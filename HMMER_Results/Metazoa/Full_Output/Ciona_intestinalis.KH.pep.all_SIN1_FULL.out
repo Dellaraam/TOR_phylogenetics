@@ -1,0 +1,146 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Ciona_intestinalis.KH.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+     0.0058   15.6  14.1     0.0067   15.4  14.1    1.0  1  ENSCINP00000036122.1  pep chromosome:KH:12:2456537:2458332:1 
+  ------ inclusion threshold ------
+       0.12   11.2  20.3       0.15   10.9  20.3    1.3  1  ENSCINP00000002654.3  pep scaffold:KH:HT000030.1:109522:11624
+       0.16   10.8  18.4       0.18   10.6  18.4    1.1  1  ENSCINP00000015864.3  pep chromosome:KH:7:4410316:4415765:1 g
+        0.4    9.5  15.1      0.043   12.7   3.6    2.2  2  ENSCINP00000013106.3  pep chromosome:KH:12:4718074:4722387:1 
+        6.2    5.6  31.9         11    4.8  31.9    1.4  1  ENSCINP00000026811.2  pep scaffold:KH:HT000099.1:83602:88497:
+
+
+Domain annotation for each sequence (and alignments):
+>> ENSCINP00000036122.1  pep chromosome:KH:12:2456537:2458332:1 gene:ENSCING00000023750.1 transcript:ENSCINT00000035609.
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.4  14.1   1.9e-06    0.0067      82     205 ..      85     250 ..      30     257 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 15.4 bits;  conditional E-value: 1.9e-06
+  PTHR13335.orig.30.pir  82 etatggdtkar.rkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseer 168
+                            +t++ ++++++ +++  l+ ++ + + ++++++++ + ++  +q++ i+ ++++++  r++ ++a+++++++++++++  + a   ++
+   ENSCINP00000036122.1  85 QTQPMVQHQQPqQQQNHLQPEKLQGNNQNHQHQINIQHLN-LQQQPRIQ-QQQQQQHLRQQLQPAQQQQQQQQHHQQQEPTQAGQHTD 170
+                            3333344444404455566677777777777888888888.77889999.55555555555466666666666655444444444443 PP
+
+  PTHR13335.orig.30.pir 169 .....................................................dqsscksiqwktessvkedsvqrassesslssers 203
+                                                                                 ++ s  s+++k          ++a+s +++  +++
+   ENSCINP00000036122.1 171 rphgckycekhfatkwyldqhekihtgeadmckqcgkyfvtrwhldkhmrvhmSGGSTSSKRLK----------KEAQSTTTTAMTTD 248
+                            6999***************************************999886644333333333333..........22333333333333 PP
+
+  PTHR13335.orig.30.pir 204 sd 205
+                            sd
+   ENSCINP00000036122.1 249 SD 250
+                            33 PP
+
+>> ENSCINP00000002654.3  pep scaffold:KH:HT000030.1:109522:116242:-1 gene:ENSCING00000001371.3 transcript:ENSCINT0000000
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.9  20.3   4.3e-05      0.15      86     179 ..      13     155 ..       1     380 [. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 10.9 bits;  conditional E-value: 4.3e-05
+  PTHR13335.orig.30.pir  86 ggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke.rrsksasiassee..r.. 168
+                            + +++ ++ ++++ q +++ +   +++ ++++ ++++lq+++i++++l+++ ++++  ++++l+++  + +++ +++++  +   +  
+   ENSCINP00000002654.3  13 QHMQNMQQMQQQNIQPQQNIQ---QQNIQQQNIQQQNLQQQNIQQQNLQQQNIQQQNIQQQNLQQQNIQqQQNMQQDSMYINRagNqq 97 
+                            112222222222222111111...2233333333333333333333333333333333333333333332222222222111111111 PP
+
+  PTHR13335.orig.30.pir 169 ...............................................dqsscksiqwk 179
+                                                                           ++++ +++qw+
+   ENSCINP00000002654.3  98 tiyqtnqiqrtpqnniiqqgspgmpmrgmaptnspmsrtmtglpspqSSMGYQRTQWS 155
+                            2222222223333334333333333333333333333333333333322222233333 PP
+
+>> ENSCINP00000015864.3  pep chromosome:KH:7:4410316:4415765:1 gene:ENSCING00000007727.3 transcript:ENSCINT00000015864.3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.6  18.4   5.2e-05      0.18      52     161 ..     135     245 ..      49     255 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 10.6 bits;  conditional E-value: 5.2e-05
+  PTHR13335.orig.30.pir  52 sssesll...srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldeg 136
+                            +     +     p++++ +++s+++++ ss + ++   +++ ++  +++ +q+  + g++q++++++++ +++++    ++s  ++ g
+   ENSCINP00000015864.3 135 GENV--QyfyTVPQQQVAQQNSTPVINQSSAQTGQIVITQPSNQIVGSDTNQQVLQIGQQQQQQQQQQQPQQQQQVKAKLNSNAVIVG 220
+                            2222..22469999************99999988888899999999999999999999999999999999999999999999999999 PP
+
+  PTHR13335.orig.30.pir 137 srrrrantavkleklrkerrsksas 161
+                             ++++++++++++++  ++++++++
+   ENSCINP00000015864.3 221 GNNNQQQQQQQQSSVVVNQQQQQQQ 245
+                            9999998888888888775544433 PP
+
+>> ENSCINP00000013106.3  pep chromosome:KH:12:4718074:4722387:1 gene:ENSCING00000006362.3 transcript:ENSCINT00000013106.
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.7   3.6   1.3e-05     0.043      73     165 ..      53     147 ..      20     259 .. 0.73
+   2 ?    2.7   3.7     0.013        45      21     132 ..     430     571 ..     347     578 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 12.7 bits;  conditional E-value: 1.3e-05
+  PTHR13335.orig.30.pir  73 edsgssneaetatg........gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklr 152
+                            ++    n a+            + t+  rk++++++r++++++++  ++++ +++ ee++s+d+ s++++++  r+  +++  ++ ++
+   ENSCINP00000013106.3  53 DTRNNTNAAN---NasaeetalPTTTDARKRKRKNKRQRKRKQRNRRKGKKLRKFAEETASTDLFSDEVQKELLRNTVSEMFGFDHMT 137
+                            2222222222...1333555556667777889999999999999999*************************************9999 PP
+
+  PTHR13335.orig.30.pir 153 ke....rrsksasiass 165
+                            +     +       +ss
+   ENSCINP00000013106.3 138 SPrpgqT-------RSS 147
+                            9843322.......222 PP
+
+  == domain 2  score: 2.7 bits;  conditional E-value: 0.013
+  PTHR13335.orig.30.pir  21 sdddg.mcerilndddvdlekihsapyppvsssssesll..srpksastpgdsgsedsgssneaetatg................... 86 
+                            ++ +g ++eril ++   + +   a+++ + +s+   +   +r+ s+s pg++++e+  +    +  ++                   
+   ENSCINP00000013106.3 430 TKSSGsLSERILLSSLGNITASLAARNTRFRRSAGTRRGnaARNGSNSLPGEDTPENEQR----SIIPVnlpqsvdndqtelhdnglv 513
+                            444455899999999999999999999999888888888888999999999888888444....333335555666666666666666 PP
+
+  PTHR13335.orig.30.pir  87 ............gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissss 132
+                                        +++k++r++++  +r ++ + k +++s+ +p+ + +  ++ +s++s
+   ENSCINP00000013106.3 514 draviqsltdqkTARKKKRRRKPCRKRGRRAKRKCKKASSTAPEADLNGSQQTCSRKS 571
+                            6666666666655555555555555555555555555555555555555444444444 PP
+
+>> ENSCINP00000026811.2  pep scaffold:KH:HT000099.1:83602:88497:1 gene:ENSCING00000014952.2 transcript:ENSCINT0000002705
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.8  31.9    0.0031        11      78     226 ..      20     240 ..       3     279 .. 0.37
+
+  Alignments for each domain:
+  == domain 1  score: 4.8 bits;  conditional E-value: 0.0031
+  PTHR13335.orig.30.pir  78 sneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdis..sssldegsrrrrantavkleklrke..rrsksas 161
+                            ++e   +++  ++   ++  + q+ ++q+ekq+++++++ + e+ l + +++   ++ + ++ +++ ++++++ek ++e  +   +++
+   ENSCINP00000026811.2  20 QEE--KQQEEKQQEEKQQEEKLQEEKQQEEKQKENKQEEHKIEIALIEKETEqnVQQEELQQEKSQ-QEELQQEKSQQEesQ---QEE 101
+                            111..1111112222223333333333333444444444444443333333300222222222222.222222222222111...122 PP
+
+  PTHR13335.orig.30.pir 162 iasseer.....................................dqsscksiqwktessvk.....edsvqrassesslsserssdss 207
+                            ++++e++                                     ++ s+++iq++  +s k     +++++ +s  ++++ +  ++++
+   ENSCINP00000026811.2 102 SQQEESQqeefpppplflldgefpvmgngtklddleyesvslpsNGGSITTIQQNIDESAKldrnaNTFPKQESPLTETDKTAIEIEK 189
+                            2222221345777777777777666665555544444444444444444444444333332111112223333333333333333333 PP
+
+  PTHR13335.orig.30.pir 208 ssssapsrrq....snkldseq...............................l 226
+                            +++++    +    ++k++++q                                
+   ENSCINP00000026811.2 190 LHAQIR---RmrnsQKKKEKSQnrntwhpgslvfvpkntntthkdievapttgI 240
+                            333332...032223333333355555555555555555444444444444441 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      17302  (5764051 residues searched)
+Passed MSV filter:                      2447  (0.141429); expected 346.0 (0.02)
+Passed bias filter:                      444  (0.0256618); expected 346.0 (0.02)
+Passed Vit filter:                        90  (0.00520171); expected 17.3 (0.001)
+Passed Fwd filter:                        13  (0.000751358); expected 0.2 (1e-05)
+Initial search space (Z):              17302  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.28u 0.07s 00:00:00.35 Elapsed: 00:00:00.17
+# Mc/sec: 21941.90
+//
+[ok]

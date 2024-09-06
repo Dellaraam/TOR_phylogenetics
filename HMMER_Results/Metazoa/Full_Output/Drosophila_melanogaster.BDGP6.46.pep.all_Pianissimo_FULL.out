@@ -1,0 +1,590 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Drosophila_melanogaster.BDGP6.46.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+          0 1245.2   8.0          0 1244.8   8.0    1.0  1  FBpp0310228  pep primary_assembly:BDGP6.46:X:19252111:1925984
+          0 1244.4   9.1          0 1244.1   9.1    1.0  1  FBpp0074458  pep primary_assembly:BDGP6.46:X:19252111:1926124
+          0 1223.3   9.0          0 1222.9   9.0    1.0  1  FBpp0310227  pep primary_assembly:BDGP6.46:X:19252111:1926124
+  ------ inclusion threshold ------
+      0.094   10.7   0.8        6.3    4.7   0.0    2.5  2  FBpp0076777  pep primary_assembly:BDGP6.46:3L:6009446:6011021
+       0.19    9.7   1.3        0.8    7.7   0.1    2.3  2  FBpp0080922  pep primary_assembly:BDGP6.46:2L:20734911:207397
+       0.19    9.7   1.3        0.8    7.7   0.1    2.3  2  FBpp0294035  pep primary_assembly:BDGP6.46:2L:20734609:207397
+       0.19    9.7   1.3        0.8    7.7   0.1    2.3  2  FBpp0294036  pep primary_assembly:BDGP6.46:2L:20734911:207509
+       0.19    9.7   1.3        0.8    7.7   0.1    2.3  2  FBpp0294037  pep primary_assembly:BDGP6.46:2L:20734911:207509
+       0.19    9.7   1.3        0.8    7.7   0.1    2.3  2  FBpp0294038  pep primary_assembly:BDGP6.46:2L:20734911:207509
+       0.26    9.3   0.4        2.5    6.0   0.0    2.2  2  FBpp0076708  pep primary_assembly:BDGP6.46:3L:6193480:6200385
+       0.26    9.3   0.4        2.5    6.0   0.0    2.2  2  FBpp0076709  pep primary_assembly:BDGP6.46:3L:6193480:6199596
+       0.26    9.3   0.4        2.5    6.0   0.0    2.2  2  FBpp0076710  pep primary_assembly:BDGP6.46:3L:6193746:6199596
+       0.26    9.3   0.4        2.5    6.0   0.0    2.2  2  FBpp0305273  pep primary_assembly:BDGP6.46:3L:6193480:6200385
+       0.53    8.2   9.8          7    4.5   0.3    3.1  3  FBpp0084903  pep primary_assembly:BDGP6.46:3R:29795697:297993
+
+
+Domain annotation for each sequence (and alignments):
+>> FBpp0310228  pep primary_assembly:BDGP6.46:X:19252111:19259843:-1 gene:FBgn0031006 transcript:FBtr0343635 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1244.8   8.0         0         0       5    1172 ..      11    1641 ..       8    1647 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 1244.8 bits;  conditional E-value: 0
+  PTHR13298.orig.30.pir    5 qeseeltvkldlatklkdgaenllsnllresrdsiekkleslnnlikl..kaaakklnellgllkeeiiikedlvelelvsclrsl 88  
+                             ++++e+ ++ld ++++ ++a +++s+l+ e+++++ k+l +ln+l++l   a+ +++++ +++++ee  +           cl+  
+            FBpp0310228   11 SQDPEDFYRLDPQRSAAENAFEIYSMLCLEETRDT-KRLFLLNALASLclGARKGSHHSNIRFTTEELLY-----------CLSAS 84  
+                             67899*******************99999888888.9**********999999*****************...........***** PP
+
+  PTHR13298.orig.30.pir   89 llseskevraaalRllrylisdskvlrrllrlgldiliarsLdrdsknetEreqalkliramlevapkliptaivralvaiae... 171 
+                             l++  ++vraaalR +ry+is+ ++++++++l+l++l++rs+d ++kn+ Er+qalkl+r+ml++ap++i++a+vr+lv++a+   
+            FBpp0310228   85 LVHTFTQVRAAALRTIRYAISTPNDIKTFNALQLQHLLCRSIDLMLKNDDERVQALKLVRKMLAIAPEDISPAVVRCLVSLADsgi 170 
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir  172 seedrlrraclatlcelallnpelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhy 257 
+                             +e+d+l raclatl+e+a+lnp+l++ +gg++ +++++lec++ +riaesl++vllyll++p+tr++  +gv+l++l+ap++df+y
+            FBpp0310228  171 EENDNLLRACLATLAEFAVLNPALLIVCGGVTSITRNVLECHN-PRIAESLCGVLLYLLEWPQTRNI--CGVRLDCLAAPYCDFTY 253 
+                             ******************************************6.***********************..***************** PP
+
+  PTHR13298.orig.30.pir  258 rakkdkqeskskeerelsrleaskkailtlLrSWaGllylckn.dkrgLkslvdvlrlpnlevrkaildlLydlLrlkepkwtesf 342 
+                             r+ +++++   k++rel r+++++ a+l++LrSW+G+l +c++ +++gLk++vd+l+l++ evrkaildlLy+lL+l++p+wt+++
+            FBpp0310228  254 RQ-SIVDK--NKDAREL-RYTSCRLALLSVLRSWTGTLEFCDPsKPSGLKAIVDALYLNQIEVRKAILDLLYELLTLPQPTWTDDY 335 
+                             **.77777..56*****.**********************7651557*************************************99 PP
+
+  PTHR13298.orig.30.pir  343 tsgsalkavdsaalqdswrlsdgfvaeesktilpssarsrpdlldnylallLlalieagLleaLvevitssdssvsvkAtiLLgel 428 
+                              + +al+avd++++qd+w+ls+gfv++e+++ilp+ a ++p++++++lal+L++++e gLl+aLvev++ssd++vsv+At+L+g++
+            FBpp0310228  336 -A-VALQAVDPSDFQDTWLLSNGFVSAEGRSILPTLAARAPSVVEQHLALMLYCFLETGLLNALVEVVVSSDQFVSVQATVLIGKI 419 
+                             .6.9********************************************************************************** PP
+
+  PTHR13298.orig.30.pir  429 lslantlLPpelsaslhslptlvslaasfssekskrnraaaa.lalksldelkrsksksaslyldeilq................. 496 
+                             l+l++t+LPp++++++++lptlvs+a+       ++++a+aa +al+++++l r++++s sl+ld i+q                 
+            FBpp0310228  420 LQLMHTHLPPDICCTSPALPTLVSHATL------GNQQANAAvAALQNYQKLLRQRPASRSLFLDSIIQggaliqtrlfrrhlnvq 499 
+                             ****************************......45555555588***************************************** PP
+
+  PTHR13298.orig.30.pir  497 ...........................................kkllersssnssedskrkrlrqiledddeafkrmlkdsqvlst 539 
+                                                                        ++++++ ss+ss + krk l q+l d+ +af+r+l+ds+vls+
+            FBpp0310228  500 eqagpvlqlqetaeaaafavppvtqfrgtldrsrldsvsssdeSNSQASTSSRSSFRLKRKFLPQALYDNFRAFNRLLTDSRVLSQ 585 
+                             ******************************************9999999999********************************** PP
+
+  PTHR13298.orig.30.pir  540 kdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPskkrfssid..ktkqlekyvqvgcqllslLlsspeGialle 623 
+                              d + W+wd+i+++l++ l    ++l+  + + kf+krL++FykP ++rfs++d  + ++l++yv +g++l+++Llss+e    le
+            FBpp0310228  586 ADAHLWDWDVITTILKSNL---IRKLD-YT-QGKFLKRLVDFYKPRNNRFSHQDlvPGQRLPTYVSAGLDLIDVLLSSNE----LE 662 
+                             ****************666...89***.55.677**********************************************....** PP
+
+  PTHR13298.orig.30.pir  624 esrlLkelleelsqelldsssekspderlfskerlsttlsqgyflfiGvLsstkeGlkiLeklnifqlllqlislktrdelvkliv 709 
+                             ++r+++++++++sq+l +++++++++++lfs++++++t++q+yfl+iG++++t +G+++L+++ +f++l++l+  +++ ++vkliv
+            FBpp0310228  663 CMRFITDYFSDISQQLAAVTTSNRAHDCLFSPQHMNNTMCQQYFLYIGRMCRTVKGIEVLKNTTVFEYLINLVRVTDHVCYVKLIV 748 
+                             ****************999999**************************************************************** PP
+
+  PTHR13298.orig.30.pir  710 ssLdysldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileyl 795 
+                             s L+ys+++++R++l+kaLts++   Rly+t++++vllra++++f++Wgi+l+++q +d +++v  aA+++Leeac+dk + le++
+            FBpp0310228  749 SGLNYSYEKLPRQVLEKALTSAKTRGRLYSTQFMAVLLRARLPHFEVWGIPLIINQTRDSDRSVGLAAMDVLEEACHDKYY-LEEI 833 
+                             ****************************************************************************99999.**** PP
+
+  PTHR13298.orig.30.pir  796 vslkpsllhlgdkgelLllrflstpkGfrylkeenyvekelekWaeernaeYvllvEealsealtlltreedgsdsrrrsngpdss 881 
+                             vs++p+l+h gd+g+lL++r++s+p+G++     + +e+e+++W++++n++YvllvE++++++ltl++r+edg +srr++n+++  
+            FBpp0310228  834 VSRWPNLTHRGDAGRLLMARYYSLPRGLNSTM--ARIEDEIRYWRNGYNKRYVLLVEADTHSSLTLHIRNEDGYYSRRNCNQRP-- 915 
+                             ***************************66555..77*********************************************996.. PP
+
+  PTHR13298.orig.30.pir  882 lrnrksvilPpHLygeLakteeGcelLekkghleelaetirshgledseeilklkaalWAlghigsselGlelleeenedliedii 967 
+                               + +   + pHLyg++a+t +G++ L+k+g+l++l+e +r+++++d++e+l+lkaa+WAl+h++++++G+e++ e n +l+e++i
+            FBpp0310228  916 --QTVPPNVAPHLYGQMAQTGQGMTALRKHGDLPQLLELLRRAKCTDDAECLELKAAIWALAHASTHSNGIEYFVELNARLYEKLI 999 
+                             ..344455668*************************************************************************** PP
+
+  PTHR13298.orig.30.pir  968 klaeesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrnal....................................... 1014
+                              l++++ev+svr+tcf +lglia t++ga+iL +l+W svrh++n++                                       
+            FBpp0310228 1000 VLVTKCEVYSVRATCFSALGLIAGTQAGANILFKLNWLSVRHDKNTMwpvhqpedwmssqytpvrhyyedvpadnmtmmddyierf 1085
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+            FBpp0310228 1086 yetgsdfwhmladqtdasgggggvagtvvgmhpivqdpnatitttdsvrtttddvhprmlvgvaaksktlpegsnlrqgkhqrsls 1171
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+            FBpp0310228 1172 eskttdvisllgsgvgtmsgavlyptpyqhrirynsctdsntsgvsscesvtgrtaaayaaaanelqqfplspipsmsnllesdel 1257
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+            FBpp0310228 1258 frrnqlatsmlpstlspmamkgyvqlrslrkhsrpvfsessaefydfaeildtpevqmrkldwthshrrlkvrsldrqlsdvyrrl 1343
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ............................iGlciPsdvnelfsipehqqsssaesapitdekpeeiktslky............... 1057
+                                                         +G+c+P++v +lf++++ ++++++++++ +d    +  +++ +               
+            FBpp0310228 1344 sadelnvllptlnapkflppndlkgpcyAGICLPKNVLDLFPTRNLSRTYVSRDIQDQDIVGINLLNTMLRpqclndsltneggde 1429
+                             ****************************************************************99999999************** PP
+
+  PTHR13298.orig.30.pir 1058 ...................................................................................... 1057
+                                                                                                                   
+            FBpp0310228 1430 ssvisslsdvssasrrqtrqlqqgakhsrslclhcarsprqqrndsgshsnggggaslapcelyssaaaalvaagiqagpvlakks 1515
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1058 ...........................ptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpelfddpclfsevlkllseyrf 1116
+                                                        +  +++++ il +v++L+n+v+ak+++++Ll+lk+k+p++f+d+cl+se++k++++ ++
+            FBpp0310228 1516 gssaqgasaalgadisfhspesmlsedSLPDRLTASILYNVQRLANPVSAKQSKMALLELKQKHPHAFQDICLYSEACKTIGRSSY 1601
+                             ***************************777******************************************************** PP
+
+  PTHR13298.orig.30.pir 1117 rlqaRrfiqelfddavllsslrseerleveesqsemyeeaelsasepesqqastae 1172
+                             r+ aRrf+qelf d+++                ++ y e++l+ ++++++++++ae
+            FBpp0310228 1602 RMIARRFLQELFLDLNF----------------DSFYVEPQLIIGARKFSAEEKAE 1641
+                             *****************................78888888888888888888776 PP
+
+>> FBpp0074458  pep primary_assembly:BDGP6.46:X:19252111:19261240:-1 gene:FBgn0031006 transcript:FBtr0074689 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1244.1   9.1         0         0       4    1172 ..      22    1653 ..       1    1659 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 1244.1 bits;  conditional E-value: 0
+  PTHR13298.orig.30.pir    4 kqeseeltvkldlatklkdgaenllsnllresrdsiekkleslnnlikl..kaaakklnellgllkeeiiikedlvelelvsclrs 87  
+                              ++++e+ ++ld ++++ ++a +++s+l+ e+++++ k+l +ln+l++l   a+ +++++ +++++ee  +           cl+ 
+            FBpp0074458   22 VSQDPEDFYRLDPQRSAAENAFEIYSMLCLEETRDT-KRLFLLNALASLclGARKGSHHSNIRFTTEELLY-----------CLSA 95  
+                             57899********************99999888888.9**********999999*****************...........**** PP
+
+  PTHR13298.orig.30.pir   88 lllseskevraaalRllrylisdskvlrrllrlgldiliarsLdrdsknetEreqalkliramlevapkliptaivralvaiae.. 171 
+                              l++  ++vraaalR +ry+is+ ++++++++l+l++l++rs+d ++kn+ Er+qalkl+r+ml++ap++i++a+vr+lv++a+  
+            FBpp0074458   96 SLVHTFTQVRAAALRTIRYAISTPNDIKTFNALQLQHLLCRSIDLMLKNDDERVQALKLVRKMLAIAPEDISPAVVRCLVSLADsg 181 
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir  172 .seedrlrraclatlcelallnpelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlekllapftdfh 256 
+                              +e+d+l raclatl+e+a+lnp+l++ +gg++ +++++lec++ +riaesl++vllyll++p+tr++  +gv+l++l+ap++df+
+            FBpp0074458  182 iEENDNLLRACLATLAEFAVLNPALLIVCGGVTSITRNVLECHN-PRIAESLCGVLLYLLEWPQTRNI--CGVRLDCLAAPYCDFT 264 
+                             *******************************************6.***********************..**************** PP
+
+  PTHR13298.orig.30.pir  257 yrakkdkqeskskeerelsrleaskkailtlLrSWaGllylckn.dkrgLkslvdvlrlpnlevrkaildlLydlLrlkepkwtes 341 
+                             yr+ +++++   k++rel r+++++ a+l++LrSW+G+l +c++ +++gLk++vd+l+l++ evrkaildlLy+lL+l++p+wt++
+            FBpp0074458  265 YRQ-SIVDK--NKDAREL-RYTSCRLALLSVLRSWTGTLEFCDPsKPSGLKAIVDALYLNQIEVRKAILDLLYELLTLPQPTWTDD 346 
+                             ***.77777..56*****.**********************7651557*************************************9 PP
+
+  PTHR13298.orig.30.pir  342 ftsgsalkavdsaalqdswrlsdgfvaeesktilpssarsrpdlldnylallLlalieagLleaLvevitssdssvsvkAtiLLge 427 
+                             + + +al+avd++++qd+w+ls+gfv++e+++ilp+ a ++p++++++lal+L++++e gLl+aLvev++ssd++vsv+At+L+g+
+            FBpp0074458  347 Y-A-VALQAVDPSDFQDTWLLSNGFVSAEGRSILPTLAARAPSVVEQHLALMLYCFLETGLLNALVEVVVSSDQFVSVQATVLIGK 430 
+                             9.6.9********************************************************************************* PP
+
+  PTHR13298.orig.30.pir  428 llslantlLPpelsaslhslptlvslaasfssekskrnraaaa.lalksldelkrsksksaslyldeilq................ 496 
+                             +l+l++t+LPp++++++++lptlvs+a+       ++++a+aa +al+++++l r++++s sl+ld i+q                
+            FBpp0074458  431 ILQLMHTHLPPDICCTSPALPTLVSHATL------GNQQANAAvAALQNYQKLLRQRPASRSLFLDSIIQggaliqtrlfrrhlnv 510 
+                             *****************************......45555555588**************************************** PP
+
+  PTHR13298.orig.30.pir  497 ............................................kkllersssnssedskrkrlrqiledddeafkrmlkdsqvls 538 
+                                                                         ++++++ ss+ss + krk l q+l d+ +af+r+l+ds+vls
+            FBpp0074458  511 qeqagpvlqlqetaeaaafavppvtqfrgtldrsrldsvsssdeSNSQASTSSRSSFRLKRKFLPQALYDNFRAFNRLLTDSRVLS 596 
+                             *******************************************9999999999********************************* PP
+
+  PTHR13298.orig.30.pir  539 tkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPskkrfssid..ktkqlekyvqvgcqllslLlsspeGiall 622 
+                             + d + W+wd+i+++l++ l    ++l+  + + kf+krL++FykP ++rfs++d  + ++l++yv +g++l+++Llss+e    l
+            FBpp0074458  597 QADAHLWDWDVITTILKSNL---IRKLD-YT-QGKFLKRLVDFYKPRNNRFSHQDlvPGQRLPTYVSAGLDLIDVLLSSNE----L 673 
+                             *****************666...89***.55.677**********************************************....* PP
+
+  PTHR13298.orig.30.pir  623 eesrlLkelleelsqelldsssekspderlfskerlsttlsqgyflfiGvLsstkeGlkiLeklnifqlllqlislktrdelvkli 708 
+                             e++r+++++++++sq+l +++++++++++lfs++++++t++q+yfl+iG++++t +G+++L+++ +f++l++l+  +++ ++vkli
+            FBpp0074458  674 ECMRFITDYFSDISQQLAAVTTSNRAHDCLFSPQHMNNTMCQQYFLYIGRMCRTVKGIEVLKNTTVFEYLINLVRVTDHVCYVKLI 759 
+                             *****************999999*************************************************************** PP
+
+  PTHR13298.orig.30.pir  709 vssLdysldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkaniley 794 
+                             vs L+ys+++++R++l+kaLts++   Rly+t++++vllra++++f++Wgi+l+++q +d +++v  aA+++Leeac+dk + le+
+            FBpp0074458  760 VSGLNYSYEKLPRQVLEKALTSAKTRGRLYSTQFMAVLLRARLPHFEVWGIPLIINQTRDSDRSVGLAAMDVLEEACHDKYY-LEE 844 
+                             *****************************************************************************99999.*** PP
+
+  PTHR13298.orig.30.pir  795 lvslkpsllhlgdkgelLllrflstpkGfrylkeenyvekelekWaeernaeYvllvEealsealtlltreedgsdsrrrsngpds 880 
+                             +vs++p+l+h gd+g+lL++r++s+p+G++     + +e+e+++W++++n++YvllvE++++++ltl++r+edg +srr++n+++ 
+            FBpp0074458  845 IVSRWPNLTHRGDAGRLLMARYYSLPRGLNSTM--ARIEDEIRYWRNGYNKRYVLLVEADTHSSLTLHIRNEDGYYSRRNCNQRP- 927 
+                             ****************************66555..77*********************************************996. PP
+
+  PTHR13298.orig.30.pir  881 slrnrksvilPpHLygeLakteeGcelLekkghleelaetirshgledseeilklkaalWAlghigsselGlelleeenedliedi 966 
+                                + +   + pHLyg++a+t +G++ L+k+g+l++l+e +r+++++d++e+l+lkaa+WAl+h++++++G+e++ e n +l+e++
+            FBpp0074458  928 ---QTVPPNVAPHLYGQMAQTGQGMTALRKHGDLPQLLELLRRAKCTDDAECLELKAAIWALAHASTHSNGIEYFVELNARLYEKL 1010
+                             ...344455668************************************************************************** PP
+
+  PTHR13298.orig.30.pir  967 iklaeesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrnal...................................... 1014
+                             i l++++ev+svr+tcf +lglia t++ga+iL +l+W svrh++n++                                      
+            FBpp0074458 1011 IVLVTKCEVYSVRATCFSALGLIAGTQAGANILFKLNWLSVRHDKNTMwpvhqpedwmssqytpvrhyyedvpadnmtmmddyier 1096
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+            FBpp0074458 1097 fyetgsdfwhmladqtdasgggggvagtvvgmhpivqdpnatitttdsvrtttddvhprmlvgvaaksktlpegsnlrqgkhqrsl 1182
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+            FBpp0074458 1183 seskttdvisllgsgvgtmsgavlyptpyqhrirynsctdsntsgvsscesvtgrtaaayaaaanelqqfplspipsmsnllesde 1268
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+            FBpp0074458 1269 lfrrnqlatsmlpstlspmamkgyvqlrslrkhsrpvfsessaefydfaeildtpevqmrkldwthshrrlkvrsldrqlsdvyrr 1354
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 .............................iGlciPsdvnelfsipehqqsssaesapitdekpeeiktslky.............. 1057
+                                                          +G+c+P++v +lf++++ ++++++++++ +d    +  +++ +              
+            FBpp0074458 1355 lsadelnvllptlnapkflppndlkgpcyAGICLPKNVLDLFPTRNLSRTYVSRDIQDQDIVGINLLNTMLRpqclndsltneggd 1440
+                             *****************************************************************99999999************* PP
+
+  PTHR13298.orig.30.pir 1058 ...................................................................................... 1057
+                                                                                                                   
+            FBpp0074458 1441 essvisslsdvssasrrqtrqlqqgakhsrslclhcarsprqqrndsgshsnggggaslapcelyssaaaalvaagiqagpvlakk 1526
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1058 ............................ptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpelfddpclfsevlkllseyr 1115
+                                                         +  +++++ il +v++L+n+v+ak+++++Ll+lk+k+p++f+d+cl+se++k++++ +
+            FBpp0074458 1527 sgssaqgasaalgadisfhspesmlsedSLPDRLTASILYNVQRLANPVSAKQSKMALLELKQKHPHAFQDICLYSEACKTIGRSS 1612
+                             ****************************777******************************************************* PP
+
+  PTHR13298.orig.30.pir 1116 frlqaRrfiqelfddavllsslrseerleveesqsemyeeaelsasepesqqastae 1172
+                             +r+ aRrf+qelf d+++                ++ y e++l+ ++++++++++ae
+            FBpp0074458 1613 YRMIARRFLQELFLDLNF----------------DSFYVEPQLIIGARKFSAEEKAE 1653
+                             ******************................78888888888888888888776 PP
+
+>> FBpp0310227  pep primary_assembly:BDGP6.46:X:19252111:19261240:-1 gene:FBgn0031006 transcript:FBtr0343634 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1222.9   9.0         0         0       4    1172 ..      22    1633 ..       1    1639 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 1222.9 bits;  conditional E-value: 0
+  PTHR13298.orig.30.pir    4 kqeseeltvkldlatklkdgaenllsnllresrdsiekkleslnnlikl..kaaakklnellgllkeeiiikedlvelelvsclrs 87  
+                              ++++e+ ++ld ++++ ++a +++s+l+ e+++++ k+l +ln+l++l   a+ +++++ +++++ee  +           cl+ 
+            FBpp0310227   22 VSQDPEDFYRLDPQRSAAENAFEIYSMLCLEETRDT-KRLFLLNALASLclGARKGSHHSNIRFTTEELLY-----------CLSA 95  
+                             57899********************99999888888.9**********999999*****************...........**** PP
+
+  PTHR13298.orig.30.pir   88 lllseskevraaalRllrylisdskvlrrllrlgldiliarsLdrdsknetEreqalkliramlevapkliptaivralvaiae.. 171 
+                              l++  ++vraaalR +ry+is+ ++++++++l+l++l++rs+d ++kn+ Er+qalkl+r+ml++ap++i++a+vr+lv++a+  
+            FBpp0310227   96 SLVHTFTQVRAAALRTIRYAISTPNDIKTFNALQLQHLLCRSIDLMLKNDDERVQALKLVRKMLAIAPEDISPAVVRCLVSLADsg 181 
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir  172 .seedrlrraclatlcelallnpelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlekllapftdfh 256 
+                              +e+d+l raclatl+e+a+lnp+l++ +gg++ +++++lec++ +riaesl++vllyll++p+tr++  +gv+l++l+ap++df+
+            FBpp0310227  182 iEENDNLLRACLATLAEFAVLNPALLIVCGGVTSITRNVLECHN-PRIAESLCGVLLYLLEWPQTRNI--CGVRLDCLAAPYCDFT 264 
+                             *******************************************6.***********************..**************** PP
+
+  PTHR13298.orig.30.pir  257 yrakkdkqeskskeerelsrleaskkailtlLrSWaGllylckn.dkrgLkslvdvlrlpnlevrkaildlLydlLrlkepkwtes 341 
+                             yr+ +++++   k++rel r+++++ a+l++LrSW+G+l +c++ +++gLk++vd+l+l++ evrkaildlLy+lL+l++p+wt++
+            FBpp0310227  265 YRQ-SIVDK--NKDAREL-RYTSCRLALLSVLRSWTGTLEFCDPsKPSGLKAIVDALYLNQIEVRKAILDLLYELLTLPQPTWTDD 346 
+                             ***.77777..56*****.**********************7651557*************************************9 PP
+
+  PTHR13298.orig.30.pir  342 ftsgsalkavdsaalqdswrlsdgfvaeesktilpssarsrpdlldnylallLlalieagLleaLvevitssdssvsvkAtiLLge 427 
+                             + + +al+avd++++qd+w+ls+gfv++e+++ilp+ a ++p++++++lal+L++++e gLl+aLvev++ssd++vsv+At+L+g+
+            FBpp0310227  347 Y-A-VALQAVDPSDFQDTWLLSNGFVSAEGRSILPTLAARAPSVVEQHLALMLYCFLETGLLNALVEVVVSSDQFVSVQATVLIGK 430 
+                             9.6.9********************************************************************************* PP
+
+  PTHR13298.orig.30.pir  428 llslantlLPpelsaslhslptlvslaasfssekskrnraaaa.lalksldelkrsksksaslyldeilq................ 496 
+                             +l+l++t+LPp++++++++lptlvs+a+       ++++a+aa +al+++++l r++++s sl+ld i+q                
+            FBpp0310227  431 ILQLMHTHLPPDICCTSPALPTLVSHATL------GNQQANAAvAALQNYQKLLRQRPASRSLFLDSIIQggaliqtrlfrrhlnv 510 
+                             *****************************......45555555588**************************************** PP
+
+  PTHR13298.orig.30.pir  497 ...........................kkllersssnssedskrkrlrqiledddeafkrmlkdsqvlstkdylkWnwdlilelle 555 
+                                                        + +l+rs+ +s  +s++++ +q+   + + f+  lk s+vls+ d + W+wd+i+++l+
+            FBpp0310227  511 qeqagpvlqlqetaeaaafavppvtqfRGTLDRSRLDS-VSSSDESNSQASTSSRSSFR--LKHSRVLSQADAHLWDWDVITTILK 593 
+                             ************************99988888887774.46666666699999999999..************************* PP
+
+  PTHR13298.orig.30.pir  556 gplnlnpkrleeavkvtkffkrLlsFykPskkrfssid..ktkqlekyvqvgcqllslLlsspeGialleesrlLkelleelsqel 639 
+                             + l    ++l+  + + kf+krL++FykP ++rfs++d  + ++l++yv +g++l+++Llss+e    le++r+++++++++sq+l
+            FBpp0310227  594 SNL---IRKLD-YT-QGKFLKRLVDFYKPRNNRFSHQDlvPGQRLPTYVSAGLDLIDVLLSSNE----LECMRFITDYFSDISQQL 670 
+                             666...89***.55.677**********************************************....****************** PP
+
+  PTHR13298.orig.30.pir  640 ldsssekspderlfskerlsttlsqgyflfiGvLsstkeGlkiLeklnifqlllqlislktrdelvklivssLdysldgesRvils 725 
+                              +++++++++++lfs++++++t++q+yfl+iG++++t +G+++L+++ +f++l++l+  +++ ++vklivs L+ys+++++R++l+
+            FBpp0310227  671 AAVTTSNRAHDCLFSPQHMNNTMCQQYFLYIGRMCRTVKGIEVLKNTTVFEYLINLVRVTDHVCYVKLIVSGLNYSYEKLPRQVLE 756 
+                             999999******************************************************************************** PP
+
+  PTHR13298.orig.30.pir  726 kaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileylvslkpsllhlgdkgel 811 
+                             kaLts++   Rly+t++++vllra++++f++Wgi+l+++q +d +++v  aA+++Leeac+dk + le++vs++p+l+h gd+g+l
+            FBpp0310227  757 KALTSAKTRGRLYSTQFMAVLLRARLPHFEVWGIPLIINQTRDSDRSVGLAAMDVLEEACHDKYY-LEEIVSRWPNLTHRGDAGRL 841 
+                             ************************************************************99999.******************** PP
+
+  PTHR13298.orig.30.pir  812 LllrflstpkGfrylkeenyvekelekWaeernaeYvllvEealsealtlltreedgsdsrrrsngpdsslrnrksvilPpHLyge 897 
+                             L++r++s+p+G++     + +e+e+++W++++n++YvllvE++++++ltl++r+edg +srr++n+++    + +   + pHLyg+
+            FBpp0310227  842 LMARYYSLPRGLNSTM--ARIEDEIRYWRNGYNKRYVLLVEADTHSSLTLHIRNEDGYYSRRNCNQRP----QTVPPNVAPHLYGQ 921 
+                             ***********66555..77*********************************************996....344455668***** PP
+
+  PTHR13298.orig.30.pir  898 LakteeGcelLekkghleelaetirshgledseeilklkaalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcf 983 
+                             +a+t +G++ L+k+g+l++l+e +r+++++d++e+l+lkaa+WAl+h++++++G+e++ e n +l+e++i l++++ev+svr+tcf
+            FBpp0310227  922 MAQTGQGMTALRKHGDLPQLLELLRRAKCTDDAECLELKAAIWALAHASTHSNGIEYFVELNARLYEKLIVLVTKCEVYSVRATCF 1007
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir  984 yvlgliarteqgaeiLeelgWesvrhsrnal....................................................... 1014
+                              +lglia t++ga+iL +l+W svrh++n++                                                       
+            FBpp0310227 1008 SALGLIAGTQAGANILFKLNWLSVRHDKNTMwpvhqpedwmssqytpvrhyyedvpadnmtmmddyierfyetgsdfwhmladqtd 1093
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+            FBpp0310227 1094 asgggggvagtvvgmhpivqdpnatitttdsvrtttddvhprmlvgvaaksktlpegsnlrqgkhqrslseskttdvisllgsgvg 1179
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+            FBpp0310227 1180 tmsgavlyptpyqhrirynsctdsntsgvsscesvtgrtaaayaaaanelqqfplspipsmsnllesdelfrrnqlatsmlpstls 1265
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+            FBpp0310227 1266 pmamkgyvqlrslrkhsrpvfsessaefydfaeildtpevqmrkldwthshrrlkvrsldrqlsdvyrrlsadelnvllptlnapk 1351
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ............iGlciPsdvnelfsipehqqsssaesapitdekpeeiktslky............................... 1057
+                                         +G+c+P++v +lf++++ ++++++++++ +d    +  +++ +                               
+            FBpp0310227 1352 flppndlkgpcyAGICLPKNVLDLFPTRNLSRTYVSRDIQDQDIVGINLLNTMLRpqclndsltneggdessvisslsdvssasrr 1437
+                             ************************************************99999999****************************** PP
+
+  PTHR13298.orig.30.pir 1058 ...................................................................................... 1057
+                                                                                                                   
+            FBpp0310227 1438 qtrqlqqgakhsrslclhcarsprqqrndsgshsnggggaslapcelyssaaaalvaagiqagpvlakksgssaqgasaalgadis 1523
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1058 ...........ptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpelfddpclfsevlkllseyrfrlqaRrfiqelfddav 1132
+                                        +  +++++ il +v++L+n+v+ak+++++Ll+lk+k+p++f+d+cl+se++k++++ ++r+ aRrf+qelf d++
+            FBpp0310227 1524 fhspesmlsedSLPDRLTASILYNVQRLANPVSAKQSKMALLELKQKHPHAFQDICLYSEACKTIGRSSYRMIARRFLQELFLDLN 1609
+                             ***********777************************************************************************ PP
+
+  PTHR13298.orig.30.pir 1133 llsslrseerleveesqsemyeeaelsasepesqqastae 1172
+                             +                ++ y e++l+ ++++++++++ae
+            FBpp0310227 1610 F----------------DSFYVEPQLIIGARKFSAEEKAE 1633
+                             *................78888888888888888888776 PP
+
+>> FBpp0076777  pep primary_assembly:BDGP6.46:3L:6009446:6011021:-1 gene:FBgn0035657 transcript:FBtr0077069 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.7   0.0    0.0029       6.3     398     453 ..     102     155 ..      99     170 .. 0.88
+   2 ?    1.9   0.1     0.019        43     935     993 ..     207     262 ..     186     275 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 4.7 bits;  conditional E-value: 0.0029
+  PTHR13298.orig.30.pir 398 ieagLleaLvevitssdssvsvkAtiLLgellslantlLPpelsaslhslptlvsl 453
+                            ++ag +  L+++++s+d+ v +k ++ Lg+ll+ a +l  +++  ++  +++l+s 
+            FBpp0076777 102 AKAGAVPRLIRLLQSPDPEVCEKGILSLGNLLHFAPNL--RDYIIRHGLMQKLMSI 155
+                            67899999******************************..8888888888888886 PP
+
+  == domain 2  score: 1.9 bits;  conditional E-value: 0.019
+  PTHR13298.orig.30.pir 935 lkaalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarte 993
+                            l +al A+ + +  ++ +++l     +++++ii l e+ + ++v   ++ +l  ia+++
+            FBpp0076777 207 LEDALMAVRNLAHGNETIQMLLD--FEVVPRIIYLLEH-PNVTVQNAALQALINIATGS 262
+                            55666666666666666666666..4566666666665.55555555555554444433 PP
+
+>> FBpp0080922  pep primary_assembly:BDGP6.46:2L:20734911:20739764:1 gene:FBgn0262743 transcript:FBtr0081392 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.7   0.1   0.00036       0.8     731     784 ..     192     250 ..     179     263 .. 0.93
+   2 ?   -0.1   0.1      0.08   1.8e+02     198     233 ..     589     623 ..     581     725 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 7.7 bits;  conditional E-value: 0.00036
+  PTHR13298.orig.30.pir 731 ssesiRlyatkhLrvllraessdfsd.....WgielLvtqlydpskevakaAlkiLeea 784
+                            +s+++Rl at  L   l + +s+f++     +++e + ++ + ++++++ aAl++L ++
+            FBpp0080922 192 PSNHVRLAATTALHNSLEFTKSNFEKdmernFIMEVVCEATQCQDSQICVAALQCLVKI 250
+                            799************************************9999***********99765 PP
+
+  == domain 2  score: -0.1 bits;  conditional E-value: 0.08
+  PTHR13298.orig.30.pir 198 eagglrvlldallecqlperiaesllavllyllnrp 233
+                             +  l+ +l+++ e q +++i+++++++ll ++n+ 
+            FBpp0080922 589 LCATLQSVLRKVHE-QDAPQISDAIMTALLTMFNSS 623
+                            67778888899999.667999999999999998875 PP
+
+>> FBpp0294035  pep primary_assembly:BDGP6.46:2L:20734609:20739764:1 gene:FBgn0262743 transcript:FBtr0305584 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.7   0.1   0.00036       0.8     731     784 ..     192     250 ..     179     263 .. 0.93
+   2 ?   -0.1   0.1      0.08   1.8e+02     198     233 ..     589     623 ..     581     725 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 7.7 bits;  conditional E-value: 0.00036
+  PTHR13298.orig.30.pir 731 ssesiRlyatkhLrvllraessdfsd.....WgielLvtqlydpskevakaAlkiLeea 784
+                            +s+++Rl at  L   l + +s+f++     +++e + ++ + ++++++ aAl++L ++
+            FBpp0294035 192 PSNHVRLAATTALHNSLEFTKSNFEKdmernFIMEVVCEATQCQDSQICVAALQCLVKI 250
+                            799************************************9999***********99765 PP
+
+  == domain 2  score: -0.1 bits;  conditional E-value: 0.08
+  PTHR13298.orig.30.pir 198 eagglrvlldallecqlperiaesllavllyllnrp 233
+                             +  l+ +l+++ e q +++i+++++++ll ++n+ 
+            FBpp0294035 589 LCATLQSVLRKVHE-QDAPQISDAIMTALLTMFNSS 623
+                            67778888899999.667999999999999998875 PP
+
+>> FBpp0294036  pep primary_assembly:BDGP6.46:2L:20734911:20750941:1 gene:FBgn0262743 transcript:FBtr0305585 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.7   0.1   0.00036       0.8     731     784 ..     192     250 ..     179     263 .. 0.93
+   2 ?   -0.1   0.1      0.08   1.8e+02     198     233 ..     589     623 ..     581     725 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 7.7 bits;  conditional E-value: 0.00036
+  PTHR13298.orig.30.pir 731 ssesiRlyatkhLrvllraessdfsd.....WgielLvtqlydpskevakaAlkiLeea 784
+                            +s+++Rl at  L   l + +s+f++     +++e + ++ + ++++++ aAl++L ++
+            FBpp0294036 192 PSNHVRLAATTALHNSLEFTKSNFEKdmernFIMEVVCEATQCQDSQICVAALQCLVKI 250
+                            799************************************9999***********99765 PP
+
+  == domain 2  score: -0.1 bits;  conditional E-value: 0.08
+  PTHR13298.orig.30.pir 198 eagglrvlldallecqlperiaesllavllyllnrp 233
+                             +  l+ +l+++ e q +++i+++++++ll ++n+ 
+            FBpp0294036 589 LCATLQSVLRKVHE-QDAPQISDAIMTALLTMFNSS 623
+                            67778888899999.667999999999999998875 PP
+
+>> FBpp0294037  pep primary_assembly:BDGP6.46:2L:20734911:20750941:1 gene:FBgn0262743 transcript:FBtr0305586 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.7   0.1   0.00036       0.8     731     784 ..     192     250 ..     179     263 .. 0.93
+   2 ?   -0.1   0.1      0.08   1.8e+02     198     233 ..     589     623 ..     581     725 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 7.7 bits;  conditional E-value: 0.00036
+  PTHR13298.orig.30.pir 731 ssesiRlyatkhLrvllraessdfsd.....WgielLvtqlydpskevakaAlkiLeea 784
+                            +s+++Rl at  L   l + +s+f++     +++e + ++ + ++++++ aAl++L ++
+            FBpp0294037 192 PSNHVRLAATTALHNSLEFTKSNFEKdmernFIMEVVCEATQCQDSQICVAALQCLVKI 250
+                            799************************************9999***********99765 PP
+
+  == domain 2  score: -0.1 bits;  conditional E-value: 0.08
+  PTHR13298.orig.30.pir 198 eagglrvlldallecqlperiaesllavllyllnrp 233
+                             +  l+ +l+++ e q +++i+++++++ll ++n+ 
+            FBpp0294037 589 LCATLQSVLRKVHE-QDAPQISDAIMTALLTMFNSS 623
+                            67778888899999.667999999999999998875 PP
+
+>> FBpp0294038  pep primary_assembly:BDGP6.46:2L:20734911:20750941:1 gene:FBgn0262743 transcript:FBtr0305587 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.7   0.1   0.00036       0.8     731     784 ..     192     250 ..     179     263 .. 0.93
+   2 ?   -0.1   0.1      0.08   1.8e+02     198     233 ..     589     623 ..     581     725 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 7.7 bits;  conditional E-value: 0.00036
+  PTHR13298.orig.30.pir 731 ssesiRlyatkhLrvllraessdfsd.....WgielLvtqlydpskevakaAlkiLeea 784
+                            +s+++Rl at  L   l + +s+f++     +++e + ++ + ++++++ aAl++L ++
+            FBpp0294038 192 PSNHVRLAATTALHNSLEFTKSNFEKdmernFIMEVVCEATQCQDSQICVAALQCLVKI 250
+                            799************************************9999***********99765 PP
+
+  == domain 2  score: -0.1 bits;  conditional E-value: 0.08
+  PTHR13298.orig.30.pir 198 eagglrvlldallecqlperiaesllavllyllnrp 233
+                             +  l+ +l+++ e q +++i+++++++ll ++n+ 
+            FBpp0294038 589 LCATLQSVLRKVHE-QDAPQISDAIMTALLTMFNSS 623
+                            67778888899999.667999999999999998875 PP
+
+>> FBpp0076708  pep primary_assembly:BDGP6.46:3L:6193480:6200385:1 gene:FBgn0024921 transcript:FBtr0077000 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.0   0.0    0.0011       2.5     760     795 ..     129     164 ..     104     178 .. 0.86
+   2 ?    0.7   0.1     0.045        98     762     826 ..     489     561 ..     449     579 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 6.0 bits;  conditional E-value: 0.0011
+  PTHR13298.orig.30.pir 760 elLvtqlydpskevakaAlkiLeeacedkanileyl 795
+                            + L + l++++  v++ A+++L+++ced+a+il+  
+            FBpp0076708 129 PSLCEMLDNQDYNVCEGAFSALQKICEDSAEILDSA 164
+                            45777889************************9875 PP
+
+  == domain 2  score: 0.7 bits;  conditional E-value: 0.045
+  PTHR13298.orig.30.pir 762 Lvtqlydpskevaka...AlkiLee.acedkanileylvs.lkpsllhlgdkgelLllr...flstpkGfryl 826
+                            L++ + d +k v +a   A+ +Lee ac + + +ley+ + l  +++++++k  l+l+     l+ ++G +++
+            FBpp0076708 489 LLKRILDSNKRVQEAacsAFATLEEeACTELVPYLEYILKtLVFAFSKYQHKNLLILYDavgTLADSVGHHLN 561
+                            44445455555555411167789999**999999***987367889999999888886511145556664444 PP
+
+>> FBpp0076709  pep primary_assembly:BDGP6.46:3L:6193480:6199596:1 gene:FBgn0024921 transcript:FBtr0077001 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.0   0.0    0.0011       2.5     760     795 ..     129     164 ..     104     178 .. 0.86
+   2 ?    0.7   0.1     0.045        98     762     826 ..     489     561 ..     449     579 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 6.0 bits;  conditional E-value: 0.0011
+  PTHR13298.orig.30.pir 760 elLvtqlydpskevakaAlkiLeeacedkanileyl 795
+                            + L + l++++  v++ A+++L+++ced+a+il+  
+            FBpp0076709 129 PSLCEMLDNQDYNVCEGAFSALQKICEDSAEILDSA 164
+                            45777889************************9875 PP
+
+  == domain 2  score: 0.7 bits;  conditional E-value: 0.045
+  PTHR13298.orig.30.pir 762 Lvtqlydpskevaka...AlkiLee.acedkanileylvs.lkpsllhlgdkgelLllr...flstpkGfryl 826
+                            L++ + d +k v +a   A+ +Lee ac + + +ley+ + l  +++++++k  l+l+     l+ ++G +++
+            FBpp0076709 489 LLKRILDSNKRVQEAacsAFATLEEeACTELVPYLEYILKtLVFAFSKYQHKNLLILYDavgTLADSVGHHLN 561
+                            44445455555555411167789999**999999***987367889999999888886511145556664444 PP
+
+>> FBpp0076710  pep primary_assembly:BDGP6.46:3L:6193746:6199596:1 gene:FBgn0024921 transcript:FBtr0077002 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.0   0.0    0.0011       2.5     760     795 ..     129     164 ..     104     178 .. 0.86
+   2 ?    0.7   0.1     0.045        98     762     826 ..     489     561 ..     449     579 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 6.0 bits;  conditional E-value: 0.0011
+  PTHR13298.orig.30.pir 760 elLvtqlydpskevakaAlkiLeeacedkanileyl 795
+                            + L + l++++  v++ A+++L+++ced+a+il+  
+            FBpp0076710 129 PSLCEMLDNQDYNVCEGAFSALQKICEDSAEILDSA 164
+                            45777889************************9875 PP
+
+  == domain 2  score: 0.7 bits;  conditional E-value: 0.045
+  PTHR13298.orig.30.pir 762 Lvtqlydpskevaka...AlkiLee.acedkanileylvs.lkpsllhlgdkgelLllr...flstpkGfryl 826
+                            L++ + d +k v +a   A+ +Lee ac + + +ley+ + l  +++++++k  l+l+     l+ ++G +++
+            FBpp0076710 489 LLKRILDSNKRVQEAacsAFATLEEeACTELVPYLEYILKtLVFAFSKYQHKNLLILYDavgTLADSVGHHLN 561
+                            44445455555555411167789999**999999***987367889999999888886511145556664444 PP
+
+>> FBpp0305273  pep primary_assembly:BDGP6.46:3L:6193480:6200385:1 gene:FBgn0024921 transcript:FBtr0333059 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.0   0.0    0.0011       2.5     760     795 ..     129     164 ..     104     178 .. 0.86
+   2 ?    0.7   0.1     0.045        98     762     826 ..     489     561 ..     449     579 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 6.0 bits;  conditional E-value: 0.0011
+  PTHR13298.orig.30.pir 760 elLvtqlydpskevakaAlkiLeeacedkanileyl 795
+                            + L + l++++  v++ A+++L+++ced+a+il+  
+            FBpp0305273 129 PSLCEMLDNQDYNVCEGAFSALQKICEDSAEILDSA 164
+                            45777889************************9875 PP
+
+  == domain 2  score: 0.7 bits;  conditional E-value: 0.045
+  PTHR13298.orig.30.pir 762 Lvtqlydpskevaka...AlkiLee.acedkanileylvs.lkpsllhlgdkgelLllr...flstpkGfryl 826
+                            L++ + d +k v +a   A+ +Lee ac + + +ley+ + l  +++++++k  l+l+     l+ ++G +++
+            FBpp0305273 489 LLKRILDSNKRVQEAacsAFATLEEeACTELVPYLEYILKtLVFAFSKYQHKNLLILYDavgTLADSVGHHLN 561
+                            44445455555555411167789999**999999***987367889999999888886511145556664444 PP
+
+>> FBpp0084903  pep primary_assembly:BDGP6.46:3R:29795697:29799354:-1 gene:FBgn0039696 transcript:FBtr0085537 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.3   0.3    0.0037       8.1     734     799 ..      22      90 ..       7     114 .. 0.65
+   2 ?    4.5   0.3    0.0032         7     942     997 ..     115     170 ..     110     182 .. 0.82
+   3 ?    3.5   0.2    0.0065        14      31     113 ..     297     390 ..     271     400 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 4.3 bits;  conditional E-value: 0.0037
+  PTHR13298.orig.30.pir 734 siRlyatkhLrvllra...essdfsd....WgielLvtqlydpskevakaAlkiLeeacedkanileylvslk 799
+                            ++ + ++  Lr  l     +           g+ ++v+ + + ++++++  l+iL ++c d+++++e++ ++k
+            FBpp0084903  22 TVIYKCLVKLRTDLVKdknGIV---LfrtaGGVHIMVRLITKLNEKIMEVVLSILGNCCTDEQSCIEAV-ECK 90 
+                            5555566666655553222222...133346888999999999****************9999988864.443 PP
+
+  == domain 2  score: 4.5 bits;  conditional E-value: 0.0032
+  PTHR13298.orig.30.pir 942 lghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgae 997
+                            lg+i++s+ + + l  +   + + i++++e+++ +  r ++f v  ++ +++q  +
+            FBpp0084903 115 LGNIAKSKKASQCLTVHYAAIAPAICHIIESTSAVQTRIMAFRVCRFLLASSQFLK 170
+                            78999999999999888888999999999999999999999988888888877644 PP
+
+  == domain 3  score: 3.5 bits;  conditional E-value: 0.0065
+  PTHR13298.orig.30.pir  31 llresrdsiekkleslnnlikl..........kaaakklnellgllkeeiiikedlvelelvs.clrslllseskevraaalRllryl 107
+                              +e++d++++ l++l+n++k           +a +  ++ l++++  ++  ++++ +   +   l++  +s sk  r +alR l ++
+            FBpp0084903 297 FVKEDGDQRASALKILSNFCKDpfafymlstaDAIVAACEMLMAVNMAKPLSESESRHCINIIlTLSTDACSRSKIRRCGALRKLVAM 384
+                            578999************************99999999999999999999996666666555557778999***************** PP
+
+  PTHR13298.orig.30.pir 108 isdskv 113
+                            i+ds++
+            FBpp0084903 385 IRDSNS 390
+                            **9887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      30799  (20378192 residues searched)
+Passed MSV filter:                      3829  (0.124322); expected 616.0 (0.02)
+Passed bias filter:                      690  (0.0224033); expected 616.0 (0.02)
+Passed Vit filter:                        90  (0.00292217); expected 30.8 (0.001)
+Passed Fwd filter:                        14  (0.00045456); expected 0.3 (1e-05)
+Initial search space (Z):              30799  [actual number of targets]
+Domain search space  (domZ):              14  [number of targets reported over threshold]
+# CPU time: 0.77u 0.32s 00:00:01.09 Elapsed: 00:00:00.52
+# Mc/sec: 46007.85
+//
+[ok]
