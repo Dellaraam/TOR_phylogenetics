@@ -1,0 +1,106 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Rhodophyta/Proteins/Cyanidioschyzon_merolae.ASM9120v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    5.3e-05   20.5   5.6    7.8e-05   20.0   5.6    1.2  1  CMG089CT  pep chromosome:ASM9120v1:7:233855:236450:-1 gene:CM
+      0.003   14.7  16.3     0.0033   14.6  16.3    1.0  1  CMN302CT  pep chromosome:ASM9120v1:14:743461:744460:-1 gene:C
+  ------ inclusion threshold ------
+       0.28    8.2   8.4       0.39    7.7   8.4    1.1  1  CMS197CT  pep chromosome:ASM9120v1:19:522456:525371:1 gene:CM
+        1.7    5.7  15.6        2.4    5.1  15.6    1.2  1  CMK157CT  pep chromosome:ASM9120v1:11:431447:434263:1 gene:CM
+
+
+Domain annotation for each sequence (and alignments):
+>> CMG089CT  pep chromosome:ASM9120v1:7:233855:236450:-1 gene:CMG089C transcript:CMG089CT gene_biotype:protein_coding tr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.0   5.6   6.3e-08   7.8e-05      95     155 ..     646     705 ..     544     711 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 20.0 bits;  conditional E-value: 6.3e-08
+  PTHR13335.orig.30.pir  95 kpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrker 155
+                            +  ++++++  +++q++++e++ ++e+++q+++ ++++++e++ ++  +++++++++++e+
+               CMG089CT 646 QRCVQSDDKVSHVEQQEQQEQQEQQEQQEQQEQQEQQEQQEQQEQQE-QQEQQEQQEQQEQ 705
+                            33333444444444444444444444333333333333333333333.3333333333333 PP
+
+>> CMN302CT  pep chromosome:ASM9120v1:14:743461:744460:-1 gene:CMN302C transcript:CMN302CT gene_biotype:protein_coding t
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.6  16.3   2.7e-06    0.0033      51     217 ..      63     230 ..      30     298 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 14.6 bits;  conditional E-value: 2.7e-06
+  PTHR13335.orig.30.pir  51 ssssesllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsr 138
+                            s ++   + ++ +a + gd ++  s+ + e        +++ +++ ++++++++q+++q++e+++++++ + l+   +s  s +++s 
+               CMN302CT  63 SVAPGATQGEAGRATNLGDATTTSSAQQQE--------QQQEQQQEQQQEQQQEQQQEQQQEQQQEQKLAQTLDPAALS-PSPIQSSA 141
+                            222222222222222222222222222222........22333333333333333333444444445555444444555.55555555 PP
+
+  PTHR13335.orig.30.pir 139 rrrantavkleklrkerrsksasiassee.r.............dqsscksiqwktessvkedsvqrassesslsserssdssssssa 212
+                              +++t  +++k+r + ++ sa++  +++ r             +    + + +  +   + +++  +  ++++  +++s+  ss+sa
+               CMN302CT 142 YPQSTTTTQRRKRRWA-EPASAPPTAPRKrRpldahdthldqagA----TPAASELSAAAEASTSYQTLIAATTPATTQSIPNSSESA 224
+                            5554555444444444.5556666666665599999999965552....444444334444444444444556666666666666777 PP
+
+  PTHR13335.orig.30.pir 213 psr.rq 217
+                            +s+ ++
+               CMN302CT 225 ASAlKP 230
+                            666444 PP
+
+>> CMS197CT  pep chromosome:ASM9120v1:19:522456:525371:1 gene:CMS197C transcript:CMS197CT gene_biotype:protein_coding tr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.7   8.4   0.00031      0.39      39     193 ..     152     288 ..     116     311 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 7.7 bits;  conditional E-value: 0.00031
+  PTHR13335.orig.30.pir  39 ekihsapyppvsssssesll.srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqs 125
+                            +++ +++   ++s++  s++ ++p +++t ++  + ds s  e     ++++k+ ++ p++d ++et   +    ses p+ +e+++s
+               CMS197CT 152 KSRRQLRHERLQSAAAASIEsATPVTSNTEKSAPKTDSHS-GE-----HVMDKQTETAPPSDASQETGARE---SSESTPARTESAAS 230
+                            5556666666677777777755555555555444444444.44.....499*****************777...9999999999**** PP
+
+  PTHR13335.orig.30.pir 126 vdissssldegsrrrrantavkleklrkerrsksasiasseerdqsscksiqwktessvkedsvqras 193
+                             ++ +    +  r+++++++ ++e +r++  s+++s+ +  +           + e+++++d v ++s
+               CMS197CT 231 ALLRRNRAPFIVRESSTDDEDRFEDVRSNAGSTGGSTPRAMS----------EGLEDPSNNDAVMTTS 288
+                            *****************************7777665544333..........3333334443333332 PP
+
+>> CMK157CT  pep chromosome:ASM9120v1:11:431447:434263:1 gene:CMK157C transcript:CMK157CT gene_biotype:protein_coding tr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.1  15.6    0.0019       2.4      44     211 ..     258     416 ..     212     503 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 5.1 bits;  conditional E-value: 0.0019
+  PTHR13335.orig.30.pir  44 apyppvsssssesll.srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdiss 130
+                            +p++ v +s++es++ +++ + + p+  g ++ +ss++ +++t++ +++  ++  +d +  +  e+q++++ +   + ++l+++ ++s
+               CMK157CT 258 PPRSLV-ESAPESRRrRTAFRTGVPA-GGIDITVSSPGERGQTRNYHRQHLGGVHQDADAGRGWEVQKATAPPHGYQSSNLAESRSTS 343
+                            455544.4444444434444444443.578999999***************************************9***********9 PP
+
+  PTHR13335.orig.30.pir 131 ssldegsrrrrantavkleklrkerrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssss 211
+                            ++  + + ++++ +    e+l ++ rs++a  +s ++ + ++ +  ++++  + ++++  +r++++s+ +se        +s
+               CMK157CT 344 RYNTQRQMQSNDRQLTMVETLGRHPRSTGARVSSAQTeD-SANVPETSSNSRNHSETSAAHRSDQSSDRDSE--------AS 416
+                            999999999999999999******999988888888777.78888777775555554444444333333333........22 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       4973  (2501354 residues searched)
+Passed MSV filter:                       500  (0.100543); expected 99.5 (0.02)
+Passed bias filter:                      176  (0.0353911); expected 99.5 (0.02)
+Passed Vit filter:                        29  (0.00583149); expected 5.0 (0.001)
+Passed Fwd filter:                         5  (0.00100543); expected 0.0 (1e-05)
+Initial search space (Z):               4973  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.13u 0.00s 00:00:00.13 Elapsed: 00:00:00.06
+# Mc/sec: 26920.22
+//
+[ok]
