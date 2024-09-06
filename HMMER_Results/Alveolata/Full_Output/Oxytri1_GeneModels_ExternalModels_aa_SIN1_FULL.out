@@ -1,0 +1,297 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Oxytri1_GeneModels_ExternalModels_aa.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                     -----------
+    1.4e-15   57.7  74.7    1.7e-15   57.5  72.2    2.0  2  jgi|Oxytri1|3190106|rna22775  
+    3.5e-07   30.0   0.0    5.2e-07   29.4   0.0    1.2  1  jgi|Oxytri1|3177632|rna16574  
+     0.0003   20.3  26.3    0.00042   19.8  26.3    1.1  1  jgi|Oxytri1|3170898|rna5868   
+     0.0054   16.2  18.7     0.0067   15.9  18.7    1.2  1  jgi|Oxytri1|3173674|rna13153  
+  ------ inclusion threshold ------
+      0.015   14.8  15.7      0.016   14.6  15.7    1.2  1  jgi|Oxytri1|3178851|rna8602   
+       0.12   11.7  39.9       0.23   10.8  27.4    2.6  3  jgi|Oxytri1|3172951|rna11630  
+       0.44    9.9  30.4       0.54    9.6  30.4    1.1  1  jgi|Oxytri1|3179193|rna6391   
+        2.9    7.1  33.2        3.7    6.8  33.2    1.1  1  jgi|Oxytri1|3190181|rna6175   
+        4.5    6.5  26.7        4.7    6.5  26.7    1.0  1  jgi|Oxytri1|3181996|rna12731  
+
+
+Domain annotation for each sequence (and alignments):
+>> jgi|Oxytri1|3190106|rna22775  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -5.1  22.2       5.4   1.5e+04     155     273 ..      84     206 ..      17     215 .. 0.53
+   2 !   57.5  72.2   6.4e-19   1.7e-15      58     664 ..     120     903 ..      85     915 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: -5.1 bits;  conditional E-value: 5.4
+         PTHR13335.orig.30.pir 155 rrsksasiasseer..........dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq....snk 220
+                                   + ++s +++ ++++          ++ ++k +q ++e+s++e            ss++ssd  s+ +++ + ++      +
+  jgi|Oxytri1|3190106|rna22775  84 MNNSSMNSMATNQNlkrdrtisdeANGGGKEVQTGYEESSSE------------SSSSSSDGGSEVDDYNFdPTkiqsIIE 152
+                                   333333333333334566666655567788888887777777............344444444444444444445523223 PP
+
+         PTHR13335.orig.30.pir 221 ldseqlsaeesdslfekkskssstktqkskkpssa.a...kqsisslssaLekkpsq 273
+                                    +se++++ +++++ +k+++ +s+++ + +++++  a   +++i   + +Lek +++
+  jgi|Oxytri1|3190106|rna22775 153 EESESDHEDSNKDIKPKADSQTSQQKPQITSQTQNiAkqeQKDI---QGQLEKIEQK 206
+                                   34444888888899999998888888888888887764443444...4444444442 PP
+
+  == domain 2  score: 57.5 bits;  conditional E-value: 6.4e-19
+         PTHR13335.orig.30.pir  58 l...srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdisssslde 135
+                                   +   s+++s+s++g s  +d+  ++          k+   ++   +++e+ +e+++++ +++ +++ ++q ++i+ s+ ++
+  jgi|Oxytri1|3190106|rna22775 120 EessSESSSSSSDGGSEVDDYNFDPT---------KI---QSIIEEESESDHEDSNKDIKPKADSQTSQQKPQIT-SQTQN 187
+                                   12213333333444444444333332.........22...35556777777777777777888888888888888.77777 PP
+
+         PTHR13335.orig.30.pir 136 gsrrrrantavkleklrke.rrsksasiassee.r.................dqsscksiqwktessvkedsvqrassess 197
+                                     ++++++ + +lek ++  r+sk ++i+   + +                 +     +i  ++ ++ ++  +++ ++++ 
+  jgi|Oxytri1|3190106|rna22775 188 IAKQEQKDIQGQLEKIEQKiRQSKLENINAVDNrKssyqtkfeekrakeqlqK-----DIIGGDGEYQADRVLTFRDMSHL 263
+                                   77777778899999999997777777776665533554444444444322221.....11112222223333333333333 PP
+
+         PTHR13335.orig.30.pir 198 lsserssdssssssapsrrqsnkldseq..................................................... 225
+                                   ++  + +                    +                                                     
+  jgi|Oxytri1|3190106|rna22775 264 SDAISTQ--------------------Drilqnenseivndlvlmnnfeqlrkkvfikekvdifqgnqhpkqtihkqtfkn 324
+                                   3333333....................122222223334445555555555555666666888888888888888889888 PP
+
+         PTHR13335.orig.30.pir 226 .....lsaeesdslfekkskssstktqkskkpssa.a........kqsi.sslssaLekkpsqlnnpfneya.kfdgkgvg 290
+                                        ++a+ + + f+k++ +++ ++q +++p+   +        +qs  s+ +s L++   q+    n y     ++g  
+  jgi|Oxytri1|3190106|rna22775 325 nkldsKTAKLQLQFFSKQQLEQEVPQQTTEHPQLQfQnsnnkseiSQSMqSQETSLLTTMIDQTLEGANDYLlPTPSQG-- 403
+                                   8999988888888899999999999999999999988888744433333544456666666666666778886777888.. PP
+
+         PTHR13335.orig.30.pir 291 ttaslkidiylplssepdkllpltvvvkasatVqevIGlaLwqyteeg.repklpdnk...vnaycLrivEdDGevd.... 363
+                                   +++++ i+iy++  ++      l++ +  +++Vq vI  +   y + +  + + p      ++ay+Lri +dD  vd    
+  jgi|Oxytri1|3190106|rna22775 404 DPSAISIKIYMFSTPK-----CLKIYIYRNSSVQNVIKHIMTLYNKDQiLSKEMPLKYpetPDAYELRIIDDD--VDyfvp 477
+                                   *************999.....9*************************9976666664454777**********..774445 PP
+
+         PTHR13335.orig.30.pir 364 .dDFPpLDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrleeakr.....sagsaneagsslstes...... 432
+                                    +D +pLDr+ +i++f    la   + +++ k  ++++   + eq ++ +e+++     +     +               
+  jgi|Oxytri1|3190106|rna22775 478 fHDIGPLDRKDEIGEFE--SLAFIDNKNYSRKYDQQRNESMEDEQNQNRQEEEKlkkqnK-----R--------Lmnvqvn 543
+                                   57**************7..99999999999888666655555555555555555333322.....2........0222333 PP
+
+         PTHR13335.orig.30.pir 433 ................................................................................. 432
+                                                                                                                    
+  jgi|Oxytri1|3190106|rna22775 544 tallktnmsfimiqdqtvreliqeisakagenflntkqfvlipihneqsnkngyvqptmsqfggqitayqdnlfniaqssg 624
+                                   346666799999***********************9999999999999999999999999999999999999999999888 PP
+
+         PTHR13335.orig.30.pir 433 ........skeslfvkvnlaypgdsvrskttivvptdvtladvlekackk.rkldqkkyrllkvsepnvivdldrtvesld 504
+                                            + + f++    +++     ++t++v +d++++   e  ++k + l+++        ++nv+  l  t+++++
+  jgi|Oxytri1|3190106|rna22775 625 rfdydanyINWNTFIRNLK-SQNV----MLTDKVYVDMPIKKQKEVPMQKkKDLEMTF------KDKNVLQLLKTTFNNTN 694
+                                   8888555433333333222.3333....499999999999987766555514444443......6**************** PP
+
+         PTHR13335.orig.30.pir 505 gleflllrknssradgvlekteskssssanatissksaa........................edsqiqiatvqddlsssa 561
+                                    ++ l ++  +++a++ +++ +++s s+a +ti+s+s +                         d+ + +++ +  +s++ 
+  jgi|Oxytri1|3190106|rna22775 695 SNNNLQVSTEKQEATQQFQNINQNSISPAKDTIMSQSVIspnrlpkmksqiistnsssekqeqGDHRQEDDFLFGSISAAR 775
+                                   **************************************9*******************9999855556666888889**** PP
+
+         PTHR13335.orig.30.pir 562 yksfkVsrkhkmrfktdrelgIdgdyieimPvenqkaa..........................tkfwekqKtisihisqv 616
+                                   y++f V+++++ + ++ r lgIdg  i+++   ++k+                            k+  + K++ + i+++
+  jgi|Oxytri1|3190106|rna22775 776 YQEFLVTKINRRGKRQTRVLGIDGFNIYNVRKSQAKNVfgqsaaiempptekekkrgsffsgflGKKLLGVKRKARVINSI 856
+                                   **********************************************99977777777766666666666666666666666 PP
+
+         PTHR13335.orig.30.pir 617 vacklssknpanFkivvrrendeKryd.feavsaaeaaeIvskinnile 664
+                                     +   + n ++  iv+ ++n++K+ + +e+ +a+ ++eI++k+n +++
+  jgi|Oxytri1|3190106|rna22775 857 DEIQ--KINNQTISIVFIEKNGTKKAIvYECMTADNCSEIIAKLNFLRK 903
+                                   6664..56666677788886666665538****************9975 PP
+
+>> jgi|Oxytri1|3177632|rna16574  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.4   0.0   1.9e-10   5.2e-07     342     429 ..     148     239 ..     137     281 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 29.4 bits;  conditional E-value: 1.9e-10
+         PTHR13335.orig.30.pir 342 klpdnkvnaycLrivEdDGevddDFPpLDrnepiskfgfselaLveat....dsegktnndlqtplpreqkkrleeakrsa 418
+                                    l+d+++n y+L ++   G+  dDFP +++++ +sk++++ +aL+ +     +s+    ++ qt+ +r++kk+++  ++ +
+  jgi|Oxytri1|3177632|rna16574 148 ILEDSDLNFYELFMAKKTGKPNDDFPNIEKSQIVSKINYNRFALCVKQqaivPSPAFMAQSYQTQVQRDPKKQSMLLGNLS 228
+                                   56777799*************************************77522227899999*******************998 PP
+
+         PTHR13335.orig.30.pir 419 gsaneagssls 429
+                                   g++++ag+++s
+  jgi|Oxytri1|3177632|rna16574 229 GQNAAAGANMS 239
+                                   88888888875 PP
+
+>> jgi|Oxytri1|3170898|rna5868  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.8  26.3   1.5e-07   0.00042      23     243 ..      81     363 ..      51     429 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 19.8 bits;  conditional E-value: 1.5e-07
+        PTHR13335.orig.30.pir  23 ddgmcerilndd..............................................................dvdlekih 42 
+                                   d +c+ + n d                                                              +++++ ++
+  jgi|Oxytri1|3170898|rna5868  81 YDLYCNLVPNEDesspiydwvprtgsfevsykgmlvfsklqstfwpntqligekcyllvqdesenkdltkylagSSPVKGNK 162
+                                  4556666666667777777777777777777777777777777777777777777777777788777777777777788888 PP
+
+        PTHR13335.orig.30.pir  43 sapyppvsssssesll.srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeel 123
+                                  + +  ++++s+ + +  s+ k+as+p ++ + +  ss +      ++ +   + ps+ q +++ + +q+++++++++++e++
+  jgi|Oxytri1|3170898|rna5868 163 NSRLAGANRSPTRDMGnSSFKNASSPSRHETTQKFSSQQ------VAAPRN-QTPSAAQLQQQYQLQQQKAVQEEQEQRERE 237
+                                  888888888888888777777777777777666666444......222222.223333333333334466777777777788 PP
+
+        PTHR13335.orig.30.pir 124 qsvdissssldegsrrrrantavkleklrke....rrsksasiasseer.........dqsscksiqwktessvkedsvqra 192
+                                  q+++++++sl +++r++ +++++ +e++ ke    r+ + ++ ++   +          ++  + ++ ++e+s k ++  +a
+  jgi|Oxytri1|3170898|rna5868 238 QQEEFQRQSLLQQQREQEMKEQQIREQQAKEaeikRQEELKKQQQM--QqqqeerekhERAEAEKKKKQEEESKKVPTENSA 317
+                                  8888888888888888888666666655555465533222222222..1222444555567777777777777777777777 PP
+
+        PTHR13335.orig.30.pir 193 ssesslsserssdssssssapsr.rq...snkldseqlsaeesdslfekksksss 243
+                                   s++++s ++s +  s +++p++      +       +++ ++ s ++k+++++ 
+  jgi|Oxytri1|3170898|rna5868 318 NSKHDISKDESNK--SIHQDPKFlDHsksR-------QDTIPAQSSLHKQPSNTY 363
+                                  7777777777666..334444442222221.......333333333344443332 PP
+
+>> jgi|Oxytri1|3173674|rna13153  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.9  18.7   2.5e-06    0.0067      36     191 ..      11     159 ..       1     285 [. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 15.9 bits;  conditional E-value: 2.5e-06
+         PTHR13335.orig.30.pir  36 vdlekihsapyppvsssssesll.srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqsseses 115
+                                   + l++  + + ++  +  + sl+ +r+  a+++    +ed+ s +  e ++++ + ++ +++++++ +++q+ +     ++
+  jgi|Oxytri1|3173674|rna13153  11 DKLKRKLQEKKKKQEKDNEDSLRkQRILAAAQDS---DEDNESVE--EKVQVTKNGKQIQGQQKQNVQQSQKKH-----KQ 81 
+                                   4566666666666666666666554444444422...33322222..233445555555555555555555555.....55 PP
+
+         PTHR13335.orig.30.pir 116 spsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r.dqsscksiqwktessvkedsvqr 191
+                                   + s+e++++++++++++  +++ + r+n +++++++++   + ++ ++++++ +  qs +k+ +++ ++ vk ++ ++
+  jgi|Oxytri1|3173674|rna13153  82 AESDEDSSDNEELNDQESSDEDEDPRDNVKLRSRSQSQDEVAAAQRRSRTNSkDqTQSALKNSKQSIKEDVKVEENKL 159
+                                   555555555555555555555555555555555555555333333333333332459*********999998755554 PP
+
+>> jgi|Oxytri1|3178851|rna8602  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.6  15.7   5.9e-06     0.016      87     226 ..      50     201 ..      16     351 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 14.6 bits;  conditional E-value: 5.9e-06
+        PTHR13335.orig.30.pir  87 gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseer 168
+                                    +++++++++++q++++ g +q+ ++++++++++++ +  i+  +l++++ ++  + a++l++l+++++            
+  jgi|Oxytri1|3178851|rna8602  50 IIQQNQQQHQQQNQAQQQIGNEQKMQQQQQQDQQQQQIAAAIDAAQLQQQIMNQT-AAALQLQQLQQQQQ------------ 118
+                                  4456677777777777777777777777777777777777888666666665555.77888888888866............ PP
+
+        PTHR13335.orig.30.pir 169 dqsscksiqwktessvkedsvqras..sesslsserssdssssssapsr.rqsnkldseq...................... 225
+                                   q  + +   + ++s++++ +  as  s   l+s ++ +        +  +q++++++ q                      
+  jgi|Oxytri1|3178851|rna8602 119 -QQPLLNLGVNANTSSSISQLMGASlnSNLHLGSHMNYN--------QPiQQQQQQQDPQisiyrglyfsarplslkqisqq 191
+                                  .44455555554444444333222200222333333333........22233222222223666666655555555555533 PP
+
+        PTHR13335.orig.30.pir 226 .........l 226
+                                           +
+  jgi|Oxytri1|3178851|rna8602 192 nmlqnplnsK 201
+                                  3443333330 PP
+
+>> jgi|Oxytri1|3172951|rna11630  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.1   0.5   0.00013      0.37      86     159 ..     280     356 ..     174     526 .. 0.78
+   2 ?   -3.8   0.3       2.2     6e+03     388     442 ..     979    1046 ..     966    1048 .. 0.57
+   3 ?   10.8  27.4   8.4e-05      0.23       4     263 ..    1211    1579 ..    1209    1656 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 10.1 bits;  conditional E-value: 0.00013
+         PTHR13335.orig.30.pir  86 g.....gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsks 159
+                                         +++ +r+++ +l ++ +t + +++s s+s + +++++qsvd +  + d +s +   + ++kl+ +++ r++  
+  jgi|Oxytri1|3172951|rna11630 280 SeevvlTQKDQRNQEEDLFGSEATVNLQNQSYSQSGQILNQNDQSVDVNMIEFDLSSPQMP-SSQQKLQLQQNLRKN-L 356
+                                   03333466778888899999999**************************999999998877.445555444333332.1 PP
+
+  == domain 2  score: -3.8 bits;  conditional E-value: 2.2
+         PTHR13335.orig.30.pir  388 atdsegktnndlqtplpreqkkrleeakr....sagsaneagsslstes..........skeslfvkvn 442 
+                                      +++ ++n+dlq+ +++ ++ + +  k+    s+ s+ ++++s+ ++s          +++++++k+n
+  jgi|Oxytri1|3172951|rna11630  979 SQENQ-EKNDDLQHLIESLSSDDISGIKSilskSSASSGTSTNSTGFGSaffaknllfqNSAPKVIKIN 1046
+                                    33333.445666666666666655555556555555555555555555566666666666666666666 PP
+
+  == domain 3  score: 10.8 bits;  conditional E-value: 8.4e-05
+         PTHR13335.orig.30.pir    4 ldnedillahlRtsyltsdddgmcerilndd................................................ 34  
+                                    l++e++l   l +++ +s+ +  +e i+n +                                                
+  jgi|Oxytri1|3172951|rna11630 1211 LNVESYLQGSLNQQTNSSTTTKSSESIVNRPltkleqnlfflfenglvkmsqlgqrqsymlsnistkqtdegiemlnis 1289
+                                    5666777777888888888888888888888888888888888888888888888888888888888888888888888 PP
+
+         PTHR13335.orig.30.pir   35 ..................................................................dvdlekihsapyp 47  
+                                                                                                      d dl+ + s  ++
+  jgi|Oxytri1|3172951|rna11630 1290 tfvsigivtligiiifplvskvierqysvirffnyldveaidailaqgntfqkqlqlkigkvqnevDEDLDNNNSGGNT 1368
+                                    89999999999999999999999999999999999999999999999999999999999999999999*********** PP
+
+         PTHR13335.orig.30.pir   48 pvsssssesll..srpksastpgdsgsedsgssneaetatg.........gdtkarrkkpsldqrretqgekqsseses 115 
+                                    pv+s  +++     + +++  ++ ++s+++  +n   +a+          + +k+ + k s+ +++++q+++++ ++++
+  jgi|Oxytri1|3172951|rna11630 1369 PVNSDDEKTGKveIKLTKNQLSQLESSQNNKTQNK--NAKSvftqgerkkKYQKFEQLKLSSASKNSKQQDQKKRKAQN 1445
+                                    ********999887788888888888888777776..444423555555555555555555555555555555555555 PP
+
+         PTHR13335.orig.30.pir  116 spsyeeelqsvdissssldegsrrrrantavkleklrke.rrsksasiasseerdqsscksiqwktessvkedsvqras 193 
+                                     + +++  +++d +  s de++++  ++++ +++++ +  +++++++  + ++      ++iq k +++ ke+s     
+  jgi|Oxytri1|3172951|rna11630 1446 LKLNKDIFENMDYD--SNDEQDKKPPQTKKNRRDSMDEDvKQPQQEGKKKNRQ-----DQNIQDKKNGKKKEESDEDRE 1517
+                                    55555544444444..3333333344344444444444444444444444333.....235666655566655555555 PP
+
+         PTHR13335.orig.30.pir  194 sesslsserssdssssssapsr.rqsnkldseqlsaeesdslfekkskssstktqkskkpssaakqsissl 263 
+                                    s++  +s ++ d+  ++++ ++ ++ n++ ++   +ee++++        + ++q+++k++ a   +i++l
+  jgi|Oxytri1|3172951|rna11630 1518 SSQNDRSGKNGDHNKRKDRKRQnSKTNQQHKNLHKNEEENKV------QDTNEDQNKNKQIAA---QIQKL 1579
+                                    555555666666443333333322233333333333333333......222333333333333...23222 PP
+
+>> jgi|Oxytri1|3179193|rna6391  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.6  30.4    0.0002      0.54      89     226 ..     214     357 ..     155     391 .. 0.42
+
+  Alignments for each domain:
+  == domain 1  score: 9.6 bits;  conditional E-value: 0.0002
+        PTHR13335.orig.30.pir  89 tkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseerdq 170
+                                  +k+++++++  ++ e+++ +   e++++++yee+  s++++     e+s  + ++t+ k+++ +  ++     +       +
+  jgi|Oxytri1|3179193|rna6391 214 DKISSGGSGIGEDEEEEKKE--GEQDEDDEYEEQKSSEESD---PGEESSSSDDSTDSKSNNKHIKQQT----N-------K 279
+                                  33333333333333333222..3333333333333333332...2222222222233333333333331....1.......2 PP
+
+        PTHR13335.orig.30.pir 171 sscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq......snkldseq..................l 226
+                                  ss k+++ k   s k++s+ ++ss++s+ s+ ss+sssss+ +++ +       +++  ++q                  +
+  jgi|Oxytri1|3179193|rna6391 280 SSNKNTKTK---SAKSSSSNSESSSQSSNSSNSSNSSSSSNSSQEgKNrklsnsQKQRLEQQhkltmkklkmleyssgsdC 357
+                                  222222222...111112222222222222222222222222222111223333222222223333333455555444440 PP
+
+>> jgi|Oxytri1|3190181|rna6175  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.8  33.2    0.0013       3.7      88     248 ..      22     177 ..       2     260 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 6.8 bits;  conditional E-value: 0.0013
+        PTHR13335.orig.30.pir  88 dtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r 168
+                                   ++++++++s++++r++  ++     +++++ ++++    +s++ + ++++rr+ n +   e++rk+++s s+++ +  + r
+  jgi|Oxytri1|3190181|rna6175  22 RDQKPAGEKSVNKSRKRSDSR---RRSKERDRRDRDPKRGSSRDRDRDHRHRRS-NRSRSNERRRKRTHSRSKDRKKHHSsR 99 
+                                  234444455555555555444...333333444455566666444555554444.888888888888888888888888777 PP
+
+        PTHR13335.orig.30.pir 169 dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkldseqlsaeesdslfekkskssstktqk 248
+                                  +qss+ + +++  +s  +++++r+ s +s+ss++ss+sss+ sa++rrq++ ++++ + +e+ ++ f++++  +++++q+
+  jgi|Oxytri1|3190181|rna6175 100 KQSSSHRHRSR--RSRDRKRRDRSRSPKSSSSDSSSSSSSDGSASRRRQREAVKKRTRIQENVHPYFQRRKGQEEEPEQQ 177
+                                  77777777777..6666677888888888889999998899999888665555555555555555555555222222222 PP
+
+>> jgi|Oxytri1|3181996|rna12731  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.5  26.7    0.0017       4.7     102     233 ..      10     155 ..       1     215 [. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 6.5 bits;  conditional E-value: 0.0017
+         PTHR13335.orig.30.pir 102 retqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r............. 168
+                                   +++ + k++++s+ + s++e+++s+d+ss s d+  + r + +++ +++l++e+r+  +++ s ++ +             
+  jgi|Oxytri1|3181996|rna12731  10 SRKDKKKDHKKSK-KYSKKERTESSDLSSISSDDDAQLRDQLEQLSESELKDEIRKIVQESKSQKSnKgkeieehrkrdkk 89 
+                                   1122222222222.333566999999999999999999999************6544444444433224455566665333 PP
+
+         PTHR13335.orig.30.pir 169 ..dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkldseq.......lsaeesds 233
+                                             + k+ + + +++++r+ ++ ++s+ +s +++ +++ + ++++  +   +       ++++e ++
+  jgi|Oxytri1|3181996|rna12731  90 lqE-----KLEAKYGKLSGDKKRKRSENSLTSSQPSSDNEEQKQNKSHSQKQHSQ---SsqvmfkpTYDKEGSA 155
+                                   331.....33333333333333333333333333332222211111111111111...0111233323333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      24578  (15782302 residues searched)
+Passed MSV filter:                     12963  (0.527423); expected 491.6 (0.02)
+Passed bias filter:                     1714  (0.0697372); expected 491.6 (0.02)
+Passed Vit filter:                      1138  (0.0463016); expected 24.6 (0.001)
+Passed Fwd filter:                        91  (0.0037025); expected 0.2 (1e-05)
+Initial search space (Z):              24578  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 4.01u 0.25s 00:00:04.26 Elapsed: 00:00:02.20
+# Mc/sec: 4815.40
+//
+[ok]

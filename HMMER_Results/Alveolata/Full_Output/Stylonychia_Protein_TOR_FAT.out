@@ -1,0 +1,97 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Stylonychia_Protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    6.9e-44  150.7  25.4    6.9e-44  150.7  25.4    3.3  4  CDW74011.1  target of rapamycin [Stylonychia lemnae]
+
+
+Domain annotation for each sequence (and alignments):
+>> CDW74011.1  target of rapamycin [Stylonychia lemnae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.2   0.0      0.21   4.3e+03      17      39 ..    1459    1481 ..    1441    1492 .. 0.63
+   2 ?   -3.2   0.1       0.2   4.2e+03     246     280 ..    1561    1588 ..    1532    1594 .. 0.56
+   3 !  150.7  25.4   3.3e-48   6.9e-44       2     342 ..    1643    2021 ..    1642    2022 .. 0.85
+   4 ?   -5.9   2.6         1   2.1e+04     222     274 ..    2555    2607 ..    2545    2651 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: -3.2 bits;  conditional E-value: 0.21
+                  CCCCT....TSSSS--CCCHCCC CS
+         FAT   17 meeylslmkkdspdkaffeaila 39  
+                  me+yls++k++s    ++++il+
+  CDW74011.1 1459 MENYLSAIKSNSKPTIVLQTILN 1481
+                  55555555555555555555554 PP
+
+  == domain 2  score: -3.2 bits;  conditional E-value: 0.2
+                  CTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTC CS
+         FAT  246 lkkGewlaalqklnwseekseeilqaysaateldp 280 
+                   +k +w ++l++        +++l  y + +++dp
+  CDW74011.1 1561 DEKEDWYEKLHR-------WKDALRIYEQKQQYDP 1588
+                  344445555555.......4555555555555555 PP
+
+  == domain 3  score: 150.7 bits;  conditional E-value: 3.3e-48
+                  CCTTCCCCTSSSGHHCCCCT......TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCS CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk..kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqk 96  
+                  +la  +aW++g+W++ ++y+++++  k+ ++++ff+a+l +  +++++a+++i+kar+ l+ ++++l gesynray l++ +Q l Eleeii+ykq 
+  CDW74011.1 1643 ELASYSAWNMGNWENFQQYVKVLDiqKNPYERNFFQAVLDIKSSKYNDAQKHIDKAREVLDPKITSLLGESYNRAYLLIQEMQNLRELEEIIEYKQI 1739
+                  678889*******************9*********************************************************************** PP
+
+                  S----TTTTTTT----TTS-TT.TGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHH CS
+         FAT   97 lssseelksllktWrkRlpgvq.ddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyayl 192 
+                    ++ + k+l++ W  Rl+    +d+e wq+ l +R lv++++e+       ++ +lkfa+la + g+ +l +++L +l+ e  +  ++      +l
+  CDW74011.1 1740 ATDETRKKHLYNLWCSRLEYQPsQDLEQWQKSLNIRNLVIDKSEE-------IDYYLKFAKLAQNCGNNDLGQRVLINLKNELIKAKAE-----KSL 1824
+                  ******************877779*********************.......***************************4443322222.....455 PP
+
+                  HHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCC...CCCCCCCT.S...-SSCCHHHHCCHHCTCCCHST CS
+         FAT  193 kylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGew...laalqklnwseekseeilqaysaateldpswyka 285 
+                  k++ +  +++ a+q+   f+s +++++ ++++       + +e+  +++ + cylk+G+w   +++l+k n +e + ++ilq   +at+++p+  +a
+  CDW74011.1 1825 KLTNQFAKVEFAIQQT-VFISGKYHEAIQNLKK----LIQDKEDMDHQIkSDCYLKLGQWhyeQQELNKINLTEGDYQHILQTCEQATQIHPKNQEA 1916
+                  5555555555555554.4555555554333333....335677777888899*******7555899999**************************** PP
+
+                  TCCCCHHHHHCCHHHHHHSSSS...........................................S-TCCHHHHCCT..CCHHHHTTTS.......S CS
+         FAT  286 whtwalfnfevlskeeekkeeee..........................................pedlseyvvpavegflkslslsse.......k 333 
+                  wh   l+n e+  +  ++ +ee                                           ++ +  +vv a++g  + lsls++       k
+  CDW74011.1 1917 WHFYSLMNYEACIYFSKRLNEEYsqlqenssqsyqtnifddfspqtsyqiqqlqahatisqiqlgQKYVY-HVVCAIKGLVQQLSLSDQmyssdmtK 2012
+                  ***9998888776665552222245666778999**************************9999666665.****************9977777788 PP
+
+                  TTTCHHHHH CS
+         FAT  334 slqdllRlL 342 
+                  +lq +lRlL
+  CDW74011.1 2013 TLQNTLRLL 2021
+                  888888888 PP
+
+  == domain 4  score: -5.9 bits;  conditional E-value: 1
+                  S-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHC CS
+         FAT  222 lssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysa 274 
+                   +++++ q++ n ee+++++  +++ k++ +++ ++++ +e   e++l+ +++
+  CDW74011.1 2555 QQKNNTDQQNPNQEEQKQNVNNAFAPKSMSTRKGKNGTIRESIVEQVLERFQK 2607
+                  34444445555666666666677777777555555555555555555555544 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      20740  (11915981 residues searched)
+Passed MSV filter:                      4523  (0.218081); expected 414.8 (0.02)
+Passed bias filter:                      272  (0.0131148); expected 414.8 (0.02)
+Passed Vit filter:                        10  (0.00048216); expected 20.7 (0.001)
+Passed Fwd filter:                         1  (4.8216e-05); expected 0.2 (1e-05)
+Initial search space (Z):              20740  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.22u 0.00s 00:00:00.22 Elapsed: 00:00:00.09
+# Mc/sec: 41160.71
+//
+[ok]

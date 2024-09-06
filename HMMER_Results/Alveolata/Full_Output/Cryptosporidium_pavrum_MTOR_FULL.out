@@ -1,0 +1,227 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Cryptosporidium_pavrum.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    7.1e-07   27.1  11.7     0.0039   15.0   0.0    5.8  6  EAK90059.1  splicing factor 3B subunit1-like HEAT repeat cont
+    1.2e-05   23.1  10.0       0.42    8.4   0.0    7.1  8  EAK90328.1  importin/karyopherin (Arm repeats) [Cryptosporidi
+     0.0024   15.7   0.1       0.38    8.5   0.0    3.2  2  EAK87682.1  4xEZ_heat domains protein [Cryptosporidium parvum
+  ------ inclusion threshold ------
+      0.015   13.1   3.2      0.014   13.2   0.5    2.3  3  EAK90071.1  beta-adaptin AP complex subunit-related; ARM/HEAT
+        1.5    6.6   9.2       0.17    9.6   0.1    3.8  4  EAK87852.1  hypothetical protein with a signal peptide, gene 
+
+
+Domain annotation for each sequence (and alignments):
+>> EAK90059.1  splicing factor 3B subunit1-like HEAT repeat containing protein [Cryptosporidium parvum Iowa II]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.1   0.0       1.8   1.4e+03      38      72 ..      53      91 ..      50     102 .. 0.47
+   2 !   15.0   0.0   5.2e-06    0.0039      70     132 ..     240     303 ..     218     327 .. 0.89
+   3 ?   -0.3   0.1      0.25   1.9e+02      89     157 ..     410     481 ..     379     484 .. 0.57
+   4 !   10.8   0.0   9.7e-05     0.074      80     158 ..     611     688 ..     560     690 .. 0.81
+   5 ?    3.0   0.0     0.025        19     106     153 ..     719     767 ..     705     770 .. 0.87
+   6 ?   -0.3   0.1      0.26     2e+02      78     126 ..     846     893 ..     788     916 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: -3.1 bits;  conditional E-value: 1.8
+    mTOR_dom 38 lGALDPykhkeveekseee...ekeeenaeetdvsel.l 72
+                +G LD  k +  +++ e+    +++ e+++++++se+  
+  EAK90059.1 53 CGKLDQKKSRWDNGEVETLreaKETVETNSSEQSSEVcS 91
+                677888888766666533222233333333334444422 PP
+
+  == domain 2  score: 15.0 bits;  conditional E-value: 5.2e-06
+    mTOR_dom  70 ellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipa 132
+                 ++++++ ++  +  p +++n Ll +l +++l+ + +++ v+a+  i++ lg k+ p++ +i+  
+  EAK90059.1 240 KAMKQIVETARDHGPGIILNHLLPLLMQSTLEeQERHMLVKALDRILQRLGEKVKPYVHKILVV 303
+                 56899999999*********************8899************************9865 PP
+
+  == domain 3  score: -0.3 bits;  conditional E-value: 0.25
+    mTOR_dom  89 naLlkilkdpsls.shhtavvqai..msifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157
+                 ++L++i++    + +++  v++a+   s + + +    ++  + i+ ++ + i++  s+ +  +l+ +++++s
+  EAK90059.1 410 KSLVQIISHGLSDeNQKVRVITALslAS-LAEASSPYgIEAFEPILGQIWKGISEYRSRNLASYLKAMGQMIS 481
+                 4555555444333344444555442122.22233333355666677777777777777777777777777776 PP
+
+  == domain 4  score: 10.8 bits;  conditional E-value: 9.7e-05
+    mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                 e+  ++  +  +l i++++s +   ++vv+ +  i+  lg+++ ++lpqi + +   ++t +++ r++  + +a ++ +
+  EAK90059.1 611 EQRLEKLLVDGILYIFQESSTD-EDSSVVENVGRILTLLGTRSKQYLPQISSIIRWRLNTPSPRARQTAADLVAGIIGV 688
+                 5556666777788888777755.899************************98888888888888888877777666665 PP
+
+  == domain 5  score: 3.0 bits;  conditional E-value: 0.025
+    mTOR_dom 106 avvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLa 153
+                 +++ a++ i+ +++++   p +++++p l+ ++++ +++++e ++q L+
+  EAK90059.1 719 SIIGALHAIVTQVRVEKlSPPIKELVPRLTPILKNRHEKVQENIIQLLG 767
+                 6788999999999998878999999999999999999999999999885 PP
+
+  == domain 6  score: -0.3 bits;  conditional E-value: 0.26
+    mTOR_dom  78 sseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpfl 126
+                  se   p +v+ a+++  + p l+  ++ v++++ ++f+++g+ +  ++
+  EAK90059.1 846 ISEICMPYTVLPAIMNEYRIPDLN-VQNGVLKTLSFMFEYIGTMSKDYI 893
+                 334445555555556656666655.455666666666666666555555 PP
+
+>> EAK90328.1  importin/karyopherin (Arm repeats) [Cryptosporidium parvum Iowa II]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.5   0.1     0.071        54     106     156 ..     199     249 ..     161     253 .. 0.74
+   2 !    4.4   0.7     0.009       6.9      72     138 ..     248     321 ..     228     331 .. 0.80
+   3 ?    2.2   0.1     0.044        33      78     155 ..     410     490 ..     383     495 .. 0.64
+   4 ?    4.2   0.3     0.011       8.1      72     141 ..     449     518 ..     413     539 .. 0.78
+   5 ?    4.1   0.0     0.011       8.7      88     146 ..     507     567 ..     496     579 .. 0.81
+   6 !    8.4   0.0   0.00055      0.42     100     149 ..     613     659 ..     590     661 .. 0.79
+   7 ?   -0.3   0.1      0.26     2e+02      87     154 ..     724     772 ..     694     790 .. 0.48
+   8 ?   -1.4   0.0      0.55   4.2e+02      21      38 ..     868     885 ..     860     962 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 1.5 bits;  conditional E-value: 0.071
+    mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                 +++  i si+++ + k  + l  +ip++l++++++ s     +++ L  L+
+  EAK90328.1 199 EAIGLISSIVESNDKKNWSPLVPLIPSILETLQNLISAQHALVIDVLYRLT 249
+                 566778999999999998888888888888888776655555555555555 PP
+
+  == domain 2  score: 4.4 bits;  conditional E-value: 0.009
+    mTOR_dom  72 lvglspsseeyypt...vvinaLlkilkdpsls.shhtavvqaimsifktlglkcvp...flpqiipallsvir 138
+                 l+++s+s+  +y +   + + ++l+i k+ +ls + ++a+++ ++ i++t  + cv+   f++  +++lls + 
+  EAK90328.1 248 LTTISESEPAFYRQhfsIFFPQILNIAKNIQLStDIRQAAMECLLCIVETRPMMCVKhpsFVNDMVSTLLSFML 321
+                 6778888888888777789999**********98999*************887776545599999999999886 PP
+
+  == domain 3  score: 2.2 bits;  conditional E-value: 0.044
+    mTOR_dom  78 sseeyypt...vvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+                  +++ y+     +i+ +l  l+d+  +  + a+ q+i +i  + +     +f + +ip+l+++i +  s+++   l+ L ++
+  EAK90328.1 410 EDDDNYQDrigQIISRVLGFLQDQFPR-VRYACCQTIGQISLDHSPFIqEAFHSSVIPQLIQAIDDPISKVSSHALSALINF 490
+                 555555553334566666666666544.566777777777655443333678888888888888887667776666666655 PP
+
+  == domain 4  score: 4.2 bits;  conditional E-value: 0.011
+    mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtce 141
+                   + sp  +e +++ vi +L++ ++dp  s+  + +++a+++  +++  +   p+++ ++ +ll ++++ +
+  EAK90328.1 449 SLDHSPFIQEAFHSSVIPQLIQAIDDPI-SKVSSHALSALINFTEEVVAEDlQPYVRPLMEKLLGILHKHP 518
+                 4556788899999999999999997776.567777888888888887666658999999999998888654 PP
+
+  == domain 5  score: 4.1 bits;  conditional E-value: 0.011
+    mTOR_dom  88 inaLlkilkdpsls..shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146
+                 +++Ll il+++       ++++++ +  i   ++   +p+++ +ip l +++++++++lr 
+  EAK90328.1 507 MEKLLGILHKHPQPprIVREQCITMVAVIAGVIENDFTPYYSTVIPYLKKTMNEASPQLRT 567
+                 56677777544433236688999999999999999******************99998875 PP
+
+  == domain 6  score: 8.4 bits;  conditional E-value: 0.00055
+    mTOR_dom 100 lsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+                 l+++ ++++q +  i+k      vp+lp+++p ++++++t e+sl   ll
+  EAK90328.1 613 LKEYLQEALQRMCRIMK---QDFVPYLPHLLPGIFNILETREDSLATKLL 659
+                 55666666666666666...599*****************9999987776 PP
+
+  == domain 7  score: -0.3 bits;  conditional E-value: 0.26
+    mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLat 154
+                 vi+ L++      +++   +v++ +++i+++l  +                     ++r  + q +++
+  EAK90328.1 724 VIHPLIRFSLSDEIKEKTYEVLSGLLKIMRELAERDS-------------------NIRTQFSQIMNE 772
+                 4444444444444444444444444444444333221...................222222222233 PP
+
+  == domain 8  score: -1.4 bits;  conditional E-value: 0.55
+    mTOR_dom  21 teqsqsiRrevikvlGil 38 
+                 +eq+q++R++++ +lG+l
+  EAK90328.1 868 KEQEQELRLNILGILGVL 885
+                 345666666555444443 PP
+
+>> EAK87682.1  4xEZ_heat domains protein [Cryptosporidium parvum Iowa II]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.2   0.0     0.022        17      12      39 ..      99     127 ..      67     231 .. 0.75
+   2 !    8.5   0.0    0.0005      0.38      13      68 ..     291     348 ..     286     376 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 3.2 bits;  conditional E-value: 0.022
+    mTOR_dom  12 LeiLlnilkteq.sqsiRrevikvlGilG 39 
+                 L+ L++il  e+ ++ +R e+   +  +G
+  EAK87682.1  99 LTRLYEILADETeHPMVRHEAGEAIAAIG 127
+                 44566666666336666666666666555 PP
+
+  == domain 2  score: 8.5 bits;  conditional E-value: 0.0005
+    mTOR_dom  13 eiLlnilkte.qsqsiRrevikvlGilGALDPykhkeveekseee..ekeeenaeetdv 68 
+                 ++L+++l+++ +++ +R e+   lG +G  DP    ++e+ +++   +ke +++++ ++
+  EAK87682.1 291 DTLSRVLSNQsEESMVRHEAAFALGSVGSNDPRCSENLEK-MDKLctKKELDRVRKLSI 348
+                 5799*****955999*****************99966654.422234444444444444 PP
+
+>> EAK90071.1  beta-adaptin AP complex subunit-related; ARM/HEAT repeat protein [Cryptosporidium parvum Iowa II]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.2   0.5   1.8e-05     0.014      72     156 ..     173     259 ..     154     261 .. 0.72
+   2 ?   -1.4   0.1      0.54   4.1e+02      78     132 ..     266     323 ..     253     336 .. 0.56
+   3 ?   -2.8   0.0       1.6   1.2e+03      86     123 ..     557     592 ..     552     595 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 13.2 bits;  conditional E-value: 1.8e-05
+    mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc..vpflpqiipallsvirtcesslrefllqqLatLv 156
+                 l+  + s+e+++ t ++  L+ +l+ +   +  t+ + ++ +i +++g      +f+ +i++++ s  + ++ ++++ ++q+L+++ 
+  EAK90071.1 173 LKFFQYSKEDFFNTNILDILICMLNTELDPNTITNLIYVLNEINQEIGGATftKQFIIKILNNIKSFNEWSQYHILQLIFQNLSNIL 259
+                 44457888****************777766888888888888888766554334455555555555555544599999999999886 PP
+
+  == domain 2  score: -1.4 bits;  conditional E-value: 0.54
+    mTOR_dom  78 ss.eeyyptvvinaLlkilkdpsls..shhtavvqaimsifktlglkcvpflpqiipa 132
+                 ss +++ ++v  + + +il+       +   +v+   ++if +l     ++ +q+i+ 
+  EAK90071.1 266 SSeTNFKEQVPSSDVFHILNALEEVirHSSVNVLLISIQIFISLTKPYPKLFSQVIQR 323
+                 4434444555555566666433333102233333344677777777777777777765 PP
+
+  == domain 3  score: -2.8 bits;  conditional E-value: 1.6
+    mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcv 123
+                 +v+++Ll i+++ s  s  ++ v+   +if+ l + c 
+  EAK90071.1 557 YVVTNLLDIFEKDS--SNIENLVNRPSNIFSILITSCC 592
+                 68888999996666..4467777777778777766665 PP
+
+>> EAK87852.1  hypothetical protein with a signal peptide, gene within locus of signal-peptide containing hypothetical p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.7   0.8      0.35   2.7e+02      98     116 ..     337     355 ..     227     419 .. 0.63
+   2 ?   -0.8   0.3      0.36   2.7e+02      32      98 ..     368     446 ..     346     462 .. 0.47
+   3 ?   -2.0   0.1      0.85   6.5e+02       8      32 ..     639     664 ..     635     666 .. 0.84
+   4 ?    9.6   0.1   0.00023      0.17     103     152 ..     756     807 ..     697     813 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: -0.7 bits;  conditional E-value: 0.35
+    mTOR_dom  98 pslsshhtavvqaimsifk 116
+                  s+ s    v+ ai++i++
+  EAK87852.1 337 GSIVSIVVRVIAAIVTIIH 355
+                 3333334444444444444 PP
+
+  == domain 2  score: -0.8 bits;  conditional E-value: 0.36
+    mTOR_dom  32 ikvlGilGALDPykhkeveekseee..ekeeenaee............tdvsellvglspsseeyyptvvinaLlkilkdp 98 
+                 i+vl  l   D  +  +v+ ++  +   + +enae+             d+sel+   ++   e+ +++++ +L ki++ +
+  EAK87852.1 368 IRVLRSLDSFDASELSKVSLAN--KliGRISENAENikesqfllrelyKDLSELAFAAEKNLHEFNENIIMDQLNKIISGK 446
+                 4444444444444444443333..122222222222111222233333344444444444448888888888888887443 PP
+
+  == domain 3  score: -2.0 bits;  conditional E-value: 0.85
+    mTOR_dom   8 ypeLLeiLlnilkteq.sqsiRrevi 32 
+                  p+LL++ +n +k++  s ++ r++i
+  EAK87852.1 639 SPRLLQLTMNKIKKNMdSAQLERDII 664
+                 699**********9954999999887 PP
+
+  == domain 4  score: 9.6 bits;  conditional E-value: 0.00023
+    mTOR_dom 103 hhtavvqaimsifkt..lglkcvpflpqiipallsvirtcesslrefllqqL 152
+                  ++++ q+i sif t   g k v+f++++i  ++svir++   +++   q L
+  EAK87852.1 756 SYEKIKQVIKSIFATifKGNKIVAFIDKLIDLIISVIRSIYHAFKNKSTQRL 807
+                 3445555555555554348999****************99887777666655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       3805  (2271431 residues searched)
+Passed MSV filter:                       355  (0.0932983); expected 76.1 (0.02)
+Passed bias filter:                      205  (0.0538765); expected 76.1 (0.02)
+Passed Vit filter:                        19  (0.00499343); expected 3.8 (0.001)
+Passed Fwd filter:                         5  (0.00131406); expected 0.0 (1e-05)
+Initial search space (Z):               3805  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.05u 0.07s 00:00:00.12 Elapsed: 00:00:00.11
+# Mc/sec: 3162.18
+//
+[ok]

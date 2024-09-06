@@ -1,0 +1,46 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Cryptosporidium_pavrum.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+     0.0074   11.4   0.2      0.011   10.8   0.2    1.1  1  EAK87834.1  putative NADPH-cytochrome p450 reductase [Cryptos
+
+
+Domain annotation for each sequence (and alignments):
+>> EAK87834.1  putative NADPH-cytochrome p450 reductase [Cryptosporidium parvum Iowa II]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.8   0.2   2.8e-06     0.011    1054    1125 ..      46     117 ..      25     125 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 10.8 bits;  conditional E-value: 2.8e-06
+  PTHR13298.orig.30.pir 1054 slkyptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpelfddpclfsevlkllseyrfrlqaRrfiq 1125
+                             s+ y+t++  +++i +l ++L ++++ +++ +e++++ e+   l+++ ++f  v  + ++ +f +++R+fi 
+             EAK87834.1   46 SIFYSTETGNSRKISELFKKLLDEISIEANVREINSILEENMYLNSNNSVFVFVVSTCGNGSFPASSRKFIR 117 
+                             445677788899**********************************************************95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                       3805  (2271431 residues searched)
+Passed MSV filter:                       472  (0.124047); expected 76.1 (0.02)
+Passed bias filter:                       45  (0.0118265); expected 76.1 (0.02)
+Passed Vit filter:                         3  (0.000788436); expected 3.8 (0.001)
+Passed Fwd filter:                         1  (0.000262812); expected 0.0 (1e-05)
+Initial search space (Z):               3805  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.09u 0.02s 00:00:00.11 Elapsed: 00:00:00.06
+# Mc/sec: 42077.47
+//
+[ok]

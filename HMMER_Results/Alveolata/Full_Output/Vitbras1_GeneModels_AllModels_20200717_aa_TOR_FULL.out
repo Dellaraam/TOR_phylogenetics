@@ -1,0 +1,1737 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Vitbras1_GeneModels_AllModels_20200717_aa.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR11139.orig.30.pir  [M=2684]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                         -----------
+          0 1434.1   0.0          0 1432.9   0.0    1.4  1  jgi|Vitbras1|10828|Vbra_14744.t1  
+   8.1e-143  478.5   0.4   8.1e-143  478.5   0.4    2.2  2  jgi|Vitbras1|17646|Vbra_17473.t1  
+   6.6e-129  432.4   8.6   6.6e-129  432.4   8.6    2.2  2  jgi|Vitbras1|4731|Vbra_12380.t1   
+   4.6e-128  429.6   8.2   4.6e-128  429.6   8.2    3.2  2  jgi|Vitbras1|21300|Vbra_19027.t1  
+   3.8e-107  360.2   6.1   1.8e-105  354.6   6.1    3.2  1  jgi|Vitbras1|710|Vbra_6836.t1     
+    4.8e-98  330.0   1.0    4.8e-98  330.0   1.0    2.4  2  jgi|Vitbras1|20002|Vbra_18443.t1  
+    6.6e-21   74.1   0.1    6.6e-21   74.1   0.1    1.7  2  jgi|Vitbras1|7213|Vbra_13243.t1   
+    3.3e-07   28.7  11.4    4.3e-07   28.3  11.4    1.1  1  jgi|Vitbras1|11491|Vbra_8998.t1   
+    1.1e-06   26.9   0.0    1.9e-06   26.1   0.0    1.4  1  jgi|Vitbras1|13326|Vbra_15710.t1  
+      0.001   17.0   0.4     0.0014   16.6   0.4    1.1  1  jgi|Vitbras1|5104|Vbra_2878.t1    
+      0.002   16.1   3.1        1.2    6.9   0.0    2.0  2  jgi|Vitbras1|694|Vbra_6820.t1     
+  ------ inclusion threshold ------
+        0.2    9.5   0.7       0.96    7.2   0.6    1.3  1  jgi|Vitbras1|19779|Vbra_23073.t1  
+
+
+Domain annotation for each sequence (and alignments):
+>> jgi|Vitbras1|10828|Vbra_14744.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1432.9   0.0         0         0      25    2684 .]      57    3367 .]      36    3367 .] 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 1432.9 bits;  conditional E-value: 0
+             PTHR11139.orig.30.pir   25 ysnllsallsalssplessrsraaraaaellkavveelldllmvllendsaeaflqflsklssllqselqsepsf 99  
+                                        ++ l s++l++l+s +es r   a+aa+ l  +v++e++++        s ++f +f++ l+ +++         
+  jgi|Vitbras1|10828|Vbra_14744.t1   57 SKMLESKYLADLKSKNESVR---AKAAKNLRIHVEAEAKEM--------SGGTFTKFMADLNKRIY--------- 111 
+                                        5666689********98654...33668*************........************44443......... PP
+
+             PTHR11139.orig.30.pir  100 adsldvlasellalllslaslitllespivvvllrslselakgllsqllnqllpllll........avrhilatd 166 
+                                        ++ ++++++ + + + +++ li++           +  e+ ++ +++++n+l+    +        ++       
+  jgi|Vitbras1|10828|Vbra_14744.t1  112 DLVSSPHQEDKIGGIMAIDELIDV-----------QCDENETK-IIRFSNYLRM---IfqqcssgpLE------- 164 
+                                        345567889***************...........65566666.**********...22333444322....... PP
+
+             PTHR11139.orig.30.pir  167 srvvlalaldllldelladlihhvrkglslaqavravlllssnlvdaslplliqtalewlll......ilerlea 235 
+                                         ++ l+ a  +l     ++l+++  +g           ++++++v+    ++++++le+l++             
+  jgi|Vitbras1|10828|Vbra_14744.t1  165 -HSILPRATRAL-----GHLARA--GG-----------TMTADFVE----FELRRSLECLQSgggsdpR-----S 211 
+                                        .22244444444.....******..99...........9*******....**********987665551.....1 PP
+
+             PTHR11139.orig.30.pir  236 .......vlil.........lflvhvqlfflliwla.lrdpvleirelaitlLaallslllsiegkirilsssf. 292 
+                                               vlil         lf  hv+ ff++iw+a  ++p+  ire+ +++L+a l+ll+++        +++ 
+  jgi|Vitbras1|10828|Vbra_14744.t1  212 eyhryaaVLILkelalnapvLFGPHVNAFFDHIWVAiQHEPKTVIREAGVEALRAVLQLLAQRDQN-----QPAv 281 
+                                        44555667777788889999*******************************************998.....2222 PP
+
+             PTHR11139.orig.30.pir  293 ......ypaaydaaldglglls..................................................... 308 
+                                               p             +                                                     
+  jgi|Vitbras1|10828|Vbra_14744.t1  282 tngttpTP-------------Qvsaaaaagpgsldgkgggaavaatagqarqrsryrthisrtiwektqqglrss 343 
+                                        44444423.............1444444555566667788888899999999999999***************** PP
+
+             PTHR11139.orig.30.pir  309 .llelfssllvllellvfseafsarlpallerllslaallqlllallqsv...vtsaalagllefltlklllksv 379 
+                                         +l l++sll++ ell                +++la + q+++ + +     vts+ +a               
+  jgi|Vitbras1|10828|Vbra_14744.t1  344 dALALHGSLLAVGELL----------------THDLARPEQAPTPTDATSdqlVTSPRFA--------------- 387 
+                                        *9**************................4566677777776666666666666666............... PP
+
+             PTHR11139.orig.30.pir  380 vrvvkllllavaapeplgflllrllfrslgskdlllellllellplleallnplfallaythalhlrdlllelcl 454 
+                                                          + ++++++ ++ ++ +l+++++l+llp l+ +++ +f++l+y +             
+  jgi|Vitbras1|10828|Vbra_14744.t1  388 ------------------EICDLVFK-FKSNRHRLVQRTVLQLLPTLAKFDPASFVALNYLD------------- 430 
+                                        ..................67888877.******************************9**44............. PP
+
+             PTHR11139.orig.30.pir  455 tlpvrlsllpllsfllqplvrdelasqllrtlelildnlepepasersdlflalgalllall............. 516 
+                                                                     + + ++l  ++     +r  +f alg l la+              
+  jgi|Vitbras1|10828|Vbra_14744.t1  431 -----------------------------KAVAHLLQTIRSG-GTDRELAFEALGDLILAVKeailpyvdriltv 475 
+                                        .............................4444444444444.67788899999999999955555554444443 PP
+
+             PTHR11139.orig.30.pir  517 ...kaggnrkflkqplplltdaaelsgllelp...........................pkllplplsvqafefl 561 
+                                           +                           +                           +        +      
+  jgi|Vitbras1|10828|Vbra_14744.t1  476 vhdA---------------------------LshrlggggmaaslglsmgggsrrrqeaQ--------T------ 509 
+                                        3330...........................33333444444444443444433333221........1...... PP
+
+             PTHR11139.orig.30.pir  562 avalpsvsnls...gvfvittlalsdellavlsvrllslllaalaaaldllesapsllsivlerllnllsss.le 632 
+                                         +al + s+l+   g +  ++    ++l++ ++v +ls+ l++++  ++l++ +psll+  + rll+ +s    +
+  jgi|Vitbras1|10828|Vbra_14744.t1  510 QEALICISKLAkavGPQLAPQ---IEQLVDKMFVGGLSPTLLEAL--NQLCKTIPSLLPVMQNRLLHSISLVlAD 579 
+                                        256788888888886455555...4599***************99..********************99988669 PP
+
+             PTHR11139.orig.30.pir  633 alvlslisaaldllscllgsalsavlsalatalqeaalsglsvwlrtalfllglaease.............ala 694 
+                                        ++v  l s ++++++++++sa s     +a+a +e++  g                  +             +l 
+  jgi|Vitbras1|10828|Vbra_14744.t1  580 ESVTNLDSGDTATHPSQATSAPS-----GASAAAEGGAAGAG----------------SgaggapyrseehaRLV 633 
+                                        99999999999999999888832.....44444433333332................02233344444555433 PP
+
+             PTHR11139.orig.30.pir  695 vallllllstlgallfsgsseealllclvl...fvrellvllLlnpnldvrkaaaaalalLlassgnssvlslls 766 
+                                        v l l++l  +g l + +           +   fv+e+++++L++p  +vrk+aa +  +Ll +++ s  +  ++
+  jgi|Vitbras1|10828|Vbra_14744.t1  634 V-LALHALGQFGTLTYNL-----------QtnsFVCECVLRYLDHPMPAVRKEAALTAIQLLLPKPFSVPTVVIQ 696 
+                                        3.5555555555566555...........1344*********************************999999999 PP
+
+             PTHR11139.orig.30.pir  767 plssvlldarpe...eka........................vvvleile.......................kl 791 
+                                        p+  ++++++++   +                          ++ ++il                        +l
+  jgi|Vitbras1|10828|Vbra_14744.t1  697 PTADAATQPSSTqdgT-QtsaagaggggtrasgasgrptqapNEGSTILAggflqhvvlcrphqllaisrvirRL 770 
+                                        9999999988878651.24578999999998888888888884444444466666777777788888888888** PP
+
+             PTHR11139.orig.30.pir  792 lllaildldplvrlsvleslaedlaafdehasqafslsllfallndeslevreaaisllgrlslksllnpalrla 866 
+                                        l++a++d++  +r++vle +    + fd ++  ++ l +l  +l desl vr +a++l+grl+l   +npa++l+
+  jgi|Vitbras1|10828|Vbra_14744.t1  771 LTFAVADPEASIRHAVLEGFD--FR-FDPFLCEPSCLAALNQSLHDESLQVRKTAVRLMGRLCL---HNPAYVLP 839 
+                                        *****************9984..44.778999********************************...******** PP
+
+             PTHR11139.orig.30.pir  867 llrkllsqlLtrL.elellsskllehldsrleeesakllgtlirkseaeellppyavsilpaLvall.aeen... 936 
+                                        +lrk+l+qlLt+L +    ++      d r + e+a+llg li+  ea++l+ pya s++ +L+++l +      
+  jgi|Vitbras1|10828|Vbra_14744.t1  840 ALRKILIQLLTDLeF----AP------DARHRDEAAELLGDLIL--EAQQLMEPYATSVIRHLITKLkET-Qstq 901 
+                                        ***********9943....66......*****************..8888*****************554.459* PP
+
+             PTHR11139.orig.30.pir  937 .................................nelrsallkt................................ 946 
+                                                                         ++++s+l+++                                
+  jgi|Vitbras1|10828|Vbra_14744.t1  902 idpasppghpippsltpspsppslsssppvpspAPSSSTLIHQraafgyvssharsvsmglpqpppptpsfythl 976 
+                                        *********************************444555555555555555555555555555566656544334 PP
+
+             PTHR11139.orig.30.pir  947 ...ladlletllaevglleaaerrqllvallplilaallqlwdsesseerlllkrlllleseakllvalallgql 1018
+                                           +        + +++++  e r+l ++llp +++al+   d ++ ++ +          ++k+ va+ +l+q 
+  jgi|Vitbras1|10828|Vbra_14744.t1  977 ftaV--------GYLSEVGGTEIRHLMDDLLPILVEALQ---D-TGTTAPS----------GIKREVAFRTLSQI 1029
+                                        3333........444555566667888************...6.3444443..........55555********* PP
+
+             PTHR11139.orig.30.pir 1019 vestgeviepllfdsiwlglepaypsllaellklllkflelshserrealavlg...............llgald 1078
+                                        v++tg+v+ep+l          +ypsll+++  l l+ +     +++++                     lgald
+  jgi|Vitbras1|10828|Vbra_14744.t1 1030 VRNTGAVLEPYL----------KYPSLLSYMIGL-LRSD-----STSDVH---WpwhwplrkqiiraigTLGALD 1085
+                                        ************..........*********885.4444.....333332...2477888888888766666666 PP
+
+             PTHR11139.orig.30.pir 1079 ...........................sldalrrallqlttllvkhapeal........................ 1102
+                                                                                                                   
+  jgi|Vitbras1|10828|Vbra_14744.t1 1086 pyrfhqlerlprtqpqqtktrgleappL----------------------Ganeadhrnlqwenvklagerhmkr 1138
+                                        6655544444444444444443333330......................1333333333333333323333344 PP
+
+             PTHR11139.orig.30.pir 1103 ...............ipaqeseldysttkvailll........................................ 1122
+                                                       +                                                           
+  jgi|Vitbras1|10828|Vbra_14744.t1 1139 qqegdfevvtglgvaA------------------Srhgmpvlgggggraaggeddkgvdlfsstairallrmmae 1195
+                                        4444444444444440..................14555555555555555555555555555555555555555 PP
+
+             PTHR11139.orig.30.pir 1123 ..........................................lqlilrdlslpssyvlq......vlvallkala 1149
+                                                                                  +                      v+ a++++++
+  jgi|Vitbras1|10828|Vbra_14744.t1 1196 nkskgrgsasqpasglpgytywggvaygqtamvggaagggggV---------------LsshqtsVMTAMMCIFK 1255
+                                        5555555555555555555555555555555555544444441...............04444447777777777 PP
+
+             PTHR11139.orig.30.pir 1150 sealqllvlpa...dkvllapslllrlkdgqlhssvsrirellvrhatrvlilqqLallvsivnaharklaldla 1221
+                                         ++ +     +   ++v+  p++l  l     hss+    e         ++l +L+ l+ iv a + ++   l 
+  jgi|Vitbras1|10828|Vbra_14744.t1 1256 NLEHKT----VyflPQVM--PAFLDIL-----HSSDGESQE---------SLLLNLSDLIAIVGAPMARYLPALF 1310
+                                        776663....23346556..7777777.....444445555.........5555555555555555555333333 PP
+
+             PTHR11139.orig.30.pir 1222 pllvlwerrw..................................................tilalleqlvlsaaa 1246
+                                         ll+ +++                                                    + l +le++++ + +
+  jgi|Vitbras1|10828|Vbra_14744.t1 1311 DLLTQICQGHlkahqqqviitgggggaqlapaniaaaqvvggvlqaeqaadkterergttALLRVLEEIATHLPN 1385
+                                        33333333335555555555555555555555444444444444433333333333344544555******9999 PP
+
+             PTHR11139.orig.30.pir 1247 reflgsylpellllesggvlpllgpllkellnllqqalgavlwinsd.f.llqklrelgsklklekllllallLp 1319
+                                        +   ++y+ +   l     +p+l+  l     ++ q+ ++      + f +lq+l ++g+   + ++  ++l++p
+  jgi|Vitbras1|10828|Vbra_14744.t1 1386 D--FETYMGQ---L-----IPILLNFL-----QNDQSERRE-----VaFgVLQALGVFGK--GVQDY--IYLVVP 1436
+                                        9..8889888...5.....66663333.....233555555.....334589******99..67888..****** PP
+
+             PTHR11139.orig.30.pir 1320 ilnkllekllelailvraaalsslaalrassvtkias.allhslvrvl........................... 1366
+                                        +l kl e+ ++++++ r  +++ l++l ++++ +  s ++ h l+r l                           
+  jgi|Vitbras1|10828|Vbra_14744.t1 1437 ALTKLAEN-EDAPPSLRIHSIYLLGHLTHTCTFPQFSaRIGHALIRILdatslpatslatagnhktkaakgktat 1510
+                                        *******9.9*****************777777777879999999999999************************ PP
+
+             PTHR11139.orig.30.pir 1367 ..............qllaaqdstnskllaadalgalgalvfnlgldyskil........................ 1403
+                                                      +   a     + + +++ l+a+g+l  +++++ + +l                        
+  jgi|Vitbras1|10828|Vbra_14744.t1 1511 titiplqppsiamsA---A----DADATPTPSLSAVGSLTGPSEMGTTPTLpsggvvgggrgwdvgvgsegevhe 1578
+                                        *******88874331...2....3444667889999999999999999999999999999999999999****** PP
+
+             PTHR11139.orig.30.pir 1404 ........................................................................... 1403
+                                                                                                                   
+  jgi|Vitbras1|10828|Vbra_14744.t1 1579 mkmaalqtlamlyrafgadfapfvplvkmvthrhrlpvfaifdpfspnalptppptnpfatrrgvatqspampph 1653
+                                        ***999999999999999999999888888888888888888888888888887777777777777766666544 PP
+
+             PTHR11139.orig.30.pir 1404 pllkklglflrsrrdwdleltllskvlarrlskatllagallqrqllaqelaslaiellseeggs.sl.sn.ggi 1475
+                                        p l++  +     +d   ++        ++ s++  +a  + q+q ++q +  +a   + + gg+ +l ++ gg+
+  jgi|Vitbras1|10828|Vbra_14744.t1 1654 PDLQSNASASLGPSD---PF--------GAASADNKDASSAPQPQPTSQSVG-HA---S-QQGGGaALmGGaGGG 1712
+                                        222221111111111...22........333333322222222222222221.21...2.222222443333333 PP
+
+             PTHR11139.orig.30.pir 1476 lglrdsdlrsgvvh.lvlse.kgsgqkllrvfeayvkelipprltsklevalgvlssersmksdwleWlrgfsll 1548
+                                        +    ++ r + v+ ++l + + s    l            +   ++ e+++      rs++++w+eW+r+fsl+
+  jgi|Vitbras1|10828|Vbra_14744.t1 1713 Q----QRGRGMDVGvGPLQVhQQS----L------------K--QAW-ETNN------RSTREEWAEWMRRFSLE 1758
+                                        3....3333333333333332332....1............1..233.3333......899************** PP
+
+             PTHR11139.orig.30.pir 1549 Llkespspalracqllglaqsdpqlarrlfpaaflslwssl..q.ldqlleellsalwsktippeilqtllalle 1620
+                                        Ll+espspalr+c++  l q + +l ++lfp+afls+w +l    +d l ++l++al+s++ pp +lqt+l+l+e
+  jgi|Vitbras1|10828|Vbra_14744.t1 1759 LLRESPSPALRTCWS--LSQVYQPLSKELFPVAFLSCWLHLydTmQDALAKALEQALQSPNLPPDVLQTILNLAE 1831
+                                        ***************..9999********************96256899************************** PP
+
+             PTHR11139.orig.30.pir 1621 flehdddtvaqglllfgsvwssvdlallpidllqlgeaanacqayakalhylepefreppslikllgallspple 1695
+                                        f+eh+                     +lp+d+ +lg +a++++ayakalhy+e e +++++++          +e
+  jgi|Vitbras1|10828|Vbra_14744.t1 1832 FMEHQ-------------------GSPLPLDYALLGGLAEKSHAYAKALHYKEREAKTAREAC----------VE 1877
+                                        ****7...................448888888***************************999..........9* PP
+
+             PTHR11139.orig.30.pir 1696 aLaelyssLgepdalyGilesra..ldletkaawaeklggweeAlaayeralqkasqdagsleatlgrlrcllaL 1768
+                                        aL++l+++Lg+ +a+ G+l +++  l++++k++w+ekl++we+Al+aye  +  +    + le t  r+rcl aL
+  jgi|Vitbras1|10828|Vbra_14744.t1 1878 ALISLNNQLGQREAATGVLVYAQkhLNVTLKESWYEKLHRWEDALEAYEIRQLDDR---TNLEWTRSRMRCLHAL 1949
+                                        **************************************************977433...57777*********** PP
+
+             PTHR11139.orig.30.pir 1769 gqw...................epeaeeellplaleaawslrlgkwdsmleyllalaaa.easselrllqallal 1823
+                                        g+w                   +p  ++e+++la++a    +l+kwd m++ ++al+a  ++++e++++ alla+
+  jgi|Vitbras1|10828|Vbra_14744.t1 1950 GEWdrlselsrkvwdsnhpglrDPLRRHEVAYLAAAAEF--NLRKWDKMNDWVAALEATpSHTYEGCFYSALLAI 2022
+                                        *******************9988********99999999..************9998889999************ PP
+
+             PTHR11139.orig.30.pir 1824 hqgdfdeaqeliqkarqlllgaelsa.vdesysrayalllvklqqLsElqelee...sqislaa......lldlk 1888
+                                        hq d+  a+ li k+r  l+  el+a v+esy+ray  +lvk+qqL+E   lee   +     +      ++  +
+  jgi|Vitbras1|10828|Vbra_14744.t1 2023 HQEDYRLATRLITKSREILD-PELTAlVGESYERAY-GALVKVQQLTE---LEEiiaY-----KqtasesRR--Q 2085
+                                        ********************.***************.99999******...7775432.....233436655..9 PP
+
+             PTHR11139.orig.30.pir 1889 siletWrnRlpgtwqddvevwedllavRrlvlppieddaelwlklaslaRkqgnlslalkll............. 1950
+                                         ++++W +Rl+g+ q  vevw+ +l+vR++vlpp e d+  wl++ sl+Rkq  lsl+ ++              
+  jgi|Vitbras1|10828|Vbra_14744.t1 2086 MMRKMWATRLQGC-QPKVEVWQAILQVRSMVLPPTE-DIPIWLRFCSLCRKQEQLSLSINIVkelltasdtqppm 2158
+                                        99***********.********************98.*********************9999************* PP
+
+             PTHR11139.orig.30.pir 1951 ...rvlieylkllwalaaveegksflleqeealldlqqllielsstaleeells..................... 2001
+                                           rv +++lk l+a      g++     e+a ++l ++++                                  
+  jgi|Vitbras1|10828|Vbra_14744.t1 2159 tdsRVVVAHLKNLYAG-----GHK-----ETAQSQLRDFCTS-----------Cnwylfdqplvpplptdtaslh 2212
+                                        ****************.....999.....9999999888744...........1344444444447777777777 PP
+
+             PTHR11139.orig.30.pir 2002 ..............................tn........................................... 2003
+                                                                      tn                                           
+  jgi|Vitbras1|10828|Vbra_14744.t1 2213 ptsdaaisdqqqqqhhppgdfllplgltslTNvtsasalsgwedthshphvaervgvgvegdgaasgggggggvg 2287
+                                        766666666666566666666666666555116666677777777777777788888888888888888888888 PP
+
+             PTHR11139.orig.30.pir 2004 ..............rkllakvllllgkWlsal..........sqlsveevlsslksaasaalqlapklekawhsw 2054
+                                                        ll+k++l+lg W ++           +++  +evl  +++    +++l p+++kaw +w
+  jgi|Vitbras1|10828|Vbra_14744.t1 2288 qmrgkgmrrvnkhlCHLLSKCHLKLGLWTKEVleekrgadwiNDQTLQEVLLYFRA----SVRLSPTYYKAWNAW 2358
+                                        899999999999995589**************999999999954443777777777....*************** PP
+
+             PTHR11139.orig.30.pir 2055 alfndellehsqesgasaa........................................................ 2073
+                                        a+ n+++++    +  ++                                                         
+  jgi|Vitbras1|10828|Vbra_14744.t1 2359 ANTNFHVVQLFDLYKSQHPahvhphacppppmvrsaspsqhqhqhhpslpvspahphhpspyihpishhpllphh 2433
+                                        ********55433322222556666677777777777777777788***************************** PP
+
+             PTHR11139.orig.30.pir 2074 ....................................................tlrllsaekaalqylvaavtcyl 2096
+                                                                                            +          lqy+v+av ++ 
+  jgi|Vitbras1|10828|Vbra_14744.t1 2434 gghasdrampdihtqppslfaeakdggegdvegflsaassvadrervgrggmD--------LHLQYVVEAVRGFV 2500
+                                        ***********************************999998888777655542........4569********** PP
+
+             PTHR11139.orig.30.pir 2097 kalala........gg.nslqdtlrlLtLwfdhgaatevndalekalssvplwpWlpviPQLiarl.shnrevrk 2161
+                                        k++al+         +   lqd+lrlLtLwf+h+ ++ +++al+++++++pl++Wl+viPQ++arl s+n++ +k
+  jgi|Vitbras1|10828|Vbra_14744.t1 2501 KSIALGtrkargklNCkANLQDVLRLLTLWFRHAGHSALESALQEGFQTTPLETWLEVIPQILARLrSSNKALQK 2575
+                                        ********9986655599999*********************************************999****** PP
+
+             PTHR11139.orig.30.pir 2162 llknLLvriakqhPqalvyplrvaakslssearseaaleildklrkkvpalaseletlvqqlirsafleeellla 2236
+                                         ++ LL ri+k++Pqalv+pl va+ks + ++ s++a ++l+++        ++ + lvqq             +
+  jgi|Vitbras1|10828|Vbra_14744.t1 2576 TIHALLKRIGKEYPQALVFPLTVASKS-AISELSKSARQLLQEI-------EQHFPVLVQQ-------------S 2629
+                                        ***************************.8889***********9.......9*********.............* PP
+
+             PTHR11139.orig.30.pir 2237 qlvsdeliklai..........ee......sskniakasavlkplkamlekegp....epdfiqallelle.... 2287
+                                         +vs+eli++ i          ee      s+++i+++ +vl pl+ ml  +gp    e++fiqa++++le    
+  jgi|Vitbras1|10828|Vbra_14744.t1 2630 LMVSEELIRVSIlwheqwyealEEasrlyySERDIDGMVQVLLPLHNMLR-RGPqtlrETAFIQAFGRDLEetes 2703
+                                        **************87777666335555555999***************8.9999****************7777 PP
+
+             PTHR11139.orig.30.pir 2288 ..................klkt..................................................... 2291
+                                                          ++++                                                     
+  jgi|Vitbras1|10828|Vbra_14744.t1 2704 wikrwkrhvpandakdtpPPQKngqqggttkgsaigkaasgqgggggggqgqqqqqqgkererapsggtnkaggv 2778
+                                        777777777777777776444488888888888888888888888888888889999999999999999999999 PP
+
+             PTHR11139.orig.30.pir 2292 .......................ltkqlpalsslgplleeis.....alr..elavPGtyka.splvtIssFspq 2335
+                                                               +  q+++l+ l   l+++s     a +  +lavPGtyk+  p+v+I  F+p+
+  jgi|Vitbras1|10828|Vbra_14744.t1 2779 ssqqpqradidqawqiyyrvfqkIHRQIQSLTHL--DLQYVSpnllsA-KdlQLAVPGTYKPdEPPVRILAFTPS 2850
+                                        9988998999999999999988899999999999..888888**9954.459*******9996777********* PP
+
+             PTHR11139.orig.30.pir 2336 vevlsskqrPkkltirGSDGkeypfLlKgheDLRqDeRimQLfrlvNtlLskdre.rrRkLsIrtYsViPLsprs 2409
+                                        ++v +skq+P+ l + GSDG +y+fLlKgheDL qDeR+mQ+f+l+N lL +++e ++R+L I +Y+V+PLs++s
+  jgi|Vitbras1|10828|Vbra_14744.t1 2851 IQVVNSKQKPRILQMEGSDGLKYKFLLKGHEDLKQDERVMQVFGLINDLLLSHSEaSQRDLAIARYAVVPLSTNS 2925
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2410 GLieWVpntdtLhsilrgcadyrearakipsdlniehrlmrqaapqaa.....ykvevfkevleetepplLhkel 2479
+                                        GLieWVp++dtLhs+++    yr+a+ +i  +l  eh lm++++++++     +kvevf+++l+ t + +L k l
+  jgi|Vitbras1|10828|Vbra_14744.t1 2926 GLIEWVPHCDTLHSLIK---MYRDAN-NI--TLSLEHNLMKSMYAKCDdlcllQKVEVFQYALDCTSGEDLEKML 2994
+                                        *****************...99*997.88..999**************988777*********9999******** PP
+
+             PTHR11139.orig.30.pir 2480 wlkssspeaWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpvPElVPFR 2554
+                                        wl+sss+e+WlarR+ y+rSlAvmSmvGyiLGLGDRHpsN++l r++G+vvHIDFgdcf++a +r+++PE++PFR
+  jgi|Vitbras1|10828|Vbra_14744.t1 2995 WLQSSSSEVWLARRTVYCRSLAVMSMVGYILGLGDRHPSNLMLTRSSGRVVHIDFGDCFEVAALRERFPEKIPFR 3069
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2555 LTrnlvnalgptGiEGvFrssceavlrvLRknkesLlavLeaFvhDPLvdWt....................... 2606
+                                        LTr+l nal+++G+EG+Fr++ce v++vLR+ k++L+a+LeaFv DPL+ W+                       
+  jgi|Vitbras1|10828|Vbra_14744.t1 3070 LTRMLLNALEISGVEGNFRHTCELVMGVLRSSKDTLMAMLEAFVDDPLITWRllpaaklqlqphqttttanttpq 3144
+                                        ****************************************************99999999999999999999988 PP
+
+             PTHR11139.orig.30.pir 2607 ........................................................................... 2606
+                                                                                                                   
+  jgi|Vitbras1|10828|Vbra_14744.t1 3145 qppltqqqqppttadplpstppssdqppsgapltgtdpmgvrsgafpklpthpedregeqaamreeggddggggg 3219
+                                        888888888888888888888888888888888888888888888888777766666666666666666666555 PP
+
+             PTHR11139.orig.30.pir 2607 ..........................................................kaerlkllssqqaeael 2623
+                                                                                                                   
+  jgi|Vitbras1|10828|Vbra_14744.t1 3220 ggggegavgqngrqrsaavveqhprepvttrttaaglppggdlrhggfpqgrvsmagdM---------------- 3278
+                                        55555555555555555555444444444444444444444444444444444444430................ PP
+
+             PTHR11139.orig.30.pir 2624 geal.....................................aavvirrvkakLeGrddfgderkgsegLsvegQV 2661
+                                           +                                     a++virrv  kL+G+d        ++  +++gQV
+  jgi|Vitbras1|10828|Vbra_14744.t1 3279 ---EkdphmvsthikqsrqrelkqylgpegmranpemlstyARSVIRRVDSKLSGTDF-------GSEHDIPGQV 3343
+                                        ...044444444444444455555567777777777779999*************865.......6678999*** PP
+
+             PTHR11139.orig.30.pir 2662 qrLIqqAtdpeNLcrmYeGWcP.W 2684
+                                        +rLIq+At++eNLc++Y GWcP W
+  jgi|Vitbras1|10828|Vbra_14744.t1 3344 ERLIQEATSHENLCQCYLGWCPfW 3367
+                                        **********************99 PP
+
+>> jgi|Vitbras1|17646|Vbra_17473.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.9   2.2     0.039        77    1126    1396 ..     269     632 ..      97     708 .. 0.56
+   2 !  478.5   0.4  4.2e-146  8.1e-143    1556    2684 .]    2439    3925 ..    2193    3925 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 0.9 bits;  conditional E-value: 0.039
+             PTHR11139.orig.30.pir 1126 ilrdlslpssyvlqvlvallkal..................asealqllvlpa..dkvllapslllrlkd..... 1175
+                                        i  ++ +p+  v ++ ++l  +                   +   +q        d   ++++l+++l++     
+  jgi|Vitbras1|17646|Vbra_17473.t1  269 IGAREDTPRGQVMRQRRPLVTRQavaaflriatvmerargdRGPPNQ-----GlsD--TASSRLVSSLPGlielw 336 
+                                        44444555555555555555555444444444444444433222222.....0222..66688888888888889 PP
+
+             PTHR11139.orig.30.pir 1176 .......gqlhssvsrirellvrhatrvlilqqLallvsivnaharklaldlapllvlwerrw............ 1231
+                                               +++++ v ++ ++ ++h ++++++ +L+ +  +  ++a    l++      w+++w            
+  jgi|Vitbras1|17646|Vbra_17473.t1  337 lrdecgrNHHMCLVVGLVQWFLKHGSSAFLFPALQ-PDTPTLINA----LQE-----RWHEDWslqvfaclrply 401 
+                                        99999999999999999999999999999999999.445555553....333.....488888886666666666 PP
+
+             PTHR11139.orig.30.pir 1232 ...................................tilalleqlvlsaaareflgsylpellllesggvlpllgp 1271
+                                                                           +                                       
+  jgi|Vitbras1|17646|Vbra_17473.t1  402 pqlppsfkrflfpqddpepepeddfddhttstssaA--------------------------------------- 437 
+                                        555555544445444444333333333333222220....................................... PP
+
+             PTHR11139.orig.30.pir 1272 ll......................................................................... 1273
+                                                                                                                   
+  jgi|Vitbras1|17646|Vbra_17473.t1  438 -Aaaaaggtaststrstslppyrgpgclresmgaslagdgdeegsgdgmpsqaglqrqkrrlknlveaygkdhar 511 
+                                        .02222222222222222222333333335555555555555555555555555556666666666666665555 PP
+
+             PTHR11139.orig.30.pir 1274 .......kellnllqqalgavlwins...d.fllqklrelgsklklekllllallLpilnkllekl...lelail 1334
+                                               ++++    +  ++++  +s   d + l+ l +l           l++l++++++ ++++     +a++
+  jgi|Vitbras1|17646|Vbra_17473.t1  512 tlmkqikSYIH----KETRQQSYRLSalqDtDQLEHLLWL-----------LCVLAEAVCQTKTTAstaSAAAAA 571 
+                                        55544442222....2222222222222222233444444...........777777777776655555333333 PP
+
+             PTHR11139.orig.30.pir 1335 vraaals.slaal...............rassvtkiasallhslvrvlqllaaqdstnskllaadalgalgalvf 1393
+                                        + + ++    a+l               +         + l++l         qd+++++ l+ ++ ++l+ l  
+  jgi|Vitbras1|17646|Vbra_17473.t1  572 SAVGTSGlHAAHLqrsnglklkemikyfA---------DTLSDL--------LQDDARARVLPRAPPDLLHHLII 629 
+                                        33333333444445666666554433331.........222233........35566666666666666555554 PP
+
+             PTHR11139.orig.30.pir 1394 nlg 1396
+                                         lg
+  jgi|Vitbras1|17646|Vbra_17473.t1  630 YLG 632 
+                                        443 PP
+
+  == domain 2  score: 478.5 bits;  conditional E-value: 4.2e-146
+             PTHR11139.orig.30.pir 1556 palracqllglaqsdpqlarrlfpaaflslwssl..q.ldqlleellsalwskt..................... 1606
+                                        + + ac +      +p+la+ l+p+  + l++    + l+q            +                     
+  jgi|Vitbras1|17646|Vbra_17473.t1 2439 QLFKACYS--AMFESPALAKFLLPHIMEILLEKApdAvLSQ------------Ardrmlalfksgrttgentain 2499
+                                        44788888..7777999999999988888855556522333............2244444444445777799999 PP
+
+             PTHR11139.orig.30.pir 1607 .............................................ippeilqtllalleflehdddtvaqgl... 1633
+                                                                                     + + + + l++ll+ le + + v       
+  jgi|Vitbras1|17646|Vbra_17473.t1 2500 adistqplveaprflatqpgqapmqedledddsggppamgwrgddNHSLAWSILFSLLDRLEEWRRCVEDDFlas 2574
+                                        999999999999999999999999999999999999999999999778888999999999977766666666555 PP
+
+             PTHR11139.orig.30.pir 1634 ..llfgsvwss.......................vdlallpidllqlgeaanacqayakalhylepefreppsli 1683
+                                          ++ +  +ss                        +++l  ++l++l++ a  ++ + +al++le+ + + +  +
+  jgi|Vitbras1|17646|Vbra_17473.t1 2575 keQVEQYTYSSnvtddqrrevgrrcnrkeykfrrIHDFLKGFPLRTLAKTALEAGEHGRALLLLESDILGGS--M 2647
+                                        77777777777**********************999999999999*********************999999..8 PP
+
+             PTHR11139.orig.30.pir 1684 kllga..................llspp...........leaLaelyssLgepdalyGilesraldletkaawa. 1728
+                                        + + a                  +   p           +  L+ +ys+L + ++++G  ++    +++  +++ 
+  jgi|Vitbras1|17646|Vbra_17473.t1 2648 PQMTAsgaaeggrpdtpyvhqsgH---PlphmpvlkeedWVLLQGIYSGLRDTEGVVGATNNPERAPTLINLIYk 2719
+                                        777779999888877766653330...13456778889999*********************9944444444441 PP
+
+             PTHR11139.orig.30.pir 1729 eklgg.weeAlaayeralqkasqdagsleatlgrlrcllaLgqw..........epeaeeellplaleaawslrl 1792
+                                        ++++g w +A+++ye+al+k ++   ++  + g l+cl   g            e++ + + ++ +l+a+w  +l
+  jgi|Vitbras1|17646|Vbra_17473.t1 2720 SHQKGhWPRAISLYEEALRKKPD---DPLLMRGYLQCLNCNGNRgtvqlvfkgfEDSMKPYIAAEGLQALW--QL 2789
+                                        466678**************996...66667777777776665599999999996666666666699****..** PP
+
+             PTHR11139.orig.30.pir 1793 gkwd....smleyllalaaa......................eas.selrllqallalhqg.............. 1826
+                                        ++w     +++++ +    +                       ++ ++++l +++ ++ ++              
+  jgi|Vitbras1|17646|Vbra_17473.t1 2790 SQWGdikpALDRAPT----KdtpamppqcdgtttllgtivpqLERdFQQHLGRIFNEIYCKkmgisgasasasas 2860
+                                        ****66554444432....366889*****************7777**********9997788888888888888 PP
+
+             PTHR11139.orig.30.pir 1827 .........................dfdeaqeliqkarqlllgaelsa........vdesysrayalllvklqqL 1868
+                                                                         i++arq+l  + ++a        ++++++ray  +l ++++L
+  jgi|Vitbras1|17646|Vbra_17473.t1 2861 asggspsmeltpldgrtdpspshivA-------IDQARQELF-SAFTAgaqdshehSSGLLERAY-GFLEEFHML 2926
+                                        88888888888888888777775552.......333445555.3333356777788999******.********* PP
+
+             PTHR11139.orig.30.pir 1869 sElqeleesqislaa...........lldlksiletWrnRlpgtwqddvevwedllavRrlvlppi......... 1923
+                                        s    le       a                ++  t  +Rl  t + + +++ +ll+  +     +         
+  jgi|Vitbras1|17646|Vbra_17473.t1 2927 SD---LEW------AvklwkgkkdnwE---AELGRTIFERLAVT-KPSADTRARLLTANA-----Avcecidqre 2983
+                                        **...764......2333444444431...23333444689999.888889999998444.....1566668996 PP
+
+             PTHR11139.orig.30.pir 1924 ..........................eddaelwlklaslaRkqgnlslalkll............rvlieylkll 1960
+                                                                  +    +wl+la               +              l+  ++  
+  jgi|Vitbras1|17646|Vbra_17473.t1 2984 lsmecivkacraireekanlpipsqlH----SWLQLA---------------PrqregepvsdrfKDLFKAAQIE 3039
+                                        666666666666664434433333333....555555...............04445555555554557779*** PP
+
+             PTHR11139.orig.30.pir 1961 walaaveegksflleqeealldlqqllielsstaleeells.....................tn...rkllakvl 2011
+                                        wa++   eg+      + a+++l      l+                               +n           
+  jgi|Vitbras1|17646|Vbra_17473.t1 3040 WAHILKQEGDV-----QGAISLLTPVIAALP---------PlprdrhtaidlkeynlpehfhGNealV------- 3093
+                                        ***99999999.....*******44333322.........1334443334544444433333222211....... PP
+
+             PTHR11139.orig.30.pir 2012 lllgkWlsalsqlsveevlsslksaasaalqlapklekawhswalfndellehsqesgasaa............. 2073
+                                        l+l kW +++++l++ ++ +  ++    a +   ++e  +++ a+++d+ll +                      
+  jgi|Vitbras1|17646|Vbra_17473.t1 3094 LRL-KWVAEEGLLDPLTIVKGHNE----AFERLGSSEMLHFEFARALDRLLTAVIK-----Dkmpwrstdpdspk 3158
+                                        444.7****************999....88888888889***********966433.....13345566666665 PP
+
+             PTHR11139.orig.30.pir 2074 ......tlrllsaekaalqylvaavtcylkalala..gg.nslqdtlrlLtLw........fdhga......... 2122
+                                              +        +  + l++ vt+y+  l+++     +sl+   rlL+++                      
+  jgi|Vitbras1|17646|Vbra_17473.t1 3159 kigaspG-------LRLVEVLKECVTHYMLTLKHGhkTLhHSLN---RLLQVVfqsvpetdT---Dssqpdsggs 3220
+                                        5554442.......333344559999****9**87431144444...***888566666652...0445777778 PP
+
+             PTHR11139.orig.30.pir 2123 ........................................................................... 2122
+                                                                                                                   
+  jgi|Vitbras1|17646|Vbra_17473.t1 3221 pgpshtssrhaaaaprsgggaaaaaaaaggsgrssgsrsgsgqyttsgasgarremernslllegkafewsreer 3295
+                                        888889999999************************************************999999999999998 PP
+
+             PTHR11139.orig.30.pir 2123 ...atevndalekalssvplwpWlpviPQLiarlsh.nrevrkllknLLvriakqhPq.alvyplrvaakslsse 2192
+                                           ++ ++++l + ++++ +++W  ++PQLi+r sh +   +  +k+LLv +a++hP+ a + +l +++++ +++
+  jgi|Vitbras1|17646|Vbra_17473.t1 3296 kaiRDGLRRILLERFRQIAPYKWMLILPQLISRVSHrHL--GDFVKDLLVYMARAHPHqAAWHLLPLKRSN-LDK 3367
+                                        88888888**************************88555..999***************999999999988.776 PP
+
+             PTHR11139.orig.30.pir 2193 arsea.aleildklrkk.........vpalaseletlvqqlirsafleeelllaqlvsdeliklaieesskniak 2257
+                                        +r+e  a+ei++k+            +   ++ele+l+++              +++s e++ +a        ++
+  jgi|Vitbras1|17646|Vbra_17473.t1 3368 KRQEKvADEIWGKV--VyghrtwqdrG---RRELEGLFDE-------------YYHFSHEMEIIA-------KDT 3417
+                                        66663155666665..15699996555...**********.............999998888444.......333 PP
+
+             PTHR11139.orig.30.pir 2258 asavlkplk.amlekegpepdfiqallelleklkt...................ltkqlpalsslgp........ 2304
+                                        +s v + ++ + ++ ++p       + ++l ++ +                   +           p        
+  jgi|Vitbras1|17646|Vbra_17473.t1 3418 MSRVPNIDRrDHIDSKDP------WYWDYLKRFNSgpdpkhgiivpilsqlsprM-----------Peaapepwd 3475
+                                        332222222122233444......7777788777777777788555433333220...........223334555 PP
+
+             PTHR11139.orig.30.pir 2305 .....lleeis...............alrelavPGtykaspl...vtIssFspqvevlsskqrPkkltirGSDGk 2356
+                                             + ++i+                        t    ++   +t+s+F++ v+++ skqrPk++t+  S+G+
+  jgi|Vitbras1|17646|Vbra_17473.t1 3476 gplndRQAQIRprfpdntlwdsntdtH--------T----AYegqITLSRFGSVVKIMRSKQRPKRITMEASNGR 3538
+                                        555554445556666665544332221........2....11333****************************** PP
+
+             PTHR11139.orig.30.pir 2357 eypfLlK..gheDLRqDeRimQLfrlvNtlLskdrerrRkLsIrtYsViPLsprsGLieWVpntdtLhsilr... 2426
+                                        ey++L+K   + DLR+D Rim++ +l+N l+s+ r  + ++++rt+sV+ L++ +G+ieWVp t+t++ +l+   
+  jgi|Vitbras1|17646|Vbra_17473.t1 3539 EYHWLVKqeEKGDLRKDSRIMEVAQLCNYLFSHKR-ETQDIQLRTFSVVTLTEVTGMIEWVPYTTTMRNVLFeaw 3612
+                                        ******998899***********************.799*********************************996 PP
+
+             PTHR11139.orig.30.pir 2427 .....gca.dyrearakipsdlniehrlmrqaapqaa.....ykvevfkevleetepplLhkelw.lkssspeaW 2489
+                                             g +   r + ++   +l+ +     ++++q+       + +++ e   +  pp Lhk+ +    s++ +W
+  jgi|Vitbras1|17646|Vbra_17473.t1 3613 rvlfqGTKtLTRLK-QD---MLGLTQ----RYNDQKNnkefkDRYKLYVEHAIKRWPPALHKWYMlHYGSDAMSW 3679
+                                        65544222122211.12...222222....333333233335366677777766669999999999********* PP
+
+             PTHR11139.orig.30.pir 2490 larRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalg 2564
+                                         a+R++y +S+A++SmvG+++GLGDRH +NiLld  +G+vvH+DF dc f +g+ L +PE VPFRLT+n v++lg
+  jgi|Vitbras1|17646|Vbra_17473.t1 3680 VAARRQYVSSTAAWSMVGFVVGLGDRHTDNILLDTVSGGVVHVDF-DCIFGKGLELCIPEVVPFRLTPNVVSGLG 3753
+                                        *********************************************.***************************** PP
+
+             PTHR11139.orig.30.pir 2565 ptGiEGvFrssceavlrvLRknkesLlavLeaFvhDPLvdWtkaerlkllssqqaeaelgeal..........aa 2629
+                                         +GiEG+Fr  ce++++vLR+nk++Ll+v e F++DPL+dW  +e +++   q         l            
+  jgi|Vitbras1|17646|Vbra_17473.t1 3754 ALGIEGPFRLQCEKIMKVLRDNKDTLLSVFEGFLYDPLFDWM-SEAERAAKRQ---------LpttmvgfdakE- 3817
+                                        ******************************************.4333333323.........123333444331. PP
+
+             PTHR11139.orig.30.pir 2630 vv............irrvkakLeGrdd..........................................fgderk 2650
+                                         v            ++ v+ kL+G ++                                           + +++
+  jgi|Vitbras1|17646|Vbra_17473.t1 3818 -VevmllehrieqsVNQVQKKLRGMVNfapigppkdyvppdgqqphhphhthgsgnvlsrretvsdrpaASAGQD 3891
+                                        .233444444455599********999*****************************************6377788 PP
+
+             PTHR11139.orig.30.pir 2651 gsegLsvegQVqrLIqqAtdpeNLcrmYeGWcPW 2684
+                                         +  Ls+e QV+ L q+A+d+ NLc mY GW+PW
+  jgi|Vitbras1|17646|Vbra_17473.t1 3892 RGGLLSIECQVDELMQAAMDKGNLCLMYGGWTPW 3925
+                                        8889****************************** PP
+
+>> jgi|Vitbras1|4731|Vbra_12380.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.9   5.7      0.28   5.5e+02     407     840 ..    1222    1758 ..     858    1853 .. 0.53
+   2 !  432.4   8.6  3.4e-132  6.6e-129    1562    2684 .]    3529    5004 ..    3219    5004 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: -1.9 bits;  conditional E-value: 0.28
+            PTHR11139.orig.30.pir  407 s..................................................lgskd..lllellllellplleall 430 
+                                                                                             +d  ++l  l  ++++l++   
+  jgi|Vitbras1|4731|Vbra_12380.t1 1222 VmvastrhkarnlvalrecltevlghptnaglrrlgarcygemvkymtrhtD--GDieIRLNTLNDSMQQLMSLMA 1295
+                                       2333333333333333333333333333333333333333333333322111..1111222222233333333333 PP
+
+            PTHR11139.orig.30.pir  431 .nplfallaythalhlrdlllelcltlpvrls.llpllsfllqplvrdelasqllrtlelildnlepe...p.... 497 
+                                        +++f++l +         l  l++    ++s  ++ + +ll++l      ++++r++++++ +++p    +    
+  jgi|Vitbras1|4731|Vbra_12380.t1 1296 hPDPFRRLGA---------LETLEY---LLPSiEKRKDMMLLYGL------ELFYRVVNCLVLAHQPFhrgKktpg 1353
+                                       3333333222.........222222...23344444444455544......6677777777766665554414534 PP
+
+            PTHR11139.orig.30.pir  498 ......asersdlflalgalllallkaggnrkflkqplplltdaaelsgllelppkllplpl....svqafeflav 563 
+                                                 ++  +alg++ll l                        gll+ +++ l++++    +  ++ ++++
+  jgi|Vitbras1|4731|Vbra_12380.t1 1354 attsftLTLTAPKVAALGRRLLTLK---------------------NTGLLDMSEH-LDRDRtakeLMEILKKSPQ 1407
+                                       3322221111122222333333321.....................2222222211.3333322222234444444 PP
+
+            PTHR11139.orig.30.pir  564 alpsvsnlsgvfvittlalsdellavls.vrllslllaalaaaldllesapsllsivlerllnllssslealvlsl 638 
+                                       +lp                ++e + + s  +++sl+     +a++l+++ +++++ v++ ++    + l +++ sl
+  jgi|Vitbras1|4731|Vbra_12380.t1 1408 TLP----------------WREDVVTSSrRVFKSLGE----MAAWLWQQCMAAPEAVSRAFFCRTLEDLYGTPSSL 1463
+                                       555................555554444333333333....33778888888888888888776666677888888 PP
+
+            PTHR11139.orig.30.pir  639 isaaldllscllgsalsavlsalatalqeaalsglsvwlrtalfllgl.......aease................ 691 
+                                       +sa+++lls  ++++++     l++alqe   + l+   +ta++++ +       +   e                
+  jgi|Vitbras1|4731|Vbra_12380.t1 1464 PSASTSLLS--FLDSNA-----LKRALQEHHATLLQ---CTADSDQDDpaveqalR---Eltsllhalawlcdrdv 1526
+                                       888888777..666533.....55555533332232...23333333344433331...13344444445556677 PP
+
+            PTHR11139.orig.30.pir  692 ............................................................................ 691 
+                                                                                                                   
+  jgi|Vitbras1|4731|Vbra_12380.t1 1527 iehfgisgtfdraavipqvrhlllsvirrdsraampgggkgmasarqgfwvgvvmlmrqdlpldgrspiaimpwtg 1602
+                                       7777777777766666666666666666666666666665555555555555555555555555554444444432 PP
+
+            PTHR11139.orig.30.pir  692 .alavallllllstlgallfsgsseealllclvl...................fvrellvllLlnpnldvrkaaaa 747 
+                                        a     ++++ ++lg l+ ++                                 r ++ ++L ++   +  ++ +
+  jgi|Vitbras1|4731|Vbra_12380.t1 1603 eA----TVSDVDRLLGVLVTAM-----------MapaelgfpasgrerdvllrVCRGFFKRYLADK---DGRSFND 1660
+                                       20....3333333333333333...........033333344444444444554466666666664...4445555 PP
+
+            PTHR11139.orig.30.pir  748 alalLlassgnssvlsllsplssvlldarpeeka..............vvvleilekllllaildldplvrlsvl. 808 
+                                        l +  a+ ++          s +l+  r                   ++++++l++l++++ + +d + +++vl 
+  jgi|Vitbras1|4731|Vbra_12380.t1 1661 ILQKWYADHPS----------SDLLRLVRQ---QgldntmdadappdsPLFDDFLKQLAAAGQT-TDTTATAAVLs 1722
+                                       55555555442..........222222211...1223333556678888888888888888887.77777888886 PP
+
+            PTHR11139.orig.30.pir  809 es.laedlaafdehasqafslsllfallnd...esl 840 
+                                          l+e +++ d+ +++ + +  l ++ +d    ++
+  jgi|Vitbras1|4731|Vbra_12380.t1 1723 FVgLEEFEHYIDALEAIQHAKGHLYDSQEDrplVQA 1758
+                                       667777666666666666666666666554332222 PP
+
+  == domain 2  score: 432.4 bits;  conditional E-value: 3.4e-132
+            PTHR11139.orig.30.pir 1562 qllglaqsdpqlarrlfpaaflslwssl..qldqlleellsalwskt.....ippeilqtllalleflehdddtva 1630
+                                        +   + +dp+la +l+   f++l ++    +  ll    ++l ++t      p+ ++++l + l    h+     
+  jgi|Vitbras1|4731|Vbra_12380.t1 3529 LS--SC-ADPPLASELMKGVFVNLFNQStaDKGMLLIHAFQCLLNSTaralsSPSASTPSLTTFL----HR----- 3592
+                                       22..33.3999999999999999988888524444444444433333466666777888888877....55..... PP
+
+            PTHR11139.orig.30.pir 1631 qglllfgsvwssvdlallpidll..........qlgeaanacqayakalhylepefreppslikllga......ll 1690
+                                                     l++lp +l+          +l++ a ++  +  a++  e++++++   +  ++       ++
+  jgi|Vitbras1|4731|Vbra_12380.t1 3593 -------------LLLALPSMLSqspdphslldTLQAGALVSLNWMSAALIMEQHISHKAQQGDVIAMargglpMM 3655
+                                       .............5556666666888888888999999********888888****99996666555577766522 PP
+
+            PTHR11139.orig.30.pir 1691 ...spp......leaLaelyssLgepdalyGilesraldletkaawaeklggweeAlaayeralqkasqda..gsl 1755
+                                          + +        +L  ly+ L+e  + +G l + + + +++a + +   g+e++ +  ++a +     a    l
+  jgi|Vitbras1|4731|Vbra_12380.t1 3656 gvcV-SaddrpvMRQLYYLYGLLQERYMQRGALDLLSINKQVDAKLMK---GLEQVARQEYKAAK-----AtmREL 3722
+                                       4441.0456677889999999999999999999999977677654443...25555443333322.....122334 PP
+
+            PTHR11139.orig.30.pir 1756 ea............tlgrlrcllaLgqw.........................epeaeeellplaleaaw.slrlg 1793
+                                       +a              g++++l  L +w                         +            e a   lrl+
+  jgi|Vitbras1|4731|Vbra_12380.t1 3723 DAsgsladwerglwEEGKVQALTGLREWgniatqqrleaglsfenvgdisllsD-T----------ETADlALRLS 3787
+                                       4444445566688899************99999988888888887776544321.1..........2222222666 PP
+
+            PTHR11139.orig.30.pir 1794 kwdsmleyllalaaa.................................easselrllq.allalhqgdfdeaqeli 1835
+                                       +   +l+++  + ++                                  a++  +++  a  a  q d+d+aq+ +
+  jgi|Vitbras1|4731|Vbra_12380.t1 3788 NAAPVLRAVVQITVEepkyadneffavtlrklieqmtgsssgatmklsGAAPCDMFHLlAAHATLQADYDKAQQVL 3863
+                                       6666666776665558888875555555555555554455555555532223334444444444466888888777 PP
+
+            PTHR11139.orig.30.pir 1836 qkarqlllgaelsavdesysrayalllvklqqLsElqelee....sqislaa......................ll 1885
+                                          ++    ++++ ++ +   a+++l+ +  +L+E   le+    +     +                      + 
+  jgi|Vitbras1|4731|Vbra_12380.t1 3864 LHGYTTVQ-QLWTRLSPLALPAHHSLVSSIALLRE---LEHflhfM-----TgksvpgtkvvkvdhpgqvdrgvQ- 3929
+                                       77755444.77777777777788777777777888...66654442.....123334477777777777655430. PP
+
+            PTHR11139.orig.30.pir 1886 dlksiletWrn.RlpgtwqddvevwedllavRrlvlppi............................eddaelwlk 1932
+                                       +l ++ + +    l++t  d + +w d+ ++R+     +                            + +a   + 
+  jgi|Vitbras1|4731|Vbra_12380.t1 3930 CLEWLEQRCDAtSLSFT-FDPFVAWADMGMLRC-----LgvqyhngvvtgkglpegqrvvdlderqkKMTARIHFS 3999
+                                       44555333322125555.666678888888888.....13445578889999***************88999**** PP
+
+            PTHR11139.orig.30.pir 1933 laslaRkqgnlslalkllrvlieylkllwalaaveegksf.lleqeealldlqqllielsstaleeells...... 2001
+                                        +s aRk gnl+ a  l+      +k l ++     ++ +  l + e ++ l      l ++ l+e+l++      
+  jgi|Vitbras1|4731|Vbra_12380.t1 4000 VGSAARKLGNLEGAKALM------AKSLSIH-----KDNSnPLMPKETIKTL------LKEADLQEDLAKvaqclt 4058
+                                       **************9998......9999999.....8888855555555555......223334455545666776 PP
+
+            PTHR11139.orig.30.pir 2002 ...........tn.......................................rkllakvllllgkWlsalsqlsv. 2026
+                                                  t+                                         + ak+ l+              
+  jgi|Vitbras1|4731|Vbra_12380.t1 4059 kvaggianndpTThpelhtafrliklrclltqnsinirrdsmpedprplwqdLVDTAKFQLIR-----------Td 4123
+                                       677777666651155556667333333333334444555555555555555545555555555...........03 PP
+
+            PTHR11139.orig.30.pir 2027 .......eev.lsslksaasaalql..apklekawhswalfndellehsqesgasaa..........tlrllsaek 2082
+                                              +++ l+ + s  ++ ++l  a +++ka  ++a+ +d+ll+h++e++              +        
+  jgi|Vitbras1|4731|Vbra_12380.t1 4124 gghtdtqAMIdLQDAASPGQSGTKLhgAASCAKALLQLADGADQLLRHYEERE---VvegpwtadarK-------- 4188
+                                       333333366656666666666777799999*******************9987...244577554331........ PP
+
+            PTHR11139.orig.30.pir 2083 aalqylvaavtcylkalala.gg.....nslq...dtlrlLtLwfdhgaatevndalekalssvplwpWlpviPQL 2149
+                                              a   c lk l+ + g+     +      +++rlL  +  hg  ++v+d+  +    +p++  l ++ QL
+  jgi|Vitbras1|4731|Vbra_12380.t1 4189 -------AQTFCVLKLLHGGeGVgsrrfE--RahaQLPRLLEMLATHG--SDVSDIWAHFRPLLPVHLYLGWLNQL 4253
+                                       .......5567999999966644654542..05579*****8887888..99************************ PP
+
+            PTHR11139.orig.30.pir 2150 iarlsh.nrev..rkllknLLvriakqhPqalvyplrvaakslssearseaaleildklrkkvpalaseletlvqq 2222
+                                       ++   +  ++v  +++ +++L++ia+++Pqal+ypl v+a+  +   +s  ++e+l+++r++ p l+s ++++   
+  jgi|Vitbras1|4731|Vbra_12380.t1 4254 LSWV-PrLERVgqGEAWREVLSKIAEAYPQALFYPLQVSAEA-AP--KSSLLQELLAMMRRQRPLLVSFSQAI--- 4322
+                                       8655.3344456777788999*****************9998.65..777889********988887754444... PP
+
+            PTHR11139.orig.30.pir 2223 lirsafleeellla.................................................qlvsdeliklai. 2248
+                                          +++ + e   +                                                 q   +++ ++a  
+  jgi|Vitbras1|4731|Vbra_12380.t1 4323 ---ECLMVPE---LravglflndilthlalmtkaksgdardkagdearrkelwegfvkscampQ---QHFDQIAGr 4389
+                                       ...2333333...033334455555555555556666666666666666655555555553332...444433334 PP
+
+            PTHR11139.orig.30.pir 2249 ..ees.......................skniakasavlkplk.amlekegpepdfiqallelleklkt..ltkql 2296
+                                                                   s   ++ sa l+ l+ a+++  +p    +qa ++  +kl +   t + 
+  jgi|Vitbras1|4731|Vbra_12380.t1 4390 egA-GlgndqlvfskglktkvamalrvqS-LPSSPSALLQTLStAFMK-LNP----HQA-HQVVDKLIReiNTESH 4457
+                                       220.0222333332333222222222111.112222233333333332.111....222.2222233334433333 PP
+
+            PTHR11139.orig.30.pir 2297 palsslg.p.lleeis.....................alr.elavPGtyka.......splvtIssFspqvevlss 2341
+                                       +++ +++ + + e+++                     ++r  l+vPG+y a        ++v++++F+ qv vl s
+  jgi|Vitbras1|4731|Vbra_12380.t1 4458 KKKLQYQdKrNTEDVCgwltrgdgysaalekrawgerNERgLLEVPGQYGAglrapdtTTHVKVVRFDTQVRVLAS 4533
+                                       444444555778888899********9999999*98877788******9999999776555*************** PP
+
+            PTHR11139.orig.30.pir 2342 kqrPkkltirGSDGkeypfLlKgheDLRqDeRimQLfrlvNtlLskdrerrRkLsIrtYsViPLsprsGLieWVpn 2417
+                                       kqrP kl+++G+D++eypfL+Kg++DLR+D+Ri+QLf+ +N++Ls+ +     LsIrtYsViP++++ GL++WV+ 
+  jgi|Vitbras1|4731|Vbra_12380.t1 4534 KQRPMKLVLHGNDEREYPFLAKGGDDLRLDQRIQQLFQAINRMLSSTS----SLSIRTYSVIPMTSQHGLLQWVSQ 4605
+                                       ********************************************8855....6*********************** PP
+
+            PTHR11139.orig.30.pir 2418 tdtLhsilr........gca.dyrearakipsdlniehrlmrqaapqaa.....................y..... 2458
+                                       t++L+ +l+        ++a d++ a         + +++ ++ + qaa                           
+  jgi|Vitbras1|4731|Vbra_12380.t1 4606 TEPLKGVLEeqarvdrqRLAsDENAA---------QDAAQAKSPYVQAAeffsgnlvdvqrkrkerdlggRrvakw 4672
+                                       ********955555544444333222.........22344445555544877777777666666665555055566 PP
+
+            PTHR11139.orig.30.pir 2459 ...........kvevfkevl...eetepplLhkelwlkssspeaWlarRknytrSlAvmSmvGyiLGLGDRHpsNi 2520
+                                                  ++e++++ +   e ++ +lL+k lw+ s +p+a++ +Rkn++ Sl +  ++ y+LG+GDRHp+N+
+  jgi|Vitbras1|4731|Vbra_12380.t1 4673 ndiykgifeltRQEIHENYIktcERMPSDLLRKRLWESSLTPDAFFVLRKNFCISLGAFNAAAYVLGVGDRHPENF 4748
+                                       66668888889888888888442444688*********************************************** PP
+
+            PTHR11139.orig.30.pir 2521 LldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvna...lgptGiEGvFrssceavlrvLRknkesLlav 2593
+                                       Lld + Gevv+IDFg++f ++ + Lp+PElVPFRLT+nlv      + +   G++  + + +l+v+R  +  L ++
+  jgi|Vitbras1|4731|Vbra_12380.t1 4749 LLDTQNGEVVGIDFGYSFSTGIRMLPIPELVPFRLTPNLVGVawpIESAQGSGTLLNTLIDTLTVMRADQAALTSL 4824
+                                       ****************************************888887777777************************ PP
+
+            PTHR11139.orig.30.pir 2594 LeaFvhDPLvdWt............................................kaerlkllssqqaeaelge 2625
+                                         +F+ +PLv+W+                                            +                  
+  jgi|Vitbras1|4731|Vbra_12380.t1 4825 CSIFINEPLVEWQqkdgkrdmmdeggvgadggdgvegagvavakgrlemvqrklrgeA------------------ 4882
+                                       *************999999888888888888888888877776666644433333330.................. PP
+
+            PTHR11139.orig.30.pir 2626 al..................................aavvirrvkakLeGrdd....................... 2644
+                                                                           aa++++  ++ ++G +                        
+  jgi|Vitbras1|4731|Vbra_12380.t1 4883 -PtailidelmhtvpnsavaamvesrgkqpqrtssrAASHWQDLQDIVTGERAnslrsellrdaltrrhrgpsagt 4957
+                                       .1333344445666666665555556666666666699999999999999555*********************** PP
+
+            PTHR11139.orig.30.pir 2645 ........f.gderkgsegLsvegQVqrLIqqAtdpeNLcrmYeGWcPW 2684
+                                               + + +++    Lsv++Q++ L++ Atd + L+r ++GW+PW
+  jgi|Vitbras1|4731|Vbra_12380.t1 4958 kgatamngDgVTGKGV--VLSVSDQARSLVDLATDSNVLGRAFIGWAPW 5004
+                                       ******9843444444..5****************************** PP
+
+>> jgi|Vitbras1|21300|Vbra_19027.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.0   7.9      0.14   2.8e+02      17     471 ..    1083    1807 ..    1060    2107 .. 0.47
+   2 !  429.6   8.2  2.3e-131  4.6e-128    1373    2683 ..    2147    3854 ..    2104    3855 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: -1.0 bits;  conditional E-value: 0.14
+             PTHR11139.orig.30.pir   17 eaishraeysnllsallsalssplessrsraar.aaa...................................... 52  
+                                        +++ + ++ s+ ++    + ss++++ r++a++ aaa                                      
+  jgi|Vitbras1|21300|Vbra_19027.t1 1083 QRTVNLSVTSAVVATSPTEPSSSNRNHRRAAPAaAAAgaartqqrasaapqldpeddaddfgmrtpprpgqdggh 1157
+                                        555556666666666666666666665555555443366666666555566666666666666666666666666 PP
+
+             PTHR11139.orig.30.pir   53 ........................................................................... 52  
+                                                                                                                   
+  jgi|Vitbras1|21300|Vbra_19027.t1 1158 qgadmadaffedqqgdrdgraqgkptdmeiewqlprhggpkgatpaesellstflpsraaviriqvdllvnpart 1232
+                                        666666666666666666666666666666666666666666666555555555555555555444444444444 PP
+
+             PTHR11139.orig.30.pir   53 .............ellkavveelldllmvllendsaeaflqflsklssllq............selqsepsfads 102 
+                                                      +lka++  ++d                         q            +      +  + 
+  jgi|Vitbras1|21300|Vbra_19027.t1 1233 vgpvdeatdrlysGMLKALESLVMDE------------------------QvadrqqarrsgeE------E--TA 1275
+                                        44444444444444444444444433........................03333332222221......1..12 PP
+
+             PTHR11139.orig.30.pir  103 ldvlasellalllslaslitllespivvvllrslselakgllsqllnqllp..llllavrhilatdsrvvlalal 175 
+                                        +  +++++++ +++++ +++  ++pi     +++ +++ +  ++l+   ++  l              vv++l+ 
+  jgi|Vitbras1|21300|Vbra_19027.t1 1276 SRMPCAQQMGVFALVVTALVSRRPPIHLSGAMTIVGMLCRCAIRLAALNVQmaL-------------MVVFPLCR 1337
+                                        333457888888888888888888885555555554444444444433333220.............23334444 PP
+
+             PTHR11139.orig.30.pir  176 dllldel........................................ladlihhvrkglslaqavravll.lssn 209 
+                                         +l+                                            + + hhv  g+++a+ +r +++  +++
+  jgi|Vitbras1|21300|Vbra_19027.t1 1338 LVLWAIDtsrsagkewelcgvlthltggndspavvcrllsslakrhkIFTPHHHVAFGVMAASTLRFLQRnKHRV 1412
+                                        444444444444444444444444444444444444443444444457888888888888844444444448888 PP
+
+             PTHR11139.orig.30.pir  210 lvdaslplliqtalewlll.....ilerlea.....vlil................................... 239 
+                                         +d      i+t++ + ++     il+++++     v                                      
+  jgi|Vitbras1|21300|Vbra_19027.t1 1413 APD-----VIETLCTIVMNrvpnlILDANTNpevrlV--Aaawctaplmevfpaaevseefkskalkrleqlqgg 1480
+                                        777.....88999988888888885555555555330..233444444445555555555555555555555666 PP
+
+             PTHR11139.orig.30.pir  240 .............................................................lflvhvqlfflliw 253 
+                                                                                                     +  + +++ +++++
+  jgi|Vitbras1|21300|Vbra_19027.t1 1481 nkevkidqdvrqllhkhgisveadafqalisahhvadvlslaragiaapeitvdfltsicaV--AREPSLVQVCF 1553
+                                        66555555555544455555555555555555555555555555555555555555555442..22333344444 PP
+
+             PTHR11139.orig.30.pir  254 lalrdpvleirelaitlLaallslllsiegkiril.sssf..ypaaydaaldglglls................. 308 
+                                        la+r++++   + + tlLa++ ++   i   +++   +    +              +                 
+  jgi|Vitbras1|21300|Vbra_19027.t1 1554 LAIRHMDQSLMQEQPTLLARHMQH---IAAGWIRRkLPLGqfP--------------Tqlfdggashsdflwsns 1611
+                                        456666666666666666633333...3333333322211221..............022222222223333333 PP
+
+             PTHR11139.orig.30.pir  309 ........................................................................... 308 
+                                                                                                                   
+  jgi|Vitbras1|21300|Vbra_19027.t1 1612 amlvsacilgglepnkvmpcfrealglkrdnqekgpelrdavapalvaillmikgqnggaseylkqllgsgniis 1686
+                                        333333333333333333334444444444444444444444444444444444444444444444444444444 PP
+
+             PTHR11139.orig.30.pir  309 ..llelfssllvllellvfseafsarlpallerllslaallqlllallqsv......vtsaalag..llefltlk 373 
+                                           ++l ss+l+ + +++ +                +aa ++  l++++s+      +++++l    +++     
+  jgi|Vitbras1|21300|Vbra_19027.t1 1687 vlKQHLRSSVLSSMLRFKAQPRDA------------VAAVAFPSLQAALSEviptpiDSYPNLDAfvSAN----- 1744
+                                        332222344444443332222111............1111111111111111111111111111122111..... PP
+
+             PTHR11139.orig.30.pir  374 lllksvvrvvkllllavaapeplgflllrllfrslgskdlllellllellplleall.nplfallaythalhlrd 447 
+                                                                               +++ ll+l+ + ll++ + + ++ + a+  +  lr+
+  jgi|Vitbras1|21300|Vbra_19027.t1 1745 ---------------------------------------FKHMLLVLDSAVLLSHGDgATPDKAAAGCFQDFLRM 1780
+                                        .......................................122223333333333444444444444444444444 PP
+
+             PTHR11139.orig.30.pir  448 lllelcltlpv..rls.llpllsfllq 471 
+                                         +++l +t +v  +   ll++l ++++
+  jgi|Vitbras1|21300|Vbra_19027.t1 1781 TSCVLKQTSHVrhLINfLLRHLKSAME 1807
+                                        444444444442223333333333333 PP
+
+  == domain 2  score: 429.6 bits;  conditional E-value: 2.3e-131
+             PTHR11139.orig.30.pir 1373 dstnskllaadalgalgalvfnlgldyskilpllkklglflrsrrdwdleltllskvlarrlskatllagallqr 1447
+                                        +++     +    +++  lv+ + l+ s +lp  +kl + +   ++++    l      ++  ++ l+a+++ ++
+  jgi|Vitbras1|21300|Vbra_19027.t1 2147 GESAPAGPRVFVSMVVRHLVNISRLGTSDHLPEAWKLQTARLLSHEGLRDTKLV-----SDALRQDLSANLARDA 2216
+                                        444444455555666777777888888888888888888887778776544444.....4444444444445555 PP
+
+             PTHR11139.orig.30.pir 1448 qllaqelaslaiellseeggs.sl.snggilgl..r..d....sdlrsgvvh.......lvlsekgsgqkllrvf 1505
+                                          +   +++   e++ + +++ ++ +      l  r  +    s+ +    +       l  ++k   +  lr++
+  jgi|Vitbras1|21300|Vbra_19027.t1 2217 TMAFDLVWTS--EYGTPDPRNqAVdGE---RPLivRelGlvvpSVAVL---GflfavtsLNHTVKTVREVGLRTL 2283
+                                        5555555541..333333333333221...001111111122222222...022222332222233333333333 PP
+
+             PTHR11139.orig.30.pir 1506 eayvke....lipprltsklevalgvlssersmksd....................................... 1537
+                                        ea v +       ++l + lev+lg          +                                       
+  jgi|Vitbras1|21300|Vbra_19027.t1 2284 EALVGDpvfqRCRQCLARQLEVSLGD---------Mtemaagaagegerdgeidvsalnwegcwalptdadgatk 2349
+                                        33222211111222333333333322.........1333444555555555666666666777777777777777 PP
+
+             PTHR11139.orig.30.pir 1538 ....wleWlrgfsllLlke..............spspalracqllglaqsdpqlarrlfpaaflslwssl..... 1589
+                                            +  Wl+++s  Ll+                     r++ +  +a ++p +ar  +p + l  ++       
+  jgi|Vitbras1|21300|Vbra_19027.t1 2350 snegYDSWLCHLSASLLCPtsdevklprqetanL----YRRLVP--MAMRSPGFARAVLPLLLLEYVTAFtplac 2418
+                                        7888878****99999988999999766544321....233334..33357999999999888888777776554 PP
+
+             PTHR11139.orig.30.pir 1590 ..qldqlleellsalwskt........................................................ 1606
+                                          +               +                                                        
+  jgi|Vitbras1|21300|Vbra_19027.t1 2419 kiA---------------Dmmnrhifvnastttddhtatdpapaaaaaagpradkgcsaaastadaagegsdrrt 2478
+                                        441...............13333333333356666678999999999999************************* PP
+
+             PTHR11139.orig.30.pir 1607 ..ippeilqtllalleflehdddtvaqgl.llfgsvwss.......vdlallpidllqlgeaanacqayakalhy 1671
+                                          ++ ++++ +l +l+ ++   +tv ++   +f  +++           ++ ++dl+ ++ aa ++++ a a++y
+  jgi|Vitbras1|21300|Vbra_19027.t1 2479 nhASRMAVAQFLRALQLMRLSLTTVLYQAvPFFTEQGNDqqeqgrrSRAFWNTLDLQAVSDAAYKIGMPADAIVY 2553
+                                        **9999*************9999999999644444444488899**7777************************* PP
+
+             PTHR11139.orig.30.pir 1672 lepefreppslikllga..............................llspp..........leaLaelyssLge 1706
+                                        le++  +  ++++   a                              +              + +L ++ ++L  
+  jgi|Vitbras1|21300|Vbra_19027.t1 2554 LELQMTKMFPNLSPDKAfltmqvqtrlassgessqdqraeappvedsD---InasfqrpphaVWELVKSSQQLS- 2624
+                                        *88777766555544449999988888887777766555554444440...03334444456445555555553. PP
+
+             PTHR11139.orig.30.pir 1707 pdalyGilesraldletkaawaeklgg.weeAlaayeralqkasqda....gslea......tlgrlrcllaL.. 1768
+                                         d+   +++s + ++   a  +++ g+  + +++++++       ++    +++++      t  + + l+++  
+  jgi|Vitbras1|21300|Vbra_19027.t1 2625 FDLGDPLHGSLS-SWAHEAVVLSEAGRhNASSMTLLHQPS-----GDtdmtTDVDSrvgqisTVFQQNGLQNIll 2693
+                                        444444444444.444455555555555555566555542.....112233333336666665555566666655 PP
+
+             PTHR11139.orig.30.pir 1769 ....gqw................epeaeeellplaleaawslrlgkwdsmleyllalaaa........easselr 1815
+                                            g w                ++  + e++++ +ea+w  rl++w ++++++               +++  +
+  jgi|Vitbras1|21300|Vbra_19027.t1 2694 gyldGLWpqdgsaadvarqvdpsSDRRQLEVWEQRMEALW--RLRQWGAITSAA-----HvpqwlerhGEAFHVH 2761
+                                        5566666777777777777766448888888899999999..999999655555.....2345568877779999 PP
+
+             PTHR11139.orig.30.pir 1816 llqallalhqgdfdeaqeliqkarq.............lllgaelsa.......vdesysrayalllvklqqLsE 1870
+                                        l+q l  l+         + ++ rq             +      +a       ++e ++ a +  l+    + E
+  jgi|Vitbras1|21300|Vbra_19027.t1 2762 LYQTLSNLK--------THSDRMRQltmaddmdvqmstA------AAaeahhprLLEQVEHALLNTLQ-TIRIGE 2821
+                                        999999984........5555556644333333222211......11223333333444444433333.333333 PP
+
+             PTHR11139.orig.30.pir 1871 lqeleesqislaa...........................ll...dlksiletWrnRlpgtwqddvevwedllav 1915
+                                            ++      +                           +    +++ i       l+  w +d+++  d ++v
+  jgi|Vitbras1|21300|Vbra_19027.t1 2822 ---WCS------PpdlftavmrirmteavreaagclldhqRPqdaEASIIK------LQQSWSRDLSTFLDPFSV 2881
+                                        ...333......033333333344444455555666666511455444442......444554455566666665 PP
+
+             PTHR11139.orig.30.pir 1916 Rrlvlppi.................eddaelwlklaslaRkqgnlslalkll....................... 1950
+                                           ++p +                 +   +++l l++  R++g++++al ll                       
+  jgi|Vitbras1|21300|Vbra_19027.t1 2882 TPVLYPLVeplaalqvsalsccgqpKPLYQHLLELGKATRRNGRIQQALTLLhetnrallqptvatridlgrggg 2956
+                                        5555555588889999999999999445569******************************************99 PP
+
+             PTHR11139.orig.30.pir 1951 .....rvlieylkllwalaaveegksflleqeealldlqqllielsstaleeells................... 2001
+                                              v  e ++  w +      +        al++ ++l+  +          +                   
+  jgi|Vitbras1|21300|Vbra_19027.t1 2957 lpasfLVKWELAQCFWES-----EDT-----RRALKLASSLAAHAL---------Qaatstgqpggsrgrggggg 3012
+                                        998886666667777777.....444.....667777777654433.........23434455666666655555 PP
+
+             PTHR11139.orig.30.pir 2002 ..tnrkllakvllll...gkWlsal...sqlsveevlsslksaasaalql....apklekawhswalfndelleh 2064
+                                          +++ +l +v+  l   g+Wl a+   +    + v   +++ + +a++l     + l+ka  s+a ++dell++
+  jgi|Vitbras1|21300|Vbra_19027.t1 3013 ggVSGSDLVHVCEVLsrtGEWLFASrwvD----ANV--VRRKYLEPAMKLgsveGEQLAKA--SLAAMLDELLKA 3079
+                                        44338888888888877788*****7664....444..45555668888888899999999..**********99 PP
+
+             PTHR11139.orig.30.pir 2065 sqesgasaa................................................tlrl...lsaekaalqyl 2088
+                                         ++++ s +                                                +  +   +    ++  ++
+  jgi|Vitbras1|21300|Vbra_19027.t1 3080 HRQRQSSLEaiksrqirehaeaeidncikemedksteahekkawalhkdqlekkvlgD--NnalEVELQQVSGWA 3152
+                                        888887777999999******************9999999888888777776665542..155778889999999 PP
+
+             PTHR11139.orig.30.pir 2089 vaavtcylkalalaggnslq....dtl....rlLtLwfdhga.atevndalekalss..vplwpWlpviPQLiar 2152
+                                        v a t y +al+       q    d++    rlL L+fd+g+  +e+   l+ka+++  +    +lp i+Q+++r
+  jgi|Vitbras1|21300|Vbra_19027.t1 3153 VDAATLYTDALS-------QshvkDAPrlacRLLGLLFDYGSeFEELPANLTKAVNQrkIHMRHFLPFIYQIASR 3220
+                                        9**********9.......445677775666888888****773344456777777744444489********** PP
+
+             PTHR11139.orig.30.pir 2153 l.sh.nrevrkllknLLvriakqhPqalvyplrvaaks.ls............searseaaleildklrkkvpal 2212
+                                           +   ++++ +  LL  +++++  +  ypl  +++  ++               + e a+++ld+l++     
+  jgi|Vitbras1|21300|Vbra_19027.t1 3221 VtPPpFTPFQECIDALLKALCRSYAFHCLYPLIALRNGdKIpagargrsaftpQAPKIEGAQQLLDYLKT----- 3290
+                                        *7555779******************999999999887555************556999********977..... PP
+
+             PTHR11139.orig.30.pir 2213 aseletlvqqlirsafleeelllaqlvsdeliklai......ees.....skn.iakasavlkplkamlekegpe 2275
+                                         + l+++v+                   d+l +l i      +       ++  +++++av k l+ +l+     
+  jgi|Vitbras1|21300|Vbra_19027.t1 3291 IDGLQQAVKA-------------T----DDLVELYIalstygD-ErtreiDIKkVPNYRAVAKGLS-LLP---V- 3342
+                                        6666666775.............4....555544443333431.1344445555777777765555.333...2. PP
+
+             PTHR11139.orig.30.pir 2276 pdfiqallelleklktltkqlpalsslgplleeis.........................alrelavPGtykasp 2325
+                                                        +t  lp +++ g      +                                       +
+  jgi|Vitbras1|21300|Vbra_19027.t1 3343 ----------------PTAELPENVM-G------AlvrasataggrgwqrgktvsdgktgE------------CD 3382
+                                        ................6777777777.3......133333444677777776664444332............67 PP
+
+             PTHR11139.orig.30.pir 2326 lvtIssFspqvev.lsskqrPkkltirGSDGkeypfLlKgheDLRqDeRimQLfrlvNtlLskdre.rrRkLsIr 2398
+                                        +++I +F ++v+v  +++++P+ +++  + G+e+++ +K ++DLRqD+  +QLf l N+ +s+ ++ r+R++++r
+  jgi|Vitbras1|21300|Vbra_19027.t1 3383 VPRINRFVERVQVsDTGLSHPRFVKMSDTSGREHKQVVKAKDDLRQDAVTQQLFMLLNKVFSSIPQtRQRDIRLR 3457
+                                        8************999*********************************************************** PP
+
+             PTHR11139.orig.30.pir 2399 tYsViPLsprsGLieWVpntdtLhsilrgca.dyrearakipsdlniehrlmrqaapqaa............... 2457
+                                        tY V PLsp+ G  e+V nt+tL ++l+g +  yr +  ++  + ++ ++l+++  + ++               
+  jgi|Vitbras1|21300|Vbra_19027.t1 3458 TYKVLPLSPQHGVTEFVRNTTTLAEYLKGAHeHYRPN--DY--SFDTCRKLIKGVEDNTIpklrgqvgqlrdrlr 3528
+                                        ****************************888888886..56..44555666664444433666666666656655 PP
+
+             PTHR11139.orig.30.pir 2458 ................y................kvevfkevleetepplLhkelwlkssspeaWlarRknytrSl 2500
+                                                                         k +vf++v++++ +p++h ++++k++s++ W+  R +y+ S+
+  jgi|Vitbras1|21300|Vbra_19027.t1 3529 nksigdnerkrltadeRalreqldratanlrrkKIKVFRDVCDNF-KPVMHAFFLEKFPSTHEWYCNRLRYATSV 3602
+                                        555555555555555505555566667777888************.***************************** PP
+
+             PTHR11139.orig.30.pir 2501 AvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalgptGiEGvFrss 2575
+                                        A+ SmvGyi+GLGDRH+sNiLld +tGe vHIDF  + f++g++  vPElVPFRLTr+ v++lg +G+EG+Fr+ 
+  jgi|Vitbras1|21300|Vbra_19027.t1 3603 AANSMVGYIVGLGDRHLSNILLDNSTGEHVHIDF-GVMFDQGRTMGVPELVPFRLTRDTVAGLGALGVEGNFRRL 3676
+                                        **********************************.566666699******************************* PP
+
+             PTHR11139.orig.30.pir 2576 ceavlrvLRknkesLlavLeaFvhDPLvdWt...........................kaerlkllssqqaeael 2623
+                                        cea+l+vLR+ +  +lavLe+F++DP ++W+                                            
+  jgi|Vitbras1|21300|Vbra_19027.t1 3677 CEATLQVLRESNTLVLAVLEVFLYDPHYQWSlsprkrfqlqhthdndnygqqehtaqsV---------------- 3735
+                                        *******************************6666666666666655555555544440................ PP
+
+             PTHR11139.orig.30.pir 2624 geal...................................................................aavv 2631
+                                                                                                               a ++
+  jgi|Vitbras1|21300|Vbra_19027.t1 3736 ---RgrgaaansaaqqssaggrggtaaasaaaaaggggggggggggnrgargpspdagvfgeynaedenafANTA 3807
+                                        ...044444344433445555556665555555555555555555555555555555555555555555555566 PP
+
+             PTHR11139.orig.30.pir 2632 irrvkakLeGrddfgderkgsegLsvegQVqrLIqqAtdpeNLcrmYeGWcP 2683
+                                        +  v+++L G d+     +++++L v+++V+rL+  A+   NL+ m+ GW +
+  jgi|Vitbras1|21300|Vbra_19027.t1 3808 MITVRNRLAGFDE-----GENTPLQVSVHVERLLNNAMRESNLAPMFAGWSA 3854
+                                        77********998.....8999****************************87 PP
+
+>> jgi|Vitbras1|710|Vbra_6836.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  354.6   6.1  9.4e-109  1.8e-105      15    2684 .]      41    5533 ..      19    5533 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 354.6 bits;  conditional E-value: 9.4e-109
+          PTHR11139.orig.30.pir   15 siea..ishraeysnllsallsalssplessrsraaraaa.......................ellkavveelldllm 67  
+                                       +a  +s++a+ + +l++l+ +++ +l  ++       +                       + lk++v  +l++++
+  jgi|Vitbras1|710|Vbra_6836.t1   41 IRDAvdASNPADGALFLQHLFEPFRRILIHEPA------QfvdnpkqrirngiidvfsrlrcdDTLKPYVNSMLEMCQ 112 
+                                     444567888999999999999999999996643......3444777899***************************** PP
+
+          PTHR11139.orig.30.pir   68 vllend.........................saeaflqflsklssl........lq...................... 90  
+                                     ++le d                         +  afl+f+ +l++         ++                      
+  jgi|Vitbras1|710|Vbra_6836.t1  113 HVLEHDnednaiaciltmfnihktyrqglegHCPAFLRFMESLYENthqmvanaITrqndaklkekqplggvhagrdg 190 
+                                     *******************************7779*******966667766666226678888888999999999999 PP
+
+          PTHR11139.orig.30.pir   91 ..............selqsepsfadsldvlasellalllslaslitllespivvvllrslselakgllsqllnqllp. 153 
+                                                   +                   +   ++ +s++++ e+p+ v+ +++l+    + + q++  l + 
+  jgi|Vitbras1|710|Vbra_6836.t1  191 asmdlpplgglgglT-----------------GVQVSTRARDSFKVMSECPLMVMVMFQLY---PRYMNQNIHALSQh 248 
+                                     986655555444331.................3333467899*******************...99999999999999 PP
+
+          PTHR11139.orig.30.pir  154 ..........l...........................................................lll..... 157 
+                                               +                                                             l     
+  jgi|Vitbras1|710|Vbra_6836.t1  249 mmvflkcgkeQipqiaelsrstltdlltaqvktlsfvvflsrqhpqfgqqggqpgqdvyqrmedtctaliD-Lfkkcp 325 
+                                     88887766551666777778888888888888888888777777777778888888777777777776651.156666 PP
+
+          PTHR11139.orig.30.pir  158 ............avrhilatdsrvvlalaldllldel....................ladlihhvrkglslaqavrav 203 
+                                                 avr il t+ r  l+ ++d llde                     la+++ h+r++l+++q++rav
+  jgi|Vitbras1|710|Vbra_6836.t1  326 henvtirkelltAVRQILNTEMRQRLRERVDPLLDETlllgwgctsyellrpllcsaLAEVVGHFRQDLTMSQLSRAV 403 
+                                     666666677777****************************************************************** PP
+
+          PTHR11139.orig.30.pir  204 lllssnlvdaslplliqtalewlll...................ilerleavlil....................... 239 
+                                     ++++++  d slp+++q   ++ l                              l                       
+  jgi|Vitbras1|710|Vbra_6836.t1  404 HIFTRLSADTSLPMQTQNHALKMLVqvcesiytnrheqdksrgrA---------Lfmkilycfidkfaslryhlprll 472 
+                                     ***********9999999997777565444444443333333330.........133344444446666666666644 PP
+
+          PTHR11139.orig.30.pir  240 .................................................lflvhvqlfflliwlalrdpvleirelai 268 
+                                                                                       ++ +v   +++i  ++r+     ++ + 
+  jgi|Vitbras1|710|Vbra_6836.t1  473 hvdpndlgsnawlrrnrppspppasdpllphpdatsipsgspslspslpPARGNVLVESTNIDNTIRE----AKSIIR 546 
+                                     45555555555555555555555555555555555555555555555552222222333333333333....444444 PP
+
+          PTHR11139.orig.30.pir  269 tlLaallslllsiegkirilsssf........................ypaaydaaldglg.lls............. 308 
+                                      l+ ++ s+ ++ +++                                +++++d+ l +l  ll              
+  jgi|Vitbras1|710|Vbra_6836.t1  547 VLIMGIQSIFYAMNHY-------PpeaprepplgglggprpptpmqqgPQPFADTELQHLTkLLKnglavcriyaqav 617 
+                                     5667777777777777.......1344666668888888888888888666666666666553336888888888888 PP
+
+          PTHR11139.orig.30.pir  309 ..........................................................llelfssllvllellvfsea 328 
+                                                                                               +  +fs+++  + + +f+ +
+  jgi|Vitbras1|710|Vbra_6836.t1  618 aqqpwppltvayprggggctvcghvphymqhrtlfahavgrgcysdarlnfaqmeekeATDMFSKMFCCMNPSNFQDL 695 
+                                     888888888888888888888888888888888888888888888888889999999966668999999999988888 PP
+
+          PTHR11139.orig.30.pir  329 fsarlpallerlls................................................................ 342 
+                                        ++++l+e+ l+                                                                
+  jgi|Vitbras1|710|Vbra_6836.t1  696 MHHEIEFLFEECLEdpimivpmqvlisypttsrtfgevllnflmprlhwlidedptptdkpphphheqqappgtpalp 773 
+                                     777777777777668888888888888888888888888888888888888888888888888888888888888888 PP
+
+          PTHR11139.orig.30.pir  343 .............................................................................. 342 
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1  774 psiwspqdasasypkelydishrrdkpsrlvvdphidrvdlqesdhrdrrtgsrtgtprsgivwrgvsgrsggrdgqd 851 
+                                     888888888888888888888888888888888888888888888888888888888888888888888888888888 PP
+
+          PTHR11139.orig.30.pir  343 .............................................................................. 342 
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1  852 dipmeivdprddpddktklapavdsyakvpnppydalgsavtmndfaakhfrlngsasnrplrylgmgnepvhvikea 929 
+                                     888888888888888888888888888888888877777777777777777777777777777777766666666666 PP
+
+          PTHR11139.orig.30.pir  343 .............................................................................. 342 
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1  930 rqaavasgggptgepqadrererererggaggqpggrtdaravradggrareghqgfvlgvgselhsptgqlkhtrst 1007
+                                     666666666666666666666666666666666666666666666666666666665555555555555555444444 PP
+
+          PTHR11139.orig.30.pir  343 .........laallqlllallqsvvtsaalagllefltlklllksvv.........................rvvkll 386 
+                                                                                k ++                          ++ + 
+  jgi|Vitbras1|710|Vbra_6836.t1 1008 vvlrlfkllF---------------------------------KTIAhqiqqnqssteatsgelmlkphfqtLIHTCI 1052
+                                     4333222221.................................22223333333333333333334555557677788 PP
+
+          PTHR11139.orig.30.pir  387 llavaapeplg.flllrllfrslgskdlllellllellplleallnplfallaythalhlrdlllelcltlpv..... 458 
+                                      la + +++++ +++l +lfr +    + + +l+++++p ++ +l  + +l+a+  + hl+d +le c t+p      
+  jgi|Vitbras1|710|Vbra_6836.t1 1053 TLAQTTHRSSNiLQVLKALFRNISPAGRAY-ELYKLFQPMVKWFLETVIQLHAD-APVHLKDSWLEVCMTVPImlkdq 1128
+                                     888888889999********9999998555.59999999999999999999888.9*****************98887 PP
+
+          PTHR11139.orig.30.pir  459 .......r..............ls.llpllsfllqplv...........rdelasqllrtlelildnlepe....p.. 497 
+                                            +               s  l+ l  ++++l             +++++ l+ ++ ++++ ++      p  
+  jgi|Vitbras1|710|Vbra_6836.t1 1129 lpflpqlTiptclalrskdpeiVSmGLRMLEGWIDGLDnnmlyavimshHQSESFCLHPCYTHWTNDMTGVgaapPpq 1206
+                                     76666550555666667777779999999999999999999888777666666999************988*996368 PP
+
+          PTHR11139.orig.30.pir  498 .............asersdlflalgalllall...................................kaggnrkflkq 527 
+                                                   + r++l+ al+ ll+a                                     +          
+  jgi|Vitbras1|710|Vbra_6836.t1 1207 hqqfylqrfegsnTQTRAPLTEALCDLLKACGspigqshgfhrylhfyrgdrhteslpehrrsnaaqT---------- 1274
+                                     8999999******999*************976888877777777666666665544444443332220.......... PP
+
+          PTHR11139.orig.30.pir  528 plplltdaaelsgllelp.......................................pkllplplsv........... 555 
+                                                                                              p        +           
+  jgi|Vitbras1|710|Vbra_6836.t1 1275 -----------------IrilgklggknrwfikepilmpyrkypydllqlglvvhsgP--------Pspplplpapap 1327
+                                     .................02222333444444445222223333344444444556663........044444444477 PP
+
+          PTHR11139.orig.30.pir  556 .............................................................................. 555 
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 1328 gpqpapapahphikteptgtsvrtktgpqetpatgpapmdidepadkkdkgrrppqqqqqpipdvrmadaeepkapdp 1405
+                                     8889999999999***************************************************************** PP
+
+          PTHR11139.orig.30.pir  556 ..................................................................qafeflavalps 567 
+                                                                                                           fl  +l +
+  jgi|Vitbras1|710|Vbra_6836.t1 1406 tiplgldgavqmcvralegamggagtgtvnpiayggaatqarvaamvaaageaapprldgefkmfcF--SFLQHCLMP 1481
+                                     *******999999999999999999999999999999999999999999999999999999988551..444444444 PP
+
+          PTHR11139.orig.30.pir  568 vsnls........................................................................g 573 
+                                     + nl+                                                                         
+  jgi|Vitbras1|710|Vbra_6836.t1 1482 LMNLEsgkgdktlervyrfllhraqqrdgplqgarerrqrqsvammdvdtpplpppvdpfsfggydtgppepeleelA 1559
+                                     444446888888888888888888888888888999999999999999999999999********************8 PP
+
+          PTHR11139.orig.30.pir  574 vfvittlalsdellavlsvrllslllaalaaaldllesapsllsivlerllnllsss..................... 630 
+                                     +++i+++ ++++ll     +++  l++a  a++d+ + ++++ + ++++l  ++                        
+  jgi|Vitbras1|710|Vbra_6836.t1 1560 HRSIACRSAEQQLLG----QIFRGLFLA-VADPDIGTKVFPFFEGIFRHLGIVFATRispkstsgeahslkahclhei 1632
+                                     899************....*********.77*******************9998766889999998888777777777 PP
+
+          PTHR11139.orig.30.pir  631 .....................lealvlslisaaldllscllgsalsavlsalatalqeaalsglsvwlrtalfllgl. 686 
+                                                          l               ++++++al+++++ +  a q+ ++++  v ++++++++ l 
+  jgi|Vitbras1|710|Vbra_6836.t1 1633 dpycvflaiqenvdvdpvhmrL---------------TAVVLHALQLIVE-TFFAIQPTSTDK--VVAESLFCEVLLt 1692
+                                     6665555554444422222222...............2333333333332.333444444333..3344444444445 PP
+
+          PTHR11139.orig.30.pir  687 aease......................................................................... 691 
+                                         +                                                                         
+  jgi|Vitbras1|710|Vbra_6836.t1 1693 T---Faqlcygvnwrkagagclaltrliklvppswskvhftrifraaqyalrdhasglsfvterlametmmtlvayvc 1767
+                                     3...04444777888888888999999998888888888888888888888888888888888888888888888888 PP
+
+          PTHR11139.orig.30.pir  692 .............................................................................. 691 
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 1768 gegepdllrhknsrarrsprpraaspdsspaverkaadstaaaeasaagmsiaageaerdpyggggvgrrltldqlms 1845
+                                     888888888888888888888888888888888888888888888888888887777777777777777777777776 PP
+
+          PTHR11139.orig.30.pir  692 ..............................alavallllllstlgallfsgsseealllclvl............... 724 
+                                                                   +                               +               
+  jgi|Vitbras1|710|Vbra_6836.t1 1846 dpgrapmrqglykccrsmvmelcagrvfqrR-------------------------------Caqrilvfiaevlqvs 1892
+                                     6654444333333333332222222222220...............................1223333333333334 PP
+
+          PTHR11139.orig.30.pir  725 .............................................................................. 724 
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 1893 vqqvitlppnmqpttttptqqphqdrkggqeaaaaaapgakpadetgsssaaagasasglpqgaesvgrvdsahrmyd 1970
+                                     444445555555555555555555666666666666666666666666666666666666666666666666666666 PP
+
+          PTHR11139.orig.30.pir  725 ......................fvrellvllLlnpnl......dvrkaaaaalalLlassgnssvlsllsplssvlld 774 
+                                                           + + ++ l L +p +      d+ + ++++                          
+  jgi|Vitbras1|710|Vbra_6836.t1 1971 gtakyflpqeflrladnyklaqCDCMCFFLALRPPMTsrdlqdDLIQGFVETVR------------------------ 2024
+                                     666665544433333333333333333333333333333333333333333333........................ PP
+
+          PTHR11139.orig.30.pir  775 arpeekavvvleile............................................................... 789 
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 2025 --------------Tlldqdseeqkkaeetalkdrleqqqqqsrppthtlgggvpeedvplrlwddgyqtkvtlvvyy 2088
+                                     ..............2555555555555555555555555556666666666666666666666677777777777777 PP
+
+          PTHR11139.orig.30.pir  790 ....kllllaildldplvrlsvleslaedlaafd....ehas.................qafslsllfallndeslev 842 
+                                         kl++l+           ++++l   ++++                          + +++  lf +l++++ ev
+  jgi|Vitbras1|710|Vbra_6836.t1 2089 irviKLVILHP---------VWFRLLKGPPRFSKpeppQ--DsssqqgrqqqtqepadlRGALIGTLFRCLTRRDIEV 2155
+                                     76667766666.........6778888888755565541..044677888888888889******************* PP
+
+          PTHR11139.orig.30.pir  843 reaaisllgrlsl.........................ksllnpalr.lallrkllsqlLtrL.e.lellss...... 886 
+                                      +aa+ +l+                             +++l p l+ la  +kl+ +lL++L   lellss      
+  jgi|Vitbras1|710|Vbra_6836.t1 2156 VNAAQHALRSIKKnerylpeggglggspqadllpednlRGSLRPILLnLANPQKLNTPLLQGLaRlLELLSScfnvtl 2233
+                                     ********9955599999998888888888888877774444444447***************97799********** PP
+
+          PTHR11139.orig.30.pir  887 ..kllehldsrleeesakllgtlirkseaee............................................... 915 
+                                       kll+hl +++   + kl +t+i   ++                                                 
+  jgi|Vitbras1|710|Vbra_6836.t1 2234 geKLLDHLRKWNS--ADKLGQTTIA--PL-Lpvvpgvvhwlhpiqpnrprdqqlpkelrdfkswrtseevkvaatmlt 2306
+                                     ************9..5567777666..44.135899****************************************** PP
+
+          PTHR11139.orig.30.pir  916 ...llppyavsilpaLvall.aeen..................................................... 936 
+                                        llpp+ +++l++L+ ++    +                                                     
+  jgi|Vitbras1|710|Vbra_6836.t1 2307 cfyLLPPAPEKFLDTLMNTTmG--Dftipglethlahagklgqlsspyryplslfcarfpresagyflrklregrmpp 2382
+                                     ***************9976643..466888888888888888888888888888888888888999999999999999 PP
+
+          PTHR11139.orig.30.pir  937 .............................................................................. 936 
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 2383 qqlnlfvqmlkmkhtepfreqvrqascelvrvfedahnemrsrsyhmltlpervlqairvihalthfqpdflfreycc 2460
+                                     999999999999999999999999999999999999999999999999999999999999999999999999999999 PP
+
+          PTHR11139.orig.30.pir  937 .............................................................................. 936 
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 2461 vkedyfrrerlnqqeykfrkqeydkemeayknkqedrqnqqqqpdgldasppppppqppnplppyqqtanpltlaeal 2538
+                                     999999999999999999999999999999999999999999999999999999999999999999999997665555 PP
+
+          PTHR11139.orig.30.pir  937 ........nelrsallkt................lad.lletllaevglleaaerrqllvallpl.....ilaallql 984 
+                                                                       ++  + + + ++vg+ + ++++++ +a +++     +++  + +
+  jgi|Vitbras1|710|Vbra_6836.t1 2539 antwrlitQ--------PviagtavpmpmphvspVGFsQQQQMEKTVGPNGMQQPDHP-DAFFHTrecrmLIK--CMV 2605
+                                     555555553........04444444477777777666666777777777777766666.77777799988555..444 PP
+
+          PTHR11139.orig.30.pir  985 wdsesseerlllkrlllles.............................eakllvalallgqlvestgeviepllfd. 1032
+                                     w   +s+ r    r+ ++ +                             ++++   l + g+   +tg++ e  +++ 
+  jgi|Vitbras1|710|Vbra_6836.t1 2606 WLIRASAPR---WRVVSRGGgggegapspspspsgsligrrdspatsenGSGG-NGLTNVGVAGYGTGYEWE--VPYs 2677
+                                     444455554...33333333555555556666666666555555555553333.344455566666666665..4445 PP
+
+          PTHR11139.orig.30.pir 1033 .siwlg...............lepaypsllaellklllkflelshserrealavlg...................... 1072
+                                      +iw g               l+++++  +++++++l +++ ++++ ++e+ ++l                       
+  jgi|Vitbras1|710|Vbra_6836.t1 2678 dDIWQGlanlrvhtllflvnaLCVRSTVDYSYVAEWLTRTV-TQTPLSFERRDILQcflnfwqrketnkdgtpmvkdg 2754
+                                     66777788888888888888877777777777777788888.777777777766668888888888888888888899 PP
+
+          PTHR11139.orig.30.pir 1073 ............................................................................ll 1074
+                                                                                                                 + 
+  jgi|Vitbras1|710|Vbra_6836.t1 2755 qqvyymqplqrvlglqviiipmlestfkrrrgghghgqdqhqafppathasfeqavlqcadqhvlepdlirkvmshV- 2831
+                                     99998888888888888888888888888888888888888888888888888888777777766666655555552. PP
+
+          PTHR11139.orig.30.pir 1075 gald................sldalrrallqlttllvkhapeal.......i.pa...qeseldysttkvaillllql 1125
+                                                         + +al  +ll+l+t+l ++a + l       i +a    +se  +++   + ++ +++
+  jgi|Vitbras1|710|Vbra_6836.t1 2832 ---LetdreqrdqqgrqytpAEEALKVELLRLATILAQYAHNELtdhrrefIkFAwshLRSESKTVQ--LWGYITICR 2904
+                                     ...14444666666666666999999*******************9987764655677667777777..********* PP
+
+          PTHR11139.orig.30.pir 1126 ilrdlslpssyvlqvlvallkalasealqllvlpa.dkvllapslllrlkd.................gqlhssvsri 1185
+                                     ++  + +ps+++ qv+vallk ++ + ++ l++ a d  +l+ +l++r+ d                 ++ +s+  + 
+  jgi|Vitbras1|710|Vbra_6836.t1 2905 FIDVYDTPSKIIVQVYVALLKQHKNDTPRELLRTAlD--MLTRALPRRIGDsgvpnwvrwtlrtlideAHNISQTVHV 2980
+                                     *****************************65555588..999999999999*****************999******* PP
+
+          PTHR11139.orig.30.pir 1186 rellvrhat............rvlilqqLal...lvsivnaharklaldlapllvlwerrw................. 1231
+                                     ++l+ rha+            +v++l++L+l     s +  ++r+ ald+a+l+v+w +r+                 
+  jgi|Vitbras1|710|Vbra_6836.t1 2981 WNLIIRHADvfypwkakfitqMVHSLNRLGLahtR-SSSASEHRRVALDIAALVVKWQARYvdeqaalcrygrdtevl 3057
+                                     ******************************88976.8888888889***************99888888888887666 PP
+
+          PTHR11139.orig.30.pir 1232 ..........................................tilalleqlvlsaaareflgsylpellllesggvlp 1267
+                                                                               +                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 3058 psspaeptaaaaaddtqgppsqrkkrqrepskaaaaaaaageE----------------------------------- 3100
+                                     6666666555555555555544444444433333333333330................................... PP
+
+          PTHR11139.orig.30.pir 1268 llgpll........................................................................ 1273
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 3101 -----Eddmdedtplaqkaakrarmakeqdkkdikdkdkdkegdvpmaaaaaegvgggegeergeggprraagvdsfg 3173
+                                     .....0333333333334446666666666666666666666666666667788888888888888888888888888 PP
+
+          PTHR11139.orig.30.pir 1274 .............................................................................. 1273
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 3174 spsssdgldgfestlggdsvdetaiddsdirtpadllmqrgdklefriddnmaqmvvnflmrtalalsvkddfdmskr 3251
+                                     888888888888888888887777777777765555555555555555544444444444444444444444444444 PP
+
+          PTHR11139.orig.30.pir 1274 ..............kellnllqqalgavlwinsdfllqklrelgsklkleklll........................ 1313
+                                                   +                                                               
+  jgi|Vitbras1|710|Vbra_6836.t1 3252 afdlfwtslalwpeA--------------------------------------Ainyphleklvvaspfapplfgphk 3291
+                                     444443333333330......................................2444444444445555555555555 PP
+
+          PTHR11139.orig.30.pir 1314 ...........................lallLpilnkllekllelailvraaals.slaalrassvtkias.allhsl 1362
+                                                                ++  L +l   +++++  +i  +++a++  l++++  ++ + as  +l  l
+  jgi|Vitbras1|710|Vbra_6836.t1 3292 elqnlspydlntywtksfyaqasyiraVHATLTVLHITVQQQPPEVIHDKLEAIThCLTPAF--TTNDKASiNSLVAL 3367
+                                     55555555555555555555555555588888888888888877777777777777777765..44455444555555 PP
+
+          PTHR11139.orig.30.pir 1363 vrvl.........................................................................q 1367
+                                     +r l                                                                         q
+  jgi|Vitbras1|710|Vbra_6836.t1 3368 LRKLvqvvpppeppsalastsyencgsggkvfykrlievvtaglnqgspsteldanglppsailpvmstphhpadteQ 3445
+                                     555555556666666666666666555555555555555555554444444444444444444444444444444441 PP
+
+          PTHR11139.orig.30.pir 1368 llaaqdstnskllaadalgalgalvfnlgldyskil.......................................... 1403
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 3446 -----------------------------------Atknvpgppgvlpgradqtyrlqvqlytaakmlqvlvgsaptt 3488
+                                     ...................................0222222222222222222222222222332222222333222 PP
+
+          PTHR11139.orig.30.pir 1404 ............pllkklglfl...rsrrdwdleltllskvlarrlskatllagallqrqllaqelas.......... 1456
+                                                               +r++++ +++ ++++l+r+++ +        ++++  +  +           
+  jgi|Vitbras1|710|Vbra_6836.t1 3489 fssmqfldhfapA--------MlkaVARHTPL-IVSGKMAELERNVHQHI-------PFMTPLGVAVGpfrndggpts 3550
+                                     2222222222221........02223333332.33334444444444444.......333333222223333333333 PP
+
+          PTHR11139.orig.30.pir 1457 ....lai.ellseeggs.sl.sn.ggilgl...rdsdlrsgvvhlvlse.kgsgqkllrvfeayvkelipprltskle 1522
+                                         ++  el++ + +   + +n  +  +l   r            l+  +     ++++++ ++++l+  +++  + 
+  jgi|Vitbras1|710|Vbra_6836.t1 3551 evlvACLsELVQMAACRlNHlPNdLRKELLkiiR-----------DLFTsYH----VPQPLSIDMIRLVGRWIVGATY 3613
+                                     3332111333333333333333211111111111...........1111111....1111111111111111111111 PP
+
+          PTHR11139.orig.30.pir 1523 valgvls....................se.rsmksd.......................................... 1537
+                                     +++ ++                      + r+m+++                                          
+  jgi|Vitbras1|710|Vbra_6836.t1 3614 DPMKSAAafiqsykpeqiatpatqqqrQQqRRMRDPparraadateddsqgdneatgtamqgeeregggggesprrsk 3691
+                                     111111122222222222222222222113444444555555555555555555555666666666666666666666 PP
+
+          PTHR11139.orig.30.pir 1538 .....................................wleWlrgfsllLlkespspalracqllglaqsdpqlarrlf 1578
+                                                                          +                                        
+  jgi|Vitbras1|710|Vbra_6836.t1 3692 ggggwllkymrtdsppprdpkappylpfgfmdpssstV---------------------------------------- 3729
+                                     65664444444444444444444444444444444441........................................ PP
+
+          PTHR11139.orig.30.pir 1579 paaflslwsslqldqlleellsalwskt.................................................. 1606
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 3730 ---------------------------Psamvhqiltyeevamlvlsmmaqdnsphlqlhlyvmdiahkvitgdcspp 3780
+                                     ...........................033333333333333333333333333333333333333334444444444 PP
+
+          PTHR11139.orig.30.pir 1607 .............................................................................. 1606
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 3781 rssddtsatpldhrgtngeaegagkgggdvvgeqpfagrsrseeasnfvweklvraaiigmaspnryirqafldifns 3858
+                                     444444444444444444444444444444444444444444444444444448888888888888888888888888 PP
+
+          PTHR11139.orig.30.pir 1607 .............................................................................. 1606
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 3859 rlpatmaqrvetifnwteewavigdrfflpqildltiaalpphtdltyahtarlpsltppvhfrllarpsaqplidfl 3936
+                                     8888888888888888888999999999999*********************************************** PP
+
+          PTHR11139.orig.30.pir 1607 .............................................................................. 1606
+                                                                                                                   
+  jgi|Vitbras1|710|Vbra_6836.t1 3937 agkgdaltysresayvddqdmgedesllrqeqdgvvadedgqestdlsvsidretdrltegegregrewagrvkgvlv 4014
+                                     ****************************************************************************** PP
+
+          PTHR11139.orig.30.pir 1607 ............ippeilqtllalleflehdddtvaqgl..llfgsvwss............................ 1642
+                                                    +++ ++l +l++l h+ ++ a+ l   lf+++w++                            
+  jgi|Vitbras1|710|Vbra_6836.t1 4015 shcefldgvvggG--STVGDVLRPLSELYHMYEDYAAALwrELFPQLWGTfrddereriaealvkflsrsssrtqerf 4090
+                                     **********874..489999*******************************98777777665555555555555555 PP
+
+          PTHR11139.orig.30.pir 1643 ..........vdlallpidll....qlgeaanacqayakalhylepefreppslikllgallspp......leaLael 1700
+                                                  ++ + d++    ql ++a + ++y     yl+  +  +             p      +  L+ l
+  jgi|Vitbras1|710|Vbra_6836.t1 4091 vvsvhrvvleG-ALGCSPDINwmphQLYSLAKVHNCYHAVREYLQAKLIAE-------------PdkgwqpSQCLSML 4154
+                                     54444444431.113333333444444444444444442222333333333.............144444488999** PP
+
+          PTHR11139.orig.30.pir 1701 yssLgepdalyGilesraldletkaawaeklgg.weeAlaayeral.qkasqdagslea.............tlgrlr 1763
+                                     y+ L e+d +yG+ + r ++letk a+++++++ w++A++++ + l +++ + +    a             ++g + 
+  jgi|Vitbras1|710|Vbra_6836.t1 4155 YRDLEEDDYRYGLCRTRVKSLETKQATSLMQHNhWQRAQDIFSQCLyNLFTSVG----AvrteaqrenqiwwYDGWVT 4228
+                                     ****************************************88777434343332....13334555568899888888 PP
+
+          PTHR11139.orig.30.pir 1764 cllaLgqw....e.peaeeellplaleaawslrlgkwdsmleyllalaaaeas.selrllqallalhqg......... 1826
+                                     c+++L qw    e  + ++ + pl++e +    lg+w ++ + +++ aaa as  +l+l  a+  l+q          
+  jgi|Vitbras1|710|Vbra_6836.t1 4229 CAKNLSQWtplkEmAAECQDM-PLQVEVST--KLGEWGLLQSVISKGAAAGASpAALKLGLAYSSLQQVlyqtdsnll 4303
+                                     ********9998546666666.99999999..******9999999999997777788888888887755666666666 PP
+
+          PTHR11139.orig.30.pir 1827 ..dfdeaqeliqka.rq......lllgaelsavdesysrayalllvklqqLsElqelee........sqislaa.... 1883
+                                       + +eaq+++  a rq       ll  +++ +   +++++ +ll+ ++q sEl+e ++        ++         
+  jgi|Vitbras1|710|Vbra_6836.t1 4304 teSREEAQKHLNDAeRQrwdgvrVLL-HQWQRLPPIVAESHVPLLRLCHQYSELVEGMDlldgirreFR----Lpdlr 4376
+                                     66889999999999877889999888.88999777889999899998999***8888888877666633....03344 PP
+
+          PTHR11139.orig.30.pir 1884 ............ll...dlksiletWrnRlpgtwqddvevwedllavRrlvlppi..................eddae 1928
+                                                 +l       +l+ WrnRlp+  + ++  w d+  +R++++  +                  +d  +
+  jgi|Vitbras1|710|Vbra_6836.t1 4377 rhareytsrlqhQLplkQCRNVLQQWRNRLPNK-WESMISWTDICVWRNFLFTLVeccfglivpecrelsaflHDLPW 4453
+                                     5556888765551134544667***********.88889***********99999******************9999* PP
+
+          PTHR11139.orig.30.pir 1929 lwlklaslaRk.qgnlslalkll.......rvlieylkllwalaaveegksf..l.leqeealldlqqllielsstal 1995
+                                     +++kla +aR  +   ++a ++l       +     l     +     ++ f  l      +l d  +  ++      
+  jgi|Vitbras1|710|Vbra_6836.t1 4454 TMIKLAGIARStHRQADVAVRQLyrlpvvpH-----LDSDAFH-----VENFlgLaQKVKLCLMDEPGESLN------ 4515
+                                     **********824445777777788777774.....6666666.....555544333334444444443333...... PP
+
+          PTHR11139.orig.30.pir 1996 eeells.................tn...............rkllakvllllgkWlsal...........sqlsv.... 2026
+                                          +                 ++                kl+a   l++++ l ++           s   +    
+  jgi|Vitbras1|710|Vbra_6836.t1 4516 -----QtidslkaginlinsfnfDQaefsremydcykaqlFKLRANIQLKWANKLRESrektaaatpqnS---Pkdds 4585
+                                     .....13333334444455555511444555555667777999*********999999766666665440...15566 PP
+
+          PTHR11139.orig.30.pir 2027 ..................................eevlsslksaasaalqlapklekawhswalfndellehsqesga 2070
+                                                                       e  l+ + + ++ a++  p ++++w +w++f+d+++e+   +++
+  jgi|Vitbras1|710|Vbra_6836.t1 4586 kgapngpyrassaqfdpnappatsephpdegpseEVLLRDADEDYNVAMRINPVYGQGWLAWGRFADSMFER--GDMR 4661
+                                     67788888888888888888999999999999965558888888888***********************75..3333 PP
+
+          PTHR11139.orig.30.pir 2071 saatlrllsaekaalqylvaavtcylkalalaggnslq.dtlrlL..tLw....fdhgaatevndalekalssvplwp 2141
+                                                   l+y+ +a+tcy+ ++  +     q +++ ++  +Lw    +d ++++ +++a+ek+++ +p++ 
+  jgi|Vitbras1|710|Vbra_6836.t1 4662 -------------DLNYAINAITCYMMGIVIR-----QeKMRLYMprVLWlltyDDEQHHSPISSAFEKHVQFIPHHL 4721
+                                     .............346999*********9977.....8877655577788889977777889999************* PP
+
+          PTHR11139.orig.30.pir 2142 WlpviPQLiarlshnrevrkllknLLvriakqhPqalvyplrvaaks.ls............................ 2190
+                                     Wlp +P Li+ l  +r ++++ k++L+ri  q+ qa++ +lr+++   +                             
+  jgi|Vitbras1|710|Vbra_6836.t1 4722 WLPFTPNLITGL--ERHEAPAMKSILCRIMPQYAQAIFCQLRTSVAEkKNsplqpicnllqqkqlyaqapdgpsaaaa 4797
+                                     ************..*****************************98763335555555555555555555555555555 PP
+
+          PTHR11139.orig.30.pir 2191 ........................................................searseaaleildklrkkvpal 2212
+                                                                                             +                     
+  jgi|Vitbras1|710|Vbra_6836.t1 4798 agtagtngrgdtgggtkhqslayledvtthcknkcgstiqpfsdfvsnvesvfrgdV--------------------- 4854
+                                     555555555555544444444444444333333333333333333332222222220..................... PP
+
+          PTHR11139.orig.30.pir 2213 aseletlvqqlirsafleeelllaqlvsdeliklaieesskniakasavlkplkamlekegp.......epdf..... 2278
+                                                                                  a ++l+ +  +l  +         +  +     
+  jgi|Vitbras1|710|Vbra_6836.t1 4855 ---------------------------------------------AEEMLSVIDNILS-KFYdlpcddgD--Psqppl 4884
+                                     .............................................2222222222222.11122333221..111233 PP
+
+          PTHR11139.orig.30.pir 2279 .........iqallelle.......klkt................................................. 2291
+                                              ++++++l +       k+++                                                 
+  jgi|Vitbras1|710|Vbra_6836.t1 4885 taptlmaqvQKTFSRLMInarqqkdKGQRsslsqpitsaivalykddiikdffdpppapprgnngdneflsdgpalqm 4962
+                                     333333333333333333333333322222222222222222222222222222222222222222222222222222 PP
+
+          PTHR11139.orig.30.pir 2292 ...........ltkqlpalsslgplleeis................................................ 2310
+                                                ++                                                                 
+  jgi|Vitbras1|710|Vbra_6836.t1 4963 pvgiaigklkkWKDL--------------Ltrqllltrwhgvsddlspyfqpahnkrsveipgiywkplfahmysggg 5026
+                                     222211111112222..............0222222223333344445555544333333445666666666555555 PP
+
+          PTHR11139.orig.30.pir 2311 alrelavPGtyka..........splvtIssFspqvevlsskqrPkkltirGSDGkeypfLlK.gheDLR...qDeRi 2374
+                                     a                      ++l ++s+ +p v  l      +++t++   G  + f l   h  L+    + R+
+  jgi|Vitbras1|710|Vbra_6836.t1 5027 A-----------DsehfqghtsgGHLDRMSRYCPLV--LRNGVWVRRMTLISQRGDYHSFILQtCH--LHqqaGEVRM 5089
+                                     2...........033333344448889999999998..777799*******************665..884454446* PP
+
+          PTHR11139.orig.30.pir 2375 mQLfrlvNtlLskdre.rrRkLsIrtYsViPLsprsGLieWVpntdtLhsilr...................gcadyr 2432
+                                      QL  + NtlLsk ++ rrR+L +     +P+spr +Lie+ p+ +++++i+                          
+  jgi|Vitbras1|710|Vbra_6836.t1 5090 VQLHLMLNTLLSKCKDtRRRGLCLSIHTTVPISPRLRLIEDHPSAISFQEIYDdfitnrrpttpqqddgvevM----- 5162
+                                     ***********************9999*************************975555555555554443330..... PP
+
+          PTHR11139.orig.30.pir 2433 earakipsdlniehrlmr............................qaapqaa.........y............kve 2461
+                                                      r                            ++ap+aa         +             + 
+  jgi|Vitbras1|710|Vbra_6836.t1 5163 -----------------RdpeypillarrlmanarrakreesekrrAEAPAAAaaaasapatAppaapqaddpdtHRG 5223
+                                     .................3444444444443333333333333333233333335555555550555566677778999 PP
+
+          PTHR11139.orig.30.pir 2462 vfkevleetepp.......lLhkelwlkssspeaWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHI 2532
+                                     v ++v+e + +        lL+ +l++ + +++a + + k++   +   ++  +++  G   p ++ + r+tG v + 
+  jgi|Vitbras1|710|Vbra_6836.t1 5224 VMEQVYEVM-GTtigldeyLLRDYLHRSALTADASFHLSKRFIIEYGILAFLAHMFKAGGITPAKLHVLRSTGQVQQY 5300
+                                     999999999.333456688*********************************************************** PP
+
+          PTHR11139.orig.30.pir 2533 DF......................................gdcffeagqrLpvPElVPFRLTrnlvnalgptGiEGvF 2572
+                                     D+                                      +        +L    +VPFRLTrn ++++gp G  G+F
+  jgi|Vitbras1|710|Vbra_6836.t1 5301 DLrpslqlpaddanqtqtqtaaadqadpqthtphplasplN-------FQLHCEDRVPFRLTRNVQALMGPHGLLGLF 5371
+                                     **888777777777766666666666666666655555542.......3455555689******************** PP
+
+          PTHR11139.orig.30.pir 2573 rssceavlrvLRknkesLlavLeaFvhDPLvdWt............................................ 2606
+                                      ++  ++  +L             F  D  v  +                                            
+  jgi|Vitbras1|710|Vbra_6836.t1 5372 PAVLFSMGECL-------------FAADTYVVFKsylalilrddywiyclhhrsqqlttlvdqlytthmqrkhstatg 5436
+                                     88888888888.............333322222244444444444557777777777777777788888888888776 PP
+
+          PTHR11139.orig.30.pir 2607 .......kaerlkllssqqaeaelgeal...............aavvir.......rvkakLeGrdd..fgderkgse 2653
+                                            +         ++++  ++ea+               a +v+r        v+  ++G ++   +++ + ++
+  jgi|Vitbras1|710|Vbra_6836.t1 5437 athgldkE---------VTSQ-AEREAHaqaiqhmtvpaprglAERVMRivddiysQVRLTVTGSNPntIAGGVDDDA 5504
+                                     54433220.........2222.22233322244444444444444555522233223333333333343122222222 PP
+
+          PTHR11139.orig.30.pir 2654 gLsvegQVqrLIqqAtdpeNLcrmYeGWcPW 2684
+                                      ++    V  LI+ A  + NL +  + W+PW
+  jgi|Vitbras1|710|Vbra_6836.t1 5505 CIDQ--RVMDLIRRASTHANLMQQPPKWHPW 5533
+                                     2332..2668999999999999999999999 PP
+
+>> jgi|Vitbras1|20002|Vbra_18443.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   1.8     0.035        69     292     756 ..     494     764 ..     112    1199 .. 0.51
+   2 !  330.0   1.0  2.5e-101   4.8e-98    2129    2684 .]    2345    4734 ..    2100    4734 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 0.035
+             PTHR11139.orig.30.pir 292 f.................ypaaydaaldglglls........................................... 308
+                                       +                 y                                                          
+  jgi|Vitbras1|20002|Vbra_18443.t1 494 TvallgpevgcvyseciaY--------------Lqachaqlpegqrnkvvplvelhlellkaagpsldaqtaltyvt 556
+                                       0222222222222222221..............02222222222222223333333333333333333333333333 PP
+
+             PTHR11139.orig.30.pir 309 ..........................................llelfssllvllellvfseafsarlpallerllsl 343
+                                                                                   +  ++ll+ll          +  p++  + l++
+  jgi|Vitbras1|20002|Vbra_18443.t1 557 dpdfmqllnspgpgrladalretyqvcigrdepqlrvplvqyFVSQLAALLSLLP--------AIPPPLIDRAQLHV 625
+                                       3333333333333333333333333333333333333322221111122222222........22334444444444 PP
+
+             PTHR11139.orig.30.pir 344 aallqlllallqsv...vtsaalag...................llef............................. 369
+                                       ++l++ +++ ++++   + +aal++                   +  +                             
+  jgi|Vitbras1|20002|Vbra_18443.t1 626 KSLAAPPQTPAAAAateDQVAALPElskslramsrllvryleilD--Arppwpllfllvlvpnstdvpdaeggggse 700
+                                       444444444444444333333333343433333333222222220..022222222222333333333333333333 PP
+
+             PTHR11139.orig.30.pir 370 ...ltlkl.ll.ksvv.....rvvkllllavaapeplgflllrllfrslgskdlllellllellplleallnplfal 436
+                                          ++l +  l +++      +                                                       
+  jgi|Vitbras1|20002|Vbra_18443.t1 701 msqVGL-ArYLgRFWRglgdaI------------------------------------------------------- 721
+                                       332111.123333333333331....................................................... PP
+
+             PTHR11139.orig.30.pir 437 laythalhlrdlllelcltlpvrlsllpllsfllqplvrdelasqllrtlelildnlepepasersdlflalgalll 513
+                                                                                                                    
+  jgi|Vitbras1|20002|Vbra_18443.t1   - -----------------------------------------------------------------------------   -
+                                       ............................................................................. PP
+
+             PTHR11139.orig.30.pir 514 allkaggnrkflkqplplltdaaelsgllelppkllplplsvqafeflavalpsvsnlsgvfvittlalsdellavl 590
+                                                                                                                    
+  jgi|Vitbras1|20002|Vbra_18443.t1   - -----------------------------------------------------------------------------   -
+                                       ............................................................................. PP
+
+             PTHR11139.orig.30.pir 591 svrllslllaalaaaldllesapsllsivlerllnllssslealvlslisaaldllscllgsalsavlsalatalqe 667
+                                                                                                                    
+  jgi|Vitbras1|20002|Vbra_18443.t1   - -----------------------------------------------------------------------------   -
+                                       ............................................................................. PP
+
+             PTHR11139.orig.30.pir 668 aalsglsvwlrtalfllglaeasealavallllllstlgallfsgsseealllclvl.........fvrellvllLl 735
+                                                                                                          +++l+ l+ +
+  jgi|Vitbras1|20002|Vbra_18443.t1 722 --------------------------------------------------------RhsgwtacntVLCDLVTLYGD 742
+                                       ........................................................022333333333333333333 PP
+
+             PTHR11139.orig.30.pir 736 npnl.dvrkaaaaalalLlass 756
+                                       +p +  v++a+++   +Ll++s
+  jgi|Vitbras1|20002|Vbra_18443.t1 743 SPATaMVWSALGESVLELLDPS 764
+                                       3333344444444444444433 PP
+
+  == domain 2  score: 330.0 bits;  conditional E-value: 2.5e-101
+             PTHR11139.orig.30.pir 2129 alekalssvplwpWlpviPQLiarl.shnrevrkllknLLvriakqhPqalvyplrvaaksls............ 2190
+                                        + + ++  +p+ +Wl+v PQL+a   ++++  r++  +L  r++ ++P +  + ++v+  s +            
+  jgi|Vitbras1|20002|Vbra_18443.t1 2345 LETITAPAIPPAVWLQVAPQLLATTrHPHPLSRQAALRLFWRLSDACPRHTLFAASVSEQS-Iaaerddaakdgg 2418
+                                        556677789****************8779999*************************9888.466********** PP
+
+             PTHR11139.orig.30.pir 2191 ..searseaaleildklrkkvpalaseletlvqqlirsafleee....llla....................... 2236
+                                           + r  +  + +++lr + p+++++l++l+     +a+l ++                               
+  jgi|Vitbras1|20002|Vbra_18443.t1 2419 hdASVRLSEGGRAMECLREHQPDMVQALSGLLEG---VAALANPidevS--Hrylerivafinsdmslqpgilpl 2488
+                                        **55799999*******99999999999999654...554444432221..122222223333333332222222 PP
+
+             PTHR11139.orig.30.pir 2237 .....qlvsdeliklaieesskniakasavlkplkamlekegp.....epdfiqallelleklkt.......... 2291
+                                                               ++ a+ v     ++l+++g                      +          
+  jgi|Vitbras1|20002|Vbra_18443.t1 2489 lygkvN-----------------EFHAALVSLSGDTVLPQPGStptppR---------------Qqrlpphrggr 2531
+                                        222221.................11111122222222222222111110...............11222222333 PP
+
+             PTHR11139.orig.30.pir 2292 ........................................................................... 2291
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 2532 rgrqqqvdfppvqpiapapqasapspsakgvqkavdaikmlsgggapvvdsiaarrflsrivpqlryaldahasl 2606
+                                        333333333333344444444444444444444444444444444444444444444444444444477777777 PP
+
+             PTHR11139.orig.30.pir 2292 ...............................................................ltkqlpalsslg 2303
+                                                                                                       +  +l++lss  
+  jgi|Vitbras1|20002|Vbra_18443.t1 2607 gedderqratesgggggagerrdegrwgeeagkdpgnmrrsfithltailkecgripsqplreISPSLEQLSS-- 2679
+                                        7777777777777777777777777777777777777766666666665555555555555555555555555.. PP
+
+             PTHR11139.orig.30.pir 2304 plleeis..........alrelavPGt.yka.splvtIssFspqvevlsskqrPkkltirGSDGkeypfLlKghe 2366
+                                              s          +   l  P t +++ ++l  +++F+p v+ l +k+rPkk++i    G+ ++fLlKg++
+  jgi|Vitbras1|20002|Vbra_18443.t1 2680 ------SvatdtplkqpL---LHLPTTtPSGaPALLPLCRFGPKVSCLATKTRPKKVVIEDDKGQQHTFLLKGRD 2745
+                                        ......245555533331...44444555556778999************************************* PP
+
+             PTHR11139.orig.30.pir 2367 DLRqDeRimQLfrlvNtlLskdrerrRkLsIrtYsViPLsprsGLieWVpntdtLhsilrgcadyrearakipsd 2441
+                                        DL +D+R mQ+++l  + L+     r + + r+Y V+PLsprsGLi WV+n ++++ +l+     r+ +++ ++ 
+  jgi|Vitbras1|20002|Vbra_18443.t1 2746 DLQLDQRLMQVLALTTRVLEEEG--RAGWRCRHYDVVPLSPRSGLIRWVNNAVPFFALLK----QRKIQKEQLRL 2814
+                                        *******************6633..3555679***************************8....33332222222 PP
+
+             PTHR11139.orig.30.pir 2442 lniehrlmrqaapqaa........................................................... 2457
+                                        l+   ++ +++    a                                                           
+  jgi|Vitbras1|20002|Vbra_18443.t1 2815 LQ---AQLKAS----Apvapqqggiisltnltgsqrketdfhhkfqpyrkhfeeggggvgggptdetavrlvsri 2882
+                                        22...333333....234458889888888888888888888888887777777777766666666666666655 PP
+
+             PTHR11139.orig.30.pir 2458 ....y.....................................kvevfkevleetepplLhkelwlkssspeaWla 2491
+                                            +                                       evf+e+++et+p++ ++el l s++p+   a
+  jgi|Vitbras1|20002|Vbra_18443.t1 2883 aaavAgriegateayhrkvqeklerrgmnpnttqrkdwpadmMKEVFLELQSETPPDIISRELFLSSTHPAHHTA 2957
+                                        55550555555556666777777777888888888889999955*****************************99 PP
+
+             PTHR11139.orig.30.pir 2492 rRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalgpt 2566
+                                        +  +++ S+A  S++G+++GLGDRH++NiLld  tGevvH+D  +++f+ g rL+vPE VPFRLTr +  algpt
+  jgi|Vitbras1|20002|Vbra_18443.t1 2958 LTASFATSTAIHSAIGHLIGLGDRHLDNILLDARTGEVVHVDV-SICFDRGARLRVPECVPFRLTRIISYALGPT 3031
+                                        9999***************************************.******************************* PP
+
+             PTHR11139.orig.30.pir 2567 GiEGvFrssceavlrvLRknkesLlavLeaFvhDPLvdWt................................... 2606
+                                        G++G+F+ + e vl  L + +e    ++++ +  PL dW                                    
+  jgi|Vitbras1|20002|Vbra_18443.t1 3032 GTHGIFQETLEDVLCILGEWREMYAGLMDTLLLAPLHDWLsaaalpppvsleevavtrervlkealsslldtisr 3106
+                                        ****************************************99888888888777777777766666666655555 PP
+
+             PTHR11139.orig.30.pir 2607 k.......................................................................... 2607
+                                        +                                                                          
+  jgi|Vitbras1|20002|Vbra_18443.t1 3107 Dtskqlsrlaaeaqevaraqssvietlrelsltgdssgyvtkkdridyenktnkiqkelsdleakhasstaqlve 3181
+                                        055555556666666666666677777777777777777777888888888888888888888899999999999 PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 3182 cratiqssavalqgvyqfllslqhhyqfsshflvsfkspvalippvkmptdveqrasvsdrwraihrfssraqkl 3256
+                                        99999999999999999999999999999999999999999999999999999********************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 3257 cnifinlqctlrglservaplgmltqawsnhhplqffmrlfaelkapthspdepfqlttdtavlntavqrldeel 3331
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 3332 qtmrhaaqqqennfvavadqldramqlfakdgalsglrvrlerrascmrrdasdslaslkpkavgvgmggiggsq 3406
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 3407 satarkkqlpviggcwkwcvhllkatktmiegegglntlvelvaimddvlevlkncssggvpadlvellkgwqti 3481
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 3482 vkalyafeasalslapsrlqvlhpsdlhethtdthrtppdppptgpllespadlekadaevrfgvlfdvddwalt 3556
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 3557 nhpvrnvgaatalgdggpqagvvppwlqrlgevtaegdraanewkrlsaalsreevsftgmaegtervkkglrgl 3631
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 3632 sghldhllsintdaatspsessrdsvapptdfapldghikelqsaihtisneltrlrdditaaqrkhdvdlgpss 3706
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 3707 pssasppttassqssnwargatpniksaisfssslastnapatsfcssavtlclvqkalendfplafaaaplsde 3781
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 3782 rrqklieedkkaeianagvhdgtttpqksddgeeqpavawgparsarqsapsladfpdlqstsaspqrspmpkra 3856
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 3857 agssgaggsadrangermdpalrahyaralrldvrewvamalgrlmakmygkrtdklqagvasqdfldvvatvgl 3931
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 3932 aplmaqtvtytlasvldrlllavygsahsvtqalkgggdstegfvltrcslrgleeavetlihqhqpamggsgpt 4006
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 4007 afvenfmaalnepsrqrlrsyevqrqaylwgafeaslpvyrgkmlelafaarwvhfpllnaamvakeiengqnsi 4081
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 4082 paapppgmtsasvvsvtlstlpspprppllaggregwidlashvrevqpvmgelsecmgamthaedeletnllsw 4156
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 4157 grqllsfglavgltlqggaaiapsalpplrayvdaramreatgreneeyqgrrgelqaalarlpsprplptedvv 4231
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 4232 qeqmvlhkegtvrvkklreareavnrhamdlwqthprllatllklykmyshllgrdkgavegrlktllpsmcpil 4306
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 4307 laksgercerivttlhslqnhllegkkkaldvkqlllvptidkkdrragqatkdpllderieqstilpaslsapm 4381
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 4382 svvkddlkalndytlallsdrkaadlgeqlsstthqpptsrdftdltpiapdaappslppfpqegakaaaadgsp 4456
+                                        *************************************************************************** PP
+
+             PTHR11139.orig.30.pir 2608 ........................................................................... 2607
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 4457 regimadgqdvgsassarggvakekdtageasdeimdvleeeteeedaegeeedaqeggaggaahmeqlaqdide 4531
+                                        *****************************************************************9999999999 PP
+
+             PTHR11139.orig.30.pir 2608 ............................................................aerlkllssqqaeae 2622
+                                                                                                                   
+  jgi|Vitbras1|20002|Vbra_18443.t1 4532 dainlqilrteakadadtdaiskpreqldqqrkravhetgdgagegeaidewelegelddI-------------- 4592
+                                        9999999999999999999998888888888888888888885555555555555555540.............. PP
+
+             PTHR11139.orig.30.pir 2623 lgeal.............................................aavvirrvkakLeGrdd........ 2644
+                                            +                                             a ++++ v++kL+            
+  jgi|Vitbras1|20002|Vbra_18443.t1 4593 ----EsdlllqeerqaapaqsalspsrtharpaaeaprprvdrpsvykwqATMAVKSVQRKLTALIRrrrprqqq 4663
+                                        ....35555555555555445555555555555555555555555555554455666666666666666668888 PP
+
+             PTHR11139.orig.30.pir 2645 ...............................fgderkgsegLsv...egQVqrLIqqAtdpeNLcrmYeGWcPW 2684
+                                                                           ++g  g s    +  ++ L+q+A+  ++L++mYeGW+PW
+  jgi|Vitbras1|20002|Vbra_18443.t1 4664 qqqqsgavaddipaassssmerraapvsgggG---GGGAGGRSQapaARAAHELLQEAMGVDRLSQMYEGWTPW 4734
+                                        88888888888887776666666667754431...222223333211336679********************* PP
+
+>> jgi|Vitbras1|7213|Vbra_13243.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.1   1.3      0.64   1.2e+03     859    2050 ..     628     668 ..     551     788 .. 0.46
+   2 !   74.1   0.1   3.4e-24   6.6e-21    2359    2564 ..     887    1045 ..     881    1079 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -3.1 bits;  conditional E-value: 0.64
+            PTHR11139.orig.30.pir  859 lnpalr...........lallrkllsqlLtrLelellsskllehldsrleeesakllgtlirkseaeellppyavs 923 
+                                       ++palr                                                                      
+  jgi|Vitbras1|7213|Vbra_13243.t1  628 AMPALRqyaigtlekasE---------------------------------------------------------- 645 
+                                       122222222111111111.......................................................... PP
+
+            PTHR11139.orig.30.pir  924 ilpaLvallaeennelrsallktladlletllaevglleaaerrqllvallplilaallqlwdsesseerlllkrl 999 
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1000 llleseakllvalallgqlvestgeviepllfdsiwlglepaypsllaellklllkflelshserrealavlgllg 1075
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1076 aldsldalrrallqlttllvkhapealipaqeseldysttkvaillllqlilrdlslpssyvlqvlvallkalase 1151
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1152 alqllvlpadkvllapslllrlkdgqlhssvsrirellvrhatrvlilqqLallvsivnaharklaldlapllvlw 1227
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1228 errwtilalleqlvlsaaareflgsylpellllesggvlpllgpllkellnllqqalgavlwinsdfllqklrelg 1303
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1304 sklklekllllallLpilnkllekllelailvraaalsslaalrassvtkiasallhslvrvlqllaaqdstnskl 1379
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1380 laadalgalgalvfnlgldyskilpllkklglflrsrrdwdleltllskvlarrlskatllagallqrqllaqela 1455
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1456 slaiellseeggsslsnggilglrdsdlrsgvvhlvlsekgsgqkllrvfeayvkelipprltsklevalgvlsse 1531
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1532 rsmksdwleWlrgfsllLlkespspalracqllglaqsdpqlarrlfpaaflslwsslqldqlleellsalwskti 1607
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1608 ppeilqtllalleflehdddtvaqglllfgsvwssvdlallpidllqlgeaanacqayakalhylepefreppsli 1683
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1684 kllgallsppleaLaelyssLgepdalyGilesraldletkaawaeklggweeAlaayeralqkasqdagsleatl 1759
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1760 grlrcllaLgqwepeaeeellplaleaawslrlgkwdsmleyllalaaaeas.selrllqallalhqgdfdeaqel 1834
+                                                                                          s  +l llq ++a++          
+  jgi|Vitbras1|7213|Vbra_13243.t1  646 ---------------------------------------------------SeLRLYLLQLVQAIR---------- 660 
+                                       ...................................................223333333333332.......... PP
+
+            PTHR11139.orig.30.pir 1835 iqkarqlllgaelsavdesysrayalllvklqqLsElqeleesqislaalldlksiletWrnRlpgtwqddvevwe 1910
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1911 dllavRrlvlppieddaelwlklaslaRkqgnlslalkllrvlieylkllwalaaveegksflleqeealldlqql 1986
+                                                                                                                   
+  jgi|Vitbras1|7213|Vbra_13243.t1    - ----------------------------------------------------------------------------    -
+                                       ............................................................................ PP
+
+            PTHR11139.orig.30.pir 1987 lielsstaleeellstnrkllakvllllgkWlsalsqlsveevlsslksaasaalqlapkleka 2050
+                                                                                               + +  ++a
+  jgi|Vitbras1|7213|Vbra_13243.t1  661 --------------------------------------------------------YEDQNAEA 668 
+                                       ........................................................11111111 PP
+
+  == domain 2  score: 74.1 bits;  conditional E-value: 3.4e-24
+            PTHR11139.orig.30.pir 2359 pfLlKgheDLRqDeRimQLfrlvNtlLskdrerrRkLsIrtYsViPLsprsGLieWVpntdtLhsilrgcadyrea 2434
+                                       ++++K+++DLRqD+ + Q   l+ +lL+k   ++ +L+++ Y Vi  sp+ G+ie+V++   L  il         
+  jgi|Vitbras1|7213|Vbra_13243.t1  887 RYMFKYGDDLRQDQLVVQMIILMDSLLKK---YGLDLKLTPYKVIATSPSDGMIEFVSGASALSAILS-------- 951 
+                                       7999***********************99...889********************************8........ PP
+
+            PTHR11139.orig.30.pir 2435 rakipsdlniehrlmrqaapqaa...ykvevfkevleetepplLhkelwlkssspeaWlarRknytrSlAvmSmvG 2507
+                                         ++  +++i  ++ r++ + ++    k                               +   n+ rS+A  ++  
+  jgi|Vitbras1|7213|Vbra_13243.t1  952 --DY--NNDIRQFFTRHHPDPSSptgFKP------------------------------QVLDNFIRSCAGYCVLT 993 
+                                       ..66..66678899999999987444443..............................34469************ PP
+
+            PTHR11139.orig.30.pir 2508 yiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalg 2564
+                                       y+LG+GDRH++NiLld+  G++ HIDFg +++   + +p P++    L r +v a+g
+  jgi|Vitbras1|7213|Vbra_13243.t1  994 YLLGVGDRHLENILLDQ-EGHLFHIDFGFILGRDPKLFPPPMK----LCREMVEAMG 1045
+                                       ****************7.89********999998888888875....7777777776 PP
+
+>> jgi|Vitbras1|11491|Vbra_8998.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.3  11.4   2.2e-10   4.3e-07    1609    2122 ..     781    1360 ..     654    1391 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 28.3 bits;  conditional E-value: 2.2e-10
+            PTHR11139.orig.30.pir 1609 peilqtllalleflehdddtvaqgl...llfgsvwss........vdlallpidllqlgea.anac.qayakalhy 1671
+                                       ++++++l     +l+  +++ a+ +   + +++vw s        +   +l     +++++ a+   +++a al+ 
+  jgi|Vitbras1|11491|Vbra_8998.t1  781 AKTAKALMDFSYHLAAGNTDEAYRSvqgVESRTVWLSmakmcvktQ---RLD----VAAKClAELGhATAAAALRE 849 
+                                       5567778888888889999999999999999999999999974331...222....33333244442344556667 PP
+
+            PTHR11139.orig.30.pir 1672 l.epefreppslikllgallspp......leaLaelyssLgepdalyGilesra...ldlet.............. 1723
+                                       + epe+     +          +      +++ ++ly ++g +d+l+ +++  a   + l++              
+  jgi|Vitbras1|11491|Vbra_8998.t1  850 CeEPEVDARLAV----------ValhlglVDEASRLYEQCGRYDLLNQLHQTCAqfdKALQVasdkdrihlrsthy 915 
+                                       777777666533..........1344599*************************8886666688888999999999 PP
+
+            PTHR11139.orig.30.pir 1724 kaawaeklgg.weeAlaayeralqkasqda..........gslea.......................tlgrlrcl 1765
+                                        aa + ++ g  ++A++ ye+a+  ++++             l+a                       ++g +r +
+  jgi|Vitbras1|11491|Vbra_8998.t1  916 AAAQYHESTGqTQDAISDYEAAQV-HAWEVprmlqaagkvEELTAyvdqaedkrlykwlasyyescgdLDGSMRYY 990 
+                                       *********************955.888887666655444333337777777778888888888888888888888 PP
+
+            PTHR11139.orig.30.pir 1766 laLgqw................................................epeaeeellplal......... 1784
+                                       ++  +w                                                            +         
+  jgi|Vitbras1|11491|Vbra_8998.t1  991 RKADDWvalvrlhclnqnvksavqicndtndaaacyhlakhlelegrpkdaihwY-----------Sktgrvrqai 1055
+                                       8888886666666555555555555544444444333333333333333333220...........0222222222 PP
+
+            PTHR11139.orig.30.pir 1785 ...eaawslrlgkwdsmleyllalaaa.......................easselrllq.allalhqgdfdea.. 1831
+                                          +                      a                       +   ++   +  +l+++ g+  +a  
+  jgi|Vitbras1|11491|Vbra_8998.t1 1056 rvaQD---------------------AglesdlmgmalsstttemsaaarYYLLRGQASKaVVLYSKAGQVRKAvd 1110
+                                       11111.....................01111111111111122221223322222222222222222222222222 PP
+
+            PTHR11139.orig.30.pir 1832 ....qeliqkarq............lll.gaelsavdesysrayalllvklqqLsElqeleesqislaa....lld 1886
+                                            +l++  r             ll  +ae+  + e +++a+  ll    q     el+e      a    l  
+  jgi|Vitbras1|11491|Vbra_8998.t1 1111 icleHHLVDGLRRiadelskeadpqLLTrCAEFLIANEQPDKAV-GLLSATKQYERAIELCE------AhdvpLS- 1178
+                                       22223333333333333333333332222233333455555555.33332333333333444......1222322. PP
+
+            PTHR11139.orig.30.pir 1887 lksiletWrnRlpgtwqddvevwedllavRrlvlppieddaelwlklaslaRkqgnlslalkllrvlieylkllwa 1962
+                                         +++   + ++p   q++ +v+ dll                  +l++++ +qg+++la+k +  +  ++k++ +
+  jgi|Vitbras1|11491|Vbra_8998.t1 1179 -EDLV---EKMTPDKNQLSADVRSDLLG-----------------RLGKVCKRQGLFQLACKKFTQAGDKVKAMKS 1233
+                                       .4445...44455555999999999999.................8*****************9667778888888 PP
+
+            PTHR11139.orig.30.pir 1963 laaveegksflleqeealldlqqllielsstaleeellstnrkllakvllllgkWlsal....sqlsveevlsslk 2034
+                                       l      k        a      +++ +                +a v+ l +++l++l    + +  + ++s+++
+  jgi|Vitbras1|11491|Vbra_8998.t1 1234 L-----LK--------AGDTQ-KIVFFAG------------TARQAEVYILAANYLQGLewqsDPEVTRNIISFYT 1283
+                                       8.....44........33333.2232222............3336788888899888888777555559999**** PP
+
+            PTHR11139.orig.30.pir 2035 saasaalql..apklekawhswalfndellehsqesgasaatlrllsaekaalqylvaavtcylkalala...... 2102
+                                       +    a+ +   +  ++       +++++    + ++++ +        + a+ +l++a+ ++l++l  +      
+  jgi|Vitbras1|11491|Vbra_8998.t1 1284 K----AKAFdkLSQFYD-------SCSQV----EVDEYRDY--------DKAAGLLKEALKAFLRSLGIDkdthmp 1336
+                                       *....655511444444.......48888....55556656........78889999*********9977666665 PP
+
+            PTHR11139.orig.30.pir 2103 .gg.nslq..dtlrlLtLwfdhga 2122
+                                        g+ +++   ++ r ++L++++++
+  jgi|Vitbras1|11491|Vbra_8998.t1 1337 pGIeHDTRvvALQRRIQLVDKFAS 1360
+                                       433533333344477777766665 PP
+
+>> jgi|Vitbras1|13326|Vbra_15710.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.1   0.0   9.7e-10   1.9e-06    2492    2535 ..     716     758 ..     628     778 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 26.1 bits;  conditional E-value: 9.7e-10
+             PTHR11139.orig.30.pir 2492 rRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFg 2535
+                                        ++ ny  S A+ S+++yiL + DRH  NiL+d + G+v+H+DFg
+  jgi|Vitbras1|13326|Vbra_15710.t1  716 AKLNYVASMAAYSIACYILSIRDRHNGNILID-TEGHVIHVDFG 758 
+                                        5789****************************.79********6 PP
+
+>> jgi|Vitbras1|5104|Vbra_2878.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.6   0.4   7.4e-07    0.0014     668     864 ..     515     691 ..     462     715 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 16.6 bits;  conditional E-value: 7.4e-07
+           PTHR11139.orig.30.pir 668 aalsglsvwlrtalfllglaeasealavallllllstlgallfsg.....sseealllclvl................f 725
+                                     ++l+gl+v l+ a+++              +++++ t  +ll+s+                +                 
+  jgi|Vitbras1|5104|Vbra_2878.t1 515 QFLEGLCVVLKRAISD-------------KIAQVFLTSTQLLQSIaiglfA----------IqgdeglkksdvqpcldP 570
+                                     3444455555544443.............3444445555555554222220..........023333333455566667 PP
+
+           PTHR11139.orig.30.pir 726 vrellvllLlnpnldvrkaaaaalalLlassgnssvlsllsplssvlldarpeeka....vvvleilekllllaildld 800
+                                     +++llv +L + n+++r aaa+ l +L+++  +                     ++     +  + ++k l +++  + 
+  jgi|Vitbras1|5104|Vbra_2878.t1 571 LLPLLVERLGDANNRCRDAAAISLTSLVKQPTV--------------------GGHfvgqYLLRTSKKKQLPAKSIVS- 628
+                                     78****************************532....................2223555445555668888887744. PP
+
+           PTHR11139.orig.30.pir 801 plvrlsvles.laedlaafd...ehas..qafslsllfallndeslevreaaisllgrlslksllnpalr 864
+                                        rls+les   e+ ++        +  q++++++     n++++evr+a++sl+g   ++ l++p+ +
+  jgi|Vitbras1|5104|Vbra_2878.t1 629 ---RLSLLESlVTECQCIQPmkkD--GmtQEALMQAAMGWFNSPHQEVRMACVSLVGA--IYTLAGPSEI 691
+                                     ...888885547777776666442..2559999999999*****************98..5555666555 PP
+
+>> jgi|Vitbras1|694|Vbra_6820.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.8   1.5   0.00066       1.3     724     935 ..     110     335 ..      25     362 .. 0.62
+   2 !    6.9   0.0    0.0006       1.2     174     398 ..     377     670 ..     345     708 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 6.8 bits;  conditional E-value: 0.00066
+          PTHR11139.orig.30.pir 724 l..............fvrellvllLlnpnldvrkaaaaalalLlassgnssvlsllsplssvlldarpeeka........ 781
+                                    +              +++++l++ +++ ++   + a +al+ L+++ +n +       l+  ++       a        
+  jgi|Vitbras1|694|Vbra_6820.t1 110 IakvgacelplgkwpNLVPVLLNVVTEGDNTAKQTALTALSYLCEELANII-------LNDGAT-------Adiipsdlt 175
+                                    044444444445555666666666666666555555555555555543221.......111111.......122223344 PP
+
+          PTHR11139.orig.30.pir 782 vvvleilekllllaildldplvrlsvleslaedlaafdehasqafslsllfallndeslevreaaisllgrlsl.kslln 860
+                                    +++l+ + + + l ++ +  + + ++ ++l  + ++fd++  + f+++++ + +  ++ +v+ aa+++l + +  ++++ 
+  jgi|Vitbras1|694|Vbra_6820.t1 176 NSILTAVVQGMRLEDASCKEAATKALYHALVLAQRNFDNETERNFIFQVVSENCKGPNGKVQVAAFECLVQIATeYYDYL 255
+                                    555555556666666666656666666888888888998888***************************99887865555 PP
+
+          PTHR11139.orig.30.pir 861 palrlallrkllsqlLtrLelellss......kllehl.dsrleeesakllgtlirkseaee.......llppyavsilp 926
+                                    +++ ++ + +l+++ +         +      +++e++ +++ ee  +k l    + ++          ++ ++++ +lp
+  jgi|Vitbras1|694|Vbra_6820.t1 256 QPYMAP-IATLTLDTIKT-------ApetvaiPAMELWsTVCDEELFLKELELDAQAEGK-SpertsqrFIAQALPLLLP 326
+                                    555555.55555555542.......13455666777777777776666666665554444.0345666688888888888 PP
+
+          PTHR11139.orig.30.pir 927 aLvall.aee 935
+                                    +L+ +l + +
+  jgi|Vitbras1|694|Vbra_6820.t1 327 ILLDTLtK-Q 335
+                                    88887743.3 PP
+
+  == domain 2  score: 6.9 bits;  conditional E-value: 0.0006
+          PTHR11139.orig.30.pir 174 aldllldel.................................ladlihhvrkglsl.aqavravll.lssnlvdaslpll 218
+                                    + ++ ++++                                 l+d+  +vr + +  ++  + ++    ++ v +s+++l
+  jgi|Vitbras1|694|Vbra_6820.t1 377 YQSAQWNQReaailaygsimegpssdklaqpvassftflmglLGDPSVAVRDTTAWtIARIAQFHEtIIAEHVGNSQAGL 456
+                                    44444555555555555555555555555555555555555555566666555555444444444445555566667788 PP
+
+          PTHR11139.orig.30.pir 219 iqtalewlll...............ilerleavlil........................................lflv 243
+                                    ++++le+l                           +                                        l+++
+  jgi|Vitbras1|694|Vbra_6820.t1 457 VKVLLEKLKDeprvaanicwvihvlA---------EthpydakdppaqctilsepffslarelivtasrpdaeeknLGEA 527
+                                    88888888876665555555544440.........244444444444444445555555556666888888889998999 PP
+
+          PTHR11139.orig.30.pir 244 hvqlfflliwlalrdpvleirelaitlLaallslllsiegkiril.sssfypaaydaaldglg.lls............. 308
+                                    ++   + li++a  d v+ +++  + +L +l       e  ++i  +++ y +++d++  ++g l++             
+  jgi|Vitbras1|694|Vbra_6820.t1 528 AYSALSMLIGKAGMDCVPMMEQITVAILEKL-------EATFQITaADPNYHKVMDVQGSLCGcLQVltvrlkekiqpvk 600
+                                    9999999999998888877777776666544.......444444445778889999999999986667788999999998 PP
+
+          PTHR11139.orig.30.pir 309 ....................................llelfssllvllellvfseafsarlpallerllslaallqllla 352
+                                                                        l e f+ +l +++++ +++++s + ++ ++r+++          
+  jgi|Vitbras1|694|Vbra_6820.t1 601 erlfaaymkviqqygqthansiheeallaisalafaLGENFEVFLPHFFPY-LQAGLSNYEETTVCRISN---------- 669
+                                    887777777777777777777777776666666666666666666666666.666666666666665554.......... PP
+
+          PTHR11139.orig.30.pir 353 llqsvvtsaalagllefltlklllksvvrvvkllllavaapeplgf 398
+                                                                                 +
+  jgi|Vitbras1|694|Vbra_6820.t1 670 ---------------------------------------------E 670
+                                    .............................................3 PP
+
+>> jgi|Vitbras1|19779|Vbra_23073.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.2   0.6   0.00049      0.96     614     802 ..      13     150 ..       5     190 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 7.2 bits;  conditional E-value: 0.00049
+             PTHR11139.orig.30.pir 614 sllsivlerllnllssslealvlslisaaldllscllgsalsavlsalatalqeaalsglsvwlrtalfllgl..ae 688
+                                       +l++++++ ++    ++l++l+  li a ++  s ++++a                +    v++r + +++++   e
+  jgi|Vitbras1|19779|Vbra_23073.t1  13 QLIKRLSSPFSLSKVNALRELHRRLILAKGKKESRAAIDA----------------TLIAAVLVRLLKSCWRStaIE 73 
+                                       4444444444444444466777777666666555555554................223333333333333333311 PP
+
+             PTHR11139.orig.30.pir 689 a.sealavallllllstlgallfsgsseealllclvl...............fvrellvllLlnpnldvrkaaaaal 749
+                                       a +                                 +               +v++ l+++L++p+ldvr +aa+a+
+  jgi|Vitbras1|19779|Vbra_23073.t1  74 AaK---------------------------------ClaamaaaeadvvieaGVVPALQQQLSSPHLDVRVQAACAI 117
+                                       111.................................01111222222233448899999999999999999999999 PP
+
+             PTHR11139.orig.30.pir 750 alLlassgnssvlsllsplssvlldarpeekavvvleilekllllaildldpl 802
+                                       ++++  +++     +l  ++++ll                   +++i+  dp 
+  jgi|Vitbras1|19779|Vbra_23073.t1 118 CTIAIKTHK----GRLGVSKTSLL----------------GVISSGICKGDPS 150
+                                       999888752....22222222222................4444444444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (2684 nodes)
+Target sequences:                      23412  (12163461 residues searched)
+Passed MSV filter:                      1100  (0.0469845); expected 468.2 (0.02)
+Passed bias filter:                      515  (0.0219973); expected 468.2 (0.02)
+Passed Vit filter:                        67  (0.00286178); expected 23.4 (0.001)
+Passed Fwd filter:                        13  (0.000555271); expected 0.2 (1e-05)
+Initial search space (Z):              23412  [actual number of targets]
+Domain search space  (domZ):              12  [number of targets reported over threshold]
+# CPU time: 2.60u 0.49s 00:00:03.09 Elapsed: 00:00:01.87
+# Mc/sec: 17454.43
+//
+[ok]

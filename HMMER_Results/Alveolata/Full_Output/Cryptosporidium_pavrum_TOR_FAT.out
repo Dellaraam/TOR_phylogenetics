@@ -1,0 +1,119 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Cryptosporidium_pavrum.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.5e-11   41.2  16.8    4.3e-11   40.4   0.0    4.2  4  EAK89842.1  Tra1p-like; C-terminal FAT domain plus phoshoinos
+     0.0004   17.5   0.8      0.037   11.0   0.2    2.7  2  EAK87836.1  FRP1 like protein involved in DNA repair with a F
+
+
+Domain annotation for each sequence (and alignments):
+>> EAK89842.1  Tra1p-like; C-terminal FAT domain plus phoshoinositide 3-kinase domain; very large protein [Cryptosporidi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -6.1   3.2         2   3.8e+03     229     284 ..    2030    2095 ..    1999    2129 .. 0.62
+   2 ?   -2.3   0.5      0.21   4.1e+02     221     292 ..    4159    4229 ..    4102    4237 .. 0.73
+   3 !   11.4   0.1   1.5e-05     0.028      31      89 ..    4363    4422 ..    4319    4434 .. 0.79
+   4 !   40.4   0.0   2.2e-14   4.3e-11     104     343 .]    4509    4780 ..    4507    4780 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: -6.1 bits;  conditional E-value: 2
+                  .......................HH..HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS CS
+         FAT  229 q............eptnleeftkll..arcylkkGewlaalqklnwseekseeilqaysaateldpswyk 284 
+                  q            +p ++ ++++ +    ++  k ++ +++++    ++++ +i+q+++ + +l  +++k
+  EAK89842.1 2030 QpipvlaqhisvnHPAQVGTQSNHQnlQNVNQSKTQYPHQIYQ----NQHQTNINQQFQMNSQLGINQTK 2095
+                  1334444444444333333333333224566677777777777....35678888888888777777766 PP
+
+  == domain 2  score: -2.3 bits;  conditional E-value: 0.21
+                  SS-SS---...............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+         FAT  221 elssglevq....eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalf 292 
+                  el+++ +v+    + +n+ e +  l  +++ ++ew +a + +    ++ ++i ++ s+at  + ++ ++  +wa+ 
+  EAK89842.1 4159 ELQEEDIVIgirrSFSNCLETHMGL--ALMQQAEWSKAQEIF---YNNLDAIYNSSSKATNSNADCSHNILNWARI 4229
+                  4455555556655555665555555..899999999999987...5779************************985 PP
+
+  == domain 3  score: 11.4 bits;  conditional E-value: 1.5e-05
+                  --CCCHCCC.CHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCH CS
+         FAT   31 kaffeaila.lhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaElee 89  
+                  ++f + i++   r+++ e+e++++ +   +++ ++ l++ +++ +++ll+++Qq++El+e
+  EAK89842.1 4363 QQFSQSIIQnSSRSKLAEFERHCSIGYRTVLNFWAMLPSVVTTCHVPLLLNFQQYIELQE 4422
+                  445555555355599********************************************9 PP
+
+  == domain 4  score: 40.4 bits;  conditional E-value: 2.2e-14
+                  TTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC................HHCCS-STTCCCCCCCCHCHHHHC.CSTTHHCCCCCHCTT.... CS
+         FAT  104 ksllktWrkRlpgvqddvevwqdilsvRslvlspied................lllkgakaemwlkfanlaRksgrl.slAekaLkklleedkeewl 183 
+                  +++l+ Wr+Rlp+ +d++  w+d++ +R +v+s i +                + + + +  + +kfa++aRks+rl +++  +L++l   +     
+  EAK89842.1 4509 ARMLNVWRDRLPNKWDSMILWNDLFVWRNFVFSIIMNlisrsdhltsqakslwPSYLQDMPWTMIKFASIARKSHRLpEVSVALLQRL---Q----- 4597
+                  5799**********************************************999888889999999********998548999999999...2..... PP
+
+                  .TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...............HH.HHCCCTCCC......................... CS
+         FAT  184 ppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq....eptnleeftkll.arcylkkGe......................... 250 
+                         +l+++  +  + e+++   e v+ +l++  +l++gl+       +++ e + ++  a+++ +kG                          
+  EAK89842.1 4598 ------NHLQVSGGDAYRAETFLATLEKVKLCLSDTTQLRTGLNILnmtdFQKCPEPYFDEYrAEFLRLKGIisnklypnyyidgeipnnansvtgs 4688
+                  ......3566666666677777777777777777777555444444333333333444455556667777766666666666666666666666666 PP
+
+                  .............CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSST CS
+         FAT  251 .............wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsseks 334 
+                                ++a++     +++   +++  +++ ++ p  +  w twa++ ++ l            +++s y+v+av  +l  + l   k+
+  EAK89842.1 4689 nvlnseqghpglnNTSATGI----STSVVRVNADLLSSLKVYPLFARGWITWAQYTDRLLYIH---------QNMS-YAVNAVISYLMGIYLRPDKY 4771
+                  66655555564433333333....456788888888888888888888999999888888777.........5666.88999999988888888877 PP
+
+                  TTCHHHHHC CS
+         FAT  335 lqdllRlLt 343 
+                     l R+L+
+  EAK89842.1 4772 SILLSRVLW 4780
+                  777888887 PP
+
+>> EAK87836.1  FRP1 like protein involved in DNA repair with a FAT domain and a phosphatidylinositol kinase domain at th
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    3.9   0.0    0.0028       5.3      47      91 ..    2426    2470 ..    2404    2485 .. 0.84
+   2 !   11.0   0.2     2e-05     0.037     264     342 ..    2730    2825 ..    2644    2826 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 3.9 bits;  conditional E-value: 0.0028
+                  HCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHC CS
+         FAT   47 eaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeii 91  
+                  ++   +ekar+ll+t ls   + s +r  ++l +l++l+++e + 
+  EAK87836.1 2426 SFINTLEKARSLLLTPLSIKWNDSHTRSSTILEKLHILMDIEFVY 2470
+                  577789**********************************99665 PP
+
+  == domain 2  score: 11.0 bits;  conditional E-value: 2e-05
+                  .-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS....................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHH CS
+         FAT  264 kseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee...................pedlseyvvpavegflkslslssekslqdllRl 341 
+                  ++e+i + +++  e++++++k++++ a + ++ +    +++e e+                   +    e +   ++ +l +l+++++ ++ +l R+
+  EAK87836.1 2730 SPENIINTFRETLEIRSNCEKTYFQFANYLDNYFHLIVSSSEAENnfptssttsknnynlgsifQ--CDETIFLCINMYLSCLKCGNSFIYPSLSRV 2824
+                  4899********************************9888887779************9987554..34669999*********************9 PP
+
+                  H CS
+         FAT  342 L 342 
+                  L
+  EAK87836.1 2825 L 2825
+                  8 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       3805  (2271431 residues searched)
+Passed MSV filter:                       394  (0.103548); expected 76.1 (0.02)
+Passed bias filter:                       86  (0.0226018); expected 76.1 (0.02)
+Passed Vit filter:                         9  (0.00236531); expected 3.8 (0.001)
+Passed Fwd filter:                         2  (0.000525624); expected 0.0 (1e-05)
+Initial search space (Z):               3805  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.07u 0.02s 00:00:00.09 Elapsed: 00:00:00.06
+# Mc/sec: 11495.02
+//
+[ok]

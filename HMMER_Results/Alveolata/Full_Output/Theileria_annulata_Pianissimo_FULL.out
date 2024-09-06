@@ -1,0 +1,54 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Theileria_annulata.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+  ------ inclusion threshold ------
+      0.011   10.7   0.6       0.37    5.7   0.0    2.7  2  CAI76906.1  importin alpha, putative [Theileria annulata]
+
+
+Domain annotation for each sequence (and alignments):
+>> CAI76906.1  importin alpha, putative [Theileria annulata]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.7   0.0   9.8e-05      0.37     937     999 ..     150     210 ..      90     215 .. 0.51
+   2 ?    2.4   0.1     0.001       3.9     930     971 ..     353     393 ..     334     457 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 5.7 bits;  conditional E-value: 9.8e-05
+  PTHR13298.orig.30.pir 937 aalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiL 999
+                             a WA+ +i+s ++  + +   +++ ++++i+l e  +   vr  ++++lg ia  ++ ++ L
+             CAI76906.1 150 EAAWAITNIASGNQQQTKVAT-DNGAVPKLIALLEA-PKEDVREQAIWALGNIAGDSAECRDL 210
+                            245666666665555555555.45666666666654.55566666666666555544444443 PP
+
+  == domain 2  score: 2.4 bits;  conditional E-value: 0.001
+  PTHR13298.orig.30.pir 930 eeilklkaalWAlghigsselG.lelleeenedliediiklae 971
+                            e+   +k a W+l++i++  +  +e + +  +d++e++i+l+ 
+             CAI76906.1 353 EKKTIKKEACWTLSNIAAGTRSqIESFLQ--SDVVEKLIELMS 393
+                            555558999*******9865542555555..469999999976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                       3795  (2027010 residues searched)
+Passed MSV filter:                       315  (0.083004); expected 75.9 (0.02)
+Passed bias filter:                       50  (0.0131752); expected 75.9 (0.02)
+Passed Vit filter:                         7  (0.00184453); expected 3.8 (0.001)
+Passed Fwd filter:                         1  (0.000263505); expected 0.0 (1e-05)
+Initial search space (Z):               3795  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.09u 0.01s 00:00:00.10 Elapsed: 00:00:00.05
+# Mc/sec: 45842.42
+//
+[ok]

@@ -1,0 +1,458 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Tetthe1_GeneModels_ExternalModels_aa.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                           -----------
+    4.9e-17   62.7  48.2    7.2e-17   62.2  48.2    1.1  1  jgi|Tetthe1|3317308|XM_001009179.3  
+    1.8e-05   24.5   0.4    1.8e-05   24.5   0.4    2.1  2  jgi|Tetthe1|3302190|XM_001030727.1  
+    2.6e-05   24.0  17.1    4.6e-05   23.2  17.1    1.4  1  jgi|Tetthe1|3306635|XM_001018210.2  
+  ------ inclusion threshold ------
+      0.018   14.6   8.9       0.03   13.8   8.9    1.3  1  jgi|Tetthe1|3308407|XM_012796903.1  
+      0.028   13.9  21.6      0.055   13.0   9.4    2.2  2  jgi|Tetthe1|3294333|XM_012799781.1  
+      0.041   13.4  35.4      0.058   12.9  35.4    1.1  1  jgi|Tetthe1|3314632|XM_001470664.2  
+       0.13   11.8   4.1       0.21   11.0   4.1    1.3  1  jgi|Tetthe1|3316472|XM_001015647.1  
+       0.15   11.6  42.1       0.18   11.3  42.1    1.2  1  jgi|Tetthe1|3298511|XM_001031307.2  
+       0.23   10.9  35.2       0.26   10.8  35.2    1.1  1  jgi|Tetthe1|3314649|XM_001007764.1  
+       0.43   10.0  16.3       0.59    9.6  16.3    1.2  1  jgi|Tetthe1|3299685|XM_001031200.2  
+       0.52    9.8  11.5       0.64    9.5  11.5    1.1  1  jgi|Tetthe1|3308601|XM_001018924.4  
+       0.83    9.1  15.3       0.88    9.0  15.3    1.0  1  jgi|Tetthe1|3305212|XM_001008551.2  
+        2.5    7.5  38.7        1.4    8.4   3.2    2.2  2  jgi|Tetthe1|3308009|XM_001024476.2  
+        2.7    7.4  13.2        3.7    6.9  13.2    1.1  1  jgi|Tetthe1|3314060|XM_001025119.3  
+        4.6    6.6  30.7        6.4    6.2  30.7    1.3  1  jgi|Tetthe1|3296538|XM_001019610.3  
+        6.4    6.2  50.1        8.7    5.7  50.1    1.2  1  jgi|Tetthe1|3299028|XM_001009902.3  
+
+
+Domain annotation for each sequence (and alignments):
+>> jgi|Tetthe1|3317308|XM_001009179.3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.2  48.2   4.3e-20   7.2e-17      64     668 ..      30     618 ..       8     645 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 62.2 bits;  conditional E-value: 4.3e-20
+               PTHR13335.orig.30.pir  64 astpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsr 138
+                                         ++ +++  +e+ ++s++ +  +   + ++++++s+++r+++ + +  s+  +s++++e + +  i++ + + +s+
+  jgi|Tetthe1|3317308|XM_001009179.3  30 NNRQKSAKFEQLSDSSDEDDRQTQFQSKQGNGMSQNNRQKENQTSLISNLLKSDGDTE-SMDDMINQINSIVSSQ 103
+                                         3333333333333333333333345556667777777777777777777777777774.4455566688888888 PP
+
+               PTHR13335.orig.30.pir 139 rrrantavkleklrke.....rrsksasiassee.r...dqsscksiqwktessvkedsvqrassesslsserss 204
+                                          ++++++ ++e++r       +        + e+       +s ++    +++++ e++  +a+++ + + e+s 
+  jgi|Tetthe1|3317308|XM_001009179.3 104 YEQKKKQFEEEQERIKmlkeiM--------QQENeEqkkMEISKTNSIIVYKNNSGEKIDENAQQSEQNGMEKSN 170
+                                         8886666666666655443331........333322234223333333333333333333333333333333322 PP
+
+               PTHR13335.orig.30.pir 205 dssssssapsr.rqsnkldseq.............lsaeesdslfekkskssstktqkskkpssa.a...kqsi. 260
+                                                 +++ +++n +++ +             +++ e++  ++++++++  ++ ++ k +++ +    qs+ 
+  jgi|Tetthe1|3317308|XM_001009179.3 171 G-------YKSkEKQNNNQDYDdsdeeeddededyDDDDEQHRYNNRQNRNGNNSDNNEDKFEQVpEdciIQSFn 238
+                                         2.......2222334444444412222222234455555555556666666666666666666662255434445 PP
+
+               PTHR13335.orig.30.pir 261 ...sslssaLekkpsqlnnpfneyakfdgkgvgttaslkidiylplssepdkllpltvvvkasatVqevIGlaLw 332
+                                            ++  s L+++ + ++n +   a+        + + k+d+y++  s       ++v    ++t+q++I  ++ 
+  jgi|Tetthe1|3317308|XM_001009179.3 239 nvvLKQVSLLKNTTQ-QKNSLAKLASN-------PRAQKLDVYFFGTSF-----NMKVPYDDNTTIQDFIKIIID 300
+                                         444333344444443.45555444433.......35558******9999.....9******************** PP
+
+               PTHR13335.orig.30.pir 333 qyteeg.repklpdnk..vnaycLrivEdDGe.vddDFPpLDrnepiskfgfselaLveatdsegktnndlqtpl 403
+                                          y   +  + +l +    ++ay+Lr+ +dDG   d +++p++++ p+++f+ ++ ++ e++              
+  jgi|Tetthe1|3317308|XM_001009179.3 301 FYMADPnTDKSLMRYPkyPQAYNLRMKDDDGYkPDSNLGPIEPKYPVQNFSKEQIVIMEIDRFMPPA-------- 367
+                                         ****999999**99988877***********99***************************9998766........ PP
+
+               PTHR13335.orig.30.pir 404 preqkkrleeakrsagsaneagsslstesskeslfvkvnlaypgdsvrskttivvptdvtladvlekackkrkld 478
+                                                    ++ ++s+++++++++ +++ + l v++     g +    + i+ + ++t+++vle +  k++ +
+  jgi|Tetthe1|3317308|XM_001009179.3 368 -----------EDFQDSIARKIKQKTIQKGLDLLNVTIEE--LGAQ----LNIEQSPQSTIKQVLEYLRDKKNAK 425
+                                         ...........44556777777777777777777777776..6888....**********************999 PP
+
+               PTHR13335.orig.30.pir 479 qkky.....rllkvsepnvivdldrtvesldgleflllrknssradgvlekteskssssanatissksaaedsqi 548
+                                          +++     +   + e+ + +dl+ ++++l  +++++ +k++ +ad++   t+++ +  +n         + ++ 
+  jgi|Tetthe1|3317308|XM_001009179.3 426 ISIKdcivfYYDYQEEKYIELDLNTSISQLPSQDKKIRIKKKEWADTPRI-TNQQVQYAPNL--------PAQIL 491
+                                         99999***99999*********************************9766.33333322221........66677 PP
+
+               PTHR13335.orig.30.pir 549 qiatvqddlsssayksfkVsrkhkmrfktdrelgIdgdyieimPvenqkaa........tkfwekqKtisihisq 615
+                                         q ++ +++++   y +f V++++  + +++r lgId+ +i + + + q           +++++++K +s+ i++
+  jgi|Tetthe1|3317308|XM_001009179.3 492 QSEPISNMNL-VKYEEFNVIKINDKKKRQERVLGIDQHKILNINKRIQQQDigflnkifVNPQTGTKNPSRKIED 565
+                                         7777777776.68***************************99988766665678999999*************** PP
+
+               PTHR13335.orig.30.pir 616 vvacklssknpanFkivvrr...endeKrydfeavsaaeaaeIvskinnileayas 668
+                                         +  +  +  n  + k+   +   +  eK +++e  ++++ ++I++ki  ++e+y+ 
+  jgi|Tetthe1|3317308|XM_001009179.3 566 IQFIQELENNIVIMKV---KdpdQQYEKTLKYEIANSEDRRKIIKKIEGLMELYRK 618
+                                         ****877777776666...4588999****************************95 PP
+
+>> jgi|Tetthe1|3302190|XM_001030727.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.5   0.4   1.1e-08   1.8e-05     280     385 ..      56     167 ..      50     176 .. 0.81
+   2 ?   -4.4   7.6         6     1e+04     218     253 ..     208     243 ..     179     256 .. 0.47
+
+  Alignments for each domain:
+  == domain 1  score: 24.5 bits;  conditional E-value: 1.1e-08
+               PTHR13335.orig.30.pir 280 eyakfdgkgvgttaslkidiylplssepdkllpltvvvka.....satVqevIGlaLwqyteegrepklpdnk.. 347
+                                         +y++  + + ++ +++k++iyl +  + d + ++ ++v++       t+ +vI la+ ++ +   e k       
+  jgi|Tetthe1|3302190|XM_001030727.1  56 RYTDCVSNS-QEEKTMKVQIYLNIEFTFDGKVEM-LKVTQdlppkQFTIDDVISLAIREFNDIL-EKKNSQYRin 127
+                                         566555556.699**************8888888.88888999999*************99864.3333333333 PP
+
+               PTHR13335.orig.30.pir 348 ..vnaycLrivEdDGevddDFPpLDrnepiskfgfselaL 385
+                                           ++ ++L++   +G+  +D+P+LDr   +++++ + ++L
+  jgi|Tetthe1|3302190|XM_001030727.1 128 ttQSIWNLYMSKKNGKPKQDLPALDRDNLLQDTQEDMFSL 167
+                                         5677***************************999888887 PP
+
+  == domain 2  score: -4.4 bits;  conditional E-value: 6
+               PTHR13335.orig.30.pir 218 snkldseqlsaeesdslfekkskssstktqkskkps 253
+                                         s+k + e++ ++ + ++++ k++ ss ++ ++k+++
+  jgi|Tetthe1|3302190|XM_001030727.1 208 SKKDQVENKETQIPQEINNSKPQKSSVPRTQKKQKE 243
+                                         222222223333333333333333333333333332 PP
+
+>> jgi|Tetthe1|3306635|XM_001018210.2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.2  17.1   2.7e-08   4.6e-05      49     282 ..     466     925 ..     279     940 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 23.2 bits;  conditional E-value: 2.7e-08
+               PTHR13335.orig.30.pir  49 vsssssesll.srpksastpgdsgsedsgssneaetatg.................................... 86 
+                                         v+s   + +  ++++++  + +s ++d++   e e +++                                    
+  jgi|Tetthe1|3306635|XM_001018210.2 466 VYSQFIQQFIpQTNTNGQVNSTSQTQDQSQIQE-EPVSFyyesqeefsiitqtlksirnqlrdnleidpsfqtyl 539
+                                         444444455566666777777777766666333.33333888888888888888888888888888888888888 PP
+
+               PTHR13335.orig.30.pir  87 ...................................................gdtkarrkkpsldqrretqgekqs 110
+                                                                                               ++ + +++++q +e+++++q+
+  jgi|Tetthe1|3306635|XM_001018210.2 540 heyftffyqinkqiilltklynkntiippiyansifdnlilsfcyeytqnqQEEQNEGANDYQNQVQEEEQQEQD 614
+                                         89999999999999999999999999999999999999999999999998877888889999************* PP
+
+               PTHR13335.orig.30.pir 111 sesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.rdqsscksiqwktessv 184
+                                         +e+++++  e+e+ +++i+++++d++s++ + ++++  e++ ++++ + ++++++ee ++q   + iq+      
+  jgi|Tetthe1|3306635|XM_001018210.2 615 EEEQEQDYEEQEDNQSQIEEEDDDDQSQQVN-QDQQLVEEEGDQQQEDEEGNQQLEEeKNQQLEEEIQQE----L 684
+                                         *******************999999998888.55566666666666677777777665523333333333....2 PP
+
+               PTHR13335.orig.30.pir 185 kedsvqrassesslsserssdssssssapsrrqsnkldseq.................................. 225
+                                          ++   +++ e+  ++ r+++++ s+sa+           q                                  
+  jgi|Tetthe1|3306635|XM_001018210.2 685 DQKLDVEKQDETFQGFMRNQSQQNSQSAN-----------Qqhilkpvgkywlifgiilaidlvaivlplvshfk 748
+                                         22222222333333333444333333333...........14556666777777777777777777777777777 PP
+
+               PTHR13335.orig.30.pir 226 ........................................................................... 225
+                                                                                                                    
+  jgi|Tetthe1|3306635|XM_001018210.2 749 iaainskndhimslydkpqikdiivikesenqhddcpqdyhdifnyefqgykpfylcrqnvlpykqgetyvdere 823
+                                         777788888888999999999999999999999999999999999999999999999999999999999999999 PP
+
+               PTHR13335.orig.30.pir 226 ....lsaeesdsl............fekkskssstktqkskkpssa.a....................kqsi... 260
+                                             + ++++++l              k+ + +++++q+  + + + +                       i   
+  jgi|Tetthe1|3306635|XM_001018210.2 824 qcqfFEDQKPKKLsilklgneniriCGKYMNINIQQKQQCDQNEVVcSfisefnsficansekdcpinN--Iqmd 896
+                                         999955555555555566666666699999999999999999999988988888887766666554330..2555 PP
+
+               PTHR13335.orig.30.pir 261 ......sslssaLekkpsq.lnnpfneya 282
+                                                s +++L+++ ++ ++ p+  + 
+  jgi|Tetthe1|3306635|XM_001018210.2 897 eiqsanGSYQQQLSPQRQApNQLPLLGFE 925
+                                         56655744457888887764555666655 PP
+
+>> jgi|Tetthe1|3308407|XM_012796903.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.8   8.9   1.8e-05      0.03      27     177 ..     121     262 ..      95     311 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 13.8 bits;  conditional E-value: 1.8e-05
+               PTHR13335.orig.30.pir  27 cerilndddvdlekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqr 101
+                                          + i+n++ + + ++ +  ++     +++ ++  ++++s++ +s+ ed+ +++      ++ +++++++ +++q+
+  jgi|Tetthe1|3308407|XM_012796903.1 121 IQNIFNNN-INIFREANNFNN-----PQNNIFNVAQNQSNNRRSSHEDDEDDDP---FLFNSQPFPSQQAQVSQE 186
+                                         55566663.444444433333.....3444444455666666666666666554...45667999********** PP
+
+               PTHR13335.orig.30.pir 102 retqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.rdqsscks 175
+                                         ++t     s +++++++  +++q +   +++l++g++++++ + ++ ++++++ +  s++++ ++  +  ++ck 
+  jgi|Tetthe1|3308407|XM_012796903.1 187 QDTHANIISFQQQNQDRVAGGSQLMYHVQQQLQQGIQNQSQMQLQQIQQQQQQLQILSNNPNVLNRqT-CPHCKQ 260
+                                         ************************99999***********9999999999999888888888887766.777777 PP
+
+               PTHR13335.orig.30.pir 176 iq 177
+                                         i 
+  jgi|Tetthe1|3308407|XM_012796903.1 261 IF 262
+                                         65 PP
+
+>> jgi|Tetthe1|3294333|XM_012799781.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.0   4.3    0.0021       3.5      97     154 ..     132     189 ..       8     217 .. 0.71
+   2 ?   13.0   9.4   3.3e-05     0.055      91     249 ..     521     741 ..     343     793 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 7.0 bits;  conditional E-value: 0.0021
+               PTHR13335.orig.30.pir  97 sldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke 154
+                                         + + ++e+ +e+ ++e+e++ ++e ++++++ +ss+  + +++++ ++ +++e+++ e
+  jgi|Tetthe1|3294333|XM_012799781.1 132 GENAEQEKPQEEEQQEEENEEQNENSQAASEKNSSQAGDFDNQKQEDEVQQEEEEPIE 189
+                                         3344445555554555555555555555555554444444444444666666666655 PP
+
+  == domain 2  score: 13.0 bits;  conditional E-value: 3.3e-05
+               PTHR13335.orig.30.pir  91 arrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiass 165
+                                         +  kk+ ++q++e  + + ++e++++ s e+++ +++ ++++ deg   +  n+  + + l+ke ++++++ +++
+  jgi|Tetthe1|3294333|XM_012799781.1 521 KIKKKKAKKQDDEDNQAQEQQEQQKKVSEEKSQGEQENEDEEEDEGEEGQEENENNNNQVLPKEEQPEAEEEEEE 595
+                                         222333333333333333334444444444444455555555555555555555555555555555444444444 PP
+
+               PTHR13335.orig.30.pir 166 ee.r...................................................dqsscksiqwktessvkeds 188
+                                         ee                                                     ++s+c+ i++  ++ v+  +
+  jgi|Tetthe1|3294333|XM_012799781.1 596 EEeEeeeqppeeeeqppeeeeeeedpdnpkpkvepyhpesiifikrivqnreivlNNSKCEIIDYFSKNDVEAYI 670
+                                         443333334444444455555555666777777777777777777777777777777777777777777776655 PP
+
+               PTHR13335.orig.30.pir 189 vqrassesslsserssdssssssapsr.rq..snkldseq.............lsaeesdslfekkskssstktq 247
+                                         ++++ +     +e++ + + ++++p       s                    +++ee++ + ++ ++  + k++
+  jgi|Tetthe1|3294333|XM_012799781.1 671 TDTTGKTLFEAFESQRIYIERQGRPYNyLVdeS------ElvkkhqgyyddvnKRNEEQKLIKKEEEQKVVLKQK 739
+                                         555555444455555554433333333222441......044433455555555555555443333333333332 PP
+
+               PTHR13335.orig.30.pir 248 ks 249
+                                         + 
+  jgi|Tetthe1|3294333|XM_012799781.1 740 QD 741
+                                         22 PP
+
+>> jgi|Tetthe1|3314632|XM_001470664.2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.9  35.4   3.4e-05     0.058      59     279 ..       9     336 ..       3     347 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 12.9 bits;  conditional E-value: 3.4e-05
+               PTHR13335.orig.30.pir  59 srpksastpgdsgsedsgssneaetatg..gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdiss. 130
+                                          +++++s++++s+s ++g s+ ++ a    ++ ++ +++++++q++++q+++q+ +s++++ +++++   ++s+ 
+  jgi|Tetthe1|3314632|XM_001470664.2   9 NSSQRQSSNQNSNSNNNGQSSFFNDAFNvfFQSPFFNPYQQQSQQQQQQQQQQQRTSGNQNNFQQQNPPRQSSQq 83 
+                                         345666677777777777766665554478555555555555555555555555555555555555444444440 PP
+
+               PTHR13335.orig.30.pir 131 ........ssldegsrrrrantavkleklrkerrsksasiassee.rdqsscksiqwktessvkedsvqrasses 196
+                                                 s+  +gs+ ++ n+++  +++++++ s+s+++++s++ +                +e++++++  +s
+  jgi|Tetthe1|3314632|XM_001470664.2  84 yqhnqnrpSYPRFGSQSQQNNQQQSYQQQSQQNYSSSQQNNRSSQqQ--------------RQQEPRPTFQNTRS 144
+                                         00000001344444444444444444444444444333333333333..............22333333333333 PP
+
+               PTHR13335.orig.30.pir 197 slsserssdssssssapsrrqsnkldseq.............................................. 225
+                                           +  + ++++ ++ + ++         +                                              
+  jgi|Tetthe1|3314632|XM_001470664.2 145 NWKKAEEPKKEKKKEVQKE---------Ntsdywkqkgnemfkqryydtaleyytrainidssqsiyysnrgrcy 210
+                                         3333333332222222222.........11222223333334444555555555666666666778888889999 PP
+
+               PTHR13335.orig.30.pir 226 .......................................................................lsae 229
+                                                                                                                + +e
+  jgi|Tetthe1|3314632|XM_001470664.2 211 kikgdlkkafddavqaieldennlkgqllcgqvlcemgkyeegihkiengikrltkgltlcssqagqkkkvFEKE 285
+                                         9999999999999999999999****************************************8888888888888 PP
+
+               PTHR13335.orig.30.pir 230 esdslfekkskssstktqkskkpssaakqsi....sslssaLekkps....qlnnpfn 279
+                                          s  +f +k+  + ++ q++k+++      i         +Le++++    q++  ++
+  jgi|Tetthe1|3314632|XM_001470664.2 286 ISVYIFRAKKLKWYKQYQEQKQKKIR---LIenykV----YLEQQSQlsdlQRQEQMD 336
+                                         88888888888887777544444443...4445341....444444443334445554 PP
+
+>> jgi|Tetthe1|3316472|XM_001015647.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.0   4.1   0.00013      0.21      70     124 ..       6     147 ..       2     156 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 11.0 bits;  conditional E-value: 0.00013
+               PTHR13335.orig.30.pir  70 sgsedsgssneaetatg.......................................................... 86 
+                                         s++  +g +n+a+++++                                                          
+  jgi|Tetthe1|3316472|XM_001015647.1   6 SNPPMDGNQNGAQQQQEqqgidlsqlecipircslgvvnefiintvdfinrvgfrlendqlsiekllegidqkll 80 
+                                         778888888998888889999999999999999999999999999999999999999999999999999999999 PP
+
+               PTHR13335.orig.30.pir  87 .............................gdtkarrkkpsldqrretqgekqssesesspsyeeelq 124
+                                                                      +  +++ ++++++q++++q+++q+++++  +++++++ 
+  jgi|Tetthe1|3316472|XM_001015647.1  81 llekkldsvnpefynvlpdipkpeltvyfNSSNQPDQQQGMQQQQQQQQQQQQYDQQYMQQQQQQNG 147
+                                         9999999999999999988888888777755555656666666666666665555555555544444 PP
+
+>> jgi|Tetthe1|3298511|XM_001031307.2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.3  42.1   0.00011      0.18      86     247 ..     130     303 ..      20     319 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 11.3 bits;  conditional E-value: 0.00011
+               PTHR13335.orig.30.pir  86 g...........gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkle 149
+                                         +            ++ + ++k++++q++++++++ +++++++++++++  +++ ++++  ++++  + +++ k +
+  jgi|Tetthe1|3298511|XM_001031307.2 130 KsecyllgevteDQQDNNNQKDQNNQNSQKEQDQ-QNNQDKDQKDQDQKNDQPPKNDQPSKNDQPPKNDQPSKND 203
+                                         0223322222212223333333333333333333.3333333333333333333334444444444446777777 PP
+
+               PTHR13335.orig.30.pir 150 klrke.rrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkld 222
+                                         + +k+ +  k ++++ +++ +++ ++k+ + ++e+++ ++  q ++++++  +e + d++ +++  ++ q++++d
+  jgi|Tetthe1|3298511|XM_001031307.2 204 QPPKNdNNDKENQSNDTKQdQNSQQGKNDNKNEENQSTNQNNQKDQEKQDNNQEAKKDQKDQNNQTDSNQNDQKD 278
+                                         777775333333333333333577778888888888888888888777777777777733222222223344455 PP
+
+               PTHR13335.orig.30.pir 223 seqlsaeesdslfekkskssstktq 247
+                                         + +l ++++d+ ++k + ++s k +
+  jgi|Tetthe1|3298511|XM_001031307.2 279 KDNLKDKNNDQNNQKDKVTNSAKSE 303
+                                         5555555555555554444433333 PP
+
+>> jgi|Tetthe1|3314649|XM_001007764.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.8  35.2   0.00015      0.26      86     275 ..     101     337 ..       7     343 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: 10.8 bits;  conditional E-value: 0.00015
+               PTHR13335.orig.30.pir  86 g.....................................................................gdtka 91 
+                                         +                                                                     + +++
+  jgi|Tetthe1|3314649|XM_001007764.1 101 FniekqleffnkefsgdyqtalnqlkedlknkdsivaiykrkfesharylqfleqcdkimgvvsnklgksKSRRQ 175
+                                         055555555555555555555555555555566666666666666666677777777777776665543322222 PP
+
+               PTHR13335.orig.30.pir  92 rrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasse 166
+                                         + k++ + +++++q+ ++ +++++s+++ e+ ++ + ++++ +++ +++++n ++k +++ +++++k+++     
+  jgi|Tetthe1|3314649|XM_001007764.1 176 QKKEKLKLKKQNQQQKSSEVQQSKSQQDGEQIAEKEEQNDQNENQLKEQQTN-EQKKQNNGENKQQKQSQ----- 244
+                                         2222222222222222223333333333333344444445556666666544.44444444443322222..... PP
+
+               PTHR13335.orig.30.pir 167 erdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkldseqlsaeesdslfekksks 241
+                                           + ++ ksiq+k+ +  +  + ++++ + ++++ ++ +                    + ++ + + fek++k+
+  jgi|Tetthe1|3314649|XM_001007764.1 245 --KEIKQKSIQQKYDKLAS--KYRNDTPKERTEFKKKGK-------------------ERKQQLKQEKFEKRQKT 296
+                                         ..35666666666222222..222222222333333333...................14445555556666655 PP
+
+               PTHR13335.orig.30.pir 242 sstktqkskkpssa.a..kqsi....sslssaLekkpsqln 275
+                                         + +++++s+  +   +   q i     s +++L+++++q+n
+  jgi|Tetthe1|3314649|XM_001007764.1 297 EKQEQENSNTRKNFkQqnLQEIdklhPSWAARLQQQQQQQN 337
+                                         55555555555555333323333334344788888887533 PP
+
+>> jgi|Tetthe1|3299685|XM_001031200.2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.6  16.3   0.00035      0.59     104     169 ..     205     298 ..     183     418 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 9.6 bits;  conditional E-value: 0.00035
+               PTHR13335.orig.30.pir 104 tqgekqssesesspsyeeelqsvdissssldegsrrrra..ntavkleklrke..rrsksasiasseer...... 168
+                                         +q+++  +++++ + y+++lq++++  ++++++++++++   ++++++++++   + + s+++++s+++      
+  jgi|Tetthe1|3299685|XM_001031200.2 205 QQQDQ--QQQNQCSLYQQKLQQQQLWYQQQQNQQQQQQQqqEQQQQQQQQSQKqqQVNNSDNSNESNDNlflela 277
+                                         23333..33333334444444444443333333333333112222222222222233444444444443677777 PP
+
+               PTHR13335.orig.30.pir 169 ....................d 169
+                                                              
+  jgi|Tetthe1|3299685|XM_001031200.2 278 iasfallliilivllyfvrkF 298
+                                         777777666666666665441 PP
+
+>> jgi|Tetthe1|3308601|XM_001018924.4  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.5  11.5   0.00038      0.64     118     197 ..      22      93 ..       3     125 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 9.5 bits;  conditional E-value: 0.00038
+               PTHR13335.orig.30.pir 118 syeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.rdqsscksiqwktessvkedsvqr 191
+                                         +y+ e+ + ++++++ d ++++ ++n+a+k+ + ++  r++sas++ +++ +      si++++++++      +
+  jgi|Tetthe1|3308601|XM_001018924.4  22 GYD-EENQNELNDEYPDTQQIQPQSNQAQKSLQGQQSARKSSASTNNTNQeN----NISINLNDNQNSTH----T 87 
+                                         333.6667788889**********9****99999999888888888887777....44555553333222....2 PP
+
+               PTHR13335.orig.30.pir 192 assess 197
+                                         ++++++
+  jgi|Tetthe1|3308601|XM_001018924.4  88 TQQQQA 93 
+                                         222222 PP
+
+>> jgi|Tetthe1|3305212|XM_001008551.2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.0  15.3   0.00052      0.88      78     154 ..      33     111 ..       8     154 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 9.0 bits;  conditional E-value: 0.00052
+               PTHR13335.orig.30.pir  78 sneaetatg...gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkle 149
+                                          n+ +++++     + +++++++++q+ ++q + ++++++  ++y ++ qs++ + ++++++++++ + ++++++
+  jgi|Tetthe1|3305212|XM_001008551.2  33 YNGYNQQQQfgsQSQMCQQQQQYQQQQLSNQPQIDQKQNGYNQQYYQQPQSYQPQ-MYQQQEYNNQTQLQQQQQQ 106
+                                         4444444445555667999999*********************************.*******999998888888 PP
+
+               PTHR13335.orig.30.pir 150 klrke 154
+                                         +  + 
+  jgi|Tetthe1|3305212|XM_001008551.2 107 QGNQL 111
+                                         77665 PP
+
+>> jgi|Tetthe1|3308009|XM_001024476.2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.9  27.6     0.009        15      99     256 ..      44     200 ..      16     249 .. 0.49
+   2 ?    8.4   3.2   0.00081       1.4      66     115 ..     819     862 ..     703     866 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 4.9 bits;  conditional E-value: 0.009
+               PTHR13335.orig.30.pir  99 dqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseer..... 168
+                                         +++r+++g++++ + ++++++e+++q  + ++++++++ ++++   + k+++++k+ +   + i++ +er     
+  jgi|Tetthe1|3308009|XM_001024476.2  44 KFDRRRRGSSNQRDRGNQKDKEQNEQTIEVEEQEQQKHKDQQQNEGQSKQDNNEKQDQ---SYIERWKERvmkei 115
+                                         4444555555455555555555555555555444444444444333333333333322...23333333223333 PP
+
+               PTHR13335.orig.30.pir 169 .dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrq..snkldseqlsaeesdslfekksk 240
+                                          +q +   +++k+ ++++++   ++s++++++++ + d++s+    ++++  +       + ++++    e + +
+  jgi|Tetthe1|3308009|XM_001024476.2 116 qKQDQEFKKNLKDLQNSMQEQEINKSNQKKSDQDDKNDKKSEDHEEKEKKdeH-------KEDQQEETASEGRHH 183
+                                         32223333444444444555555555555555555555333333322211121.......222222212222222 PP
+
+               PTHR13335.orig.30.pir 241 ssstktqkskkpssa.a 256
+                                         ++s+k +k+k++++  +
+  jgi|Tetthe1|3308009|XM_001024476.2 184 HKSKKHKKHKSQKKNeQ 200
+                                         22233333333333211 PP
+
+  == domain 2  score: 8.4 bits;  conditional E-value: 0.00081
+               PTHR13335.orig.30.pir  66 tpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqsseses 115
+                                         ++   + e + +++         +k+ ++++++ q++++q++++++++e+
+  jgi|Tetthe1|3308009|XM_001024476.2 819 SNYKAYLESNEEQEK------EKQKIEQDQQQKEQQQQQQQQQSQQQQEP 862
+                                         333333333333222......23333333333333333333333333333 PP
+
+>> jgi|Tetthe1|3314060|XM_001025119.3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.9  13.2    0.0022       3.7     100     149 ..      10      58 ..       2     121 .. 0.41
+
+  Alignments for each domain:
+  == domain 1  score: 6.9 bits;  conditional E-value: 0.0022
+               PTHR13335.orig.30.pir 100 qrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkle 149
+                                         q++ + ++ + ++ ++++ +++++q++++++++ +++++ ++a++ ++  
+  jgi|Tetthe1|3314060|XM_001025119.3  10 QQQLQNQYNHVKQMQQQQNQQQQAQQQQLQQQQ-QQQQQHQQAQQHQEKP 58 
+                                         222222222222222222233333333333111.1111111111111111 PP
+
+>> jgi|Tetthe1|3296538|XM_001019610.3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.2  30.7    0.0038       6.4      92     250 ..     184     343 ..      62     364 .. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 6.2 bits;  conditional E-value: 0.0038
+               PTHR13335.orig.30.pir  92 rrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasse 166
+                                           +  +++++++ q++ ++s+++++++++++ q +++   ++++++++++ n+ +++++++ +++          
+  jgi|Tetthe1|3296538|XM_001019610.3 184 NVNSYQQQTNQQYQNQANHSQQSQQDQLNQRRQMMQMR-AQQQQQQQQSNLNQNQNQQSQQIQQQ---------- 247
+                                         22222333333333333333333333333333333333.12222222222233333333333333.......... PP
+
+               PTHR13335.orig.30.pir 167 er....dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq................... 217
+                                          +    ++++++++q++ +++     +q ++++ ++ ++ + +   ++s +++ ++                   
+  jgi|Tetthe1|3296538|XM_001019610.3 248 -NigywNAIHSQNVQQQIQQPQV---TQQQQQQLQTNQVNQRI---QPSNYREpQReicnvcgrsfetivellsh 315
+                                         .2445557777777777222222...23333333333333333...33333332223445555544444333322 PP
+
+               PTHR13335.orig.30.pir 218 snkldseq..lsaeesdslfekkskssstktqksk 250
+                                                    ++++++s +++ ++ ++t++ +++
+  jgi|Tetthe1|3296538|XM_001019610.3 316 A------EqaHQPQQNNSGNQASQQQNTTTN-NNN 343
+                                         1......011222222222111111111111.111 PP
+
+>> jgi|Tetthe1|3299028|XM_001009902.3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.7  50.1    0.0051       8.7      62     232 ..      26     229 ..       2     315 .. 0.45
+
+  Alignments for each domain:
+  == domain 1  score: 5.7 bits;  conditional E-value: 0.0051
+               PTHR13335.orig.30.pir  62 ksastpgdsgsedsgssneaetatg........gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdi 128
+                                         + +++ + +g                        ++++ rk+++++ ++++++++++++ +  ++++ +++s + 
+  jgi|Tetthe1|3299028|XM_001009902.3  26 NYNNEGALKGQ-------------NiqqdtpanENDQKERKRSPSNRKHKKEKDHKKKDRK--SEKDRRSRSNSE 85 
+                                         22222222223.............0333333334455555566666666666555333333..333334444444 PP
+
+               PTHR13335.orig.30.pir 129 ssssldegsrrrrantavkleklrkerrsksasiassee.r.......dqsscksiqwktessvkedsvqrasse 195
+                                         +++ ++++ +rr+++ +++ +k  k r s  + ++s +e +       +  +  s + +++s    ds++r+ + 
+  jgi|Tetthe1|3299028|XM_001009902.3  86 KKKRDEKSKKRRSSSRDQRKSKSDKDRSS--SRHRSKREkDrkksssrK--RHSSRSKRDKSRKRHDSSKRKRRH 156
+                                         44566777777777777777777777443..333333333346666442..233333333344444444555555 PP
+
+               PTHR13335.orig.30.pir 196 sslsserssdssssssapsr.rq......snkldseq.............................lsaeesd 232
+                                         +s+ss++ss+s+sss+++++ r+      ++k+ se                              + ++e+d
+  jgi|Tetthe1|3299028|XM_001009902.3 157 HSSSSSSSSSSQSSSDRSRSrRRrrssslNKKKLSEAelrrlerekrnlgeyysqlknssrskerkKKNKEND 229
+                                         5555555555555555544433345777755555555677666555555554444444444444442222222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      26994  (16948219 residues searched)
+Passed MSV filter:                     11683  (0.4328); expected 539.9 (0.02)
+Passed bias filter:                     2258  (0.0836482); expected 539.9 (0.02)
+Passed Vit filter:                      1639  (0.0607172); expected 27.0 (0.001)
+Passed Fwd filter:                        99  (0.00366748); expected 0.3 (1e-05)
+Initial search space (Z):              26994  [actual number of targets]
+Domain search space  (domZ):              16  [number of targets reported over threshold]
+# CPU time: 3.36u 0.73s 00:00:04.09 Elapsed: 00:00:02.05
+# Mc/sec: 5532.48
+//
+[ok]
