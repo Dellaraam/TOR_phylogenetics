@@ -1,0 +1,294 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Phaeodactylum_tricornutum_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    9.2e-57  192.0   5.7    9.2e-57  192.0   5.7    2.0  2  EEC46831.1  predicted protein [Phaeodactylum tricornutum CCAP
+    1.6e-38  132.1   2.2    3.3e-38  131.0   2.2    1.6  1  EEC51756.1  predicted protein [Phaeodactylum tricornutum CCAP
+    0.00017   20.2   0.0    0.00067   18.2   0.0    1.9  2  EEC50074.1  predicted protein [Phaeodactylum tricornutum CCAP
+    0.00023   19.8   2.9      0.015   13.8   0.1    3.0  3  EEC48629.1  predicted protein [Phaeodactylum tricornutum CCAP
+    0.00083   17.9   0.1        0.4    9.1   0.0    3.0  2  EEC46999.1  predicted protein [Phaeodactylum tricornutum CCAP
+      0.003   16.1   1.7      0.095   11.1   1.1    2.7  1  EEC45576.1  predicted protein [Phaeodactylum tricornutum CCAP
+  ------ inclusion threshold ------
+      0.026   13.0   1.1        3.1    6.2   0.1    3.0  2  EEC51187.1  predicted protein, partial [Phaeodactylum tricorn
+      0.037   12.5   2.9        0.6    8.5   0.7    2.7  3  EEC50434.1  predicted protein [Phaeodactylum tricornutum CCAP
+      0.048   12.1   2.9      0.052   12.0   0.4    2.1  2  EEC42754.1  predicted protein [Phaeodactylum tricornutum CCAP
+
+
+Domain annotation for each sequence (and alignments):
+>> EEC46831.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  192.0   5.7     8e-60   9.2e-57       3     343 .]    1404    1756 ..    1403    1756 .. 0.88
+   2 ?   -1.3   0.1      0.49   5.6e+02      25      64 ..    1903    1945 ..    1808    1970 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 192.0 bits;  conditional E-value: 8e-60
+                  CTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-. CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls. 98  
+                  + a+aaWrlgqWd++e+y s++   ++d+af++a+l++hr++ ++a++ i+ ar+ ++   +al  esy+ray+++v  Q+l+E+eeii+y++ ++ 
+  EEC46831.1 1404 MCAQAAWRLGQWDDLEKYSSQLTCVGFDGAFYSAVLHVHRQDWSHAADAIDAARKAMDSRFTALLAESYSRAYPSMVTAQMLSEMEEIIEYMKTEEr 1500
+                  669******************************************************************************************9999 PP
+
+                  ..............---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.. CS
+         FAT   99 ..............sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkee 181 
+                                 ++ +++l + W++Rl g+  d e+  +il+vRslv+ p++d       +++ l  ++l+R++ r++ Ae++L+  l++ k  
+  EEC46831.1 1501 srieidhhpanrqsIERARERLISVWKDRLAGCRMDSEAHASILAVRSLVIGPEDD-------VDAVLTLSKLSRQAERHKFAERVLLDPLHSLK-- 1588
+                  **********999989999999**********************************.......**************************988888.. PP
+
+                  ...TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCC....CCCCCCT.S...-SSCCHHHH CS
+         FAT  182 wlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewl....aalqklnwseekseeilqays 273 
+                   ++   ++ay+k+lw +ge++ea  +L++    + ++ +++   +e++           l   c l+ Gew      +l++ + s + + ++l + +
+  EEC46831.1 1589 IQH-TFYFAYVKHLWYTGEKHEATRRLEHLCD-VVDMVSHCERINETS-----------LrVACWLEYGEWKlsttTSLGS-SMSPQFQLDVLTSLK 1671
+                  566.899********************88887.666655555554443...........3356777777765111133333.344455779****** PP
+
+                  CCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS............S-TCCHHHHCCT..CCHHHHTTTS....STTTCHHHHHC CS
+         FAT  274 aateldpswykawhtwalfnfevlskeeekkeeee...........pedlseyvvpavegflkslslsse....kslqdllRlLt 343 
+                  +at+ d+  ykawh w l+nf++  ++ ++ + ++            + ++++vv av+gf ++++l+      ++ qdll lLt
+  EEC46831.1 1672 RATQPDDCGYKAWHGWSLLNFRIALQLNDRHHLSSqadaqrpgasfDKSIRNHVVAAVRGFVNAINLGTIkqsaSVQQDLLNLLT 1756
+                  ************************999888555556779999999989999****************965445677888888886 PP
+
+  == domain 2  score: -1.3 bits;  conditional E-value: 0.49
+                  ....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCT CS
+         FAT   25 k...kdspdkaffeailalhrnqfdeaeeliekarqllvtels 64  
+                      +++p+ ++ + +   h +++++a+++i+k +ql  ++ +
+  EEC46831.1 1903 HgefEKEPETSMERDFAEAHGGNIRQAYDCIKKYIQLSSNDDE 1945
+                  1444444555555555555556677777777776666544433 PP
+
+>> EEC51756.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  131.0   2.2   2.9e-41   3.3e-38       2     333 ..    2971    3318 ..    2970    3328 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 131.0 bits;  conditional E-value: 2.9e-41
+                  CCTTCCCCTSSSGHHCCCCT..........TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCC..CCCHHHHHCCCCCHHHCHH CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk......kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesy..nraydllvrlQqlaEleei 90  
+                  +l++e+aW++++W+ +++ +  ++      + +p  ++ e++la+  ++++e+e l  ++ ql++ +++ l+  s   +++ +ll+ ++ l+E+ e+
+  EEC51756.1 2971 RLRLECAWKVQDWNTVRSLCTSTSllaaveSGDPLVKISETLLAVADGKLSEVENLHAQTAQLCLHKWQLLPLLSSgsTSHTSLLHFFHRLVEIRES 3067
+                  589************9999888888888778888888*************************************8622679999************* PP
+
+                  CCHHCSS-......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.........HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCC CS
+         FAT   91 iqykqkls......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.........lllkgakaemwlkfanlaRksgrlslAekaLk 172 
+                   q++ + s      ++ +lk ll+ Wr Rlp+  d++  w+ ++s+R++++s i +         l+  + +  + +++a+ aRk+g+ +++  +L+
+  EEC51756.1 3068 GQIMVETSthssekTLPDLKNLLNAWRHRLPNDFDPIASWDEVFSWRAHMFSAITSnfhwsepntLATLHDRPWTAIRMAKTARKHGMRDVSLLTLN 3164
+                  ****999988877788888888*****************************************88777788888888******************** PP
+
+                  CCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..SS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-S CS
+         FAT  173 klleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke..elssglevqeptnleeftkll.arcylkkGewlaalqklnwseekse 266 
+                  k  +e                      ++++a++kLre++  +++  +  e + gl+ ++ tnl+ f + + ++++ +k+++la+l+        ++
+  EEC51756.1 3165 KTVDE-------------------RAMNVSDAFLKLREQILAYYNPGSdaERHGGLNLINTTNLSFFDQPQkSEIFRLKASFLASLGF-------RS 3235
+                  **444...................55899************9999766889999**********************************.......9* PP
+
+                  SCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS................S-TCCHHHHCCT..CCHHHHTTTS.S CS
+         FAT  267 eilqaysaateldpswykawhtwalfnfevlskeeekkeeee...............pedlseyvvpavegflkslslsse.k 333 
+                  +++qa++ a +++p+ + aw +w+ ++       e++ + ++               ++ + +y+ +a+ ++l+s++l  +  
+  EEC51756.1 3236 KANQAFCHALQISPTHARAWESWGGLCSMLGAVAEKQVDLSTskgghegskevgtdsSKRVAQYLAQAMGCYLESIQLDTNeW 3318
+                  ***************************988777766633333567999999*****766666****************98844 PP
+
+>> EEC50074.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.2   0.0   5.8e-07   0.00067     242     343 .]      66     181 ..      21     181 .. 0.82
+   2 ?   -1.1   0.0      0.42   4.9e+02      63     110 ..     289     335 ..     279     337 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 18.2 bits;  conditional E-value: 5.8e-07
+                 HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS....................S-TCCHHHHCCT. CS
+         FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee...................pedlseyvvpave 321
+                  +c l +  w+   + +        ei+  +++ ++++ps +ka++  a++ + vl+   +  ++ +                    e  ++ v + +e
+  EEC50074.1  66 VECALQSTRWMMDGGLK-----AGAEIMYRFRTIHRIAPSFEKAHFLYAKYLDSVLKSRISALQRRQtgqlpgldeddlrsrtigaDEACQRNVLRIME 159
+                 56777777777776663.....4899******************************99988844444589***************98888999****** PP
+
+                 .CCHHHHTTTSSTTTCHHHHHC CS
+         FAT 322 gflkslslssekslqdllRlLt 343
+                 ++ + l l+s ++++ l+RlL+
+  EEC50074.1 160 HYTQTLCLNSIHVYNALPRLLS 181
+                 ********************96 PP
+
+  == domain 2  score: -1.1 bits;  conditional E-value: 0.42
+                 CTS---SCCCCCHHHHHCCC.CCHHHCHHCCHHCSS----TTTTTTT-- CS
+         FAT  63 lsalsgesynraydllvrlQ.qlaEleeiiqykqklssseelksllktW 110
+                    l++ s + +y +l         ++e+++yk++  +++ ++  +k W
+  EEC50074.1 289 EKTLVKASNQTHYRVLMASKgLFKFFQELAKYKNS--DLSTQSINVKPW 335
+                 56788999999999966666155678999999997..555555555555 PP
+
+>> EEC48629.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    4.6   0.1    0.0078         9     160     218 ..     326     391 ..     318     417 .. 0.83
+   2 ?   -1.5   0.0      0.56   6.5e+02     164     196 ..     467     501 ..     444     513 .. 0.72
+   3 !   13.8   0.1   1.3e-05     0.015     164     229 ..     662     727 ..     655     759 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 4.6 bits;  conditional E-value: 0.0078
+                 HHHHCCSTTHHCCCCCHCTT................TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSC CS
+         FAT 160 ksgrlslAekaLkklleedk...eewlp........pevvyaylkylwakgeqkealqkLrefvscllek 218
+                 k+g++  Ae +L +ll+e +       p        +++ +  +  +wak++   a +k +e ++ ++++
+  EEC48629.1 326 KHGQPAHAEATLHSLLQEYEqatT---PtarealrpSDLSFLAAINSWAKSQDPRAAEKAEELLK-HMQR 391
+                 9**************999995551...3445566778***********************99999.4443 PP
+
+  == domain 2  score: -1.5 bits;  conditional E-value: 0.56
+                 CCSTTHHCCCCCHCTT.......TSSCCCHHHHHH CS
+         FAT 164 lslAekaLkklleedk.eewlp.pevvyaylkylw 196
+                 ++ A k+L +l+e ++  +++  p+++ +y+k   
+  EEC48629.1 467 PERAVKLLHRLEELSSqGNPALiPNAMTEYAKSHV 501
+                 56677788888777775333336888888888654 PP
+
+  == domain 3  score: 13.8 bits;  conditional E-value: 1.3e-05
+                 CCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---. CS
+         FAT 164 lslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq 229
+                 +++Aek+L+ ++++++++ +p+ v y ++ + wa +e+++a+++++e ++ + ++ e++++ + ++
+  EEC48629.1 662 PEQAEKVLRWMKGQRSKHIHPSVVSYNHVLMAWAHSERNQAFSRIKELIEDMESSSETIPDSISYS 727
+                 689********999999999999*******************************999666665554 PP
+
+>> EEC46999.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    4.8   0.0    0.0068       7.8     238     305 ..     240     308 ..     211     356 .. 0.80
+   2 !    9.1   0.0   0.00034       0.4     154     309 ..     376     617 ..     322     656 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 4.8 bits;  conditional E-value: 0.0068
+                 ..HHHHCCCTCCC.CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSS CS
+         FAT 238 tkllarcylkkGe.wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekke 305
+                 +++  r  l kG+  ++++++ ++++   +e l++ s+  ++dp++++a ++++++ +e  +++++ k 
+  EEC46999.1 240 RTSDNRLCLAKGKkAMSEVHNEERRQILVKELLSSISTYGRYDPRVADASASLGDHLDESGEHKQSLKL 308
+                 4444555566665488999998888888*******************************9999988765 PP
+
+  == domain 2  score: 9.1 bits;  conditional E-value: 0.00034
+                 CCCCHCHHHHCCSTTHHCCCCCHCTT..........T.........................SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS CS
+         FAT 154 fanlaRksgrlslAekaLkklleedkeewlp.....p.........................evvyaylkylwakgeqkealqkLrefvscllekkeel 222
+                 +a+  Rk g + +A+k Lk+ l+   e+  +     +                          v +  + +   ++e+ ++l +L    +c  +     
+  EEC46999.1 376 IAHTLRKKGDYHQAIKELKRSLKIYRESLGDahpkvSsavdeiaslyvtlgdfdksaaileeVVKLKAATLGMNTKEVASTLISLATTYECSEQV---- 470
+                 66666777777777777766655555222222212212233333333333444444433333222222333333333333333332222222222.... PP
+
+                 -SS---................................................................HH.HHCCCTCCCCCCCCCCCT.S...-SS CS
+         FAT 223 ssglevq.....................................................eptnleeftkll.arcylkkGewlaalqklnwseeksee 267
+                       +                                                      ++++   ++l+ +++y k+G  l+++++ +++ ++ +e
+  EEC46999.1 471 ------EkslktlkkaykieseiggfssegaisilnriamlyegtgdynrasiaflgvlrGQKSIYGEEHLVvGEAYYKLGYSLHQMGHIHKALKCMKE 563
+                 ......0112222222233444444455555555666666677777777777788888889999999999999************************** PP
+
+                 CCHHHH...CCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS..........S CS
+         FAT 268 ilqays...aateldpswykawhtwalfnfevlskeeekkeeee.........p 309
+                 +l  +    + t    + +++ h+++l+n e+++  e++ + ++         +
+  EEC46999.1 564 ALPIFVregTETSDVERIAEILHEMGLMNKEMKNFHESTCMFKQelgirrkigQ 617
+                 **999622245777778999*************999888333333335555550 PP
+
+>> EEC45576.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.1   1.1   8.2e-05     0.095     265     332 ..     393     511 ..     383     523 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 11.1 bits;  conditional E-value: 8.2e-05
+                 -SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS...................................................S-TCC CS
+         FAT 265 seeilqaysaateldpswykawhtwalfnfevlskeeekkeeee..................................................pedls 313
+                 + ++ q++++a ++d++ ++aw  +++ + e +++    +   +                                                   + ++
+  EEC45576.1 393 RAKAIQYFQRALKIDRTFTSAWTLMGHEYVEWKQTANAMEAYRRavqvapedyrawyglgqtyeilnmhlyalyyykkaahlrpydarmwcavgTTLVQ 491
+                 555566666666666666666666666666666655333222225555566666666666666666666666666666888999999999999977777 PP
+
+                 .HHHHCCT..CCHHHHTTTS CS
+         FAT 314 .eyvvpavegflkslslsse 332
+                  ++v +a++ + k+ls+ ++
+  EEC45576.1 492 lNMVADAIRAYEKALSHDDK 511
+                 8899*******999999887 PP
+
+>> EEC51187.1  predicted protein, partial [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.2   0.1    0.0027       3.1     262     295 ..     156     189 ..     123     196 .. 0.88
+   2 ?    4.2   0.0     0.011        12     241     281 ..     278     311 ..     223     325 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 6.2 bits;  conditional E-value: 0.0027
+                 ...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+         FAT 262 eekseeilqaysaateldpswykawhtwalfnfe 295
+                 +e+  ++ +++++a ++d++ y+aw+ ++  +++
+  EEC51187.1 156 NEDFVKAIACFRQALRTDDKHYNAWYGLGAIYQR 189
+                 456778999*****************99988775 PP
+
+  == domain 2  score: 4.2 bits;  conditional E-value: 0.011
+                 HHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCC CS
+         FAT 241 larcylkkGewlaalqklnwseekseeilqaysaateldps 281
+                  a +++ +G+  ++l++        +e+++++++a  ldp+
+  EEC51187.1 278 EATVHFSLGKVYKKLGR-------TKEAMKCFLTAMDLDPK 311
+                 37889999999999999.......89999999999999986 PP
+
+>> EEC50434.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.5   0.7   0.00052       0.6     210     297 ..      42     123 ..       9     132 .. 0.69
+   2 ?    0.9   0.0       0.1   1.2e+02     154     195 ..     123     164 ..     118     167 .. 0.86
+   3 ?    2.0   0.1      0.05        58     265     294 ..     190     219 ..     184     248 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 8.5 bits;  conditional E-value: 0.00052
+                 HHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCC CS
+         FAT 210 efvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevl 297
+                 e ++++ +   ++++ ++  e+ + ++  + + a++ +++G+  + l++       ++++ +ays+a+ ldp+  +a ++++ +   ++
+  EEC50434.1  42 EAAENYEQALAHYREKIDRLEYVEAQQEVTTIaAQAAFFLGMVYQDLHR-------PNDAAEAYSLAHSLDPRHWSAAANLGALLHDNM 123
+                 4455555555566666555567777777777779999************.......*****************9999999975544333 PP
+
+  == domain 2  score: 0.9 bits;  conditional E-value: 0.1
+                 CCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHH CS
+         FAT 154 fanlaRksgrlslAekaLkklleedkeewlppevvyaylkyl 195
+                 +an a     ++lA++ L++ +ee  +++l+p+ ++++l+y 
+  EEC50434.1 123 MANHAKALQAYNLAYDILTNREEEPTDPPLEPRFILSQLQYR 164
+                 78888888999*********96666688888********995 PP
+
+  == domain 3  score: 2.0 bits;  conditional E-value: 0.05
+                 -SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+         FAT 265 seeilqaysaateldpswykawhtwalfnf 294
+                 +e + +a+++a+e+d + ++a h++a +  
+  EEC50434.1 190 QEFAAHAFALAVEYDEDNESAKHMLATVTA 219
+                 566789*******************98765 PP
+
+>> EEC42754.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.0   0.4   4.5e-05     0.052     264     325 ..      21      79 ..       7     148 .. 0.82
+   2 ?    0.4   0.8      0.15   1.7e+02     205     205 ..     162     162 ..      79     245 .. 0.41
+
+  Alignments for each domain:
+  == domain 1  score: 12.0 bits;  conditional E-value: 4.5e-05
+                 .-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCH CS
+         FAT 264 kseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflk 325
+                 + +e+  +y+aat+ldps+   w ++a  +++  ++ee  +     +  ++     v+g+++
+  EEC42754.1  21 SYQEAIDKYLAATKLDPSVPAYWSNMAACYEKLGKYEEMAEAG---RSCIKADRTFVKGYFR 79 
+                 4689999********************9998888887444333...3333466667777776 PP
+
+  == domain 2  score: 0.4 bits;  conditional E-value: 0.15
+                 S CS
+         FAT 205 l 205
+                 +
+  EEC42754.1 162 I 162
+                 1 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      10408  (4834366 residues searched)
+Passed MSV filter:                       529  (0.0508263); expected 208.2 (0.02)
+Passed bias filter:                      259  (0.0248847); expected 208.2 (0.02)
+Passed Vit filter:                        28  (0.00269024); expected 10.4 (0.001)
+Passed Fwd filter:                         9  (0.000864719); expected 0.1 (1e-05)
+Initial search space (Z):              10408  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.13u 0.02s 00:00:00.15 Elapsed: 00:00:00.08
+# Mc/sec: 18697.77
+//
+[ok]

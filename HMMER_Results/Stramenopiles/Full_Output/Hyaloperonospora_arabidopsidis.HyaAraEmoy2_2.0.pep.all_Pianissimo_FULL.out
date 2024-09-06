@@ -1,0 +1,212 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Hyaloperonospora_arabidopsidis.HyaAraEmoy2_2.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+          0 1099.2   0.5          0 1098.7   0.5    1.1  1  HpaP805161  pep scaffold:HyaAraEmoy2_2.0:scaffold_35:407534:4
+  ------ inclusion threshold ------
+       0.01   12.8   0.2      0.023   11.6   0.0    1.6  2  HpaP806771  pep scaffold:HyaAraEmoy2_2.0:scaffold_55:164750:1
+      0.084    9.8   0.0      0.093    9.6   0.0    1.1  1  HpaP804996  pep scaffold:HyaAraEmoy2_2.0:scaffold_34:89590:90
+        1.6    5.6   9.9      0.047   10.6   0.3    2.1  2  HpaP806087  pep scaffold:HyaAraEmoy2_2.0:scaffold_46:66914:67
+        2.5    4.9  12.0       0.14    9.1   0.3    2.9  3  HpaP806086  pep scaffold:HyaAraEmoy2_2.0:scaffold_46:64631:67
+
+
+Domain annotation for each sequence (and alignments):
+>> HpaP805161  pep scaffold:HyaAraEmoy2_2.0:scaffold_35:407534:412334:1 gene:HpaG805161 transcript:HpaT805161 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1098.7   0.5         0         0      29    1155 ..      20    1458 ..       6    1474 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 1098.7 bits;  conditional E-value: 0
+  PTHR13298.orig.30.pir   29 snllresrdsiekkleslnnliklkaaakklnellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylisdskvl 114 
+                              +l+++ + ++++kl+s+ + +++   +k+++ ll+ +++e+ ik          ++r+l++++++++ra+alR+lry+is+sk++
+             HpaP805161   20 CTLIERGNLDRKSKLDSTGRVCYE---LKNDPLLLDSFPMERLIK----------AMRRLVCDSDTSTRAGALRALRYAISSSKSI 92  
+                             4578888999**************...9****************7..........******************************* PP
+
+  PTHR13298.orig.30.pir  115 rrllrlgldiliarsLdrdsknetEreqalkliramlevapkliptaivralvaiaeseedrlrraclatlcelallnpelvaeag 200 
+                             +++++l+l+++++rsL+r++k+ +Er+qalk++r+++e++++++pt++v +l aia +++d++rr+cl+tl+elalln+e+vaea+
+             HpaP805161   93 KHFVDLNLPVFVVRSLEREQKHLAERVQALKVVRRVMEIDAAQMPTGLVASLTAIAGHKDDNMRRVCLETLRELALLNVEVVAEAN 178 
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir  201 glrvlldallecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqeskskeerelsrleaskkailt 286 
+                             g+++l+da+le+++ +++a+sll++ll +ln+pstrk++++ vd ++llapftd++ +a +++++          r++as++ai+t
+             HpaP805161  179 GTKILVDAILEPSF-QDLADSLLMTLLLILNEPSTRKFIEPFVDSQVLLAPFTDTDLPAGNERRQ----------RWMASRNAIVT 253 
+                             ***********998.****************************************9999555555..........*********** PP
+
+  PTHR13298.orig.30.pir  287 lLrSWaGllylckndkrgLkslvdvlrlp.nlevrkaildlLydlLrlkepkwtesftsgsalkavdsaalqdswrlsdgfvaees 371 
+                             ++rSW+G+++l +++++gL+sl+++l  p  ++v+ka+l++ +++++ k+   ++++++      +d+++l         +++ +s
+             HpaP805161  254 MMRSWTGMVVL-TSNPQGLQSLIQLLVRPvGEDVQKAVLSTVCEIFYKKTSFDKSTVDA-----GADTPSL---------PITMSS 324 
+                             ***********.7789**********************************666666655.....6666766.........777899 PP
+
+  PTHR13298.orig.30.pir  372 ktilpssarsrpdlldnylallLlalieagLleaLvevitssdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasf 457 
+                             ++++p+  ++  +lldny++++Lla+i++g+leaLv++ t ++++++++A  LL+++l++a++lLP++++a+l +lp+lvs+++ +
+             HpaP805161  325 AEQMPLALNH--NLLDNYTVVILLAMIHCGILEALVTLGTGPSRALAEPAMDLLADILRMASRLLPDQHCATLLALPRLVSSTSLT 408 
+                             9999999999..************************************************************************** PP
+
+  PTHR13298.orig.30.pir  458 ssekskrnraaaalalksldelkrsksksaslyldeilq............................................... 496 
+                             s+++++ +++a++     +++l+r+ks++as +l+e+++                                               
+             HpaP805161  409 STTTMSLGEHAKS----LVERLQREKSIRASEMLSELANavgansgsiatrgvslvsyggsgvngvqlasellrdtnrpsnllalq 490 
+                             *************....9******************************************************************** PP
+
+  PTHR13298.orig.30.pir  497 ........................kkllersssnssedskrkrlrq.................iledddeafkrmlkd.sqvlstk 540 
+                                                     ++++ +  s+++ ++++  + +                 ++++dd++fk+ml++ s+vl++k
+             HpaP805161  491 qiagvvripssgggggiggsgsgsANYAVATPSTQRGTKSAMAQLKdsltsrelmvlelkqslDAQMDDSTFKDMLYNrSRVLTDK 576 
+                             ************************555555555555544444444446666777788889999**************9899***** PP
+
+  PTHR13298.orig.30.pir  541 dylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFyk...PskkrfssidktkqlekyvqvgcqllslLlsspeGialle 623 
+                             +y++Wnwd+i+e+legpl +np+rl+ea+ +tkffkrL +F++    +k +fs++++  ++  y++ +cq+++lLl++peG+ +l+
+             HpaP805161  577 NYKNWNWDIISEMLEGPL-TNPQRLSEAM-KTKFFKRLSGFFRcdqGNKGYFSNLYWIPDHVPYLRPACQMYTLLLNHPEGLLFLK 660 
+                             ******************.*******998.999**********888999************************************* PP
+
+  PTHR13298.orig.30.pir  624 esr...lLkelleelsqel..ldssse...kspderlfskerlsttlsqgyflfiGvLsstkeGlkiLeklnifqlllqlislktr 701 
+                             ++r   lL+e+ ++l+ e+  +++++e   +  ++r+fs++++s+++ ++yf+++G++ss+keGlk++e++n+fq l+ + ++k++
+             HpaP805161  661 TDRrgqLLTEISSALELEArpEAAIVEshiGVLKARMFSPDYVSRRMLREYFTLLGLMSSSKEGLKMMEQSNLFQRLYVMGTTKGH 746 
+                             *****************999966666669*99****************************************************** PP
+
+  PTHR13298.orig.30.pir  702 delvklivssLdysldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeaced 787 
+                             d l++li+++Ldys+dg sR++l+++++++s+++Rlyat+ Lr+llr+e++df++Wgi++Lvtql ++++evakaAl++Leea e+
+             HpaP805161  747 DFLCRLILANLDYSVDGSSRKLLQSWMMEGSKALRLYATCLLRALLRSEVADFEKWGIDALVTQL-TQEEEVAKAALSVLEEAAET 831 
+                             *****************************************************************.******************** PP
+
+  PTHR13298.orig.30.pir  788 kanileylvslkpsllhlgd.kgelLllrflstpkGfrylkee.nyvekelekWaeernaeYvllvEealsealtl.......... 861 
+                              a++l+++ ++  +l +l+d + e+Lll+ ls+ +G+++l+++ n++ ++l  W++e+++ Yv++vE+al++ l++          
+             HpaP805161  832 PACLLAMILKRPIKLIQLKDkRAESLLLKSLSLAEGLNFLRDTgNWIPRTLAAWRREKHILYVHAVEHALFRGLHRdasgrergsn 917 
+                             ********************88******************************************************8888888888 PP
+
+  PTHR13298.orig.30.pir  862 ...................................................................................... 861 
+                                                                                                                   
+             HpaP805161  918 ssststrqtcsptpipvnvpmkrgghkppsggssqrsqwgldwlyrmpwnmevkivgppgsgppsnliletyidaamrdegeatgv 1003
+                             88888888888888888888888888888888888888888888888888888888888888888888888888888888888888 PP
+
+  PTHR13298.orig.30.pir  862 ...................................................................................... 861 
+                                                                                                                   
+             HpaP805161 1004 ddelrmnsirvkgivvdarnmpqpvvvnsqqtlqaslflgtqpvdrrgftkpppqsnggfvstsgsasssgaglssdtqqkmlrar 1089
+                             88888888888888888888888888888888888888888888888877777777777777777777777777777666666666 PP
+
+  PTHR13298.orig.30.pir  862 ...........ltreedgsdsrrrsngpdsslrnrks................................................. 887 
+                                                                                                                   
+             HpaP805161 1090 sasnpgmertsE------------------------Ttsssldfadngsssadtakeenkdwsscqpeqrspqylsapecslcapg 1151
+                             666555443332........................03333333333333334444444558899999999999999********* PP
+
+  PTHR13298.orig.30.pir  888 .............................................vilPpHLygeLakteeGcelLekkghleelaetirshgled 928 
+                                                                          v+lP+HLygeLakt++Gc++L+++ghl+e+++++r+    +
+             HpaP805161 1152 eravwnfrvemesaagtnttngsvkrlllksveftlqllplrprtVPLPVHLYGELAKTSAGCQILRASGHLPEFLACLRD----A 1233
+                             *********************************************************************************....* PP
+
+  PTHR13298.orig.30.pir  929 seeilklkaalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrnal 1014
+                             ++  l+++aalWAlgh++++++G++ll+++ +d++e+i+kla++s+ +s+rGtcf+vlgl+ar+ +g+++L++lgW++ r+ ++++
+             HpaP805161 1234 ASVPLEKRAALWALGHVAATSRGYDLLSHYAQDFVEMIVKLATDSPLVSIRGTCFFVLGLLARSTAGQRHLARLGWNAPRDASRTS 1319
+                             ******************************99****************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 iGlciPsdvnelfsipehqqsssaesapitdekpeeiktslkyptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpelfdd 1100
+                               +++P+++++lf +p+   s+s++ ++++  +p ++   +++ +++++  e+lr+va+Lsn++++k+a+++L+kl+++k+elf++
+             HpaP805161 1320 --IAVPQNCTSLFLWPPPGSSTSCPLTQTPSSSPLQRLLARRRDKMPKEWHEVLRFVADLSNHITQKEAHASLNKLRSSKSELFEE 1403
+                             ..9*********************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1101 pclfsevlkllseyrfrlqaRrfiqelfddavllsslrseerleveesqsemyee 1155
+                             p l+++v+ ll++y++rl  R+f+++ fd+a+l++++ ++ rle+ee+q++++++
+             HpaP805161 1404 PVLLMYVHALLEKYSYRLALRQFLLNAFDRATLTDEVLDTLRLEDEEEQGHQTHQ 1458
+                             *************************************************999865 PP
+
+>> HpaP806771  pep scaffold:HyaAraEmoy2_2.0:scaffold_55:164750:168067:-1 gene:HpaG806771 transcript:HpaT806771 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.7   0.1      0.35     1e+03      86     107 ..     105     126 ..      84     136 .. 0.77
+   2 ?   11.6   0.0   8.1e-06     0.023     734     792 ..     149     206 ..     137     211 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: -3.7 bits;  conditional E-value: 0.35
+  PTHR13298.orig.30.pir  86 rslllseskevraaalRllryl 107
+                            ++ l ++++++ra alR+++ +
+             HpaP806771 105 QKDLADPNQLIRALALRVMTSI 126
+                            56689999*********99876 PP
+
+  == domain 2  score: 11.6 bits;  conditional E-value: 8.1e-06
+  PTHR13298.orig.30.pir 734 siRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkanil 792
+                             +R++at+ + +      ++ +d+ +e++ t l+d s+ v  +A+++L e+c d+  +l
+             HpaP806771 149 YVRKCATNAISKVFV-VDPEQKDVLAEIIGTLLHDSSTMVLGSAIQALSEVCPDRLDLL 206
+                            68********99999.99**********************************9986655 PP
+
+>> HpaP804996  pep scaffold:HyaAraEmoy2_2.0:scaffold_34:89590:90999:-1 gene:HpaG804996 transcript:HpaT804996 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.6   0.0   3.2e-05     0.093     719     787 ..     320     388 ..     216     413 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 9.6 bits;  conditional E-value: 3.2e-05
+  PTHR13298.orig.30.pir 719 esRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqly.dpskevakaAlkiLeeaced 787
+                              Rv+ s++L ++s+++R y +  L + +r +s+ fs+ +  l+v+q++ +p+  +++ ++ ++  +++ 
+             HpaP804996 320 NNRVLCSSILSTASQHTRCYILLLLSRCIRKSSKSFSV-FSGLMVEQVQqQPHPRIVIVIIAVVLTSIHV 388
+                            689***************************77777776.679******6588999999999988877754 PP
+
+>> HpaP806087  pep scaffold:HyaAraEmoy2_2.0:scaffold_46:66914:67920:-1 gene:HpaG806087 transcript:HpaT806087 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.6   2.7     0.078   2.2e+02     726     788 ..      23      95 ..      22     117 .. 0.67
+   2 ?   10.6   0.3   1.6e-05     0.047     728     802 ..     208     286 ..     200     290 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: -1.6 bits;  conditional E-value: 0.078
+  PTHR13298.orig.30.pir 726 kaLtsssesiRlyatkhLrvllraessdfsd.........WgielLvtql....ydpskevakaAlkiLeeacedk 788
+                            ++Lt++ +++R   ++ L ++l+ e s  sd           ++ L   l    +d  ++ ++ Al++L   ce+ 
+             HpaP806087  23 NCLTDADRTVRRRGVDKLHRALQYEASRVSDavlralcvsHLLRPL---LqcaeRDVVEKCREQALRLLLVLCEHG 95 
+                            5789999999999999999999977777777655664222222222...222345888888888888888888544 PP
+
+  == domain 2  score: 10.6 bits;  conditional E-value: 1.6e-05
+  PTHR13298.orig.30.pir 728 LtsssesiRlyatkhLrvllraessdfsdWgielLvtqly....dpskevakaAlkiLeeacedkanileylvslkpsl 802
+                            L  +++ +R +a++ L++++   s+ +++ + elL+++++    d+s +v+k  +++L  ++ ++++i ++ +s+ p +
+             HpaP806087 208 LGHQHSRVRVCALQALEAAVPCASEALQHLMKELLLPAVSkvvlDQSPSVRKQLVITLATWMAQSEQIEQFEASVFPIF 286
+                            6678899**************99****************88999******************99999877777777665 PP
+
+>> HpaP806086  pep scaffold:HyaAraEmoy2_2.0:scaffold_46:64631:67884:-1 gene:HpaG806086 transcript:HpaT806086 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.1   1.6      0.12   3.4e+02     726     788 ..      11      83 ..      10     123 .. 0.70
+   2 ?    9.1   0.3   4.8e-05      0.14     728     802 ..     196     274 ..     181     282 .. 0.89
+   3 ?    3.1   0.1     0.003       8.7     728     785 ..     596     658 ..     533     692 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: -2.1 bits;  conditional E-value: 0.12
+  PTHR13298.orig.30.pir 726 kaLtsssesiRlyatkhLrvllraessdfsd.........WgielLvtql....ydpskevakaAlkiLeeacedk 788
+                            ++Lt++ +++R   ++ L ++l+ e s  sd           ++ L   l    +d  ++ ++ Al++L   ce+ 
+             HpaP806086  11 NCLTDADRTVRRRGVDKLHRALQYEASRVSDavlralcvsHLLRPL---LqcaeRDVVEKCREQALRLLLVLCEHG 83 
+                            5788899999999999999999977777777655664222222222...222345888888888888888888543 PP
+
+  == domain 2  score: 9.1 bits;  conditional E-value: 4.8e-05
+  PTHR13298.orig.30.pir 728 LtsssesiRlyatkhLrvllraessdfsdWgielLvtqly....dpskevakaAlkiLeeacedkanileylvslkpsl 802
+                            L  +++ +R +a++ L++++   s+ +++ + elL+++++    d+s +v+k  +++L  ++ ++++i ++ +s+ p +
+             HpaP806086 196 LGHQHSRVRVCALQALEAAVPCASEALQHLMKELLLPAVSkvvlDQSPSVRKQLVITLATWMAQSEQIEQFEASVFPIF 274
+                            6778899**************999***************88999******************99999877777777765 PP
+
+  == domain 3  score: 3.1 bits;  conditional E-value: 0.003
+  PTHR13298.orig.30.pir 728 LtsssesiRlyatkhLrvllra.essdfsd......WgielLvtqlydpskevakaAlkiLeeac 785
+                            L +s++ +R+ a +  +  l++  +++          ++++L  +l+d + e+ +aA ++L+e +
+             HpaP806086 596 LDDSNDIVRKTACQTFATFLKTaPKKH--LqgpiidYALDCLFVHLDDSEPEIQEAAYSVLRETV 658
+                            345555666666666666666222222..123444466667777777777777777777776633 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      14321  (4626395 residues searched)
+Passed MSV filter:                       696  (0.0486); expected 286.4 (0.02)
+Passed bias filter:                      323  (0.0225543); expected 286.4 (0.02)
+Passed Vit filter:                        30  (0.00209483); expected 14.3 (0.001)
+Passed Fwd filter:                         5  (0.000349138); expected 0.1 (1e-05)
+Initial search space (Z):              14321  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.22u 0.07s 00:00:00.29 Elapsed: 00:00:00.13
+# Mc/sec: 39432.78
+//
+[ok]

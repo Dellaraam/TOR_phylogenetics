@@ -1,0 +1,490 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Albugo_candida.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.1e-72  244.8   3.1    1.1e-72  244.8   3.1    2.1  2  CCI39855.1  unnamed protein product [Albugo candida]
+    4.6e-47  160.5   2.9    8.8e-32  110.2   0.0    3.3  3  CCI46288.1  Ev783 [Albugo candida]
+    2.5e-42  144.9   2.9    2.5e-42  144.9   2.9    2.6  2  CCI46575.1  unnamed protein product [Albugo candida]
+    5.3e-33  114.3   7.7    5.3e-33  114.3   7.7    2.2  2  CCI46697.1  unnamed protein product [Albugo candida]
+      9e-09   34.6   0.9      0.039   12.7   0.2    6.4  3  CCI46056.1  unnamed protein product [Albugo candida]
+    1.1e-08   34.3   0.9      0.045   12.6   0.2    6.3  3  CCI46057.1  unnamed protein product [Albugo candida]
+     0.0075   15.1  11.7      0.059   12.2   5.2    2.7  3  CCI44801.1  unnamed protein product [Albugo candida]
+     0.0085   14.9   6.0       0.71    8.6   1.7    2.9  2  CCI39362.1  unnamed protein product [Albugo candida]
+  ------ inclusion threshold ------
+      0.018   13.8   1.5        2.9    6.6   0.0    3.8  4  CCI45135.1  unnamed protein product [Albugo candida]
+      0.019   13.8   6.6        1.1    8.0   0.9    3.4  3  CCI39361.1  unnamed protein product [Albugo candida]
+      0.027   13.3   6.5        1.2    7.8   0.9    3.4  3  CCI39359.1  unnamed protein product [Albugo candida]
+        0.2   10.4   5.1        6.8    5.4   0.3    3.5  2  CCI39383.1  unnamed protein product [Albugo candida]
+
+
+Domain annotation for each sequence (and alignments):
+>> CCI39855.1  unnamed protein product [Albugo candida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.5   0.8       3.1   3.4e+03      72     268 ..    1974    2011 ..    1926    2047 .. 0.46
+   2 !  244.8   3.1   9.6e-76   1.1e-72       3     343 .]    2136    2588 ..    2134    2588 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: -3.5 bits;  conditional E-value: 3.1
+                  CCCHHHHHCCCCCHHHCHHCCHHCSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTT CS
+         FAT   72 nraydllvrlQqlaEleeiiqykqklssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAe 168 
+                  ++                                                                                               
+  CCI39855.1 1974 QQ----------------------------------------------------------------------------------------------- 1975
+                  22............................................................................................... PP
+
+                  HHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...- CS
+         FAT  169 kaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseeks 265 
+                                                                               + +n+ + +++    + k+ +w++al+  + + ++ 
+  CCI39855.1 1976 -------------------------------------------------------------HHQNVIHVEESW---LEKLQDWQQALRLYDAKLQDE 2008
+                  .............................................................222222222221...233333333333333333333 PP
+
+                  SSC CS
+         FAT  266 eei 268 
+                  ++ 
+  CCI39855.1 2009 RDT 2011
+                  333 PP
+
+  == domain 2  score: 244.8 bits;  conditional E-value: 9.6e-76
+                  CTTCCCCTSSSGHHCCCCT.............................................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCC CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmk.........................................kdspdkaffeailalhrnqfdeaeeliekarql 58  
+                  l a+a W l+ Wd+m++y++++                                          +++p++ +f+ +la+hr qfd+a+ +i+ +r+l
+  CCI39855.1 2136 LGAQACWCLSRWDDMAKYVDEATaisshssstvnvlptslrrqestasviaatyeasgysrwqfETDPEEFLFRSVLAVHRCQFDQAALYIDTTRKL 2232
+                  899********************************************************************************************** PP
+
+                  CCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-..---TTTTTTT----TT.S-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCC CS
+         FAT   59 lvtelsalsgesynraydllvrlQqlaEleeiiqykqkls..sseelksllktWrkRl.pgvqddvevwqdilsvRslvlspiedlllkgakaemwl 152 
+                  l+t+l+al+gesy+ray ++  lQql+Eleeii+ykq ++   ++  ++l ++W +Rl  g+++dv+vwq+il++Rs++l p+ed       +e wl
+  CCI39855.1 2233 LDTKLAALVGESYERAYRIMMTLQQLSELEEIIAYKQLREedAQHYKRHLIDMWHDRLfTGCKRDVNVWQQILAIRSIILRPQED-------IESWL 2322
+                  *************************************99998888889999**********************************.......***** PP
+
+                  CCCCCHCHHHHCCSTTHHCCCCCHCTT.................T...............SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.. CS
+         FAT  153 kfanlaRksgrlslAekaLkklleedk.....eewlp.......p...............evvyaylkylwakgeqkealqkLrefvscllekke.. 220 
+                  +fa+l+R+sg+ls +  + +  l+ ++     +++l+       p               +v +aylk+lwa ge+++al  L++ v   ++ ++  
+  CCI39855.1 2323 EFASLCRQSGNLSRSLAVFTTTLGVEEqqglmDQQLTkqvtgllPrssllasgygekqanRVAFAYLKHLWAVGEKEKALDDLHQLVRYISNIAGsa 2419
+                  *********************999999666652222255666663667777788888888***********************99999555544488 PP
+
+                  ...................SS-SS---......................HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTT CS
+         FAT  221 ...................elssglevq...........eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykaw 286 
+                                     +       +            + +l++ +k+l  +c+lk++ew+  +++ + s+++ + +l++ ++ t l+p++ykaw
+  CCI39855.1 2420 pvidafggegdasvrytgtNS------SrimdtrtvlgnAAGSLDQSEKELiVKCHLKLAEWQFTVHEQQLSRTCLSRVLASLKLCTDLQPQSYKAW 2510
+                  888888887777766655433......1444456999999********************************************************* PP
+
+                  CCCCHHHHHCCHHHHHH....SSSS.................S-TCCHHHHCCT..CCHHHHTTTS....STTTCHHHHHC CS
+         FAT  287 htwalfnfevlskeeek....keeee................pedlseyvvpavegflkslslsse....kslqdllRlLt 343 
+                  htwal+nf v+ +   +    +   +                +     y+ +avegf++s++l+ +    ++ qd+lR+Lt
+  CCI39855.1 2511 HTWALMNFYVVDRFNLQsgipQ---HrdkadktknkgtsagiKGGPGPYIASAVEGFFRSVALGRSrwaaNVQQDILRVLT 2588
+                  ***********99844434543...0455899999***999955566799******************************8 PP
+
+>> CCI46288.1  Ev783 [Albugo candida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.1   0.1       4.7   5.2e+03     185     227 ..    1524    1566 ..    1494    1578 .. 0.58
+   2 !   48.7   0.1   4.1e-16   4.6e-13      11      95 ..    1606    1690 ..    1600    1703 .. 0.91
+   3 !  110.2   0.0   7.9e-35   8.8e-32      99     343 .]    1754    2052 ..    1744    2052 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -4.1 bits;  conditional E-value: 4.7
+                  TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS-- CS
+         FAT  185 pevvyaylkylwakgeqkealqkLrefvscllekkeelssgle 227 
+                   e+++ +++ l a ge ++   +++e  ++ + +  e +sg++
+  CCI46288.1 1524 VEAIFGKMRCLFAIGEWNKLNDHVQETWTKIYGQDDESPSGMT 1566
+                  3556666666666666666666666666666666666666655 PP
+
+  == domain 2  score: 48.7 bits;  conditional E-value: 4.1e-16
+                  SSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHH.HHCCCCCHHHCHHCCHHC CS
+         FAT   11 lgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydl.lvrlQqlaEleeiiqykq 95  
+                  l++Wd + +y+   + ++ + ++f+a++a+++ ++dea + i+ +r+ ++  l++l++esy+ray   +vrlQ l+Eleei++y++
+  CCI46288.1 1606 LQNWDTIPKYI-NSDMEETQAHMFRALVAIRNMELDEAMDEIKSCRKTMDPTLRSLVSESYARAYAPsIVRLQCLTELEEIVAYLD 1690
+                  678********.5566677889*******************************************644***************987 PP
+
+  == domain 3  score: 110.2 bits;  conditional E-value: 7.9e-35
+                  ---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT............T... CS
+         FAT   99 sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk...eewlp....p... 185 
+                  ++  l++l k W+ R +gv +++evwqdi+ vR+lv++ +ed        ++wlk+++l+ k+g+l+lA  aL ++ + ++   +  +     p   
+  CCI46288.1 1754 KQLALERLQKIWTHRILGVERNIEVWQDIMLVRTLVFDARED-------LDIWLKYSRLCSKAGHLKLAATALWRV-GAQPfirS-IQNdpyaPlpi 1841
+                  5667899999********************************.......***************************.88888852.33343442558 PP
+
+                  ...........................................SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---........... CS
+         FAT  186 ...........................................evvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftk 239 
+                                                             +v ++yl++lwa+++ + al+++ + +  +le+++ + s+         ee  +
+  CCI46288.1 1842 nlttlttntavhglgndtnrsagpsmrrfhtlanfgdgssadpRVALSYLRHLWAENREDIALKQMSHLID-VLEQQG-DESD---------EEMIR 1927
+                  8888899999999999999999999999999999999999999***********************99999.555543.2333.........34446 PP
+
+                  HHHHCCCTCCCCC.CCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS....................S-TCCHHH CS
+         FAT  240 llarcylkkGewl.aalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee...................pedlseyv 316 
+                  l  ++y  ++ew+ ++l+ +++  +  e++l+   +at+l p+  kaw +wal+nf++++   ++   e+                    e + +y+
+  CCI46288.1 1928 LRVQAYIQLSEWQmSSLEPGKQFDQVFEQVLSRLETATRLEPTNHKAWREWALMNFRAIEVIVRGDAHEKnsnegrlpgsvavpgpaslIEGA-QYA 2023
+                  66899*******83567888878888*********************************9997774444447789********9986543444.6** PP
+
+                  HCCT..CCHHHHTTTS..STTTCHHHHHC CS
+         FAT  317 vpavegflkslslsse..kslqdllRlLt 343 
+                   pa++gf++s+s +++     +d+lRlLt
+  CCI46288.1 2024 PPAIQGFFRSISFGHTqyDFTKDVLRLLT 2052
+                  ****************98899*******8 PP
+
+>> CCI46575.1  unnamed protein product [Albugo candida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.7   0.1      0.84   9.3e+02      99     157 ..      37     155 ..      19     162 .. 0.77
+   2 !  144.9   2.9   2.2e-45   2.5e-42       2     343 .]    3331    3658 ..    3330    3658 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: -1.7 bits;  conditional E-value: 0.84
+                 ---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC......................................................... CS
+         FAT  99 sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied......................................................... 140
+                  s+ l+sl+  W k l+ + ++  + ++i + R+l+l+ i++                                                         
+  CCI46575.1  37 LSQMLESLFPVWSKLLQTTLSPQIADNPINRCRKLLLQIINRlpsnermrpyvahllhllmdvlrrdneenslcalktmftlhrnyrpglrgevetfle 135
+                 5778899999999999999988888889**********9999888888888888888888888888888888888888888888888888888888877 PP
+
+                 ...HHCCS-STTCCCCCCCC CS
+         FAT 141 ...lllkgakaemwlkfanl 157
+                     ++++++ + +++fa++
+  CCI46575.1 136 fvkEVYQKMEQTLKIQFASS 155
+                 77777777777777777776 PP
+
+  == domain 2  score: 144.9 bits;  conditional E-value: 2.2e-45
+                  CCTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCC CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiq 92  
+                  +l + +aW+ g+W   ++ ls +        +p+ a+ + ++a+   ++ ++a  +  ++ +l +++++ ++  + +++++l++ ++  +E++e+iq
+  CCI46575.1 3331 ELLLDCAWKRGDWSGTKQLLSSTVqavgdIGCPEIALQRLYIAVLDgDRKSNADAIMMQTAELALQQWHVMPRLLGRSHIPLMHLFHKFVEMKESIQ 3427
+                  7999****************99998888778899999999999888799************************************************ PP
+
+                  HHCSS-......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.........HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCC CS
+         FAT   93 ykqkls......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.........lllkgakaemwlkfanlaRksgrlslAekaLkkl 174 
+                  ++ + +      ++ +lk   + Wr+Rlp+   d+  w+dil++R+++++  ++         l+  + +  + +k a++aRk++ ++++  aL+kl
+  CCI46575.1 3428 MMVDIKstsqahTLPNLKPAINIWRERLPNKYEDILLWDDILTWRTHIFQVVKNtfswsdpqvLACMHDTPWAVIKLAHVARKQHLPDVCLGALSKL 3524
+                  99877766667777777777********************************99*******88777788888999********************** PP
+
+                  CHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCH CS
+         FAT  175 leedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilq 270 
+                                      +++  ++++a++kLre+v+ ++e+  e+  gl+  ++tnl +f +++ a+ + +kG +l a++        s+e++q
+  CCI46575.1 3525 -------------------SSIPAMDVEDAFLKLREQVNICYESSTEYIGGLNILNNTNLHYFDARQkAELFRLKGIFLDAIGT-------SQEANQ 3595
+                  ...................689**************************************************************.......9***** PP
+
+                  HHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  271 aysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                   +s   +++ +  k w +w+ ++ + +  +         +++ +++ +a+ ++++++++  ++++  ++R+L+
+  CCI46575.1 3596 TFSYCLQICETHGKGWLSWGNYCYHLFMIQ---------KEV-TMASQAIACYFQAIHHRCNSARSMIARVLW 3658
+                  *************************99887.........444.499**************************9 PP
+
+>> CCI46697.1  unnamed protein product [Albugo candida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.6   0.2       1.7   1.8e+03     214     245 ..    1759    1791 ..    1662    1815 .. 0.66
+   2 !  114.3   7.7   4.7e-36   5.3e-33       4     343 .]    1986    2348 ..    1983    2348 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -2.6 bits;  conditional E-value: 1.7
+                  CTSSCCC...SS-SS---...........HH.HHCC CS
+         FAT  214 cllekke...elssglevqeptnleeftkll.arcy 245 
+                  + +   +   + +s+l+ qe++nleef k + +r +
+  CCI46697.1 1759 NGS---NnttNGLSELDDQEKENLEEFLKDIpSRLL 1791
+                  222...223356666666677777777666655544 PP
+
+  == domain 2  score: 114.3 bits;  conditional E-value: 4.7e-36
+                  TTCCCCTSSSGHHCCCCT...................................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---S CS
+         FAT    4 aaeaaWrlgqWdsmeeylslmk...............................kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsge 69  
+                  a+e++Wrl+ W+++ + l+  k                                d+ + +f++++++lh+++ +++++ +  ar  ++  l+a  ge
+  CCI46697.1 1986 ALECTWRLSRWELLSDLLQSDKtnfstennsvaqdptqqlwsfpffsrqkdvnGDTSHIKFVRVLHNLHTKDAKALSTNLRTARLEIMGPLAAALGE 2082
+                  89****************9999****************************9999999999************************************* PP
+
+                  CCCCCHHHHHCCCCCHHHCHHCCHHCSS-...---TTTTT...TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCH CS
+         FAT   70 synraydllvrlQqlaEleeiiqykqkls...sseelksl...lktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRk 160 
+                  sy+ray+ l+rl+ l+E e+  + ++k     ++++++++     +W+ R+  ++++++++++il++R+++ ++++     +   + wl++a++aRk
+  CCI46697.1 2083 SYQRAYPMLHRLHFLHEVEQGFAALSKVYdvsDESQRADVwkrHCNWESRYALIANSLRFRDPILALRRVLATKADL---LTDLSSNWLQYAKVARK 2176
+                  *******************988888876678755555555455569***********************99988866...888999*********** PP
+
+                  HHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCC...HHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCC CS
+         FAT  161 sgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkL...refvscllekkeelssglevqeptnleeftkllarcylkkGewlaa 254 
+                   g + +A +a   ++   +     p++ ++++k+l+++++  ealq++   +  +s+l +++                e ++l a+ +l+   w+++
+  CCI46697.1 2177 EGFIRTATNAVMHADLLCN-----PSASMEQAKLLIQQNRMYEALQTIepvEIDTSKLEFDA----------------EHSALNAKRLLLATNWMQQ 2252
+                  **************55555.....9*********************9944445555444442................3344448999********* PP
+
+                  CCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH.SSSS............S-TCCHHHHCCT..CCHHHHTTTSSTTTCHH CS
+         FAT  255 lqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek.keeee...........pedlseyvvpavegflkslslssekslqdll 339 
+                  ++       + ++i + y+a ++l+p+++k ++++a++ +  l +   +   +ee            + + +++++ +++++  l+++ + ++q l+
+  CCI46697.1 2253 FGLR-----QGKQIIERYRAVIRLNPTCEKGYFHLAKYFEYLLATAYPSlHLNEErandtslsiapDSGFHQLLINLMRNYISTLKHGTKYVYQALP 2344
+                  **94.....59**************************988887766555433333568999*9*99889999************************* PP
+
+                  HHHC CS
+         FAT  340 RlLt 343 
+                  RlLt
+  CCI46697.1 2345 RLLT 2348
+                  ***8 PP
+
+>> CCI46056.1  unnamed protein product [Albugo candida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    5.3   0.0    0.0064       7.1     231     298 ..      95     155 ..      62     222 .. 0.76
+   2 ?    2.8   0.0     0.037        41     245     293 ..     245     286 ..     230     293 .. 0.86
+   3 !   12.7   0.2   3.5e-05     0.039     263     332 ..     358     444 ..     325     492 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 5.3 bits;  conditional E-value: 0.0064
+                 .........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCH CS
+         FAT 231 ptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevls 298
+                 ++++  +    a++y  +G  l+++++       + ++ + y +a++l+p+  +a++++a  + ++ +
+  CCI46056.1  95 NQQCIRLDPHFAEAYGNLGNALKETGD-------ILGAIHFYVKAIQLHPRFSDAYNNLAVSYMQIGQ 155
+                 555555666667888888888888888.......8899999999999999999999999888776654 PP
+
+  == domain 2  score: 2.8 bits;  conditional E-value: 0.037
+                 CCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+         FAT 245 ylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                 y+ +G  l++ ++        +++ + y++a+e++p+ + a+ ++a+++
+  CCI46056.1 245 YTNLGNALRESGR-------LQDAINVYKKAIEIRPNFATAHGNLASAY 286
+                 6677777777777.......899**********************9987 PP
+
+  == domain 3  score: 12.7 bits;  conditional E-value: 3.5e-05
+                 ..-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS...................S-TCCHHHHCCT..CCHHHHTTTS CS
+         FAT 263 ekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee..................pedlseyvvpavegflkslslsse 332
+                   ++e+ ++ys+a++l p+++ a+ +++++  e+ + e+  ++ ++                   +d++  + ++++++  +++l  e
+  CCI46056.1 358 GMIKEAIHCYSTAARLMPHLAAAYSNLGSVLKEQGKLEQALAHYQQaihidprfadafsnmgnvFKDMN-RLEDSIQCYSTAIRLKPE 444
+                 335555555555555555555555555555555555555554444444455555555544444422222.344444444444444433 PP
+
+>> CCI46057.1  unnamed protein product [Albugo candida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    5.2   0.0    0.0069       7.7     231     298 ..     126     186 ..      96     252 .. 0.75
+   2 ?    2.6   0.0     0.043        48     245     293 ..     276     317 ..     270     324 .. 0.85
+   3 !   12.6   0.2     4e-05     0.045     264     332 ..     390     475 ..     365     523 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 5.2 bits;  conditional E-value: 0.0069
+                 .........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCH CS
+         FAT 231 ptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevls 298
+                 ++++  +    a++y  +G  l+++++       + ++ + y +a++l+p+  +a++++a  + ++ +
+  CCI46057.1 126 NQQCIRLDPHFAEAYGNLGNALKETGD-------ILGAIHFYVKAIQLHPRFSDAYNNLAVSYMQIGQ 186
+                 555555666667888888888888888.......8899999999999999999999999888776654 PP
+
+  == domain 2  score: 2.6 bits;  conditional E-value: 0.043
+                 CCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+         FAT 245 ylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                 y+ +G  l++ ++        +++ + y++a+e++p+ + a+ ++a+++
+  CCI46057.1 276 YTNLGNALRESGR-------LQDAINVYKKAIEIRPNFATAHGNLASAY 317
+                 6667777777777.......899**********************9987 PP
+
+  == domain 3  score: 12.6 bits;  conditional E-value: 4e-05
+                 .-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS...................S-TCCHHHHCCT..CCHHHHTTTS CS
+         FAT 264 kseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee..................pedlseyvvpavegflkslslsse 332
+                  ++e+ ++ys+a++l p+++ a+ +++++  e+ + e+  ++ ++                   +d++  + ++++++  +++l  e
+  CCI46057.1 390 MIKEAIHCYSTAARLMPHLAAAYSNLGSVLKEQGKLEQALAHYQQaihidprfadafsnmgnvFKDMN-RLEDSIQCYSTAIRLKPE 475
+                 45555555555555555555555555555555555555554444444455555555555444422222.344444444444444433 PP
+
+>> CCI44801.1  unnamed protein product [Albugo candida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.2   5.2   5.3e-05     0.059     123     295 ..     416     586 ..     396     599 .. 0.67
+   2 ?   -4.1   0.0       4.6   5.1e+03      14      51 ..     625     665 ..     623     676 .. 0.58
+   3 !    6.0   0.1     0.004       4.4     144     278 ..     741     808 ..     702     888 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 12.2 bits;  conditional E-value: 5.3e-05
+                 CTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT..............TSSCCCHHHHHHHCCHHHHHSSCCHHHH CS
+         FAT 123 vwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk.....eewlp....pevvyaylkylwakgeqkealqkLrefv 212
+                 v++di s R+++ +  +      ++  mw k a   +ks +++lA    kk+ + +       +w++     + ++++ ++++  +  +   ++    +
+  CCI44801.1 416 VREDIPSARQFFRKVLQA--KYPKELGMWNKWAVMEWKSANYDLARVIFKKASKIRYdlrlwVSWATmemeCNNYHESKRLFHVIIATDPKNSHALLGL 512
+                 578888888888888877..4456788999999999999999999999999965555333332222233322333333333333333322222222222 PP
+
+                 CCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+         FAT 213 scllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfe 295
+                   lle+k+ +++    + ++ + e+ k +  ++   G ++ + ++        +e+ + ++ at+ld+   + wh+wa+++ e
+  CCI44801.1 513 A-LLEMKQGYNHKAKKIFNELIREYPKDV-NAFQAYGIFQGKCKN-------MKEARELFHHATQLDDVGGQVWHAWAKAEYE 586
+                 3.333333444444444667777777776.778888888888888.......9**************************9876 PP
+
+  == domain 2  score: -4.1 bits;  conditional E-value: 4.6
+                 GHHCCCCT.....TSSSS--CCCHCCCCHH..--CCHCHHC CS
+         FAT  14 Wdsmeeylslmk.kdspdkaffeailalhr..nqfdeaeel 51 
+                 W+  + + +l++  d  + aff+a+ ++    +++++ae+l
+  CCI44801.1 625 WEGRRTFSQLVDsGDFIHAAFFNAFAKMEEeaGDMTQAESL 665
+                 55555555555544445666777777766655666666655 PP
+
+  == domain 3  score: 6.0 bits;  conditional E-value: 0.004
+                 CS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHH CS
+         FAT 144 kgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftklla 242
+                 + ++ e+w   a++ +k g+++ A  +L+++++  +   ++ ++ ++ +k    +++++ea  +L++ ++                             
+  CCI44801.1 741 EPTHLEAWRALARVENKLGNVQNARAVLTRAAQHVD--NSV-PLLMQLAKNEERNNNIDEARRTLEKALE----------------------------- 807
+                 346777777778888888888888888887755555..333.5677777777777777777777777666............................. PP
+
+                 HCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHC CS
+         FAT 243 rcylkkGewlaalqklnwseekseeilqaysaatel 278
+                                                    l
+  CCI44801.1 808 -----------------------------------L 808
+                 ...................................2 PP
+
+>> CCI39362.1  unnamed protein product [Albugo candida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.6   1.7   0.00064      0.71     261     300 ..     160     199 ..      45     243 .. 0.71
+   2 !    6.7   0.2    0.0024       2.7     146     206 ..     248     305 ..     236     328 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 8.6 bits;  conditional E-value: 0.00064
+                 S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+         FAT 261 seekseeilqaysaateldpswykawhtwalfnfevlske 300
+                 ++e+ e++ ++y+ a+++dp+ y+aw+ ++  + ++ ++e
+  CCI39362.1 160 ANEDYEKAANCYRHAIRVDPRHYNAWYGLGTICYRQEKYE 199
+                 4566899*********************666554443333 PP
+
+  == domain 2  score: 6.7 bits;  conditional E-value: 0.0024
+                 -STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSS CS
+         FAT 146 akaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealq 206
+                  + ++ ++ an+   + +++ A++ L+ +++ ++   ++++v+y   +++ + ++ +ea+q
+  CCI39362.1 248 FNLQARIQRANVLISQEQFDAAMDELLAVRDLAP---QESSVYYLMGQVSKKLNHMDEAMQ 305
+                 56899999*********************99999...334555555555555555555544 PP
+
+>> CCI45135.1  unnamed protein product [Albugo candida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.2   0.8      0.11   1.3e+02     226     226 ..     119     119 ..      48     286 .. 0.49
+   2 ?    0.7   0.2      0.17   1.8e+02     314     332 ..     257     275 ..     141     436 .. 0.69
+   3 ?    2.0   0.0     0.065        72     230     303 ..     419     485 ..     396     501 .. 0.71
+   4 ?    6.6   0.0    0.0026       2.9     243     293 ..     507     552 ..     465     585 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 1.2 bits;  conditional E-value: 0.11
+                 - CS
+         FAT 226 l 226
+                 +
+  CCI45135.1 119 T 119
+                 1 PP
+
+  == domain 2  score: 0.7 bits;  conditional E-value: 0.17
+                 HHHHCCT..CCHHHHTTTS CS
+         FAT 314 eyvvpavegflkslslsse 332
+                  ++v++ +++ +s+s++  
+  CCI45135.1 257 MHPVKSSDHYTESISSQTD 275
+                 3444444444444444433 PP
+
+  == domain 3  score: 2.0 bits;  conditional E-value: 0.065
+                 ..........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH CS
+         FAT 230 eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek 303
+                 + t++ e++   a +y+ +G    +++         e  + + +aa+el p+  +a+++++  + ++l + +++
+  CCI45135.1 419 DLTRCIELASDFAMAYMQLGVLHTRVGA-------FEVGTTYLKAAAELIPDAPEAYNYLGEIYMQMLGDPQST 485
+                 4455566666666666666666666666.......677778888999******************999998554 PP
+
+  == domain 4  score: 6.6 bits;  conditional E-value: 0.0026
+                 HCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+         FAT 243 rcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                  +y  kG+ la+ + +n     +e++l  +++a+e++p++  a+ ++a+++
+  CCI45135.1 507 MAYINKGSILAQKNPAN-----AEDALGLFKKAIEMSPRSKLAYVNLAQVY 552
+                 56888888888888865.....**************************987 PP
+
+>> CCI39361.1  unnamed protein product [Albugo candida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.2   0.0      0.31   3.4e+02     154     179 ..      45      70 ..      44      88 .. 0.83
+   2 ?    8.0   0.9   0.00095       1.1     261     298 ..     361     398 ..     247     442 .. 0.73
+   3 ?    5.9   0.2    0.0041       4.6     146     206 ..     449     506 ..     436     533 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: -0.2 bits;  conditional E-value: 0.31
+                 CCCCHCHHHHCCSTTHHCCCCCHCTT CS
+         FAT 154 fanlaRksgrlslAekaLkklleedk 179
+                 + +++R++++ + A+k+  + le d+
+  CCI39361.1  45 MGKICRQNNQRDRAIKYFVESLELDP 70 
+                 5789************9999999998 PP
+
+  == domain 2  score: 8.0 bits;  conditional E-value: 0.00095
+                 S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCH CS
+         FAT 261 seekseeilqaysaateldpswykawhtwalfnfevls 298
+                 ++e+ e++ ++y+ a+++dp+ y+aw+ ++  + ++ +
+  CCI39361.1 361 ANEDYEKAANCYRHAIRVDPRHYNAWYGLGTICYRQEK 398
+                 4566899*********************7665544433 PP
+
+  == domain 3  score: 5.9 bits;  conditional E-value: 0.0041
+                 -STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSS CS
+         FAT 146 akaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealq 206
+                  + ++ ++ an+   + +++ A++ L+ +++ ++   ++++v+y   +++ + ++ +ea+q
+  CCI39361.1 449 FNLQARIQRANVLISQEQFDAAMDELLAVRDLAP---QESSVYYLMGQVSKKLNHMDEAMQ 506
+                 5789999**********************99999...334455555554444444444444 PP
+
+>> CCI39359.1  unnamed protein product [Albugo candida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.4   0.0      0.35   3.9e+02     154     179 ..     116     141 ..     115     159 .. 0.83
+   2 ?    7.8   0.9    0.0011       1.2     261     298 ..     432     469 ..     314     513 .. 0.73
+   3 ?    6.2   0.5    0.0034       3.8     144     206 ..     518     577 ..     479     604 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: -0.4 bits;  conditional E-value: 0.35
+                 CCCCHCHHHHCCSTTHHCCCCCHCTT CS
+         FAT 154 fanlaRksgrlslAekaLkklleedk 179
+                 + +++R++++ + A+k+  + le d+
+  CCI39359.1 116 MGKICRQNNQRDRAIKYFVESLELDP 141
+                 5789************9999999998 PP
+
+  == domain 2  score: 7.8 bits;  conditional E-value: 0.0011
+                 S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCH CS
+         FAT 261 seekseeilqaysaateldpswykawhtwalfnfevls 298
+                 ++e+ e++ ++y+ a+++dp+ y+aw+ ++  + ++ +
+  CCI39359.1 432 ANEDYEKAANCYRHAIRVDPRHYNAWYGLGTICYRQEK 469
+                 4566899*********************7665544433 PP
+
+  == domain 3  score: 6.2 bits;  conditional E-value: 0.0034
+                 CS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSS CS
+         FAT 144 kgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealq 206
+                 +  + ++ ++ an+   + +++ A++ L+ +++ ++   ++++v+y   +++ + ++ +ea+q
+  CCI39359.1 518 QPFNLQARIQRANVLISQEQFDAAMDELLAVRDLAP---QESSVYYLMGQVSKKLNHMDEAMQ 577
+                 445667778888888888888888888888877777...223444444444433333333333 PP
+
+>> CCI39383.1  unnamed protein product [Albugo candida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.4   0.3    0.0061       6.8     136     341 ..     788     984 ..     784     986 .. 0.55
+   2 ?    4.6   0.4      0.01        11     139     174 ..    1175    1210 ..    1148    1345 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 5.4 bits;  conditional E-value: 0.0061
+                 CCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT...............TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-S CS
+         FAT 136 spiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk.....eewlp.....pevvyaylkylwakgeqkealqkLrefvscllekkeelss 224
+                 + ie+       a++w ++a+ + k ++l++A+ +L ++ + +      +  ++       + +  +++ + ++  + + ++ r  + ++l +      
+  CCI39383.1 788 KLIEN-------ASVWENMAHMCVKTKQLDVAQVCLGNMGHARGaiavqD-ARQepeseAAIAMVAIQLGLRDDAARLYRECGRYDLLNKLYR------ 872
+                 55666.......99999*********************966666444321.111222222333333344444444444444444444433333...... PP
+
+                 S---................HH..HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCC.HH CS
+         FAT 225 glevq.....eptnleeftkll..arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedls.ey 315
+                           ++ +l e+++++    ++   G + + l++        +e+ +ay +a  +++++    +++++++   l+k+ ++++ +  + +   +
+  CCI39383.1 873 ----AsgiwsKAISLAEKKDRIhlKNTHYHFGRHFEDLGD-------VDEAIKAYEDAGTHQKDVPRMLYKMGKME--LLKKYVDNSNDN-DALIWwAH 957
+                 ....233333333333333333233445555667777777.......88999999999999998888888888874..455553333332.33333455 PP
+
+                 HHCCT..CCHHHHTTTS.STTTCHHHH CS
+         FAT 316 vvpavegflkslslsse.kslqdllRl 341
+                   ++  +f +++  ++  k++ +l R+
+  CCI39383.1 958 FEESQGHFDRAIEAYKRaKDYLSLVRV 984
+                 555555555555555555555555555 PP
+
+  == domain 2  score: 4.6 bits;  conditional E-value: 0.01
+                  HCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCC CS
+         FAT  139 edlllkgakaemwlkfanlaRksgrlslAekaLkkl 174 
+                  e+ l+k+++ e+ lk a+ +  +g++ lA k  +++
+  CCI39383.1 1175 ENALGKKQRNEILLKLAKCCKHQGSYHLATKKYTQA 1210
+                  446788888999999999999999999999877776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      13310  (6619927 residues searched)
+Passed MSV filter:                      1088  (0.0817431); expected 266.2 (0.02)
+Passed bias filter:                      326  (0.0244929); expected 266.2 (0.02)
+Passed Vit filter:                        44  (0.00330579); expected 13.3 (0.001)
+Passed Fwd filter:                        12  (0.000901578); expected 0.1 (1e-05)
+Initial search space (Z):              13310  [actual number of targets]
+Domain search space  (domZ):              12  [number of targets reported over threshold]
+# CPU time: 0.19u 0.01s 00:00:00.20 Elapsed: 00:00:00.10
+# Mc/sec: 22694.68
+//
+[ok]

@@ -1,0 +1,100 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Nannochloropsis_gaditana_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.8e-06   24.3  14.4    2.8e-06   24.3  14.4    1.7  2  EKU21636.1  dna binding protein, partial [Nannochloropsis gad
+    0.00021   18.1   1.9    0.00023   17.9   1.9    1.1  1  EKU21576.1  hypothetical protein NGA_0401010 [Nannochloropsis
+  ------ inclusion threshold ------
+        2.9    4.4  15.9         10    2.6  16.2    1.6  1  EKU22057.1  hypothetical protein NGA_0171200, partial [Nannoc
+
+
+Domain annotation for each sequence (and alignments):
+>> EKU21636.1  dna binding protein, partial [Nannochloropsis gaditana CCMP526]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.3  14.4   2.4e-09   2.8e-06      63     218 ..     124     319 ..      66     537 .. 0.58
+   2 ?   -2.8   1.0      0.38   4.4e+02     241     252 ..    1050    1061 ..    1004    1156 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 24.3 bits;  conditional E-value: 2.4e-09
+  PTHR13335.orig.30.pir  63 sastpgdsgsedsgssneaetatg....................................gdtkarrkkpsldqrretqgekqssese 114
+                             +   g +g e+s s + a+++++                                     +++++++++ +d++++   ++q+ ++ 
+             EKU21636.1 124 HGEGGGGKGEEGSLSLSAAAMQQFylqqqqaaaaaagigpqssgvdavawyalaqahhqhLQQQQQQQQQHRDHNHQALPVQQHHHHH 211
+                            3444556666777776777777769999999999999999999999999998777644433333333333333333333333333333 PP
+
+  PTHR13335.orig.30.pir 115 sspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r..........dqsscksiqwktessvkedsvqr 191
+                             +++++    +++ ++++++++++++++++++++++ ++++++     as  + +           q+++   q +           +
+             EKU21636.1 212 HQQQQQ----QQQQQQQQQQQQQQQQQQQQQQQQQQHPQHHQA----FASHLTgDgrkrggegadVQAQLPELQFQA----------E 281
+                            333222....222222222233333332333333333333332....222222224454444555455555555553..........3 PP
+
+  PTHR13335.orig.30.pir 192 assesslsserssdssssssapsrrq...........s 218
+                             s++s +s+e + ++  ++saps+r+           +
+             EKU21636.1 282 VSGKSHVSQEPNRKKVRERSAPSKRKaagekggrgggR 319
+                            34445677777888787888877733355444444440 PP
+
+  == domain 2  score: -2.8 bits;  conditional E-value: 0.38
+  PTHR13335.orig.30.pir  241 ssstktqkskkp 252 
+                               s+++q+++k 
+             EKU21636.1 1050 KRSKEEQRWEKR 1061
+                             111111111111 PP
+
+>> EKU21576.1  hypothetical protein NGA_0401010 [Nannochloropsis gaditana CCMP526]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.9   1.9   1.9e-07   0.00023      64     160 ..     481     567 ..     243     611 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 17.9 bits;  conditional E-value: 1.9e-07
+  PTHR13335.orig.30.pir  64 astpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavklekl 151
+                            + +p+ s +  ++           +++++++ p ++q++++q+++q +++ + + + ++ q+++    s+ +g +   a++++++++ 
+             EKU21576.1 481 PQQPAQSDPYAAYY---------QQQQNQGPSPAQQQQQQQQQQQQPQHQPQHQPQPQQPQQQPAY-ASQTNGGDAAAAQQQQQQAAP 558
+                            33333333333333.........2333333334444444444444444444444444444444444.566667777776666666666 PP
+
+  PTHR13335.orig.30.pir 152 rkerrsksa 160
+                              +  s+s+
+             EKU21576.1 559 APAPTSSSD 567
+                            666443333 PP
+
+>> EKU22057.1  hypothetical protein NGA_0171200, partial [Nannochloropsis gaditana CCMP526]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.6  16.2    0.0087        10      85     192 ..     188     292 ..     163     495 .. 0.43
+
+  Alignments for each domain:
+  == domain 1  score: 2.6 bits;  conditional E-value: 0.0087
+  PTHR13335.orig.30.pir  85 tggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseer.... 168
+                             ++ ++  +kk  + +++e+++++q++++++++++eee+++++ +  ++d g + ++  ++ ++e  r +                  
+             EKU22057.1 188 EEKGKEREEKKLAVEKEDEEEEQQQQQQQQQQQQQEEEEEEEEAH--TDDGGEKGEN-EDKKREEVFRGH-------------Wrewg 259
+                            112223334444444455555444444444444444444444444..3333333333.445555555555.............04444 PP
+
+  PTHR13335.orig.30.pir 169 ...........dqsscksiqwktessvkedsvqra 192
+                                       +  ++  ++ +t++ ++ +s   +
+             EKU22057.1 260 lteseeggspeA--GLGAKNARTAEASSFPSCGAS 292
+                            444444444442..333333332222222222222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       3554  (1055556 residues searched)
+Passed MSV filter:                       280  (0.0787845); expected 71.1 (0.02)
+Passed bias filter:                      127  (0.0357344); expected 71.1 (0.02)
+Passed Vit filter:                        22  (0.00619021); expected 3.6 (0.001)
+Passed Fwd filter:                         5  (0.00140687); expected 0.0 (1e-05)
+Initial search space (Z):               3554  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.06u 0.03s 00:00:00.09 Elapsed: 00:00:00.05
+# Mc/sec: 12022.72
+//
+[ok]

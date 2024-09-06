@@ -1,0 +1,278 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Saprolegnia_diclina_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    3.1e-47  162.0   0.0    4.3e-47  161.5   0.0    1.2  1  EQC38912.1  hypothetical protein SDRG_03870 [Saprolegnia dicl
+    0.00064   18.8  22.1    0.00073   18.6  22.1    1.2  1  EQC36240.1  hypothetical protein SDRG_06347 [Saprolegnia dicl
+     0.0019   17.3  14.9      0.002   17.2  14.9    1.1  1  EQC26470.1  hypothetical protein SDRG_15712 [Saprolegnia dicl
+     0.0037   16.3   0.5       0.14   11.1   0.1    2.2  2  EQC27295.1  hypothetical protein SDRG_14916 [Saprolegnia dicl
+  ------ inclusion threshold ------
+      0.021   13.8  39.3       0.11   11.4  25.5    2.4  2  EQC27478.1  hypothetical protein SDRG_14681 [Saprolegnia dicl
+      0.032   13.2  14.5      0.041   12.8  14.5    1.1  1  EQC37602.1  hypothetical protein, variant 2 [Saprolegnia dicl
+      0.036   13.0  11.3      0.041   12.8  11.3    1.0  1  EQC37285.1  hypothetical protein SDRG_05509 [Saprolegnia dicl
+       0.11   11.4  20.8       0.17   10.8  20.8    1.2  1  EQC37601.1  hypothetical protein, variant 1 [Saprolegnia dicl
+       0.41    9.5  24.6       0.69    8.8  24.6    1.3  1  EQC36385.1  hypothetical protein SDRG_06488 [Saprolegnia dicl
+        1.7    7.5  32.6        1.9    7.3  32.6    1.1  1  EQC28931.1  hypothetical protein SDRG_13270 [Saprolegnia dicl
+
+
+Domain annotation for each sequence (and alignments):
+>> EQC38912.1  hypothetical protein SDRG_03870 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  161.5   0.0   2.4e-50   4.3e-47     236     664 ..     102     533 ..      12     537 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 161.5 bits;  conditional E-value: 2.4e-50
+  PTHR13335.orig.30.pir 236 ekkskssstktqkskkpssa.a....kqsi...........sslssaLekkps.qlnnpfneyakfdgkg.vgttaslkidiylplss 305
+                            + k+++ +++++ksk+  s  +    +  +           s+ ++aL+++ + ++  p+       g++   ++++l ++iylp+ +
+             EQC38912.1 102 PGKPRVVVFDKKKSKRGDSDdDsdeeS--FmferepveslpSAATTALDAALKgSSGMPMGL----AGTKaAIDSPVLYLKIYLPNRQ 183
+                            333333333333333333332222220..123333333234555667777666445556543....344443367************* PP
+
+  PTHR13335.orig.30.pir 306 epdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnkvnaycLrivEdDGevddDFPpLDrnepiskf...gfselaLveatd 390
+                            e      + +++ + +tV+e I ++L  + +e r+p+l   ++++y Lr+ + DG  d+D P+LDr+++i++f   g++e++L+e++d
+             EQC38912.1 184 E------MNLELYEISTVEESIQAILSSHRKEARQPPLYYGHPECYDLRLHDMDGYPDEDCPALDRSRKIKNFgdnGDHEFCLCERPD 265
+                            *......*********************************9999*****************************8888*********** PP
+
+  PTHR13335.orig.30.pir 391 segktnndlqtplpreqkkrleeakrsagsaneagsslstes.......skeslfvkvnlaypgdsvrskttivvptdvtladvleka 471
+                            ++  +  +  t ++            ++ s  +++s+ +  s        +++  +k+++ +++ +    t +     +  +d+l  +
+             EQC38912.1 266 ACPPNEHSPDTYRQ------------GSTSGLQISSQDNSLSihrrfggASDKAILKIFM-PNDNY----TVVALKDGMCGKDLLPVL 336
+                            **987333333332............223333333343333377788889**********.65666....99999999********** PP
+
+  PTHR13335.orig.30.pir 472 ckkrkldqkkyrllkvsepnvi........vdldrtvesldgleflllrknssradgvlekteskssssanatissksaaedsqiqia 551
+                             ++++l   ++++lkv++   +         dldr++  l+ +e  l rk    a +v     ++s +   + +++  + +  ++   
+             EQC38912.1 337 ARRHRLPVLDEYVLKVNDAEKVrldlvsdeIDLDRPLKPLGLQEVTLARKVYADAPKVSAHVAPTSDATEVDENPAEALKNVRPDPST 424
+                            ***********9999998766533333333799***********999999999999999988888888888888888888******** PP
+
+  PTHR13335.orig.30.pir 552 tvqddlsssayksfkVsrkhkmrfktdrelgIdgdyieimPvenqkaatkfwekqKtisihisqvvacklssknpanFkivvrrende 639
+                            ++++d+ +++yk++kV++ +k+r +++r  g d  ++++ +v ++ +   + ++ K+++++is++ + +     p  F+i++ ++ +e
+             EQC38912.1 425 FMYNDVKAAMYKEWKVMKTNKFRKRQHRMFGVDLHKVYNKKVGERAMI--SRTNIKVSERPISSITWLR-FLTDPCDFQIHFSQP-EE 508
+                            ***********************************************9..9*****************9.9*********77764.45 PP
+
+  PTHR13335.orig.30.pir 640 KrydfeavsaaeaaeIvskinnile 664
+                               d+ a+sa e+aeIv+k+ +i++
+             EQC38912.1 509 ETIDYSAESAYECAEIVAKLMYIRD 533
+                            577888888***********99975 PP
+
+>> EQC36240.1  hypothetical protein SDRG_06347 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.6  22.1     4e-07   0.00073      32     205 ..      64     233 ..      39     331 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 18.6 bits;  conditional E-value: 4e-07
+  PTHR13335.orig.30.pir  32 ndddvdlekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatg........gdtkarrkkpsldqrretqgekqss 111
+                             + d+++ k ++ap ++         + +p++++ p +s ++ ++ s+ ++++++               ++  l+q++ +q+++  +
+             EQC36240.1  64 AMADDQIAKKETAPSTT---------TPSPRQSPPPTTSKPVAPTQSPVQAQQQQllqqqqqaL----AKQQAALQQQKLQQQQQ--A 136
+                            44566666666555553.........35566677777788888777777666666554321112....22222222222222222..2 PP
+
+  PTHR13335.orig.30.pir 112 esesspsyeeelqsvdissssldegsrrrrantavkleklrke..rrsksasiassee.r.dqsscksiqwktessvkedsvqrasse 195
+                            + ++++++++ +++++ ++++l++ + ++++++a+ ++ +++   +++k++++  +   + ++++ +++    +   +++s  +a ++
+             EQC36240.1 137 ALQQQKQQQQLQKQQQQQQQQLQQKQLQQKQAQAQAQAVQQQKtvQQPKQGATPATTPmQlNAAGFTNTADL-SALFSNPSMVMANMS 223
+                            222222222222222222233333333333333333333322244777777777776666646666666555.455555667777666 PP
+
+  PTHR13335.orig.30.pir 196 sslsserssd 205
+                            s +++ + s 
+             EQC36240.1 224 SLSGFQMPST 233
+                            6666666555 PP
+
+>> EQC26470.1  hypothetical protein SDRG_15712 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.2  14.9   1.1e-06     0.002      87     257 ..      18     191 ..       4     275 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 17.2 bits;  conditional E-value: 1.1e-06
+  PTHR13335.orig.30.pir  87 gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrra.........ntavkleklrke.rrsksasias 164
+                             d+k+++ +++l+ + e+ g++  ++++ s+  +  +++ +i + ++ +g+r             + a++le++++  r+++++++ +
+             EQC26470.1  18 IDDKCDALRKQLQAKAEKDGDS--NDKGASSHARAVQKEKQIAQLKDAFGIRSTYRdgasfdfdaQAAQRLERQEEFeRKQQAKETTE 103
+                            4689999999999999999999..7777777778888999999999999997665567888888566666666666543322222222 PP
+
+  PTHR13335.orig.30.pir 165 seer..dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq.snkldseqlsaeesdslfekkskssstktqk 248
+                             + r  d+ss+k  + k      + + ++ ss+ss+ss++ssd+ss+ss+ ++ r  + ++ s  +s + s++   + ++ ++++  k
+             EQC26470.1 104 RR-RlrDASSGKKEKRK------R-RKRSPSSSSSSSSSSSSDASSDSSDDESaRAaRREPASDRKSRSRSRQNGAHENAPGTRASPK 183
+                            22.23233333333333......2.222223344444555555555555555544454445555566666666666666666666666 PP
+
+  PTHR13335.orig.30.pir 249 skkpssaak 257
+                             + ps+  k
+             EQC26470.1 184 RRTPSPN-K 191
+                            6666665.3 PP
+
+>> EQC27295.1  hypothetical protein SDRG_14916 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.1   0.1   7.5e-05      0.14     422     495 ..     225     293 ..     198     309 .. 0.78
+   2 ?    3.2   0.0     0.019        34     454     481 ..     335     362 ..     305     384 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 11.1 bits;  conditional E-value: 7.5e-05
+  PTHR13335.orig.30.pir 422 neagsslstes.........skeslfvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkkyrllkvsepnvivd 495
+                            ++        s          k+ + vkv+  + g+      +  +++ ++ + +l+++c  +kl++ +  +lk++++   +d
+             EQC27295.1 225 AK--------SmakspakspAKDIIRVKVRR-TGGKI----EIYRISSSMPVQKLLLSFCNVHKLSPDDV-TLKLLGDTLELD 293
+                            22........133334555799*********.88999....*****************************.*****9987766 PP
+
+  == domain 2  score: 3.2 bits;  conditional E-value: 0.019
+  PTHR13335.orig.30.pir 454 ttivvptdvtladvlekackkrkldqkk 481
+                               +++t+   + +++k+c kr+ld+  
+             EQC27295.1 335 EAFKISTTALVKTLVQKVCAKRHLDPAH 362
+                            677899*******************975 PP
+
+>> EQC27478.1  hypothetical protein SDRG_14681 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.8   5.8   0.00077       1.4      66     187 ..      65     351 ..       8     364 .. 0.69
+   2 ?   11.4  25.5   6.2e-05      0.11      74     233 ..    1697    1832 ..    1637    1936 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 7.8 bits;  conditional E-value: 0.00077
+  PTHR13335.orig.30.pir  66 tpgdsgsedsgssneaetatg................................................................... 86 
+                            +p +s++e++g+        +                                                                   
+             EQC27478.1  65 SPSRSSDERNGR--------Kelhaiamlrrqlfersgelvdgpisvqalgelklettgswttselfpigyetralvdgiawrcsiql 144
+                            333333333333........02334555566777777777777777777777777777777777777777777777777777777777 PP
+
+  PTHR13335.orig.30.pir  87 ........................................................................................ 86 
+                                                                                                                    
+             EQC27478.1 145 akddakkgpvfqvqlekapaiafrsyttakawakamtflddasedeknhwreatgatsetvhdgfglqreniartleglphvlecdgy 232
+                            7777777777777777777777777777777777777777777777777888888888888888888888888899999999999999 PP
+
+  PTHR13335.orig.30.pir  87 ................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsk 158
+                                            + +ka  +k+   q+ ++q+ek    ++ +++ + ++++  ++ ++ + + +++r+++a+k ++ +++  s 
+             EQC27478.1 233 lfwdardgrtmsatdlVTQKAALTKQLEAQDEARQREK---RAIRAKARQMYEEEKALQAQQEQVSATKKRQQQALKTQQKQQA--SM 315
+                            99999999999777765555555555555555555555...5666666666777777887777777777776666666666666..55 PP
+
+  PTHR13335.orig.30.pir 159 sasiassee.r......dqsscksiqwktessvked 187
+                            +++i  +++ r       + + ++i+w+ +  v+++
+             EQC27478.1 316 QKKIDALRQrRqllkeqEALRTTGINWRSSMDVNKT 351
+                            567777777668889999999999999988777765 PP
+
+  == domain 2  score: 11.4 bits;  conditional E-value: 6.2e-05
+  PTHR13335.orig.30.pir   74 dsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsks 159 
+                              +  + +  ++++ ++++++ +  ++q++ +q  +q++++  +p+++ ++q ++++ ++++ + + +++++++++ +++++     
+             EQC27478.1 1697 MQLQQQQ--QQQQQQQQQQQHHRHMQQQQYQQMLQQQQQHVHQPQLQHQMQMQQLQLQQQQHQLQLQQQQYQQQQYQQQQQ----- 1775
+                             3333222..111122222222223333333333333333333333333333333333333333333332222222222222..... PP
+
+  PTHR13335.orig.30.pir  160 asiasseer..dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkldseqlsaeesds 233 
+                                 +++ +  +q ++++++ +++ s++ +s++ as +++ + ++               + +l ++ ++ ee +s
+             EQC27478.1 1776 ----QLQHQhqQQQQLQHTKKRPTPSSSPPSSTHASPSQKKQKTK---------------ESRLLQQIQALEEHKS 1832
+                             ....11111124667777777766666655555542222211111...............1122222233333333 PP
+
+>> EQC37602.1  hypothetical protein, variant 2 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.8  14.5   2.3e-05     0.041     123     236 ..      14     175 ..       2     239 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 12.8 bits;  conditional E-value: 2.3e-05
+  PTHR13335.orig.30.pir 123 lqsvdissssldegsrrrra...ntavkleklrkerrsksasiassee.r.........dqsscksiqwktessvkedsvqrassess 197
+                            + s+d+ssss +++  ++ a   + +vk ++  k  +s+s+s++sse+           +++  k ++++ ++s++ed+   ++++ +
+             EQC37602.1  14 SSSSDSSSSSSEDEAPKKAApvkKSPVKKAAPAKKAESSSDSSSSSEDeApakkaapakKAAAAKKAESS-SDSSSEDEAPAKKAAPA 100
+                            3455555555555554444344556666666666677666666666665488888777644444444444.55666666666666666 PP
+
+  PTHR13335.orig.30.pir 198 lsserssdssssssapsr.rq........snkldseq.................................lsaeesdslfe 236
+                             + e+ssdsss+ss  ++ ++        +      +                                  +++e++++fe
+             EQC37602.1 101 KKAESSSDSSSDSSSDEEeTPvikkrkasE------SseqpakvqkaadgsakavdagcaeifiaglpwvVDESELRAIFE 175
+                            666666666665555444333553332220......122233334444555556666666666666666644444444444 PP
+
+>> EQC37285.1  hypothetical protein SDRG_05509 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.8  11.3   2.3e-05     0.041      91     148 ..     174     230 ..      77     243 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 12.8 bits;  conditional E-value: 2.3e-05
+  PTHR13335.orig.30.pir  91 arrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkl 148
+                            +++  ++++q++++q+++ ++++ + +++++ +q++ i++++++ ++++ +   +++ 
+             EQC37285.1 174 NGGYAQQQQQQQQQQQQQIHQQQHQLQQQQQAMQQQTIQQQQMQLQQQQAQ-LAQQQA 230
+                            222233333333333344444444444444445555555333333332222.222222 PP
+
+>> EQC37601.1  hypothetical protein, variant 1 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.8  20.8   9.1e-05      0.17      69     226 ..      14     196 ..       2     270 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 10.8 bits;  conditional E-value: 9.1e-05
+  PTHR13335.orig.30.pir  69 dsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke.. 154
+                            +s+s+ s+ss+e        ++a+               k+ + ++++p ++  + s++++ ss +++  +++ + +vk + ++k+  
+             EQC37601.1  14 SSSSDSSSSSSE--------DEAP---------------KKAAPAKKAPVKKAASSSSESE-SSSEDEAPKKK-AAPVKKSPVKKAap 76 
+                            333333333222........1111...............1112222233333333344444.33333333333.33444444444434 PP
+
+  PTHR13335.orig.30.pir 155 ...rrsksasiassee.r.........dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq........snk 220
+                                +s+s+s++sse+           +++  k ++++ ++s++ed+   ++++ + + e+ssdsss+ss  ++ ++        +  
+             EQC37601.1  77 akkAESSSDSSSSSEDeApakkaapakKAAAAKKAESS-SDSSSEDEAPAKKAAPAKKAESSSDSSSDSSSDEEeTPvikkrkasE-- 161
+                            42255555555555553377777766544444444444.55555555555555555566666665555555444333443332220.. PP
+
+  PTHR13335.orig.30.pir 221 ldseq.................................l 226
+                                +                                  
+             EQC37601.1 162 ----SseqpakvqkaadgsakavdagcaeifiaglpwvV 196
+                            ....12223333344445555555555555555555553 PP
+
+>> EQC36385.1  hypothetical protein SDRG_06488 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.8  24.6   0.00038      0.69      55     255 ..      15     311 ..       2     340 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 8.8 bits;  conditional E-value: 0.00038
+  PTHR13335.orig.30.pir  55 esll..srpksastpgdsgsedsgssneaetatg...................................................gdt 89 
+                            +      + ++ +     + ++s+++++++++++                                                      
+             EQC36385.1  15 S--SsePDGSRYARLDGAHRQRSTRAPRQGQQSQatsgsatcrycwfafgerlphstdrcrllarafsnnpvprdfklppalatlQRV 100
+                            1..112222222222333333334444444444466677899999************************************9977444 PP
+
+  PTHR13335.orig.30.pir  90 karrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.rdqsscksi 176
+                            + ++++p++d+ +++++ ++s   +++ + + + + vd+++ss+d  s+r+r+    ++++ r+ rrs s++++ss+  rd++ ++++
+             EQC36385.1 101 RLQAPYPKRDGTQKRKERSSSGSDRPRGKRRARRRKVDSDTSSDDSRSDRSRKVRRDNRREGRRDRRSRSQQRRSSSRaRDSVAGRNV 188
+                            5566778888888888888888888888889999999999999999999999766666666666699999999999999966666666 PP
+
+  PTHR13335.orig.30.pir 177 qwktessvkedsvqrassesslsserssd....ssssssapsr.rq.......snkldseq........................... 225
+                              +++    +   +r+++ + +ss++s+     s+ +  ++s+ ++       +      +                           
+             EQC36385.1 189 GHSDAPGNGNNNMTRSTAFAVSSSSSSQTreslSATALVVASTpTTtaqtvepR------Spvmsemtqtlptlasqpatsttsvasl 270
+                            655544444444444333333333332220000222222222211122222220......1222333333333333333333333333 PP
+
+  PTHR13335.orig.30.pir 226 ...........lsaeesdslfekkskssstktqkskkpssa 255
+                                        sa+  +s f ++++s++ +t ++   s +
+             EQC36385.1 271 gatshqrtapvVSASTGNSTFGEAPSSQVPATAVPVAASTP 311
+                            33333333333666666666666666666666655555555 PP
+
+>> EQC28931.1  hypothetical protein SDRG_13270 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.3  32.6    0.0011       1.9      72     185 ..      47     158 ..       3     178 .. 0.43
+
+  Alignments for each domain:
+  == domain 1  score: 7.3 bits;  conditional E-value: 0.0011
+  PTHR13335.orig.30.pir  72 sedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke..... 154
+                             +  ++++  ++a++g+ +ar+++ +  +            ++++++y+++ q+++ ++++ ++ +++++++++++++++ +e     
+             EQC28931.1  47 QRPEADQSPLNQAPAGQAPARQQQHQHHHH-----------QQQQSQYQQPPQQQQQQQQQYQQPQQQQQQQYQQQQTQNYQEppqqq 123
+                            222222223333333333333333333333...........44444444444444444444444444444444444444444433222 PP
+
+  PTHR13335.orig.30.pir 155 ......rrsksasiasseer....dqsscksiqwktessvk 185
+                                  ++s sa+      +    + ss++  + +++s v+
+             EQC28931.1 124 yrqqqqQQS-SAPF-----TqgggNESSGRVSSNRYASGVS 158
+                            211100332.2222.....1222223444444444333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      18229  (8862079 residues searched)
+Passed MSV filter:                      1680  (0.0921608); expected 364.6 (0.02)
+Passed bias filter:                      552  (0.0302814); expected 364.6 (0.02)
+Passed Vit filter:                       103  (0.00565034); expected 18.2 (0.001)
+Passed Fwd filter:                        18  (0.000987438); expected 0.2 (1e-05)
+Initial search space (Z):              18229  [actual number of targets]
+Domain search space  (domZ):              10  [number of targets reported over threshold]
+# CPU time: 0.30u 0.11s 00:00:00.41 Elapsed: 00:00:00.20
+# Mc/sec: 29689.78
+//
+[ok]

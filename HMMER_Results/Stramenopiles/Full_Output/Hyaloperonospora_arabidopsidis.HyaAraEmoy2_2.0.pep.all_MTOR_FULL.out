@@ -1,0 +1,509 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Hyaloperonospora_arabidopsidis.HyaAraEmoy2_2.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.2e-50  170.4   0.0    3.5e-21   75.5   0.0    5.9  5  HpaP807852  pep scaffold:HyaAraEmoy2_2.0:scaffold_70:142074:1
+    1.2e-46  158.3   3.3    3.6e-27   95.0   0.0    5.4  5  HpaP802906  pep scaffold:HyaAraEmoy2_2.0:scaffold_16:75910:85
+    4.3e-05   23.2   0.3        9.4    5.9   0.0    6.4  6  HpaP808876  pep scaffold:HyaAraEmoy2_2.0:scaffold_90:60696:68
+     0.0007   19.3   7.7        1.1    8.9   0.1    5.6  5  HpaP800094  pep scaffold:HyaAraEmoy2_2.0:scaffold_1:335230:33
+     0.0011   18.6   1.2        2.2    7.9   0.0    3.9  3  HpaP802023  pep scaffold:HyaAraEmoy2_2.0:scaffold_10:518202:5
+     0.0018   17.9   0.2        1.6    8.4   0.0    3.0  3  HpaP810242  pep scaffold:HyaAraEmoy2_2.0:scaffold_121:128186:
+     0.0087   15.7   3.8        2.4    7.8   0.1    5.2  6  HpaP801975  pep scaffold:HyaAraEmoy2_2.0:scaffold_10:320579:3
+  ------ inclusion threshold ------
+      0.059   13.0   1.8        5.3    6.7   0.4    3.8  4  HpaP813079  pep scaffold:HyaAraEmoy2_2.0:scaffold_240:58383:6
+      0.061   13.0   0.3         37    3.9   0.0    3.3  3  HpaP808926  pep scaffold:HyaAraEmoy2_2.0:scaffold_90:250848:2
+      0.062   12.9   0.8       0.67    9.6   0.0    3.2  3  HpaP811487  pep scaffold:HyaAraEmoy2_2.0:scaffold_159:47262:5
+      0.068   12.8   2.6         44    3.7   0.0    5.1  6  HpaP804112  pep scaffold:HyaAraEmoy2_2.0:scaffold_25:576256:5
+       0.15   11.7   0.1       0.29   10.8   0.1    1.5  2  HpaP811844  pep scaffold:HyaAraEmoy2_2.0:scaffold_172:55244:5
+       0.37   10.4   4.7       0.32   10.6   0.1    3.4  4  HpaP803190  pep scaffold:HyaAraEmoy2_2.0:scaffold_18:234314:2
+
+
+Domain annotation for each sequence (and alignments):
+>> HpaP807852  pep scaffold:HyaAraEmoy2_2.0:scaffold_70:142074:145738:-1 gene:HpaG807852 transcript:HpaT807852 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.4   0.0     5e-06    0.0055      77     157 ..     686     776 ..     607     778 .. 0.76
+   2 !   53.3   0.0   2.1e-17   2.4e-14       1      66 [.     781     847 ..     781     868 .. 0.82
+   3 !   75.5   0.0   3.2e-24   3.5e-21      71     159 ..     938    1035 ..     882    1036 .. 0.73
+   4 !   14.7   0.0   1.6e-05     0.018      90     145 ..    1047    1102 ..    1038    1115 .. 0.84
+   5 ?    2.4   0.0     0.099   1.1e+02     124     157 ..    1121    1155 ..    1106    1157 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 16.4 bits;  conditional E-value: 5e-06
+    mTOR_dom  77 pss.eeyyptvvinaLlkilkdpsls.shhtavvqaimsifkt......lglkc.vpflpqiipallsvirtces.slrefllqqLatLvs 157
+                  s+  + y   +++ L+k l++ s + sh  ++v++   i+ t      +g +  +p+l q++p ++  +r++++ +++++ ++ L++Lvs
+  HpaP807852 686 ASQlAQPYVLPILRVLMKNLREDSERrSHNRSTVSVSKAILATlgdlaeVGAQElTPYLGQLLPDVIDEMRDSSNpQILQVAIKTLGQLVS 776
+                 444555666678999**9999888776899999999888988833333344444478**************99999*************97 PP
+
+  == domain 2  score: 53.3 bits;  conditional E-value: 2.1e-17
+    mTOR_dom   1 VvePyldypeLLeiLlnilkte.q.sqsiRrevikvlGilGALDPykhkeveekseee..ekeeenaeet 66 
+                 Vv Py++ypeLL++L+++l+++ +  +s+R e+ +++GilGALDPy+ + ++ +++ +  +   ++++e+
+  HpaP807852 781 VVLPYHEYPELLDLLCQALQKSgDaFESLRVEAGRTIGILGALDPYNLRLFHLQMQGKltD---AKKKEF 847
+                 899*****************996469*************************9999776431...233333 PP
+
+  == domain 3  score: 75.5 bits;  conditional E-value: 3.2e-24
+    mTOR_dom   71 l.........lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158 
+                  +         l ++++ s +y+p+v+inaL++il +p  s h++ +  aim+i+k+++ ++ + l++iipa+l +++++++slr+fl++qL++Lv+i
+  HpaP807852  938 IvleippndlLPSMISESFQYFPSVAINALIRILLEPRNSVHYQGTFMAIMYICKSQRKRVGQHLDKIIPAFLYTLEKVNRSLRKFLFEQLCDLVRI 1034
+                  122233334377789999******************************************************************************* PP
+
+    mTOR_dom  159 v 159 
+                  v
+  HpaP807852 1035 V 1035
+                  9 PP
+
+  == domain 4  score: 14.7 bits;  conditional E-value: 1.6e-05
+    mTOR_dom   90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slr 145 
+                  aLl+i+ ++  ++h ++v++ + +  ++lg k   +lp ++p++l+virt  + s r
+  HpaP807852 1047 ALLSIV-NSYWDEHLEEVLNLVKNLANSLGEKFRVYLPDLVPQMLRVIRTERDnSAR 1102
+                  577777.56678999**********************************98775555 PP
+
+  == domain 5  score: 2.4 bits;  conditional E-value: 0.099
+    mTOR_dom  124 pflpqiipallsvirtces.slrefllqqLatLvs 157 
+                   +l  iipal+++i++  + + r+  l  L++Lv+
+  HpaP807852 1121 GYLHLIIPALVALIQSDADvNARKQGLGSLGSLVK 1155
+                  6999***********98888********9999996 PP
+
+>> HpaP802906  pep scaffold:HyaAraEmoy2_2.0:scaffold_16:75910:85728:-1 gene:HpaG802906 transcript:HpaT802906 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.0      0.39   4.3e+02      80     142 ..       6      72 ..       1      87 [. 0.77
+   2 ?   -0.9   0.2       1.1   1.2e+03      11      29 ..     815     833 ..     720     843 .. 0.46
+   3 !   57.3   0.0   1.3e-18   1.4e-15       1      85 [.     849     949 ..     849     957 .. 0.68
+   4 !   95.0   0.0   3.3e-30   3.6e-27      72     159 ..    1067    1154 ..    1035    1155 .. 0.89
+   5 ?   -1.0   0.0       1.1   1.3e+03     103     138 ..    1176    1212 ..    1169    1214 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 0.39
+    mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvq...aimsifktlglkc.vpflpqiipallsvirtces 142
+                  e  +++ + +L++ l+ p  ++ h+ v +   a++s  ++l+ +   + l q+ p+l++++++  s
+  HpaP802906   6 REHVEHTLLVSLVQRLDVPDAATRHARVAElyaAVTSLHRQLSAERfAKALGQVTPQLYKLLQKGAS 72 
+                 5667777888999999999999999888754437888899999888799***********9997544 PP
+
+  == domain 2  score: -0.9 bits;  conditional E-value: 1.1
+    mTOR_dom  11 LLeiLlnilkteqsqsiRr 29 
+                 L+ +++  l+  +s++ R+
+  HpaP802906 815 LFPLIIHTLQDHSSTEKRQ 833
+                 2233333333333333333 PP
+
+  == domain 3  score: 57.3 bits;  conditional E-value: 1.3e-18
+    mTOR_dom   1 VvePyldypeLLeiLlnilkte..qsqsiRrevikvlGilGALDPykhkeveeks.........eeeekeeenaeetdvsel.......lvglspssee 81 
+                 V++Pyl  p+LLei+l++l+ +  + +s+Rre+++++GilGALDPyk+k   +++         +  + ++++a++ d +++        +++s ++  
+  HpaP802906 849 VIRPYLASPKLLEIFLSLLHHNvgSPWSLRREAMRTIGILGALDPYKYKLCISRAslrqanevaS--TADTSTAADRDEKKVgratlsvSNSISDTRMS 945
+                 9********************98559***********************9998875554332220..22233333333333333333323333444455 PP
+
+    mTOR_dom  82 yypt 85 
+                  ypt
+  HpaP802906 946 QYPT 949
+                 5555 PP
+
+  == domain 4  score: 95.0 bits;  conditional E-value: 3.3e-30
+    mTOR_dom   72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                   ++lsp+s+ y+ptv+i+aLl+il++psl+ hh+ v+qaim+ifk+l+++cv+fl+ i+p +l+v+   e++lre l+ qL+tL+siv
+  HpaP802906 1067 PTELSPASDAYFPTVAIHALLHILREPSLNAHHHGVIQAIMFIFKSLSTQCVSFLKYILPPFLRVLARGEPRLRESLFLQLTTLISIV 1154
+                  6678***********************************************************************************9 PP
+
+  == domain 5  score: -1.0 bits;  conditional E-value: 1.1
+    mTOR_dom  103 hhtavvqaimsifktlglkc.vpflpqiipallsvir 138 
+                  h  ++v+ + +i +    +  +++ p+++p+ll+v++
+  HpaP802906 1176 HLPQIVRLVEEISQAAPHEFhTQYFPKVLPKLLEVLQ 1212
+                  66778888888888888888899**********9986 PP
+
+>> HpaP808876  pep scaffold:HyaAraEmoy2_2.0:scaffold_90:60696:68969:1 gene:HpaG808876 transcript:HpaT808876 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.4   0.0         6   6.6e+03      17      41 ..    1414    1438 ..    1390    1454 .. 0.58
+   2 !    5.9   0.0    0.0085       9.4      87     154 ..    1565    1631 ..    1562    1637 .. 0.81
+   3 ?    0.8   0.0      0.31   3.4e+02      95     157 ..    1691    1754 ..    1652    1756 .. 0.72
+   4 ?    0.9   0.0      0.28     3e+02     105     140 ..    1968    2003 ..    1952    2024 .. 0.74
+   5 ?    4.8   0.0     0.018        20      91     157 ..    2402    2468 ..    2374    2469 .. 0.88
+   6 ?   -1.2   0.1       1.3   1.4e+03     109     109 ..    2663    2663 ..    2607    2703 .. 0.45
+
+  Alignments for each domain:
+  == domain 1  score: -3.4 bits;  conditional E-value: 6
+    mTOR_dom   17 nilkteqsqsiRrevikvlG.ilGAL 41  
+                  ++l    s+s++r+v  +l+ i+GA+
+  HpaP808876 1414 EALDI-PSESVQRSVATCLStIIGAV 1438
+                  33322.24444444444443244554 PP
+
+  == domain 2  score: 5.9 bits;  conditional E-value: 0.0085
+    mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLat 154 
+                  v+ +Ll  l++++ +  +++ +q + s+      +  + lpq++p+l+++++++++++re   + L +
+  HpaP808876 1565 VLPSLLGALEESAWR-TKQSGIQILGSMAYCAPRQLGSCLPQVVPKLMAALTDSHPKVREAGKSALRD 1631
+                  677888888555555.788999999999999999999******************9999986666655 PP
+
+  == domain 3  score: 0.8 bits;  conditional E-value: 0.31
+    mTOR_dom   95 lkdpsls..shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                  lkd++ +  +  + +v ++ s++++     vp+++ ++p+l + + +  +++r +  + L++Lv+
+  HpaP808876 1691 LKDRAGDakKKAALIVGSMCSMIND-AKDLVPYMETVLPSLKTQLMDPIPEVRAVAGKALGKLVK 1754
+                  5555544213444456677777775.4566*************9999999999999999999986 PP
+
+  == domain 4  score: 0.9 bits;  conditional E-value: 0.28
+    mTOR_dom  105 tavvqaimsifktlglkcvpflpqiipallsvirtc 140 
+                  + v q+ +++ k++ ++  ++l+qi+ all++i ++
+  HpaP808876 1968 AVVRQSALQVWKSVVTNTPKTLRQILEALLNTIVSA 2003
+                  345578899999999999999******999998754 PP
+
+  == domain 5  score: 4.8 bits;  conditional E-value: 0.018
+    mTOR_dom   91 LlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                  L++i  d+   + ++a++q++  i+ + g+   pflpq+  +++++++++ +++r    + L +Lv+
+  HpaP808876 2402 LIRIAGDRFPGHVKAAILQSLEIILTKGGVALKPFLPQLQTTFIKALNDTAAEVRARGASALRVLVT 2468
+                  677777777778889999*******************************999999988888888886 PP
+
+  == domain 6  score: -1.2 bits;  conditional E-value: 1.3
+    mTOR_dom  109 q 109 
+                  +
+  HpaP808876 2663 R 2663
+                  2 PP
+
+>> HpaP800094  pep scaffold:HyaAraEmoy2_2.0:scaffold_1:335230:338669:-1 gene:HpaG800094 transcript:HpaT800094 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.8   0.6      0.32   3.5e+02      63     116 ..     172     228 ..      70     272 .. 0.50
+   2 !    8.9   0.1     0.001       1.1      82     157 ..     431     510 ..     383     513 .. 0.84
+   3 ?    4.4   0.0     0.024        26      88     141 ..     570     624 ..     546     632 .. 0.80
+   4 ?   -2.9   0.0       4.3   4.8e+03     116     142 ..     761     787 ..     755     793 .. 0.78
+   5 ?    4.2   0.0     0.028        31      75     144 ..     848     932 ..     803     937 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 0.8 bits;  conditional E-value: 0.32
+    mTOR_dom  63 aeetdvsellvglspsseeyyptvvinaLlkilkdpsls...shhtavvqaimsifk 116
+                 a+  + s++l +l+  +e +  tvv++ +l+i++    +       +v++a+++i +
+  HpaP800094 172 ASVKAASAFLLTLEDKQELMAFTVVVAPMLRIIEALVQTgdqLAFREVLSALVQIAE 228
+                 222222333444444444444455555555555322222110122344444444444 PP
+
+  == domain 2  score: 8.9 bits;  conditional E-value: 0.001
+    mTOR_dom  82 yyptvvinaLlkilkdpsls.shhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157
+                  + +vv+ aL ++++ ++l    ++ + ++i++ ++t   + k  +p+ + ++ al++++r+c+++++e  +  +a+  +
+  HpaP800094 431 KFYAVVMPALTALIQGEQLVlRTRALAASVIINFCNTnvCKAKYvTPYSRALLEALFNTMRSCPRQVQEQAITAVASVAK 510
+                 45679999*****999999977788888899999999555556568899********************99988877665 PP
+
+  == domain 3  score: 4.4 bits;  conditional E-value: 0.024
+    mTOR_dom  88 inaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                 ++ L+++ + + l+    + v q+   i + l+   vp+lp +ip l++ ++  +
+  HpaP800094 570 MEILVRVQSSEELEgPEVQYVAQSCARIGSILKEDFVPYLPFVIPPLIRQAQIQP 624
+                 4556666677777766777888999999999999**************9887655 PP
+
+  == domain 4  score: -2.9 bits;  conditional E-value: 4.3
+    mTOR_dom 116 ktlglkcvpflpqiipallsvirtces 142
+                 k+ +l+c++   + ++a+l+v++++++
+  HpaP800094 761 KEDELECLSAFAEAMSAVLEVCKDSQE 787
+                 556789999999999999999998775 PP
+
+  == domain 5  score: 4.2 bits;  conditional E-value: 0.028
+    mTOR_dom  75 l...........spss....eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcessl 144
+                 +            + +      +++t  ++ +  +l+++++   + +++  i  i+++ g    ++lp ++++l++ +++ ++s+
+  HpaP800094 848 VfrsmvdsigwiVKIQkdafFPVFKTHLLSFVTPLLDQKTMPMLRGQAICMIDDIIEHCGGSAQELLPLFLNQLVQSLEDPSPSV 932
+                 022223334444344420033344555666666778999999**********************************999988765 PP
+
+>> HpaP802023  pep scaffold:HyaAraEmoy2_2.0:scaffold_10:518202:521186:-1 gene:HpaG802023 transcript:HpaT802023 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.9   0.0     0.002       2.2       7      32 ..     123     148 ..     121     153 .. 0.91
+   2 !    6.3   0.1    0.0062       6.9      89     157 ..     553     625 ..     540     628 .. 0.70
+   3 ?   -1.6   0.0       1.7   1.8e+03      80     113 ..     737     770 ..     679     801 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 7.9 bits;  conditional E-value: 0.002
+    mTOR_dom   7 dypeLLeiLlnilkteqsqsiRrevi 32 
+                 + peLL +L++ l+teq++++R  v+
+  HpaP802023 123 QWPELLPQLVQKLQTEQEWQVRNGVL 148
+                 579*******************8775 PP
+
+  == domain 2  score: 6.3 bits;  conditional E-value: 0.0062
+    mTOR_dom  89 naLlkilkdpsls..shhtavvqaimsifktlglkc.vpflpqiipallsvirtces.slrefllqqLatLvs 157
+                 + + +il++p +   ++  +vv  +m++ k+  l    + ++++ + l +++ + ++ s++++l++ L++L+ 
+  HpaP802023 553 EHVFNILEQPDYPenDYLMKVVMRVMNVAKEGILPLtDMAVNKLTSILNRICANPSNpSFSHYLFESLSVLIL 625
+                 56778888888864467788999999999985444422334444444444555555559**********9985 PP
+
+  == domain 3  score: -1.6 bits;  conditional E-value: 1.7
+    mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaims 113
+                 +e  +   ++ L + ++ +++++   ++v+ +m 
+  HpaP802023 737 TEASAFSLLRGLFAFMQHEAYANFLGEIVKILMI 770
+                 4444444444444444444444444444444444 PP
+
+>> HpaP810242  pep scaffold:HyaAraEmoy2_2.0:scaffold_121:128186:129112:-1 gene:HpaG810242 transcript:HpaT810242 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.0      0.68   7.5e+02      12      36 ..      52      77 ..      50      79 .. 0.74
+   2 ?    5.2   0.0     0.014        15      13      40 ..      86     114 ..      79     117 .. 0.88
+   3 !    8.4   0.0    0.0014       1.6       7      43 ..     238     275 ..     233     297 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.68
+    mTOR_dom 12 LeiLlnilkte.qsqsiRrevikvlG 36
+                Le+Ll++l +  +s+ +R e   v+G
+  HpaP810242 52 LEVLLTALLNRkDSELVRHELAYVIG 77
+                5566666555526*******999998 PP
+
+  == domain 2  score: 5.2 bits;  conditional E-value: 0.014
+    mTOR_dom  13 eiLlnilkteq.sqsiRrevikvlGilGA 40 
+                 ++L  +l  e+ +  +R e+   lG +GA
+  HpaP810242  86 DTLEHVLADETdDGMVRHEAAEALGAIGA 114
+                 56778999996599**************9 PP
+
+  == domain 3  score: 8.4 bits;  conditional E-value: 0.0014
+    mTOR_dom   7 dypeLLeiLlnilkte.qsqsiRrevikvlGilGALDP 43 
+                 + p ++ +L ++l  e q+  +R e+   lG +G +  
+  HpaP810242 238 ENPVVVPALKEVLLDEtQHRMVRHEAAEALGAIGTIEC 275
+                 678888999999999967****************9975 PP
+
+>> HpaP801975  pep scaffold:HyaAraEmoy2_2.0:scaffold_10:320579:323821:-1 gene:HpaG801975 transcript:HpaT801975 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.8   0.1      0.31   3.4e+02      92     136 ..     211     254 ..     116     270 .. 0.65
+   2 ?    1.7   0.0      0.16   1.7e+02     123     157 ..     396     430 ..     377     433 .. 0.84
+   3 !    7.8   0.1    0.0021       2.4      97     155 ..     452     511 ..     446     513 .. 0.84
+   4 ?   -2.6   0.0       3.4   3.8e+03     116     156 ..     677     718 ..     656     720 .. 0.65
+   5 ?   -1.0   0.3       1.1   1.2e+03      85     127 ..     750     792 ..     740     820 .. 0.69
+   6 ?   -2.7   0.0       3.6     4e+03      89     135 ..     859     905 ..     793     914 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 0.8 bits;  conditional E-value: 0.31
+    mTOR_dom  92 lkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsv 136
+                 +++l ++++ss  +a     m +f+++     p+l+q  p+++++
+  HpaP801975 211 ITVL-QQCVSSGAEAEAVEFMDVFSEIASHPFPILDQAFPQFIEL 254
+                 3344.5555555555555677777777777777777777777765 PP
+
+  == domain 2  score: 1.7 bits;  conditional E-value: 0.16
+    mTOR_dom 123 vpflpqiipallsvirtcesslrefllqqLatLvs 157
+                  + l++++pa+++v++++++++re     L+++ +
+  HpaP801975 396 CQNLNELLPAVYRVAQDADQHVREASCFALGQFAE 430
+                 56799******************998888887765 PP
+
+  == domain 3  score: 7.8 bits;  conditional E-value: 0.0021
+    mTOR_dom  97 dpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+                 d++ +  +++++ ++ +i ++++  + +p+l+ ++ +l+ v+rt +++l+++ l+ ++++
+  HpaP801975 452 DNASKVIKATALYVLDEITQSMESDQvLPYLEILMTKLVDVLRTGSPQLQKMALDAVGSI 511
+                 5555566677777888999***999989************************99987765 PP
+
+  == domain 4  score: -2.6 bits;  conditional E-value: 3.4
+    mTOR_dom 116 ktlglkc.vpflpqiipallsvirtcesslrefllqqLatLv 156
+                  + g  +  p++p+++ al+ +++ +++++r  + + La Lv
+  HpaP801975 677 LNCGGPVfEPYIPKFLEALAPLTEYIHEDVRGAVAEALAALV 718
+                 333333434677777777777777777788888888888776 PP
+
+  == domain 5  score: -1.0 bits;  conditional E-value: 1.1
+    mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflp 127
+                 +v+ +a++k l ++ l++  + vv    + +k ++ ++ p+++
+  HpaP801975 750 AVIASAVMKSLVEELLEDPEEVVVVKAFNAVKAMSARVGPVVT 792
+                 5777888888888889988888888888888888888755443 PP
+
+  == domain 6  score: -2.7 bits;  conditional E-value: 3.6
+    mTOR_dom  89 naLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135
+                  aL++       +  ++a+v    +++++lg   + f++ + p +l+
+  HpaP801975 859 PALMSFATGLRAARDRAAAVGCFAEVLRELGPAGLGFVESVFPVVLQ 905
+                 44555555555556666777777777777777778888888877776 PP
+
+>> HpaP813079  pep scaffold:HyaAraEmoy2_2.0:scaffold_240:58383:61556:-1 gene:HpaG813079 transcript:HpaT813079 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.0      0.66   7.3e+02      76     138 ..     322     385 ..     284     393 .. 0.70
+   2 ?    6.7   0.4    0.0048       5.3     103     143 ..     408     449 ..     403     454 .. 0.88
+   3 ?    1.5   0.0      0.18     2e+02     108     137 ..     523     552 ..     512     565 .. 0.83
+   4 ?   -2.2   0.0       2.5   2.8e+03     123     156 ..     625     659 ..     600     662 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.66
+    mTOR_dom  76 spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvir 138
+                  p  +e y+  +++ L + l+d +    ++ + +a+ + +     +  +p+l++ +++l+++++
+  HpaP813079 322 APQFQEAYHPQALTVLAHYLEDFTKPRLQAHAATALRQFIDMCPPELlTPYLDKMLHQLFALLQ 385
+                 4445667777788888888876655555555555555555555556668888888888887776 PP
+
+  == domain 2  score: 6.7 bits;  conditional E-value: 0.0048
+    mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvirtces.s 143
+                  ++++++ai s+    g   ++++p i+p l++++ +c + s
+  HpaP813079 408 VQEQAITAISSVAMVAGASFTKYYPAIMPPLQQILMKCLQeS 449
+                 57899******************************9997744 PP
+
+  == domain 3  score: 1.5 bits;  conditional E-value: 0.18
+    mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvi 137
+                 +qa    +  lg    p+lp ++p+ll+++
+  HpaP813079 523 LQAWARCCTCLGHDFAPYLPLVMPTLLEAA 552
+                 67777888999999************9865 PP
+
+  == domain 4  score: -2.2 bits;  conditional E-value: 2.5
+    mTOR_dom 123 vpflpqiipallsvirtces.slrefllqqLatLv 156
+                  p+ +q+ + ++ +++++   ++r   ++ +  Lv
+  HpaP813079 625 FPYAEQVTQVFAPLLTESVHsDIRASAIRSMPALV 659
+                 55555555555555544433355555555555555 PP
+
+>> HpaP808926  pep scaffold:HyaAraEmoy2_2.0:scaffold_90:250848:251892:-1 gene:HpaG808926 transcript:HpaT808926 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.9   0.0     0.035        39     112     159 ..      41      88 ..      28      89 .. 0.83
+   2 ?    3.9   0.0     0.034        37      92     139 ..     104     151 ..      90     168 .. 0.80
+   3 ?    0.3   0.0      0.45   4.9e+02      99     130 ..     208     240 ..     168     258 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 3.9 bits;  conditional E-value: 0.035
+    mTOR_dom 112 msifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                 +  +++l+    p+ ++i++all+v++t ++   e  +   + L ++v
+  HpaP808926  41 IAAIQKLSADIEPLADRIMQALLQVFSTRNAAAAEEAFMAAGALANVV 88 
+                 556677888899999*************99999998888877777766 PP
+
+  == domain 2  score: 3.9 bits;  conditional E-value: 0.034
+    mTOR_dom  92 lkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                 l+ lk++     ++ +v ++   ++ l+ k +p+ ++i+ al++++++
+  HpaP808926 104 LMGLKNSEEYMVCSVAVGVVGDLCRALESKILPMCDEIVAALIEILNN 151
+                 55566666667788899999999*******************999876 PP
+
+  == domain 3  score: 0.3 bits;  conditional E-value: 0.45
+    mTOR_dom  99 slsshhtavvqaimsifktlglkc.vpflpqii 130
+                  +++ +++v++a++ i++ lg     ++l +  
+  HpaP808926 208 YMNQLRESVLEALTGIVQGLGAANkATILVECA 240
+                 455677788888888888887766555555555 PP
+
+>> HpaP811487  pep scaffold:HyaAraEmoy2_2.0:scaffold_159:47262:51112:-1 gene:HpaG811487 transcript:HpaT811487 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.6   0.0   0.00061      0.67      72     149 ..     426     506 ..     365     514 .. 0.85
+   2 ?   -2.1   0.1       2.4   2.7e+03      76     118 ..     579     623 ..     534     651 .. 0.54
+   3 ?   -1.6   0.0       1.7   1.9e+03     125     146 ..     702     723 ..     668     767 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 9.6 bits;  conditional E-value: 0.00061
+    mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefll 149
+                    +s+ +e  +  +vi+ Ll + + +  ++ ++ v + im+++ +    l+   +fl+ ++++l++ ++++++ ++++  
+  HpaP811487 426 SGAMSEENEKRFLVTVIKDLLGLCEMKRGKDNKAVVASNIMYVVGQypRFLRAhWKFLRTVVNKLFEFMHELHPGVQDMAC 506
+                 45678999************************************994433555599***************9999888765 PP
+
+  == domain 2  score: -2.1 bits;  conditional E-value: 2.4
+    mTOR_dom  76 spsseeyyptvvinaL..lkilkdpslsshhtavvqaimsifktl 118
+                  +  +e  ++++ +a   ++il d+   +   +++++ ++++k +
+  HpaP811487 579 MSLPNEAWKSIMTQAAqdVSILYDSRGIKEIVKIIRTNVKVCKAI 623
+                 333344444444433311344555554445555555555555544 PP
+
+  == domain 3  score: -1.6 bits;  conditional E-value: 1.7
+    mTOR_dom 125 flpqiipallsvirtcesslre 146
+                 flp+++ ++ls  +t++++ +e
+  HpaP811487 702 FLPKLLETILSDYQTTTPTAKE 723
+                 4555555555444444442222 PP
+
+>> HpaP804112  pep scaffold:HyaAraEmoy2_2.0:scaffold_25:576256:578988:-1 gene:HpaG804112 transcript:HpaT804112 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.7   0.0      0.16   1.8e+02      91     146 ..     138     197 ..     117     208 .. 0.74
+   2 ?   -0.2   0.1      0.61   6.7e+02      95     141 ..     228     274 ..     221     282 .. 0.72
+   3 ?    3.7   0.0      0.04        44     115     147 ..     294     326 ..     291     330 .. 0.87
+   4 ?   -1.4   0.0       1.5   1.6e+03       9      36 ..     412     439 ..     409     443 .. 0.83
+   5 ?    0.4   0.0      0.41   4.5e+02      90     150 ..     503     561 ..     453     570 .. 0.70
+   6 ?   -0.9   0.0         1   1.1e+03      10      36 ..     685     710 ..     678     786 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 1.7 bits;  conditional E-value: 0.16
+    mTOR_dom  91 Llkilkdpslsshhtavvqaimsifktlglkcvp....flpqiipallsvirtcesslre 146
+                 L   l+++s ++  + +++a+++i+++   k        l+ ++p+ll+++++ ++ +r 
+  HpaP804112 138 LSLFLEQQSDDNAIAGALSALVKICEDSAAKLEHspsrPLNTLVPQLLHYFHHPNAIFRR 197
+                 556678888888888999999999998655552223447999999999999988775544 PP
+
+  == domain 2  score: -0.2 bits;  conditional E-value: 0.61
+    mTOR_dom  95 lkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtce 141
+                 l +   s+ ++ v ++i+  + ++g++  vp l+ ii+ +l++ ++ +
+  HpaP804112 228 LTQDVSSDVRKLVCKSIVILL-EVGVQYlVPHLDSIIQFILRANQDKD 274
+                 555555566666666666555.5899988********99998877655 PP
+
+  == domain 3  score: 3.7 bits;  conditional E-value: 0.04
+    mTOR_dom 115 fktlglkcvpflpqiipallsvirtcesslref 147
+                 f++l+ +  p+l+q++p l++ +  +e++l +f
+  HpaP804112 294 FEELKSRLQPYLTQVVPLLFRCMVYSEEDLANF 326
+                 789999***************998888777665 PP
+
+  == domain 4  score: -1.4 bits;  conditional E-value: 1.5
+    mTOR_dom   9 peLLeiLlnilkteqsqsiRrevikvlG 36 
+                 p+LL +L + l +eq +++  + i  lG
+  HpaP804112 412 PTLLPLLQERLAQEQPWPLVESGILALG 439
+                 99*************9998777666666 PP
+
+  == domain 5  score: 0.4 bits;  conditional E-value: 0.41
+    mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150
+                  L +il dp  ++ ++a+ +a  +  ++ + + vp+l+ i+++l+ ++ + +++ +  l++
+  HpaP804112 503 MLKRIL-DPH-KKVQEAACSAFCTLEEEAREELVPYLTPILQNLMFAFGKYQAKNLLILYD 561
+                 344555.444.34566777777777777888889999999999988777777655555555 PP
+
+  == domain 6  score: -0.9 bits;  conditional E-value: 1
+    mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvlG 36 
+                 ++L++L+++++ e   ++R++++ v+G
+  HpaP804112 685 NILNVLMSCVRHE-VLDVRQSAMGVVG 710
+                 6788888888877.7788888765555 PP
+
+>> HpaP811844  pep scaffold:HyaAraEmoy2_2.0:scaffold_172:55244:56017:1 gene:HpaG811844 transcript:HpaT811844 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.3   0.0       5.6   6.1e+03     122     138 ..      90     106 ..      71     114 .. 0.62
+   2 ?   10.8   0.1   0.00026      0.29     102     147 ..     127     172 ..     116     176 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -3.3 bits;  conditional E-value: 5.6
+    mTOR_dom 122 cvpflpqiipallsvir 138
+                 c   l+++i + ++++r
+  HpaP811844  90 CCGHLQRLIKTSMNACR 106
+                 44455555555555544 PP
+
+  == domain 2  score: 10.8 bits;  conditional E-value: 0.00026
+    mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+                  + ++ vq+++ i ++l+++ ++ +++i+ ++l v+++c++ +  +
+  HpaP811844 127 AYANDLVQVVLGIGHNLQCQTLQQMRHILEEFLDVASHCTNVFDRV 172
+                 567899*********************************9866555 PP
+
+>> HpaP803190  pep scaffold:HyaAraEmoy2_2.0:scaffold_18:234314:238266:1 gene:HpaG803190 transcript:HpaT803190 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.6   0.1   0.00029      0.32     105     159 ..     111     165 ..      79     166 .. 0.91
+   2 ?   -2.2   0.0       2.6   2.8e+03      80     148 ..     337     418 ..     302     428 .. 0.64
+   3 ?   -2.0   0.1       2.3   2.5e+03     123     154 ..     668     699 ..     661     702 .. 0.87
+   4 ?   -3.7   0.0       7.4   8.2e+03       8      21 ..    1037    1050 ..    1035    1057 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 10.6 bits;  conditional E-value: 0.00029
+    mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                   v++ ++   ++lg +  p    ++p l+ vi t +++l+  +++ L++L s++
+  HpaP803190 111 VPVLKLVTALARELGKEFYPHFAAVLPLLVDVIDTKDPELSTQVFKTLTMLFSYL 165
+                 568888999999***************************************9986 PP
+
+  == domain 2  score: -2.2 bits;  conditional E-value: 2.6
+    mTOR_dom  80 eeyyptvvinaLlkil.................kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefl 148
+                 ++ y + v++ Ll  l                 + ps+ + +ta v+   ++f +    + ++l+ ++ a+++++  + +   + +
+  HpaP803190 337 QDLYLSRVLRVLLGFLisrrgqlitetndayevRVPSIHKICTALVNPANKVFTS----QSTVLRDVLMAMFEAVWRLYPAADDAM 418
+                 6666677777777666666666666666665556666666666666666666665....344566666666555555555555555 PP
+
+  == domain 3  score: -2.0 bits;  conditional E-value: 2.3
+    mTOR_dom 123 vpflpqiipallsvirtcesslrefllqqLat 154
+                 v++lpq  ++l++++r+   +lr + lq La 
+  HpaP803190 668 VELLPQATNSLFAALRSPAHELRLVALQLLAR 699
+                 8899************9999**9999999986 PP
+
+  == domain 4  score: -3.7 bits;  conditional E-value: 7.4
+    mTOR_dom    8 ypeLLeiLlnilkt 21  
+                   peLL +Ll++l +
+  HpaP803190 1037 RPELLPVLLRLLYS 1050
+                  599******99865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      14321  (4626395 residues searched)
+Passed MSV filter:                       573  (0.0400112); expected 286.4 (0.02)
+Passed bias filter:                      476  (0.0332379); expected 286.4 (0.02)
+Passed Vit filter:                        49  (0.00342155); expected 14.3 (0.001)
+Passed Fwd filter:                        13  (0.000907758); expected 0.1 (1e-05)
+Initial search space (Z):              14321  [actual number of targets]
+Domain search space  (domZ):              13  [number of targets reported over threshold]
+# CPU time: 0.13u 0.07s 00:00:00.20 Elapsed: 00:00:00.15
+# Mc/sec: 4629.46
+//
+[ok]

@@ -1,0 +1,324 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Hyaloperonospora_arabidopsidis.HyaAraEmoy2_2.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    9.1e-75  251.7   1.2    9.1e-75  251.7   1.2    1.7  2  HpaP802906  pep scaffold:HyaAraEmoy2_2.0:scaffold_16:75910:85
+    2.2e-57  194.5   1.9    1.2e-55  188.8   0.5    3.2  2  HpaP814551  pep scaffold:HyaAraEmoy2_2.0:scaffold_892:243:460
+    6.3e-40  137.1   7.1    6.3e-40  137.1   7.1    2.1  2  HpaP801970  pep scaffold:HyaAraEmoy2_2.0:scaffold_10:300230:3
+    1.1e-17   64.0  12.0      3e-17   62.6  12.0    1.8  1  HpaP802491  pep scaffold:HyaAraEmoy2_2.0:scaffold_13:478447:4
+    8.6e-11   41.3   1.4      0.097   11.5   0.0    6.9  3  HpaP811648  pep scaffold:HyaAraEmoy2_2.0:scaffold_165:40057:4
+    0.00024   20.1   0.8        0.1   11.5   0.0    3.0  4  HpaP806096  pep scaffold:HyaAraEmoy2_2.0:scaffold_46:97650:98
+     0.0077   15.2   1.5      0.015   14.2   0.4    2.0  1  HpaP801549  pep scaffold:HyaAraEmoy2_2.0:scaffold_7:836063:83
+  ------ inclusion threshold ------
+      0.012   14.5   4.1       0.14   11.0   0.0    3.2  3  HpaP813129  pep scaffold:HyaAraEmoy2_2.0:scaffold_245:18124:2
+
+
+Domain annotation for each sequence (and alignments):
+>> HpaP802906  pep scaffold:HyaAraEmoy2_2.0:scaffold_16:75910:85728:-1 gene:HpaG802906 transcript:HpaT802906 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.7   0.1       2.4   4.3e+03     285     303 ..    1721    1747 ..    1680    1780 .. 0.56
+   2 !  251.7   1.2   5.1e-78   9.1e-75       3     343 .]    1874    2299 ..    1872    2299 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -3.7 bits;  conditional E-value: 2.4
+                  TTCC........CCHHHHHCCHHHHHH CS
+         FAT  285 awht........walfnfevlskeeek 303 
+                  +w++        +al+n +  ++++++
+  HpaP802906 1721 TWFEklqdwraaLALYNRRLQNAQAQG 1747
+                  222222333333444444444444444 PP
+
+  == domain 2  score: 251.7 bits;  conditional E-value: 5.1e-78
+                  CTTCCCCTSSSGHHCCCCT.......................................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCT CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmk...................................kdspdkaffeailalhrnqfdeaeeliekarqllvtels 64  
+                  l a a+W l+qWd+m +y+ +                                     +d  + ++++ ila+h+++f +ae li+ +r+ l+t+l 
+  HpaP802906 1874 LGARASWCLSQWDNMTQYVTECAaqndsnsavifkaangtvhgngyghthgygifgadEDVTELSLYQSILAVHQGNFVRAEVLIDATRKTLDTKLG 1970
+                  7899***************88889*******************************9966666777******************************** PP
+
+                  S---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCC CS
+         FAT   65 alsgesynraydllvrlQqlaEleeiiqykqkls.......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkf 154 
+                  al+g+sy+ray ++v lQql+Elee+++yk+ ++        ++  ++l  +Wr+Rl+g+++ vevwq++++vR+l++ p+ed       ++++l+f
+  HpaP802906 1971 ALVGKSYSRAYRSMVTLQQLSELEEVVMYKKLRAqiskgeeAARYKRHLMCMWRDRLSGCKRVVEVWQQLIAVRALIVAPHED-------IDTYLQF 2060
+                  *******************************998998777655555666899*******************************.......******* PP
+
+                  CCCHCHHHHCCSTTHHCCCCCHCTT...................T.................SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC CS
+         FAT  155 anlaRksgrlslAekaLkklleedk.........eewlp.....p.................evvyaylkylwakgeqkealqkLrefvscllekke 220 
+                  a+l+R+sg+lsl+ k+ +++l+            +   +     p                 +v +aylk+lwa g+++eal+ L++ v + +  ++
+  HpaP802906 2061 ASLCRQSGNLSLSLKVFTNALHVYGgagsssagiS---EmlrmaPpssgsvstfgfgekdrnRVAFAYLKHLWAAGQKQEALSDLHHLVIRISATAR 2154
+                  ********************998887765444442...144466257777888888888888*********************99666665555554 PP
+
+                  ......SS-SS---..............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS. CS
+         FAT  221 ......elssglevq...eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee 308 
+                        + +sg+ +        ++e ++ll +c+lk +ew+ a+++ + ++   e +l++ ++ teldp+ ykawh+wal+nf+v+++ +++++ + 
+  HpaP802906 2155 qrsqatSGLSGMSSTapaMLPLKNEGEELLVKCHLKMAEWQLAIHDQQIEHVPVESVLSSLRLCTELDPRNYKAWHAWALMNFQVVEHSTHSQHISA 2251
+                  445555555555555553444456666666****************9999***************************************99966555 PP
+
+                  .........S-TCCHHHHCCT..CCHHHHTTTS....STTTCHHHHHC CS
+         FAT  309 .........pedlseyvvpavegflkslslsse....kslqdllRlLt 343 
+                           ++ +  y+ pa+egf++s++l+ +    ++ qd+lR+Lt
+  HpaP802906 2252 natasavtaSASVAPYIAPAIEGFFRSVALGRSrwaaNVQQDILRVLT 2299
+                  888999998888889********************************8 PP
+
+>> HpaP814551  pep scaffold:HyaAraEmoy2_2.0:scaffold_892:243:4603:1 gene:HpaG814551 transcript:HpaT814551 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.1   0.0      0.19   3.5e+02     175     221 ..      99     142 ..      68     157 .. 0.75
+   2 !  188.8   0.5   6.9e-59   1.2e-55      10     343 .]     174     571 ..     166     571 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -0.1 bits;  conditional E-value: 0.19
+                 CHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCS CS
+         FAT 175 leedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkee 221
+                 l+e+++++   e ++ +++ lwa ge ++   +++e  s+ + + ++
+  HpaP814551  99 LQEQPNNV---ESIFGKMRCLWAIGEWRKLNDHVQETWSKIYGESQD 142
+                 44444333...458888999999999999888888888888777643 PP
+
+  == domain 2  score: 188.8 bits;  conditional E-value: 6.9e-59
+                 TSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCH.HHHHCCCCCHHHCHHCCHHCSS-......... CS
+         FAT  10 rlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynray.dllvrlQqlaEleeiiqykqkls......... 98 
+                 +l++Wds+ +y+   + d  + ++f+a+++++r ++dea + i  +r+ ++  l++l++esy+ray +++v+lQ+l+Eleei++y++  +         
+  HpaP814551 174 SLQNWDSIPKYI-NSDMDATESHLFKAVVSIRRMELDEAMSSITDCRKEMDPTLRSLISESYARAYlPSVVNLQMLTELEEIVAYLKTFAcknngeltl 271
+                 7899*******9.5667777888******************************************9778*****************98889999***** PP
+
+                 ......................................---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHC CS
+         FAT  99 ......................................sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaR 159
+                                                       ++  lk+l   W++R +gv +++evwq+++ vRslv++p+ed       +++wlk+a+l+ 
+  HpaP814551 272 lsapvlsssvsttasrrkqsisslnfvssasstsygheKQVALKKLQTIWTRRMLGVERSIEVWQSLMLVRSLVFDPRED-------VDIWLKYARLCL 363
+                 ******************************9999998888888899999*******************************.......************ PP
+
+                 HHHHCCSTTHHCCCCCHCTT..............T..............................SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCC CS
+         FAT 160 ksgrlslAekaLkklleedk.......eewlp..p..............................evvyaylkylwakgeqkealqkLrefvscllekk 219
+                 ksg+++lA +aL ++ + ++       +   p  p                              +v ++ l++lwa+++ + al+++  f++ l +  
+  HpaP814551 364 KSGHINLAASALWRV-GAQPfirsverD---PyaPipinlggnvgasqgfangllsladstaqdpRVAFSFLRHLWAENREDVALKQMDYFIEALEQH- 457
+                 ***************.888888655442...1331446666666666666666666677777777****************************55443. PP
+
+                 CSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S....-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHH CS
+         FAT 220 eelssglevqeptnleeftkllarcylkkGewlaalqklnwseek.seeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvv 317
+                              + e+ ++l  ++y  +Gew+ +l++ +++ +   +++l++  +at+ldp+   awh+wal+nf++l+      +e+++ d ++y+v
+  HpaP814551 458 ----------GDPTNEDMRRLRVQVYIQLGEWQMSLSEPHKQADGaFDHVLECLETATKLDPTNDRAWHEWALMNFRALEVTM---KESGQGDPKRYAV 543
+                 ..........333345667777999************9887776559******************************999883...34558999***** PP
+
+                 CCT..CCHHHHTTTS..STTTCHHHHHC CS
+         FAT 318 pavegflkslslsse..kslqdllRlLt 343
+                 +a++gf++s+s +++   + +d+lRlLt
+  HpaP814551 544 RAIQGFFRSISFGHTsyDVTKDVLRLLT 571
+                 ***************9999********8 PP
+
+>> HpaP801970  pep scaffold:HyaAraEmoy2_2.0:scaffold_10:300230:305344:-1 gene:HpaG801970 transcript:HpaT801970 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.9   0.1      0.34   6.1e+02     107     127 ..     584     604 ..     541     607 .. 0.74
+   2 !  137.1   7.1   3.5e-43   6.3e-40       2     343 .]     615     944 ..     614     944 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: -0.9 bits;  conditional E-value: 0.34
+                 TT----TTS-TTTGCCCTTTC CS
+         FAT 107 lktWrkRlpgvqddvevwqdi 127
+                 l+ W++R  g+++++  wq +
+  HpaP801970 584 LRLWEERWVGCAKQLCQWQLM 604
+                 689***************976 PP
+
+  == domain 2  score: 137.1 bits;  conditional E-value: 3.5e-43
+                 CCTTCCCCTSSSGHHCCCCT...........TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCC CS
+         FAT   2 plaaeaaWrlgqWdsmeeylslmk.......kdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiq 92 
+                 +l + +aW+ g+W s ++ l  +          +p+  + + ++++   ++ + + +l  ++ +l + +++ l+  + +++++l++ ++  +E +e+iq
+  HpaP801970 615 ELLLDCAWKRGDWASAKQLLL-LPsmqssaeLGCPQTRLQRLYISILDaDKRSVVDTLTAQTAELALHQWQGLPRILSRAHLPLMHLFHKFVEVKESIQ 712
+                 7999***********887773.33466777667777779999999666599************************************************ PP
+
+                 HHCSS-.......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.........HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCC CS
+         FAT  93 ykqkls.......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.........lllkgakaemwlkfanlaRksgrlslAekaLkkll 175
+                 ++++ +        + +lk   +tWr+Rlp+ + ++  w+dil++Rs++++  +          l+  + +    +k a+ aRk+  ++++  aL kl 
+  HpaP801970 713 MMEDIKsastqhaGLPNLKPSINTWRERLPNKWEPILLWDDILTWRSHMFQVVKTtfawsdaqvLACMHDSPWSVIKLAHTARKQRLPDVCLGALAKL- 810
+                 ***988777777767777777******************************9999999999987777777788889**********************. PP
+
+                 HCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHH CS
+         FAT 176 eedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqays 273
+                                   yl++  ++++a++kLre+vs ++e++ e+s gl   + tnl++f+ ++ a+++ +k+ +l+a ++         +++q +s
+  HpaP801970 811 ------------------YLIPAMDVQDAFSKLREQVSICYESATEYSGGLSILNTTNLDYFSLRQkAEMFRLKALFLEAQGS-------LPDANQTFS 884
+                 ..................*****************************************************************.......9******** PP
+
+                 CCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT 274 aateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343
+                    ++++s  k w +w++++ + +  +         +dl  ++ + + ++l+++++  ++++  ++R+L+
+  HpaP801970 885 HCLQICDSYGKGWLSWGHYCYRLFLVQ---------KDLA-LASQTIACYLQAIHHRCNSARLMIARVLW 944
+                 ************************999.........6776.99**************************9 PP
+
+>> HpaP802491  pep scaffold:HyaAraEmoy2_2.0:scaffold_13:478447:485751:-1 gene:HpaG802491 transcript:HpaT802491 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.6  12.0   1.7e-20     3e-17       6     342 ..    1406    1844 ..    1402    1845 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 62.6 bits;  conditional E-value: 1.7e-20
+                  CCCCTSSSGHHCCCCT................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCC..CTS---SCCCCCHHHHHCCCCCHHHC CS
+         FAT    6 eaaWrlgqWdsmeeylslmk............kdspdkaffeailalhrnqfdeaeeliekarqllvte..lsalsgesynraydllvrlQqlaEle 88  
+                  e aW+++qW+ +   ls+++              s ++ +fe + a+ +++f ++++    a++ ++ +  ls  s es++  y++lv+l ++ E+e
+  HpaP802491 1406 ELAWKNMQWEAVLPGLSTIDndrsgikesianCLSHQQMIFEGLRAIAHENFAHLQSAMATAKDQIIHSvrLSLHSFESTKDSYSALVHLRAIREIE 1502
+                  679****************999888877775444555559999999999********999999988875227888999******************* PP
+
+                  HHCCHHCSS-.........................---TTTTT............TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-ST CS
+         FAT   89 eiiqykqkls.........................sseelksl............lktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgaka 148 
+                  ei++ + k+                                 +            l +W+kR+ ++++d++  +++l++  ++l+ ++ +  k+a +
+  HpaP802491 1503 EIAAHIGKPCcaiesemvsvgnmieqngvgssgveA------IgvaeippiaqplLAQWQKRHDQIKNDFDKAESLLALEEVLLQVSKASDNKQALI 1593
+                  *******99999999999999999888885555540......4555556666666*****************************9988878899999 PP
+
+                  TCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.........TSSCCCHHHHHHHCCHHHHHSSCCHHHHC...CTSSCCC.SS-SS---......... CS
+         FAT  149 emwlkfanlaRksgrlslAekaLkklleedkeewlp....pevvyaylkylwakgeqkealqkLrefvs...cllekke.elssglevqeptnleef 237 
+                  +  l  a++ Rksgr+ +A+++L+kl++ +++ +l      ++ +++ k+lw+++e ++a+ + +e  s    +l++ + +           +   +
+  HpaP802491 1594 KLHLDLASVGRKSGRTAVAYRSLLKLEQLNQSGMLCisekMQWKIQKGKLLWKQQEFQSAIWTGKEVCSelsTYLHDSSlSVD---------KAIPL 1681
+                  9999************************99944444555569**************999997666655500045554333222.........22234 PP
+
+                  ..HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC................CCHHHHHCCHHHHHH...SSSS........ CS
+         FAT  238 tkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawht................walfnfevlskeeek...keeee....... 308 
+                  + ll  +++  G+w a+ +       ++   +q++++at++  s +    +                +a +n++v s+++++   +   +       
+  HpaP802491 1682 QLLLVNVLTTTGKWIASQRCE----SSQIVLEQYFQKATKIVTSIEAEAVSarardaakahfvladfMAAMNQQVSSRVTSRewlA---Gkevvqar 1771
+                  445578888888888888882....3344456778888888887777444448888888888877777777777777777774440...24445588 PP
+
+                  .......................................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+         FAT  309 .......................................pedlseyvvpavegflkslslssekslqdllRlL 342 
+                                                         ++ ++++++ a++ + k l ls +  l  ++R+L
+  HpaP802491 1772 leelqelqtmeqgmqnenrahifalnkevahdmderskvEASVNHFLIGALHSYGKGLCLSPQAELAMVFRVL 1844
+                  8888888888888999999999999999999999999888888899999999999999999999999999998 PP
+
+>> HpaP811648  pep scaffold:HyaAraEmoy2_2.0:scaffold_165:40057:43258:1 gene:HpaG811648 transcript:HpaT811648 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.6   0.3   0.00022      0.39     229     295 ..      87     149 ..      20     354 .. 0.69
+   2 ?    1.9   0.0     0.048        86     258     295 ..     350     387 ..     343     390 .. 0.83
+   3 !   11.5   0.0   5.4e-05     0.097     261     329 ..     387     472 ..     368     489 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 9.6 bits;  conditional E-value: 0.00022
+                 ...............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+         FAT 229 q....eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfe 295
+                 +    +++++   +   a++y  +G  l++l++          ++q y++a++l+p+  +a++++a+ +  
+  HpaP811648  87 EsmfyNQQCI-LVAPDFAEAYGNLGNALKELGD-------LTSAVQFYLRAIKLNPRFGDAYNNLASCYML 149
+                 2555333333.3444457777778888888888.......6788888888888888888888888776544 PP
+
+  == domain 2  score: 1.9 bits;  conditional E-value: 0.048
+                 CT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+         FAT 258 lnwseekseeilqaysaateldpswykawhtwalfnfe 295
+                 + + +   +e+l++y++a++l p+ + a+ + +++  e
+  HpaP811648 350 ALKDKGLVKEALHCYTTAARLLPQFAAAHSNIGSVLKE 387
+                 445567799*********************99988776 PP
+
+  == domain 3  score: 11.5 bits;  conditional E-value: 5.4e-05
+                 S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.................S-TCC.HHHHCCT..CCHHHHT CS
+         FAT 261 seekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee................pedls.eyvvpavegflkslsl 329
+                 ++ k +++l++y++a+ +dp+ ++a+ +++ ++    +  e  +  ++                ++      +v+a++++ k+l+l
+  HpaP811648 387 EQGKLDQALAHYQQAITIDPNFADAYSNMGNVYKDLCRLDEAIQCYSTairikpqfpdaysnlaSTYKDgGRLVDAITCYRKALAL 472
+                 445589999*********************99999998886655555578888999999888862222245688888888888887 PP
+
+>> HpaP806096  pep scaffold:HyaAraEmoy2_2.0:scaffold_46:97650:98586:1 gene:HpaG806096 transcript:HpaT806096 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.7   0.0      0.59   1.1e+03     251     286 ..      59      93 ..      40      98 .. 0.72
+   2 !   11.5   0.0   5.8e-05       0.1     261     296 ..     102     137 ..      91     143 .. 0.85
+   3 !    6.0   0.1    0.0026       4.6     229     281 ..     207     258 ..     136     272 .. 0.61
+   4 ?   -1.5   0.0       0.5     9e+02     160     180 ..     259     279 ..     257     283 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -1.7 bits;  conditional E-value: 0.59
+                 CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTT CS
+         FAT 251 wlaalqklnwseekseeilqaysaateldpswykaw 286
+                 w aa + ++ ++e +  +l  +++a++ldps + a+
+  HpaP806096  59 WCAAGNCFSLQKE-HVVALTFFQRAIQLDPSFTYAY 93 
+                 6666666655554.6678889999999999877766 PP
+
+  == domain 2  score: 11.5 bits;  conditional E-value: 5.8e-05
+                 S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+         FAT 261 seekseeilqaysaateldpswykawhtwalfnfev 296
+                 ++e+ e+++++y+ a+++dp+ y+aw+ ++  +f++
+  HpaP806096 102 ANEDFEKAVNCYRHAIRTDPRHYNAWYGLGTIYFRQ 137
+                 45669*************************999975 PP
+
+  == domain 3  score: 6.0 bits;  conditional E-value: 0.0026
+                 .................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCC CS
+         FAT 229 q......eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldps 281
+                 +      e + l++f+ +   +++  G+  ++l++       +ee+++++++a +++p+
+  HpaP806096 207 RyeealvELQVLKDFAPREPSVHFMMGKVAKKLGR-------IEEAMKYFTLALHFHPK 258
+                 0234445667788888888888999999999****.......9*************986 PP
+
+  == domain 4  score: -1.5 bits;  conditional E-value: 0.5
+                 HHHHCCSTTHHCCCCCHCTT. CS
+         FAT 160 ksgrlslAekaLkklleedke 180
+                 +++++++A++ +++l++ed+e
+  HpaP806096 259 DNNQIKVAIDKINELDDEDDE 279
+                 5899***********999984 PP
+
+>> HpaP801549  pep scaffold:HyaAraEmoy2_2.0:scaffold_7:836063:839520:-1 gene:HpaG801549 transcript:HpaT801549 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.2   0.4   8.6e-06     0.015     163     280 ..     169     278 ..     167     316 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 14.2 bits;  conditional E-value: 8.6e-06
+                 HCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S CS
+         FAT 163 rlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnws 261
+                 r++ A  +L++l++ d+   + pe+ + +++ l+ +ge  +a+++L++ + +  ++ +   + +e +  ++le+ +++ a + +k G+  +a+q    +
+  HpaP801549 169 RYDEAFAVLTQLMRTDS---SSPELLFLRARCLYYQGEFPSAIKHLQQALRSDPDNSK---CMKEIKRIRSLETCKEE-ANNAFKAGKMAEAVQMY-TE 259
+                 56678899******999...558***********************999995555544...33333333333333333.33445555543333332.23 PP
+
+                 ...-SSCCHHHHCCHHCTC CS
+         FAT 262 eekseeilqaysaateldp 280
+                   k++  ++a+ + +++++
+  HpaP801549 260 CLKIDPKNKAFNSKIHCNR 278
+                 3333333343333333332 PP
+
+>> HpaP813129  pep scaffold:HyaAraEmoy2_2.0:scaffold_245:18124:20254:-1 gene:HpaG813129 transcript:HpaT813129 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.6   0.2      0.03        53     250     293 ..     187     230 ..     128     233 .. 0.78
+   2 ?   11.0   0.0   7.8e-05      0.14     249     303 ..     357     411 ..     293     425 .. 0.79
+   3 ?    0.4   0.1      0.13   2.3e+02     150     191 ..     427     463 ..     411     604 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 2.6 bits;  conditional E-value: 0.03
+                 CCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+         FAT 250 ewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                   ++a++ ++ + ++   + + ++ a+ + +   + wh+wa+++
+  HpaP813129 187 LIMQAYGVFEAKCQHVGMARSIFQNAVSHPRATGQVWHAWAKAE 230
+                 4566666666666668889999*******************986 PP
+
+  == domain 2  score: 11.0 bits;  conditional E-value: 7.8e-05
+                 CCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH CS
+         FAT 249 Gewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek 303
+                 G  l+a++++++++ + +++ + y +a+ ++p+++++w ++a+++ + +++e+ +
+  HpaP813129 357 GPVLHAFGDFEEQHGELDNARELYDEAANVQPTVIETWRALARVEARLKNYEAAR 411
+                 44899****************************************9999998665 PP
+
+  == domain 3  score: 0.4 bits;  conditional E-value: 0.13
+                 CCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCH CS
+         FAT 150 mwlkfanlaRksgrlslAekaLkklleedkeewlppevvyay 191
+                   ++ a++  ++ rl  A +aL k+l+ d+++ ++      +
+  HpaP813129 427 LLIELAKIEQRNRRLPAAREALEKALKIDPSDASV-----WN 463
+                 56788888888888889999999988888833322.....22 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      14321  (4626395 residues searched)
+Passed MSV filter:                       757  (0.0528594); expected 286.4 (0.02)
+Passed bias filter:                      319  (0.022275); expected 286.4 (0.02)
+Passed Vit filter:                        34  (0.00237414); expected 14.3 (0.001)
+Passed Fwd filter:                         8  (0.00055862); expected 0.1 (1e-05)
+Initial search space (Z):              14321  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.11u 0.04s 00:00:00.15 Elapsed: 00:00:00.07
+# Mc/sec: 20739.13
+//
+[ok]

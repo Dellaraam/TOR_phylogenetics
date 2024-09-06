@@ -1,0 +1,690 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Aphanomyces_invadans_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+   1.7e-263  877.1   0.0   2.4e-263  876.6   0.0    1.1  1  ETV97011.1  hypothetical protein, variant 1 [Aphanomyces inva
+   2.2e-256  853.5   2.3     2e-179  598.6   5.8    2.1  2  ETV97010.1  hypothetical protein H310_09851 [Aphanomyces inva
+   1.1e-215  718.7   0.0   1.6e-215  718.2   0.0    1.1  1  ETV97013.1  hypothetical protein, variant 3 [Aphanomyces inva
+   8.8e-209  695.8   1.8   1.3e-179  599.2   5.8    2.1  2  ETV97012.1  hypothetical protein, variant 2 [Aphanomyces inva
+   3.3e-193  644.3   0.3   4.4e-193  643.9   0.3    1.1  1  ETV97014.1  hypothetical protein, variant 4 [Aphanomyces inva
+   5.8e-193  643.5   1.0   7.4e-193  643.1   1.0    1.1  1  ETV97015.1  hypothetical protein, variant 5 [Aphanomyces inva
+   5.8e-193  643.5   1.0   7.4e-193  643.1   1.0    1.1  1  ETV97016.1  hypothetical protein, variant 6 [Aphanomyces inva
+     0.0085   13.6   2.2       0.01   13.3   2.2    1.2  1  ETW09785.1  hypothetical protein H310_00266 [Aphanomyces inva
+  ------ inclusion threshold ------
+      0.065   10.7   0.2      0.087   10.3   0.2    1.2  1  ETV95341.1  hypothetical protein, variant [Aphanomyces invada
+      0.065   10.7   0.2      0.087   10.3   0.2    1.2  1  ETV95340.1  hypothetical protein H310_11234 [Aphanomyces inva
+       0.16    9.4   0.1       0.27    8.6   0.1    1.2  1  ETW09696.1  hypothetical protein H310_00206 [Aphanomyces inva
+        2.9    5.2  11.2       0.32    8.4   0.6    3.7  4  ETW02439.1  hypothetical protein H310_05952 [Aphanomyces inva
+
+
+Domain annotation for each sequence (and alignments):
+>> ETV97011.1  hypothetical protein, variant 1 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  876.6   0.0  1.4e-266  2.4e-263      35    1161 ..      17    1409 ..       2    1423 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 876.6 bits;  conditional E-value: 1.4e-266
+  PTHR13298.orig.30.pir   35 srdsiekkleslnnliklkaaakklnellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylisdskvlrrllrl 120 
+                              + ++ +kle + +++ +    kk++ ll++++ e+i +          c+r l+ + +++vr+aalR+lry + +s +  +  +l
+             ETV97011.1   17 GGLDRRTKLEATGRITHE---MKKDPMLLEVFAVERIQN----------CARGLMSDTDTSVRTAALRVLRYSMINSASTAQAIKL 89  
+                             555566666666666666...666777777776666663..........************************************* PP
+
+  PTHR13298.orig.30.pir  121 gldiliarsLdrdsknetEreqalkliramlevapkliptaivralvaiaeseedrlrraclatlcelallnpelvaeagglrvll 206 
+                             g++ +++rs++rd k   Er+qalk++r+++++++ ++pt++vr++vaia+++ed+lrr++l+tl+ela+ n+++v +++g+++l+
+             ETV97011.1   90 GVHLFVSRSMERDAKLVGERIQALKVVRRFMDIDALQVPTSVVRSIVAIANHKEDNLRRVALETLRELAIANVSVVMQCNGMKTLV 175 
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir  207 dallecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqeskskeerelsrleaskkailtlLrSWa 292 
+                             d +l+ ++ ++iae+ll++l+yl+n+p++r++++  v++++llapftd++ +a +++++          r++as++ai++++rSW+
+             ETV97011.1  176 DCILD-PTCQDIAEALLMTLIYLINEPANRNLIHSFVNVQVLLAPFTDTDSPAGTERRQ----------RWTASRNAIVMMMRSWT 250 
+                             *****.55699************************************998888555555..........***************** PP
+
+  PTHR13298.orig.30.pir  293 GllylckndkrgLkslvdvlrlp.nlevrkaildlLydlLrlkepkwtesftsgsalkavdsaal.qdswrlsdgfvaeesktilp 376 
+                             G+l+l + +++gL++lv +l +p  ++v+k++l++++d+++ ++p  ++  +        d++++ ++         a  + +++p
+             ETV97011.1  251 GILVL-TANPQGLRALVRMLEQPvGDDVKKVVLATICDIFYTNAPLDKNGNDI-------DRSQMdPT--------KAGLAMSDKP 320 
+                             *****.6679**********************************998774433.......33333221........1222344456 PP
+
+  PTHR13298.orig.30.pir  377 ssarsrp.dlldnylallLlalieagLleaLvevits.sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfsse 460 
+                             + +++   +lldny++l+Ll l ++gLleaLv + t    s+++++A+ LL e+l+l+ +lLP++++a l +lp+lv+++a     
+             ETV97011.1  321 IVSTHGGtNLLDNYMVLVLLSLGHCGLLEALVALGTCaNRSALAEPAIELLSEVLHLSARLLPDQHCAMLLALPQLVATTAYS--- 403 
+                             66667667***************************9945566**************************************996... PP
+
+  PTHR13298.orig.30.pir  461 kskrnraaaalalksldelkrsksksaslyldeilq.....................................kkllersssnsse 509 
+                             k ++    ++      d+  r+ +++as +l+e+++                                     ++ + +s+++s  
+             ETV97011.1  404 KVDYLADLQS--KPPEDRGEREHAIRASEMLAELARavgassssgglvtrqnpstvngvhlasellrgtnrplHNFNVHSQRDSAR 487 
+                             6666666666..5668999999***********99999999999999999999999999999999999877777777776666554 PP
+
+  PTHR13298.orig.30.pir  510 dskrkrlrq......iledddeafkrm.lkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPsk.. 586 
+                             + +            ++++dd +f+++ ++ s+vl  kd  +Wnwd+i+ellegpl +np rl+ea+ +tkffkr+ +F++  +  
+             ETV97011.1  488 EMLV----YdlkvhlDNQMDDHTFRDLlMHKSRVLYGKDWFRWNWDIISELLEGPL-TNPARLSEAM-KTKFFKRVSGFFRCDNsd 567 
+                             4444....355569999*******9962689*************************.*******998.999**********65555 PP
+
+  PTHR13298.orig.30.pir  587 .krfssidktkqlekyvqvgcqllslLlsspeGialleesr...lLkelleelsqel..ldssse...kspderlfskerlsttls 663 
+                                f+ + +t +   y++ +cq+++lLl++peGia+l+++r   lL e+ ++l+ e   ++ ++e   ++ + r+fs+e+ s+++ 
+             ETV97011.1  568 kGFFAGLPWTPDYVPYLRPACQMYTLLLNHPEGIAFLKTDRrgqLLNEISTALELEGrpEATIVEshlGELQSRMFSPEYCSRRML 653 
+                             47788888**********************************************988996666667999999************** PP
+
+  PTHR13298.orig.30.pir  664 qgyflfiGvLsstkeGlkiLeklnifqlllqlislktrdelvk......................livssLdysldgesRvilska 727 
+                             ++yf+++G++ss++eGlk++++  if  l++l + k++ ++++                      li+++Ldy+++g sR++l+ +
+             ETV97011.1  654 REYFTLLGLMSSSPEGLKMMQR--IFARLTKLGTVKDKGSFASldlsksqravkdksqshdflcrLILANLDYTVEGSSRQLLTDW 737 
+                             **********************..9*************9999999999************************************** PP
+
+  PTHR13298.orig.30.pir  728 LtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkaniley.lvslkpsllhlgdkgelL 812 
+                             ++ +ses+Rlyat+ Lr+llr+e + f+ Wgie Lv+ql d++  va+aAl++Leea e+++ +l + + +++ +++hl+   e+L
+             ETV97011.1  738 MNYGSESLRLYATCLLRALLRSEIEGFERWGIESLVAQL-DKEPNVARAALSVLEEAAEQSPVYLSAmIKKRSLQFVHLQA--ESL 820 
+                             ***************************************.****************9998887776615567778888877..*** PP
+
+  PTHR13298.orig.30.pir  813 llrflstpkGfrylkee.nyvekelekWaeernaeYvllvEealsealtl.................................... 861 
+                             ll+fls+p+G+ +lk+  n+++  l +W++ ++ +Yv+lvE +l + + +                                    
+             ETV97011.1  821 LLKFLSLPEGLAFLKDVpNWISSNLMQWRQVKYVQYVHLVESQLLCGVFRdkqsvttnaskaalkpvpipvtvpnrrssnfkhgph 906 
+                             ********************************************9999999*********************************** PP
+
+  PTHR13298.orig.30.pir  862 ...................................................................................... 861 
+                                                                                                                   
+             ETV97011.1  907 reqwglewlfrmpwnievklvgppgsgppahltidafvdasetgqdvpsssdgnplstirikgvvvdarnipkpvmvnsqqtlqac 992 
+                             *******************************9999998888888888888888888888888888888888888888888888888 PP
+
+  PTHR13298.orig.30.pir  862 ............................................................................ltreedgsds 871 
+                                                                                                                   
+             ETV97011.1  993 lflgaqpvdrkghtrpapttnggfpapndkepgsavaaasatappirsrtesrgvtdrlsefsmdsstayeapeenK--------- 1069
+                             88888888888866666666666666666666666666666666665555555555544444444444444444440......... PP
+
+  PTHR13298.orig.30.pir  872 rrrsngpdsslrnrks...................................................................... 887 
+                                            +                                                                      
+             ETV97011.1 1070 ---------------Dwsscgpehrtaavlfnaaintnasgsekearlcpageravwtfdmdtdnqqikrvqlksveftiqllptk 1140
+                             ...............055555555566666666666666666666666667777777777777777777777777999999999** PP
+
+  PTHR13298.orig.30.pir  888 ...vilPpHLygeLakteeGcelLekkghleelaetirshgledseeilklkaalWAlghigsselGlelleeenedliediikla 970 
+                                v+lP H+ygeLakte Gc++L+++ghl+el++ +++     +   l+++aalW+lghi+ +++G+ell ++  dl+e+i+++a
+             ETV97011.1 1141 aptVPLPRHFYGELAKTEDGCAILRQSGHLSELVASLKD----PTVVPLEKRAALWTLGHIAGTNRGFELLLSYADDLVECIVHMA 1222
+                             *99************************************....89*****************************99********** PP
+
+  PTHR13298.orig.30.pir  971 eesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrnaliGlciPsdvnelfsipehqqsssaesapitdekpeeiktslk 1056
+                             ++++ ls+rGt++++lgli+r+++g+++L++ gW + r s+ +   +++P++v +lf +p+ +++   + +    ++     + +k
+             ETV97011.1 1223 TSCQLLSLRGTSIFALGLISRSSAGRRALSQAGWIAPRGSNVS---IAVPNNVASLFEWPSVSHTPFPSELVDLSTSF-VSPNFIK 1304
+                             *************************************986655...6*************998888877776655554.4456678 PP
+
+  PTHR13298.orig.30.pir 1057 yptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpelfddpclfsevlkllseyrfrlqaRrfiqelfddavllsslrseer 1142
+                             + + +  +keilrl+ +Ls+ +++k+a ++L+++k  +pelf+d++   +++++l++y++rl+aR+f+++lf++a+l   + ++  
+             ETV97011.1 1305 SGKASAKAKEILRLIGDLSSTISQKEAGASLNRMKGAHPELFEDTETALAAHTILARYHYRLSARQFVMNLFEKADLSNASLNQYL 1390
+                             88889************************************************************************777777766 PP
+
+  PTHR13298.orig.30.pir 1143 leveesqsemyeeaelsas 1161
+                              + ees++ + +  ++ +s
+             ETV97011.1 1391 YQGEESAQVVPQGGRRRRS 1409
+                             6666666666555555555 PP
+
+>> ETV97010.1  hypothetical protein H310_09851 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  598.6   5.8  1.1e-182    2e-179      35     826 ..      17     834 ..       2     839 .. 0.89
+   2 !  249.3   0.0   3.5e-77   6.1e-74     821    1161 ..     856    1436 ..     844    1450 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 598.6 bits;  conditional E-value: 1.1e-182
+  PTHR13298.orig.30.pir  35 srdsiekkleslnnliklkaaakklnellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylisdskvlrrllrlgl 122
+                             + ++ +kle + +++ +    kk++ ll++++ e+i +          c+r l+ + +++vr+aalR+lry + +s +  +  +lg+
+             ETV97010.1  17 GGLDRRTKLEATGRITHE---MKKDPMLLEVFAVERIQN----------CARGLMSDTDTSVRTAALRVLRYSMINSASTAQAIKLGV 91 
+                            555566666666666666...666777777776666663..........*************************************** PP
+
+  PTHR13298.orig.30.pir 123 diliarsLdrdsknetEreqalkliramlevapkliptaivralvaiaeseedrlrraclatlcelallnpelvaeagglrvlldall 210
+                            + +++rs++rd k   Er+qalk++r+++++++ ++pt++vr++vaia+++ed+lrr++l+tl+ela+ n+++v +++g+++l+d +l
+             ETV97010.1  92 HLFVSRSMERDAKLVGERIQALKVVRRFMDIDALQVPTSVVRSIVAIANHKEDNLRRVALETLRELAIANVSVVMQCNGMKTLVDCIL 179
+                            **************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 211 ecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqeskskeerelsrleaskkailtlLrSWaGllylc 298
+                            + ++ ++iae+ll++l+yl+n+p++r++++  v++++llapftd++ +a +++++          r++as++ai++++rSW+G+l+l 
+             ETV97010.1 180 D-PTCQDIAEALLMTLIYLINEPANRNLIHSFVNVQVLLAPFTDTDSPAGTERRQ----------RWTASRNAIVMMMRSWTGILVL- 255
+                            *.55699************************************998888555555..........**********************. PP
+
+  PTHR13298.orig.30.pir 299 kndkrgLkslvdvlrlp.nlevrkaildlLydlLrlkepkwtesftsgsalkavdsaal.qdswrlsdgfvaeesktilpssarsrp. 383
+                            + +++gL++lv +l +p  ++v+k++l++++d+++ ++p  ++  +        d++++ ++         a  + +++p+ +++   
+             ETV97010.1 256 TANPQGLRALVRMLEQPvGDDVKKVVLATICDIFYTNAPLDKNGNDI-------DRSQMdPT--------KAGLAMSDKPIVSTHGGt 328
+                            6679**********************************998774433.......33333221........122234445666667667 PP
+
+  PTHR13298.orig.30.pir 384 dlldnylallLlalieagLleaLvevits.sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfssekskrnraaaa 470
+                            +lldny++l+Ll l ++gLleaLv + t    s+++++A+ LL e+l+l+ +lLP++++a l +lp+lv+++a     k ++    ++
+             ETV97010.1 329 NLLDNYMVLVLLSLGHCGLLEALVALGTCaNRSALAEPAIELLSEVLHLSARLLPDQHCAMLLALPQLVATTAYS---KVDYLADLQS 413
+                            ***************************9945566**************************************996...6666666666 PP
+
+  PTHR13298.orig.30.pir 471 lalksldelkrsksksaslyldeilq.....................................kkllersssnssedskrkrlrq... 518
+                                  d+  r+ +++as +l+e+++                                     ++ + +s+++s  + +         
+             ETV97010.1 414 --KPPEDRGEREHAIRASEMLAELARavgassssgglvtrqnpstvngvhlasellrgtnrplHNFNVHSQRDSAREMLV----Ydlk 495
+                            ..5668999999***********999999999999999999999999999999999998777777777766665544444....3555 PP
+
+  PTHR13298.orig.30.pir 519 ...iledddeafkrm.lkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPsk...krfssidktkqle 599
+                               ++++dd +f+++ ++ s+vl  kd  +Wnwd+i+ellegpl +np rl+ea+ +tkffkr+ +F++  +     f+ + +t +  
+             ETV97010.1 496 vhlDNQMDDHTFRDLlMHKSRVLYGKDWFRWNWDIISELLEGPL-TNPARLSEAM-KTKFFKRVSGFFRCDNsdkGFFAGLPWTPDYV 581
+                            69999*******9962689*************************.*******998.999**********6555547788888****** PP
+
+  PTHR13298.orig.30.pir 600 kyvqvgcqllslLlsspeGialleesr...lLkelleelsqel..ldssse...kspderlfskerlsttlsqgyflfiGvLsstkeG 679
+                             y++ +cq+++lLl++peGia+l+++r   lL e+ ++l+ e   ++ ++e   ++ + r+fs+e+ s+++ ++yf+++G++ss++eG
+             ETV97010.1 582 PYLRPACQMYTLLLNHPEGIAFLKTDRrgqLLNEISTALELEGrpEATIVEshlGELQSRMFSPEYCSRRMLREYFTLLGLMSSSPEG 669
+                            ****************************************988996666667999999****************************** PP
+
+  PTHR13298.orig.30.pir 680 lkiLeklnifqlllqlislktrdelvk......................livssLdysldgesRvilskaLtsssesiRlyatkhLrv 745
+                            lk++++  if  l++l + k++ ++++                      li+++Ldy+++g sR++l+ +++ +ses+Rlyat+ Lr+
+             ETV97010.1 670 LKMMQR--IFARLTKLGTVKDKGSFASldlsksqravkdksqshdflcrLILANLDYTVEGSSRQLLTDWMNYGSESLRLYATCLLRA 755
+                            ******..9*************9999999999******************************************************** PP
+
+  PTHR13298.orig.30.pir 746 llraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkaniley.lvslkpsllhlgdkgelLllrflstpkGfryl 826
+                            llr+e + f+ Wgie Lv+ql d++  va+aAl++Leea e+++ +l + + +++ +++hl+   e+Lll+fls+p+G   +
+             ETV97010.1 756 LLRSEIEGFERWGIESLVAQL-DKEPNVARAALSVLEEAAEQSPVYLSAmIKKRSLQFVHLQA--ESLLLKFLSLPEGTDQC 834
+                            *********************.****************9998887776615567778888877..*************8766 PP
+
+  == domain 2  score: 249.3 bits;  conditional E-value: 3.5e-77
+  PTHR13298.orig.30.pir  821 kGfrylkee.nyvekelekWaeernaeYvllvEealsealtl............................................ 861 
+                              G+ +lk+  n+++  l +W++ ++ +Yv+lvE +l + + +                                            
+             ETV97010.1  856 IGLAFLKDVpNWISSNLMQWRQVKYVQYVHLVESQLLCGVFRdkqsvttnaskaalkpvpipvtvpnrrssnfkhgphreqwglew 941 
+                             699*********************************9999999******************************************* PP
+
+  PTHR13298.orig.30.pir  862 ...................................................................................... 861 
+                                                                                                                   
+             ETV97010.1  942 lfrmpwnievklvgppgsgppahltidafvdasetgqdvpsssdgnplstirikgvvvdarnipkpvmvnsqqtlqaclflgaqpv 1027
+                             ***********************999999888888888888888888888888888888888888888888888888888888888 PP
+
+  PTHR13298.orig.30.pir  862 ....................................................................ltreedgsdsrrrsngpd 879 
+                                                                                                                   
+             ETV97010.1 1028 drkghtrpapttnggfpapndkepgsavaaasatappirsrtesrgvtdrlsefsmdsstayeapeenK----------------- 1096
+                             888866666666666666666666666666666666665555555555544444444444444444440................. PP
+
+  PTHR13298.orig.30.pir  880 sslrnrks.........................................................................vilPp 892 
+                                    +                                                                         v+lP 
+             ETV97010.1 1097 -------DwsscgpehrtaavlfnaaintnasgsekearlcpageravwtfdmdtdnqqikrvqlksveftiqllptkaptVPLPR 1175
+                             .......055555555566666666666666666666666667777777777777777777777777999999999***99***** PP
+
+  PTHR13298.orig.30.pir  893 HLygeLakteeGcelLekkghleelaetirshgledseeilklkaalWAlghigsselGlelleeenedliediiklaeesevlsv 978 
+                             H+ygeLakte Gc++L+++ghl+el++ +++     +   l+++aalW+lghi+ +++G+ell ++  dl+e+i+++a++++ ls+
+             ETV97010.1 1176 HFYGELAKTEDGCAILRQSGHLSELVASLKD----PTVVPLEKRAALWTLGHIAGTNRGFELLLSYADDLVECIVHMATSCQLLSL 1257
+                             *******************************....89*****************************99****************** PP
+
+  PTHR13298.orig.30.pir  979 rGtcfyvlgliarteqgaeiLeelgWesvrhsrnaliGlciPsdvnelfsipehqqsssaesapitdekpeeiktslkyptsqmvr 1064
+                             rGt++++lgli+r+++g+++L++ gW + r s+ +   +++P++v +lf +p+ +++   + +    ++     + +k+ + +  +
+             ETV97010.1 1258 RGTSIFALGLISRSSAGRRALSQAGWIAPRGSNVS---IAVPNNVASLFEWPSVSHTPFPSELVDLSTSF-VSPNFIKSGKASAKA 1339
+                             *****************************986655...6*************998888877776655554.445667888889*** PP
+
+  PTHR13298.orig.30.pir 1065 keilrlvanLsnsvlakkaekeLlklkekkpelfddpclfsevlkllseyrfrlqaRrfiqelfddavllsslrseerleveesqs 1150
+                             keilrl+ +Ls+ +++k+a ++L+++k  +pelf+d++   +++++l++y++rl+aR+f+++lf++a+l   + ++   + ees++
+             ETV97010.1 1340 KEILRLIGDLSSTISQKEAGASLNRMKGAHPELFEDTETALAAHTILARYHYRLSARQFVMNLFEKADLSNASLNQYLYQGEESAQ 1425
+                             *********************************************************************77777776666666666 PP
+
+  PTHR13298.orig.30.pir 1151 emyeeaelsas 1161
+                              + +  ++ +s
+             ETV97010.1 1426 VVPQGGRRRRS 1436
+                             66555555555 PP
+
+>> ETV97013.1  hypothetical protein, variant 3 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  718.2   0.0    9e-219  1.6e-215      35     957 ..      17    1209 ..       2    1236 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 718.2 bits;  conditional E-value: 9e-219
+  PTHR13298.orig.30.pir   35 srdsiekkleslnnliklkaaakklnellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylisdskvlrrllrl 120 
+                              + ++ +kle + +++ +    kk++ ll++++ e+i +          c+r l+ + +++vr+aalR+lry + +s +  +  +l
+             ETV97013.1   17 GGLDRRTKLEATGRITHE---MKKDPMLLEVFAVERIQN----------CARGLMSDTDTSVRTAALRVLRYSMINSASTAQAIKL 89  
+                             555566666666666666...666777777776666663..........************************************* PP
+
+  PTHR13298.orig.30.pir  121 gldiliarsLdrdsknetEreqalkliramlevapkliptaivralvaiaeseedrlrraclatlcelallnpelvaeagglrvll 206 
+                             g++ +++rs++rd k   Er+qalk++r+++++++ ++pt++vr++vaia+++ed+lrr++l+tl+ela+ n+++v +++g+++l+
+             ETV97013.1   90 GVHLFVSRSMERDAKLVGERIQALKVVRRFMDIDALQVPTSVVRSIVAIANHKEDNLRRVALETLRELAIANVSVVMQCNGMKTLV 175 
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir  207 dallecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqeskskeerelsrleaskkailtlLrSWa 292 
+                             d +l+ ++ ++iae+ll++l+yl+n+p++r++++  v++++llapftd++ +a +++++          r++as++ai++++rSW+
+             ETV97013.1  176 DCILD-PTCQDIAEALLMTLIYLINEPANRNLIHSFVNVQVLLAPFTDTDSPAGTERRQ----------RWTASRNAIVMMMRSWT 250 
+                             *****.55699************************************998888555555..........***************** PP
+
+  PTHR13298.orig.30.pir  293 GllylckndkrgLkslvdvlrlp.nlevrkaildlLydlLrlkepkwtesftsgsalkavdsaal.qdswrlsdgfvaeesktilp 376 
+                             G+l+l + +++gL++lv +l +p  ++v+k++l++++d+++ ++p  ++  +        d++++ ++         a  + +++p
+             ETV97013.1  251 GILVL-TANPQGLRALVRMLEQPvGDDVKKVVLATICDIFYTNAPLDKNGNDI-------DRSQMdPT--------KAGLAMSDKP 320 
+                             *****.6679**********************************998774433.......33333221........1222344456 PP
+
+  PTHR13298.orig.30.pir  377 ssarsrp.dlldnylallLlalieagLleaLvevits.sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfsse 460 
+                             + +++   +lldny++l+Ll l ++gLleaLv + t    s+++++A+ LL e+l+l+ +lLP++++a l +lp+lv+++a     
+             ETV97013.1  321 IVSTHGGtNLLDNYMVLVLLSLGHCGLLEALVALGTCaNRSALAEPAIELLSEVLHLSARLLPDQHCAMLLALPQLVATTAYS--- 403 
+                             66667667***************************9945566**************************************996... PP
+
+  PTHR13298.orig.30.pir  461 kskrnraaaalalksldelkrsksksaslyldeilq.....................................kkllersssnsse 509 
+                             k ++    ++      d+  r+ +++as +l+e+++                                     ++ + +s+++s  
+             ETV97013.1  404 KVDYLADLQS--KPPEDRGEREHAIRASEMLAELARavgassssgglvtrqnpstvngvhlasellrgtnrplHNFNVHSQRDSAR 487 
+                             6666666666..5668999999***********99999999999999999999999999999999999877777777776666554 PP
+
+  PTHR13298.orig.30.pir  510 dskrkrlrq......iledddeafkrm.lkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPsk.. 586 
+                             + +            ++++dd +f+++ ++ s+vl  kd  +Wnwd+i+ellegpl +np rl+ea+ +tkffkr+ +F++  +  
+             ETV97013.1  488 EMLV----YdlkvhlDNQMDDHTFRDLlMHKSRVLYGKDWFRWNWDIISELLEGPL-TNPARLSEAM-KTKFFKRVSGFFRCDNsd 567 
+                             4444....355569999*******9962689*************************.*******998.999**********65555 PP
+
+  PTHR13298.orig.30.pir  587 .krfssidktkqlekyvqvgcqllslLlsspeGialleesr...lLkelleelsqel..ldssse...kspderlfskerlsttls 663 
+                                f+ + +t +   y++ +cq+++lLl++peGia+l+++r   lL e+ ++l+ e   ++ ++e   ++ + r+fs+e+ s+++ 
+             ETV97013.1  568 kGFFAGLPWTPDYVPYLRPACQMYTLLLNHPEGIAFLKTDRrgqLLNEISTALELEGrpEATIVEshlGELQSRMFSPEYCSRRML 653 
+                             47788888**********************************************988996666667999999************** PP
+
+  PTHR13298.orig.30.pir  664 qgyflfiGvLsstkeGlkiLeklnifqlllqlislktrdelvk......................livssLdysldgesRvilska 727 
+                             ++yf+++G++ss++eGlk++++  if  l++l + k++ ++++                      li+++Ldy+++g sR++l+ +
+             ETV97013.1  654 REYFTLLGLMSSSPEGLKMMQR--IFARLTKLGTVKDKGSFASldlsksqravkdksqshdflcrLILANLDYTVEGSSRQLLTDW 737 
+                             **********************..9*************9999999999************************************** PP
+
+  PTHR13298.orig.30.pir  728 LtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkaniley.lvslkpsllhlgdkgelL 812 
+                             ++ +ses+Rlyat+ Lr+llr+e + f+ Wgie Lv+ql d++  va+aAl++Leea e+++ +l + + +++ +++hl+   e+L
+             ETV97013.1  738 MNYGSESLRLYATCLLRALLRSEIEGFERWGIESLVAQL-DKEPNVARAALSVLEEAAEQSPVYLSAmIKKRSLQFVHLQA--ESL 820 
+                             ***************************************.****************9998887776615567778888877..*** PP
+
+  PTHR13298.orig.30.pir  813 llrflstpkGfrylkee.nyvekelekWaeernaeYvllvEealsealtl.................................... 861 
+                             ll+fls+p+G+ +lk+  n+++  l +W++ ++ +Yv+lvE +l + + +                                    
+             ETV97013.1  821 LLKFLSLPEGLAFLKDVpNWISSNLMQWRQVKYVQYVHLVESQLLCGVFRdkqsvttnaskaalkpvpipvtvpnrrssnfkhgph 906 
+                             ********************************************9999999*********************************** PP
+
+  PTHR13298.orig.30.pir  862 ...................................................................................... 861 
+                                                                                                                   
+             ETV97013.1  907 reqwglewlfrmpwnievklvgppgsgppahltidafvdasetgqdvpsssdgnplstirikgvvvdarnipkpvmvnsqqtlqac 992 
+                             *******************************9999998888888888888888888888888888888888888888888888888 PP
+
+  PTHR13298.orig.30.pir  862 ............................................................................ltreedgsds 871 
+                                                                                                                   
+             ETV97013.1  993 lflgaqpvdrkghtrpapttnggfpapndkepgsavaaasatappirsrtesrgvtdrlsefsmdsstayeapeenK--------- 1069
+                             88888888888866666666666666666666666666666666665555555555544444444444444444440......... PP
+
+  PTHR13298.orig.30.pir  872 rrrsngpdsslrnrks...................................................................... 887 
+                                            +                                                                      
+             ETV97013.1 1070 ---------------Dwsscgpehrtaavlfnaaintnasgsekearlcpageravwtfdmdtdnqqikrvqlksveftiqllptk 1140
+                             ...............055555555566666666666666666666666667777777777777777777777777999999999** PP
+
+  PTHR13298.orig.30.pir  888 ...vilPpHLygeLakteeGcelLekkghleelaetirshgledseeilklkaalWAlghigsselGlellee 957 
+                                v+lP H+ygeLakte Gc++L+++ghl+el++ +++     +   l+++aalW+lghi+ +++G+ +l+ 
+             ETV97013.1 1141 aptVPLPRHFYGELAKTEDGCAILRQSGHLSELVASLKD----PTVVPLEKRAALWTLGHIAGTNRGYVVLRM 1209
+                             *99************************************....89***********************99876 PP
+
+>> ETV97012.1  hypothetical protein, variant 2 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  599.2   5.8  7.5e-183  1.3e-179      35     826 ..      17     834 ..       2     839 .. 0.89
+   2 !   90.5   0.0     3e-29   5.3e-26     821     957 ..     856    1236 ..     844    1263 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 599.2 bits;  conditional E-value: 7.5e-183
+  PTHR13298.orig.30.pir  35 srdsiekkleslnnliklkaaakklnellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylisdskvlrrllrlgl 122
+                             + ++ +kle + +++ +    kk++ ll++++ e+i +          c+r l+ + +++vr+aalR+lry + +s +  +  +lg+
+             ETV97012.1  17 GGLDRRTKLEATGRITHE---MKKDPMLLEVFAVERIQN----------CARGLMSDTDTSVRTAALRVLRYSMINSASTAQAIKLGV 91 
+                            555566666666666666...666777777776666663..........*************************************** PP
+
+  PTHR13298.orig.30.pir 123 diliarsLdrdsknetEreqalkliramlevapkliptaivralvaiaeseedrlrraclatlcelallnpelvaeagglrvlldall 210
+                            + +++rs++rd k   Er+qalk++r+++++++ ++pt++vr++vaia+++ed+lrr++l+tl+ela+ n+++v +++g+++l+d +l
+             ETV97012.1  92 HLFVSRSMERDAKLVGERIQALKVVRRFMDIDALQVPTSVVRSIVAIANHKEDNLRRVALETLRELAIANVSVVMQCNGMKTLVDCIL 179
+                            **************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 211 ecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqeskskeerelsrleaskkailtlLrSWaGllylc 298
+                            + ++ ++iae+ll++l+yl+n+p++r++++  v++++llapftd++ +a +++++          r++as++ai++++rSW+G+l+l 
+             ETV97012.1 180 D-PTCQDIAEALLMTLIYLINEPANRNLIHSFVNVQVLLAPFTDTDSPAGTERRQ----------RWTASRNAIVMMMRSWTGILVL- 255
+                            *.55699************************************998888555555..........**********************. PP
+
+  PTHR13298.orig.30.pir 299 kndkrgLkslvdvlrlp.nlevrkaildlLydlLrlkepkwtesftsgsalkavdsaal.qdswrlsdgfvaeesktilpssarsrp. 383
+                            + +++gL++lv +l +p  ++v+k++l++++d+++ ++p  ++  +        d++++ ++         a  + +++p+ +++   
+             ETV97012.1 256 TANPQGLRALVRMLEQPvGDDVKKVVLATICDIFYTNAPLDKNGNDI-------DRSQMdPT--------KAGLAMSDKPIVSTHGGt 328
+                            6679**********************************998774433.......33333221........122234445666667667 PP
+
+  PTHR13298.orig.30.pir 384 dlldnylallLlalieagLleaLvevits.sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfssekskrnraaaa 470
+                            +lldny++l+Ll l ++gLleaLv + t    s+++++A+ LL e+l+l+ +lLP++++a l +lp+lv+++a     k ++    ++
+             ETV97012.1 329 NLLDNYMVLVLLSLGHCGLLEALVALGTCaNRSALAEPAIELLSEVLHLSARLLPDQHCAMLLALPQLVATTAYS---KVDYLADLQS 413
+                            ***************************9945566**************************************996...6666666666 PP
+
+  PTHR13298.orig.30.pir 471 lalksldelkrsksksaslyldeilq.....................................kkllersssnssedskrkrlrq... 518
+                                  d+  r+ +++as +l+e+++                                     ++ + +s+++s  + +         
+             ETV97012.1 414 --KPPEDRGEREHAIRASEMLAELARavgassssgglvtrqnpstvngvhlasellrgtnrplHNFNVHSQRDSAREMLV----Ydlk 495
+                            ..5668999999***********999999999999999999999999999999999998777777777766665544444....3555 PP
+
+  PTHR13298.orig.30.pir 519 ...iledddeafkrm.lkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPsk...krfssidktkqle 599
+                               ++++dd +f+++ ++ s+vl  kd  +Wnwd+i+ellegpl +np rl+ea+ +tkffkr+ +F++  +     f+ + +t +  
+             ETV97012.1 496 vhlDNQMDDHTFRDLlMHKSRVLYGKDWFRWNWDIISELLEGPL-TNPARLSEAM-KTKFFKRVSGFFRCDNsdkGFFAGLPWTPDYV 581
+                            69999*******9962689*************************.*******998.999**********6555547788888****** PP
+
+  PTHR13298.orig.30.pir 600 kyvqvgcqllslLlsspeGialleesr...lLkelleelsqel..ldssse...kspderlfskerlsttlsqgyflfiGvLsstkeG 679
+                             y++ +cq+++lLl++peGia+l+++r   lL e+ ++l+ e   ++ ++e   ++ + r+fs+e+ s+++ ++yf+++G++ss++eG
+             ETV97012.1 582 PYLRPACQMYTLLLNHPEGIAFLKTDRrgqLLNEISTALELEGrpEATIVEshlGELQSRMFSPEYCSRRMLREYFTLLGLMSSSPEG 669
+                            ****************************************988996666667999999****************************** PP
+
+  PTHR13298.orig.30.pir 680 lkiLeklnifqlllqlislktrdelvk......................livssLdysldgesRvilskaLtsssesiRlyatkhLrv 745
+                            lk++++  if  l++l + k++ ++++                      li+++Ldy+++g sR++l+ +++ +ses+Rlyat+ Lr+
+             ETV97012.1 670 LKMMQR--IFARLTKLGTVKDKGSFASldlsksqravkdksqshdflcrLILANLDYTVEGSSRQLLTDWMNYGSESLRLYATCLLRA 755
+                            ******..9*************9999999999******************************************************** PP
+
+  PTHR13298.orig.30.pir 746 llraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkaniley.lvslkpsllhlgdkgelLllrflstpkGfryl 826
+                            llr+e + f+ Wgie Lv+ql d++  va+aAl++Leea e+++ +l + + +++ +++hl+   e+Lll+fls+p+G   +
+             ETV97012.1 756 LLRSEIEGFERWGIESLVAQL-DKEPNVARAALSVLEEAAEQSPVYLSAmIKKRSLQFVHLQA--ESLLLKFLSLPEGTDQC 834
+                            *********************.****************9998887776615567778888877..*************8766 PP
+
+  == domain 2  score: 90.5 bits;  conditional E-value: 3e-29
+  PTHR13298.orig.30.pir  821 kGfrylkee.nyvekelekWaeernaeYvllvEealsealtl............................................ 861 
+                              G+ +lk+  n+++  l +W++ ++ +Yv+lvE +l + + +                                            
+             ETV97012.1  856 IGLAFLKDVpNWISSNLMQWRQVKYVQYVHLVESQLLCGVFRdkqsvttnaskaalkpvpipvtvpnrrssnfkhgphreqwglew 941 
+                             699*********************************9999999******************************************* PP
+
+  PTHR13298.orig.30.pir  862 ...................................................................................... 861 
+                                                                                                                   
+             ETV97012.1  942 lfrmpwnievklvgppgsgppahltidafvdasetgqdvpsssdgnplstirikgvvvdarnipkpvmvnsqqtlqaclflgaqpv 1027
+                             ***********************999999888888888888888888888888888888888888888888888888888888888 PP
+
+  PTHR13298.orig.30.pir  862 ....................................................................ltreedgsdsrrrsngpd 879 
+                                                                                                                   
+             ETV97012.1 1028 drkghtrpapttnggfpapndkepgsavaaasatappirsrtesrgvtdrlsefsmdsstayeapeenK----------------- 1096
+                             888866666666666666666666666666666666665555555555544444444444444444440................. PP
+
+  PTHR13298.orig.30.pir  880 sslrnrks.........................................................................vilPp 892 
+                                    +                                                                         v+lP 
+             ETV97012.1 1097 -------DwsscgpehrtaavlfnaaintnasgsekearlcpageravwtfdmdtdnqqikrvqlksveftiqllptkaptVPLPR 1175
+                             .......055555555566666666666666666666666667777777777777777777777777999999999***99***** PP
+
+  PTHR13298.orig.30.pir  893 HLygeLakteeGcelLekkghleelaetirshgledseeilklkaalWAlghigsselGlellee 957 
+                             H+ygeLakte Gc++L+++ghl+el++ +++     +   l+++aalW+lghi+ +++G+ +l+ 
+             ETV97012.1 1176 HFYGELAKTEDGCAILRQSGHLSELVASLKD----PTVVPLEKRAALWTLGHIAGTNRGYVVLRM 1236
+                             *******************************....89***********************99876 PP
+
+>> ETV97014.1  hypothetical protein, variant 4 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  643.9   0.3  2.5e-196  4.4e-193      35     861 ..      17     870 ..       2     973 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 643.9 bits;  conditional E-value: 2.5e-196
+  PTHR13298.orig.30.pir  35 srdsiekkleslnnliklkaaakklnellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylisdskvlrrllrlgl 122
+                             + ++ +kle + +++ +    kk++ ll++++ e+i +          c+r l+ + +++vr+aalR+lry + +s +  +  +lg+
+             ETV97014.1  17 GGLDRRTKLEATGRITHE---MKKDPMLLEVFAVERIQN----------CARGLMSDTDTSVRTAALRVLRYSMINSASTAQAIKLGV 91 
+                            555566666666666666...667777777776666663..........*************************************** PP
+
+  PTHR13298.orig.30.pir 123 diliarsLdrdsknetEreqalkliramlevapkliptaivralvaiaeseedrlrraclatlcelallnpelvaeagglrvlldall 210
+                            + +++rs++rd k   Er+qalk++r+++++++ ++pt++vr++vaia+++ed+lrr++l+tl+ela+ n+++v +++g+++l+d +l
+             ETV97014.1  92 HLFVSRSMERDAKLVGERIQALKVVRRFMDIDALQVPTSVVRSIVAIANHKEDNLRRVALETLRELAIANVSVVMQCNGMKTLVDCIL 179
+                            **************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 211 ecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqeskskeerelsrleaskkailtlLrSWaGllylc 298
+                            + ++ ++iae+ll++l+yl+n+p++r++++  v++++llapftd++ +a +++++          r++as++ai++++rSW+G+l+l 
+             ETV97014.1 180 D-PTCQDIAEALLMTLIYLINEPANRNLIHSFVNVQVLLAPFTDTDSPAGTERRQ----------RWTASRNAIVMMMRSWTGILVL- 255
+                            *.55699************************************998888555555..........**********************. PP
+
+  PTHR13298.orig.30.pir 299 kndkrgLkslvdvlrlp.nlevrkaildlLydlLrlkepkwtesftsgsalkavdsaal.qdswrlsdgfvaeesktilpssarsrp. 383
+                            + +++gL++lv +l +p  ++v+k++l++++d+++ ++p  ++  +        d++++ ++         a  + +++p+ +++   
+             ETV97014.1 256 TANPQGLRALVRMLEQPvGDDVKKVVLATICDIFYTNAPLDKNGNDI-------DRSQMdPT--------KAGLAMSDKPIVSTHGGt 328
+                            6679**********************************998774433.......33333221........122234445666667667 PP
+
+  PTHR13298.orig.30.pir 384 dlldnylallLlalieagLleaLvevits.sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfssekskrnraaaa 470
+                            +lldny++l+Ll l ++gLleaLv + t    s+++++A+ LL e+l+l+ +lLP++++a l +lp+lv+++a     k ++    ++
+             ETV97014.1 329 NLLDNYMVLVLLSLGHCGLLEALVALGTCaNRSALAEPAIELLSEVLHLSARLLPDQHCAMLLALPQLVATTAYS---KVDYLADLQS 413
+                            ***************************9945566**************************************996...6666666666 PP
+
+  PTHR13298.orig.30.pir 471 lalksldelkrsksksaslyldeilq.....................................kkllersssnssedskrkrlrq... 518
+                                  d+  r+ +++as +l+e+++                                     ++ + +s+++s  + +         
+             ETV97014.1 414 --KPPEDRGEREHAIRASEMLAELARavgassssgglvtrqnpstvngvhlasellrgtnrplHNFNVHSQRDSAREMLV----Ydlk 495
+                            ..5668999999***********999999999999999999999999999999999998777777777766665544444....3555 PP
+
+  PTHR13298.orig.30.pir 519 ...iledddeafkrm.lkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPsk...krfssidktkqle 599
+                               ++++dd +f+++ ++ s+vl  kd  +Wnwd+i+ellegpl +np rl+ea+ +tkffkr+ +F++  +     f+ + +t +  
+             ETV97014.1 496 vhlDNQMDDHTFRDLlMHKSRVLYGKDWFRWNWDIISELLEGPL-TNPARLSEAM-KTKFFKRVSGFFRCDNsdkGFFAGLPWTPDYV 581
+                            69999*******9962689*************************.*******998.999**********6555547788888****** PP
+
+  PTHR13298.orig.30.pir 600 kyvqvgcqllslLlsspeGialleesr...lLkelleelsqel..ldssse...kspderlfskerlsttlsqgyflfiGvLsstkeG 679
+                             y++ +cq+++lLl++peGia+l+++r   lL e+ ++l+ e   ++ ++e   ++ + r+fs+e+ s+++ ++yf+++G++ss++eG
+             ETV97014.1 582 PYLRPACQMYTLLLNHPEGIAFLKTDRrgqLLNEISTALELEGrpEATIVEshlGELQSRMFSPEYCSRRMLREYFTLLGLMSSSPEG 669
+                            ****************************************988996666667999999****************************** PP
+
+  PTHR13298.orig.30.pir 680 lkiLeklnifqlllqlislktrdelvk......................livssLdysldgesRvilskaLtsssesiRlyatkhLrv 745
+                            lk++++  if  l++l + k++ ++++                      li+++Ldy+++g sR++l+ +++ +ses+Rlyat+ Lr+
+             ETV97014.1 670 LKMMQR--IFARLTKLGTVKDKGSFASldlsksqravkdksqshdflcrLILANLDYTVEGSSRQLLTDWMNYGSESLRLYATCLLRA 755
+                            ******..9*************9999999999******************************************************** PP
+
+  PTHR13298.orig.30.pir 746 llraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkaniley.lvslkpsllhlgdkgelLllrflstpkGfrylkee.ny 831
+                            llr+e + f+ Wgie Lv+ql d++  va+aAl++Leea e+++ +l + + +++ +++hl+   e+Lll+fls+p+G+ +lk+  n+
+             ETV97014.1 756 LLRSEIEGFERWGIESLVAQL-DKEPNVARAALSVLEEAAEQSPVYLSAmIKKRSLQFVHLQA--ESLLLKFLSLPEGLAFLKDVpNW 840
+                            *********************.****************9998887776615567778888877..*********************** PP
+
+  PTHR13298.orig.30.pir 832 vekelekWaeernaeYvllvEealsealtl 861
+                            ++  l +W++ ++ +Yv+lvE +l + + +
+             ETV97014.1 841 ISSNLMQWRQVKYVQYVHLVESQLLCGVFR 870
+                            ***********************9888887 PP
+
+>> ETV97015.1  hypothetical protein, variant 5 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  643.1   1.0  4.3e-196  7.4e-193      35     861 ..      17     870 ..       2    1001 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 643.1 bits;  conditional E-value: 4.3e-196
+  PTHR13298.orig.30.pir  35 srdsiekkleslnnliklkaaakklnellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylisdskvlrrllrlgl 122
+                             + ++ +kle + +++ +    kk++ ll++++ e+i +          c+r l+ + +++vr+aalR+lry + +s +  +  +lg+
+             ETV97015.1  17 GGLDRRTKLEATGRITHE---MKKDPMLLEVFAVERIQN----------CARGLMSDTDTSVRTAALRVLRYSMINSASTAQAIKLGV 91 
+                            555566666666666666...667777777776666663..........*************************************** PP
+
+  PTHR13298.orig.30.pir 123 diliarsLdrdsknetEreqalkliramlevapkliptaivralvaiaeseedrlrraclatlcelallnpelvaeagglrvlldall 210
+                            + +++rs++rd k   Er+qalk++r+++++++ ++pt++vr++vaia+++ed+lrr++l+tl+ela+ n+++v +++g+++l+d +l
+             ETV97015.1  92 HLFVSRSMERDAKLVGERIQALKVVRRFMDIDALQVPTSVVRSIVAIANHKEDNLRRVALETLRELAIANVSVVMQCNGMKTLVDCIL 179
+                            **************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 211 ecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqeskskeerelsrleaskkailtlLrSWaGllylc 298
+                            + ++ ++iae+ll++l+yl+n+p++r++++  v++++llapftd++ +a +++++          r++as++ai++++rSW+G+l+l 
+             ETV97015.1 180 D-PTCQDIAEALLMTLIYLINEPANRNLIHSFVNVQVLLAPFTDTDSPAGTERRQ----------RWTASRNAIVMMMRSWTGILVL- 255
+                            *.55699************************************998888555555..........**********************. PP
+
+  PTHR13298.orig.30.pir 299 kndkrgLkslvdvlrlp.nlevrkaildlLydlLrlkepkwtesftsgsalkavdsaal.qdswrlsdgfvaeesktilpssarsrp. 383
+                            + +++gL++lv +l +p  ++v+k++l++++d+++ ++p  ++  +        d++++ ++         a  + +++p+ +++   
+             ETV97015.1 256 TANPQGLRALVRMLEQPvGDDVKKVVLATICDIFYTNAPLDKNGNDI-------DRSQMdPT--------KAGLAMSDKPIVSTHGGt 328
+                            6679**********************************998774433.......33333221........122234445666667667 PP
+
+  PTHR13298.orig.30.pir 384 dlldnylallLlalieagLleaLvevits.sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfssekskrnraaaa 470
+                            +lldny++l+Ll l ++gLleaLv + t    s+++++A+ LL e+l+l+ +lLP++++a l +lp+lv+++a     k ++    ++
+             ETV97015.1 329 NLLDNYMVLVLLSLGHCGLLEALVALGTCaNRSALAEPAIELLSEVLHLSARLLPDQHCAMLLALPQLVATTAYS---KVDYLADLQS 413
+                            ***************************9945566**************************************996...6666666666 PP
+
+  PTHR13298.orig.30.pir 471 lalksldelkrsksksaslyldeilq.....................................kkllersssnssedskrkrlrq... 518
+                                  d+  r+ +++as +l+e+++                                     ++ + +s+++s  + +         
+             ETV97015.1 414 --KPPEDRGEREHAIRASEMLAELARavgassssgglvtrqnpstvngvhlasellrgtnrplHNFNVHSQRDSAREMLV----Ydlk 495
+                            ..5668999999***********999999999999999999999999999999999998777777777766665544444....3555 PP
+
+  PTHR13298.orig.30.pir 519 ...iledddeafkrm.lkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPsk...krfssidktkqle 599
+                               ++++dd +f+++ ++ s+vl  kd  +Wnwd+i+ellegpl +np rl+ea+ +tkffkr+ +F++  +     f+ + +t +  
+             ETV97015.1 496 vhlDNQMDDHTFRDLlMHKSRVLYGKDWFRWNWDIISELLEGPL-TNPARLSEAM-KTKFFKRVSGFFRCDNsdkGFFAGLPWTPDYV 581
+                            69999*******9962689*************************.*******998.999**********6555547788888****** PP
+
+  PTHR13298.orig.30.pir 600 kyvqvgcqllslLlsspeGialleesr...lLkelleelsqel..ldssse...kspderlfskerlsttlsqgyflfiGvLsstkeG 679
+                             y++ +cq+++lLl++peGia+l+++r   lL e+ ++l+ e   ++ ++e   ++ + r+fs+e+ s+++ ++yf+++G++ss++eG
+             ETV97015.1 582 PYLRPACQMYTLLLNHPEGIAFLKTDRrgqLLNEISTALELEGrpEATIVEshlGELQSRMFSPEYCSRRMLREYFTLLGLMSSSPEG 669
+                            ****************************************988996666667999999****************************** PP
+
+  PTHR13298.orig.30.pir 680 lkiLeklnifqlllqlislktrdelvk......................livssLdysldgesRvilskaLtsssesiRlyatkhLrv 745
+                            lk++++  if  l++l + k++ ++++                      li+++Ldy+++g sR++l+ +++ +ses+Rlyat+ Lr+
+             ETV97015.1 670 LKMMQR--IFARLTKLGTVKDKGSFASldlsksqravkdksqshdflcrLILANLDYTVEGSSRQLLTDWMNYGSESLRLYATCLLRA 755
+                            ******..9*************9999999999******************************************************** PP
+
+  PTHR13298.orig.30.pir 746 llraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkaniley.lvslkpsllhlgdkgelLllrflstpkGfrylkee.ny 831
+                            llr+e + f+ Wgie Lv+ql d++  va+aAl++Leea e+++ +l + + +++ +++hl+   e+Lll+fls+p+G+ +lk+  n+
+             ETV97015.1 756 LLRSEIEGFERWGIESLVAQL-DKEPNVARAALSVLEEAAEQSPVYLSAmIKKRSLQFVHLQA--ESLLLKFLSLPEGLAFLKDVpNW 840
+                            *********************.****************9998887776615567778888877..*********************** PP
+
+  PTHR13298.orig.30.pir 832 vekelekWaeernaeYvllvEealsealtl 861
+                            ++  l +W++ ++ +Yv+lvE +l + + +
+             ETV97015.1 841 ISSNLMQWRQVKYVQYVHLVESQLLCGVFR 870
+                            ***********************9888877 PP
+
+>> ETV97016.1  hypothetical protein, variant 6 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  643.1   1.0  4.3e-196  7.4e-193      35     861 ..      17     870 ..       2    1001 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 643.1 bits;  conditional E-value: 4.3e-196
+  PTHR13298.orig.30.pir  35 srdsiekkleslnnliklkaaakklnellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylisdskvlrrllrlgl 122
+                             + ++ +kle + +++ +    kk++ ll++++ e+i +          c+r l+ + +++vr+aalR+lry + +s +  +  +lg+
+             ETV97016.1  17 GGLDRRTKLEATGRITHE---MKKDPMLLEVFAVERIQN----------CARGLMSDTDTSVRTAALRVLRYSMINSASTAQAIKLGV 91 
+                            555566666666666666...667777777776666663..........*************************************** PP
+
+  PTHR13298.orig.30.pir 123 diliarsLdrdsknetEreqalkliramlevapkliptaivralvaiaeseedrlrraclatlcelallnpelvaeagglrvlldall 210
+                            + +++rs++rd k   Er+qalk++r+++++++ ++pt++vr++vaia+++ed+lrr++l+tl+ela+ n+++v +++g+++l+d +l
+             ETV97016.1  92 HLFVSRSMERDAKLVGERIQALKVVRRFMDIDALQVPTSVVRSIVAIANHKEDNLRRVALETLRELAIANVSVVMQCNGMKTLVDCIL 179
+                            **************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 211 ecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqeskskeerelsrleaskkailtlLrSWaGllylc 298
+                            + ++ ++iae+ll++l+yl+n+p++r++++  v++++llapftd++ +a +++++          r++as++ai++++rSW+G+l+l 
+             ETV97016.1 180 D-PTCQDIAEALLMTLIYLINEPANRNLIHSFVNVQVLLAPFTDTDSPAGTERRQ----------RWTASRNAIVMMMRSWTGILVL- 255
+                            *.55699************************************998888555555..........**********************. PP
+
+  PTHR13298.orig.30.pir 299 kndkrgLkslvdvlrlp.nlevrkaildlLydlLrlkepkwtesftsgsalkavdsaal.qdswrlsdgfvaeesktilpssarsrp. 383
+                            + +++gL++lv +l +p  ++v+k++l++++d+++ ++p  ++  +        d++++ ++         a  + +++p+ +++   
+             ETV97016.1 256 TANPQGLRALVRMLEQPvGDDVKKVVLATICDIFYTNAPLDKNGNDI-------DRSQMdPT--------KAGLAMSDKPIVSTHGGt 328
+                            6679**********************************998774433.......33333221........122234445666667667 PP
+
+  PTHR13298.orig.30.pir 384 dlldnylallLlalieagLleaLvevits.sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfssekskrnraaaa 470
+                            +lldny++l+Ll l ++gLleaLv + t    s+++++A+ LL e+l+l+ +lLP++++a l +lp+lv+++a     k ++    ++
+             ETV97016.1 329 NLLDNYMVLVLLSLGHCGLLEALVALGTCaNRSALAEPAIELLSEVLHLSARLLPDQHCAMLLALPQLVATTAYS---KVDYLADLQS 413
+                            ***************************9945566**************************************996...6666666666 PP
+
+  PTHR13298.orig.30.pir 471 lalksldelkrsksksaslyldeilq.....................................kkllersssnssedskrkrlrq... 518
+                                  d+  r+ +++as +l+e+++                                     ++ + +s+++s  + +         
+             ETV97016.1 414 --KPPEDRGEREHAIRASEMLAELARavgassssgglvtrqnpstvngvhlasellrgtnrplHNFNVHSQRDSAREMLV----Ydlk 495
+                            ..5668999999***********999999999999999999999999999999999998777777777766665544444....3555 PP
+
+  PTHR13298.orig.30.pir 519 ...iledddeafkrm.lkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPsk...krfssidktkqle 599
+                               ++++dd +f+++ ++ s+vl  kd  +Wnwd+i+ellegpl +np rl+ea+ +tkffkr+ +F++  +     f+ + +t +  
+             ETV97016.1 496 vhlDNQMDDHTFRDLlMHKSRVLYGKDWFRWNWDIISELLEGPL-TNPARLSEAM-KTKFFKRVSGFFRCDNsdkGFFAGLPWTPDYV 581
+                            69999*******9962689*************************.*******998.999**********6555547788888****** PP
+
+  PTHR13298.orig.30.pir 600 kyvqvgcqllslLlsspeGialleesr...lLkelleelsqel..ldssse...kspderlfskerlsttlsqgyflfiGvLsstkeG 679
+                             y++ +cq+++lLl++peGia+l+++r   lL e+ ++l+ e   ++ ++e   ++ + r+fs+e+ s+++ ++yf+++G++ss++eG
+             ETV97016.1 582 PYLRPACQMYTLLLNHPEGIAFLKTDRrgqLLNEISTALELEGrpEATIVEshlGELQSRMFSPEYCSRRMLREYFTLLGLMSSSPEG 669
+                            ****************************************988996666667999999****************************** PP
+
+  PTHR13298.orig.30.pir 680 lkiLeklnifqlllqlislktrdelvk......................livssLdysldgesRvilskaLtsssesiRlyatkhLrv 745
+                            lk++++  if  l++l + k++ ++++                      li+++Ldy+++g sR++l+ +++ +ses+Rlyat+ Lr+
+             ETV97016.1 670 LKMMQR--IFARLTKLGTVKDKGSFASldlsksqravkdksqshdflcrLILANLDYTVEGSSRQLLTDWMNYGSESLRLYATCLLRA 755
+                            ******..9*************9999999999******************************************************** PP
+
+  PTHR13298.orig.30.pir 746 llraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkaniley.lvslkpsllhlgdkgelLllrflstpkGfrylkee.ny 831
+                            llr+e + f+ Wgie Lv+ql d++  va+aAl++Leea e+++ +l + + +++ +++hl+   e+Lll+fls+p+G+ +lk+  n+
+             ETV97016.1 756 LLRSEIEGFERWGIESLVAQL-DKEPNVARAALSVLEEAAEQSPVYLSAmIKKRSLQFVHLQA--ESLLLKFLSLPEGLAFLKDVpNW 840
+                            *********************.****************9998887776615567778888877..*********************** PP
+
+  PTHR13298.orig.30.pir 832 vekelekWaeernaeYvllvEealsealtl 861
+                            ++  l +W++ ++ +Yv+lvE +l + + +
+             ETV97016.1 841 ISSNLMQWRQVKYVQYVHLVESQLLCGVFR 870
+                            ***********************9888877 PP
+
+>> ETW09785.1  hypothetical protein H310_00266 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.3   2.2   5.9e-06      0.01      62     238 ..      63     229 ..      18     259 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 13.3 bits;  conditional E-value: 5.9e-06
+  PTHR13298.orig.30.pir  62 llgllkeeiiikedlvelelvsclrslllseskevraaalRllrylisdskvlrrllrlgldiliarsLdrdsknetEreqalklira 149
+                            ++++ +           l+  ++l  l  s+++ev++ a ++l  l s +++ ++ ++++  i + ++L + ++  + r +a  l + 
+             ETW09785.1  63 QVQIVE-----------LDGLQLLLPLTESKDTEVQRLAAHALANL-SVNSDNQTKMANEGGIDMLIHLLQSNNEHVQRQAAKALANL 138
+                            333333...........334447778999*****************.54555555555555555666899998888889888888888 PP
+
+  PTHR13298.orig.30.pir 150 mlev.apkli.ptaivralvaiaeseedrlrraclatlcelallnpelv..aeagglrvlldallecqlperiaesllavllyllnrp 233
+                             ++v + ++i   + ++ l+ +a s++     +++a l+ la+++   +  a++ggl+ +++a    +   ++++++  +l +l  +p
+             ETW09785.1 139 GVNVdNKEKIaKAGGIKPLIELARSKQVGVAVEAIAALANLAVNDANEIeiAQEGGLKPIIQAAKSDS--MELQSQVARALRNLSVNP 224
+                            888876666668889*****************************98766457**********999844..599999999998888777 PP
+
+  PTHR13298.orig.30.pir 234 strky 238
+                             ++++
+             ETW09785.1 225 DNKEL 229
+                            77765 PP
+
+>> ETV95341.1  hypothetical protein, variant [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.3   0.2     5e-05     0.087     716     793 ..     304     378 ..      91     390 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 10.3 bits;  conditional E-value: 5e-05
+  PTHR13298.orig.30.pir 716 ldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkanile 793
+                            l+ ++ +il  +L +  ++iR+ a++ L + +  + +   +   +++v +l+dp+ +++++Al++++  + ++ n ++
+             ETV95341.1 304 LKVLAINILGRFLLNRDNNIRYVALNTLSKVIA-DDAPAVQRHRNTIVDCLKDPDLSIRQRALELIYALV-NESN-IQ 378
+                            6667889*********************99999.8888888999**********************9977.4433.33 PP
+
+>> ETV95340.1  hypothetical protein H310_11234 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.3   0.2     5e-05     0.087     716     793 ..     304     378 ..      91     390 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 10.3 bits;  conditional E-value: 5e-05
+  PTHR13298.orig.30.pir 716 ldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkanile 793
+                            l+ ++ +il  +L +  ++iR+ a++ L + +  + +   +   +++v +l+dp+ +++++Al++++  + ++ n ++
+             ETV95340.1 304 LKVLAINILGRFLLNRDNNIRYVALNTLSKVIA-DDAPAVQRHRNTIVDCLKDPDLSIRQRALELIYALV-NESN-IQ 378
+                            6667889*********************99999.8888888999**********************9977.4433.33 PP
+
+>> ETW09696.1  hypothetical protein H310_00206 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.6   0.1   0.00016      0.27     724     790 ..     725     800 ..     715     807 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 8.6 bits;  conditional E-value: 0.00016
+  PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllra........essdfsd.WgielLvtqlydpskevakaAlkiLeeacedkan 790
+                            +++ L  +s+++R  a + L  ll          ++s fs+ +++e+L + ++ p+++v+k Al++L+    +++ 
+             ETW09696.1 725 FQALLDLASSTCRDVASHTLTLLLELvppasediGVSPFSQeFVVEALARLVSSPQQDVCKGALSVLDRLAAQHPD 800
+                            77889999*****************55566788866666666**************************97666665 PP
+
+>> ETW02439.1  hypothetical protein H310_05952 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.2   0.3     0.073   1.3e+02     443     531 ..     117     195 ..      95     203 .. 0.60
+   2 ?   -2.0   0.1      0.25   4.3e+02     665     725 ..     222     282 ..     208     296 .. 0.78
+   3 ?    8.4   0.6   0.00019      0.32     154     206 ..     744     798 ..     727     851 .. 0.83
+   4 ?    0.4   0.0     0.048        83     955    1000 ..    1167    1210 ..    1136    1242 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: -0.2 bits;  conditional E-value: 0.073
+  PTHR13298.orig.30.pir 443 slhslptlvslaasfssekskrnraaaalalksldelkrsksksaslyldeilqkkllersssnssedskrkrlrq.iledddeafkr 529
+                            +++s  t +s+++  ++++  +++++  +++++l  ++rs+++++s+ ld+  +             ds+ +r rq +  +d  a++ 
+             ETW02439.1 117 PMQSATTPMSSSSAATIPMTAASQSRRKAGVSKLTPMSRSSNHRESVVLDVKDE-----------GRDSRMNRKRQcAYAIDAMAANP 193
+                            3445555555555555666666666665679*****************998322...........22222333333355556555555 PP
+
+  PTHR13298.orig.30.pir 530 ml 531
+                            ml
+             ETW02439.1 194 ML 195
+                            55 PP
+
+  == domain 2  score: -2.0 bits;  conditional E-value: 0.25
+  PTHR13298.orig.30.pir 665 gyflfiGvLsstkeGlkiLeklnifqlllqlislktrdelvklivssLdysldgesRvils 725
+                              + +++ Ls +++G +++ +++ +++l   + l   +++ +++ +  + s+++    +++
+             ETW02439.1 222 LCVSALCHLSGSQRGRELMLQHGCLSILQAALLLPASPDHYNILATFANLSIEDSFESMFV 282
+                            4467889999999999999999999999999998888888888877777777777766664 PP
+
+  == domain 3  score: 8.4 bits;  conditional E-value: 0.00019
+  PTHR13298.orig.30.pir 154 apkliptaivralvaiaeseedrlrraclatlcelallnpelva..eagglrvll 206
+                             ++li  +iv++l+++a  +e+  rrac    c l  ++  +v+  + g+l++ll
+             ETW02439.1 744 CRELIENGIVHSLASLAAAPEEDVRRACAIAFCNLSTNEDNIVTlvKHGALKALL 798
+                            68999********************************999999655888888775 PP
+
+  == domain 4  score: 0.4 bits;  conditional E-value: 0.048
+  PTHR13298.orig.30.pir  955 leeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLe 1000
+                             l    e+ ++++++l e+++ l++   c+   +l+ar  +    L+
+             ETW02439.1 1167 LVD--EGAVPCVVSLLETTSNLYIKRNCTATFCLLARKHSVKPSLA 1210
+                             444..55788888888888888888888888888887666555554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      20816  (10284592 residues searched)
+Passed MSV filter:                      1130  (0.0542852); expected 416.3 (0.02)
+Passed bias filter:                      536  (0.0257494); expected 416.3 (0.02)
+Passed Vit filter:                        56  (0.00269024); expected 20.8 (0.001)
+Passed Fwd filter:                        12  (0.00057648); expected 0.2 (1e-05)
+Initial search space (Z):              20816  [actual number of targets]
+Domain search space  (domZ):              12  [number of targets reported over threshold]
+# CPU time: 0.53u 0.09s 00:00:00.62 Elapsed: 00:00:00.30
+# Mc/sec: 39073.44
+//
+[ok]
