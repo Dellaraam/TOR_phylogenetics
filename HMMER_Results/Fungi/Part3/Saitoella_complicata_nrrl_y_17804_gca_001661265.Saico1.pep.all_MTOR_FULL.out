@@ -1,0 +1,362 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Saitoella_complicata_nrrl_y_17804_gca_001661265.Saico1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.8e-72  239.8   9.0    1.7e-71  238.0   0.5    4.5  4  ODQ52547  pep supercontig:Saico1:KV454267:251123:259269:1 gen
+    3.7e-08   32.2   0.0     0.0073   15.0   0.0    6.1  7  ODQ56549  pep supercontig:Saico1:KV454254:1325080:1328453:1 g
+    0.00014   20.5   4.6       0.57    8.8   0.1    5.8  5  ODQ51096  pep supercontig:Saico1:KV454275:298471:302130:-1 ge
+    0.00095   17.8   0.0        2.1    7.0   0.0    5.2  6  ODQ54556  pep supercontig:Saico1:KV454259:521474:524534:-1 ge
+     0.0063   15.2   0.6         21    3.7   0.1    5.7  6  ODQ55945  pep supercontig:Saico1:KV454254:34162:37848:-1 gene
+  ------ inclusion threshold ------
+      0.014   14.0   0.0       0.19   10.4   0.0    3.0  3  ODQ54270  pep supercontig:Saico1:KV454260:500446:506835:1 gen
+       0.02   13.5   0.5        2.7    6.6   0.0    3.0  2  ODQ53803  pep supercontig:Saico1:KV454261:34165:39452:1 gene:
+      0.023   13.4   0.2       0.17   10.5   0.0    2.7  2  ODQ50800  pep supercontig:Saico1:KV454276:23462:25642:1 gene:
+      0.023   13.3   0.0       0.08   11.6   0.0    2.0  1  ODQ52530  pep supercontig:Saico1:KV454267:215295:221422:-1 ge
+
+
+Domain annotation for each sequence (and alignments):
+>> ODQ52547  pep supercontig:Saico1:KV454267:251123:259269:1 gene:SAICODRAFT_25841 transcript:ODQ52547 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.0   0.0       1.5   1.2e+03      74     135 ..     517     579 ..     488     606 .. 0.58
+   2 ?    2.3   0.0     0.074        58      96     156 ..     897     957 ..     834     959 .. 0.69
+   3 !  238.0   0.5   2.2e-74   1.7e-71       1     160 []     963    1121 ..     963    1121 .. 0.97
+   4 ?    0.9   0.7       0.2   1.5e+02      81     154 ..    1205    1277 ..    1146    1281 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: -2.0 bits;  conditional E-value: 1.5
+  mTOR_dom  74 glspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135
+               +l   + +e+ +++  + +l++l   + ++ +ta  +a+  +   +g  + p+l+ i+ ++ +
+  ODQ52547 517 TLAAYNpNEFVASYLHKCMLHLLGLLKKEKDRTAPFDAVGRVAIAVGSSMGPYLDAILASIKE 579
+               334444456666666666666665555566666667777777777777777777777766665 PP
+
+  == domain 2  score: 2.3 bits;  conditional E-value: 0.074
+  mTOR_dom  96 kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156
+               +d+s s   ++v++a+ +  +  g   + +++ ++p ++ ++++ +s   r+  l+ L++L 
+  ODQ52547 897 RDAS-SGVASSVLSALGELANVGGEDLLVYIKDLMPLIIDTLHDQSSsVKRDAALKALGQLA 957
+               4544.345666777777777766666688888888888888887777567778888888775 PP
+
+  == domain 3  score: 238.0 bits;  conditional E-value: 2.2e-74
+  mTOR_dom    1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdps 99  
+                V++Pyl+yp+LL+iL+ ilkteqs++iRre++k++GilGALDPy+h+ +e+ +ee ++ e+++ +tdvs+l+vg++psseeyyptvvi++L++ilkdps
+  ODQ52547  963 VIDPYLEYPQLLNILIGILKTEQSSDIRRETVKLMGILGALDPYRHQIIERGTEE-HTLEQKSVSTDVSLLMVGMTPSSEEYYPTVVISSLMNILKDPS 1060
+                9*********************************************999987766.778888899********************************** PP
+
+  mTOR_dom  100 lsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160 
+                l  hhtav+qaim+ifkt+glkcvpfl+qiip +l+v+rtc+++++ef++qqL++Lvsivk
+  ODQ52547 1061 LGAHHTAVIQAIMYIFKTMGLKCVPFLSQIIPGFLHVMRTCSPTILEFYFQQLGILVSIVK 1121
+                ************************************************************8 PP
+
+  == domain 4  score: 0.9 bits;  conditional E-value: 0.2
+  mTOR_dom   81 eyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLat 154 
+                e y++ ++  ++k++++     + ++a++q++ +  ++  ++     ++ii+ l +v++t++ +l+   ++ L+ 
+  ODQ52547 1205 EEYMHLILPVVVKMFEKVDAPvTLRKAAIQTVAQLSRK--VNFSDHASRIIHPLSRVLSTANHELKMASMDTLCA 1277
+                44444555555666654444446666777777776664..55556667777777777777777777766666665 PP
+
+>> ODQ56549  pep supercontig:Saico1:KV454254:1325080:1328453:1 gene:SAICODRAFT_16547 transcript:ODQ56549 gene_biotype:pr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.0      0.46   3.6e+02      87     149 ..     102     163 ..      82     174 .. 0.69
+   2 ?    1.0   0.0      0.18   1.4e+02     104     158 ..     197     252 ..     184     254 .. 0.80
+   3 ?    0.8   0.0      0.21   1.7e+02      87     147 ..     373     432 ..     303     442 .. 0.72
+   4 !   15.0   0.0   9.3e-06    0.0073      73     142 ..     484     552 ..     446     560 .. 0.81
+   5 ?    4.0   0.0     0.022        17     108     138 ..     609     639 ..     584     648 .. 0.84
+   6 ?   -3.6   0.0         5   3.9e+03     109     146 ..     848     885 ..     841     896 .. 0.78
+   7 ?    0.1   0.0      0.35   2.7e+02      80     132 ..     967    1026 ..     949    1048 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.46
+  mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+               v   Ll+ + ++++   +++v +ai +i ++ gl +    p +++al+s  ++ e+ +re  +
+  ODQ56549 102 VHDLLLASFAEEQVVGVRHKVCDAIAEIARH-GLYSSYKWPDLLQALFSCSKSPEAAHRESAY 163
+               5556666667777777778888888888775.7777777777777777777776666666544 PP
+
+  == domain 2  score: 1.0 bits;  conditional E-value: 0.18
+  mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvsi 158
+               + a+++a    + + g +  ++l+ ++pa l+v+  +++ + +e+l   L++L+++
+  ODQ56549 197 RLAALRAYCAFLLEAGSNTRSTLSVLLPACLNVLPPLSTtHDSETLATALTSLIEL 252
+               555666666666778899999**************999988999999999999975 PP
+
+  == domain 3  score: 0.8 bits;  conditional E-value: 0.21
+  mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+               +++ L ++++  + + +++a++ ai  i +  +  + + l++++  +l ++r+ ++++r  
+  ODQ56549 373 AFAYLPNMISSTNWR-QRHAALMAISAIAEGCEKIMKAELSRVLDMVLPLLRDPHPRVRWA 432
+               566677777666665.566788899999999999999999999999999999988887755 PP
+
+  == domain 4  score: 15.0 bits;  conditional E-value: 9.3e-06
+  mTOR_dom  73 vglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                +  +++ e y   +++ Ll++l+ p+    ++++v++i ++    + k v++++ i+p l++v++  ++
+  ODQ56549 484 EECDNATLEPYLDGILERLLALLQSPKK-YVQEQAVTTIATVADAAEAKFVKYYDAIMPLLVNVLKAPDA 552
+               4445566788889999*******99985.588999******************************98665 PP
+
+  == domain 5  score: 4.0 bits;  conditional E-value: 0.022
+  mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvir 138
+               + a   i++ +g + +p+l  ++p ll++++
+  ODQ56549 609 IPAWGRICRVMGKEFLPYLGAVMPPLLEAAK 639
+               666678*********************9877 PP
+
+  == domain 6  score: -3.6 bits;  conditional E-value: 5
+  mTOR_dom 109 qaimsifktlglkcvpflpqiipallsvirtcesslre 146
+               +a +  fkt+++  +p  ++++p + + +++ e+s r+
+  ODQ56549 848 KAFHMTFKTINTAFLPHWERLLPYIGAFLNHPEQSSRQ 885
+               57778899999999999999999999999888887665 PP
+
+  == domain 7  score: 0.1 bits;  conditional E-value: 0.35
+  mTOR_dom   80 eeyypt.vvinaLlkil.....kdpslsshhtavvqaimsifktlglkc.vpflpqiipa 132 
+                e+ y+t  + +a+ kil     k ++l++   a +q++  i+ + +     +fl+++i +
+  ODQ56549  967 ENIYATeNACAAIAKILrfnssKVQNLDQTVVAWIQTLPIICDDEEAPYaYSFLSELIEQ 1026
+                556665578888888886655566666677777777777888777777667777777765 PP
+
+>> ODQ51096  pep supercontig:Saico1:KV454275:298471:302130:-1 gene:SAICODRAFT_27145 transcript:ODQ51096 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.0      0.19   1.5e+02      69     130 ..     417     479 ..     388     486 .. 0.79
+   2 ?    1.9   0.1     0.098        77       8     139 ..     545     600 ..     538     720 .. 0.53
+   3 !    8.8   0.1   0.00073      0.57     105     147 ..     813     855 ..     724     868 .. 0.66
+   4 ?   -0.3   0.0      0.48   3.7e+02     106     149 ..     897     941 ..     846     948 .. 0.70
+   5 ?    3.2   0.0      0.04        31      15     142 ..     967    1087 ..     960    1101 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 0.19
+  mTOR_dom  69 sellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+               +++l +l+    e+ ++  +n++l +l +++l+ + ++  v++i  i+ +l+  + pf  +i+
+  ODQ51096 417 KTALRQLTDKAREFGAAALFNQILPLLMERTLEdQERHLLVKVIDRILYKLDDLVRPFTHKIL 479
+               3345777888899999999*************9777888999999999999988888888886 PP
+
+  == domain 2  score: 1.9 bits;  conditional E-value: 0.098
+  mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavv 108
+                p LL  L  + ++++s++ R   +k++                                                                         
+  ODQ51096 545 IPALLPFLRAVCRSKKSWQARHTGVKIV------------------------------------------------------------------------- 572
+               5666666666666666666665544443......................................................................... PP
+
+  mTOR_dom 109 qaimsifktlglkcvpflpqiipallsvirt 139
+                   +i   +g+  +p l++++  +++ +++
+  ODQ51096 573 ---QQIAILMGCAILPHLKNLVDCIANGLED 600
+               ...3333333333333333333333333332 PP
+
+  == domain 3  score: 8.8 bits;  conditional E-value: 0.00073
+  mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+               + +++   ++++ lg++c ++lpqi++++l  +++ ++++r+ 
+  ODQ51096 813 NIMLNGFGTVVNALGTRCKSYLPQIVSTILWRLNNKSAKVRQQ 855
+               4455556788999***************999988877776665 PP
+
+  == domain 4  score: -0.3 bits;  conditional E-value: 0.48
+  mTOR_dom 106 avvqaimsifktlglkc.vpflpqiipallsvirtcesslrefll 149
+               +++ a+ si++ +g+ + +p ++ ++p l+ ++r+ +++++e  +
+  ODQ51096 897 SILGALKSIVNVVGMTSmTPPIKDLLPRLTPILRNRHEKVQENTI 941
+               555666777777777776777888888888888877777777655 PP
+
+  == domain 5  score: 3.2 bits;  conditional E-value: 0.04
+  mTOR_dom   15 LlnilkteqsqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaim 112 
+                Ll++lk   ++ iRr +++++G +  A+ P+ +  +  ++     + ++ ++ +v  ++v +    e   p +v+ aL++  + p l+  ++ v++++ 
+  ODQ51096  967 LLDMLKAH-KKGIRRAAVNTFGYIAkAIGPQDVLATLLNN-L---KVQERQN-RVC-TTVAIAIVAETCAPFTVLPALMNEYRVPELN-VQNGVLKSLS 1057
+                56666654.6788888888888775588888883333222.1...1222211.122.2345556778888888999999999888887.6788888888 PP
+
+  mTOR_dom  113 sifktlglkcvpflpqiipallsvirtces 142 
+                + f+++g     ++  + p l  ++++ ++
+  ODQ51096 1058 FLFEYIGELAKDYVYAVTPLLEDALTDRDQ 1087
+                888888888888888887777777766665 PP
+
+>> ODQ54556  pep supercontig:Saico1:KV454259:521474:524534:-1 gene:SAICODRAFT_78096 transcript:ODQ54556 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.0     0.082        64     115     155 ..     113     154 ..      72     157 .. 0.76
+   2 !    7.0   0.0    0.0027       2.1      87     158 ..     128     204 ..     125     205 .. 0.82
+   3 ?    1.3   0.0      0.15   1.1e+02     117     137 ..     288     308 ..     253     316 .. 0.84
+   4 ?   -0.2   0.0      0.42   3.3e+02     105     148 ..     425     468 ..     366     475 .. 0.77
+   5 ?   -3.1   0.0       3.3   2.6e+03      91     140 ..     499     547 ..     482     563 .. 0.50
+   6 ?    0.2   0.0      0.33   2.6e+02       9      40 ..     765     797 ..     760     850 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 0.082
+  mTOR_dom 115 fktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+               + t+  +  v   p+++p l+ ++ +++   +e  ++ L+++
+  ODQ54556 113 ITTIVSRGgVIAWPEVLPRLMDMLDNSTGATQEGAFSALCKI 154
+               44433333378889************999********99987 PP
+
+  == domain 2  score: 7.0 bits;  conditional E-value: 0.0027
+  mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifkt......lglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+               v+  L+ +l d+s    ++ + +a+ +i+++      ++ +    l+  ip++l+ +++ +++lre  +  L+++v i
+  ODQ54556 128 VLPRLMDML-DNSTGATQEGAFSALCKICEDssheldQDYNGQRPLNFMIPKFLTFCENPNPKLRENAIFCLNQFVMI 204
+               566899999.888888999999*******9844333333444558999********************9999999987 PP
+
+  == domain 3  score: 1.3 bits;  conditional E-value: 0.15
+  mTOR_dom 117 tlglkcvpflpqiipallsvi 137
+               +l+lk  p+lp+i+p ll+ +
+  ODQ54556 288 DLRLKLEPYLPRIVPMLLKGM 308
+               489999**********99865 PP
+
+  == domain 4  score: -0.2 bits;  conditional E-value: 0.42
+  mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtcesslrefl 148
+               +a v a+  i        +p lp+i p l+s++++ ++ +r+  
+  ODQ54556 425 EAGVLALGAIADGCMDGIMPHLPEIFPYLISLLKDPKPLVRQIT 468
+               55566666666666667799999999999999999888666655 PP
+
+  == domain 5  score: -3.1 bits;  conditional E-value: 3.3
+  mTOR_dom  91 Llkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtc 140
+               Ll+++ d+  +  ++a  +a  +  +  g   +p++  i+ +++ ++++ 
+  ODQ54556 499 LLRMVLDNH-KRVQEAGCSAFANLEEISGAVLLPYMIPILKSFQMAFQKY 547
+               444443333.2234444455555444444555555555555555555544 PP
+
+  == domain 6  score: 0.2 bits;  conditional E-value: 0.33
+  mTOR_dom   9 peLLeiLlnilkte.qsqsiRrevikvlGilGA 40 
+                +L++ L+ +l+ + + +++R ++  +lG lG 
+  ODQ54556 765 EQLMGRLVPLLNAKgTPHTVRENAAITLGRLGL 797
+               589999*****99967999**********9995 PP
+
+>> ODQ55945  pep supercontig:Saico1:KV454254:34162:37848:-1 gene:SAICODRAFT_68361 transcript:ODQ55945 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.6   0.1       1.2   9.2e+02      76     101 ..      29      55 ..      10      65 .. 0.54
+   2 ?    1.1   0.0      0.17   1.4e+02     110     140 ..     191     221 ..     166     243 .. 0.76
+   3 ?    0.5   0.0      0.25     2e+02       9      36 ..     467     494 ..     426     513 .. 0.85
+   4 ?   -0.8   0.0      0.64     5e+02     118     141 ..     588     611 ..     580     616 .. 0.77
+   5 ?   -0.9   0.0      0.73   5.7e+02     110     157 ..     654     701 ..     643     703 .. 0.90
+   6 ?    3.7   0.1     0.027        21     102     157 ..     988    1043 ..     957    1046 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -1.6 bits;  conditional E-value: 1.2
+  mTOR_dom  76 spsseeyypt.vvinaLlkilkdpsls 101
+                + ++++y+    + aL++il++++  
+  ODQ55945  29 KTLKDNVYSRpQSLPALIHILQQNANV 55 
+               444444444434555555555555443 PP
+
+  == domain 2  score: 1.1 bits;  conditional E-value: 0.17
+  mTOR_dom 110 aimsifktlglkcvpflpqiipallsvirtc 140
+                + +i+   +  +v++ ++i+p++++v++++
+  ODQ55945 191 KVSEILDGEDKHSVKMFREILPSMVNVLQEV 221
+               5667777777888999999999999999865 PP
+
+  == domain 3  score: 0.5 bits;  conditional E-value: 0.25
+  mTOR_dom   9 peLLeiLlnilkteqsqsiRrevikvlG 36 
+               p+L+e L+ +l++  ++s+++ v   +G
+  ODQ55945 467 PRLMERLCAVLQSGAATSVKLTVAAAIG 494
+               7788888888888888888877776666 PP
+
+  == domain 4  score: -0.8 bits;  conditional E-value: 0.64
+  mTOR_dom 118 lglkcvpflpqiipallsvirtce 141
+                g    pfl+ i+p l++ +++ e
+  ODQ55945 588 YGADFAPFLEYIVPDLIKSCEQEE 611
+               577789**********99888754 PP
+
+  == domain 5  score: -0.9 bits;  conditional E-value: 0.73
+  mTOR_dom 110 aimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+               a+ +if + +   +p+ ++   al+ ++++  + +r+  +  L  +vs
+  ODQ55945 654 AMGEIFAHTKHAFMPYFEKCTEALMGLTTHFYEGVRKAAFGSLWRFVS 701
+               7789***************************99*******99998887 PP
+
+  == domain 6  score: 3.7 bits;  conditional E-value: 0.027
+  mTOR_dom  102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                +  t v + i++ ++t +  ++ +  q++p l+sv+ +++++l+  + ++L +Lv+
+  ODQ55945  988 QENTPVYNMIIQLYRTNDAIVMGLTGQLLPVLASVLAKADEQLKPKVKEELVELVR 1043
+                55677888999999999999999****************************99997 PP
+
+>> ODQ54270  pep supercontig:Saico1:KV454260:500446:506835:1 gene:SAICODRAFT_6553 transcript:ODQ54270 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.2   0.0       1.8   1.4e+03      27      84 ..     248     309 ..     242     336 .. 0.56
+   2 ?   10.4   0.0   0.00024      0.19      74     152 ..     505     586 ..     472     594 .. 0.84
+   3 ?   -3.3   0.0         4   3.1e+03     121     147 ..     604     631 ..     597     635 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: -2.2 bits;  conditional E-value: 1.8
+  mTOR_dom  27 iRrevikvlGilGALDPykhkeveeks...eee..ekeeenaeetdvsellvglspsseeyyp 84 
+               +R  ++k+l+ +G L    +  +e+     ++   + ++    +t+++++  + s+ ++++++
+  ODQ54270 248 FRNVTLKCLTEIGGLSVGAQ-YNEKFVvmfKSVmtSIQAMVPIATSIKDVYENASSNDQDFIQ 309
+               67777888888887764433.222222221111111111222224444444444444455555 PP
+
+  == domain 2  score: 10.4 bits;  conditional E-value: 0.00024
+  mTOR_dom  74 glspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqqL 152
+                + + +e  +  +vi+ Ll + + +  ++ ++ v + im+i+ +    lk   +fl+ ++++l++ ++++++ ++++  + +
+  ODQ54270 505 AMNEETEKRFLVTVIKDLLGLCEMKRGKDNKAVVASNIMYIVGQypRFLKAhWKFLKTVVNKLFEFMHELHEGVQDMACDTF 586
+               456667999999******************************995534666699***************9999998876655 PP
+
+  == domain 3  score: -3.3 bits;  conditional E-value: 4
+  mTOR_dom 121 kcvpflpqiipallsvirtces.slref 147
+               +  pf+++i+ +l ++++++++ ++  f
+  ODQ54270 604 EHEPFIDEIVRNLSRITNDLQPqQVHTF 631
+               4568888888888888888887555555 PP
+
+>> ODQ53803  pep supercontig:Saico1:KV454261:34165:39452:1 gene:SAICODRAFT_24589 transcript:ODQ53803 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.6   0.0    0.0035       2.7     103     146 ..     397     440 ..     367     451 .. 0.90
+   2 ?    3.7   0.1     0.028        22      59     153 ..     530     640 ..     471     647 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 6.6 bits;  conditional E-value: 0.0035
+  mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146
+                + ++v++  + ++++ + c  +++ ++p l++v++++++++ e
+  ODQ53803 397 VQRTAVTTAANCCRSIPVDCFGTVRDVMPILQNVVTSSDQRVVE 440
+               567889999****************************9987655 PP
+
+  == domain 2  score: 3.7 bits;  conditional E-value: 0.028
+  mTOR_dom  59 eeenaeetdvsellvglspss.eeyypt.vvinaLlkil.............kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.s 143
+               e+e+ +++++ ++++ l++ss e++y+t  vi +Ll  +             +  + +   +a+v+  + ++k  + ++  f + ++p+l+ v  ++ + +
+  ODQ53803 530 ENEEDRKNNSIMVMQALIHSSkEQVYETlNVIGELLPGIpkkekeedkekegEGDTPARKSKAAVENRLAMLKGCKPEVARFAKILLPTLIDVYASTINlN 630
+               22222233333347777777779999996677777755568888888887774444455678888888888888888888888888888888887766667 PP
+
+  mTOR_dom 144 lrefllqqLa 153
+               +r+ +l  L 
+  ODQ53803 631 VRQKVLTALL 640
+               7777777765 PP
+
+>> ODQ50800  pep supercontig:Saico1:KV454276:23462:25642:1 gene:SAICODRAFT_84093 transcript:ODQ50800 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.5   0.0   0.00022      0.17      72     155 ..     272     353 ..     205     356 .. 0.81
+   2 ?   -1.8   0.1       1.3     1e+03     119     148 ..     510     541 ..     480     553 .. 0.48
+
+  Alignments for each domain:
+  == domain 1  score: 10.5 bits;  conditional E-value: 0.00022
+  mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+               ++   + s  + ++v i+a +++l+d   +  +ta+   i   f +l   +  f+++iip++++++++ ++++r  l +qL+ L
+  ODQ50800 272 VTLAASVSASVVKSVLIEAFIRLLSDTEAE-VRTAIAGQIPG-FAKLVDDSALFVERIIPKIQELVNDGSQHVRAALASQLGGL 353
+               33445666889999**********999866.66777777666.5557778899****************************977 PP
+
+  == domain 2  score: -1.8 bits;  conditional E-value: 1.3
+  mTOR_dom 119 glkc.vpflpq.iipallsvirtcesslrefl 148
+                  + v++++q i+p++++++++  +++r  +
+  ODQ50800 510 APAVdVSVVDQyILPTITQLVEDPIPNIRFNV 541
+               22222444444366666666666555555555 PP
+
+>> ODQ52530  pep supercontig:Saico1:KV454267:215295:221422:-1 gene:SAICODRAFT_81229 transcript:ODQ52530 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.6   0.0    0.0001      0.08      10      50 ..     606     648 ..     599     704 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 11.6 bits;  conditional E-value: 0.0001
+  mTOR_dom  10 eLLeiLlnilkte.q.sqsiRrevikvlGilGALDPykhkeve 50 
+               +L++ Ll+i ++  + + +i r    +lGi+GA+DP ++   +
+  ODQ52530 606 DLIRSLLDICSKYhNeHREIERLCAECLGIVGAVDPNRVNAAR 648
+               57777888877664348999999**************995433 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       7034  (2970847 residues searched)
+Passed MSV filter:                       265  (0.0376742); expected 140.7 (0.02)
+Passed bias filter:                      229  (0.0325562); expected 140.7 (0.02)
+Passed Vit filter:                        29  (0.00412283); expected 7.0 (0.001)
+Passed Fwd filter:                         9  (0.0012795); expected 0.1 (1e-05)
+Initial search space (Z):               7034  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.05u 0.02s 00:00:00.07 Elapsed: 00:00:00.04
+# Mc/sec: 9600.25
+//
+[ok]

@@ -1,0 +1,254 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Rozella_allomycis_csf55_gca_000442015.Rozella_k41_t100.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.2e-107  357.8   1.5   5.8e-107  356.4   0.4    2.5  2  EPZ33264  pep supercontig:Rozella_k41_t100:KE561068:60850:683
+    4.6e-59  198.9   5.6    4.6e-59  198.9   5.6    3.0  3  EPZ34656  pep supercontig:Rozella_k41_t100:KE560931:28699:403
+    5.5e-12   44.1   9.9    5.5e-12   44.1   9.9    2.7  3  EPZ33635  pep supercontig:Rozella_k41_t100:KE561047:135099:13
+      9e-05   20.4   1.2      0.067   10.9   0.0    2.8  3  EPZ31055  pep supercontig:Rozella_k41_t100:KE561316:1892:2804
+     0.0014   16.4   8.0       0.12   10.0   8.0    2.4  1  EPZ36186  pep supercontig:Rozella_k41_t100:KE560636:36734:374
+  ------ inclusion threshold ------
+      0.014   13.1  17.4       0.32    8.7   0.1    5.6  4  EPZ32696  pep supercontig:Rozella_k41_t100:KE561117:22702:255
+
+
+Domain annotation for each sequence (and alignments):
+>> EPZ33264  pep supercontig:Rozella_k41_t100:KE561068:60850:68317:-1 gene:O9G_001615 transcript:EPZ33264 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.6   0.0       1.6   1.7e+03     242     291 ..    1266    1284 ..    1234    1297 .. 0.69
+   2 !  356.4   0.4  5.4e-110  5.8e-107       1     343 []    1339    1709 ..    1339    1709 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: -3.6 bits;  conditional E-value: 1.6
+                HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCH CS
+       FAT  242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwal 291 
+                 +++ +k +w ++l++                               w  
+  EPZ33264 1266 KQNFELKESWYEKLHR-------------------------------WEE 1284
+                3455555555555555...............................433 PP
+
+  == domain 2  score: 356.4 bits;  conditional E-value: 5.4e-110
+                CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+       FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                aplaa aaW+l+qW+s+++yls++++d+ d++ff+ai al +n+f+ a+ liek+r+ll+tel+al+gesynray++lvr+Q+++Eleeii++k+    
+  EPZ33264 1339 APLAAGAAWGLKQWESLDDYLSVIREDTADGSFFRAISALNKNDFSLAQGLIEKTRDLLDTELTALIGESYNRAYNVLVRIQMIVELEEIISFKK---Y 1434
+                69*********************************************************************************************...7 PP
+
+                --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT................... CS
+       FAT  100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk..............eewlp 184 
+                +e++  +++ W+kRl+g+q++vevwq+il++Rslv++p+e+       +emw+kfanl+Rk+gr+s+++k  + l +++               e    
+  EPZ33264 1435 PEKQPIIKECWMKRLSGCQRNVEVWQRILKIRSLVMEPEEN-------IEMWIKFANLCRKAGRFSICNKIFLDLFKNNFvfknaevdkvlalkE---- 1522
+                *****************************************.......***************************99999997665544443331.... PP
+
+                T.................................SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCC CS
+       FAT  185 p.................................evvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGe 250 
+                +                                  ++y+ lky+w++ ++ e+l++L +f+ +l+ + e  ++   ++e  +++e +klla+cy+k+G+
+  EPZ33264 1523 SslkgsslkaskslgsgllnsiplnlisfdqsppLIIYSFLKYSWETRDKVETLKSLYDFTLNLAGDLEIRKNSESNSETFSINEHSKLLAKCYHKLGQ 1621
+                1344445555566666666666677777777777**********************************8777777777999****************** PP
+
+                CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  251 wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                ++++l +     ++++ i +a+++at+++p+wykawh+wal+nf+v+s++e++ + + ++++  +vvpav+gf+ks+sls e+slqd+lRlLt
+  EPZ33264 1622 YQKSLLS----DDSHSSIIHAFLEATRFNPEWYKAWHSWALANFQVVSDMEKSGQGN-KQTIVSFVVPAVQGFFKSISLSFENSLQDTLRLLT 1709
+                *****99....4689***********************************8887776.556668****************************8 PP
+
+>> EPZ34656  pep supercontig:Rozella_k41_t100:KE560931:28699:40305:1 gene:O9G_002974 transcript:EPZ34656 gene_biotype:pr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -6.0   3.1         6   6.4e+03      83     126 ..    2578    2621 ..    2575    2623 .. 0.86
+   2 !  198.9   5.6   4.3e-62   4.6e-59       2     343 .]    2633    2980 ..    2632    2980 .. 0.89
+   3 ?   -1.4   0.0      0.35   3.7e+02      17      53 ..    3177    3216 ..    3154    3236 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: -6.0 bits;  conditional E-value: 6
+                CCHHHCHHCCHHCSS----TTTTTTT----TTS-TTTGCCCTTT CS
+       FAT   83 qlaEleeiiqykqklssseelksllktWrkRlpgvqddvevwqd 126 
+                q +E+ e++q k + + ++  +s +  W++R  ++ ++++ w+ 
+  EPZ34656 2578 QAQEMYESVQNKARAGHLQFTESEYYLWEERWIDCTRKLQQWEL 2621
+                567889999999999988888888889***************85 PP
+
+  == domain 2  score: 198.9 bits;  conditional E-value: 4.3e-62
+                CCTTCCCCTSSSGHHCCCCT......TSSSS--CCCHCCC.............CHH--CCHCHHCCCH..CCCCCCCCCTS---SCCCCCHHHHHCCCC CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk..kdspdkaffeaila.............lhrnqfdeaeeliek..arqllvtelsalsgesynraydllvrlQq 83  
+                +l + a W++++W + +e +  +    ++ +k +++a+l+             ++ +q+++ +++ ++  ++q ++ ++++ ++ + + +++llv +Qq
+  EPZ34656 2633 DLLLDAHWHNSDWIQDKELILPLVkqCKNNQKRVYDAFLNllaiqegndkgieFQ-RQYENGKQMFKMiiGIQTCLIKWHSFPNIISSCHIPLLVEFQQ 2730
+                68999**********888876665244445555*******766554444443322.334444444443114688999********************** PP
+
+                CHHHCHHCCHHCSS----TTTTT......TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC................HHCCS-STTCCC..CCCCCH CS
+       FAT   84 laEleeiiqykqklssseelksl......lktWrkRlpgvqddvevwqdilsvRslvlspied................lllkgakaemwl..kfanla 158 
+                  El e+ +++q+ +s ++++++      l+tWr+Rlp+++dd+++w+d++++R++v++ i++                ++++g+++ +w+  +fa++a
+  EPZ34656 2731 WLELNEAFEIYQNFNSNNKQQMIqnvkgaLSTWRDRLPNIWDDISIWSDLVAWRQHVYNSINKvfqpfasepnaaqnasFAFRGYHEIAWIinRFAHVA 2829
+                ************99977777777788888********************************************************************** PP
+
+                CHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCC CS
+       FAT  159 RksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalq 256 
+                Rk+   +++  +L+k+                   y+++++e+++a++kLre+++c l ++e+l++gl  ++ tnl +f++ + a+++++kG +l++++
+  EPZ34656 2830 RKHQLNEVCVGSLNKI-------------------YTLPNIEIQDAFLKLREQTKCFLTSPEDLPTGLRIINDTNLGYFANPQkAEFFTLKGIFLSKMN 2909
+                ****************...................**************************************************************** PP
+
+                CCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT  257 klnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                        ++e+++ +++a+++d ++   w++w++fn++++++          +d+  +  +av+++l++++ + +  s ++l R L+
+  EPZ34656 2910 I-------HDEANKVFQQAVHIDMNLPVGWAAWGHFNDQRFQAT---------KDIA-FCANAVNCYLQAANIYRNyRSKKYLGRSLW 2980
+                *.......9***********************************.........7887.*****************9889998888877 PP
+
+  == domain 3  score: -1.4 bits;  conditional E-value: 0.35
+                CCCCT.......TSSSS--CCCHCCCCHH--CCHCHHCCC CS
+       FAT   17 meeylslmk...kdspdkaffeailalhrnqfdeaeelie 53  
+                me+ ++ +    + +pd+ f++ i+ l  + +++++  ie
+  EPZ34656 3177 MESMVDHIMqrlRATPDEDFYRIIITLLFESYQQFNAKIE 3216
+                44444433377799************99999999998887 PP
+
+>> EPZ33635  pep supercontig:Rozella_k41_t100:KE561047:135099:138169:1 gene:O9G_000410 transcript:EPZ33635 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.8   0.4     0.074        78     223     301 ..      31     102 ..      10     168 .. 0.77
+   2 !   44.1   9.9   5.2e-15   5.5e-12     124     343 .]     206     406 ..     186     406 .. 0.86
+   3 ?   -3.3   0.0       1.3   1.4e+03     119     176 ..     656     716 ..     650     738 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 0.8 bits;  conditional E-value: 0.074
+               -SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHH CS
+       FAT 223 ssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskee 301
+               ++gl+ + ++ +   +++l+  y + G+w  a++         e  l   ++   l+ ++ k+++++ ++ + +l+ e+
+  EPZ33635  31 PDGLQGIVSKFKLRSNNSLSLLYELNGKWSMAASC-------YESLLTENQDDKDLNIKLVKCYNNMNSYDNLILKIEK 102
+               55555566666667777888899999999999999.......8899999999999999999999999988877776663 PP
+
+  == domain 2  score: 44.1 bits;  conditional E-value: 5.2e-15
+               TTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS- CS
+       FAT 124 wqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp.pevvyaylkylwakgeqkealqkLrefvscllekkeels 223
+                +++ls+ + +++  +d+  +  + e wlk+a+ aRk g l+++++aL+k +  d+ +     e+ ++++k+lw+ ++  +a  +L+ f +      e++s
+  EPZ33635 206 SEKLLSLQRAMINQMKDVNNNLLNGEFWLKSAKNARKDGLLEISHSALLKFRCFDDIK--LmGEYELERAKWLWSCNQTLQARVTLESFME-----EENYS 299
+               5677888788887777766777889**************************9999933..3469**************************9.....22444 PP
+
+               SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS....S-TCCHHHHCCT. CS
+       FAT 224 sglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee...pedlseyvvpave 321
+               s ++            + +++ lk + w+++++ +n     s++i q+y++a++ ++ ++k ++  +++   v+ +e+ + ++++    +++ ++++++++
+  EPZ33635 300 SSKT-----------ISCSKIALKISRWMEEASMAN-----SNDIIQSYQSAVKQANVSEKSHYFFGRYISSVYDHERINRSSSSakaFQQTHNLLISSIK 384
+               4433...........35699**************77.....************************************988666555555667789****** PP
+
+               .CCHHHHTTTSSTTTCHHHHHC CS
+       FAT 322 gflkslslssekslqdllRlLt 343
+               +  +s   +s+ +++ l+R+Lt
+  EPZ33635 385 HLARSMIKGSNYIFEALPRFLT 406
+               *********************8 PP
+
+  == domain 3  score: -3.3 bits;  conditional E-value: 1.3
+               TGCCCTTTCCCCTCCCHCCCHC...................HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCH CS
+       FAT 119 ddvevwqdilsvRslvlspied...................lllkgakaemwlkfanlaRksgrlslAekaLkklle 176
+               ++ + + + l++R++ ++p ++                                      k  ++++++kaLk+l++
+  EPZ33635 656 KNAQTRRRQLKIRTYSVTPLNEecgliewvnnticyreiliD----------------YYKEINVDMSHKALKELMQ 716
+               555666666666666666666634333333333222222220................1233344555555555554 PP
+
+>> EPZ31055  pep supercontig:Rozella_k41_t100:KE561316:1892:2804:1 gene:O9G_004906 transcript:EPZ31055 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.1   0.1    0.0018       1.9     210     288 ..      17      92 ..       7     107 .. 0.69
+   2 !   10.9   0.0   6.3e-05     0.067     237     291 ..     155     201 ..     148     206 .. 0.86
+   3 ?    1.7   0.0      0.04        42     245     294 ..     196     238 ..     193     247 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 6.1 bits;  conditional E-value: 0.0018
+               HHHCCTSSCCCSS-SS---................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+       FAT 210 efvscllekkeelssglevq.....eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawht 288
+               +fv c+le+++ l+++ e       +++ l  + k l r+yl++++ + +l +       + ++ + y++a+ +d ++  a+++
+  EPZ31055  17 DFVDCYLERASYLQKNEELNqaitdCSDALVINPKCL-RAYLLRAQIRYKLDQ-------KLQAISDYTKAISIDHNSVIAYYN 92 
+               5666777766633333333333344777777777777.999999999999998.......788888899999998888888776 PP
+
+  == domain 2  score: 10.9 bits;  conditional E-value: 6.3e-05
+               ...HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCH CS
+       FAT 237 ftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwal 291
+               f k+ a+ ++++G+ l++l++        +e+l++ys+a++++p + +++  ++ 
+  EPZ31055 155 FPKE-AKLHALLGMCLEKLKR-------YKEALNSYSTAIKYNPFLVEIYLCMGN 201
+               4455.8***************.......9***************99999887776 PP
+
+  == domain 3  score: 1.7 bits;  conditional E-value: 0.04
+               CCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+       FAT 245 ylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnf 294
+               yl  G  + a+ +       ++++ + y+ a+++  + y a+ ++a+  +
+  EPZ31055 196 YLCMGNVQTAMDN-------IQAAKSLYQNAIRIKVDYYPAYLNLAYTLQ 238
+               5555555666666.......999*********************998765 PP
+
+>> EPZ36186  pep supercontig:Rozella_k41_t100:KE560636:36734:37457:1 gene:O9G_002252 transcript:EPZ36186 gene_biotype:pr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.0   8.0   0.00012      0.12     192     317 ..       3     170 ..       1     188 [. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 10.0 bits;  conditional E-value: 0.00012
+               HHHHHHCCHHHHHSSCCHHHHCCTSSCCC.................SS-SS---..................HH.HHCCCTCCC................. CS
+       FAT 192 lkylwakgeqkealqkLrefvscllekke.................elssglevq.......eptnleeftkll.arcylkkGe................. 250
+               +k+  +++++  a++ L+ f +c   +k                  e       +       + + +++++++l a+ + k++e                 
+  EPZ36186   3 SKLEMSENDRFLAFSILEYFKTCIEGEKIpstkvealkenifkvfmE-------KreklnleQEELKMKKAEELkAQGNVKLSEkcyeeaiklyteaigly 96 
+               67888888888999999999998888877777665444444444342.......14444443444444555555566666666677777778888899888 PP
+
+               CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS........S-TCCHHHH CS
+       FAT 251 wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee.......pedlseyvv 317
+                 +a++ +n+++ k +++ +  ++a ++dp+ +ka+ +++l+  +  ++e++ ++ ++        e++++ + 
+  EPZ36186  97 PKSAIYFGNSQQGKYDQAIEDCHQALKIDPNYTKAYSRLGLAFLQLHNYEKSVENYKKalsfdpnNENIKNALA 170
+               55555556666677999999999999999999999999999988888888766666656777766555555544 PP
+
+>> EPZ32696  pep supercontig:Rozella_k41_t100:KE561117:22702:25576:-1 gene:O9G_000771 transcript:EPZ32696 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.0      0.17   1.7e+02     140     174 ..     263     294 ..     223     336 .. 0.80
+   2 ?    4.0   2.4    0.0082       8.7     243     291 ..     539     586 ..     398     590 .. 0.74
+   3 ?    5.3   0.6    0.0033       3.5     140     215 ..     607     675 ..     590     728 .. 0.68
+   4 ?    8.7   0.1   0.00031      0.32     131     179 ..     732     778 ..     715     806 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.17
+               CHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCC CS
+       FAT 140 dlllkgakaemwlkfanlaRksgrlslAekaLkkl 174
+                   + ++a  w++ a++   +grl++A +++ k 
+  EPZ32696 263 T---NPKHAPGWISAARIEEVAGRLKVARNVIAKG 294
+               3...6678888******************999875 PP
+
+  == domain 2  score: 4.0 bits;  conditional E-value: 0.0082
+               HCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCH CS
+       FAT 243 rcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwal 291
+                   +kG w++a++  ++++ ++ee+++   +a++++p++   w  wa+
+  EPZ32696 539 TLPNRKGLWRRAAYF-EKEHGSREEMEKVLEKAVKYCPQSHVLWLLWAK 586
+               55578999**99999.899999*******************9***9997 PP
+
+  == domain 3  score: 5.3 bits;  conditional E-value: 0.0033
+               CHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCT CS
+       FAT 140 dlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscl 215
+               +   ++ ++++wl   +l  ++++++ A+  L k++e+++     p+v + ++ +  ++g++++a ++ +  +s++
+  EPZ32696 607 S---NANDENIWLAAFKLEYQNNEIERAKVILEKAREQAD----SPRVWMKSAVFERQQGNIEMAKEMCKIGISKY 675
+               4...666788888888888888888888888888855544....35666666666666666666666665555544 PP
+
+  == domain 4  score: 8.7 bits;  conditional E-value: 0.00031
+               TCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT CS
+       FAT 131 RslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk 179
+                + +l+++ +  l+ +k e w++ ++l  k g+++lA+++L k+l+e +
+  EPZ32696 732 ARSILEKARK--LNPKKPELWIEVIRLELKGGNTNLAKSLLAKALQECP 778
+               4556666666..7888999*************************99988 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       6350  (2473668 residues searched)
+Passed MSV filter:                       598  (0.0941732); expected 127.0 (0.02)
+Passed bias filter:                      178  (0.0280315); expected 127.0 (0.02)
+Passed Vit filter:                        22  (0.00346457); expected 6.4 (0.001)
+Passed Fwd filter:                         6  (0.000944882); expected 0.1 (1e-05)
+Initial search space (Z):               6350  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.07u 0.02s 00:00:00.09 Elapsed: 00:00:00.04
+# Mc/sec: 19830.45
+//
+[ok]

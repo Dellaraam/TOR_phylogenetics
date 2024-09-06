@@ -1,0 +1,141 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Saitoella_complicata_nrrl_y_17804_gca_000227095.Scomplicata_3.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   6.3e-112  374.4   0.0   8.4e-112  374.0   0.0    1.1  1  GAO48815  pep supercontig:Scomplicata_3.0:contig017:207220:20
+     0.0089   13.7  52.7      0.011   13.4  52.7    1.1  1  GAO48877  pep supercontig:Scomplicata_3.0:contig018:72378:733
+  ------ inclusion threshold ------
+      0.037   11.6   0.2      0.053   11.1   0.2    1.1  1  GAO51512  pep supercontig:Scomplicata_3.0:contig047:58849:598
+      0.079   10.6  13.5       0.12   10.0  13.5    1.2  1  GAO46606  pep supercontig:Scomplicata_3.0:contig004:368591:37
+
+
+Domain annotation for each sequence (and alignments):
+>> GAO48815  pep supercontig:Scomplicata_3.0:contig017:207220:209584:-1 gene:G7K_2984-t1 transcript:GAO48815 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  374.0   0.0  4.7e-115  8.4e-112       7     664 ..      76     760 ..      71     763 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 374.0 bits;  conditional E-value: 4.7e-115
+  PTHR13335.orig.30.pir   7 edillahlRtsyltsdddgmcerilndd...............dvdlekihsapyppvsssssesllsrpksastpgdsgsedsgssn 79 
+                             ++ +++lRt yl + ddg++er++  +               + +  + +s+p+p++  ++ +    rp+  ++  ds  + +    
+               GAO48815  76 HRFAIHRLRTLYLQNSDDGVAERVISLNpaalntlaykqagwtNAQTRRCYSPPIPAFGDIPFNNT--RPTFRNSLDDSDLVLA---- 157
+                            56789***********************99999999999999988888899888886544444444..2233333333333222.... PP
+
+  PTHR13335.orig.30.pir  80 eaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee 167
+                                  +++ +  r+++++ +r+et  ++           + e  + + +++++de++   +   ++ + k++ ++ s ++++  s+ 
+               GAO48815 158 ------APAGRDTRPGSRRLKRSETGTST-----------QNEGSEFSDDDDYMDEEIALPQ--SMIAFPKRPLRMASNTNTSTPSQG 226
+                            ......24444445555555555555555...........5455555555566666664444..577777777775533332222222 PP
+
+  PTHR13335.orig.30.pir 168 r...........................dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkldseq... 225
+                            +                           ++  ++s+   ++++ k++ +++++ +s + + ++++  +++s +           +   
+               GAO48815 227 TpiadddlktpkvlvtgpsrpnsasrvpKADMGESTAPAVTDTFKDQARKLDPVQSMVATQMNTS--PAMSLA-----------Neat 301
+                            25666666555555544444443333333333333333333333333333333333333333333..222222...........0222 PP
+
+  PTHR13335.orig.30.pir 226 .............lsaeesdslfekkskssstktqkskkpssaa.........................kqsi......sslssaLek 269
+                                         +s e                          a                         +++i      s+l++ +++
+               GAO48815 302 lnvepfeesdasvTSSEY-------------------------AgtigsdtgfqamfttptayhkplpkPRPIstiqpsSALTALFKA 364
+                            222222222222222222.........................133333333333333333333334433333555665999888888 PP
+
+  PTHR13335.orig.30.pir 270 kpsqlnnpfneyakfdgkgvgttaslkidiylplssepdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnk..vnaycLri 355
+                            ++ +  np+  ya f+gkg  + ++l+++iy p   +  +  p++v ++++a V+e+IG+aL++y+e    p+l ++    n+++Lri
+               GAO48815 365 NEAADHNPLAHYAVFSGKG--DLNPLRLKIYRPSGAQ--PTVPWEVLIRSTANVAETIGYALYRYQEDALMPELAPEEfdANRWTLRI 448
+                            8889***************..****************..99***********************************999888****** PP
+
+  PTHR13335.orig.30.pir 356 vEdDGevddDFPpLDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrleeakr..........sagsaneagsslstes. 432
+                            vE+DGe d+DFP+LDr++ is+f f+e+aLveat+++ + n++ +++ ++++++++  +++          +a  +++++++++ +s 
+               GAO48815 449 VEEDGEPDEDFPALDRKKIISEFRFDEFALVEATEAQALVNEATTPNPNKQFTAKPAVTTDgpltsgtpptQAAVNVSSPNTTPRKSa 536
+                            ****************************************777666666666666555555999999998877777777777777779 PP
+
+  PTHR13335.orig.30.pir 433 .....skeslfvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkkyrllkvsepnvivdldrtvesldgleflllrkns 515
+                                 ++e+  +k+++++   +++   t++v  ++ +++vl ++c++++ld++ky  l ++++ ++v  d+tvesl+   +l+l+k++
+               GAO48815 537 nskplPAEPRNLKIRIHPHTEGAPV-STVSVMPETSISEVLGQICRRKNLDRIKY-CLRIPGTSTLVSNDKTVESLNRRLELELIKRK 622
+                            99999***********665555555.888888999********************.******************************** PP
+
+  PTHR13335.orig.30.pir 516 sradgvlekteskssssanatissksaaedsqiqiatvqddlsssayksfkVsrkhkmrfktdrel..gIdgdyieimPvenqkaatk 601
+                              + +        + ++ +a + ++       ++ +++ + + +++y++++V+r+++m+f+ ++e+  +Idgdyi+imP+e+++ +  
+               GAO48815 623 LIDPTY------VPGAPLTANNLRQ---DMLMPGYGAANAVITNASYQKYIVWRRQPMSFMGRHERvlAIDGDYIHIMPSEQKTLF-- 699
+                            554444......3344444444444...4445566778888999******************************************.. PP
+
+  PTHR13335.orig.30.pir 602 fwekqKtisihisqvvacklssknpanFkivvrrendeKrydfeavsaaeaaeIvskinnile 664
+                              e+ Kt+sihi  ++ ck+s+k+panFk vv +++++Krydfea++++eaaeIvsk++ +++
+               GAO48815 700 --ESPKTSSIHIGAIITCKQSRKVPANFKFVVLKARETKRYDFEAINPKEAAEIVSKVRTLMN 760
+                            ..*********************************************************9986 PP
+
+>> GAO48877  pep supercontig:Scomplicata_3.0:contig018:72378:73394:-1 gene:G7K_3041-t1 transcript:GAO48877 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.4  52.7   6.3e-06     0.011      59     239 ..      66     307 ..      41     327 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 13.4 bits;  conditional E-value: 6.3e-06
+  PTHR13335.orig.30.pir  59 srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantav 146
+                            +++++ + +++s+s+ds+s+++ e++++++    ++  +++++++  g++++ses+ s+s+ +++ ++d+ssss   +s +++ ++a 
+               GAO48877  66 DSSTTLKKDESSSSDDSSSDSDEEMTDAKAESTAATTAKNSESDSDSGDESDSESSDSDSDSDSDSDSDSSSSSSGSSSSDSS-SDAS 152
+                            56677778889999999999999999997777777777777777777777777777777777777777777666666666655.5566 PP
+
+  PTHR13335.orig.30.pir 147 kleklrkerrsksasiasseer........dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rqsnkldseq 225
+                            ++++ ++   s++ +  ss+ +        ++ss +s +++++ss++++s  ++ss+ss+ s++ssdsss+s+ +s+ ++ +k+++++
+               GAO48877 153 DSDSDSDVSDSSTPAVTSSS-SepdndsdsSSSSNASSSSSPASSSSSSSASSSSSSSSSNSSSSSDSSSDSDSSSEsEKDEKTEDQK 239
+                            66666666222222222222.1233566666788888888888888888888888888888888888888888888866655555555 PP
+
+  PTHR13335.orig.30.pir 226 ......................................................lsaeesdslfekks 239
+                                                                                    a  s++l++++ 
+               GAO48877 240 pakrvkldvpvklppgtkqpgerfsrikmdeisyaddslkdnsyevahafdeatYGARASKDLLVTRG 307
+                            56667777777777777777777777777777777666666666666666666655555555555555 PP
+
+>> GAO51512  pep supercontig:Scomplicata_3.0:contig047:58849:59824:1 gene:G7K_5611-t1 transcript:GAO51512 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.1   0.2     3e-05     0.053     400     478 ..     156     261 ..     139     269 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 11.1 bits;  conditional E-value: 3e-05
+  PTHR13335.orig.30.pir 400 qtplpreqkkrleeakrsagsaneagsslstes..............................skeslfvkvnlaypgdsvrskttiv 457
+                            ++p  +++++   ++++sag++ +++ s +++                               s  ++++++++ +   s++ +t  +
+               GAO51512 156 APPVASSPTQTQASSQTSAGTSPSPPPSPTKPIptptpalastllasatvittpapttpttttSTPTITLTIRF-S--NSLGDTTLTN 240
+                            334444444444444444444444444444444888888999999999999999999999999999********.5..455689**** PP
+
+  PTHR13335.orig.30.pir 458 vptdvtladvlekackkrkld 478
+                            +p ++t a++ e a +++ l+
+               GAO51512 241 IPETYTAAQIAEAALQQQGLE 261
+                            ****************99986 PP
+
+>> GAO46606  pep supercontig:Scomplicata_3.0:contig004:368591:370300:-1 gene:G7K_0833-t1 transcript:GAO46606 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.0  13.5   6.5e-05      0.12      45     118 ..     289     365 ..     222     385 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 10.0 bits;  conditional E-value: 6.5e-05
+  PTHR13335.orig.30.pir  45 pyppvsssssesll..srpksastpgdsgsedsgssneaetatg.gdtkarrkkpsldqrretqgekqssesessps 118
+                            p +p +++++++ +  ++++++s+p  s + + + + +++++++  ++ +++ +++ +q++++q+++q++++++++s
+               GAO46606 289 PQQPYQQALPQVHTpqAQHQRPSMPTPSPPGQHVQAHQHQHQQQhQQQHQQQHQQQHQQQHQQQHQQQHQQQGPPSS 365
+                            33444455555555678999999999999999999888777665233333333444444444444444444444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       7119  (3658863 residues searched)
+Passed MSV filter:                      1121  (0.157466); expected 142.4 (0.02)
+Passed bias filter:                      328  (0.0460739); expected 142.4 (0.02)
+Passed Vit filter:                        66  (0.00927097); expected 7.1 (0.001)
+Passed Fwd filter:                         7  (0.000983284); expected 0.1 (1e-05)
+Initial search space (Z):               7119  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.19u 0.01s 00:00:00.20 Elapsed: 00:00:00.10
+# Mc/sec: 24271.54
+//
+[ok]

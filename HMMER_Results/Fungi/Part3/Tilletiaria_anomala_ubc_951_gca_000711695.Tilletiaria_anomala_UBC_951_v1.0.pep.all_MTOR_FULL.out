@@ -1,0 +1,368 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Tilletiaria_anomala_ubc_951_gca_000711695.Tilletiaria_anomala_UBC_951_v1.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.8e-63  211.3   4.8    1.7e-59  199.0   0.2    5.6  5  KDN41769  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+      7e-06   24.7   3.9       0.79    8.3   0.2    5.1  4  KDN42069  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+    0.00015   20.4   1.7       0.52    8.9   0.4    5.2  7  KDN53633  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+  ------ inclusion threshold ------
+       0.01   14.4   1.8       0.14   10.8   0.0    3.2  3  KDN44907  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+      0.015   13.9   1.0        2.1    6.9   0.1    3.5  3  KDN43192  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+      0.033   12.8   0.7        7.1    5.2   0.0    3.9  4  KDN37415  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+      0.033   12.8   0.1       0.45    9.1   0.0    3.0  3  KDN52738  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+        1.4    7.5  10.4         66    2.1   0.0    6.4  8  KDN52549  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+
+
+Domain annotation for each sequence (and alignments):
+>> KDN41769  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_76:2383:10117:-1 gene:K437DRAFT_169985 transc
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.1   0.0      0.31   2.6e+02      80     133 ..     315     375 ..     294     387 .. 0.76
+   2 ?    2.5   0.0     0.056        48      36     115 ..     584     674 ..     579     714 .. 0.55
+   3 !  199.0   0.2     2e-62   1.7e-59       1     160 []     763     922 ..     763     922 .. 0.97
+   4 ?    3.1   0.0     0.036        31     101     152 ..     944     996 ..     932    1002 .. 0.82
+   5 ?    2.1   0.0     0.076        64      79     156 ..    1005    1081 ..     997    1084 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 0.1 bits;  conditional E-value: 0.31
+  mTOR_dom  80 eeyyptvvinaLlkil.......kdpslsshhtavvqaimsifktlglkcvpflpqiipal 133
+                +y++   + ++++++       k+++ ++  +++ +a+  +   +g ++ ++++qi+  +
+  KDN41769 315 PQYFADKLLGSVMAMFtdqlrkeKERTPREVNAQTFEAMGLVTAAMGSRMKSYIEQILACV 375
+               556666666677777766666666667778889999999999999***********99766 PP
+
+  == domain 2  score: 2.5 bits;  conditional E-value: 0.056
+  mTOR_dom  36 GilGALDPykhkeveekseee....ekeeenaeetdvsel....lvglspsseeyyptvvinaLlkil......kdpslsshhtavvqaimsif 115
+               ++lGALD +  +++ ++   +    +    n ee++v e+    + +l + +  y +    ++L+++l      +++  ++  ++ ++ +++  
+  KDN41769 584 TVLGALDEHFDRHLAQSEYVRslfiA---LNDEEFAVREMaiviIGRLAKHNPAYVMPSLRKSLIQLLteleyaNQSRCKEEAAKLLTEVVKAS 674
+               69*********999876633344442...33344444444333344455666667666777778888755554422333333333333333333 PP
+
+  == domain 3  score: 199.0 bits;  conditional E-value: 2e-62
+  mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls 101
+               Vv+Pyld+  LL+++++i+k+eq +++Rre+i+v+GilGALDPy++k +e++ +e+ ++  ++  td+ el + + +sse+y+++v+inaL++ilkd+sls
+  KDN41769 763 VVKPYLDHRGLLSTIVKIMKNEQMPAVRRETIRVMGILGALDPYRYKLLEKSPDESGSRIVENGGTDLFELSMAIGTSSEDYFQNVAINALINILKDQSLS 863
+               9************************************************998888766777777899999999**************************** PP
+
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+               +hh+av++a+m++fkt+glkcv+flpqi+pa+l+virtc++ l ef++qqLa+L+si+k
+  KDN41769 864 THHHAVIEAVMYMFKTQGLKCVAFLPQIVPAFLQVIRTCSTGLAEFYYQQLAILISIIK 922
+               *********************************************************97 PP
+
+  == domain 4  score: 3.1 bits;  conditional E-value: 0.036
+  mTOR_dom 101 sshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqL 152
+               ss + ++v+ +  + k l+ +  ++lp ++p++l+++    + +++ +ll+ L
+  KDN41769 944 SSIQLTIVSLVEAVAKALEGEFKSYLPVLLPNMLQTLDGEITpKRQPTLLRIL 996
+               5667889999999***********************98543337777777665 PP
+
+  == domain 5  score: 2.1 bits;  conditional E-value: 0.076
+  mTOR_dom   79 seeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                s e y++ v+  ++k+++ +  s   + a++ ++ +  ++  ++     +++i+ l++v++   +++r   l+ La Lv
+  KDN41769 1005 SIEEYMHLVLPVMVKMFERADAStVLRRAAIVTVGQLSRK--VNFCDHASRVIHPLIRVLNAGGQEVRSAALDTLAALV 1081
+                4466777888999999988888855677777777777764..77799999************999***********998 PP
+
+>> KDN42069  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_73:19899:23773:-1 gene:K437DRAFT_275247 trans
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    5.2   0.0    0.0083       7.1       2     150 ..     551     706 ..     550     712 .. 0.74
+   2 !    8.3   0.2   0.00093      0.79      40     142 ..     740     861 ..     740     879 .. 0.69
+   3 ?    4.0   0.1      0.02        17     104     153 ..     906     956 ..     859     960 .. 0.84
+   4 ?    4.2   0.1     0.018        15      15     142 ..     978    1098 ..     972    1113 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 5.2 bits;  conditional E-value: 0.0083
+  mTOR_dom   2 vePyldypeLLeiLlnilkteqsqsiRrevikvlGil....G.ALDPykhkeveeks...eeeekeeenaeetdvsellvglspsseeyyptvvinaLlki 94 
+               v   l  p LL  L  + ++++s++ R   i+++  +    G A+ P+    v       ++e+++ +++++ ++++l+    p   e +++ v++ L + 
+  KDN42069 551 VASALGIPALLPFLRAVCRSKKSWQARHTGIRIVQQIaimmGcAILPHLKNLVDCVEpglADEQQKVKTMTALALAALAEAAAPYGIESFEN-VLKPLWTG 650
+               55566779999999999999999999988888765432223457888877666654455444466666666677777777777778888877.67777877 PP
+
+  mTOR_dom  95 lkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllq 150
+               ++++  +   +a ++ai +i+  ++    + f++++ p+l++ ++++++++++ +l+
+  KDN42069 651 IRQHRGK-GLAAFLKAIGFIIPLMDSDNtLFFVKEVTPTLIREFQSADEEMKKIVLK 706
+               7777654.7889999********9999988999************999999999887 PP
+
+  == domain 2  score: 8.3 bits;  conditional E-value: 0.00093
+  mTOR_dom  40 ALDPykhkeveeks....................eeeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlg 119
+               ALD  ++k+v e++                    ++e++  +++  ++v++++++l  ++ +e  +   i  L+  +++++++   + +++   ++++ lg
+  KDN42069 740 ALDRRNYKQVVETTvelaqktgvseivarivnelKDESEPFRKMVMETVQKVVASLGAADiDERLEVQLIDGLIYAFQEQTIE--DNVMLEGFGTVVNALG 838
+               77777777777666666555555555544444333334444444456666667777777778888888888888888999988..578899999******* PP
+
+  mTOR_dom 120 lkcvpflpqiipallsvirtces 142
+               +++ p+l+qi++++l  + + ++
+  KDN42069 839 MRVKPYLTQIVSTILWRLGNKNA 861
+               *************9977666555 PP
+
+  == domain 3  score: 4.0 bits;  conditional E-value: 0.02
+  mTOR_dom 104 htavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLa 153
+                +++++ai+ i + +g+ +  p ++ ++p ++ ++r+ +++++e  ++ ++
+  KDN42069 906 LASIISAITAIANVVGMTQmNPPIKDLLPRMTPILRNRHEKVQEASINLIG 956
+               5789*************99789***************99999998887766 PP
+
+  == domain 4  score: 4.2 bits;  conditional E-value: 0.018
+  mTOR_dom   15 LlnilkteqsqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaim 112 
+                Ll++lk   +++iRr +++ +G +  A+ P+ + +v  ++ +     ++ ++   s++   +    e   p ++i  Ll+  ++p l+  +t v++a+ 
+  KDN42069  978 LLDLLKAH-KKAIRRAAVNSFGYIAkAIGPQDVLQVLLTNLR----VQERQSRVCSTV--AIAIVAETTGPFTTIPHLLNEYRQPELN-VRTGVLKALS 1068
+                55666644.788999999999988559999999777654433....233333333333..4455667777888899**********98.89******** PP
+
+  mTOR_dom  113 sifktlglkcvpflpqiipallsvirtces 142 
+                ++f+++g     ++  ii al  ++++ + 
+  KDN42069 1069 FVFEYIGEMGKDYVYAIIGALEDALTDRDH 1098
+                ******999999999999998888776555 PP
+
+>> KDN53633  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_1:406444:410100:1 gene:K437DRAFT_253000 trans
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.1   0.0     0.036        31      40     150 ..      82     197 ..      77     207 .. 0.63
+   2 ?    0.3   0.0      0.27   2.3e+02     108     155 ..     388     436 ..     376     441 .. 0.77
+   3 ?    0.6   0.0      0.22   1.9e+02      88     138 ..     454     517 ..     436     535 .. 0.65
+   4 ?    2.5   0.0     0.056        47      80     135 ..     502     557 ..     481     566 .. 0.83
+   5 !    8.9   0.4   0.00061      0.52      60     142 ..     522     620 ..     509     640 .. 0.71
+   6 ?   -1.1   0.0      0.75   6.3e+02     108     144 ..     629     666 ..     619     681 .. 0.79
+   7 ?   -1.8   0.0       1.2     1e+03      95     139 ..     658     702 ..     640     710 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 3.1 bits;  conditional E-value: 0.036
+  mTOR_dom  40 ALDPykhkeveekseeeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc..vpflpqiipallsvi 137
+               ALD    + v++ks ++ ++e+++++t+  ++++ +   +  +   +  i++Ll+  +++  ++ ++a++qai + +++l+         ++i+ a+++ +
+  KDN53633  82 ALDDAAKQDVKSKSLQTLTTENSQASTQAGQVIAAIAAIEiPQGGWKDLIAQLLAASQNQGNAKLRQAALQAIGFTCESLQSTDslRDQSNEILTAVIQGA 182
+               66666666776666555334444444444444444444444333334467778888888888999999999999999998776545667788888888888 PP
+
+  mTOR_dom 138 rtces..slrefllq 150
+               r+ e+  +++   lq
+  KDN53633 183 RKEEPvpQVQLAALQ 197
+               876543344444444 PP
+
+  == domain 2  score: 0.3 bits;  conditional E-value: 0.27
+  mTOR_dom 108 vqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+               v    si+   + k   p+++q +p++++++r+++  ++++    L+ +
+  KDN53633 388 VMCFGSILDGPDAKTlAPLVEQALPSIIEMLRDTSVPVKDTAAWTLGRI 436
+               55556666666777768999************99988888887777665 PP
+
+  == domain 3  score: 0.6 bits;  conditional E-value: 0.22
+  mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlglkcvp...............flpqiipallsvir 138
+               ++aLl+ l+d+      t++  aim+ ++++g    p               f++ ii++ll++++
+  KDN53633 454 VQALLAALHDQP--RIATNCCWAIMNLCEQMGGPAQPiaenvdlaptspispFYEAIISNLLQATQ 517
+               455566665554..3357777888888888888887766666666666666677777777777665 PP
+
+  == domain 4  score: 2.5 bits;  conditional E-value: 0.056
+  mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135
+                 +y++++ n L +  +d + s+ +t++ +a+ +  ++    c+p +++++ a+l+
+  KDN53633 502 SPFYEAIISNLLQATQRDGNESNSRTSAYEALATAANNAAKDCLPHVSNLLVAVLE 557
+               56899999999999999999999999999999999999999999999988888776 PP
+
+  == domain 5  score: 8.9 bits;  conditional E-value: 0.00061
+  mTOR_dom  60 eenaeetdvsellvglspsseeyyptvvinaLlkil.................kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+               e+n+++++ ++l++   ++ ++  p+ v n L+++l                 + ++ ++ +++  ++i  i++tl+ + +p+ ++i+ +ll++i++ ++
+  KDN53633 522 ESNSRTSAYEALATAANNAAKDCLPH-VSNLLVAVLerqeqlngmaaqlvgmdDRNNWAELQSNLCSVIQAIVRTLQKEIMPIADRIMTSLLTLIQNGTK 620
+               44444444555555555666777777.56777777777778888888888876677777899999999999999999******************97654 PP
+
+  == domain 6  score: -1.1 bits;  conditional E-value: 0.75
+  mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirtces.sl 144
+                 a+  +++ l+    ++l+ ++p +++ +++ e+ +l
+  KDN53633 629 FLAVAAVISALEADFSKYLDAFLPFMVQSLQSHEEyQL 666
+               56888999999999999*******99999998776555 PP
+
+  == domain 7  score: -1.8 bits;  conditional E-value: 1.2
+  mTOR_dom  95 lkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+               l+ +   + ++  v  i  i++ lg  + p+ + ++  l++ +++
+  KDN53633 658 LQSHEEYQLCSISVGLIGDICRALGKGSAPYCETFVKVLFENLSS 702
+               444444455555677788899999999999999988888877665 PP
+
+>> KDN44907  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_47:105856:112342:1 gene:K437DRAFT_224659 tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.7   0.3       2.3   1.9e+03     117     156 ..     136     175 ..     117     232 .. 0.62
+   2 ?    1.1   0.0      0.15   1.3e+02     104     158 ..     316     368 ..     309     370 .. 0.84
+   3 ?   10.8   0.0   0.00016      0.14      11      51 ..     508     547 ..     502     603 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: -2.7 bits;  conditional E-value: 2.3
+  mTOR_dom 117 tlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+               ++++ +v+ +  + + +++v+r +  +  +fl   L+++v
+  KDN44907 136 QVSVYVVSRMMAVPSLFIEVLRLTGMTKTKFLQATLQHIV 175
+               4555555555555555555555444444444444444443 PP
+
+  == domain 2  score: 1.1 bits;  conditional E-value: 0.15
+  mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+               ++avv+++ + +  +g   +++ pqii +l+s + ++  +lr+ +l+   +L+s+
+  KDN44907 316 KKAVVKSLSELIDIVGYFITSITPQIIATLTSNFANA--DLRHEVLKTWRKLISV 368
+               6889999999999999999999999999999999874..6999999998888876 PP
+
+  == domain 3  score: 10.8 bits;  conditional E-value: 0.00016
+  mTOR_dom  11 LLeiLlnilkteqsqsiRrevikvlGilGALDPykhkevee 51 
+               LL iL ++ +  +s +i + + ++lG +GA+DP +    e 
+  KDN44907 508 LLAILARM-EAASSGDIAQLAFQCLGCVGAIDPDRLDIRED 547
+               45555544.3345999******************9944333 PP
+
+>> KDN43192  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_63:18736:22319:-1 gene:K437DRAFT_248568 trans
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.0       1.8   1.5e+03      85     116 ..     446     477 ..     388     516 .. 0.71
+   2 ?    6.9   0.1    0.0025       2.1     105     159 ..     599     654 ..     565     655 .. 0.85
+   3 ?    3.3   0.0     0.031        27      98     152 ..     660     712 ..     656     718 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 1.8
+  mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifk 116
+                ++i+ L +i    s ++h  + v+a++ ++k
+  KDN43192 446 DTAIYLLTSIAVGGSTAQHGVSSVNALIDVVK 477
+               45666777777777777777777777766665 PP
+
+  == domain 2  score: 6.9 bits;  conditional E-value: 0.0025
+  mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvsiv 159
+               ++v++ im+  +tl     p+l+q+ + l+++ ++ ++ ++++f+++ ++ L+++v
+  KDN43192 599 KCVMRLIMTSRHTLAPFHSPILQQLTNVLAEISKNPSNpKFNQFVFESISALIRFV 654
+               567777888888888888888888888888888888888**************987 PP
+
+  == domain 3  score: 3.3 bits;  conditional E-value: 0.031
+  mTOR_dom  98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152
+               ++lss  ++     ++i+++  ++ vpf+ qi+ ++l+  +++  +l e +++ L
+  KDN43192 660 STLSSCEQSLFGPFTTILQSDVVEFVPFVFQILAQMLEQHTSS--DLPEAYVDLL 712
+               5788888999999999999999999999999999999987764..5666666555 PP
+
+>> KDN37415  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_139:13791:17444:-1 gene:K437DRAFT_270869 tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.2   0.0    0.0083       7.1     118     157 ..      76     115 ..      72     118 .. 0.84
+   2 ?    1.2   0.0      0.14   1.2e+02     119     159 ..     263     303 ..     241     304 .. 0.83
+   3 ?    1.2   0.0      0.14   1.2e+02     121     145 ..     531     555 ..     488     563 .. 0.79
+   4 ?   -2.2   0.0       1.6   1.4e+03      72      96 ..     743     767 ..     724     817 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 5.2 bits;  conditional E-value: 0.0083
+  mTOR_dom 118 lglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+               lg +  p+l+q++p +l+ + + +s++r f  + + ++ +
+  KDN37415  76 LGQEIAPYLQQVVPPILQCFIDPDSKIRYFACESFYNIAK 115
+               677889***************9999999998887776655 PP
+
+  == domain 2  score: 1.2 bits;  conditional E-value: 0.14
+  mTOR_dom 119 glkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+               +l+ v+flp ++  ll+++++ ++++r    + La++ + +
+  KDN37415 263 QLELVSFLPAFLDGLLKYLSDPNTDVRVATANVLADFLQKI 303
+               6889*****************99999999999998887765 PP
+
+  == domain 3  score: 1.2 bits;  conditional E-value: 0.14
+  mTOR_dom 121 kcvpflpqiipallsvirtcesslr 145
+                 vpf p+iip++l +i + ++ ++
+  KDN37415 531 VIVPFTPRIIPSILPLIAHHSPAIQ 555
+               4699**********99998887665 PP
+
+  == domain 4  score: -2.2 bits;  conditional E-value: 1.6
+  mTOR_dom  72 lvglspsseeyyptvvinaLlkilk 96 
+               l+++s++se+ y    +++Ll++++
+  KDN37415 743 LAQISSASEDTYFYSFMANLLSLFS 767
+               5667777777666666666666652 PP
+
+>> KDN52738  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_7:192386:196047:-1 gene:K437DRAFT_277459 tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.1   0.0   0.00053      0.45      72     150 ..     486     567 ..     435     577 .. 0.81
+   2 ?   -3.4   0.0       3.6   3.1e+03      80     105 ..     588     613 ..     579     626 .. 0.50
+   3 ?   -1.2   0.0       0.8   6.8e+02      80     138 ..     750     816 ..     713     834 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 9.1 bits;  conditional E-value: 0.00053
+  mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllq 150
+                  +s+ +e  +  +vi+ Ll + + +  ++ ++ v + im+i+ +    lk   +fl+ ++++ ++ ++++++ ++++  +
+  KDN52738 486 SGAMSEETEKRFLVTVIKDLLGLCEMKRGKDNKAVVASNIMYIVGQypRFLKAhWKFLKTVVNKNFEFMHETHEGVQDMACD 567
+               44578888999*********************************995534666699**************999998887655 PP
+
+  == domain 2  score: -3.4 bits;  conditional E-value: 3.6
+  mTOR_dom  80 eeyyptvvinaLlkilkdpslsshht 105
+               +e +   ++++L++i  d s ++ ht
+  KDN52738 588 QEPFVDEILRTLHRITVDLSPQQVHT 613
+               44444445555555555544443332 PP
+
+  == domain 3  score: -1.2 bits;  conditional E-value: 0.8
+  mTOR_dom  80 eeyyptvvinaLl.kil...kdpslsshhtavvqaimsifkt....lglkcvpflpqiipallsvir 138
+                ey+ +  i +Ll +il   +++  +   ++v++++ +i       l+ +  p+l+ +    ls+i+
+  KDN52738 750 LEYINQNFIPSLLdAILgdyRNNVPAARDAEVLNVMATITTRmgslLNEQIQPTLDAVFEPTLSMIN 816
+               5777777777777445555444444455556666666665552222233445666666666666665 PP
+
+>> KDN52549  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_9:182682:187430:-1 gene:K437DRAFT_254134 tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.0     0.078        66     128     159 ..      49      80 ..      35      81 .. 0.75
+   2 ?    1.6   0.0      0.11        93      23      43 ..     190     210 ..     180     243 .. 0.75
+   3 ?   -1.6   0.0         1   8.6e+02     125     155 ..     254     286 ..     239     288 .. 0.75
+   4 ?    1.1   0.0      0.16   1.3e+02      73     106 ..     383     416 ..     345     431 .. 0.66
+   5 ?    0.4   0.1      0.25   2.1e+02     113     156 ..     528     572 ..     500     575 .. 0.73
+   6 ?    0.1   0.0      0.32   2.7e+02       9      38 ..     601     631 ..     596     633 .. 0.77
+   7 ?   -2.7   0.1       2.3     2e+03      92     107 ..     755     772 ..     702     822 .. 0.54
+   8 ?   -2.6   0.0       2.1   1.8e+03      99     145 ..    1017    1062 ..    1001    1068 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 0.078
+  mTOR_dom 128 qiipallsvirtcesslrefllqqLatLvsiv 159
+               + ++++l+++++++ +++++ ++ L++Lv+ v
+  KDN52549  49 RTVNQVLEMMKDTNGEVKNMTVKTLGILVRRV 80 
+               55777888888887788888888888888766 PP
+
+  == domain 2  score: 1.6 bits;  conditional E-value: 0.11
+  mTOR_dom  23 qsqsiRrevikvlGilGALDP 43 
+               ++  +R+ ++  ++ilGA   
+  KDN52549 190 NNAGVRKRAMTAMSILGACAS 210
+               5889**************755 PP
+
+  == domain 3  score: -1.6 bits;  conditional E-value: 1
+  mTOR_dom 125 flpqiipallsvirtces..slrefllqqLatL 155
+                lp ++ a+l ++++ e+  +lre  lq L++L
+  KDN52549 254 RLPDFMTAILPLVNSEEEddELREACLQTLEVL 286
+               467777777777775554459999999999887 PP
+
+  == domain 4  score: 1.1 bits;  conditional E-value: 0.16
+  mTOR_dom  73 vglspsseeyyptvvinaLlkilkdpslsshhta 106
+                  ++ +ee     v+n+L+++lk+  l s   +
+  KDN52549 383 IARTSEREETVRLEVLNTLVALLKQTRLYSAGPQ 416
+               2334445888888888888888888877765555 PP
+
+  == domain 5  score: 0.4 bits;  conditional E-value: 0.25
+  mTOR_dom 113 sifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLv 156
+                if+    ++  + lp+++p ++s i++ + + +   lq  ++L+
+  KDN52549 528 LIFRLHAPQSyEEHLPKVLPIIISGIESRQHRNSTEALQTASELI 572
+               56665555554679*************998877777777666665 PP
+
+  == domain 6  score: 0.1 bits;  conditional E-value: 0.32
+  mTOR_dom   9 peLLeiLlnilkte.qsqsiRrevikvlGil 38 
+                ++++++++ l++  ++q+iR +++k+l il
+  KDN52549 601 QQIYDAVVERLNRPdSDQAIREQALKTLAIL 631
+               5677777777777635999999999999987 PP
+
+  == domain 7  score: -2.7 bits;  conditional E-value: 2.3
+  mTOR_dom  92 lkil.kdpsls.shhtav 107
+               + il ++p+ + + ++++
+  KDN52549 755 VVILiQQPTSQeKVKQEI 772
+               222211111111222222 PP
+
+  == domain 8  score: -2.6 bits;  conditional E-value: 2.1
+  mTOR_dom   99 slsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145 
+                s s  + av+ a+ + + + g    ++l  ++ ++ls++++++ ++r
+  KDN52549 1017 SAS-ARIAVLVAVRFTLTETGATYDELLAPLLVEFLSLLKDSDVEVR 1062
+                433.5667888888888888999999999999999999988877444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       6808  (3543999 residues searched)
+Passed MSV filter:                       275  (0.0403937); expected 136.2 (0.02)
+Passed bias filter:                      246  (0.036134); expected 136.2 (0.02)
+Passed Vit filter:                        21  (0.00308461); expected 6.8 (0.001)
+Passed Fwd filter:                         8  (0.00117509); expected 0.1 (1e-05)
+Initial search space (Z):               6808  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.04u 0.08s 00:00:00.12 Elapsed: 00:00:00.12
+# Mc/sec: 4414.87
+//
+[ok]

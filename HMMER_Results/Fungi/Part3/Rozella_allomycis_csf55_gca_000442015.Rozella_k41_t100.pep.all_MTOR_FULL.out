@@ -1,0 +1,331 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Rozella_allomycis_csf55_gca_000442015.Rozella_k41_t100.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    8.4e-61  203.1  17.5    3.5e-57  191.4   0.4    7.5  7  EPZ33264  pep supercontig:Rozella_k41_t100:KE561068:60850:683
+    3.6e-09   35.3   3.4       0.58    8.6   0.0    6.4  4  EPZ34213  pep supercontig:Rozella_k41_t100:KE560971:1:7571:-1
+    1.9e-05   23.2   1.5    0.00087   17.8   0.0    3.7  3  EPZ34308  pep supercontig:Rozella_k41_t100:KE560959:1:3279:-1
+     0.0003   19.3  12.5       0.13   10.8   1.6    6.0  5  EPZ31586  pep supercontig:Rozella_k41_t100:KE561209:137139:14
+    0.00072   18.1   0.6       0.67    8.4   0.0    3.7  3  EPZ34328  pep supercontig:Rozella_k41_t100:KE560959:55590:589
+    0.00093   17.7   7.2        1.8    7.1   0.1    5.0  5  EPZ31678  pep supercontig:Rozella_k41_t100:KE561209:316527:32
+     0.0011   17.4   6.6      0.012   14.2   0.0    4.1  5  EPZ35366  pep supercontig:Rozella_k41_t100:KE560847:621:5735:
+
+
+Domain annotation for each sequence (and alignments):
+>> EPZ33264  pep supercontig:Rozella_k41_t100:KE561068:60850:68317:-1 gene:O9G_001615 transcript:EPZ33264 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.0   0.0      0.28   2.6e+02      89     143 ..       2      61 ..       1      76 [. 0.74
+   2 ?   -0.4   0.0      0.39   3.5e+02     102     147 ..     144     189 ..     131     201 .. 0.83
+   3 ?   -1.2   0.1       0.7   6.4e+02      82     138 ..     294     347 ..     263     356 .. 0.66
+   4 !    4.9   0.1    0.0092       8.4      88     157 ..     640     710 ..     547     712 .. 0.64
+   5 !  191.4   0.4   3.8e-60   3.5e-57       1     160 []     715     874 ..     715     874 .. 0.97
+   6 !    7.1   0.1    0.0019       1.7      92     156 ..     885     949 ..     880     951 .. 0.88
+   7 ?    3.8   0.5      0.02        18      83     136 ..     999    1049 ..     972    1066 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 0.0 bits;  conditional E-value: 0.28
+  mTOR_dom  89 naLlkilkdpslssh....htavvqaimsifktlglkc.vpflpqiipallsvirtcess 143
+               ++L++il d s+++      ++  + i++i ++++ ++  ++l+ +   ++++i++ + +
+  EPZ33264   2 EELVRILGDLSVTETrvpaSHELYNHITYISREMSAEQfSKYLNDVNKRIFELIHSPSMN 61 
+               578888888777754111157888999********999889***********99987654 PP
+
+  == domain 2  score: -0.4 bits;  conditional E-value: 0.39
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+               + + ++v  +m+  k+    + +++ qii ++  ++r+ ++ +re 
+  EPZ33264 144 HKRLSAVYIVMELAKNAPSLVYSYVGQIIDSIWCALRDPKQVVREA 189
+               556678899999999999999****************999888876 PP
+
+  == domain 3  score: -1.2 bits;  conditional E-value: 0.7
+  mTOR_dom  82 yyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir 138
+               +y t+  + +l+++k+++    + +  ++   i k+++   ++f++qi + +  +++
+  EPZ33264 294 FYLTTFCSHILNMMKKEK---ERGNLFESFGLIAKQVQHSITEFIDQIFSFIKDTLT 347
+               555555555555554443...456777777777777777777777777766665555 PP
+
+  == domain 4  score: 4.9 bits;  conditional E-value: 0.0092
+  mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157
+               ++ Ll  l++++      +++ a+ +  +  g +  p+l++++p +++++++ +s   r   l+ L+ L+s
+  EPZ33264 640 LRVLLPKLDQNNTPGVVGSILFAVGELAHIGGNELRPYLKRLCPIIIQTLQDQSSpMKRMEALKALCRLTS 710
+               444444444444444444555555555555667779***************99888999999***999976 PP
+
+  == domain 5  score: 191.4 bits;  conditional E-value: 3.8e-60
+  mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls 101
+               V+ePy+dyp+LL+ L++ilk eq + iR+e+ ++lG++GALDPy++k+++  +ee+e+  +   e   +e+ v+l p++++yypt+vi++L++ilkd+sls
+  EPZ33264 715 VIEPYVDYPDLLTNLISILKMEQGSGIRKETTRLLGVMGALDPYRYKVTQMDKEESEECFKGLVEVGNEEVSVNLHPTHDDYYPTIVIKSLVRILKDSSLS 815
+               9**********************************************999888887888888999999999****************************** PP
+
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                hht vvqaim+ifkt+g++cv+flpq++  +ls+++ c++ l+ef++qqL++L+ iv+
+  EPZ33264 816 MHHTGVVQAIMYIFKTMGMRCVTFLPQVMDPYLSIMKVCQAGLLEFYFQQLSILIVIVR 874
+               *********************************************************97 PP
+
+  == domain 6  score: 7.1 bits;  conditional E-value: 0.0019
+  mTOR_dom  92 lkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+               +++++++   + +++ ++ i si   ++ +   +lp+++p +l ++++ +s+ ++  ++ L+t++
+  EPZ33264 885 IELINEHWNVNIQNSLLDLIESISVAMNGEFRDYLPKLLPLILGILENDSSEKKQLTFKALQTII 949
+               556666667788889999999***************************999***********997 PP
+
+  == domain 7  score: 3.8 bits;  conditional E-value: 0.02
+  mTOR_dom   83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsv 136 
+                y++  i+ +l+il+ + l+    ++v+a++ i k+l+   + f+p +  +l++ 
+  EPZ33264  999 YSSRFIHPILRILNVHELK---PTCVEALIVIAKQLNKDFIVFIPMVQKSLIKN 1049
+                6666788888888776666...89**********************99988874 PP
+
+>> EPZ34213  pep supercontig:Rozella_k41_t100:KE560971:1:7571:-1 gene:O9G_001825 transcript:EPZ34213 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.9   1.2    0.0022         2      62     160 .]    1163    1261 ..    1064    1261 .. 0.90
+   2 !    8.6   0.0   0.00064      0.58      95     157 ..    1315    1377 ..    1277    1380 .. 0.79
+   3 !    8.3   0.0   0.00084      0.76      83     152 ..    1384    1449 ..    1374    1455 .. 0.82
+   4 ?    4.7   0.0      0.01       9.2      74     153 ..    2055    2137 ..    2024    2140 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 6.9 bits;  conditional E-value: 0.0022
+  mTOR_dom   62 naeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                n +  ++++l+ +++ s+      ++++  Ll+ lk+++ +s ++a v+ + ++      +    lp iip++++v+++++ +++e   + L++++s++
+  EPZ34213 1163 NIQVRNTAQLTSRIIMSNlSSHCVKIILPFLLNGLKESQWRS-KKASVELLGQMAFLAPKQLSINLPIIIPEIANVLNDSHINVQEAAKKALENFTSVI 1260
+                455566777788888888899999999999999999988885.6777899999888777777889**************999************99998 PP
+
+  mTOR_dom  160 k 160 
+                +
+  EPZ34213 1261 R 1261
+                6 PP
+
+  == domain 2  score: 8.6 bits;  conditional E-value: 0.00064
+  mTOR_dom   95 lkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                lk++s +  ++++ + + +++   + +  v +lpqi+p+l +++++ ++++r    + +++L++
+  EPZ34213 1315 LKERSAE-IKKKAAHIVSNMCTLTEKNDfVLYLPQIVPNLKEMLSDPNPDVRSISAKAFGSLIN 1377
+                5555544.667777888888887777767******************99999999988888875 PP
+
+  == domain 3  score: 8.3 bits;  conditional E-value: 0.00084
+  mTOR_dom   83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152 
+                ++   i +Llkil++++l+  +  + qa+ +i+  lg+     l++ +pa+++++ +++ss+re +++ L
+  EPZ34213 1384 FAD-LIPQLLKILNESQLNVDRLGAAQALSEIIYGLGID---KLREMLPAFIKMTCHVSSSVREGFMSLL 1449
+                555.6889**************************99976...5788888888888888888888877766 PP
+
+  == domain 4  score: 4.7 bits;  conditional E-value: 0.01
+  mTOR_dom   74 glspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces...slrefllqqLa 153 
+                ++s+    + pt v+  L++ + ++  +s + +++ +    f++      pflpq++ ++ + +++ +s   + + fll +La
+  EPZ34213 2055 SISTPASKFNPTLVVGPLIRTMAERIPDSLKLSCLITFYILFEKSISSLKPFLPQLLRTFSKSLTENNSlikKQSAFLLGKLA 2137
+                3455558999*********************************999999***********99998776522134445555555 PP
+
+>> EPZ34308  pep supercontig:Rozella_k41_t100:KE560959:1:3279:-1 gene:O9G_000493 transcript:EPZ34308 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.0      0.82   7.4e+02     122     149 ..     332     360 ..     322     363 .. 0.81
+   2 ?    1.4   0.2      0.11        98     111     151 ..     717     757 ..     667     765 .. 0.78
+   3 !   17.8   0.0   9.6e-07   0.00087      14     112 ..     837     929 ..     831     942 .. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 0.82
+  mTOR_dom 122 cvpflpqiipallsvirtces.slrefll 149
+               ++ f+++i  + l+v+++ e+ + ++fl+
+  EPZ34308 332 QIGFIEEITESQLNVMKQEEQkKSLDFLM 360
+               578999***********999877777765 PP
+
+  == domain 2  score: 1.4 bits;  conditional E-value: 0.11
+  mTOR_dom 111 imsifktlglkcvpflpqiipallsvirtcesslrefllqq 151
+               + + +  lg +  +f++qi++++++  ++ + + ++ l++ 
+  EPZ34308 717 MKNLMTLLGNQIGTFMNQIVSQMINFQKDKDLEKEQILFSL 757
+               45666778889999***********9998665666666654 PP
+
+  == domain 3  score: 17.8 bits;  conditional E-value: 9.6e-07
+  mTOR_dom  14 iLlnilkteq.sqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptv...vinaLlkilkdpslsshhtavvqa 110
+                Ll i ++ + +++iR  ++ ++G++GA+DP +      ++++e          ++++l  ++ +   e+        +  L +  kd+sl++ ++ ++q 
+  EPZ34308 837 SLLAIGSSFKdNKEIRILIVECIGLIGAIDPERLELKMIETKSE--------FLTLQTL--ETASVCREFAVEFisnKLGPLFMSTKDSSLQDKYAFTIQQ 927
+               5666666654499*******************983222212111........1111111..1111112232222000333334444666666666666665 PP
+
+  mTOR_dom 111 im 112
+               ++
+  EPZ34308 928 VL 929
+               54 PP
+
+>> EPZ31586  pep supercontig:Rozella_k41_t100:KE561209:137139:140060:-1 gene:O9G_000064 transcript:EPZ31586 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.6   0.2     0.022        20      88     138 ..     144     196 ..      50     214 .. 0.72
+   2 ?   -1.3   0.0      0.73   6.7e+02     119     155 ..     404     441 ..     372     446 .. 0.70
+   3 !   10.8   1.6   0.00014      0.13      96     159 ..     568     632 ..     510     633 .. 0.82
+   4 ?    3.7   0.1     0.021        19      82     141 ..     680     740 ..     639     755 .. 0.77
+   5 ?    2.4   0.0     0.053        48     101     154 ..     753     811 ..     748     816 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 3.6 bits;  conditional E-value: 0.022
+  mTOR_dom  88 inaLlkilkdpsls.shhtavvqaimsifktlglkc.vpflpqiipallsvir 138
+               + +L++ ++ p  + + ++a+++ai +i+++++      + ++++ a+++ +r
+  EPZ31586 144 VPTLVNYMSSPESDvNRKKATMEAIGFICEQVDSDAiKVYSNNLMTAIFQGAR 196
+               34566667776666677778888888888888887744455667777776665 PP
+
+  == domain 2  score: -1.3 bits;  conditional E-value: 0.73
+  mTOR_dom 119 glkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+               +    + fl++ +p ll ++++ ++++r+ +   ++++
+  EPZ31586 404 ESPLfTDFLRNALPVLLDLMNDPSADVRDSVAWTVGEI 441
+               44444678999999999999998888888776666555 PP
+
+  == domain 3  score: 10.8 bits;  conditional E-value: 0.00014
+  mTOR_dom  96 kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvsiv 159
+                d sls+ +++++++i   +k lg k+vp+ +q++  ll++++ +++ ++ + +l+ ++++  +v
+  EPZ31586 568 VDDSLSEVQSNILSVIDALVKRLGKKMVPVADQLMTLLLNILSCSKNtTVADDILNVIKEICGVV 632
+               799***************************************98777788888888887777665 PP
+
+  == domain 4  score: 3.7 bits;  conditional E-value: 0.021
+  mTOR_dom  82 yyptvvinaLlkilkdpslsshhtavvqai.msifktlglkcvpflpqiipallsvirtce 141
+                y    +n+L  il+dp+++ + ++ v  i   i  +++    ++ + + + l+++i+++e
+  EPZ31586 680 SYCDNFMNSLWIILQDPNVERQTKTLVFGIfGDIAVSIESSFSKYFESVQNVLFHAISSIE 740
+               4666789*************66666555542689999999999999999999999988776 PP
+
+  == domain 5  score: 2.4 bits;  conditional E-value: 0.053
+  mTOR_dom 101 sshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtces..slrefllqqLat 154
+                ++h++++ +  sif+   ++ +c ++ +p+i++ + +vi+++++  s  +  l  L++
+  EPZ31586 753 VQMHETIMGSFSSIFRGlaQNSQClLSSVPNILQFIHTVINDAHRpeSTTKAALGLLGD 811
+               579999999******98556778888888888888888888776544566666666655 PP
+
+>> EPZ34328  pep supercontig:Rozella_k41_t100:KE560959:55590:58935:-1 gene:O9G_000515 transcript:EPZ34328 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.5   0.0       1.7   1.6e+03     108     140 ..     369     401 ..     361     410 .. 0.74
+   2 !    8.4   0.0   0.00074      0.67      74     152 ..     485     566 ..     431     574 .. 0.82
+   3 !    5.5   0.1    0.0061       5.5      63     151 ..     627     713 ..     581     716 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: -2.5 bits;  conditional E-value: 1.7
+  mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirtc 140
+               +q +  ++ ++g +  +++ q++++l +v+ + 
+  EPZ34328 369 IQMMPLMVGEQGARRAEMYGQVLSNLRHVMINQ 401
+               666666777888888888899998888888654 PP
+
+  == domain 2  score: 8.4 bits;  conditional E-value: 0.00074
+  mTOR_dom  74 glspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqqL 152
+                + + se  +  +vi++Ll +++ +  ++ ++ v   im+i+ +    l+    fl+ ++ +l++ +++ ++ +r++  + +
+  EPZ34328 485 AMDEESEKRFLITVIRELLGLVELKRGKDNKAIVAANIMYIVGQypRFLRAhWRFLKTVVRKLFEFMHEYHEGVRDMACDTF 566
+               4566679999999*****************************994433555589***************9999998876655 PP
+
+  == domain 3  score: 5.5 bits;  conditional E-value: 0.0061
+  mTOR_dom  63 aeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqq 151
+               ++++ +s+l+    ++ +e   + + +  ++i+kd    +   +v+++ +  +k++g   v+ l +i + llsv + +++ ++e +++q
+  EPZ34328 627 MQTQLISKLMELPNKTWDEIVRS-ASQD-IMIFKDYEKVKVLVNVLKTNVAACKSIGGPFVSQLGRIYHDLLSVYNAISKFVSESVISQ 713
+               33344444444444444444444.2222.45779999999999999999***************************9999888887765 PP
+
+>> EPZ31678  pep supercontig:Rozella_k41_t100:KE561209:316527:320099:1 gene:O9G_000157 transcript:EPZ31678 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.4   0.0      0.38   3.5e+02      74     130 ..     404     461 ..     370     468 .. 0.78
+   2 !    5.8   0.1    0.0049       4.4       6     156 ..     525     682 ..     520     703 .. 0.69
+   3 !    7.1   0.1    0.0019       1.8      54     147 ..     744     836 ..     710     852 .. 0.64
+   4 ?   -2.7   0.0       1.9   1.8e+03     112     147 ..     884     920 ..     858     928 .. 0.62
+   5 ?    4.4   0.0     0.013        11      16     133 ..     949    1059 ..     939    1081 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: -0.4 bits;  conditional E-value: 0.38
+  mTOR_dom  74 glspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+               +l+    e+ +   +n++l +l  p+l+ + +++ v++i  ++ +l+  + p++ +i+
+  EPZ31678 404 QLTMNAREFGAGPLFNQILPLLMSPTLDdQERHMLVKVIDRVLYKLDDLVRPYVHKIL 461
+               4444557777777889999999999999888899999999999999888888888886 PP
+
+  == domain 2  score: 5.8 bits;  conditional E-value: 0.0049
+  mTOR_dom   6 ldypeLLeiLlnilkteqsqsiRrevikvlGil....G.ALDPykhkeveeks...eeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdp 98 
+               l  p+LL  L  + k+++s++ R   ik++  +    G A+ P+    ve+ +   ++e+++ ++ +  ++++l+   sp   e ++ +v++ L k ++++
+  EPZ31678 525 LGIPSLLPFLKAVCKSKKSWQARHTGIKIVQQIailmGcAVLPHLTSLVETIAeglKDEQQKVKTITGLALAALAEASSPYGIESFS-IVLEPLWKGIRQQ 624
+               567899999999999999999998777765433122445888888866664443332224444444444455555555666666654.6888888888777 PP
+
+  mTOR_dom  99 slsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLv 156
+                 +   ++ ++ai  i+  ++ +    ++++++  l + ++t ++++++ +l+ +++ v
+  EPZ31678 625 RGK-VLASFLKAIGCIIPLMDSEYaNYYVKEVMEVLRREFQTPDEEMKKIVLKVIKQCV 682
+               755.7788888888888888888855577888888888888888888888888776655 PP
+
+  == domain 3  score: 7.1 bits;  conditional E-value: 0.0019
+  mTOR_dom  54 eeeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+               ++e++  +++   +++++++++ + + ++   + +i   l  +++++ +     v++   +++++lg+++ pfl+ i++++l  +++ ++++r+ 
+  EPZ31678 744 KDESEVFRRMVMDSMNQIIKNIGSLDfDDRLIQLMIDGCLFAFQEQTED--SFVVMNCFGTVVQSLGIRSKPFLNTICSTILWRLNNKSAKVRQQ 836
+               3333344444445666667777777778888888888777777777755..4578889999********************99998877766554 PP
+
+  == domain 4  score: -2.7 bits;  conditional E-value: 1.9
+  mTOR_dom 112 msifktlglkc.vpflpqiipallsvirtcesslref 147
+                si++ +g++   p ++ ++p l+ ++r+ +++++e 
+  EPZ31678 884 KSIVNVIGMNEmKPPIKDLLPRLTPILRNRHEKVQEN 920
+               4455555555545566666666666666666666655 PP
+
+  == domain 5  score: 4.4 bits;  conditional E-value: 0.013
+  mTOR_dom   16 lnilkteqsqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsel.lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaim 112 
+                l+++k +q++siRr++++++G +  A+ P+ +  +  ++   +     ++e ++    +  +    e+  p +v+ aL++  + p  +  ++ v++a+ 
+  EPZ31678  949 LEMVK-SQKKSIRRSAVNTFGFISkAIGPQDVLATLLNNL--K-----VQERNMRICtTIAIAIVAENCGPFTVLPALMNEYRVPEAN-VQNGVLKALS 1038
+                44555.4689999999999999865999998833332221..2.....2222222222234556678888999999999999888865.7888999999 PP
+
+  mTOR_dom  113 sifktlglkcvpflpqiipal 133 
+                + f+++g     ++  + p l
+  EPZ31678 1039 FLFEYIGEIARDYIYSVTPML 1059
+                999988888888888877766 PP
+
+>> EPZ35366  pep supercontig:Rozella_k41_t100:KE560847:621:5735:-1 gene:O9G_003020 transcript:EPZ35366 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.1      0.86   7.8e+02      94     155 ..     237     302 ..     195     305 .. 0.50
+   2 ?    3.8   0.1     0.019        18     100     153 ..     309     364 ..     282     369 .. 0.84
+   3 ?   -3.9   0.0       4.5   4.1e+03     110     131 ..     607     628 ..     599     641 .. 0.79
+   4 ?   -2.5   0.2       1.7   1.6e+03     142     142 ..     745     745 ..     687     797 .. 0.49
+   5 !   14.2   0.0   1.3e-05     0.012      24     155 ..     929    1073 ..     921    1078 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 0.86
+  mTOR_dom  94 ilkdpslsshhtavvqaimsifktlglkc.vpflpqiipall..svirtces.slrefllqqLatL 155
+               ++ +++    + +v++ +++++++l+++   p+l   + +++  ++++ +++ +l +  ++ L++L
+  EPZ35366 237 LFGEHTNMRLQLTVLKFVLNVIENLQIENiAPILASGLEKFVfeNAMNLAQNeNLINLSFKCLSVL 302
+               334444445566677777777777777665666666555554334555555456666666666655 PP
+
+  == domain 2  score: 3.8 bits;  conditional E-value: 0.019
+  mTOR_dom 100 lsshhtavvqaimsifktlglkc.vpflpqiipallsvirtces.slrefllqqLa 153
+               l + + ++v+ +   +++ g k  v  ++q i +l+++++  ++ ++++fl++qL+
+  EPZ35366 309 LYERQVEMVKRMFGLLRDSGNKNiVYSVQQCIVSLAKALKYFDEkEMKKFLFEQLN 364
+               456677788888889999999988999***************999**********7 PP
+
+  == domain 3  score: -3.9 bits;  conditional E-value: 4.5
+  mTOR_dom 110 aimsifktlglkcvpflpqiip 131
+                +m++fk+ + k ++f+ +++ 
+  EPZ35366 607 LLMKMFKSGKEKNLEFVGRVLA 628
+               5799999999999999988874 PP
+
+  == domain 4  score: -2.5 bits;  conditional E-value: 1.7
+  mTOR_dom 142 s 142
+               +
+  EPZ35366 745 E 745
+               1 PP
+
+  == domain 5  score: 14.2 bits;  conditional E-value: 1.3e-05
+  mTOR_dom   24 sqsiRrevikvlGilGALDPykhkeveeks.........eee...ekeeenaeetdvsel..lvglspsseeyyptvvinaLlkilkdpslsshhtavv 108 
+                ++s+R+ +i + ++lG L+ +     ++++         + +   e+ e+++++t+ s      ++sps++      +i  Ll+    +s+++ ++  +
+  EPZ35366  929 KESVRLAAISTCTTLGNLTLTDIGYDNGNAavtssntfeS-HhtvEQVETTSPSTSNSPStsSPSTSPSNTSNTLECTIPFLLNSGLSSSVDQVRSFSL 1026
+                6788888888888888888777744444444444433320.1223222222222222222245666889988888889999999999************ PP
+
+  mTOR_dom  109 qaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155 
+                + i+si+k+ +    pf+  +i++ll+ ++++e+s+ ++   +L++L
+  EPZ35366 1027 KIILSICKSSSSTLKPFIIPLISKLLESLSELEPSIFNYASFHLNDL 1073
+                ******************************99997766655555554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       6350  (2473668 residues searched)
+Passed MSV filter:                       445  (0.0700787); expected 127.0 (0.02)
+Passed bias filter:                      280  (0.0440945); expected 127.0 (0.02)
+Passed Vit filter:                        25  (0.00393701); expected 6.4 (0.001)
+Passed Fwd filter:                         7  (0.00110236); expected 0.1 (1e-05)
+Initial search space (Z):               6350  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 0.06u 0.04s 00:00:00.10 Elapsed: 00:00:00.09
+# Mc/sec: 4394.58
+//
+[ok]
