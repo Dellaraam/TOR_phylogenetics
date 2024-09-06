@@ -1,0 +1,520 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Candida_albicans.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.9e-69  230.6  20.1    4.4e-66  220.2   0.9    7.4  9  XP_714879.2  phosphatidylinositol kinase-related protein kina
+    7.8e-08   30.9   0.1       0.14   10.6   0.1    6.7  7  XP_717622.2  uncharacterized protein CAALFM_C108110WA [Candid
+      2e-06   26.3   8.4     0.0091   14.4   0.1    5.4  6  XP_715016.1  snoRNA-binding rRNA-processing protein [Candida 
+    5.9e-05   21.6   0.6        3.1    6.2   0.0    6.6  6  XP_717136.2  Gcn1p [Candida albicans SC5314]
+     0.0034   15.8   9.0       0.41    9.0   0.0    5.9  6  XP_720428.1  mRNA-binding U2 snRNP complex subunit [Candida a
+     0.0037   15.7   8.3       0.21   10.0   0.0    6.2  7  XP_718510.2  uncharacterized protein CAALFM_C105630CA [Candid
+     0.0057   15.1   0.1     0.0057   15.1   0.1    3.9  2  XP_716758.2  histone acetyltransferase [Candida albicans SC53
+     0.0085   14.5   0.3      0.091   11.2   0.0    3.0  3  XP_712928.2  DNA-binding ATPase [Candida albicans SC5314]
+  ------ inclusion threshold ------
+      0.011   14.1   3.4       0.14   10.5   0.0    3.7  3  XP_715374.2  uncharacterized protein CAALFM_C202720WA [Candid
+      0.015   13.7   1.2      0.077   11.4   1.2    2.2  1  XP_711598.2  uncharacterized protein CAALFM_C403500CA [Candid
+      0.043   12.2   0.0        2.9    6.3   0.0    2.5  2  XP_714875.1  deoxyhypusine monooxygenase [Candida albicans SC
+        7.7    4.9   9.7       0.57    8.6   0.3    3.3  4  XP_722563.2  uncharacterized protein CAALFM_C202040WA [Candid
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_714879.2  phosphatidylinositol kinase-related protein kinase [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.6   0.0       3.2   1.6e+03     102     140 ..     166     204 ..     127     233 .. 0.63
+   2 ?   -1.4   0.0       1.4   6.8e+02      96     138 ..     356     398 ..     298     415 .. 0.72
+   3 ?   -2.8   0.0       3.6   1.8e+03      93     114 ..     471     492 ..     418     510 .. 0.73
+   4 !    8.0   0.0    0.0017      0.85      22     155 ..     685     826 ..     627     828 .. 0.62
+   5 !  220.2   0.9   8.8e-69   4.4e-66       1     160 []     833     991 ..     833     991 .. 0.98
+   6 ?    2.3   0.0     0.099        50     102     155 ..    1016    1069 ..    1002    1073 .. 0.83
+   7 ?   -1.3   0.0       1.3   6.4e+02     118     156 ..    1072    1110 ..    1064    1114 .. 0.82
+   8 ?    0.3   0.0      0.41     2e+02      87     135 ..    1122    1169 ..    1115    1176 .. 0.87
+   9 !    6.3   0.2    0.0059         3      50     155 ..    1802    1913 ..    1794    1916 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -2.6 bits;  conditional E-value: 3.2
+     mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtc 140
+                  + ++a++  i+s   + ++   p+++q++ +l + +r+ 
+  XP_714879.2 166 NRRHAAILIITSLADNASTLLYPLINQVLENLWTPLRDH 204
+                  333444444444444444445555666665555555544 PP
+
+  == domain 2  score: -1.4 bits;  conditional E-value: 1.4
+     mTOR_dom  96 kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                  ++++ ++ ++a+ ++i  i  ++g ++ ++l+ i+ ++ + ++
+  XP_714879.2 356 NNETANTDKSAIFKSIGLIALEVGNQMATYLDAILDNIREGLS 398
+                  5566667888899999999999999999999999988876555 PP
+
+  == domain 3  score: -2.8 bits;  conditional E-value: 3.6
+     mTOR_dom  93 kilkdpslsshhtavvqaimsi 114
+                  +++ + sls+h ++v+q++++ 
+  XP_714879.2 471 MMFANCSLSKHMQDVLQVLIEN 492
+                  3445566666666666666543 PP
+
+  == domain 4  score: 8.0 bits;  conditional E-value: 0.0017
+     mTOR_dom  22 eqsqsiRrevikvlGilGALDPykhkeveeks........eeeekeeenaeetdvsel..lvglspss..eeyyptvvinaLlkilkdpslsshhtav 107
+                  ++   +R+ +i++lG l  ++P       +k+        e     ++++++ + s++     +s+s+  +  y + ++ aLl   kd s ss  +++
+  XP_714879.2 685 DEVFGVRKVAIQILGRLSCINPAYIVPSLRKTliqllsklE----YSTTSRKKEESAIllSLLISNSKelTRPYVKPIVDALLPKAKDLS-SSVASSA 777
+                  33455666677777777777765553222222565544221....222222222233311222222221244455567788888888877.4588999 PP
+
+     mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatL 155
+                  ++ + +     g    pf+p ++p +l ++++ +s   r+  l+ L++L
+  XP_714879.2 778 IKCLGELSVVGGEDLKPFIPDLMPLILDTFQDQSSsYKRDAALRTLGQL 826
+                  999999988888888****************999878889999999888 PP
+
+  == domain 5  score: 220.2 bits;  conditional E-value: 8.8e-69
+     mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdp 98 
+                  V++P+ldyp+LL++L+ ilk+e+s++i+re++++lGilGALDPykh+eve++s++    e+na+  dv++l++g+sps+eeyyp+v+i++L+kilkdp
+  XP_714879.2 833 VIQPLLDYPQLLGMLVAILKSETSPDIKRETVRLLGILGALDPYKHREVEQNSKN-IPVEQNAPPVDVALLMQGMSPSNEEYYPKVAITNLMKILKDP 929
+                  9************************************************987755.88999************************************* PP
+
+     mTOR_dom  99 slsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                  sls hht+v+qa+m+if+tlgl+cv+flpqiip +++v++tc+ s+++f++qqL+++v ivk
+  XP_714879.2 930 SLSIHHTKVIQAVMYIFQTLGLRCVAFLPQIIPGIINVMHTCQLSMLKFYFQQLGDIVLIVK 991
+                  ************************************************************98 PP
+
+  == domain 6  score: 2.3 bits;  conditional E-value: 0.099
+     mTOR_dom  102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155 
+                   + + +++++i s+ + l+ +  ++lp+++  ++ v+++ +s  r   l+ L+++
+  XP_714879.2 1016 NIQVTIINVIQSVSRALDGEFKMYLPEVLTLMIGVFEEDKSAKRSPSLHVLKSF 1069
+                   5678899*****************************998777777777666665 PP
+
+  == domain 7  score: -1.3 bits;  conditional E-value: 1.3
+     mTOR_dom  118 lglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                    g +  +f++ i+p+++++++t + +lr   ++ ++ L 
+  XP_714879.2 1072 FGSNIEEFVDIIVPHIVKLFETGPVELRRAAIETIGRLS 1110
+                   6677788999************99999999999888875 PP
+
+  == domain 8  score: 0.3 bits;  conditional E-value: 0.41
+     mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135 
+                   +i+ +l+il + +++  ++++++++++++ +lg + + f+p i  +ll+
+  XP_714879.2 1122 IIHPILRILGQGNID-LRESCINTLTYMLVQLGPEFTVFIPVIKKTLLQ 1169
+                   688899999888877.8999********************999888775 PP
+
+  == domain 9  score: 6.3 bits;  conditional E-value: 0.0059
+     mTOR_dom   50 eekseee...ekeeenaeetdvsellvglspsseeyyptvvi...naLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139 
+                   e++++++   ++++++a+ + ++++  +++ps + +++++++   n+L  +l+  +l      + +a   + +  ++  +    +++p+l+s i++
+  XP_714879.2 1802 EQQKQQQqqqQQQQQQANIIPIEAVQRHVIPSIKGFFHSIALsnsNSLQDMLRLLTLWFKFGGIPEAAKAMTEGFNMVKIDNWLEVVPQLISRIHQ 1897
+                   333333222244445555566777788999**********9844468999**9999999999999999999999999999999999*********9 PP
+
+     mTOR_dom  140 cesslrefllqqLatL 155 
+                    ++ ++  l+  L++L
+  XP_714879.2 1898 PNEIVSRSLFALLTDL 1913
+                   9999999999999988 PP
+
+>> XP_717622.2  uncharacterized protein CAALFM_C108110WA [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.5   0.0      0.73   3.7e+02      91     147 ..      47     104 ..       9     111 .. 0.73
+   2 ?    2.3   0.0     0.099        50      97     150 ..     111     163 ..      99     167 .. 0.80
+   3 ?    0.7   0.0      0.31   1.6e+02     109     157 ..     201     253 ..     189     255 .. 0.63
+   4 !   10.6   0.1   0.00028      0.14      76     139 ..     486     548 ..     433     568 .. 0.78
+   5 ?    5.4   0.0     0.011       5.3     110     146 ..     609     646 ..     597     648 .. 0.87
+   6 ?   -0.8   0.1      0.88   4.4e+02     106     146 ..     883     923 ..     812     934 .. 0.58
+   7 ?   -0.2   0.0      0.59     3e+02     104     156 ..     969    1021 ..     954    1023 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -0.5 bits;  conditional E-value: 0.73
+     mTOR_dom  91 Llkilkdpslsshhtavvqaims.ifktlglkcvpflpqiipallsvirtces.slref 147
+                  Ll  l +++ +   +++++a  s +f+ + +k+ + l+ +    + vi +  + ++r  
+  XP_717622.2  47 LLVFLAEQACQ-GNNDTIRAFASvMFRRMAIKSPKELQSVTDRTIGVIGEPARqQIRGI 104
+                  55555555544.45566666644278899999999999999999999887766566555 PP
+
+  == domain 2  score: 2.3 bits;  conditional E-value: 0.099
+     mTOR_dom  97 dpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150
+                   p+ ++ +++  +ai ++ k+ +     + +++ipal++++r+ ++s+re  ++
+  XP_717622.2 111 SPQSNQVRHKLSDAISEVAKE-DASPAGTWNELIPALFEATRNEDPSFRESAFR 163
+                  566667777788888888886.6666788999***********999****9996 PP
+
+  == domain 3  score: 0.7 bits;  conditional E-value: 0.31
+     mTOR_dom 109 qaimsifktlglkcvpflpqiipalls....virtcesslrefllqqLatLvs 157
+                  +a +  f++l  +  ++l+ ++p+ll+     +++ +++ +  +l+ L +Lv+
+  XP_717622.2 201 TAFVAFFRKLPKNTWKLLSPLLPNLLNslprFLQNGQDHALASVLEALIDLVE 253
+                  56666777777777776666666666622225556666777777777777765 PP
+
+  == domain 4  score: 10.6 bits;  conditional E-value: 0.00028
+     mTOR_dom  76 spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                  ++   e y    +n+Ll +l+ p+    +++v+++i  i    +   v++++ ++p l++v+rt
+  XP_717622.2 486 TKEVLEPYLDDLLNNLLILLQSPKR-YVQEQVLTTIAIIADAAEKTFVKYYDTLMPLLVNVLRT 548
+                  3333566777789999999988885.58999*******************************97 PP
+
+  == domain 5  score: 5.4 bits;  conditional E-value: 0.011
+     mTOR_dom 110 aimsifktlglkcvpflpqiipallsvirtces.slre 146
+                  a   i+k lg   +p+lp ++p l+ +++ +++ sl+e
+  XP_717622.2 609 AWGRICKILGKDFLPYLPSVLPPLMLTAKASQDiSLLE 646
+                  55689********************9999988777665 PP
+
+  == domain 6  score: -0.8 bits;  conditional E-value: 0.88
+     mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtcesslre 146
+                  + ++ +  i+++ g  +vpf + ++  + + ++++++s+r+
+  XP_717622.2 883 CGLSIVSDILEHCGPDSVPFKEMFVKVISESVTSANASIRQ 923
+                  33444556666666666666666666666666666666655 PP
+
+  == domain 7  score: -0.2 bits;  conditional E-value: 0.59
+     mTOR_dom  104 htavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156 
+                    +++v+ai ++++     +vp l+ +i + +s++  +++ s   f +  L++L+
+  XP_717622.2  969 TENCVSAIAKVCHRF-SSSVPNLDSLIDQWISLLPIVQDeSAAPFAYMFLSELI 1021
+                   567899999999974.55699999999999999887777677777777777776 PP
+
+>> XP_715016.1  snoRNA-binding rRNA-processing protein [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.6   0.1       1.6   7.9e+02      71     116 ..     472     526 ..     389     540 .. 0.57
+   2 ?    1.9   0.0      0.13        66      98     155 ..     863     920 ..     834     923 .. 0.81
+   3 ?   -1.5   0.1       1.4   7.1e+02      81     117 ..     993    1039 ..     951    1077 .. 0.53
+   4 ?   -1.5   0.0       1.5   7.3e+02     124     157 ..    1318    1352 ..    1306    1355 .. 0.74
+   5 !    9.9   0.0   0.00046      0.23      84     142 ..    1367    1429 ..    1325    1441 .. 0.71
+   6 !   14.4   0.1   1.8e-05    0.0091      73     146 ..    1720    1795 ..    1694    1808 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -1.6 bits;  conditional E-value: 1.6
+     mTOR_dom  71 l..lvglspsseeyypt.......vvinaLlkilkdpslsshhtavvqaimsifk 116
+                  +   ++l+++ + y+ t        v+++L ++l+ +  + h + +++ + ++f+
+  XP_715016.1 472 TvdFTKLQSTAKSYFNTeydeefnLVLKELKSVLSASDAKLHVSVILTFLQKVFS 526
+                  1222222222233333322222335777777777666655544444455555555 PP
+
+  == domain 2  score: 1.9 bits;  conditional E-value: 0.13
+     mTOR_dom  98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatL 155
+                  +s s+ +++v + i ++  + +lk ++fl +i+ + l+  r++   +l+++l++ L++L
+  XP_715016.1 863 SSNSTKQAMVRDEINNM-ASGHLKKLTFLLEILESSLRKKRNVAGpDLLKVLFKILTDL 920
+                  44455555555555555.5579*****************9999988********99998 PP
+
+  == domain 3  score: -1.5 bits;  conditional E-value: 1.4
+     mTOR_dom   81 eyyptvvinaLlkil..........kdpslsshhtavvqaimsifkt 117 
+                      p v++++++ i+          +d+  ss  +++v  ++  + +
+  XP_715016.1  993 SLAPEVILHSVMPIFtfmgahtvrqDDEFSSSALQQTVAKVIPALAS 1039
+                   33444444444444444444444432222234444444444444444 PP
+
+  == domain 4  score: -1.5 bits;  conditional E-value: 1.5
+     mTOR_dom  124 pflpqiipallsvirtces.slrefllqqLatLvs 157 
+                   +++++++p l++ i++  + +l++ +l+ ++t+v+
+  XP_715016.1 1318 SVINNLLPILIKGIKKNVDvELQQAYLDTFSTIVN 1352
+                   56777888888888866666888888888888875 PP
+
+  == domain 5  score: 9.9 bits;  conditional E-value: 0.00046
+     mTOR_dom   84 ptvvinaLlkilkdpslsshhtav....vqaimsifktlglkcvpflpqiipallsvirtces 142 
+                   ++v i++L  +  d+ l + + +v    ++ai+si++ lg+k + + p+++p  l++ ++++s
+  XP_715016.1 1367 SKVLIESLGIVTTDRGLLNEQPEViiasINAITSIVNILGVKTLGLFPKVVPPALKIWESTNS 1429
+                   34566666666677766666655522226889************************9988765 PP
+
+  == domain 6  score: 14.4 bits;  conditional E-value: 1.8e-05
+     mTOR_dom   73 vglspsseeyyptvvinaLlkilkdpslsshhtav..vqaimsifktlglkcvpflpqiipallsvirtcesslre 146 
+                   + ++  s + y  + +++L+k +++++ +s  t++  ++++ +if+++g + +++lp ++p +++++++ +++++ 
+  XP_715016.1 1720 TFVTDVSSDEYNETLVHELIKYISNANENSAATKIwsIRTLKTIFQKMGEQWLSYLPTLVPYIAELLEDDDEEVEM 1795
+                   3346667677777789999999988888877777655999*************************99987776655 PP
+
+>> XP_717136.2  Gcn1p [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   0.0      0.34   1.7e+02      85     125 ..     363     402 ..     307     428 .. 0.76
+   2 ?   -0.8   0.0      0.89   4.5e+02     125     155 ..    1335    1365 ..    1314    1401 .. 0.69
+   3 ?    2.8   0.0     0.069        35     119     150 ..    1563    1594 ..    1556    1601 .. 0.87
+   4 ?   -2.3   0.0       2.6   1.3e+03      81      86 ..    1738    1743 ..    1689    1831 .. 0.59
+   5 ?    1.5   0.0      0.18        89      84     157 ..    1910    1981 ..    1879    1982 .. 0.79
+   6 !    6.2   0.0    0.0062       3.1      81     157 ..    2051    2127 ..    2028    2128 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 0.34
+     mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpf 125
+                  t  +++ ++++  +sl+ h  +vv+  ++ f++ +l+ v f
+  XP_717136.2 363 T-SLASSVRVFTYHSLKYHNDEVVKQFITGFNSAKLRRVWF 402
+                  3.445558888999999999999999999999988887654 PP
+
+  == domain 2  score: -0.8 bits;  conditional E-value: 0.89
+     mTOR_dom  125 flpqiipallsvirtcesslrefllqqLatL 155 
+                    l+ iip+++ v++++++++r+     L+ +
+  XP_717136.2 1335 SLSIIIPQIVGVLNDTHKEVRKAASAALQRF 1365
+                   5666777777777766666666555555444 PP
+
+  == domain 3  score: 2.8 bits;  conditional E-value: 0.069
+     mTOR_dom  119 glkcvpflpqiipallsvirtcesslrefllq 150 
+                   g +  p+l++iip +l+ + + ++++r++ l+
+  XP_717136.2 1563 GSQFSPYLNKIIPPILKGLADQDEEVRDTALK 1594
+                   567789***************99999999887 PP
+
+  == domain 4  score: -2.3 bits;  conditional E-value: 2.6
+     mTOR_dom   81 eyyptv 86  
+                   e+   v
+  XP_717136.2 1738 EMVRRV 1743
+                   333333 PP
+
+  == domain 5  score: 1.5 bits;  conditional E-value: 0.18
+     mTOR_dom   84 ptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                   + + ++ ++ +lkd+  +  +  + + +   f + +l   ++l+  +  l+  + + ++++ +  ++ L+ Lv+
+  XP_717136.2 1910 H-TLMQIIMGLLKDEDTK-RRVFIFSRLAGFFANTELDYSMYLEDMVTRLILSLADPSPDVVKGAFEALSALVK 1981
+                   3.3667778888888866.6778889999999999999999999999999999999999999999999999985 PP
+
+  == domain 6  score: 6.2 bits;  conditional E-value: 0.0062
+     mTOR_dom   81 eyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                     ++t +   L++++ ++  s+ ++a++ a+ + + ++     pf+pq+  ++++ +++++++lr+  +  L+tL++
+  XP_717136.2 2051 RPFSTSITGPLIRVIGEKVASDIKAAILVALNNLLLKIPQFLRPFIPQLQRTFVRSLSDSNEKLRKRAVVALGTLIK 2127
+                   55777788889999999999999999999999999988888899999999999999999999************997 PP
+
+>> XP_720428.1  mRNA-binding U2 snRNP complex subunit [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.0   0.0   0.00082      0.41      61     133 ..     271     344 ..     242     359 .. 0.81
+   2 ?    1.0   0.0      0.24   1.2e+02     115     139 ..     402     427 ..     374     484 .. 0.75
+   3 ?   -3.2   0.0       4.9   2.4e+03      83     105 ..     536     557 ..     526     591 .. 0.56
+   4 ?    1.6   0.2      0.16        80      91     153 ..     694     755 ..     670     762 .. 0.69
+   5 ?    1.3   0.1       0.2     1e+02     124     152 ..     794     822 ..     767     827 .. 0.70
+   6 ?    0.7   0.0       0.3   1.5e+02      81     134 ..     905     958 ..     882     978 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 9.0 bits;  conditional E-value: 0.00082
+     mTOR_dom  61 enaeetdvsellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipal 133
+                  +n +  + ++++ +l++    + p+v +n++l il +p+l+ + ++  ++ i  i+ +l+    p+ ++++  +
+  XP_720428.1 271 KNGSPVTRKRAMRQLTNNAAKFGPKVLLNQILPILLEPNLTpQERHLLIKMIGRIIYQLDELIRPYTSKVLTVI 344
+                  3444455666788999999**********************999999*************99999999998765 PP
+
+  == domain 2  score: 1.0 bits;  conditional E-value: 0.24
+     mTOR_dom 115 fktlglkc.vpflpqiipallsvirt 139
+                   +tlglk+ +pfl+ +i +  +++  
+  XP_720428.1 402 ANTLGLKSfLPFLKAVIKSKKNWTAR 427
+                  45577777777777777766665553 PP
+
+  == domain 3  score: -3.2 bits;  conditional E-value: 4.9
+     mTOR_dom  83 yptvvinaLlkilkdpslsshht 105
+                  y ++  ++L++i+  +  +s  +
+  XP_720428.1 536 YTNYYTTELMHIITREF-RSPDE 557
+                  44444444444442222.22222 PP
+
+  == domain 4  score: 1.6 bits;  conditional E-value: 0.16
+     mTOR_dom  91 LlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLa 153
+                  L   l +  l+ h ++++++i++ +k+   +  +  + +i  ++ vi++c+++  e l++ + 
+  XP_720428.1 694 LADAL-NVRLKPHLNSILSTILYRMKNKLAEIRQQASDLIAIIAPVIKQCSEHDDELLMKLIL 755
+                  44444.445677777888888888887777777788888888888888887777776666555 PP
+
+  == domain 5  score: 1.3 bits;  conditional E-value: 0.2
+     mTOR_dom 124 pflpqiipallsvirtcesslrefllqqL 152
+                  p ++qi+p+l+ ++++ +++++e  ++ +
+  XP_720428.1 794 PSINQILPTLTPILKNRHEKVQEACIKLV 822
+                  56667777777777766666666655543 PP
+
+  == domain 6  score: 0.7 bits;  conditional E-value: 0.3
+     mTOR_dom  81 eyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipall 134
+                     p +v+ a+++  + p  ++ ++ v++a+ ++f++l+ k    +l  i p l 
+  XP_720428.1 905 TCLPFTVLPAIMNEYRIPE-KNVQNGVLKAMSFMFEYLDGKItKDYLFAITPLLE 958
+                  5555566666666666665.45788899999999999999886678877777665 PP
+
+>> XP_718510.2  uncharacterized protein CAALFM_C105630CA [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.1      0.25   1.2e+02      65     100 ..      18      54 ..       3      65 .. 0.70
+   2 ?   -0.3   0.3       0.6     3e+02     110     110 ..     191     191 ..      80     266 .. 0.47
+   3 ?    0.5   0.1      0.35   1.8e+02     127     157 ..     398     428 ..     323     472 .. 0.75
+   4 ?    0.9   0.1      0.27   1.4e+02      85     128 ..     482     525 ..     452     565 .. 0.73
+   5 !   10.0   0.0   0.00041      0.21      67     140 ..     557     629 ..     518     635 .. 0.75
+   6 ?   -3.7   0.0       6.9   3.5e+03      10      37 ..     900     927 ..     896     928 .. 0.80
+   7 ?   -0.3   0.0      0.61   3.1e+02       6      22 ..     938     954 ..     934     963 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 0.25
+     mTOR_dom  65 etdvsellvglspsseeyypt.vvinaLlkilkdpsl 100
+                   +d+s + +  s+ ++++yp+ +++ aLl+i +  + 
+  XP_718510.2  18 VPDSSVIKQASSKLTKDFYPNlIALPALLQISQTTKQ 54 
+                  455566667778888****998899999999876554 PP
+
+  == domain 2  score: -0.3 bits;  conditional E-value: 0.6
+     mTOR_dom 110 a 110
+                  +
+  XP_718510.2 191 V 191
+                  2 PP
+
+  == domain 3  score: 0.5 bits;  conditional E-value: 0.35
+     mTOR_dom 127 pqiipallsvirtcesslrefllqqLatLvs 157
+                  ++iipa+++ ++++e  ++   l+ L++L+s
+  XP_718510.2 398 QKIIPAIVNGLKDTELIVKVAALRTLGQLTS 428
+                  4555555555555555555555555555543 PP
+
+  == domain 4  score: 0.9 bits;  conditional E-value: 0.27
+     mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpq 128
+                      ++L ++l++++ ++ ++a+v+ai s     g   +p+ + 
+  XP_718510.2 482 EPLTHKLFHMLQQANSATLKSAIVSAIGSTAFASGKAYTPYFEA 525
+                  44567888999999999999999999977766666666666555 PP
+
+  == domain 5  score: 10.0 bits;  conditional E-value: 0.00041
+     mTOR_dom  67 dvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtc 140
+                  ++s+++  + + s   y++  ++a ++ l+    s  +++    i ++ k  g++   fl+qi+p++l+ +++ 
+  XP_718510.2 557 NISTMARAVGSESFSAYAKPLVEAAYNSLSS-EHSRIRESGFAFIANMAKVYGTEFAGFLDQIVPKILECLKQE 629
+                  4445544455555666777777777777744.446678888999*************************99874 PP
+
+  == domain 6  score: -3.7 bits;  conditional E-value: 6.9
+     mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvlGi 37 
+                  eLL+i+++ l +++s +++ ++   +G+
+  XP_718510.2 900 ELLQIFSDKLANDKSIEVKGNAAYGIGL 927
+                  8999999999999999999877766665 PP
+
+  == domain 7  score: -0.3 bits;  conditional E-value: 0.61
+     mTOR_dom   6 ldypeLLeiLlnilkte 22 
+                  ++yp++L++L+++l++ 
+  XP_718510.2 938 STYPHILQLLFQLLNKV 954
+                  78***********9875 PP
+
+>> XP_716758.2  histone acetyltransferase [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.1   0.1   1.1e-05    0.0057      87     135 ..    1525    1573 ..    1510    1588 .. 0.88
+   2 ?   -3.8   0.0       7.3   3.7e+03     115     149 ..    2613    2648 ..    2608    2652 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 15.1 bits;  conditional E-value: 1.1e-05
+     mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135 
+                    in+L +i  +   ++h  ++v ai++if+ l  k  +f+++ii++l+ 
+  XP_716758.2 1525 QINTLRQIAGQDLTNNHTVQIVMAILNIFHLLPAKAYTFMEEIINTLQY 1573
+                   599999***999999*****************************99875 PP
+
+  == domain 2  score: -3.8 bits;  conditional E-value: 7.3
+     mTOR_dom  115 fktlglkcvpflpqiipallsvirtces.slrefll 149 
+                    k+ ++++v + p++i++ll+ ++ c++ +l  f +
+  XP_716758.2 2613 SKDYHTRQVDMRPNVIQSLLEGVSRCDDlQLPPFAV 2648
+                   566778899999************999877766665 PP
+
+>> XP_712928.2  DNA-binding ATPase [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.5   0.0       6.1   3.1e+03      10      37 ..      40      66 ..      37     101 .. 0.79
+   2 ?   -2.0   0.1       2.1   1.1e+03     159     159 ..     552     552 ..     494     609 .. 0.54
+   3 !   11.2   0.0   0.00018     0.091      29     159 ..    1116    1253 ..    1095    1254 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -3.5 bits;  conditional E-value: 6.1
+     mTOR_dom 10 eLLeiLlnilkteqsqsiRrevikvlGi 37
+                 +LL+ ++  lk++ ++++R ++ + +G 
+  XP_712928.2 40 NLLGRVYPYLKSK-KWETRISAARAFGG 66
+                 6778888888855.89999999999985 PP
+
+  == domain 2  score: -2.0 bits;  conditional E-value: 2.1
+     mTOR_dom 159 v 159
+                  +
+  XP_712928.2 552 L 552
+                  0 PP
+
+  == domain 3  score: 11.2 bits;  conditional E-value: 0.00018
+     mTOR_dom   29 revikvlGilGALDPykhkeveekseee.......ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt 117 
+                   ++vi  lGil AL P   ke+  +  ++        ++e ++   ++++ l+++++         ++n++l +lk++   ++++ +++++ +i   
+  XP_712928.2 1116 QSVIDALGILRALFPKMDKELYPEVIDNldlflpgLQSEYSVFRYSTAKCLATICSVVPAKAFIFIVNSVLPMLKNAGDVKQRQGAIETVYHISAA 1211
+                   5688889999999999988888777333445555544455555566677777777777444555689***************************** PP
+
+     mTOR_dom  118 lglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                   +g   +p++  +i  ++  +++++ ++r      +a+++++v
+  XP_712928.2 1212 MGASILPYVMFLIVPVMGRMSDSDHDVRVLAATTFASIIKLV 1253
+                   **********99999999999999999988888888888876 PP
+
+>> XP_715374.2  uncharacterized protein CAALFM_C202720WA [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.7   0.0       3.4   1.7e+03     106     137 ..     396     427 ..     382     439 .. 0.53
+   2 ?    1.9   0.2      0.13        65      90     118 ..     559     586 ..     505     640 .. 0.68
+   3 ?   10.5   0.0   0.00029      0.14      87     155 ..     742     813 ..     728     816 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: -2.7 bits;  conditional E-value: 3.4
+     mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvi 137
+                  + v +i +i++  + k  +++  +++ + +++
+  XP_715374.2 396 SDVASINFIYRLSNKKFKSTIGMVCQIINEIF 427
+                  44555555555544444444433333332222 PP
+
+  == domain 2  score: 1.9 bits;  conditional E-value: 0.13
+     mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktl 118
+                  +L+ il ++s +++ +++++ +m if + 
+  XP_715374.2 559 QLMGILLEKS-KQYESDILTNVMDIFVEK 586
+                  4888886666.668888888888888653 PP
+
+  == domain 3  score: 10.5 bits;  conditional E-value: 0.00029
+     mTOR_dom  87 vinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces..slrefllqqLatL 155
+                   +n   +ilkd+  +    +++ + i   +  l+ +  +flpq++p+++ +++++es   +  ++l++L++L
+  XP_715374.2 742 LMNVCFTILKDEDTDpVFAHSAFENIELTVLALNQRFASFLPQFLPEIFDIFTKLESqdAFDGYMLHHLSIL 813
+                  456667899***99989999******999999*******************998775568999999999987 PP
+
+>> XP_711598.2  uncharacterized protein CAALFM_C403500CA [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.4   1.2   0.00015     0.077     100     145 ..     134     179 ..      13     183 .] 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 11.4 bits;  conditional E-value: 0.00015
+     mTOR_dom 100 lsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+                   ++  t+ +qai++   +l  + ++fl++i p++++v+++  ++l+
+  XP_711598.2 134 KRDTTTELIQAIIQEGVKLTPEIISFLQKIAPQVIEVLTKEAPQLL 179
+                  4467788999999999999*******************98777665 PP
+
+>> XP_714875.1  deoxyhypusine monooxygenase [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.0   0.0     0.062        31      15      39 ..      90     115 ..      82     118 .. 0.89
+   2 ?    6.3   0.0    0.0057       2.9      85     139 ..     243     295 ..     226     308 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 3.0 bits;  conditional E-value: 0.062
+     mTOR_dom  15 Llnilkte.qsqsiRrevikvlGilG 39 
+                  L ++l+++ q+  +R e+   lG lG
+  XP_714875.1  90 LREVLENDnQQCMVRHEAAEALGALG 115
+                  7789999956999************9 PP
+
+  == domain 2  score: 6.3 bits;  conditional E-value: 0.0057
+     mTOR_dom  85 tvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                   v++ +L+k+lkd+s +   ++++ +a+ si  +   +c+p+l+ +++    v+r+
+  XP_714875.1 243 PVTVPSLIKVLKDESEAgMVRHEAAEALGSIATD---ECLPVLQSFLNDSEPVVRD 295
+                  5777888888888888878888888888888886...7777777777766666665 PP
+
+>> XP_722563.2  uncharacterized protein CAALFM_C202040WA [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.2   1.0       9.6   4.8e+03      46      64 ..     185     198 ..     172     224 .. 0.41
+   2 ?    4.1   0.0     0.027        13      17      40 ..     744     768 ..     711     772 .. 0.62
+   3 ?    8.6   0.3    0.0011      0.57      17      61 ..     744     788 ..     743     823 .. 0.69
+   4 ?    1.3   0.1       0.2        99      10      56 ..     833     881 ..     827     939 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: -4.2 bits;  conditional E-value: 9.6
+     mTOR_dom  46 hkeveekseeeekeeenae 64 
+                  h++ + ++++     +n++
+  XP_722563.2 185 HRSSTIETSK-----QNSQ 198
+                  2222211111.....1111 PP
+
+  == domain 2  score: 4.1 bits;  conditional E-value: 0.027
+     mTOR_dom  17 nilkteq.sqsiRrevikvlGilGA 40 
+                  n+lk+ + s++ R ++i ++GilG 
+  XP_722563.2 744 NFLKKANnSNTQRNSIIDMMGILGK 768
+                  4555553266666666666666664 PP
+
+  == domain 3  score: 8.6 bits;  conditional E-value: 0.0011
+     mTOR_dom  17 nilkteq.sqsiRrevikvlGilGALDPykhkeveekseeeekeee 61 
+                  n+lk+ + s++ R ++i ++GilG L     k++ ++ +  ++e +
+  XP_722563.2 744 NFLKKANnSNTQRNSIIDMMGILGKLEDDINKQTGSTEKA-KSEVR 788
+                  688888549999**************99999877543322.22222 PP
+
+  == domain 4  score: 1.3 bits;  conditional E-value: 0.2
+     mTOR_dom  10 eLLeiLlnilkte.q.sqsiRrevikvlGilGALDPykhkeveekseee 56 
+                  +LL  L n   t+ + +qs R++v+ ++++l AL    + e++ +s+ +
+  XP_722563.2 833 DLLANLENTTTTNdKpKQSNRKSVVDMMSTLSALQEPPVIENNANSNMQ 881
+                  6788888888877557999***************755443444333222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       6030  (2979179 residues searched)
+Passed MSV filter:                       641  (0.106302); expected 120.6 (0.02)
+Passed bias filter:                      381  (0.0631841); expected 120.6 (0.02)
+Passed Vit filter:                        35  (0.00580431); expected 6.0 (0.001)
+Passed Fwd filter:                        12  (0.00199005); expected 0.1 (1e-05)
+Initial search space (Z):               6030  [actual number of targets]
+Domain search space  (domZ):              12  [number of targets reported over threshold]
+# CPU time: 0.08u 0.05s 00:00:00.13 Elapsed: 00:00:00.09
+# Mc/sec: 4869.24
+//
+[ok]

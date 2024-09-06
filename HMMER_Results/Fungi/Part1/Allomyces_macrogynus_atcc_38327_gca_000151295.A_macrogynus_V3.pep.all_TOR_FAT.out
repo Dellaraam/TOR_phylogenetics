@@ -1,0 +1,360 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Allomyces_macrogynus_atcc_38327_gca_000151295.A_macrogynus_V3.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.1e-108  363.7   0.1   2.7e-108  362.4   0.0    1.7  2  KNE64964  pep supercontig:A_macrogynus_V3:supercont3.19:22659
+    8.3e-63  212.8   3.3    1.8e-62  211.7   3.3    1.6  1  KNE59353  pep supercontig:A_macrogynus_V3:supercont3.7:101115
+    1.5e-62  211.9   3.8    1.5e-62  211.9   3.8    2.0  2  KNE58153  pep supercontig:A_macrogynus_V3:supercont3.5:132689
+    1.5e-34  119.9   0.0    4.3e-34  118.4   0.0    1.8  1  KNE54071  pep supercontig:A_macrogynus_V3:supercont3.1:301138
+    7.6e-12   45.2   1.0    7.6e-12   45.2   1.0    3.1  3  KNE56049  pep supercontig:A_macrogynus_V3:supercont3.3:174336
+    1.1e-09   38.1   2.0    2.4e-09   37.0   2.0    1.6  1  KNE56447  pep supercontig:A_macrogynus_V3:supercont3.3:119006
+    1.2e-09   38.0   2.0    2.6e-09   36.9   2.0    1.6  1  KNE56448  pep supercontig:A_macrogynus_V3:supercont3.3:119009
+    4.1e-09   36.2   1.5    8.9e-09   35.1   1.5    1.6  1  KNE54798  pep supercontig:A_macrogynus_V3:supercont3.1:230764
+  ------ inclusion threshold ------
+       0.31   10.3   4.3       0.21   10.9   0.1    2.7  3  KNE57511  pep supercontig:A_macrogynus_V3:supercont3.4:176290
+
+
+Domain annotation for each sequence (and alignments):
+>> KNE64964  pep supercontig:A_macrogynus_V3:supercont3.19:226592:234547:1 gene:AMAG_10629 transcript:KNE64964 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.0   0.0       1.6   3.4e+03     240     266 ..    1325    1353 ..    1306    1355 .. 0.77
+   2 !  362.4   0.0  1.3e-111  2.7e-108       1     343 []    1359    1708 ..    1359    1708 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: -3.0 bits;  conditional E-value: 1.6
+                HHHHCCCTCCCC..CCCCCCCT.S...-S CS
+       FAT  240 llarcylkkGew..laalqklnwseekse 266 
+                 +++c++k+Gew  l++l + +w +++++
+  KNE64964 1325 GMMKCLHKLGEWdrLSKLARDKWPNAQPD 1353
+                57899999999855667777777776665 PP
+
+  == domain 2  score: 362.4 bits;  conditional E-value: 1.3e-111
+                CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+       FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                ap+aa+a W+lg W+ m+ey+ ++k dspd++ff+aila+hrn f +a+ +iek+r ll+te  al+gesy+r yd++vr+Q+laEleeiiqyk++++ 
+  KNE64964 1359 APFAAAAEWGLGHWEAMDEYIHVLKPDSPDGSFFRAILAVHRNLFPQAHVYIEKTRALLDTEFMALVGESYSRSYDVVVRVQMLAELEEIIQYKRNHDY 1457
+                689************************************************************************************************ PP
+
+                --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.........TSSCCCHHHH CS
+       FAT  100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp....pevvyaylky 194 
+                ++ +++++ tW++Rl g+q++ve+w+++l+vRs+vl p+ed       +emw++f++l+Rksgr++l++k+L++ll+ +++e +     p+vvyaylk+
+  KNE64964 1458 PQAQEMIRVTWKNRLMGTQRNVEIWDRMLKVRSVVLAPQED-------MEMWIRFSSLCRKSGRFGLSHKTLTNLLKFEPDENNLlngpPPVVYAYLKH 1549
+                *****************************************.......********************************44444579*********** PP
+
+                HHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...............HHHHCCCTCCCCCCCCCCCT.S.....-SSCCHHHHCCHHCTCCCHSTTC CS
+       FAT  195 lwakgeqkealqkLrefvscllekkeelssglevq....eptnleeftkllarcylkkGewlaalqklnwseek..seeilqaysaateldpswykawh 287 
+                +w++g+  +al+ L  f+ +l+e   +++  l ++     p   +  ++llarcy++++ew+a+  + +w  +   + eilqay++at++d+ wy awh
+  KNE64964 1550 MWETGRGLDALKLLSAFTGRLAEVVASNPAALAAIaaplVPVASSAAARLLARCYFRLAEWQAQQLD-HWPDDPtvRHEILQAYRLATHYDKAWYRAWH 1647
+                **************************9999999999998888888889999***********99888.7877644499********************* PP
+
+                CCCHHHHHCCHHHHHH....SSSS....S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT  288 twalfnfevlskeeek....keeee...pedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                +wal+n +v+++ e+     +        + +s++vvpa++gf +s+sls +  slqd+lRlLt
+  KNE64964 1648 AWALANLQVVNHHERAlaaaP---PdeyAALVSHHVVPALQGFVHSISLSRGgDSLQDTLRLLT 1708
+                *************77755542...044366777******************************8 PP
+
+>> KNE59353  pep supercontig:A_macrogynus_V3:supercont3.7:1011154:1017774:-1 gene:AMAG_18156 transcript:KNE59353 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  211.7   3.3   8.2e-66   1.8e-62       2     343 .]    1241    1593 ..    1240    1593 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 211.7 bits;  conditional E-value: 8.2e-66
+                CCTTCCCCTSSSGHH.CCCCT..........TSSSS--CCCHCCCCHH....--......CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCC CS
+       FAT    2 plaaeaaWrlgqWds.meeylslmk......kdspdkaffeailalhr....nq......fdeaeeliekarqllvtelsalsgesynraydllvrlQq 83  
+                +l +ea Wrlg+W s  ++++ +++       ++p+ ++f+a++al +    ++      ++e++ +++++ q  ++++  l++ +   +++ll  +Qq
+  KNE59353 1241 DLILEAVWRLGDWTSgGKDKV-EVEsllqhlPEDPRSKVFRAFVALNKladrKEledklrVQEFQNICDEGVQMALKKWFLLPHAIGDCHLPLLALFQQ 1338
+                5889***********644444.44448899999************666654322555777*************************************** PP
+
+                CHHHCHHCCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC................HHCCS-STTCCC..CCC CS
+       FAT   84 laEleeiiqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied................lllkgakaemwl..kfa 155 
+                 +El e++q++++ls          s+elk++l+tWr+Rlp+v+dd++vw+d++++R++++  i++                + ++g+++++w+  +fa
+  KNE59353 1339 FVELVEALQIYTSLSnttlqnheqRSQELKAILQTWRERLPNVWDDIDVWSDLVAWRQHIFGAINKayfpiltsmsnttnnsSPYRGYHETAWIinRFA 1437
+                **************9************************************************************************************ PP
+
+                CCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCC CS
+       FAT  156 nlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewla 253 
+                ++aR ++ +s+++++L k+                   y ++++e++ea++kLre+++c+l+++ ++++gl+v+++tnl +f+ ++ a+++ +k+++la
+  KNE59353 1438 HVARLHDLTSVCIQYLPKI-------------------YALPNIEIQEAFLKLREQAKCYLSNPDDYKTGLDVITNTNLVYFNPQQkAEFFGLKAKFLA 1517
+                *******************...................************************************************************* PP
+
+                CCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT  254 alqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                 l++         e+++a+ +a+ +d +++k w++w+ ++++ +++         ++dl+ +    ++++l+ + l ++ k++ +++R+L+
+  KNE59353 1518 LLGN-------EVEANKAFVTAVTTDHHLAKSWAMWGEYHEQLFRQSG-------EKDLE-MSWHTLNCYLHTIGLFKSgKARRYIARVLW 1593
+                ****.......99**********************************3.......45776.999**************99**********9 PP
+
+>> KNE58153  pep supercontig:A_macrogynus_V3:supercont3.5:1326894:1338480:-1 gene:AMAG_04968 transcript:KNE58153 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.5   0.0       1.2   2.6e+03      45     114 ..    1487    1561 ..    1473    1573 .. 0.74
+   2 !  211.9   3.8   6.9e-66   1.5e-62       2     343 .]    2733    3085 ..    2732    3085 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: -2.5 bits;  conditional E-value: 1.2
+                CCHCHHCCCHCCCCCCCCCTS---S...CCCCCHHH...HHCCCCCHHHCHHCCHHCSS----TTTTTTT----TT CS
+       FAT   45 fdeaeeliekarqllvtelsalsge...synraydl...lvrlQqlaEleeiiqykqklssseelksllktWrkRl 114 
+                 +e+++++ +a  l + e sal+++   + ++a ++   +v++Q l+  +   ++ +++ +s  ++++     kRl
+  KNE58153 1487 TTELNRMLTEALALADAEDSALVHKilpVKHSASPVdlrIVCIQLLSAAMACGEFQSQR-QSTMRTRIIAVFFKRL 1561
+                689999999**************9988888999998999********999999999965.5555555555555555 PP
+
+  == domain 2  score: 211.9 bits;  conditional E-value: 6.9e-66
+                CCTTCCCCTSSSGHH.CCCCT..........TSSSS--CCCHCCCCHH....--......CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCC CS
+       FAT    2 plaaeaaWrlgqWds.meeylslmk......kdspdkaffeailalhr....nq......fdeaeeliekarqllvtelsalsgesynraydllvrlQq 83  
+                +l +ea Wrlg+W s  ++++ +++       ++p+ ++f+a++al +    ++      ++e++ +++++ q  ++++  l++ +   +++ll  +Qq
+  KNE58153 2733 DLILEAVWRLGDWTSgGKDKV-EVEsllqhlPEDPRSKVFRAFVALNKladrKEledkmrVQEFQNICDEGVQMALKKWFLLPHAIGDCHLPLLALFQQ 2830
+                5889***********644444.44448899999************555543311455666*************************************** PP
+
+                CHHHCHHCCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC................HHCCS-STTCCC..CCC CS
+       FAT   84 laEleeiiqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied................lllkgakaemwl..kfa 155 
+                 +El e++q++++ls          s+elk++l+tWr+Rlp+v+dd++vw+d++++R++++  i++                + ++g+++++w+  +fa
+  KNE58153 2831 FVELVEALQIYTSLSnttlqnheqRSQELKAILQTWRERLPNVWDDIDVWSDLVAWRQHIFGAINKayfpiltsmsnttnnsSPYRGYHETAWIinRFA 2929
+                **************9************************************************************************************ PP
+
+                CCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCC CS
+       FAT  156 nlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewla 253 
+                ++aR ++ +s+++++L k+                   y ++++e++ea++kLre+++c+l+++e++++gl+v+++tnl +f+ ++ a+++ +k+++la
+  KNE58153 2930 HVARLHDLTSVCIQYLPKI-------------------YALPNIEIQEAFLKLREQAKCYLSNPEDYKTGLDVITNTNLVYFNPQQkAEFFGLKAKFLA 3009
+                *******************...................************************************************************* PP
+
+                CCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT  254 alqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                 l++         e+++a+ +a+ +d +++k w++w+ ++++ +++         ++dl+ +    ++++l+ + l ++ k++ +++R+L+
+  KNE58153 3010 LLGN-------EVEANKAFVTAVTTDHHLAKSWAMWGEYHEQLFRQSG-------EKDLE-MSWHTLNCYLHTIGLFKSgKARRYIARVLW 3085
+                ****.......99**********************************3.......45776.999**************99**********9 PP
+
+>> KNE54071  pep supercontig:A_macrogynus_V3:supercont3.1:301138:304896:1 gene:AMAG_17616 transcript:KNE54071 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.4   0.0     2e-37   4.3e-34     160     343 .]     335     583 ..     324     583 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 118.4 bits;  conditional E-value: 2e-37
+               HHHHCCSTTHHCCCCCHCTT.........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---............................ CS
+       FAT 160 ksgrlslAekaLkklleedkeewlp....pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq........................... 229
+                sgr++l++k+L++ll+ +++e++     p+vv aylk++w++g+  +al+ L  f+ +l+e   +++  l ++                           
+  KNE54071 335 SSGRFGLSHKTLTNLLKFEPDESNLlngpPPVVDAYLKHMWETGRGLDALKLLSAFTGRLAELVASNPAALAAIaaplvpvapsaaggpgagsgllavlgs 435
+               79******************55555689***********************************99999999999999************************ PP
+
+               .......................................HHHHCCCTCCCCCCCCCCCT.S.....-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHH CS
+       FAT 230 .............................eptnleeftkllarcylkkGewlaalqklnwseek..seeilqaysaateldpswykawhtwalfnfevlsk 299
+                                             p+ +  +++llarcy+ ++ew+ +  + +w  +   + eilqay++at++d+ wy awh+wal+n +v+++
+  KNE54071 436 igagsgaaaatsavaaadviqpsnsswymGPDPV-SQARLLARCYFWLAEWQTQQLD-HWPDDPtvRHEILQAYRLATHYDKAWYRAWHAWALANLQVVNH 534
+               **********************999999655555.567788***********98888.787664449********************************** PP
+
+               HHHH....SSSS....S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT 300 eeek....keeee...pedlseyvvpavegflkslslsse.kslqdllRlLt 343
+                e+     +        + +s++vvpa++gf +s+sls +  slqd+lRlLt
+  KNE54071 535 HERAlaaaP---PdeyAALVSHHVVPALQGFVHSISLSRGgDSLQDTLRLLT 583
+               *77755542...044366777******************************8 PP
+
+>> KNE56049  pep supercontig:A_macrogynus_V3:supercont3.3:174336:183688:-1 gene:AMAG_01892 transcript:KNE56049 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.0   0.0       0.2   4.3e+02      54      93 ..     793     832 ..     769     847 .. 0.83
+   2 ?    0.7   0.2      0.12   2.6e+02       4      44 ..    2009    2046 ..    2006    2065 .. 0.81
+   3 !   45.2   1.0   3.5e-15   7.6e-12     124     332 ..    2127    2376 ..    2104    2383 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -0.0 bits;  conditional E-value: 0.2
+               HCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCH CS
+       FAT  54 karqllvtelsalsgesynraydllvrlQqlaEleeiiqy 93 
+               +a+ ll++  ++    s + a+  ++ +Q+l+El  ++ +
+  KNE56049 793 EANALLTRWVERFEAVSNETAIADVQTVQTLVELARSLGL 832
+               67788888888899999*****************987765 PP
+
+  == domain 2  score: 0.7 bits;  conditional E-value: 0.12
+                TTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH-- CS
+       FAT    4 aaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnq 44  
+                 +++ Wr++qWd ++      k+ ++++++fe   alh+++
+  KNE56049 2009 QYQSLWRNQQWDVQATPE---KSLEFHGHVFELSRALHHDN 2046
+                6899********977774...57778888999999988844 PP
+
+  == domain 3  score: 45.2 bits;  conditional E-value: 3.5e-15
+                TTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC CS
+       FAT  124 wqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp..pevvyaylkylwakgeqkealqkLrefvscllekke 220 
+                 +++ls+Rs +l+  +     +   +  l+ +++a +++   +A+++L+ +++      ++    v  + +k+ w +g++  al +++e +        
+  KNE56049 2127 IHSLLSIRSTLLTVTKA--PPKRILDSLLHHVHVAKQQHGAHVAKSLLRAARKLPL--LAVdeRLVAEEDAKLYWRQGDHALALRMIHELID------A 2215
+                57899999999987766..6677899******************999999955544..22255788999**********************9......5 PP
+
+                SS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS............ CS
+       FAT  221 elssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee........... 308 
+                e + +  +++  n +  t++lar + + G+wla+ ++     +     ++++ aa++ldp+ +k+  t+a++   ++++ e+++  ++           
+  KNE56049 2216 EGTAQVAAIHDGNPNGPTARLARLLNRAGQWLAENRSQ----APDVILEKYFDAAIQLDPTNAKIASTLARYAHDQYEAAEQSET-MTllvaqrdvkmr 2309
+                788888899999999******************99992....3344556889999*************************77743.3369999999*** PP
+
+                ..........................................S-TCC.HHHHCCT..CCHHHHTTTS CS
+       FAT  309 ..........................................pedls.eyvvpavegflkslslsse 332 
+                                                           e+l+ ++vv+av+ +l++l+ls++
+  KNE56049 2310 didalkaalkgvsktstnyqriknmiarvepqlamdteeitrHEQLQlQLVVKAVTFYLQALRLSDK 2376
+                ******************************************999999*****************98 PP
+
+>> KNE56447  pep supercontig:A_macrogynus_V3:supercont3.3:1190069:1197108:1 gene:AMAG_02254 transcript:KNE56447 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.0   2.0   1.1e-12   2.4e-09       2     330 ..    1143    1530 ..    1142    1543 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 37.0 bits;  conditional E-value: 1.1e-12
+                CCTTCCCCTSSSGHHCCCCT.....................TSSSS--CCCHCCC...............CHH--CCHCHHCCCHCCCCCCCCCTS--- CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk.................kdspdkaffeaila...............lhrnqfdeaeeliekarqllvtelsalsg 68  
+                ++++ea W++g+W ++ +y+  ++                           a+ a               l     d++  ++ +a  l v+ +++   
+  KNE56447 1143 QYRVEACWKMGEWSLLNQYT--TDpaptqpgttsaaatdesA--------TAVAAaaaknavsighlfndLA---QDRLDAFARHAHHLQVQTIQRFRL 1228
+                57899**********99998..33458888887754432221........1111122345555444322233...555555555566666666666666 PP
+
+                SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.......................---TTTTTTT----TTS-TTTGCCCTTTCCC.CTCCCHCCCHC... CS
+       FAT   69 esynraydllvrlQqlaEleeiiqykqkls.......................sseelksllktWrkRlpgvqddvevwqdils.vRslvlspied... 140 
+                    r  ++lv+ ++l++  ++++++ +++                       +++ + ++++ W++Rl  + d++ev++di+s  Rs+++  + +   
+  KNE56447 1229 S---RSQPALVQNHILSDVISSATLLYHSNdlvstqfprlvpthfgqgpghpaEQRTMGDWFDVWKQRLARTPDKYEVREDIISaCRSILMLEHHRsrp 1324
+                5...7789****************99999999******************66666666666*********************9736888877776789* PP
+
+                .....................HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSC CS
+       FAT  141 .....................lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllek 218 
+                                     +  ++++ e wl +a+la k+ r  +A+  Lk ++e     +   e+    +k+  a+   + al+++r        +
+  KNE56447 1325 aataaparlamsqqvmaadlgPEWRNMMGELWLMSARLAMKNERQHTAYTNLKHAEELLGAGQ--LELERLTAKWIGANRSAQAALERIRSLNL---PD 1418
+                *********************99********************************55544222..23444556777777778999999965444...44 PP
+
+                CC..SS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS....S-TC CS
+       FAT  219 ke..elssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee...pedl 312 
+                    + s +le  +    +  + + ar+ l+++ w+ +++      + s++  +++ +   l+p+w ka++  ++++ + +  ++  ++  +   ++d+
+  KNE56447 1419 FDctSVSMQLEFDTFIDRSSTQFQHARIQLLQARWMDETGG-----NISQGTAKKFMSVCALQPNWDKAFYLAGRYYHKLFMSMRAHPNDPSiseRKDT 1512
+                32335555555544444444444449***************.....469****************************9999988777554443334444 PP
+
+                CHHHHCCT..CCHHHHTT CS
+       FAT  313 seyvvpavegflkslsls 330 
+                   + +a +   +sl  +
+  KNE56447 1513 YAVLKSATQFLNRSLLVG 1530
+                444445544444555555 PP
+
+>> KNE56448  pep supercontig:A_macrogynus_V3:supercont3.3:1190091:1197108:1 gene:AMAG_02254 transcript:KNE56448 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.9   2.0   1.2e-12   2.6e-09       2     330 ..    1241    1628 ..    1240    1641 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 36.9 bits;  conditional E-value: 1.2e-12
+                CCTTCCCCTSSSGHHCCCCT.....................TSSSS--CCCHCCC...............CHH--CCHCHHCCCHCCCCCCCCCTS--- CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk.................kdspdkaffeaila...............lhrnqfdeaeeliekarqllvtelsalsg 68  
+                ++++ea W++g+W ++ +y+  ++                           a+ a               l     d++  ++ +a  l v+ +++   
+  KNE56448 1241 QYRVEACWKMGEWSLLNQYT--TDpaptqpgttsaaatdesA--------TAVAAaaaknavsighlfndLA---QDRLDAFARHAHHLQVQTIQRFRL 1326
+                57899**********99998..33458888877754432221........1111122345555444322233...555555555566666666666666 PP
+
+                SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.......................---TTTTTTT----TTS-TTTGCCCTTTCCC.CTCCCHCCCHC... CS
+       FAT   69 esynraydllvrlQqlaEleeiiqykqkls.......................sseelksllktWrkRlpgvqddvevwqdils.vRslvlspied... 140 
+                    r  ++lv+ ++l++  ++++++ +++                       +++ + ++++ W++Rl  + d++ev++di+s  Rs+++  + +   
+  KNE56448 1327 S---RSQPALVQNHILSDVISSATLLYHSNdlvstqfprlvpthfgqgpghpaEQRTMGDWFDVWKQRLARTPDKYEVREDIISaCRSILMLEHHRsrp 1422
+                5...7789****************99999999******************66666666666*********************9736888877776789* PP
+
+                .....................HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSC CS
+       FAT  141 .....................lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllek 218 
+                                     +  ++++ e wl +a+la k+ r  +A+  Lk ++e     +   e+    +k+  a+   + al+++r        +
+  KNE56448 1423 aataaparlamsqqvmaadlgPEWRNMMGELWLMSARLAMKNERQHTAYTNLKHAEELLGAGQ--LELERLTAKWIGANRSAQAALERIRSLNL---PD 1516
+                *********************99********************************55544222..23444556777777778999999965444...44 PP
+
+                CC..SS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS....S-TC CS
+       FAT  219 ke..elssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee...pedl 312 
+                    + s +le  +    +  + + ar+ l+++ w+ +++      + s++  +++ +   l+p+w ka++  ++++ + +  ++  ++  +   ++d+
+  KNE56448 1517 FDctSVSMQLEFDTFIDRSSTQFQHARIQLLQARWMDETGG-----NISQGTAKKFMSVCALQPNWDKAFYLAGRYYHKLFMSMRAHPNDPSiseRKDT 1610
+                32335555555544444444444449***************.....469****************************9999988777554443334444 PP
+
+                CHHHHCCT..CCHHHHTT CS
+       FAT  313 seyvvpavegflkslsls 330 
+                   + +a +   +sl  +
+  KNE56448 1611 YAVLKSATQFLNRSLLVG 1628
+                444445544444555555 PP
+
+>> KNE54798  pep supercontig:A_macrogynus_V3:supercont3.1:2307645:2314877:1 gene:AMAG_00751 transcript:KNE54798 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.1   1.5   4.1e-12   8.9e-09       3     343 .]    1227    1626 ..    1225    1626 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 35.1 bits;  conditional E-value: 4.1e-12
+                CTTCCCCTSSSGHHCCCCT................TSSSS--CCCHCCC.........CHH--..CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHH CS
+       FAT    3 laaeaaWrlgqWdsmeeylslmk............kdspdkaffeaila.........lhrnq..fdeaeeliekarqllvtelsalsgesynraydll 78  
+                +++ea W++g+W ++ +y+   +              + + +++ a  a         +  n+   d++ +++++a  l v+ +++       r  ++l
+  KNE54798 1227 YRIEACWKMGEWPLLNQYTA--DpaptqpgmasaaAADATASTVAAAAAknavsighlF--NDlaQDQLDTFAQHAHHLQVQTIQRFRLS---RSQPAL 1318
+                678999********999984..3358988888877333333333333335665544431..33335666666666677777777777766...7789** PP
+
+                HCCCCCHHHCHHCCHHCSS-.......................---TTTTTTT----TTS-TTTGCCCTTTCCC.CTCCCHCCCHC............. CS
+       FAT   79 vrlQqlaEleeiiqykqkls.......................sseelksllktWrkRlpgvqddvevwqdils.vRslvlspied............. 140 
+                v+ ++l++  ++++++ +++                        ++ + ++++ W++Rl  +  ++ev++di+s  Rs+++  + +             
+  KNE54798 1319 VHNHILSDVISSATLLYHSNdlvltqfphlvpthlgggpghpaVQRTMGEWFEVWKQRLARTPEKYEVREDIISaCRSILMLEHHRtrpataaaparla 1417
+                *************999999999******************88888888899*********************9736888887777799*********** PP
+
+                ...........HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS--- CS
+       FAT  141 ...........lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglev 228 
+                           +  ++++ e wl +a+la k+ r   A+  Lk ++e     +   e+    +k+  a+   + al+++r       +++ + s +le 
+  KNE54798 1418 msqqvmaadlgPEWRNMMGELWLMSARLAMKNARQHSAYMNLKHAEELLGAGQ--LELERLTAKWIGANRSPQAALERIRSLNL-PDFDMTSVSVQLEF 1513
+                ***********99*******************************955544222..23445567888888889******976555.33344455666666 PP
+
+                ...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS....S-TCCHHHHCCT..CC CS
+       FAT  229 qeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee...pedlseyvvpavegfl 324 
+                         + + ar+ l+++ w+ +++      + s++  +++ +   l+p+w ka++  ++++ + +  ++  ++  +    +d+   + +a++   
+  KNE54798 1514 DAFVDRGSMQFQHARIQLLQARWMDETGG-----NISQGTAKKFMSVCALQPNWDKAFYLTGRYYHKLFVSMRAHPNDASiseHKDTYAVLKSAIQFLN 1607
+                66666666666669***************.....469***********************************999766666666666678899999999 PP
+
+                HHHHTTTSSTTTCHHHHHC CS
+       FAT  325 kslslssekslqdllRlLt 343 
+                +sl  +   ++q l+ +Lt
+  KNE54798 1608 RSLLVGCRYVYQALPLVLT 1626
+                9999999999998887776 PP
+
+>> KNE57511  pep supercontig:A_macrogynus_V3:supercont3.4:1762900:1766181:-1 gene:AMAG_03217 transcript:KNE57511 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.9   0.0      0.74   1.6e+03     251     251 ..     365     365 ..     254     419 .. 0.57
+   2 ?   -0.8   0.2      0.34   7.4e+02     159     204 ..     578     620 ..     535     715 .. 0.62
+   3 ?   10.9   0.1   9.6e-05      0.21     259     327 ..     812     887 ..     800     892 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: -1.9 bits;  conditional E-value: 0.74
+               C CS
+       FAT 251 w 251
+               w
+  KNE57511 365 W 365
+               2 PP
+
+  == domain 2  score: -0.8 bits;  conditional E-value: 0.34
+               CHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHH CS
+       FAT 159 RksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkea 204
+               + +g +  A ++L  + + ++   + p++ +a +k+  ++ + + a
+  KNE57511 578 WLAGDIHGARSTLAAAFQANP---ASPQIWLAAVKLEQENRDYDRA 620
+               444444444444444444444...2234444444444333333322 PP
+
+  == domain 3  score: 10.9 bits;  conditional E-value: 9.6e-05
+               T.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS........S-TCCHHHHCCT..CCHHH CS
+       FAT 259 nwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee.......pedlseyvvpavegflksl 327
+                w+e+k +++ + + +a++ d++  ++w++w +f+  + ++e++ +  ++         ++   v +ave+  ks+
+  KNE57511 812 FWAERKGDKARSWFERAIKADDDYGDTWAYWLRFERMHGTAERQAEVANKcvaaepkHGEIWPRVAKAVENTGKSI 887
+               499999********************************99998886666677777754444477777777777776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      19447  (9381744 residues searched)
+Passed MSV filter:                       860  (0.0442228); expected 388.9 (0.02)
+Passed bias filter:                      429  (0.02206); expected 388.9 (0.02)
+Passed Vit filter:                        56  (0.00287962); expected 19.4 (0.001)
+Passed Fwd filter:                         9  (0.000462796); expected 0.2 (1e-05)
+Initial search space (Z):              19447  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.22u 0.02s 00:00:00.24 Elapsed: 00:00:00.11
+# Mc/sec: 26841.42
+//
+[ok]

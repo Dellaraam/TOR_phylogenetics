@@ -1,0 +1,137 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Colletotrichum_graminicola.C_graminicola_M1_001_V1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+          0 1090.7   0.0          0 1090.4   0.0    1.0  1  EFQ25263  pep supercontig:C_graminicola_M1_001_V1:GG697331:15
+  ------ inclusion threshold ------
+      0.086    9.5   0.1        1.5    5.4   0.0    2.5  2  EFQ28134  pep supercontig:C_graminicola_M1_001_V1:GG697339:10
+
+
+Domain annotation for each sequence (and alignments):
+>> EFQ25263  pep supercontig:C_graminicola_M1_001_V1:GG697331:1526303:1530562:-1 gene:GLRG_00407 transcript:EFQ25263 gen
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1090.4   0.0         0         0       4    1170 ..     111    1347 ..      84    1354 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 1090.4 bits;  conditional E-value: 0
+  PTHR13298.orig.30.pir    4 kqeseeltvkldlatklkdgaenll......sn.llresrdsiekkleslnnlikl.............................. 52  
+                             +q+ ++l+ +l++++k+kdg+en+l      ++ +++e+r+++e +l+ +n++ik                               
+               EFQ25263  111 EQTLAALREQLNREMKIKDGSENMLealnakKAkQTKEQRAKVEAELNASNQRIKIlrqkiadasrpkatpttptrqrtndalyss 196 
+                             67888999*****************999886226**************************************************** PP
+
+  PTHR13298.orig.30.pir   53 ..............................................kaaakklnellgllkeeiiikedlvelelvsclrslllse 92  
+                                                                           ++++++ n+l++l+ +++++k+dlv++ +  +++ +llse
+               EFQ25263  197 annglrsppsasrsgagsdydeaaeqsptfllaellqaleqegmppEYYVSRGNSLVDLFRRHPTLKYDLVWSVFGMRMQVMLLSE 282 
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir   93 skevraaalRllrylisdskvlrrllrlgldiliarsLdrdsknetEreqalkliramlev..apkliptaivralvaiaeseedr 176 
+                             ++ev aa++R++ry+isd ++l+++++l++d +++ sL +d+k + Ereqalk++ra+l+v  + k++++a+vr+++a+ae++edr
+               EFQ25263  283 AREVVAAGYRMIRYAISDVSSLKKIRSLNTDMIVVTSLIKDRKADLEREQALKFVRAFLDVkdGVKELSRAVVRTIAAVAEQAEDR 368 
+                             *************************************************************999********************** PP
+
+  PTHR13298.orig.30.pir  177 lrraclatlcelallnpelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkd 262 
+                             lr++cl+tl+e++l++p+l+ ++ggl+ l +al+e  ++ +  esl+a  l++l++p+ r ylr g dle+l++ ftd+      +
+               EFQ25263  369 LRSICLETLAEIMLRDPALAVASGGLSPLSEALIE--GTYKSPESLTASYLQILDNPQKRVYLRSGYDLEVLFTAFTDI------I 446 
+                             ***********************************..7899999*********************************44......6 PP
+
+  PTHR13298.orig.30.pir  263 kqeskskeerelsrleaskkailtlLrSWaGllylckndkrgLkslvdvlrlpnlevrkaildlLydlLrlkepkwtesftsgsal 348 
+                              ++        +s l++ +kai+ +L+SW+Gl++l + d+r+Lksl+ ++ lp++ +r++++dl y lLr+k+p+w +sf +g++l
+               EFQ25263  447 LAN--------ESLLKQNAKAITKILKSWPGLMILTMHDSRALKSLLTSMVLPQPTIRETVIDLVYLLLRIKSPSWASSFLAGRRL 524 
+                             666........349************************************************************************ PP
+
+  PTHR13298.orig.30.pir  349 kavdsaalqdswrlsdgfvaeesktilpssarsrp.dlldnylallLlalieagLleaLvevitssdssvsvkAtiLLgellslan 433 
+                             +++++ a      l++    ++s + +p  +++ + + +d+y+allL+++++agLle L++v ++s +++s+k  +L+ge+l+la+
+               EFQ25263  525 TTYGRVAS-----LKSISNHNSSGSTSPMEEDTGEqNFMDHYTALLLATFVKAGLLENLLQVARTSEPQLSRKTCLLIGEVLKLAS 605 
+                             ******96.....33443444445556777777668************************************************** PP
+
+  PTHR13298.orig.30.pir  434 tlLPpelsaslhslptlvslaasfssekskrnraaaalalksldelkrsksksa.slyldeilqkkllersssnssedskrkrlrq 518 
+                             +lLP+++s+ l+ lp+l+++a++f   k ++++ a++ +++++++++r+ ++s  s+ ++  l+   + +s+ n+   ++ ++ + 
+               EFQ25263  606 RLLPSSWSNDLPLLPELFAAATQF---KDDNRFIASG-IVYQISSVSRTLYRSSpSVGTAGTLP---SHDSMGNL--ADMPRKSNT 682 
+                             ***********************9...9999999999.************98763666677666...33333333..333333345 PP
+
+  PTHR13298.orig.30.pir  519 iledddeafkrmlkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPskkrfssidktkqlekyvqv 604 
+                             +  ++++a++++l +s+vl++ +ylkWnwd+i+ ++egpl    krl+e  +v+kf+ r++sFy+P+k rfs ++++k+++kyv+v
+               EFQ25263  683 GVVVQEGAIRQLLVESNVLNSSNYLKWNWDVISRIIEGPL-QDGKRLDEVNRVSKFMNRIMSFYRPFKHRFSDLSSNKNTQKYVRV 767 
+                             89**************************************.999****999*********************************** PP
+
+  PTHR13298.orig.30.pir  605 gcqllslLlsspeGialleesrlLkelleelsqelldssse.kspderlfskerlsttlsqgyflfiGvLsstkeGlkiLeklnif 689 
+                             gc l+++Ll+s+eG+++l+++++L++++e+l+q  +d+ss+     + +fs+ rl++tl+ gyf ++GvLs +++Gl +L+++++f
+               EFQ25263  768 GCALMHTLLQSNEGVEYLQDHKMLRQIAECLAQ--CDPSSGlT-STDPMFSPGRLQSTLCAGYFPMLGVLSGDPRGLDLLQRWRMF 850 
+                             *********************************..9*****63.4577************************************** PP
+
+  PTHR13298.orig.30.pir  690 qlllqlislktrdelvklivssLdysldgesRvilskaLtsssesiRlyatkhLrvllraessdfsd.........WgielLvtql 766 
+                             +++++++  k+r++l+kl++s++dys+ g++Rv++++aLts++++iR+ at+ Lr++   +  d s+         W+ie L  ql
+               EFQ25263  851 NMMYHILGHKQRPDLIKLLLSNFDYSIPGHPRVLIEQALTSGTREIRITATNALRKYAT-RPFDASQpsygkvdwkWAIEKLCDQL 935 
+                             ***********************************************************.3334444666779************* PP
+
+  PTHR13298.orig.30.pir  767 ydpskevakaAlkiLeeacedkanileylvslkpsllhlgdkgelLllrflstpkGfrylkeenyvekelekWaeernaeYvllvE 852 
+                             ydp++ev++ A+kiLe+ac +ka+ ley+v+++p+++hlg++g++Lllrfls + G++yl+  +y+++e+++W+ +rn +Yv  +E
+               EFQ25263  936 YDPEVEVCRTAVKILEKACNKKAY-LEYVVQCRPTMDHLGEIGAPLLLRFLSSSIGYHYLDGVDYISNEMDDWFLGRNDSYVGVIE 1020
+                             *******************99999.************************************************************* PP
+
+  PTHR13298.orig.30.pir  853 ealsealtlltreedgsdsrrrsngpdsslrnrksvilPpHLygeLakteeGcelLekkghleelaetirshgle..dseeilklk 936 
+                             ++l++a+ +  ++e+ ++ ++  ++ +    +++++ +PpH+y+eLa+t+eGc+lL +kgh++e+a+ti++ g++  d+e +lk+k
+               EFQ25263 1021 TSLAKAFLE--NPEEHQNRMNMVDEAQ--AEAEPENHIPPHFYRELARTQEGCKLLNDKGHFAEFANTIKEYGMQseDPELMLKVK 1102
+                             ********9..8999999999998774..5789**************************************999999********* PP
+
+  PTHR13298.orig.30.pir  937 aalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrnaliGlciPsd 1022
+                             +++WA+g++gs+elG++++e+   d++edi+++aee+ev+s+rGt+f+vlgli+r+ +g eiL+e gW++++++r+++ G ciP+d
+               EFQ25263 1103 SSMWAVGNVGSMELGAPFIES--CDVVEDIVRIAEEHEVMSLRGTAFFVLGLISRSAHGLEILSECGWDANLSPRGESLGFCIPND 1186
+                             *********************..69************************************************************* PP
+
+  PTHR13298.orig.30.pir 1023 vnelfsipehqqsssaesapitdekpeeiktslky................ptsqmvrkeilrlvanLsnsvlakkaekeLlklke 1092
+                             ++++fs +++++  +++ + ++++k   ++ +  +                 ++  ++++il+lv +L+n+vl+k a++eL ++++
+               EFQ25263 1187 LSKFFSFKPWKHAIASKITLPDTQK---TFLTPPPptearpplekedlpafTNEAATNQRILDLVVDLGNMVLYKRAMGELMQIRQ 1269
+                             **********988888887776644...3444444899*************999******************************** PP
+
+  PTHR13298.orig.30.pir 1093 kkpelfddpclfsevlkllseyrfrlqaRrfiqelfddavllsslrseerleveesqsemyeeaelsasepesqqast 1170
+                             +k   f  p++f++v+++l+ +++rl+ Rr++ e+fd++vl++ +  e+++ +  + ++ ++e  +s s +e++++++
+               EFQ25263 1270 HKVPGFRCPKMFKRVMTMLEYNHYRLPIRRMVIEMFDKSVLRRIVFGEDSDGESDEDEDEEDEDDASSSGDENRTERQ 1347
+                             ******************************************999999888777777777777766666666655544 PP
+
+>> EFQ28134  pep supercontig:C_graminicola_M1_001_V1:GG697339:1015159:1017109:1 gene:GLRG_03278 transcript:EFQ28134 gene
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.4   0.0   0.00025       1.5     909     990 ..     121     194 ..     106     231 .. 0.85
+   2 ?    0.8   0.0    0.0061        37     396     428 ..     288     320 ..     286     348 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 5.4 bits;  conditional E-value: 0.00025
+  PTHR13298.orig.30.pir 909 ekkghleelaetirshgledseeilklkaalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlglia 990
+                            +k+g++++++e++rs     + ++++   a WAl +i+s ++  + +  e  + ++ +++l  + +   vr  ++++lg ia
+               EFQ28134 121 IKTGVVSRFVEFLRS-----PHTLVQFE-AAWALTNIASGSATQTQVVIE-AGAVPIFVELLAS-PEPDVREQAVWALGNIA 194
+                            689999999999999.....66777765.56******9998887766663.6799999999986.88999999999999887 PP
+
+  == domain 2  score: 0.8 bits;  conditional E-value: 0.0061
+  PTHR13298.orig.30.pir 396 alieagLleaLvevitssdssvsvkAtiLLgel 428
+                            a ieag++  Lve+++  ++sv ++A+   g++
+               EFQ28134 288 AVIEAGIPRRLVELLMHASTSVQTPALRSVGNI 320
+                            789***********************9766665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      12020  (5585764 residues searched)
+Passed MSV filter:                       536  (0.0445923); expected 240.4 (0.02)
+Passed bias filter:                      289  (0.0240433); expected 240.4 (0.02)
+Passed Vit filter:                        35  (0.00291181); expected 12.0 (0.001)
+Passed Fwd filter:                         2  (0.000166389); expected 0.1 (1e-05)
+Initial search space (Z):              12020  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.27u 0.02s 00:00:00.29 Elapsed: 00:00:00.14
+# Mc/sec: 46337.41
+//
+[ok]
