@@ -1,0 +1,271 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Rhizaria/Proteins/Plasmodiophora_brassicae_gca_001049375.pbe3.h15.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-50  171.4   0.0    3.5e-50  170.3   0.0    1.6  1  CEO95116  pep supercontig:pbe3.h15:scaffold_11:40879:50470:-1
+    8.9e-38  129.5   2.8    8.9e-38  129.5   2.8    2.0  2  CEP01214  pep supercontig:pbe3.h15:scaffold_5:14183:27022:-1 
+    1.3e-27   96.1   1.0    2.9e-27   94.9   1.0    1.5  1  CEP02365  pep supercontig:pbe3.h15:scaffold_62:35430:48097:-1
+    6.7e-26   90.4   1.4    1.1e-25   89.7   1.4    1.4  1  CEP02592  pep supercontig:pbe3.h15:scaffold_7:29285:37462:1 g
+     0.0019   16.6   0.1     0.0078   14.6   0.0    2.0  2  CEO94531  pep supercontig:pbe3.h15:scaffold_1:695030:705923:1
+     0.0054   15.1   0.0       0.03   12.7   0.0    2.1  2  CEP01241  pep supercontig:pbe3.h15:scaffold_5:76853:80422:-1 
+     0.0087   14.4   0.1       0.24    9.7   0.0    2.8  4  CEP02298  pep supercontig:pbe3.h15:scaffold_60:46751:48620:-1
+
+
+Domain annotation for each sequence (and alignments):
+>> CEO95116  pep supercontig:pbe3.h15:scaffold_11:40879:50470:-1 gene:PBRA_003882 transcript:CEO95116 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  170.3   0.0   2.5e-53   3.5e-50       2     342 ..    1448    1775 ..    1447    1776 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 170.3 bits;  conditional E-value: 2.5e-53
+                CCTTCCCCTSSSGHHCCCCT........................TSSSS--..CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHH CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk....................kdspdka..ffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydll 78  
+                 l ae aW+lg W ++ +++++m+                    +     +  f++a+ a+h ++f +a+ li++ r      + al+++ y ray  +
+  CEO95116 1448 HLGAETAWHLGRWSEIGKFVEAMDasffgsgsinqysgadtatdQLAS--EslFYHALTAVHDGNFGRARALIDRDRAHHNSTIGALVSKGYLRAYREI 1544
+                689***********************************8776433333..156********************************************** PP
+
+                HCCCCCHHHCHHCCHHCSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHH..HCCSTTHHCCCCC CS
+       FAT   79 vrlQqlaEleeiiqykqklssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksg..rlslAekaLkkll 175 
+                +rlQ laEle+ii+y ++ +++e++  l ++W+kRl g+q dv+vw ++l++R+lv++p+++       +++ lkfa+l+R+s    l+l+ +++++l+
+  CEO95116 1545 LRLQELAELEDIIEYREC-DNAERRLVLQEMWTKRLYGCQADVHVWVNLLAIRALVIDPASE-------IDVRLKFASLCRNSSppLLDLSLRTITSLD 1635
+                *****************9.5899999999*********************************.......**************85578**********9 PP
+
+                HCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCC.CCCCCT.S...-SSCCHHH CS
+       FAT  176 eedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewla.alqklnwseekseeilqay 272 
+                + d       +v +a +k+l a+g    a  +L  fvs++  ++ +                + ll +r + k++ wl+  l kl+ +  + ++ ++ y
+  CEO95116 1636 QTDY------RVRFAMCKHLFAQGSYALARDQLSRFVSEVDADAVAR---------------RSLLaSRSHRKLALWLSgDLTKLTPRDPSVDKLMSLY 1713
+                9999......9***************************664444333...............34444788888888876348888888999******** PP
+
+                HCCHHCT.CCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHH CS
+       FAT  273 saateld.pswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlL 342 
+                s+at++d +s+ k+w + alfnf    +             s yvv+avegf+++l+++++ ++lq +lR+L
+  CEO95116 1714 SRATQFDgQSCFKCWQSFALFNFALSGQG----------YSSSYVVSAVEGFFRALAYGDGrNALQNALRIL 1775
+                *******557899**********987766..........3448***************************98 PP
+
+>> CEP01214  pep supercontig:pbe3.h15:scaffold_5:14183:27022:-1 gene:PBRA_001820 transcript:CEP01214 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.0      0.86   1.2e+03     288     327 ..    1267    1312 ..    1258    1329 .. 0.49
+   2 !  129.5   2.8   6.4e-41   8.9e-38       3     343 .]    2638    2973 ..    2636    2973 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 0.86
+                CCCHHHHHCCHHHHHH.....SSSS.S-TCC.HHHHCCT..CCHHH CS
+       FAT  288 twalfnfevlskeeek.....keeeepedls.eyvvpavegflksl 327 
+                ++ + n+ev+++  e+     ++e  p++l  + + p++++f +  
+  CEP01214 1267 SLRSSNEEVVQAANEGmilacEQERPPKQLLqQCLRPVLTNFAEYN 1312
+                3444555555555444444432222244444466666666665555 PP
+
+  == domain 2  score: 129.5 bits;  conditional E-value: 6.4e-41
+                CTTCCCCTSSSGHH..CCCCT..........TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCH CS
+       FAT    3 laaeaaWrlgqWds..meeylslmk......kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqy 93  
+                l a+aaW+ g+W      e ls         + + +  +f  ++a+   + +++ ++++++ q+l++ + +l++ + + ++++l  ++ ++E++e+ ++
+  CEP01214 2638 LQAQAAWKSGDWGVrlPTESLSGSAggashaSVTIEARLFLICQAIC-ARENDVDRHCDRTLQILLRAWNSLPSVVSETHLPILSLFHSMVEIQESHSM 2735
+                789*********98554455555558766555555555666666633.5667899******************************************** PP
+
+                HCSS-......---TTTTT...TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC...............HHCCS-STTCCCCCCCCHCHHHHCCSTT CS
+       FAT   94 kqkls......sseelksl...lktWrkRlpgvqddvevwqdilsvRslvlspied...............lllkgakaemwlkfanlaRksgrlslAe 168 
+                + + +      +  +   l   l +Wr+Rlp+ + +++ w d +s+R +v++ i++                 + + ++ + l  a++aRk+    ++ 
+  CEP01214 2736 LGEVAalrsqgKTID---LtpqLMKWRQRLPNDWEELSTWTDRVSWRLHVFDLISQvlsgqtasihssvktAPMVEDRVWTLLTLAKIARKQQLGLQCL 2831
+                **9997664333334...2566*********************************************9998555567778888**************** PP
+
+                HHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-S CS
+       FAT  169 kaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekse 266 
+                +aL +   + +                 a    ++a+ ++re++  ++ ++ ++++ l  +++ n+++ft+++ a+ + +kG+ l++l++        +
+  CEP01214 2832 SALAQTVTNGE-----------------APMAASDAFTRVREQIRMCMCSPVQYKDALALINSINIDYFTNVQkAELFRLKGDALQHLGQ-------GD 2906
+                ******66666.................445589********************************************************.......89 PP
+
+                SCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  267 eilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                ++++++s+a +++ +  k w +wa+f+++v+ +++++          e ++ av+++++++ +++  ++  + R+++
+  CEP01214 2907 DANACFSTALYVCENHGKSWLSWADFCDRVFAMKKDR----------EWATCAVSCYMHAITYGEARARLMITRVIW 2973
+                **********************************444..........5999************************98 PP
+
+>> CEP02365  pep supercontig:pbe3.h15:scaffold_62:35430:48097:-1 gene:PBRA_008949 transcript:CEP02365 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   94.9   1.0   2.1e-30   2.9e-27      51     343 .]    2946    3220 ..    2931    3220 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 94.9 bits;  conditional E-value: 2.1e-30
+                CCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC... CS
+       FAT   51 liekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied... 140 
+                ++++a ++ ++e+ + ++ + ++++dll r+Qql+El e   ++++ +         + k ll+ Wr+Rlp+ +d++ +w+ i+  R  v++  +    
+  CEP02365 2946 MLDRAMDIALQEWMRRPSFLGTAHVDLLSRFQQLVELREGRIMIDEAGkafkqnRVPDFKNLLSAWRDRLPNYWDSITIWNEIVCGRLQVFQRLSAafq 3044
+                6899**********************************998888888856655444555666*****************************88888888 PP
+
+                ........HHCCS-STTCCC..CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---. CS
+       FAT  141 ........lllkgakaemwl..kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq 229 
+                            +++ ++w+  k+a+ aR++  ++++   L kl    +                 a     e + kLre+v+ +l+ + e++s     
+  CEP02365 3045 slasapqqE--LAYNDTTWTvvKMAETARRQQLPQVCLTWLDKL----P----------------TAGLSPAESFAKLREQVKICLQTADEIRSAVSLL 3121
+                898888542..44556666666**********************....3................3445689*************************** PP
+
+                ..........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHH CS
+       FAT  230 eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflksl 327 
+                +++ ++ +t ++ a+++ +kGe l++l++        ee   a+s++  ++++  k w +w+ f+++ +  +++           + +   ++++l+++
+  CEP02365 3122 NQSPMDRYTGEQcAEMFRLKGEALEHLGH-------GEESHTAFSSSLAVCDDYGKGWLSWGAFCDQLFGLQKD---------R-QWAEYTITCYLQAV 3203
+                *****************************.......7999******************************9944.........4.488999******** PP
+
+                HTTTS.STTTCHHHHHC CS
+       FAT  328 slsse.kslqdllRlLt 343 
+                + + +  ++  l+R+L+
+  CEP02365 3204 RFHTSdRARLTLARVLW 3220
+                ***999**********9 PP
+
+>> CEP02592  pep supercontig:pbe3.h15:scaffold_7:29285:37462:1 gene:PBRA_002559 transcript:CEP02592 gene_biotype:protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   89.7   1.4   8.1e-29   1.1e-25       4     343 .]    1658    1969 ..    1655    1969 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 89.7 bits;  conditional E-value: 8.1e-29
+                TTCCCCTSSSGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS---- CS
+       FAT    4 aaeaaWrlgqWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklssse 101 
+                 +e+aWr  +W  +e+++ +     +++  + ++i a + ++ +++   +++ar  ++  l+a + esy+ray+   +lQ l+++  + +  +      
+  CEP02592 1658 GIESAWRSANWAALERFMIAHPdPSCFEVGLANVISAWRSDDEERVTATLQQARFNIMSHLAAAAQESYARAYPFWAQLQLLNDFDLARTRVT------ 1750
+                689**********999973333122333336666666888*********************************************99888888...... PP
+
+                TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH CS
+       FAT  102 elksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakge 200 
+                  +s+ + W++R   +q+ +  +++ilsv++lv++ + +    +   ++wl+ a+ +R s ++++A  a +++ + +       ++ ++++ +l a+g+
+  CEP02592 1751 --ASVSWPWQQRIASMQPAFTTREPILSVHRLVFEAACR---DDLAGQCWLQLARESRLSSEFDQASYAVLRANRLQV-----RNACLEQAELLRARGN 1839
+                ..6999*****************************9999...8999***************************88887.....99************** PP
+
+                HHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHH CS
+       FAT  201 qkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlsk 299 
+                 ++al  L+e +     + ++l+ g ++q      e +++l+ +  + Ge ++   +     ++s+ il+ y++a+ +++++ k ++ w++f +  l+ 
+  CEP02592 1840 FSQALIVLEEHIA----SRGQLPIGYTSQ------ERQEELSNMQCLVGELMQLSAS-----RTSDSILSTYRTAIAHCSTLDKPHFLWGSFMDTLLRS 1923
+                ************9....445677776653......3333444445667774444444.....56*********************************** PP
+
+                HHHHSSSS..S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  300 eeekkeeee.pedls.eyvvpavegflkslslssekslqdllRlLt 343 
+                e + +  ++ ++d++ ++v + ++++l s+ +ss+ ++  l+R+ t
+  CEP02592 1924 ELDVQIDDSdRRDVIkKLVPDIIHHYLLSVMSSSGYVFDTLPRVVT 1969
+                *887444335666666***************************976 PP
+
+>> CEO94531  pep supercontig:pbe3.h15:scaffold_1:695030:705923:1 gene:PBRA_000316 transcript:CEO94531 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.3   0.0      0.75     1e+03       3      37 ..    1875    1909 ..    1873    1921 .. 0.72
+   2 !   14.6   0.0   5.6e-06    0.0078     185     338 ..    2043    2240 ..    2015    2244 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: -2.3 bits;  conditional E-value: 0.75
+                CTTCCCCTSSSGHHCCCCT....TSSSS--CCCHC CS
+       FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdkaffeai 37  
+                  +eaaW+ ++W +   y+      +++++++ a+
+  CEO94531 1875 QQYEAAWKCSDWSLDIAYMPDGPGVGFHQHLYTAL 1909
+                5789********99766665555666666666665 PP
+
+  == domain 2  score: 14.6 bits;  conditional E-value: 5.6e-06
+                TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCH CS
+       FAT  185 pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswy 283 
+                 e+ +++++++w +g ++ a+  +   +   +  +     +         ++ + ll+r +l  + w ++++       +++ i++ y  a     +  
+  CEO94531 2043 LEMNMERCRLMWLQGSHSRAIHAMSSLIDAIAGGQ-----N---------DDVRVLLSRGHLCIARWASSARTH-----SHDFIMSRYGMACGSGVRDP 2122
+                48899999999999999999999988888555543.....2.........334556688888888888888884.....48888888888888888888 PP
+
+                STTCCCCHHHHHCCHHHHHHSSSS................................................................S-TCCHHHHCC CS
+       FAT  284 kawhtwalfnfevlskeeekkeeee...............................................................pedlseyvvpa 319 
+                +a+++ a+f ++vl ++ ek+ ++e                                                                + +++++v a
+  CEO94531 2123 SAFFEFAQFQDRVLAQLLEKETSNEartaeklheerrqdlvqlraqlarhrksvskdgpmddierrlrgfiktlelqhaadedaitrrNTRIEQLAVGA 2221
+                899999999998888887775555578888888899999999999999999999999999999999999999999999999999999555666****** PP
+
+                T..CCHHHHTTTSSTTTCH CS
+       FAT  320 vegflkslslssekslqdl 338 
+                ve+f+++  l++ ++l +l
+  CEO94531 2222 VENFIRCMELGDDHDLSSL 2240
+                *************999876 PP
+
+>> CEP01241  pep supercontig:pbe3.h15:scaffold_5:76853:80422:-1 gene:PBRA_001847 transcript:CEP01241 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.8   0.0      0.54   7.5e+02     153     175 ..     162     184 ..     155     193 .. 0.86
+   2 !   12.7   0.0   2.1e-05      0.03     148     259 ..     986    1114 ..     969    1123 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: -1.8 bits;  conditional E-value: 0.54
+               CCCCCHCHHHHCCSTTHHCCCCC CS
+       FAT 153 kfanlaRksgrlslAekaLkkll 175
+               + a+l+R ++r++ A  +L+ +l
+  CEP01241 162 SLASLCRLAKRPESALPLLTDVL 184
+               789************99999875 PP
+
+  == domain 2  score: 12.7 bits;  conditional E-value: 2.1e-05
+                TTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---................ CS
+       FAT  148 aemwlkfanlaRksgrlslAekaLkklleedkeewlp..pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq............... 229 
+                  +w+   + +Rk++ +  Ae++ ++++   + +++       y  l   +a+ ++++  ++Lre+     +   + ++g +++               
+  CEP01241  986 QVTWTTVLSACRKHNDVVRAERVFSRIQSLPNASSHLagA---YVILSSIYASVRRHSDAERLREEMR--VQGLAKKPQGETASlmlpdrtihfssddt 1079
+                558************************5555533333432...2222234455555666666655555..44444444444444444444555555555 PP
+
+                ................HHHHCCCTCCCCCCCCCCCT CS
+       FAT  230 ......eptnleeftkllarcylkkGewlaalqkln 259 
+                      +p+ le++++l+ r ++ +G wl+++++ +
+  CEP01241 1080 rngpmtDPDLLETYRRLM-RSLTASGHWLERAEDVD 1114
+                5677779********997.***********998854 PP
+
+>> CEP02298  pep supercontig:pbe3.h15:scaffold_60:46751:48620:-1 gene:PBRA_008882 transcript:CEP02298 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.0      0.18   2.6e+02     243     280 ..     146     176 ..      89     190 .. 0.69
+   2 ?   -0.9   0.0      0.29   4.1e+02     293     306 ..     287     300 ..     247     352 .. 0.45
+   3 ?   -2.4   0.0      0.81   1.1e+03     254     286 ..     354     379 ..     322     395 .. 0.74
+   4 !    9.7   0.0   0.00017      0.24     240     321 ..     409     481 ..     393     499 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.18
+               HCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTC CS
+       FAT 243 rcylkkGewlaalqklnwseekseeilqaysaateldp 280
+               +c+++ G+  ++l++       ++ ++ +y  a+e++p
+  CEP02298 146 QCHMLMGQLNERLGR-------IKSAVVCYFNAIEMNP 176
+               455555555555555.......4555555555555444 PP
+
+  == domain 2  score: -0.9 bits;  conditional E-value: 0.29
+               HHHCCHHHHHHSSS CS
+       FAT 293 nfevlskeeekkee 306
+                 ++ +++ + +++
+  CEP02298 287 MRNQATELGSLSQR 300
+               44444444333222 PP
+
+  == domain 3  score: -2.4 bits;  conditional E-value: 0.81
+               CCCCCT.S...-SSCCHHHHCCHHCTCCCHSTT CS
+       FAT 254 alqklnwseekseeilqaysaateldpswykaw 286
+               a       + +++e++ ay++a+ +d++  + +
+  CEP02298 354 A-------TGCADEAVTAYKQANLIDRRELDSY 379
+               3.......3448889999999988888766655 PP
+
+  == domain 4  score: 9.7 bits;  conditional E-value: 0.00017
+               HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT. CS
+       FAT 240 llarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpave 321
+               + ar++++ G  la++ ++      ++++ +a+++a ++dp++ +a  ++++++  + + +e  +    +++l +++++a++
+  CEP02298 409 N-ARALTLFGNVLARTTEG------RDNARKAFTKALQIDPNCHDACIALVKLCMAQSQFQEAITLL--EKHLAHHPTDAMH 481
+               4.78888888888888885......9***************************99999988555443..5778888888876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       9727  (4370296 residues searched)
+Passed MSV filter:                       497  (0.0510949); expected 194.5 (0.02)
+Passed bias filter:                      280  (0.0287859); expected 194.5 (0.02)
+Passed Vit filter:                        32  (0.00328981); expected 9.7 (0.001)
+Passed Fwd filter:                         7  (0.000719646); expected 0.1 (1e-05)
+Initial search space (Z):               9727  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 0.11u 0.01s 00:00:00.12 Elapsed: 00:00:00.07
+# Mc/sec: 21073.09
+//
+[ok]

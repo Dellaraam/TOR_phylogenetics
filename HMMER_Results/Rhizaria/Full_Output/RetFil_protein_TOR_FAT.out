@@ -1,0 +1,634 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Rhizaria/Proteins/RetFil_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.2e-66  224.7  16.9    1.3e-65  223.1  16.9    1.9  1  ETO28610.1  phosphatidylinositol kinase Tor2 [Reticulomyxa fi
+    3.2e-58  198.7  21.0    1.9e-45  156.7   3.4    4.9  5  ETO28318.1  fkbp-rapamycin associated protein [Reticulomyxa f
+    3.8e-11   43.9  12.2    1.1e-09   39.2   9.6    4.0  3  ETO08866.1  hypothetical protein RFI_28520 [Reticulomyxa filo
+    3.7e-09   37.4  11.8        1.4    9.3   0.1    8.5  7  ETO06138.1  TPR Domain containing protein, partial [Reticulom
+      2e-08   35.0   2.6    0.00018   22.0   1.5    2.1  2  ETO11507.1  putative O-linked N-acetylglucosamine transferase
+      1e-06   29.4   1.0    1.6e-06   28.7   1.0    1.3  1  ETO11286.1  hypothetical protein RFI_26089 [Reticulomyxa filo
+    0.00017   22.1   0.6    0.00028   21.4   0.4    1.3  1  ETO22875.1  hypothetical protein RFI_14315 [Reticulomyxa filo
+    0.00073   20.0   0.0     0.0013   19.2   0.0    1.4  1  ETO15019.1  hypothetical protein RFI_22348, partial [Reticulo
+     0.0014   19.1   4.3       0.53   10.6   0.2    2.2  2  ETO30094.1  hypothetical protein RFI_07024 [Reticulomyxa filo
+     0.0035   17.7   2.3     0.0077   16.6   2.1    1.6  1  ETO02004.1  hypothetical protein RFI_35438 [Reticulomyxa filo
+     0.0049   17.3   0.3     0.0073   16.7   0.3    1.3  1  ETO09106.1  hypothetical protein RFI_28281 [Reticulomyxa filo
+     0.0092   16.4   6.7      0.041   14.3   2.6    2.2  2  ETO06835.1  hypothetical protein RFI_30557, partial [Reticulo
+  ------ inclusion threshold ------
+      0.018   15.4   3.3      0.028   14.8   3.3    1.2  1  ETO33121.1  hypothetical protein RFI_03986, partial [Reticulo
+      0.022   15.1   2.9      0.036   14.4   2.9    1.5  1  ETO29482.1  TPR domain protein [Reticulomyxa filosa]
+      0.037   14.4   2.6      0.081   13.3   2.6    1.6  1  ETO13980.1  hypothetical protein RFI_23390 [Reticulomyxa filo
+      0.062   13.7   0.1      0.076   13.4   0.1    1.3  1  ETO12675.1  peptidase S1 and S6 chymotrypsin/Hap, partial [Re
+      0.065   13.6   0.1      0.066   13.6   0.1    1.1  1  ETO12472.1  hypothetical protein RFI_24903 [Reticulomyxa filo
+      0.072   13.4  18.2       0.21   11.9   2.6    3.8  3  ETO11064.1  TPR domain-containing protein, partial [Reticulom
+      0.074   13.4   0.1      0.086   13.2   0.1    1.2  1  ETO32549.1  hypothetical protein RFI_04569 [Reticulomyxa filo
+       0.11   12.9   5.2      0.031   14.7   1.5    1.7  2  ETO27036.1  hypothetical protein RFI_10097, partial [Reticulo
+       0.14   12.5   0.3       0.14   12.5   0.3    2.1  2  ETO27501.1  putative TPR domain-containing protein, partial [
+       0.19   12.1   2.7       0.39   11.0   2.7    1.4  1  ETO21510.1  hypothetical protein RFI_15694 [Reticulomyxa filo
+
+
+Domain annotation for each sequence (and alignments):
+>> ETO28610.1  phosphatidylinositol kinase Tor2 [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  223.1  16.9     7e-69   1.3e-65       2     343 .]    1400    1743 ..    1399    1743 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 223.1 bits;  conditional E-value: 7e-69
+                  CCTTCCCCTSSSGHHCCCCT....TSSSS--..CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCS CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdka..ffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqk 96  
+                   l a +aW+l++W++m +++++m++d+      f++aila+h++++++a e+i+++r+ l+ e++al+gesynraydl vrlQqlaE+eei+ y+q 
+  ETO28610.1 1400 ALGAMSAWSLQKWEDMTSFTQQMSEDEMVADtwFYRAILAVHNKEYKSALEYIDRTREALDGEMTALVGESYNRAYDLCVRLQQLAEMEEIV-YMQT 1495
+                  68899*******************888877778*********************************************************86.6666 PP
+
+                  S----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT............T. CS
+         FAT   97 lssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp.......p. 185 
+                  + +++  ++l+  W kRl g+q+ v vwq++lsvR++++sp+ed       +++wlkf++l+Rk+g+l l +++L+ +l e +e+ l        p 
+  ETO28610.1 1496 HVEPQWKQRLKHVWAKRLNGCQKTVAVWQKVLSVRQMAISPRED-------VDTWLKFSSLCRKNGHLVLDMQTLSAMLNETPEYCLRalstkqfPe 1585
+                  8899999999999*******************************.......********************************55555554455525 PP
+
+                  ...............SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-S CS
+         FAT  186 ...............evvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekse 266 
+                                 +++++ +k+ w+ g +++a   L+  +++l++  e            n+e    ++ a+cy k+G w ++  + + + + ++
+  ETO28610.1 1586 lyakaqstnsdidsaKITFSLAKHCWSAGMHDQAKDFLHYLITELTKTSEPREL--------NIESAYSEMvAKCYVKLGVWAQESTH-DLNDNVIS 1673
+                  555566666666667****************99999999999977776532222........3344444555**********998888.788888** PP
+
+                  SCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS....STTTCHHHHHC CS
+         FAT  267 eilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse....kslqdllRlLt 343 
+                  +++q++ aat+++ s+y  wh +a ++ e+++++          ++ ++vv av+  ++s++l ++      lqd+lRlL+
+  ETO28610.1 1674 QATQYFNAATQHNTSSYWGWHDLAVMHYEAINRN----------NT-THVVAAVTSLFQSIALDHNthygTRLQDILRLLQ 1743
+                  **********************************..........22.59*****************988889*******96 PP
+
+>> ETO28318.1  fkbp-rapamycin associated protein [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.1   0.1       2.1   3.9e+03      86     289 ..     102     155 ..      81     240 .. 0.59
+   2 ?   -1.8   0.1       1.8   3.2e+03     255     293 ..     319     356 ..     264     365 .. 0.60
+   3 !  156.7   3.4     1e-48   1.9e-45       1     230 [.     485     709 ..     485     728 .. 0.85
+   4 !   57.4   9.8   1.7e-18   3.1e-15     184     332 ..     753    1001 ..     737    1005 .. 0.89
+   5 ?   -2.7   3.4       3.3     6e+03      13      88 ..    1214    1298 ..    1211    1303 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: -2.1 bits;  conditional E-value: 2.1
+                 HHCHHCCHHCSS-...........---TTTTT.......TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCS CS
+         FAT  86 Eleeiiqykqkls...........sseelksl.......lktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlsl 166
+                 El+++++++ +++           +   ++++       +k W+++ + ++                                                
+  ETO28318.1 102 ELHDMLSLYHSDNvplsnrvhpteN---QDQIevtlhplRKAWETQNRSTHE----------------------------------------------- 150
+                 5555555555444455555443321...222222233334445444444443............................................... PP
+
+                 TTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...- CS
+         FAT 167 AekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseeks 265
+                                                                                                                    
+  ETO28318.1   - ---------------------------------------------------------------------------------------------------   -
+                 ................................................................................................... PP
+
+                 SSCCHHHHCCHHCTCCCHSTTCCC CS
+         FAT 266 eeilqaysaateldpswykawhtw 289
+                                     w tw
+  ETO28318.1 151 -------------------DWITW 155
+                 ...................34333 PP
+
+  == domain 2  score: -1.8 bits;  conditional E-value: 1.8
+                 CCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+         FAT 255 lqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                 lq+  ++ +   e + ++++ +++ p+w +  ++w  + 
+  ETO28318.1 319 LQQ-PQAAQGVVEYTRKFQSDIQIKPQWFERLNRWEEAL 356
+                 333.12233355666666777777777776666666655 PP
+
+  == domain 3  score: 156.7 bits;  conditional E-value: 1e-48
+                 CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---S.CCCCCHHH.HHCCCCCHHHCHHCCHHCSS CS
+         FAT   1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsge.synraydl.lvrlQqlaEleeiiqykqkl 97 
+                 apl a+a W+lg+W +me+y+++m++d++++aff+ +l++h+ +  +a + i+k+r+ l  el++  +   y  +y++ +++ Qql+Elee++ yk++l
+  ETO28318.1 485 APLGATACWNLGEWSDMEDYVNAMSEDTLQGAFFRSVLCVHKYERLDALKWIDKTRKFLHFELAQSMKDgYYDLNYKSlIIKAQQLTELEEVLLYKDSL 583
+                 699************************************************************998888788999988789****************** PP
+
+                 -..---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHH CS
+         FAT  98 s..sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylky 194
+                 +  +  ++++++++W +Rl g+ ++v+vwq+ilsvR+lv+sp+ed       +++wl f++l+ ksgrlsl+ k L++l+++++     p++ +++  y
+  ETO28318.1 584 QfdDRVRQQQIKRMWSTRLYGCERNVDVWQNILSVRRLVVSPQED-------VSTWLTFVSLSGKSGRLSLSLKILSRLMGYES-----PDLLLQHQHY 670
+                 **99999**************************************.......********************************.....7777776666 PP
+
+                 HHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---..... CS
+         FAT 195 lwakgeqkealqkLrefvscllekkeelssglevq...e 230
+                    + ++ +  +++ +  +++ ++++++++++e     +
+  ETO28318.1 671 YNRTLKHGKIRESVSKNNNNNNNNNNNNNNNNEDDdddD 709
+                 666666655555555555544444443333333324442 PP
+
+  == domain 4  score: 57.4 bits;  conditional E-value: 1.7e-18
+                  ....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.....SS-SS---.......................HHHHCCCTCCCCCCCCCCCT. CS
+         FAT  184 p...pevvyaylkylwakgeqkealqkLrefvscllekke.....elssglevq............eptnleeftkllarcylkkGewlaalqklnw 260 
+                      p+v ++y+k+l   g +++a ++L   v+ +le+       +++sg+++             +  +l+++++l a cyl+ G   +++q+ + 
+  ETO28318.1  753 GlhqPQVAFSYAKHLTRAGLKNQAHEQLVGLVK-HLEDCIvnfddRNNSGTNATksalkkdlsnnkDRLSLQTLHRLAANCYLRIGGLKREFQD-DL 847 
+                  13469***********************99999.77776667777666666666778888888867777899999999****************.89 PP
+
+                  S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.................................................. CS
+         FAT  261 seekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee................................................. 308 
+                   e++++ei ++y+aate+dp++y awh+wal+n e + ++++ +  ++                                                 
+  ETO28318.1  848 DEKTISEIIHCYRAATEHDPNSYWAWHAWALMNYESIAYYARMAAHHSrkenvaiemskklreqqmteslspkpmsptsptmefkqiqqqvqqqhqq 944 
+                  ****************************************88855444667899******************************************* PP
+
+                  .................................S-TCCHHHHCCT..CCHHHHTTTS CS
+         FAT  309 .................................pedlseyvvpavegflkslslsse 332 
+                                                    + ++ ++ pa++ f+ks+ l+ +
+  ETO28318.1  945 hqqhqqqdekntnlkrrlstsdimkhrqlkkkaLDSVQAHMAPALDAFFKSILLGAG 1001
+                  **************************9999998788899*************99876 PP
+
+  == domain 5  score: -2.7 bits;  conditional E-value: 3.3
+                  SGHHCCCCT......TSSSS--CCCHCCCCHH..--CCHCHHCCCHCCCCCCCCCTS---S....CCCCCHHHHHC.CCCCHHHC CS
+         FAT   13 qWdsmeeylslmk..kdspdkaffeailalhr..nqfdeaeeliekarqllvtelsalsge....synraydllvr.lQqlaEle 88  
+                  + ++m ++l+++k   ++++k +++    l    ++++e ++++ k r+    el +  +      y+r yd +++ l ql+Ele
+  ETO28318.1 1214 NHELMNQKLEELKknGNDYQKITYRERTFLNAfeQELTESYRYLCKYREEESAELKEQYMYqaweCYQRMYDRIQKqLPQLQELE 1298
+                  5678899999999554555555665433333333778888888888888777777776665555599999999886467777776 PP
+
+>> ETO08866.1  hypothetical protein RFI_28520 [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.1   0.0       2.2   3.9e+03     302     328 ..     209     252 ..     163     267 .. 0.78
+   2 ?   -1.6   0.0       1.5   2.7e+03      87     118 ..    1300    1331 ..    1296    1339 .. 0.85
+   3 !   39.2   9.6     6e-13   1.1e-09      37     342 ..    1705    2152 ..    1652    2153 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: -2.1 bits;  conditional E-value: 2.2
+                 HHSSSS..................S-TCCHHHHCCT..CCHHHH CS
+         FAT 302 ekkeeee.................pedlseyvvpavegflksls 328
+                 + k+++e                 +e+ s+++v+a+e f+ s  
+  ETO08866.1 209 KHKHQTEinnkldmlfsnlihplhREKCSQFLVRAIELFFDSSY 252
+                 22333336677888888888888899999***********9975 PP
+
+  == domain 2  score: -1.6 bits;  conditional E-value: 1.5
+                  HCHHCCHHCSS----TTTTTTT----TTS-TT CS
+         FAT   87 leeiiqykqklssseelksllktWrkRlpgvq 118 
+                  ++ ii+y++k +  + lk++ k W++R ++v 
+  ETO08866.1 1300 FMFIISYDKKIKGFDMLKRYQKAWEERQKDVV 1331
+                  566999***999***************98875 PP
+
+  == domain 3  score: 39.2 bits;  conditional E-value: 6e-13
+                  CCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-...............................---T CS
+         FAT   37 ilalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls...............................ssee 102 
+                  ++++ r++  + +++++k  + l+++++ l+    n+ ++ll++lQ l E+ e+ q ++  +                                s +
+  ETO08866.1 1705 VYSVIRSDWPRGKYYLKKSYDMLLEKWCNLPLLAENNKMELLHHLQKLEEINEFGQWMKYINekqaktmasssssslllssspslkkrgryenASID 1801
+                  4456668889999******************************************9888777788******************99999999999999 PP
+
+                  TTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC......HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHH CS
+         FAT  103 lksllktWrkRlpgvqddvevwqdilsvRslvlspied......lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylk 193 
+                  l++ll+ W++R p+  ddv+ w+di+  R +++++  d       ++ ++ +++  ++++   +++++ +A+ ++ ++    +   l p++ ++++k
+  ETO08866.1 1802 LEDLLESWKQRFPNKGDDVNTWNDIAFHRNVFFKKMTDqcqdlsTIIADMYVTTLCETISALIEQKNYPVAQYHIEEASLLGQ---LSPQLKLQQIK 1895
+                  9999*****************************99999996666666666666666*********************955555...23666666666 PP
+
+                  HHHHCCH.HHHHSSCCHHHHCCTSSCCCSS-SS---....................HHHHCCCTCCC.................CCCCCCCCT.S.. CS
+         FAT  194 ylwakge.qkealqkLrefvscllekkeelssglevq.........eptnleeftkllarcylkkGe.................wlaalqklnwsee 263 
+                  + ++++  +  +l++ +++ + +++++ + + ++ +q         + + +++f+  +   y ++G+                 +  ++     +++
+  ETO08866.1 1896 LHLEETLdKYHYLSERKHESTTNSQENDKKLLQKLYQlsgklgfylKDEPMNDFQPTI---YSLQGKmlclmatlvaknnrlsdYVDHA----TTNA 1985
+                  6665554333333333333333333333222222222344454444333333333332...4444444444444444333222222222....2233 PP
+
+                  .-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS..................................................... CS
+         FAT  264 kseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee.................................................... 308 
+                    +++  +y+    + +  +++  ++  +  +v+ k+++kk+e+                                                     
+  ETO08866.1 1986 LFQQAQFCYCCVYVYVQIRIHNARSMYVYVRNVFAKKKKKKRESYqnavrllddedigmeesktvseekvneglvvsamtseengaslslppsylem 2082
+                  4444444444444444444445555666666666666555444445566666666666666666666677888888888888889999999999999 PP
+
+                  ...................................S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+         FAT  309 ...................................pedls.eyvvpavegflkslslssekslqdllRlL 342 
+                                                      ++++ e++ + + + lk+ +++s ++ + ++R+L
+  ETO08866.1 2083 alfchrrlldldeserlkmveqkrgtnkfsvqrsdFSEIEiELAKQLIYHLLKAMAYGSPEAINLFPRVL 2152
+                  9988888888888888888999999999988888844555589999999999999999999999999988 PP
+
+>> ETO06138.1  TPR Domain containing protein, partial [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.0   0.5   0.00086       1.6     154     207 ..      29      86 ..      12     193 .. 0.69
+   2 !    6.0   0.4    0.0073        13     153     259 ..     202     305 ..     180     311 .. 0.70
+   3 ?    2.7   0.1     0.073   1.3e+02     160     198 ..     243     285 ..     233     366 .. 0.52
+   4 ?   -0.0   0.0       0.5   9.1e+02     148     179 ..     402     433 ..     399     440 .. 0.78
+   5 ?   -0.0   0.0       0.5   9.1e+02     154     182 ..     442     470 ..     436     476 .. 0.84
+   6 !    9.3   0.1   0.00074       1.4     153     200 ..     475     526 ..     457     534 .. 0.74
+   7 !    5.8   0.0    0.0081        15     152     228 ..     542     653 ..     537     678 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 9.0 bits;  conditional E-value: 0.00086
+                 CCCCHCHHHHCCSTTHHCCCCCHCTT.........TSSCCCHHHHHHHCCHHHHHSSC CS
+         FAT 154 fanlaRksgrlslAekaLkklleedkeewlp....pevvyaylkylwakgeqkealqk 207
+                  a+l  ++g ++lAe  Lkk+ e++++++ +    ++++ a+ k+ +a++e ++ +++
+  ETO06138.1  29 LADLYKDQGKFDLAEAELKKIIEQNPNNSYKrellSDLYKAQGKFDLAEKELEKIIEQ 86 
+                 6777777777777777777777777733332346667777777777777765555544 PP
+
+  == domain 2  score: 6.0 bits;  conditional E-value: 0.0073
+                 CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCC CS
+         FAT 153 kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGe 250
+                 kfa+l  k+g+l lA +++++  + d+++  +   +   +++  a+g+ + a+++L++ ++      ++ ++    + + n++ +t++  +  y  +G+
+  ETO06138.1 202 KFAQLYEKQGNLALATEQIREEIKLDSNNLCT---HNFLARLYKAQGKFDLAIEYLNKTLE-IPPPLSRKLKTYKEIAYVNCKMNTHKFlSDLYRAQGK 296
+                 99****************99999999943333...33446788888888999999988888.3333333333333336666666666666888888888 PP
+
+                 CCCCCCCCT CS
+         FAT 251 wlaalqkln 259
+                 +  a+++l+
+  ETO06138.1 297 FDLAVEHLQ 305
+                 776666654 PP
+
+  == domain 3  score: 2.7 bits;  conditional E-value: 0.073
+                 HHHHCCSTTHHCCCCCHCTT...........TSSCCCHHHHHHHC CS
+         FAT 160 ksgrlslAekaLkklleedk..eewlp....pevvyaylkylwak 198
+                  +g ++lA+++L+k le  +  +  ++     e+ y ++k+  +k
+  ETO06138.1 243 AQGKFDLAIEYLNKTLEIPPplS--RKlktyKEIAYVNCKMNTHK 285
+                 55555555555555555555221..21223444444444444333 PP
+
+  == domain 4  score: -0.0 bits;  conditional E-value: 0.5
+                 TTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT CS
+         FAT 148 aemwlkfanlaRksgrlslAekaLkklleedk 179
+                 +e  l++a+l  k+g ++lA+++ kk  e d+
+  ETO06138.1 402 FELFLSIAELYEKQGKFDLAIEHFKKEIERDP 433
+                 66778899999999999999988887666655 PP
+
+  == domain 5  score: -0.0 bits;  conditional E-value: 0.5
+                 CCCCHCHHHHCCSTTHHCCCCCHCTT... CS
+         FAT 154 fanlaRksgrlslAekaLkklleedkeew 182
+                 fa+l  ++g ++lAe++  k+lee + ++
+  ETO06138.1 442 FAELYERQGKFDLAEEVFIKALEEHPRDS 470
+                 899999************99999999433 PP
+
+  == domain 6  score: 9.3 bits;  conditional E-value: 0.00074
+                 CCCCCHCHHHHCCSTTHHCCCCCHCTT...........TSSCCCHHHHHHHCCH CS
+         FAT 153 kfanlaRksgrlslAekaLkklleedk..eewlp....pevvyaylkylwakge 200
+                 + a+l Rk+g ++lAek+  k+le ++  +         +++ ++ k+ ++ ++
+  ETO06138.1 475 QLADLYRKQGKFGLAEKHFEKMLELRPnnS--YIrqwlADMYKEQGKLDLSIKQ 526
+                 6899***********************442..3322444666666666665555 PP
+
+  == domain 7  score: 5.8 bits;  conditional E-value: 0.0081
+                 CCCCCCHCHHHHCCSTTHHCCCCCHCTT.........TSSCCCHHHHHHHCCHH..............................HHHSSCCHHHHCCTS CS
+         FAT 152 lkfanlaRksgrlslAekaLkklleedkeewlp....pevvyaylkylwakgeq..............................kealqkLrefvscll 216
+                 l+ a++  ++gr++lAe++ kk+ e ++++  +      ++  + k+ +a+ e                               +ea+ k re + +++
+  ETO06138.1 542 LSLADIYKEQGRFDLAEEVFKKAIELNPNNLYHrkalALLYEDQGKFDLAEAEFqkiierdpkgiwpyeslgkiykelgkttlaEEAFRKARELTDEYI 640
+                 778999999999999999999999999944444444422222233333333331122222333444444444455555555555777777777777777 PP
+
+                 SCCC.SS-SS--- CS
+         FAT 217 ekke.elssglev 228
+                   ++ e++++ ++
+  ETO06138.1 641 ATNRaEAPKDETT 653
+                 7666544444444 PP
+
+>> ETO11507.1  putative O-linked N-acetylglucosamine transferase, partial [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.0   1.5     1e-07   0.00018     143     249 ..      20     117 ..      11     122 .. 0.84
+   2 !   13.6   0.0   3.5e-05     0.063      33      88 ..     115     170 ..     106     178 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 22.0 bits;  conditional E-value: 1e-07
+                 CCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH CS
+         FAT 143 lkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll 241
+                 +k  ++++ lk+  l  +s r++ A+ + +++le +++++   ++ y+++ +lw k+e +ea+ +L+  +  ++ ++e++++ +e+   ++++ef+++ 
+  ETO11507.1  20 MKPDHVKTMLKYGVLLSRSRRFQEAHIVFRNALEMNPNDM---DLRYEHANVLWTKQEYEEAIMELKRCLL-VATNPEQMQKSIEM--ENKCKEFQEK- 111
+                 466799*******************************444...569**********************999.99999999999998..4677777665. PP
+
+                 HHCCCTCC CS
+         FAT 242 arcylkkG 249
+                   c l+ G
+  ETO11507.1 112 --CVLLYG 117
+                 ..566655 PP
+
+  == domain 2  score: 13.6 bits;  conditional E-value: 3.5e-05
+                 CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHH.HHCCCCCHHHC CS
+         FAT  33 ffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydl.lvrlQqlaEle 88 
+                 +++ +l   ++++d+ae +i +a++l   +l +l+g sy+   ++  v++  laE++
+  ETO11507.1 115 LYGIMLE-EKQEYDKAELYIAQAISLNQPNLKSLPGLSYHDKDGSkAVDVRYLAEFM 170
+                 4555555.6699***************************987665577777777776 PP
+
+>> ETO11286.1  hypothetical protein RFI_26089 [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   28.7   1.0   8.9e-10   1.6e-06      56     166 ..     153     301 ..     150     328 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 28.7 bits;  conditional E-value: 8.9e-10
+                 CCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.......---TTTTT.......TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC CS
+         FAT  56 rqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls.......sseelksl.......lktWrkRlpgvqddvevwqdilsvRslvlspied 140
+                  + ++ ++++ +g +   +++ll r+++l ++e +++++           +s+ l++l       +++Wr  lp  + ++++w+d++s+R  +ls    
+  ETO11286.1 153 GEFIDWSYARTNGYLSPMHIPLLRRVHALKDMERASSILAGALlirraplDSNFLSDLyyqnvhfRNEWRASLPAHWEELHDWSDLISFRLNILSLMRH 251
+                 566667788888999999**********************9889999999777777778888889*****************************99999 PP
+
+                 ......................HHCCS-STTCCC..CCCCCHCHHHHCCS CS
+         FAT 141 ......................lllkgakaemwl..kfanlaRksgrlsl 166
+                                        l+++++ +mw   ++a++aRk  +++ 
+  ETO11286.1 252 vlrdksidvssqsassqdtvdrILAQSMDDKMWYtlRMAQIARKYYHTES 301
+                 9999******************99999999999667********877765 PP
+
+>> ETO22875.1  hypothetical protein RFI_14315 [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.4   0.4   1.5e-07   0.00028     238     309 ..     132     200 ..      75     212 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 21.4 bits;  conditional E-value: 1.5e-07
+                 ..HH.HHCCCTCCC.CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S CS
+         FAT 238 tkll.arcylkkGe.wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeep 309
+                 ++++ ++++ ++G  + + l++     ++ ++il++y +a ++d+++++a++++a f fe+ s+  + ++e +p
+  ETO22875.1 132 SNSIrSQMHNRLGYlYERYLGN-----KQFDDILEHYVLALQFDDHCTDAHFNLANFLFEQGSRHLSLANELNP 200
+                 4555666777777634444555.....56*******************************99998888776665 PP
+
+>> ETO15019.1  hypothetical protein RFI_22348, partial [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.2   0.0     7e-07    0.0013     247     343 .]      17     154 ..       2     154 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 19.2 bits;  conditional E-value: 7e-07
+                 TCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH......SSSS................................ CS
+         FAT 247 kkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek......keeee............................... 308
+                 + G+wl+  ++     ++++ i q+y+++++++p+ +k ++++a + +   ++          k++ +                               
+  ETO15019.1  17 LCGDWLQINES-----KEPSIIIQYYRDSVKYQPKFEKSFFKLATYMDILWQRSLTYvyifytKQS-Qkykhslqenqhyiggsdknpidmncldfkhs 109
+                 55666654444.....45999*******************99666666666665443444443222.13558899999********************* PP
+
+                 ..........S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT 309 ..........pedlseyvvpavegflkslslssekslqdllRlLt 343
+                            e+++  + + + ++++sl++++ + +q l+R+Lt
+  ETO15019.1 110 iegipweyliHENIISQLSELLLQYMQSLQYGHIHLFQTLPRILT 154
+                 **********89999889999999********************8 PP
+
+>> ETO30094.1  hypothetical protein RFI_07024 [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.6   0.2   0.00029      0.53     230     303 ..      47     122 ..       2     145 .. 0.65
+   2 !    9.5   1.7   0.00064       1.2     242     303 ..     149     204 ..     122     224 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 10.6 bits;  conditional E-value: 0.00029
+                 ..........HH.HHCCCTCCCCCCCCCCC.T.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH CS
+         FAT 230 eptnleeftkll.arcylkkGewlaalqkl.nwseekseeilqaysaateldpswykawhtwalfnfevlskeeek 303
+                  +tn++e+++       +++G ++  ++ l ++  e+ +e++ +y + ++ +ps ++a+ +w++++  v++  e+k
+  ETO30094.1  47 GYTNKSENNRGAlEALRTLRGGFRYMYGILlHNYLERYDEAVRQYDQCVQECPSNANAHCSWGSLCRDVFQLIEKK 122
+                 555555555555555555666544444433123345589********************************99877 PP
+
+  == domain 2  score: 9.5 bits;  conditional E-value: 0.00064
+                 HHCCCTCCCCC.CCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH CS
+         FAT 242 arcylkkGewl.aalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek 303
+                 a c+   G +l ++l++        +e+l    +a+el p+  +a+ ++a  + e++++ ++ 
+  ETO30094.1 149 AICHDNYGLFLfKQLNN-------YDEALRMLNKAVELKPQMSQAHSHLAEIYHEHFKDFQRA 204
+                 66777777765255555.......89*******************************998544 PP
+
+>> ETO02004.1  hypothetical protein RFI_35438 [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.6   2.1   4.2e-06    0.0077     181     328 ..      72     253 ..      61     269 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 16.6 bits;  conditional E-value: 4.2e-06
+                 ......TSSCCCHHHHHHHCCH...HHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHH CS
+         FAT 181 ewlp..pevvyaylkylwakge...qkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqays 273
+                 ++++  ++ +y+++k + ++ e   q++ ++ L+  +s ++++   ++s l ++  + +  + k++ a ++  ++  l +lq+        +e++ + +
+  ETO02004.1  72 KVSKqwSDDIYEQMKCMSKRAEelmQQQPISDLEGAIS-YFDD---CQSLLKNIALNDIPPLFKRKvAIILCNRSICLGKLQR-------LDEAERQCR 159
+                 33335667899********9999999999999*99999.7776...666666665566666666666999*************.......99******* PP
+
+                 CCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS........................................S-TCCHHHHCCT..CCHHHH CS
+         FAT 274 aateldpswykawhtwalfnfevlskeeekkeeee.......................................pedlseyvvpavegflksls 328
+                 + +e+dp+w k ++t+a++ + + s+ e+ k+  +                                       +++ + y  +av++  +sl+
+  ETO02004.1 160 QVIEMDPTWQKGYFTLASLLQLQSSDPEKLKQALGyfqkalqfsltqpekdktqqrinrlrerieehvqttppsSKKRRLYQGSAVDETARSLR 253
+                 ***************************9998887788888888888887777777777776666666666665544444555555555555555 PP
+
+>> ETO09106.1  hypothetical protein RFI_28281 [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.7   0.3     4e-06    0.0073     206     299 ..     118     203 ..      77     246 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 16.7 bits;  conditional E-value: 4e-06
+                 SCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHH CS
+         FAT 206 qkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlsk 299
+                 q+L++ v+ +++k  e ++      ++ ++ +++ + ++ +  +Ge    l++ + + +  ++il+ y +a ++d s +ka+ ++++f  e+ ++
+  ETO09106.1 118 QELEKNVKAKMFKECERQC-----LAKVKSGLSRPIvSKLHNHLGE----LYEHHLEDKLFDDILERYILALQYDESNAKAHVNLGRFLIEQGKQ 203
+                 4555555544444322222.....3344566666666667777776....4444444578***************************99887555 PP
+
+>> ETO06835.1  hypothetical protein RFI_30557, partial [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.3   2.6   2.2e-05     0.041     253     329 ..      64     152 ..       2     156 .. 0.67
+   2 ?    5.3   0.8     0.012        21     257     310 ..     137     190 ..     110     207 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 14.3 bits;  conditional E-value: 2.2e-05
+                 CCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.......................S-TCCHHHHCCT..CCHHHHT CS
+         FAT 253 aalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee......................pedlseyvvpavegflkslsl 329
+                  +lq+       + ++l++y + ++ dp+ ++a+++wa ++ + ++++++ +   +                      +++l++y     ++f  +l+l
+  ETO06835.1  64 DHLQR-------HADALEQYELCVQDDPQNASAHYNWAILYKNYFEDYKKAEV--HyrkaielkpkhaayynnyglllEQQLKNYSAAR-DNFAAALKL 152
+                 34444.......89**********************************66633..2346677777777777777777666666555444.666666665 PP
+
+  == domain 2  score: 5.3 bits;  conditional E-value: 0.012
+                 CCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.......S- CS
+         FAT 257 klnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee......pe 310
+                 k      + +++   ++aa +ldp+   a+ ++a +  + +++ e+ ++  +      p+
+  ETO06835.1 137 K------NYSAARDNFAAALKLDPNNGRAHTNMANLLKKYYKDFERANDHYKeaikldPQ 190
+                 3......36778888999999999999999999998888888775553333234444444 PP
+
+>> ETO33121.1  hypothetical protein RFI_03986, partial [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.8   3.3   1.5e-05     0.028     223     327 ..     117     226 ..      89     232 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 14.8 bits;  conditional E-value: 1.5e-05
+                 -SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCC.HHHHCCHHCTCCCHS.TTCCCCHHHHHCCHHHHHHSSSS........S-TC CS
+         FAT 223 ssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeil.qaysaateldpswyk.awhtwalfnfevlskeeekkeeee.......pedl 312
+                 ++++++ +++n + ++++  ++  k +e+ ++++k      k +ei  +  sa+ ++dp  +k +++++  +nf  lsk+ + + +e+        +++
+  ETO33121.1 117 NDNNNNNNNNNNNNNNNNDEKHKEKEAEYWKHASKR----SKYDEIYgHLSSASLHHDPANAKyKYMHLLEYNFDLLSKVCSDEFSERmryivrvHTMM 211
+                 222222223333333333367889999988888882....3355555055566789999*********************7775555578999998899 PP
+
+                 CHHHHCCT..CCHHH CS
+         FAT 313 seyvvpavegflksl 327
+                 +++v++ + +f ++ 
+  ETO33121.1 212 RRFVCEIFYEFVRAF 226
+                 999999999999985 PP
+
+>> ETO29482.1  TPR domain protein [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.4   2.9     2e-05     0.036     252     329 ..     142     228 ..      51     236 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 14.4 bits;  conditional E-value: 2e-05
+                 CCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH.SSSS.................S-TCCHHHHCCT..CCHHHHT CS
+         FAT 252 laalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek.keeee................pedlseyvvpavegflkslsl 329
+                   +lq+       + ++lq+y++ ++ dp+ ++a+++wa ++ + +++ e    + +e                +++l +y  +a ++f  +l l
+  ETO29482.1 142 HDHLQR-------HADALQQYQLCVQDDPQNASAHYNWAILYKNYFQQAEVHyRKAIElkpkhaayynnyglllEQQLHNY-NEARKNFAAALEL 228
+                 344444.......89********************************9977632222266666666666666655555433.3444666666655 PP
+
+>> ETO13980.1  hypothetical protein RFI_23390 [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.3   2.6   4.5e-05     0.081     227     327 ..      79     171 ..      41     186 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 13.3 bits;  conditional E-value: 4.5e-05
+                 --...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCH CS
+         FAT 227 evqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflk 325
+                 e +e t +e ++++      k+G  + ++++   ++++++e+  +++aa +l+ +   aw++++l+++++l +      e+++ d+ ey  +a++++ k
+  ETO13980.1  79 EEEERTWIERISENP-----KSGNVRVKFGNYLLKQDRNDEAQYQFKAALQLNGRNVAAWYSLGLLHQQNLYRAY---LEKKMGDAFEYGNDAMQCYHK 169
+                 444444444444443.....666667777776677777***************************9998876652...3334788889*********87 PP
+
+                 HH CS
+         FAT 326 sl 327
+                  l
+  ETO13980.1 170 VL 171
+                 55 PP
+
+>> ETO12675.1  peptidase S1 and S6 chymotrypsin/Hap, partial [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.4   0.1   4.2e-05     0.076     235     296 ..      39      97 ..       4     119 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 13.4 bits;  conditional E-value: 4.2e-05
+                 .....HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+         FAT 235 eeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+                 + + +ll a++y  +G   ++  +     +  ++il++y ++ +ld++ ++a+++++ f  e+
+  ETO12675.1  39 KNLPNLLrAKVYNCLGYLYENCME----DKLFDDILEKYVLSLQLDNDNANAHYNLGNFLVEQ 97 
+                 567789999999999997776666....468***************************99876 PP
+
+>> ETO12472.1  hypothetical protein RFI_24903 [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.6   0.1   3.6e-05     0.066     156     207 ..      25      71 ..       4      99 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 13.6 bits;  conditional E-value: 3.6e-05
+                 CCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSC CS
+         FAT 156 nlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqk 207
+                 nl+   ++++ ++++L++l   ++     pe++  +lky ++ +e+ + ++k
+  ETO12472.1  25 NLCTYENQFKDCQNVLNNLVVDSS-----PEIYWIKLKYKIPVNEKADIINK 71 
+                 99*****************99999.....9***************9999988 PP
+
+>> ETO11064.1  TPR domain-containing protein, partial [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.9   2.6   0.00011      0.21     254     333 ..      68     163 ..       2     169 .. 0.63
+   2 ?    7.0   2.4    0.0037       6.7     249     305 ..     171     221 ..     162     292 .. 0.82
+   3 ?    2.7   0.4     0.071   1.3e+02     227     303 ..     526     600 ..     508     658 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 11.9 bits;  conditional E-value: 0.00011
+                 CCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.......................S-TCCHHHHCCT..CCHHHHTT CS
+         FAT 254 alqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee......................pedlseyvvpavegflkslsls 330
+                  l++     e++ ++l++y + ++ dp+ ++a+++wa ++ + ++++++ +   +                      +++l++y     ++f  +l+l 
+  ETO11064.1  68 LLHD---HLERHADALEQYELCVQDDPQNASAHYNWAILYKNYFEDYKKAEV--HyrkaielkpkhaayynnyglllEQQLKNYSAAR-DNFAAALKLD 160
+                 3333...234489**********************************66643..2347777888888888888888777777666555.7777777776 PP
+
+                 TSS CS
+         FAT 331 sek 333
+                  ++
+  ETO11064.1 161 PNN 163
+                 665 PP
+
+  == domain 2  score: 7.0 bits;  conditional E-value: 0.0037
+                 CCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSS CS
+         FAT 249 Gewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekke 305
+                 +  l++++k      + e ++ +y++a++ldp+ +  +++ alf  ++lsk+ee  e
+  ETO11064.1 171 ANLLKKYYK------DFERANDHYKEAIKLDPQNATRHFNYALFLKHNLSKYEEAGE 221
+                 445555555......5999*********************************87633 PP
+
+  == domain 3  score: 2.7 bits;  conditional E-value: 0.071
+                 --...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH CS
+         FAT 227 evqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek 303
+                  +  +++l e ++++ a++  k  + +++ +      ++ +e +q + +  ++  ++ +  ++w   ++++ +++ ++
+  ETO11064.1 526 SQDYSSHLLEMQRRMiAQMCEKMTKVQKNSNGCI---DSTNENTQLFDSVLKTLAQLNQQLNAWNTSHNNNNNNNNNN 600
+                 3336788888888888999999999999999854...56677777777777777777777777776666666555444 PP
+
+>> ETO32549.1  hypothetical protein RFI_04569 [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.2   0.1   4.7e-05     0.086     239     300 ..     105     163 ..      64     187 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 13.2 bits;  conditional E-value: 4.7e-05
+                 .HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+         FAT 239 kll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlske 300
+                 ++l a++y  +G   ++  ++    ++ +++l++y +a ++d+++ +a++++a f  e+  + 
+  ETO32549.1 105 NQLrAKVYNHLGYLYENCIEG----KHFDDVLEHYVLALQVDDTSVSAHFNLANFLLEQGLQH 163
+                 456699999999876666664....58***************************987765444 PP
+
+>> ETO27036.1  hypothetical protein RFI_10097, partial [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.5       0.6   1.1e+03     203     230 ..      15      62 ..       8      79 .. 0.55
+   2 ?   14.7   1.5   1.7e-05     0.031      21      99 ..      69     161 ..      59     178 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.6
+                 HHSSCCHHHHCCTSSCCC.....SS-SS---................. CS
+         FAT 203 ealqkLrefvscllekke.....elssglevq...............e 230
+                 e   +L+e++  llekk+     +++ g++++               +
+  ETO27036.1  15 ERQRELEEQLRALLEKKHeletiAYKAGIIQSksddilakemieenkN 62 
+                 555678888888888887555553333333334444443444442222 PP
+
+  == domain 2  score: 14.7 bits;  conditional E-value: 1.7e-05
+                 T..............TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-...- CS
+         FAT  21 lslmk..........kdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls...s 99 
+                 ls+m+           ++ ++++++++ +l+  ++++e+ +++ + ++ ++  ls +++   n++++ ++   +l+E ee+i+y ++++    
+  ETO27036.1  69 LSEMQpnsldaiimvGKKKTQKLVNVYNKLRMmKNINELFTFCTNDNSKIIHLLSGINHQQSNACLQFVLTHRTLMEQEEVINYTNDSGqnaV 161
+                 5555555555555557777888999999*999******************************************************9875440 PP
+
+>> ETO27501.1  putative TPR domain-containing protein, partial [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.3   2.5      0.38   6.9e+02     231     298 ..      61     123 ..       3     127 .. 0.50
+   2 ?   12.5   0.3   7.6e-05      0.14     242     304 ..     157     213 ..     134     220 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 0.3 bits;  conditional E-value: 0.38
+                 .........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCH CS
+         FAT 231 ptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevls 298
+                 +++l e  ++  +++ +  G  l+++ +      + ee++++y + ++  p   +a+ +w+ ++  v++
+  ETO27501.1  61 SSELIEALHNFrSQIRHMYGTLLQNYLE------RYEEAVHQYDQCIQEWPFHGSAHCNWGTLCKDVFQ 123
+                 2222222222223334444443333333......36777777777777777777888888888888876 PP
+
+  == domain 2  score: 12.5 bits;  conditional E-value: 7.6e-05
+                 HHCCCTCCCCC.CCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHS CS
+         FAT 242 arcylkkGewl.aalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekk 304
+                 a c+   G+ l ++l++        +e+l+ + +a+el p+  +a+ ++a  ++ ++++  + k
+  ETO27501.1 157 AICHDSYGMLLyKQLNN-------YDEALKMFNKAVELKPHMSEAHSHLAEIYNDHFKDFSRAK 213
+                 55666667644144555.......9****************************99998875444 PP
+
+>> ETO21510.1  hypothetical protein RFI_15694 [Reticulomyxa filosa]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.0   2.7   0.00022      0.39     193     299 ..     124     228 ..     110     231 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 11.0 bits;  conditional E-value: 0.00022
+                 HHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S....-SSCCHHHHCCHHCTCCCHSTTCCCC CS
+         FAT 193 kylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwse.ekseeilqaysaateldpswykawhtwa 290
+                 ++  ++++ ++ +++L+   + l+ + +e++s  + q + +++e++++l rc+ ++ + l+++ + n+   + ++++++ +s+  +l+   +ka+ +++
+  ETO21510.1 124 RMNEENSKYENEILHLQSTKEALSTQVSEMQSTVN-QLKGSVDELNNQL-RCFDELKQELEKIAEHNQDIgTLIDDVTNIFSDMRRLCLANEKAF-YLG 219
+                 5556677789999***9999999999989999876.69**********9.********999999965554256****************999996.688 PP
+
+                 HHHHHCCHH CS
+         FAT 291 lfnfevlsk 299
+                 l+++ ++++
+  ETO21510.1 220 LYYDVAFKD 228
+                 888877765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      39963  (12698489 residues searched)
+Passed MSV filter:                      5864  (0.146736); expected 799.3 (0.02)
+Passed bias filter:                      965  (0.0241473); expected 799.3 (0.02)
+Passed Vit filter:                       102  (0.00255236); expected 40.0 (0.001)
+Passed Fwd filter:                        22  (0.000550509); expected 0.4 (1e-05)
+Initial search space (Z):              39963  [actual number of targets]
+Domain search space  (domZ):              22  [number of targets reported over threshold]
+# CPU time: 0.33u 0.01s 00:00:00.34 Elapsed: 00:00:00.15
+# Mc/sec: 27685.08
+//
+[ok]

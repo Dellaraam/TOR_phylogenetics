@@ -1,0 +1,369 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Rhizaria/Proteins/Plasmodiophora_brassicae_gca_001049375.pbe3.h15.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.3e-55  186.8   4.7    6.2e-52  174.9   0.0    6.2  7  CEO95116  pep supercontig:pbe3.h15:scaffold_11:40879:50470:-1
+    9.5e-07   28.1   0.3      0.082   12.0   0.0    4.2  4  CEO97829  pep supercontig:pbe3.h15:scaffold_20:401238:405218:
+    0.00061   18.9   0.0         13    4.9   0.0    6.4  8  CEO98375  pep supercontig:pbe3.h15:scaffold_24:146629:154890:
+  ------ inclusion threshold ------
+       0.05   12.7   0.1        3.1    6.9   0.0    3.4  4  CEO98205  pep supercontig:pbe3.h15:scaffold_23:98604:101185:1
+      0.069   12.2   0.2          1    8.5   0.0    2.7  2  CEO97614  pep supercontig:pbe3.h15:scaffold_2:958472:961661:-
+      0.084   12.0   0.0       0.42    9.7   0.0    2.3  1  CEP02592  pep supercontig:pbe3.h15:scaffold_7:29285:37462:1 g
+        1.6    7.8   5.9         52    2.9   0.0    5.2  7  CEO95271  pep supercontig:pbe3.h15:scaffold_11:465932:470963:
+        2.5    7.2   7.8         23    4.1   0.1    5.3  7  CEO94507  pep supercontig:pbe3.h15:scaffold_1:638289:646607:-
+
+
+Domain annotation for each sequence (and alignments):
+>> CEO95116  pep supercontig:pbe3.h15:scaffold_11:40879:50470:-1 gene:PBRA_003882 transcript:CEO95116 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.8   0.0       1.2   1.5e+03      98     158 ..     324     384 ..     302     386 .. 0.79
+   2 ?    3.7   0.1     0.024        29      83     157 ..     688     762 ..     640     764 .. 0.84
+   3 !  174.9   0.0   5.1e-55   6.2e-52       1     159 [.     767     937 ..     767     938 .. 0.85
+   4 ?    0.3   0.1      0.28   3.4e+02      77     155 ..    1021    1101 ..     976    1105 .. 0.60
+   5 ?   -0.5   0.0      0.49     6e+02      79     126 ..    1064    1113 ..    1042    1122 .. 0.66
+   6 ?    0.7   0.0       0.2   2.5e+02     119     154 ..    1796    1831 ..    1768    1833 .. 0.85
+   7 ?    0.9   0.0      0.18   2.2e+02     119     152 ..    1908    1941 ..    1905    1943 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: -1.8 bits;  conditional E-value: 1.2
+  mTOR_dom  98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                +lss++  +  a+ +i  ++g + +p +p i++ + +++     ++ ++ l  L+ L s+
+  CEO95116 324 GALSSQRDVAFVALGEIAMSVGKRILPRVPVIVQLISAALGPKAVRRHQVSLCALTCLASV 384
+               57899999999999***************99998777777665558888888888777665 PP
+
+  == domain 2  score: 3.7 bits;  conditional E-value: 0.024
+  mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157
+               y + v+n L+  lkd s     + v+ ++ +     g  + ++l  ++p ++ ++++  s   re  l+ +++L++
+  CEO95116 688 YFAPVLNVLMPNLKDDSAG-VSSRVLLTLGQLATVCGSDMNQYLATLMPLIMDTLQDRASmLKREAALRCIGQLIR 762
+               3445899999999999977.7889999999999999999****************998887778899998888875 PP
+
+  == domain 3  score: 174.9 bits;  conditional E-value: 5.1e-55
+  mTOR_dom   1 VvePyldypeLLeiLlnilkteq.sqsiRrevikvlGilGALDPykhkeveeks.....eeeekeeenaeetdvsel..........lvglspsseeyypt 85 
+               V+ePy +y +LL +Ll++lkte+ s+++Rre+++v+Gi+GALDP k+k+++++s     +     ++  +  + s++            + + ss++yypt
+  CEO95116 767 VIEPYNTYRQLLPTLLDALKTEEvSWPVRREALRVVGIVGALDPLKFKQFQNESlaattS-----AAVDPGARDSSIdsglgassgsPLEFTASSDDYYPT 862
+               9*********************88**************************9888544320.....22222222222212223333334456999******* PP
+
+  mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvsiv 159
+               v+i aL+ki+ +psls+hh++v+qa+m+ifk+lg++ +pfl+qiip +ls++rt+++ slre+l+qq+++Lvsiv
+  CEO95116 863 VAIDALMKIMGKPSLSQHHSMVIQAVMFIFKSLGMQGIPFLSQIIPPFLSAMRTSTDeSLRETLFQQIGVLVSIV 937
+               ******************************************************9999****************9 PP
+
+  == domain 4  score: 0.3 bits;  conditional E-value: 0.28
+  mTOR_dom   77 psseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces..slrefllqqLatL 155 
+                p  ++y+   v+  L+++  d  ++ + + ++v+a+   ++t   + + + ++ii+ l++++++ ++  +lr+ +++ L+ L
+  CEO95116 1021 PNLNDYFFL-VVPPLIRLAGDVDVQlQTRLQCVRALAALVSTPLNQLTCYASRIIHPLVRILSSDNTpaDLRNAIVDLLCAL 1101
+                333455544.455566666666666566666667766666665555566667777777776664332246666666666655 PP
+
+  == domain 5  score: -0.5 bits;  conditional E-value: 0.49
+  mTOR_dom   79 s.eeyyptvvinaLlkil.kdpslsshhtavvqaimsifktlglkcvpfl 126 
+                +    y++ +i+ L++il +d++ ++ ++a+v+ +   + +lg   + f+
+  CEO95116 1064 NqLTCYASRIIHPLVRILsSDNTPADLRNAIVDLLCALLIQLGRDFTIFV 1113
+                44567888888888888844555558888888877777777776654444 PP
+
+  == domain 6  score: 0.7 bits;  conditional E-value: 0.2
+  mTOR_dom  119 glkcvpflpqiipallsvirtcesslrefllqqLat 154 
+                ++  +++  ++ip++++ i+t+++ +re ++  L+ 
+  CEO95116 1796 SMSTIETWLEVIPQIIARIHTSTPAIRELIYALLCR 1831
+                5556677779*******************9998876 PP
+
+  == domain 7  score: 0.9 bits;  conditional E-value: 0.18
+  mTOR_dom  119 glkcvpflpqiipallsvirtcesslrefllqqL 152 
+                g k +p +  i+  l +++ + ++++re+ +qq+
+  CEO95116 1908 GSKNIPAMLAILEPLHAMMDKGPQTMREVSFQQM 1941
+                6788899999***********************9 PP
+
+>> CEO97829  pep supercontig:pbe3.h15:scaffold_20:401238:405218:-1 gene:PBRA_005943 transcript:CEO97829 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.7   0.0      0.56   6.8e+02     129     157 ..     210     239 ..     178     241 .. 0.86
+   2 ?   -1.5   0.1      0.99   1.2e+03     124     154 ..     247     279 ..     229     282 .. 0.68
+   3 !   10.0   0.0   0.00028      0.33      87     142 ..     474     529 ..     401     536 .. 0.88
+   4 !   12.0   0.0   6.7e-05     0.082      92     138 ..     561     608 ..     554     619 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -0.7 bits;  conditional E-value: 0.56
+  mTOR_dom 129 iipallsvirtces.slrefllqqLatLvs 157
+               ++p ll++i+ ces + ++  l +L +Lv 
+  CEO97829 210 LLPLLLQTIQACESeTDLKSTLTNLIELVG 239
+               689999999*99998888888888888886 PP
+
+  == domain 2  score: -1.5 bits;  conditional E-value: 0.99
+  mTOR_dom 124 pflpqiipallsvirtce..sslrefllqqLat 154
+                f+pqi+ a+ +++r+ +  ++ r + l+ L +
+  CEO97829 247 RFIPQICMAMEAIMRSPQldQNCRSMSLEVLVS 279
+               589999999999999654214666666666655 PP
+
+  == domain 3  score: 10.0 bits;  conditional E-value: 0.00028
+  mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                ++aL ++l+ +       a+++ai s  + lg k v+f+++++pall+++ + ++
+  CEO97829 474 SLQALCSVLDSSPAPAVADAALTAISSLSEVLGEKFVQFYDRLMPALLALCASESQ 529
+               678999999888888999*******************************9998665 PP
+
+  == domain 4  score: 12.0 bits;  conditional E-value: 6.7e-05
+  mTOR_dom  92 lkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvir 138
+               l  l+ ps  +    v qa+  i++t+g +   pflp iip+lls + 
+  CEO97829 561 LLQLNLPSNHDDWPFVHQALARICQTMGAEFfSPFLPAIIPHLLSCTA 608
+               44555666666666789**************99***********9875 PP
+
+>> CEO98375  pep supercontig:pbe3.h15:scaffold_24:146629:154890:-1 gene:PBRA_006489 transcript:CEO98375 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.5   0.0         2   2.4e+03      29      50 ..     806     827 ..     784     888 .. 0.70
+   2 ?   -3.5   0.0         4   4.9e+03      86     149 ..    1201    1222 ..    1185    1233 .. 0.57
+   3 ?   -3.2   0.0       3.3     4e+03     112     135 ..    1306    1329 ..    1277    1340 .. 0.74
+   4 ?    4.9   0.0      0.01        13     122     159 ..    1395    1432 ..    1365    1433 .. 0.88
+   5 ?   -0.1   0.0      0.35   4.2e+02      90     150 ..    1563    1620 ..    1556    1661 .. 0.77
+   6 ?   -2.4   0.0       1.8   2.2e+03     105     137 ..    1762    1794 ..    1757    1818 .. 0.79
+   7 ?   -0.1   0.0      0.37   4.5e+02     125     154 ..    1824    1853 ..    1811    1857 .. 0.89
+   8 ?    2.9   0.0     0.043        52      91     157 ..    2192    2258 ..    2164    2260 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: -2.5 bits;  conditional E-value: 2
+  mTOR_dom  29 revikvlGilGALDPykhkeve 50 
+               r+++  lG  G LDP  +k+  
+  CEO98375 806 RQTLSALGANGGLDPRLRKSSD 827
+               578889999999***9887654 PP
+
+  == domain 2  score: -3.5 bits;  conditional E-value: 4
+  mTOR_dom   86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149 
+                 v++ Ll+ l+ ps+s                                          ++  + 
+  CEO98375 1201 SVFERLLEALRTPSYS------------------------------------------VQMAVA 1222
+                3555666666666655..........................................433333 PP
+
+  == domain 3  score: -3.2 bits;  conditional E-value: 3.3
+  mTOR_dom  112 msifktlglkcvpflpqiipalls 135 
+                   f+ lg    p+l q+ip ll 
+  CEO98375 1306 EALFEALGKLFEPYLAQLIPDLLL 1329
+                567888888889999999999986 PP
+
+  == domain 4  score: 4.9 bits;  conditional E-value: 0.01
+  mTOR_dom  122 cvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                  +flp ++p l+sv+ + +++++e   + L ++ +++
+  CEO98375 1395 LCAFLPTVVPRLMSVLADPHPKVQEAAKSALRDIGAVI 1432
+                468**********************9999998886665 PP
+
+  == domain 5  score: -0.1 bits;  conditional E-value: 0.35
+  mTOR_dom   90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150 
+                 L ++l+ +s s  ++   q + +++     + ++ l+  +p +l+++r++e+++re +++
+  CEO98375 1563 WLFELLRSNSSSVERNGGAQGLAEVLTA---RGLSSLRDHLPRMLEAARDSEATVREAFFE 1620
+                5666666666666666666666666664...556778888889999999988888888886 PP
+
+  == domain 6  score: -2.4 bits;  conditional E-value: 1.8
+  mTOR_dom  105 tavvqaimsifktlglkcvpflpqiipallsvi 137 
+                ++v q+   + k++  ++  +l +i+p l++++
+  CEO98375 1762 HNVQQTAWLVWKSMVSNSNRMLGEIMPVLMEYV 1794
+                567778888899999999999999999999865 PP
+
+  == domain 7  score: -0.1 bits;  conditional E-value: 0.37
+  mTOR_dom  125 flpqiipallsvirtcesslrefllqqLat 154 
+                +lp iip +++ +r+ ++s+r+ + q +++
+  CEO98375 1824 VLPVIIPIFQEGLRSKQASVRQGVCQGMSE 1853
+                699************999***999999876 PP
+
+  == domain 8  score: 2.9 bits;  conditional E-value: 0.043
+  mTOR_dom   91 LlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                L++i+ d+  +  ++a+++++   +k+ g  + pf+pq+  ++++ +r+ + s+r+     La+L++
+  CEO98375 2192 LIRIVGDRFPAGVKAAILTTLGLLLKKSGPSMKPFVPQLQATFVKNLRDPDVSVRDSAGAALASLMT 2258
+                788888888888899999999999*************************999*****9999999987 PP
+
+>> CEO98205  pep supercontig:pbe3.h15:scaffold_23:98604:101185:1 gene:PBRA_006319 transcript:CEO98205 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.9   0.0    0.0026       3.1     118     155 ..     100     137 ..      64     142 .. 0.85
+   2 ?   -3.5   0.0         4   4.9e+03     121     142 ..     226     247 ..     220     261 .. 0.77
+   3 ?    1.3   0.0      0.13   1.6e+02       7      31 ..     313     337 ..     308     340 .. 0.90
+   4 ?   -3.3   0.0       3.5   4.3e+03     126     144 ..     399     417 ..     390     429 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 6.9 bits;  conditional E-value: 0.0026
+  mTOR_dom 118 lglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+               l+  c  fl+ i+p +l+++++ e++ r +  + L + 
+  CEO98205 100 LSQTCHLFLDDILPPVLQLMQDQEARCRYYACETLYNV 137
+               5668999***************9999999888887765 PP
+
+  == domain 2  score: -3.5 bits;  conditional E-value: 4
+  mTOR_dom 121 kcvpflpqiipallsvirtces 142
+                 + +lp ++p l+ ++ + ++
+  CEO98205 226 DLLRYLPGVLPGLFGMTADPNA 247
+               5678999999999998887654 PP
+
+  == domain 3  score: 1.3 bits;  conditional E-value: 0.13
+  mTOR_dom   7 dypeLLeiLlnilkteqsqsiRrev 31 
+               +yp L++ Ll+++ ++++ +iR+++
+  CEO98205 313 QYPYLINGLLKCIAETDNDQIRKSA 337
+               8*********************875 PP
+
+  == domain 4  score: -3.3 bits;  conditional E-value: 3.5
+  mTOR_dom 126 lpqiipallsvirtcessl 144
+               +++++pal++++++ ++++
+  CEO98205 399 IDHLLPALIQTLSDPSDHV 417
+               5666677777766665544 PP
+
+>> CEO97614  pep supercontig:pbe3.h15:scaffold_2:958472:961661:-1 gene:PBRA_000958 transcript:CEO97614 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.0   0.0      0.34   4.2e+02     126     152 ..     177     204 ..     168     209 .. 0.57
+   2 ?    8.5   0.0   0.00082         1     108     156 ..     549     597 ..     536     599 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: -0.0 bits;  conditional E-value: 0.34
+  mTOR_dom 126 lpqiipallsvirtces.slrefllqqL 152
+                 q++p l+  +r +++ +++ ++l+ L
+  CEO97614 177 AVQVLPLLADFLRRAPNvKIQRMVLRAL 204
+               4555555555555555555555555444 PP
+
+  == domain 2  score: 8.5 bits;  conditional E-value: 0.00082
+  mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                 a+m+++ ++g   +   ++ii  + svi  c+++    +++qL +Lv
+  CEO97614 549 TAAVMQVYCSMGHLDIDDQSEIIEGVCSVICACPQESIAEYFRQLLNLV 597
+               5699*******************************999999****9998 PP
+
+>> CEP02592  pep supercontig:pbe3.h15:scaffold_7:29285:37462:1 gene:PBRA_002559 transcript:CEP02592 gene_biotype:protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.7   0.0   0.00034      0.42      11      53 ..    1226    1271 ..    1217    1320 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 9.7 bits;  conditional E-value: 0.00034
+  mTOR_dom   11 LLeiLlnilkte..q.sqsiRrevikvlGilGALDPykhkeveeks 53  
+                LL +L+++l +   + s+s+R+    ++G lGA+DP  +  +++++
+  CEP02592 1226 LLFVLVTALLRRcsDpSSSVRLLCAECIGALGAVDPSLVGTIHNMK 1271
+                555555554433233499******************9886665444 PP
+
+>> CEO95271  pep supercontig:pbe3.h15:scaffold_11:465932:470963:-1 gene:PBRA_004037 transcript:CEO95271 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.3   0.0       3.5   4.3e+03      95     117 ..      56      77 ..      36      88 .. 0.55
+   2 ?    2.9   0.0     0.043        52     107     153 ..     250     296 ..     244     301 .. 0.86
+   3 ?    1.2   0.0      0.15   1.8e+02     102     134 ..     297     329 ..     290     338 .. 0.85
+   4 ?   -2.7   0.1       2.3   2.8e+03     157     157 ..     462     462 ..     420     540 .. 0.57
+   5 ?   -1.9   0.0       1.3   1.6e+03     124     140 ..     603     619 ..     578     643 .. 0.62
+   6 ?    1.8   0.1     0.091   1.1e+02      90     157 ..     713     780 ..     687     781 .. 0.80
+   7 ?   -2.6   0.0       2.1   2.5e+03     119     137 ..    1094    1112 ..    1063    1120 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: -3.3 bits;  conditional E-value: 3.5
+  mTOR_dom  95 lkdpslsshhtavvqaimsifkt 117
+               l+d+s +  ++ +v+ + si+k+
+  CEO95271  56 LSDQSND-VQAVAVKCLSSIVKK 77 
+               3333322.233333333444433 PP
+
+  == domain 2  score: 2.9 bits;  conditional E-value: 0.043
+  mTOR_dom 107 vvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLa 153
+                +q+i  i++  g  + p l +i+p+l++ +  ++++ +e + q ++
+  CEO95271 250 YIQTIGVICRASGELVGPWLVRIVPQLIRFLGASNQDASEEHPQVFT 296
+               69*****************************9999988877666555 PP
+
+  == domain 3  score: 1.2 bits;  conditional E-value: 0.15
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipall 134
+               + +++++qa   i++     ++pflp +ip   
+  CEO95271 297 ELKENCLQAFDAILNRCPHDVIPFLPAVIPICC 329
+               567889999999******************876 PP
+
+  == domain 4  score: -2.7 bits;  conditional E-value: 2.3
+  mTOR_dom 157 s 157
+               +
+  CEO95271 462 T 462
+               2 PP
+
+  == domain 5  score: -1.9 bits;  conditional E-value: 1.3
+  mTOR_dom 124 pflpqiipallsvirtc 140
+               p l++i+++ll++i++c
+  CEO95271 603 PSLQNILQKLLNAIHSC 619
+               45555555555555544 PP
+
+  == domain 6  score: 1.8 bits;  conditional E-value: 0.091
+  mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157
+               +Ll++l+++s s  +  + +a+   ++t    +   +l+  + ++++ i +c+++l +  ++ L++L+s
+  CEO95271 713 ELLSLLRKKSQS-LRYLAFEALSALLRTRASSVdERTLRSTLLQIIACIDECDTRLAQLAIELLTSLIS 780
+               577777777755.66777888888888866666678899999999999999999999999999999885 PP
+
+  == domain 7  score: -2.6 bits;  conditional E-value: 2.1
+  mTOR_dom  119 glkcvpflpqiipallsvi 137 
+                g  +  +l+q++p +l ++
+  CEO95271 1094 GPPVPGLLEQVVPVVLPAM 1112
+                3444557777777777655 PP
+
+>> CEO94507  pep supercontig:pbe3.h15:scaffold_1:638289:646607:-1 gene:PBRA_000292 transcript:CEO94507 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.1   0.1     0.019        23     104     156 ..     117     169 ..      99     172 .. 0.85
+   2 ?    1.7   0.0     0.099   1.2e+02      10      41 ..     576     607 ..     573     610 .. 0.91
+   3 ?    0.3   0.0      0.27   3.3e+02     102     146 ..     918     962 ..     863     966 .. 0.82
+   4 ?   -2.9   0.1       2.6   3.1e+03     102     136 ..    1075    1112 ..    1068    1134 .. 0.61
+   5 ?   -2.8   0.0       2.4   2.9e+03      71     111 ..    1172    1214 ..    1148    1251 .. 0.74
+   6 ?   -1.7   0.1       1.1   1.3e+03      14      50 ..    1329    1365 ..    1325    1475 .. 0.50
+   7 ?   -2.6   0.0       2.1   2.6e+03     104     152 ..    1549    1598 ..    1506    1602 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.019
+  mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                +a v+ i    ++l+ +    lp++++al+ +i   +++l+e ++  +a L 
+  CEO94507 117 LEALVDLISVLARDLRQEFFVELPRVLNALTDLIDPQNPNLLEAIFTSIAFLF 169
+               5678888888999999999*****************999********999886 PP
+
+  == domain 2  score: 1.7 bits;  conditional E-value: 0.099
+  mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvlGilGAL 41 
+               +++ +++ +++te s ++ r+  +++G +G L
+  CEO94507 576 NMFALMMGVIETEPSIETERDLSRTVGQIGKL 607
+               678899************************55 PP
+
+  == domain 3  score: 0.3 bits;  conditional E-value: 0.27
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146
+               s + + v++++ +++++g +  + +p i  al+++i++  +sl e
+  CEO94507 918 SRQRKFVEVLTGMLEQVGARLQSSMPAIFTALATLITHHGKSLDE 962
+               577899*****************************9998888876 PP
+
+  == domain 4  score: -2.9 bits;  conditional E-value: 2.6
+  mTOR_dom  102 shhtavvqaimsifkt.lglkcvp..flpqiipallsv 136 
+                + h++vvqa++s   +  +  c+p  +l+ ++ +l+++
+  CEO94507 1075 HVHADVVQAVLSCATNlADHGCLPehLLTALVAELQTL 1112
+                67999999999988773455664433455555555444 PP
+
+  == domain 5  score: -2.8 bits;  conditional E-value: 2.4
+  mTOR_dom   71 l..lvglspsseeyyptvvinaLlkilkdpslsshhtavvqai 111 
+                +  lv   p+ +   + ++++ Ll + +d s+++h  +  +ai
+  CEO94507 1172 ItsLVPFVPMADATSAFYAVHRLLLMADDVSVRQHICEFARAI 1214
+                2334555667777777788888888889999888887777766 PP
+
+  == domain 6  score: -1.7 bits;  conditional E-value: 1.1
+  mTOR_dom   14 iLlnilkteqsqsiRrevikvlGilGALDPykhkeve 50  
+                +L + l++ +s++iR+ ++ vl  l A  P+ +  ++
+  CEO94507 1329 QLRRNLSKVHSEKIRKATMEVLAALIAAFPTVYPDMQ 1365
+                5666677777888888888888777666555554443 PP
+
+  == domain 7  score: -2.6 bits;  conditional E-value: 2.1
+  mTOR_dom  104 htavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqL 152 
+                +  vv ai++ +k l  ++  + +p++ + l++ ++  e++ r++  q L
+  CEO94507 1549 RVPVVMAIVKLLKRLPERVlEAHVPRLTSVLMKKLTGKEQRTRDVARQTL 1598
+                45566666666666666654445555555555555555556666665555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       9727  (4370296 residues searched)
+Passed MSV filter:                       394  (0.0405058); expected 194.5 (0.02)
+Passed bias filter:                      338  (0.0347486); expected 194.5 (0.02)
+Passed Vit filter:                        35  (0.00359823); expected 9.7 (0.001)
+Passed Fwd filter:                         8  (0.000822453); expected 0.1 (1e-05)
+Initial search space (Z):               9727  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.07u 0.03s 00:00:00.10 Elapsed: 00:00:00.08
+# Mc/sec: 8477.13
+//
+[ok]
