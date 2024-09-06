@@ -1,0 +1,181 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Kluyveromyces_lactis_gca_000002515.ASM251v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   4.4e-136  451.8   1.5   4.4e-136  451.8   1.5    1.8  2  CAH02545  pep chromosome:ASM251v1:B:1222276:1229628:1 gene:KL
+    1.1e-81  272.9   9.0    1.1e-81  272.9   9.0    2.1  2  CAG98773  pep chromosome:ASM251v1:F:2051033:2062327:-1 gene:K
+    9.2e-21   72.6   6.9    2.3e-20   71.3   6.9    1.7  1  CAH01756  pep chromosome:ASM251v1:C:1367880:1374743:-1 gene:K
+     0.0039   14.7   0.5      0.047   11.1   0.6    2.5  2  CAG99350  pep chromosome:ASM251v1:E:631154:639439:-1 gene:KLL
+
+
+Domain annotation for each sequence (and alignments):
+>> CAH02545  pep chromosome:ASM251v1:B:1222276:1229628:1 gene:KLLA0_B13948g transcript:CAH02545 gene_biotype:protein_cod
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.6   0.3       1.1   1.4e+03      83     116 ..    1361    1393 ..    1324    1410 .. 0.54
+   2 !  451.8   1.5  3.5e-139  4.4e-136       1     343 []    1451    1825 ..    1451    1825 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: -3.6 bits;  conditional E-value: 1.1
+                CCHHHCHHCCHHCSS----TTTTTTT----TTS- CS
+       FAT   83 qlaEleeiiqykqklssseelksllktWrkRlpg 116 
+                ql+    +i ++++  +++   +l++tW ++l+ 
+  CAH02545 1361 QLHQTDAAIGILKHA-QQHHDLQLKETWYEKLQR 1393
+                444444444444432.333333455555555543 PP
+
+  == domain 2  score: 451.8 bits;  conditional E-value: 3.5e-139
+                CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+       FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                aplaa aaW+l qWd +e+y+++mk +spdkaff a+l+lhrn+fd+a+e i  ar+llvte+sal++esynray+++vr Q++aEleeiiqyk+ ++ 
+  CAH02545 1451 APLAAGAAWGLAQWDRIEQYIEVMKPQSPDKAFFAAVLCLHRNNFDKAQEQIFAARDLLVTEMSALVNESYNRAYGVVVRTQMVAELEEIIQYKNLPQG 1549
+                69************************************************************************************************* PP
+
+                --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT...........TSSCCCHH CS
+       FAT  100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp......pevvyayl 192 
+                s+++++++ktW+kRl+g+q++v+vwq+il+vRslv++p++d       +++w+kfanl+Rksgrl+lA+k+L+ llee++++ +p      p+vvya+l
+  CAH02545 1550 SDRRAMIRKTWNKRLLGCQKNVDVWQRILKVRSLVIKPKQD-------MKVWIKFANLCRKSGRLGLAQKTLNTLLEESSDPKNPntarapPPVVYAQL 1641
+                *****************************************.......********************************55555568899******** PP
+
+                HHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCH CS
+       FAT  193 kylwakgeqkealqkLrefvscllekkeelssglevq........eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswy 283 
+                ky+wa+g qkeal++L  f+s+++++ + ++s++++q        ++ ++e++tkllarc+lk+Gew+ +lq  nw+ e++++il +y++at++d+swy
+  CAH02545 1642 KYMWATGSQKEALNHLISFTSRMAHDLGLDPSNMIAQsvpqnssvSQHHIEDYTKLLARCFLKQGEWRVSLQP-NWRLENPDAILGSYLLATHFDKSWY 1739
+                *************************************************************************.9************************ PP
+
+                STTCCCCHHHHHCCHHHHHHSSSS...........................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  284 kawhtwalfnfevlskeeekkeeee..........................pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                kawh+wal+nfev s ++++ + ++                          pe ++++vvpa++gf++s++ls+++slqd+lRlLt
+  CAH02545 1740 KAWHNWALANFEVTSSLTQRIKDDKvltledasteftngavaglganenfpPELVQRHVVPAIKGFFRSIALSQSSSLQDTLRLLT 1825
+                ******************9966666799**********************999999*****************************8 PP
+
+>> CAG98773  pep chromosome:ASM251v1:F:2051033:2062327:-1 gene:KLLA0_F22066g transcript:CAG98773 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.0      0.49   6.2e+02      83     179 ..      29     132 ..      23     210 .. 0.72
+   2 !  272.9   9.0   8.7e-85   1.1e-81       2     343 .]    2749    3098 ..    2748    3098 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 0.49
+               CCHHHCHHCCHHCSS-.---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.......HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCC CS
+       FAT  83 qlaEleeiiqykqkls.sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.......lllkgakaemwlkfanlaRksgrlslAekaLkkll 175
+               +++El +++ + +++   +e lk+ll  +  +l + q ++++ ++  ++R   l+  ++         +     ++ lk+  l ++  +  l++k L++l 
+  CAG98773  29 IISELYDVLDVVTSSVeYDEFLKKLLPLILSQLNDDQISMNASSPEHKLRNTCLELLNRcplndkmEPMAMEVLQCLLKILTLENDE-NGVLCMKILTSLF 128
+               577888888888877777888888888888888888888888888888888888888886666666223334566667777776655.4668888888887 PP
+
+               HCTT CS
+       FAT 176 eedk 179
+               +  k
+  CAG98773 129 KCYK 132
+               7766 PP
+
+  == domain 2  score: 272.9 bits;  conditional E-value: 8.7e-85
+                CCTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.....--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHH CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhr.....nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleei 90  
+                +l +e+ Wr+ +W+  +e+l+         ++p++++fe++lal++     +  +e+++l+++++ql ++++++l+++ + ++  ll+++Qq++E+ e+
+  CAG98773 2749 DLLLECGWRVAEWNADREALEHSVksvmdVPTPRRQIFETFLALQQfgetkKGDQEVRRLCDEGIQLSLKKWHSLPKRYTPAHKALLHSFQQYMEFLEA 2847
+                689************77776554445555*****************97654449********************************************* PP
+
+                CCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC....................HHCCS-STTCCC..CCCCCH CS
+       FAT   91 iqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied....................lllkgakaemwl..kfanla 158 
+                 q++ +l+         +++e k++l+ Wr+Rlp+++dd+ +w+d++++R++v++ i++                    ++++g+++ +w+  +fa++a
+  CAG98773 2848 TQIYANLAsttvqnldtKAQEIKRVLQAWRDRLPNIWDDITIWDDLVTWRQHVFNVINSaylplvpalqqansnsnintHAYRGYHEIAWVinRFAHVA 2946
+                *************************************************************************************************** PP
+
+                CHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCC CS
+       FAT  159 RksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalq 256 
+                R+++++++++++L ++                   y+++++e++ea++kLre+++c++++++el++gl+v+++tnl +f +++ a+++++kG++l++l+
+  CAG98773 2947 RRHNMPDVCISQLARI-------------------YTLPNIEIQEAFLKLREQAKCHYQNMNELTTGLDVISNTNLVYFGTVQkAEFFTLKGMFLSKLR 3026
+                ****************...................**************************************************************** PP
+
+                CCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT  257 klnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                        ++e++qa+++a+++d +++kaw++w+ fn+++ls+e        p+++s ++ +a++++l+++ l+++ k+++ l R+L+
+  CAG98773 3027 A-------HDEANQAFATAVQIDLNLAKAWAQWGFFNDRRLSEE--------PKNIS-FASNAMSCYLQAAGLYKNsKTRKLLSRILW 3098
+                *.......9***********************************........****9.******************9**********8 PP
+
+>> CAH01756  pep chromosome:ASM251v1:C:1367880:1374743:-1 gene:KLLA0_C15785g transcript:CAH01756 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.3   6.9   1.8e-23   2.3e-20      31     343 .]    1494    1777 ..    1471    1777 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 71.3 bits;  conditional E-value: 1.8e-23
+                --CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCC..CCHHHHHCCCCCHHHCHHCCHHCSS----TTTTTTT----TTS-TTTGCCCTTTC CS
+       FAT   31 kaffeailalhrnqfdeaeeliekarqllvtelsalsgesyn..raydllvrlQqlaEleeiiqykqklssseelksllktWrkRlpgvqddvevwqdi 127 
+                 ++ ++++a+ rnq +++e++i+k+  l+  + + ++++s++   + ++l++l++l++++ +++ +++    +e +   k ++ Rl+ v +d++  + +
+  CAH01756 1494 YNIAKVLQAVSRNQQQNVERYINKCFTLIGAQFT-IPSTSTTllKNREVLQKLHALTDIKLLCSAHTQ----SEFSNASKALDGRLSHVGSDFSPNHYL 1587
+                457788999*****************99988887.55555551145678*********9999999995....5556666677***************** PP
+
+                CCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS- CS
+       FAT  128 lsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssgl 226 
+                ls+R+ v   +++++l++   +++ + ++l Rk +rl+lA + L ++l+++       ++ ++ + +lw++ge+++al+++ e +++  ++++++ss++
+  CAH01756 1588 LSIRKTVEIISKNQHLQNDISNVYFQLSQLDRKENRLDLAAEDLMNALKYNH-----HSAELEFAEILWKQGEKDMALKTVAEITKRFKDDPSTASSEN 1681
+                ******987777778*************************************.....56779************************8888876555554 PP
+
+                --...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCH CS
+       FAT  227 evqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflk 325 
+                +               +++lk  ewl   ++       se+i ++y + +++d++w   +++++l++ + l+k++ +      +d   +  +++++fl 
+  CAH01756 1682 Q------------DFKEVLLKYTEWLDLSNSS-----VSEQIIKQYNELIRFDKNWDAPFYSMGLYYSKLLEKKKAEGY---VSDG-SLEYRSITNFLT 1759
+                3............345667**********994.....49***********************************54422...2222.35689******* PP
+
+                HHHTTTSSTTTCHHHHHC CS
+       FAT  326 slslssekslqdllRlLt 343 
+                s   +s +++q+l+++ t
+  CAH01756 1760 SFEKGSPNIRQSLPKVVT 1777
+                ***************976 PP
+
+>> CAG99350  pep chromosome:ASM251v1:E:631154:639439:-1 gene:KLLA0_E06975g transcript:CAG99350 gene_biotype:protein_codi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.2   0.0       0.1   1.3e+02     194     272 ..     912     997 ..     854    1006 .. 0.68
+   2 !   11.1   0.6   3.7e-05     0.047     127     230 ..    1928    2087 ..    1926    2219 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: -0.2 bits;  conditional E-value: 0.1
+               HHHHCCHHHHHSSCCHHHHCCTSSCCC....SS-SS---...................HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHH CS
+       FAT 194 ylwakgeqkealqkLrefvscllekke....elssglevq........eptnleeftkll.arcylkkGewlaalqklnwseekseeilqay 272
+               y  ++    eal++L  f + llek +    ++s               + ++  + k l  r+  ++G + ++++  ++++   +e lq +
+  CAG99350 912 YDESSFSGVEALYELARFMTLLLEKYNlsnsSIS-----GgkqrvfkiLSGCITRLPKYLtNRVVSLLGTYVKRVGV-TNQRILFKELLQRF 997
+               3333333589*****9999999998655443222.....133446888***************************99.56777788888887 PP
+
+  == domain 2  score: 11.1 bits;  conditional E-value: 3.7e-05
+                CCCCTCCCH..CCCHC...........HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.........T..........SSCCCHHHHHHHC CS
+       FAT  127 ilsvRslvl..spied...........lllkgakaemwlkfanlaRksgrlslAekaLkklleedk...eewlp.p..........evvyaylkylwak 198 
+                il + ++++  s+i++           + l+ ak+   ++ +  +R++gr++  ++    l+   +   ++++  p            +++++++lwa+
+  CAG99350 1928 ILHWSRHFFieSKINNtsviehapgsnFTLQLAKILNLVHASTFCRDQGRFQDLINIVMTLEAAVDditNNPAIgPsdtitlfckrISTVESARMLWAN 2026
+                66665555555555557777777776666666667777788889999999998888888885555544433333624444455554889********** PP
+
+                CHHHHHSSCCHHHHCCTSSCCC.SS-SS---.............................. CS
+       FAT  199 geqkealqkLrefvscllekke.elssglevq............................e 230 
+                +e+ +a+++L++ ++ +l   + e+ s  +vq                             
+  CAG99350 2027 KESAMAINMLEDLLQTNLTAVNvENVSLADVQdilmpdavvdsqlvewssfsrhrspdviF 2087
+                **************99998876766666666666655566555555555555555555551 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       5076  (2459916 residues searched)
+Passed MSV filter:                       421  (0.0829393); expected 101.5 (0.02)
+Passed bias filter:                      105  (0.0206856); expected 101.5 (0.02)
+Passed Vit filter:                        10  (0.00197006); expected 5.1 (0.001)
+Passed Fwd filter:                         4  (0.000788022); expected 0.1 (1e-05)
+Initial search space (Z):               5076  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.09u 0.04s 00:00:00.13 Elapsed: 00:00:00.08
+# Mc/sec: 10402.29
+//
+[ok]

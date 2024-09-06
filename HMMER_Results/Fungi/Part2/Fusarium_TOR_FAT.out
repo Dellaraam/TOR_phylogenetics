@@ -1,0 +1,165 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Fusarium.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+   3.5e-122  407.6   6.0   6.2e-122  406.8   5.2    1.9  2  CCT70557.1  related to 1-phosphatidylinositol 3-kinase [Fusar
+    3.9e-82  276.0   6.6    8.6e-82  274.8   6.6    1.7  1  CCT67100.1  related to the component Tra1 of the SAGA complex
+    1.5e-40  139.2   1.6    3.2e-40  138.1   1.6    1.6  1  CCT70244.1  probable UVSB PI-3 kinase [Fusarium fujikuroi IMI
+     0.0015   17.6   0.2      0.003   16.5   0.2    1.4  1  CCT72841.1  uncharacterized protein FFUJ_12735 [Fusarium fuji
+
+
+Domain annotation for each sequence (and alignments):
+>> CCT70557.1  related to 1-phosphatidylinositol 3-kinase [Fusarium fujikuroi IMI 58289]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.9   0.0       1.3     5e+03     127     161 ..     592     638 ..     589     643 .. 0.76
+   2 !  406.8   5.2  1.7e-125  6.2e-122       1     343 []    1394    1784 ..    1394    1784 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: -3.9 bits;  conditional E-value: 1.3
+                 CCCCTCCCHCCCHC..........HHCCS-STTCCC..CCCCCHCHH CS
+         FAT 127 ilsvRslvlspied..........lllkgakaemwl..kfanlaRks 161
+                 ++s+R +++s i +          + l+++ ++m +  +f+++aR+ 
+  CCT70557.1 592 VFSIREVAISIIGRlarynpayviPSLRKTLIQMLTelEFSDVARNK 638
+                 67888888888888888888888877777777777666999999976 PP
+
+  == domain 2  score: 406.8 bits;  conditional E-value: 1.7e-125
+                  CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS CS
+         FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkl 97  
+                  apla++aaW+l +Wdsm++yls +k+ spd++ff+ailalhrnqf+ea  ++++ar+ l+telsal++esynray+++vr+Q+laElee+i ykq+ 
+  CCT70557.1 1394 APLATAAAWGLNKWDSMDNYLSSLKRYSPDRSFFGAILALHRNQFREAIACVQQAREGLDTELSALVSESYNRAYQVVVRVQMLAELEELIVYKQC- 1489
+                  69**********************************************************************************************. PP
+
+                  ----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT............... CS
+         FAT   98 ssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk......eewlp.... 184 
+                   ++++++ +++tW++Rl+g+q++vevwq++l++R++v+ p e+       ++mw+kfanl+Rksgr++lAek+Lk+l + d       ++w++    
+  CCT70557.1 1490 -DEKKQAIMRRTWETRLKGCQRNVEVWQRMLRLRAIVIAPTEN-------MHMWIKFANLCRKSGRMGLAEKSLKQLIGTDAplisaiPYWNEqrqp 1578
+                  .9*****************************************.......********************************999999666666665 PP
+
+                  ...T......SSCCCHHHHHHHCCHH.........HHHSSCCHHHHCCTSSCCC......SS-SS---............................. CS
+         FAT  185 ...p......evvyaylkylwakgeq.........kealqkLrefvscllekke......elssglevq...................eptnleeft 238 
+                     p      +v+ya lky+w+ g+q         +++l++Lr+f++  +++ e      +++ g++++                   +++ l ++t
+  CCT70557.1 1579 asnPraapaaQVIYAVLKYQWELGQQlpvnkgsipEKTLYCLRKFTNDAAHRLEvarahlAAQAGNDASitgdygfqnpmdpalisphTSRALYDQT 1675
+                  6551555566***************8888888888******************96666665555555559999**************9999999999 PP
+
+                  .HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.....S-TCCHHHHCCT..CCHHHHTTT CS
+         FAT  239 kllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee....pedlseyvvpavegflkslslss 331 
+                   lla+cyl++Gewl al+k +w+ ++ ++il +ys+at+++p+wykawh+wal+nfe++++++ ++e +     +++++++vvpav+gf+ks++ls+
+  CCT70557.1 1676 VLLAKCYLRQGEWLIALNKDDWQYTQVQDILLSYSQATKYNPRWYKAWHAWALANFEIVQTLTAGNEGHLsrtdQSMVIDHVVPAVKGFFKSIALSQ 1772
+                  999***********************************************************99966655777799999****************** PP
+
+                  SSTTTCHHHHHC CS
+         FAT  332 ekslqdllRlLt 343 
+                  ++slqd+lRlLt
+  CCT70557.1 1773 GSSLQDTLRLLT 1784
+                  ***********8 PP
+
+>> CCT67100.1  related to the component Tra1 of the SAGA complex [Fusarium fujikuroi IMI 58289]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  274.8   6.6   2.3e-85   8.6e-82       2     343 .]    2804    3155 ..    2803    3155 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 274.8 bits;  conditional E-value: 2.3e-85
+                  CCTTCCCCTSSS.GHH..CCCCT.........TSSSS--CCCHCCC...CHH..--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCH CS
+         FAT    2 plaaeaaWrlgq.Wds..meeylslmk.....kdspdkaffeaila...lhr..nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqla 85  
+                  +l +e+aWr+++ W++   +++l+ +       ++p++aff+ +++   +h+  +  +++++++++a+ql ++++++l+ +++n++++ll+++Qql+
+  CCT67100.1 2804 DLLLECAWRNTEmWQDegHRDALDNIIkgvmdAPTPRRAFFQSFMSllkFHNqkEASTDFARVCDEAIQLSIRKWHQLPERLTNAHVPLLQNFQQLV 2900
+                  799********99***9967777666666667**************6555555455999************************************** PP
+
+                  HHCHHCCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC...................HHCCS-STTCCC.. CS
+         FAT   86 Eleeiiqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied...................lllkgakaemwl.. 152 
+                  El++++ ++q+l+         +s elk ll  Wr+Rlp+v+dd+ +wqd++++R++++s i++                   ++++g+++++w+  
+  CCT67100.1 2901 ELHDASVICQSLAntnqtnldvKSGELKLLLGAWRDRLPNVWDDITAWQDLVTWRQHIFSLINQtylqllpqqgqqnaggassFAYRGYHETAWIin 2997
+                  ************9************************************************************************************ PP
+
+                  CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTC CS
+         FAT  153 kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkk 248 
+                  +fa++aRk++ +++++++L+++                   y+++++e++ea++kLre+++c++e++ elssgl+v+++tnl++f+ ++ a++y++k
+  CCT67100.1 2998 RFAHVARKHNLPDVCINQLSRI-------------------YTLPNIEIQEAFLKLREQAKCHYENPDELSSGLDVINNTNLNYFSPSQkAEFYTLK 3075
+                  **********************...................******************************************************** PP
+
+                  CCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+         FAT  249 Gewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                  G++l++l++       ++e+ +ay +a ++d + +kaw++w++fn++++++         p+dl+  + +a++ +l+++ ++++ ks++ l+R+L+
+  CCT67100.1 3076 GMFLEKLKQ-------KDEADSAYGTALYFDIGAAKAWAEWGYFNDRKFKED--------PTDLN-AARQALTSYLQAAGSYKNaKSRKLLARILW 3155
+                  *********.......9***********************************........****8.*****************************9 PP
+
+>> CCT70244.1  probable UVSB PI-3 kinase [Fusarium fujikuroi IMI 58289]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  138.1   1.6   8.6e-44   3.2e-40       2     343 .]    1610    1944 ..    1609    1944 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 138.1 bits;  conditional E-value: 8.6e-44
+                  CCTTCCCCTSSSGHHCCCCT.......TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHH CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk...kdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqyk 94  
+                  p+a+eaaW  g W+s+ ++++  +    ++++ ++   + +l+  ++ +e+ ++ + +r  +  ++ a s  s ++++dll++ + l++ e ii  k
+  CCT70244.1 1610 PYAVEAAWVTGRWESLTKFIQRFRgdpIEDFNISIATLFEKLRAkDKPKELIKIMKDIRVKISSSMNAASTSSLQACHDLLLKSHVLTDVEIIIGTK 1706
+                  89*********************976666777778888888999888************************************************** PP
+
+                  CSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCH CS
+         FAT   95 qklssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyay 191 
+                      ++  ++++   +++R + +  +++++q +l +R+  ++              wl++a+laRks++l ++ +a++ + +  +       +++++
+  CCT70244.1 1707 AG--DEVARQTTAALLERRIEIIGAYMNDKQYLLGIRRATMELTRPTFTDLDISGLWLSSARLARKSNSLHQSFNAILHASKLGD-----DAATIEN 1796
+                  *8..77777888889**************************999884555555679************************99999.....899**** PP
+
+                  HHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---............HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTT CS
+         FAT  192 lkylwakgeqkealqkLrefvscllekkeelssglevq.eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykaw 286 
+                  +k+lw ++++++a+q L+  ++   ++k   ++g+ ++ ++++l+ ++kll ar+ l++++wl +++++     ++ +  ++y++  ++ ++w+k +
+  CCT70244.1 1797 AKLLWRENQHRKAIQVLQGAIK---SNKFMTQTGTATStSSSKLSPQQKLLtARAQLLLAKWLDSAGQT-----HAGALREKYQQPPKTFSTWEKGH 1885
+                  **********************...44556677777777999**************************5.....5999******************* PP
+
+                  CCCCHHHHHCCHHHHHHSSSS..S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  287 htwalfnfevlskeeekkeeee.pedls.eyvvpavegflkslslssekslqdllRlLt 343 
+                  +++++++ ++l++e+  k  ++  + +  e +  ++e++ +sl+++ +  +q l+R+Lt
+  CCT70244.1 1886 YYLGRHYKKILEAEKPLKADDQsDNYITgEVARLVIENYVRSLNSGTKYLYQTLPRILT 1944
+                  **************999888873556669*****************************8 PP
+
+>> CCT72841.1  uncharacterized protein FFUJ_12735 [Fusarium fujikuroi IMI 58289]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.5   0.2   8.2e-07     0.003     171     313 ..     228     365 ..     209     391 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 16.5 bits;  conditional E-value: 8.2e-07
+                 CCCCCHCTT.....TSSCCCHHHHHHHCCH..HHHHSSCC...HHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S... CS
+         FAT 171 Lkklleedkeewlppevvyaylkylwakge..qkealqkL...refvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseek 264
+                 L+ ++++ +     ++   + ++y++a+++  +  ++ +L   ++ +++l + k +l+ gl v+e    e+  k    c+  +++ +++l++ ++++++
+  CCT72841.1 228 LQLAEDSVP-----SQFDSTPFRYTIADIHraRAACFVHLydlNQDIENLRKAKASLNRGLAVSE----EKRPKDRFNCLINLASLQQKLNE-EENTRD 316
+                 444433333.....667777788999998855344455545559999999888889****99952....223333367999***********.899999 PP
+
+                 -SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCC CS
+         FAT 265 seeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedls 313
+                 ++++  + ++a +++p++++a  ++a +  e+ +++ +++ ++e ++l+
+  CCT72841.1 317 PSAEIGYLRQALRVHPNSTEALEELANALGERAEQNNHRETQVEADKLI 365
+                 ************************************9988877755554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      14813  (7179985 residues searched)
+Passed MSV filter:                       687  (0.0463782); expected 296.3 (0.02)
+Passed bias filter:                      369  (0.0249106); expected 296.3 (0.02)
+Passed Vit filter:                        37  (0.00249781); expected 14.8 (0.001)
+Passed Fwd filter:                         4  (0.000270033); expected 0.1 (1e-05)
+Initial search space (Z):              14813  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.16u 0.04s 00:00:00.20 Elapsed: 00:00:00.10
+# Mc/sec: 24246.26
+//
+[ok]
