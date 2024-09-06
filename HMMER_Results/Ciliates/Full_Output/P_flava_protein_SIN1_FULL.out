@@ -1,0 +1,120 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/P_flava_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence            Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------            -----------
+  ------ inclusion threshold ------
+       0.23    9.0  26.5       0.25    8.9  26.5    1.1  1  PSEFLAVA_mRNA_06984  
+        6.6    4.2  15.4       0.47    8.0   2.5    2.5  2  PSEFLAVA_mRNA_02357  
+        6.9    4.2  36.6         10    3.6  36.6    1.2  1  PSEFLAVA_mRNA_05433  
+
+
+Domain annotation for each sequence (and alignments):
+>> PSEFLAVA_mRNA_06984  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.9  26.5    0.0001      0.25      86     241 ..      63     261 ..       1     278 [. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: 8.9 bits;  conditional E-value: 0.0001
+  PTHR13335.orig.30.pir  86 g.....................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklr 152
+                            +                     +  k+ ++   ++ +++ +  k+s++se+ +++ e ++++++++++++e++r +  + + ++e++r
+    PSEFLAVA_mRNA_06984  63 EkqrqvkgkytqkqmqppgqkkKSEKNLED---SKPSKKAEPKKDSKKSEEHKKKHEAEHEEELQRQKQEEEQRVQEEKRQKEEEARR 147
+                            033344444444444444322222222222...2223333333334455566666678899999977777777777755555555555 PP
+
+  PTHR13335.orig.30.pir 153 kerrsksasiassee.r.......dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrq.snkldseq...... 225
+                             + +++ a+++++e+ r       + + +k ++   e++v e++  ++ + +sl+  +++ +  ++ + + ++ ++++++++      
+    PSEFLAVA_mRNA_06984 148 VREEAERAERERLEDiRrlkeieeKEAEGKQAKEENEGQVVEEEKENDGATMSLDDIMKQQERETKRDQRIQRkQKEKEAKNkdmnfd 235
+                            5577778888888887766666564444444444444555555555554445555555444222222222211233333333556666 PP
+
+  PTHR13335.orig.30.pir 226 ..........lsaeesdslfekksks 241
+                                      +++  ++++++kk  +
+    PSEFLAVA_mRNA_06984 236 yikptekevfKNPLVAKQVLQKKTEE 261
+                            66666666665555555555555543 PP
+
+>> PSEFLAVA_mRNA_02357  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.4   3.7    0.0095        23      26     261 ..     642     962 ..     635    1029 .. 0.69
+   2 ?    8.0   2.5   0.00019      0.47      96     149 ..    2937    2991 ..    2837    3011 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 2.4 bits;  conditional E-value: 0.0095
+  PTHR13335.orig.30.pir  26 mcerilndddvdlekihsapyppvsssssesll...srpksastpgdsgsedsgssneaetatg..............gdtkarrkkp 96 
+                            +ce+i++     le+++++ ++++ s+  e++l    +++  + +++s  e+ + +                      + +k+     
+    PSEFLAVA_mRNA_02357 642 ICEQIIKI----LEEESEKYESKIESGGTEYYLdnvMSATIRAAQKYSKLEKFYIQQ------NkvfdpyshtmhphhFLKKQHFEVE 719
+                            78999998....888888888888888888888766555555555666666555422......2356788889888886677777777 PP
+
+  PTHR13335.orig.30.pir  97 sldqrretqgekqssesesspsyeeelqsvdissssldegsrrrra..ntavkleklrke..rrsksasiassee.r........... 168
+                             +++r++ ++e ++++ ++++ +e++ qs + + ++ +eg r++r+     + +ekl++e  r     +ia++ + r           
+    PSEFLAVA_mRNA_02357 720 EQTKRDKIKHEIDNVNFIFKSLMESPIQSAQRQHEQNQEGARQSRTdgGSRQPFEKLSEEatR---EMDIAELVKmRdetyqrirqfi 804
+                            777777888888888888888888888888888888888888888744446667777777532...3455555555577888999999 PP
+
+  PTHR13335.orig.30.pir 169 ...............................dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rqsnkldse 224
+                                                               +ks ++        ++ ++++ +++     +++++++s  p++ rqs+ ++++
+    PSEFLAVA_mRNA_02357 805 erlfrsgvrvsdisydyinhfyelfpnfrlhTELISKSLNLL-------SEITTEPHMHRFLK-DKQSTYFDSMLPQErRQSDNQENQ 884
+                            999998888888889999999999999996544444444444.......23333334444444.445569999999998886666666 PP
+
+  PTHR13335.orig.30.pir 225 q.................................lsaeesdslfekkskssstktqkskkpssa.akqsi.........s 261
+                            q                                 ++ ee + +f++++k  +++ +k++ +++a + ++i          
+    PSEFLAVA_mRNA_02357 885 QwpagnkifpcmkrkidfyaveikskaialyfkfFQREEMN-VFKAAKKCLTRQLKKEQNQQEAlP-NQIlkecvrpalN 962
+                            67788899999999999999999999999999965555555.666666666666655555555544.3333444444441 PP
+
+  == domain 2  score: 8.0 bits;  conditional E-value: 0.00019
+  PTHR13335.orig.30.pir   96 psldqrretqgekqssesesspsyeeelqsvdissssldegsrrrra.ntavkle 149 
+                             ++++q++++q+++q+++++++p++ ++ q ++ +  ++ +++ r+++  t +  e
+    PSEFLAVA_mRNA_02357 2937 DQQQQQQQNQQQQQQQQQQQPPQQPQPPQPPQQNLLEQLFQFLRQNQgETIMTIE 2991
+                             3334444444444455666677777777777777777777777776535555555 PP
+
+>> PSEFLAVA_mRNA_05433  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.6  36.6    0.0042        10      65     333 ..     127     443 ..      67     452 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: 3.6 bits;  conditional E-value: 0.0042
+  PTHR13335.orig.30.pir  65 stpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqsse.sesspsyeeelqsvdissssldegsrrrrantavklekl 151
+                            ++++d+ + ++g+ + a+t+t+  +k  +  ++++ + +t++ek +se + +++++eee ++ d + ++ +e++     +++ + ekl
+    PSEFLAVA_mRNA_05433 127 GESADTEKKINGEIEAAGTTTEEYKKREEEAKQKQAALQTEREKIQSEtEAKQKATEEEKKAADAKMKEAEENRAVAAEAQKGQAEKL 214
+                            4566666777777777777776555555555555555555555544440455556666666666665555555555555666666676 PP
+
+  PTHR13335.orig.30.pir 152 rke..rrsksasiasseer.........dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrq........... 217
+                            ++e  +r ++a+ +++e++         +q ++k ++  ++   ke     +++e+++s  +++ ++         +           
+    PSEFLAVA_mRNA_05433 215 EQErlQREQAAKARKEESDkkmaeleaaQQGKLKAAKEEEKAAEKEANKAQEAQEKQISAAEKEAKEK--------Ekalkeeqkkae 294
+                            66675444444444444434555665444444444444444444443333333333333333333222........123332222354 PP
+
+  PTHR13335.orig.30.pir 218 ............snkldseq............lsaeesdslfekkskssstktqkskkpssaa............kqsisslssaLek 269
+                                        ++k ++eq             +++e+++  ++k+  + +++  +k++++a+            +++i  + ++Le+
+    PSEFLAVA_mRNA_05433 295 eeakaakeaakeQEKIEKEQaeakkeaeklqkEADKEAKEAEKAKKEAEKEAKAAEKEKQEAEklngqlekldgeQKKIDESRKKLEE 382
+                            4443333333333333333354444444444433333333333333233333333333333312333333333333333333445555 PP
+
+  PTHR13335.orig.30.pir 270 kpsqlnnpfneyakfdgkgvgttaslkidiylplssepdkllpltvvvkasatVqevIGlaLwq 333
+                             + + ++ +    ++ + +   ++s k+++      e++k+l++  +++  atV+ vIG++L++
+    PSEFLAVA_mRNA_05433 383 EQDKIDKKMKKGKDVEKLK---VESEKLRVKHAKLDEEQKPLHIVWARMVIATVALVIGMILLK 443
+                            5544444444444444444...677777777777666788888888999999999999999987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       7301  (2575507 residues searched)
+Passed MSV filter:                       764  (0.104643); expected 146.0 (0.02)
+Passed bias filter:                      214  (0.0293111); expected 146.0 (0.02)
+Passed Vit filter:                        34  (0.0046569); expected 7.3 (0.001)
+Passed Fwd filter:                         4  (0.00054787); expected 0.1 (1e-05)
+Initial search space (Z):               7301  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.11u 0.01s 00:00:00.12 Elapsed: 00:00:00.05
+# Mc/sec: 29181.81
+//
+[ok]

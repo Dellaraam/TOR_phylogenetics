@@ -1,0 +1,374 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/T_thermophila_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------         -----------
+    3.4e-17   62.7  48.2      5e-17   62.2  48.2    1.1  1  TTHERM_00550880   hypothetical protein
+    1.2e-05   24.5   0.4    1.2e-05   24.5   0.4    2.1  2  TTHERM_01026280   hypothetical protein
+    1.8e-05   24.0  17.1    3.2e-05   23.2  17.1    1.4  1  TTHERM_00283540   transmembrane protein putative
+  ------ inclusion threshold ------
+      0.013   14.6   8.9      0.021   13.8   8.9    1.3  1  TTHERM_000294938  zinc finger C3HC4 type (RING finger) protei
+       0.02   13.9  21.6      0.038   13.0   9.4    2.2  2  TTHERM_000569069  Dpy-30 motif protein
+      0.028   13.4  35.4       0.04   12.9  35.4    1.1  1  TTHERM_00069368   U-box protein
+      0.089   11.8   4.1       0.15   11.1   4.1    1.3  1  TTHERM_00077060   hypothetical protein
+       0.16   11.0  35.2       0.18   10.8  35.2    1.1  1  TTHERM_00069260   hypothetical protein
+        0.3   10.0  16.3       0.41    9.6  16.3    1.2  1  TTHERM_00925840   chitin-binding peritrophin-A domain protein
+        0.4    9.6  11.7       0.49    9.3  11.7    1.1  1  TTHERM_00581830   DHHC zinc finger protein
+        1.8    7.5  38.7       0.95    8.4   3.2    2.2  2  TTHERM_00298420   ATP-dependent metalloprotease FtsH
+        3.1    6.6  30.7        4.4    6.2  30.7    1.3  1  TTHERM_00131330   AN1-type zinc finger protein
+        4.4    6.2  50.1          6    5.7  50.1    1.2  1  TTHERM_00161740   RRM4 RNA recognition motif protein
+
+
+Domain annotation for each sequence (and alignments):
+>> TTHERM_00550880  hypothetical protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   62.2  48.2   3.5e-20     5e-17      64     668 ..      30     618 ..       8     645 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 62.2 bits;  conditional E-value: 3.5e-20
+  PTHR13335.orig.30.pir  64 astpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavklekl 151
+                            ++ +++  +e+ ++s++ +  +   + ++++++s+++r+++ + +  s+  +s++++e + +  i++ + + +s+ ++++++ ++e++
+        TTHERM_00550880  30 NNRQKSAKFEQLSDSSDEDDRQTQFQSKQGNGMSQNNRQKENQTSLISNLLKSDGDTE-SMDDMINQINSIVSSQYEQKKKQFEEEQE 116
+                            3333333333333333333333345556667777777777777777777777777774.44555666888888888886666666666 PP
+
+  PTHR13335.orig.30.pir 152 rke.....rrsksasiassee.r...dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rqsnkldseq.... 225
+                            r       +        + e+       +s ++    +++++ e++  +a+++ + + e+s         +++ +++n +++ +    
+        TTHERM_00550880 117 RIKmlkeiM--------QQENeEqkkMEISKTNSIIVYKNNSGEKIDENAQQSEQNGMEKSNG-------YKSkEKQNNNQDYDdsde 189
+                            655443331........3333222342233333333333333333333333333333333222.......222233444444441222 PP
+
+  PTHR13335.orig.30.pir 226 .........lsaeesdslfekkskssstktqkskkpssa.a...kqsi....sslssaLekkpsqlnnpfneyakfdgkgvgttaslk 296
+                                     +++ e++  ++++++++  ++ ++ k +++ +    qs+    ++  s L+++ + ++n +   a+        + + k
+        TTHERM_00550880 190 eeddededyDDDDEQHRYNNRQNRNGNNSDNNEDKFEQVpEdciIQSFnnvvLKQVSLLKNTTQ-QKNSLAKLASN-------PRAQK 269
+                            2222234455555555556666666666666666666662255434445444333344444443.45555444433.......35558 PP
+
+  PTHR13335.orig.30.pir 297 idiylplssepdkllpltvvvkasatVqevIGlaLwqyteeg.repklpdnk..vnaycLrivEdDGe.vddDFPpLDrnepiskfgf 380
+                            +d+y++  s       ++v    ++t+q++I  ++  y   +  + +l +    ++ay+Lr+ +dDG   d +++p++++ p+++f+ 
+        TTHERM_00550880 270 LDVYFFGTSF-----NMKVPYDDNTTIQDFIKIIIDFYMADPnTDKSLMRYPkyPQAYNLRMKDDDGYkPDSNLGPIEPKYPVQNFSK 352
+                            ******9999.....9************************999999**99988877***********99******************* PP
+
+  PTHR13335.orig.30.pir 381 selaLveatdsegktnndlqtplpreqkkrleeakrsagsaneagsslstesskeslfvkvnlaypgdsvrskttivvptdvtladvl 468
+                            ++ ++ e++                         ++ ++s+++++++++ +++ + l v++     g +    + i+ + ++t+++vl
+        TTHERM_00550880 353 EQIVIMEIDRFMPPA-------------------EDFQDSIARKIKQKTIQKGLDLLNVTIEE--LGAQ----LNIEQSPQSTIKQVL 415
+                            ********9998766...................44556777777777777777777777776..6888....*************** PP
+
+  PTHR13335.orig.30.pir 469 ekackkrkldqkky.....rllkvsepnvivdldrtvesldgleflllrknssradgvlekteskssssanatissksaaedsqiqia 551
+                            e +  k++ + +++     +   + e+ + +dl+ ++++l  +++++ +k++ +ad++   t+++ +  +n         + ++ q +
+        TTHERM_00550880 416 EYLRDKKNAKISIKdcivfYYDYQEEKYIELDLNTSISQLPSQDKKIRIKKKEWADTPRI-TNQQVQYAPNL--------PAQILQSE 494
+                            *******99999999***99999*********************************9766.33333322221........66677777 PP
+
+  PTHR13335.orig.30.pir 552 tvqddlsssayksfkVsrkhkmrfktdrelgIdgdyieimPvenqkaa........tkfwekqKtisihisqvvacklssknpanFki 631
+                            + +++++   y +f V++++  + +++r lgId+ +i + + + q           +++++++K +s+ i+++  +  +  n  + k+
+        TTHERM_00550880 495 PISNMNL-VKYEEFNVIKINDKKKRQERVLGIDQHKILNINKRIQQQDigflnkifVNPQTGTKNPSRKIEDIQFIQELENNIVIMKV 581
+                            7777776.68***************************99988766665678999999*******************877777776666 PP
+
+  PTHR13335.orig.30.pir 632 vvrr...endeKrydfeavsaaeaaeIvskinnileayas 668
+                               +   +  eK +++e  ++++ ++I++ki  ++e+y+ 
+        TTHERM_00550880 582 ---KdpdQQYEKTLKYEIANSEDRRKIIKKIEGLMELYRK 618
+                            ...4588999****************************95 PP
+
+>> TTHERM_01026280  hypothetical protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.5   0.4   8.5e-09   1.2e-05     280     385 ..      56     167 ..      50     176 .. 0.81
+   2 ?   -4.2   7.4       4.3   6.1e+03     218     253 ..     208     243 ..     179     256 .. 0.47
+
+  Alignments for each domain:
+  == domain 1  score: 24.5 bits;  conditional E-value: 8.5e-09
+  PTHR13335.orig.30.pir 280 eyakfdgkgvgttaslkidiylplssepdkllpltvvvka.....satVqevIGlaLwqyteegrepklpdnk....vnaycLrivEd 358
+                            +y++  + + ++ +++k++iyl +  + d + ++ ++v++       t+ +vI la+ ++ +   e k         ++ ++L++   
+        TTHERM_01026280  56 RYTDCVSNS-QEEKTMKVQIYLNIEFTFDGKVEM-LKVTQdlppkQFTIDDVISLAIREFNDIL-EKKNSQYRinttQSIWNLYMSKK 140
+                            566555556.699**************8888888.88888999999*************99864.33333333335677********* PP
+
+  PTHR13335.orig.30.pir 359 DGevddDFPpLDrnepiskfgfselaL 385
+                            +G+  +D+P+LDr   +++++ + ++L
+        TTHERM_01026280 141 NGKPKQDLPALDRDNLLQDTQEDMFSL 167
+                            ******************999888887 PP
+
+  == domain 2  score: -4.2 bits;  conditional E-value: 4.3
+  PTHR13335.orig.30.pir 218 snkldseqlsaeesdslfekkskssstktqkskkps 253
+                            s+k + e++ ++ + ++++ k++ ss ++ ++k+++
+        TTHERM_01026280 208 SKKDQVENKETQIPQEINNSKPQKSSVPRTQKKQKE 243
+                            222222223333333333333333333333333332 PP
+
+>> TTHERM_00283540  transmembrane protein putative
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.2  17.1   2.2e-08   3.2e-05      49     282 ..     466     925 ..     279     940 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 23.2 bits;  conditional E-value: 2.2e-08
+  PTHR13335.orig.30.pir  49 vsssssesll.srpksastpgdsgsedsgssneaetatg................................................. 86 
+                            v+s   + +  ++++++  + +s ++d++   e e +++                                                 
+        TTHERM_00283540 466 VYSQFIQQFIpQTNTNGQVNSTSQTQDQSQIQE-EPVSFyyesqeefsiitqtlksirnqlrdnleidpsfqtylheyftffyqinkq 552
+                            444444455566666777777777766666333.333338888888888888888888888888888888888888999999999999 PP
+
+  PTHR13335.orig.30.pir  87 ......................................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldeg 136
+                                                                     ++ + +++++q +e+++++q++e+++++  e+e+ +++i+++++d++
+        TTHERM_00283540 553 iilltklynkntiippiyansifdnlilsfcyeytqnqQEEQNEGANDYQNQVQEEEQQEQDEEEQEQDYEEQEDNQSQIEEEDDDDQ 640
+                            9999999999999999999999999999999999998877888889999********************************9999999 PP
+
+  PTHR13335.orig.30.pir 137 srrrrantavkleklrkerrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnklds 223
+                            s++ + ++++  e++ ++++ + ++++++ee ++q   + iq+       ++   +++ e+  ++ r+++++ s+sa+          
+        TTHERM_00283540 641 SQQVN-QDQQLVEEEGDQQQEDEEGNQQLEEeKNQQLEEEIQQE----LDQKLDVEKQDETFQGFMRNQSQQNSQSAN---------- 713
+                            98888.55566666666666677777777665523333333333....222222222333333333444333333333.......... PP
+
+  PTHR13335.orig.30.pir 224 eq...................................................................................... 225
+                             q                                                                                      
+        TTHERM_00283540 714 -Qqhilkpvgkywlifgiilaidlvaivlplvshfkiaainskndhimslydkpqikdiivikesenqhddcpqdyhdifnyefqgyk 800
+                            .145566667777777777777777777777777777777888888889999999999999999999999999999999999999999 PP
+
+  PTHR13335.orig.30.pir 226 ...........................lsaeesdsl............fekkskssstktqkskkpssa.a................. 256
+                                                       + ++++++l              k+ + +++++q+  + + + +                 
+        TTHERM_00283540 801 pfylcrqnvlpykqgetyvdereqcqfFEDQKPKKLsilklgneniriCGKYMNINIQQKQQCDQNEVVcSfisefnsficansekdc 888
+                            9999999999999999999999999995555555555556666666669999999999999999999998898888888776666655 PP
+
+  PTHR13335.orig.30.pir 257 ...kqsi.........sslssaLekkpsq.lnnpfneya 282
+                                  i          s +++L+++ ++ ++ p+  + 
+        TTHERM_00283540 889 pinN--IqmdeiqsanGSYQQQLSPQRQApNQLPLLGFE 925
+                            4330..255556655744457888887764555666655 PP
+
+>> TTHERM_000294938  zinc finger C3HC4 type (RING finger) protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.8   8.9   1.4e-05     0.021      27     177 ..     121     262 ..      95     311 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 13.8 bits;  conditional E-value: 1.4e-05
+  PTHR13335.orig.30.pir  27 cerilndddvdlekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssese 114
+                             + i+n++ + + ++ +  ++     +++ ++  ++++s++ +s+ ed+ +++      ++ +++++++ +++q+++t     s +++
+       TTHERM_000294938 121 IQNIFNNN-INIFREANNFNN-----PQNNIFNVAQNQSNNRRSSHEDDEDDDP---FLFNSQPFPSQQAQVSQEQDTHANIISFQQQ 199
+                            55566663.444444433333.....3444444455666666666666666554...45667999*********************** PP
+
+  PTHR13335.orig.30.pir 115 sspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.rdqsscksiq 177
+                            ++++  +++q +   +++l++g++++++ + ++ ++++++ +  s++++ ++  +  ++ck i 
+       TTHERM_000294938 200 NQDRVAGGSQLMYHVQQQLQQGIQNQSQMQLQQIQQQQQQLQILSNNPNVLNRqT-CPHCKQIF 262
+                            ***********99999***********9999999999999888888888887766.77777765 PP
+
+>> TTHERM_000569069  Dpy-30 motif protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.0   4.3    0.0017       2.4      97     154 ..     132     189 ..       8     217 .. 0.71
+   2 ?   13.0   9.4   2.7e-05     0.038      91     249 ..     521     741 ..     343     793 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 7.0 bits;  conditional E-value: 0.0017
+  PTHR13335.orig.30.pir  97 sldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke 154
+                            + + ++e+ +e+ ++e+e++ ++e ++++++ +ss+  + +++++ ++ +++e+++ e
+       TTHERM_000569069 132 GENAEQEKPQEEEQQEEENEEQNENSQAASEKNSSQAGDFDNQKQEDEVQQEEEEPIE 189
+                            3344445555554555555555555555555554444444444444666666666655 PP
+
+  == domain 2  score: 13.0 bits;  conditional E-value: 2.7e-05
+  PTHR13335.orig.30.pir  91 arrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r......... 168
+                            +  kk+ ++q++e  + + ++e++++ s e+++ +++ ++++ deg   +  n+  + + l+ke ++++++ +++ee           
+       TTHERM_000569069 521 KIKKKKAKKQDDEDNQAQEQQEQQKKVSEEKSQGEQENEDEEEDEGEEGQEENENNNNQVLPKEEQPEAEEEEEEEEeEeeeqppeee 608
+                            2223333333333333333344444444444444555555555555555555555555555555554444444444433333344444 PP
+
+  PTHR13335.orig.30.pir 169 ..........................................dqsscksiqwktessvkedsvqrassesslsserssdssssssaps 214
+                                                                      ++s+c+ i++  ++ v+  +++++ +     +e++ + + ++++p 
+       TTHERM_000569069 609 eqppeeeeeeedpdnpkpkvepyhpesiifikrivqnreivlNNSKCEIIDYFSKNDVEAYITDTTGKTLFEAFESQRIYIERQGRPY 696
+                            4445555555566677777777777777777777777777777777777777777777665555555544445555555443333333 PP
+
+  PTHR13335.orig.30.pir 215 r.rq..snkldseq.............lsaeesdslfekkskssstktqks 249
+                                  s                    +++ee++ + ++ ++  + k+++ 
+       TTHERM_000569069 697 NyLVdeS------ElvkkhqgyyddvnKRNEEQKLIKKEEEQKVVLKQKQD 741
+                            3222441......04443345555555555555544333333333333222 PP
+
+>> TTHERM_00069368  U-box protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.9  35.4   2.8e-05      0.04      59     279 ..       9     336 ..       3     347 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 12.9 bits;  conditional E-value: 2.8e-05
+  PTHR13335.orig.30.pir  59 srpksastpgdsgsedsgssneaetatg..gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdiss.........sslde 135
+                             +++++s++++s+s ++g s+ ++ a    ++ ++ +++++++q++++q+++q+ +s++++ +++++   ++s+         s+  +
+        TTHERM_00069368   9 NSSQRQSSNQNSNSNNNGQSSFFNDAFNvfFQSPFFNPYQQQSQQQQQQQQQQQRTSGNQNNFQQQNPPRQSSQqyqhnqnrpSYPRF 96 
+                            3456666777777777777666655544785555555555555555555555555555555555554444444400000000134444 PP
+
+  PTHR13335.orig.30.pir 136 gsrrrrantavkleklrkerrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkld 222
+                            gs+ ++ n+++  +++++++ s+s+++++s++ +                +e++++++  +s  +  + ++++ ++ + ++       
+        TTHERM_00069368  97 GSQSQQNNQQQSYQQQSQQNYSSSQQNNRSSQqQ--------------RQQEPRPTFQNTRSNWKKAEEPKKEKKKEVQKE------- 163
+                            4444444444444444444444333333333333..............223333333333333333333332222222222....... PP
+
+  PTHR13335.orig.30.pir 223 seq..................................................................................... 225
+                              +                                                                                     
+        TTHERM_00069368 164 --Ntsdywkqkgnemfkqryydtaleyytrainidssqsiyysnrgrcykikgdlkkafddavqaieldennlkgqllcgqvlcemgk 249
+                            ..112222233333344445555555556666666667788888899999999999999999999999999***************** PP
+
+  PTHR13335.orig.30.pir 226 ................................lsaeesdslfekkskssstktqkskkpssaakqsi....sslssaLekkps....q 273
+                                                            + +e s  +f +k+  + ++ q++k+++      i         +Le++++    q
+        TTHERM_00069368 250 yeegihkiengikrltkgltlcssqagqkkkvFEKEISVYIFRAKKLKWYKQYQEQKQKKIR---LIenykV----YLEQQSQlsdlQ 330
+                            ***********************888888888888888888888888887777544444443...4445341....444444443334 PP
+
+  PTHR13335.orig.30.pir 274 lnnpfn 279
+                            ++  ++
+        TTHERM_00069368 331 RQEQMD 336
+                            445554 PP
+
+>> TTHERM_00077060  hypothetical protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.1   4.1    0.0001      0.15      70     124 ..       6     147 ..       2     156 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 11.1 bits;  conditional E-value: 0.0001
+  PTHR13335.orig.30.pir  70 sgsedsgssneaetatg....................................................................... 86 
+                            s++  +g +n+a+++++                                                                       
+        TTHERM_00077060   6 SNPPMDGNQNGAQQQQEqqgidlsqlecipircslgvvnefiintvdfinrvgfrlendqlsiekllegidqkllllekkldsvnpef 93 
+                            7788888889988888899999999999999999999999999999999999999999999999999999999999999999999999 PP
+
+  PTHR13335.orig.30.pir  87 ................gdtkarrkkpsldqrretqgekqssesesspsyeeelq 124
+                                            +  +++ ++++++q++++q+++q+++++  +++++++ 
+        TTHERM_00077060  94 ynvlpdipkpeltvyfNSSNQPDQQQGMQQQQQQQQQQQQYDQQYMQQQQQQNG 147
+                            999988888888777755555656666666666666665555555555544444 PP
+
+>> TTHERM_00069260  hypothetical protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.8  35.2   0.00012      0.18      86     275 ..     101     337 ..       7     343 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: 10.8 bits;  conditional E-value: 0.00012
+  PTHR13335.orig.30.pir  86 g.....................................................................gdtkarrkkpsldqrret 104
+                            +                                                                     + ++++ k++ + +++++
+        TTHERM_00069260 101 FniekqleffnkefsgdyqtalnqlkedlknkdsivaiykrkfesharylqfleqcdkimgvvsnklgksKSRRQQKKEKLKLKKQNQ 188
+                            0555555555555555555555555555556666666666666666666777777777777766655433222222222222222222 PP
+
+  PTHR13335.orig.30.pir 105 qgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseerdqsscksiqwktessvkedsvqra 192
+                            q+ ++ +++++s+++ e+ ++ + ++++ +++ +++++n ++k +++ +++++k+++       + ++ ksiq+k+ +  +  + +++
+        TTHERM_00069260 189 QQKSSEVQQSKSQQDGEQIAEKEEQNDQNENQLKEQQTN-EQKKQNNGENKQQKQSQ-------KEIKQKSIQQKYDKLAS--KYRND 266
+                            222223333333333333344444445556666666544.44444444443322222.......35666666666222222..22222 PP
+
+  PTHR13335.orig.30.pir 193 ssesslsserssdssssssapsrrqsnkldseqlsaeesdslfekkskssstktqkskkpssa.a..kqsi....sslssaLekkpsq 273
+                            + + ++++ ++ +                    + ++ + + fek++k++ +++++s+  +   +   q i     s +++L+++++q
+        TTHERM_00069260 267 TPKERTEFKKKGK-------------------ERKQQLKQEKFEKRQKTEKQEQENSNTRKNFkQqnLQEIdklhPSWAARLQQQQQQ 335
+                            2222333333333...................14445555556666655555555555555553333233333343447888888875 PP
+
+  PTHR13335.orig.30.pir 274 ln 275
+                            +n
+        TTHERM_00069260 336 QN 337
+                            33 PP
+
+>> TTHERM_00925840  chitin-binding peritrophin-A domain protein putative
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.6  16.3   0.00028      0.41     104     169 ..     205     298 ..     183     418 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 9.6 bits;  conditional E-value: 0.00028
+  PTHR13335.orig.30.pir 104 tqgekqssesesspsyeeelqsvdissssldegsrrrra..ntavkleklrke..rrsksasiasseer................... 168
+                            +q+++  +++++ + y+++lq++++  ++++++++++++   ++++++++++   + + s+++++s+++                   
+        TTHERM_00925840 205 QQQDQ--QQQNQCSLYQQKLQQQQLWYQQQQNQQQQQQQqqEQQQQQQQQSQKqqQVNNSDNSNESNDNlflelaiasfallliiliv 290
+                            23333..333333344444444444433333333333331122222222222222334444444444436777777777776666666 PP
+
+  PTHR13335.orig.30.pir 169 .......d 169
+                                    
+        TTHERM_00925840 291 llyfvrkF 298
+                            66665441 PP
+
+>> TTHERM_00581830  DHHC zinc finger protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.3  11.7   0.00034      0.49     118     198 ..      22      94 ..       3     126 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 9.3 bits;  conditional E-value: 0.00034
+  PTHR13335.orig.30.pir 118 syeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.rdqsscksiqwktessvkedsvqrassessl 198
+                            +y+ e+ + ++++++ d ++++ ++n+a+k+ + ++  r++sas++ +++ +      si++++++++      +++++++ 
+        TTHERM_00581830  22 GYD-EENQNELNDEYPDTQQIQPQSNQAQKSLQGQQSARKSSASTNNTNQeN----NISINLNDNQNSTH----TTQQQQAQ 94 
+                            333.6667788889**********9****99999999888888888887777....44555553333222....22222222 PP
+
+>> TTHERM_00298420  ATP-dependent metalloprotease FtsH
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.9  27.6    0.0073        11      99     256 ..      44     200 ..      16     249 .. 0.49
+   2 ?    8.4   3.2   0.00066      0.95      66     115 ..     819     862 ..     703     866 .] 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 4.9 bits;  conditional E-value: 0.0073
+  PTHR13335.orig.30.pir  99 dqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseer......dqsscksiqwkt 180
+                            +++r+++g++++ + ++++++e+++q  + ++++++++ ++++   + k+++++k+ +   + i++ +er      +q +   +++k+
+        TTHERM_00298420  44 KFDRRRRGSSNQRDRGNQKDKEQNEQTIEVEEQEQQKHKDQQQNEGQSKQDNNEKQDQ---SYIERWKERvmkeiqKQDQEFKKNLKD 128
+                            4444555555455555555555555555555444444444444333333333333322...233333332233333222333344444 PP
+
+  PTHR13335.orig.30.pir 181 essvkedsvqrassesslsserssdssssssapsrrq..snkldseqlsaeesdslfekkskssstktqkskkpssa.a 256
+                             ++++++   ++s++++++++ + d++s+    ++++  +       + ++++    e + +++s+k +k+k++++  +
+        TTHERM_00298420 129 LQNSMQEQEINKSNQKKSDQDDKNDKKSEDHEEKEKKdeH-------KEDQQEETASEGRHHHKSKKHKKHKSQKKNeQ 200
+                            4444555555555555555555555333333322211121.......22222221222222222233333333333211 PP
+
+  == domain 2  score: 8.4 bits;  conditional E-value: 0.00066
+  PTHR13335.orig.30.pir  66 tpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqsseses 115
+                            ++   + e + +++         +k+ ++++++ q++++q++++++++e+
+        TTHERM_00298420 819 SNYKAYLESNEEQEK------EKQKIEQDQQQKEQQQQQQQQQSQQQQEP 862
+                            333333333333222......23333333333333333333333333333 PP
+
+>> TTHERM_00131330  AN1-type zinc finger protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.2  30.7     0.003       4.4      92     250 ..     184     343 ..      62     364 .. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 6.2 bits;  conditional E-value: 0.003
+  PTHR13335.orig.30.pir  92 rrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseer....dqsscks 175
+                              +  +++++++ q++ ++s+++++++++++ q +++   ++++++++++ n+ +++++++ +++           +    +++++++
+        TTHERM_00131330 184 NVNSYQQQTNQQYQNQANHSQQSQQDQLNQRRQMMQMR-AQQQQQQQQSNLNQNQNQQSQQIQQQ-----------NigywNAIHSQN 259
+                            22222333333333333333333333333333333333.12222222222233333333333333...........244555777777 PP
+
+  PTHR13335.orig.30.pir 176 iqwktessvkedsvqrassesslsserssdssssssapsr.rq...................snkldseq..lsaeesdslfekksks 241
+                            +q++ +++     +q ++++ ++ ++ + +   ++s +++ ++                              ++++++s +++ ++ 
+        TTHERM_00131330 260 VQQQIQQPQV---TQQQQQQLQTNQVNQRI---QPSNYREpQReicnvcgrsfetivellshA------EqaHQPQQNNSGNQASQQQ 335
+                            7777222222...23333333333333333...333333322234455555444443333221......0112222222221111111 PP
+
+  PTHR13335.orig.30.pir 242 sstktqksk 250
+                            ++t++ +++
+        TTHERM_00131330 336 NTTTN-NNN 343
+                            11111.111 PP
+
+>> TTHERM_00161740  RRM4 RNA recognition motif protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.7  50.1    0.0042         6      62     232 ..      26     229 ..       2     315 .. 0.45
+
+  Alignments for each domain:
+  == domain 1  score: 5.7 bits;  conditional E-value: 0.0042
+  PTHR13335.orig.30.pir  62 ksastpgdsgsedsgssneaetatg........gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrr 141
+                            + +++ + +g                        ++++ rk+++++ ++++++++++++ +  ++++ +++s + +++ ++++ +rr+
+        TTHERM_00161740  26 NYNNEGALKGQ-------------NiqqdtpanENDQKERKRSPSNRKHKKEKDHKKKDRK--SEKDRRSRSNSEKKKRDEKSKKRRS 98 
+                            22222222223.............0333333334455555566666666666555333333..3333344444444456677777777 PP
+
+  PTHR13335.orig.30.pir 142 antavkleklrkerrsksasiassee.r.......dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq... 217
+                            ++ +++ +k  k r s  + ++s +e +       +  +  s + +++s    ds++r+ + +s+ss++ss+s+sss+++++ r+   
+        TTHERM_00161740  99 SSRDQRKSKSDKDRSS--SRHRSKREkDrkksssrK--RHSSRSKRDKSRKRHDSSKRKRRHHSSSSSSSSSSQSSSDRSRSrRRrrs 182
+                            7777777777777443..333333333346666442..23333333334444444455555555555555555555555444333457 PP
+
+  PTHR13335.orig.30.pir 218 ...snkldseq.............................lsaeesd 232
+                               ++k+ se                              + ++e+d
+        TTHERM_00161740 183 sslNKKKLSEAelrrlerekrnlgeyysqlknssrskerkKKNKEND 229
+                            77755555555677666555555554444444444444442222222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      18774  (11777696 residues searched)
+Passed MSV filter:                      8437  (0.449398); expected 375.5 (0.02)
+Passed bias filter:                     1621  (0.0863428); expected 375.5 (0.02)
+Passed Vit filter:                      1209  (0.0643976); expected 18.8 (0.001)
+Passed Fwd filter:                        65  (0.00346224); expected 0.2 (1e-05)
+Initial search space (Z):              18774  [actual number of targets]
+Domain search space  (domZ):              13  [number of targets reported over threshold]
+# CPU time: 2.93u 0.04s 00:00:02.97 Elapsed: 00:00:01.47
+# Mc/sec: 5364.98
+//
+[ok]

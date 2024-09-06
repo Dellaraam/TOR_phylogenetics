@@ -1,0 +1,62 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/E_vannus_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------          -----------
+     0.0044   16.0   0.1       0.33    9.9   0.0    2.9  3  MSTRG.12290.1_fr1  UNIQ_LONG STOP:3 ANY(X):0 LONGEST:301 TOTA
+
+
+Domain annotation for each sequence (and alignments):
+>> MSTRG.12290.1_fr1  UNIQ_LONG STOP:3 ANY(X):0 LONGEST:301 TOTAL_LENGTH:594 MULTIPLE_ORFs:4
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.9   0.0   3.8e-05      0.33     124     159 ..      68     103 ..       8     104 .. 0.82
+   2 !    2.7   0.0    0.0061        54      75     112 ..     139     178 ..     116     197 .. 0.68
+   3 ?   -1.1   0.0     0.088   7.8e+02      81     113 ..     223     254 ..     196     291 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 9.9 bits;  conditional E-value: 3.8e-05
+           mTOR_dom 124 pflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                        ++ ++iip +l+ +r++es++r  ++++L +L +++
+  MSTRG.12290.1_fr1  68 QTNDHIIPVFLQFLRDTESEVRLAVFKNLINLNKVI 103
+                        45589*************************998776 PP
+
+  == domain 2  score: 2.7 bits;  conditional E-value: 0.0061
+           mTOR_dom  75 lspsseeyyptvvinaLlkilkdpsls.shhta.vvqaim 112
+                         ++  ee+++   ++ Ll+ l+dp  s   ht+ +++ + 
+  MSTRG.12290.1_fr1 139 AEQLGEEVFKEKLLKMLLEWLSDPIFSiREHTMiAINNLG 178
+                        34555999999999*********99885444441455555 PP
+
+  == domain 3  score: -1.1 bits;  conditional E-value: 0.088
+           mTOR_dom  81 eyyptvvinaLlkilkdpslsshhtavvqaims 113
+                        e+y+  v+  L +   d+ ++  + +v ++im+
+  MSTRG.12290.1_fr1 223 EFYSENVFPVLSTFATDKIIN-IRMNVSRVIME 254
+                        555555555444444443333.33333333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       8856  (2176206 residues searched)
+Passed MSV filter:                       746  (0.0842367); expected 177.1 (0.02)
+Passed bias filter:                      390  (0.0440379); expected 177.1 (0.02)
+Passed Vit filter:                        38  (0.00429088); expected 8.9 (0.001)
+Passed Fwd filter:                         1  (0.000112918); expected 0.1 (1e-05)
+Initial search space (Z):               8856  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.03u 0.00s 00:00:00.03 Elapsed: 00:00:00.01
+# Mc/sec: 24744.45
+//
+[ok]

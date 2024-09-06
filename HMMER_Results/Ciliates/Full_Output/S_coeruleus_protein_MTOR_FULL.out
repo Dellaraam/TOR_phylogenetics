@@ -1,0 +1,55 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/S_coeruleus_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence            Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------            -----------
+    3.8e-10   38.7   0.1    1.1e-09   37.1   0.1    1.7  2  PSEFLAVA_mRNA_04131  
+
+
+Domain annotation for each sequence (and alignments):
+>> PSEFLAVA_mRNA_04131  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.1   0.1   1.6e-13   1.1e-09      84     157 ..      44     120 ..      21     122 .. 0.90
+   2 ?   -1.8   0.0      0.15   1.1e+03       6      34 ..     148     176 ..     146     178 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 37.1 bits;  conditional E-value: 1.6e-13
+             mTOR_dom  84 ptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vp..flpqiipallsvirtcesslrefllqqLatLvs 157
+                          pt +i++++++l+dp+l++hh+ v+q i +i++t g    v   flp iip  + +i++ ++ l e l+q ++++++
+  PSEFLAVA_mRNA_04131  44 PTKAIEQMIRVLQDPTLRDHHHIVLQGIKYIVHTFGETIsVLqlFLPLIIPPTMILIKNNDPLLTESLFQCINSIIA 120
+                          899*******************************9877643245***************************999986 PP
+
+  == domain 2  score: -1.8 bits;  conditional E-value: 0.15
+             mTOR_dom   6 ldypeLLeiLlnilkteqsqsiRrevikv 34 
+                          +d+pe L+++ + +k +++++   e+ kv
+  PSEFLAVA_mRNA_04131 148 IDFPEFLSLMARKMKDTDTEEELVEAFKV 176
+                          57899999999999988877777777776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       7301  (2575507 residues searched)
+Passed MSV filter:                       371  (0.050815); expected 146.0 (0.02)
+Passed bias filter:                      265  (0.0362964); expected 146.0 (0.02)
+Passed Vit filter:                        17  (0.00232845); expected 7.3 (0.001)
+Passed Fwd filter:                         1  (0.000136968); expected 0.1 (1e-05)
+Initial search space (Z):               7301  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.03u 0.03s 00:00:00.06 Elapsed: 00:00:00.03
+# Mc/sec: 13111.05
+//
+[ok]
