@@ -1,0 +1,301 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Requested_Organisms/Proteins/Chlamydomonas_reinhardtii_Chlamydomonas_reinhardtii_v5.5_pep.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-46  158.3   0.0    5.8e-41  140.2   0.0    6.0  5  PNW79096  pep chromosome:Chlamydomonas_reinhardtii_v5.5:9:552
+    1.7e-46  158.3   0.0    5.8e-41  140.2   0.0    6.0  5  PNW79097  pep chromosome:Chlamydomonas_reinhardtii_v5.5:9:552
+     0.0016   18.6   1.5      0.025   14.6   0.0    3.5  4  PNW78179  pep chromosome:Chlamydomonas_reinhardtii_v5.5:10:65
+  ------ inclusion threshold ------
+       0.02   15.0   3.8        2.2    8.4   0.0    4.2  4  PNW84522  pep chromosome:Chlamydomonas_reinhardtii_v5.5:3:830
+      0.028   14.5   0.0         34    4.5   0.1    3.3  3  PNW84140  pep chromosome:Chlamydomonas_reinhardtii_v5.5:4:260
+      0.078   13.1   0.0         42    4.2   0.0    4.8  6  PNW88131  pep chromosome:Chlamydomonas_reinhardtii_v5.5:1:265
+       0.19   11.8   0.0        2.1    8.4   0.0    2.1  2  PNW77416  pep chromosome:Chlamydomonas_reinhardtii_v5.5:10:24
+
+
+Domain annotation for each sequence (and alignments):
+>> PNW79096  pep chromosome:Chlamydomonas_reinhardtii_v5.5:9:5520743:5541454:1 gene:CHLRE_09g400553v5 transcript:PNW7909
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.7   0.0         1   2.8e+03       8      46 ..     288     325 ..     285     339 .. 0.77
+   2 ?    1.0   0.0      0.14     4e+02      20      47 ..     608     635 ..     600     665 .. 0.85
+   3 !    5.6   0.0    0.0054        15     105     157 ..     823     876 ..     811     878 .. 0.79
+   4 !  140.2   0.0   2.1e-44   5.8e-41       1     160 []     881    1081 ..     881    1081 .. 0.80
+   5 ?    1.3   0.0      0.12   3.3e+02      80     129 ..    1205    1254 ..    1121    1261 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: -1.7 bits;  conditional E-value: 1
+  mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykh 46 
+               y+e++e +++  k +++++iRr vi +l  + A  P ++
+  PNW79096 288 YKEVVENVFR-YKDSKEKNIRRAVIHLLPRMAAFSPERF 325
+               5555555555.35667999*******9988888888765 PP
+
+  == domain 2  score: 1.0 bits;  conditional E-value: 0.14
+  mTOR_dom  20 kteqsqsiRrevikvlGilGALDPykhk 47 
+                 + s+ +R+ev++ l    ALD y  +
+  PNW79096 608 VADPSERVRKEVLRALVATTALDDYLAQ 635
+               557799*****************99775 PP
+
+  == domain 3  score: 5.6 bits;  conditional E-value: 0.0054
+  mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157
+               ++v++++    +  g+   pf+++++p ++++i++ ++ ++r + ++ L+ +vs
+  PNW79096 823 KTVLSTLGALAEVSGTTFRPFISEVMPLVIEAIQDNSDgRRRVVAVKTLGFIVS 876
+               34444455555567788899***************9999999999999999886 PP
+
+  == domain 4  score: 140.2 bits;  conditional E-value: 2.1e-44
+  mTOR_dom    1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks.....................................eeeekeeen 62  
+                V+ Pyl+yp+LL++Ll++l++  +++ RrevikvlGi+GALDP++hk ++ +                                      +        
+  PNW79096  881 VMGPYLEYPQLLSVLLRMLHE-GHPAQRREVIKVLGIIGALDPHTHKLNQASLsgegklekegvrplrhggggaggagggaggggvgggvA-------- 970 
+                788*****************5.59999*********************9988866666655555555555555555555555544444331........ PP
+
+  mTOR_dom   63 aeetdvsellvgl.........................spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsv 136 
+                                                       +sse+yyptv+inaL+++l+dp+l+s+h av++a+  if+ l+l +vp+lp+++p ll v
+  PNW79096  971 ------------GdsndggmgpgddggpggdllpssglVTSSEDYYPTVAINALMRVLRDPALASQHLAVIRALAAIFRALQLSVVPYLPKVLPILLGV 1057
+                ............033333333333333334444444439************************************************************ PP
+
+  mTOR_dom  137 irtcesslrefllqqLatLvsivk 160 
+                +r  ++ lre +l  L  Lv +v+
+  PNW79096 1058 LRGGDEALREEILASLRALVGYVR 1081
+                *********************997 PP
+
+  == domain 5  score: 1.3 bits;  conditional E-value: 0.12
+  mTOR_dom   80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqi 129 
+                   y++ v++ L+k+l+ +s ++ + +++++i  +   lg +   f+p i
+  PNW79096 1205 LGGYASAVLHPLIKVLDGHSDEQLRRDALDTICAVAVCLGPEFAIFVPTI 1254
+                56688999999999999999999999999999999998888888888777 PP
+
+>> PNW79097  pep chromosome:Chlamydomonas_reinhardtii_v5.5:9:5520743:5541454:1 gene:CHLRE_09g400553v5 transcript:PNW7909
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.7   0.0      0.97   2.7e+03       8      46 ..     288     325 ..     285     342 .. 0.77
+   2 ?    1.0   0.0      0.14     4e+02      20      47 ..     617     644 ..     609     674 .. 0.85
+   3 !    5.6   0.0    0.0054        15     105     157 ..     832     885 ..     820     887 .. 0.79
+   4 !  140.2   0.0   2.1e-44   5.8e-41       1     160 []     890    1090 ..     890    1090 .. 0.80
+   5 ?    1.3   0.0      0.12   3.3e+02      80     129 ..    1214    1263 ..    1130    1270 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: -1.7 bits;  conditional E-value: 0.97
+  mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykh 46 
+               y+e++e +++  k +++++iRr vi +l  + A  P ++
+  PNW79097 288 YKEVVENVFR-YKDSKEKNIRRAVIHLLPRMAAFSPERF 325
+               5555555555.3566799999999999988888887765 PP
+
+  == domain 2  score: 1.0 bits;  conditional E-value: 0.14
+  mTOR_dom  20 kteqsqsiRrevikvlGilGALDPykhk 47 
+                 + s+ +R+ev++ l    ALD y  +
+  PNW79097 617 VADPSERVRKEVLRALVATTALDDYLAQ 644
+               557799*****************99775 PP
+
+  == domain 3  score: 5.6 bits;  conditional E-value: 0.0054
+  mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157
+               ++v++++    +  g+   pf+++++p ++++i++ ++ ++r + ++ L+ +vs
+  PNW79097 832 KTVLSTLGALAEVSGTTFRPFISEVMPLVIEAIQDNSDgRRRVVAVKTLGFIVS 885
+               34444455555567788899***************9999999999999999886 PP
+
+  == domain 4  score: 140.2 bits;  conditional E-value: 2.1e-44
+  mTOR_dom    1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks.....................................eeeekeeen 62  
+                V+ Pyl+yp+LL++Ll++l++  +++ RrevikvlGi+GALDP++hk ++ +                                      +        
+  PNW79097  890 VMGPYLEYPQLLSVLLRMLHE-GHPAQRREVIKVLGIIGALDPHTHKLNQASLsgegklekegvrplrhggggaggagggaggggvgggvA-------- 979 
+                788*****************5.59999*********************9988866666655555555555555555555555544444331........ PP
+
+  mTOR_dom   63 aeetdvsellvgl.........................spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsv 136 
+                                                       +sse+yyptv+inaL+++l+dp+l+s+h av++a+  if+ l+l +vp+lp+++p ll v
+  PNW79097  980 ------------GdsndggmgpgddggpggdllpssglVTSSEDYYPTVAINALMRVLRDPALASQHLAVIRALAAIFRALQLSVVPYLPKVLPILLGV 1066
+                ............033333333333333334444444439************************************************************ PP
+
+  mTOR_dom  137 irtcesslrefllqqLatLvsivk 160 
+                +r  ++ lre +l  L  Lv +v+
+  PNW79097 1067 LRGGDEALREEILASLRALVGYVR 1090
+                *********************997 PP
+
+  == domain 5  score: 1.3 bits;  conditional E-value: 0.12
+  mTOR_dom   80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqi 129 
+                   y++ v++ L+k+l+ +s ++ + +++++i  +   lg +   f+p i
+  PNW79097 1214 LGGYASAVLHPLIKVLDGHSDEQLRRDALDTICAVAVCLGPEFAIFVPTI 1263
+                56688999999999999999999999999999999998888888888777 PP
+
+>> PNW78179  pep chromosome:Chlamydomonas_reinhardtii_v5.5:10:6551126:6569587:1 gene:CHLRE_10g467200v5 transcript:PNW781
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.5   0.0       0.4   1.1e+03       8      40 ..    1237    1268 ..    1235    1283 .. 0.85
+   2 ?   -2.3   0.0       1.5   4.1e+03       7      36 ..    1297    1326 ..    1295    1328 .. 0.84
+   3 !   14.6   0.0   9.1e-06     0.025      10      53 ..    1774    1820 ..    1771    1845 .. 0.72
+   4 ?   -2.0   0.1       1.2   3.3e+03     104     135 ..    1998    2029 ..    1995    2047 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: -0.5 bits;  conditional E-value: 0.4
+  mTOR_dom    8 ypeLLeiLlnilkteqsqsiRrevikvlGilGA 40  
+                 p+LL ++l +l  e +q++R  +   lG+l A
+  PNW78179 1237 APQLLLMVLGCLGAE-DQQVRAAASSALGVLTA 1268
+                699999999999988.88999999999999976 PP
+
+  == domain 2  score: -2.3 bits;  conditional E-value: 1.5
+  mTOR_dom    7 dypeLLeiLlnilkteqsqsiRrevikvlG 36  
+                + p+LL  L+++l+ +++q +R  v   +G
+  PNW78179 1297 TSPRLLPELCRLLNATDAQLVRAIVPHAIG 1326
+                679*************99999987766666 PP
+
+  == domain 3  score: 14.6 bits;  conditional E-value: 9.1e-06
+  mTOR_dom   10 eLLeiLlnilkte....qsqsiRrevikvlGilGALDPykhkeveeks 53  
+                +LL++Ll++ +++      ++iR     +lG+lGALDP ++  ve+++
+  PNW78179 1774 QLLSALLRCCENTvrtrLGKDIRIRCGECLGLLGALDPARV-AVERRA 1820
+                667777666555532105789*******************9.555555 PP
+
+  == domain 4  score: -2.0 bits;  conditional E-value: 1.2
+  mTOR_dom  104 htavvqaimsifktlglkc.vpflpqiipalls 135 
+                h+a+ +a+m ++++ +l   + +lpq+++a+l 
+  PNW78179 1998 HQAAFNAMMPVMRQ-DLPLmTFMLPQVVHAVLV 2029
+                78888999999985.777735578999998874 PP
+
+>> PNW84522  pep chromosome:Chlamydomonas_reinhardtii_v5.5:3:830672:839553:-1 gene:CHLRE_03g146487v5 transcript:PNW84522
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.4   0.0   0.00079       2.2      73     149 ..     503     582 ..     467     591 .. 0.84
+   2 ?    2.6   0.5     0.048   1.3e+02      93     141 ..     674     722 ..     664     730 .. 0.88
+   3 ?   -2.6   0.0       1.8     5e+03     108     157 ..     756     806 ..     745     833 .. 0.62
+   4 ?    1.2   0.0      0.12   3.4e+02     111     156 ..     853     898 ..     837     901 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 8.4 bits;  conditional E-value: 0.00079
+  mTOR_dom  73 vglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefll 149
+                ++   +e+ +  +vi+ Ll++ +    ++ ++ + + im+++ +    l+   +fl+ ++++l++ ++++++ ++++  
+  PNW84522 503 GSMADEQENRFLVTVIRDLLNLCEVTRGKDNKAVIASNIMYVVGQypKFLRAhWKFLKTVVNKLFEFMHETHPGVQDMAC 582
+               4567788999*************99999999999999******984433455589***************9999988765 PP
+
+  == domain 2  score: 2.6 bits;  conditional E-value: 0.048
+  mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+               ++lk++ + +  ++v+q+ +s++++lg   +   + i   +l+v +  +
+  PNW84522 674 EVLKQQEVVKSIQNVLQTNVSVCSSLGQPFLVQFNVIFADMLQVYKLYS 722
+               5899999999*******************99999999999999987655 PP
+
+  == domain 3  score: -2.6 bits;  conditional E-value: 1.8
+  mTOR_dom 108 vqaimsifktlglkcvpflpqiipalls.virtcesslrefllqqLatLvs 157
+               +++ +  + + +l   ++lp  +  ll  ++r++++ +   +l+ +a +++
+  PNW84522 756 IETFVDKCDDPQLLASQYLPAMMDPLLGdYARSVPDARDAEVLSLMAAIIN 806
+               555555555555556666666666655425555555666666666666554 PP
+
+  == domain 4  score: 1.2 bits;  conditional E-value: 0.12
+  mTOR_dom 111 imsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+               + s f+tl l + + l+ +i +++ ++r++e+++ e+ l  L +L 
+  PNW84522 853 VNSCFNTLFLMSAAQLKLVIDSIVWAFRHTERNVAETGLALLHDLL 898
+               456799999999*************************999999885 PP
+
+>> PNW84140  pep chromosome:Chlamydomonas_reinhardtii_v5.5:4:2608887:2615483:-1 gene:CHLRE_04g222700v5 transcript:PNW841
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.9   0.0     0.038   1.1e+02      90     158 ..      64     132 ..      38     134 .. 0.83
+   2 ?    2.8   0.0     0.041   1.2e+02     121     154 ..     175     208 ..     138     214 .. 0.82
+   3 ?    4.5   0.1     0.012        34      82     155 ..     254     329 ..     223     332 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 2.9 bits;  conditional E-value: 0.038
+  mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+               aL + ++d++    ++a + a   i+ ++g    pfl  ++pa+l+ + + +++++       + L+si
+  PNW84140  64 ALKAAIEDKANPAARQAGLAAYQAICDNIGSAAEPFLAPLLPAVLEQCGDKKPEVKAAAEAASKALISI 132
+               56667778888888899999999***********************99988877776655555555555 PP
+
+  == domain 2  score: 2.8 bits;  conditional E-value: 0.041
+  mTOR_dom 121 kcvpflpqiipallsvirtcesslrefllqqLat 154
+               + +  lp i+pa+   ++++++s++++  + +++
+  PNW84140 175 QITRALPDIVPAVSGCMNDSKQSVKDVATETMKE 208
+               34789********************999988876 PP
+
+  == domain 3  score: 4.5 bits;  conditional E-value: 0.012
+  mTOR_dom  82 yyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatL 155
+                  ++++  Ll+ l+++  + + ++avv   m  + +   + + flp+++p++ +v++++ + +lr++  + ++tL
+  PNW84140 254 PALAMMVPLLLRGLRERVTAiKRKAAVVADNMAKLVDNPAEALVFLPRLMPEIEKVANEAADpELRKVSNSAIKTL 329
+               445567788999999999887888899999999999999999****************998889999877777776 PP
+
+>> PNW88131  pep chromosome:Chlamydomonas_reinhardtii_v5.5:1:2652800:2670781:1 gene:CHLRE_01g015600v5 transcript:PNW8813
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.7   0.0         4   1.1e+04      14      35 ..     423     444 ..     420     444 .. 0.88
+   2 ?    4.2   0.0     0.015        42      86     159 ..    1497    1569 ..    1472    1570 .. 0.86
+   3 ?    1.3   0.0      0.12   3.3e+02     104     138 ..    1897    1931 ..    1864    1954 .. 0.81
+   4 ?   -0.8   0.0      0.53   1.5e+03     113     148 ..    1989    2025 ..    1960    2034 .. 0.76
+   5 ?   -2.7   0.0         2   5.5e+03     126     158 ..    2284    2317 ..    2280    2319 .. 0.81
+   6 ?   -2.2   0.0       1.3   3.7e+03      88     141 ..    2331    2384 ..    2297    2389 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -3.7 bits;  conditional E-value: 4
+  mTOR_dom  14 iLlnilkteqsqsiRrevikvl 35 
+               +Ll +lk + ++++Rr + + l
+  PNW88131 423 QLLACLKDTAREALRRAAARAL 444
+               79999**999******999976 PP
+
+  == domain 2  score: 4.2 bits;  conditional E-value: 0.015
+  mTOR_dom   86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                 v+ aLlk l+d+  +  ++  vq +  + +    +  + lp i+p+l +v+++ +++++    + L+++ s++
+  PNW88131 1497 LVLPALLKGLEDKVWR-TKQGSVQLLGAMAHCAPKQLGTCLPTIVPKLGEVLSDPHPKVQTAAQEALNEIGSVI 1569
+                6788999999999888.56677899999999999999*******************9**999999999887776 PP
+
+  == domain 3  score: 1.3 bits;  conditional E-value: 0.12
+  mTOR_dom  104 htavvqaimsifktlglkcvpflpqiipallsvir 138 
+                + +v q  +++ kt+ ++  ++l qi+p l++++ 
+  PNW88131 1897 QYTVRQEALHVWKTVVVNTPKTLGQILPDLMQLVI 1931
+                55677888999*******************99654 PP
+
+  == domain 4  score: -0.8 bits;  conditional E-value: 0.53
+  mTOR_dom  113 sifktlglkc.vpflpqiipallsvirtcesslrefl 148 
+                +++ ++g  +  + l +++p+++s+++++++++re  
+  PNW88131 1989 EVLDNMGRHQlQEHLAEVLPTVQSALTDADAHVREAA 2025
+                56667777775789**************999999976 PP
+
+  == domain 5  score: -2.7 bits;  conditional E-value: 2
+  mTOR_dom  126 lpqiipalls.virtcesslrefllqqLatLvsi 158 
+                l  ++p +l+ v++ +++++re   + L++Lvs+
+  PNW88131 2284 LAPLLPIFLQgVLQGSSAEVRESAADGLGDLVSV 2317
+                667889999856677777*************986 PP
+
+  == domain 6  score: -2.2 bits;  conditional E-value: 1.3
+  mTOR_dom   88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141 
+                   L++i+ d+  +  ++a++ ++   +++ g+   pf+pq+  ++l+ +++++
+  PNW88131 2331 TGPLIRIIGDRFPAPIKAAILGTLGLLISKAGVGLKPFVPQLQTTFLKCLNDTS 2384
+                445888888888888899999999999999999999999999999999988765 PP
+
+>> PNW77416  pep chromosome:Chlamydomonas_reinhardtii_v5.5:10:2412493:2415774:1 gene:CHLRE_10g435550v5 transcript:PNW774
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.4   0.0   0.00074       2.1      13      46 ..      79     116 ..      75     155 .. 0.79
+   2 ?    0.7   0.0      0.18     5e+02      13      38 ..     232     258 ..     227     259 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 8.4 bits;  conditional E-value: 0.00074
+  mTOR_dom  13 eiLlnilkteq.sqsiRrevikvlGilGA...LDPykh 46 
+               ++L++il+ ++ ++ +R e+   lG +G    L+P + 
+  PNW77416  79 QVLTSILHDNNeHPMVRHEAGEALGAIGTeecLTPLRE 116
+               79******995599**************5333666655 PP
+
+  == domain 2  score: 0.7 bits;  conditional E-value: 0.18
+  mTOR_dom  13 eiLlnilkte.qsqsiRrevikvlGil 38 
+               + L+ +lk+  ++  +R e+   lG +
+  PNW77416 232 DFLSGVLKNPeEHAMVRHEAAEALGAI 258
+               678999999835999*******99976 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      19528  (14375500 residues searched)
+Passed MSV filter:                       966  (0.0494674); expected 390.6 (0.02)
+Passed bias filter:                      783  (0.0400963); expected 390.6 (0.02)
+Passed Vit filter:                        98  (0.00501844); expected 19.5 (0.001)
+Passed Fwd filter:                         7  (0.00035846); expected 0.2 (1e-05)
+Initial search space (Z):              19528  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 0.14u 0.03s 00:00:00.17 Elapsed: 00:00:00.06
+# Mc/sec: 34848.45
+//
+[ok]

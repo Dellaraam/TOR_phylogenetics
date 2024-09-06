@@ -1,0 +1,97 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/PIANISSIMO_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Requested_Organisms/Proteins/Chlamydomonas_reinhardtii_Chlamydomonas_reinhardtii_v5.5_pep.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+  ------ inclusion threshold ------
+      0.019   12.3   1.8      0.017   12.5   0.7    1.4  1  PNW88495  pep chromosome:Chlamydomonas_reinhardtii_v5.5:1:465
+       0.13    9.6   0.0       0.21    8.9   0.0    1.4  1  PNW72230  pep chromosome:Chlamydomonas_reinhardtii_v5.5:16:59
+        0.3    8.4   5.9        5.3    4.3   2.6    2.9  3  PNW71688  pep chromosome:Chlamydomonas_reinhardtii_v5.5:16:30
+
+
+Domain annotation for each sequence (and alignments):
+>> PNW88495  pep chromosome:Chlamydomonas_reinhardtii_v5.5:1:4652390:4654771:1 gene:CHLRE_01g032000v5 transcript:PNW8849
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.5   0.7   2.6e-06     0.017     165     259 ..     104     204 ..      87     237 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 12.5 bits;  conditional E-value: 2.6e-06
+  PTHR13298.orig.30.pir 165 alvaiaeseedrlrraclatlcelalln...pelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlekll 249
+                             + ++a++ee   ++ +l  l el++ n    e + +aggl  +l+ + ++ lper++e++ +v++++  + str  l ++  ++kl+
+               PNW88495 104 LVQSVADTEERTVQLNALGSLTELLRDNepkAEELVAAGGLEPILRLC-DPALPERLQEAAADVVCSIACSDSTRAALSEQGAVSKLA 190
+                            4558888999****************98433456789********965.779******************************999999 PP
+
+  PTHR13298.orig.30.pir 250 apft....dfhyra 259
+                            a +     d++ ra
+               PNW88495 191 ALLAtpnnDVRVRA 204
+                            98885555555555 PP
+
+>> PNW72230  pep chromosome:Chlamydomonas_reinhardtii_v5.5:16:5983028:5990391:-1 gene:CHLRE_16g676650v5 transcript:PNW72
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.9   0.0   3.2e-05      0.21     719     791 ..     307     377 ..      88     388 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 8.9 bits;  conditional E-value: 3.2e-05
+  PTHR13298.orig.30.pir 719 esRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkani 791
+                            ++ +il  +L ++ ++iR+ a++ L++ +  +++   +    ++v++++d +++++++Al+++++ + ++ani
+               PNW72230 307 LAINILGRFLANKDNNIRYVALNTLAKVVAVDTQAV-QRHRATIVECVKDADVSIRRRALELVYSLV-NEANI 377
+                            56789************************9444433.3566799*******************9988.66663 PP
+
+>> PNW71688  pep chromosome:Chlamydomonas_reinhardtii_v5.5:16:3006866:3011797:1 gene:CHLRE_16g664750v5 transcript:PNW716
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.9   0.0    0.0021        13     206     240 ..     308     349 ..     292     357 .. 0.76
+   2 ?    4.3   2.6   0.00081       5.3      87     206 ..     422     549 ..     409     576 .. 0.78
+   3 ?   -0.0   0.0     0.016   1.1e+02     760     791 ..     590     621 ..     548     629 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 2.9 bits;  conditional E-value: 0.0021
+  PTHR13298.orig.30.pir 206 ldalle.......cqlperiaesllavllyllnrpstrkylr 240
+                               ++        c  pe ++ ++l vll+ll +pstr ++ 
+               PNW71688 308 AAGCIAtlsrdpaCEQPEAMQRAALPVLLRLLANPSTRPHVP 349
+                            44444444444558899*********************9975 PP
+
+  == domain 2  score: 4.3 bits;  conditional E-value: 0.00081
+  PTHR13298.orig.30.pir  87 slllseskevraaalRllrylis.dskvlrrllrlgldiliarsLdrdsknetEreqalkliramlev....apkli..ptaivralv 167
+                             +  s    +r ++lR+l  l+     + ++ll+ ++ + i+rsL+  +  +  r +a  ++ra+ +       +l+     ++  lv
+               PNW71688 422 LASTSAVAALREGCLRALGSLCLnRDDSRKQLLEAKVLRHIVRSLEDPC--DGVRAAAALCVRALSRCvrtlRSSLLdgGGELAPVLV 507
+                            5566777889*********999967778889******************..8889999999999999877754555544455788999 PP
+
+  PTHR13298.orig.30.pir 168 aiaeseedrlrraclatlcelallnpe...lvaeagglrvll 206
+                            a++++++   r+ + a  c l+l   +    v +agglr l+
+               PNW71688 508 ALLDDANVDVRSSAAAAMCNLVLDFSAaksAVLAAGGLRRLV 549
+                            999999999999999999999997543111455677776665 PP
+
+  == domain 3  score: -0.0 bits;  conditional E-value: 0.016
+  PTHR13298.orig.30.pir 760 elLvtqlydpskevakaAlkiLeeacedkani 791
+                              Lv  l+dp+  v++ Al iL++ c  + + 
+               PNW71688 590 SRLVGLLSDPEPGVVEQALVILRNLCMGDRQH 621
+                            57999*******************99877765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      19528  (14375500 residues searched)
+Passed MSV filter:                      1143  (0.0585313); expected 390.6 (0.02)
+Passed bias filter:                      801  (0.041018); expected 390.6 (0.02)
+Passed Vit filter:                       106  (0.0054281); expected 19.5 (0.001)
+Passed Fwd filter:                         5  (0.000256043); expected 0.2 (1e-05)
+Initial search space (Z):              19528  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.86u 0.02s 00:00:00.88 Elapsed: 00:00:00.41
+# Mc/sec: 40487.08
+//
+[ok]
