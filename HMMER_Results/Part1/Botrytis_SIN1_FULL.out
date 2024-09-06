@@ -1,0 +1,169 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Botrytis.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+   3.5e-149  498.4   0.5     4e-149  498.3   0.5    1.0  1  XP_024553682.1  Bcavo1 [Botrytis cinerea B05.10]
+    0.00034   19.3  29.1    0.00036   19.2  29.1    1.1  1  XP_001561127.1  Bcpxr1 [Botrytis cinerea B05.10]
+     0.0022   16.6  18.1     0.0025   16.5  18.1    1.1  1  XP_024548795.1  hypothetical protein BCIN_05g04470 [Botrytis 
+     0.0046   15.6   2.4     0.0046   15.6   2.4    1.1  1  XP_024549563.1  hypothetical protein BCIN_07g00350 [Botrytis 
+  ------ inclusion threshold ------
+        0.4    9.2  33.8       0.47    8.9  33.8    1.1  1  XP_024553462.1  Bcnsr1 [Botrytis cinerea B05.10]
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_024553682.1  Bcavo1 [Botrytis cinerea B05.10]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  498.3   0.5  1.4e-152    4e-149       1     669 [.       1     810 [.       1     812 [] 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 498.3 bits;  conditional E-value: 1.4e-152
+  PTHR13335.orig.30.pir   1 MafldnedillahlRtsyltsdddgmcerilndd.................dvdlekihsapyppvsssssesllsrpksastpgdsg 71 
+                            M+++++ed++ ++lR+ yl+++ dg++er+++ +                    ++++hs+p+p+  +++se++++ p +++  + sg
+         XP_024553682.1   1 MSVIQVEDLVSYQLRSNYLNTIADGVGERLITINdgflntpgfkaagwrtnAANIKRTHSPPIPT--AIASEYFQAPP-RSAGLAPSG 85 
+                            ***************************************************999**********6..9******8755.5555699** PP
+
+  PTHR13335.orig.30.pir  72 sedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsks 159
+                             ed +++ +    tgg+   +  +p+  ++r++++e+          +e e++s+d+s++s+d+g+  +ra++++k++k++ ++rs+s
+         XP_024553682.1  86 LEDEVDEGG--LLTGGAG--DTVGPGIATKRRRRREQ----------ME-EEDSSDLSDDSDDDGD--QRAAQQIKFSKMPIRNRSGS 156
+                            ***999666..5555433..34468888888888888..........45.99**************..7778**************** PP
+
+  PTHR13335.orig.30.pir 160 asiassee.r..........dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rqsnkldseq.......... 225
+                            ++i+ s+  +           ++++++++++  + vke    ra +++ +sse+ssd+++++sa +r r+sn++ ++           
+         XP_024553682.1 157 SPIRGSNLrQsttanspsrtPGPGIRRGSQSAVEVVKE----RARRDTVTSSEMSSDNEFDASAFQRqRESNRNAARAgrtvrthpsd 240
+                            *******977**********9**********9999998....777779*******************777444444445566666667 PP
+
+  PTHR13335.orig.30.pir 226 ..................................lsaeesdsl..............fekkskssstk.tqkskkpssaa.....kqs 259
+                                                              +sa+ +ds+                  ++  +++ t++sk+  ++      +++
+         XP_024553682.1 241 pdvgvkrqvsdlleeeeededsgsdmsstfggsiDSASILDSVdgpitaapehigntI---PRDLIRSpTKRSKPAPPVLqalppPRP 325
+                            7777777777777888888889999999999999777777777888888876664331...323332202222222222146666455 PP
+
+  PTHR13335.orig.30.pir 260 i......sslssaLekkpsqlnnpfneyakfdgkgvgttaslkidiylplssepdkllpltvvvka........satVqevIGlaLwq 333
+                            i      s l++++++k  + n pf+ +a+++g+g  ++++++i+i  p+ ++ +k++++ ++++         ++ + ++IGl Lw+
+         XP_024553682.1 326 IsmiqpkSLLTAMITAKRTKANMPFENFASLSGQG--DPNPINIRILAPFATSTKKPYEVLIRRTVhedeshnrPVVITDLIGLSLWR 411
+                            577777799999*****99****************..****************777777755443378889999************** PP
+
+  PTHR13335.orig.30.pir 334 yteegrepklpdnk..vnaycLrivEdDGevddDFPpLDrnepiskfg................fselaLveatdsegktnndlqtpl 403
+                            y+ee+ ep + ++k  vn++ Lr+v dDGevd+DFPpLDr +p+++f                 f+e+aLveatd+++++n++l++++
+         XP_024553682.1 412 YFEEKLEPTIAPEKlnVNRWILRMV-DDGEVDTDFPPLDRLKPVTSFTfannkagprarsnsktFDEFALVEATDEQFEENQRLTPQF 498
+                            **************9999*******.88*******************55667899999999*************************** PP
+
+  PTHR13335.orig.30.pir 404 preqkkrleeakr.....sagsaneagsslstes.......................................skeslfvkvnlaypg 447
+                            ++e+++++e++++     + +++++ +                                              ++ ++ + +++++ +
+         XP_024553682.1 499 KQEAVASSEAEEEftpinTPKANTSFP------LgtqpyqnpllttmtalrknstladaptigtaltqptsrgGGTKKILSIHIHSIN 580
+                            ********9999966663223333333......23444469********************************9999*******999* PP
+
+  PTHR13335.orig.30.pir 448 dsvrskttivvptdvtladvlekackkrkldqkkyrllkvsepnvivdldrtvesldgleflllrknssradgvlekteskssssana 535
+                             ++++++ ++v+td++ladvl+++ckkr+ld+  + +lk+ +++++v ldrtv s ++  +l+l ++++++dg+l++t+s+sss +n+
+         XP_024553682.1 581 ATPGQMVALEVTTDTYLADVLDTVCKKRQLDKAGH-VLKLTGSGTVVYLDRTVGSIGNSSELDLYRRRFATDGPLTMTGSPSSSTPNS 667
+                            ***********************************.***********************************************99998 PP
+
+  PTHR13335.orig.30.pir 536 tissksaa..........edsqiqiatvqddlsssayksfkVsrkhkmrfktdrel..gIdgdyieimPvenqkaatkfwekqKtisi 611
+                             +  +  +            ++  ++  qd+l s+ y++++V+rk++mrf   +e+  +Idg+y +i P  ++k++  f +++Kt+++
+         XP_024553682.1 668 LMVDRPDPrkarkgtqmlVPHPLMESVKQDELGSANYRRYIVWRKQPMRFVGMNERviAIDGEYLHILPASTGKTM--FEGQGKTTTV 753
+                            777766559*********777777777899*********************************************9..9********* PP
+
+  PTHR13335.orig.30.pir 612 hisqvvacklssknpanFkivvrrendeKrydfeavsaaeaaeIvskinnileayass 669
+                            h+s+vv+ck+ +++p+nFk+vv+++++eKrydfea+sa+eaaeIv +i+++++ y+ +
+         XP_024553682.1 754 HFSNVVGCKVTRRHPTNFKLVVYKSREEKRYDFEAKSADEAAEIVYEIKKGIAPYQ-T 810
+                            ******************************************************98.4 PP
+
+>> XP_001561127.1  Bcpxr1 [Botrytis cinerea B05.10]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.2  29.1   1.3e-07   0.00036      72     205 ..     171     333 ..      52     364 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 19.2 bits;  conditional E-value: 1.3e-07
+  PTHR13335.orig.30.pir  72 sedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsks 159
+                              ds+s++e     + + ++ +kk+s++ +re+q+++ +  s++s++ ++e ++  +++++ ++++ + + +++ k++k +k r+sks
+         XP_001561127.1 171 ESDSSSDEEE---EKSPEPVAEKKKSSKRKREEQEDEEKTSSKKSKKEKKEKKEKKSKKRQSEDEDEKDK-SESKKSKKSKKDRKSKS 254
+                            1111111111...112334555555555555555555555555555555555555555555555554444.44555555555555555 PP
+
+  PTHR13335.orig.30.pir 160 asiassee.r................................dqsscksiqwktessvkedsvqrassesslsserssd 205
+                            +s+++ e+ +                                + s++  ++ k++ ++ ++s +++++++ + se+s  
+         XP_001561127.1 255 KSTSEAEDeTldesalkarkkekkekkrkekeaagadteeasSTSKSSKKSKKDKHKSPSTSKTSTKESTPIVSESSGR 333
+                            5555555544433111100000000000000000000000003344444444444444444444444444444444433 PP
+
+>> XP_024548795.1  hypothetical protein BCIN_05g04470 [Botrytis cinerea B05.10]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.5  18.1   9.1e-07    0.0025      96     226 ..      69     229 ..      29     262 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 16.5 bits;  conditional E-value: 9.1e-07
+  PTHR13335.orig.30.pir  96 psldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r.dqsscksiqwkte 181
+                            +++ ++ e ++e+q++ ++++ +++  +q+ + +++++ e++r++++ +++  e++++++ s+ ++i s  +   ++ sc s ++   
+         XP_024548795.1  69 SRRITSLEYEHEQQKQREQQREQQR--EQQREQQREQQREQQREEQQEKQQSKESESQNTLSSPSPIPSIDSfCsYSYSCSSESSH-- 152
+                            5666677777777444444444444..44444444566666666666777777777777666666666664443333333333333.. PP
+
+  PTHR13335.orig.30.pir 182 ssvkedsvqrassesslsserssdssssssapsr.rqsnkldseq........................................... 225
+                             sv +     +       s++ssdss +s  p++  ++++ +  +                                           
+         XP_024548795.1 153 -SVPR-----T-------SSSSSDSSYTSTSPTAeNTHPQATHPSinipeeqslyipqlsparlaspdhfseipetptwtstpkpsld 227
+                            .2222.....2.......2333333333333333333333333333344444566666666667666666666666666665555555 PP
+
+  PTHR13335.orig.30.pir 226 .l 226
+                             +
+         XP_024548795.1 228 mF 229
+                            53 PP
+
+>> XP_024549563.1  hypothetical protein BCIN_07g00350 [Botrytis cinerea B05.10]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.6   2.4   1.7e-06    0.0046      55     141 ..      70     156 ..       7     175 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 15.6 bits;  conditional E-value: 1.7e-06
+  PTHR13335.orig.30.pir  55 esllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrr 141
+                            e l +r  +++t+g ++ +++g ++ ++   ++d++++++  +++q+r +++ k+s++ + ++ +e+e++ +++++++ld++ ++  
+         XP_024549563.1  70 EALKQRLVNSNTDGPDTVVEQGIQKMMRAYRKKDRENKEPVHQAQQARHEEEGKDSDQDSVKDNDEGEDHTEECDDEELDDELDDDE 156
+                            33337778899***************************************99999999999999***************99987765 PP
+
+>> XP_024553462.1  Bcnsr1 [Botrytis cinerea B05.10]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.9  33.8   0.00017      0.47      52     241 ..      27     230 ..       4     327 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 8.9 bits;  conditional E-value: 0.00017
+  PTHR13335.orig.30.pir  52 sssesll.srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsr 138
+                            +++ +   +++ ++s++ +sgs+ ++s++e e    +++ka   k   + ++ +++e+ ss s+ss+s+e e++s++++     e++ 
+         XP_024553462.1  27 AKPAPKPaKKAATPSSDSESGSDSDSSESEEEK---PAPKATKAKANGKAAKVEKKEVESSSSDSSSSSEAEDDSSSSE----SETDS 107
+                            222333344555677777788888888666433...4444444444444444444444344444444444444444444....33333 PP
+
+  PTHR13335.orig.30.pir 139 rrrantavkleklrkerrsksasiassee.r......................dqsscksiqwktessvkedsvqrassesslssers 203
+                            +  a+ta k ++ ++e   +s++++s+ee +                      +++ ++ ++ +  +s ++ds+ ++ +++s s + s
+         XP_024553462.1 108 EPAAKTAKKAAASESEDSDDSSDSESEEEaKpvvaaakkvqkvvdagkakvngAAKAVAKATEDSDDSDSSDSSEEEEKKASGSDSDS 195
+                            4444566666666666666788888888877999*99999999999888877644444444444444444444444444444444444 PP
+
+  PTHR13335.orig.30.pir 204 sdssssssapsrrq..snkldseqlsaeesdslfekksks 241
+                            sds+s+s+   + +  s+k ++e+     + +   kksk+
+         XP_024553462.1 196 SDSDSESASEAEAEapSKKRKAED-----EPEASTKKSKT 230
+                            443322222111112322222111.....11111122222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      13703  (6765164 residues searched)
+Passed MSV filter:                      2927  (0.213603); expected 274.1 (0.02)
+Passed bias filter:                      583  (0.0425454); expected 274.1 (0.02)
+Passed Vit filter:                       128  (0.00934102); expected 13.7 (0.001)
+Passed Fwd filter:                        15  (0.00109465); expected 0.1 (1e-05)
+Initial search space (Z):              13703  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.44u 0.09s 00:00:00.53 Elapsed: 00:00:00.29
+# Mc/sec: 15490.88
+//
+[ok]

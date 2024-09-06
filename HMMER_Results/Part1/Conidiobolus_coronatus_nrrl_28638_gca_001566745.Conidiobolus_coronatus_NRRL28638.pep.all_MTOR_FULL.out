@@ -1,0 +1,428 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Conidiobolus_coronatus_nrrl_28638_gca_001566745.Conidiobolus_coronatus_NRRL28638.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    6.5e-56  188.0  19.4      2e-52  176.6   0.1    6.5  6  KXN69193  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ
+      7e-10   38.3   5.4     0.0087   15.3   0.1    8.2 10  KXN70940  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ
+    2.2e-06   27.0  10.7       0.17   11.1   0.1    7.0  8  KXN68027  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ
+    0.00093   18.4   0.2      0.046   12.9   0.0    3.5  3  KXN71545  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ
+  ------ inclusion threshold ------
+      0.025   13.8   1.4      0.065   12.5   0.1    2.4  2  KXN66585  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ
+      0.044   13.0   3.2       0.05   12.8   3.2    1.1  1  KXN68516  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ
+        0.1   11.8   0.5       0.24   10.6   0.5    1.7  1  KXN69248  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ
+       0.19   11.0   2.7       0.75    9.0   0.0    3.4  4  KXN70784  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ
+        1.1    8.5  13.9        2.8    7.1   0.0    6.2  8  KXN68378  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ
+        2.3    7.4   6.5       0.44    9.8   1.4    2.5  3  KXN74624  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ
+
+
+Domain annotation for each sequence (and alignments):
+>> KXN69193  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ964544:41503:49561:-1 gene:CONCODRAFT_82022 transcript:K
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.1   0.2    0.0026       2.8      83     145 ..     653     714 ..     609     727 .. 0.78
+   2 !  176.6   0.1   1.9e-55     2e-52       1     160 []     732     893 ..     732     893 .. 0.94
+   3 !    7.4   1.5    0.0022       2.3      93     159 ..     946    1015 ..     912    1051 .. 0.85
+   4 ?    2.9   0.2     0.052        55      65     158 ..    1352    1448 ..    1327    1450 .. 0.77
+   5 ?    1.9   0.0      0.11   1.2e+02     114     154 ..    1721    1761 ..    1674    1764 .. 0.81
+   6 ?   -2.9   0.0       3.2   3.4e+03      69     101 ..    2181    2214 ..    2167    2223 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 7.1 bits;  conditional E-value: 0.0026
+  mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+               y   +++aLl+ ++dpsl+    +v++ai + ++  g    ++ + i p +++++++++ss++
+  KXN69193 653 YIESILQALLTKIRDPSLT-VSCSVIKAIGELYRVGGKDLEKYTSTIFPIMVEAAQDSTSSIK 714
+               3445789999999*****9.6889**********8888889**************99888554 PP
+
+  == domain 2  score: 176.6 bits;  conditional E-value: 1.9e-55
+  mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseee..ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdps 99 
+               V++P +dypeL+ +L+nil+ eq++++R+e+i+++GilGALDPy   + +++ e++  e +  ++e +d+s+ll gl psse+yypt+v+++Llki+kdps
+  KXN69193 732 VIQPIIDYPELMPTLTNILSVEQNSEVRQETIRLMGILGALDPYVLSNSRTSLESAvgEPKPIESEVPDISQLLLGLNPSSEDYYPTIVVSSLLKIVKDPS 832
+               9*********************************************6666555555776666667779********************************* PP
+
+  mTOR_dom 100 lsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+               l +hh  v++a ms fktlg+kc++flp i+pa+++vir+++s + ef+l+qL+tLv+ivk
+  KXN69193 833 LVNHHRLVIDAFMSLFKTLGIKCIQFLPYILPAYFNVIRSSPSGMHEFYLDQLCTLVNIVK 893
+               ************************************************************8 PP
+
+  == domain 3  score: 7.4 bits;  conditional E-value: 0.0022
+  mTOR_dom   93 kilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces..slrefllqqLatLvsiv 159 
+                ++l+    + s h +v   i++ ++ lg     ++  i+p ++++++  +   +++   +q La L + v
+  KXN69193  946 QMLHSLEFDtSEHYEVTVKILQTISVLGSTTQDYIHMIMPVIIQLLERDDVaiNVKIAAIQTLARLCRSV 1015
+                55555555557899999999999999*******************9976654688999999999998766 PP
+
+  == domain 4  score: 2.9 bits;  conditional E-value: 0.052
+  mTOR_dom   65 etdvsel....lvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158 
+                  +++++      gl + +  e y +v+ +++ + l  +s+s+ h++  +   + +k+ +++  p l+ +i   ++ + ++   +r  ++++L++++++
+  KXN69193 1352 RKSIANMaigaSLGLRKWDsMEKYIQVMDQEVSETLLYKSISNVHKNKFDKAEKYIKQARIQLDPELTALIGDTYNQAYSL--MIRVQIFSELEEIIQF 1448
+                23333333344444555555999*************************************************999998875..6999999999999875 PP
+
+  == domain 5  score: 1.9 bits;  conditional E-value: 0.11
+  mTOR_dom  114 ifktlglkcvpflpqiipallsvirtcesslrefllqqLat 154 
+                i++  ++ ++ +  q+ip+l++ i+t++s++r  + q L +
+  KXN69193 1721 IVEGFNTVSIDTWLQVIPQLIARIHTSNSHIRRSIHQLLIE 1761
+                444445555667779************99999999888865 PP
+
+  == domain 6  score: -2.9 bits;  conditional E-value: 3.2
+  mTOR_dom   69 sellvglspss.eeyyptvvinaLlkilkdpsls 101 
+                +++l++  + s  e    v+ ++++++l+d++ s
+  KXN69193 2181 TRMLTNAMEVSgIEGTYRVTCENVMRVLRDNKES 2214
+                4554444444446666678999999999998754 PP
+
+>> KXN70940  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ964489:118285:121716:-1 gene:CONCODRAFT_78621 transcript
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.7   0.1       5.6   5.9e+03     130     149 ..      46      66 ..      26      75 .. 0.59
+   2 ?    2.6   0.0     0.065        69       8      36 ..     166     194 ..     161     210 .. 0.87
+   3 ?    1.6   0.3      0.13   1.4e+02      90     159 ..     218     286 ..     212     287 .. 0.87
+   4 !    6.4   0.0    0.0046       4.8     102     156 ..     383     437 ..     369     441 .. 0.86
+   5 ?    2.9   0.0     0.053        56      85     143 ..     451     508 ..     435     519 .. 0.80
+   6 ?   -0.4   0.0      0.55   5.8e+02     119     142 ..     578     601 ..     571     606 .. 0.80
+   7 !   15.3   0.1   8.2e-06    0.0087     101     156 ..     626     681 ..     621     683 .. 0.89
+   8 ?   -1.0   0.1      0.86   9.1e+02      90     138 ..     717     766 ..     703     775 .. 0.72
+   9 ?    0.1   0.0      0.39   4.1e+02     113     155 ..     807     850 ..     797     855 .. 0.79
+  10 ?   -4.0   0.0         7   7.4e+03      10      38 ..     864     891 ..     863     893 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -3.7 bits;  conditional E-value: 5.6
+  mTOR_dom 130 ipallsvirtces.slrefll 149
+               i ++++vi+++++ ++r+   
+  KXN70940  46 IVSFITVIQNSSNpTVRQLAA 66 
+               445666666555555555554 PP
+
+  == domain 2  score: 2.6 bits;  conditional E-value: 0.065
+  mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlG 36 
+                p++LeiL++ l+  +sq++R    + lG
+  KXN70940 166 LPKILEILVRTLSDPESQAVRITSAQSLG 194
+               699**********99******99888887 PP
+
+  == domain 3  score: 1.6 bits;  conditional E-value: 0.13
+  mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+               +++++l ++++++  ++  ++i+++f++l l  ++fl+    +l++ + ++++ +++ l+q L +++ +v
+  KXN70940 218 TIVQVL-QHAINEEDENGASSIIEVFEDLLLSEISFLTPHFKELTEFLIKLKAIRKHNLIQPLLDMIMTV 286
+               677888.677788999999*******************99999999999999999999999999988776 PP
+
+  == domain 4  score: 6.4 bits;  conditional E-value: 0.0046
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+               s ++a+  a+ +i ++l+   +++ + +ip l++++++ ++ +++++ + L  ++
+  KXN70940 383 SVRKAACLALSYIAEELQADITQYHTSLIPPLFQLTQDNNKLVLKYVWNALDAII 437
+               4677888899****************************99999999999998887 PP
+
+  == domain 5  score: 2.9 bits;  conditional E-value: 0.053
+  mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcess 143
+               t  ++++ ++l+ p+ s  +  ++ ++ s  +t g   vp+ p +i  l++ +   ++s
+  KXN70940 451 T-LMEQIGAVLSSPASSIVKGLALGTLGSAARTSGAAFVPYFPSVIERLAQFMALKPTS 508
+               3.66777888999999999999999999999********************99866554 PP
+
+  == domain 6  score: -0.4 bits;  conditional E-value: 0.55
+  mTOR_dom 119 glkcvpflpqiipallsvirtces 142
+               g ++ + lp i+p++++ +r++e+
+  KXN70940 578 GAEVGESLPSIMPEIFKSLRQSET 601
+               6667789*************9875 PP
+
+  == domain 7  score: 15.3 bits;  conditional E-value: 8.2e-06
+  mTOR_dom 101 sshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+               ++ ++ vv++i +if++lg + vp+++++  +l++++++ ++ lr   ++ L ++v
+  KXN70940 626 AQEKEIVVDVIAEIFENLGSQFVPYVNEVYKELIKATTHFSEGLRRSAISCLLQFV 681
+               577888***********************************999998888777665 PP
+
+  == domain 8  score: -1.0 bits;  conditional E-value: 0.86
+  mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvir 138
+                +l+il+++  +     + + i++ + t+g     + +p+i+p ll++++
+  KXN70940 717 HVLQILQEEEERLVVVHICNEILNALDTVGPALlENHMPEICPILLKLFQ 766
+               45677777777777777777777777777777766778888888887766 PP
+
+  == domain 9  score: 0.1 bits;  conditional E-value: 0.39
+  mTOR_dom 113 sifktlglkcvpflpqiipallsvirtces.slrefllqqLatL 155
+                i k lg   +p++pq+ p++ +++ + ++ s r + +  +++L
+  KXN70940 807 RISKALGNSFLPYIPQFYPEIRKYADENKPsSERATAIATFGEL 850
+               58899999***************999888756666665555555 PP
+
+  == domain 10  score: -4.0 bits;  conditional E-value: 7
+  mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvlGil 38 
+               +LL+i+ ++l  ++++++R ++   +G+l
+  KXN70940 864 DLLQIFQRALT-DSDPEVRSNAAYGMGTL 891
+               58889999887.56899999999888887 PP
+
+>> KXN68027  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ964599:29629:32973:-1 gene:CONCODRAFT_9811 transcript:KX
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.8   0.1         3   3.2e+03      90     159 ..     109     177 ..      97     178 .. 0.62
+   2 ?   -0.5   0.0       0.6   6.4e+02      89     147 ..     187     246 ..     182     258 .. 0.73
+   3 !    6.7   0.1    0.0037       3.9      77     159 ..     446     529 ..     423     530 .. 0.86
+   4 !   11.1   0.1   0.00016      0.17      90     144 ..     502     555 ..     498     572 .. 0.85
+   5 !    8.8   0.0   0.00082      0.87      89     140 ..     591     641 ..     567     649 .. 0.76
+   6 ?    0.9   0.0      0.22   2.3e+02      96     139 ..     745     788 ..     721     801 .. 0.81
+   7 ?   -1.6   0.0       1.3   1.3e+03     102     140 ..     841     879 ..     820     895 .. 0.74
+   8 ?    2.7   0.0     0.063        67      91     122 ..     954     990 ..     934    1003 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: -2.8 bits;  conditional E-value: 3
+  mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+               +Ll+ l  +   + +++  +a+ + ++++ +  ++  p++  a+++++++  + l+e+ ++ L++  +iv
+  KXN68027 109 QLLQCLTSQEDYQLQHKLADAVAELYRQITIHDLE-WPELAMAIVHLCNSDRPILKETGFRILSSVPNIV 177
+               56666666666666666667776666666666554.3556666666666666677777777776666666 PP
+
+  == domain 2  score: -0.5 bits;  conditional E-value: 0.6
+  mTOR_dom  89 naLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slref 147
+               +a ++ l++++ ++ + a+++a +s + + + k +    +++p++ls+++t  +   ++ 
+  KXN68027 187 QAFVANLNNSQPKEVQLAALDAAVSLLLKSESKPIDSAAELLPQMLSTLQTFYQaGDEDA 246
+               556666777777888888999999999999999999999999999999998776444444 PP
+
+  == domain 3  score: 6.7 bits;  conditional E-value: 0.0037
+  mTOR_dom  77 psseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+               +  +  +++v++++L+ +l+d++    ++ +  a ++ +++l+    +p+l+ ++ +l+ ++++ +  ++e ++  +at   +v
+  KXN68027 446 HIMQKEFHNVILTNLVPLLDDNANPRVQAHCAAATINFCEYLDRDImTPYLEPLLGKLVPLLNSPKLFVQEQIVTTIATVADTV 529
+               555667899************************************999**************9987799999998888876665 PP
+
+  == domain 4  score: 11.1 bits;  conditional E-value: 0.00016
+  mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcessl 144
+               +L+ +l+ p+l   ++++v++i ++  t++    +f+p i+p l+++++t +s+ 
+  KXN68027 502 KLVPLLNSPKLF-VQEQIVTTIATVADTVQDGFAQFYPSIMPLLINILQTHNSNE 555
+               577788888887.6899********************************987743 PP
+
+  == domain 5  score: 8.8 bits;  conditional E-value: 0.00082
+  mTOR_dom  89 naLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtc 140
+               + + + l d++ + +ht  +qa   ++k +g +  p+l+ ++p l+++++  
+  KXN68027 591 QHIQQSLTDET-DPQHTYLLQAWARVCKVMGDEFAPYLDFVMPPLIKTAQLK 641
+               44445565555.679*******************************998754 PP
+
+  == domain 6  score: 0.9 bits;  conditional E-value: 0.22
+  mTOR_dom  96 kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+               +d+ lss h+a+   + +i+++ +++ v+ l   + + l+++ t
+  KXN68027 745 EDEFLSSFHSAATVMLQTIVSETDIQYVAHLYSCLGNCLEIVGT 788
+               7899*************************999999888887765 PP
+
+  == domain 7  score: -1.6 bits;  conditional E-value: 1.3
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtc 140
+               +  +++ + i+s f+t g+  ++  + +ip+++ ++++ 
+  KXN68027 841 NLMSEMARCIHSCFQTHGITFLKPFDALIPQIQVLLNHP 879
+               445566677788888888888888888888877776665 PP
+
+  == domain 8  score: 2.7 bits;  conditional E-value: 0.063
+  mTOR_dom  91 Llkil.....kdpslsshhtavvqaimsifktlglkc 122
+               Ll+ l     +d+   +   +v++a+++i+k+l++k 
+  KXN68027 954 LLQALqdptaNDEENVNATDNVISALTKIMKNLSTKI 990
+               4555511111233333445667777777777776665 PP
+
+>> KXN71545  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ964472:14098:17112:1 gene:CONCODRAFT_78249 transcript:KX
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   0.0      0.25   2.7e+02     119     139 ..     282     302 ..     223     309 .. 0.84
+   2 ?   -2.1   0.0       1.8   1.9e+03     112     144 ..     433     465 ..     408     479 .. 0.66
+   3 !   12.9   0.0   4.4e-05     0.046      72     159 ..     481     567 ..     452     568 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 0.25
+  mTOR_dom 119 glkcvpflpqiipallsvirt 139
+               +    p+lp iip+ll+ +  
+  KXN71545 282 SQHIPPYLPVIIPTLLERMVY 302
+               455678999999999987755 PP
+
+  == domain 2  score: -2.1 bits;  conditional E-value: 1.8
+  mTOR_dom 112 msifktlglkcvpflpqiipallsvirtcessl 144
+                 i +       + lp++ip ll+ +++ ++ +
+  KXN71545 433 GAIAEGCYEGIESHLPELIPLLLQNLQNRQRLI 465
+               555555555556678888888888777765544 PP
+
+  == domain 3  score: 12.9 bits;  conditional E-value: 4.4e-05
+  mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+               ++  +p + + y+t v+++Ll+ + d+s +  ++++ +a     +t +    p+l+ ii++l +++ + +++    l++ ++tLv  v
+  KXN71545 481 VKVATPEHLDLYMTPVLQSLLTAILDNSKK-VQETACSAFSVLAETARGLLEPYLDPIINTLSTALGKYQRKNMAILYDAIGTLVDAV 567
+               444577779***********9888899955.77888899999999999999*******************999999********9877 PP
+
+>> KXN66585  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ964708:23793:26210:-1 gene:CONCODRAFT_11528 transcript:K
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.5   0.1   6.1e-05     0.065      56     116 ..     184     250 ..     168     288 .. 0.66
+   2 ?   -2.0   0.1       1.7   1.8e+03     101     101 ..     444     444 ..     389     495 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 12.5 bits;  conditional E-value: 6.1e-05
+  mTOR_dom  56 e.ekeeenaeetdvsel.....lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifk 116
+               + +++ +n++ t ++++     ++ + + +++ ++t vi+aLl+ ++ ps+  h++a ++ai + ++
+  KXN66585 184 TsSTDGNNKDRTPIERVvmaicACFVGEYTDDRIQTQVIKALLTAVSSPSIVLHQEALLNAIRTLYN 250
+               223333333334444442223344447778**************************99999955443 PP
+
+  == domain 2  score: -2.0 bits;  conditional E-value: 1.7
+  mTOR_dom 101 s 101
+               +
+  KXN66585 444 A 444
+               2 PP
+
+>> KXN68516  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ964572:77587:77889:-1 gene:CONCODRAFT_9237 transcript:KX
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.8   3.2   4.7e-05      0.05      90     159 ..      10      81 ..       1      82 [. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 12.8 bits;  conditional E-value: 4.7e-05
+  mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkc..vpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                   il+++s s+ +++ ++    i+ + +     ++ ++ i++  l+ + ++++s++e++ ++L++L+si+
+  KXN68516  10 LNSVILNEHSSSQIQSSYIKLNFDIITEFSKSNslIAGYSIIVHVALQSVIKVKDSFSETYHNKLSDLISIM 81 
+               334699***************9999999655544688899999999998888999***************96 PP
+
+>> KXN69248  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ964542:43959:46754:-1 gene:CONCODRAFT_59536 transcript:K
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.6   0.5   0.00022      0.24      60     155 ..      13     115 ..       1     119 [. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 10.6 bits;  conditional E-value: 0.00022
+  mTOR_dom  60 eenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvp......flpqiipallsvirtcesslrefllqqLa 153
+                +++++ d ++  +  +  + e+      +++L++il d+s  s h+++++++ + +kt  + +++      fl+++  +l+s+ ++  ++ r+ ll+ + 
+  KXN69248  13 IKETPSKDKKKEKNPDEDLTeEDLELLNQLEQLVNILGDSSKISSHEQALDTMSTTIKTATTSMTSvpkplkFLSRFYDTLVSTYESWMEDKRKLLLSDIL 113
+               3333333333332222333324445556699***************************9666554444777777777777777777777666666666655 PP
+
+  mTOR_dom 154 tL 155
+               ++
+  KXN69248 114 SI 115
+               44 PP
+
+>> KXN70784  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ964493:110985:114744:-1 gene:CONCODRAFT_6644 transcript:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.0   0.1       1.7   1.8e+03     109     135 ..      50      77 ..      38     106 .. 0.56
+   2 ?   -3.1   0.0       3.8     4e+03     129     158 ..      95     126 ..      81     128 .. 0.75
+   3 ?   -1.9   0.2       1.6   1.7e+03      93     145 ..     158     211 ..     151     225 .. 0.59
+   4 ?    9.0   0.0   0.00071      0.75      73     156 ..     504     590 ..     448     592 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: -2.0 bits;  conditional E-value: 1.7
+  mTOR_dom 109 qaimsifktlglkcvpflp.qiipalls 135
+               + +++i+++ + ++++fl  qi+ +l+ 
+  KXN70784  50 TQVHFILQQSQNESTKFLAlQILEKLIG 77 
+               4556666666666666554355555554 PP
+
+  == domain 2  score: -3.1 bits;  conditional E-value: 3.8
+  mTOR_dom 129 iipallsvirtces.slrefllqqLa.tLvsi 158
+               ii++++sv +t +  + + ++l++L+ +L+ i
+  KXN70784  95 IINEIVSVSSTEQGlTQQRTYLRKLNrVLIDI 126
+               78888888888887888888888886245555 PP
+
+  == domain 3  score: -1.9 bits;  conditional E-value: 1.6
+  mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slr 145
+               +ilk  s +    ++ q   +  k+++ + +  ++qi +  +++++++++ sl 
+  KXN70784 158 NILKLLSEEVFEYSAEQMTRNKTKNMQNQLTVEISQIFNLCYEILSKSDKqSLV 211
+               555555555555555566666666667777777777777777777766553332 PP
+
+  == domain 4  score: 9.0 bits;  conditional E-value: 0.00071
+  mTOR_dom  73 vglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt...lglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                ++s+sse  +   +i+ Ll + + ++ ++ ++ v + im+++ +      k  +fl+ ++++l++ ++++++ ++++  + L++++
+  KXN70784 504 GTTSESSEKQFIVGIIKDLLGLCDFKKGKDNKAIVASNIMYVVGQyprFLKKHWKFLKTVVNKLFEFMHESHEGVQDMACDTLKHIT 590
+               345777788888999999***999999999999999******998554445669************************999998876 PP
+
+>> KXN68378  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ964579:30974:35300:1 gene:CONCODRAFT_86479 transcript:KX
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.2   0.1       1.9     2e+03      97     133 ..     183     220 ..     137     243 .. 0.59
+   2 ?    7.1   0.0    0.0027       2.8      99     156 ..     252     309 ..     237     312 .. 0.90
+   3 ?   -0.9   0.3      0.77   8.1e+02       5      33 ..     396     423 ..     394     428 .. 0.86
+   4 ?    2.3   0.1     0.082        86     120     158 ..     486     524 ..     478     525 .. 0.85
+   5 ?   -2.0   0.0       1.8   1.9e+03       8      22 ..     642     656 ..     533     670 .. 0.65
+   6 ?   -1.7   0.0       1.3   1.4e+03      89     138 ..     865     921 ..     824     936 .. 0.57
+   7 ?    2.3   0.0     0.082        87     118     153 ..     977    1011 ..     970    1016 .. 0.79
+   8 ?   -2.7   0.1       2.9     3e+03      88      88 ..    1120    1120 ..    1043    1172 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: -2.2 bits;  conditional E-value: 1.9
+  mTOR_dom  97 dpslsshhtavvqaimsifkt.lglkcvpflpqiipal 133
+               d+ l+++  +++  +++  k+ l+ k+v++l+++ip l
+  KXN68378 183 DSELQTQTLDTIIPLLQSNKSiLRRKSVNILNNLIPLL 220
+               44444444444444444444456777777777777755 PP
+
+  == domain 2  score: 7.1 bits;  conditional E-value: 0.0027
+  mTOR_dom  99 slsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+               + s++  a++qa+++  k  g k  + +p +i++l+s+i+t  ++++e  lq ++ +v
+  KXN68378 252 KHSEQTRAILQALTTFAKLSGDKFGTHVPGVISNLFSLIETGADEVKEAALQCIEYIV 309
+               457888999999999999999******************************9988776 PP
+
+  == domain 3  score: -0.9 bits;  conditional E-value: 0.77
+  mTOR_dom   5 yldypeLLeiLlnilkteqsqsiRrevik 33 
+               y  + eL  +L++ l+ e+++++R evi+
+  KXN68378 396 YKFHQELAPLLIRRLS-EREENVRIEVIQ 423
+               6668899999999998.789*******97 PP
+
+  == domain 4  score: 2.3 bits;  conditional E-value: 0.082
+  mTOR_dom 120 lkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                  v+ lp++i+a+++ ++  + +  + ++q L++L+ +
+  KXN68378 486 KSIVESLPRLISAIVKQLNGKSLETHQAIFQLLGELTLV 524
+               566999*************9888***********99765 PP
+
+  == domain 5  score: -2.0 bits;  conditional E-value: 1.8
+  mTOR_dom   8 ypeLLeiLlnilkte 22 
+               y +L+ei+ ++++t+
+  KXN68378 642 YNKLIEIIQQCIQTS 656
+               444444444444443 PP
+
+  == domain 6  score: -1.7 bits;  conditional E-value: 1.3
+  mTOR_dom  89 naLlkil......kdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvir 138
+               naLl+++        ps s +  +++  ++ ++   l l + + ++ i+p l+++i+
+  KXN68378 865 NALLQVVqepirqVSPSSSfKLSKSAYATLSKVTAGLALTSNERVQTILPDLAKIIQ 921
+               444444422222212222224444455555555555555555556666666666555 PP
+
+  == domain 7  score: 2.3 bits;  conditional E-value: 0.082
+  mTOR_dom  118 lglkcvpflpqiipallsvirtcesslrefllqqLa 153 
+                lg   v+ l  ++p++l+v+rt  +++r+ ll  L+
+  KXN68378  977 LGGTTVSNLGFFLPKFLEVLRTN-QQHRNLLLLALK 1011
+                6778899999***********95.566776666665 PP
+
+  == domain 8  score: -2.7 bits;  conditional E-value: 2.9
+  mTOR_dom   88 i 88  
+                +
+  KXN68378 1120 V 1120
+                2 PP
+
+>> KXN74624  pep supercontig:Conidiobolus_coronatus_NRRL28638:KQ964421:10506:13043:-1 gene:CONCODRAFT_76710 transcript:K
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.8   1.4   0.00041      0.44      57     134 ..     167     244 ..     141     261 .. 0.73
+   2 ?   -3.0   0.1       3.5   3.7e+03      42      54 ..     330     353 ..     326     391 .. 0.56
+   3 ?   -3.9   0.0       6.6     7e+03     125     140 ..     470     485 ..     466     489 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 9.8 bits;  conditional E-value: 0.00041
+  mTOR_dom  57 ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipall 134
+               +k+e+++++ ++++ ++ +++ +++y++ + +++ ++ ++dps ++ + ++ q++++     + +  +  p+ ++ ++
+  KXN74624 167 RKHEREQRAVKMAKHANLMTQYDKDYISRIQLSQFMNSVSDPSQEDFYYKTYQTLHNTSTPTEPNKHKGKPEAVNRMQ 244
+               34455556677777788999999****************************999998766655555555555555555 PP
+
+  == domain 2  score: -3.0 bits;  conditional E-value: 3.5
+  mTOR_dom  42 DPykhkeveeks...........e 54 
+               + ++hk++ +++           +
+  KXN74624 330 TQHQHKRILQQIeavydsvllteQ 353
+               555666666555444444444330 PP
+
+  == domain 3  score: -3.9 bits;  conditional E-value: 6.6
+  mTOR_dom 125 flpqiipallsvirtc 140
+               fl  ++p ++s+++++
+  KXN74624 470 FLGTVMPPIMSYVNDA 485
+               8999*****9999875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      10572  (3653626 residues searched)
+Passed MSV filter:                       695  (0.0657397); expected 211.4 (0.02)
+Passed bias filter:                      497  (0.047011); expected 211.4 (0.02)
+Passed Vit filter:                        47  (0.00444571); expected 10.6 (0.001)
+Passed Fwd filter:                        10  (0.000945895); expected 0.1 (1e-05)
+Initial search space (Z):              10572  [actual number of targets]
+Domain search space  (domZ):              10  [number of targets reported over threshold]
+# CPU time: 0.07u 0.09s 00:00:00.16 Elapsed: 00:00:00.20
+# Mc/sec: 2889.34
+//
+[ok]

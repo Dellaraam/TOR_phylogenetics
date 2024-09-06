@@ -1,0 +1,153 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Candida_albicans.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+   1.9e-135  449.9   6.9   1.9e-135  449.9   6.9    2.7  2  XP_714879.2  phosphatidylinositol kinase-related protein kina
+      2e-86  288.8   6.6    7.5e-86  286.9   6.6    2.1  1  XP_716758.2  histone acetyltransferase [Candida albicans SC53
+    4.9e-11   40.9   2.6    4.9e-11   40.9   2.6    2.5  2  XP_710664.2  protein kinase [Candida albicans SC5314]
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_714879.2  phosphatidylinositol kinase-related protein kinase [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.7   0.2      0.45   8.9e+02      71      71 ..    1428    1428 ..    1375    1462 .. 0.56
+   2 !  449.9   6.9  9.6e-139  1.9e-135       1     343 []    1467    1857 ..    1467    1857 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: -2.7 bits;  conditional E-value: 0.45
+                   C CS
+          FAT   71 y 71  
+                    
+  XP_714879.2 1428 M 1428
+                   2 PP
+
+  == domain 2  score: 449.9 bits;  conditional E-value: 9.6e-139
+                   CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCS CS
+          FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqk 96  
+                   aplaa+aaW+l+qWd m+ ++++mk +spdkaff+ail+lhrn+fd+a+ +i kar+llvte++al++esynray+++vr+Q+laEleeii+yk+ 
+  XP_714879.2 1467 APLAAAAAWGLSQWDRMDACIKVMKAESPDKAFFNAILSLHRNNFDDASVHILKARDLLVTEITALVSESYNRAYGVVVRVQMLAELEEIIKYKCL 1562
+                   79********************************************************************************************** PP
+
+                   S----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT........TSSCC CS
+          FAT   97 lssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk.eewlp..pevvy 189 
+                   +s se+++ ++ktW++Rl+g+q++v++wq++l+vR+lv++p++d       ++mw+kfanl+Rksgrl+lAek+L+ llee + e+++   p+vvy
+  XP_714879.2 1563 PSGSEKRAVMRKTWNTRLLGCQRNVDIWQRMLKVRALVIKPKQD-------MDMWIKFANLCRKSGRLNLAEKSLNLLLEEGSpENPSRapPQVVY 1651
+                   ********************************************.......*******************************986666678***** PP
+
+                   CHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHH CS
+          FAT  190 aylkylwakgeqkealqkLrefvscllekkeelssglevq........eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaate 277 
+                   a+lky+wakg++ eal +L +f+++++++ + ++++l++q         p+++ee+tkllarc+lk+Gew+ al++ nw++e+se il ay++at+
+  XP_714879.2 1652 AQLKYMWAKGQRPEALRHLVDFTTRMSQDLGLNPNDLITQplpsegpgIPKHVEEYTKLLARCFLKQGEWQIALNS-NWRSETSEIILGAYLLATH 1746
+                   ****************************************************************************.9****************** PP
+
+                   CTCCCHSTTCCCCHHHHHCCHHHHHHSSSS..............................................S-TCCHHHHCCT..CCHHHH CS
+          FAT  278 ldpswykawhtwalfnfevlskeeekkeeee.............................................pedlseyvvpavegflksls 328 
+                   +d++wykawh+wal+nfev+s +++++ + +                                              e ++++v+p+++gf++s++
+  XP_714879.2 1747 FDNKWYKAWHNWALANFEVISLYTSQNTSANnkieilqderngstedghselkraeqqkqqqqqqqqqqqqaniipIEAVQRHVIPSIKGFFHSIA 1842
+                   ***********************999666667899********************************99999999556666*************** PP
+
+                   TTTSSTTTCHHHHHC CS
+          FAT  329 lssekslqdllRlLt 343 
+                   ls+++slqd+lRlLt
+  XP_714879.2 1843 LSNSNSLQDMLRLLT 1857
+                   **************8 PP
+
+>> XP_716758.2  histone acetyltransferase [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  286.9   6.6   3.7e-89   7.5e-86       2     343 .]    2782    3131 ..    2781    3131 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 286.9 bits;  conditional E-value: 3.7e-89
+                   CCTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.....--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHH CS
+          FAT    2 plaaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhr.....nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEl 87  
+                   +l +e+ Wr+ +W + +e+l+++       ++p++++fe++l+l+      ++++++++l+++++ql +++++ l+ +++n++++ll+ +Qq++E+
+  XP_716758.2 2782 DLLLECGWRVADWYNDRETLDQTVknvmdVPTPRRQVFETFLCLQGfgqekETLQDLSRLCDEGIQLALRKWHGLPERFANAHIPLLHTFQQYVEF 2877
+                   789************99999887778888**************7777555577******************************************* PP
+
+                   CHHCCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC....................HHCCS-STTCCC.. CS
+          FAT   88 eeiiqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied....................lllkgakaemwl.. 152 
+                   +e++q++ +l          +s+elk++l+ Wr+Rlp+v+dd+++w+d++++R+++++ i++                    ++++g ++ +w+  
+  XP_716758.2 2878 MEASQVYASLVttnaqnldmKSQELKRVLQVWRERLPNVWDDINIWNDLVTWRQHAFQVINKvympfipvlqqnstgsnansYAYRGFHEIAWVin 2973
+                   *********99************************************************************************************* PP
+
+                   CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCT CS
+          FAT  153 kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylk 247 
+                   +fa++aRk++++++++k L+++                   y+++++e++ea++kL+e+v+c++++++el++gl+v+++tnl +f++++ a+++++
+  XP_716758.2 2974 RFAHVARKHNMPEVCIKELTRI-------------------YQLPNIEIQEAFLKLKEQVKCHYQNANELNTGLDVISNTNLVYFATQQkAEFFTL 3050
+                   **********************...................******************************************************* PP
+
+                   CCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHH CS
+          FAT  248 kGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlL 342 
+                   kG++l++l++       ++e+++a+++++++d ++ kaw++w+ fn+++++++        p+d+  y+ +a++++l+++ l+++ k+++ l+R+L
+  XP_716758.2 3051 KGMFLNKLNQ-------KDEANKAFATSVQIDLNLPKAWAEWGMFNDRRFKEN--------PNDMV-YANNAISCYLQAAGLYKNgKTRKLLARIL 3130
+                   **********.......9***********************************........****9.***************************** PP
+
+                   C CS
+          FAT  343 t 343 
+                   +
+  XP_716758.2 3131 W 3131
+                   9 PP
+
+>> XP_710664.2  protein kinase [Candida albicans SC5314]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.9   0.1      0.49   9.8e+02      58     117 ..     961    1024 ..     943    1030 .. 0.72
+   2 !   40.9   2.6   2.4e-14   4.9e-11     108     343 .]    1605    1801 ..    1599    1801 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: -2.9 bits;  conditional E-value: 0.49
+                   CCCCCCTS---S...CCCCCHHHHHCCCCCHHHCHHCCHHCSS-.---TTTTTTT----TTS-T CS
+          FAT   58 llvtelsalsge...synraydllvrlQqlaEleeiiqykqkls.sseelksllktWrkRlpgv 117 
+                   + ++ l+++  e    ynr   ++++l  l+ +e+ +++k+ ++ +s ++++++++ ++Rl+ +
+  XP_710664.2  961 IAIEILRKIYEEikdKYNRYSLYFLSLPFLSYMEDYQMVKEFRNmKSPSRAMIFSEFTRRLQTS 1024
+                   45555555544433346666666888888999999999999888999999999*******9976 PP
+
+  == domain 2  score: 40.9 bits;  conditional E-value: 2.4e-14
+                   T----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHH CS
+          FAT  108 ktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqke 203 
+                   +t++ R  +v +d++ + +il+++ ++ +  ++    ++  +  l+ ++laRk +rl+++ +++ +++  ++      ++ ++ + ++wa+g+q+e
+  XP_710664.2 1605 DTLDLRIGNVDQDFDTQRNILTLHNVANTVMKN---PAMISKNLLRESSLARKYNRLDISTRSIVQAMSLED-----DQANIEFAELQWAQGKQSE 1692
+                   5677799999******************99999...777889999**********************99999.....79999************** PP
+
+                   HSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHH CS
+          FAT  204 alqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlsk 299 
+                   a+++L + ++                  +n+ +  k++a++ l  + wl + ++l+     + +i   y +a +l+   +k+ +  ++++++ ++ 
+  XP_710664.2 1693 AIKCLFDILK------------------DNKFHDDKSKAKVQLQYANWLDESNHLS-----AHQIITEYNKAFHLNMVDEKCNFDIGKYYNKLMES 1765
+                   *****99988..................23333456679999************87.....9*********************************9 PP
+
+                   HHHHSSSS.S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+          FAT  300 eeekkeeeepedls.eyvvpavegflkslslssekslqdllRlLt 343 
+                             +d s ey    v+++++++s + + +++ l+++Lt
+  XP_710664.2 1766 S---------NDESgEYEHLTVRNYIRAVSVGTTYIFEALPKVLT 1801
+                   9.........33344788999**********************98 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       6030  (2979179 residues searched)
+Passed MSV filter:                       595  (0.0986733); expected 120.6 (0.02)
+Passed bias filter:                      130  (0.0215589); expected 120.6 (0.02)
+Passed Vit filter:                        12  (0.00199005); expected 6.0 (0.001)
+Passed Fwd filter:                         3  (0.000497512); expected 0.1 (1e-05)
+Initial search space (Z):               6030  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.07u 0.00s 00:00:00.07 Elapsed: 00:00:00.03
+# Mc/sec: 26242.27
+//
+[ok]
