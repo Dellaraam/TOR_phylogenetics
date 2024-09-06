@@ -1,0 +1,682 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/NA/Proteins/Amphimedon_queenslandica.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+   3.2e-100  336.1  16.5   3.2e-100  336.1  16.5    2.0  2  XP_019856828.1  PREDICTED: serine/threonine-protein kinase mT
+    7.1e-57  193.6   6.8    1.4e-56  192.5   6.8    1.6  1  XP_019851030.1  PREDICTED: transformation/transcription domai
+    6.4e-35  121.4   6.6    6.6e-35  121.3   3.9    2.3  2  XP_019850314.1  PREDICTED: serine/threonine-protein kinase AT
+    2.4e-22   80.0   0.4    6.3e-21   75.4   0.2    3.0  2  XP_019852740.1  PREDICTED: DNA-dependent protein kinase catal
+    1.8e-14   54.1   7.9      4e-14   53.0   7.9    1.6  1  XP_019856363.1  PREDICTED: serine-protein kinase ATM [Amphime
+    2.9e-07   30.4  15.0        0.2   11.3   0.5    7.0  6  XP_003386934.3  PREDICTED: UDP-N-acetylglucosamine--peptide N
+    0.00029   20.6   2.0     0.0058   16.3   0.4    2.2  2  XP_019864136.1  PREDICTED: transmembrane and TPR repeat-conta
+    0.00033   20.4   0.0    0.00033   20.4   0.0    1.0  1  XP_019863029.1  PREDICTED: uncharacterized protein LOC1095918
+    0.00047   19.9  18.3      0.033   13.8   0.3    4.0  3  XP_011402481.1  PREDICTED: pre-mRNA-processing factor 6-like 
+     0.0023   17.6   0.8      0.003   17.2   0.8    1.1  1  XP_003390841.1  PREDICTED: putative syntaxin-3 [Amphimedon qu
+     0.0047   16.6   0.3        1.5    8.3   0.1    2.8  2  XP_019852329.1  PREDICTED: mitochondrial import receptor subu
+     0.0094   15.6   0.9          1    8.9   0.1    2.7  3  XP_003388214.1  PREDICTED: transmembrane and TPR repeat-conta
+  ------ inclusion threshold ------
+       0.01   15.5   0.7      0.013   15.1   0.7    1.2  1  XP_019849002.1  PREDICTED: syntaxin pep12-like [Amphimedon qu
+      0.064   12.9   0.2       0.13   11.8   0.2    1.5  1  XP_003386549.1  PREDICTED: transaldolase-like [Amphimedon que
+      0.077   12.6  10.6        1.2    8.6   0.2    3.4  3  XP_011404887.1  PREDICTED: cell division cycle protein 27 hom
+      0.078   12.6  10.6        1.2    8.6   0.2    3.4  3  XP_019853835.1  PREDICTED: cell division cycle protein 27 hom
+       0.08   12.5   2.7        0.3   10.6   0.0    2.4  2  XP_011402895.2  PREDICTED: protein RMD5 homolog B-like [Amphi
+       0.11   12.1   5.1        0.2   11.2   1.6    2.7  2  XP_019861305.1  PREDICTED: uncharacterized protein LOC1095897
+       0.27   10.8   4.8        2.5    7.6   0.1    2.4  3  XP_003383901.1  PREDICTED: tetratricopeptide repeat protein 1
+       0.41   10.2   4.1        2.8    7.5   0.1    2.4  3  XP_019864402.1  PREDICTED: tetratricopeptide repeat protein 1
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_019856828.1  PREDICTED: serine/threonine-protein kinase mTOR-like, partial [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  336.1  16.5  2.7e-103  3.2e-100       3     343 .]     472     825 ..     470     825 .. 0.93
+   2 ?   -3.1   0.1       3.9   4.6e+03     230     257 ..     978    1007 ..     873    1032 .. 0.48
+
+  Alignments for each domain:
+  == domain 1  score: 336.1 bits;  conditional E-value: 2.7e-103
+                     CTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS CS
+             FAT   3 laaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkl 97 
+                     +a++aaW+l qW+smeey+ ++ k+s+d+af++ +l++h++ f +a++ i+kar++l+ el+al+gesynray l+v++Q l+Eleeiiq +   
+  XP_019856828.1 472 MATAAAWGLNQWESMEEYVRCIPKESFDGAFYQSLLNIHNHCFIDAQKSIDKARSSLDAELTALVGESYNRAYHLMVSVQLLSELEEIIQCLV-- 564
+                     799***************************************************************************************999.. PP
+
+                     ----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT............. CS
+             FAT  98 ssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk......eewlp.. 184
+                       +e+ k+l ktW++Rl+g+q+++e+wq+il+vRslvl+ +e+        + w+kfa+++Rksg l l+e++L  ll +d+      ++     
+  XP_019856828.1 565 -RPEKKKQLQKTWWNRLLGCQRNMEDWQRILQVRSLVLTQQEE-------LKSWIKFASICRKSGKLVLSERTLITLLSNDQsfnidaDPL-Svk 650
+                     .69****************************************.......*******************************9998764333.369 PP
+
+                     .TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S....-SSCCHHHHCCHH CS
+             FAT 185 .pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnws.eekseeilqaysaate 277
+                      p+v++ay+k+ w+ ++++ea+  L +fv +l +++         ++p+  +e ++llarcylk+G+w a+l+  ++s +++ + il++y +at+
+  XP_019856828.1 651 fPQVTLAYMKHKWHADQKQEAFRLLDQFVVRLQSDN---------IDPSASNETNQLLARCYLKLGDWKAELNPDSSSlTTSFSSILHYYELATK 736
+                     ******************************776665.........4566667778888***************9776635669************ PP
+
+                     CTCCCHSTTCCCCHHHHHCCHHHHHHSSSS........................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+             FAT 278 ldpswykawhtwalfnfevlskeeekkeeee.......................pedlseyvvpavegflkslslssekslqdllRlLt 343
+                     +d++wykawh+wa +nf++l ++++++++ +                       ++  ++y  +av+gf++s+slss++slqd+lRlLt
+  XP_019856828.1 737 FDRQWYKAWHAWAFMNFQALLHQRQEQQKLQktnvilsedstssestnkigpvdMTASIQYSSSAVHGFFRSISLSSGNSLQDTLRLLT 825
+                     **********************99997777788******************997444448****************************8 PP
+
+  == domain 2  score: -3.1 bits;  conditional E-value: 3.9
+                      ..........HH..HHCCCTCCCCCCCCCC CS
+             FAT  230 eptnleeftkll..arcylkkGewlaalqk 257 
+                       p++l+e++ +   +r +++ +ew +++q 
+  XP_019856828.1  978 GPETLKEISFNHayGRDLAEASEWCKKFQT 1007
+                      333333332221134444444455555555 PP
+
+>> XP_019851030.1  PREDICTED: transformation/transcription domain-associated protein [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  192.5   6.8   1.2e-59   1.4e-56       3     343 .]    2771    3112 ..    2769    3112 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 192.5 bits;  conditional E-value: 1.2e-59
+                      CTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCC.CHH..--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHH CS
+             FAT    3 laaeaaWrlgqWdsmeeylslmk.....kdspdkaffeaila.lhr..nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEl 87  
+                      l +e aWr+++W  m+e+  +++     + s + ++++ +la ++   ++++++e+l+e a+   v+++++l++ + n++++ll+  Qq++El
+  XP_019851030.1 2771 LVLENAWRVQDWSAMREASTQAEpicseSYSARLNLLRGFLAlCYPdeQRLNAVEKLVEAASIQSVKQWRRLPHIVSNSHIPLLQLSQQIIEL 2863
+                      789****************9999***777777777*******65557666******************************************* PP
+
+                      CHHCCHHCSS-........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC..............HHCCS-STTCCCCCCCCH CS
+             FAT   88 eeiiqykqkls........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied..............lllkgakaemwlkfanla 158 
+                      +e+ q+++ l+         ++e k+++ktW++Rlp+  dd++ w+di+ +R  ++  i +              +l+ +  a  +++f+++a
+  XP_019851030.1 2864 QEATQIHSGLQsgslsrqsFLNEVKTIFKTWKNRLPNHFDDLSYWSDIFLWREQHFRSIIKaydgtshgeqsnqaMLAVHHLAGGITQFSSIA 2956
+                      *************99998888999999*****************************999999***********98888888888899****** PP
+
+                      CHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.....SS-SS---...........HH.HHCC CS
+             FAT  159 RksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.....elssglevqeptnleeftkll.arcy 245 
+                      Rk++ + ++ ++L+++                   + +++  + + +qk+r++v+c+l  ++     e+++  + +e+tnl++f+k++ ++++
+  XP_019851030.1 2957 RKQKLITVSLDSLSRI-------------------HNIPSVPVVDLFQKIRQQVKCYLMTAStmepsEIQEAFDFIESTNLKYFSKEMvSEFL 3030
+                      ****************...................9***********************99988888999999999***************** PP
+
+                      CTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTC CS
+             FAT  246 lkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqd 337 
+                      ++kG +l +++k       see+++++saa++l++++ykaw+ w++f ++ +            +++  ++v+a+++fl++++++se ks+++
+  XP_019851030.1 3031 ALKGTFLIQYGK-------SEEANKCFSAAVQLHDGLYKAWALWGDFLDQLFAVD---------KNIT-LAVSALTCFLHACRHQSEpKSRKY 3106
+                      ************.......9********************************999.........5676.9*********************** PP
+
+                      HHHHHC CS
+             FAT  338 llRlLt 343 
+                      l+R ++
+  XP_019851030.1 3107 LARTIW 3112
+                      ***877 PP
+
+>> XP_019850314.1  PREDICTED: serine/threonine-protein kinase ATR-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.0   0.0      0.91   1.1e+03     210     257 ..    1596    1646 ..    1589    1654 .. 0.71
+   2 !  121.3   3.9   5.6e-38   6.6e-35       2     342 ..    1663    1981 ..    1662    1982 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: -1.0 bits;  conditional E-value: 0.91
+                      HHHCCTSSCCCSS-SS---................HHHHCCCTCCCCCCCCCC CS
+             FAT  210 efvscllekkeelssglevq.....eptnleeftkllarcylkkGewlaalqk 257 
+                      e++ ++ +  +++++ l +      e+  +++++++l  c++ +Ge+++al  
+  XP_019850314.1 1596 EQILQYQSI-GNYRDALLYYqkairENPGVKYYEDSL-HCLMSLGEFQSALTY 1646
+                      555544333.3333333222367779999*******9.***********9976 PP
+
+  == domain 2  score: 121.3 bits;  conditional E-value: 5.6e-38
+                      CCTTCCCCTSSSGHHCCCCT......TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---S..CCCCCHHHHHCCCCCHHHCHH CS
+             FAT    2 plaaeaaWrlgqWdsmeeylslmk..kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsge..synraydllvrlQqlaEleei 90  
+                      ++ +eaaW+lg+W+s+e+ +++++    ++   + + +la  +++  +++  ++ +r++++  l+a s e  sy+r y+ +vrl++l+E e++
+  XP_019850314.1 1663 SYYIEAAWKLGDWNSLEQSVKEARssLVNWGSGLGKLLLAAKKKDKVAFQAQLQAVRNSVMGPLTAASLElgSYQRGYEHIVRLHMLQEVEDM 1755
+                      6789*****************999777788888**********************************************************97 PP
+
+                      C.CHHCSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC......HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCH CS
+             FAT   91 i.qykqklssseelksllktWrkRlpgvqddvevwqdilsvRslvlspied......lllkgakaemwlkfanlaRksgrlslAekaLkklle 176 
+                      + q++ +  s+++  ++lk+W+ Rl+ +   ++ +++il +R+ +ls  ++      l +k+ +   wlk+a++aR s+ ++ A+++L+ +++
+  XP_019850314.1 1756 AtQVIFS--SESRTVDILKNWKSRLLSTEETFRTQEPILNLRRTLLSLVDEkqelltLSIKQETGCLWLKSASIARHSNCMQAAHNLLLHAAD 1846
+                      6145553..788888999****************************988888999*999********************************99 PP
+
+                      CTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCC CS
+             FAT  177 edkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeil 269 
+                      +       pe+ ++++ +   +g+ ++al++L++ +++ + +  e +                 +a+++l  G+ l+++ + +     s+ il
+  XP_019850314.1 1847 YHL-----PEYCLEHADLISTQGDPHQALLNLQKTIESWTASE-EVPLA--------------TKAKAMLMVGKLLEETDH-D-----SQTIL 1913
+                      999.....*****************************665542.33333..............33899*************.4.....9**** PP
+
+                      HHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+             FAT  270 qaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlL 342 
+                      ++y++ + +d + ++ ++ +++++++ l+ +e++     p+++ + +   ++++  +l +++  ++  l+R L
+  XP_019850314.1 1914 KHYKEVIAIDGENEEGHFCLGRYYDRLLTLVEKN-----PSNYADVLNYTIKHYGDALTYGNRFIYHCLPRAL 1981
+                      *******************************777.....99999*******************9999999977 PP
+
+>> XP_019852740.1  PREDICTED: DNA-dependent protein kinase catalytic subunit [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   75.4   0.2   5.3e-24   6.3e-21      18     343 .]    3082    3493 ..    3070    3493 .. 0.77
+   2 ?   -3.9   0.0       6.6   7.8e+03      14      57 ..    3633    3678 ..    3631    3680 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 75.4 bits;  conditional E-value: 5.3e-24
+                      CCCT....TSSSS--CCCHCCC.......CHH--CCHCHHCCCHCCCCCCCCCTS---S..CCCCCHHHHHCCCCCHHHCHHCCHHCSS-... CS
+             FAT   18 eeylslmkkdspdkaffeaila.......lhrnqfdeaeeliekarqllvtelsalsge..synraydllvrlQqlaEleeiiqykqkls... 98  
+                      +++l++  +++ +++++e ++        + r+++d+a+++++   +   + +s  +g   s+ +  +++++lQ l+E+ e+i+++++++   
+  XP_019852740.1 3082 ASFLDKSLSEEANRSVLESHYPqeltlsyVLRDDYDRAYYYLSLSLKAKQQIWSVQDGIssSTGAVSSTVQSLQRLTEMNEFITFMKSNDnfs 3174
+                      56666666666666666666666666667777*****************99999999986466667777******************9999** PP
+
+                      ---TTTTTTT----TTS-TT.TGCCCTTTCCCCTCCCHCCCHC.........................HHCCS-STTCCCCCCCCHCHHHHCC CS
+             FAT   99 sseelksllktWrkRlpgvq.ddvevwqdilsvRslvlspied.........................lllkgakaemwlkfanlaRksgrls 165 
+                      s+   + ll++WrkR p+ + d+v +w+di+++R ++l +i+                          +++k+ +++m ++ a+ aR++ ++ 
+  XP_019852740.1 3175 SPGPVNNLLRKWRKRFPDPKlDPVPIWDDIITTRWMMLRKISTklqdsvlsqqceylldddgsscsvdSMMKNENINMFMRAADAARTQSNYP 3267
+                      **************************************99999999*********************************************** PP
+
+                      STTHHCCCCCHCTT......TSSCCCHHHHHHHCCHH.............HHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HH CS
+             FAT  166 lAekaLkklleedkeewlp.pevvyaylkylwakgeq.............kealqkLrefvscllekkeelssglevqeptnleeftkll.ar 243 
+                      +Ae++Lk ++++     ++ p+ ++ +l++l++ +++              ea+ +L  +  +   +     sg+ +++++ +  ++++l ++
+  XP_019852740.1 3268 VAENYLKIVEKSIL---KDfPDNYFIQLRWLHSLIKVrldrihqdpsptdMEAVISLTCQMDNFKGR--LGGSGKGAISSKPFISQHHVLlGK 3355
+                      *******9944443...34766666666666665554333333455555555555555555544333..455555555444444444444466 PP
+
+                      CCCTCCC..........................................CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+             FAT  244 cylkkGe..........................................wlaalqklnwseekseeilqaysaateldpswykawhtwalfnf 294 
+                       + k +e                                          w +al+++n  +++    +   ++ + + +s+     ++  f++
+  XP_019852740.1 3356 LLNKMAEifatpedgmlalsalsndgntklnsliggtpststkaiseglWIQALSSFNAGVRSGTTLNPLTKDPVPTVQSL----EELFGFCD 3444
+                      666666666666667787777777777777777777777777788888899999998877765555555555555555544....46889*** PP
+
+                      HCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+             FAT  295 evlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                      ++l++e +  e+++  d++ ++   +++ l + sl+s+k+++ ++RlL+
+  XP_019852740.1 3445 NALRQEDHDDEQSTGLDTKSFPSIIINHTLTAMSLGSSKARELFPRLLQ 3493
+                      ******99999988899999***************************96 PP
+
+  == domain 2  score: -3.9 bits;  conditional E-value: 6.6
+                      GHHCCCCT....TSSSS--CCCHCCCCHH..--CCHCHHCCCHCCC CS
+             FAT   14 Wdsmeeylslmkkdspdkaffeailalhr..nqfdeaeeliekarq 57  
+                      W++m ++l ++++   dk++++   +l++  +q + a+ +++++ +
+  XP_019852740.1 3633 WEQMYSQLLETRSGLGDKSLYGGSPSLQKgaRQKTFAQAYAKNIED 3678
+                      9999999999999999*************99999999999999876 PP
+
+>> XP_019856363.1  PREDICTED: serine-protein kinase ATM [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.0   7.9   3.4e-17     4e-14       4     342 ..     906    1271 ..     903    1272 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 53.0 bits;  conditional E-value: 3.4e-17
+                      TTCCCCTSSSGHH..CCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHH CS
+             FAT    4 aaeaaWrlgqWds..meeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqyk 94  
+                       +e  Wrl+qW +    + l +   d+++  + + +l l +n+  ++ e+i k+r ++++e+ + s es+ +  + l rlQ+l+Ele+  q+ 
+  XP_019856363.1  906 YTENIWRLTQWRDtdDMNLLHVGTTDNYHPCLHNLLLTLKHNKKAQFDEFITKGRASIINEMVSTSLESVCNINPHLTRLQTLNELESTFQLV 998 
+                      57889*******9433334444448888888************************************************************** PP
+
+                      CSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCH.CCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHC.CCCCHCTT.....T CS
+             FAT   95 qklssseelksllktWrkRlpgvqddvevwqdilsvRslvl.spiedlllkgakaemwlkfanlaRksgrlslAekaL.kklleedkeewlpp 185 
+                       +++   + + ll++W+ +l+++ +d+e  + +lsvR ++l s    +  +g + e  +++  l   s   slA++a  +++           
+  XP_019856363.1  999 LEPD--LSPSVLLSNWKGKLSNMSTDFELVELVLSVRFHALlSVLPYYKRSGGENESLIQSGLLNVLSTKASLAIEAQqYQI----------- 1078
+                      *854..34456789*************************9976666655678889999999999999999999996640344........... PP
+
+                      SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..SS-SS---..............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHH CS
+             FAT  186 evvyaylkylwakgeqkealqkLrefvscllekke..elssglevq...eptnleeftkllarcylkkGewlaalqklnwseekseeilqays 273 
+                      +  ++++k+ w++g+ + a++ +++ +++l   +e  ++++ l+      +++l+e   ++ + yl+k+  l + q  n     +++ l+ay+
+  XP_019856363.1 1079 DSLLEEAKLYWSQGKADIAMLLMKDILEKLECHQEgvAYPTVLTLYgnwLSETLSERPLVILEEYLEKAVSLLESQPVN-----KDQLLHAYL 1166
+                      447899*********9999999976666554444445777777777888999999999999999******999999977.....9******** PP
+
+                      CCHHCTCCCHS.TTCCCCHHHHHCCHHHHHHSSSS.....................................S-TCCHHHHCCT..CCHHHHT CS
+             FAT  274 aateldpswyk.awhtwalfnfevlskeeekkeeee....................................pedlseyvvpavegflkslsl 329 
+                      + +++++++   +  ++ +   ++++k+ ++++ +                                     ++d ++++ +++ ++  +ls 
+  XP_019856363.1 1167 SLARYSDNQFRrISDHMNSPLYQAKQKLLDRAKTDLqsmskakpdgrstefpkhyrqlsklseedeliirqhEQDQRQFLNKSIINYSLCLST 1259
+                      999999999875555555555555555555533322456678999999*********************998566668*************** PP
+
+                      TTSSTTTCHHHHH CS
+             FAT  330 ssekslqdllRlL 342 
+                      +++ +l  ++Rl 
+  XP_019856363.1 1260 GEQYNL-RIFRLM 1271
+                      ***666.699986 PP
+
+>> XP_003386934.3  PREDICTED: UDP-N-acetylglucosamine--peptide N-acetylglucosaminyltransferase 110 kDa subunit-like [Amp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.3   0.0    0.0053       6.3     236     292 ..     102     152 ..      73     158 .. 0.78
+   2 !    6.5   0.0    0.0046       5.4     252     334 ..     187     279 ..     176     282 .. 0.66
+   3 !   11.3   0.5   0.00017       0.2     160     295 ..     291     427 ..     285     429 .. 0.66
+   4 !   10.1   0.0   0.00038      0.45     245     293 ..     418     459 ..     413     462 .. 0.82
+   5 ?   -0.3   0.0      0.56   6.5e+02     260     293 ..     460     493 ..     455     508 .. 0.85
+   6 ?   -1.5   4.0       1.3   1.5e+03     194     218 ..     818     842 ..     775     868 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 6.3 bits;  conditional E-value: 0.0053
+                     ....HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+             FAT 236 eftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalf 292
+                      +++l  a++y  +G   ++ ++        +++lq+y+ a++l p+  + + ++a +
+  XP_003386934.3 102 IKKNLTlAEAYSNLGNVFKEKGQ-------LDQALQHYRHAVHLKPDFVDGYINLAAA 152
+                     44455556667777776666666.......9***********************9977 PP
+
+  == domain 2  score: 6.5 bits;  conditional E-value: 0.0046
+                     CCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC............CCHHHHHCCHHHHHHSSSS................S-TCCHHHHCC CS
+             FAT 252 laalqklnwseekseeilqaysaateldpswykawht............walfnfevlskeeekkeeee...............pedlseyvvpa 319
+                      +al++        e++ ++y +a+e++p+ + aw +            +a ++fe+           +                +++ +   +a
+  XP_003386934.3 187 YKALGR-------LEDAKSCYMKAIETHPTFAVAWSNlgcvynsqgeiwLAIHHFEKAV---------QldpafqdayinlgnvLKEA-RIFDRA 264
+                     444555.......89999*******************4444444444433444444433.........24455556677787653333.467888 PP
+
+                     T..CCHHHHTTTSST CS
+             FAT 320 vegflkslslsseks 334
+                     v  +l++lsls +++
+  XP_003386934.3 265 VAAYLRALSLSPNHA 279
+                     899999999998876 PP
+
+  == domain 3  score: 11.3 bits;  conditional E-value: 0.00017
+                     HHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCH...HHHHSSCCHHHHCCTSSCCCSS-SS---...................HHH CS
+             FAT 160 ksgrlslAekaLkklleedkeewlp.pevvyaylkylwakge...qkealqkLrefvscllekkeelssglevq........eptnleeftklla 242
+                     ++g ++lA+++ k++ e ++    + p+++   +  l ++g+    +e+++   ++ s+++++ ++l + +  q         +++  e+  + a
+  XP_003386934.3 291 EQGLIELAIDTYKRAIELQP----HfPDAYCNLANALKEQGKvaeAEECYNIALKMNSSHADSLNNLANIKREQghideaikLYKRALEIMPEFA 381
+                     68889999999999988888....55777776666666666633346667777666666666665444444443554444444455555555555 PP
+
+                     HCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+             FAT 243 rcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfe 295
+                      ++  +++ l+  +k        +++l +y++a++++p+ ++a+ +++    e
+  XP_003386934.3 382 AAHSNLASILQMQGK-------LQDALLHYKEAIRIHPNFADAYSNMGNTLKE 427
+                     555555555555555.......999********************99987665 PP
+
+  == domain 4  score: 10.1 bits;  conditional E-value: 0.00038
+                     CCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+             FAT 245 ylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                     y   G  l+++q+        +++lq+ys+a++++p  ++a+ ++a+ +
+  XP_003386934.3 418 YSNMGNTLKEMQD-------FQGALQCYSRAIQINPAFADAHSNLASIH 459
+                     5555666666666.......99***********************9876 PP
+
+  == domain 5  score: -0.3 bits;  conditional E-value: 0.56
+                     .S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+             FAT 260 wseekseeilqaysaateldpswykawhtwalfn 293
+                     + + ++ e+  +y+ a +l p+  +a+ ++a+  
+  XP_003386934.3 460 KDSGNIPEAITSYRMALKLKPDFPDAFCNLAHCL 493
+                     4567799**********************99865 PP
+
+  == domain 6  score: -1.5 bits;  conditional E-value: 1.3
+                     HHHHCCHHHHHSSCCHHHHCCTSSC CS
+             FAT 194 ylwakgeqkealqkLrefvscllek 218
+                     yl + +++++alqk++ ++++l+++
+  XP_003386934.3 818 YLQQCQQSQQALQKIQASLNQLSQQ 842
+                     3444444555555555555555444 PP
+
+>> XP_019864136.1  PREDICTED: transmembrane and TPR repeat-containing protein 1-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.3   0.4   4.9e-06    0.0058     184     289 ..     475     582 ..     457     604 .. 0.83
+   2 ?    3.5   0.0     0.039        46     210     301 ..     750     838 ..     669     854 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 16.3 bits;  conditional E-value: 4.9e-06
+                     ...TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---....................HHHHCCCTCCCCCCCCCCCT.S...-SS CS
+             FAT 184 p..pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq.........eptnleeftkllarcylkkGewlaalqklnwseeksee 267
+                     p  ++++y y+ yl ++g+ ++a+ + re ++ l+e+ +++++++ +           ++ + ++++   ++++ ++  +++l++       +e+
+  XP_019864136.1 475 PhnSKAHYNYANYLKDTGQTDSAVHHYREAIK-LTEDHSSAHNNMATLlngpealyhLNEAIRHNRRHF-KAFFNLANEMWNLGN-------KEK 560
+                     235799**************************.777776444444444566677788999999999998.99999999999***9.......99* PP
+
+                     CCHHHHCCHHCTCCCHSTTCCC CS
+             FAT 268 ilqaysaateldpswykawhtw 289
+                     +++ y+++++++p+ ++a  ++
+  XP_019864136.1 561 AEELYKESIKINPNYTDALIKL 582
+                     *************999986655 PP
+
+  == domain 2  score: 3.5 bits;  conditional E-value: 0.039
+                     HHHCCTSSCCCSS-SS---............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHH CS
+             FAT 210 efvscllekkeelssglevq.eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskee 301
+                      fv+++l    el++ l+++ ++t++    k+   +y + G  l+ +q+l+ s ++ e++ + + +a+ +  ++  + h ++++    + + +
+  XP_019864136.1 750 IFVKQKL----ELHQALTYSlKATQIAATDKERYDAYNLHGTILKDTQNLSDSAKNFEKAAAIFPDAVGTWINLGAIMHLLGDYRKAEVFYRK 838
+                     3444222....5666666667888888888999999**************999999******9999999999999999999999887765554 PP
+
+>> XP_019863029.1  PREDICTED: uncharacterized protein LOC109591857, partial [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.4   0.0   2.8e-07   0.00033      67     135 ..       5      71 ..       1     109 [. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 20.4 bits;  conditional E-value: 2.8e-07
+                     --SCCCCCHHHHHCCCCCHHHCHHCCHHCSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCH CS
+             FAT  67 sgesynraydllvrlQqlaEleeiiqykqklssseelksllktWrkRlpgvqddvevwqdilsvRslvl 135
+                     s es+ +  + l rlQ+l+Ele+  q+  +++   + + ll++W+ +l+++ +d+e  + +lsvR ++l
+  XP_019863029.1   5 SLESVCNINPHLTRLQTLNELESTFQLVLEPD--LSPSVLLSNWKGKLSNMSTDFELVELVLSVRFHAL 71 
+                     56777777788******************854..344567899**********************9987 PP
+
+>> XP_011402481.1  PREDICTED: pre-mRNA-processing factor 6-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.4   0.0      0.59     7e+02     146     228 ..     305     386 ..     286     445 .. 0.68
+   2 !    5.4  10.7      0.01        12     137     296 ..     569     720 ..     440     732 .. 0.71
+   3 !   13.8   0.3   2.8e-05     0.033     150     304 ..     743     894 ..     727     929 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -0.4 bits;  conditional E-value: 0.59
+                     -STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH...HHHHSSCCHHHHCCTSSCCCSS-SS--- CS
+             FAT 146 akaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakge...qkealqkLrefvscllekkeelssglev 228
+                      +a  w+  a+l    gr+++A + + +  e  +   +  +v +++++++ +++    + +a+ ++ ++v+  l+   el s+ ++
+  XP_011402481.1 305 NHAPGWVAAARLEEVTGRMQMARNIIMRGCEVCS---KNEDVWVESIRLQPPENAklvVAQAIGHIPQSVKIWLKA-VELESDVPA 386
+                     4666799999999999999999999888766555...224678888888888888555588888888888855444.355555554 PP
+
+  == domain 2  score: 5.4 bits;  conditional E-value: 0.01
+                     CCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---... CS
+             FAT 137 piedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq.e 230
+                     p+++        ++wl+ a    ++g+ +  e +L+k+ ++ + + ++  ++ a++k+l  +  +   +++L  +++ ++e+    +     + e
+  XP_011402481.1 569 PKQK--------NIWLEAAYFEKDHGSGESLEALLQKAVQNCP-KAEVLWLMAAKSKWLAGDVPSARSILSLAFQANPNSEEV--WLAAVKLEsE 652
+                     3333........6999999999999999999999999988888.222212344455555555555555555566666554443..2222222226 PP
+
+                     .........HHHHCCCTCCC..CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+             FAT 231 ptnleeftkllarcylkkGe..wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+                     ++++e  + ll ++ +  G    + +  kl+w  ++ e++++  ++a e +p+ +k w++++++n++ 
+  XP_011402481.1 653 NNEFERARILLEKAWASAGTarVMMKSVKLEWVLNNMEKAFKLTRDALEKHPDFAKLWMMLGQMNEQE 720
+                     777777777777777777767777777788999999*****************************986 PP
+
+  == domain 3  score: 13.8 bits;  conditional E-value: 2.8e-05
+                     CCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.SS-SS---...........HHHH CS
+             FAT 150 mwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.elssglevqeptnleeftkllar 243
+                      w+ +++l  ksg++  A ++L k++ +++   + p++ ++ +++    +++  a + + + ++++ ++ +  + s  ++  p+++ +  + l +
+  XP_011402481.1 743 LWILYSRLEEKSGQPTKARSVLEKARLKNP---RSPDLWLEAIRLEMRGDRKPIAQNLMAKALQECPSSGKlWAESIFMATRPQRKTKSVDALKK 834
+                     69***********************66666...6699***************************9999876666666666689999999999988 PP
+
+                     CCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHS CS
+             FAT 244 cylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekk 304
+                     c +     la ++   w+e+k+++  + + +a+++dp++ ++w++  +f+  + ++e++ +
+  XP_011402481.1 835 CEHDPHVLLAVAKL-FWTERKISKCREWFIRAIKIDPDQGDTWAHYYKFELAHGTQEQQDE 894
+                     88887775555555.6***************************998888777777776554 PP
+
+>> XP_003390841.1  PREDICTED: putative syntaxin-3 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.2   0.8   2.6e-06     0.003     106     238 ..      56     220 ..      34     247 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 17.2 bits;  conditional E-value: 2.6e-06
+                     TTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC..............HHCCS-STTCCC..CCCCCHCHHHHCCSTTHHCCCCCHCTT..... CS
+             FAT 106 llktWrkRlpgvqddvevwqdilsvRslvlspied..............lllkgakaemwl..kfanlaRksgrlslAekaLkklleedk..... 179
+                      lk + k+  g qdd e +q+il+vR+ +++  e               +  ++ + ++ +     n +R+++++s+A++ +   l+e++     
+  XP_003390841.1  56 ELKSLCKKIGGRQDDAELRQRILAVRKAAFENVETttetfntlmtrygrS--NDREHTIAIesLQKNFSRTANEFSQAYERIVGRLQENPrprvt 148
+                     36777889999*******************998888999****9975332..23333333422445899**********9999999999965544 PP
+
+                     ................T.....SSCCCHHHHHHHCCH.HHHHSSCCHHHHCCTSSCCCSS-SS---.......... CS
+             FAT 180 ...eewlp........p.....evvyaylkylwakge.qkealqkLrefvscllekkeelssglevqeptnleeft 238
+                                     p     +  +++ ++  + +e + ea+++L  +   +l++  +  +++ v++ ++++ ++
+  XP_003390841.1 149 dsvV---NtsasddtiPileaeQQLHEQDQIHVSYTEqRAEAVENLASEML-HLQDIMNSINNMVVEQGETIDNIE 220
+                     3330...13333333312222244444444444333325666666666666.444444444444444444444443 PP
+
+>> XP_019852329.1  PREDICTED: mitochondrial import receptor subunit TOM70-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    5.5   0.0    0.0096        11     261     341 ..      95     193 ..      60     252 .. 0.82
+   2 !    8.3   0.1    0.0013       1.5     262     305 ..     504     547 ..     466     575 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 5.5 bits;  conditional E-value: 0.0096
+                     S...-SSCCHHHHCCHHCTC.....CCHSTTCCCCHHHHHCCHHHHHHSSSS............S-TCC.HHHHCCT..CCHHHHTTTS.STTTC CS
+             FAT 261 seekseeilqaysaateldp.....swykawhtwalfnfevlskeeekkeeee...........pedls.eyvvpavegflkslslsse.kslqd 337
+                     ++++ ee+l++y++a+e++p     + +  +h+ a ++++++ + +++ e++              +l+ +y+   ++ f    +l+++ ++l d
+  XP_019852329.1  95 KQKQLEEALKCYKEAIEICPpeetdDIATFHHNIAAVYDKMVVDCTDNDEKVIlwegirghcteAIKLKpKYIKAIFRRFHANRALNNKrEALLD 189
+                     456699***********986333336777899999999999999988855444888887887776667767777777777666666666777777 PP
+
+                     HHHH CS
+             FAT 338 llRl 341
+                     + Rl
+  XP_019852329.1 190 VTRL 193
+                     7777 PP
+
+  == domain 2  score: 8.3 bits;  conditional E-value: 0.0013
+                     ...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSS CS
+             FAT 262 eekseeilqaysaateldpswykawhtwalfnfevlskeeekke 305
+                     +++ +++ ++ ++a+e+d+s+++a+ t+a+++ ++ +ke+  + 
+  XP_019852329.1 504 HRDMDKAINSLRTAIEMDSSCIQAYETLASLEMQKGNKEKALEL 547
+                     567899**************************999999987655 PP
+
+>> XP_003388214.1  PREDICTED: transmembrane and TPR repeat-containing protein 3-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.6   0.0       5.4   6.3e+03     272     300 ..     499     527 ..     487     554 .. 0.60
+   2 ?    3.7   0.0     0.034        40     243     292 ..     623     665 ..     592     679 .. 0.70
+   3 !    8.9   0.1   0.00088         1     236     304 ..     721     782 ..     701     830 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: -3.6 bits;  conditional E-value: 5.4
+                     HHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+             FAT 272 ysaateldpswykawhtwalfnfevlske 300
+                     +++ ++++ + +k + ++++ +++ +++ 
+  XP_003388214.1 499 FTSGIKINTNNAKLYSNLGHEYEQLMNYS 527
+                     55555666666666666666666555544 PP
+
+  == domain 2  score: 3.7 bits;  conditional E-value: 0.034
+                     HCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+             FAT 243 rcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalf 292
+                     ++yl  G+ l + +k         e+ + +++a+el+p+ ++a+++++  
+  XP_003388214.1 623 EAYLNMGDLLLKQNK-------TVEAKNTFLKAVELSPEYADAHFNLGTT 665
+                     445555555555555.......6777778888888888888888877765 PP
+
+  == domain 3  score: 8.9 bits;  conditional E-value: 0.00088
+                     ....HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHS CS
+             FAT 236 eftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekk 304
+                     ++t + a++y+ +G+ +  l++       ++ +   +s+a+el p+  +a ++++ +n +  ++ee  k
+  XP_003388214.1 721 KLTPKDAKVYFQLGMIQTDLRH-------ISSAKTWFSKAIELVPNYRQALYNLGFLNYQENRYEEAVK 782
+                     5666669***************.......9****************************99988886553 PP
+
+>> XP_019849002.1  PREDICTED: syntaxin pep12-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   15.1   0.7   1.1e-05     0.013     106     237 ..      56     219 ..      34     247 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 15.1 bits;  conditional E-value: 1.1e-05
+                     TTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC..............HHCCS-STTCCC..CCCCCHCHHHHCCSTTHHCCCCCHCTT..... CS
+             FAT 106 llktWrkRlpgvqddvevwqdilsvRslvlspied..............lllkgakaemwl..kfanlaRksgrlslAekaLkklleedk..... 179
+                      lk + k+  g qdd e +q+il+vR+ +++  e               +  ++ + ++ +     n +R ++++s+A++ +   l+e++     
+  XP_019849002.1  56 ELKSLCKKIGGRQDDAELRQRILAVRKAAFENVETttetfntlmtrygrS--NDREHTIAIesLQKNFSRIANEFSQAYERIVGRLQENPrprvt 148
+                     36777889999*******************99888889999999965332..22233333322445788999999***99999999999965444 PP
+
+                     ................T.....SSCCCHHHHHHHCCH.HHHHSSCCHHHHCCTSSCCCSS-SS---......... CS
+             FAT 180 ...eewlp........p.....evvyaylkylwakge.qkealqkLrefvscllekkeelssglevqeptnleef 237
+                                     p     +  +++ ++  + +e + ea+++L  +   +l++  +  +++ v++ ++++ +
+  XP_019849002.1 149 dsvV---NtsasddtiPileaeQQLHEQDQIHVSYTEqRAEAVENLASEML-HLQDIMNSINNMVVEQGETIDNI 219
+                     3330...13333333312222244444444443333324666666666655.44444344444444444444443 PP
+
+>> XP_003386549.1  PREDICTED: transaldolase-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.8   0.2   0.00011      0.13     166     218 ..     246     309 ..     241     320 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 11.8 bits;  conditional E-value: 0.00011
+                     STTHHCCCCCHCTT................TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSC CS
+             FAT 166 lAekaLkklleedk........eewlp...pevvyaylkylwakgeqkealqkLrefvscllek 218
+                     ++ k+L++l+ + +        e+ ++    ++++ ++k+ w+ +e ++a +kL e + + + +
+  XP_003386549.1 246 ISPKLLNELQSSTDtvtrklsvEDAQKtemEKWTLDEAKFRWELNEDQMATEKLSEGIRKFAAD 309
+                     5667777776666666655444223335678***********************9998876655 PP
+
+>> XP_011404887.1  PREDICTED: cell division cycle protein 27 homolog isoform X2 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.6   0.3    0.0045       5.2     164     294 ..      62     167 ..      39     192 .. 0.74
+   2 ?    8.6   0.2    0.0011       1.2     264     296 ..     605     637 ..     592     641 .. 0.88
+   3 ?    2.3   0.8      0.09   1.1e+02     143     210 ..     653     717 ..     640     751 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 6.6 bits;  conditional E-value: 0.0045
+                     CCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCC CS
+             FAT 164 lslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqkl 258
+                     l++A+ +L++         ++++ v+ y++  ++ +e ++ l++Lr  +   +e++          e+  +++f+++ + ++l++G+  ++l+  
+  XP_011404887.1  62 LKQAQYLLSNY-------LSDSQCVLLYARCCLELKEYQDGLLRLRGLLC-IAESN----------ENFIVDKFNNEAGVAFLLLGDLNRKLHL- 137
+                     33333333333.......22255777777777777777777777755443.44432..........3334689*********************. PP
+
+                     T.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+             FAT 259 nwseekseeilqaysaateldpswykawhtwalfnf 294
+                            ee+ +ay++a  ++p + +a+ ++ ++  
+  XP_011404887.1 138 ------TEEACEAYKQALNYNPFLWSAFESLCQLQR 167
+                     ......89************9999988888776665 PP
+
+  == domain 2  score: 8.6 bits;  conditional E-value: 0.0011
+                     .-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+             FAT 264 kseeilqaysaateldpswykawhtwalfnfev 296
+                     + +++l +++aat +dp  y+aw+ + +++f++
+  XP_011404887.1 605 DYDKALTSFQAATNIDPCHYNAWYGLSHLYFQQ 637
+                     4789**************************986 PP
+
+  == domain 3  score: 2.3 bits;  conditional E-value: 0.09
+                     CCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHH CS
+             FAT 143 lkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLre 210
+                     l++++  ++++ a +  k+g++s+A  ++ k+ + ++++ lp    y ++ +l + ++ +e l++L+e
+  XP_011404887.1 653 LNACSSMAYTQLAMIQQKQGHHSTALCTIEKAVKCNSSNYLP---KYHRALILESLEQYDESLKQLNE 717
+                     566777788889999999999999999999999998866665...44555555555555555555554 PP
+
+>> XP_019853835.1  PREDICTED: cell division cycle protein 27 homolog isoform X1 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.6   0.3    0.0045       5.3     164     294 ..      62     167 ..      39     192 .. 0.74
+   2 ?    8.6   0.2    0.0011       1.2     264     296 ..     606     638 ..     593     642 .. 0.88
+   3 ?    2.3   0.8      0.09   1.1e+02     143     210 ..     654     718 ..     641     752 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 6.6 bits;  conditional E-value: 0.0045
+                     CCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCC CS
+             FAT 164 lslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqkl 258
+                     l++A+ +L++         ++++ v+ y++  ++ +e ++ l++Lr  +   +e++          e+  +++f+++ + ++l++G+  ++l+  
+  XP_019853835.1  62 LKQAQYLLSNY-------LSDSQCVLLYARCCLELKEYQDGLLRLRGLLC-IAESN----------ENFIVDKFNNEAGVAFLLLGDLNRKLHL- 137
+                     33333333333.......22255777777777777777777777755443.44432..........3334689*********************. PP
+
+                     T.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+             FAT 259 nwseekseeilqaysaateldpswykawhtwalfnf 294
+                            ee+ +ay++a  ++p + +a+ ++ ++  
+  XP_019853835.1 138 ------TEEACEAYKQALNYNPFLWSAFESLCQLQR 167
+                     ......89************9999988888776665 PP
+
+  == domain 2  score: 8.6 bits;  conditional E-value: 0.0011
+                     .-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+             FAT 264 kseeilqaysaateldpswykawhtwalfnfev 296
+                     + +++l +++aat +dp  y+aw+ + +++f++
+  XP_019853835.1 606 DYDKALTSFQAATNIDPCHYNAWYGLSHLYFQQ 638
+                     4789**************************986 PP
+
+  == domain 3  score: 2.3 bits;  conditional E-value: 0.09
+                     CCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHH CS
+             FAT 143 lkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLre 210
+                     l++++  ++++ a +  k+g++s+A  ++ k+ + ++++ lp    y ++ +l + ++ +e l++L+e
+  XP_019853835.1 654 LNACSSMAYTQLAMIQQKQGHHSTALCTIEKAVKCNSSNYLP---KYHRALILESLEQYDESLKQLNE 718
+                     566777788889999999999999999999999998866665...44555555555555555555554 PP
+
+>> XP_011402895.2  PREDICTED: protein RMD5 homolog B-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.3   0.6      0.35   4.1e+02      42      78 ..      12      51 ..       1      82 [. 0.70
+   2 ?   10.6   0.0   0.00026       0.3      32      87 ..     153     208 ..     133     217 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 0.3 bits;  conditional E-value: 0.35
+                    H...--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHH CS
+             FAT 42 r...nqfdeaeeliekarqllvtelsalsgesynraydll 78
+                    +   +++++a++ i++  +  +++l++l + ++n   ++l
+  XP_011402895.2 12 TkvnQKLQSASQTISNKMEETINSLQSLRSSLANEEKPVL 51
+                    1443458888888888888888888888888887777765 PP
+
+  == domain 2  score: 10.6 bits;  conditional E-value: 0.00026
+                     -CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHH CS
+             FAT  32 affeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEl 87 
+                      +   ++al+++++d a + +e  r+ l++  s+l  ++ +r y ll++l q++E 
+  XP_011402895.2 153 DIHYIVQALRNRDVDPALRWVEGHRDELLRHGSSLEFKLKQRKYLLLLSLGQINEA 208
+                     45567788********************************************9995 PP
+
+>> XP_019861305.1  PREDICTED: uncharacterized protein LOC109589706 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.9   0.1      0.24   2.8e+02      38      97 ..     238     298 ..     214     317 .. 0.74
+   2 ?   11.2   1.6   0.00017       0.2      12      98 ..     336     443 ..     334     518 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 0.9 bits;  conditional E-value: 0.24
+                     CCCHH--CCHCHHCCCHCCCCCCCCCTS---S.CCCCCHHHHHCCCCCHHHCHHCCHHCSS CS
+             FAT  38 lalhrnqfdeaeeliekarqllvtelsalsge.synraydllvrlQqlaEleeiiqykqkl 97 
+                     l++  ++++++ + i+ a+     +lsa s+e s + +++  +++ q++  + + q+k + 
+  XP_019861305.1 238 LCFTDEELQKMGRQINIASHANSGSLSATSSEySHYDRLQDHQDFEQYIKKKAAGQIKHHT 298
+                     5566788999999999999999999**9999944444444444555666666666666655 PP
+
+  == domain 2  score: 11.2 bits;  conditional E-value: 0.00017
+                     SSGHHCCCCT.......TSSSS--CCCHCCC.................CHH--...CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCC CS
+             FAT  12 gqWdsmeeylslmk...kdspdkaffeaila.................lhrnq...fdeaeeliekarqllvtelsalsgesynraydllvrlQq 83 
+                     ++W +++e   +m+   +   d+++fe i                   l   q   ++++ ++i ++++ll te+  l +++ n    l+++ Q+
+  XP_019861305.1 336 QEWLDLHEPYREMSsdlEGASDEKIFEIITGtsdiedwvehhsknvnnLK--QlsvLSDIVYCIHQCIDLLQTEIDTLTMKLENMETLLVQKSQM 428
+                     66777666666666666666666677777666666666654444432233..244488999********************************** PP
+
+                     CHHHCHHCCHHCSS- CS
+             FAT  84 laEleeiiqykqkls 98 
+                     + El    ++++++ 
+  XP_019861305.1 429 MEELRLCHSVISSNI 443
+                     ****87777777544 PP
+
+>> XP_003383901.1  PREDICTED: tetratricopeptide repeat protein 1-like isoform X1 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.9   0.7     0.029        34     221     280 ..      72     138 ..      34     152 .. 0.74
+   2 ?    3.8   0.4     0.031        36     233     280 ..      91     138 ..      60     177 .. 0.60
+   3 ?    7.6   0.1    0.0021       2.5     190     248 ..     178     242 ..     162     251 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 3.9 bits;  conditional E-value: 0.029
+                     SS-SS---..................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTC CS
+             FAT 221 elssglevq.......eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldp 280
+                     e+ s+ +++        + +  e+t+++ + + ++G  l++l++++ +e + e++  +ys+a ++ p
+  XP_003383901.1  72 EYVSNVDNRyvsedveVKGESVELTEEQIKELKEQGHRLKELGNASFKEGDTEQAITHYSEALKVYP 138
+                     33333333366677767888889999999999*****************************998765 PP
+
+  == domain 2  score: 3.8 bits;  conditional E-value: 0.031
+                     .......HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTC CS
+             FAT 233 nleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldp 280
+                     +  e+t+++ + + ++G  l++l++++ +e + e++  +ys+a ++ p
+  XP_003383901.1  91 ESVELTEEQIKELKEQGHRLKELGNASFKEGDTEQAITHYSEALKVYP 138
+                     444555555555566666666666666666666666666666555443 PP
+
+  == domain 3  score: 7.6 bits;  conditional E-value: 0.0021
+                     CHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---................HH.HHCCCTC CS
+             FAT 190 aylkylwakgeqkealqkLrefvscllekkeelssglevq.....eptnleeftkll.arcylkk 248
+                      ylk l+ +g++ eal++L e ++ + +  e  +++ +++      p+++ e++++l a+++ k+
+  XP_003383901.1 178 DYLKALIRRGQSYEALERLDEALEDYKKVLEIEPHQPIARaaalrLPQQITEQHERLkAEMFGKL 242
+                     599*********************98887774444444446667799999999999989998765 PP
+
+>> XP_019864402.1  PREDICTED: tetratricopeptide repeat protein 1-like isoform X2 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.8   0.5     0.063        74     220     280 ..      67     135 ..      35     150 .. 0.69
+   2 ?    2.3   0.3     0.086     1e+02     229     258 ..     122     166 ..      75     179 .. 0.53
+   3 ?    7.5   0.1    0.0024       2.8     190     248 ..     175     239 ..     167     248 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 2.8 bits;  conditional E-value: 0.063
+                     C....SS-SS---..............HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTC CS
+             FAT 220 e....elssglevq...eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldp 280
+                     e    e+ s+ +++   e  +++  + +l  +   ++G  l++l++++ +e + e++  +ys+a ++ p
+  XP_019864402.1  67 EtpevEYVSNVDNRyvsEDVEVKGESVELtEEQIKEQGHRLKELGNASFKEGDTEQAITHYSEALKVYP 135
+                     24444333333333666444444444445488899****************************988765 PP
+
+  == domain 2  score: 2.3 bits;  conditional E-value: 0.086
+                     ..........................HHHHCCCTCCCCCCCCCCC CS
+             FAT 229 q...............eptnleeftkllarcylkkGewlaalqkl 258
+                     q               + ++++  + + a cylk+G++ + +++ 
+  XP_019864402.1 122 QaithysealkvyppnCDQEVSVCHSNRAACYLKLGKHEEVVEDC 166
+                     122222233333345455555556666677777777776666665 PP
+
+  == domain 3  score: 7.5 bits;  conditional E-value: 0.0024
+                     CHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---................HH.HHCCCTC CS
+             FAT 190 aylkylwakgeqkealqkLrefvscllekkeelssglevq.....eptnleeftkll.arcylkk 248
+                      ylk l+ +g++ eal++L e ++ + +  e  +++ +++      p+++ e++++l a+++ k+
+  XP_019864402.1 175 DYLKALIRRGQSYEALERLDEALEDYKKVLEIEPHQPIARaaalrLPQQITEQHERLkAEMFGKL 239
+                     599*********************98887774444444446667799999999999989998765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      23542  (11521146 residues searched)
+Passed MSV filter:                      1935  (0.0821935); expected 470.8 (0.02)
+Passed bias filter:                      627  (0.0266333); expected 470.8 (0.02)
+Passed Vit filter:                        55  (0.00233625); expected 23.5 (0.001)
+Passed Fwd filter:                        20  (0.000849545); expected 0.2 (1e-05)
+Initial search space (Z):              23542  [actual number of targets]
+Domain search space  (domZ):              20  [number of targets reported over threshold]
+# CPU time: 0.22u 0.07s 00:00:00.29 Elapsed: 00:00:00.13
+# Mc/sec: 28595.89
+//
+[ok]
