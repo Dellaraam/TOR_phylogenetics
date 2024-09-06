@@ -1,0 +1,569 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Streptophyta/Proteins/Oryza_sativa_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.5e-10   41.1   0.1       0.18   13.1   0.0    7.8  7  BAS86124.1  Os03g0721200, partial [Oryza sativa Japonica Grou
+    8.2e-06   27.3   4.1        2.3    9.6   0.0    5.9  5  BAS77166.1  Os02g0167700 [Oryza sativa Japonica Group]
+    2.2e-05   25.9   0.4      0.011   17.1   0.0    2.9  2  BAS83361.1  Os03g0261900 [Oryza sativa Japonica Group]
+    7.9e-05   24.1   0.3      0.085   14.2   0.0    2.7  3  BAS83362.1  Os03g0261900, partial [Oryza sativa Japonica Grou
+     0.0004   21.8   2.8         17    6.8   0.0    5.7  6  BAT02280.1  Os07g0575100 [Oryza sativa Japonica Group]
+    0.00083   20.8   0.1      0.085   14.2   0.0    2.6  3  BAS77190.1  Os02g0169800, partial [Oryza sativa Japonica Grou
+     0.0045   18.4   0.1      0.081   14.3   0.0    3.0  5  BAS86125.1  Os03g0721200, partial [Oryza sativa Japonica Grou
+     0.0057   18.0   0.4          1   10.7   0.0    3.2  2  BAS87463.1  Os03g0858100 [Oryza sativa Japonica Group]
+  ------ inclusion threshold ------
+      0.013   16.9   0.1        3.7    8.9   0.0    4.2  5  BAS83038.1  Os03g0223700 [Oryza sativa Japonica Group]
+      0.064   14.6  19.8        3.3    9.0   0.2    6.6  6  BAT12967.1  Os11g0183800 [Oryza sativa Japonica Group]
+       0.23   12.8   0.0        3.1    9.2   0.0    2.3  2  BAS71986.1  Os01g0343200 [Oryza sativa Japonica Group]
+       0.28   12.5   0.0       0.62   11.4   0.0    1.6  1  BAS85168.1  Os03g0597200 [Oryza sativa Japonica Group]
+       0.56   11.6   1.3         32    5.8   0.4    3.0  2  BAS80762.1  Os02g0732200 [Oryza sativa Japonica Group]
+       0.79   11.1   2.4        1.7   10.0   0.5    2.1  2  BAT18172.1  Os12g0624800 [Oryza sativa Japonica Group]
+       0.85   11.0   2.6         23    6.3   0.0    4.4  6  BAT15780.1  Os12g0134200, partial [Oryza sativa Japonica Grou
+        3.5    9.0   8.7         16    6.8   0.4    3.9  4  BAT00500.1  Os07g0201100 [Oryza sativa Japonica Group]
+
+
+Domain annotation for each sequence (and alignments):
+>> BAS86124.1  Os03g0721200, partial [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.9   0.0    0.0024       7.3      86     154 ..      93     160 ..      67     166 .. 0.79
+   2 ?    2.0   0.0      0.16     5e+02      80     151 ..     287     354 ..     269     360 .. 0.78
+   3 ?   -2.0   0.0       2.8   8.5e+03     117     149 ..     361     393 ..     356     395 .. 0.82
+   4 ?    2.6   0.0       0.1   3.2e+02     105     156 ..     493     548 ..     479     552 .. 0.68
+   5 ?   -0.2   0.0      0.75   2.3e+03     115     155 ..     624     663 ..     597     668 .. 0.71
+   6 ?    1.9   0.0      0.17   5.1e+02      86     158 ..     747     818 ..     703     820 .. 0.76
+   7 !   13.1   0.0   6.1e-05      0.18      89     156 ..     909     976 ..     869     982 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 7.9 bits;  conditional E-value: 0.0024
+    mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLat 154
+                  v+ +Llk l+d++ +  +++ vq +  +      +  + lp+i+p+l++v+++++++++      L++
+  BAS86124.1  93 LVLPSLLKGLEDKAWR-TKQSSVQLLGAMAYCAPQQLSQCLPKIVPKLTEVLTDTHPKVQAAGQTALQQ 160
+                 6888999999999998.4667789998888888889999**************9998877654444433 PP
+
+  == domain 2  score: 2.0 bits;  conditional E-value: 0.16
+    mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqq 151
+                 ee +p   +  Ll  lk  s +  ++ + q + +++  lg     + +qi+p +++ +++ ++s+r+ +l  
+  BAS86124.1 287 EEIFPD-LVPWLLDTLKSDSSNVERSGAAQGLSEVLAALGK---DYFDQILPDIIRNCSHQKASVRDGHLTL 354
+                 677777.4566888888888888899999999999998886...5889999999999999888888887765 PP
+
+  == domain 3  score: -2.0 bits;  conditional E-value: 2.8
+    mTOR_dom 117 tlglkcvpflpqiipallsvirtcesslrefll 149
+                 +lg    ++l+ ++pa+l  + + ++s+r+  l
+  BAS86124.1 361 SLGGVFQNYLQIVLPAILDGLADENESVRDAAL 393
+                 566677899*********999998888887766 PP
+
+  == domain 4  score: 2.6 bits;  conditional E-value: 0.1
+    mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvir....tcesslrefllqqLatLv 156
+                  +v qa +++ kt+  +   +l++i+p l+ ++     +++s++r++  + L++Lv
+  BAS86124.1 493 LTVRQAALHVWKTIVANTPRTLKEIMPVLMDTLIsslaSSSSERRQVAGRSLGELV 548
+                 45668888888888888888888888877765431221555567777777777776 PP
+
+  == domain 5  score: -0.2 bits;  conditional E-value: 0.75
+    mTOR_dom 115 fktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+                 f+tl     ++ +++i+p+ll+++++   + + + l+ L+++
+  BAS86124.1 624 FSTLYKSAgLQAIDEIVPTLLRALEDD--ETSATALDGLKQI 663
+                 66655555588999*******999974..4555556655555 PP
+
+  == domain 6  score: 1.9 bits;  conditional E-value: 0.17
+    mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                 + i +Llk ++d++ s ++      i + fk+ +l      p i+++l+++++++++      l+ ++  vs 
+  BAS86124.1 747 TLIPELLKGVNDSQAS-MRRGSAYLIGFLFKNSKLYLADEAPDIMSTLITLLSDTDKATVSAALEAFSRVVSS 818
+                 4677778888777766.555666789999************************99998888888888877765 PP
+
+  == domain 7  score: 13.1 bits;  conditional E-value: 6.1e-05
+    mTOR_dom  89 naLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                   L++il d+   + ++a++++++ i+++ gl   pflpq+  ++++ +++ ++s+r    + L++L 
+  BAS86124.1 909 GPLIRILGDRFPWQVKSAILSTLTIIISKGGLALKPFLPQLQTTFVKCLQDNNRSVRTRAASALGKLS 976
+                 4699***********************************************99999998888888875 PP
+
+>> BAS77166.1  Os02g0167700 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.0   0.0     0.038   1.2e+02     117     153 ..     143     179 ..     106     186 .. 0.84
+   2 !    9.6   0.0   0.00075       2.3      87     155 ..     208     280 ..     179     282 .. 0.78
+   3 !    7.6   0.0    0.0031       9.3     105     156 ..     617     669 ..     601     671 .. 0.88
+   4 ?   -2.5   0.0       3.8   1.1e+04      87     105 ..     809     827 ..     782     868 .. 0.66
+   5 ?    1.4   0.1      0.25   7.5e+02      65     145 ..     928    1022 ..     891    1056 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 4.0 bits;  conditional E-value: 0.038
+    mTOR_dom 117 tlglkcvpflpqiipallsvirtcesslrefllqqLa 153
+                 +++++c+ +l  +++ + ++i++ ++s++  ll+qL+
+  BAS77166.1 143 EVKCECLDILGDVLHRFGNLITKDHDSMLTALLSQLS 179
+                 578899*****************999*********98 PP
+
+  == domain 2  score: 9.6 bits;  conditional E-value: 0.00075
+    mTOR_dom  87 vinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtce..s.slrefllqqLatL 155
+                 +  +++++lk++s + +   + +q i    +++g +  p l + +p l++++++++  + +lre+ lq L+++
+  BAS77166.1 208 ATFEVVQLLKNRSAKsEIARTNIQMIGALSRSVGYRFGPHLAEAVPLLINYCTSASenDeELREYSLQALESF 280
+                 4445799999999995677888****************************9997652225899*****99876 PP
+
+  == domain 3  score: 7.6 bits;  conditional E-value: 0.0031
+    mTOR_dom 105 tavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                  ++v+a   i k+ l++    +l+++i++l++ +r++++ lr+  l  L++Lv
+  BAS77166.1 617 LTAVKAFAVIAKSpLRIDLSCVLDHVISELTAFLRKANRALRQATLGTLNSLV 669
+                 5789999999999988888999*****************************98 PP
+
+  == domain 4  score: -2.5 bits;  conditional E-value: 3.8
+    mTOR_dom  87 vinaLlkilkdpslsshht 105
+                 +i+ L  ilkd s ++  +
+  BAS77166.1 809 TIEMLKGILKDDSTTNSAK 827
+                 5677777887777664332 PP
+
+  == domain 5  score: 1.4 bits;  conditional E-value: 0.25
+    mTOR_dom   65 etdvsellvglspsseeyyptvvinaLlkil.............kdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145 
+                   +++ +ll + ++s+ee   +vv + L ki              + +s + + +++v  ai + + +   k  +++   i+++l +i+++++++r
+  BAS77166.1  928 IEKILALLFNHCESEEEGVRNVVAECLGKIAlieprklipalkeRTSSPAaNTRATVAIAIKYSIVERPGKIDEIMYSEISTFLMLIKDSDRHVR 1022
+                  33444446666666666666666666666655555555555543111111123333333333333333333433333444444444444444444 PP
+
+>> BAS83361.1  Os03g0261900 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.1   0.0   3.7e-06     0.011      84     149 ..      99     165 ..      36     172 .. 0.82
+   2 !    5.9   0.3    0.0099        30     107     158 ..     246     299 ..     187     301 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 17.1 bits;  conditional E-value: 3.7e-06
+    mTOR_dom  84 ptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefll 149
+                  t  + +L+k  k p   + +t+vv ++ ++ + +g    +++++i+p +l+ + ++e+ ++r+  +
+  BAS83361.1  99 FTKLFDSLMKFAKSPHPPQDKTMVVATLAEVAQGMGAPISAYVDKIMPLVLKELASSEAtNRRNAAF 165
+                 4557899*********************************************999999877777665 PP
+
+  == domain 2  score: 5.9 bits;  conditional E-value: 0.0099
+    mTOR_dom 107 vvqaimsifktlglkcvpflpqiipallsvirtces..slrefllqqLatLvsi 158
+                 v + + + + + + + +p++p +i+a+++v+ + ++  +++ ++ + +++L+s+
+  BAS83361.1 246 VYSCVCNLLLSSHPQILPLVPDVINAFAQVVVSPNEsdEVKTVVAKAVSHLISV 299
+                 33557788888888999************9998765568888899999999875 PP
+
+>> BAS83362.1  Os03g0261900, partial [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.2   0.0   2.8e-05     0.085      90     149 ..       1      61 [.       1      67 [. 0.92
+   2 ?    0.2   0.0      0.58   1.7e+03     125     138 ..     118     131 ..      63     151 .. 0.61
+   3 !    6.1   0.2    0.0086        26     109     158 ..     144     195 ..     132     197 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 14.2 bits;  conditional E-value: 2.8e-05
+    mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefll 149
+                 +L+k  k p   + +t+vv ++ ++ + +g    +++++i+p +l+ + ++e+ ++r+  +
+  BAS83362.1   1 SLMKFAKSPHPPQDKTMVVATLAEVAQGMGAPISAYVDKIMPLVLKELASSEAtNRRNAAF 61 
+                 699999999999**********************************999999878777665 PP
+
+  == domain 2  score: 0.2 bits;  conditional E-value: 0.58
+    mTOR_dom 125 flpqiipallsvir 138
+                  l+q++p +++++ 
+  BAS83362.1 118 PLNQVLPVFIKALP 131
+                 37788888877765 PP
+
+  == domain 3  score: 6.1 bits;  conditional E-value: 0.0086
+    mTOR_dom 109 qaimsifktlglkcvpflpqiipallsvirtces..slrefllqqLatLvsi 158
+                 + + + + + + + +p++p +i+a+++v+ + ++  +++ ++ + +++L+s+
+  BAS83362.1 144 SCVCNLLLSSHPQILPLVPDVINAFAQVVVSPNEsdEVKTVVAKAVSHLISV 195
+                 456777777888899************9998775568889999999999875 PP
+
+>> BAT02280.1  Os07g0575100 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.0       0.3     9e+02      87     156 ..     193     264 ..     163     268 .. 0.78
+   2 ?    5.7   0.0     0.011        35      89     155 ..     388     453 ..     379     457 .. 0.84
+   3 !    6.8   0.0    0.0055        17      82     154 ..     464     537 ..     454     541 .. 0.91
+   4 ?    1.7   0.0       0.2   6.1e+02     106     138 ..     620     652 ..     564     661 .. 0.84
+   5 ?   -3.5   0.0       7.7   2.3e+04     127     152 ..     773     799 ..     759     804 .. 0.69
+   6 ?   -1.3   0.0       1.6   4.9e+03     123     142 ..    1057    1076 ..    1014    1092 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 0.3
+    mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllq.qLatLv 156
+                 + n L + l  p+  + + a+++a ++ ++ l ++     ++ ++pa+++++++c +s +e   q  L+ Lv
+  BAT02280.1 193 IHNLLASALAHPTSPDVRIAALSAAVNLVQCLPTNAdRDKMQDLLPAMMRALTDCLNSGQEASAQeALELLV 264
+                 345555778888888999999999999999999999899999999999999999998666654441466666 PP
+
+  == domain 2  score: 5.7 bits;  conditional E-value: 0.011
+    mTOR_dom  89 naLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                 + L + l+ p  ++hh+a + ++ +i +     +++ l+q+++ +l+ +++ ++++r   ++ +++L
+  BAT02280.1 388 ELLPQYLSAPEWQKHHAALI-TLAQIAEGCAKVMLKNLEQVVSMILNGFQHPHARVRWAAINAIGQL 453
+                 55667788888887777766.689****999999*****************9999999999988887 PP
+
+  == domain 3  score: 6.8 bits;  conditional E-value: 0.0055
+    mTOR_dom  82 yyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLat 154
+                  y++ v+ aL + ++d +    ++ + +ai++  ++   +  +p+l+ i+ +ll ++++ ++ ++e  l  La+
+  BAT02280.1 464 NYHQQVLPALANAMDDFQNPRVQAHAASAILNFSENCTPEIlTPYLDGIVTKLLVLLQNGKQMVQEGALTALAS 537
+                 58888999******9999999***************9999999***********************99999986 PP
+
+  == domain 4  score: 1.7 bits;  conditional E-value: 0.2
+    mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvir 138
+                  ++qa    +k lg   +p+++ ++p ll+ ++
+  BAT02280.1 620 YMLQAWARLCKCLGQDFLPYMNVVMPPLLQSAQ 652
+                 5678899999******************99776 PP
+
+  == domain 5  score: -3.5 bits;  conditional E-value: 7.7
+    mTOR_dom 127 pqiipallsvirtces.slrefllqqL 152
+                 + iipal++++++ ++ ++   +l+ L
+  BAT02280.1 773 DYIIPALVEALHKEPEtEMCSSMLDSL 799
+                 457888888877766656666666665 PP
+
+  == domain 6  score: -1.3 bits;  conditional E-value: 1.6
+    mTOR_dom  123 vpflpqiipallsvirtces 142 
+                   ++lp+i++ +++v+ + ++
+  BAT02280.1 1057 SQYLPKIVSIFAEVLCNGTE 1076
+                  46888888888888776655 PP
+
+>> BAS77190.1  Os02g0169800, partial [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.2   0.0       6.7     2e+04     142     154 ..      15      27 ..      11      48 .. 0.62
+   2 ?    4.0   0.0     0.038   1.2e+02     116     153 ..     112     149 ..      68     156 .. 0.84
+   3 !   14.2   0.0   2.8e-05     0.085      84     154 ..     176     249 ..     149     252 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: -3.2 bits;  conditional E-value: 6.7
+    mTOR_dom 142 sslrefllqqLat 154
+                 ++l  ++lqqL++
+  BAS77190.1  15 PKLTTTVLQQLED 27 
+                 4555555555543 PP
+
+  == domain 2  score: 4.0 bits;  conditional E-value: 0.038
+    mTOR_dom 116 ktlglkcvpflpqiipallsvirtcesslrefllqqLa 153
+                  +++++c+ +l  +++ + ++i++ ++ ++  ll+qL+
+  BAS77190.1 112 AEVKCECLDILGDVLHRFGNLITKDHDCMLTALLSQLS 149
+                 4578899*****************99999999999997 PP
+
+  == domain 3  score: 14.2 bits;  conditional E-value: 2.8e-05
+    mTOR_dom  84 ptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces...slrefllqqLat 154
+                 ++ +  +++++lk++s + +   + +q i    +++g +  p l +++p l+++++++++   +l e+ lq L++
+  BAS77190.1 176 AK-ATFEVVQLLKNRSAKsEIARTNIQMIGALSRSVGYRFGPHLAEVVPLLINYCTSASEndeELCEYSLQALES 249
+                 44.4445799999999995677888*****************************998765223667777777765 PP
+
+>> BAS86125.1  Os03g0721200, partial [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.3   0.0   2.7e-05     0.081      91     156 ..      14      79 ..       6      85 .. 0.92
+   2 ?   -0.9   0.0       1.2   3.7e+03     128     156 ..      87     115 ..      77     118 .. 0.77
+   3 ?   -1.7   0.0       2.2   6.5e+03      23      38 ..     141     156 ..     132     175 .. 0.70
+   4 ?   -2.8   0.0       4.8   1.4e+04       8      37 ..     208     236 ..     205     237 .. 0.79
+   5 ?   -2.7   0.2       4.6   1.4e+04      10      31 ..     250     271 ..     246     274 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 14.3 bits;  conditional E-value: 2.7e-05
+    mTOR_dom  91 LlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                 L++il d+   + ++a++++++ i+++ gl   pflpq+  ++++ +++ ++s+r    + L++L 
+  BAS86125.1  14 LIRILGDRFPWQVKSAILSTLTIIISKGGLALKPFLPQLQTTFVKCLQDNNRSVRTRAASALGKLS 79 
+                 899*****999**************************************99999998888888875 PP
+
+  == domain 2  score: -0.9 bits;  conditional E-value: 1.2
+    mTOR_dom 128 qiipallsvirtcesslrefllqqLatLv 156
+                  +++ lls++++ ++ ++e +l+ L+  v
+  BAS86125.1  87 PLVSDLLSMLQSGDDAVKESVLSALKGVV 115
+                 56788888899888899998888887655 PP
+
+  == domain 3  score: -1.7 bits;  conditional E-value: 2.2
+    mTOR_dom  23 qsqsiRrevikvlGil 38 
+                 ++ ++R ++ k +G+l
+  BAS86125.1 141 DADDVRSSAAKAIGTL 156
+                 3667777777777765 PP
+
+  == domain 4  score: -2.8 bits;  conditional E-value: 4.8
+    mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlGi 37 
+                 +p+++++L + lk + + ++R    k+lG 
+  BAS86125.1 208 FPSIVDLLKDSLKDD-KFPVREASTKTLGR 236
+                 688888888888865.78899999999985 PP
+
+  == domain 5  score: -2.7 bits;  conditional E-value: 4.6
+    mTOR_dom  10 eLLeiLlnilkteqsqsiRrev 31 
+                 +L+++L  +l+ ++s+  Rr+ 
+  BAS86125.1 250 QLIQLLALALRDDSSEVRRRSL 271
+                 7888999999988666666655 PP
+
+>> BAS87463.1  Os03g0858100 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.7   0.0   0.00034         1      72     157 ..     505     593 ..     464     596 .. 0.80
+   2 ?    3.8   0.1     0.046   1.4e+02      36     140 ..     620     724 ..     606     733 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 10.7 bits;  conditional E-value: 0.00034
+    mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157
+                   ++ + +e+ +  +vi+ Ll++ +  + ++ ++ + + im+++ +    l+   +fl+ ++++l++ ++++++ ++++  + + ++v+
+  BAS87463.1 505 SGSMVEEQENRFLVMVIRDLLNLCEITKGKDNKAVIASNIMYVVGQypRFLRAhWKFLKTVVNKLFEFMHEMHPGVQDMACDTFLKIVQ 593
+                 556788899*******************999999999*******994433555599******************999998888777775 PP
+
+  == domain 2  score: 3.8 bits;  conditional E-value: 0.046
+    mTOR_dom  36 GilGALDPykhkeveekseee..ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipa 132
+                 +++G L P++   + e+  +   ++++++++++ +++l+    +   e + + + ++ + ilk++ +     +++q+ +s+ ++lg    p ++ i   
+  BAS87463.1 620 TTIGDLEPHQIHTFYESVGHMiqAESDNTKRDEYLKRLMSLPNQKWAEIIGQ-A-SQSIDILKNQDVIRSVLNILQTNTSVASSLGPHFFPQISLIFLD 716
+                 6789999999987776664433222222222333344444444444555555.2.33367777777777777777777777777777777777777777 PP
+
+    mTOR_dom 133 llsvirtc 140
+                 +l+v r  
+  BAS87463.1 717 MLTVYRMY 724
+                 77777765 PP
+
+>> BAS83038.1  Os03g0223700 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.9   0.0    0.0012       3.7      60     160 .]      24     124 ..      12     124 .. 0.83
+   2 ?   -1.1   0.0       1.4   4.3e+03     121     153 ..     208     240 ..     171     247 .. 0.76
+   3 ?    0.7   0.0      0.41   1.2e+03     109     146 ..     278     315 ..     225     328 .. 0.70
+   4 ?   -0.4   0.0      0.86   2.6e+03      88     142 ..     337     394 ..     298     402 .. 0.73
+   5 ?   -0.3   0.1      0.82   2.5e+03      94     158 ..     492     559 ..     462     561 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 8.9 bits;  conditional E-value: 0.0012
+    mTOR_dom  60 eenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                 ++++++ +++ ++++l +s e    + vi+ L + +  +  ++h++  +  +  +   l  +  + l+qi+p +l+ + + +s++r +  + L ++ ++
+  BAS83038.1  24 KRKNAALEIEGIVKQLATSGEHDKISAVIALLTNDFTMSPQANHRKGGLIGLAAVTVGLTSEAAQHLEQIVPPVLTSFLDQDSRVRYYACEALYNIAKV 122
+                 455566778888888888885555555899999999888889999999999999999999********************999************9999 PP
+
+    mTOR_dom 159 vk 160
+                 v+
+  BAS83038.1 123 VR 124
+                 96 PP
+
+  == domain 2  score: -1.1 bits;  conditional E-value: 1.4
+    mTOR_dom 121 kcvpflpqiipallsvirtcesslrefllqqLa 153
+                  ++ flp ++  l++++++++ ++r+     L+
+  BAS83038.1 208 DMLGFLPDFLDGLFNMLSDSSHEIRQQADAALS 240
+                 556788888888888888877777766555555 PP
+
+  == domain 3  score: 0.7 bits;  conditional E-value: 0.41
+    mTOR_dom 109 qaimsifktlglkc.vpflpqiipallsvirtcesslre 146
+                 + i + +k lg ++ vp++  i+ a+l  i++ e+++r 
+  BAS83038.1 278 TWINEFVK-LGGEQlVPYYADILGAILPCISDQEEKIRV 315
+                 33334444.555555999999999999999998888775 PP
+
+  == domain 4  score: -0.4 bits;  conditional E-value: 0.86
+    mTOR_dom  88 inaLlkilkdpslsshhtavvqai...msifktlglkcvpflpqiipallsvirtces 142
+                 i a+l+i k +  s+h ++ ++++    + +   + + +++l+ i   ll+++++ ++
+  BAS83038.1 337 IGAILSIAKRELNSEHEATRIESLhwfSTLLVRYRAEFLAYLNDIFDPLLNALSDPSD 394
+                 5677888888888888888888873333444445666788999999999998887665 PP
+
+  == domain 5  score: -0.3 bits;  conditional E-value: 0.82
+    mTOR_dom  94 ilkdpslsshhtavvqaimsifkt..lglkcvpflpqiipallsvirtces.slrefllqqLatLvsi 158
+                 +lk+  ++s  ++  q++     +  + + ++ +l q  ++ +svi+++ + +++  +l qL +L+++
+  BAS83038.1 492 LLKKTLVDSCGKDLFQSLYASWCHspMATISLCLLAQAYNHAISVIQSLGEeDINVKFLVQLDKLIRL 559
+                 55555555666666666644443312333335578999999999999999889999999999999986 PP
+
+>> BAT12967.1  Os11g0183800 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.7   0.1       4.6   1.4e+04     114     157 ..      22      65 ..      17      66 .. 0.74
+   2 ?    3.3   0.0     0.063   1.9e+02      88     155 ..     221     287 ..     159     290 .. 0.77
+   3 ?    1.4   0.0      0.24   7.3e+02      87     155 ..     305     373 ..     296     375 .. 0.90
+   4 ?    6.2   0.4    0.0085        26      84     156 ..     468     543 ..     430     545 .. 0.78
+   5 ?    3.1   0.6     0.072   2.2e+02      69     111 ..     620     661 ..     599     727 .. 0.60
+   6 ?    9.0   0.2    0.0011       3.3      79     155 ..     837     917 ..     812     920 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: -2.7 bits;  conditional E-value: 4.6
+    mTOR_dom 114 ifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                  f++  l + p + + ip+l+s++++ +   + f  q La+Lvs
+  BAT12967.1  22 LFQDSMLVQSPAIMRTIPSLASLLKSDKIIDKYFAAQSLASLVS 65 
+                 56666666778888889999999998555667777888999987 PP
+
+  == domain 2  score: 3.3 bits;  conditional E-value: 0.063
+    mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                  n+L+++l+  s +  + ++ +++ + f + +++ +++  q ip ll ++++ +++ ++  l  L +L
+  BAT12967.1 221 SNQLVAVLRLGSRN-SRLNAARTLQNLFDSENIRDTEVAWQAIPPLLDMLESGTETEQQAALGALIKL 287
+                 46788888888855.67788899999999999999999999999999999999999999999888887 PP
+
+  == domain 3  score: 1.4 bits;  conditional E-value: 0.24
+    mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                 ++++L+kil+ +s  + ++++ q     f++  ++  p+ ++ ++ l+s++++ ++ + e  ++ L+ L
+  BAT12967.1 305 TLESLYKILSFSSSLELKNDAAQLCYILFENSTIRASPIASECLQPLISLMTSGSTFVVEPAVRALNRL 373
+                 6789*****9999999***********************************999888888887777776 PP
+
+  == domain 4  score: 6.2 bits;  conditional E-value: 0.0085
+    mTOR_dom  84 ptvvinaLlkilkdpsls.shhtavvqaimsifkt.lglkcvpfl.pqiipallsvirtcesslrefllqqLatLv 156
+                 ++ +++ L  +l+ p ++   +++++qa+++i+++ ++l  +++  +qii  l+s +++ ++ +++   + L++L 
+  BAT12967.1 468 AAKMVEPLFLLLRRPDVTmWDQHSALQALVNILEKpQSLAALKLSpSQIIEPLISFLESPSQAIQQLGTELLTHLL 543
+                 5556777788888888886678899********996777775554269************9999999999988885 PP
+
+  == domain 5  score: 3.1 bits;  conditional E-value: 0.072
+    mTOR_dom  69 sellvglspsseeyyptvvinaLlkilkdpslsshhtavvqai 111
+                 +++l+++   s + y +v i+ L+++l +++++s  t +++a+
+  BAT12967.1 620 ALVLCNVLRYSSDNYVQVSIAVLVRLL-NSTIESTVTIALNAL 661
+                 334788888889999999999999999.333343333333333 PP
+
+  == domain 6  score: 9.0 bits;  conditional E-value: 0.0011
+    mTOR_dom  79 s.eeyyptvvinaLlkilkdpsls..shhtavvqaimsifktlg.lkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                 + +ey ++  i++L + l+ + ls  +  + ++++i+ if++ + ++  +  +  ip+l+ ++++ ++  +e +l+ L+ L
+  BAT12967.1 837 TlQEYVSNELIRSLTAALERELLStsTINEVILRTIHVIFNNFKkVRFSEAATLCIPHLVCALKDGNEAAQESVLDTLCLL 917
+                 34899999**********9998886345566678999999995515557788889**********************9987 PP
+
+>> BAS71986.1  Os01g0343200 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.0      0.31   9.3e+02      68     154 ..      99     187 ..      65     190 .. 0.79
+   2 ?    9.2   0.0     0.001       3.1       6      40 ..     326     360 ..     322     445 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 0.31
+    mTOR_dom  68 vsel.lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpq.iipallsvirtcesslrefllqqLat 154
+                   +l  v+ +p  +e++ + v+   ++ l  + + + + ++  a+++i +    + ++++++  +p +++++++  +++re  +  L++
+  BAS71986.1  99 FRKLlSVDHCPPIDEVIRSGVLPRFVEFLTREEYPQLQFEAAWALTNIASGTAANTMAVIEHgAVPIFVKLLSSPREDVREQAVWALGN 187
+                 2333467778888999999999999999999999999999999999*999999999888875489999999999999999999888875 PP
+
+  == domain 2  score: 9.2 bits;  conditional E-value: 0.001
+    mTOR_dom   6 ldypeLLeiLlnilkteqsqsiRrevikvlGilGA 40 
+                 + +p+ L  L+n+l t+q++s++re+  +++ + A
+  BAS71986.1 326 VGHPQALPCLFNLLTTTQKKSVKREACWTISNITA 360
+                 569***********************988887755 PP
+
+>> BAS85168.1  Os03g0597200 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.4   0.0    0.0002      0.62      26     102 ..      75     163 ..      57     196 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 11.4 bits;  conditional E-value: 0.0002
+    mTOR_dom  26 siRrevikvlGilGALDPykhkeveeks....eee.........ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslss 102
+                 ++  e+i+ lG +GALD  k+ + e +       +         + e ++  + +v+++l++l+p       tvv n Ll++l + s  +
+  BAS85168.1  75 EVYEEIIRKLGAVGALDLMKVLVAEMRReghqV-KlgvvhsfldSYEGQQLFDDAVDLILNQLQPLFGIQADTVVYNHLLNVLVEGSKMK 163
+                 6778*****************776665554440.14444445544555555567778888999999988899999999999997766554 PP
+
+>> BAS80762.1  Os02g0732200 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.8   0.4     0.011        32      83     140 ..     393     449 ..     353     467 .. 0.68
+   2 ?    2.7   0.0     0.096   2.9e+02      88     157 ..     481     550 ..     477     590 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 5.8 bits;  conditional E-value: 0.011
+    mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtc 140
+                  ++ +i+aL+k+l+ + l+++ +av   +   + +++ + + +   i+p  ++v+r+ 
+  BAS80762.1 393 AESGAISALVKLLSSKDLKTQEHAVTALLNLSIYDQNKELIVVAGAIVPI-IQVLRKG 449
+                 45679**************8888877777655666777778888888874.5666654 PP
+
+  == domain 2  score: 2.7 bits;  conditional E-value: 0.096
+    mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157
+                 i+aL+++l+  s +  ++++ +a+ + + ++  k+ ++   i+  l+++++++++    +  l  L++Lvs
+  BAS80762.1 481 IEALVELLQSGSPR-GRKDAATALFNLCIYQANKVRAVRAGILAPLIQMLQDSSRnGAIDEALTILSVLVS 550
+                 66677777555544.56666677777777777777777777777777777776665666666666666664 PP
+
+>> BAT18172.1  Os12g0624800 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.1   0.1      0.64   1.9e+03     116     141 ..      57      82 ..      46      93 .. 0.76
+   2 ?   10.0   0.5   0.00057       1.7      71     137 ..     177     252 ..     151     266 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 0.1 bits;  conditional E-value: 0.64
+    mTOR_dom 116 ktlglkcvpflpqiipallsvirtce 141
+                 +  g k vp +  i++a+++++++ +
+  BAT18172.1  57 QAHGRKIVPHIALIVSAIVRMMSSRN 82 
+                 34678999999999999999998765 PP
+
+  == domain 2  score: 10.0 bits;  conditional E-value: 0.00057
+    mTOR_dom  71 l.....lvglspsseeyyptvvinaLlkilkdpslsshhtavvqai...msifktlglkc.vpflpqiipallsvi 137
+                 l     l +  p   e y    i++ l+il++++ +s  ++++++i   +si+k l+l    + ++ ii+a+ +  
+  BAT18172.1 177 LnlvvvLLTQNPLMLEPYGRSLIRSGLQILDESAKASSSQMIISSIqmiHSIMKGLDLGIiSSEISSIIHAMEQFQ 252
+                 2223334555667789999999********8877777777776655222677777777775556777776665544 PP
+
+>> BAT15780.1  Os12g0134200, partial [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.5   0.0       8.1   2.5e+04     119     144 ..      29      54 ..      22      66 .. 0.66
+   2 ?   -1.1   0.0       1.4   4.3e+03     113     148 ..     162     197 ..     130     227 .. 0.81
+   3 ?    6.3   0.0    0.0076        23      76     146 ..     301     371 ..     241     376 .. 0.77
+   4 ?   -3.7   0.0       9.4   2.8e+04       9      29 ..     459     479 ..     454     481 .. 0.74
+   5 ?   -0.4   0.0      0.91   2.8e+03      87     112 ..     603     627 ..     578     698 .. 0.67
+   6 ?   -0.4   0.0       0.9   2.7e+03       8      30 ..     769     791 ..     759     796 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: -3.5 bits;  conditional E-value: 8.1
+    mTOR_dom 119 glkcvpflpqiipallsvirtcessl 144
+                 + k +++lpqi  al++++ + ++  
+  BAT15780.1  29 HPKILELLPQIQEALTHLLGDQNDLT 54 
+                 55677788888888888777765544 PP
+
+  == domain 2  score: -1.1 bits;  conditional E-value: 1.4
+    mTOR_dom 113 sifktlglkcvpflpqiipallsvirtcesslrefl 148
+                 +i k+ g    p l  +ip l+++  + ++++++ +
+  BAT15780.1 162 KIAKQAGEALQPHLHTLIPRLVRYQYDPDKNIQDSM 197
+                 677888888888888899988888888877777665 PP
+
+  == domain 3  score: 6.3 bits;  conditional E-value: 0.0076
+    mTOR_dom  76 spsseeyyptvvinaLl..kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146
+                 ++s+ +  +++v+  Ll   il  +++ss ++a ++ +m+  k  g    p l+++++ +l+ ++++e+++++
+  BAT15780.1 301 TSSDANETMNIVLPYLLseGIL--SKVSSVQKASISLVMKLAKGAGPALKPHLSELVSCMLECLSSLEDQRLN 371
+                 3344555566777777734466..778899***********************************99986655 PP
+
+  == domain 4  score: -3.7 bits;  conditional E-value: 9.4
+    mTOR_dom   9 peLLeiLlnilkteqsqsiRr 29 
+                  +LL++L++++ +e+s++ +r
+  BAT15780.1 459 ATLLRLLYSAVLEEKSSAAKR 479
+                 479999999999998777665 PP
+
+  == domain 5  score: -0.4 bits;  conditional E-value: 0.91
+    mTOR_dom  87 vinaLlkilkdpslsshhtavvqaim 112
+                 +i++L   l  +sls hh++++++++
+  BAT15780.1 603 AIKKLCDAL-GESLSVHHNNILESLL 627
+                 667777777.6677778877777653 PP
+
+  == domain 6  score: -0.4 bits;  conditional E-value: 0.9
+    mTOR_dom   8 ypeLLeiLlnilkteqsqsiRre 30 
+                  +++Lei+ln l+ e+s++i+++
+  BAT15780.1 769 RKNILEIILNSLSPEESWQIKLS 791
+                 5789***************9975 PP
+
+>> BAT00500.1  Os07g0201100 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.8   0.4    0.0053        16      67     112 ..     108     152 ..      65     207 .. 0.68
+   2 ?    3.1   0.4     0.074   2.2e+02      65     128 ..     325     391 ..     304     397 .. 0.78
+   3 ?    1.8   0.0      0.18   5.5e+02       6      26 ..     398     418 ..     394     430 .. 0.81
+   4 ?   -3.3   0.0       7.1   2.1e+04     107     153 ..     661     709 ..     654     711 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 6.8 bits;  conditional E-value: 0.0053
+    mTOR_dom  67 dvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaim 112
+                  +s+l++++ +s++++y + +i+ L +i++   l++      qai+
+  BAT00500.1 108 VTSSLMKDM-NSKTDMYRANAIRVLCRIIDSTLLTQIERYLKQAIV 152
+                 345556776.788999999999999999988888887777777775 PP
+
+  == domain 2  score: 3.1 bits;  conditional E-value: 0.074
+    mTOR_dom  65 etdvsel...lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpq 128
+                   +v++    + +l++ ++  ++t +i++Llk  +++s++   +++ + +  i  + ++ +v+ ++ 
+  BAT00500.1 325 PLAVTNCnidMESLISDQNRSIATLAITTLLKTGNESSVDRLMKQMTNFMSDIADEFKIVVVEAIRS 391
+                 44444444557777888899999*****************999999999999999888888877665 PP
+
+  == domain 3  score: 1.8 bits;  conditional E-value: 0.18
+    mTOR_dom   6 ldypeLLeiLlnilkteqsqs 26 
+                 l+y +L++ L+nil++e   +
+  BAT00500.1 398 LKYRSLMNFLSNILREEGGFE 418
+                 689************996555 PP
+
+  == domain 4  score: -3.3 bits;  conditional E-value: 7.1
+    mTOR_dom 107 vvqaimsifktlglkcvpflp.qiipallsvirtces.slrefllqqLa 153
+                 vv+ i      l+ +c++++p q++ +++  +  +e+ +++e+  + L 
+  BAT00500.1 661 VVKHIYDGHVVLQYNCTNTIPeQLLEEVVVFVDASEAdEFSEVATKSLR 709
+                 5555555555566666555542566666666666666666666666655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      48407  (14578621 residues searched)
+Passed MSV filter:                      1356  (0.0280125); expected 968.1 (0.02)
+Passed bias filter:                     1187  (0.0245212); expected 968.1 (0.02)
+Passed Vit filter:                        95  (0.00196253); expected 48.4 (0.001)
+Passed Fwd filter:                        16  (0.000330531); expected 0.5 (1e-05)
+Initial search space (Z):              48407  [actual number of targets]
+Domain search space  (domZ):              16  [number of targets reported over threshold]
+# CPU time: 0.19u 0.18s 00:00:00.37 Elapsed: 00:00:00.30
+# Mc/sec: 7747.85
+//
+[ok]
