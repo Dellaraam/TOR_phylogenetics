@@ -1,0 +1,158 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Excavata/Proteins/Giardia_intestinalis.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    7.9e-21   72.9   2.0    7.9e-21   72.9   2.0    5.5  5  XP_001706690.1  GTOR [Giardia intestinalis]
+    0.00053   18.2   0.1      0.021   13.0   0.0    3.3  3  XP_001707585.1  CLASP N terminal domain-containing protein [G
+  ------ inclusion threshold ------
+      0.063   11.4   8.7        2.6    6.2   0.0    5.2  4  XP_001706751.1  hypothetical protein GL50803_0017110 [Giardia
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_001706690.1  GTOR [Giardia intestinalis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.8   0.2      0.45   7.4e+02      86     134 ..     240     296 ..     196     315 .. 0.67
+   2 !    8.0   1.2   0.00043      0.71       5     145 ..     778     927 ..     775     939 .. 0.65
+   3 !   72.9   2.0   4.8e-24   7.9e-21       1     159 [.     944    1159 ..     944    1160 .. 0.78
+   4 ?   -3.0   0.1       1.1   1.7e+03     106     137 ..    1334    1365 ..    1330    1378 .. 0.82
+   5 ?   -4.3   0.0       2.6   4.3e+03      98     121 ..    1568    1591 ..    1560    1601 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -1.8 bits;  conditional E-value: 0.45
+        mTOR_dom  86 vvinaLlkil....kdpsls....shhtavvqaimsifktlglkcvpflpqiipall 134
+                     ++++ Ll++l    kd+s++    + +++  + + +if++   +  +++  ii+ ++
+  XP_001706690.1 240 IALHLLLNMLnlsvKDKSIAdyfqENYSSFFSLVANIFRSKTSEGRMLVASIISLFA 296
+                     677777777777776776651111334556666777777777777777777776665 PP
+
+  == domain 2  score: 8.0 bits;  conditional E-value: 0.00043
+        mTOR_dom   5 yldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks......eeeekeeenaeetdvsel...lvglspss.eeyyptvvin 89 
+                     yl + + L++L+ +l   ++ +iR  ++k++G l  L+P  +    ++       e + ++e+n+++t ++el   + + + s    y p+ v +
+  XP_001706690.1 778 YLVHESSLRTLFIALYD-DNIEIRILAVKLIGRLCSLNPALVTPEIRHLilvlltELRLTTENNKRAT-SNELivkIFKFCGSIvLPYVPM-VYS 869
+                     66666777777777774.5899*****************99965555557887652223333333333.4444244445566664666666.667 PP
+
+        mTOR_dom  90 aLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces.slr 145
+                     a++ ++++ + +     + ++++ + f   ++ +v  l ++ip l++ i++ +s +lr
+  XP_001706690.1 870 AVMGLISKDCDDeYLLITSLTTLAELFTIGSTSMVHCLAEVIPLLITCIKEETSkTLR 927
+                     777766554444144556677777788777778899999****999999976653444 PP
+
+  == domain 3  score: 72.9 bits;  conditional E-value: 4.8e-24
+        mTOR_dom    1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks........................................ 53  
+                      Vv P++ y++L++i++ ilk+++sq+iR+e+ k+++++GA+DP  +++ +                                           
+  XP_001706690.1  944 VVFPWFIYHDLFTIVFGILKNDTSQEIRLEAAKLITTIGAIDPIFYQNGKPDLsalvpptnltckcqstdvfsldyimdesniwvchkgegga 1036
+                      899*******************************************87776658889888888888888778777777766666665544443 PP
+
+        mTOR_dom   54 .eeeekeeenaeetdvsellvgl...................................spsseeyyptvvinaLlkilkdpslsshhtavvqa 110 
+                       +                                                          s+ e   +v++++L++il++++l+ +h ++v +
+  XP_001706690.1 1037 aQ--------------------EasikshgkavvspitghvvenvyimkldsgsevsaNVSDFELTLNVIMSTLYSILSESTLDMYHYDAVVV 1109
+                      21....................0222222222222234444555566777778776534444677778************************* PP
+
+        mTOR_dom  111 imsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                        +i++t  +   +p++p+ii+ +l+ i++c+  ++e++l++L  ++s +
+  XP_001706690.1 1110 FRTIIQTECTAIsLPMVPKIISLILENIQNCKVFMQETMLRELILIISSI 1159
+                      ******9666666*******************************999865 PP
+
+  == domain 4  score: -3.0 bits;  conditional E-value: 1.1
+        mTOR_dom  106 avvqaimsifktlglkcvpflpqiipallsvi 137 
+                      ++ +++++i+ + g+ ++ ++p i   ll+v 
+  XP_001706690.1 1334 KAFEVLHFICAQFGVSVTLYIPVITECLLKVG 1365
+                      5678999*****************99999985 PP
+
+  == domain 5  score: -4.3 bits;  conditional E-value: 2.6
+        mTOR_dom   98 pslsshhtavvqaimsifktlglk 121 
+                      ps ++h++ +v++i s+f ++++ 
+  XP_001706690.1 1568 PSNNEHRNYIVESIRSVFLSQNCP 1591
+                      678899999********9987764 PP
+
+>> XP_001707585.1  CLASP N terminal domain-containing protein [Giardia intestinalis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.0   0.0   1.3e-05     0.021     104     156 ..     140     192 ..     126     194 .. 0.90
+   2 ?    0.4   0.0     0.096   1.6e+02      11      35 ..     339     363 ..     290     371 .. 0.85
+   3 ?   -1.7   0.0      0.41   6.8e+02      82     137 ..     739     798 ..     700     817 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 13.0 bits;  conditional E-value: 1.3e-05
+        mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                     +++++q + +i+ +lg   v+ l +++p ++++++++++ +r      La+L+
+  XP_001707585.1 140 RETTIQLLSTILLELGKPDVKALAKVVPRFTELTKDSSPVVRSQATVALANLT 192
+                     6889**********************************999999999998886 PP
+
+  == domain 2  score: 0.4 bits;  conditional E-value: 0.096
+        mTOR_dom  11 LLeiLlnilkteqsqsiRrevikvl 35 
+                     ++++++  lk+e +++i+++++k l
+  XP_001707585.1 339 IFSVFSANLKNEANWTIQLDTVKAL 363
+                     5677778889999999999998876 PP
+
+  == domain 3  score: -1.7 bits;  conditional E-value: 0.41
+        mTOR_dom  82 yyptvvinaLlkilkdpslsshhtavvqaims....ifktlglkcvpflpqiipallsvi 137
+                     +  t + + L  il++ +ls++  +v+ ++m+     f +l+ +    + q i  ll ++
+  XP_001707585.1 739 VTNTQTATRLNGILSNLALSTQPDNVLLSLMKqwtnSFPELQSELRRSYAQAILVLLDLT 798
+                     455556667777888888887777777777540000333344444444444444444444 PP
+
+>> XP_001706751.1  hypothetical protein GL50803_0017110 [Giardia intestinalis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.2   0.0    0.0062        10      37     140 ..       9     110 ..       8     119 .. 0.61
+   2 ?    0.2   0.6      0.11   1.8e+02      88      95 ..     520     527 ..     440     574 .. 0.53
+   3 ?    0.1   0.6      0.12   1.9e+02     119     156 ..     659     699 ..     571     702 .. 0.49
+   4 ?    6.2   0.0    0.0016       2.6      15      51 ..     883     920 ..     878     952 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 4.2 bits;  conditional E-value: 0.0062
+        mTOR_dom  37 ilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls..shhtavvqaimsifktlglkcvpflpqi 129
+                     +lG LDP +++  + +++    + + ++e++  ++   l  s++e     +     +i++ p     s   +  q+ ++ f tl lk   +++  
+  XP_001706751.1   9 LLGTLDPSRVQASTDAIQ----KLKGSPEFANMLYSYMLDASNDEQTRYLASIYFSQIFRSPLSHekSVLMEFSQSTLHCFCTLPLKIRRVIKDC 99 
+                     59********87776553....3555555544444444444555555555555556677666532123334445666888888888887777777 PP
+
+        mTOR_dom 130 ipallsvirtc 140
+                     +   l+ + +c
+  XP_001706751.1 100 LAVTLNHLYQC 110
+                     76666666555 PP
+
+  == domain 2  score: 0.2 bits;  conditional E-value: 0.11
+        mTOR_dom  88 inaLlkil 95 
+                     ++aLl+ l
+  XP_001706751.1 520 LQALLRCL 527
+                     33333333 PP
+
+  == domain 3  score: 0.1 bits;  conditional E-value: 0.12
+        mTOR_dom 119 glkc.vpflpqiipallsvirtces..slrefllqqLatLv 156
+                     g+k   ++++q i  ++s+ +++e+  + +  ++q L+ L+
+  XP_001706751.1 659 GIKTnSEVVNQMIKLFASLYSQLENeeDWLPIYFQLLSPLM 699
+                     22222223444444444444433332345555555555555 PP
+
+  == domain 4  score: 6.2 bits;  conditional E-value: 0.0016
+        mTOR_dom  15 Llnilkteq.sqsiRrevikvlGilGALDPykhkevee 51 
+                     Ll+ l  +q +++i+ +v++++G+lG L   k    ++
+  XP_001706751.1 883 LLTKLPVNQlDEAIKWDVLRCIGVLGGLVRRKIDLCSR 920
+                     4455555555999*************997777754443 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       4965  (3153173 residues searched)
+Passed MSV filter:                       278  (0.0559919); expected 99.3 (0.02)
+Passed bias filter:                      203  (0.0408862); expected 99.3 (0.02)
+Passed Vit filter:                        12  (0.00241692); expected 5.0 (0.001)
+Passed Fwd filter:                         3  (0.00060423); expected 0.0 (1e-05)
+Initial search space (Z):               4965  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.04u 0.03s 00:00:00.07 Elapsed: 00:00:00.05
+# Mc/sec: 8605.68
+//
+[ok]

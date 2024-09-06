@@ -1,0 +1,133 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Excavata/Proteins/Spironucleus_salmonicida.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    2.4e-19   68.8  13.3    2.4e-19   68.8  13.3    3.1  4  KAH0572751.1  Kinase, PIKK [Spironucleus salmonicida]
+    2.3e-16   58.9  14.3    2.3e-16   58.9  14.3    3.8  3  KAH0574663.1  Kinase, PIKK [Spironucleus salmonicida]
+
+
+Domain annotation for each sequence (and alignments):
+>> KAH0572751.1  Kinase, PIKK [Spironucleus salmonicida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.3   0.0      0.11   4.6e+02     160     206 ..     481     531 ..     479     557 .. 0.74
+   2 ?   -3.3   1.8      0.46     2e+03      43      97 ..    1020    1075 ..     989    1084 .. 0.70
+   3 !   68.8  13.3   5.4e-23   2.4e-19      13     240 ..    1100    1417 ..    1094    1528 .. 0.66
+   4 ?   -2.8   0.1       0.3   1.3e+03     171     208 ..    1552    1592 ..    1541    1653 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: -1.3 bits;  conditional E-value: 0.11
+                   HHHHCCSTTHHCCCCCHCTT............TSSCCCHHHHHHHCCHHHHHSS CS
+           FAT 160 ksgrlslAekaLkklleedk...eewlp....pevvyaylkylwakgeqkealq 206
+                   k  +++lA+++L+ +l  +k   +   +     + ++ + +y+ +++ +++al 
+  KAH0572751.1 481 KDSSMELAKRTLTTILVLKKqieS---EihllIPQILKSTQYFQDTIYVEKALD 531
+                   567899*********999995431...233564556677777777777777765 PP
+
+  == domain 2  score: -3.3 bits;  conditional E-value: 0.46
+                    --CCHCHHCCCHCCCCCCCCCTS---S.CCCCCHHHHHCCCCCHHHCHHCCHHCSS CS
+           FAT   43 nqfdeaeeliekarqllvtelsalsge.synraydllvrlQqlaEleeiiqykqkl 97  
+                    ++ + +++l +  r+ +  +ls++s   s  +  +ll ++Q+  ++ e+++y++  
+  KAH0572751.1 1020 RNPKLIQQLKDSYREYYAISLSKISAQfSLGNYNQLLTDIQAFKDITESLSYLEPY 1075
+                    66777888888899999999999999944444445699999999999999998754 PP
+
+  == domain 3  score: 68.8 bits;  conditional E-value: 5.4e-23
+                    SGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-........ CS
+           FAT   13 qWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls........ 98  
+                    ++d+  + ++++  k++  k +f+ i+++ +n++++a e i   + +l ++++  + e y ray+ l+++Qq++El+e+ +++ +++        
+  KAH0572751.1 1100 NYDEASQWVEKIPgKQESSKLLFQIIISTKTNKYTDALEKIVYLKHILAKQIQTSIQENYDRAYEQLIDFQQVIELQEANSFLVAQKqslekvtd 1194
+                    566666677777778889999************************************************************998888899***** PP
+
+                    ..........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.... CS
+           FAT   99 ..........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk.... 179 
+                              + ++ k+l   W +Rl ++ +d+e+w +++++R+l++  ++d        +++++fan a ksgr+ lA +++ +l  +++    
+  KAH0572751.1 1195 etsriiiekeNNKRIKHLQLLWSRRLANIRQDIEFWISLVRIRKLIIPVHQD-------YSAYVSFANQALKSGRIYLARNLIESLFNKKPqnlf 1282
+                    *******999999999************************************.......***************************999998888 PP
+
+                    .........................T......SSCCCHHHHHHHCCHH........................HHHSSCC....HHHHCCTSSCCC CS
+           FAT  180 .......eewlp.............p......evvyaylkylwakgeq........................kealqkL....refvscllekke 220 
+                           +   +             p      ev+y y+k+l ++ ++                        ++    +     e+++ l +++ 
+  KAH0572751.1 1283 rmyhnnnK---QysinsdnldilipPleiqssEVIYCYSKLLFKDYKIenkvagfvhltrlalqlkegdiliEK----VhfkiVEMLKTLEQQQT 1370
+                    87764320...255555555556651555555999999999999999733333333333333333333333311....02222333333333332 PP
+
+                    .......SS-SS---......................................H CS
+           FAT  221 .......elssglevq...........................eptnleeftkl 240 
+                           +                                    +++l++++++
+  KAH0572751.1 1371 hlkdddiH-------DslvnniyriynsqnsnsitseqtdsdvYSSTLSQLSDS 1417
+                    22222220.......132223333343333333344445445444444444444 PP
+
+  == domain 4  score: -2.8 bits;  conditional E-value: 0.3
+                    CCCCCHCTT.......TSSCCCHHHHHHHCCHH.HHHSSCC CS
+           FAT  171 Lkklleedkeewlp..pevvyaylkylwakgeq.kealqkL 208 
+                    L++++e + e+wlp  p++++   ky  + ++q ++ +++L
+  KAH0572751.1 1552 LTSMQETEIENWLPilPQLTLYATKYDFKYNQQlQQIILSL 1592
+                    66665555588888889999999998888888624444444 PP
+
+>> KAH0574663.1  Kinase, PIKK [Spironucleus salmonicida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   58.9  14.3   5.3e-20   2.3e-16      29     214 ..    1521    1700 ..    1497    1839 .. 0.75
+   2 ?   -1.0   1.0      0.09   3.9e+02       8      87 ..    1945    2030 ..    1941    2044 .. 0.71
+   3 ?   -1.7   0.0      0.15   6.4e+02     165     219 ..    2330    2388 ..    2328    2397 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 58.9 bits;  conditional E-value: 5.3e-20
+                    SS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-..---TTTTTTT----TTS-TTTGC CS
+           FAT   29 pdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls..sseelksllktWrkRlpgvqddv 121 
+                     ++++++ ++ l +++f+ea+++i+   + l+   ++  +esy+ray++l++lQ ++ lee++ +k++++  s+ +l +l++ W+ R +++    
+  KAH0574663.1 1521 DQRNILQILQFLKNEEFTEAQSIINIQFKQLLSLVQSALSESYQRAYPILLQLQDICLLEEVLYFKSHNDksSHLQLLKLKQIWDIRIENSS--- 1612
+                    46778888888999*****************************************************9995444445566999****99988... PP
+
+                    CCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH....HHHHSSCCHHHH CS
+           FAT  122 evwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakge....qkealqkLrefv 212 
+                       q+ +++R+l+l p++d       + ++l fa+l+ k + l lA k+ + l+++++   +  ++++  lky w+++     ++++l+ L e+v
+  KAH0574663.1 1613 -QTQNTIKIRQLILLPQKD-------EVIYLTFADLCLKEKKLHLALKQYQLLQKSSSVTFN-NKIQFNLLKYKWDNNMdisiIQDQLNDLLEQV 1698
+                    .78999*************.......***********************9999888873333.59************997777799999996666 PP
+
+                    CC CS
+           FAT  213 sc 214 
+                     +
+  KAH0574663.1 1699 DN 1700
+                    62 PP
+
+  == domain 2  score: -1.0 bits;  conditional E-value: 0.09
+                    CCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH....--CCHCHHCC.CHCCCCCCCCCTS---SCCCCCHHHHHCC.CCCHHH CS
+           FAT    8 aWrlgqWdsmeeylslmkkdspdkaffeailalhr....nqfdeaeeli.ekarqllvtelsalsgesynraydllvrl.QqlaEl 87  
+                     W  + +ds+  ++ + ++++ + +f++ i ++h     n+ ++ e+l  ++  ++++ + ++l   + ++ ++l+ +  Qql+El
+  KAH0574663.1 1945 LWPEMAYDSINAAVLAYNSNKKQMQFYNSISQIHSeitqNKSSQSEKLFqDQFLSIFLDSFTKLKQGIKTSQIQLVESAkQQLIEL 2030
+                    58888999999999888899999999999999777665444444444432667777777777777777777777776544777776 PP
+
+  == domain 3  score: -1.7 bits;  conditional E-value: 0.15
+                    CSTTHHCCCCCHCTT........TSSCCCHHHHHHHCCH.HHHHSSCCHHHHCCTSSCC CS
+           FAT  165 slAekaLkklleedk...eewlppevvyaylkylwakge.qkealqkLrefvscllekk 219 
+                    +lA+ a+++  +ed+   e+ l+p+v++ ++k+ ++  e    ++++++++v+ l++++
+  KAH0574663.1 2330 KLAIMAIFETFREDPlvrEDDLTPDVFINRIKVKLEGREfDTTQILSVNQQVNYLIKSA 2388
+                    588999999999999876666669************99988899999999999555554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       8667  (3325212 residues searched)
+Passed MSV filter:                      1027  (0.118495); expected 173.3 (0.02)
+Passed bias filter:                      158  (0.0182301); expected 173.3 (0.02)
+Passed Vit filter:                        16  (0.00184608); expected 8.7 (0.001)
+Passed Fwd filter:                         2  (0.00023076); expected 0.1 (1e-05)
+Initial search space (Z):               8667  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.08u 0.05s 00:00:00.13 Elapsed: 00:00:00.06
+# Mc/sec: 16635.38
+//
+[ok]

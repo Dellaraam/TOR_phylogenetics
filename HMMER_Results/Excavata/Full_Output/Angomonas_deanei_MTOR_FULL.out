@@ -1,0 +1,228 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Excavata/Proteins/Angomonas_deanei.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    2.8e-17   62.4   4.9    6.5e-16   57.9   0.0    4.5  5  CAD2213251.1  Domain of unknown function (DUF3385)/FAT domain
+    6.2e-10   38.5   0.3    6.2e-10   38.5   0.3    3.2  4  CAD2214805.1  Domain of unknown function (DUF3385)/FAT domain
+     0.0003   20.0   0.2      0.048   12.8   0.0    4.1  4  CAD2216203.1  Importin repeat, putative [Angomonas deanei]
+  ------ inclusion threshold ------
+      0.036   13.3   0.0         10    5.3   0.0    3.4  3  CAD2216805.1  hypothetical protein, conserved [Angomonas dean
+       0.14   11.4  12.9      0.061   12.5   0.8    5.3  5  CAD2215204.1  hypothetical protein ADEAN_000265900 [Angomonas
+
+
+Domain annotation for each sequence (and alignments):
+>> CAD2213251.1  Domain of unknown function (DUF3385)/FAT domain/FKBP12-rapamycin binding domain/Phosphatidylinositol 3-
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.6   0.1      0.31   6.5e+02      71     141 ..     597     670 ..     577     689 .. 0.70
+   2 ?    0.1   0.2      0.19     4e+02      84     157 ..     697     772 ..     629     775 .. 0.72
+   3 !   57.9   0.0   3.1e-19   6.5e-16       2     159 ..     777     929 ..     777     930 .. 0.80
+   4 ?   -2.9   0.0       1.6   3.4e+03      10      38 ..     939     966 ..     937     988 .. 0.65
+   5 ?    1.7   0.0     0.061   1.3e+02     109     155 ..    1834    1880 ..    1775    1883 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -0.6 bits;  conditional E-value: 0.31
+      mTOR_dom  71 l.lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsi..fktlglkc.vpflpqiipallsvirtce 141
+                   + l +l++ + ey  t +++++ + l  p+l + h++ + a+     ++t +  c  p+l++i+ + ++ i+  +
+  CAD2213251.1 597 IrLHTLEKLTCEYDNTLALQSIASSL-FPALHDKHQNRIAAVRLLgrVSTRNPACiYPMLRRILVQCTTDIQLFQ 670
+                   33677788889999999999999999.899999999999998544115667777778888888887777666555 PP
+
+  == domain 2  score: 0.1 bits;  conditional E-value: 0.19
+      mTOR_dom  84 ptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157
+                    t  +++  + l+dp    s++ta ++ i +   + + + +p+l+ i p +++ i ++++   ++  ++ L+++++
+  CAD2213251.1 697 VTSLLTECSTQLRDPEKPtSMQTALLSCIGKLSLYAEGENIPILNAIRPVVIQHILDSSNlVKKQEAIRTLGNIIR 772
+                   3333333345578887665888888999999999999999999999999999999888887778888888888876 PP
+
+  == domain 3  score: 57.9 bits;  conditional E-value: 3.1e-19
+      mTOR_dom   2 vePyldypeLLeiLlnilkte.q.sqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilk 96 
+                   v+ y+  peLL +Ll++l++  + ++++R +v+ ++Gi+GA+DP+k+k + ++ ++        +e ++ e+   ++++ e   ++ v++++l +l+
+  CAD2213251.1 777 VDVYSSNPELLHVLLSALHGGyKeTWPVRSDVLELMGIVGAVDPVKVKDIFRTLRDG-------QERASPET---VISAGESAVAQNVVKNVLDVLN 863
+                   689*****************9855**************************9877552.......22222333...455669999************* PP
+
+      mTOR_dom  97 dpsls.shhtavvqaimsifkt...lglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                    psls +++ ++v+++ si++    +g   +pf++ ii+ +   +++   + r  l+++La++ +i+
+  CAD2213251.1 864 LPSLSdEQCISAVKVLSSILSLkdtIGGSLIPFYNDIISVVCLHAQQ-RVKKRCDLIRELAKMATIL 929
+                   *****7777787877777765333399999********998877765.3477777888888888776 PP
+
+  == domain 4  score: -2.9 bits;  conditional E-value: 1.6
+      mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvlGil 38 
+                   eLL +L+ ++ +  +q +  ev+++l+ l
+  CAD2213251.1 939 ELLAVLVGFMPGA-DQRVLVEVLRLLSAL 966
+                   5666666666644.566666777766544 PP
+
+  == domain 5  score: 1.7 bits;  conditional E-value: 0.061
+      mTOR_dom  109 qaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155 
+                    q  ++i ++l   + ++  ++ip++++ i ++++sl e ++q L++ 
+  CAD2213251.1 1834 QGNTTIQEELFQVSPNVWLKVIPQIIARIYSSDASLMESVYQLLSVV 1880
+                    44455555555555667789**********************99875 PP
+
+>> CAD2214805.1  Domain of unknown function (DUF3385)/FAT domain/FKBP12-rapamycin binding domain/Phosphatidylinositol 3-
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.6   0.0       2.7   5.7e+03      88     119 ..     317     348 ..     314     351 .. 0.81
+   2 !   38.5   0.3     3e-13   6.2e-10      12     159 ..     359     513 ..     355     514 .. 0.84
+   3 ?    0.1   0.2       0.2   4.1e+02      98     160 .]     632     695 ..     587     695 .. 0.77
+   4 ?   -2.4   0.1       1.2   2.4e+03      86     117 ..    1500    1532 ..    1481    1555 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: -3.6 bits;  conditional E-value: 2.7
+      mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlg 119
+                   ++++l+i+++   s+ + a+++++ si+ tl 
+  CAD2214805.1 317 VRTILSIINNGDCSTRRCAALETLASILTTLT 348
+                   56788888999999999999999999988876 PP
+
+  == domain 2  score: 38.5 bits;  conditional E-value: 3e-13
+      mTOR_dom  12 LeiLlnilkte.q.sqsiRrevikvlGilGALDPykhkeveekseee.ekeeenaeetdvsel..lvglspsseeyyptvvinaLlkilkdpslssh 103
+                   ++ + +i++ e + +  + + +i+v+ ++GA++P+k +++ +  +++  +eee+a +++++++    ++ p   e yp+vv++ L+k l+ +     
+  CAD2214805.1 359 YRCIARIIRWEaEeQVGVTLAAINVFATIGAVNPVKIRSILTVLNSDgIEEEEEAVTPALAQYkpHLRVHPKMAERYPSVVLYYLVKSLQLSIDPRL 455
+                   6778889988853377899*********************987766675555666666777776567778899****************76666699 PP
+
+      mTOR_dom 104 htavvqaimsifktlglkc.vpflpqiipallsvirtces.slrefllqqLatLvsiv 159
+                   + +++ ++  +++++   +   +l+q++p+l ++++++++  l e +l  +++L +++
+  CAD2214805.1 456 QVDTLVTLRLMMQEVPSTQkAVLLTQLLPQLKTWLTETDRaYLFEIVLCLMCDLAALL 513
+                   9999999999999998888799*****************999***********98775 PP
+
+  == domain 3  score: 0.1 bits;  conditional E-value: 0.2
+      mTOR_dom  98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvsivk 160
+                   p++++   a+ + + +i+ +++        qi+++++ +i  +++ +  +  l  La+L+ ++k
+  CAD2214805.1 632 PKMKDINDACFDFLNNIMVKQQSLLKDCCAQIVHTIMWYIDLSDNqEEMDIGLTTLASLIDVIK 695
+                   5566666666667777777777777777778888888888877766667777777777777765 PP
+
+  == domain 4  score: -2.4 bits;  conditional E-value: 1.2
+      mTOR_dom   86 vvinaLlkilkdpsls.shhtavvqaimsifkt 117 
+                      i+++++++k  +ls +  ++v+q ++ i++ 
+  CAD2214805.1 1500 HHIASVIALFKSVQLSsDNANNVMQDVLRILSV 1532
+                    456677777777777756667777777777765 PP
+
+>> CAD2216203.1  Importin repeat, putative [Angomonas deanei]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.5   0.0      0.15   3.1e+02     100     139 ..     184     222 ..     178     241 .. 0.79
+   2 !   12.8   0.0   2.3e-05     0.048      80     144 ..     491     555 ..     453     571 .. 0.80
+   3 ?    0.1   0.0       0.2   4.1e+02     116     140 ..     615     639 ..     610     648 .. 0.81
+   4 ?   -2.9   0.0       1.6   3.3e+03      98     114 ..     712     728 ..     675     772 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 0.5 bits;  conditional E-value: 0.15
+      mTOR_dom 100 lsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                    ++ h+a++q++ s+    + +  + ++q++pa+l +++ 
+  CAD2216203.1 184 AKDLHQAALQTVSSVSAG-SQQIREEMKQLVPAILDMLQR 222
+                   567899999999998774.455588999999999999875 PP
+
+  == domain 2  score: 12.8 bits;  conditional E-value: 2.3e-05
+      mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.sl 144
+                    +y p+ v  aLl  l++ sl + +++++    si   ++ +c pf++++++a ++v+   e+ +l
+  CAD2216203.1 491 AQYNPQ-VYGALLGCLENTSLPNLQNSILACFASITDVMKDECAPFVERVVNASQRVLGAPEDpKL 555
+                   555555.8899******************************************9999987766555 PP
+
+  == domain 3  score: 0.1 bits;  conditional E-value: 0.2
+      mTOR_dom 116 ktlglkcvpflpqiipallsvirtc 140
+                   + +g ++ ++lp i+p ll+ ++  
+  CAD2216203.1 615 ECVGANMAQYLPIIMPILLQRLEAE 639
+                   56789999***********988764 PP
+
+  == domain 4  score: -2.9 bits;  conditional E-value: 1.6
+      mTOR_dom  98 pslsshhtavvqaimsi 114
+                   +sl + h+++vq+   +
+  CAD2216203.1 712 KSLGNVHEEIVQTSAMV 728
+                   45566666666643222 PP
+
+>> CAD2216805.1  hypothetical protein, conserved [Angomonas deanei]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.1   0.0      0.19     4e+02      72     144 ..      65     137 ..      30     154 .. 0.65
+   2 ?    5.3   0.0    0.0049        10     100     155 ..     180     235 ..     150     238 .. 0.81
+   3 ?    2.8   0.0     0.029        60      85     143 ..     353     410 ..     335     428 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 0.1 bits;  conditional E-value: 0.19
+      mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcessl 144
+                   l +ls++  e   + v++++ k+++ ++     +a + a   ++       +p+lp i   ll v+++ +s++
+  CAD2216805.1  65 LDTLSSCYGEAVLMPVLQEVDKMMQPNAPWREFEASMVAFGAVVDGCLEALTPYLPSITTRLLGVLEDPNSHF 137
+                   4555666677777777777777776666666666666677777776666678999999999999999887655 PP
+
+  == domain 2  score: 5.3 bits;  conditional E-value: 0.0049
+      mTOR_dom 100 lsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                    +s+ t+++q+ ++  +++g +  p+l  i+ + ++ +r  + + +  ll+ L ++
+  CAD2216805.1 180 TQSYATDALQTFLQANQDVGANLGPYLGTILETWAQCLRGYQLKNKVSLLDALDII 235
+                   3488999********************************99888888888888765 PP
+
+  == domain 3  score: 2.8 bits;  conditional E-value: 0.029
+      mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcess 143
+                   tv  + +l +l+dps +  + +      +++k+  +   ++lp +++a+ls ++++++s
+  CAD2216805.1 353 TVLTQMMLFMLQDPSAE-IRCSGFGLASEMCKSSPTVIQQVLPDFMQAVLSNLSNIDES 410
+                   56666777888888866.56677777888888877777777777777777777766653 PP
+
+>> CAD2215204.1  hypothetical protein ADEAN_000265900 [Angomonas deanei]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.8   0.0      0.76   1.6e+03       3      23 ..     191     211 ..     190     223 .. 0.83
+   2 ?   -1.4   0.0      0.55   1.1e+03     108     151 ..     778     820 ..     718     826 .. 0.58
+   3 ?   -0.9   3.2       0.4   8.3e+02      75     143 ..     883     970 ..     790     988 .. 0.61
+   4 ?   12.5   0.8   2.9e-05     0.061      10     116 ..     980    1077 ..     973    1138 .. 0.53
+   5 ?    0.7   0.1      0.12   2.5e+02      86     142 ..    1217    1272 ..    1157    1276 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: -1.8 bits;  conditional E-value: 0.76
+      mTOR_dom   3 ePyldypeLLeiLlnilkteq 23 
+                   +P  +yp+L + L++i++  +
+  CAD2215204.1 191 SPAAKYPRLCRHLTSIMQCGR 211
+                   6899************98764 PP
+
+  == domain 2  score: -1.4 bits;  conditional E-value: 0.55
+      mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirtcesslrefllqq 151
+                   ++ i    + ++l+     p+i+p+lls ++  ++s+ e  ++ 
+  CAD2215204.1 778 LKEIALLTEAVNLRPFLSDPRILPSLLSFLTG-PQSIHEKTVEL 820
+                   55555555555555444456666666666665.33555554444 PP
+
+  == domain 3  score: -0.9 bits;  conditional E-value: 0.4
+      mTOR_dom  75 l........spsseeyyptvvinaLlkil.........kdpslsshhtavvqaimsifktlglkcvpflpq.iipallsvirtces.s 143
+                   l         + +e+ ++ vvi ++lk l         +++++ +++ +v +    i++ l+  c p l++  ++ l+s+ r c + +
+  CAD2215204.1 883 LgrifyalkKNLKEDNIADVVILSILKTLdvilitlagEEKTVLQYQDDVAELYSPIVSILKESCSPSLSHaAVSVLVSMNRMCAPlQ 970
+                   0444444434556888889999999988888889998888888888888888888888888888877665415666666667776644 PP
+
+  == domain 4  score: 12.5 bits;  conditional E-value: 2.9e-05
+      mTOR_dom   10 eLLeiLlnilkteq..sqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpsls 101 
+                    eL+ +L+ +  +++  +++  ++++ +lG +GA+DP    ++ +  ++  ke++++  +d +++       + +  y  +v ++L ++l+    +
+  CAD2215204.1  980 ELIHVLTHLFTSTNhlAKDELLNMLTLLGQIGAVDPASNAVLVR-PKK--KEDATV--QDEADM-------ElTYDYTVIVYRTLSRMLDMTLPD 1062
+                    677777776666632455556677889************66654.433..222222..222222.......111224445555555555333333 PP
+
+      mTOR_dom  102 shhtavvqaimsifk 116 
+                      ++++++++++ ++
+  CAD2215204.1 1063 AVCSQALRTLLQYMR 1077
+                    444444444443333 PP
+
+  == domain 5  score: 0.7 bits;  conditional E-value: 0.12
+      mTOR_dom   86 vvinaLlkilkdp.slsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142 
+                    +v+  L++ +++p +l + + + + a ++i+   +lk+v++ + +++ + +++r+c+ 
+  CAD2215204.1 1217 IVFPMLIHFVQQPeQLVEVRGQSLCAAVHIVC--DLKVVQYFSSLMHGMRTLVRHCQV 1272
+                    45556666666551455777777778888887..499999999999999999999975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      10365  (4280187 residues searched)
+Passed MSV filter:                       603  (0.0581766); expected 207.3 (0.02)
+Passed bias filter:                      482  (0.0465027); expected 207.3 (0.02)
+Passed Vit filter:                        45  (0.00434153); expected 10.4 (0.001)
+Passed Fwd filter:                         5  (0.000482393); expected 0.1 (1e-05)
+Initial search space (Z):              10365  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.05u 0.03s 00:00:00.08 Elapsed: 00:00:00.10
+# Mc/sec: 6546.65
+//
+[ok]

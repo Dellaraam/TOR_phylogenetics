@@ -1,0 +1,304 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Excavata/Proteins/Trypanosoma_brucei.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.6e-70  237.0   2.5    3.2e-70  236.0   2.5    1.5  1  EAN78248.1  phosphatidylinositol 3 kinase, putative [Trypanos
+    6.9e-41  139.6   3.0    2.8e-40  137.6   3.0    2.0  1  AAZ10633.1  phosphatidylinositol 3-kinase tor, putative [Tryp
+    4.4e-25   87.6   0.1    9.6e-25   86.5   0.1    1.6  1  AAZ10671.1  hypothetical protein, conserved [Trypanosoma bruc
+    3.7e-22   78.0   5.7    9.2e-22   76.7   5.7    1.7  1  CAJ16242.1  phosphatidylinositol 3-kinase, putative [Trypanos
+    9.7e-20   70.0   0.5      5e-19   67.7   0.5    2.2  1  EAN80414.1  phosphatidylinositol 3-related kinase, putative [
+     0.0091   14.2   0.2       0.01   14.1   0.2    1.1  1  EAN80560.1  tubulin binding cofactor A, putative [Trypanosoma
+  ------ inclusion threshold ------
+      0.057   11.6   1.5       0.18   10.0   0.3    2.2  2  EAN78071.1  hypothetical protein, conserved [Trypanosoma bruc
+       0.07   11.3  12.3        0.1   10.7   0.3    5.0  6  EAN76789.1  hypothetical protein, conserved [Trypanosoma bruc
+
+
+Domain annotation for each sequence (and alignments):
+>> EAN78248.1  phosphatidylinositol 3 kinase, putative [Trypanosoma brucei brucei TREU927]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  236.0   2.5   2.9e-73   3.2e-70       1     342 [.    1449    1771 ..    1449    1772 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 236.0 bits;  conditional E-value: 2.9e-73
+                  CCCTTCCCCTSSSGHHCCCCT....TSSSS--...CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHH CS
+         FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdka...ffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqyk 94  
+                  a++ a+aaW l  Wd+me+ +s+m++++++++   f++a la ++++f+eae+li+++r+ ++ +lsal+ esy raydl+v +Qql+Elee+++  
+  EAN78248.1 1449 ASMGAHAAWLLRRWDDMEHITSFMSDEDYTGTtalFYKATLAARKKRFREAEKLIDMCRKRVDSKLSALVAESYDRAYDLFVGIQQLSELEELAMAT 1545
+                  5799*********************9999999999************************************************************** PP
+
+                  CSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT...........T CS
+         FAT   95 qklssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp......p 185 
+                  +   ++++ +++++ W++Rl++++  +e w   l++++l++ p+++       ++mwl+f++l+R +g+ s++ ++L++ll++++ e++       p
+  EAN78248.1 1546 S---DPQSAMHWRQLWERRLSVMA--YEGWPGTLANHTLLVPPSSE-------IDMWLRFVSLSRAHGQGSVSTEVLRELLGNQSIESAIengiptP 1630
+                  *...8*******************..********************.......********************************44444467789* PP
+
+                  SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCC CS
+         FAT  186 evvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpsw 282 
+                   v + ++++l++++++++a+ +L+  vs++             + +++++  ++ +a c++k++ewl + +k++++e++ ++i+++ ++ateld+s 
+  EAN78248.1 1631 AVAMGSFQHLYETNQRDSAIARLQLYVSKVEG-----------SGAQHVSREREDMAVCHAKLAEWLVHQKKAHRTEDELQKIFHHLRRATELDKSN 1716
+                  ****************************5544...........3789************************************************** PP
+
+                  HSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+         FAT  283 ykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlL 342 
+                   ++w t+a+++ e+ +k +++++   ++ +s ++++a++ +l+s+sls+e  l+d+l +L
+  EAN78248.1 1717 GSIWRTLARVHREAATKPADGSD---SSGASGHIMEALSAYLRSVSLSEE--LEDALGFL 1771
+                  ******************88866...78999*******************..88887776 PP
+
+>> AAZ10633.1  phosphatidylinositol 3-kinase tor, putative [Trypanosoma brucei brucei TREU927]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  137.6   3.0   2.5e-43   2.8e-40       4     343 .]    1451    1762 ..    1448    1762 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 137.6 bits;  conditional E-value: 2.5e-43
+                  TTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.. CS
+         FAT    4 aaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls.. 98  
+                  aa a+ rl+ Wd +e+++    +d+   ++ +a l++h+++++ea + i+++r+ll+++ls l + sy+ray+ lv  Q l+Eleei+++k+++   
+  AAZ10633.1 1451 AADASIRLQAWDTLEDTTRWQLNDTVSYHVSRAALSIHKRRYEEATSAINEGRKLLLEDLSGLLHQSYTRAYEGLVIAQKLSELEEIVTVKRAEVvs 1547
+                  667777999***********************************************************************************99999 PP
+
+                  ---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT...............T CS
+         FAT   99 sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk...eewlp.......p 185 
+                  s + l+++l+ W +R +++ + v++w+ +l vR l++ p ed       +++ l+f+nl+R+ +  +     L +ll+++    e   +       p
+  AAZ10633.1 1548 STHHLSRVLRLWSQRIEMMSSTVSAWKEVLGVRGLLIPPGED-------VATRLRFVNLCRREKAKQHERFILCQLLGYRCptsE---QlmhsnanP 1634
+                  ******************************************.......*******************************95441...323456677 PP
+
+                  SSCCCHHHHHHHCCH.HHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCC CS
+         FAT  186 evvyaylkylwakge.qkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldps 281 
+                  +vv++y+ +l a+ge   +  + L+  +             + +++  + +e++ ll+ +y+++G+             + +e++q+y+aat ++p+
+  AAZ10633.1 1635 RVVMQYISFLSANGElGPKSSYGLERDLL------------KRMIDTHSRNENAFLLSSAYARLGS----SA-------ELSEAVQCYKAATTYCPK 1708
+                  88888888888888863444445544444............2233445566677788999999998....33.......3889************** PP
+
+                  CHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS..STTTCHHHHHC CS
+         FAT  282 wykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse..kslqdllRlLt 343 
+                  w +aw + a  n e+l            +d+      a+eg+++s++l+++   + qd+l+lLt
+  AAZ10633.1 1709 WFHAWRMFAESNAEMLDVT--------FSDA--TCAAAIEGYIQSIKLGNSdsTIIQDVLKLLT 1762
+                  ****************999........4444..5999**************98999*******8 PP
+
+>> AAZ10671.1  hypothetical protein, conserved [Trypanosoma brucei brucei TREU927]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   86.5   0.1   8.8e-28   9.6e-25       2     342 ..    1588    1902 ..    1587    1903 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 86.5 bits;  conditional E-value: 8.8e-28
+                  CCTTCCCCTSSSGHHCCCCT....TSSSS--..CCCHCCC.CHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHC CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdka..ffeaila.lhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykq 95  
+                  pl a+aa  lg Wd+ +e +    +++  +   ++e + + ++++ + e+ +++++ r++l  +  +   esynr yd+lv lQ +  +ee++++ +
+  AAZ10671.1 1588 PLKAKAALWLGRWDEFDEVV---GQPGVMERldMVERCASlFRQKHYGELLDYVDEHRKSLFDSFFESFTESYNRSYDTLVELQHVRHFEELVSFVK 1681
+                  55666665577777777775...33333333346777777355599*************************************************** PP
+
+                  SS----TTTTTTT----TTS-TT.TGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT...........T CS
+         FAT   96 klssseelksllktWrkRlpgvq.ddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk..eewlp....p 185 
+                  +   se++k+l++ W kR   +  ++ +++  ++++ slvlsp+ed           +  ++   k++ +slA  +L+ ll+ +      +     p
+  AAZ10671.1 1682 S--GSERRKMLRELWHKRVTLMSsRPAHIK-TLITINSLVLSPQED-------LPSQVVCVRALTKHHWTSLADHTLSTLLHPNGlnT--RLanldP 1766
+                  7..9***************88876888888.9**************.......***************************99999532..224689* PP
+
+                  SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCC CS
+         FAT  186 evvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldps 281 
+                  +v++ y+k+ + +  ++e++  L + ++++       +             ++++  + c l++Gew+ +l       ++  ++ +  ++at+l+p+
+  AAZ10671.1 1767 DVIHVYMKHCYVTRGKQETYTLLSDILNNV-------QLT--------ATSNRAEAwGCCWLLLGEWTVQLFP-----DCGTKAIETLRTATQLCPE 1843
+                  ***********************9999933.......222........2234555669***************.....68***************** PP
+
+                  CHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCC.HHHHCCT..CCHHHHTTTS...STTTCHHHHH CS
+         FAT  282 wykawhtwalfnfevlskeeekkeeeepedls.eyvvpavegflkslslsse...kslqdllRlL 342 
+                     a+h+++ ++    ++   +      ++++ ++ +++++  +k+++ls      +++d+lR+L
+  AAZ10671.1 1844 NCAAFHSLGILHYDLSRDPNTS------QETQtKHHIESITALFKAVALSRResnGVMEDVLRIL 1902
+                  **********999999999444......3333379999************986656789999998 PP
+
+>> CAJ16242.1  phosphatidylinositol 3-kinase, putative [Trypanosoma brucei brucei TREU927]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.7   5.7   8.4e-25   9.2e-22       4     343 .]    1919    2277 ..    1916    2277 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 76.7 bits;  conditional E-value: 8.4e-25
+                  TTCCCCTSSSGHHCCCCT.............................TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCC CS
+         FAT    4 aaeaaWrlgqWdsmeeylslmk.........................kdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsgesynra 74  
+                   a aaW lg+Wd+++  ++ +                          + ++d+ + +    l +  q+++++  i +a+  ++++l  l   sy+ a
+  CAJ16242.1 1919 GAMAAWILGKWDDVKMLIERLPnkekgnitlrhffqnatlfhqefgcRAQWDCGVQDGQRRLETsPQVEALRASIMRAKMEVDESLKTLLPLSYAHA 2015
+                  5789*****************9999999999888888777777777777777777777777888899****************************** PP
+
+                  HHHHHCCCCCHHHCHHCCHHCSS----TTTTTTT----TTS-TT.TGCCCTTTCCCCTCCCHCCCHC..............HHCCS-STTCCCCCCC CS
+         FAT   75 ydllvrlQqlaEleeiiqykqklssseelksllktWrkRlpgvq.ddvevwqdilsvRslvlspied..............lllkgakaemwlkfan 156 
+                  y+ l  lQ  +E+ee i+y++ ++++e + +l+++W++R   ++ d++    + l+++slvl+ +e               +               
+  CAJ16242.1 2016 YENLTMLQHFTEMEEHIAYME-SRTEEFRGQLRERWNRRFAALKpDSLMPNLRSLMLHSLVLNASEMsvmvvnfcertgtnY--------------- 2096
+                  *********************.58********************999999999**********9988555555544444441............... PP
+
+                  CHCHHHHCCSTTHHCCCCCHCTT........................TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...... CS
+         FAT  157 laRksgrlslAekaLkklleedk......eewlp.............pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnl 234 
+                         ++l++ a+  l++ +       +   +             p v ++y+   w+ g++++a+q ++ f+++        +        ++l
+  CAJ16242.1 2097 -------PQLSKWAMEWLKQGKFpranhlS---QschvlpatpvslePCVAITYIGQVWSGGQRQKAVQLMENFLEE-------TH--------STL 2168
+                  .......45555555444333323332220...133334444445569****************************2.......23........345 PP
+
+                  .....HH.HHCCCTCCCCCCC.CCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCC.HHHHCCT..CCHHHH CS
+         FAT  235 eeftkll.arcylkkGewlaa.lqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedls.eyvvpavegflksls 328 
+                  ee++    + + l++G+w ++ + +  w++e+++e+l ++++a++  p++ +awh+w+l+n +v ++  + ++ e     +  +v  a +gf  ++ 
+  CAJ16242.1 2169 EEQQPAAyGVAQLRLGMWKQEmFADSFWKVEHRQEVLRHFHEAVRAVPGSCEAWHSWGLMNYRVQQRDCSLSRYE-----QrLFVEAAHQGFVAAIC 2260
+                  555556669999*****9766156667*************************************99997775543.....33589999999999997 PP
+
+                  TTTS..STTTCHHHHHC CS
+         FAT  329 lsse..kslqdllRlLt 343 
+                   s +   +l  + RlL+
+  CAJ16242.1 2261 RSASpsTALPGVMRLLQ 2277
+                  77776688888888885 PP
+
+>> EAN80414.1  phosphatidylinositol 3-related kinase, putative [Trypanosoma brucei brucei TREU927]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.7   0.5   4.6e-22     5e-19       2     342 ..    1968    2312 ..    1967    2313 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 67.7 bits;  conditional E-value: 4.6e-22
+                  CCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS- CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls 98  
+                  ++a eaaWrlg+Wds++   +l  +  +    ++ +l+ +r+++ ++   +   r  +   ++a   esy++ y+ +v l++l+++e+++     + 
+  EAN80414.1 1968 NYANEAAWRLGEWDSVQARQDLPVSLALPMVALNKMLK-RRGTLHDVFAACLFQRMKIAPIIRAACRESYAQVYPHVVFLHALTDIESAAVAVATSM 2063
+                  67889**********88887778899999999999999.7766666666666668888999*****************************9999877 PP
+
+                  ....................---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCC CS
+         FAT   99 ....................sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkkll 175 
+                                      + +++++l  t+++R + + + ++ ++ +ls+++ ++   +    ++   ++w++ ++l R+ g l+ A +a k++ 
+  EAN80414.1 2064 aqvspdpsdpvvsfratglrDTKKMQELGPTLQRRASLTETTLDTQELLLSLHRSIFRAFSM---EEEVSKTWMSHVKLLRNEGFLEPALSAVKQAS 2157
+                  99******************99***********************************66655...66699**************************5 PP
+
+                  HCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHH CS
+         FAT  176 eedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqa 271 
+                   ++k     p++  + +k+l++ + +k+a++  ++ +s    +                e +  ++ a+   ++  w + ++      ++++e++ +
+  EAN80414.1 2158 LNNK--FTSPSYWTTPAKLLYEMNMSKQAIEFAEDAAS----D----------------ESIPPEIrAKLRVLLTRWKQDISY-----QTPQEVVDS 2227
+                  5555..333899999******************99999....2................234566778889999******999.....46******* PP
+
+                  HHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH..SSSS................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+         FAT  272 ysaateldpswykawhtwalfnfevlskeeek..keeee...............pedlseyvvpavegflkslslssekslqdllRlL 342 
+                  y +a  ++p ++ka+h++alf++ v+  + ++  +  ++                e +++yv  a+++f  +l+l+ + +l +l+R+L
+  EAN80414.1 2228 YELALVMHP-SEKAHHHLALFYETVYHSVHSSllQ--SSsdaakstretferkeVEAVETYVLLAIKHFGMALQLGCKTVLISLPRML 2312
+                  *********.9******************999553..3345799999999999666777****************************9 PP
+
+>> EAN80560.1  tubulin binding cofactor A, putative [Trypanosoma brucei brucei TREU927]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.1   0.2   9.3e-06      0.01     170     228 ..      54     114 ..      26     127 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 14.1 bits;  conditional E-value: 9.3e-06
+                 HCCCCCHCTT.....TSSCCCHHHHHHHCCH..HHHHSSCCHHHHCCTSSCCCSS-SS--- CS
+         FAT 170 aLkklleedkeewlppevvyaylkylwakge..qkealqkLrefvscllekkeelssglev 228
+                  L ++++ +++ +++ e v+a+++++++ +e  ++ a++ L++f+  + +++ee     ++
+  EAN80560.1  54 RLESIRDTNPDRVKQQENVIAEAQMMIPHSEnrVRAAIKDLQDFLDTHENDAEEGELMQDA 114
+                 488999999988888999********99999878************999987644433333 PP
+
+>> EAN78071.1  hypothetical protein, conserved [Trypanosoma brucei brucei TREU927]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.0   0.0      0.34   3.8e+02     315     334 ..      41      60 ..      32      66 .. 0.84
+   2 ?   10.0   0.3   0.00016      0.18     271     306 ..      85     120 ..      78     160 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: -1.0 bits;  conditional E-value: 0.34
+                 HHHCCT..CCHHHHTTTSST CS
+         FAT 315 yvvpavegflkslslsseks 334
+                 +  +a++++ k+l l s+++
+  EAN78071.1  41 FYLSAIRCYTKALDLDSSSA 60 
+                 66789*********999864 PP
+
+  == domain 2  score: 10.0 bits;  conditional E-value: 0.00016
+                 HHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSS CS
+         FAT 271 aysaateldpswykawhtwalfnfevlskeeekkee 306
+                     a++ldp+wyka+ + a++ f ++++ee k+  
+  EAN78071.1  85 DAEHAVRLDPGWYKAHLRVADAQFGRKKYEEAKAAY 120
+                 556899**********************99887554 PP
+
+>> EAN76789.1  hypothetical protein, conserved [Trypanosoma brucei brucei TREU927]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.0      0.49   5.4e+02     262     300 ..      40      78 ..      30     133 .. 0.66
+   2 ?   -3.9   0.0       2.6   2.9e+03     185     227 ..     397     440 ..     387     461 .. 0.62
+   3 ?   10.7   0.3   9.5e-05       0.1     145     276 ..     526     652 ..     498     660 .. 0.74
+   4 ?    3.0   0.3     0.022        24     148     274 ..     790     915 ..     703     926 .. 0.63
+   5 ?    1.1   0.0     0.083        91     147     198 ..     991    1041 ..     967    1073 .. 0.77
+   6 ?   -2.1   0.0      0.79   8.7e+02      26      58 ..    1229    1262 ..    1215    1269 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 0.49
+                 ...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+         FAT 262 eekseeilqaysaateldpswykawhtwalfnfevlske 300
+                 + +++e+l  y++a++++ +++ a +  +l + + + +e
+  EAN76789.1  40 QGQPNEALREYKSAQQHRETVIPALMGIVLIYRRSKDTE 78 
+                 345778888888888888888777777777776666666 PP
+
+  == domain 2  score: -3.9 bits;  conditional E-value: 2.6
+                 TSSCCCHHHHHHHCCH.HHHHSSCCHHHHCCTSSCCCSS-SS-- CS
+         FAT 185 pevvyaylkylwakge.qkealqkLrefvscllekkeelssgle 227
+                 pe+   ++ ++w + +  ++al  L + ++   ++ ++ ssgle
+  EAN76789.1 397 PELSALNAILQWRRHRnESKALHFLDQTAEAIRQEVGSGSSGLE 440
+                 45555555566666664556666666666666666666666655 PP
+
+  == domain 3  score: 10.7 bits;  conditional E-value: 9.5e-05
+                 S-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.SS-SS---...........HHH CS
+         FAT 145 gakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.elssglevqeptnleeftklla 242
+                 +a  ++ l +a+++   g++slA +aL ++l  d e   +p + + y  +l   +++keal+ L+e ++ + ++k+    +g  v +p ++++      
+  EAN76789.1 526 HAIPDAFLLSAQICQYVGNVSLASQALEQALTLDFEVKDQPLYNLLYGSVLGMMNKHKEALEALQEALK-VVKDKShVTAKGRLV-QPLSVQDHVS--- 619
+                 5556778889************************955555999**************************.555554233344333.3333333333... PP
+
+                 HCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCH CS
+         FAT 243 rcylkkGewlaalqklnwseekseeilqaysaat 276
+                   yl+ ++   +l+++++++++  e+++ +++ +
+  EAN76789.1 620 -LYLLIAQTHLKLHDAEEARATVAEATALFKDTA 652
+                 .366666666666666666666777776666655 PP
+
+  == domain 4  score: 3.0 bits;  conditional E-value: 0.022
+                 TTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT................TSSCCCHHHHHHHCCH...HHHHSSCCHHHHCCTSSCCCSS-SS---.... CS
+         FAT 148 aemwlkfanlaRksgrlslAekaLkklleedk.eewlp..........pevvyaylkylwakge...qkealqkLrefvscllekkeelssglevqept 232
+                 +++    a l +  g ++ A+ +Lk++  +++ ++  +           +  +  +k+   +++     eal++ r f + +l ++       +  e +
+  EAN76789.1 790 FAVRADLATLFWHLGAVDHAIAVLKEAPAYQSePD--VgegvdraierVNCALLMCKINRNTQNadlAAEALLQARGFQEHVLRNM-------MRNETR 879
+                 55666666777777777777777777766666422..1224443332223333333443333332223555555555555444432.......222333 PP
+
+                 .......HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHC CS
+         FAT 233 nleeftkll.arcylkkGewlaalqklnwseekseeilqaysa 274
+                 +  +++k++ a + l++G + a++++        e + ++y++
+  EAN76789.1 880 ETIYQQKVVaATISLELGRYYASVGE-------VERAKECYQE 915
+                 33444455558888888888888888.......4444444444 PP
+
+  == domain 5  score: 1.1 bits;  conditional E-value: 0.083
+                  STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.........TSSCCCHHHHHHHC CS
+         FAT  147 kaemwlkfanlaRksgrlslAekaLkklleedkeewlp....pevvyaylkylwak 198 
+                  + e+ +++++l R +grls A+ +L ++     e++l+    p++ ++ ++ l+++
+  EAN76789.1  991 NYEALVQYVQLLRHAGRLSDAKIVLERA-----ESMLDvgqrPDAALSFARGLYHR 1041
+                  5789999******************999.....33444444677777777666654 PP
+
+  == domain 6  score: -2.1 bits;  conditional E-value: 0.79
+                  TSSSS--.CCCHCCCCHH--CCHCHHCCCHCCCC CS
+         FAT   26 kdspdka.ffeailalhrnqfdeaeeliekarql 58  
+                  +ds ++a +++a++++++++++ a+++++ka +l
+  EAN76789.1 1229 SDSVHRArLLSAHMSVQKKDVKMAKMMLQKALEL 1262
+                  5566666688888888888888888888877665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       8758  (4387069 residues searched)
+Passed MSV filter:                       563  (0.0642841); expected 175.2 (0.02)
+Passed bias filter:                      229  (0.0261475); expected 175.2 (0.02)
+Passed Vit filter:                        27  (0.0030829); expected 8.8 (0.001)
+Passed Fwd filter:                         8  (0.000913451); expected 0.1 (1e-05)
+Initial search space (Z):               8758  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.09u 0.03s 00:00:00.12 Elapsed: 00:00:00.06
+# Mc/sec: 22502.73
+//
+[ok]
