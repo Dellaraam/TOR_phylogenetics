@@ -1,0 +1,377 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Amoebozoa/Proteins/Acanthamoeba_castellanii.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+     2e-235  783.6   0.2   1.7e-155  518.8   0.1    3.0  3  ELR24886.1  cytosolic regulator of adenylate cyclase [Acantha
+     5e-217  722.7   0.7   1.8e-133  446.0   4.0    2.0  2  ELR13240.1  developmental protein [Acanthamoeba castellanii s
+   3.4e-152  507.9   0.9      7e-63  212.1   0.0    3.6  3  ELR16684.1  cytosolic regulator of adenylate cyclase [Acantha
+    1.6e-10   38.7   0.1    1.7e-10   38.6   0.1    1.0  1  ELR21228.1  hypothetical protein ACA1_355740 [Acanthamoeba ca
+     0.0032   14.6   2.0     0.0058   13.7   0.2    1.9  2  ELR21536.1  Armadillo/betacatenin-like repeat domain containi
+  ------ inclusion threshold ------
+      0.014   12.4   0.0      0.024   11.7   0.0    1.3  1  ELR15409.1  Armadillo/betacatenin-like repeat domain containi
+      0.099    9.6   0.2       0.14    9.1   0.2    1.2  1  ELR14212.1  gammaadaptin 1, putative [Acanthamoeba castellani
+       0.78    6.6   4.8        4.5    4.1   2.1    2.5  2  ELR25646.1  Armadillo/betacatenin-like repeat domain containi
+       0.79    6.6   4.9          2    5.3   3.2    2.3  2  ELR12523.1  Armadillo/betacatenin-like repeat domain containi
+
+
+Domain annotation for each sequence (and alignments):
+>> ELR24886.1  cytosolic regulator of adenylate cyclase [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  139.3   0.0   4.2e-44   7.1e-41      59     253 ..      28     223 ..       8     226 .. 0.91
+   2 !  518.8   0.1  1.1e-158  1.7e-155     288     958 ..     229     913 ..     227     918 .. 0.89
+   3 !  121.9   0.0   7.6e-39   1.3e-35     956    1135 ..    1013    1181 ..    1009    1189 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 139.3 bits;  conditional E-value: 4.2e-44
+  PTHR13298.orig.30.pir  59 lnellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylis..dskvlrrllrlgldiliarsLdrdsknetEreqal 144
+                            ln+l  l+++ +++++     ++   +  +l s s  +r+aalR lr +++  ds ++r+l+ +++ ++i+rsL++d+  ++Er++a+
+             ELR24886.1  28 LNALATLAPKIEELSSVVSYAAFFTTMGGALGSGSSTIRRAALRTLRRFMRdgDSDFVRHLVFYQVAYFISRSLEKDKGTTAERVEAM 115
+                            55556666666666555555556667889**********************9************************************ PP
+
+  PTHR13298.orig.30.pir 145 kliramlevapkliptaivralvaiaeseedrlrraclatlcelallnpelvaeagglrvlldallecqlperiaesllavllyllnr 232
+                            +++r+++e++p l p++i+++l ai+e+++d+++r++l tl+ la++n + va++gg+r+ll+al+++ + ++  +slla +ly+ln+
+             ELR24886.1 116 RVVRRLVEIDPVLTPRCIIQSLLAIVETRDDSFVRIALDTLALLAVQNIKGVAQCGGMRTLLNALVDPTF-SDQHDSLLAGVLYILNH 202
+                            *******************************************************************777.67778************ PP
+
+  PTHR13298.orig.30.pir 233 pstrkylragvdlekllapft 253
+                            p++r ylr++ dl+ ++a +t
+             ELR24886.1 203 PQNRAYLRPHTDLRGVFAALT 223
+                            ******************999 PP
+
+  == domain 2  score: 518.8 bits;  conditional E-value: 1.1e-158
+  PTHR13298.orig.30.pir 288 LrSWaGllylckndkrgLkslvdvlrlpnlevrkaildlLydlLrlkepkwtesftsgsalkavdsaal.qdswrlsdgfvaeeskti 374
+                             +SW+Gl+yl  +d++g +slv +l+lp++e  + +ld +   + l+++ ++e f +++a + +++++   d++ l  g        +
+             ELR24886.1 229 AKSWTGLIYL-SSDPSGMRSLVLSLTLPFPELHELVLDGIMAMFHLPAAAGKEAF-ARRASTEAGRTSGpSDHLGLGVGL-------D 307
+                            69********.5578****************************************.558888888888767888777776.......5 PP
+
+  PTHR13298.orig.30.pir 375 lpssarsrp.dlldnylallLlalieagLleaLvevi.................................................ts 412
+                            lps++ s++ +ll nyl+++L++l+++gL++aLv++                                                  + 
+             ELR24886.1 308 LPSRTFSDRpNLLYNYLGMVLVILVDCGLIQALVKLGqdkddlpnftppvfskgeereggekekedkdkekvsreksssspppperQV 395
+                            7888877777***************************888888888888888888888877777777777766665544444444322 PP
+
+  PTHR13298.orig.30.pir 413 sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfssekskrnraaaalalksldelkrsksksaslyldeilqkkll 500
+                            +++ +++kAt+LL+ell+l++ lLP + +a+l++lp+l+ +a sf++++  r  a+a+  + +l+++++ k  s   + +++    + 
+             ELR24886.1 396 HNAEIATKATVLLAELLHLSHFLLPTSQCARLQTLPELMCSAVSFNLTRGVRMSASAM--VGNLHQFSHIKGESSF-FDFHLSL--IV 478
+                            7777*****************************************************9..8888888766554432.3333333..45 PP
+
+  PTHR13298.orig.30.pir 501 ersssnssedskrkrlrq........iledddeafkrmlkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLls 580
+                            + ++++++ + +++rl+         ++ +dd+++   l+ +q+l tkdy++W w + +e+legpl  np++l+ a  +tkf+kr+ls
+             ELR24886.1 479 TGANKWRRLKGRNRRLDRiddvkkkiDWGMDDKQLLARLQQTQILATKDYSRWEWYTVTEILEGPL-RNPTHLSTAL-QTKFIKRILS 564
+                            57777777777777776677777778****************************************.*******666.999******* PP
+
+  PTHR13298.orig.30.pir 581 FykPskkrfssidktkqlekyvqvgcqllslLlsspeGialleesr.lLkelleelsqelldsssekspderlfskerlsttlsqgyf 667
+                            F++Ps+++fs +++t ++ kyv+v+c ll++Ll+  eG ++lee++ l+ ++++ l+ e++ +    ++  rl+s+er+ +t++++yf
+             ELR24886.1 565 FLRPSNLLFSAQSWTVPNMKYVRVACLLLEVLLAESEGYKYLEEKNpLVFQIADLLRVEVEGVP--DKNGPRLLSPERVLKTMAREYF 650
+                            ********************************************99***********9764333..333447**************** PP
+
+  PTHR13298.orig.30.pir 668 lfiGvLsstkeGlkiLeklnifqlllqlislktrdelvklivssLdysld.gesRvilskaLtsssesiRlyatkhLrvllraessdf 754
+                            +++G+Lsst++Gl++++k++if++l+++ +l++rd+l+ li++sLdy+++ g+sRvilskaLts+s+ +R  at+h+rvllra++++f
+             ELR24886.1 651 TMLGTLSSTERGLELMKKFKIFNYLKSMTELQGRDDLSFLILTSLDYNISgGHSRVILSKALTSQSKVVRFLATRHMRVLLRAGVANF 738
+                            ************************************************9846************************************ PP
+
+  PTHR13298.orig.30.pir 755 sdWgielLvtqlydpskevakaAlkiLeeacedkanileylvslkpsll..hlgdkgelLllrflstpkGfrylkee.nyvekelekW 839
+                            s Wgie+Lv              l++L+ea+ d++++l+ l+s +p+ +   +g+ g+ Lllr+lst++G++yl+ e ++++  l++W
+             ELR24886.1 739 SAWGIEFLVIGM----------SLSVLDEAV-DEEECLDCLISKQPASVlaAIGRPGRDLLLRLLSTEAGLEYLSREnDFISGALQYW 815
+                            ********9776..........9********.77777*********9777799999*********************9********** PP
+
+  PTHR13298.orig.30.pir 840 aeernaeYvllvEealsealtlltreedgsdsrrrsngpdsslrnrksvilPpHLygeLakteeGcelLekkghleelaetirshgle 927
+                             e +n eYv++++ alsea+++      gs +  +            +vi+PpHLygeLakt++Gc +L+++ h  el++++r+    
+             ELR24886.1 816 KETGNLEYVTALDDALSEAFSA-----PGSEYLTK------------HVIIPPHLYGELAKTAKGCGILKQSAHHLELLAVLRD---- 882
+                            **********************.....55555544............4************************************.... PP
+
+  PTHR13298.orig.30.pir 928 dseeilklkaalWAlghigsselGlelleee 958
+                             s+  l  + a+WAlghi+sse Gl+ll+e+
+             ELR24886.1 883 VSQPPLARRTAMWALGHIASSEFGLKLLDES 913
+                            9999************************994 PP
+
+  == domain 3  score: 121.9 bits;  conditional E-value: 7.6e-39
+  PTHR13298.orig.30.pir  956 eeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrnaliGlciPsdvne..lfsipehqqsssae 1039
+                             +e  e+++e ++++ae+  ++ vrGt++yv+g+++ teqg++ Le++gW++ +h ++++   ++P d+ +  + +i+e+++ ++  
+             ELR24886.1 1013 RE-AENVVEALVRIAETDGCFAVRGTAVYVIGMVSGTEQGRQRLERFGWDTPCHVNSHV---SLPRDIRStpFLRIDENEYIDVFV 1094
+                             44.467****************************************************9...******873367777777777777 PP
+
+  PTHR13298.orig.30.pir 1040 sapitdekpeeiktslkyptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpelfddpclfsevlkllseyrfrlqaRrfiq 1125
+                             ++++++   e+       ++++ +r+ei+  v+nLsn+++a+ a+++L++ k k+p  f +  l +e+l++l++yrfrl++Rrf++
+             ELR24886.1 1095 APESET--GEA-------QGKESIREEIILWVTNLSNHITAERAMNALKRAKVKHPSEFRKAALAKEILQMLERYRFRLPVRRFVY 1171
+                             776655..433.......45699*************************************************************** PP
+
+  PTHR13298.orig.30.pir 1126 elfddavlls 1135
+                             +l+dd+ + +
+             ELR24886.1 1172 SLLDDSAFDR 1181
+                             ******9965 PP
+
+>> ELR13240.1  developmental protein [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  446.0   4.0  1.1e-136  1.8e-133      37     732 ..      42     726 ..      15     730 .. 0.84
+   2 !  271.2   0.0     6e-84     1e-80     766    1137 ..     749    1097 ..     740    1102 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 446.0 bits;  conditional E-value: 1.1e-136
+  PTHR13298.orig.30.pir  37 dsiekkleslnnliklkaaakklnellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylisdskvlrrllrlgldi 124
+                             +  +kl             + l++l+ l++++  +  +++   +v c+rsl+  +   vr  alR+lry+  d  ++r++ ++++  
+             ELR13240.1  42 SNLCQKL-------------DALKALCTLSTSMTQL-AESFSRRVVLCIRSLVSFPRLVVRVQALRALRYMTVDPLFVRHVTASRTAL 115
+                            3333444.............4555555555555555.4555555555************************99*************** PP
+
+  PTHR13298.orig.30.pir 125 liarsLdrdsknetEreqalkliramlevapkliptaivralvaiaeseedrlrraclatlcelallnpelvaeagglrvlldalle. 211
+                            l+arsL+r+++ + Er+qa++ + +m++v+p  i++aiv alva+aes +d  r ++l+ lc la++np++va  +g+r++++a  + 
+             ELR13240.1 116 LLARSLEREKEDSPERIQAFRAVYRMIDVGPMYISRAIVSALVAVAESTDDPIRAIALEALCCLAITNPRVVALNNGIRTIFKASADl 203
+                            ***************************************************************************************5 PP
+
+  PTHR13298.orig.30.pir 212 cqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyra........kkdkqeskskeerelsrleaskkailtlLrSW 291
+                             +   ++++sll ++lylln+p++r y+r  +dl++llap+td++ +          kd +++k+++e+  +    + +a+ +lL++W
+             ELR13240.1 204 DH--VQMQDSLLNTVLYLLNEPACRPYVRLSCDLQCLLAPITDTDPEVlppktgdaAKDAEKEKAAKEQCRAGRVVCLDAVGALLKNW 289
+                            44..58999**************************************999886544222222222222222233457799******** PP
+
+  PTHR13298.orig.30.pir 292 aGllylckndkrgLkslvdvlrlpnlevrkaildlLydlLrlkepkwtesftsgsalkavdsaalqdswrlsdgfvaeesktilpssa 379
+                            aGl+ +   d+ +L+slv+ lr         il+++++++    p+ ++s++ +s++ a ++++++d++  + ++         +  +
+             ELR13240.1 290 AGLISF-AADPLALRSLVETLRE-------LILAMIFSVFGMLVPQDKDSWMFSSRQGAQSTKSFKDHTVNTLHN--------PSRVY 361
+                            ******.44689*******9965.......5******************99667888888888885444333333........24557 PP
+
+  PTHR13298.orig.30.pir 380 rsrpdlldnylallLlalieagLleaLvevits.......sdss.............vsvkAtiLLgellslantlLPpelsaslhsl 447
+                            ++rp+l++ y++ lL+a++++gL+eaLv++ ++          +             +  kAtiLLg+ll+++  lLP+   a+l++l
+             ELR13240.1 362 SERPNLVNMYRSALLIAFVNCGLVEALVDMGKEqveeqqdV--CvvsqpggvsgnlgLGFKATILLGDLLQMSPSLLPRVQVARLQTL 447
+                            7788***************************8877665440..14444555555556**********************88******* PP
+
+  PTHR13298.orig.30.pir 448 ptlvslaasfssekskrnraaaalalksldelkrsksksaslyldeilq.......kkllersssnssedskrkrlrq........il 520
+                             tlvs+a sf  + + r+ +++  +++ l++  +s+  sa+ y+   +        ++l+ r+++ +                   + 
+             ELR13240.1 448 ATLVSHAVSFVEHPKVRSSTST--IISHLHQCAQSRQGSAKDYSGASVVtsgasryRRLKGRDRKLD----------RiddvrakvDY 523
+                            **********544444444444..5999999999999999999888777334433333333333333..........23346666699 PP
+
+  PTHR13298.orig.30.pir 521 edddeafkrmlkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPskkrfssidktkqlekyvqvgcql 608
+                             ++ ++f++ l+ +qvl tk+y+kW+wdli e legpl  np ++  a++ t f+kr+lsF+kP+ k + + + t    kyv+++c  
+             ELR13240.1 524 SMEPSQFMQKLQQTQVLATKEYTKWDWDLIEETLEGPL-RNPVHFTTATQRTTFIKRILSFLKPNDKSIMKESHTVTFCKYVRIACLC 610
+                            **************************************.*******999*********************999999999********* PP
+
+  PTHR13298.orig.30.pir 609 lslLlsspeGialleesrlLkelleelsqelldsssekspderlfskerlsttlsqgyflfiGvLsstkeGlkiLeklnifqlllqli 696
+                            ++lLl+s+ G ++l++++l+++++e +++el      ++ ++r++ ++r+ + ++++yf+++G+Lss+++Gl+++ + +if    +l 
+             ELR13240.1 611 VELLLQSEAGEEFLKQHGLVRKVAELFRDELD-----GKSSARILAEDRVVELMAREYFTLVGTLSSSSRGLELMNQYKIFA---SLG 690
+                            *****************************873.....455789**********************************76666...778 PP
+
+  PTHR13298.orig.30.pir 697 slktrdelvklivssLdysldgesRvilskaLtsss 732
+                            ++++   l+ l ++sLdys+ g++Rv++sk Lts+s
+             ELR13240.1 691 EMQSSSNLSYLSLTSLDYSIGGQARVLISKSLTSTS 726
+                            888888899999**********************87 PP
+
+  == domain 2  score: 271.2 bits;  conditional E-value: 6e-84
+  PTHR13298.orig.30.pir  766 lydpskevakaAlkiLeeacedkanileylvslkpsll.hlgdk...gelLllrflstpkGfrylkeenyvekelekWaeernaeY 847 
+                             l d++ +v + Al  L+eace+ ++ l+  v+++psl+  lg k    + L+l++lst++Gf+yl e +y+e el kW  e++ eY
+             ELR13240.1  749 LGDEHAKVFQMALTSLDEACETPEC-LDTFVKCRPSLSlLLGSKnrvASDLILKMLSTEAGFEYLLEAGYLESELAKWKAEGYVEY 833 
+                             6799****************99999.************755654235889************************************ PP
+
+  PTHR13298.orig.30.pir  848 vllvEealsealtlltreedgsdsrrrsngpdsslrnrksvilPpHLygeLakteeGcelLekkghleelaetirshgledseeil 933 
+                             +l++Ee+l+   ++       ++  r +++p           +PpH+yg Lakt  G elL  +gh++++a+++r++    s   l
+             ELR13240.1  834 MLKLEESLEVMASK-------GKIWRPEDKP--------ALDVPPHFYGDLAKTVLGSELLAVSGHMRHFAAVLRNKT--GSTPAL 902 
+                             **********9999.......3333333333........478**********************************44..556789 PP
+
+  PTHR13298.orig.30.pir  934 klkaalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrnaliGlci 1019
+                             + +aalW lgh+g+se+Gl++le+  e+l+++i++lae++++ls+rGtc+yvlgli+++++g+  L+ lgWes ++  na   +c+
+             ELR13240.1  903 NQRAALWVLGHVGASERGLRFLEK--EGLLAEIVSLAENADSLSLRGTCYYVLGLISQSPRGRVLLDGLGWESPCN--NAN--ICV 982 
+                             9***********************..67***********************************************8..555..8** PP
+
+  PTHR13298.orig.30.pir 1020 Psdv..nelfsipehqqsssaesapitdekpeeiktslkyptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpelfddpcl 1103
+                             P+d   + lf+i++++++ s+  +p    +       ++yp     r+e l+ + +Lsn++    a+++ ++l++k+pe+f dp +
+             ELR13240.1  983 PKDSasSGLFKIKPSKYEGSRAQLPAASIQGSG----QRYP-AGDPRAECLQQIGALSNPIIVDRASRQVTSLRSKHPEVFFDPGF 1063
+                             **9722569******999999999886654432....2333.46779*************************************** PP
+
+  PTHR13298.orig.30.pir 1104 fsevlkllseyrfrlqaRrfiqelfddavllssl 1137
+                               evl++l+++rfrl+aRr +++l ++a +++++
+             ELR13240.1 1064 VLEVLQMLANFRFRLSARRLVHSLIENAAFTPQV 1097
+                             ******************************8765 PP
+
+>> ELR16684.1  cytosolic regulator of adenylate cyclase [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  110.8   1.1   1.6e-35   2.7e-32     234     446 ..     195     386 ..     123     396 .. 0.81
+   2 !  212.1   0.0   4.2e-66     7e-63     518     842 ..     393     718 ..     384     721 .. 0.86
+   3 !  182.0   0.0   5.2e-57   8.7e-54     886    1135 ..     720     955 ..     716     987 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 110.8 bits;  conditional E-value: 1.6e-35
+  PTHR13298.orig.30.pir 234 strkylragvd.lekllapft.dfhyrakkdkqeskskeerelsrleaskkailtlLrSWaGllylckndkrgLkslvdvlrlpnlev 319
+                               +   ++++ l+ l++p+t  fh +  + + e       +++ + a+ k + ++L+SW+G++yl  +d++gLk++vd+lrlp++e 
+             ELR16684.1 195 RAAQWSGCKQSsLSLLFTPLTdTFHLPKAGYPPE-------QSAVWDACIKTLCVMLKSWTGVIYL-ASDQQGLKTFVDALRLPHPEL 274
+                            555566666666999******6688888777777.......5679*********************.6779***************** PP
+
+  PTHR13298.orig.30.pir 320 rkaildlLydlLrlkepkwtesftsgsalkavdsaalqdswrlsdgfvaeesktilpssarsrpdlldnylallLlalieagLleaLv 407
+                             + ild L+ l+r++    t s   g++ + ++s a                    +s + +r +l+dnyl+ lL+a+i +gLle+Lv
+             ELR16684.1 275 HELILDALNLLFRIPRSAMTLSRGFGRRGSPSESHAE---------Q---------SSEEAQRANLIDNYLSALLMAFISCGLLEVLV 344
+                            ****************888773311223222222222.........1.........12233445************************ PP
+
+  PTHR13298.orig.30.pir 408 evitssdss...vsvkAtiLLgellslantlLPpelsaslhs 446
+                            e+ +++dss   + +kA++LLge+l+l++ l+P + +a+++ 
+             ELR16684.1 345 ELGKTQDSSarkLDEKALMLLGEILHLSDILMPASQCANIQK 386
+                            ****96665566**********************99999985 PP
+
+  == domain 2  score: 212.1 bits;  conditional E-value: 4.2e-66
+  PTHR13298.orig.30.pir 518 q........iledddeafkrmlkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPskkrfssidktkq 597
+                                     ++++d +++   l++s vl tk+y+kW wd+i+e+legpl  np + e + ++t+ff+rLl F++Ps+ +fs++ +++ 
+             ELR16684.1 393 RidgikrkmDWDMDTRQLLAKLQNSGVLATKEYTKWAWDTISEVLEGPL-RNPVHTEYTKTKTNFFERLLTFFRPSSCQFSTLPWSHI 479
+                            23334444599**************************************.*******55589********************996555 PP
+
+  PTHR13298.orig.30.pir 598 lekyvqvgcqllslLlsspeGialleesrlLkelleelsqelldssse..kspderlfskerlsttlsqgyflfiGvLsstkeGlkiL 683
+                            l          l+  +  + G+++l+++ l+ e+   l++ ++    +   +p  +l+  +   ++++++yf++iG+Lsst+eGl+ L
+             ELR16684.1 480 L----------LKPEVPDNIGVKFLKSDPLFSEISAILQAVAE----KipDDPLGALLLTDPPCSNMTCEYFALIGTLSSTHEGLEFL 553
+                            5..........55556666666666666666666655555222....122566778******************************** PP
+
+  PTHR13298.orig.30.pir 684 eklnifqlllqlislktrdelvklivssL......dysldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtq 765
+                            ++++if+ l +l +++++d+l k +++s        + l+g +  +      s+  +i   atkh+r llra++s+fs+W+i++Lv+ 
+             ELR16684.1 554 RSTKIFNWLRTLSEQQGQDQLRKRVLTSSiterlpPFPLNGAPFPLRPHSFPSPATHITSLATKHMRTLLRAGVSNFSVWAIDFLVER 641
+                            ***********************666554488888899************************************************** PP
+
+  PTHR13298.orig.30.pir 766 lydpskevakaAlkiLeeacedkanileylvslkps.llhlgdkgelLllrflstpkGfrylkeenyvekelekWaee 842
+                            l+d++++v  +Al++L+ea+ d+ ++l+  ++ kp+ l++lg++g+ +++rfls+++Gf yl+e+n++ +e+e W+ +
+             ELR16684.1 642 LSDQDRQVTHEALSVLDEAS-DNFECLKSFIEKKPQaLKKLGKEGKNMMIRFLSIEAGFDYLEEINFIGPEVELWRAS 718
+                            ********************.777778888888876266************************************976 PP
+
+  == domain 3  score: 182.0 bits;  conditional E-value: 5.2e-57
+  PTHR13298.orig.30.pir  886 ksvilPpHLygeLakteeGcelLekkghleelaetirshgledseeilklkaalWAlghigsselGlelleeenedliediiklae 971 
+                             ksvi PpH+yg+Lakte+Gc+ L+   +l+e ++t+++    +s   l+ +aalWA+gh+g se Gl++lee   + i  i +la 
+             ELR16684.1  720 KSVIPPPHMYGALAKTEKGCAFLRNGRYLDEVWATLTN----ESVSPLERRAALWAVGHVGESETGLAFLEE--LNAIGYIANLAV 799 
+                             78999*********************************....9*****************************..66********** PP
+
+  PTHR13298.orig.30.pir  972 esevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrnaliGlciPsdvnelfsipehqqsssaesapitdekpeeiktslky 1057
+                             + + l +rGtcfyvlgl++rte+g ++L+ lgWe+ r+++ +   +c P+d++++   ++++  ++ ++a    ++        +y
+             ELR16684.1  800 TVDNLALRGTCFYVLGLLSRTERGKQVLSTLGWETPRTRKTNT--ICMPKDITSRCLLQVKECVYQGSWAVLCANHL-----VCRY 878 
+                             **************************************99998..9*********9999998888888777755554.....3444 PP
+
+  PTHR13298.orig.30.pir 1058 ptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpelfddpclfsevlkllseyrfrlqaRrfiqelfddavlls 1135
+                             +  +  r +i++ + nL++ +++k a+++L++l+ k pe+f + +l + v  ll++yrf+l aRrf++ l d + +++
+             ELR16684.1  879 K-LSDQRHGIITQICNLGSGLTYKGAAQTLKRLRMKSPEMFFSHSLVANVYRLLETYRFSLAARRFVYGLIDGSAHTP 955 
+                             3.467799****************************************************************999865 PP
+
+>> ELR21228.1  hypothetical protein ACA1_355740 [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.6   0.1     1e-13   1.7e-10     813     861 ..       2      50 ..       1      56 [. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 38.6 bits;  conditional E-value: 1e-13
+  PTHR13298.orig.30.pir 813 llrflstpkGfrylkeenyvekelekWaeernaeYvllvEealsealtl 861
+                            ++rfls+++Gf yl+e+n++ +e+e W+ + +++Y   +E++l ea+++
+             ELR21228.1   2 MIRFLSIEAGFDYLEEINFIGPEVELWRASLSIQYAIDIEADLDEAFSE 50 
+                            89*********************************************97 PP
+
+>> ELR21536.1  Armadillo/betacatenin-like repeat domain containing protein [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.7   0.2   3.5e-06    0.0058      92     253 ..      82     258 ..      18     270 .. 0.77
+   2 ?    0.4   0.1     0.036        60     197     254 ..     288     345 ..     262     365 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 13.7 bits;  conditional E-value: 3.5e-06
+  PTHR13298.orig.30.pir  92 eskevraaalRllrylisdskvlrrllrlgldiliarsLdrds.kn.etEreqa....lkliramlev....apkli.ptaivralva 168
+                             +  v+  a  +lr + +  +  +++ +l+   +i+ +++++  k   +E+ +a    l++ +  + v    + ++i +++ v ++v 
+             ELR21536.1  82 THSRVQELACLALRRIAAHASYRNKIADLKGVLYICSAMQNHYnKAsVQEQACAalwnLSIGNSYCPVhhqkNKSRIlSEGGVGCIVE 169
+                            3344555555566666678999999***************99954447788888666666666666669988666666********** PP
+
+  PTHR13298.orig.30.pir 169 iaese..edrlrraclatlcelallnpelva..eagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlekllapf 252
+                              +++      ++++l +l  lal++       ++gg++ ++ a++    ++r++e+++a++ +l  ++ +r+ +  +  ++k++  +
+             ELR21536.1 170 AMKNHpfTAPVQEYALGILWNLALHDKGRTKigKTGGITYVIAAMTNHARSARVQEQACAAIWNLSASELNRQKIDVQSGIQKIVVTM 257
+                            99955124679**************99877557**************9999*************************9999**999887 PP
+
+  PTHR13298.orig.30.pir 253 t 253
+                             
+             ELR21536.1 258 R 258
+                            6 PP
+
+  == domain 2  score: 0.4 bits;  conditional E-value: 0.036
+  PTHR13298.orig.30.pir 197 aeagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlekllapftd 254
+                             e++g+ ++l a+     ++ ++e ++++l +l+ + str ++ + + +  +++ + +
+             ELR21536.1 288 GEEDGVVAILTAMRGHEENRAVQERACTALQHLVAEDSTRVLILEENGIFAVISAMIH 345
+                            4677777788888776778889999999999999999999999999999888888883 PP
+
+>> ELR15409.1  Armadillo/betacatenin-like repeat domain containing protein [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.7   0.0   1.4e-05     0.024     724     793 ..     245     318 ..     179     326 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 11.7 bits;  conditional E-value: 1.4e-05
+  PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllra...essdfsd.....WgielLvtqlydpskevakaAlkiLeeacedkanile 793
+                            ++k Lts++ +i+  a + ++ l      +    +       +i+ Lv+ l+ +++ v ++Al ++ + c d++ + +
+             ELR15409.1 245 IAKLLTSANAEIQALAAHAIANLSLHaenR----AAvrntrGAIQSLVQMLSSRDEAVQEKALTAIANLCVDDPTNRQ 318
+                            689******************998842322....22355689****************************99987665 PP
+
+>> ELR14212.1  gammaadaptin 1, putative [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.1   0.2   8.5e-05      0.14     716     800 ..     266     348 ..     135     367 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 9.1 bits;  conditional E-value: 8.5e-05
+  PTHR13298.orig.30.pir 716 ldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileylvslkp 800
+                            l  ++ +il  +L +  ++iR+ a++ L++ +  + s   +    ++v +l+d +++++++Al++++  + + +n    + ++ +
+             ELR14212.1 266 LRVLAINILGRFLLNRDNNIRYVALNTLAKVVG-RDSAAVQRHRATIVDCLKDSDVSIRRRALELIYVLV-NAENVRPLVREMTN 348
+                            6667889**************************.777777788899*******************98877.55554555555544 PP
+
+>> ELR25646.1  Armadillo/betacatenin-like repeat domain containing protein [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.1   2.1    0.0027       4.5      84     192 ..     161     313 ..      62     438 .. 0.75
+   2 ?    2.1   0.0     0.011        19      61     113 ..     483     535 ..     470     550 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.0027
+  PTHR13298.orig.30.pir  84 clrslllseskevraaalRllrylis.dskvlrrllrlgldiliarsLdrds.knetEreqa.......................... 143
+                            ++  ll s++  v+ +a+R+++ l +  ++ ++++ + gl  l+ + L ++  + ++E + a                          
+             ELR25646.1 161 VVFDLLRSDNETVQMMAYRVITNLGDnENNRVEIVKAGGLKLLVDFVLKNEDeSTTVEALNAlcvlvenkqhaiefakegglkalvpl 248
+                            5557888999999999999999998856667777888888888888888888666777777733333333333333333333333333 PP
+
+  PTHR13298.orig.30.pir 144 .............lkliramlev...apkliptaivralvaiaeseedrlrraclatlcelalln 192
+                                          +l  ++ ++   ++  + ++++  l  +a+s e   r  ++ ++++l+l++
+             ELR25646.1 249 vgddesetaqataADLLHTLATIdelKTWFLAEGLIAPLLKLAKSDEVTTRKKSIKIIAQLVLND 313
+                            33333333344442333333333222444445555555555555666666666666666665554 PP
+
+  == domain 2  score: 2.1 bits;  conditional E-value: 0.011
+  PTHR13298.orig.30.pir  61 ellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylisdskv 113
+                            + l++l+ee++ + + v+l  v +l+ ll+s+   ++  +l++lr+l++ +++
+             ELR25646.1 483 RTLAVLTEEESARDEIVRLGGVGLLHFLLDSSFEILQNEGLKALRHLVNHKEA 535
+                            55677778888877777788888999*********************985554 PP
+
+>> ELR12523.1  Armadillo/betacatenin-like repeat domain containing protein [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.3   0.0     0.037        62     154     211 ..     121     182 ..      41     239 .. 0.57
+   2 ?    5.3   3.2    0.0012         2     170     230 ..     423     510 ..     281     547 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 0.3 bits;  conditional E-value: 0.037
+  PTHR13298.orig.30.pir 154 apkliptaivralvaiae..seedrlrraclatlcelallnpelv..aeagglrvlldalle 211
+                            +++++ ++ v ++ a+    s+++  + ++ ++ + la +    +   eagg+  ++  ++ 
+             ELR12523.1 121 DRAKFEESGVDSVLALMRvySKDPLVQAEICRLVMDLAATARNRAkiREAGGILLVVLTMQT 182
+                            44444444444444444443444444444444444444332222210244444444433333 PP
+
+  == domain 2  score: 5.3 bits;  conditional E-value: 0.0012
+  PTHR13298.orig.30.pir 170 ae..........................seedrlrraclatlcelallnpelv.aeagglrvlldallecqlperiaesllavllyll 230
+                             +                          +e+ + ++ + a+l+ +al++   + ++++g++ +l+a+   + ++ ++e +++++l+l 
+             ELR12523.1 423 MNfattdtnrlvmlsegaveavlfamqiKENAAIQEHSCAMLANMALNGKCAMkISEEGIKPILSAMATHSANPSVQEKACGAILNLS 510
+                            33333333333333337777777888899*******************9655537**************9999************995 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      14974  (6566425 residues searched)
+Passed MSV filter:                      1039  (0.0693869); expected 299.5 (0.02)
+Passed bias filter:                      420  (0.0280486); expected 299.5 (0.02)
+Passed Vit filter:                        53  (0.00353947); expected 15.0 (0.001)
+Passed Fwd filter:                         9  (0.000601042); expected 0.1 (1e-05)
+Initial search space (Z):              14974  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.36u 0.11s 00:00:00.47 Elapsed: 00:00:00.26
+# Mc/sec: 29097.31
+//
+[ok]

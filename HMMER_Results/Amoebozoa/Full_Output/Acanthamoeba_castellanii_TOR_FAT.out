@@ -1,0 +1,274 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Amoebozoa/Proteins/Acanthamoeba_castellanii.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+   1.8e-105  352.7   0.0   7.5e-105  350.7   0.0    2.2  1  ELR13010.1  FKBP12rapamycin complex-associated protein [Acant
+      4e-50  170.7   0.0    1.9e-49  168.5   0.0    2.2  2  ELR15225.1  rapamycin binding domain containing protein [Acan
+    2.4e-47  161.6   0.0    6.9e-47  160.1   0.0    1.8  2  ELR10846.1  FAT domain containing protein [Acanthamoeba caste
+    2.7e-23   82.5   3.5    1.4e-22   80.1   3.5    1.9  1  ELR13405.1  GTPase-activator protein for Ras family GTPase [A
+    2.2e-22   79.5   5.9    4.9e-22   78.3   5.9    1.7  1  ELR17399.1  FATC domain containing protein [Acanthamoeba cast
+    3.6e-11   42.6   0.0      6e-11   41.9   0.0    1.3  1  ELR24298.1  FRAP-related family protein, partial [Acanthamoeb
+  ------ inclusion threshold ------
+       0.04   12.9   0.2      0.073   12.0   0.2    1.4  1  ELR20002.1  hypothetical protein ACA1_113470 [Acanthamoeba ca
+      0.072   12.0   2.5        2.6    6.9   0.2    3.2  2  ELR15333.1  udpn-acetylglucosamine--peptide n-acetylglucosami
+
+
+Domain annotation for each sequence (and alignments):
+>> ELR13010.1  FKBP12rapamycin complex-associated protein [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  350.7   0.0    4e-108  7.5e-105       1     343 []    1348    1706 ..    1348    1706 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 350.7 bits;  conditional E-value: 4e-108
+                  CCCTTCCCCTSSSGHHCCCCT.........................................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCC CS
+         FAT    1 aplaaeaaWrlgqWdsmeeylslmk.....................................kdspdkaffeailalhrnqfdeaeeliekarqllv 60  
+                  aplaa aaW+l  W+++e+y+ +m                                       ++pd++ff+ail+lh+++++ea+++i+++r+ll+
+  ELR13010.1 1348 APLAAGAAWNLRLWKNIEDYIGVMPdntvptiiliiiiiiiiitfiiiafiiiafiiiafkkTHQPDGTFFKAILNLHKENYEEAHKYINRTRELLD 1444
+                  69***********************************************************9999******************************** PP
+
+                  CCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCC CS
+         FAT   61 telsalsgesynraydllvrlQqlaEleeiiqykqklssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanl 157 
+                  tel+al+gesynray+++v++Qql+E+ee+i+ykq+ + +++ ++++  W+kRl+g+q++vevwqd+l+vRs+v+ pied       ++ wlkf++l
+  ELR13010.1 1445 TELRALVGESYNRAYKVVVKVQQLSEMEEVINYKQSVDAEDRKAMIRTIWTKRLKGCQRNVEVWQDMLAVRSMVIPPIED-------MDNWLKFSSL 1534
+                  ***********************************9888888888899********************************.......********** PP
+
+                  HCHHHHCCSTTHHCCCCCHCTT................TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHH CS
+         FAT  158 aRksgrlslAekaLkklleedk....eewlp.......pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllar 243 
+                  +Rksg++ l++k+L +ll+ d+        +       p v++ ylk++++ g++k+a+++Lr f+                    nl++ +kllar
+  ELR13010.1 1535 CRKSGHMRLSYKTLVNLLGFDPaptsL---DkfashpyPGVTFHYLKHMYDAGDKKDAFERLRVFTR-------------------NLQDDAKLLAR 1609
+                  **********************75440...256668899****************************...................455567999** PP
+
+                  CCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHH CS
+         FAT  244 cylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdll 339 
+                  c+l +G+w ++l++ n se ++ +il++++aate+d++wykawh+wal nfev++++++ ++   p+++  ++vpav gf++s++l  + kslqd+l
+  ELR13010.1 1610 CHLTLGQWESELHD-NLSESTIPHILASFKAATEYDDHWYKAWHSWALSNFEVITHYQKLAQ---PDKITPHLVPAVAGFFRSIALAPQgKSLQDTL 1702
+                  **************.9*****************************************88865...9*********************999******* PP
+
+                  HHHC CS
+         FAT  340 RlLt 343 
+                  RlLt
+  ELR13010.1 1703 RLLT 1706
+                  ***8 PP
+
+>> ELR15225.1  rapamycin binding domain containing protein [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.4   0.0       3.8   7.1e+03     200     241 ..     459     503 ..     452     505 .. 0.77
+   2 !  168.5   0.0   9.9e-53   1.9e-49     126     343 .]    1337    1529 ..    1327    1529 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: -4.4 bits;  conditional E-value: 3.8
+                 HHHHHSSCCHHHHCCTSSCCCSS-SS---..............HH CS
+         FAT 200 eqkealqkLrefvscllekkeelssglevq...eptnleeftkll 241
+                 ++ + ++++++ +++++ ++  ++  +e +   +++n+ee ++ll
+  ELR15225.1 459 NRTNIFSHMQQDTQSNFIQPTLIQLLTELEfsgDSRNKEESARLL 503
+                 677889999999999999988555555555668999999988887 PP
+
+  == domain 2  score: 168.5 bits;  conditional E-value: 9.9e-53
+                  TCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT...........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTS CS
+         FAT  126 dilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk.eewlp.....pevvyaylkylwakgeqkealqkLrefvscll 216 
+                  d+l+++s+v+ pied       ++ wl+f++l+Rksgrl l++k+L +ll++d+  ++l+     p v++ ylk+++a g++kea+++Lr f++ l 
+  ELR15225.1 1337 DMLAIHSMVIPPIED-------VDNWLRFSSLCRKSGRLRLSYKTLVNLLGSDPaHHPLDlaashPGVTFNYLKHMYAAGDKKEAFERLRVFTEGLP 1426
+                  89*************.......********************************75555588899*****************************555 PP
+
+                  SCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCC CS
+         FAT  217 ekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedls 313 
+                   +                   ++l+arcyl  G+w ++l++ n    +  +il+ ++aa+e+d++wykawh+wal nfev+s++++ ++   pe++s
+  ELR15225.1 1427 GD------------------DAALQARCYLTMGQWESELND-N---LSETNILALFKAAIEYDDTWYKAWHSWALSNFEVISHYQKLNM---PEKIS 1498
+                  44..................35799****************.4...66799*********************************88877...9**** PP
+
+                  HHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+         FAT  314 eyvvpavegflkslslsse.kslqdllRlLt 343 
+                   ++vpav  f++s++l  + kslqd+lRlLt
+  ELR15225.1 1499 PHLVPAVAAFFRSIALAPQgKSLQDTLRLLT 1529
+                  *****************999**********8 PP
+
+>> ELR10846.1  FAT domain containing protein [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.9   0.1       1.4   2.6e+03      14      69 ..      96     151 ..      94     154 .. 0.82
+   2 !  160.1   0.0   3.7e-50   6.9e-47       2     342 ..     749    1119 ..     748    1120 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: -2.9 bits;  conditional E-value: 1.4
+                 GHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---S CS
+         FAT  14 Wdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsge 69 
+                 + ++e+++s++   +++ ++++ ++ + +   ++ ++++++  +llv+ l++l++e
+  ELR10846.1  96 YSDIEQTISTTLGSDYKASLWSGMVIILKTLSNHQADYADRFLSLLVKLLQRLAKE 151
+                 6789999999999******9999999888777788888888888888888877766 PP
+
+  == domain 2  score: 160.1 bits;  conditional E-value: 3.7e-50
+                  CCTTCCCCTSSSGHHCCCCT.......TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHC CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk...kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykq 95  
+                  +l + +aW+ g+W+sm+++l       +d+p+ ++++ ++a++ ++  ++  l  +a+ l +  +++l+     ++ +ll+ ++ql+El e++q+++
+  ELR10846.1  749 ELVLDCAWKIGDWNSMRDALARYAgaaSDTPQLKVYQSYVAVQDGKPGDVDALTVQASHLGLLHWHSLPPIPSPAHTPLLQAFHQLVELRESAQIIK 845 
+                  6899****************9988999********************************************************************** PP
+
+                  SS-......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC...........HHCCS-STTCCC..CCCCCHCHHHHCCSTTHHCCC CS
+         FAT   96 kls......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied...........lllkgakaemwl..kfanlaRksgrlslAekaLkk 173 
+                  + +         e k +l tWr+Rlp+ + dv vw dil++R++v++ i+            +++ g ++++w+  +f ++aR+++ ++++ + L++
+  ELR10846.1  846 EINgtnrhqAIPEIKNILTTWRERLPNEWEDVGVWTDILTWRQHVFTLINGafqpllevnssVAYIGHHEAAWTinRFGHVARRHDLVDVCLSWLSR 942 
+                  99889888777788999*********************************************9********************************** PP
+
+                  CCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..........SS-SS---...........HH.HHCCCTCCCCCCCCCCCT CS
+         FAT  174 lleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke..........elssglevqeptnleeftkll.arcylkkGewlaalqkln 259 
+                  +                   y+++++e+++a+ kLre+v+c+   +            +++ l+ +++tnl+ f  ++ a+++ +k+e+la+l+   
+  ELR10846.1  943 I-------------------YSLPNIEIHDAFVKLREQVKCYRRLAAqsnspgaaanFYRTALDIINSTNLDFFGPQQkAEFFYLKAEFLAKLGF-- 1018
+                  *...................********************99777656444555444444455555*****************************.. PP
+
+                  .S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH...SSSS........................S-TCCHHHHCCT..CCHHHHTT CS
+         FAT  260 wseekseeilqaysaateldpswykawhtwalfnfevlskeeek...keeee.......................pedlseyvvpavegflkslsls 330 
+                        e+++ ays+a+ + +++   w+ w++f++ +  +   +       +                       p++    v  a+ +fl++ + +
+  ELR10846.1 1019 -----GEDANGAYSTAVSTWDGLGRGWAGWGSFCEAMHAAGSASpplL---RghqqqpqpqaetaaagskdassvPRQPHSWVEFALICFLQAMRAQ 1107
+                  .....89***************************99988886664441...2444556788888888888888887777778888888888888888 PP
+
+                  TSSTTTCHHHHH CS
+         FAT  331 sekslqdllRlL 342 
+                     s   ++R+L
+  ELR10846.1 1108 PALSESLVPRVL 1119
+                  875555677776 PP
+
+>> ELR13405.1  GTPase-activator protein for Ras family GTPase [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   80.1   3.5   7.7e-26   1.4e-22      33     218 ..     941    1143 ..     911    1160 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 80.1 bits;  conditional E-value: 7.7e-26
+                  CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-........................---TTTT CS
+         FAT   33 ffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls........................sseelks 105 
+                  + + + a+ r++ + +++l+ek+r  ++  lsa s+esy+ray+++ +l++l+      +  +++                         + +  k+
+  ELR13405.1  941 IGGLVSAIKRQDDTLFQKLLEKTRAEVMGVLSAASMESYQRAYPYITKLHMLHGTATNNTCNRAELlrdwqhltvwyaraeleqsfglssTGDGVKD 1037
+                  44556679999*****************************************9887766666655578899************99999999999999 PP
+
+                  TTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHH CS
+         FAT  106 llktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqk 202 
+                  ll+ W++Rl+ +q++++ +++il +R+ +++ +      ++  ++wl++a++aR++ ++++A  a +++  +++   +  + +++++k+ wa+ge +
+  ELR13405.1 1038 LLSSWDTRLRRTQPSFKTREPILNLRRAIFDLHGM---PDKASDCWLQIAKVARTASQYQTASAAVLRASTNQQ---SL-KFHLESAKLRWAQGENH 1127
+                  9*****************************99977...78889**************************66666...33.79*************** PP
+
+                  HHSSCCHHHHCCTSSC CS
+         FAT  203 ealqkLrefvscllek 218 
+                  +al +L++ +  ++ +
+  ELR13405.1 1128 QALVQLQKVTATHSAE 1143
+                  ********99987765 PP
+
+>> ELR17399.1  FATC domain containing protein [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   78.3   5.9   2.6e-25   4.9e-22       3     343 .]    1929    2368 ..    1927    2368 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 78.3 bits;  conditional E-value: 2.6e-25
+                  CTTCCCCTSSSGHH..CCCCT......................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHH CS
+         FAT    3 laaeaaWrlgqWds..meeylslmk..................kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllv 79  
+                  + +++aWr  +W+    ++ ++ +                   + +++   ++++ +lh ++   + + + k+r  lv+ +   s es+++ y++l 
+  ELR17399.1 1929 FQYAEAWRTCKWQMdwFRHSVNPLLftrqsdeggddqaqspssNSNFHMGSYQCLRSLHDGDQAVFWKNLRKTRLELVRAIGVTSLESTKSVYPALA 2025
+                  67899*******9877666666666999*****999977555555555557777777999************************************* PP
+
+                  CCCCCHHHCHHCCHHCSS-..........................---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTC CS
+         FAT   80 rlQqlaEleeiiqykqkls..........................sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaem 150 
+                  +lQ l E+e++ ++   ++                          s+ e++ ll+ Wr+Rl+ + +++e  +++ls+ + +l+  e+    g    +
+  ELR17399.1 2026 KLQFLGEIEHAWNLRWGEDkridatpspmtpgtsagltlrtkripSAVEMDNLLSGWRERLSLMENNFELIEPLLSLGTTLLKILEK----GEYLPA 2118
+                  **************99888999*****************************************************************....555555 PP
+
+                  CC.CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSC...CHHHHCCTSSCCCSS-SS---............... CS
+         FAT  151 wl.kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqk...Lrefvscllekkeelssglevq.....eptnleeft 238 
+                   l  fa+laRk+  +++A +++ + + ++       ++ +a++++lw++ge ++a++    L +++++l+ k  e  s   ++      p +l+e  
+  ELR17399.1 2119 QLsTFAQLARKAECFQIASNCIHQDAVSSV------SWRLAEARVLWDQGEGDKAISIgklLTKSLEELYTKHVEVASRGKAKatekgRPASLDERL 2209
+                  555********************9966666......99*************9999986333567777777776644444444455567777777776 PP
+
+                  .HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS.TTCCCCHHHHHCCHHHHHHSSSS.......................... CS
+         FAT  239 kll.arcylkkGewlaalqklnwseekseeilqaysaateldpswyk.awhtwalfnfevlskeeekkeeee......................... 308 
+                   +  a++    G+wla++++ ++s+  +++  +   + +++d++    a++t+a++ +  + ++ ek +++e                         
+  ELR17399.1 2210 LRAyAEATYCTGKWLAETRSESSSTIINDHLQKTVELYQHFDDGNRGrAYFTLARYADGLYGHLVEKLKSSEwamsqelrkqkerelqqceklletr 2306
+                  66668899999*********7766666777777788889999987777****9999999999997774444468889999999999999999***** PP
+
+                  ...........................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  309 ...........................pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                                             ++d +e++ +ave++l++l ++++ +   ++Rl++
+  ELR17399.1 2307 pkdkdllrhtivlrrqceidksenrrlEKDREELLHSAVENYLRCLLSGDKYDIRVMFRLCS 2368
+                  **************************999**********************9999*****95 PP
+
+>> ELR24298.1  FRAP-related family protein, partial [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.9   0.0   3.2e-14     6e-11       3      85 ..     432     542 ..     430     546 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 41.9 bits;  conditional E-value: 3.2e-14
+                 CTTCCCCTSSSGHHCCCCT................................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCC CS
+         FAT   3 laaeaaWrlgqWdsmeeylslmk............................kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynr 73 
+                 + ++aaWrlg+Wd ++++ls                                 +++ a+ + + a+ r++ + +++l+ek+r  ++  lsa s+esy+r
+  ELR24298.1 432 YGVQAAWRLGKWDILHKFLSPHLrrsglpdtnslsltnstsassvetlgdsPLDFEVAIGGLVSAIKRQDDTLFQKLLEKTRAEVMGVLSAASMESYQR 530
+                 679****************98889**************999999888876666666668888888********************************** PP
+
+                 CHHHHHCCCCCH CS
+         FAT  74 aydllvrlQqla 85 
+                 ay+++ +l++l+
+  ELR24298.1 531 AYPYITKLHMLH 542
+                 **********96 PP
+
+>> ELR20002.1  hypothetical protein ACA1_113470 [Acanthamoeba castellanii str. Neff]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.0   0.2   3.9e-05     0.073     244     306 ..     625     690 ..     507     715 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 12.0 bits;  conditional E-value: 3.9e-05
+                 CCCTCCCCCCCCCCCT.S...-SS...CCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSS CS
+         FAT 244 cylkkGewlaalqklnwseeksee...ilqaysaateldpswykawhtwalfnfevlskeeekkee 306
+                  ++k+Ge l++l + + +ee+++    + + ysaatel+p++ +a+++w++   e+ ++++ ++ e
+  ELR20002.1 625 SLTKLGELLHRLASDQTAEERARLyllAAATYSAATELRPDLWQAFYSWGDILYEQARAKAGEEAE 690
+                 4678888999998877666665542225678*************************9999666444 PP
+
+>> ELR15333.1  udpn-acetylglucosamine--peptide n-acetylglucosaminyltransferase spindly, putative [Acanthamoeba castellan
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.3   0.1     0.017        32     265     307 ..      85     127 ..      74     171 .. 0.65
+   2 ?    6.9   0.2    0.0014       2.6     244     300 ..     180     229 ..     167     357 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 3.3 bits;  conditional E-value: 0.017
+                 -SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS CS
+         FAT 265 seeilqaysaateldpswykawhtwalfnfevlskeeekkeee 307
+                  +e +++y+aa++++ps + a+++ a  + e  ++ee  +  +
+  ELR15333.1  85 LDEGMSKYLAAIRVNPSYAPAYYNIAVIYSELNRYEEALQYYN 127
+                 5666777777777777777777777777777766665554332 PP
+
+  == domain 2  score: 6.9 bits;  conditional E-value: 0.0014
+                 CCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+         FAT 244 cylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlske 300
+                 +++  G + ++ +k       + e++q+y++a  ++ + ++a+++++ ++ e+ s+ 
+  ELR15333.1 180 ALTDYGTFIKNQGK-------RVEAVQYYQKALTYNVQYADAYYNLGVAYGEMGSYD 229
+                 55666666666666.......99***********************99998876655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      14974  (6566425 residues searched)
+Passed MSV filter:                       932  (0.0622412); expected 299.5 (0.02)
+Passed bias filter:                      347  (0.0231735); expected 299.5 (0.02)
+Passed Vit filter:                        36  (0.00240417); expected 15.0 (0.001)
+Passed Fwd filter:                         8  (0.000534259); expected 0.1 (1e-05)
+Initial search space (Z):              14974  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.15u 0.02s 00:00:00.17 Elapsed: 00:00:00.08
+# Mc/sec: 25364.77
+//
+[ok]
