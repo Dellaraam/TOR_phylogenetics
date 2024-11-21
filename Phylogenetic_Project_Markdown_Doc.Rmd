@@ -7,20 +7,27 @@ output:
   html_document: default
 ---
 
+#Libraries needed 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-install.packages("tidyverse")
-install.packages("rentrez")
-install.packages("gridExtra")
-install.packages("plotly")
+#install.packages("tidyverse")
+#install.packages("rentrez")
+#install.packages("gridExtra")
+#install.packages("plotly")
+```
 
+```{r setup, include=FALSE}
 library(tidyverse)
 library(rentrez)
 library(ggrepel)
 library(gridExtra)
 library(plotly)
+```
 
+
+```{r setup, include=FALSE}
+#All Raw HMMER files for TOR components in Alveolata and Stramenopiles clades
 # Loading CSVs of the Alveolata and Stramenopiles
 D1AlveolataRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Updated_Alveolata/D1Alveolata.csv")
 RAPTORAlveolataRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Updated_Alveolata/RAPTORAlveolata.csv")
@@ -35,20 +42,29 @@ RICTORStramenopilesRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Updated_Strame
 SIN1StramenopilesRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Updated_Stramenopiles/SIN1Stramenopiles.csv")
 TORStramenopilesRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Updated_Stramenopiles/TORStramenopiles.csv")
 LST8StramenopilesRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Updated_Stramenopiles/LST8Stramenopiles.csv")
+```
 
+
+```{r setup, include=FALSE}
+#HMMR files for TOR componants in Metazoa anf Fungi clades
 MetazoaShioRICTOR <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/RICTOR_Metazoa")
 MetazoaShioSIN1 <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/SIN1_Metazoa")
 
 FungiShioRICTOR <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/RICTOR_Fungi")
 FungiShioSIN1 <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/SIN1_Fungi")
+```
 
+```{r setup, include=FALSE}
+#Changing names to match
 Alveolata_Names <- read.csv("C:/Users/kajoh/Desktop/Tables/Alveolata_Information_2.csv")
 Alveolata_Names <- Alveolata_Names %>% rename(Accn = Assembly.Accession)
 Stramenopiles_Names <- read.csv("C:/Users/kajoh/Desktop/Tables/Stramenopiles_Information_2.csv")
 Stramenopiles_Names <- Stramenopiles_Names %>% rename(Accn = Assembly.Accession)
 # Add in the Rhizaria_Names from NCBI
+```
 
-
+```{r setup, include=FALSE}
+#Changing C score to numeric values
 Alveolata_Busco <- read.csv("C:/Users/kajoh/Desktop/Tables/Alveolata BUSCO - Sheet1.csv", na = 0)
 Alveolata_Busco <- Alveolata_Busco %>% rename(Accn = Accession)
 Alveolata_Busco$C.score <-gsub("%$","",Alveolata_Busco$C.score)
@@ -63,16 +79,16 @@ Stramenopiles_Busco$C.score <- as.numeric(as.character(Stramenopiles_Busco$C.sco
 Stramenopiles_Busco$Frag.score <- gsub("%$", "", Stramenopiles_Busco$Frag.score)
 Stramenopiles_Busco$Frag.score <- as.numeric(as.character(Stramenopiles_Busco$Frag.score))
 # Add in the Rhizaria BUSCO scores
+```
 
 
-
+```{r setup, include=FALSE}
 # Add in the different clade csvs/tsvs for clade checking
 Ciliates <- read_tsv("C:/Users/kajoh/Desktop/Tables/Ciliates_Names.tsv")
+```
 
 
-
-
-
+```{r setup, include=FALSE}
 # Global Variables for Analysis
 
 # Score Values
@@ -268,9 +284,10 @@ RAPTORAlveolata <- RAPTORAlveolataRaw %>% filter(sca >= LRTScoresA & scd >= LRTS
 SIN1Alveolata <- SIN1AlveolataRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
 LST8Alveolata <- LST8AlveolataRaw %>% filter(sca >= LRTScoresA & scd >= LRTScoreD)
 TORAlveolata <- TORAlveolataRaw %>% filter(sca >= LRTScoresA & scd >= LRTScoreD)
+```
 
 
-
+```{r include=FALSE}
 # Stramenopiles
 D1Stramenopiles <- D1StramenopilesRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
 RICTORStramenopiles <- RICTORStramenopilesRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
@@ -280,14 +297,10 @@ LST8Stramenopiles <- LST8StramenopilesRaw %>% filter(sca >= LRTScoresA & scd >= 
 TORStramenopiles <- TORStramenopilesRaw %>% filter(sca >= LRTScoresA & scd >= LRTScoreD)
   
 #Rhizaria (Future)
+```
 
 
-
-
-
-
-
-
+```{r include=FALSE}
 # Add in the Taxonomic Information
 # Note that this section takes the longest to run due to the web based approach
 ## Alveolata
@@ -329,10 +342,6 @@ SIN1Stramenopiles <- merge(SIN1Stramenopiles, Stramenopiles_Busco[c("C.score","F
 LST8Stramenopiles <- merge(LST8Stramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 TORStramenopiles <- merge(TORStramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 
-
-
-
-
 ```
 
 
@@ -359,7 +368,10 @@ RAPTORStramenopiles <- Check_Ciliates(RAPTORStramenopiles, Ciliates)
 SIN1Stramenopiles <- Check_Ciliates(SIN1Stramenopiles, Ciliates)
 LST8Stramenopiles <- Check_Ciliates(LST8Stramenopiles, Ciliates)
 TORStramenopiles <- Check_Ciliates(TORStramenopiles, Ciliates)
+```
 
+
+```{r}
 # Check to see if the D1 Protein exists with the other proteins (Basically, if D1 protein containing organisms contain the other proteins of RICTOR, SIN1)
 ## Alveolata
 D1Alveolata <- photoCheck(D1Alveolata, D1Alveolata)
