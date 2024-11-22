@@ -29,19 +29,19 @@ library(plotly)
 ```{r setup, include=FALSE}
 #All Raw HMMER files for TOR components in Alveolata and Stramenopiles clades
 # Loading CSVs of the Alveolata and Stramenopiles
-D1AlveolataRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/D1Alveolata.csv")
-RAPTORAlveolataRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RAPTORAlveolata.csv")
-RICTORAlveolataRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RICTORAlveolata.csv")
-SIN1AlveolataRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/SIN1Alveolata.csv")
-TORAlveolataRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/TORAlveolata.csv")
-LST8AlveolataRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/LST8Alveolata.csv")
+D1AlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/D1Alveolata.csv")
+RAPTORAlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RAPTORAlveolata.csv")
+RICTORAlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RICTORAlveolata.csv")
+SIN1AlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/SIN1Alveolata.csv")
+TORAlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/TORAlveolata.csv")
+LST8AlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/LST8Alveolata.csv")
 
-D1StramenopilesRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/D1Stramenopiles.csv")
-RAPTORStramenopilesRaw <- read.csv("/~/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RAPTORStramenopiles.csv")
-RICTORStramenopilesRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RICTORStramenopiles.csv")
-SIN1StramenopilesRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/SIN1Stramenopiles.csv")
-TORStramenopilesRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/TORStramenopiles.csv")
-LST8StramenopilesRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/LST8Stramenopiles.csv")
+D1StramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/D1Stramenopiles.csv")
+RAPTORStramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RAPTORStramenopiles.csv")
+RICTORStramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RICTORStramenopiles.csv")
+SIN1StramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/SIN1Stramenopiles.csv")
+TORStramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/TORStramenopiles.csv")
+LST8StramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/LST8Stramenopiles.csv")
 ```
 
 
@@ -56,23 +56,23 @@ FungiShioSIN1 <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/SIN1_Fu
 
 ```{r setup, include=FALSE}
 #Changing names to match
-Alveolata_Names <- read.csv("C:/Users/kajoh/Desktop/Tables/Alveolata_Information_2.csv")
+Alveolata_Names <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Alveolata_Information_2.csv")
 Alveolata_Names <- Alveolata_Names %>% rename(Accn = Assembly.Accession)
-Stramenopiles_Names <- read.csv("C:/Users/kajoh/Desktop/Tables/Stramenopiles_Information_2.csv")
+Stramenopiles_Names <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Stramenopiles_Information_2.csv")
 Stramenopiles_Names <- Stramenopiles_Names %>% rename(Accn = Assembly.Accession)
 # Add in the Rhizaria_Names from NCBI
 ```
 
 ```{r setup, include=FALSE}
 #Changing C score to numeric values
-Alveolata_Busco <- read.csv("C:/Users/kajoh/Desktop/Tables/Alveolata BUSCO - Sheet1.csv", na = 0)
+Alveolata_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Alveolata BUSCO - Sheet1.csv", na = 0)
 Alveolata_Busco <- Alveolata_Busco %>% rename(Accn = Accession)
 Alveolata_Busco$C.score <-gsub("%$","",Alveolata_Busco$C.score)
 Alveolata_Busco$C.score <- as.numeric(as.character(Alveolata_Busco$C.score))
 Alveolata_Busco$Frag.score <- gsub("%$", "", Alveolata_Busco$Frag.score)
 Alveolata_Busco$Frag.score <- as.numeric(as.character(Alveolata_Busco$Frag.score))
 # Add in the Stramenopiles BUSCO scores
-Stramenopiles_Busco <- read.csv("C:/Users/kajoh/Desktop/Tables/Stramenopiles BUSCO - Sheet1.csv")
+Stramenopiles_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Stramenopiles BUSCO - Sheet1.csv")
 Stramenopiles_Busco <- Stramenopiles_Busco %>% rename(Accn = Accession)
 Stramenopiles_Busco$C.score <- gsub("%$","",Stramenopiles_Busco$C.score)
 Stramenopiles_Busco$C.score <- as.numeric(as.character(Stramenopiles_Busco$C.score))
@@ -134,7 +134,10 @@ Species_Name <- function(maincsv, namecsv){
   }
   return(maincsv) 
 }
+```
 
+
+```{r}
 Taxon_Add <- function(csvToAdd){
   temp <- csvToAdd
   if("taxid" %in% colnames(temp)){
@@ -161,7 +164,10 @@ Taxon_Add <- function(csvToAdd){
 # Finally, return the value held within temp to the output of the function
   return(temp)
 }
+```
 
+
+```{r}
 Check_Ciliates <- function (toBeCompared, ciliate){
   # Add in a column that will have values for comparing. Default is false
   # Adding the column after the Organism column (requires that it exists)
@@ -186,7 +192,10 @@ Check_Ciliates <- function (toBeCompared, ciliate){
   }
   return(toBeCompared)
   }
-  
+```
+
+
+```{r}
 photoCheck <- function(inputCSV , photoCSV){
   if ("Has_D1" %in% colnames(inputCSV)){
   }else{
@@ -207,53 +216,9 @@ photoCheck <- function(inputCSV , photoCSV){
   #print(inputCSV$Has_D1)
   return(inputCSV)
 }
+```
 
-BuscoAdd <- function(inputCSV, BUSCO){
-  
-  inputCSV$Organism <- tolower(inputCSV$Organism)
-  if ("C_score" %in% colnames(inputCSV) & "Fragmentation" %in% colnames(inputCSV)){
-  }else{
-    inputCSV <- inputCSV %>% add_column(C_score = 0, .after = "bid")
-    inputCSV <- inputCSV %>% add_column(Fragmentation = 0, .after = "C_score")
-  }
-  BUSCO$Name <- tolower(BUSCO$Name)
-  
-  for(n in 1:nrow(inputCSV)){
-    for(m in 1:nrow(BUSCO)){
-      if (inputCSV[n, "Organism"] == BUSCO[m, "Name"]){
-        inputCSV$C_score[n] <- BUSCO$C.score[m]
-        inputCSV$Fragmentation[n] <- BUSCO$Frag.score[m]
-      }else{}
-    }
-    
-  }
-  return(inputCSV)
-}
-
-
-
-# AccnAdd <- function(input, names){
-#   
-#   if ("Assembly_Acc" %in% colnames(input)){
-#   }else{
-#     input <- input %>% add_column(Assembly_Acc = NA, .before = "tar")
-#   }
-#   if("SeqLen" %in% colnames(input)){
-#   }else{
-#     input <- input %>% add_column(Seqlen = NA, .after = "bid")
-#   }
-#   
-#   for (n in 1:nrow(input)){
-#     for (m in 1:nrow(names)){
-#       if (input[n, "taxid"] == names[m, "Organism_Taxonomic_ID"] ){
-#         input$Assembly_Acc[n] <- names$Assembly.Accession[m]
-#       }
-#     }
-#   }
-#   return(input)
-# }
-
-
+```{r}
 plotCleanup <- function (df, var){
   print(df)
   print(colnames(df))
@@ -266,10 +231,7 @@ plotCleanup <- function (df, var){
   return(df)
 }
 
-
 ```
-
-
 
 
 For initial filtering steps, the csvs are first filtered to remove any values that are considered below acceptable. For LST8, RAPTOR, TOR, this score will be 150 and 150 respectively due to the large presence of WD-40 Repeats. For RICTOR, SIN1, and D1 this will be 100 respectively. Prior analysis work indicates that for all proteins, any value below this cutoff threshold is most likely a false positive at best and can therefore be safely discarded.
@@ -351,9 +313,6 @@ TORStramenopiles <- merge(TORStramenopiles, Stramenopiles_Busco[c("C.score","Fra
 ```
 
 
-
-
-
 ```{r}
 # Check for Ciliates
 ## Alveolata
@@ -392,8 +351,6 @@ LST8Stramenopiles <- photoCheck(LST8Stramenopiles, D1Stramenopiles)
 TORStramenopiles <- photoCheck(TORStramenopiles, D1Stramenopiles)
 
 ```
-
-
 
 
 ```{r}
@@ -609,26 +566,10 @@ cleanedSIN1Stramenopiles <- SIN1Stramenopiles %>%
 
 
 
-
-
-
 ```{r}
 
   
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
