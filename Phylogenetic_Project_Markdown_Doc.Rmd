@@ -323,8 +323,10 @@ SIN1Stramenopiles <- merge(SIN1Stramenopiles, Stramenopiles_Names[c("Organism_Ta
 LST8Stramenopiles <- merge(LST8Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
 TORStramenopiles <- merge(TORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
 #Rhizaria (Future)
+```
 
 
+```{r include=FALSE}
 # Add Busco Scores 
 ## Alveolata
 D1Alveolata <- merge(D1Alveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
@@ -388,8 +390,6 @@ RAPTORStramenopiles <- photoCheck(RAPTORStramenopiles, D1Stramenopiles)
 SIN1Stramenopiles <- photoCheck(SIN1Stramenopiles, D1Stramenopiles)
 LST8Stramenopiles <- photoCheck(LST8Stramenopiles, D1Stramenopiles)
 TORStramenopiles <- photoCheck(TORStramenopiles, D1Stramenopiles)
-
-
 
 ```
 
