@@ -11,10 +11,10 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-#install.packages("tidyverse")
-#install.packages("rentrez")
-#install.packages("gridExtra")
-#install.packages("plotly")
+install.packages("tidyverse")
+install.packages("rentrez")
+install.packages("gridExtra")
+install.packages("plotly")
 ```
 
 ```{r setup, include=FALSE}
@@ -29,26 +29,26 @@ library(plotly)
 ```{r setup, include=FALSE}
 #All Raw HMMER files for TOR components in Alveolata and Stramenopiles clades
 # Loading CSVs of the Alveolata and Stramenopiles
-D1AlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/D1Alveolata.csv")
-RAPTORAlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RAPTORAlveolata.csv")
-RICTORAlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RICTORAlveolata.csv")
-SIN1AlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/SIN1Alveolata.csv")
-TORAlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/TORAlveolata.csv")
-LST8AlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/LST8Alveolata.csv")
+D1AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/D1Alveolata.csv")
+RAPTORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RAPTORAlveolata.csv")
+RICTORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RICTORAlveolata.csv")
+SIN1AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/SIN1Alveolata.csv")
+TORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/TORAlveolata.csv")
+LST8AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/LST8Alveolata.csv")
 
-D1StramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/D1Stramenopiles.csv")
-RAPTORStramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RAPTORStramenopiles.csv")
-RICTORStramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RICTORStramenopiles.csv")
-SIN1StramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/SIN1Stramenopiles.csv")
-TORStramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/TORStramenopiles.csv")
-LST8StramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/LST8Stramenopiles.csv")
+D1StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/D1Stramenopiles.csv")
+RAPTORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RAPTORStramenopiles.csv")
+RICTORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RICTORStramenopiles.csv")
+SIN1StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/SIN1Stramenopiles.csv")
+TORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/TORStramenopiles.csv")
+LST8StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/LST8Stramenopiles.csv")
 
-D1RhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/D1Rhizaria.csv")
-RAPTORRhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RAPTORRhizaria.csv")
-RICTORRhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RICTORRhizaria.csv")
-SIN1RhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/SIN1Rhizaria.csv")
-TORRhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/TORRhizaria.csv")
-LST8RhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/LST8Rhizaria.csv")
+D1RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/D1Rhizaria.csv")
+RAPTORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RAPTORRhizaria.csv")
+RICTORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RICTORRhizaria.csv")
+SIN1RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/SIN1Rhizaria.csv")
+TORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/TORRhizaria.csv")
+LST8RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/LST8Rhizaria.csv")
 ```
 
 
@@ -63,25 +63,25 @@ FungiShioSIN1 <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/SIN1_Fu
 
 ```{r setup, include=FALSE}
 #Changing names to match
-Alveolata_Names <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Alveolata_Information_2.csv")
+Alveolata_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Information_2.csv")
 Alveolata_Names <- Alveolata_Names %>% rename(Accn = Assembly.Accession)
-Stramenopiles_Names <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Stramenopiles_Information_2.csv")
+Stramenopiles_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopiles_Information_2.csv")
 Stramenopiles_Names <- Stramenopiles_Names %>% rename(Accn = Assembly.Accession)
-Rhizaria_Names <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Rhizaria_Information_2.csv")
+Rhizaria_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_Information_2.csv")
 Rhizaria_Names <- Rhizaria_Names %>% rename(Accn = Assembly.Accession)
 # Add in the Rhizaria_Names from NCBI
 ```
 
 ```{r setup, include=FALSE}
 #Changing C score to numeric values
-Alveolata_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Alveolata BUSCO - Sheet1.csv", na = 0)
+Alveolata_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata BUSCO - Sheet1.csv", na = 0)
 Alveolata_Busco <- Alveolata_Busco %>% rename(Accn = Accession)
 Alveolata_Busco$C.score <-gsub("%$","",Alveolata_Busco$C.score)
 Alveolata_Busco$C.score <- as.numeric(as.character(Alveolata_Busco$C.score))
 Alveolata_Busco$Frag.score <- gsub("%$", "", Alveolata_Busco$Frag.score)
 Alveolata_Busco$Frag.score <- as.numeric(as.character(Alveolata_Busco$Frag.score))
 # Add in the Stramenopiles BUSCO scores
-Stramenopiles_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Stramenopiles BUSCO - Sheet1.csv")
+Stramenopiles_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopiles BUSCO - Sheet1.csv")
 Stramenopiles_Busco <- Stramenopiles_Busco %>% rename(Accn = Accession)
 Stramenopiles_Busco$C.score <- gsub("%$","",Stramenopiles_Busco$C.score)
 Stramenopiles_Busco$C.score <- as.numeric(as.character(Stramenopiles_Busco$C.score))
@@ -494,6 +494,146 @@ ThreeD
 
 
 ```
+
+```{r}
+RICTORStramenopilesPlot <- ggplot(RICTORStramenopiles, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RICTOR Hits Stramenopiles")
+
+SIN1StramenopilesPlot <- ggplot(SIN1Stramenopiles, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("SIN1 Hits Stramenopiles")
+
+RAPTORStramenopilesPlot <- ggplot(RAPTORStramenopiles, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RAPTOR Hits Stramenopiles")
+
+LST8StramenopilesPlot <- ggplot(LST8Stramenopiles, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  theme_minimal()+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("LST8 Hits Stramenopiles")
+
+TORStramenopilesPlot <- ggplot(TORStramenopiles, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 50,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("TOR Hits Stramenopiles")
+
+D1StramenopilesPlot <- ggplot (D1Stramenopiles, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("D1 Hits Alveolata")
+
+
+
+
+RICTORStramenopilesPlot
+SIN1StramenopilesPlot
+RAPTORStramenopilesPlot
+TORStramenopilesPlot
+LST8StramenopilesPlot
+D1StramenopilesPlot
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```{r}
 # Create cleaned up dataframes that contain only the best possible hit from each taxon ID
