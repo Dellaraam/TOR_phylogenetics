@@ -884,8 +884,10 @@ cleanedD1Alveolata %>% rename( "Accession Number" = Accn,
                             "Best Domain Score" = scd,
                             "Bias Domain" = bid,
                             "Taxonomic ID" = Organism_Taxonomic_ID,
-                            "Organism Name" = Organism.Name) %>%
-  select(!c(tid, qid))%>%
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
   kbl(caption = "Most Likely D1 Proteins Alveolata", longtable = TRUE, digits = 1000) %>%
   kable_classic(full_width = F, html_font = "Cambria")
 
@@ -899,8 +901,10 @@ cleanedRAPTORAlveolata %>% rename( "Accession Number" = Accn,
                             "Best Domain Score" = scd,
                             "Bias Domain" = bid,
                             "Taxonomic ID" = Organism_Taxonomic_ID,
-                            "Organism Name" = Organism.Name) %>%
-  select(!c(tid, qid))%>%
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
   kbl(caption = "Most Likely RAPTOR Proteins Alveolata", longtable = TRUE, digits = 1000) %>%
   kable_classic(full_width = F, html_font = "Cambria")
 
@@ -914,8 +918,10 @@ cleanedLST8Alveolata %>% rename( "Accession Number" = Accn,
                             "Best Domain Score" = scd,
                             "Bias Domain" = bid,
                             "Taxonomic ID" = Organism_Taxonomic_ID,
-                            "Organism Name" = Organism.Name) %>%
-  select(!c(tid, qid))%>%
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
   kbl(caption = "Most Likely LST8 Proteins Alveolata", longtable = TRUE, digits = 1000) %>%
   kable_classic(full_width = F, html_font = "Cambria")
 
@@ -929,8 +935,10 @@ cleanedRICTORAlveolata %>% rename( "Accession Number" = Accn,
                             "Best Domain Score" = scd,
                             "Bias Domain" = bid,
                             "Taxonomic ID" = Organism_Taxonomic_ID,
-                            "Organism Name" = Organism.Name) %>%
-  select(!c(tid, qid))%>%
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
   kbl(caption = "Most Likely RICTOR Proteins Alveolata", longtable = TRUE, digits = 1000) %>%
   kable_classic(full_width = F, html_font = "Cambria")
 
@@ -944,9 +952,28 @@ cleanedSIN1Alveolata %>% rename( "Accession Number" = Accn,
                             "Best Domain Score" = scd,
                             "Bias Domain" = bid,
                             "Taxonomic ID" = Organism_Taxonomic_ID,
-                            "Organism Name" = Organism.Name) %>%
-  select(!c(tid, qid,))%>%
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
   kbl(caption = "Most Likely SIN1 Proteins Alveolata", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
+cleanedTORAlveolata %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
+  kbl(caption = "Most Likely TOR Proteins Alveolata", longtable = TRUE, digits = 1000) %>%
   kable_classic(full_width = F, html_font = "Cambria")
 
 
