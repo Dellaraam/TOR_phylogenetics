@@ -472,7 +472,7 @@ D1AlveolataPlot <- ggplot (D1Alveolata, aes(x = sca, y = scd, color = C.score, l
 
 
 # Attempting to make a 3D graph
-ThreeD <- plot_ly(LST8Alveolata, x = ~sca, y = ~C.score, z = ~scd, type = "scatter3d", 
+ThreeDLST8 <- plot_ly(LST8Alveolata, x = ~sca, y = ~C.score, z = ~scd, type = "scatter3d", 
                   mode = "markers", 
                   color = ~Frag.score,
                   text = ~paste('Organism Name:', Organism.Name, '<br>Fragmentation Score:', Frag.score, '<br>TaxID:', Organism_Taxonomic_ID),
@@ -483,10 +483,37 @@ ThreeD <- plot_ly(LST8Alveolata, x = ~sca, y = ~C.score, z = ~scd, type = "scatt
                       zaxis = list(title = "Best Domain Score Hit")))
                   
 
+ThreeDRICTOR <- plot_ly(RICTORAlveolata, x = ~sca, y = ~C.score, z = ~scd, type = "scatter3d", 
+                  mode = "markers", 
+                  color = ~Frag.score,
+                  text = ~paste('Organism Name:', Organism.Name, '<br>Fragmentation Score:', Frag.score, '<br>TaxID:', Organism_Taxonomic_ID),
+                  marker = list(size = 3)) %>%
+                  layout(title = "3D Scatter Plot of LST8 HMMER Hits",
+         scene = list(xaxis = list(title = "HMMER Overall Scores"),
+                      yaxis = list(title = "C scores for Organisms"),
+                      zaxis = list(title = "Best Domain Score Hit")))
+
+
+# Table for the plots
+# RICTOR Alveolata
+
 
 
 
 RICTORAlveolataPlot
+RICTORAlveolata %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name) %>%
+  select(!c(tid, qid))
+
 SIN1AlveolataPlot
 RAPTORAlveolataPlot
 LST8AlveolataPlot
@@ -494,8 +521,8 @@ TORAlveolataPlot
 D1AlveolataPlot
 # Note, look into TOR more deeply
 # Also do a version where
-ThreeD
-
+#ThreeD
+#ThreeDRICTOR
 
 ```
 
