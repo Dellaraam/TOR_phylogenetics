@@ -42,6 +42,13 @@ RICTORStramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_
 SIN1StramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/SIN1Stramenopiles.csv")
 TORStramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/TORStramenopiles.csv")
 LST8StramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/LST8Stramenopiles.csv")
+
+D1RhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/D1Rhizaria.csv")
+RAPTORRhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RAPTORRhizaria.csv")
+RICTORRhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RICTORRhizaria.csv")
+SIN1RhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/SIN1Rhizaria.csv")
+TORRhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/TORRhizaria.csv")
+LST8RhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/LST8Rhizaria.csv")
 ```
 
 
@@ -60,6 +67,8 @@ Alveolata_Names <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Alveolata_Infor
 Alveolata_Names <- Alveolata_Names %>% rename(Accn = Assembly.Accession)
 Stramenopiles_Names <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Stramenopiles_Information_2.csv")
 Stramenopiles_Names <- Stramenopiles_Names %>% rename(Accn = Assembly.Accession)
+Rhizaria_Names <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Rhizaria_Information_2.csv")
+Rhizaria_Names <- Rhizaria_Names %>% rename(Accn = Assembly.Accession)
 # Add in the Rhizaria_Names from NCBI
 ```
 
@@ -92,9 +101,11 @@ Ciliates <- read_tsv("C:/Users/kajoh/Desktop/Tables/Ciliates_Names.tsv")
 # Global Variables for Analysis
 
 # Score Values
+#LST8, RAPTOR, TOR
 LRTScoresA <- 150
 LRTScoreD <- 150
 
+#RICTOR, SIN1, D1
 RSDScoreA <- 100
 RSDScoreD <- 100
 
