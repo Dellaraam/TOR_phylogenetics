@@ -11,10 +11,10 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-install.packages("tidyverse")
-install.packages("rentrez")
-install.packages("gridExtra")
-install.packages("plotly")
+#install.packages("tidyverse")
+#install.packages("rentrez")
+#install.packages("gridExtra")
+#install.packages("plotly")
 ```
 
 ```{r setup, include=FALSE}
@@ -29,26 +29,32 @@ library(plotly)
 ```{r setup, include=FALSE}
 #All Raw HMMER files for TOR components in Alveolata and Stramenopiles clades
 # Loading CSVs of the Alveolata and Stramenopiles
-D1AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/D1Alveolata.csv")
-RAPTORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RAPTORAlveolata.csv")
-RICTORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RICTORAlveolata.csv")
-SIN1AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/SIN1Alveolata.csv")
-TORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/TORAlveolata.csv")
-LST8AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/LST8Alveolata.csv")
+D1AlveolataRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/D1Alveolata.csv")
+RAPTORAlveolataRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RAPTORAlveolata.csv")
+RICTORAlveolataRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RICTORAlveolata.csv")
+SIN1AlveolataRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/SIN1Alveolata.csv")
+TORAlveolataRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/TORAlveolata.csv")
+LST8AlveolataRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/LST8Alveolata.csv")
+```
 
-D1StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/D1Stramenopiles.csv")
-RAPTORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RAPTORStramenopiles.csv")
-RICTORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RICTORStramenopiles.csv")
-SIN1StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/SIN1Stramenopiles.csv")
-TORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/TORStramenopiles.csv")
-LST8StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/LST8Stramenopiles.csv")
 
-D1RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/D1Rhizaria.csv")
-RAPTORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RAPTORRhizaria.csv")
-RICTORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RICTORRhizaria.csv")
-SIN1RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/SIN1Rhizaria.csv")
-TORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/TORRhizaria.csv")
-LST8RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/LST8Rhizaria.csv")
+```{r setup, include=FALSE}
+D1StramenopilesRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/D1Stramenopiles.csv")
+RAPTORStramenopilesRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RAPTORStramenopiles.csv")
+RICTORStramenopilesRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RICTORStramenopiles.csv")
+SIN1StramenopilesRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/SIN1Stramenopiles.csv")
+TORStramenopilesRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/TORStramenopiles.csv")
+LST8StramenopilesRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/LST8Stramenopiles.csv")
+```
+
+
+```{r setup, include=FALSE}
+D1RhizariaRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/D1Rhizaria.csv")
+RAPTORRhizariaRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RAPTORRhizaria.csv")
+RICTORRhizariaRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RICTORRhizaria.csv")
+SIN1RhizariaRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/SIN1Rhizaria.csv")
+TORRhizariaRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/TORRhizaria.csv")
+LST8RhizariaRaw <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/LST8Rhizaria.csv")
 ```
 
 
@@ -63,25 +69,25 @@ FungiShioSIN1 <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/SIN1_Fu
 
 ```{r setup, include=FALSE}
 #Changing names to match
-Alveolata_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Information_2.csv")
+Alveolata_Names <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Alveolata_Information_2.csv")
 Alveolata_Names <- Alveolata_Names %>% rename(Accn = Assembly.Accession)
-Stramenopiles_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopiles_Information_2.csv")
+Stramenopiles_Names <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Stramenopiles_Information_2.csv")
 Stramenopiles_Names <- Stramenopiles_Names %>% rename(Accn = Assembly.Accession)
-Rhizaria_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_Information_2.csv")
+Rhizaria_Names <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Rhizaria_Information_2.csv")
 Rhizaria_Names <- Rhizaria_Names %>% rename(Accn = Assembly.Accession)
 # Add in the Rhizaria_Names from NCBI
 ```
 
 ```{r setup, include=FALSE}
 #Changing C score to numeric values
-Alveolata_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata BUSCO - Sheet1.csv", na = 0)
+Alveolata_Busco <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Alveolata BUSCO - Sheet1.csv", na = 0)
 Alveolata_Busco <- Alveolata_Busco %>% rename(Accn = Accession)
 Alveolata_Busco$C.score <-gsub("%$","",Alveolata_Busco$C.score)
 Alveolata_Busco$C.score <- as.numeric(as.character(Alveolata_Busco$C.score))
 Alveolata_Busco$Frag.score <- gsub("%$", "", Alveolata_Busco$Frag.score)
 Alveolata_Busco$Frag.score <- as.numeric(as.character(Alveolata_Busco$Frag.score))
 # Add in the Stramenopiles BUSCO scores
-Stramenopiles_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopiles BUSCO - Sheet1.csv")
+Stramenopiles_Busco <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Stramenopiles BUSCO - Sheet1.csv")
 Stramenopiles_Busco <- Stramenopiles_Busco %>% rename(Accn = Accession)
 Stramenopiles_Busco$C.score <- gsub("%$","",Stramenopiles_Busco$C.score)
 Stramenopiles_Busco$C.score <- as.numeric(as.character(Stramenopiles_Busco$C.score))
@@ -96,7 +102,6 @@ Stramenopiles_Busco$Frag.score <- as.numeric(as.character(Stramenopiles_Busco$Fr
 Ciliates <- read_tsv("C:/Users/kajoh/Desktop/Tables/Ciliates_Names.tsv")
 ```
 
-
 ```{r setup, include=FALSE}
 # Global Variables for Analysis
 
@@ -108,7 +113,6 @@ LRTScoreD <- 150
 #RICTOR, SIN1, D1
 RSDScoreA <- 100
 RSDScoreD <- 100
-
 
 ```
 
