@@ -3,8 +3,8 @@ title: "Alveolata & Stramenopiles TORC 1 & 2 Analysis"
 author: "Kyle Johnson"
 date: "`r Sys.Date()`"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 #Libraries needed 
@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #install.packages("rentrez")
 #install.packages("gridExtra")
 #install.packages("plotly")
+#install.packages("kableExtra")
 ```
 
 ```{r setup, include=FALSE}
@@ -23,6 +24,7 @@ library(rentrez)
 library(ggrepel)
 library(gridExtra)
 library(plotly)
+library(kableExtra)
 ```
 
 
@@ -499,6 +501,7 @@ ThreeDRICTOR <- plot_ly(RICTORAlveolata, x = ~sca, y = ~C.score, z = ~scd, type 
 
 
 
+# Have to set digits to a large number since the kable function rounds
 
 RICTORAlveolataPlot
 RICTORAlveolata %>% rename( "Accession Number" = Accn,
@@ -512,13 +515,90 @@ RICTORAlveolata %>% rename( "Accession Number" = Accn,
                             "Bias Domain" = bid,
                             "Taxonomic ID" = Organism_Taxonomic_ID,
                             "Organism Name" = Organism.Name) %>%
-  select(!c(tid, qid))
+  select(!c(tid, qid)) %>%
+  kbl(caption = "Rictor Alveolata Table", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
 
 SIN1AlveolataPlot
+SIN1Alveolata %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name) %>%
+  select(!c(tid, qid))%>%
+  kbl(caption = "SIN1 Alveolata Table", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
 RAPTORAlveolataPlot
+RAPTORAlveolata %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name) %>%
+  select(!c(tid, qid))%>%
+  kbl(caption = "RAPTOR Alveolata Table", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
 LST8AlveolataPlot
+LST8Alveolata %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name) %>%
+  select(!c(tid, qid))%>%
+kbl(caption = "LST8 Alveolata Table", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
 TORAlveolataPlot
+TORAlveolata %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name) %>%
+  select(!c(tid, qid))%>%
+  
+  kbl(caption = "TOR Alveolata Table", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
 D1AlveolataPlot
+D1Alveolata %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name) %>%
+  select(!c(tid, qid))%>%
+  kbl(caption = "D1 Alveolata Table", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
 # Note, look into TOR more deeply
 # Also do a version where
 #ThreeD
