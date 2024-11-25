@@ -88,6 +88,9 @@ Alveolata_Busco$C.score <-gsub("%$","",Alveolata_Busco$C.score)
 Alveolata_Busco$C.score <- as.numeric(as.character(Alveolata_Busco$C.score))
 Alveolata_Busco$Frag.score <- gsub("%$", "", Alveolata_Busco$Frag.score)
 Alveolata_Busco$Frag.score <- as.numeric(as.character(Alveolata_Busco$Frag.score))
+```
+
+```{r setup, include=FALSE}
 # Add in the Stramenopiles BUSCO scores
 Stramenopiles_Busco <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Stramenopiles BUSCO - Sheet1.csv")
 Stramenopiles_Busco <- Stramenopiles_Busco %>% rename(Accn = Accession)
@@ -95,7 +98,16 @@ Stramenopiles_Busco$C.score <- gsub("%$","",Stramenopiles_Busco$C.score)
 Stramenopiles_Busco$C.score <- as.numeric(as.character(Stramenopiles_Busco$C.score))
 Stramenopiles_Busco$Frag.score <- gsub("%$", "", Stramenopiles_Busco$Frag.score)
 Stramenopiles_Busco$Frag.score <- as.numeric(as.character(Stramenopiles_Busco$Frag.score))
+```
+
+```{r setup, include=FALSE}
 # Add in the Rhizaria BUSCO scores
+Rhizaria_Busco <- read.csv("~/TOR_phylogenetics/GitHub_CSV/Rhizaria_BUSCO_Sheet1.csv")
+Rhizaria_Busco <- Rhizaria_Busco %>% rename(Accn = Accession)
+Rhizaria_Busco$C.score <- gsub("%$", "", Rhizaria_Busco$C.score)
+Rhizaria_Busco$C.score <- as.numeric(as.character(Rhizaria_Busco$C.score))
+Rhizaria_Busco$Frag.score <- gsub("%$", "", Rhizaria_Busco$Frag.score)
+Rhizaria_Busco$Frag.score <- as.numeric(as.character(Rhizaria_Busco$Frag.score))
 ```
 
 
@@ -109,7 +121,7 @@ Ciliates <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Checking
 
 # Score Values
 #LST8, RAPTOR, TOR
-LRTScoresA <- 150
+LRTScoreA <- 150
 LRTScoreD <- 150
 
 #RICTOR, SIN1, D1
@@ -274,10 +286,18 @@ RAPTORStramenopiles <- RAPTORStramenopilesRaw %>% filter(sca >= LRTScoresA & scd
 SIN1Stramenopiles <- SIN1StramenopilesRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
 LST8Stramenopiles <- LST8StramenopilesRaw %>% filter(sca >= LRTScoresA & scd >= LRTScoreD)
 TORStramenopiles <- TORStramenopilesRaw %>% filter(sca >= LRTScoresA & scd >= LRTScoreD)
-  
-#Rhizaria (Future)
 ```
 
+
+```{r include=FALSE}
+#Rhizaria (Future)
+D1Rhizaria <- D1RhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RICTORRhizaria <- RICTORRhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RAPTORRhizaria <- RAPTORRhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+SIN1Rhizaria <- SIN1RhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+LST8Rhizaria <- LST8RhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+TORRhizaria <- TORRhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+```
 
 ```{r include=FALSE}
 # Add in the Taxonomic Information
@@ -292,8 +312,10 @@ LST8Alveolata <- merge(LST8Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID",
 TORAlveolata <- merge(TORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
 
 # Do the Busco Scores
+```
 
 
+```{r include=FALSE}
 # Stramenopiles
 D1Stramenopiles <- merge(D1Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
 RICTORStramenopiles <- merge(RICTORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
@@ -304,6 +326,13 @@ TORStramenopiles <- merge(TORStramenopiles, Stramenopiles_Names[c("Organism_Taxo
 #Rhizaria (Future)
 ```
 
+```{r}
+D1Rhizaria <- merge(D1Rhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
+RICTORRhizaria <- merge(RICTORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn", by = "Accn")])
+RAPTORRhizaria <- merge(RAPTORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn", by = "Accn")])
+LST8Rhizaria <- merge(LST8Rhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn", by = "Accn")])
+TORRhizaria <- merge(TORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn", by = "Accn")])
+```
 
 ```{r include=FALSE}
 # Add Busco Scores 
@@ -314,7 +343,9 @@ RAPTORAlveolata <- merge(RAPTORAlveolata, Alveolata_Busco[c("C.score","Frag.scor
 SIN1Alveolata <- merge(SIN1Alveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 LST8Alveolata <- merge(LST8Alveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 TORAlveolata <- merge(TORAlveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+```
 
+```{r include=FALSE}
 ## Stramenopiles
 D1Stramenopiles <- merge(D1Stramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 RICTORStramenopiles <- merge(RICTORStramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
@@ -322,11 +353,16 @@ RAPTORStramenopiles <- merge(RAPTORStramenopiles,Stramenopiles_Busco[c("C.score"
 SIN1Stramenopiles <- merge(SIN1Stramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 LST8Stramenopiles <- merge(LST8Stramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 TORStramenopiles <- merge(TORStramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-
 ```
 
-
 ```{r}
+##Rhizaria 
+D1Rhizaria <- merge(D1Rhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
+RICTORRhizaria <- merge(RICTORRhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
+RAPTORRhizaria <- merge(RAPTORRhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
+SIN1Rhizaria <- merge(SIN1Rhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
+LST8Rhizaria <- merge(LST8Rhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
+TORRhizaria <- merge(LST8Rhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
 ```
 
 
