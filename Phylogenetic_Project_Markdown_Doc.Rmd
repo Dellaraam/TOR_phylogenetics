@@ -101,7 +101,7 @@ Stramenopiles_Busco$Frag.score <- as.numeric(as.character(Stramenopiles_Busco$Fr
 
 ```{r setup, include=FALSE}
 # Add in the different clade csvs/tsvs for clade checking
-Ciliates <- read_tsv("C:/Users/kajoh/Desktop/Tables/Ciliates_Names.tsv")
+Ciliates <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Checking_CSVs/Ciliates_Names.tsv")
 ```
 
 ```{r setup, include=FALSE}
@@ -387,6 +387,26 @@ RICTORAlveolataPlot <- ggplot(RICTORAlveolata, aes(x = sca, y = scd, color = C.s
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("RICTOR Hits Alveolata")
 
+
+
+
+RICTORAlveolataPlotCiliate <- ggplot(RICTORAlveolata, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(data = subset(RICTORAlveolata, Ciliate_Check == TRUE),
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RICTOR Hits Alveolata")
+
 SIN1AlveolataPlot <- ggplot(SIN1Alveolata, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
   geom_point()+
   geom_text_repel(direction = "y",
@@ -599,6 +619,8 @@ D1Alveolata %>% rename( "Accession Number" = Accn,
   select(!c(tid, qid))%>%
   kbl(caption = "D1 Alveolata Table", longtable = TRUE, digits = 1000) %>%
   kable_classic(full_width = F, html_font = "Cambria")
+
+RICTORAlveolataPlotCiliate
 # Note, look into TOR more deeply
 # Also do a version where
 #ThreeD
@@ -784,70 +806,149 @@ D1StramenopilesPlot
 # Create cleaned up dataframes that contain only the best possible hit from each taxon ID
 # This should be done using the maximum scd value as this denotes the best possible domain score
 cleanedD1Alveolata <- D1Alveolata %>%
-  group_by(taxid) %>%
+  group_by(Organism_Taxonomic_ID) %>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup
 
 cleanedTORAlveolata <- TORAlveolata %>%
-  group_by(taxid) %>%
+  group_by(Organism_Taxonomic_ID) %>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup()
 
 cleanedLST8Alveolata <- LST8Alveolata %>%
-  group_by(taxid) %>%
+  group_by(Organism_Taxonomic_ID) %>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup()
 
 cleanedRICTORAlveolata <- RICTORAlveolata %>%
-  group_by(taxid) %>%
+  group_by(Organism_Taxonomic_ID) %>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup()
 
 cleanedRAPTORAlveolata <- RAPTORAlveolata %>%
-  group_by(taxid) %>%
+  group_by(Organism_Taxonomic_ID) %>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup()
 
 cleanedSIN1Alveolata <- SIN1Alveolata %>%
-  group_by(taxid) %>%
+  group_by(Organism_Taxonomic_ID) %>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup()
 
 cleanedD1Stramenopiles <- D1Stramenopiles %>%
-  group_by(taxid) %>%
+  group_by(Organism_Taxonomic_ID) %>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup()
 
 cleanedLST8Stramenopiles <- LST8Stramenopiles %>%
-  group_by(taxid) %>%
+  group_by(Organism_Taxonomic_ID) %>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup()
 
 cleanedRAPTORStramenopiles <- RAPTORStramenopiles %>%
-  group_by(taxid) %>%
+  group_by(Organism_Taxonomic_ID) %>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup()
 
 cleanedRICTORStramenopiles <- RICTORStramenopiles %>%
-  group_by(taxid) %>%
+  group_by(Organism_Taxonomic_ID) %>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup()
 
 cleanedSIN1Stramenopiles <- SIN1Stramenopiles %>%
-  group_by(taxid) %>%
+  group_by(Organism_Taxonomic_ID) %>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup()
+
+
+# Now show the Tables which indicate the most likely candidates for the specific Proteins
+
+cleanedD1Alveolata %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name) %>%
+  select(!c(tid, qid))%>%
+  kbl(caption = "Most Likely D1 Proteins Alveolata", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
+cleanedRAPTORAlveolata %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name) %>%
+  select(!c(tid, qid))%>%
+  kbl(caption = "Most Likely RAPTOR Proteins Alveolata", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
+cleanedLST8Alveolata %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name) %>%
+  select(!c(tid, qid))%>%
+  kbl(caption = "Most Likely LST8 Proteins Alveolata", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
+cleanedRICTORAlveolata %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name) %>%
+  select(!c(tid, qid))%>%
+  kbl(caption = "Most Likely RICTOR Proteins Alveolata", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
+cleanedSIN1Alveolata %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name) %>%
+  select(!c(tid, qid,))%>%
+  kbl(caption = "Most Likely SIN1 Proteins Alveolata", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
 
 
 ```
