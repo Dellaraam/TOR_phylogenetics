@@ -623,6 +623,22 @@ RICTORStramenopilesPlot <- ggplot(RICTORStramenopiles, aes(x = sca, y = scd, col
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("RICTOR Hits Stramenopiles")
 
+RICTORStramenopilesPlotPhoto <- ggplot(RICTORStramenopiles, aes(x = sca, y = scd, color = Has_D1, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RICTOR/D1 Stramenopiles")
+
 SIN1StramenopilesPlot <- ggplot(SIN1Stramenopiles, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
   geom_point()+
   geom_text_repel(direction = "y",
@@ -655,6 +671,23 @@ RAPTORStramenopilesPlot <- ggplot(RAPTORStramenopiles, aes(x = sca, y = scd, col
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("RAPTOR Hits Stramenopiles")
 
+RAPTORStramenopilesPlotPhoto <- ggplot(RAPTORStramenopiles, aes(x = sca, y = scd, color = Has_D1, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(data = subset(RAPTORStramenopiles, Has_D1 == TRUE),
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RAPTOR/D1 Stramenopiles")
+
 LST8StramenopilesPlot <- ggplot(LST8Stramenopiles, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
   geom_point()+
   geom_text_repel(direction = "y",
@@ -667,7 +700,6 @@ LST8StramenopilesPlot <- ggplot(LST8Stramenopiles, aes(x = sca, y = scd, color =
                   point.padding = 0.6,
                   color = "black",
                   size = 2.0)+
-  theme_minimal()+
   xlab("Overall Score of HMMER Hit")+
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("LST8 Hits Stramenopiles")
@@ -678,7 +710,7 @@ TORStramenopilesPlot <- ggplot(TORStramenopiles, aes(x = sca, y = scd, color = C
                   min.segment.length = 0.5,
                   force = 10,
                   max.time = 10,
-                  max.overlaps = 50,
+                  max.overlaps = 30,
                   nudge_x = -50,
                   nudge_y = .1,
                   point.padding = 0.6,
@@ -708,8 +740,10 @@ D1StramenopilesPlot <- ggplot (D1Stramenopiles, aes(x = sca, y = scd, color = C.
 
 
 RICTORStramenopilesPlot
+RICTORStramenopilesPlotPhoto
 SIN1StramenopilesPlot
 RAPTORStramenopilesPlot
+RAPTORStramenopilesPlotPhoto
 TORStramenopilesPlot
 LST8StramenopilesPlot
 D1StramenopilesPlot
