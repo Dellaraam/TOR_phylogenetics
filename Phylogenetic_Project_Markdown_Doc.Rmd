@@ -300,12 +300,12 @@ TORStramenopiles <- TORStramenopilesRaw %>% filter(sca >= LRTScoreA & scd >= LRT
 
 ```{r include=FALSE}
 #Rhizaria (Future)
-D1Rhizaria <- D1RhizariaRaw %>% filter(sca >= 0 & scd >= 0)
-RICTORRhizaria <- RICTORRhizariaRaw %>% filter(sca >= 0 & scd >= 0)
-RAPTORRhizaria <- RAPTORRhizariaRaw %>% filter(sca >= 0 & scd >= 0)
-SIN1Rhizaria <- SIN1RhizariaRaw %>% filter(sca >= 0 & scd >= 0)
-LST8Rhizaria <- LST8RhizariaRaw %>% filter(sca >= 0 & scd >= 0)
-TORRhizaria <- TORRhizariaRaw %>% filter(sca >= 0 & scd >= 0)
+D1Rhizaria <- D1RhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RICTORRhizaria <- RICTORRhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RAPTORRhizaria <- RAPTORRhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+SIN1Rhizaria <- SIN1RhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+LST8Rhizaria <- LST8RhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+TORRhizaria <- TORRhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
 ```
 
 ```{r include=FALSE}
@@ -952,34 +952,6 @@ TORRhizariaPlot + scale_color_gradient(low = "green", high = "red")
 ```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```{r}
 # Create cleaned up dataframes that contain only the best possible hit from each taxon ID
 # This should be done using the maximum scd value as this denotes the best possible domain score
@@ -1049,9 +1021,53 @@ cleanedSIN1Stramenopiles <- SIN1Stramenopiles %>%
   slice_max(evd)%>%
   ungroup()
 
+cleanedTORStramenopiles <- TORStramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
 
+cleanedD1Rhizaria <- D1Rhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedRICTORRhizaria <- RICTORRhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+# cleanedSIN1Rhizaria <- SIN1Rhizaria %>%
+#   group_by(Organism_Taxonomic_ID) %>%
+#   slice_max(scd) %>%
+#   slice_max(evd)%>%
+#   ungroup()
+
+cleanedRAPTORRhizaria <- RAPTORRhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedLST8Rhizaria <- LST8Rhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedTORRhizaria <- TORRhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+```
+
+
+```{r}
 # Now show the Tables which indicate the most likely candidates for the specific Proteins
-
 cleanedD1Alveolata %>% rename( "Accession Number" = Accn,
                             "Target Protein" = tar,
                             "Query HMM" = qry,
@@ -1155,96 +1171,204 @@ cleanedTORAlveolata %>% rename( "Accession Number" = Accn,
   kable_classic(full_width = F, html_font = "Cambria")
 
 
-
-```
-
-
-```{r}
-
-
-
 ```
 
 
 
 
 ```{r}
+cleanedD1Rhizaria %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
+  kbl(caption = "Most Likely D1 Proteins Rhizaria", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
+cleanedRICTORRhizaria %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
+  kbl(caption = "Most Likely RICOTR Proteins Rhizaria", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
+cleanedRAPTORRhizaria %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
+  kbl(caption = "Most Likely RAPTOR Proteins Rhizaria", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
+cleanedLST8Rhizaria %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
+  kbl(caption = "Most Likely LST8 Proteins Rhizaria", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
+cleanedTORRhizaria %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
+  kbl(caption = "Most Likely TOR Proteins Rhizaria", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
 
   
 ```
 
 
+```{r}
+cleanedD1Stramenopiles %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
+  kbl(caption = "Most Likely D1 Proteins Stramenopiles", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
 
-In order to determine the initial cut off values, graphs were made for the Raw data for each of the proteins regarding the clades Alveolata and Stramenopila
+cleanedRICTORStramenopiles %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
+  kbl(caption = "Most Likely RICTOR Proteins Stramenopiles", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
 
-Here is a comparison between the scores for Alveolata (L) and Stramenopila (R)
-```{r echo=FALSE}
-RICTORAlveolataRawPlot <- ggplot(RICTORAlveolataRaw, aes(x = sca, y = scd))+
-  geom_point()+
-  ggtitle("RICTOR HMMER Results Alveolata")+
-  xlab("Overall HMMER BIT Score")+
-  ylab("Best Domain HMMER BIT Score")
+cleanedSIN1Stramenopiles %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
+  kbl(caption = "Most Likely SIN1 Proteins Stramenopiles", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
 
-RICTORStramenopilesRawPlot <- ggplot(RICTORStramenopilesRaw, aes(x = sca, y = scd))+
-  geom_point()+
-  ggtitle("RICTOR HMMER Results Stramenopiles")+
-  xlab("Overall HMMER BIT Score")+
-  ylab("Best Domain HMMER BIT Score")
+cleanedRAPTORStramenopiles %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
+  kbl(caption = "Most Likely RAPTOR Proteins Stramenopiles", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
 
-grid.arrange(RICTORAlveolataRawPlot, RICTORStramenopilesRawPlot, ncol=2)
+cleanedLST8Stramenopiles %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
+  kbl(caption = "Most Likely LST8 Proteins Stramenopiles", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
+
+cleanedTORStramenopiles %>% rename( "Accession Number" = Accn,
+                            "Target Protein" = tar,
+                            "Query HMM" = qry,
+                            "E-value All" = eva,
+                            "Score All" = sca,
+                            "Bias All" = bia,
+                            "E-value Domain" = evd,
+                            "Best Domain Score" = scd,
+                            "Bias Domain" = bid,
+                            "Taxonomic ID" = Organism_Taxonomic_ID,
+                            "Organism Name" = Organism.Name,
+                            "Is A Ciliate" = Ciliate_Check,
+                            "Is Photosynthetic" = Has_D1) %>%
+  select(!c(tid, qid,"Query HMM"))%>%
+  kbl(caption = "Most Likely TOR Proteins Stramenopiles", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = F, html_font = "Cambria")
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Based upon the Results, a good potential cutoff value is likely between at the 250 Bit score mark for RICTOR. An annotation is added to represent the cutoff region.
-```{r echo=FALSE}
-RICTORAlveolataRawPlot <- ggplot(RICTORAlveolataRaw, aes(x = sca, y = scd))+
-  geom_point()+
-  annotate("rect",
-           xmin = 0,
-           xmax = 250,
-           ymin = 0,
-           ymax = 250,
-           alpha = .1,
-           color = "blue")+
-  ggtitle("RICTOR Alveolata")+
-  xlab("Overall HMMER BIT Score")+
-  ylab("Best Domain HMMER BIT Score")
-
-RICTORStramenopilesRawPlot <- ggplot(RICTORStramenopilesRaw, aes(x = sca, y = scd))+
-  geom_point()+
-    annotate("rect",
-           xmin = 0,
-           xmax = 250,
-           ymin = 0,
-           ymax = 250,
-           alpha = .1,
-           color = "blue")+
-  ggtitle("RICTOR Stramenopiles")+
-  xlab("Overall HMMER BIT Score")+
-  ylab("Best Domain HMMER BIT Score")
-
-grid.arrange(RICTORAlveolataRawPlot, RICTORStramenopilesRawPlot, ncol=2)
-
-```
-To compare these results to prior known, a third graph has been added
 
 
 ```{r echo=FALSE}
@@ -1675,47 +1799,5 @@ FungiShioSIN1Plot <- ggplot(FungiShioSIN1, aes(x = sca, y = scd))+
 
 
 grid.arrange(MetazoaShioSIN1Plot, FungiShioSIN1Plot, SIN1AlveolataRawPlot, SIN1StramenopilesRawPlot, ncol=2, nrow = 2)
-```
-
-
-
-```{r}
-
-fSIN1AlveolataPlot <- ggplot(fSIN1Alveolata, aes(x = sca, y = scd, label = Organism))+
-    geom_point()+
-  ggtitle("SIN1 Alveolata")+
-      # annotate("rect",
-      #      xmin = 0,
-      #      xmax = 100,
-      #      ymin = 0,
-      #      ymax = 100,
-      #      alpha = .1,
-      #      color = "blue")+
-  annotate("segment",
-           x = 0,
-           xend = 1000,
-           y = 230,
-           yend = 230,
-           color = "red")+
-    geom_text_repel(direction = "y",
-                  min.segment.length = Inf,
-                  force = 10,
-                  max.time = 10,
-                  max.overlaps = 10,
-                  nudge_x = -50,
-                  nudge_y = .1,
-                  point.padding = 0.6)+
-  xlab("Overall Score")+
-  ylab("Best Domain Score")
-
-
-fSIN1AlveolataPlot
-
-```
-```{r}
-D1AlveolataRawPlot <- ggplot(D1AlveolataRaw, aes(x = sca, y = scd))+
-  geom_point()
-
-D1AlveolataRawPlot
 ```
 
