@@ -10,7 +10,7 @@ output:
 #Libraries needed 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
+# 
 # install.packages("tidyverse")
 # install.packages("rentrez")
 # install.packages("gridExtra")
@@ -212,15 +212,19 @@ Check_Ciliates <- function (toBeCompared, ciliate){
   #print(ciliate)
   
   # Iterate through the toBeCompared dataframe and the ciliates dataframe
-  for (n in 1:nrow(toBeCompared)){
-    for(c in 1:nrow(ciliate)){
-      if(toBeCompared[n, "Organism_Taxonomic_ID"] == ciliate[c, "Organism_Taxonomic_ID"]){
-        toBeCompared$Ciliate_Check[n] <- TRUE
-      } else{}
+  if(dim(toBeCompared)[1] == 0){
+    return(toBeCompared)
+  }else{
+    for (n in 1:nrow(toBeCompared)){
+      for(c in 1:nrow(ciliate)){
+        if(toBeCompared[n, "Organism_Taxonomic_ID"] == ciliate[c, "Organism_Taxonomic_ID"]){
+          toBeCompared$Ciliate_Check[n] <- TRUE
+        }else{}
       }
   }
   return(toBeCompared)
   }
+}
 ```
 
 
@@ -230,20 +234,25 @@ photoCheck <- function(inputCSV , photoCSV){
   }else{
     inputCSV <- inputCSV %>% add_column(Has_D1 = FALSE, .after = "bid")
   }
-  for(n in 1:nrow(photoCSV)){
+  
+  if(dim(inputCSV)[1] == 0){
+    return(inputCSV)
+  }else{
+    for(n in 1:nrow(photoCSV)){
     #print("PhotoCSV Values")
     #print(photoCSV$Has_D1[n])
-    for(m in 1:nrow(inputCSV)){
+      for(m in 1:nrow(inputCSV)){
       #print("InputCSV Values")
       #print(inputCSV$Has_D1[m])
-      if(inputCSV[m, "Organism_Taxonomic_ID"] == photoCSV[n,"Organism_Taxonomic_ID"]){
-        inputCSV$Has_D1[m] <- TRUE
-      }else{
+        if(inputCSV[m, "Organism_Taxonomic_ID"] == photoCSV[n,"Organism_Taxonomic_ID"]){
+          inputCSV$Has_D1[m] <- TRUE
+        }else{
+        }
       }
     }
-  }
   #print(inputCSV$Has_D1)
-  return(inputCSV)
+    return(inputCSV)
+  }
 }
 ```
 
@@ -382,6 +391,14 @@ RAPTORStramenopiles <- Check_Ciliates(RAPTORStramenopiles, Ciliates)
 SIN1Stramenopiles <- Check_Ciliates(SIN1Stramenopiles, Ciliates)
 LST8Stramenopiles <- Check_Ciliates(LST8Stramenopiles, Ciliates)
 TORStramenopiles <- Check_Ciliates(TORStramenopiles, Ciliates)
+
+## Rhizaria (None Should Be)
+D1Rhizaria <- Check_Ciliates(D1Rhizaria, Ciliates)
+RICTORRhizaria <- Check_Ciliates(RICTORRhizaria, Ciliates)
+RAPTORRhizaria <- Check_Ciliates(RAPTORRhizaria, Ciliates)
+SIN1Rhizaria <- Check_Ciliates(SIN1Rhizaria, Ciliates)
+LST8Rhizaria <- Check_Ciliates(LST8Rhizaria, Ciliates)
+TORRhizaria <- Check_Ciliates(TORRhizaria, Ciliates)
 ```
 
 
@@ -402,6 +419,13 @@ RAPTORStramenopiles <- photoCheck(RAPTORStramenopiles, D1Stramenopiles)
 SIN1Stramenopiles <- photoCheck(SIN1Stramenopiles, D1Stramenopiles)
 LST8Stramenopiles <- photoCheck(LST8Stramenopiles, D1Stramenopiles)
 TORStramenopiles <- photoCheck(TORStramenopiles, D1Stramenopiles)
+
+D1Rhizaria <- photoCheck(D1Rhizaria, D1Rhizaria)
+RICTORRhizaria <- photoCheck(RICTORRhizaria, D1Rhizaria)
+RAPTORRhizaria <- photoCheck(RAPTORRhizaria, D1Rhizaria)
+SIN1Rhizaria <- photoCheck(SIN1Rhizaria, D1Rhizaria)
+LST8Rhizaria <- photoCheck(LST8Rhizaria, D1Rhizaria)
+TORRhizaria <- photoCheck(TORRhizaria, D1Rhizaria)
 
 ```
 
@@ -808,6 +832,119 @@ D1StramenopilesPlot
 ```
 
 
+```{r}
+D1RhizariaPlot <- ggplot(D1Rhizaria, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("D1 Hits Rhizaria")
+
+RICTORRhizariaPlot <- ggplot(RICTORRhizaria, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RICTOR Hits Rhizaria")
+
+SIN1RhizariaPlot <- ggplot(SIN1Rhizaria, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("SIN1 Hits Rhizaria")
+
+RAPTORRhizariaPlot <- ggplot(RAPTORRhizaria, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RAPTOR Hits Rhizaria")
+
+LST8RhizariaPlot <- ggplot(LST8Rhizaria, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("LST8 Hits Rhizaria")
+
+TORRhizariaPlot <- ggplot(TORRhizaria, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("TOR Hits Rhizaria")
+
+
+
+D1RhizariaPlot
+RICTORRhizariaPlot
+#SIN1RhizariaPlot
+RAPTORRhizariaPlot
+LST8RhizariaPlot
+TORRhizariaPlot
+
+
+
+
+
+
+
+```
 
 
 
