@@ -1371,6 +1371,40 @@ cleanedTORStramenopiles %>% rename( "Accession Number" = Accn,
 ```
 
 
+```{r}
+# Write to file the cleaned alveolatas
+write.csv(cleanedD1Alveolata, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_D1_Alveolata.csv")
+write.csv(cleanedRICTORAlveolata, file ="~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_RICTOR_Alveolata.csv")
+write.csv(cleanedSIN1Alveolata, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_SIN1_Alveolata.csv")
+write.csv(cleanedRAPTORAlveolata, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_RAPTOR_Alveolata.csv")
+write.csv(cleanedLST8Alveolata, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_LST8_Alveolata.csv")
+write.csv(cleanedTORAlveolata, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_TOR_Alveolata.csv")
+
+```
+
+```{r}
+# Write to file the cleaned stramenopiles
+write.csv(cleanedD1Stramenopiles, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_D1_Stramenopiles.csv")
+write.csv(cleanedRICTORStramenopiles, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_RICTOR_Stramenopiles.csv")
+write.csv(cleanedSIN1Stramenopiles, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_SIN1_Stramenopiles.csv")
+write.csv(cleanedRAPTORStramenopiles, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_RAPTOR_Stramenopiles.csv")
+write.csv(cleanedLST8Stramenopiles, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_LST8_Stramenopiles.csv")
+write.csv(cleanedTORStramenopiles, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_TOR_Stramenopiles.csv")
+
+
+```
+
+```{r}
+write.csv(cleanedD1Rhizaria, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_D1_Rhizaria.csv")
+write.csv(cleanedRICTORRhizaria, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_RICTOR_Rhizaria.csv")
+write.csv(cleanedRAPTORRhizaria, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_RAPTOR_Rhizaria.csv")
+write.csv(cleanedLST8Rhizaria, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_LST8_Rhizaria.csv")
+write.csv(cleanedTORRhizaria, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_TOR_Rhizaria.csv")
+```
+
+
+
+
 ```{r echo=FALSE}
 RICTORAlveolataRawPlot <- ggplot(RICTORAlveolataRaw, aes(x = sca, y = scd))+
   geom_point()+
