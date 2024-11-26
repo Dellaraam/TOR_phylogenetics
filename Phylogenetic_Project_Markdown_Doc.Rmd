@@ -300,12 +300,12 @@ TORStramenopiles <- TORStramenopilesRaw %>% filter(sca >= LRTScoreA & scd >= LRT
 
 ```{r include=FALSE}
 #Rhizaria (Future)
-D1Rhizaria <- D1RhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
-RICTORRhizaria <- RICTORRhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
-RAPTORRhizaria <- RAPTORRhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
-SIN1Rhizaria <- SIN1RhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
-LST8Rhizaria <- LST8RhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
-TORRhizaria <- TORRhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+D1Rhizaria <- D1RhizariaRaw %>% filter(sca >= 0 & scd >= 0)
+RICTORRhizaria <- RICTORRhizariaRaw %>% filter(sca >= 0 & scd >= 0)
+RAPTORRhizaria <- RAPTORRhizariaRaw %>% filter(sca >= 0 & scd >= 0)
+SIN1Rhizaria <- SIN1RhizariaRaw %>% filter(sca >= 0 & scd >= 0)
+LST8Rhizaria <- LST8RhizariaRaw %>% filter(sca >= 0 & scd >= 0)
+TORRhizaria <- TORRhizariaRaw %>% filter(sca >= 0 & scd >= 0)
 ```
 
 ```{r include=FALSE}
@@ -433,7 +433,8 @@ TORRhizaria <- photoCheck(TORRhizaria, D1Rhizaria)
 ```{r}
 RICTORAlveolataPlot <- ggplot(RICTORAlveolata, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
   geom_point()+
-  geom_text_repel(direction = "y",
+  geom_text_repel(data = RICTORAlveolata, aes(color = Frag.score),
+                  direction = "y",
                   min.segment.length = 0.5,
                   force = 10,
                   max.time = 10,
@@ -441,7 +442,6 @@ RICTORAlveolataPlot <- ggplot(RICTORAlveolata, aes(x = sca, y = scd, color = C.s
                   nudge_x = -50,
                   nudge_y = .1,
                   point.padding = 0.6,
-                  color = "black",
                   size = 2.0)+
   xlab("Overall Score of HMMER Hit")+
   ylab("Best Domain Score of HMMER Hit")+
@@ -452,8 +452,7 @@ RICTORAlveolataPlot <- ggplot(RICTORAlveolata, aes(x = sca, y = scd, color = C.s
 
 RICTORAlveolataPlotCiliate <- ggplot(RICTORAlveolata, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
   geom_point()+
-  geom_text_repel(data = subset(RICTORAlveolata, Ciliate_Check == TRUE),
-                  direction = "y",
+  geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
                   force = 10,
                   max.time = 10,
@@ -816,7 +815,7 @@ D1StramenopilesPlot <- ggplot (D1Stramenopiles, aes(x = sca, y = scd, color = C.
                   size = 2.0)+
   xlab("Overall Score of HMMER Hit")+
   ylab("Best Domain Score of HMMER Hit")+
-  ggtitle("D1 Hits Alveolata")
+  ggtitle("D1 Hits Stramenopiles")
 
 
 
@@ -833,7 +832,7 @@ D1StramenopilesPlot
 
 
 ```{r}
-D1RhizariaPlot <- ggplot(D1Rhizaria, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+D1RhizariaPlot <- ggplot(D1Rhizaria, aes(x = sca, y = scd, color = Frag.score, label = Organism.Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -849,7 +848,7 @@ D1RhizariaPlot <- ggplot(D1Rhizaria, aes(x = sca, y = scd, color = C.score, labe
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("D1 Hits Rhizaria")
 
-RICTORRhizariaPlot <- ggplot(RICTORRhizaria, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+RICTORRhizariaPlot <- ggplot(RICTORRhizaria, aes(x = sca, y = scd, color = Frag.score, label = Organism.Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -865,7 +864,7 @@ RICTORRhizariaPlot <- ggplot(RICTORRhizaria, aes(x = sca, y = scd, color = C.sco
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("RICTOR Hits Rhizaria")
 
-SIN1RhizariaPlot <- ggplot(SIN1Rhizaria, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+SIN1RhizariaPlot <- ggplot(SIN1Rhizaria, aes(x = sca, y = scd, color = Frag.score, label = Organism.Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -881,7 +880,7 @@ SIN1RhizariaPlot <- ggplot(SIN1Rhizaria, aes(x = sca, y = scd, color = C.score, 
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("SIN1 Hits Rhizaria")
 
-RAPTORRhizariaPlot <- ggplot(RAPTORRhizaria, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+RAPTORRhizariaPlot <- ggplot(RAPTORRhizaria, aes(x = sca, y = scd, color = Frag.score, label = Organism.Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -897,7 +896,7 @@ RAPTORRhizariaPlot <- ggplot(RAPTORRhizaria, aes(x = sca, y = scd, color = C.sco
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("RAPTOR Hits Rhizaria")
 
-LST8RhizariaPlot <- ggplot(LST8Rhizaria, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+LST8RhizariaPlot <- ggplot(LST8Rhizaria, aes(x = sca, y = scd, color = Frag.score, label = Organism.Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -913,7 +912,7 @@ LST8RhizariaPlot <- ggplot(LST8Rhizaria, aes(x = sca, y = scd, color = C.score, 
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("LST8 Hits Rhizaria")
 
-TORRhizariaPlot <- ggplot(TORRhizaria, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+TORRhizariaPlot <- ggplot(TORRhizaria, aes(x = sca, y = scd, color = Frag.score, label = Organism.Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -931,12 +930,18 @@ TORRhizariaPlot <- ggplot(TORRhizaria, aes(x = sca, y = scd, color = C.score, la
 
 
 
-D1RhizariaPlot
-RICTORRhizariaPlot
+D1RhizariaPlot + scale_color_gradient(low = "green", high = "red")
+RICTORRhizariaPlot + scale_color_gradient(low = "green", high = "red")
 #SIN1RhizariaPlot
-RAPTORRhizariaPlot
-LST8RhizariaPlot
-TORRhizariaPlot
+RAPTORRhizariaPlot + scale_color_gradient(low = "green", high = "red")
+LST8RhizariaPlot + annotate("rect",
+           xmin = 0,
+           xmax = 150,
+           ymin = 0,
+           ymax = 150,
+           alpha = .1,
+           color = "green")+ scale_color_gradient(low = "green", high = "red")
+TORRhizariaPlot + scale_color_gradient(low = "green", high = "red")
 
 
 
