@@ -5,7 +5,19 @@ computationally confirm the proteomic sequences of the RICTOR, RAPTOR, LST8, and
 We seek to answer questions such as when and where have TOR components have been gained and lost
 and what contexts do these occur as well as confirm or disprove previous conclusions.
 
+We started with 96 unique genomes form various clades such as Alveolata, Stramenoplies, Rhizaria, 
+Metzoa, and Fungi clades. Then added an additional, although not unique, 193 Alveolata,  
+176 Stramenopiles, 8 Rhizaria genomes to our analysis from the NCBI database in protein form. 
+If the genome did not have a proteome then using TBLASTN the genome would be converted to protein 
+format. 
 
+Using the Eddy Labs HMMER program we searched for sequences that match the stated TOR components 
+either in part or in whole and convert the output into comma separated values using the script 
+hmmer2csv.py. 
+
+```
+ insert example commandline input here 
+```
 
  
 
