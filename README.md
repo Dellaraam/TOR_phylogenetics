@@ -18,7 +18,9 @@ using the script hmmer2csv.py.
 ```
  insert example command line input here 
 ```
-
+All genomes are also run on BUSCO for genome quality assurance to sense the general completeness of 
+the assembly and how much fragmentation is expected. Allowing us to be more confident in the accuracy
+of our results as well as identify organisms that should be further investigated in the alignement step.
 
 
 
