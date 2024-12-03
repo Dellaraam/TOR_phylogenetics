@@ -271,6 +271,35 @@ plotCleanup <- function (df, var){
 
 ```
 
+```{r}
+ComplexCheck2 <- function (inputdf, SIN1df, RICTORdf){
+  # Check to see if the input function has the column already. Add it if it does not
+  if ("TORC2" %in% colnames(inputdf)){
+  }else{
+    inputdf <- inputdf %>% add_column(TORC2 = FALSE, .after = Organism.Name)
+  }
+  
+  
+  #Loop to iterate through the inputdf
+  for (n in 1:nrow(inputdf)) {
+    #Loop to iterate through the RICTORdf
+    for (i in 1:nrow(RICTORdf)){
+      #Loop to iterate through the SIN1df
+      for (j in 1:nrow(SIN1df)){
+        if (inputdf[n, "Organism_Taxonomic_ID"] == RICTORdf[i, "Organism_Taxonomic_ID"] & inputdf[n, "Organism_Taxonomic_ID"] == SIN1df[j, "Organism_Taxonomic_ID"]){
+          inputdf&TORC2[n] <- TRUE
+        }else{}
+      }
+    }
+  }
+  
+  
+}
+```
+
+
+
+
 
 For initial filtering steps, the csvs are first filtered to remove any values that are considered below acceptable. For LST8, RAPTOR, TOR, this score will be 150 and 150 respectively due to the large presence of WD-40 Repeats. For RICTOR, SIN1, and D1 this will be 100 respectively. Prior analysis work indicates that for all proteins, any value below this cutoff threshold is most likely a false positive at best and can therefore be safely discarded.
 The following code blocks do the initial filtering steps and then add in the taxonomic ID for each of the proteins within the CSV, add in the organism name, checks to see if the organisms belong to the ciliate family, checks if any of the organisms contain the D1 Protein while also containing the others, and finally adds in BUSCO scores for each of the organisms:
@@ -1403,6 +1432,16 @@ write.csv(cleanedLST8Rhizaria, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/C
 write.csv(cleanedTORRhizaria, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cleaned_TOR_Rhizaria.csv")
 ```
 
+```{r}
+
+
+
+
+
+
+
+
+```
 
 
 
