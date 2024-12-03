@@ -955,6 +955,7 @@ TORRhizariaPlot + scale_color_gradient(low = "green", high = "red")
 ```{r}
 # Create cleaned up dataframes that contain only the best possible hit from each taxon ID
 # This should be done using the maximum scd value as this denotes the best possible domain score
+# Feel free to modify as you need
 cleanedD1Alveolata <- D1Alveolata %>%
   group_by(Organism_Taxonomic_ID) %>%
   slice_max(scd) %>%
