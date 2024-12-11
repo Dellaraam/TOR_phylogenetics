@@ -276,7 +276,7 @@ ComplexCheck2 <- function (inputdf, SIN1df, RICTORdf){
   # Check to see if the input function has the column already. Add it if it does not
   if ("TORC2" %in% colnames(inputdf)){
   }else{
-    inputdf <- inputdf %>% add_column(TORC2 = FALSE, .after = Organism.Name)
+    inputdf <- inputdf %>% add_column(TORC2 = FALSE, .after = "Organism.Name")
   }
   
   
@@ -287,12 +287,13 @@ ComplexCheck2 <- function (inputdf, SIN1df, RICTORdf){
       #Loop to iterate through the SIN1df
       for (j in 1:nrow(SIN1df)){
         if (inputdf[n, "Organism_Taxonomic_ID"] == RICTORdf[i, "Organism_Taxonomic_ID"] & inputdf[n, "Organism_Taxonomic_ID"] == SIN1df[j, "Organism_Taxonomic_ID"]){
-          inputdf&TORC2[n] <- TRUE
+          inputdf$TORC2[n] <- TRUE
         }else{}
       }
     }
   }
   
+  return(inputdf)
   
 }
 ```
@@ -1433,9 +1434,9 @@ write.csv(cleanedTORRhizaria, file = "~/GitHub/TOR_phylogenetics/Cleaned_CSVs/Cl
 ```
 
 ```{r}
-
-
-
+D1StramenopilesFinal <- ComplexCheck2(cleanedD1Stramenopiles, SIN1Stramenopiles, RICTORStramenopiles)
+#RICTORStramenopilesFinal <- ComplexCheck2(cleanedRICTORStramenopiles, SIN1Stramenopiles, RICTORStramenopiles)
+#RICTORAlveolataFinal <- ComplexCheck2(cleanedRICTORAlveolata, SIN1Alveolata, RICTORAlveolata)
 
 
 
