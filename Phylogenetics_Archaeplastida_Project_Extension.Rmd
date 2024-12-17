@@ -4,19 +4,23 @@ author: "Kyle Johnson"
 date: "`r Sys.Date()`"
 output: html_document
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-
-# Include the libraries here
-
+```{r}
+# Only use if the packages have not been installed in this environment
 # Packages 
  install.packages("tidyverse")
  install.packages("rentrez")
  install.packages("gridExtra")
  install.packages("plotly")
  install.packages("kableExtra")
- 
+```
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Include the libraries here
 # Libraries
 library(tidyverse)
 library(rentrez)
@@ -190,7 +194,7 @@ RAPTORStreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated
 SIN1StreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/SIN1_Streptophyta.csv")
 TORStreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/TOR_Streptophyta.csv")
 StreptophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_Names.tsv", show_col_types = FALSE)
-StreptophytaNames <- StreptophytaNames %>% rename(Accn = "Assembly Accession")
+StreptophytaNames <- StreptophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 
 D1ChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/D1_Chlorophyta.csv")
 LST8ChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/LST8_Chlorophyta.csv")
@@ -199,7 +203,7 @@ RAPTORChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_
 SIN1ChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/SIN1_Chlorophyta.csv")
 TORChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/TOR_Chlorophyta.csv")
 ChlorophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Chlorophyta_Names.tsv", show_col_types = FALSE)
-ChlorophytaNames <- ChlorophytaNames %>% rename(Accn = "Assembly Accession")
+ChlorophytaNames <- ChlorophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 
 D1RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/D1_Rhodophyta.csv")
 LST8RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/LST8_Rhodophyta.csv")
@@ -208,34 +212,34 @@ RAPTORRhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_R
 SIN1RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/SIN1_Rhodophyta.csv")
 TORRhodophytaRaw  <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/TOR_Rhodophyta.csv")
 RhodophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/Rhodophyta_Names.tsv", show_col_types = FALSE)
-RhodophytaNames <- RhodophytaNames %>% rename(Accn = "Assembly Accession")
+RhodophytaNames <- RhodophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 
 
 ```
 
 ```{r}
 
-D1Streptophyta <- merge(D1StreptophytaRaw, StreptophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-LST8Streptophyta <- merge(LST8StreptophytaRaw, StreptophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-RAPTORStreptophyta <- merge(RAPTORStreptophytaRaw, StreptophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-RICTORStreptophyta <- merge(RICTORStreptophytaRaw, StreptophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-SIN1Streptophyta <- merge(SIN1StreptophytaRaw, StreptophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-TORStreptophyta <- merge(TORStreptophytaRaw, StreptophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
+D1Streptophyta <- merge(D1StreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+LST8Streptophyta <- merge(LST8StreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RAPTORStreptophyta <- merge(RAPTORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RICTORStreptophyta <- merge(RICTORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+SIN1Streptophyta <- merge(SIN1StreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+TORStreptophyta <- merge(TORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
 
 
-D1Rhodophyta <- merge(D1RhodophytaRaw, RhodophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-LST8Rhodophyta <- merge(LST8RhodophytaRaw, RhodophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-RAPTORRhodophyta <- merge(RAPTORRhodophytaRaw, RhodophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-RICTORRhodophyta <- merge(RICTORRhodophytaRaw, RhodophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-SIN1Rhodophyta <- merge(SIN1RhodophytaRaw, RhodophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-TORRhodophyta <- merge(TORRhodophytaRaw, RhodophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
+D1Rhodophyta <- merge(D1RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+LST8Rhodophyta <- merge(LST8RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RAPTORRhodophyta <- merge(RAPTORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RICTORRhodophyta <- merge(RICTORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+SIN1Rhodophyta <- merge(SIN1RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+TORRhodophyta <- merge(TORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
 
-D1Chlorophyta <- merge(D1ChlorophytaRaw, ChlorophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-LST8Chlorophyta <- merge(LST8ChlorophytaRaw, ChlorophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-RAPTORChlorophyta <- merge(RAPTORChlorophytaRaw, ChlorophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-RICTORChlorophyta <- merge(RICTORChlorophytaRaw, ChlorophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-SIN1Chlorophyta <- merge(SIN1ChlorophytaRaw, ChlorophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
-TORChlorophyta <- merge(TORChlorophytaRaw, ChlorophytaNames[c("Organism Taxonomic ID", "Organism Name", "Accn")], by ="Accn")
+D1Chlorophyta <- merge(D1ChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+LST8Chlorophyta <- merge(LST8ChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RAPTORChlorophyta <- merge(RAPTORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RICTORChlorophyta <- merge(RICTORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+SIN1Chlorophyta <- merge(SIN1ChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+TORChlorophyta <- merge(TORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
 
 
 
@@ -252,12 +256,37 @@ TORChlorophyta <- merge(TORChlorophytaRaw, ChlorophytaNames[c("Organism Taxonomi
 
 ```{r}
 
-plot1 <- ggplot(RICTORStreptophytaRaw, aes(x = sca, y = scd))+
-  geom_point()
+plot1 <- ggplot(RICTORStreptophyta, aes(x = sca, y = scd, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)
   
 
 
 plot1
+
+plot2 <- ggplot(SIN1Streptophyta, aes(x = sca, y = scd, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)
+
+plot2
 
 ```
 
