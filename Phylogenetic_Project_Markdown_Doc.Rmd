@@ -121,8 +121,8 @@ Ciliates <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Checking
 
 # Score Values
 #LST8, RAPTOR, TOR
-LRTScoreA <- 150
-LRTScoreD <- 150
+LRTScoreA <- 100
+LRTScoreD <- 100
 
 #RICTOR, SIN1, D1
 RSDScoreA <- 100
@@ -337,6 +337,7 @@ mainCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TO
       }
       
     }
+    print("Finished RICTOR")
   }else{}
     #Second Loop for SIN1
   if(nrow(SIN1df) != 0){
@@ -357,6 +358,7 @@ mainCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TO
       }
       
     }
+    print("Finished SIN1")
   }else{}
 
     #Third Loop for RAPTOR
@@ -378,31 +380,34 @@ mainCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TO
       }
       
     }
+    print("Finished RAPTOR")
   }else{}
   
   
     #Fourth Loop for LST8
+  print(nrow(LST8df))
   if(nrow(LST8df) != 0){
     for (n in 1:nrow(returnDF)){
       for (m in 1:nrow(LST8df)){
         #condition check to see if the taxIDs line up
-        if(returnDF[n, "Organism_Taxonomic_ID"] == LST8df[m, "Organism_Taxonomic_ID"]){
+        if(returnDF[n,"Organism_Taxonomic_ID"] == LST8df[m, "Organism_Taxonomic_ID"]){
           if (LST8df[m, "scd"] > 300){
           returnDF$LST8[n] <- "H"
           }else if (LST8df[m,"scd"] < 300 & LST8df[m,"scd"] > 150){
           returnDF$LST8[n] <- "M"
           }else if (LST8df[m,"scd"] < 150){
-          returnDF$LSt8[n] <- "L"
+          returnDF$LST8[n] <- "L"
           }
         } else{
           next
         }
       }
     }
+    print("Finished LST8")
   }else{}
   
     #Fourth Loop for TOR
-  if(nrow(LST8df) != 0){
+  if(nrow(TORdf) != 0){
     for (n in 1:nrow(returnDF)){
       for (m in 1:nrow(TORdf)){
         #condition check to see if the taxIDs line up
