@@ -313,7 +313,7 @@ mainCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TO
   # Now create empty columns and rows that will be filled in later in the function
   # These will be the "checking" sections for each of the specified proteins
   
-  returnDF <- returnDF %>% add_column(RICTOR = NA, SIN1 = NA, RAPTOR = NA, LST8 = NA, TOR = NA, D1 = NA)
+  returnDF <- returnDF %>% add_column(SIN1 = NA, RICTOR = NA, RAPTOR = NA, TOR = NA, LST8 = NA, D1 = NA)
   returnDF <- returnDF %>% add_column(Group = Grouping, .before = "Accn")
   
   #Check the input dataframes to see if they are of length 0. If they are, do something about it
@@ -627,35 +627,190 @@ TORRhizaria <- photoCheck(TORRhizaria, D1Rhizaria)
 ```
 
 
+```{r}
+# Create cleaned up dataframes that contain only the best possible hit from each taxon ID
+# This should be done using the maximum scd value as this denotes the best possible domain score
+# Feel free to modify as you need
+cleanedD1Alveolata <- D1Alveolata %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
 
+cleanedTORAlveolata <- TORAlveolata %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedLST8Alveolata <- LST8Alveolata %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedRICTORAlveolata <- RICTORAlveolata %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedRAPTORAlveolata <- RAPTORAlveolata %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedSIN1Alveolata <- SIN1Alveolata %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedD1Stramenopiles <- D1Stramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedLST8Stramenopiles <- LST8Stramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedRAPTORStramenopiles <- RAPTORStramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedRICTORStramenopiles <- RICTORStramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedSIN1Stramenopiles <- SIN1Stramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedTORStramenopiles <- TORStramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedD1Rhizaria <- D1Rhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedRICTORRhizaria <- RICTORRhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+# its of length 0 for rows
+# cleanedSIN1Rhizaria <- SIN1Rhizaria %>%
+#   group_by(Organism_Taxonomic_ID) %>%
+#   slice_max(scd) %>%
+#   slice_max(evd)%>%
+#   ungroup()
+
+cleanedRAPTORRhizaria <- RAPTORRhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedLST8Rhizaria <- LST8Rhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedTORRhizaria <- TORRhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+```
 
 
 
 ```{r}
 # create Combined tables that have the information 
 
-CombinedAlveolata <- mainCombine("Alveolata", Alveolata_Names, RICTORAlveolata, SIN1Alveolata, RAPTORAlveolata, LST8Alveolata, TORAlveolata, D1Alveolata)
+CombinedAlveolata <- mainCombine("Alveolata", Alveolata_Names, cleanedRICTORAlveolata, cleanedSIN1Alveolata, cleanedRAPTORAlveolata, cleanedLST8Alveolata, cleanedTORAlveolata, cleanedD1Alveolata)
 CombinedAlveolata <- CombinedAlveolata[!duplicated(CombinedAlveolata$Organism_Taxonomic_ID),]
 CombinedAlveolata <- merge(CombinedAlveolata, Alveolata_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
 
-CombinedAlveolata
 
-CombinedStramenopiles <- mainCombine("Stramenopile", Stramenopiles_Names, RICTORStramenopiles, SIN1Stramenopiles, RAPTORStramenopiles, LST8Stramenopiles, TORStramenopiles, D1Stramenopiles)
+
+
+# Now show the Tables which indicate the most likely candidates for the specific Proteins
+CombinedAlveolata %>% replace(is.na(CombinedAlveolata), "")
+CombinedAlveolata %>% rename( "Accession Number" = Accn,
+                              "Organism" = Organism.Name,
+                            "C Score" = C.score,
+                            "ID" = Organism_Taxonomic_ID,
+                            "Fragmentation Score" = Frag.score) %>%
+  kbl(caption = "Combined Alveolata Table", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = T, html_font = "Cambria")
+
+
+
+
+
+CombinedStramenopiles <- mainCombine("Stramenopile", Stramenopiles_Names, cleanedRICTORStramenopiles, cleanedSIN1Stramenopiles, cleanedRAPTORStramenopiles, cleanedLST8Stramenopiles, cleanedTORStramenopiles, cleanedD1Stramenopiles)
 CombinedStramenopiles <- CombinedStramenopiles[!duplicated(CombinedStramenopiles$Organism_Taxonomic_ID), ]
 CombinedStramenopiles <- merge(CombinedStramenopiles, Stramenopiles_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
 
-CombinedStramenopiles
+CombinedStramenopiles %>% replace(is.na(CombinedStramenopiles), "")
+CombinedStramenopiles %>% rename( "Accession Number" = Accn,
+                              "Organism" = Organism.Name,
+                            "C Score" = C.score,
+                            "ID" = Organism_Taxonomic_ID,
+                            "Fragmentation Score" = Frag.score) %>%
+  kbl(caption = "Combined Alveolata Table", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = T, html_font = "Cambria")
 
-CombinedRhizaria <- mainCombine("Rhizaria", Rhizaria_Names, RICTORRhizaria, SIN1Rhizaria, RAPTORRhizaria, LST8Rhizaria, TORRhizaria, D1Rhizaria)
+CombinedRhizaria <- mainCombine("Rhizaria", Rhizaria_Names, cleanedRICTORRhizaria, SIN1Rhizaria, cleanedRAPTORRhizaria, cleanedLST8Rhizaria, cleanedTORRhizaria, cleanedD1Rhizaria)
 CombinedRhizaria <- CombinedRhizaria[!duplicated(CombinedRhizaria$Organism_Taxonomic_ID)]
 CombinedRhizaria <- merge(CombinedRhizaria, Rhizaria_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
 
-CombinedRhizaria
+CombinedRhizaria %>% replace(is.na(CombinedRhizaria), "")
+CombinedRhizaria %>% rename( "Accession Number" = Accn,
+                              "Organism" = Organism.Name,
+                            "C Score" = C.score,
+                            "ID" = Organism_Taxonomic_ID,
+                            "Fragmentation Score" = Frag.score) %>%
+  kbl(caption = "Combined Alveolata Table", longtable = TRUE, digits = 1000) %>%
+  kable_classic(full_width = T, html_font = "Cambria")
 
 
 
 
 ```
+
+```{r}
+write.csv(CombinedAlveolata, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Alveolata.csv")
+write.csv(CombinedStramenopiles, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Stramenopile.csv")
+write.csv(CombinedRhizaria, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Rhizaria.csv")
+
+
+```
+
+
+
+
+
+
 
 
 ```{r}
@@ -1180,119 +1335,7 @@ TORRhizariaPlot + scale_color_gradient(low = "green", high = "red")
 ```
 
 
-```{r}
-# Create cleaned up dataframes that contain only the best possible hit from each taxon ID
-# This should be done using the maximum scd value as this denotes the best possible domain score
-# Feel free to modify as you need
-cleanedD1Alveolata <- D1Alveolata %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup
 
-cleanedTORAlveolata <- TORAlveolata %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedLST8Alveolata <- LST8Alveolata %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedRICTORAlveolata <- RICTORAlveolata %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedRAPTORAlveolata <- RAPTORAlveolata %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedSIN1Alveolata <- SIN1Alveolata %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedD1Stramenopiles <- D1Stramenopiles %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedLST8Stramenopiles <- LST8Stramenopiles %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedRAPTORStramenopiles <- RAPTORStramenopiles %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedRICTORStramenopiles <- RICTORStramenopiles %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedSIN1Stramenopiles <- SIN1Stramenopiles %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedTORStramenopiles <- TORStramenopiles %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedD1Rhizaria <- D1Rhizaria %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedRICTORRhizaria <- RICTORRhizaria %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-# cleanedSIN1Rhizaria <- SIN1Rhizaria %>%
-#   group_by(Organism_Taxonomic_ID) %>%
-#   slice_max(scd) %>%
-#   slice_max(evd)%>%
-#   ungroup()
-
-cleanedRAPTORRhizaria <- RAPTORRhizaria %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedLST8Rhizaria <- LST8Rhizaria %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-cleanedTORRhizaria <- TORRhizaria %>%
-  group_by(Organism_Taxonomic_ID) %>%
-  slice_max(scd) %>%
-  slice_max(evd)%>%
-  ungroup()
-
-```
 
 
 ```{r}
