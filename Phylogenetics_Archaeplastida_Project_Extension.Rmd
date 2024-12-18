@@ -256,6 +256,15 @@ TORChlorophyta <- merge(TORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomi
 
 ```{r}
 
+```
+
+
+
+
+
+
+```{r}
+
 plot1 <- ggplot(RICTORStreptophyta, aes(x = sca, y = scd, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",

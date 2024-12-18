@@ -114,6 +114,8 @@ Rhizaria_Busco$Frag.score <- as.numeric(as.character(Rhizaria_Busco$Frag.score))
 ```{r setup, include=FALSE}
 # Add in the different clade csvs/tsvs for clade checking
 Ciliates <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Checking_CSVs/Ciliates_Names.tsv")
+Apicomplexa <-read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Parasitic/Apicomplexa_Information.tsv")
+Perkinsozoa <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Parasitic/Perkinsozoa_Information.tsv")
 ```
 
 ```{r setup, include=FALSE}
@@ -203,7 +205,7 @@ Check_Ciliates <- function (toBeCompared, ciliate){
   if ("Ciliate_Check" %in% colnames(toBeCompared)){
   }else{
     toBeCompared <- toBeCompared %>%
-      add_column(Ciliate_Check = FALSE, .after = "bid")
+      add_column(Ciliate_Check = FALSE)
   }
   #print(toBeCompared)
   # Get rid of any spaces and replace them with _
@@ -456,12 +458,72 @@ return(returnDF)
 ```
 
 ```{r}
-# Test block for functions
-length(SIN1Rhizaria)
-test1 <- mainCombine("Alveolata", Alveolata_Names, RICTORAlveolata, SIN1Alveolata, RAPTORAlveolata, LST8Alveolata, TORAlveolata, D1Alveolata)
-test1 <- test1[!duplicated(test1$Organism_Taxonomic_ID),]
-test1 <- merge(test1, Alveolata_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
+parasiteCheck <- function(inputdf, parasite1, parasite2){
+  # Add in a column that will have values for comparing. Default is false
+  # Adding the column after the Organism column (requires that it exists)
+  if ("Parasite_Check" %in% colnames(inputdf)){
+  }else{
+    inputdf <- inputdf %>%
+      add_column(Parasite_Check = FALSE)
+  }
+  #print(toBeCompared)
+  # Get rid of any spaces and replace them with _
+  colnames(parasite1) = gsub(" ", "_", colnames(parasite1))
+  colnames(parasite2) = gsub(" ","_", colnames(parasite2))
+  print(colnames(parasite1))
+  print(colnames(parasite2))
+  
+  # Iterate through the inputdf and the two parasites dataframes
+  if(dim(inputdf)[1] == 0){
+    print("At If statement for check for 0")
+    return(inputdf)
+  }else{
+    
+    print("Entering First Loop")
+    for (n in 1:nrow(inputdf)){
+      for(c in 1:nrow(parasite1)){
+        if(inputdf[n,"Organism_Taxonomic_ID"] == parasite1[c,"Organism_Taxonomic_ID"]){
+          inputdf$Parasite_Check[n] <- TRUE
+        }else{
+        }
+      }
+    }
+    
+    print("Entering Second Loop")
+    for(n in 1:nrow(inputdf)){
+      for (m in 1:nrow(parasite2)){
+        print(m)
+        print(parasite2$Organism_Taxonomic_ID[m])
+        print(inputdf$Organism_Taxonomic_ID[n])
+        if(inputdf[n,"Organism_Taxonomic_ID"] == parasite2[m,"Organism_Taxonomic_ID"]){
+          inputdf$Parasite_Check[n] <- TRUE
+        }else{
+        }
+      }
+    }
+    
+  #Finally return the dataframe  
+  }
+  
+  return(inputdf)
+} 
+```
 
+
+
+```{r}
+# Test block for functions
+#length(SIN1Rhizaria)
+#test1 <- mainCombine("Alveolata", Alveolata_Names, RICTORAlveolata, SIN1Alveolata, RAPTORAlveolata, LST8Alveolata, TORAlveolata, D1Alveolata)
+#test1 <- test1[!duplicated(test1$Organism_Taxonomic_ID),]
+#test1 <- merge(test1, Alveolata_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
+
+#test1
+
+
+
+test1 <- parasiteCheck(test1, Apicomplexa, Perkinsozoa)
+test1 <- Check_Ciliates(test1, Ciliates)
 test1
 
 ```
@@ -794,6 +856,9 @@ CombinedRhizaria %>% rename( "Accession Number" = Accn,
   kable_classic(full_width = T, html_font = "Cambria")
 
 
+SARCombined <- rbind(CombinedAlveolata, CombinedRhizaria)
+SARCombined <- rbind(SARCombined,CombinedStramenopiles)
+SARCombined <- Check_Ciliates(SARCombined, Ciliates)
 
 
 ```
@@ -802,7 +867,7 @@ CombinedRhizaria %>% rename( "Accession Number" = Accn,
 write.csv(CombinedAlveolata, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Alveolata.csv")
 write.csv(CombinedStramenopiles, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Stramenopile.csv")
 write.csv(CombinedRhizaria, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Rhizaria.csv")
-
+write.csv(SARCombined, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/SAR_Combined.csv")
 
 ```
 
