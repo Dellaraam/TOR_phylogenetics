@@ -185,6 +185,7 @@ RSDScoreD <- 100
 ```
 
 Reading in the Archaeplastida group here. This includes Streptophyta, Rhodophyta, Chlorophyta. This section is reading in the raw data for all of these groups.
+
 ```{r}
 
 D1StreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/D1_Streptophyta.csv")
@@ -472,5 +473,36 @@ Cplot1 <- ggplot(RICTORChlorophyta, aes( x = sca, y = scd, label = Organism_Name
                   size = 2.0)+
   ggtitle("RICTOR Chlorophyta")
 Cplot1
+```
+```{r}
+Rplot1 <- ggplot(RICTORRhodophyta, aes( x = sca, y = scd, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  ggtitle("RICTOR Rhodophyta")
+Rplot1
+
+Rplot1 <- ggplot(RICTORRhodophyta, aes( x = sca, y = scd, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  ggtitle("RICTOR Rhodophyta")
+Rplot1
 ```
 

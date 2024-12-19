@@ -469,9 +469,9 @@ parasiteCheck <- function(inputdf, parasite1, parasite2){
 ```{r}
 # Test block for functions
 #length(SIN1Rhizaria)
-#test1 <- mainCombine("Alveolata", Alveolata_Names, RICTORAlveolata, SIN1Alveolata, RAPTORAlveolata, LST8Alveolata, TORAlveolata, D1Alveolata)
-#test1 <- test1[!duplicated(test1$Organism_Taxonomic_ID),]
-#test1 <- merge(test1, Alveolata_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
+test1 <- mainCombine("Alveolata", Alveolata_Names, RICTORAlveolata, SIN1Alveolata, RAPTORAlveolata, LST8Alveolata, TORAlveolata, D1Alveolata)
+test1 <- test1[!duplicated(test1$Organism_Taxonomic_ID),]
+test1 <- merge(test1, Alveolata_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
 
 #test1
 
@@ -481,7 +481,6 @@ test1 <- parasiteCheck(test1, Apicomplexa, Perkinsozoa)
 test1 <- Check_Ciliates(test1, Ciliates)
 test1
 
-write.csv(test1, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Parasite_Test.csv")
 
 ```
 
@@ -751,6 +750,9 @@ cleanedTORRhizaria <- TORRhizaria %>%
 CombinedAlveolata <- mainCombine("Alveolata", Alveolata_Names, cleanedRICTORAlveolata, cleanedSIN1Alveolata, cleanedRAPTORAlveolata, cleanedLST8Alveolata, cleanedTORAlveolata, cleanedD1Alveolata)
 CombinedAlveolata <- CombinedAlveolata[!duplicated(CombinedAlveolata$Organism_Taxonomic_ID),]
 CombinedAlveolata <- merge(CombinedAlveolata, Alveolata_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
+CombinedAlveolata <- parasiteCheck(CombinedAlveolata,Apicomplexa,Perkinsozoa)
+CombinedAlveolata <- Check_Ciliates(CombinedAlveolata, Ciliates)
+CombinedAlveolata %>% arrange(desc(Organism_Taxonomic_ID))
 
 
 
@@ -796,9 +798,8 @@ CombinedRhizaria %>% rename( "Accession Number" = Accn,
   kable_classic(full_width = T, html_font = "Cambria")
 
 
-SARCombined <- rbind(CombinedAlveolata, CombinedRhizaria)
-SARCombined <- rbind(SARCombined,CombinedStramenopiles)
-SARCombined <- Check_Ciliates(SARCombined, Ciliates)
+#SARCombined <- rbind(CombinedAlveolata, CombinedRhizaria)
+#SARCombined <- rbind(SARCombined,CombinedStramenopiles)
 
 
 ```
