@@ -247,6 +247,113 @@ TORChlorophyta <- merge(TORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomi
 ```
 
 ```{r}
+# Picking the highest possible scd and evd value for each of the organisms
+# Streptophyta Section
+D1Streptophyta <- D1Streptophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+LST8Streptophyta <- LST8Streptophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+RAPTORStreptophyta <- RAPTORStreptophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+RICTORStreptophyta <- RICTORStreptophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+SIN1Streptophyta <- SIN1Streptophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+TORStreptophyta <- TORStreptophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+
+# Rhodophyta Section
+D1Rhodophyta <- D1Rhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+LST8Rhodophyta <- LST8Rhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+RAPTORRhodophyta <- RAPTORRhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+RICTORRhodophyta <- RICTORRhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+SIN1Rhodophyta <- SIN1Rhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+TORRhodophyta <- TORRhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+# Chlorophyta Section
+D1Chlorophyta <- D1Chlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+LST8Chlorophyta <- LST8Chlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+RAPTORChlorophyta <- RAPTORChlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+RICTORChlorophyta <- RICTORChlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+SIN1Chlorophyta <- SIN1Chlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+TORChlorophyta <- TORChlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+
+
+
+```
+
+
+
+
+```{r}
 # Busco scores will be added here to the different dfs
 
 
@@ -265,7 +372,7 @@ TORChlorophyta <- merge(TORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomi
 
 ```{r}
 
-plot1 <- ggplot(RICTORStreptophyta, aes(x = sca, y = scd, label = Organism_Name))+
+plot1 <- ggplot(RICTORStreptophyta, aes(x = sca, y = scd, label = tar))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -276,13 +383,14 @@ plot1 <- ggplot(RICTORStreptophyta, aes(x = sca, y = scd, label = Organism_Name)
                   nudge_y = .1,
                   point.padding = 0.6,
                   color = "black",
-                  size = 2.0)
+                  size = 2.0)+
+  ggtitle("RICTOR Streptophyta")
   
 
 
 plot1
 
-plot2 <- ggplot(SIN1Streptophyta, aes(x = sca, y = scd, label = Organism_Name))+
+plot2 <- ggplot(SIN1Streptophyta, aes(x = sca, y = scd, label = tar))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -293,10 +401,76 @@ plot2 <- ggplot(SIN1Streptophyta, aes(x = sca, y = scd, label = Organism_Name))+
                   nudge_y = .1,
                   point.padding = 0.6,
                   color = "black",
-                  size = 2.0)
+                  size = 2.0)+
+  ggtitle("SIN1 Streptophyta")
 
 plot2
 
+plot3 <- ggplot(RAPTORStreptophyta, aes(x = sca, y = scd, label = tar))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  ggtitle("RAPTOR Streptophyta")
+plot3
+
+plot4 <- ggplot(LST8Streptophyta, aes(x = sca, y = scd, label = tar))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  ggtitle("LST8 Streptophyta")
+plot4
+
+plot5 <- ggplot(TORStreptophyta, aes(x = sca, y = scd, label = tar))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  ggtitle("TOR Streptophyta")
+plot5
+
+
+
 ```
 
+```{r}
+# Chlorophyta RICTOR Search
+
+Cplot1 <- ggplot(RICTORChlorophyta, aes( x = sca, y = scd, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  ggtitle("RICTOR Chlorophyta")
+Cplot1
+```
 

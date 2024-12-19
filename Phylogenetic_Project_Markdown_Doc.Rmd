@@ -37,36 +37,20 @@ RICTORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Al
 SIN1AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/SIN1Alveolata.csv")
 TORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/TORAlveolata.csv")
 LST8AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/LST8Alveolata.csv")
-```
 
-
-```{r setup, include=FALSE}
 D1StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/D1Stramenopiles.csv")
 RAPTORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RAPTORStramenopiles.csv")
 RICTORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RICTORStramenopiles.csv")
 SIN1StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/SIN1Stramenopiles.csv")
 TORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/TORStramenopiles.csv")
 LST8StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/LST8Stramenopiles.csv")
-```
 
-
-```{r setup, include=FALSE}
 D1RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/D1Rhizaria.csv")
 RAPTORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RAPTORRhizaria.csv")
 RICTORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RICTORRhizaria.csv")
 SIN1RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/SIN1Rhizaria.csv")
 TORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/TORRhizaria.csv")
 LST8RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/LST8Rhizaria.csv")
-```
-
-
-```{r setup, include=FALSE}
-#HMMR files for TOR componants in Metazoa anf Fungi clades
-MetazoaShioRICTOR <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/RICTOR_Metazoa")
-MetazoaShioSIN1 <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/SIN1_Metazoa")
-
-FungiShioRICTOR <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/RICTOR_Fungi")
-FungiShioSIN1 <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/SIN1_Fungi")
 ```
 
 ```{r setup, include=FALSE}
@@ -77,10 +61,7 @@ Stramenopiles_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenop
 Stramenopiles_Names <- Stramenopiles_Names %>% rename(Accn = Assembly.Accession)
 Rhizaria_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_Information_2.csv")
 Rhizaria_Names <- Rhizaria_Names %>% rename(Accn = Assembly.Accession)
-# Add in the Rhizaria_Names from NCBI
-```
 
-```{r setup, include=FALSE}
 #Changing C score to numeric values
 Alveolata_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata BUSCO - Sheet1.csv", na = 0)
 Alveolata_Busco <- Alveolata_Busco %>% rename(Accn = Accession)
@@ -88,9 +69,7 @@ Alveolata_Busco$C.score <-gsub("%$","",Alveolata_Busco$C.score)
 Alveolata_Busco$C.score <- as.numeric(as.character(Alveolata_Busco$C.score))
 Alveolata_Busco$Frag.score <- gsub("%$", "", Alveolata_Busco$Frag.score)
 Alveolata_Busco$Frag.score <- as.numeric(as.character(Alveolata_Busco$Frag.score))
-```
 
-```{r setup, include=FALSE}
 # Add in the Stramenopiles BUSCO scores
 Stramenopiles_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopiles BUSCO - Sheet1.csv")
 Stramenopiles_Busco <- Stramenopiles_Busco %>% rename(Accn = Accession)
@@ -98,9 +77,7 @@ Stramenopiles_Busco$C.score <- gsub("%$","",Stramenopiles_Busco$C.score)
 Stramenopiles_Busco$C.score <- as.numeric(as.character(Stramenopiles_Busco$C.score))
 Stramenopiles_Busco$Frag.score <- gsub("%$", "", Stramenopiles_Busco$Frag.score)
 Stramenopiles_Busco$Frag.score <- as.numeric(as.character(Stramenopiles_Busco$Frag.score))
-```
 
-```{r setup, include=FALSE}
 # Add in the Rhizaria BUSCO scores
 Rhizaria_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_BUSCO_Sheet1.csv")
 Rhizaria_Busco <- Rhizaria_Busco %>% rename(Accn = Accession)
@@ -113,12 +90,9 @@ Rhizaria_Busco$Frag.score <- as.numeric(as.character(Rhizaria_Busco$Frag.score))
 
 ```{r setup, include=FALSE}
 # Add in the different clade csvs/tsvs for clade checking
-Ciliates <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Checking_CSVs/Ciliates_Names.tsv")
-Apicomplexa <-read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Parasitic/Apicomplexa_Information.tsv")
-Perkinsozoa <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Parasitic/Perkinsozoa_Information.tsv")
-```
-
-```{r setup, include=FALSE}
+Ciliates <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Checking_CSVs/Ciliates_Names.tsv", show_col_types = FALSE)
+Apicomplexa <-read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Parasitic/Apicomplexa_Information.tsv", show_col_types = FALSE)
+Perkinsozoa <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Parasitic/Perkinsozoa_Information.tsv", show_col_types = FALSE)
 # Global Variables for Analysis
 
 # Score Values
@@ -165,10 +139,7 @@ Species_Name <- function(maincsv, namecsv){
   }
   return(maincsv) 
 }
-```
 
-
-```{r}
 Taxon_Add <- function(csvToAdd){
   temp <- csvToAdd
   if("taxid" %in% colnames(temp)){
@@ -195,10 +166,7 @@ Taxon_Add <- function(csvToAdd){
 # Finally, return the value held within temp to the output of the function
   return(temp)
 }
-```
 
-
-```{r}
 Check_Ciliates <- function (toBeCompared, ciliate){
   # Add in a column that will have values for comparing. Default is false
   # Adding the column after the Organism column (requires that it exists)
@@ -227,10 +195,7 @@ Check_Ciliates <- function (toBeCompared, ciliate){
   return(toBeCompared)
   }
 }
-```
 
-
-```{r}
 photoCheck <- function(inputCSV , photoCSV){
   if ("Has_D1" %in% colnames(inputCSV)){
   }else{
@@ -256,9 +221,7 @@ photoCheck <- function(inputCSV , photoCSV){
     return(inputCSV)
   }
 }
-```
 
-```{r}
 plotCleanup <- function (df, var){
   print(df)
   print(colnames(df))
@@ -271,9 +234,6 @@ plotCleanup <- function (df, var){
   return(df)
 }
 
-```
-
-```{r}
 ComplexCheck2 <- function (inputdf, SIN1df, RICTORdf){
   # Check to see if the input function has the column already. Add it if it does not
   if ("TORC2" %in% colnames(inputdf)){
@@ -298,10 +258,7 @@ ComplexCheck2 <- function (inputdf, SIN1df, RICTORdf){
   return(inputdf)
   
 }
-```
 
-
-```{r}
 # Function for combining all of the relevant information into one table
 
 mainCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TORdf, D1df){
@@ -455,9 +412,7 @@ mainCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TO
 # Finally return the completed dataframe   
 return(returnDF)  
 }
-```
 
-```{r}
 parasiteCheck <- function(inputdf, parasite1, parasite2){
   # Add in a column that will have values for comparing. Default is false
   # Adding the column after the Organism column (requires that it exists)
@@ -526,6 +481,8 @@ test1 <- parasiteCheck(test1, Apicomplexa, Perkinsozoa)
 test1 <- Check_Ciliates(test1, Ciliates)
 test1
 
+write.csv(test1, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Parasite_Test.csv")
+
 ```
 
 
@@ -543,10 +500,7 @@ RAPTORAlveolata <- RAPTORAlveolataRaw %>% filter(sca >= LRTScoreA & scd >= LRTSc
 SIN1Alveolata <- SIN1AlveolataRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
 LST8Alveolata <- LST8AlveolataRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
 TORAlveolata <- TORAlveolataRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
-```
 
-
-```{r include=FALSE}
 # Stramenopiles
 D1Stramenopiles <- D1StramenopilesRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
 RICTORStramenopiles <- RICTORStramenopilesRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
@@ -554,10 +508,7 @@ RAPTORStramenopiles <- RAPTORStramenopilesRaw %>% filter(sca >= LRTScoreA & scd 
 SIN1Stramenopiles <- SIN1StramenopilesRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
 LST8Stramenopiles <- LST8StramenopilesRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
 TORStramenopiles <- TORStramenopilesRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
-```
 
-
-```{r include=FALSE}
 #Rhizaria (Future)
 D1Rhizaria <- D1RhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
 RICTORRhizaria <- RICTORRhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
@@ -570,8 +521,8 @@ TORRhizaria <- TORRhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
 ```{r include=FALSE}
 # Add in the Taxonomic Information
 # Note that this section takes the longest to run due to the web based approach
-## Alveolata
 
+# Alveolata
 D1Alveolata <- merge(D1Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
 RICTORAlveolata <- merge(RICTORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
 RAPTORAlveolata <- merge(RAPTORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
@@ -579,11 +530,6 @@ SIN1Alveolata <- merge(SIN1Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID",
 LST8Alveolata <- merge(LST8Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
 TORAlveolata <- merge(TORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
 
-# Do the Busco Scores
-```
-
-
-```{r include=FALSE}
 # Stramenopiles
 D1Stramenopiles <- merge(D1Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
 RICTORStramenopiles <- merge(RICTORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
@@ -591,10 +537,8 @@ RAPTORStramenopiles <- merge(RAPTORStramenopiles, Stramenopiles_Names[c("Organis
 SIN1Stramenopiles <- merge(SIN1Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
 LST8Stramenopiles <- merge(LST8Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
 TORStramenopiles <- merge(TORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
-#Rhizaria (Future)
-```
 
-```{r}
+# Rhizaria (Future)
 D1Rhizaria <- merge(D1Rhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
 RICTORRhizaria <- merge(RICTORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
 RAPTORRhizaria <- merge(RAPTORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
@@ -611,9 +555,7 @@ RAPTORAlveolata <- merge(RAPTORAlveolata, Alveolata_Busco[c("C.score","Frag.scor
 SIN1Alveolata <- merge(SIN1Alveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 LST8Alveolata <- merge(LST8Alveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 TORAlveolata <- merge(TORAlveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-```
 
-```{r include=FALSE}
 ## Stramenopiles
 D1Stramenopiles <- merge(D1Stramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 RICTORStramenopiles <- merge(RICTORStramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
@@ -621,9 +563,7 @@ RAPTORStramenopiles <- merge(RAPTORStramenopiles,Stramenopiles_Busco[c("C.score"
 SIN1Stramenopiles <- merge(SIN1Stramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 LST8Stramenopiles <- merge(LST8Stramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 TORStramenopiles <- merge(TORStramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-```
 
-```{r}
 ##Rhizaria 
 D1Rhizaria <- merge(D1Rhizaria, Rhizaria_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 RICTORRhizaria <- merge(RICTORRhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
@@ -871,7 +811,7 @@ write.csv(SARCombined, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CS
 
 ```
 
-
+## From here on out: Only plots
 
 
 

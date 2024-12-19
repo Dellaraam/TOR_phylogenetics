@@ -1,0 +1,316 @@
+---
+title: "Excavata_Project"
+author: "Kyle Johnson"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Include the libraries here
+# Libraries
+library(tidyverse)
+library(rentrez)
+library(ggrepel)
+library(gridExtra)
+library(plotly)
+library(kableExtra)
+```
+
+```{r}
+# Initalize the functions here
+# Functions for filtering purposes and addition of information
+
+Species_Name <- function(maincsv, namecsv){
+  #First add the organism name column to the maincsv
+  #Filling it with NA
+  #Check to see if it has it already
+  if ("Organism" %in% colnames(maincsv)){
+  }else{
+    maincsv <- maincsv %>% add_column(Organism=NA, .before = "tid")
+  }
+  #Iterate through the rows of the main csv file
+  for (i in 1:nrow(maincsv)){
+    #print(maincsv[i, "taxid"])
+    
+    #Iterate through the name csv file
+    for (n in 1:nrow(namecsv)){
+      if (maincsv[i, "taxid"] == namecsv[n, "Organism_Taxonomic_ID"]){
+        #print(namecsv[n,"Organism"])
+        maincsv$Organism[i] <- namecsv$Organism.Name[n]
+      } else{
+        next
+      }
+    }
+  }
+  return(maincsv) 
+}
+
+Taxon_Add <- function(csvToAdd){
+  temp <- csvToAdd
+  if("taxid" %in% colnames(temp)){
+  }else{
+    temp <- temp %>%
+      add_column(taxid = NA, .before = "tar")
+  }
+    for (r in 1:nrow(temp)){
+      print(r)
+      targ <- temp[r, "tar"]
+      eSearch <- entrez_search(db ="protein", term = targ)
+      eSummary <- entrez_summary(db="protein", id=eSearch$ids)
+      print(eSummary$taxid)
+      if(is.null(eSummary$taxid)){
+        next
+      } else{}
+      
+      taxID <- extract_from_esummary(eSummary, "taxid")
+      ID <- unname(taxID)
+      if(nrow(temp) >0){
+        temp$taxid[r] <- ID
+      } else {}
+    }
+# Finally, return the value held within temp to the output of the function
+  return(temp)
+}
+
+Check_Ciliates <- function (toBeCompared, ciliate){
+  # Add in a column that will have values for comparing. Default is false
+  # Adding the column after the Organism column (requires that it exists)
+  if ("Ciliate_Check" %in% colnames(toBeCompared)){
+  }else{
+    toBeCompared <- toBeCompared %>%
+      add_column(Ciliate_Check = FALSE, .after = "bid")
+  }
+  #print(toBeCompared)
+  # Get rid of any spaces and replace them with _
+  colnames(ciliate) = gsub(" ", "_", colnames(ciliate))
+  #print(nrow(ciliate))
+  #print(ciliate)
+  
+  # Iterate through the toBeCompared dataframe and the ciliates dataframe
+  if(dim(toBeCompared)[1] == 0){
+    return(toBeCompared)
+  }else{
+    for (n in 1:nrow(toBeCompared)){
+      for(c in 1:nrow(ciliate)){
+        if(toBeCompared[n, "Organism_Taxonomic_ID"] == ciliate[c, "Organism_Taxonomic_ID"]){
+          toBeCompared$Ciliate_Check[n] <- TRUE
+        }else{}
+      }
+  }
+  return(toBeCompared)
+  }
+}
+
+photoCheck <- function(inputCSV , photoCSV){
+  if ("Has_D1" %in% colnames(inputCSV)){
+  }else{
+    inputCSV <- inputCSV %>% add_column(Has_D1 = FALSE, .after = "bid")
+  }
+  
+  if(dim(inputCSV)[1] == 0){
+    return(inputCSV)
+  }else{
+    for(n in 1:nrow(photoCSV)){
+    #print("PhotoCSV Values")
+    #print(photoCSV$Has_D1[n])
+      for(m in 1:nrow(inputCSV)){
+      #print("InputCSV Values")
+      #print(inputCSV$Has_D1[m])
+        if(inputCSV[m, "Organism_Taxonomic_ID"] == photoCSV[n,"Organism_Taxonomic_ID"]){
+          inputCSV$Has_D1[m] <- TRUE
+        }else{
+        }
+      }
+    }
+  #print(inputCSV$Has_D1)
+    return(inputCSV)
+  }
+}
+
+ComplexCheck2 <- function (inputdf, SIN1df, RICTORdf){
+  # Check to see if the input function has the column already. Add it if it does not
+  if ("TORC2" %in% colnames(inputdf)){
+  }else{
+    inputdf <- inputdf %>% add_column(TORC2 = FALSE, .after = "Organism.Name")
+  }
+  
+  
+  #Loop to iterate through the inputdf
+  for (n in 1:nrow(inputdf)) {
+    #Loop to iterate through the RICTORdf
+    for (i in 1:nrow(RICTORdf)){
+      #Loop to iterate through the SIN1df
+      for (j in 1:nrow(SIN1df)){
+        if (inputdf[n, "Organism_Taxonomic_ID"] == RICTORdf[i, "Organism_Taxonomic_ID"] & inputdf[n, "Organism_Taxonomic_ID"] == SIN1df[j, "Organism_Taxonomic_ID"]){
+          inputdf$TORC2[n] <- TRUE
+        }else{}
+      }
+    }
+  }
+  
+  return(inputdf)
+  
+}
+
+# Global Variables for Analysis
+
+# Score Values
+#LST8, RAPTOR, TOR
+LRTScoreA <- 150
+LRTScoreD <- 150
+
+#RICTOR, SIN1, D1
+RSDScoreA <- 100
+RSDScoreD <- 100
+```
+
+```{r}
+
+
+D1Discoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/D1_Discoba.csv")
+LST8Discoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/LST8_Discoba.csv")
+RICTORDiscoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RICTOR_Discoba.csv")
+RAPTORDiscoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RAPTOR_Discoba.csv")
+SIN1Discoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/SIN1_Discoba.csv")
+TORDiscoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/TOR_Discoba.csv")
+DiscobaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/Discoba_Names.tsv", show_col_types = FALSE)
+DiscobaNames <- DiscobaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
+
+```
+```{r}
+
+D1Metamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/D1_Metamonada.csv")
+LST8Metamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/LST8_Metamonada.csv")
+RICTORMetamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RICTOR_Metamonada.csv")
+RAPTORMetamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RAPTOR_Metamonada.csv")
+SIN1Metamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/SIN1_Metamonada.csv")
+TORMetamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/TOR_Metamonada.csv")
+MetamonadaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/Metamonada_Names.tsv", show_col_types = FALSE)
+MetamonadaNames <- MetamonadaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
+```
+
+
+
+```{r}
+D1Discoba <- merge(D1Discoba, DiscobaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+LST8Discoba <- merge(LST8Discoba, DiscobaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RICTORDiscoba <- merge(RICTORDiscoba, DiscobaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RAPTORDiscoba <- merge(RAPTORDiscoba, DiscobaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+SIN1Discoba <- merge(SIN1Discoba, DiscobaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+TORDiscoba <- merge(TORDiscoba, DiscobaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+
+D1Metamonada <- merge(D1Metamonada, MetamonadaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+LST8Metamonada <- merge(LST8Metamonada, MetamonadaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RICTORMetamonada <- merge(RICTORMetamonada, MetamonadaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RAPTORMetamonada <- merge(RAPTORMetamonada, MetamonadaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+SIN1Metamonada <- merge(SIN1Metamonada, MetamonadaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+TORMetamonada <- merge(TORMetamonada, MetamonadaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+
+
+```
+
+
+
+```{r}
+D1Discoba <- D1Discoba %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+LST8Discoba <- LST8Discoba %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+RICTORDiscoba <- RICTORDiscoba %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+RAPTORDiscoba <- RAPTORDiscoba %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+SIN1Discoba <- SIN1Discoba %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+TORDiscoba <- TORDiscoba %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+D1Metamonada <- D1Metamonada %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+LST8Metamonada <- LST8Metamonada %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+RICTORMetamonada <- RICTORMetamonada %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+RAPTORMetamonada <- RAPTORMetamonada %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+SIN1Metamonada <- SIN1Metamonada %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+TORMetamonada <- TORMetamonada %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+```
+
+
+```{r}
+write.csv(RICTORDiscoba,"~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RICTOR_Results.csv")
+write.csv(RICTORMetamonada,"~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RICTOR_Results_Metamonada.csv")
+```
+
+
+
+```{r}
+Dplot1 <- ggplot(RICTORDiscoba, aes(x = sca, y = scd, label = tar))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  ggtitle("RICTOR Discoba")
+Dplot1
+
+
+```
+
