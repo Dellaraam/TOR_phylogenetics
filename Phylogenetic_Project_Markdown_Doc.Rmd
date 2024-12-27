@@ -63,7 +63,7 @@ Rhizaria_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_Infor
 Rhizaria_Names <- Rhizaria_Names %>% rename(Accn = Assembly.Accession)
 
 #Changing C score to numeric values
-Alveolata_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata BUSCO - Sheet1.csv", na = 0)
+Alveolata_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_BUSCO_Sheet1.csv", na = 0)
 Alveolata_Busco <- Alveolata_Busco %>% rename(Accn = Accession)
 Alveolata_Busco$C.score <-gsub("%$","",Alveolata_Busco$C.score)
 Alveolata_Busco$C.score <- as.numeric(as.character(Alveolata_Busco$C.score))
@@ -90,11 +90,20 @@ Rhizaria_Busco$Frag.score <- as.numeric(as.character(Rhizaria_Busco$Frag.score))
 
 ```{r setup, include=FALSE}
 # Add in the different clade csvs/tsvs for clade checking
+#Cilites check
 Ciliates <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Checking_CSVs/Ciliates_Names.tsv", show_col_types = FALSE)
+```
+
+
+```{r setup, include=FALSE}
+#Parasite check
 Apicomplexa <-read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Parasitic/Apicomplexa_Information.tsv", show_col_types = FALSE)
 Perkinsozoa <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Parasitic/Perkinsozoa_Information.tsv", show_col_types = FALSE)
 # Global Variables for Analysis
+```
 
+
+```{r setup, include=FALSE}
 # Score Values
 #LST8, RAPTOR, TOR
 LRTScoreA <- 100

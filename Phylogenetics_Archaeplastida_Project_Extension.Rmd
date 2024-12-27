@@ -7,11 +7,11 @@ output: html_document
 ```{r}
 # Only use if the packages have not been installed in this environment
 # Packages 
- install.packages("tidyverse")
- install.packages("rentrez")
- install.packages("gridExtra")
- install.packages("plotly")
- install.packages("kableExtra")
+ #install.packages("tidyverse")
+ #install.packages("rentrez")
+ #install.packages("gridExtra")
+ #install.packages("plotly")
+ #install.packages("kableExtra")
 ```
 
 
@@ -280,8 +280,10 @@ TORStreptophyta <- TORStreptophyta %>% filter(sca >= 100 & scd >= 100)%>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup
+```
 
 
+```{r}
 # Rhodophyta Section
 D1Rhodophyta <- D1Rhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
   group_by(Organism_Taxonomic_ID) %>%
@@ -313,7 +315,10 @@ TORRhodophyta <- TORRhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
   slice_max(scd) %>%
   slice_max(evd)%>%
   ungroup
+```
 
+
+```{r}
 # Chlorophyta Section
 D1Chlorophyta <- D1Chlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
   group_by(Organism_Taxonomic_ID) %>%
@@ -347,23 +352,43 @@ TORChlorophyta <- TORChlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
   ungroup
 
 
-
-
 ```
-
 
 
 
 ```{r}
 # Busco scores will be added here to the different dfs
+Rhodophyta_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Rhodophyta-BUSCO-Sheet1.csv", na = 0)
+Rhodophyta_Busco <- Rhodophyta_Busco %>% rename(Accn = Accession)
+Rhodophyta_Busco$C.score <-gsub("%$","",Rhodophyta_Busco$C.score)
+Rhodophyta_Busco$C.score <- as.numeric(as.character(Rhodophyta_Busco$C.score))
+Rhodophyta_Busco$Frag.score <- gsub("%$", "", Rhodophyta_Busco$Frag.score)
+Rhodophyta_Busco$Frag.score <- as.numeric(as.character(Rhodophyta_Busco$Frag.score))
 
 
+Chlorophyta_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv", na = 0)
+Chlorophyta_Busco <- Chlorophyta_Busco %>% rename(Accn = Accession)
+Chlorophyta_Busco$C.score <-gsub("%$","",Chlorophyta_Busco$C.score)
+Chlorophyta_Busco$C.score <- as.numeric(as.character(Chlorophyta_Busco$C.score))
+Chlorophyta_Busco$Frag.score <- gsub("%$", "", Chlorophyta_Busco$Frag.score)
+Chlorophyta_Busco$Frag.score <- as.numeric(as.character(Chlorophyta_Busco$Frag.score))
 ```
 
 
 
 ```{r}
+RICTORRhodophyta <- merge(RICTORRhodophyta, Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RAPTORRhodophyta <- merge(RAPTORRhodophyta, Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+SIN1Rhodophyta <- merge(SIN1Rhodophyta, Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+LST8Rhodophyta <- merge(LST8Rhodophyta, Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+TORRhodophyta <- merge(TORRhodophyta, Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 
+D1Chlorophyta <- merge(D1Chlorophyta, Chlorophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RICTORChlorophyta <- merge(RICTORChlorophyta, Chlorophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RAPTORChlorophyta <- merge(RAPTORChlorophyta, Chlorophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+SIN1Chlorophyta <- merge(SIN1Chlorophyta, Chlorophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+LST8Chlorophyta <- merge(LST8Chlorophyta, Chlorophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+TORChlorophyta <- merge(TORChlorophyta, Chlorophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 ```
 
 
