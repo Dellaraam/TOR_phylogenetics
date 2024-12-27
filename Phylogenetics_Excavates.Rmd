@@ -10,12 +10,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Include the libraries here
 # Libraries
-library(tidyverse)
-library(rentrez)
-library(ggrepel)
-library(gridExtra)
-library(plotly)
-library(kableExtra)
+#library(tidyverse)
+#library(rentrez)
+#library(ggrepel)
+#library(gridExtra)
+#library(plotly)
+#library(kableExtra)
 ```
 
 ```{r}
@@ -179,6 +179,7 @@ DiscobaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/
 DiscobaNames <- DiscobaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 
 ```
+
 ```{r}
 
 D1Metamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/D1_Metamonada.csv")
@@ -191,6 +192,14 @@ MetamonadaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metam
 MetamonadaNames <- MetamonadaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 ```
 
+```{r}
+Excavata_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Excavata-BUSCO-Sheet1.csv", na = 0)
+Excavata_Busco <- Excavata_Busco %>% rename(Accn = Accession)
+Excavata_Busco$C.score <-gsub("%$","",Excavata_Busco$C.score)
+Excavata_Busco$C.score <- as.numeric(as.character(Excavata_Busco$C.score))
+Excavata_Busco$Frag.score <- gsub("%$", "", Excavata_Busco$Frag.score)
+Excavata_Busco$Frag.score <- as.numeric(as.character(Excavata_Busco$Frag.score))
+```
 
 
 ```{r}
@@ -211,6 +220,13 @@ TORMetamonada <- merge(TORMetamonada, MetamonadaNames[c("Organism_Taxonomic_ID",
 
 ```
 
+```{r}
+RICTORExcavata <- merge(RICTORExcavata, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RAPTORExcavata <- merge(RAPTORExcavata, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+SIN1Excavata <- merge(SIN1Excavata, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+LST8Excavata <- merge(LST8Excavata, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+TORExcavata <- merge(TORExcavata, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+```
 
 
 ```{r}
