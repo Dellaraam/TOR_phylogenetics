@@ -88,19 +88,31 @@ Rhizaria_Busco$Frag.score <- as.numeric(as.character(Rhizaria_Busco$Frag.score))
 ```
 
 
-```{r setup, include=FALSE}
-# Add in the different clade csvs/tsvs for clade checking
-#Cilites check
-Ciliates <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Checking_CSVs/Ciliates_Names.tsv", show_col_types = FALSE)
-```
-
 
 ```{r setup, include=FALSE}
-#Parasite check
+#Parasite check and Alveolata Groups
 Apicomplexa <-read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Parasitic/Apicomplexa_Information.tsv", show_col_types = FALSE)
+Apicomplexa <- Apicomplexa %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
 Perkinsozoa <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Parasitic/Perkinsozoa_Information.tsv", show_col_types = FALSE)
-# Global Variables for Analysis
+Perkinsozoa <- Perkinsozoa %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
+Chromerida <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Groups_Information/Chromerida_Information.tsv", show_col_types = FALSE)
+Chromerida <- Chromerida %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
+Dinozoa <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Groups_Information/Dinozoa_Information.tsv", show_col_types = FALSE)
+Dinozoa <- Dinozoa %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
+Ciliates <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Checking_CSVs/Ciliates_Names.tsv", show_col_types = FALSE)
+Ciliates <- Ciliates %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
 ```
+
+```{r}
+# Stramenopile Groups
+Bigyra <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopile_Groups_Information/Bigyra_Information.tsv", show_col_types = FALSE)
+Bigyra <- Bigyra %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
+Ochrophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopile_Groups_Information/Ochrophyta_Information.tsv", show_col_types = FALSE)
+Ochrophyta <- Ochrophyta %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
+Oomycota <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopile_Groups_Information/Oomycota_Information.tsv", show_col_types = FALSE)
+Oomycota <- Oomycota %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
+```
+
 
 
 ```{r setup, include=FALSE}
@@ -752,20 +764,97 @@ cleanedTORRhizaria <- TORRhizaria %>%
 ```
 
 
-
 ```{r}
 # create Combined tables that have the information 
 
 CombinedAlveolata <- mainCombine("Alveolata", Alveolata_Names, cleanedRICTORAlveolata, cleanedSIN1Alveolata, cleanedRAPTORAlveolata, cleanedLST8Alveolata, cleanedTORAlveolata, cleanedD1Alveolata)
 CombinedAlveolata <- CombinedAlveolata[!duplicated(CombinedAlveolata$Organism_Taxonomic_ID),]
 CombinedAlveolata <- merge(CombinedAlveolata, Alveolata_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
-CombinedAlveolata <- parasiteCheck(CombinedAlveolata,Apicomplexa,Perkinsozoa)
-CombinedAlveolata <- Check_Ciliates(CombinedAlveolata, Ciliates)
+#Create a new column in the combined alveolata
+CombinedAlveolata <- CombinedAlveolata %>% add_column(SubClade = NA, .after = "Group")
+#Begin the iterative loops
+for (i in 1:nrow(CombinedAlveolata)){
+  print(CombinedAlveolata[i, "Organism_Taxonomic_ID"])
+  print("Apicomplexa Loop")
+  for(j in 1:nrow(Apicomplexa)) {
+    if (CombinedAlveolata[i, "Organism_Taxonomic_ID"] == Apicomplexa[j, "Organism_Taxonomic_ID"]){
+      #print(Apicomplexa[j, "Organism_Taxonomic_ID"])
+      CombinedAlveolata$SubClade[i] <- "Apicomplexa"
+    }else{next}
+  }
+  print("Chromerida Loop")
+  for(h in 1:nrow(Chromerida)){
+    if (CombinedAlveolata[i, "Organism_Taxonomic_ID"] == Chromerida[h, "Organism_Taxonomic_ID"]){
+      CombinedAlveolata$SubClade[i] <- "Chromerida"
+    }else{next}
+  }
+  print("Perkinsozoa Loop")
+  for(k in 1:nrow(Perkinsozoa)){
+    if (CombinedAlveolata[i, "Organism_Taxonomic_ID"] == Perkinsozoa[k, "Organism_Taxonomic_ID"]){
+      CombinedAlveolata$SubClade[i] <- "Perkinsozoa"
+    }else{next}
+  }
+  
+  for(m in 1:nrow(Dinozoa)){
+    if (CombinedAlveolata[i, "Organism_Taxonomic_ID"] == Dinozoa[m, "Organism_Taxonomic_ID"]){
+      CombinedAlveolata$SubClade[i] <- "Dinozoa"
+    }else{next}
+  }
+  
+  for(n in 1:nrow(Ciliates)){
+    if (CombinedAlveolata[i, "Organism_Taxonomic_ID"] == Ciliates[n, "Organism_Taxonomic_ID"]){
+      CombinedAlveolata$SubClade[i] <- "Ciliates"
+    }else{next}
+  }
+  
+}
+
+
 CombinedAlveolata %>% arrange(desc(Organism_Taxonomic_ID))
+```
+
+```{r}
+CombinedStramenopiles <- mainCombine("Stramenopile", Stramenopiles_Names, cleanedRICTORStramenopiles, cleanedSIN1Stramenopiles, cleanedRAPTORStramenopiles, cleanedLST8Stramenopiles, cleanedTORStramenopiles, cleanedD1Stramenopiles)
+CombinedStramenopiles <- CombinedStramenopiles[!duplicated(CombinedStramenopiles$Organism_Taxonomic_ID), ]
+CombinedStramenopiles <- merge(CombinedStramenopiles, Stramenopiles_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
+CombinedStramenopiles <- CombinedStramenopiles %>% add_column(SubClade = NA, .after = "Group")
+#Iterative loops
+for(a in 1:nrow(CombinedStramenopiles)){
+  
+  for(b in 1:nrow(Bigyra)){
+    if(CombinedStramenopiles[a, "Organism_Taxonomic_ID"] == Bigyra[b, "Organism_Taxonomic_ID"]){
+      CombinedStramenopiles$SubClade[a] <- "Bigyra"
+    }
+  }
+  
+  for(c in 1:nrow(Ochrophyta)){
+    if(CombinedStramenopiles[a, "Organism_Taxonomic_ID"] == Ochrophyta[c, "Organism_Taxonomic_ID"]){
+      CombinedStramenopiles$SubClade[a] <- "Ochrophyta"
+    }
+  }
+  
+  for(d in 1:nrow(Oomycota)){
+    if(CombinedStramenopiles[a, "Organism_Taxonomic_ID"] == Oomycota[d, "Organism_Taxonomic_ID"]){
+      CombinedStramenopiles$SubClade[a] <- "Oomycota"
+    }
+  }
+}
+
+```
+
+```{r}
+
+CombinedRhizaria <- mainCombine("Rhizaria", Rhizaria_Names, cleanedRICTORRhizaria, SIN1Rhizaria, cleanedRAPTORRhizaria, cleanedLST8Rhizaria, cleanedTORRhizaria, cleanedD1Rhizaria)
+CombinedRhizaria <- CombinedRhizaria[!duplicated(CombinedRhizaria$Organism_Taxonomic_ID)]
+CombinedRhizaria <- merge(CombinedRhizaria, Rhizaria_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
+CombinedRhizaria <- CombinedRhizaria %>% add_column(SubClade = NA, .after = "Group")
+```
 
 
 
 
+
+```{r}
 # Now show the Tables which indicate the most likely candidates for the specific Proteins
 CombinedAlveolata %>% replace(is.na(CombinedAlveolata), "")
 CombinedAlveolata %>% rename( "Accession Number" = Accn,
@@ -777,13 +866,6 @@ CombinedAlveolata %>% rename( "Accession Number" = Accn,
   kable_classic(full_width = T, html_font = "Cambria")
 
 
-
-
-
-CombinedStramenopiles <- mainCombine("Stramenopile", Stramenopiles_Names, cleanedRICTORStramenopiles, cleanedSIN1Stramenopiles, cleanedRAPTORStramenopiles, cleanedLST8Stramenopiles, cleanedTORStramenopiles, cleanedD1Stramenopiles)
-CombinedStramenopiles <- CombinedStramenopiles[!duplicated(CombinedStramenopiles$Organism_Taxonomic_ID), ]
-CombinedStramenopiles <- merge(CombinedStramenopiles, Stramenopiles_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
-
 CombinedStramenopiles %>% replace(is.na(CombinedStramenopiles), "")
 CombinedStramenopiles %>% rename( "Accession Number" = Accn,
                               "Organism" = Organism.Name,
@@ -793,9 +875,6 @@ CombinedStramenopiles %>% rename( "Accession Number" = Accn,
   kbl(caption = "Combined Alveolata Table", longtable = TRUE, digits = 1000) %>%
   kable_classic(full_width = T, html_font = "Cambria")
 
-CombinedRhizaria <- mainCombine("Rhizaria", Rhizaria_Names, cleanedRICTORRhizaria, SIN1Rhizaria, cleanedRAPTORRhizaria, cleanedLST8Rhizaria, cleanedTORRhizaria, cleanedD1Rhizaria)
-CombinedRhizaria <- CombinedRhizaria[!duplicated(CombinedRhizaria$Organism_Taxonomic_ID)]
-CombinedRhizaria <- merge(CombinedRhizaria, Rhizaria_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
 
 CombinedRhizaria %>% replace(is.na(CombinedRhizaria), "")
 CombinedRhizaria %>% rename( "Accession Number" = Accn,

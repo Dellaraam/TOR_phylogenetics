@@ -358,7 +358,7 @@ TORChlorophyta <- TORChlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
 
 ```{r}
 # Busco scores will be added here to the different dfs
-Rhodophyta_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Rhodophyta-BUSCO-Sheet1.csv", na = 0)
+Rhodophyta_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhodophyta-BUSCO-Sheet1.csv", na = 0)
 Rhodophyta_Busco <- Rhodophyta_Busco %>% rename(Accn = Accession)
 Rhodophyta_Busco$C.score <-gsub("%$","",Rhodophyta_Busco$C.score)
 Rhodophyta_Busco$C.score <- as.numeric(as.character(Rhodophyta_Busco$C.score))
@@ -366,7 +366,7 @@ Rhodophyta_Busco$Frag.score <- gsub("%$", "", Rhodophyta_Busco$Frag.score)
 Rhodophyta_Busco$Frag.score <- as.numeric(as.character(Rhodophyta_Busco$Frag.score))
 
 
-Chlorophyta_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv", na = 0)
+Chlorophyta_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv", na = 0)
 Chlorophyta_Busco <- Chlorophyta_Busco %>% rename(Accn = Accession)
 Chlorophyta_Busco$C.score <-gsub("%$","",Chlorophyta_Busco$C.score)
 Chlorophyta_Busco$C.score <- as.numeric(as.character(Chlorophyta_Busco$C.score))

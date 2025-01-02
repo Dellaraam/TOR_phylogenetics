@@ -193,7 +193,7 @@ MetamonadaNames <- MetamonadaNames %>% rename(Accn = "Assembly Accession") %>% r
 ```
 
 ```{r}
-Excavata_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Excavata-BUSCO-Sheet1.csv", na = 0)
+Excavata_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata-BUSCO-Sheet1.csv", na = 0)
 Excavata_Busco <- Excavata_Busco %>% rename(Accn = Accession)
 Excavata_Busco$C.score <-gsub("%$","",Excavata_Busco$C.score)
 Excavata_Busco$C.score <- as.numeric(as.character(Excavata_Busco$C.score))
@@ -221,11 +221,19 @@ TORMetamonada <- merge(TORMetamonada, MetamonadaNames[c("Organism_Taxonomic_ID",
 ```
 
 ```{r}
-RICTORExcavata <- merge(RICTORExcavata, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-RAPTORExcavata <- merge(RAPTORExcavata, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-SIN1Excavata <- merge(SIN1Excavata, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-LST8Excavata <- merge(LST8Excavata, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-TORExcavata <- merge(TORExcavata, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RICTORMetamonada <- merge(RICTORMetamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RAPTORMetamonada <- merge(RAPTORMetamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+SIN1Metamonada <- merge(SIN1Metamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+LST8Metamonada <- merge(LST8Metamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+TORMetamonada <- merge(TORMetamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+D1Metamonada <- merge(D1Metamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+
+RICTORDiscoba <- merge(RICTORDiscoba, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RAPTORDiscoba <- merge(RAPTORDiscoba, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+SIN1Discoba <- merge(SIN1Discoba, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+LST8Discoba <- merge(LST8Discoba, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+TORDiscoba <- merge(TORDiscoba, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+D1Discoba <- merge(D1Discoba, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 ```
 
 
@@ -312,7 +320,7 @@ write.csv(RICTORMetamonada,"~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamo
 
 
 ```{r}
-Dplot1 <- ggplot(RICTORDiscoba, aes(x = sca, y = scd, label = tar))+
+Dplot1 <- ggplot(RICTORDiscoba, aes(x = sca, y = scd, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -326,6 +334,21 @@ Dplot1 <- ggplot(RICTORDiscoba, aes(x = sca, y = scd, label = tar))+
                   size = 2.0)+
   ggtitle("RICTOR Discoba")
 Dplot1
+
+Mplot1 <- ggplot(RICTORMetamonada, aes(x = sca, y = scd, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  ggtitle("RICTOR Metamonada")
+Mplot1
 
 
 ```
