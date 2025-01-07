@@ -490,17 +490,14 @@ TORMetamonada <- TORMetamonada %>% filter(sca >= 100 & scd >= 100)%>%
 CombinedDiscoba <- mainCombine("Discoba", DiscobaNames, RICTORDiscoba, SIN1Discoba, RAPTORDiscoba, LST8Discoba, TORDiscoba, D1Discoba)
 CombinedMetamonada <- mainCombine("Metamonada",MetamonadaNames, RICTORMetamonada, SIN1Metamonada, RAPTORMetamonada, LST8Metamonada, TORMetamonada, D1Metamonada)
 
-CombinedDiscoba <- CombinedDiscoba %>% left_join(select(TaxonomyDiscoba, `Class name`,`Order name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
-CombinedMetamonada <- CombinedMetamonada %>% left_join(select(TaxonomyMetamonada, `Class name`,`Order name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+CombinedDiscoba <- CombinedDiscoba %>% left_join(select(TaxonomyDiscoba, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+CombinedMetamonada <- CombinedMetamonada %>% left_join(select(TaxonomyMetamonada, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 
 ```
 
 
 
 ```{r}
-write.csv(RICTORDiscoba,"~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RICTOR_Results.csv")
-write.csv(RICTORMetamonada,"~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RICTOR_Results_Metamonada.csv")
-
 write.csv(CombinedDiscoba, "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/CombinedDiscoba.csv")
 write.csv(CombinedMetamonada,"~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/CombinedMetamonada.csv")
 

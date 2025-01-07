@@ -557,9 +557,9 @@ CombinedChlorophyta <- mainCombine("Chlorophyta", ChlorophytaNames, RICTORChloro
 
 ```{r}
 #CombinedStreptophyta <- CombinedStreptophyta %>% add_column(Class = NA, .after = "Group")
-CombinedStreptophyta <- CombinedStreptophyta %>% left_join(select(FullTaxonomyStreptophyta, `Class name`,`Order name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
-CombinedRhodophyta <- CombinedRhodophyta %>% left_join(select(FullTaxonomyRhodophyta, `Class name`,`Order name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
-CombinedChlorophyta <- CombinedChlorophyta %>% left_join(select(FullTaxonomyChlorophyta, `Class name`,`Order name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+CombinedStreptophyta <- CombinedStreptophyta %>% left_join(select(FullTaxonomyStreptophyta, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+CombinedRhodophyta <- CombinedRhodophyta %>% left_join(select(FullTaxonomyRhodophyta, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+CombinedChlorophyta <- CombinedChlorophyta %>% left_join(select(FullTaxonomyChlorophyta, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 
 
 

@@ -101,6 +101,19 @@ Dinozoa <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Groups_Info
 Dinozoa <- Dinozoa %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
 Ciliates <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Checking_CSVs/Ciliates_Names.tsv", show_col_types = FALSE)
 Ciliates <- Ciliates %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
+
+
+
+# Full Taxonomy Information
+TaxonomyStramenopiles <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+TaxonomyAlveolata <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+TaxonomyRhizaria <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+
+
+
+
+
+
 ```
 
 ```{r}
@@ -762,6 +775,31 @@ cleanedTORRhizaria <- TORRhizaria %>%
   ungroup()
 
 ```
+
+```{r}
+
+
+CombinedAlveolata <- mainCombine("Alveolata", Alveolata_Names, cleanedRICTORAlveolata, cleanedSIN1Alveolata, cleanedRAPTORAlveolata, cleanedLST8Alveolata, cleanedTORAlveolata, cleanedD1Alveolata)
+CombinedAlveolata <- merge(CombinedAlveolata, Alveolata_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
+CombinedAlveolata <- CombinedAlveolata %>% left_join(select(TaxonomyAlveolata, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+
+CombinedStramenopiles <- mainCombine("Stramenopiles", Stramenopiles_Names, cleanedRICTORStramenopiles, cleanedSIN1Stramenopiles, cleanedRAPTORStramenopiles, cleanedLST8Stramenopiles, cleanedTORStramenopiles, cleanedD1Stramenopiles)
+CombinedStramenopiles <- merge(CombinedStramenopiles, Stramenopiles_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
+CombinedStramenopiles <- CombinedStramenopiles %>% left_join(select(TaxonomyStramenopiles, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+CombinedRhizaria <- mainCombine("Rhizaria", Rhizaria_Names, RICTORRhizaria, SIN1Rhizaria, RAPTORRhizaria, LST8Rhizaria, TORRhizaria, D1Rhizaria)
+CombinedRhizaria <- merge(CombinedRhizaria, Rhizaria_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
+CombinedRhizaria <- CombinedRhizaria %>% left_join(select(TaxonomyRhizaria, `Class name`,`Order name`,`Phylum name`,`Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+
+
+
+```
+
+
+
+
 
 
 ```{r}
