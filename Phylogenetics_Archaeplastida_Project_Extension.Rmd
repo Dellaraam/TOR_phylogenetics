@@ -369,31 +369,11 @@ SIN1RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rho
 TORRhodophytaRaw  <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/TOR_Rhodophyta.csv")
 RhodophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/Rhodophyta_Names.tsv", show_col_types = FALSE)
 RhodophytaNames <- RhodophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
-
-
 ```
 
 
 ```{r}
-# Streptophyta
-Klebsormidiophyceae <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Klebsormidiophyceae_Information.tsv", show_col_types = FALSE) %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
-Streptophytina <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophytina_Information.tsv", show_col_types = FALSE) %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 
-# Chlorophyta
-Chlorophyceae <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Chlorophyceae_Information.tsv", show_col_types = FALSE) %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
-Chloropicophyceae <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Chloropicophyceae_Information.tsv", show_col_types = FALSE) %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
-Mamielleophyceae <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Mamielleophyceae_Information.tsv", show_col_types = FALSE) %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
-Pedinophyceae <-read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Pedinophyceae_Information.tsv", show_col_types = FALSE) %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
-Pyramimonadophyceae <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Pyramimonadophyceae_Information.tsv", show_col_types = FALSE) %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
-Trebouxiophyceae <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Trebouxiophyceae_Information.tsv", show_col_types = FALSE) %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
-Ulvophyceae <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Ulvophyceae_Information.tsv", show_col_types = FALSE) %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
-
-# Rhodophyta
-Bangiophyceae <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/Bangiophyceae_Information.tsv", show_col_types = FALSE) %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
-Florideophyceae <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/Florideophyceae_Information.tsv", show_col_types = FALSE) %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
-Stylonematophyceae <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/Stylonematophyceae_Information.tsv", show_col_types = FALSE) %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
-
-#Experimental
 FullTaxonomyStreptophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
 
 FullTaxonomyRhodophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
@@ -556,31 +536,9 @@ CombinedChlorophyta <- mainCombine("Chlorophyta", ChlorophytaNames, RICTORChloro
 
 
 ```{r}
-#CombinedStreptophyta <- CombinedStreptophyta %>% add_column(Class = NA, .after = "Group")
-CombinedStreptophyta <- CombinedStreptophyta %>% left_join(select(FullTaxonomyStreptophyta, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
-CombinedRhodophyta <- CombinedRhodophyta %>% left_join(select(FullTaxonomyRhodophyta, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
-CombinedChlorophyta <- CombinedChlorophyta %>% left_join(select(FullTaxonomyChlorophyta, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
-
-
-
-# for(i in 1:nrow(CombinedStreptophyta)){
-#   for(j in 1:nrow(FullTaxonomy)){
-#     if(CombinedStreptophyta[i, "Organism_Taxonomic_ID"] == FullTaxonomy[j, "Organism_Taxonomic_ID"]){
-#       CombinedStreptophyta$Class[i] <- FullTaxonomy$`Class name`[j]
-#     }
-#   }
-# }
-
-
-```
-
-
-
-
-```{r}
 # Temp Code
-clipr::write_clip(RICTORChlorophyta$tar)
-write.table(D1Streptophyta$tar, "C:/Users/kajoh/Desktop/Batch_Prot.txt", sep = "\t", row.names = F, col.names = F, quote = F)
+# clipr::write_clip(RICTORChlorophyta$tar)
+# write.table(D1Streptophyta$tar, "C:/Users/kajoh/Desktop/Batch_Prot.txt", sep = "\t", row.names = F, col.names = F, quote = F)
 
 
 ```
@@ -604,22 +562,22 @@ Chlorophyta_Busco$Frag.score <- gsub("%$", "", Chlorophyta_Busco$Frag.score)
 Chlorophyta_Busco$Frag.score <- as.numeric(as.character(Chlorophyta_Busco$Frag.score))
 ```
 
-
-
 ```{r}
-RICTORRhodophyta <- merge(RICTORRhodophyta, Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-RAPTORRhodophyta <- merge(RAPTORRhodophyta, Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-SIN1Rhodophyta <- merge(SIN1Rhodophyta, Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-LST8Rhodophyta <- merge(LST8Rhodophyta, Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-TORRhodophyta <- merge(TORRhodophyta, Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+#CombinedStreptophyta <- CombinedStreptophyta %>% add_column(Class = NA, .after = "Group")
+CombinedStreptophyta <- CombinedStreptophyta %>% left_join(select(FullTaxonomyStreptophyta, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 
-D1Chlorophyta <- merge(D1Chlorophyta, Chlorophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-RICTORChlorophyta <- merge(RICTORChlorophyta, Chlorophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-RAPTORChlorophyta <- merge(RAPTORChlorophyta, Chlorophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-SIN1Chlorophyta <- merge(SIN1Chlorophyta, Chlorophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-LST8Chlorophyta <- merge(LST8Chlorophyta, Chlorophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
-TORChlorophyta <- merge(TORChlorophyta, Chlorophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+CombinedRhodophyta <- merge(CombinedRhodophyta, Rhodophyta_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
+CombinedRhodophyta <- CombinedRhodophyta %>% left_join(select(FullTaxonomyRhodophyta, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+#Create a new column in the combined alveolata
+CombinedChlorophyta <- merge(CombinedChlorophyta, Chlorophyta_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
+CombinedChlorophyta <- CombinedChlorophyta %>% left_join(select(FullTaxonomyChlorophyta, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+
+
 ```
+
+
 
 
 

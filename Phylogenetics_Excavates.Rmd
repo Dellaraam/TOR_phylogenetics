@@ -490,7 +490,11 @@ TORMetamonada <- TORMetamonada %>% filter(sca >= 100 & scd >= 100)%>%
 CombinedDiscoba <- mainCombine("Discoba", DiscobaNames, RICTORDiscoba, SIN1Discoba, RAPTORDiscoba, LST8Discoba, TORDiscoba, D1Discoba)
 CombinedMetamonada <- mainCombine("Metamonada",MetamonadaNames, RICTORMetamonada, SIN1Metamonada, RAPTORMetamonada, LST8Metamonada, TORMetamonada, D1Metamonada)
 
+
+CombinedDiscoba <- merge(CombinedDiscoba, Discoba_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
 CombinedDiscoba <- CombinedDiscoba %>% left_join(select(TaxonomyDiscoba, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+CombinedMetamonada <- merge(CombinedMetamonada, Metamonada_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 CombinedMetamonada <- CombinedMetamonada %>% left_join(select(TaxonomyMetamonada, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 
 ```
