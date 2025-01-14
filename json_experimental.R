@@ -7,8 +7,8 @@ library(rjson)
 # Read in jsons
 # Read in the path for everything in a directory
 
-files = dir("C:/Users/kajoh/Desktop/JSONs", pattern = "*.json")
-files = paste0("C:/Users/kajoh/Desktop/JSONs/", files)
+files = dir("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Streptophyta_Jsons", pattern = "*.json")
+files = paste0("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Streptophyta_Jsons/", files)
 jsonList = lapply(files, fromJSON)
 
 
@@ -34,9 +34,18 @@ parameterdf <- parameterdf %>%
 # from the parameter dataframe
 
 df$name <- parameterdf$out
+# coerce the data and replace lists as characters. This is to write to csv output
+dfinal <- data.frame(lapply(df, as.character))
+dfinal <- rename(dfinal, "Frag.score" = Frag.score)
+dfinal <- rename(dfinal, 'C.score' = Complete.percentage)
+dfinal <- rename(dfinal, 'Accession' = name)
+dfinal <- rename(dfinal, "Accn" = Accession)
 
 
 
 
+
+write_csv(dfinal, file="C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Streptophyta_Busco.csv")
+write.table(df, file="C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Streptophyta_Busco.csv")
 
 

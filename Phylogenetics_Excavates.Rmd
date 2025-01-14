@@ -491,11 +491,16 @@ CombinedDiscoba <- mainCombine("Discoba", DiscobaNames, RICTORDiscoba, SIN1Disco
 CombinedMetamonada <- mainCombine("Metamonada",MetamonadaNames, RICTORMetamonada, SIN1Metamonada, RAPTORMetamonada, LST8Metamonada, TORMetamonada, D1Metamonada)
 
 
-CombinedDiscoba <- merge(CombinedDiscoba, Discoba_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
+
+CombinedDiscoba <- merge(CombinedDiscoba, Excavata_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
 CombinedDiscoba <- CombinedDiscoba %>% left_join(select(TaxonomyDiscoba, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 
-CombinedMetamonada <- merge(CombinedMetamonada, Metamonada_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+CombinedMetamonada <- merge(CombinedMetamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 CombinedMetamonada <- CombinedMetamonada %>% left_join(select(TaxonomyMetamonada, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+```
+```{r}
+# Add in the taxonomic information to the combined dataframes here
 
 ```
 
