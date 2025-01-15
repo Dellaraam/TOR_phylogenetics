@@ -57,10 +57,13 @@ LST8RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhiza
 #Changing names to match
 Alveolata_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Information_2.csv")
 Alveolata_Names <- Alveolata_Names %>% rename(Accn = Assembly.Accession)
+Alveolata_Names <- Alveolata_Names %>% rename(Organism_Name = Organism.Name)
 Stramenopiles_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopiles_Information_2.csv")
 Stramenopiles_Names <- Stramenopiles_Names %>% rename(Accn = Assembly.Accession)
+Stramenopiles_Names <- Stramenopiles_Names %>% rename(Organism_Name = Organism.Name)
 Rhizaria_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_Information_2.csv")
 Rhizaria_Names <- Rhizaria_Names %>% rename(Accn = Assembly.Accession)
+Rhizaria_Names <- Rhizaria_Names %>% rename(Organism_Name = Organism.Name)
 
 #Changing C score to numeric values
 Alveolata_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_BUSCO_Sheet1.csv", na = 0)
@@ -556,27 +559,27 @@ TORRhizaria <- TORRhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
 # Note that this section takes the longest to run due to the web based approach
 
 # Alveolata
-D1Alveolata <- merge(D1Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
-RICTORAlveolata <- merge(RICTORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
-RAPTORAlveolata <- merge(RAPTORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
-SIN1Alveolata <- merge(SIN1Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
-LST8Alveolata <- merge(LST8Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
-TORAlveolata <- merge(TORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
+D1Alveolata <- merge(D1Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RICTORAlveolata <- merge(RICTORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RAPTORAlveolata <- merge(RAPTORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+SIN1Alveolata <- merge(SIN1Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+LST8Alveolata <- merge(LST8Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+TORAlveolata <- merge(TORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
 
 # Stramenopiles
-D1Stramenopiles <- merge(D1Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
-RICTORStramenopiles <- merge(RICTORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
-RAPTORStramenopiles <- merge(RAPTORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
-SIN1Stramenopiles <- merge(SIN1Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
-LST8Stramenopiles <- merge(LST8Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
-TORStramenopiles <- merge(TORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by ="Accn")
+D1Stramenopiles <- merge(D1Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+RICTORStramenopiles <- merge(RICTORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+RAPTORStramenopiles <- merge(RAPTORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+SIN1Stramenopiles <- merge(SIN1Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+LST8Stramenopiles <- merge(LST8Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+TORStramenopiles <- merge(TORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
 
 # Rhizaria (Future)
-D1Rhizaria <- merge(D1Rhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
-RICTORRhizaria <- merge(RICTORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
-RAPTORRhizaria <- merge(RAPTORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
-LST8Rhizaria <- merge(LST8Rhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
-TORRhizaria <- merge(TORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism.Name", "Accn")], by = "Accn")
+D1Rhizaria <- merge(D1Rhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+RICTORRhizaria <- merge(RICTORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+RAPTORRhizaria <- merge(RAPTORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+LST8Rhizaria <- merge(LST8Rhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+TORRhizaria <- merge(TORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
 ```
 
 ```{r include=FALSE}
