@@ -18,7 +18,7 @@ base = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils'
 taxids = []
 with open(arg.file) as fp:
 	for line in fp:
-		f = line.split()
+		f = line.split("\t")
 		taxids.append(f[0])
 
 for taxid in taxids:
