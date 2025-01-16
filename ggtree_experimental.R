@@ -92,22 +92,20 @@ RPTree <- RPTree %<+% RAPTORData + geom_tiplab(aes(label = Organism.Name, color 
 RPTree
 
 # SIN1 Phylogenetics SAR
-SINTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/SIN1_SAR.nwk')
-SINTree$tip.label <- trimws(SINTree$tip.label, whitespace = "/.*")
-SINData <- full_join(cleanedSIN1Alveolata,cleanedSIN1Stramenopiles)
-SINData <- SINData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
-SINData <- relocate(SINData,tar)
-
-STree <- ggtree(SINTree, branch.length = "none")
-STree <- STree %<+% SINData + geom_tiplab(aes(label = Organism.Name, color = `Order name`), size=3, offset=.5, align = TRUE) + labs(title = "Phylogenetics of SIN1 Protein in SAR Superclade") + geom_nodepoint()+geom_text(aes(label=node, size = 5, vjust = 1))
-STree
+# SINTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/SIN1_SAR.nwk')
+# SINTree$tip.label <- trimws(SINTree$tip.label, whitespace = "/.*")
+# SINData <- full_join(cleanedSIN1Alveolata,cleanedSIN1Stramenopiles)
+# SINData <- SINData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+# SINData <- relocate(SINData,tar)
+# 
+# STree <- ggtree(SINTree, branch.length = "none")
+# STree <- STree %<+% SINData + geom_tiplab(aes(label = Organism.Name, color = `Order name`), size=3, offset=.5, align = TRUE) + labs(title = "Phylogenetics of SIN1 Protein in SAR Superclade") + geom_nodepoint()+geom_text(aes(label=node, size = 5, vjust = 1))
+# STree
 
 
 # ggsave("C:/Users/kajoh/Desktop/RictorGraph.pdf", CombinedPlot, width = 50, height = 50, units = "cm", limitsize = FALSE)
-# Combined Tree for TOR proteins
 
-
-
+# Combined Tree for TOR proteins------------------------------------------------
 CombinedTree <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Project_TOR.nwk")
 CombinedTree$tip.label<- trimws(CombinedTree$tip.label, whitespace = "/.*")
 CData <- full_join(cleanedTORAlveolata,cleanedTORStramenopiles)
@@ -129,7 +127,7 @@ CTree <- CTree %<+% CData+
 CTree
 
 
-# Combined Tree for RICTOR Proteins
+# Combined Tree for RICTOR Proteins --------------------------------------------
 
 RictorCombined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Rictor_All.nwk")
 RictorCombined$tip.label <- trimws(RictorCombined$tip.label, whitespace = "/.*")
@@ -154,6 +152,77 @@ RCtree <- RCtree <- RCtree %<+% RictorData+
   geom_highlight(node = 312, fill = 'steelblue', color = "white", type = "roundrect", alpha=0.2, extend = 15)+
   geom_highlight(node = 232, fill = 'green', color = "white", type = "roundrect", alpha=0.2, extend = 15)
 RCtree
+
+#Combined tree for SIN1 --------------------------------------------------------
+SIN1Combined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Combined_SIN1.nwk")
+SIN1Combined$tip.label <- trimws(SIN1Combined$tip.label, whitespace = "/.*")
+#Note that there were not that many found SIN1 proteins overall
+SIN1Data <- full_join(cleanedSIN1Alveolata, cleanedSIN1Stramenopiles)%>%
+  full_join(SIN1Chlorophyta)%>%
+  full_join(SIN1Discoba)%>%
+  full_join(SIN1Metamonada)%>%
+  full_join(SIN1Streptophyta)%>%
+  left_join(select(CombinedTaxonomy, `Group name`, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))%>%
+  relocate(tar)
+
+SIN1Tree <- ggtree(SIN1Combined, layout = "circular", branch.length = "none")
+SIN1Tree <- SIN1Tree <- SIN1Tree %<+% SIN1Data+
+  geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
+  geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
+  labs(title = "Phylogenetics of SIN1 Protein")
+SIN1Tree
+
+
+
+
+#Combined tree for RAPTOR ------------------------------------------------------
+RAPTORCombined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Combined_RAPTOR.nwk")
+RAPTORCombined$tip.label <- trimws(RAPTORCombined$tip.label, whitespace = "/.*")
+RAPTORData <- full_join(cleanedRAPTORAlveolata,cleanedRAPTORStramenopiles)%>%
+  full_join(cleanedRAPTORRhizaria)%>%
+  full_join(RAPTORDiscoba)%>%
+  full_join(RAPTORMetamonada)%>%
+  full_join(RAPTORChlorophyta)%>%
+  full_join(RAPTORStreptophyta)%>%
+  full_join(RAPTORRhodophyta)%>%
+  left_join(select(CombinedTaxonomy, `Group name`, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))%>%
+  relocate(tar)
+
+RAPTORTree <- ggtree(RAPTORCombined, layout = "circular", branch.length = "none")
+RAPTORTree <- RAPTORTree <- RAPTORTree %<+% RAPTORData+
+  geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
+  geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
+  labs(title = "Phylogenetics of RAPTOR Protein")
+RAPTORTree
+
+#Combined tree for LST8---------------------------------------------------------
+LST8Combined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Combined_LST8.nwk")
+LST8Combined$tip.label <- trimws(LST8Combined$tip.label, whitespace = "/.*")
+
+LST8Data <- full_join(cleanedLST8Alveolata,cleanedLST8Stramenopiles)%>%
+  full_join(cleanedLST8Rhizaria)%>%
+  full_join(LST8Discoba)%>%
+  full_join(LST8Metamonada)%>%
+  full_join(LST8Chlorophyta)%>%
+  full_join(LST8Rhodophyta)%>%
+  full_join(LST8Streptophyta)%>%
+  left_join(select(CombinedTaxonomy, `Group name`, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))%>%
+  relocate(tar)
+
+LST8Tree <- ggtree(LST8Combined, layout = "circular", branch.length = "none")
+LST8Tree <- LST8Tree <- LST8Tree %<+% LST8Data+
+  geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
+  geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
+  labs(title = "Phylogenetics of LST8 Protein")
+LST8Tree
+
+# Experimental RICTOR Tree------------------------------------------------------
+ExperimentalCombined <-  read.tree("")
+ExperimentalCombined$tip.label <- trimws(ExperimentalCombined$tip.label, whitespace = "/.*")
+
+ExperimentalData
+
+
 
 
 
