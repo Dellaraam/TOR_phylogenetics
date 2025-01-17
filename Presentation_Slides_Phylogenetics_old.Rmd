@@ -2,19 +2,21 @@
 title: "Phylogenetics_Presentation_1_23"
 author: "Kyle Johnson, Dell"
 date: "`r Sys.Date()`"
-output:
-  html_document:
-    df_print: paged
+output: powerpoint_presentation
 ---
 ```{r setup, include=FALSE}
-
 knitr::opts_chunk$set(echo = FALSE)
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install("ggtree")
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
+
 BiocManager::install("Biostrings")
+```
+
+
+```{r, include=FALSE}
 library("Biostrings")
 library(tidyverse)
 library(ggplot2)
@@ -23,12 +25,9 @@ library(ggtree) #Have citation requirements for their usage. See attached messag
 # phylogenetic tree input and output with richly annotated and associated data. Molecular Biology and Evolution. 2020, 37(2):599-603. doi:
 #  10.1093/molbev/msz240
 library(treeio)
-library(ggrepel)
-library(gridExtra)
-library(plotly)
-library(kableExtra)
-library(knitr)
 ```
+
+
 
 ```{r, include=FALSE}
 # Score Values
@@ -41,31 +40,6 @@ RSDScoreA <- 100
 RSDScoreD <- 100
 
 ```
-
-```{r, include=FALSE}
-# Read in the combined tables
-# Maybe make a overall combined table?
-CombinedAlveolata <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Alveolata.csv")
-CombinedStramenopiles <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/COmbined_Stramenopile.csv")
-CombinedRhizaria <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Rhizaria.csv")
-CombinedMetamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Metamonada.csv")
-CombinedDiscoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Discoba.csv")
-CombinedChlorophyta <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Chlorophyta.csv")
-CombinedStreptophyta <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Streptophyta.csv")
-CombinedRhodophyta <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Rhodophyta.csv")
-
-SARCombined <- rbind(CombinedAlveolata,CombinedStramenopiles,CombinedRhizaria)
-#ArchaeplastidaCombined <- rbind(CombinedStreptophyta,CombinedRhodophyta,CombinedChlorophyta)
-#ExcavataCombined <- rbind(CombinedDiscoba,CombinedMetamonada)
-
-
-
-
-```
-
-
-
-
 
 ```{r, include=FALSE}
 D1Metamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/D1_Metamonada.csv")
@@ -814,62 +788,38 @@ This is an R Markdown presentation. Markdown is a simple formatting syntax for a
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
 
-
-
-## Tables SARs
-```{r}
-kable(SARCombined) %>%
-  kable_styling("striped", full_width = F) %>%
-  scroll_box(width = "100%", height = "500px")
-```
-
-
-
-
-
-
 ## Combined Rictor Tree
-```{r, fig.width=10, fig.height=10, dpi=400,out.height="150%", out.width="150%"}
+```{r, fig.width=10, fig.height=10, dpi=300,out.height="150%", out.width="150%"}
 #Rictor Tree
 #Do any modifications here
 RCtree
 ```
 
 
-## Combined SIN1 Tree
-```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+
+## Slide with SIN1 Tree
+```{r, fig.width=20, fig.height=20}
 # SIN1 Tree
 # Do any modifications here
 SIN1Tree
 ```
 
-## Combined SIN1 Table
 
-## Combined RAPTOR Tree
-```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+
+## Slide with tree
+```{r}
 RAPTORTree
 ```
 
-## Combined RAPTOR Table
 
 
 
-## Combined TOR Tree
-```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+
+## Slide with tree
+```{r}
 # Tor Tree
 # Need to rename at some point
 CTree
 ```
 
 
-
-
-
-
-
-## Combined LST8 Tree
-```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
-# Tor Tree
-# Need to rename at some point
-LST8Tree
-```
