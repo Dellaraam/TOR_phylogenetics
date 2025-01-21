@@ -45,14 +45,14 @@ RSDScoreD <- 100
 ```{r, include=FALSE}
 # Read in the combined tables
 # Maybe make a overall combined table?
-CombinedAlveolata <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Alveolata.csv")
-CombinedStramenopiles <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/COmbined_Stramenopile.csv")
-CombinedRhizaria <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Rhizaria.csv")
-CombinedMetamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Metamonada.csv")
-CombinedDiscoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Discoba.csv")
-CombinedChlorophyta <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Chlorophyta.csv")
-CombinedStreptophyta <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Streptophyta.csv")
-CombinedRhodophyta <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Rhodophyta.csv")
+CombinedAlveolata <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Alveolata.csv")
+CombinedStramenopiles <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/COmbined_Stramenopile.csv")
+CombinedRhizaria <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Rhizaria.csv")
+CombinedMetamonada <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Metamonada.csv")
+CombinedDiscoba <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Discoba.csv")
+CombinedChlorophyta <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Chlorophyta.csv")
+CombinedStreptophyta <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Streptophyta.csv")
+CombinedRhodophyta <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Rhodophyta.csv")
 
 SARCombined <- rbind(CombinedAlveolata,CombinedStramenopiles,CombinedRhizaria)
 #ArchaeplastidaCombined <- rbind(CombinedStreptophyta,CombinedRhodophyta,CombinedChlorophyta)
@@ -68,25 +68,25 @@ SARCombined <- rbind(CombinedAlveolata,CombinedStramenopiles,CombinedRhizaria)
 
 
 ```{r, include=FALSE}
-D1Metamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/D1_Metamonada.csv")
-LST8Metamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/LST8_Metamonada.csv")
-RICTORMetamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RICTOR_Metamonada.csv")
-RAPTORMetamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RAPTOR_Metamonada.csv")
-SIN1Metamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/SIN1_Metamonada.csv")
-TORMetamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/TOR_Metamonada.csv")
-MetamonadaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/Metamonada_Names.tsv", show_col_types = FALSE)
+D1Metamonada <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/D1_Metamonada.csv")
+LST8Metamonada <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/LST8_Metamonada.csv")
+RICTORMetamonada <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RICTOR_Metamonada.csv")
+RAPTORMetamonada <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RAPTOR_Metamonada.csv")
+SIN1Metamonada <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/SIN1_Metamonada.csv")
+TORMetamonada <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/TOR_Metamonada.csv")
+MetamonadaNames <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/Metamonada_Names.tsv", show_col_types = FALSE)
 MetamonadaNames <- MetamonadaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 
-D1Discoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/D1_Discoba.csv")
-LST8Discoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/LST8_Discoba.csv")
-RICTORDiscoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RICTOR_Discoba.csv")
-RAPTORDiscoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RAPTOR_Discoba.csv")
-SIN1Discoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/SIN1_Discoba.csv")
-TORDiscoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/TOR_Discoba.csv")
-DiscobaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/Discoba_Names.tsv", show_col_types = FALSE)
+D1Discoba <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/D1_Discoba.csv")
+LST8Discoba <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/LST8_Discoba.csv")
+RICTORDiscoba <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RICTOR_Discoba.csv")
+RAPTORDiscoba <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RAPTOR_Discoba.csv")
+SIN1Discoba <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/SIN1_Discoba.csv")
+TORDiscoba <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/TOR_Discoba.csv")
+DiscobaNames <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/Discoba_Names.tsv", show_col_types = FALSE)
 DiscobaNames <- DiscobaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 
-Excavata_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata-BUSCO-Sheet1.csv", na = 0)
+Excavata_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Excavata-BUSCO-Sheet1.csv", na = 0)
 Excavata_Busco <- Excavata_Busco %>% rename(Accn = Accession)
 Excavata_Busco$C.score <-gsub("%$","",Excavata_Busco$C.score)
 Excavata_Busco$C.score <- as.numeric(as.character(Excavata_Busco$C.score))
@@ -198,48 +198,48 @@ TORMetamonada <- TORMetamonada %>% filter(sca >= 100 & scd >= 100)%>%
 
 ```{r, include=FALSE}
 #-------------------------------------------------------------------------------
-D1StreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/D1_Streptophyta.csv")
-LST8StreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/LST8_Streptophyta.csv")
-RICTORStreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/RICTOR_Streptophyta.csv")
-RAPTORStreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/RAPTOR_Streptophyta.csv")
-SIN1StreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/SIN1_Streptophyta.csv")
-TORStreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/TOR_Streptophyta.csv")
-StreptophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_Names.tsv", show_col_types = FALSE)
+D1StreptophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/D1_Streptophyta.csv")
+LST8StreptophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/LST8_Streptophyta.csv")
+RICTORStreptophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/RICTOR_Streptophyta.csv")
+RAPTORStreptophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/RAPTOR_Streptophyta.csv")
+SIN1StreptophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/SIN1_Streptophyta.csv")
+TORStreptophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/TOR_Streptophyta.csv")
+StreptophytaNames <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_Names.tsv", show_col_types = FALSE)
 StreptophytaNames <- StreptophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 
-D1ChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/D1_Chlorophyta.csv")
-LST8ChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/LST8_Chlorophyta.csv")
-RICTORChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/RICTOR_Chlorophyta.csv")
-RAPTORChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/RAPTOR_Chlorophyta.csv")
-SIN1ChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/SIN1_Chlorophyta.csv")
-TORChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/TOR_Chlorophyta.csv")
-ChlorophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Chlorophyta_Names.tsv", show_col_types = FALSE)
+D1ChlorophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/D1_Chlorophyta.csv")
+LST8ChlorophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/LST8_Chlorophyta.csv")
+RICTORChlorophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/RICTOR_Chlorophyta.csv")
+RAPTORChlorophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/RAPTOR_Chlorophyta.csv")
+SIN1ChlorophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/SIN1_Chlorophyta.csv")
+TORChlorophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/TOR_Chlorophyta.csv")
+ChlorophytaNames <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Chlorophyta_Names.tsv", show_col_types = FALSE)
 ChlorophytaNames <- ChlorophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 
-D1RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/D1_Rhodophyta.csv")
-LST8RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/LST8_Rhodophyta.csv")
-RICTORRhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RICTOR_Rhodophyta.csv")
-RAPTORRhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RAPTOR_Rhodophyta.csv")
-SIN1RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/SIN1_Rhodophyta.csv")
-TORRhodophytaRaw  <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/TOR_Rhodophyta.csv")
-RhodophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/Rhodophyta_Names.tsv", show_col_types = FALSE)
+D1RhodophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/D1_Rhodophyta.csv")
+LST8RhodophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/LST8_Rhodophyta.csv")
+RICTORRhodophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RICTOR_Rhodophyta.csv")
+RAPTORRhodophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RAPTOR_Rhodophyta.csv")
+SIN1RhodophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/SIN1_Rhodophyta.csv")
+TORRhodophytaRaw  <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/TOR_Rhodophyta.csv")
+RhodophytaNames <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/Rhodophyta_Names.tsv", show_col_types = FALSE)
 RhodophytaNames <- RhodophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 #-------------------------------------------------------------------------------
-Rhodophyta_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhodophyta-BUSCO-Sheet1.csv", na = 0)
+Rhodophyta_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Rhodophyta-BUSCO-Sheet1.csv", na = 0)
 Rhodophyta_Busco <- Rhodophyta_Busco %>% rename(Accn = Accession)
 Rhodophyta_Busco$C.score <-gsub("%$","",Rhodophyta_Busco$C.score)
 Rhodophyta_Busco$C.score <- as.numeric(as.character(Rhodophyta_Busco$C.score))
 Rhodophyta_Busco$Frag.score <- gsub("%$", "", Rhodophyta_Busco$Frag.score)
 Rhodophyta_Busco$Frag.score <- as.numeric(as.character(Rhodophyta_Busco$Frag.score))
 
-Chlorophyta_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv", na = 0)
+Chlorophyta_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv", na = 0)
 Chlorophyta_Busco <- Chlorophyta_Busco %>% rename(Accn = Accession)
 Chlorophyta_Busco$C.score <-gsub("%$","",Chlorophyta_Busco$C.score)
 Chlorophyta_Busco$C.score <- as.numeric(as.character(Chlorophyta_Busco$C.score))
 Chlorophyta_Busco$Frag.score <- gsub("%$", "", Chlorophyta_Busco$Frag.score)
 Chlorophyta_Busco$Frag.score <- as.numeric(as.character(Chlorophyta_Busco$Frag.score))
 
-Streptophyta_Busco <- read.csv("~/GitHub/Tor_phylogenetics/GitHub_CSV/Streptophyta_Busco.csv")
+Streptophyta_Busco <- read.csv("~/Code/Tor_phylogenetics/GitHub_CSV/Streptophyta_Busco.csv")
 Streptophyta_Busco$C.score <-gsub("%$","",Streptophyta_Busco$C.score)
 Streptophyta_Busco$C.score <- as.numeric(as.character(Streptophyta_Busco$C.score))
 Streptophyta_Busco$Frag.score <- gsub("%$", "", Streptophyta_Busco$Frag.score)
@@ -368,52 +368,52 @@ TORChlorophyta <- TORChlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
 
 ```{r, include=FALSE}
 #-------------------------------------------------------------------------------
-D1AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/D1Alveolata.csv")
-RAPTORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RAPTORAlveolata.csv")
-RICTORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RICTORAlveolata.csv")
-SIN1AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/SIN1Alveolata.csv")
-TORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/TORAlveolata.csv")
-LST8AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/LST8Alveolata.csv")
+D1AlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/D1Alveolata.csv")
+RAPTORAlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RAPTORAlveolata.csv")
+RICTORAlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RICTORAlveolata.csv")
+SIN1AlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/SIN1Alveolata.csv")
+TORAlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/TORAlveolata.csv")
+LST8AlveolataRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/LST8Alveolata.csv")
 
-D1StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/D1Stramenopiles.csv")
-RAPTORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RAPTORStramenopiles.csv")
-RICTORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RICTORStramenopiles.csv")
-SIN1StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/SIN1Stramenopiles.csv")
-TORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/TORStramenopiles.csv")
-LST8StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/LST8Stramenopiles.csv")
+D1StramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/D1Stramenopiles.csv")
+RAPTORStramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RAPTORStramenopiles.csv")
+RICTORStramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RICTORStramenopiles.csv")
+SIN1StramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/SIN1Stramenopiles.csv")
+TORStramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/TORStramenopiles.csv")
+LST8StramenopilesRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/LST8Stramenopiles.csv")
 
-D1RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/D1Rhizaria.csv")
-RAPTORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RAPTORRhizaria.csv")
-RICTORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RICTORRhizaria.csv")
-SIN1RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/SIN1Rhizaria.csv")
-TORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/TORRhizaria.csv")
-LST8RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/LST8Rhizaria.csv")
+D1RhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/D1Rhizaria.csv")
+RAPTORRhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RAPTORRhizaria.csv")
+RICTORRhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RICTORRhizaria.csv")
+SIN1RhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/SIN1Rhizaria.csv")
+TORRhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/TORRhizaria.csv")
+LST8RhizariaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/LST8Rhizaria.csv")
 
-Alveolata_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Information_2.csv")
+Alveolata_Names <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Alveolata_Information_2.csv")
 Alveolata_Names <- Alveolata_Names %>% rename(Accn = Assembly.Accession)
 Alveolata_Names <- Alveolata_Names %>% rename(Organism_Name = Organism.Name)
-Stramenopiles_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopiles_Information_2.csv")
+Stramenopiles_Names <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Stramenopiles_Information_2.csv")
 Stramenopiles_Names <- Stramenopiles_Names %>% rename(Accn = Assembly.Accession)
 Stramenopiles_Names <- Stramenopiles_Names %>% rename(Organism_Name = Organism.Name)
-Rhizaria_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_Information_2.csv")
+Rhizaria_Names <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Rhizaria_Information_2.csv")
 Rhizaria_Names <- Rhizaria_Names %>% rename(Accn = Assembly.Accession)
 Rhizaria_Names <- Rhizaria_Names %>% rename(Organism_Name = Organism.Name)
 
-Alveolata_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_BUSCO_Sheet1.csv", na = 0)
+Alveolata_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Alveolata_BUSCO_Sheet1.csv", na = 0)
 Alveolata_Busco <- Alveolata_Busco %>% rename(Accn = Accession)
 Alveolata_Busco$C.score <-gsub("%$","",Alveolata_Busco$C.score)
 Alveolata_Busco$C.score <- as.numeric(as.character(Alveolata_Busco$C.score))
 Alveolata_Busco$Frag.score <- gsub("%$", "", Alveolata_Busco$Frag.score)
 Alveolata_Busco$Frag.score <- as.numeric(as.character(Alveolata_Busco$Frag.score))
 
-Stramenopiles_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopiles BUSCO - Sheet1.csv")
+Stramenopiles_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Stramenopiles BUSCO - Sheet1.csv")
 Stramenopiles_Busco <- Stramenopiles_Busco %>% rename(Accn = Accession)
 Stramenopiles_Busco$C.score <- gsub("%$","",Stramenopiles_Busco$C.score)
 Stramenopiles_Busco$C.score <- as.numeric(as.character(Stramenopiles_Busco$C.score))
 Stramenopiles_Busco$Frag.score <- gsub("%$", "", Stramenopiles_Busco$Frag.score)
 Stramenopiles_Busco$Frag.score <- as.numeric(as.character(Stramenopiles_Busco$Frag.score))
 
-Rhizaria_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_BUSCO_Sheet1.csv")
+Rhizaria_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Rhizaria_BUSCO_Sheet1.csv")
 Rhizaria_Busco <- Rhizaria_Busco %>% rename(Accn = Accession)
 Rhizaria_Busco$C.score <- gsub("%$", "", Rhizaria_Busco$C.score)
 Rhizaria_Busco$C.score <- as.numeric(as.character(Rhizaria_Busco$C.score))
@@ -606,14 +606,14 @@ cleanedTORRhizaria <- TORRhizaria %>%
 
 ```{r, include=FALSE}
 # Read in the Taxonomy information here
-TaxonomyDiscoba <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
-TaxonomyMetamonada <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
-TaxonomyStramenopiles <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
-TaxonomyAlveolata <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
-TaxonomyRhizaria <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
-FullTaxonomyStreptophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
-FullTaxonomyRhodophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
-FullTaxonomyChlorophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+TaxonomyDiscoba <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+TaxonomyMetamonada <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+TaxonomyStramenopiles <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+TaxonomyAlveolata <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+TaxonomyRhizaria <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+FullTaxonomyStreptophyta <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+FullTaxonomyRhodophyta <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+FullTaxonomyChlorophyta <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
 
 # Make a combined Taxonomy Here
 CombinedTaxonomy <- rbind(TaxonomyAlveolata,TaxonomyStramenopiles, TaxonomyRhizaria, TaxonomyDiscoba, TaxonomyMetamonada, FullTaxonomyChlorophyta, FullTaxonomyRhodophyta, FullTaxonomyStreptophyta)
@@ -622,12 +622,12 @@ CombinedTaxonomy <- rbind(TaxonomyAlveolata,TaxonomyStramenopiles, TaxonomyRhiza
 
 ```{r, include=FALSE}
 
-# RictorMSA <- read.fasta('C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/SAR_MSA/Combined_RICTOR_SAR_CLUSTALO_MSA.fa', type = "AA")
+# RictorMSA <- read.fasta('C:/Users/kajoh/Documents/Code/TOR_phylogenetics/SAR_MSA/Combined_RICTOR_SAR_CLUSTALO_MSA.fa', type = "AA")
 # names(RictorMSA) <- trimws(names(RictorMSA), whitespace = "/.*")
 # names(RictorMSA)
 
 
-tree <- read.tree('C:/Users/kajoh/Desktop/Verification_Proteins/TOR_File.nwk')
+tree <- read.tree('~/Code/TOR_phylogenetics/Newick_Files/Project_TOR.nwk')
 str(tree)
 tree
 tree$tip.label <- trimws(tree$tip.label, whitespace = "/.*")
@@ -647,7 +647,7 @@ p2
 
 
 # RICTOR Phylogenetics Tree
-RictorTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/Combined_SAR_RICTOR.nwk')
+RictorTree <- read.tree('~/Code/TOR_phylogenetics/Newick_Files/Combined_SAR_RICTOR.nwk')
 RictorTree$tip.label <- trimws(RictorTree$tip.label, whitespace = "/.*")
 RictorData <- full_join(RICTORStramenopiles,RICTORAlveolata)
 RictorData <- full_join(RictorData, RICTORRhizaria)
@@ -661,7 +661,7 @@ RTree <- RTree %<+% RictorData + geom_tiplab(aes(label = Organism_Name, color = 
 
 
 # TOR Phylogenetics Tree SAR
-TORTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/TOR_SAR.nwk')
+TORTree <- read.tree('~/Code/TOR_phylogenetics/Newick_Files/TOR_SAR.nwk')
 TORTree$tip.label <- trimws(TORTree$tip.label, whitespace = "/.*")
 TORData <- full_join(cleanedTORStramenopiles, cleanedTORAlveolata)
 TORData <- full_join(TORData, cleanedTORRhizaria)
@@ -673,7 +673,7 @@ TTree <- TTree %<+% TORData + geom_tiplab(aes(label = Organism_Name, color = `Or
 TTree
 
 # Raptor Phylogenetics SAR
-RAPTORTree <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/RAPTOR_SAR.nwk")
+RAPTORTree <- read.tree("~/Code/TOR_phylogenetics/Newick_Files/RAPTOR_SAR.nwk")
 RAPTORTree$tip.label <- trimws(RAPTORTree$tip.label, whitespace = "/.*")
 RAPTORData <- full_join(cleanedRAPTORAlveolata, cleanedRAPTORStramenopiles)
 RAPTORData <- full_join(RAPTORData, cleanedRAPTORRhizaria)
@@ -689,7 +689,7 @@ RPTree <- RPTree %<+% RAPTORData + geom_tiplab(aes(label = Organism_Name, color 
 RPTree
 
 # SIN1 Phylogenetics SAR
-# SINTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/SIN1_SAR.nwk')
+# SINTree <- read.tree('~/Code/TOR_phylogenetics/Newick_Files/SIN1_SAR.nwk')
 # SINTree$tip.label <- trimws(SINTree$tip.label, whitespace = "/.*")
 # SINData <- full_join(cleanedSIN1Alveolata,cleanedSIN1Stramenopiles)
 # SINData <- SINData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
@@ -703,7 +703,7 @@ RPTree
 # ggsave("C:/Users/kajoh/Desktop/RictorGraph.pdf", CombinedPlot, width = 50, height = 50, units = "cm", limitsize = FALSE)
 
 # Combined Tree for TOR proteins------------------------------------------------
-CombinedTree <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Project_TOR.nwk")
+CombinedTree <- read.tree("~/Code/TOR_phylogenetics/Newick_Files/Project_TOR.nwk")
 CombinedTree$tip.label<- trimws(CombinedTree$tip.label, whitespace = "/.*")
 CData <- full_join(cleanedTORAlveolata,cleanedTORStramenopiles)
 CData <- full_join(CData, cleanedTORRhizaria)
@@ -725,7 +725,7 @@ CTree <- CTree %<+% CData+
 
 # Combined Tree for RICTOR Proteins --------------------------------------------
 
-RictorCombined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Rictor_All.nwk")
+RictorCombined <- read.tree("~/Code/TOR_phylogenetics/Newick_Files/Rictor_All.nwk")
 RictorCombined$tip.label <- trimws(RictorCombined$tip.label, whitespace = "/.*")
 RictorData <- full_join(cleanedRICTORAlveolata, cleanedRICTORStramenopiles)
 RictorData <- RictorData %>% full_join(cleanedRICTORRhizaria)%>%
@@ -749,7 +749,7 @@ RCtree <- RCtree <- RCtree %<+% RictorData+
   # geom_highlight(node = 232, fill = 'green', color = "white", type = "roundrect", alpha=0.2, extend = 15)
 
 #Combined tree for SIN1 --------------------------------------------------------
-SIN1Combined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Combined_SIN1.nwk")
+SIN1Combined <- read.tree("~/Code/TOR_phylogenetics/Newick_Files/Combined_SIN1.nwk")
 SIN1Combined$tip.label <- trimws(SIN1Combined$tip.label, whitespace = "/.*")
 #Note that there were not that many found SIN1 proteins overall
 SIN1Data <- full_join(cleanedSIN1Alveolata, cleanedSIN1Stramenopiles)%>%
@@ -767,7 +767,7 @@ SIN1Tree <- SIN1Tree <- SIN1Tree %<+% SIN1Data+
   labs(title = "Phylogenetics of SIN1 Protein")
 
 #Combined tree for RAPTOR ------------------------------------------------------
-RAPTORCombined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Combined_RAPTOR.nwk")
+RAPTORCombined <- read.tree("~/Code/TOR_phylogenetics/Newick_Files/Combined_RAPTOR.nwk")
 RAPTORCombined$tip.label <- trimws(RAPTORCombined$tip.label, whitespace = "/.*")
 RAPTORData <- full_join(cleanedRAPTORAlveolata,cleanedRAPTORStramenopiles)%>%
   full_join(cleanedRAPTORRhizaria)%>%
@@ -786,7 +786,7 @@ RAPTORTree <- RAPTORTree <- RAPTORTree %<+% RAPTORData+
   labs(title = "Phylogenetics of RAPTOR Protein")
 
 #Combined tree for LST8---------------------------------------------------------
-LST8Combined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Combined_LST8.nwk")
+LST8Combined <- read.tree("~/Code/TOR_phylogenetics/Newick_Files/Combined_LST8.nwk")
 LST8Combined$tip.label <- trimws(LST8Combined$tip.label, whitespace = "/.*")
 
 LST8Data <- full_join(cleanedLST8Alveolata,cleanedLST8Stramenopiles)%>%
