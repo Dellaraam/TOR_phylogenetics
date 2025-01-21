@@ -619,6 +619,23 @@ FullTaxonomyChlorophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updat
 CombinedTaxonomy <- rbind(TaxonomyAlveolata,TaxonomyStramenopiles, TaxonomyRhizaria, TaxonomyDiscoba, TaxonomyMetamonada, FullTaxonomyChlorophyta, FullTaxonomyRhodophyta, FullTaxonomyStreptophyta)
 ```
 
+```{r}
+CombinedSAR <- rbind(CombinedStramenopiles,CombinedAlveolata,CombinedRhizaria)
+CombinedSAR <- select(CombinedSAR, -X) %>% rename("Super Group" = Group)
+# Need to do some data cleanup
+CombinedRhodophyta <- select(CombinedRhodophyta, -C.score.x) %>% select(-Frag.score.x)%>% rename("C.score" = C.score.y) %>% rename("Frag.score" = Frag.score.y)
+CombinedArchae <- rbind(CombinedStreptophyta, CombinedRhodophyta, CombinedChlorophyta)
+CombinedArchae <- select(CombinedArchae, -X)%>% rename("Super Group" = Phylum)
+
+CombinedExc <- rbind(CombinedDiscoba,CombinedMetamonada)
+CombinedExc <- select(CombinedExc, -X)%>% rename("Super Group" = Phylum)
+
+CombinedProject <- rbind(CombinedSAR,CombinedArchae,CombinedExc)
+```
+
+
+
+
 
 ```{r, include=FALSE}
 
@@ -640,53 +657,53 @@ TaxonomyData <- rbind(TaxonomyStramenopiles, TaxonomyAlveolata,TaxonomyRhizaria)
 tempdata <- tempdata %>% left_join(select(TaxonomyStramenopiles, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 # Important rule: the first column of the dataframe "MUST" be the same values as the tip labels
 
-#Generate Test tree
-p1 <- ggtree(tree, layout = "circular", branch.length = "none")
-p2 <- p1 %<+% tempdata +geom_tiplab(aes(label = Organism_Name, color = `Family name`), size=2)
-p2
-
-
-# RICTOR Phylogenetics Tree
-RictorTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/Combined_SAR_RICTOR.nwk')
-RictorTree$tip.label <- trimws(RictorTree$tip.label, whitespace = "/.*")
-RictorData <- full_join(RICTORStramenopiles,RICTORAlveolata)
-RictorData <- full_join(RictorData, RICTORRhizaria)
-RictorData <- RictorData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
-RictorData <- relocate(RictorData, tar)
-# Generate RICTOR tree SAR
-RTree <- ggtree(RictorTree,layout = "circular", branch.length = "none")
-RTree <- RTree %<+% RictorData + geom_tiplab(aes(label = Organism_Name, color = `Order name`), size=2, offset=3, align = TRUE) + labs(title = "Phylogenetics of RICTOR Protein in SAR Superclade") + geom_nodepoint()
-# CombinedPlot <- msaplot(RTree, RictorMSA)
-# CombinedPlot
-
-
-# TOR Phylogenetics Tree SAR
-TORTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/TOR_SAR.nwk')
-TORTree$tip.label <- trimws(TORTree$tip.label, whitespace = "/.*")
-TORData <- full_join(cleanedTORStramenopiles, cleanedTORAlveolata)
-TORData <- full_join(TORData, cleanedTORRhizaria)
-TORData <- TORData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
-TORData <- relocate(TORData, tar)
-
-TTree <- ggtree(TORTree,branch.length = "none")
-TTree <- TTree %<+% TORData + geom_tiplab(aes(label = Organism_Name, color = `Order name`), size=2, offset=3, align = TRUE) + labs(title = "Phylogenetics of TOR Protein in SAR Superclade") + geom_nodepoint()
-TTree
-
-# Raptor Phylogenetics SAR
-RAPTORTree <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/RAPTOR_SAR.nwk")
-RAPTORTree$tip.label <- trimws(RAPTORTree$tip.label, whitespace = "/.*")
-RAPTORData <- full_join(cleanedRAPTORAlveolata, cleanedRAPTORStramenopiles)
-RAPTORData <- full_join(RAPTORData, cleanedRAPTORRhizaria)
-RAPTORData <- RAPTORData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
-RAPTORData <- relocate(RAPTORData, tar)
-
-RPTree <- ggtree(RAPTORTree, layout = "circular", branch.length = "none")
-RPTree <- RPTree %<+% RAPTORData + geom_tiplab(aes(label = Organism_Name, color = `Order name`), size=2, offset=3, align = TRUE)+
-  labs(title = "Phylogenetics of RAPTOR Protein in SAR Superclade") + geom_nodepoint()+
-  geom_polygon(aes(color = `Order name`, fill = `Order name`, x = 0, y = 0))+
-  geom_nodepoint()+
-  geom_text(aes(label=node, size = 5, vjust = 1))
-RPTree
+# #Generate Test tree
+# p1 <- ggtree(tree, layout = "circular", branch.length = "none")
+# p2 <- p1 %<+% tempdata +geom_tiplab(aes(label = Organism_Name, color = `Family name`), size=2)
+# p2
+# 
+# 
+# # RICTOR Phylogenetics Tree
+# RictorTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/Combined_SAR_RICTOR.nwk')
+# RictorTree$tip.label <- trimws(RictorTree$tip.label, whitespace = "/.*")
+# RictorData <- full_join(RICTORStramenopiles,RICTORAlveolata)
+# RictorData <- full_join(RictorData, RICTORRhizaria)
+# RictorData <- RictorData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+# RictorData <- relocate(RictorData, tar)
+# # Generate RICTOR tree SAR
+# RTree <- ggtree(RictorTree,layout = "circular", branch.length = "none")
+# RTree <- RTree %<+% RictorData + geom_tiplab(aes(label = Organism_Name, color = `Order name`), size=2, offset=3, align = TRUE) + labs(title = "Phylogenetics of RICTOR Protein in SAR Superclade") + geom_nodepoint()
+# # CombinedPlot <- msaplot(RTree, RictorMSA)
+# # CombinedPlot
+# 
+# 
+# # TOR Phylogenetics Tree SAR
+# TORTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/TOR_SAR.nwk')
+# TORTree$tip.label <- trimws(TORTree$tip.label, whitespace = "/.*")
+# TORData <- full_join(cleanedTORStramenopiles, cleanedTORAlveolata)
+# TORData <- full_join(TORData, cleanedTORRhizaria)
+# TORData <- TORData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+# TORData <- relocate(TORData, tar)
+# 
+# TTree <- ggtree(TORTree,branch.length = "none")
+# TTree <- TTree %<+% TORData + geom_tiplab(aes(label = Organism_Name, color = `Order name`), size=2, offset=3, align = TRUE) + labs(title = "Phylogenetics of TOR Protein in SAR Superclade") + geom_nodepoint()
+# TTree
+# 
+# # Raptor Phylogenetics SAR
+# RAPTORTree <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/RAPTOR_SAR.nwk")
+# RAPTORTree$tip.label <- trimws(RAPTORTree$tip.label, whitespace = "/.*")
+# RAPTORData <- full_join(cleanedRAPTORAlveolata, cleanedRAPTORStramenopiles)
+# RAPTORData <- full_join(RAPTORData, cleanedRAPTORRhizaria)
+# RAPTORData <- RAPTORData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+# RAPTORData <- relocate(RAPTORData, tar)
+# 
+# RPTree <- ggtree(RAPTORTree, layout = "circular", branch.length = "none")
+# RPTree <- RPTree %<+% RAPTORData + geom_tiplab(aes(label = Organism_Name, color = `Order name`), size=2, offset=3, align = TRUE)+
+#   labs(title = "Phylogenetics of RAPTOR Protein in SAR Superclade") + geom_nodepoint()+
+#   geom_polygon(aes(color = `Order name`, fill = `Order name`, x = 0, y = 0))+
+#   geom_nodepoint()+
+#   geom_text(aes(label=node, size = 5, vjust = 1))
+# RPTree
 
 # SIN1 Phylogenetics SAR
 # SINTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/SIN1_SAR.nwk')
@@ -703,6 +720,8 @@ RPTree
 # ggsave("C:/Users/kajoh/Desktop/RictorGraph.pdf", CombinedPlot, width = 50, height = 50, units = "cm", limitsize = FALSE)
 
 # Combined Tree for TOR proteins------------------------------------------------
+
+
 CombinedTree <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Project_TOR.nwk")
 CombinedTree$tip.label<- trimws(CombinedTree$tip.label, whitespace = "/.*")
 CData <- full_join(cleanedTORAlveolata,cleanedTORStramenopiles)
@@ -843,15 +862,11 @@ RCtree
 SIN1Tree
 ```
 
-## Combined SIN1 Table
 
 ## Combined RAPTOR Tree
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
 RAPTORTree
 ```
-
-## Combined RAPTOR Table
-
 
 
 ## Combined TOR Tree
