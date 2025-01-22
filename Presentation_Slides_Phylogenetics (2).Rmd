@@ -1,0 +1,1125 @@
+---
+title: "Test_Phylo"
+author: "Kyle Johnson"
+date: "`r Sys.Date()`"
+output: powerpoint_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dev = 'jpeg', echo = FALSE, warning = FALSE)
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("ggtree")
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("Biostrings")
+library("Biostrings")
+library(tidyverse)
+library(ggplot2)
+library(ggtree) #Have citation requirements for their usage. See attached message
+# LG Wang, TTY Lam, S Xu, Z Dai, L Zhou, T Feng, P Guo, CW Dunn, BR Jones, T Bradley, H Zhu, Y Guan, Y Jiang, G Yu. treeio: an R package for
+# phylogenetic tree input and output with richly annotated and associated data. Molecular Biology and Evolution. 2020, 37(2):599-603. doi:
+#  10.1093/molbev/msz240
+library(treeio)
+library(ggrepel)
+library(gridExtra)
+library(plotly)
+library(kableExtra)
+library(knitr)
+```
+
+```{r, include=FALSE}
+# Score Values
+#LST8, RAPTOR, TOR
+LRTScoreA <- 100
+LRTScoreD <- 100
+
+#RICTOR, SIN1, D1
+RSDScoreA <- 100
+RSDScoreD <- 100
+
+```
+
+```{r, include=FALSE}
+# Read in the combined tables
+# Maybe make a overall combined table?
+CombinedAlveolata <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Alveolata.csv")
+CombinedStramenopiles <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/COmbined_Stramenopile.csv")
+CombinedRhizaria <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Rhizaria.csv")
+CombinedMetamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Metamonada.csv")
+CombinedDiscoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Discoba.csv")
+CombinedChlorophyta <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Chlorophyta.csv")
+CombinedStreptophyta <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Streptophyta.csv")
+CombinedRhodophyta <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Rhodophyta.csv")
+
+SARCombined <- rbind(CombinedAlveolata,CombinedStramenopiles,CombinedRhizaria)
+#ArchaeplastidaCombined <- rbind(CombinedStreptophyta,CombinedRhodophyta,CombinedChlorophyta)
+#ExcavataCombined <- rbind(CombinedDiscoba,CombinedMetamonada)
+
+
+
+
+```
+
+
+
+
+
+```{r, include=FALSE}
+D1Metamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/D1_Metamonada.csv")
+LST8Metamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/LST8_Metamonada.csv")
+RICTORMetamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RICTOR_Metamonada.csv")
+RAPTORMetamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RAPTOR_Metamonada.csv")
+SIN1Metamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/SIN1_Metamonada.csv")
+TORMetamonada <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/TOR_Metamonada.csv")
+MetamonadaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/Metamonada_Names.tsv", show_col_types = FALSE)
+MetamonadaNames <- MetamonadaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
+
+D1Discoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/D1_Discoba.csv")
+LST8Discoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/LST8_Discoba.csv")
+RICTORDiscoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RICTOR_Discoba.csv")
+RAPTORDiscoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RAPTOR_Discoba.csv")
+SIN1Discoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/SIN1_Discoba.csv")
+TORDiscoba <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/TOR_Discoba.csv")
+DiscobaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/Discoba_Names.tsv", show_col_types = FALSE)
+DiscobaNames <- DiscobaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
+
+Excavata_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata-BUSCO-Sheet1.csv", na = 0)
+Excavata_Busco <- Excavata_Busco %>% rename(Accn = Accession)
+Excavata_Busco$C.score <-gsub("%$","",Excavata_Busco$C.score)
+Excavata_Busco$C.score <- as.numeric(as.character(Excavata_Busco$C.score))
+Excavata_Busco$Frag.score <- gsub("%$", "", Excavata_Busco$Frag.score)
+Excavata_Busco$Frag.score <- as.numeric(as.character(Excavata_Busco$Frag.score))
+
+D1Discoba <- merge(D1Discoba, DiscobaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+LST8Discoba <- merge(LST8Discoba, DiscobaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RICTORDiscoba <- merge(RICTORDiscoba, DiscobaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RAPTORDiscoba <- merge(RAPTORDiscoba, DiscobaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+SIN1Discoba <- merge(SIN1Discoba, DiscobaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+TORDiscoba <- merge(TORDiscoba, DiscobaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+
+D1Metamonada <- merge(D1Metamonada, MetamonadaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+LST8Metamonada <- merge(LST8Metamonada, MetamonadaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RICTORMetamonada <- merge(RICTORMetamonada, MetamonadaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RAPTORMetamonada <- merge(RAPTORMetamonada, MetamonadaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+SIN1Metamonada <- merge(SIN1Metamonada, MetamonadaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+TORMetamonada <- merge(TORMetamonada, MetamonadaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+
+RICTORMetamonada <- merge(RICTORMetamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RAPTORMetamonada <- merge(RAPTORMetamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+SIN1Metamonada <- merge(SIN1Metamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+LST8Metamonada <- merge(LST8Metamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+TORMetamonada <- merge(TORMetamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+D1Metamonada <- merge(D1Metamonada, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+
+RICTORDiscoba <- merge(RICTORDiscoba, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RAPTORDiscoba <- merge(RAPTORDiscoba, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+SIN1Discoba <- merge(SIN1Discoba, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+LST8Discoba <- merge(LST8Discoba, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+TORDiscoba <- merge(TORDiscoba, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+D1Discoba <- merge(D1Discoba, Excavata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+
+D1Discoba <- D1Discoba %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+LST8Discoba <- LST8Discoba %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+RICTORDiscoba <- RICTORDiscoba %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+RAPTORDiscoba <- RAPTORDiscoba %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+SIN1Discoba <- SIN1Discoba %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+TORDiscoba <- TORDiscoba %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+D1Metamonada <- D1Metamonada %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+LST8Metamonada <- LST8Metamonada %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+RICTORMetamonada <- RICTORMetamonada %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+RAPTORMetamonada <- RAPTORMetamonada %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+SIN1Metamonada <- SIN1Metamonada %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+TORMetamonada <- TORMetamonada %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+```
+
+
+
+```{r, include=FALSE}
+#-------------------------------------------------------------------------------
+D1StreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/D1_Streptophyta.csv")
+LST8StreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/LST8_Streptophyta.csv")
+RICTORStreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/RICTOR_Streptophyta.csv")
+RAPTORStreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/RAPTOR_Streptophyta.csv")
+SIN1StreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/SIN1_Streptophyta.csv")
+TORStreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/TOR_Streptophyta.csv")
+StreptophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_Names.tsv", show_col_types = FALSE)
+StreptophytaNames <- StreptophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
+
+D1ChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/D1_Chlorophyta.csv")
+LST8ChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/LST8_Chlorophyta.csv")
+RICTORChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/RICTOR_Chlorophyta.csv")
+RAPTORChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/RAPTOR_Chlorophyta.csv")
+SIN1ChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/SIN1_Chlorophyta.csv")
+TORChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/TOR_Chlorophyta.csv")
+ChlorophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Chlorophyta_Names.tsv", show_col_types = FALSE)
+ChlorophytaNames <- ChlorophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
+
+D1RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/D1_Rhodophyta.csv")
+LST8RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/LST8_Rhodophyta.csv")
+RICTORRhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RICTOR_Rhodophyta.csv")
+RAPTORRhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RAPTOR_Rhodophyta.csv")
+SIN1RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/SIN1_Rhodophyta.csv")
+TORRhodophytaRaw  <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/TOR_Rhodophyta.csv")
+RhodophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/Rhodophyta_Names.tsv", show_col_types = FALSE)
+RhodophytaNames <- RhodophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
+#-------------------------------------------------------------------------------
+Rhodophyta_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhodophyta-BUSCO-Sheet1.csv", na = 0)
+Rhodophyta_Busco <- Rhodophyta_Busco %>% rename(Accn = Accession)
+Rhodophyta_Busco$C.score <-gsub("%$","",Rhodophyta_Busco$C.score)
+Rhodophyta_Busco$C.score <- as.numeric(as.character(Rhodophyta_Busco$C.score))
+Rhodophyta_Busco$Frag.score <- gsub("%$", "", Rhodophyta_Busco$Frag.score)
+Rhodophyta_Busco$Frag.score <- as.numeric(as.character(Rhodophyta_Busco$Frag.score))
+
+Chlorophyta_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv", na = 0)
+Chlorophyta_Busco <- Chlorophyta_Busco %>% rename(Accn = Accession)
+Chlorophyta_Busco$C.score <-gsub("%$","",Chlorophyta_Busco$C.score)
+Chlorophyta_Busco$C.score <- as.numeric(as.character(Chlorophyta_Busco$C.score))
+Chlorophyta_Busco$Frag.score <- gsub("%$", "", Chlorophyta_Busco$Frag.score)
+Chlorophyta_Busco$Frag.score <- as.numeric(as.character(Chlorophyta_Busco$Frag.score))
+
+Streptophyta_Busco <- read.csv("~/GitHub/Tor_phylogenetics/GitHub_CSV/Streptophyta_Busco.csv")
+Streptophyta_Busco$C.score <-gsub("%$","",Streptophyta_Busco$C.score)
+Streptophyta_Busco$C.score <- as.numeric(as.character(Streptophyta_Busco$C.score))
+Streptophyta_Busco$Frag.score <- gsub("%$", "", Streptophyta_Busco$Frag.score)
+Streptophyta_Busco$Frag.score <- as.numeric(as.character(Streptophyta_Busco$Frag.score))
+#-------------------------------------------------------------------------------
+D1Streptophyta <- merge(D1StreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+LST8Streptophyta <- merge(LST8StreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RAPTORStreptophyta <- merge(RAPTORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RICTORStreptophyta <- merge(RICTORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+SIN1Streptophyta <- merge(SIN1StreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+TORStreptophyta <- merge(TORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+
+D1Rhodophyta <- merge(D1RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+LST8Rhodophyta <- merge(LST8RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RAPTORRhodophyta <- merge(RAPTORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RICTORRhodophyta <- merge(RICTORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+SIN1Rhodophyta <- merge(SIN1RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+TORRhodophyta <- merge(TORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+
+D1Chlorophyta <- merge(D1ChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+LST8Chlorophyta <- merge(LST8ChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RAPTORChlorophyta <- merge(RAPTORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RICTORChlorophyta <- merge(RICTORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+SIN1Chlorophyta <- merge(SIN1ChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+TORChlorophyta <- merge(TORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+#-------------------------------------------------------------------------------
+D1Streptophyta <- D1Streptophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+LST8Streptophyta <- LST8Streptophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+RAPTORStreptophyta <- RAPTORStreptophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+RICTORStreptophyta <- RICTORStreptophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+SIN1Streptophyta <- SIN1Streptophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+TORStreptophyta <- TORStreptophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+#-------------------------------------------------------------------------------
+D1Rhodophyta <- D1Rhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+LST8Rhodophyta <- LST8Rhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+RAPTORRhodophyta <- RAPTORRhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+RICTORRhodophyta <- RICTORRhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+SIN1Rhodophyta <- SIN1Rhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+TORRhodophyta <- TORRhodophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+#-------------------------------------------------------------------------------
+D1Chlorophyta <- D1Chlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+LST8Chlorophyta <- LST8Chlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+RAPTORChlorophyta <- RAPTORChlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+RICTORChlorophyta <- RICTORChlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+SIN1Chlorophyta <- SIN1Chlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+TORChlorophyta <- TORChlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+#-------------------------------------------------------------------------------
+
+
+
+```
+
+
+
+```{r, include=FALSE}
+#-------------------------------------------------------------------------------
+D1AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/D1Alveolata.csv")
+RAPTORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RAPTORAlveolata.csv")
+RICTORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RICTORAlveolata.csv")
+SIN1AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/SIN1Alveolata.csv")
+TORAlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/TORAlveolata.csv")
+LST8AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/LST8Alveolata.csv")
+
+D1StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/D1Stramenopiles.csv")
+RAPTORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RAPTORStramenopiles.csv")
+RICTORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RICTORStramenopiles.csv")
+SIN1StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/SIN1Stramenopiles.csv")
+TORStramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/TORStramenopiles.csv")
+LST8StramenopilesRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/LST8Stramenopiles.csv")
+
+D1RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/D1Rhizaria.csv")
+RAPTORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RAPTORRhizaria.csv")
+RICTORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RICTORRhizaria.csv")
+SIN1RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/SIN1Rhizaria.csv")
+TORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/TORRhizaria.csv")
+LST8RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/LST8Rhizaria.csv")
+
+Alveolata_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Information_2.csv")
+Alveolata_Names <- Alveolata_Names %>% rename(Accn = Assembly.Accession)
+Alveolata_Names <- Alveolata_Names %>% rename(Organism_Name = Organism.Name)
+Stramenopiles_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopiles_Information_2.csv")
+Stramenopiles_Names <- Stramenopiles_Names %>% rename(Accn = Assembly.Accession)
+Stramenopiles_Names <- Stramenopiles_Names %>% rename(Organism_Name = Organism.Name)
+Rhizaria_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_Information_2.csv")
+Rhizaria_Names <- Rhizaria_Names %>% rename(Accn = Assembly.Accession)
+Rhizaria_Names <- Rhizaria_Names %>% rename(Organism_Name = Organism.Name)
+
+Alveolata_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_BUSCO_Sheet1.csv", na = 0)
+Alveolata_Busco <- Alveolata_Busco %>% rename(Accn = Accession)
+Alveolata_Busco$C.score <-gsub("%$","",Alveolata_Busco$C.score)
+Alveolata_Busco$C.score <- as.numeric(as.character(Alveolata_Busco$C.score))
+Alveolata_Busco$Frag.score <- gsub("%$", "", Alveolata_Busco$Frag.score)
+Alveolata_Busco$Frag.score <- as.numeric(as.character(Alveolata_Busco$Frag.score))
+
+Stramenopiles_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopiles BUSCO - Sheet1.csv")
+Stramenopiles_Busco <- Stramenopiles_Busco %>% rename(Accn = Accession)
+Stramenopiles_Busco$C.score <- gsub("%$","",Stramenopiles_Busco$C.score)
+Stramenopiles_Busco$C.score <- as.numeric(as.character(Stramenopiles_Busco$C.score))
+Stramenopiles_Busco$Frag.score <- gsub("%$", "", Stramenopiles_Busco$Frag.score)
+Stramenopiles_Busco$Frag.score <- as.numeric(as.character(Stramenopiles_Busco$Frag.score))
+
+Rhizaria_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_BUSCO_Sheet1.csv")
+Rhizaria_Busco <- Rhizaria_Busco %>% rename(Accn = Accession)
+Rhizaria_Busco$C.score <- gsub("%$", "", Rhizaria_Busco$C.score)
+Rhizaria_Busco$C.score <- as.numeric(as.character(Rhizaria_Busco$C.score))
+Rhizaria_Busco$Frag.score <- gsub("%$", "", Rhizaria_Busco$Frag.score)
+Rhizaria_Busco$Frag.score <- as.numeric(as.character(Rhizaria_Busco$Frag.score))
+
+#-------------------------------------------------------------------------------
+D1Alveolata <- D1AlveolataRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RICTORAlveolata <- RICTORAlveolataRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RAPTORAlveolata <- RAPTORAlveolataRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+SIN1Alveolata <- SIN1AlveolataRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+LST8Alveolata <- LST8AlveolataRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+TORAlveolata <- TORAlveolataRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+
+# Stramenopiles
+D1Stramenopiles <- D1StramenopilesRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RICTORStramenopiles <- RICTORStramenopilesRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RAPTORStramenopiles <- RAPTORStramenopilesRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+SIN1Stramenopiles <- SIN1StramenopilesRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+LST8Stramenopiles <- LST8StramenopilesRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+TORStramenopiles <- TORStramenopilesRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+
+#Rhizaria (Future)
+D1Rhizaria <- D1RhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RICTORRhizaria <- RICTORRhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RAPTORRhizaria <- RAPTORRhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+SIN1Rhizaria <- SIN1RhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+LST8Rhizaria <- LST8RhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+TORRhizaria <- TORRhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
+#-------------------------------------------------------------------------------
+# Alveolata
+D1Alveolata <- merge(D1Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RICTORAlveolata <- merge(RICTORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+RAPTORAlveolata <- merge(RAPTORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+SIN1Alveolata <- merge(SIN1Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+LST8Alveolata <- merge(LST8Alveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+TORAlveolata <- merge(TORAlveolata, Alveolata_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+
+# Stramenopiles
+D1Stramenopiles <- merge(D1Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+RICTORStramenopiles <- merge(RICTORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+RAPTORStramenopiles <- merge(RAPTORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+SIN1Stramenopiles <- merge(SIN1Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+LST8Stramenopiles <- merge(LST8Stramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+TORStramenopiles <- merge(TORStramenopiles, Stramenopiles_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+
+# Rhizaria (Future)
+D1Rhizaria <- merge(D1Rhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+RICTORRhizaria <- merge(RICTORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+RAPTORRhizaria <- merge(RAPTORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+LST8Rhizaria <- merge(LST8Rhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+TORRhizaria <- merge(TORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
+
+## Alveolata
+D1Alveolata <- merge(D1Alveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RICTORAlveolata <- merge(RICTORAlveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RAPTORAlveolata <- merge(RAPTORAlveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+SIN1Alveolata <- merge(SIN1Alveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+LST8Alveolata <- merge(LST8Alveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+TORAlveolata <- merge(TORAlveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+
+## Stramenopiles
+D1Stramenopiles <- merge(D1Stramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RICTORStramenopiles <- merge(RICTORStramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RAPTORStramenopiles <- merge(RAPTORStramenopiles,Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+SIN1Stramenopiles <- merge(SIN1Stramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+LST8Stramenopiles <- merge(LST8Stramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+TORStramenopiles <- merge(TORStramenopiles, Stramenopiles_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+
+##Rhizaria 
+D1Rhizaria <- merge(D1Rhizaria, Rhizaria_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RICTORRhizaria <- merge(RICTORRhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
+RAPTORRhizaria <- merge(RAPTORRhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
+SIN1Rhizaria <- merge(SIN1Rhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
+LST8Rhizaria <- merge(LST8Rhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
+TORRhizaria <- merge(TORRhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
+#-------------------------------------------------------------------------------
+cleanedD1Alveolata <- D1Alveolata %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup
+
+cleanedTORAlveolata <- TORAlveolata %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedLST8Alveolata <- LST8Alveolata %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedRICTORAlveolata <- RICTORAlveolata %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedRAPTORAlveolata <- RAPTORAlveolata %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedSIN1Alveolata <- SIN1Alveolata %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+#-------------------------------------------------------------------------------
+cleanedD1Stramenopiles <- D1Stramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedLST8Stramenopiles <- LST8Stramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedRAPTORStramenopiles <- RAPTORStramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedRICTORStramenopiles <- RICTORStramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedSIN1Stramenopiles <- SIN1Stramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedTORStramenopiles <- TORStramenopiles %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+#-------------------------------------------------------------------------------
+cleanedD1Rhizaria <- D1Rhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedRICTORRhizaria <- RICTORRhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+# its of length 0 for rows
+# cleanedSIN1Rhizaria <- SIN1Rhizaria %>%
+#   group_by(Organism_Taxonomic_ID) %>%
+#   slice_max(scd) %>%
+#   slice_max(evd)%>%
+#   ungroup()
+
+cleanedRAPTORRhizaria <- RAPTORRhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedLST8Rhizaria <- LST8Rhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+
+cleanedTORRhizaria <- TORRhizaria %>%
+  group_by(Organism_Taxonomic_ID) %>%
+  slice_max(scd) %>%
+  slice_max(evd)%>%
+  ungroup()
+#-------------------------------------------------------------------------------
+
+
+```
+
+
+```{r, include=FALSE}
+# Read in the Taxonomy information here
+TaxonomyDiscoba <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+TaxonomyMetamonada <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+TaxonomyStramenopiles <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+TaxonomyAlveolata <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+TaxonomyRhizaria <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+FullTaxonomyStreptophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+FullTaxonomyRhodophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+FullTaxonomyChlorophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+
+# Make a combined Taxonomy Here
+CombinedTaxonomy <- rbind(TaxonomyAlveolata,TaxonomyStramenopiles, TaxonomyRhizaria, TaxonomyDiscoba, TaxonomyMetamonada, FullTaxonomyChlorophyta, FullTaxonomyRhodophyta, FullTaxonomyStreptophyta)
+```
+
+```{r, include=FALSE}
+CombinedSAR <- rbind(CombinedStramenopiles,CombinedAlveolata,CombinedRhizaria)
+CombinedSAR <- select(CombinedSAR, -X) %>% rename("Super Group" = Group)
+CombinedSAR <- rename(CombinedSAR, "Organism_Name" = Organism.Name)
+# Need to do some data cleanup
+CombinedRhodophyta <- select(CombinedRhodophyta, -C.score.x) %>% select(-Frag.score.x)%>% rename("C.score" = C.score.y) %>% rename("Frag.score" = Frag.score.y)
+CombinedArchae <- rbind(CombinedStreptophyta, CombinedRhodophyta, CombinedChlorophyta)
+CombinedArchae <- select(CombinedArchae, -X)%>% rename("Super Group" = Phylum)
+
+CombinedExc <- rbind(CombinedDiscoba,CombinedMetamonada)
+CombinedExc <- select(CombinedExc, -X)%>% rename("Super Group" = Phylum)
+
+
+
+names(CombinedExc)
+names(CombinedSAR)
+names(CombinedArchae)
+rm(CombinedProject)
+CombinedProject <- rbind(CombinedSAR,CombinedArchae,CombinedExc)
+
+
+```
+
+
+
+
+
+```{r, include=FALSE}
+
+# RictorMSA <- read.fasta('C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/SAR_MSA/Combined_RICTOR_SAR_CLUSTALO_MSA.fa', type = "AA")
+# names(RictorMSA) <- trimws(names(RictorMSA), whitespace = "/.*")
+# names(RictorMSA)
+
+
+tree <- read.tree('C:/Users/kajoh/Desktop/Verification_Proteins/TOR_File.nwk')
+str(tree)
+tree
+tree$tip.label <- trimws(tree$tip.label, whitespace = "/.*")
+ # tree$tip.label[i] <- trimws(tree$tip.label[i], whitespace = "/.*")
+tempdata <- full_join(TORStramenopiles, TORAlveolata)
+tempdata <- full_join(tempdata, TORRhizaria)
+tempdata <- relocate(tempdata, tar)
+# Taxonomy Information
+TaxonomyData <- rbind(TaxonomyStramenopiles, TaxonomyAlveolata,TaxonomyRhizaria)
+tempdata <- tempdata %>% left_join(select(TaxonomyStramenopiles, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+# Important rule: the first column of the dataframe "MUST" be the same values as the tip labels
+
+# #Generate Test tree
+# p1 <- ggtree(tree, layout = "circular", branch.length = "none")
+# p2 <- p1 %<+% tempdata +geom_tiplab(aes(label = Organism_Name, color = `Family name`), size=2)
+# p2
+# 
+# 
+# # RICTOR Phylogenetics Tree
+# RictorTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/Combined_SAR_RICTOR.nwk')
+# RictorTree$tip.label <- trimws(RictorTree$tip.label, whitespace = "/.*")
+# RictorData <- full_join(RICTORStramenopiles,RICTORAlveolata)
+# RictorData <- full_join(RictorData, RICTORRhizaria)
+# RictorData <- RictorData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+# RictorData <- relocate(RictorData, tar)
+# # Generate RICTOR tree SAR
+# RTree <- ggtree(RictorTree,layout = "circular", branch.length = "none")
+# RTree <- RTree %<+% RictorData + geom_tiplab(aes(label = Organism_Name, color = `Order name`), size=2, offset=3, align = TRUE) + labs(title = "Phylogenetics of RICTOR Protein in SAR Superclade") + geom_nodepoint()
+# # CombinedPlot <- msaplot(RTree, RictorMSA)
+# # CombinedPlot
+# 
+# 
+# # TOR Phylogenetics Tree SAR
+# TORTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/TOR_SAR.nwk')
+# TORTree$tip.label <- trimws(TORTree$tip.label, whitespace = "/.*")
+# TORData <- full_join(cleanedTORStramenopiles, cleanedTORAlveolata)
+# TORData <- full_join(TORData, cleanedTORRhizaria)
+# TORData <- TORData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+# TORData <- relocate(TORData, tar)
+# 
+# TTree <- ggtree(TORTree,branch.length = "none")
+# TTree <- TTree %<+% TORData + geom_tiplab(aes(label = Organism_Name, color = `Order name`), size=2, offset=3, align = TRUE) + labs(title = "Phylogenetics of TOR Protein in SAR Superclade") + geom_nodepoint()
+# TTree
+# 
+# # Raptor Phylogenetics SAR
+# RAPTORTree <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/RAPTOR_SAR.nwk")
+# RAPTORTree$tip.label <- trimws(RAPTORTree$tip.label, whitespace = "/.*")
+# RAPTORData <- full_join(cleanedRAPTORAlveolata, cleanedRAPTORStramenopiles)
+# RAPTORData <- full_join(RAPTORData, cleanedRAPTORRhizaria)
+# RAPTORData <- RAPTORData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+# RAPTORData <- relocate(RAPTORData, tar)
+# 
+# RPTree <- ggtree(RAPTORTree, layout = "circular", branch.length = "none")
+# RPTree <- RPTree %<+% RAPTORData + geom_tiplab(aes(label = Organism_Name, color = `Order name`), size=2, offset=3, align = TRUE)+
+#   labs(title = "Phylogenetics of RAPTOR Protein in SAR Superclade") + geom_nodepoint()+
+#   geom_polygon(aes(color = `Order name`, fill = `Order name`, x = 0, y = 0))+
+#   geom_nodepoint()+
+#   geom_text(aes(label=node, size = 5, vjust = 1))
+# RPTree
+
+# SIN1 Phylogenetics SAR
+# SINTree <- read.tree('~/GitHub/TOR_phylogenetics/Newick_Files/SIN1_SAR.nwk')
+# SINTree$tip.label <- trimws(SINTree$tip.label, whitespace = "/.*")
+# SINData <- full_join(cleanedSIN1Alveolata,cleanedSIN1Stramenopiles)
+# SINData <- SINData %>% left_join(select(TaxonomyData, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+# SINData <- relocate(SINData,tar)
+# 
+# STree <- ggtree(SINTree, branch.length = "none")
+# STree <- STree %<+% SINData + geom_tiplab(aes(label = Organism.Name, color = `Order name`), size=3, offset=.5, align = TRUE) + labs(title = "Phylogenetics of SIN1 Protein in SAR Superclade") + geom_nodepoint()+geom_text(aes(label=node, size = 5, vjust = 1))
+# STree
+
+
+# ggsave("C:/Users/kajoh/Desktop/RictorGraph.pdf", CombinedPlot, width = 50, height = 50, units = "cm", limitsize = FALSE)
+
+# Combined Tree for TOR proteins------------------------------------------------
+CombinedTree <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Project_TOR.nwk")
+CombinedTree$tip.label<- trimws(CombinedTree$tip.label, whitespace = "/.*")
+CData <- full_join(cleanedTORAlveolata,cleanedTORStramenopiles)
+CData <- full_join(CData, cleanedTORRhizaria)
+CData <- full_join(CData, TORStreptophyta)
+CData <- full_join(CData, TORChlorophyta)
+CData <- full_join(CData, TORDiscoba)
+CData <- full_join(CData, TORMetamonada)
+CData <- full_join(CData, TORRhodophyta)
+CData <- CData %>% left_join(select(CombinedTaxonomy, `Group name`, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+CData <- relocate(CData, tar)
+
+
+CTree <- ggtree(CombinedTree, layout = "circular", branch.length = "none") + xlim(-20,NA)
+CTree <- CTree %<+% CData+
+  geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
+  geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
+  labs(title = "Phylogenetics of TOR Protein")
+
+
+# Combined Tree for RICTOR Proteins --------------------------------------------
+
+RictorCombined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Rictor_All.nwk")
+RictorCombined$tip.label <- trimws(RictorCombined$tip.label, whitespace = "/.*")
+RictorData <- full_join(cleanedRICTORAlveolata, cleanedRICTORStramenopiles)
+RictorData <- RictorData %>% full_join(cleanedRICTORRhizaria)%>%
+  full_join(RICTORRhodophyta)%>%
+  full_join(RICTORStreptophyta)%>%
+  full_join(RICTORChlorophyta)%>%
+  full_join(RICTORRhodophyta)%>%
+  full_join(RICTORMetamonada)%>%
+  full_join(RICTORDiscoba)
+
+RictorData <- RictorData %>% left_join(select(CombinedTaxonomy, `Group name`, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+RictorData <- relocate(RictorData, tar)
+
+RCtree <- ggtree(RictorCombined, layout = "circular", branch.length = "none")
+RCtree <- RCtree <- RCtree %<+% RictorData+
+  geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
+  geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
+  labs(title = "Phylogenetics of RICTOR Protein")
+  #geom_text(aes(label=node, size = 1, vjust = 1))+
+  # geom_highlight(node = 312, fill = 'steelblue', color = "white", type = "roundrect", alpha=0.2, extend = 15)+
+  # geom_highlight(node = 232, fill = 'green', color = "white", type = "roundrect", alpha=0.2, extend = 15)
+
+#Combined tree for SIN1 --------------------------------------------------------
+SIN1Combined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Combined_SIN1.nwk")
+SIN1Combined$tip.label <- trimws(SIN1Combined$tip.label, whitespace = "/.*")
+#Note that there were not that many found SIN1 proteins overall
+SIN1Data <- full_join(cleanedSIN1Alveolata, cleanedSIN1Stramenopiles)%>%
+  full_join(SIN1Chlorophyta)%>%
+  full_join(SIN1Discoba)%>%
+  full_join(SIN1Metamonada)%>%
+  full_join(SIN1Streptophyta)%>%
+  left_join(select(CombinedTaxonomy, `Group name`, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))%>%
+  relocate(tar)
+
+SIN1Tree <- ggtree(SIN1Combined, layout = "circular", branch.length = "none")
+SIN1Tree <- SIN1Tree <- SIN1Tree %<+% SIN1Data+
+  geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
+  geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
+  labs(title = "Phylogenetics of SIN1 Protein")
+
+#Combined tree for RAPTOR ------------------------------------------------------
+RAPTORCombined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Combined_RAPTOR.nwk")
+RAPTORCombined$tip.label <- trimws(RAPTORCombined$tip.label, whitespace = "/.*")
+RAPTORData <- full_join(cleanedRAPTORAlveolata,cleanedRAPTORStramenopiles)%>%
+  full_join(cleanedRAPTORRhizaria)%>%
+  full_join(RAPTORDiscoba)%>%
+  full_join(RAPTORMetamonada)%>%
+  full_join(RAPTORChlorophyta)%>%
+  full_join(RAPTORStreptophyta)%>%
+  full_join(RAPTORRhodophyta)%>%
+  left_join(select(CombinedTaxonomy, `Group name`, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))%>%
+  relocate(tar)
+
+RAPTORTree <- ggtree(RAPTORCombined, layout = "circular", branch.length = "none")
+RAPTORTree <- RAPTORTree <- RAPTORTree %<+% RAPTORData+
+  geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
+  geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
+  labs(title = "Phylogenetics of RAPTOR Protein")
+
+#Combined tree for LST8---------------------------------------------------------
+LST8Combined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Combined_LST8.nwk")
+LST8Combined$tip.label <- trimws(LST8Combined$tip.label, whitespace = "/.*")
+
+LST8Data <- full_join(cleanedLST8Alveolata,cleanedLST8Stramenopiles)%>%
+  full_join(cleanedLST8Rhizaria)%>%
+  full_join(LST8Discoba)%>%
+  full_join(LST8Metamonada)%>%
+  full_join(LST8Chlorophyta)%>%
+  full_join(LST8Rhodophyta)%>%
+  full_join(LST8Streptophyta)%>%
+  left_join(select(CombinedTaxonomy, `Group name`, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))%>%
+  relocate(tar)
+
+LST8Tree <- ggtree(LST8Combined, layout = "circular", branch.length = "none")
+LST8Tree <- LST8Tree <- LST8Tree %<+% LST8Data+
+  geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
+  geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
+  labs(title = "Phylogenetics of LST8 Protein")
+
+
+```
+
+```{r, include = FALSE}
+# Misc dataframes, variables for plotting and additions to trees
+# Add totalRICTOR etc to the Associated Dataframes
+# Get the total number of stramenopiles, Alveolata, Rhizaria, etc and save those results
+RictorDataPlot <- left_join(RictorData, select(CombinedProject, `Super Group`, Accn), by=c("Accn"))
+SIN1DataPlot <- left_join(SIN1Data, select(CombinedProject, `Super Group`, Accn), by=c("Accn"))
+RAPTORDataPlot <- left_join(RAPTORData, select(CombinedProject, `Super Group`, Accn), by=c("Accn"))
+TORDataPlot <- left_join(CData, select(CombinedProject, `Super Group`, Accn), by=c("Accn"))
+LST8DataPlot <- left_join(LST8Data, select(CombinedProject, `Super Group`, Accn), by=c("Accn"))
+```
+
+## Initial Thoughts Slide
+
+- Originally did by the following:
+- Parasites, Photosynthetic symbiotes, Ciliates
+- Found some out-lier organisms which are unicellular
+- In Stramenopiles, fairly uniform distribution of TOR Components
+- Rhizaria information is unreliable at current moment
+- Alveolata contained wide majority of parastic organisms
+
+
+## Continued Work
+- Expanded research parameters to include the following:
+- For Archaeplastida: Streptophyta, chlorophyta, rhodophyta
+- For Excavata: Discoba and Metamonada
+- Currently looking for more information about Rhizaria
+- Beginning SRA work to rule out/in some outlier species in all supergroups
+- Expanding the phylogenetic trees for the protein components
+
+
+## RICTOR Results
+- RICTOR very prevalent across the different Super Groups
+- Found especially within the Excavates and the SAR Groups
+- Some hits were found in the Archaeplastida grouping
+- SRA analysis required to officially confirm presence
+- Possible issues with contamination in Streptophyta specifically
+
+## Combined Rictor Tree
+```{r, fig.width=10, fig.height=10, dpi = 200, out.height="1920ppx", out.width="1080ppx"}
+#Rictor Tree
+#Do any modifications here
+RCtree
+```
+
+
+
+## RICTOR Values Plots
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot()+
+  geom_histogram(data = RictorDataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity" )+
+  geom_histogram(data = CombinedProject, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  ylab("Number of Found RICTOR vs Total Species")+
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+
+## RICTOR Values Plots
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot(RictorDataPlot,aes(`Super Group`, fill = `Super Group`))+
+  geom_bar()+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  theme(axis.text.x = element_blank())+ 
+  ylab("Number of Rictor Proteins Found")
+```
+
+
+
+## RICTOR Values Plots
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot(RictorDataPlot,aes(`Phylum name`, fill = `Super Group`))+
+  geom_bar()+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 90))+ 
+  ylab("Number of Rictor Proteins Found")
+```
+
+
+
+## SIN1 Results
+- SIN1 much more rare in most Super Groups
+- Predominately in the Oomycota group (Pseudo-Fungi)
+- Very Prevalent within the Ciliates
+- Some random hits detected in Chlorophyta and Streptophyta
+- Further SRA analysis required to rule out their presence
+
+## Combined SIN1 Tree
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+# SIN1 Tree
+# Do any modifications here
+SIN1Tree
+```
+
+## SIN1 Values Plots
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot()+
+  geom_histogram(data = SIN1DataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", bins = 30, binwidth = 0.1, show.legend = FALSE)+
+  geom_histogram(data = CombinedProject, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1, bins = 30, binwidth = 0.1, show.legend = FALSE)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  ylab("Number of Found SIN1 vs Total Species")+
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+
+## SIN1 Relative Plot
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot(SIN1DataPlot,aes(`Super Group`, fill = `Super Group`))+
+  geom_bar(show.legend = FALSE)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 90))+ 
+  ylab("Number of Rictor Proteins Found")
+```
+
+
+
+## SIN1 Relative Plot 2
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot(SIN1DataPlot,aes(`Phylum name`, fill = `Super Group`))+
+  geom_bar(show.legend = FALSE)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 90))+ 
+  ylab("Number of Rictor Proteins Found")
+```
+
+
+## RAPTOR Results
+- RAPTOR found across all Super Groups
+- Major exception found within the Ciliates who lack entirely
+- Results indicate the presence of One RAPTOR at minimum. More likely (see A.thaliana)
+- Very clustered results. I.E. RAPTOR proteins tend to stay very close to Group
+
+## Combined RAPTOR Tree
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+RAPTORTree
+```
+
+## RAPTOR Values Plots
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot()+
+  geom_histogram(data = RAPTORDataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", show.legend = FALSE )+
+  geom_histogram(data = CombinedProject, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1, show.legend = FALSE)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  ylab("Number of Found RAPTOR vs Total Species")+
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+## RAPTOR Values Plots
+
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot(RAPTORDataPlot,aes(`Super Group`, fill = `Super Group`))+
+  geom_bar(show.legend = FALSE)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 90))+
+  ylab("Number of RAPTOR Proteins Found")
+```
+
+## RAPTOR Values Plots
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot(RAPTORDataPlot,aes(`Phylum name`, fill = `Super Group`))+
+  geom_bar(show.legend = FALSE)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 90))+ 
+  ylab("Number of RAPTOR Proteins Found")
+```
+
+
+
+
+## TOR Results
+- TOR found across nearly every single species sampled
+- Orgininally thought that all parasites lacked TOR, results suggest some remnant
+- Very strong clustering into Group
+
+## Combined TOR Tree
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+# Tor Tree
+# Need to rename at some point
+CTree
+```
+
+
+## TOR Values Plots
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot()+
+  geom_histogram(data = TORDataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", show.legend = FALSE )+
+  geom_histogram(data = CombinedProject, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1, show.legend = FALSE)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  ylab("Number of Found TOR vs Total Species")+
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+## Slide
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot(TORDataPlot,aes(`Super Group`, fill = `Super Group`))+
+  geom_bar(show.legend = FALSE)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 90))+
+  ylab("Number of TOR Proteins Found")
+```
+
+
+
+## Slide
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot(TORDataPlot,aes(`Phylum name`, fill = `Super Group`))+
+  geom_bar(show.legend = FALSE)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 90))+ 
+  ylab("Number of TOR Proteins Found")
+```
+
+
+
+
+
+
+
+
+## Combined LST8 Tree
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+# Tor Tree
+# Need to rename at some point
+LST8Tree
+```
+
+
+## LST8 Values Plots
+
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot()+
+  geom_histogram(data = LST8DataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", show.legend = FALSE )+
+  geom_histogram(data = CombinedProject, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1, show.legend = FALSE)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  ylab("Number of Found RICTOR vs Total Species")+
+  theme(axis.text.x = element_text(angle = 90))
+```
+
+
+## Slide
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot(LST8DataPlot,aes(`Super Group`, fill = `Super Group`))+
+  geom_bar(show.legend = FALSE)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 90))+ 
+  ylab("Number of Rictor Proteins Found")
+```
+
+
+## Slide
+```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
+ggplot(LST8DataPlot,aes(`Phylum name`, fill = `Super Group`))+
+  geom_bar(show.legend = FALSE)+
+  scale_fill_brewer(palette = "Dark2")+
+  theme_light()+
+  theme(axis.text.x = element_text(angle = 90))+ 
+  ylab("Number of Rictor Proteins Found")
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
