@@ -744,7 +744,8 @@ CTree <- ggtree(CombinedTree, layout = "circular", branch.length = "none") + xli
 CTree <- CTree %<+% CData+
   geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
   geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
-  labs(title = "Phylogenetics of TOR Protein")
+  labs(title = "Phylogenetics of TOR Protein")+
+  theme(plot.title = element_text(hjust = 0.5, vjust = 11))
 
 
 # Combined Tree for RICTOR Proteins --------------------------------------------
@@ -767,7 +768,8 @@ RCtree <- ggtree(RictorCombined, layout = "circular", branch.length = "none")
 RCtree <- RCtree <- RCtree %<+% RictorData+
   geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
   geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
-  labs(title = "Phylogenetics of RICTOR Protein")
+  labs(title = "Phylogenetics of RICTOR Protein")+
+  theme(plot.title = element_text(hjust = 0.5, vjust = 11))
   #geom_text(aes(label=node, size = 1, vjust = 1))+
   # geom_highlight(node = 312, fill = 'steelblue', color = "white", type = "roundrect", alpha=0.2, extend = 15)+
   # geom_highlight(node = 232, fill = 'green', color = "white", type = "roundrect", alpha=0.2, extend = 15)
@@ -788,7 +790,8 @@ SIN1Tree <- ggtree(SIN1Combined, layout = "circular", branch.length = "none")
 SIN1Tree <- SIN1Tree <- SIN1Tree %<+% SIN1Data+
   geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
   geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
-  labs(title = "Phylogenetics of SIN1 Protein")
+  labs(title = "Phylogenetics of SIN1 Protein")+
+  theme(plot.title = element_text(hjust = 0.5, vjust = 11))
 
 #Combined tree for RAPTOR ------------------------------------------------------
 RAPTORCombined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Combined_RAPTOR.nwk")
@@ -807,7 +810,8 @@ RAPTORTree <- ggtree(RAPTORCombined, layout = "circular", branch.length = "none"
 RAPTORTree <- RAPTORTree <- RAPTORTree %<+% RAPTORData+
   geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
   geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
-  labs(title = "Phylogenetics of RAPTOR Protein")
+  labs(title = "Phylogenetics of RAPTOR Protein")+
+  theme(plot.title = element_text(hjust = 0.5, vjust = 11))
 
 #Combined tree for LST8---------------------------------------------------------
 LST8Combined <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Combined_LST8.nwk")
@@ -827,7 +831,8 @@ LST8Tree <- ggtree(LST8Combined, layout = "circular", branch.length = "none")
 LST8Tree <- LST8Tree <- LST8Tree %<+% LST8Data+
   geom_tiplab(aes(label = Organism_Name, color = `Phylum name`), size=2,show.legend = FALSE)+
   geom_polygon(aes(color = `Phylum name`, fill = `Phylum name`, x = 0, y = 0))+
-  labs(title = "Phylogenetics of LST8 Protein")
+  labs(title = "Phylogenetics of LST8 Protein")+
+  theme(plot.title = element_text(hjust = 0.5, vjust = 11))
 
 
 ```
@@ -1063,6 +1068,12 @@ ggplot(TORDataPlot,aes(`Phylum name`, fill = `Super Group`))+
 
 
 
+## LST8 Results
+-
+-
+-
+-
+-
 
 
 
