@@ -770,10 +770,10 @@ RPTree
 
 
 
-CombinedTree <- read.tree("~/GitHub/TOR_phylogenetics/Newick_Files/Project_TOR.nwk")
-=======
 CombinedTree <- read.tree("~/Code/TOR_phylogenetics/Newick_Files/Project_TOR.nwk")
->>>>>>> 64f15b60b071b99433457961c15081ec948c8f36
+
+CombinedTree <- read.tree("~/Code/TOR_phylogenetics/Newick_Files/Project_TOR.nwk")
+
 CombinedTree$tip.label<- trimws(CombinedTree$tip.label, whitespace = "/.*")
 CData <- full_join(cleanedTORAlveolata,cleanedTORStramenopiles)
 CData <- full_join(CData, cleanedTORRhizaria)
