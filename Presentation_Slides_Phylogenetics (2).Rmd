@@ -846,6 +846,7 @@ SIN1DataPlot <- left_join(SIN1Data, select(CombinedProject, `Super Group`,SIN1, 
 RAPTORDataPlot <- left_join(RAPTORData, select(CombinedProject, `Super Group`,RAPTOR, Accn), by=c("Accn"))
 TORDataPlot <- left_join(CData, select(CombinedProject, `Super Group`, TOR, Accn), by=c("Accn"))
 LST8DataPlot <- left_join(LST8Data, select(CombinedProject, `Super Group`,LST8, Accn), by=c("Accn"))
+
 ```
 
 ## Initial Thoughts Slide
