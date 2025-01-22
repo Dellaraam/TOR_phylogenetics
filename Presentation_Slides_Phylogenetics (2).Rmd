@@ -1,6 +1,6 @@
 ---
-title: "Test_Phylo"
-author: "Kyle Johnson"
+title: "Update on TORC1 and TORC2 Phylogenetics"
+author: "Kyle Johnson, Dellaram"
 date: "`r Sys.Date()`"
 output: powerpoint_presentation
 ---
@@ -841,11 +841,11 @@ LST8Tree <- LST8Tree <- LST8Tree %<+% LST8Data+
 # Misc dataframes, variables for plotting and additions to trees
 # Add totalRICTOR etc to the Associated Dataframes
 # Get the total number of stramenopiles, Alveolata, Rhizaria, etc and save those results
-RictorDataPlot <- left_join(RictorData, select(CombinedProject, `Super Group`, Accn), by=c("Accn"))
-SIN1DataPlot <- left_join(SIN1Data, select(CombinedProject, `Super Group`, Accn), by=c("Accn"))
-RAPTORDataPlot <- left_join(RAPTORData, select(CombinedProject, `Super Group`, Accn), by=c("Accn"))
-TORDataPlot <- left_join(CData, select(CombinedProject, `Super Group`, Accn), by=c("Accn"))
-LST8DataPlot <- left_join(LST8Data, select(CombinedProject, `Super Group`, Accn), by=c("Accn"))
+RictorDataPlot <- left_join(RictorData, select(CombinedProject, `Super Group`,RICTOR, Accn), by=c("Accn"))
+SIN1DataPlot <- left_join(SIN1Data, select(CombinedProject, `Super Group`,SIN1, Accn), by=c("Accn"))
+RAPTORDataPlot <- left_join(RAPTORData, select(CombinedProject, `Super Group`,RAPTOR, Accn), by=c("Accn"))
+TORDataPlot <- left_join(CData, select(CombinedProject, `Super Group`, TOR, Accn), by=c("Accn"))
+LST8DataPlot <- left_join(LST8Data, select(CombinedProject, `Super Group`,LST8, Accn), by=c("Accn"))
 ```
 
 ## Initial Thoughts Slide
@@ -883,40 +883,30 @@ RCtree
 
 
 
-## RICTOR Values Plots
+## RICTOR Relative to Total Species Surveyed
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
 ggplot()+
   geom_histogram(data = RictorDataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity" )+
   geom_histogram(data = CombinedProject, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1)+
   scale_fill_brewer(palette = "Dark2")+
   theme_light()+
+  xlab("")+
   ylab("Number of Found RICTOR vs Total Species")+
   theme(axis.text.x = element_text(angle = 90))
 ```
 
 
 
-## RICTOR Values Plots
+## RICTOR Score Distribution
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
-ggplot(RictorDataPlot,aes(`Super Group`, fill = `Super Group`))+
+ggplot(RictorDataPlot,aes(`Super Group`, fill = factor(RICTOR)))+
   geom_bar()+
-  scale_fill_brewer(palette = "Dark2")+
+  scale_fill_brewer(name = "Score Range", palette = "Dark2")+
   theme_light()+
-  theme(axis.text.x = element_blank())+ 
+  theme(axis.text.x = element_text(angle = 90))+
   ylab("Number of Rictor Proteins Found")
 ```
 
-
-
-## RICTOR Values Plots
-```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
-ggplot(RictorDataPlot,aes(`Phylum name`, fill = `Super Group`))+
-  geom_bar()+
-  scale_fill_brewer(palette = "Dark2")+
-  theme_light()+
-  theme(axis.text.x = element_text(angle = 90))+ 
-  ylab("Number of Rictor Proteins Found")
-```
 
 
 
@@ -934,7 +924,7 @@ ggplot(RictorDataPlot,aes(`Phylum name`, fill = `Super Group`))+
 SIN1Tree
 ```
 
-## SIN1 Values Plots
+## SIN1 Relative to Total Species Surveyed
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
 ggplot()+
   geom_histogram(data = SIN1DataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", bins = 30, binwidth = 0.1, show.legend = FALSE)+
@@ -947,23 +937,11 @@ ggplot()+
 
 
 
-## SIN1 Relative Plot
+## SIN1 Score Distribution
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
-ggplot(SIN1DataPlot,aes(`Super Group`, fill = `Super Group`))+
-  geom_bar(show.legend = FALSE)+
-  scale_fill_brewer(palette = "Dark2")+
-  theme_light()+
-  theme(axis.text.x = element_text(angle = 90))+ 
-  ylab("Number of Rictor Proteins Found")
-```
-
-
-
-## SIN1 Relative Plot 2
-```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
-ggplot(SIN1DataPlot,aes(`Phylum name`, fill = `Super Group`))+
-  geom_bar(show.legend = FALSE)+
-  scale_fill_brewer(palette = "Dark2")+
+ggplot(SIN1DataPlot,aes(`Super Group`, fill = factor(SIN1)))+
+  geom_bar()+
+  scale_fill_brewer(name = "Score Range", palette = "Dark2")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 90))+ 
   ylab("Number of Rictor Proteins Found")
@@ -981,7 +959,7 @@ ggplot(SIN1DataPlot,aes(`Phylum name`, fill = `Super Group`))+
 RAPTORTree
 ```
 
-## RAPTOR Values Plots
+## RAPTOR Relative to Total Species Surveyed
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
 ggplot()+
   geom_histogram(data = RAPTORDataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", show.legend = FALSE )+
@@ -993,25 +971,17 @@ ggplot()+
 ```
 
 
-## RAPTOR Values Plots
+## RAPTOR Score Distribution
 
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
-ggplot(RAPTORDataPlot,aes(`Super Group`, fill = `Super Group`))+
-  geom_bar(show.legend = FALSE)+
-  scale_fill_brewer(palette = "Dark2")+
+ggplot(RAPTORDataPlot,aes(`Super Group`, fill = factor(RAPTOR)))+
+  geom_bar()+
+  scale_fill_brewer(name = "Score Range", palette = "Dark2")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 90))+
   ylab("Number of RAPTOR Proteins Found")
-```
-
-## RAPTOR Values Plots
-```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
-ggplot(RAPTORDataPlot,aes(`Phylum name`, fill = `Super Group`))+
-  geom_bar(show.legend = FALSE)+
-  scale_fill_brewer(palette = "Dark2")+
-  theme_light()+
-  theme(axis.text.x = element_text(angle = 90))+ 
-  ylab("Number of RAPTOR Proteins Found")
+  
+           
 ```
 
 
@@ -1030,7 +1000,7 @@ CTree
 ```
 
 
-## TOR Values Plots
+## TOR Relative to Total Species Surveyed
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
 ggplot()+
   geom_histogram(data = TORDataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", show.legend = FALSE )+
@@ -1042,11 +1012,11 @@ ggplot()+
 ```
 
 
-## Slide
+## TOR Score Distribution
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
-ggplot(TORDataPlot,aes(`Super Group`, fill = `Super Group`))+
-  geom_bar(show.legend = FALSE)+
-  scale_fill_brewer(palette = "Dark2")+
+ggplot(TORDataPlot,aes(`Super Group`, fill = factor(TOR)))+
+  geom_bar()+
+  scale_fill_brewer(name = "Score Range", palette = "Dark2")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 90))+
   ylab("Number of TOR Proteins Found")
@@ -1054,27 +1024,11 @@ ggplot(TORDataPlot,aes(`Super Group`, fill = `Super Group`))+
 
 
 
-## Slide
-```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
-ggplot(TORDataPlot,aes(`Phylum name`, fill = `Super Group`))+
-  geom_bar(show.legend = FALSE)+
-  scale_fill_brewer(palette = "Dark2")+
-  theme_light()+
-  theme(axis.text.x = element_text(angle = 90))+ 
-  ylab("Number of TOR Proteins Found")
-```
-
-
-
-
-
 ## LST8 Results
--
--
--
--
--
-
+- Very segregated results across phylum/Super Group
+- Some mixing, likely due to the repeat nature of the protein
+- Alveolata tended to have the lowest scores overall for this protein
+- Parasites tend to be found in the Alveolatas, supsected reason for low score
 
 
 ## Combined LST8 Tree
@@ -1085,7 +1039,7 @@ LST8Tree
 ```
 
 
-## LST8 Values Plots
+## LST8 Relative to Total Species Surveyed
 
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
 ggplot()+
@@ -1098,30 +1052,17 @@ ggplot()+
 ```
 
 
-## Slide
+## LST8 Score Distribution
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
-ggplot(LST8DataPlot,aes(`Super Group`, fill = `Super Group`))+
-  geom_bar(show.legend = FALSE)+
-  scale_fill_brewer(palette = "Dark2")+
+ggplot(LST8DataPlot,aes(`Super Group`, fill = factor(LST8)))+
+  geom_bar()+
+  scale_fill_brewer(name = "Score Range", palette = "Dark2")+
   theme_light()+
   theme(axis.text.x = element_text(angle = 90))+ 
   ylab("Number of Rictor Proteins Found")
 ```
 
 
-## Slide
-```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
-ggplot(LST8DataPlot,aes(`Phylum name`, fill = `Super Group`))+
-  geom_bar(show.legend = FALSE)+
-  scale_fill_brewer(palette = "Dark2")+
-  theme_light()+
-  theme(axis.text.x = element_text(angle = 90))+ 
-  ylab("Number of Rictor Proteins Found")
-
-
-
-
-```
 
 
 
