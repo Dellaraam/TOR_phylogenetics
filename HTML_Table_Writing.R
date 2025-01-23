@@ -27,6 +27,10 @@ library(tableHTML)
 HTML <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
 
 
+
+
+HTML %>%rename("Super Group" = Super.Group) %>% filter(`Super Group` == "Streptophyta") %>% view()
+
 write_tableHTML(tableHTML(HTML), file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Table.html")
 
 

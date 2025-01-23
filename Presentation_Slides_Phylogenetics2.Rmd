@@ -7,6 +7,13 @@ output: powerpoint_presentation
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(dev = 'jpeg', echo = FALSE, warning = FALSE)
+ 
+install.packages("tidyverse")
+install.packages("rentrez")
+install.packages("gridExtra")
+install.packages("plotly")
+install.packages("kableExtra")
+
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install("ggtree")
@@ -846,6 +853,13 @@ SIN1DataPlot <- left_join(SIN1Data, select(CombinedProject, `Super Group`,SIN1, 
 RAPTORDataPlot <- left_join(RAPTORData, select(CombinedProject, `Super Group`,RAPTOR, Accn), by=c("Accn"))
 TORDataPlot <- left_join(CData, select(CombinedProject, `Super Group`, TOR, Accn), by=c("Accn"))
 LST8DataPlot <- left_join(LST8Data, select(CombinedProject, `Super Group`,LST8, Accn), by=c("Accn"))
+CombinedProjectGraph <- CombinedProject %>% group_by(Organism_Taxonomic_ID) %>% slice_max(C.score)
+```
+
+
+```{r, include = FALSE}
+# Fix the duplicate Issue
+CombinedProject2 <- distinct(CombinedProjectGraph, Organism_Name, .keep_all = TRUE)
 
 ```
 
@@ -888,7 +902,7 @@ RCtree
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
 ggplot()+
   geom_histogram(data = RictorDataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity" )+
-  geom_histogram(data = CombinedProject, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1)+
+  geom_histogram(data = CombinedProject2, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1)+
   scale_fill_brewer(palette = "Dark2")+
   theme_light()+
   xlab("")+
@@ -906,6 +920,38 @@ ggplot(RictorDataPlot,aes(`Super Group`, fill = factor(RICTOR)))+
   theme_light()+
   theme(axis.text.x = element_text(angle = 90))+
   ylab("Number of Rictor Proteins Found")
+```
+
+## Plot
+```{r}
+ggplot(RictorDataPlot, aes(x = C.score, y = scd, fill = `Super Group`, color = `Super Group`))+
+  scale_fill_brewer()+
+  geom_point(position = position_dodge2(w = 0.65))+
+  xlab("C Score")+
+  ylab("Best Domain HMMER Score")
+```
+
+
+```{r}
+RICTORAlveolataPlot <- ggplot(filter(RictorDataPlot, `Super Group` == "Chlorophyta"), aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(data = filter(RictorDataPlot, `Super Group` == "Chlorophyta"),
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RICTOR Hits Alveolata")
+
+
+
+RICTORAlveolataPlot
 ```
 
 
@@ -929,7 +975,7 @@ SIN1Tree
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
 ggplot()+
   geom_histogram(data = SIN1DataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", bins = 30, binwidth = 0.1, show.legend = FALSE)+
-  geom_histogram(data = CombinedProject, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1, bins = 30, binwidth = 0.1, show.legend = FALSE)+
+  geom_histogram(data = CombinedProject2, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1, bins = 30, binwidth = 0.1, show.legend = FALSE)+
   scale_fill_brewer(palette = "Dark2")+
   theme_light()+
   ylab("Number of Found SIN1 vs Total Species")+
@@ -964,7 +1010,7 @@ RAPTORTree
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
 ggplot()+
   geom_histogram(data = RAPTORDataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", show.legend = FALSE )+
-  geom_histogram(data = CombinedProject, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1, show.legend = FALSE)+
+  geom_histogram(data = CombinedProject2, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1, show.legend = FALSE)+
   scale_fill_brewer(palette = "Dark2")+
   theme_light()+
   ylab("Number of Found RAPTOR vs Total Species")+
@@ -1005,7 +1051,7 @@ CTree
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
 ggplot()+
   geom_histogram(data = TORDataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", show.legend = FALSE )+
-  geom_histogram(data = CombinedProject, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1, show.legend = FALSE)+
+  geom_histogram(data = CombinedProject2, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1, show.legend = FALSE)+
   scale_fill_brewer(palette = "Dark2")+
   theme_light()+
   ylab("Number of Found TOR vs Total Species")+
@@ -1045,7 +1091,7 @@ LST8Tree
 ```{r, fig.width=10, fig.height=10, dpi=400, out.height="150%", out.width="150%"}
 ggplot()+
   geom_histogram(data = LST8DataPlot, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", show.legend = FALSE )+
-  geom_histogram(data = CombinedProject, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1, show.legend = FALSE)+
+  geom_histogram(data = CombinedProject2, aes(`Super Group`, fill = `Super Group`), stat = "count", position = "identity", alpha = 0.1, show.legend = FALSE)+
   scale_fill_brewer(palette = "Dark2")+
   theme_light()+
   ylab("Number of Found RICTOR vs Total Species")+

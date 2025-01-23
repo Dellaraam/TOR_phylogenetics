@@ -16,9 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
  install.packages("gridExtra")
  install.packages("plotly")
  install.packages("kableExtra")
-```
 
-```{r setup, include=FALSE}
 library(tidyverse)
 library(rentrez)
 library(ggrepel)
@@ -28,7 +26,7 @@ library(kableExtra)
 ```
 
 
-```{r setup, include=FALSE}
+```{r}
 #All Raw HMMER files for TOR components in Alveolata and Stramenopiles clades
 # Loading CSVs of the Alveolata and Stramenopiles
 D1AlveolataRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/D1Alveolata.csv")
@@ -51,9 +49,7 @@ RICTORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhi
 SIN1RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/SIN1Rhizaria.csv")
 TORRhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/TORRhizaria.csv")
 LST8RhizariaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/LST8Rhizaria.csv")
-```
 
-```{r setup, include=FALSE}
 #Changing names to match
 Alveolata_Names <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Information_2.csv")
 Alveolata_Names <- Alveolata_Names %>% rename(Accn = Assembly.Accession)
@@ -88,11 +84,8 @@ Rhizaria_Busco$C.score <- gsub("%$", "", Rhizaria_Busco$C.score)
 Rhizaria_Busco$C.score <- as.numeric(as.character(Rhizaria_Busco$C.score))
 Rhizaria_Busco$Frag.score <- gsub("%$", "", Rhizaria_Busco$Frag.score)
 Rhizaria_Busco$Frag.score <- as.numeric(as.character(Rhizaria_Busco$Frag.score))
-```
 
 
-
-```{r setup, include=FALSE}
 #Parasite check and Alveolata Groups
 Apicomplexa <-read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Parasitic/Apicomplexa_Information.tsv", show_col_types = FALSE)
 Apicomplexa <- Apicomplexa %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
@@ -117,9 +110,6 @@ TaxonomyRhizaria <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhiz
 
 
 
-```
-
-```{r}
 # Stramenopile Groups
 Bigyra <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopile_Groups_Information/Bigyra_Information.tsv", show_col_types = FALSE)
 Bigyra <- Bigyra %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
@@ -127,11 +117,7 @@ Ochrophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopile_Group
 Ochrophyta <- Ochrophyta %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
 Oomycota <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopile_Groups_Information/Oomycota_Information.tsv", show_col_types = FALSE)
 Oomycota <- Oomycota %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
-```
 
-
-
-```{r setup, include=FALSE}
 # Score Values
 #LST8, RAPTOR, TOR
 LRTScoreA <- 100
@@ -304,7 +290,7 @@ mainCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TO
   returnDf <- data.frame()
   
   # Add in the taxid and species names columns to the dataframe
-  returnDF <- subset(Namedf, select = c("Accn","Organism_Taxonomic_ID", "Organism.Name"))
+  returnDF <- subset(Namedf, select = c("Accn","Organism_Taxonomic_ID", "Organism_Name"))
   
   # Now create empty columns and rows that will be filled in later in the function
   # These will be the "checking" sections for each of the specified proteins
@@ -503,25 +489,6 @@ parasiteCheck <- function(inputdf, parasite1, parasite2){
 
 
 
-```{r}
-# Test block for functions
-#length(SIN1Rhizaria)
-test1 <- mainCombine("Alveolata", Alveolata_Names, RICTORAlveolata, SIN1Alveolata, RAPTORAlveolata, LST8Alveolata, TORAlveolata, D1Alveolata)
-test1 <- test1[!duplicated(test1$Organism_Taxonomic_ID),]
-test1 <- merge(test1, Alveolata_Busco[c("C.score","Frag.score", "Accn")], by = "Accn")
-
-#test1
-
-
-
-test1 <- parasiteCheck(test1, Apicomplexa, Perkinsozoa)
-test1 <- Check_Ciliates(test1, Ciliates)
-test1
-
-
-```
-
-
 
 
 For initial filtering steps, the csvs are first filtered to remove any values that are considered below acceptable. For LST8, RAPTOR, TOR, this score will be 150 and 150 respectively due to the large presence of WD-40 Repeats. For RICTOR, SIN1, and D1 this will be 100 respectively. Prior analysis work indicates that for all proteins, any value below this cutoff threshold is most likely a false positive at best and can therefore be safely discarded.
@@ -552,9 +519,9 @@ RAPTORRhizaria <- RAPTORRhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScor
 SIN1Rhizaria <- SIN1RhizariaRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
 LST8Rhizaria <- LST8RhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
 TORRhizaria <- TORRhizariaRaw %>% filter(sca >= LRTScoreA & scd >= LRTScoreD)
-```
 
-```{r include=FALSE}
+
+
 # Add in the Taxonomic Information
 # Note that this section takes the longest to run due to the web based approach
 
@@ -580,9 +547,9 @@ RICTORRhizaria <- merge(RICTORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID"
 RAPTORRhizaria <- merge(RAPTORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
 LST8Rhizaria <- merge(LST8Rhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
 TORRhizaria <- merge(TORRhizaria, Rhizaria_Names[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by = "Accn")
-```
 
-```{r include=FALSE}
+
+
 # Add Busco Scores 
 ## Alveolata
 D1Alveolata <- merge(D1Alveolata, Alveolata_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
@@ -607,10 +574,7 @@ RAPTORRhizaria <- merge(RAPTORRhizaria, Rhizaria_Busco[c("C.score", "Frag.score"
 SIN1Rhizaria <- merge(SIN1Rhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
 LST8Rhizaria <- merge(LST8Rhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
 TORRhizaria <- merge(TORRhizaria, Rhizaria_Busco[c("C.score", "Frag.score", "Accn")], by = "Accn")
-```
 
-
-```{r}
 # Check for Ciliates
 ## Alveolata
 D1Alveolata <- Check_Ciliates(D1Alveolata, Ciliates)
@@ -634,10 +598,7 @@ RAPTORRhizaria <- Check_Ciliates(RAPTORRhizaria, Ciliates)
 SIN1Rhizaria <- Check_Ciliates(SIN1Rhizaria, Ciliates)
 LST8Rhizaria <- Check_Ciliates(LST8Rhizaria, Ciliates)
 TORRhizaria <- Check_Ciliates(TORRhizaria, Ciliates)
-```
 
-
-```{r}
 # Check to see if the D1 Protein exists with the other proteins (Basically, if D1 protein containing organisms contain the other proteins of RICTOR, SIN1)
 ## Alveolata
 D1Alveolata <- photoCheck(D1Alveolata, D1Alveolata)
@@ -816,34 +777,34 @@ CombinedRhizaria <- CombinedRhizaria %>% left_join(select(TaxonomyRhizaria, `Cla
 
 ```{r}
 # Now show the Tables which indicate the most likely candidates for the specific Proteins
-CombinedAlveolata %>% replace(is.na(CombinedAlveolata), "")
-CombinedAlveolata %>% rename( "Accession Number" = Accn,
-                              "Organism" = Organism.Name,
-                            "C Score" = C.score,
-                            "ID" = Organism_Taxonomic_ID,
-                            "Fragmentation Score" = Frag.score) %>%
-  kbl(caption = "Combined Alveolata Table", longtable = TRUE, digits = 1000) %>%
-  kable_classic(full_width = T, html_font = "Cambria")
-
-
-CombinedStramenopiles %>% replace(is.na(CombinedStramenopiles), "")
-CombinedStramenopiles %>% rename( "Accession Number" = Accn,
-                              "Organism" = Organism.Name,
-                            "C Score" = C.score,
-                            "ID" = Organism_Taxonomic_ID,
-                            "Fragmentation Score" = Frag.score) %>%
-  kbl(caption = "Combined Alveolata Table", longtable = TRUE, digits = 1000) %>%
-  kable_classic(full_width = T, html_font = "Cambria")
-
-
-CombinedRhizaria %>% replace(is.na(CombinedRhizaria), "")
-CombinedRhizaria %>% rename( "Accession Number" = Accn,
-                              "Organism" = Organism.Name,
-                            "C Score" = C.score,
-                            "ID" = Organism_Taxonomic_ID,
-                            "Fragmentation Score" = Frag.score) %>%
-  kbl(caption = "Combined Alveolata Table", longtable = TRUE, digits = 1000) %>%
-  kable_classic(full_width = T, html_font = "Cambria")
+# CombinedAlveolata %>% replace(is.na(CombinedAlveolata), "")
+# CombinedAlveolata %>% rename( "Accession Number" = Accn,
+#                               "Organism" = Organism.Name,
+#                             "C Score" = C.score,
+#                             "ID" = Organism_Taxonomic_ID,
+#                             "Fragmentation Score" = Frag.score) %>%
+#   kbl(caption = "Combined Alveolata Table", longtable = TRUE, digits = 1000) %>%
+#   kable_classic(full_width = T, html_font = "Cambria")
+# 
+# 
+# CombinedStramenopiles %>% replace(is.na(CombinedStramenopiles), "")
+# CombinedStramenopiles %>% rename( "Accession Number" = Accn,
+#                               "Organism" = Organism.Name,
+#                             "C Score" = C.score,
+#                             "ID" = Organism_Taxonomic_ID,
+#                             "Fragmentation Score" = Frag.score) %>%
+#   kbl(caption = "Combined Alveolata Table", longtable = TRUE, digits = 1000) %>%
+#   kable_classic(full_width = T, html_font = "Cambria")
+# 
+# 
+# CombinedRhizaria %>% replace(is.na(CombinedRhizaria), "")
+# CombinedRhizaria %>% rename( "Accession Number" = Accn,
+#                               "Organism" = Organism.Name,
+#                             "C Score" = C.score,
+#                             "ID" = Organism_Taxonomic_ID,
+#                             "Fragmentation Score" = Frag.score) %>%
+#   kbl(caption = "Combined Alveolata Table", longtable = TRUE, digits = 1000) %>%
+#   kable_classic(full_width = T, html_font = "Cambria")
 
 
 #SARCombined <- rbind(CombinedAlveolata, CombinedRhizaria)
@@ -868,7 +829,7 @@ write.csv(CombinedRhizaria, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combin
 
 
 ```{r}
-RICTORAlveolataPlot <- ggplot(RICTORAlveolata, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+RICTORAlveolataPlot <- ggplot(RICTORAlveolata, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
   geom_point()+
   geom_text_repel(data = RICTORAlveolata, aes(color = Frag.score),
                   direction = "y",
@@ -886,8 +847,11 @@ RICTORAlveolataPlot <- ggplot(RICTORAlveolata, aes(x = sca, y = scd, color = C.s
 
 
 
+RICTORAlveolataPlot
 
-RICTORAlveolataPlotCiliate <- ggplot(RICTORAlveolata, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+
+
+RICTORAlveolataPlotCiliate <- ggplot(RICTORAlveolata, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -903,7 +867,7 @@ RICTORAlveolataPlotCiliate <- ggplot(RICTORAlveolata, aes(x = sca, y = scd, colo
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("RICTOR Hits Alveolata")
 
-SIN1AlveolataPlot <- ggplot(SIN1Alveolata, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+SIN1AlveolataPlot <- ggplot(SIN1Alveolata, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -919,7 +883,7 @@ SIN1AlveolataPlot <- ggplot(SIN1Alveolata, aes(x = sca, y = scd, color = C.score
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("SIN1 Hits Alveolata")
 
-RAPTORAlveolataPlot <- ggplot(RAPTORAlveolata, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+RAPTORAlveolataPlot <- ggplot(RAPTORAlveolata, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -935,7 +899,7 @@ RAPTORAlveolataPlot <- ggplot(RAPTORAlveolata, aes(x = sca, y = scd, color = C.s
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("RAPTOR Hits Alveolata")
 
-LST8AlveolataPlot <- ggplot(LST8Alveolata, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+LST8AlveolataPlot <- ggplot(LST8Alveolata, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -952,7 +916,7 @@ LST8AlveolataPlot <- ggplot(LST8Alveolata, aes(x = sca, y = scd, color = C.score
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("LST8 Hits Alveolata")
 
-TORAlveolataPlot <- ggplot(TORAlveolata, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+TORAlveolataPlot <- ggplot(TORAlveolata, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -968,7 +932,7 @@ TORAlveolataPlot <- ggplot(TORAlveolata, aes(x = sca, y = scd, color = C.score, 
   ylab("Best Domain Score of HMMER Hit")+
   ggtitle("TOR Hits Alveolata")
 
-D1AlveolataPlot <- ggplot (D1Alveolata, aes(x = sca, y = scd, color = C.score, label = Organism.Name))+
+D1AlveolataPlot <- ggplot (D1Alveolata, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -990,35 +954,42 @@ D1AlveolataPlot <- ggplot (D1Alveolata, aes(x = sca, y = scd, color = C.score, l
 
 
 # Attempting to make a 3D graph
-ThreeDLST8 <- plot_ly(LST8Alveolata, x = ~sca, y = ~C.score, z = ~scd, type = "scatter3d", 
-                  mode = "markers", 
-                  color = ~Frag.score,
-                  text = ~paste('Organism Name:', Organism.Name, '<br>Fragmentation Score:', Frag.score, '<br>TaxID:', Organism_Taxonomic_ID),
-                  marker = list(size = 3)) %>%
-                  layout(title = "3D Scatter Plot of LST8 HMMER Hits",
-         scene = list(xaxis = list(title = "HMMER Overall Scores"),
-                      yaxis = list(title = "C scores for Organisms"),
-                      zaxis = list(title = "Best Domain Score Hit")))
-                  
-
-ThreeDRICTOR <- plot_ly(RICTORAlveolata, x = ~sca, y = ~C.score, z = ~scd, type = "scatter3d", 
-                  mode = "markers", 
-                  color = ~Frag.score,
-                  text = ~paste('Organism Name:', Organism.Name, '<br>Fragmentation Score:', Frag.score, '<br>TaxID:', Organism_Taxonomic_ID),
-                  marker = list(size = 3)) %>%
-                  layout(title = "3D Scatter Plot of LST8 HMMER Hits",
-         scene = list(xaxis = list(title = "HMMER Overall Scores"),
-                      yaxis = list(title = "C scores for Organisms"),
-                      zaxis = list(title = "Best Domain Score Hit")))
+# ThreeDLST8 <- plot_ly(LST8Alveolata, x = ~sca, y = ~C.score, z = ~scd, type = "scatter3d", 
+#                   mode = "markers", 
+#                   color = ~Frag.score,
+#                   text = ~paste('Organism Name:', Organism.Name, '<br>Fragmentation Score:', Frag.score, '<br>TaxID:', Organism_Taxonomic_ID),
+#                   marker = list(size = 3)) %>%
+#                   layout(title = "3D Scatter Plot of LST8 HMMER Hits",
+#          scene = list(xaxis = list(title = "HMMER Overall Scores"),
+#                       yaxis = list(title = "C scores for Organisms"),
+#                       zaxis = list(title = "Best Domain Score Hit")))
+#                   
+# 
+# ThreeDRICTOR <- plot_ly(RICTORAlveolata, x = ~sca, y = ~C.score, z = ~scd, type = "scatter3d", 
+#                   mode = "markers", 
+#                   color = ~Frag.score,
+#                   text = ~paste('Organism Name:', Organism.Name, '<br>Fragmentation Score:', Frag.score, '<br>TaxID:', Organism_Taxonomic_ID),
+#                   marker = list(size = 3)) %>%
+#                   layout(title = "3D Scatter Plot of LST8 HMMER Hits",
+#          scene = list(xaxis = list(title = "HMMER Overall Scores"),
+#                       yaxis = list(title = "C scores for Organisms"),
+#                       zaxis = list(title = "Best Domain Score Hit")))
 
 
 # Table for the plots
 # RICTOR Alveolata
 
 
+```
+
+
+
+
+
+
 
 # Have to set digits to a large number since the kable function rounds
-
+```{r}
 RICTORAlveolataPlot
 RICTORAlveolata %>% rename( "Accession Number" = Accn,
                             "Target Protein" = tar,
@@ -1030,7 +1001,7 @@ RICTORAlveolata %>% rename( "Accession Number" = Accn,
                             "Best Domain Score" = scd,
                             "Bias Domain" = bid,
                             "Taxonomic ID" = Organism_Taxonomic_ID,
-                            "Organism Name" = Organism.Name) %>%
+                            "Organism Name" = Organism_Name) %>%
   select(!c(tid, qid)) %>%
   kbl(caption = "Rictor Alveolata Table", longtable = TRUE, digits = 1000) %>%
   kable_classic(full_width = F, html_font = "Cambria")
@@ -1046,7 +1017,7 @@ SIN1Alveolata %>% rename( "Accession Number" = Accn,
                             "Best Domain Score" = scd,
                             "Bias Domain" = bid,
                             "Taxonomic ID" = Organism_Taxonomic_ID,
-                            "Organism Name" = Organism.Name) %>%
+                            "Organism Name" = Organism_Name) %>%
   select(!c(tid, qid))%>%
   kbl(caption = "SIN1 Alveolata Table", longtable = TRUE, digits = 1000) %>%
   kable_classic(full_width = F, html_font = "Cambria")
@@ -1062,7 +1033,7 @@ RAPTORAlveolata %>% rename( "Accession Number" = Accn,
                             "Best Domain Score" = scd,
                             "Bias Domain" = bid,
                             "Taxonomic ID" = Organism_Taxonomic_ID,
-                            "Organism Name" = Organism.Name) %>%
+                            "Organism Name" = Organism_Name) %>%
   select(!c(tid, qid))%>%
   kbl(caption = "RAPTOR Alveolata Table", longtable = TRUE, digits = 1000) %>%
   kable_classic(full_width = F, html_font = "Cambria")
@@ -1078,7 +1049,7 @@ LST8Alveolata %>% rename( "Accession Number" = Accn,
                             "Best Domain Score" = scd,
                             "Bias Domain" = bid,
                             "Taxonomic ID" = Organism_Taxonomic_ID,
-                            "Organism Name" = Organism.Name) %>%
+                            "Organism Name" = Organism_Name) %>%
   select(!c(tid, qid))%>%
 kbl(caption = "LST8 Alveolata Table", longtable = TRUE, digits = 1000) %>%
   kable_classic(full_width = F, html_font = "Cambria")
@@ -1094,7 +1065,7 @@ TORAlveolata %>% rename( "Accession Number" = Accn,
                             "Best Domain Score" = scd,
                             "Bias Domain" = bid,
                             "Taxonomic ID" = Organism_Taxonomic_ID,
-                            "Organism Name" = Organism.Name) %>%
+                            "Organism Name" = Organism_Name) %>%
   select(!c(tid, qid))%>%
   
   kbl(caption = "TOR Alveolata Table", longtable = TRUE, digits = 1000) %>%
@@ -1111,7 +1082,7 @@ D1Alveolata %>% rename( "Accession Number" = Accn,
                             "Best Domain Score" = scd,
                             "Bias Domain" = bid,
                             "Taxonomic ID" = Organism_Taxonomic_ID,
-                            "Organism Name" = Organism.Name) %>%
+                            "Organism Name" = Organism_Name) %>%
   select(!c(tid, qid))%>%
   kbl(caption = "D1 Alveolata Table", longtable = TRUE, digits = 1000) %>%
   kable_classic(full_width = F, html_font = "Cambria")
