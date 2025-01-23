@@ -339,6 +339,34 @@ RSDScoreA <- 100
 RSDScoreD <- 100
 ```
 
+```{r}
+# Busco scores will be added here to the different dfs
+Rhodophyta_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Rhodophyta-BUSCO-Sheet1.csv", na = 0)
+Rhodophyta_Busco <- Rhodophyta_Busco %>% rename(Accn = Accession)
+Rhodophyta_Busco$C.score <-gsub("%$","",Rhodophyta_Busco$C.score)
+Rhodophyta_Busco$C.score <- as.numeric(as.character(Rhodophyta_Busco$C.score))
+Rhodophyta_Busco$Frag.score <- gsub("%$", "", Rhodophyta_Busco$Frag.score)
+Rhodophyta_Busco$Frag.score <- as.numeric(as.character(Rhodophyta_Busco$Frag.score))
+
+Chlorophyta_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv", na = 0)
+Chlorophyta_Busco <- Chlorophyta_Busco %>% rename(Accn = Accession)
+Chlorophyta_Busco$C.score <-gsub("%$","",Chlorophyta_Busco$C.score)
+Chlorophyta_Busco$C.score <- as.numeric(as.character(Chlorophyta_Busco$C.score))
+Chlorophyta_Busco$Frag.score <- gsub("%$", "", Chlorophyta_Busco$Frag.score)
+Chlorophyta_Busco$Frag.score <- as.numeric(as.character(Chlorophyta_Busco$Frag.score))
+
+Streptophyta_Busco <- read.csv("~/Code/Tor_phylogenetics/GitHub_CSV/Streptophyta_Busco.csv")
+Streptophyta_Busco$C.score <-gsub("%$","",Streptophyta_Busco$C.score)
+Streptophyta_Busco$C.score <- as.numeric(as.character(Streptophyta_Busco$C.score))
+Streptophyta_Busco$Frag.score <- gsub("%$", "", Streptophyta_Busco$Frag.score)
+Streptophyta_Busco$Frag.score <- as.numeric(as.character(Streptophyta_Busco$Frag.score))
+```
+
+
+
+
+
+
 Reading in the Archaeplastida group here. This includes Streptophyta, Rhodophyta, Chlorophyta. This section is reading in the raw data for all of these groups.
 
 ```{r}
@@ -387,27 +415,27 @@ FullTaxonomyChlorophyta <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated
 
 ```{r}
 
-D1Streptophyta <- merge(D1StreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-LST8Streptophyta <- merge(LST8StreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-RAPTORStreptophyta <- merge(RAPTORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-RICTORStreptophyta <- merge(RICTORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-SIN1Streptophyta <- merge(SIN1StreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-TORStreptophyta <- merge(TORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+D1Streptophyta <- merge(D1StreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Streptophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+LST8Streptophyta <- merge(LST8StreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Streptophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RAPTORStreptophyta <- merge(RAPTORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Streptophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RICTORStreptophyta <- merge(RICTORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Streptophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+SIN1Streptophyta <- merge(SIN1StreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Streptophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+TORStreptophyta <- merge(TORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Streptophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 
 
-D1Rhodophyta <- merge(D1RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") 
-LST8Rhodophyta <- merge(LST8RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-RAPTORRhodophyta <- merge(RAPTORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-RICTORRhodophyta <- merge(RICTORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-SIN1Rhodophyta <- merge(SIN1RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-TORRhodophyta <- merge(TORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+D1Rhodophyta <- merge(D1RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn") 
+LST8Rhodophyta <- merge(LST8RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RAPTORRhodophyta <- merge(RAPTORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RICTORRhodophyta <- merge(RICTORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+SIN1Rhodophyta <- merge(SIN1RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+TORRhodophyta <- merge(TORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Rhodophyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 
-D1Chlorophyta <- merge(D1ChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-LST8Chlorophyta <- merge(LST8ChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-RAPTORChlorophyta <- merge(RAPTORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-RICTORChlorophyta <- merge(RICTORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-SIN1Chlorophyta <- merge(SIN1ChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
-TORChlorophyta <- merge(TORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+D1Chlorophyta <- merge(D1ChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Chlorophtyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+LST8Chlorophyta <- merge(LST8ChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Chlorophtyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RAPTORChlorophyta <- merge(RAPTORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Chlorophtyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+RICTORChlorophyta <- merge(RICTORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Chlorophtyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+SIN1Chlorophyta <- merge(SIN1ChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Chlorophtyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
+TORChlorophyta <- merge(TORChlorophytaRaw, ChlorophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") %>% merge(Chlorophtyta_Busco[c("C.score","Frag.score","Accn")], by = "Accn")
 
 
 
@@ -532,28 +560,7 @@ TORChlorophyta <- TORChlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
 ```
 
 
-```{r}
-# Busco scores will be added here to the different dfs
-Rhodophyta_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Rhodophyta-BUSCO-Sheet1.csv", na = 0)
-Rhodophyta_Busco <- Rhodophyta_Busco %>% rename(Accn = Accession)
-Rhodophyta_Busco$C.score <-gsub("%$","",Rhodophyta_Busco$C.score)
-Rhodophyta_Busco$C.score <- as.numeric(as.character(Rhodophyta_Busco$C.score))
-Rhodophyta_Busco$Frag.score <- gsub("%$", "", Rhodophyta_Busco$Frag.score)
-Rhodophyta_Busco$Frag.score <- as.numeric(as.character(Rhodophyta_Busco$Frag.score))
 
-Chlorophyta_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv", na = 0)
-Chlorophyta_Busco <- Chlorophyta_Busco %>% rename(Accn = Accession)
-Chlorophyta_Busco$C.score <-gsub("%$","",Chlorophyta_Busco$C.score)
-Chlorophyta_Busco$C.score <- as.numeric(as.character(Chlorophyta_Busco$C.score))
-Chlorophyta_Busco$Frag.score <- gsub("%$", "", Chlorophyta_Busco$Frag.score)
-Chlorophyta_Busco$Frag.score <- as.numeric(as.character(Chlorophyta_Busco$Frag.score))
-
-Streptophyta_Busco <- read.csv("~/Code/Tor_phylogenetics/GitHub_CSV/Streptophyta_Busco.csv")
-Streptophyta_Busco$C.score <-gsub("%$","",Streptophyta_Busco$C.score)
-Streptophyta_Busco$C.score <- as.numeric(as.character(Streptophyta_Busco$C.score))
-Streptophyta_Busco$Frag.score <- gsub("%$", "", Streptophyta_Busco$Frag.score)
-Streptophyta_Busco$Frag.score <- as.numeric(as.character(Streptophyta_Busco$Frag.score))
-```
 
 
 ```{r}
