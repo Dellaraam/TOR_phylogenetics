@@ -343,42 +343,42 @@ Reading in the Archaeplastida group here. This includes Streptophyta, Rhodophyta
 
 ```{r}
 
-D1StreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/D1_Streptophyta.csv")
-LST8StreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/LST8_Streptophyta.csv")
-RICTORStreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/RICTOR_Streptophyta.csv")
-RAPTORStreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/RAPTOR_Streptophyta.csv")
-SIN1StreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/SIN1_Streptophyta.csv")
-TORStreptophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/TOR_Streptophyta.csv")
-StreptophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_Names.tsv", show_col_types = FALSE)
+D1StreptophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/D1_Streptophyta.csv")
+LST8StreptophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/LST8_Streptophyta.csv")
+RICTORStreptophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/RICTOR_Streptophyta.csv")
+RAPTORStreptophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/RAPTOR_Streptophyta.csv")
+SIN1StreptophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/SIN1_Streptophyta.csv")
+TORStreptophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/TOR_Streptophyta.csv")
+StreptophytaNames <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_Names.tsv", show_col_types = FALSE)
 StreptophytaNames <- StreptophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 
-D1ChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/D1_Chlorophyta.csv")
-LST8ChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/LST8_Chlorophyta.csv")
-RICTORChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/RICTOR_Chlorophyta.csv")
-RAPTORChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/RAPTOR_Chlorophyta.csv")
-SIN1ChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/SIN1_Chlorophyta.csv")
-TORChlorophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/TOR_Chlorophyta.csv")
-ChlorophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Chlorophyta_Names.tsv", show_col_types = FALSE)
+D1ChlorophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/D1_Chlorophyta.csv")
+LST8ChlorophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/LST8_Chlorophyta.csv")
+RICTORChlorophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/RICTOR_Chlorophyta.csv")
+RAPTORChlorophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/RAPTOR_Chlorophyta.csv")
+SIN1ChlorophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/SIN1_Chlorophyta.csv")
+TORChlorophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/TOR_Chlorophyta.csv")
+ChlorophytaNames <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Chlorophyta_Names.tsv", show_col_types = FALSE)
 ChlorophytaNames <- ChlorophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 
-D1RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/D1_Rhodophyta.csv")
-LST8RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/LST8_Rhodophyta.csv")
-RICTORRhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RICTOR_Rhodophyta.csv")
-RAPTORRhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RAPTOR_Rhodophyta.csv")
-SIN1RhodophytaRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/SIN1_Rhodophyta.csv")
-TORRhodophytaRaw  <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/TOR_Rhodophyta.csv")
-RhodophytaNames <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/Rhodophyta_Names.tsv", show_col_types = FALSE)
+D1RhodophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/D1_Rhodophyta.csv")
+LST8RhodophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/LST8_Rhodophyta.csv")
+RICTORRhodophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RICTOR_Rhodophyta.csv")
+RAPTORRhodophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RAPTOR_Rhodophyta.csv")
+SIN1RhodophytaRaw <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/SIN1_Rhodophyta.csv")
+TORRhodophytaRaw  <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/TOR_Rhodophyta.csv")
+RhodophytaNames <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/Rhodophyta_Names.tsv", show_col_types = FALSE)
 RhodophytaNames <- RhodophytaNames %>% rename(Accn = "Assembly Accession") %>% rename(Organism_Taxonomic_ID = "Organism Taxonomic ID") %>% rename(Organism_Name = "Organism Name")
 ```
 
 
 ```{r}
 
-FullTaxonomyStreptophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+FullTaxonomyStreptophyta <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
 
-FullTaxonomyRhodophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+FullTaxonomyRhodophyta <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
 
-FullTaxonomyChlorophyta <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
+FullTaxonomyChlorophyta <- read_tsv("~/Code/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/taxonomy_summary.tsv", show_col_types = FALSE) %>% rename(Organism_Taxonomic_ID = "Taxid")
 
 ```
 
@@ -395,7 +395,7 @@ SIN1Streptophyta <- merge(SIN1StreptophytaRaw, StreptophytaNames[c("Organism_Tax
 TORStreptophyta <- merge(TORStreptophytaRaw, StreptophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
 
 
-D1Rhodophyta <- merge(D1RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
+D1Rhodophyta <- merge(D1RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn") 
 LST8Rhodophyta <- merge(LST8RhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
 RAPTORRhodophyta <- merge(RAPTORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
 RICTORRhodophyta <- merge(RICTORRhodophytaRaw, RhodophytaNames[c("Organism_Taxonomic_ID", "Organism_Name", "Accn")], by ="Accn")
@@ -534,21 +534,21 @@ TORChlorophyta <- TORChlorophyta %>% filter(sca >= 100 & scd >= 100)%>%
 
 ```{r}
 # Busco scores will be added here to the different dfs
-Rhodophyta_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Rhodophyta-BUSCO-Sheet1.csv", na = 0)
+Rhodophyta_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Rhodophyta-BUSCO-Sheet1.csv", na = 0)
 Rhodophyta_Busco <- Rhodophyta_Busco %>% rename(Accn = Accession)
 Rhodophyta_Busco$C.score <-gsub("%$","",Rhodophyta_Busco$C.score)
 Rhodophyta_Busco$C.score <- as.numeric(as.character(Rhodophyta_Busco$C.score))
 Rhodophyta_Busco$Frag.score <- gsub("%$", "", Rhodophyta_Busco$Frag.score)
 Rhodophyta_Busco$Frag.score <- as.numeric(as.character(Rhodophyta_Busco$Frag.score))
 
-Chlorophyta_Busco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv", na = 0)
+Chlorophyta_Busco <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv", na = 0)
 Chlorophyta_Busco <- Chlorophyta_Busco %>% rename(Accn = Accession)
 Chlorophyta_Busco$C.score <-gsub("%$","",Chlorophyta_Busco$C.score)
 Chlorophyta_Busco$C.score <- as.numeric(as.character(Chlorophyta_Busco$C.score))
 Chlorophyta_Busco$Frag.score <- gsub("%$", "", Chlorophyta_Busco$Frag.score)
 Chlorophyta_Busco$Frag.score <- as.numeric(as.character(Chlorophyta_Busco$Frag.score))
 
-Streptophyta_Busco <- read.csv("~/GitHub/Tor_phylogenetics/GitHub_CSV/Streptophyta_Busco.csv")
+Streptophyta_Busco <- read.csv("~/Code/Tor_phylogenetics/GitHub_CSV/Streptophyta_Busco.csv")
 Streptophyta_Busco$C.score <-gsub("%$","",Streptophyta_Busco$C.score)
 Streptophyta_Busco$C.score <- as.numeric(as.character(Streptophyta_Busco$C.score))
 Streptophyta_Busco$Frag.score <- gsub("%$", "", Streptophyta_Busco$Frag.score)
@@ -586,18 +586,17 @@ CombinedChlorophyta <- CombinedChlorophyta %>% left_join(select(FullTaxonomyChlo
 ```
 
 ```{r}
-write.csv(CombinedStreptophyta, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Streptophyta.csv")
-write.csv(CombinedChlorophyta, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Chlorophyta.csv")
-write.csv(CombinedRhodophyta, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Rhodophyta.csv")
+write.csv(CombinedStreptophyta, file = "C:/Users/kajoh/Documents/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Streptophyta.csv")
+write.csv(CombinedChlorophyta, file = "C:/Users/kajoh/Documents/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Chlorophyta.csv")
+write.csv(CombinedRhodophyta, file = "C:/Users/kajoh/Documents/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Rhodophyta.csv")
 ```
-
 
 
 
 
 ```{r}
 
-plot1 <- ggplot(RICTORStreptophyta, aes(x = sca, y = scd, label = tar))+
+RICTORStreptophytaPlot <- ggplot(RICTORStreptophyta, aes(x = sca, y = scd, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -609,13 +608,13 @@ plot1 <- ggplot(RICTORStreptophyta, aes(x = sca, y = scd, label = tar))+
                   point.padding = 0.6,
                   color = "black",
                   size = 2.0)+
-  ggtitle("RICTOR Streptophyta")
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RICTOR Hits Streptophyta")
   
+RICTORStreptophytaPlot
 
-
-plot1
-
-plot2 <- ggplot(SIN1Streptophyta, aes(x = sca, y = scd, label = tar))+
+SIN1StreptophytaPlot <- ggplot(SIN1Streptophyta, aes(x = sca, y = scd, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -627,11 +626,13 @@ plot2 <- ggplot(SIN1Streptophyta, aes(x = sca, y = scd, label = tar))+
                   point.padding = 0.6,
                   color = "black",
                   size = 2.0)+
-  ggtitle("SIN1 Streptophyta")
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("SIN1 Hits Streptophyta")
 
-plot2
+SIN1StreptophytaPlot
 
-plot3 <- ggplot(RAPTORStreptophyta, aes(x = sca, y = scd, label = tar))+
+RAPTORStreptophytaPlot <- ggplot(RAPTORStreptophyta, aes(x = sca, y = scd, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -643,10 +644,12 @@ plot3 <- ggplot(RAPTORStreptophyta, aes(x = sca, y = scd, label = tar))+
                   point.padding = 0.6,
                   color = "black",
                   size = 2.0)+
-  ggtitle("RAPTOR Streptophyta")
-plot3
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RAPTOR Hits Streptophyta")
+RAPTORStreptophytaPlot
 
-plot4 <- ggplot(LST8Streptophyta, aes(x = sca, y = scd, label = tar))+
+LST8StreptophytaPlot <- ggplot(LST8Streptophyta, aes(x = sca, y = scd, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -658,10 +661,12 @@ plot4 <- ggplot(LST8Streptophyta, aes(x = sca, y = scd, label = tar))+
                   point.padding = 0.6,
                   color = "black",
                   size = 2.0)+
-  ggtitle("LST8 Streptophyta")
-plot4
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("LST8 Hits Streptophyta")
+LST8StreptophytaPlot
 
-plot5 <- ggplot(TORStreptophyta, aes(x = sca, y = scd, label = tar))+
+TORStreptophytaPlot <- ggplot(TORStreptophyta, aes(x = sca, y = scd, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -673,8 +678,10 @@ plot5 <- ggplot(TORStreptophyta, aes(x = sca, y = scd, label = tar))+
                   point.padding = 0.6,
                   color = "black",
                   size = 2.0)+
-  ggtitle("TOR Streptophyta")
-plot5
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("TOR Hits Streptophyta")
+TORStreptophytaPlot
 
 
 
@@ -683,7 +690,7 @@ plot5
 ```{r}
 # Chlorophyta RICTOR Search
 
-Cplot1 <- ggplot(RICTORChlorophyta, aes( x = sca, y = scd, label = Organism_Name))+
+RICTORChlorophytaPlot <- ggplot(RICTORChlorophyta, aes( x = sca, y = scd, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -695,26 +702,83 @@ Cplot1 <- ggplot(RICTORChlorophyta, aes( x = sca, y = scd, label = Organism_Name
                   point.padding = 0.6,
                   color = "black",
                   size = 2.0)+
-  ggtitle("RICTOR Chlorophyta")
-Cplot1
-```
-```{r}
-Rplot1 <- ggplot(RICTORRhodophyta, aes( x = sca, y = scd, label = Organism_Name))+
-  geom_point()+
-  geom_text_repel(direction = "y",
-                  min.segment.length = 0.5,
-                  force = 10,
-                  max.time = 10,
-                  max.overlaps = 30,
-                  nudge_x = -50,
-                  nudge_y = .1,
-                  point.padding = 0.6,
-                  color = "black",
-                  size = 2.0)+
-  ggtitle("RICTOR Rhodophyta")
-Rplot1
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RICTOR Hits Chlorophyta")
+RICTORChlorophytaPlot
 
-Rplot1 <- ggplot(RICTORRhodophyta, aes( x = sca, y = scd, label = Organism_Name))+
+RAPTORChlorophytaPlot <- ggplot(RAPTORChlorophyta, aes(x = sca, y = scd, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RAPTOR Hits Chlorophyta")
+RAPTORChlorophytaPlot
+
+SIN1ChlorophytaPlot <- ggplot(SIN1Chlorophyta, aes(x = sca, y = scd, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("SIN1 Hits Chlorophyta")
+SIN1ChlorophytaPlot
+
+LST8ChlorophytaPlot <- ggplot(LST8Chlorophyta, aes(x = sca, y = scd, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("LST8 Hits Chlorophyta")
+LST8ChlorophytaPlot
+
+TORChlorophytaPlot <- ggplot(TORChlorophyta, aes(x = sca, y = scd, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RAPTOR Hits Chlorophyta")
+TORChlorophytaPlot
+  
+```
+
+```{r}
+RAPTORRodophytaPlot <- ggplot(RAPTORRhodophyta, aes( x = sca, y = scd, label = Organism_Name))+
   geom_point()+
   geom_text_repel(direction = "y",
                   min.segment.length = 0.5,
@@ -726,7 +790,44 @@ Rplot1 <- ggplot(RICTORRhodophyta, aes( x = sca, y = scd, label = Organism_Name)
                   point.padding = 0.6,
                   color = "black",
                   size = 2.0)+
-  ggtitle("RICTOR Rhodophyta")
-Rplot1
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RAPTOR Hits Rhodophyta")
+RAPTORRodophytaPlot
+
+LST8RhodophytaPlot <- ggplot(LST8Rhodophyta, aes( x = sca, y = scd, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("LST8 Hits Rhodophyta")
+LST8RhodophytaPlot
+
+TORRhodophytaPlot <- ggplot(TORRhodophyta, aes( x = sca, y = scd, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 30,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  color = "black",
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("TOR Hits Rhodophyta")
+TORRhodophytaPlot
+
 ```
 
