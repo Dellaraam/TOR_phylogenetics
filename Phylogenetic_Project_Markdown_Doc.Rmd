@@ -11,11 +11,11 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
  
- install.packages("tidyverse")
- install.packages("rentrez")
- install.packages("gridExtra")
- install.packages("plotly")
- install.packages("kableExtra")
+ #install.packages("tidyverse")
+ #install.packages("rentrez")
+ #install.packages("gridExtra")
+ #install.packages("plotly")
+ #install.packages("kableExtra")
 
 library(tidyverse)
 library(rentrez)
@@ -95,7 +95,7 @@ Chromerida <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Groups_I
 Chromerida <- Chromerida %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
 Dinozoa <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Groups_Information/Dinozoa_Information.tsv", show_col_types = FALSE)
 Dinozoa <- Dinozoa %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
-Ciliates <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Checking_CSVs/Ciliates_Names.tsv", show_col_types = FALSE)
+Ciliates <- read_tsv("~/GitHub/TOR_phylogenetics/Checking_CSVs/Ciliates_Names.tsv", show_col_types = FALSE)
 Ciliates <- Ciliates %>% rename(Accn = 'Assembly Accession') %>% rename(Organism_Taxonomic_ID = 'Organism Taxonomic ID') %>% rename(Organism_Name = 'Organism Name')
 
 
