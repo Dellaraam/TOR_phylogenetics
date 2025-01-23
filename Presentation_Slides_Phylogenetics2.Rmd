@@ -933,9 +933,9 @@ ggplot(RictorDataPlot, aes(x = C.score, y = scd, fill = `Super Group`, color = `
 
 
 ```{r}
-RICTORAlveolataPlot <- ggplot(filter(RictorDataPlot, `Super Group` == "Chlorophyta"), aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+RICTORMetamonadaPlot <- ggplot(filter(RictorDataPlot, `Super Group` == "Metamonada"), aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
   geom_point()+
-  geom_text_repel(data = filter(RictorDataPlot, `Super Group` == "Chlorophyta"),
+  geom_text_repel(data = filter(RictorDataPlot, `Super Group` == "Metamonada"),
                   direction = "y",
                   min.segment.length = 0.5,
                   force = 10,
@@ -947,11 +947,27 @@ RICTORAlveolataPlot <- ggplot(filter(RictorDataPlot, `Super Group` == "Chlorophy
                   size = 2.0)+
   xlab("Overall Score of HMMER Hit")+
   ylab("Best Domain Score of HMMER Hit")+
-  ggtitle("RICTOR Hits Alveolata")
+  ggtitle("RICTOR Hits Metamonada")
+
+RICTORDiscobaPlot <- ggplot(filter(RictorDataPlot, `Super Group` == "Discoba"), aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(data = filter(RictorDataPlot, `Super Group` == "Discoba"),
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RICTOR Hits Discoba")
 
 
-
-RICTORAlveolataPlot
+RICTORDiscobaPlot
+RICTORMetamonadaPlot
 ```
 
 

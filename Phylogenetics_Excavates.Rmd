@@ -499,11 +499,6 @@ CombinedMetamonada <- merge(CombinedMetamonada, Excavata_Busco[c("C.score","Frag
 CombinedMetamonada <- CombinedMetamonada %>% left_join(select(TaxonomyMetamonada, `Class name`,`Phylum name`,`Order name`, `Family name`, `Genus name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 
 ```
-```{r}
-# Add in the taxonomic information to the combined dataframes here
-
-```
-
 
 
 ```{r}
@@ -548,4 +543,210 @@ Mplot1
 
 
 ```
+
+
+
+```{r}
+RICTORMetamonadaPlot <- ggplot(RICTORMetamonada, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(data = RICTORMetamonada,
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RICTOR Hits Metamonada")
+
+RICTORDiscobaPlot <- ggplot(RICTORDiscoba, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(data = RICTORDiscoba,
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RICTOR Hits Discoba")
+
+
+RAPTORMetamonadaPlot <- ggplot(RAPTORMetamonada, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(data = RAPTORMetamonada,
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RAPTOR Hits Metamonada")
+
+RAPTORDiscobaPlot <- ggplot(RAPTORDiscoba, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(data = RAPTORDiscoba,
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("RAPTOR Hits Discoba")
+
+
+TORMetamonadaPlot <- ggplot(TORMetamonada, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(data = TORMetamonada,
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("TOR Hits Metamonada")
+
+TORDiscobaPlot <- ggplot(TORDiscoba, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(data = TORDiscoba,
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("TOR Hits Discoba")
+
+SIN1MetamonadaPlot <- ggplot(SIN1Metamonada, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(data = SIN1Metamonada,
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("SIN1 Hits Metamonada")
+
+SIN1DiscobaPlot <- ggplot(SIN1Discoba, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(data = SIN1Discoba,
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("SIN1 Hits Discoba")
+
+
+LST8MetamonadaPlot <- ggplot(LST8Metamonada, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(data = LST8Metamonada,
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("LST8 Hits Metamonada")
+
+LST8DiscobaPlot <- ggplot(LST8Discoba, aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
+  geom_point()+
+  geom_text_repel(data = LST8Discoba,
+                  direction = "y",
+                  min.segment.length = 0.5,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6,
+                  size = 2.0)+
+  xlab("Overall Score of HMMER Hit")+
+  ylab("Best Domain Score of HMMER Hit")+
+  ggtitle("LST8 Hits Discoba")
+
+
+
+
+
+
+RAPTORDiscobaPlot
+RICTORMetamonadaPlot
+RICTORDiscobaPlot
+RICTORMetamonadaPlot
+TORDiscobaPlot
+TORMetamonadaPlot
+SIN1DiscobaPlot
+SIN1MetamonadaPlot
+LST8DiscobaPlot
+LST8MetamonadaPlot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+
 
