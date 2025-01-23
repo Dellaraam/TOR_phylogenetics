@@ -922,52 +922,66 @@ ggplot(RictorDataPlot,aes(`Super Group`, fill = factor(RICTOR)))+
   ylab("Number of Rictor Proteins Found")
 ```
 
-## Plot
+## Violin Plots
 ```{r}
 ggplot(RictorDataPlot, aes(x = C.score, y = scd, fill = `Super Group`, color = `Super Group`))+
   scale_fill_brewer()+
   geom_point(position = position_dodge2(w = 0.65))+
   xlab("C Score")+
   ylab("Best Domain HMMER Score")
-```
 
 
-```{r}
-RICTORMetamonadaPlot <- ggplot(filter(RictorDataPlot, `Super Group` == "Metamonada"), aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
-  geom_point()+
-  geom_text_repel(data = filter(RictorDataPlot, `Super Group` == "Metamonada"),
-                  direction = "y",
-                  min.segment.length = 0.5,
-                  force = 10,
-                  max.time = 10,
-                  max.overlaps = 10,
-                  nudge_x = -50,
-                  nudge_y = .1,
-                  point.padding = 0.6,
-                  size = 2.0)+
-  xlab("Overall Score of HMMER Hit")+
-  ylab("Best Domain Score of HMMER Hit")+
-  ggtitle("RICTOR Hits Metamonada")
+ggplot(RictorDataPlot, aes(x = C.score, y = factor(`Super Group`), color = `Super Group`, fill = `Super Group`))+
+  scale_fill_brewer()+
+  geom_violin()+
+  xlab("C Score")+
+  ylab("Super Group")+
+  labs(title = "RICTOR Protein")+
+  theme_light()
 
-RICTORDiscobaPlot <- ggplot(filter(RictorDataPlot, `Super Group` == "Discoba"), aes(x = sca, y = scd, color = C.score, label = Organism_Name))+
-  geom_point()+
-  geom_text_repel(data = filter(RictorDataPlot, `Super Group` == "Discoba"),
-                  direction = "y",
-                  min.segment.length = 0.5,
-                  force = 10,
-                  max.time = 10,
-                  max.overlaps = 10,
-                  nudge_x = -50,
-                  nudge_y = .1,
-                  point.padding = 0.6,
-                  size = 2.0)+
-  xlab("Overall Score of HMMER Hit")+
-  ylab("Best Domain Score of HMMER Hit")+
-  ggtitle("RICTOR Hits Discoba")
+ggplot(RAPTORDataPlot, aes(x = C.score, y = factor(`Super Group`), color = `Super Group`, fill = `Super Group`))+
+  scale_fill_brewer()+
+  geom_violin()+
+  xlab("C Score")+
+  ylab("Super Group")+
+  labs(title = "RAPTOR Protein")+
+  theme_light()
+
+ggplot(SIN1DataPlot, aes(x = C.score, y = factor(`Super Group`), color = `Super Group`, fill = `Super Group`))+
+  scale_fill_brewer()+
+  geom_violin()+
+  xlab("C Score")+
+  ylab("Super Group")+
+  labs(title = "SIN1 Protein")+
+  theme_light()
+
+ggplot(TORDataPlot, aes(x = C.score, y = factor(`Super Group`), color = `Super Group`, fill = `Super Group`))+
+  scale_fill_brewer()+
+  geom_violin()+
+  xlab("C Score")+
+  ylab("Super Group")+
+  labs(title = "TOR Protein")+
+  theme_light()
+
+ggplot(LST8DataPlot, aes(x = C.score, y = factor(`Super Group`), color = `Super Group`, fill = `Super Group`))+
+  scale_fill_brewer()+
+  geom_violin()+
+  xlab("C Score")+
+  ylab("Super Group")+
+  labs(title = "LST8 Protein")+
+  theme_light()
+
+ggplot(CombinedProject, aes(x = factor(`Super Group`), y = C.score, color = `RICTOR`, fill = `RICTOR`))+
+  scale_fill_brewer()+
+  geom_col()
+
+ggplot(CombinedProject, aes(x = factor(`Super Group`), y = C.score, fill = `RAPTOR`, color = RAPTOR))+
+  scale_fill_brewer(palette = "dark2")+
+  theme_light()+
+  geom_point(size = 4)
 
 
-RICTORDiscobaPlot
-RICTORMetamonadaPlot
+
 ```
 
 
