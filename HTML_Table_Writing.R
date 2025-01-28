@@ -25,8 +25,8 @@ install.packages("tableHTML")
 library(tableHTML)
 
 
-Taxon <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
-HTML <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
+Taxon <- read.csv("~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
+HTML <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
 
 
 
@@ -39,14 +39,8 @@ Rhizaria <- HTML %>% filter(Super.Group == "Rhizaria")
 Chlorophyta <- HTML %>% filter(Super.Group == "Chlorophyta")
 Rhodophyta <- HTML %>% filter(Super.Group == "Rhodophyta")
 Streptophyta <- HTML %>% filter(Super.Group == "Streptophyta")
-
-
-
-
-
-
-
-
+Discoba <- HTML %>% filter(Super.Group == "Discoba")
+Metamonada <- HTML %>% filter(Super.Group == "Metamonada")
 
 
 write.table(HTML$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/All.txt", sep = "\t", row.names = F, col.names = F)
@@ -56,15 +50,11 @@ write.table(Rhizaria$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/I
 write.table(Chlorophyta$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Chlorophyta.txt", sep = "\t", row.names = F, col.names = F)
 write.table(Streptophyta$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Streptophyta.txt", sep = "\t", row.names = F, col.names = F)
 write.table(Rhodophyta$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Rhodophyta.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Discoba$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Discoba.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Metamonada$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Metamonada.txt", sep = "\t", row.names = F, col.names = F)
 
 
-write_tableHTML(tableHTML(HTML), file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Table.html")
-
-
-
-
-
-tree <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
+tree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
 tree$tip.label <- gsub("'","", tree$tip.label)
 tree$tip.label
 #Relocate the Organism name to the beginning before creating the tree
@@ -75,7 +65,7 @@ AllTree+aes(color = Super.Group)+ geom_tiplab(aes(color = RICTOR))+geom_text(aes
 
 
 # ------------------------------------------------------------------------------
-StramenopileTree <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/StramenopileTreeP.phy")
+StramenopileTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/StramenopileTreeP.phy")
 StramenopileTree$tip.label
 StramenopileTree$tip.label <- gsub("'","", StramenopileTree$tip.label)
 StramenopileTree$tip.label
@@ -98,19 +88,33 @@ SSP <- STP + geom_tiplab(aes(color = SIN1, size = 1)) + geom_text(aes(label = no
   geom_point2(aes(subset=(node==26)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
   
 SSP
+
+# Note: Add in the dark blue locations to denote a possible error location
+SRAPTORS <- STP + geom_tiplab(aes(color = RAPTOR, size = 1)) + geom_text(aes(label = node))
+SRAPTORS
+
+STORS <- STP + geom_tiplab(aes(color = TOR, size = 1)) + geom_text(aes(label = node))
+STORS
+
+SLST8S <- STP + geom_tiplab(aes(color = LST8, size = 1)) + geom_text(aes(label = node))
+SLST8S
+
+
+
+
 # ------------------------------------------------------------------------------
 
 
 
 
-AlveolataTree <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/AlveolataTreeP.phy")
+AlveolataTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AlveolataTreeP.phy")
 AlveolataTree$tip.label
 AlveolataTree$tip.label <- gsub("'","", AlveolataTree$tip.label)
 AlveolataTree$tip.label
 Alveolata <- Alveolata %>% relocate(Organism_Name)
 AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
 AlvP <- AlvP  %<+% Alveolata
-
+# SIN1
 ASinP <- AlvP + geom_tiplab(aes(color = SIN1), size = 2) + geom_text(aes(label = node))+
   geom_point2(aes(subset=(node==165)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==139)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
@@ -121,11 +125,14 @@ ASinP <- AlvP + geom_tiplab(aes(color = SIN1), size = 2) + geom_text(aes(label =
   
 ASinP
 
+# RICTOR
 ARIC <- AlvP + geom_tiplab(aes(color = RICTOR), size = 2) + geom_text(aes(label = node))+
   geom_point2(aes(subset=(node==139)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==118)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==167)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
 ARIC
+
+# RAPTOR
 
 ARAPT <- AlvP + geom_tiplab(aes(color = RAPTOR), size = 2) + geom_text(aes(label = node))+
   geom_point2(aes(subset=(node==132)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
@@ -145,23 +152,89 @@ ATOR <- AlvP + geom_tiplab(aes(color = TOR), size = 2) + geom_text(aes(label = n
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
 ATOR
 
-ALST8 <- AlvP + geom_tiplab(aes(color = LST8), size = 2) + geom_text(aes(label = node))
+ALST8 <- AlvP + geom_tiplab(aes(color = LST8), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==157)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==144)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==141)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==161)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==163)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
+  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)
 ALST8
 
+# ------------------------------------------------------------------------------
+# Initial Setup for the tree
+RhizariaTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/RhizariaTreeP.phy")
+RhizariaTree$tip.label
+RhizariaTree$tip.label <- gsub("'","", RhizariaTree$tip.label)
+RhizariaTree$tip.label
+Rhizaria <- Rhizaria %>% relocate(Organism_Name)
+RTP <- ggtree(RhizariaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
+RTP <- RTP%<+% Rhizaria
 
-# We may need a dataframe that has all of the specific nodes that we are interested in. How to do this however
+# Generating the tree plots with markings at specific node locations
+RRICTOR <- RTP + geom_tiplab(aes(color = RICTOR), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==13)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==10)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+RRICTOR
 
+RSIN <- RTP + geom_tiplab(aes(color = SIN1), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==9)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+RSIN
 
+RRAPTOR <-  RTP + geom_tiplab(aes(color = RAPTOR), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==6)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==10)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+RRAPTOR
 
+RTOR <- RTP + geom_tiplab(aes(color = TOR), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==3)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==1)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+RTOR
 
+RLST8 <- RTP + geom_tiplab(aes(color = LST8), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==5)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
+  geom_point2(aes(subset=(node==6)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
+  geom_point2(aes(subset=(node==3)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
+  geom_point2(aes(subset=(node==1)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)
+RLST8
 
-CleanedHTML<- HTML %>%
-  rename("Number" = X, "Accession" = Accn, "Super Group"=Super.Group, "Tax ID" = Organism_Taxonomic_ID, "Organism Name" = Organism_Name) %>%
-  rename("Completeness Score"=C.score, "Fragmentation Score" = Frag.score, "Class" = Class.name, "Phylum" = Phylum.name, "Order" = Order.name)%>%
-  rename("Family"=Family.name, "Genus" = Genus.name) %>%
-  relocate(`Super Group`, .before = Class)%>%
-  relocate(Accession, .after = Genus)%>%
-  kbl(caption = "Complete Table of Searched Species with Relevant Information") %>%
-  kable_classic(full_width = F, html_font = "Cambria")
+# ------------------------------------------------------------------------------
 
-readr::write_file(CleanedHTML, "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/kable_out.html")
+DiscobaTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/DiscobaTreeP.phy")
+DiscobaTree$tip.label
+DiscobaTree$tip.label <- gsub("'","", DiscobaTree$tip.label)
+DiscobaTree$tip.label
+Discoba <- Discoba %>% relocate(Organism_Name)
+DTP <- ggtree(DiscobaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
+DTP <- DTP%<+% Discoba
+
+DRAPTOR <- DTP + geom_tiplab(aes(color = RAPTOR), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==6)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
+  geom_point2(aes(subset=(node==13)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
+  geom_point2(aes(subset=(node==18)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
+  geom_point2(aes(subset=(node==21)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)
+DRAPTOR
+
+DRICTOR <- DTP + geom_tiplab(aes(color = RICTOR), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==6)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
+  geom_point2(aes(subset=(node==12)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
+  geom_point2(aes(subset=(node==13)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
+  geom_point2(aes(subset=(node==18)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)
+DRICTOR
+
+DSIN1 <- DTP + geom_tiplab(aes(color = SIN1), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==46)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+DSIN1
+
+DTOR <- DTP + geom_tiplab(aes(color = TOR), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==13)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
+  geom_point2(aes(subset=(node==18)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)
+DTOR
+
+DLST8 <- DTP + geom_tiplab(aes(color = TOR), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==13)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
+  geom_point2(aes(subset=(node==18)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)
+DLST8
+
+# ------------------------------------------------------------------------------
