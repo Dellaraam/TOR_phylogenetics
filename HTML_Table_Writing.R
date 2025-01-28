@@ -81,12 +81,72 @@ StramenopileTree$tip.label <- gsub("'","", StramenopileTree$tip.label)
 StramenopileTree$tip.label
 
 Stramenopiles <- Stramenopiles %>% relocate(Organism_Name)
-STP <- ggtree(StramenopileTree, branch.length = "none")
+STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
 STP <- STP  %<+% Stramenopiles
-write.jtree(Output, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/TestTree.tree")
-STP + geom_tiplab(aes(color = RAPTOR)) + geom_text(aes(label = node))
+#RICTOR Stramenopiles
+RISP <- STP + geom_tiplab(aes(color = RICTOR, size = 1)) + geom_text(aes(label = node)) + geom_point2(aes(subset=(node==110)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3) +
+  geom_point2(aes(subset=(node==97)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) + geom_point2(aes(subset=(node==115)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==116)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3) + geom_point2(aes(subset=(node==2)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==111)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+RISP
+#Sin1 Stramenopiles
+SSP <- STP + geom_tiplab(aes(color = SIN1, size = 1)) + geom_text(aes(label = node)) + geom_point2(aes(subset=(node==105)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==90)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==35)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==34)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==25)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==26)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+  
+SSP
+# ------------------------------------------------------------------------------
 
 
+
+
+AlveolataTree <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/AlveolataTreeP.phy")
+AlveolataTree$tip.label
+AlveolataTree$tip.label <- gsub("'","", AlveolataTree$tip.label)
+AlveolataTree$tip.label
+Alveolata <- Alveolata %>% relocate(Organism_Name)
+AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
+AlvP <- AlvP  %<+% Alveolata
+
+ASinP <- AlvP + geom_tiplab(aes(color = SIN1), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==165)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==139)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==137)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==134)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==131)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==1)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+  
+ASinP
+
+ARIC <- AlvP + geom_tiplab(aes(color = RICTOR), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==139)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==118)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==167)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+ARIC
+
+ARAPT <- AlvP + geom_tiplab(aes(color = RAPTOR), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==132)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==139)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==167)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==118)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+ARAPT
+
+ATOR <- AlvP + geom_tiplab(aes(color = TOR), size = 2) + geom_text(aes(label = node))+
+  geom_point2(aes(subset=(node==111)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==112)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==128)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==123)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==144)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==29)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==2)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+ATOR
+
+ALST8 <- AlvP + geom_tiplab(aes(color = LST8), size = 2) + geom_text(aes(label = node))
+ALST8
 
 
 # We may need a dataframe that has all of the specific nodes that we are interested in. How to do this however
