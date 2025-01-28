@@ -27,7 +27,7 @@ library(tableHTML)
 
 Taxon <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
 HTML <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
-HTML <- full_join(HTML,select(Taxon, Group.name, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
 
 
 
@@ -50,13 +50,13 @@ Streptophyta <- HTML %>% filter(Super.Group == "Streptophyta")
 
 
 write.table(HTML$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/All.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Alveolata$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Alveolata.txt", sep = "\t", row.names = F, col.names = F)
 write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
-write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
-write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
-write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
-write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
-write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
-write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Rhizaria$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Rhizaria.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Chlorophyta$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Chlorophyta.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Streptophyta$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Streptophyta.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Rhodophyta$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Rhodophyta.txt", sep = "\t", row.names = F, col.names = F)
+
 
 write_tableHTML(tableHTML(HTML), file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Table.html")
 
@@ -64,16 +64,29 @@ write_tableHTML(tableHTML(HTML), file = "C:/Users/kajoh/Documents/GitHub/TOR_phy
 
 
 
-tree <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/StramenopileTreeP.phy")
+tree <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
 tree$tip.label <- gsub("'","", tree$tip.label)
 tree$tip.label
-Stramenopiles$Organism_Name
 #Relocate the Organism name to the beginning before creating the tree
+HTML <- HTML %>% relocate(Organism_Name)
+AllTree <- ggtree(tree, layout = "circular", branch.length = "none")
+AllTree <- AllTree %<+% HTML
+AllTree+aes(color = Super.Group)+ geom_tiplab(aes(color = RICTOR))+geom_text(aes(label=node))
+
+
+# ------------------------------------------------------------------------------
+StramenopileTree <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/StramenopileTreeP.phy")
+StramenopileTree$tip.label
+StramenopileTree$tip.label <- gsub("'","", StramenopileTree$tip.label)
+StramenopileTree$tip.label
+
 Stramenopiles <- Stramenopiles %>% relocate(Organism_Name)
-StramenopileTree <- ggtree(tree, branch.length = "none")
-StramenopileTree$tip
-StramenopileTree <- StramenopileTree %<+% Stramenopiles
-StramenopileTree+aes(color = RICTOR)+ geom_tiplab(aes(color = RICTOR))+geom_text(aes(label=node)) + geom_point2(aes(subset=(node==94)), shape=21, size=5, fill='green')
+STP <- ggtree(StramenopileTree, branch.length = "none")
+STP <- STP  %<+% Stramenopiles
+write.jtree(Output, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/TestTree.tree")
+STP + geom_tiplab(aes(color = RAPTOR)) + geom_text(aes(label = node))
+
+
 
 
 # We may need a dataframe that has all of the specific nodes that we are interested in. How to do this however
