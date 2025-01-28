@@ -24,14 +24,61 @@ library(xtable)
 install.packages("tableHTML")
 library(tableHTML)
 
+
+Taxon <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
 HTML <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
+HTML <- full_join(HTML,select(Taxon, Group.name, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+
+
+HTML %>%rename("Super Group" = Super.Group) %>% filter(`Super Group` == "Alveolata") %>% filter(!is.na(RAPTOR)) %>% relocate(Group.name) %>% view()
+Stramenopiles <- HTML %>% filter(Super.Group == "Stramenopiles")
+Alveolata <- HTML %>% filter(Super.Group == "Alveolata")
+Rhizaria <- HTML %>% filter(Super.Group == "Rhizaria")
+
+Chlorophyta <- HTML %>% filter(Super.Group == "Chlorophyta")
+Rhodophyta <- HTML %>% filter(Super.Group == "Rhodophyta")
+Streptophyta <- HTML %>% filter(Super.Group == "Streptophyta")
 
 
 
 
-HTML %>%rename("Super Group" = Super.Group) %>% filter(`Super Group` == "Streptophyta") %>% view()
+
+
+
+
+
+
+write.table(HTML$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/All.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
+write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
 
 write_tableHTML(tableHTML(HTML), file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Table.html")
+
+
+
+
+
+tree <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/StramenopileTreeP.phy")
+tree$tip.label <- gsub("'","", tree$tip.label)
+tree$tip.label
+Stramenopiles$Organism_Name
+#Relocate the Organism name to the beginning before creating the tree
+Stramenopiles <- Stramenopiles %>% relocate(Organism_Name)
+StramenopileTree <- ggtree(tree, branch.length = "none")
+StramenopileTree$tip
+StramenopileTree <- StramenopileTree %<+% Stramenopiles
+StramenopileTree+aes(color = RICTOR)+ geom_tiplab(aes(color = RICTOR))+geom_text(aes(label=node)) + geom_point2(aes(subset=(node==94)), shape=21, size=5, fill='green')
+
+
+# We may need a dataframe that has all of the specific nodes that we are interested in. How to do this however
+
+
 
 
 
