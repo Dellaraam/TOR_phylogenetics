@@ -398,8 +398,8 @@ ChloroP
 #RICTOR
 RicCh <- ChloroP + geom_tiplab(aes(color = RICTOR, size = 1)) + geom_text(aes(label = node)) + 
   geom_point2(aes(subset=(node==3)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
-  geom_point2(aes(subset=(node==63)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) + geom_point2(aes(subset=(node==115)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
-  geom_point2(aes(subset=(node==64)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) + geom_point2(aes(subset=(node==2)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==63)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==64)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) + 
   geom_point2(aes(subset=(node==68)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
 RicCh
 
@@ -478,14 +478,8 @@ StrephP <- StrephP %<+% Streptophyta
 StrephP 
 
 #RICTOR
-RicStr <- StrephP + geom_tiplab(aes(color = RICTOR), size = 1) + geom_text(aes(label = node), size = 2) + 
-  geom_point2(aes(subset=(node==427)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
-  geom_point2(aes(subset=(node==512)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) + 
-  geom_point2(aes(subset=(node==502)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) + 
-  geom_point2(aes(subset=(node==486)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
-  geom_point2(aes(subset=(node==486)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
-  geom_point2(aes(subset=(node==468)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
-  
+RicStr <- StrephP + geom_tiplab(aes(color = RICTOR), size = 1) + geom_text(aes(label = node), size = 3) + 
+  geom_point2(aes(subset=(node==357)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
 RicStr
 
 #RAPTOR
@@ -498,3 +492,12 @@ RapStr <- StrephP + geom_tiplab(aes(color = RAPTOR), size = 1) + geom_text(aes(l
   geom_point2(aes(subset=(node==345)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
 RapStr
 
+#SIN1
+SIN1Str <- StrephP + geom_tiplab(aes(color = SIN1), size = 1) + geom_text(aes(label = node), size = 3) + 
+  geom_point2(aes(subset=(node==357)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
+SIN1Str
+
+#LST8
+LST8Str <- StrephP + geom_tiplab(aes(color = LST8), size = 1) + geom_text(aes(label = node), size = 2) + 
+  geom_point2(aes(subset=(node==187)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
+LST8Str
