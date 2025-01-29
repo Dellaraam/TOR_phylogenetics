@@ -309,3 +309,37 @@ MLST8
 
 # ------------------------------------------------------------------------------
 
+ChlorophytaTree <- read.tree(file = "Code/TOR_phylogenetics/Trees/ChlorophytaTreeP.phy")
+ChlorophytaTree$tip.label
+ChlorophytaTree$tip.label <- gsub("'","", ChlorophytaTree$tip.label)
+ChlorophytaTree$tip.label
+Chlorophyta <- Chlorophyta %>% relocate(Organism_Name)
+ChloroP <- ggtree(ChlorophytaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
+ChloroP <- ChloroP  %<+% Chlorophyta
+ChloroP
+
+#RICTOR
+RicCh <- ChloroP + geom_tiplab(aes(color = RICTOR, size = 1)) + geom_text(aes(label = node)) + geom_point2(aes(subset=(node==110)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3) +
+  geom_point2(aes(subset=(node==97)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) + geom_point2(aes(subset=(node==115)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==116)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3) + geom_point2(aes(subset=(node==2)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==111)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+RicCh
+
+#SIN1
+RhodophytaTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/RhodophytaTreeP.phy")
+RhodophytaTree$tip.label
+RhodophytaTree$tip.label <- gsub("'","", ChlorophytaTree$tip.label)
+RhodophytaTree$tip.label 
+Rhodophyta <- Rhodophyta %>% relocate(Organism_Name)
+RhodoP <- ggtree(RhodophytaTree, branch.length = "none", laddarize = FALSE)+xlim(NA,+15)
+RhodoP <- RhodoP %<+% Rhodophyta
+RhodoP
+
+StreptophytaTree <- read.tree(file = "~/Code/TOR_phylogentics/Trees/RhodophytaTreeP.phy")
+StreptophytaTree$tip.label
+StreptophytaTree$tip.label <- gsub("'", "", StreptophytaTree$tip.label)
+StreptophytaTree$tip.label
+Streptophyta <- Streptophyta %>% relocate(Organism_Name)
+StrephP <- ggtree(StreptophytaTree, branch.length = "none", laddarize = FALSE)+xlim(NA,+15)
+StrephP <- StrephP %<+% Streptophyta
+StrephP 
