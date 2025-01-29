@@ -498,6 +498,21 @@ SIN1Str <- StrephP + geom_tiplab(aes(color = SIN1), size = 1) + geom_text(aes(la
 SIN1Str
 
 #LST8
-LST8Str <- StrephP + geom_tiplab(aes(color = LST8), size = 1) + geom_text(aes(label = node), size = 2) + 
-  geom_point2(aes(subset=(node==187)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
+LST8Str <- StrephP + geom_tiplab(aes(color = LST8), size = 1) + geom_text(aes(label = node), size = 1) + 
+  geom_point2(aes(subset=(node==330)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==332)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==335)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==283)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==187)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==161)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==92)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==89)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==51)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==48)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==22)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) 
 LST8Str
+
+TorStr <- StrephP + geom_tiplab(aes(color = TOR), size = 1) + geom_text(aes(label = node), size = 1) + 
+  geom_point2(aes(subset=(node==187)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==89)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) 
+TorStr
