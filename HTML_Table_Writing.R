@@ -18,7 +18,7 @@ library(gridExtra)
 library(plotly)
 library(kableExtra)
 library(knitr)
-
+library(patchwork)
 library(xtable)
 
 install.packages("tableHTML")
@@ -54,17 +54,31 @@ write.table(Discoba$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/ID
 write.table(Metamonada$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Metamonada.txt", sep = "\t", row.names = F, col.names = F)
 
 
-tree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
-tree$tip.label <- gsub("'","", tree$tip.label)
-tree$tip.label
-#Relocate the Organism name to the beginning before creating the tree
-HTML <- HTML %>% relocate(Organism_Name)
-AllTree <- ggtree(tree, layout = "circular", branch.length = "none")
-AllTree <- AllTree %<+% HTML
-AllTree+aes(color = Super.Group)+ geom_tiplab(aes(color = RICTOR))+geom_text(aes(label=node))
+# tree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
+# tree$tip.label <- gsub("'","", tree$tip.label)
+# tree$tip.label
+# #Relocate the Organism name to the beginning before creating the tree
+# HTML <- HTML %>% relocate(Organism_Name)
+# AllTree <- ggtree(tree, layout = "circular", branch.length = "none")
+# AllTree <- AllTree %<+% HTML
+# AllTree+aes(color = Super.Group)+ geom_tiplab(aes(color = RICTOR))+geom_text(aes(label=node))
 
 
 # ------------------------------------------------------------------------------
+
+# Lets make a color pallete that can be used going forward
+pal <- c(
+  "H" = "red",
+  "M" = "blue",
+  "L" = "green",
+  "NA" = "grey"
+)
+
+
+
+
+
+
 StramenopileTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/StramenopileTreeP.phy")
 StramenopileTree$tip.label
 StramenopileTree$tip.label <- gsub("'","", StramenopileTree$tip.label)
@@ -74,29 +88,37 @@ Stramenopiles <- Stramenopiles %>% relocate(Organism_Name)
 STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
 STP <- STP  %<+% Stramenopiles
 #RICTOR Stramenopiles
-RISP <- STP + geom_tiplab(aes(color = RICTOR, size = 1)) + geom_text(aes(label = node)) + geom_point2(aes(subset=(node==110)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3) +
+RISP <- STP + geom_tiplab( aes(color = RICTOR), size = 2) + geom_text(aes(label = node)) +
+  
+  scale_color_manual(values = pal)+
+  geom_point2(aes(subset=(node==110)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3) +
   geom_point2(aes(subset=(node==97)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) + geom_point2(aes(subset=(node==115)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==116)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3) + geom_point2(aes(subset=(node==2)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==111)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
 RISP
 #Sin1 Stramenopiles
-SSP <- STP + geom_tiplab(aes(color = SIN1, size = 1)) + geom_text(aes(label = node)) + geom_point2(aes(subset=(node==105)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+SSP <- STP + geom_tiplab(aes(color = SIN1), size = 2)+ geom_text(aes(label = node))+
+  scale_color_manual(values = pal)+
+  geom_point2(aes(subset=(node==105)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==90)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==35)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==34)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==25)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==26)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
-  
 SSP
 
+SSP+R
 # Note: Add in the dark blue locations to denote a possible error location
-SRAPTORS <- STP + geom_tiplab(aes(color = RAPTOR, size = 1)) + geom_text(aes(label = node))
+SRAPTORS <- STP + geom_tiplab(aes(color = RAPTOR, size = 1)) + geom_text(aes(label = node))+
+  scale_color_manual(values = pal)
 SRAPTORS
 
-STORS <- STP + geom_tiplab(aes(color = TOR, size = 1)) + geom_text(aes(label = node))
+STORS <- STP + geom_tiplab(aes(color = TOR, size = 1)) + geom_text(aes(label = node))+
+  scale_color_manual(values = pal)
 STORS
 
-SLST8S <- STP + geom_tiplab(aes(color = LST8, size = 1)) + geom_text(aes(label = node))
+SLST8S <- STP + geom_tiplab(aes(color = LST8, size = 1)) + geom_text(aes(label = node))+
+  scale_color_manual(values = pal)
 SLST8S
 
 
@@ -238,3 +260,52 @@ DLST8 <- DTP + geom_tiplab(aes(color = TOR), size = 2) + geom_text(aes(label = n
 DLST8
 
 # ------------------------------------------------------------------------------
+
+MetamonadaTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/MetamonadaTreeP.phy")
+MetamonadaTree$tip.label <- gsub("'","", MetamonadaTree$tip.label)
+MetamonadaTree$tip.label
+Metamonada <- Metamonada %>% relocate(Organism_Name)
+MTP <- ggtree(MetamonadaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
+MTP <- MTP %<+% Metamonada
+
+MRICTOR <- MTP + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = FALSE) + geom_text(aes(label = node))+
+  geom_polygon(aes(fill = `RICTOR`, x = 0, y = 0))+
+  geom_point2(aes(subset=(node==4)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==5)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==12)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==31)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+MRICTOR
+
+MSIN1 <- MTP + geom_tiplab(aes(color = SIN1), size = 2, show.legend = FALSE) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
+  geom_point2(aes(subset=(node==1)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==23)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==25)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==28)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+MSIN1
+
+
+# No losses
+MRAPTOR <- MTP + geom_tiplab(aes(color = RAPTOR), size = 2, show.legend = FALSE) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))
+MRAPTOR
+# No losses
+MTOR <- MTP + geom_tiplab(aes(color = TOR), size = 2, show.legend = FALSE) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))
+MTOR
+
+# One possible loss though skeptical of its veracity
+MLST8 <- MTP + geom_tiplab(aes(color = LST8), size = 2, show.legend = FALSE) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
+  geom_point2(aes(subset=(node==15)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)
+MLST8
+
+
+# Done using the patchwork library
+# Allows the combining of different ggplots together
+(MRICTOR + MSIN1)
+
+(MLST8 + MRAPTOR)/MTOR
+
+# ------------------------------------------------------------------------------
+
