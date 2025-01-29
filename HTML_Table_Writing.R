@@ -88,8 +88,9 @@ Stramenopiles <- Stramenopiles %>% relocate(Organism_Name)
 STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
 STP <- STP  %<+% Stramenopiles
 #RICTOR Stramenopiles
-RISP <- STP + geom_tiplab( aes(color = RICTOR), size = 2) + geom_text(aes(label = node)) +
-  
+RISP <- STP + geom_tiplab( aes(color = RICTOR), size = 2, show.legend = FALSE) + geom_text(aes(label = node)) +
+  geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==110)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3) +
   geom_point2(aes(subset=(node==97)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) + geom_point2(aes(subset=(node==115)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
@@ -98,6 +99,8 @@ RISP <- STP + geom_tiplab( aes(color = RICTOR), size = 2) + geom_text(aes(label 
 RISP
 #Sin1 Stramenopiles
 SSP <- STP + geom_tiplab(aes(color = SIN1), size = 2)+ geom_text(aes(label = node))+
+  geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==105)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==90)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
@@ -109,19 +112,37 @@ SSP
 
 SSP+R
 # Note: Add in the dark blue locations to denote a possible error location
-SRAPTORS <- STP + geom_tiplab(aes(color = RAPTOR, size = 1)) + geom_text(aes(label = node))+
-  scale_color_manual(values = pal)
+SRAPTORS <- STP + geom_tiplab(aes(color = RAPTOR), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
+  geom_point2(aes(subset=(node==15)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) +
+  geom_point2(aes(subset=(node==72)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) +
+  geom_point2(aes(subset=(node==73)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) 
 SRAPTORS
 
-STORS <- STP + geom_tiplab(aes(color = TOR, size = 1)) + geom_text(aes(label = node))+
-  scale_color_manual(values = pal)
+STORS <- STP + geom_tiplab(aes(color = TOR), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
+  geom_point2(aes(subset=(node==72)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) +
+  geom_point2(aes(subset=(node==73)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) 
 STORS
 
-SLST8S <- STP + geom_tiplab(aes(color = LST8, size = 1)) + geom_text(aes(label = node))+
-  scale_color_manual(values = pal)
+SLST8S <- STP + geom_tiplab(aes(color = LST8), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
+  geom_point2(aes(subset=(node==45)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) +
+  geom_point2(aes(subset=(node==46)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) +
+  geom_point2(aes(subset=(node==66)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) +
+  geom_point2(aes(subset=(node==72)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) +
+  geom_point2(aes(subset=(node==73)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) +
+  geom_point2(aes(subset=(node==87)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) 
 SLST8S
 
-
+SSP+RISP
+(SRAPTORS+SLST8S) / STORS
 
 
 # ------------------------------------------------------------------------------
@@ -138,6 +159,9 @@ AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)+xlim(NA
 AlvP <- AlvP  %<+% Alveolata
 # SIN1
 ASinP <- AlvP + geom_tiplab(aes(color = SIN1), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==165)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==139)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==137)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
@@ -149,6 +173,9 @@ ASinP
 
 # RICTOR
 ARIC <- AlvP + geom_tiplab(aes(color = RICTOR), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==139)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==118)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==167)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
@@ -157,6 +184,9 @@ ARIC
 # RAPTOR
 
 ARAPT <- AlvP + geom_tiplab(aes(color = RAPTOR), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==132)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==139)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==167)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
@@ -164,6 +194,9 @@ ARAPT <- AlvP + geom_tiplab(aes(color = RAPTOR), size = 2) + geom_text(aes(label
 ARAPT
 
 ATOR <- AlvP + geom_tiplab(aes(color = TOR), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==111)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==112)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==128)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
@@ -175,6 +208,9 @@ ATOR <- AlvP + geom_tiplab(aes(color = TOR), size = 2) + geom_text(aes(label = n
 ATOR
 
 ALST8 <- AlvP + geom_tiplab(aes(color = LST8), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==157)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==144)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==141)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
@@ -195,26 +231,41 @@ RTP <- RTP%<+% Rhizaria
 
 # Generating the tree plots with markings at specific node locations
 RRICTOR <- RTP + geom_tiplab(aes(color = RICTOR), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==13)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==10)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
 RRICTOR
 
 RSIN <- RTP + geom_tiplab(aes(color = SIN1), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==9)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
 RSIN
 
 RRAPTOR <-  RTP + geom_tiplab(aes(color = RAPTOR), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==6)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==10)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
 RRAPTOR
 
 RTOR <- RTP + geom_tiplab(aes(color = TOR), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==3)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==1)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
 RTOR
 
 RLST8 <- RTP + geom_tiplab(aes(color = LST8), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==5)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
   geom_point2(aes(subset=(node==6)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
   geom_point2(aes(subset=(node==3)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
@@ -232,6 +283,9 @@ DTP <- ggtree(DiscobaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+1
 DTP <- DTP%<+% Discoba
 
 DRAPTOR <- DTP + geom_tiplab(aes(color = RAPTOR), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==6)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
   geom_point2(aes(subset=(node==13)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
   geom_point2(aes(subset=(node==18)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
@@ -239,6 +293,9 @@ DRAPTOR <- DTP + geom_tiplab(aes(color = RAPTOR), size = 2) + geom_text(aes(labe
 DRAPTOR
 
 DRICTOR <- DTP + geom_tiplab(aes(color = RICTOR), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==6)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
   geom_point2(aes(subset=(node==12)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
   geom_point2(aes(subset=(node==13)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
@@ -246,15 +303,24 @@ DRICTOR <- DTP + geom_tiplab(aes(color = RICTOR), size = 2) + geom_text(aes(labe
 DRICTOR
 
 DSIN1 <- DTP + geom_tiplab(aes(color = SIN1), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==46)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
 DSIN1
 
 DTOR <- DTP + geom_tiplab(aes(color = TOR), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==13)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
   geom_point2(aes(subset=(node==18)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)
 DTOR
 
-DLST8 <- DTP + geom_tiplab(aes(color = TOR), size = 2) + geom_text(aes(label = node))+
+DLST8 <- DTP + geom_tiplab(aes(color = LST8), size = 2) + geom_text(aes(label = node))+
+  geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==13)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
   geom_point2(aes(subset=(node==18)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)
 DLST8
@@ -269,7 +335,9 @@ MTP <- ggtree(MetamonadaTree, branch.length = "none", ladderize = FALSE)+xlim(NA
 MTP <- MTP %<+% Metamonada
 
 MRICTOR <- MTP + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = FALSE) + geom_text(aes(label = node))+
-  geom_polygon(aes(fill = `RICTOR`, x = 0, y = 0))+
+  geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==4)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==5)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==12)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
@@ -278,6 +346,8 @@ MRICTOR
 
 MSIN1 <- MTP + geom_tiplab(aes(color = SIN1), size = 2, show.legend = FALSE) + geom_text(aes(label = node))+
   geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==1)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==23)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==25)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
@@ -287,16 +357,23 @@ MSIN1
 
 # No losses
 MRAPTOR <- MTP + geom_tiplab(aes(color = RAPTOR), size = 2, show.legend = FALSE) + geom_text(aes(label = node))+
-  geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))
+  geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
 MRAPTOR
+
 # No losses
 MTOR <- MTP + geom_tiplab(aes(color = TOR), size = 2, show.legend = FALSE) + geom_text(aes(label = node))+
-  geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))
+  geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
 MTOR
 
 # One possible loss though skeptical of its veracity
 MLST8 <- MTP + geom_tiplab(aes(color = LST8), size = 2, show.legend = FALSE) + geom_text(aes(label = node))+
   geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==15)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)
 MLST8
 
