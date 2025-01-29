@@ -26,7 +26,7 @@ library(tableHTML)
 
 
 Taxon <- read.csv("~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
-HTML <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
+HTML <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
 
 
 
@@ -319,27 +319,105 @@ ChloroP <- ChloroP  %<+% Chlorophyta
 ChloroP
 
 #RICTOR
-RicCh <- ChloroP + geom_tiplab(aes(color = RICTOR, size = 1)) + geom_text(aes(label = node)) + geom_point2(aes(subset=(node==110)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3) +
-  geom_point2(aes(subset=(node==97)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3) + geom_point2(aes(subset=(node==115)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
-  geom_point2(aes(subset=(node==116)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3) + geom_point2(aes(subset=(node==2)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
-  geom_point2(aes(subset=(node==111)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)
+RicCh <- ChloroP + geom_tiplab(aes(color = RICTOR, size = 1)) + geom_text(aes(label = node)) + 
+  geom_point2(aes(subset=(node==3)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==63)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) + geom_point2(aes(subset=(node==115)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==64)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) + geom_point2(aes(subset=(node==2)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
+  geom_point2(aes(subset=(node==68)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
 RicCh
 
+#RAPTOR
+RapCh <- ChloroP + geom_tiplab(aes(color = RAPTOR, size = 1)) + geom_text(aes(label = node)) + 
+  geom_point2(aes(subset=(node==44)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) 
+RapCh
+
 #SIN1
+Sin1Ch <- ChloroP + geom_tiplab(aes(color = SIN1, size = 1)) + geom_text(aes(label = node)) +
+  geom_point2(aes(subset=(node==62)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==3)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+ 
+  geom_point2(aes(subset=(node==63)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+ 
+  geom_point2(aes(subset=(node==64)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+ 
+  geom_point2(aes(subset=(node==69)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+ 
+  geom_point2(aes(subset=(node==81)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+ 
+  geom_point2(aes(subset=(node==87)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==60)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==58)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==57)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==56)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==55)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==54)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) 
+Sin1Ch
+
+#LST8
+lst8Ch <- ChloroP + geom_tiplab(aes(color = LST8, size = 1)) + geom_text(aes(label = node)) 
+lst8Ch
+
+#TOR
+TorCh <- ChloroP + geom_tiplab(aes(color = TOR, size = 1)) + geom_text(aes(label = node))
+TorCh
+
+#Rhodophyta
 RhodophytaTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/RhodophytaTreeP.phy")
 RhodophytaTree$tip.label
-RhodophytaTree$tip.label <- gsub("'","", ChlorophytaTree$tip.label)
+RhodophytaTree$tip.label <- gsub("'","", RhodophytaTree$tip.label)
 RhodophytaTree$tip.label 
 Rhodophyta <- Rhodophyta %>% relocate(Organism_Name)
 RhodoP <- ggtree(RhodophytaTree, branch.length = "none", laddarize = FALSE)+xlim(NA,+15)
 RhodoP <- RhodoP %<+% Rhodophyta
 RhodoP
 
-StreptophytaTree <- read.tree(file = "~/Code/TOR_phylogentics/Trees/RhodophytaTreeP.phy")
+#RICTOR
+RicRh <- RhodoP + geom_tiplab(aes(color = RICTOR, size = 1)) + geom_text(aes(label = node)) + 
+  geom_point2(aes(subset=(node==15)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
+RicRh
+
+#RAPTOR
+RapRh <- RhodoP + geom_tiplab(aes(color = RAPTOR, size = 1)) + geom_text(aes(label = node)) + 
+  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
+RapRh
+
+#SIN1
+Sin1Rh <- RhodoP + geom_tiplab(aes(color = SIN1, size = 1)) + geom_text(aes(label = node)) + 
+  geom_point2(aes(subset=(node==15)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
+Sin1Rh
+
+#LST8
+lst8Rh <- RhodoP + geom_tiplab(aes(color = LST8, size = 1)) + geom_text(aes(label = node)) +
+  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
+lst8Rh
+
+#TOR
+TorRh <- RhodoP + geom_tiplab(aes(color = LST8, size = 1)) + geom_text(aes(label = node)) +
+  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
+TorRh
+
+StreptophytaTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/StreptophytaTreeP.phy")
 StreptophytaTree$tip.label
 StreptophytaTree$tip.label <- gsub("'", "", StreptophytaTree$tip.label)
 StreptophytaTree$tip.label
 Streptophyta <- Streptophyta %>% relocate(Organism_Name)
-StrephP <- ggtree(StreptophytaTree, branch.length = "none", laddarize = FALSE)+xlim(NA,+15)
+StrephP <- ggtree(StreptophytaTree, layout = "circular", branch.length = "none", laddarize = FALSE)
 StrephP <- StrephP %<+% Streptophyta
 StrephP 
+
+#RICTOR
+RicStr <- StrephP + geom_tiplab(aes(color = RICTOR), size = 1) + geom_text(aes(label = node), size = 2) + 
+  geom_point2(aes(subset=(node==427)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==512)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) + 
+  geom_point2(aes(subset=(node==502)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) + 
+  geom_point2(aes(subset=(node==486)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==486)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==468)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
+  
+RicStr
+
+#RAPTOR
+RapStr <- StrephP + geom_tiplab(aes(color = RAPTOR), size = 1) + geom_text(aes(label = node), size = 1) + 
+  geom_point2(aes(subset=(node==89)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==187)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==193)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==65)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==79)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==345)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
+RapStr
+
