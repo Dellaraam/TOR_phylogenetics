@@ -398,6 +398,7 @@ ChloroP
 #RICTOR
 RicCh <- ChloroP + geom_tiplab(aes(color = RICTOR, size = 1)) + geom_text(aes(label = node)) + 
   geom_point2(aes(subset=(node==3)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==6)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
   geom_point2(aes(subset=(node==63)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
   geom_point2(aes(subset=(node==64)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) + 
   geom_point2(aes(subset=(node==68)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
