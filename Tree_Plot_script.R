@@ -36,7 +36,7 @@ library(tableHTML)
 
 
 Taxon <- read.csv("~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
-HTML <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
+HTML <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
 
 
 
@@ -473,7 +473,7 @@ MRICTOR + MSIN1
 
 # ------------------------------------------------------------------------------
 
-ChlorophytaTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/ChlorophytaTreeP.phy")
+ChlorophytaTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/ChlorophytaTreeP.phy")
 ChlorophytaTree$tip.label
 ChlorophytaTree$tip.label <- gsub("'","", ChlorophytaTree$tip.label)
 ChlorophytaTree$tip.label
@@ -489,6 +489,7 @@ RicCh <- ChloroP + geom_tiplab(aes(color = RICTOR),size = 3)+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==3)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
+  geom_point2(aes(subset=(node==6)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
   geom_point2(aes(subset=(node==63)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
   geom_point2(aes(subset=(node==64)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) + 
   geom_point2(aes(subset=(node==68)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
@@ -506,11 +507,13 @@ RapCh
 #SIN1
 Sin1Ch <- ChloroP + geom_tiplab(aes(color = SIN1), size = 3)+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
+  geom_text(aes(label = node))+
   geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==62)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
   geom_point2(aes(subset=(node==3)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+ 
+  geom_point2(aes(subset=(node==6)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+ 
   geom_point2(aes(subset=(node==63)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+ 
   geom_point2(aes(subset=(node==64)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+ 
   geom_point2(aes(subset=(node==69)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+ 
@@ -553,7 +556,7 @@ RicCh+Sin1Ch
 
 
 #Rhodophyta
-RhodophytaTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/RhodophytaTreeP.phy")
+RhodophytaTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/RhodophytaTreeP.phy")
 RhodophytaTree$tip.label
 RhodophytaTree$tip.label <- gsub("'","", RhodophytaTree$tip.label)
 RhodophytaTree$tip.label 
@@ -609,7 +612,7 @@ RicRh+Sin1Rh
 # ------------------------------------------------------------------------------
 
 
-StreptophytaTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/StreptophytaTreeP.phy")
+StreptophytaTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/StreptophytaTreeP.phy")
 StreptophytaTree$tip.label
 StreptophytaTree$tip.label <- gsub("'", "", StreptophytaTree$tip.label)
 StreptophytaTree$tip.label
