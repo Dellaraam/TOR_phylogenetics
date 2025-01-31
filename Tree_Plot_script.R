@@ -38,6 +38,8 @@ library(tableHTML)
 Taxon <- read.csv("~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
 HTML <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
 
+HTML$Organism_Name <- str_replace(HTML$Organism_Name,"Neopyropia yezoensis","Pyropia yezoensis")
+
 
 
 
@@ -274,7 +276,7 @@ ARIC + ASinP
 
 # ------------------------------------------------------------------------------
 # Initial Setup for the tree
-RhizariaTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/RhizariaTreeP.phy")
+RhizariaTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/RhizariaTreeP.phy")
 RhizariaTree$tip.label
 RhizariaTree$tip.label <- gsub("'","", RhizariaTree$tip.label)
 RhizariaTree$tip.label
