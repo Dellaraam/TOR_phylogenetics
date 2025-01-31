@@ -579,8 +579,7 @@ RicRh
 RapRh <- RhodoP + geom_tiplab(aes(color = RAPTOR), size = 3)+
   geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
   scale_fill_manual(values = pal)+
-  scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
+  scale_color_manual(values = pal)
 RapRh
 
 #SIN1
@@ -595,16 +594,14 @@ Sin1Rh
 lst8Rh <- RhodoP + geom_tiplab(aes(color = LST8), size = 3)+
   geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
   scale_fill_manual(values = pal)+
-  scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
+  scale_color_manual(values = pal)
 lst8Rh
 
 #TOR
 TorRh <- RhodoP + geom_tiplab(aes(color = TOR), size = 3)+
   geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
   scale_fill_manual(values = pal)+
-  scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
+  scale_color_manual(values = pal)
 TorRh
 
 
