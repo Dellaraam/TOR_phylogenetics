@@ -104,7 +104,7 @@ pal <- c(
 # ------------------------------------------------------------------------------
 
 
-StramenopileTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/StramenopileTreeP.phy")
+StramenopileTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/StramenopileTreeP.phy")
 StramenopileTree$tip.label
 StramenopileTree$tip.label <- gsub("'","", StramenopileTree$tip.label)
 StramenopileTree$tip.label
@@ -117,6 +117,7 @@ RISP <- STP + geom_tiplab( aes(color = RICTOR), size = 3, show.legend = FALSE)+g
   geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
+  geom_point2(aes(subset=(node==64)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
   geom_point2(aes(subset=(node==66)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
   geom_point2(aes(subset=(node==14)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
   geom_point2(aes(subset=(node==45)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
