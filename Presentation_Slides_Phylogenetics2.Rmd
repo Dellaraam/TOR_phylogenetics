@@ -649,6 +649,102 @@ CombinedProject <- rbind(CombinedSAR,CombinedArchae,CombinedExc)
 
 
 
+```{r}
+# Idea here is to get a complete combination of all of the scores from all of the organisms into one table
+# This is different than the combined table as this will include all of the numerical scores for each of the associated proteins
+# we are going to want the following columns: Organism_Taxonomic_ID, Organism_Name, sca, scd, C,score, Frag.score
+# We are also going to want to combine the different proteins into combined protein tables
+# 
+SARLST8Table <- rbind(cleanedLST8Alveolata,cleanedLST8Rhizaria,cleanedLST8Stramenopiles)
+SARLST8Table <- select(SARLST8Table, -c(C.score,Frag.score))
+ArchLST8Table <- rbind(LST8Chlorophyta, LST8Streptophyta, LST8Rhodophyta)
+ExcavataLST8Table <- rbind(LST8Discoba, LST8Metamonada)
+ExcavataLST8Table <- select(ExcavataLST8Table, -c(C.score, Frag.score))
+
+
+
+
+SARRAPTORTable <-rbind(cleanedRAPTORAlveolata,cleanedRAPTORRhizaria,cleanedRAPTORStramenopiles)
+SARRAPTORTable <- select(SARRAPTORTable, -c(C.score,Frag.score))
+ArchRAPTORTable <- rbind(RAPTORChlorophyta, RAPTORStreptophyta, RAPTORRhodophyta)
+ExcavataRAPTORTable <- rbind(RAPTORDiscoba, RAPTORMetamonada)
+ExcavataRAPTORTable <- select(ExcavataRAPTORTable, -c(C.score, Frag.score))
+
+
+
+
+
+SARRICTORTable <- rbind(cleanedRICTORAlveolata,cleanedRICTORRhizaria,cleanedRICTORStramenopiles)
+SARRICTORTable <- select(SARRICTORTable, -c(C.score,Frag.score))
+ArchRICTORTable <- rbind(RICTORChlorophyta, RICTORStreptophyta, RICTORRhodophyta)
+ExcavataRICTORTable <- rbind(RICTORDiscoba, RICTORMetamonada)
+ExcavataRICTORTable <- select(ExcavataRICTORTable, -c(C.score, Frag.score))
+
+SARTORTable <- rbind(cleanedTORAlveolata,cleanedTORRhizaria,cleanedTORStramenopiles)
+SARTORTable <- select(SARTORTable, -c(C.score,Frag.score))
+ArchTORTable <- rbind(TORChlorophyta, TORStreptophyta, TORRhodophyta)
+ExcavataTORTable <- rbind(TORDiscoba, TORMetamonada)
+ExcavataTORTable <- select(ExcavataTORTable, -c(C.score, Frag.score))
+
+
+SARSIN1Table <- rbind(cleanedSIN1Alveolata,cleanedSIN1Stramenopiles)
+SARSIN1Table <- select(SARSIN1Table, -c(C.score,Frag.score))
+ExcavataSIN1Table <- rbind(SIN1Discoba, SIN1Metamonada)
+ExcavataSIN1Table <- select(ExcavataSIN1Table, -c(C.score, Frag.score))
+ArchSIN1Table <- rbind(SIN1Chlorophyta, SIN1Rhodophyta, SIN1Streptophyta)
+
+
+
+AllLST8 <- rbind(SARLST8Table, ExcavataLST8Table, ArchLST8Table)
+AllLST8 <- AllLST8 %>% rename(LST8_scd = scd) %>% rename(LST8_sca = sca)
+
+AllSIN1 <- rbind(SARSIN1Table, ExcavataSIN1Table, ArchSIN1Table)
+AllSIN1 <- AllSIN1 %>% rename(SIN1_scd = scd) %>% rename(SIN1_sca = sca)
+
+AllRAPTOR <- rbind(SARRAPTORTable, ExcavataRAPTORTable, ArchRAPTORTable)
+AllRAPTOR <- AllRAPTOR %>% rename(RAPTOR_scd = scd) %>% rename(RAPTOR_sca = sca)
+
+AllRICTOR <- rbind(SARRICTORTable, ExcavataRICTORTable, ArchRICTORTable)
+AllRICTOR <- AllRICTOR %>% rename(RICTOR_scd = scd) %>% rename(RICTOR_sca = sca)
+
+AllTOR <- rbind(SARTORTable, ExcavataTORTable, ArchTORTable)
+AllTOR <- AllTOR %>% rename(TOR_scd = scd) %>% rename(TOR_sca = sca)
+
+
+
+
+# Example code
+#SARSIN1Table <- SARSIN1Table %>% rename(SIN1_scd = scd) %>% rename(SIN1_sca = sca)
+# Play around with the data here
+# Goal is to mutate the data and add in a column that is the SIN target number
+
+NumericTable <- CombinedProject
+
+
+
+NumericTable <- left_join(NumericTable, AllSIN1[c("SIN1_scd", "SIN1_sca", "Organism_Name")], by = c("Organism_Name"))
+NumericTable <- left_join(NumericTable, AllRAPTOR[c("RAPTOR_scd", "RAPTOR_sca", "Organism_Name")], by = c("Organism_Name"))
+NumericTable <- left_join(NumericTable, AllLST8[c("LST8_scd", "LST8_sca", "Organism_Name")], by = c("Organism_Name"))
+NumericTable <- left_join(NumericTable, AllRICTOR[c("RICTOR_scd", "RICTOR_sca", "Organism_Name")], by = c("Organism_Name"))
+NumericTable <- left_join(NumericTable, AllTOR[c("TOR_scd", "TOR_sca", "Organism_Name")], by = c("Organism_Name"))
+
+
+NumericTable <- NumericTable %>% select(-c(SIN1, RICTOR, RAPTOR, TOR, LST8, D1)) %>% relocate(c("SIN1_scd", "SIN1_sca", "RICTOR_scd", "RICTOR_sca", "RAPTOR_scd", "RAPTOR_sca", "LST8_scd", "LST8_sca", "TOR_scd", "TOR_sca"), .before = C.score)
+# Should we remove the duplicates or keep them due to the differing C.scores etc?
+#NumericTable <- distinct(NumericTable, Organism_Name, .keep_all = TRUE)
+view(NumericTable)
+
+
+write.csv(NumericTable, "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
+
+
+```
+
+
+
+
+
+
 
 
 ```{r, include=FALSE}
