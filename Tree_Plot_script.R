@@ -36,7 +36,46 @@ library(tableHTML)
 
 
 Taxon <- read.csv("~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
-HTML <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
+HTML <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
+
+
+
+# ------------------------------------------------------------------------------
+# Lets remove some of the RICTORS
+# Doing further data cleanup
+
+# HTML$RICTOR[625] <- NA
+# HTML$RICTOR[625]
+# HTML$RICTOR[506] <- NA
+# HTML$RICTOR[506]
+# HTML$RICTOR[629] <- NA
+# HTML$RICTOR[629]
+# HTML$RICTOR[411] <- NA
+# HTML$RICTOR[411]
+# HTML$RICTOR[834] <- NA
+# HTML$RICTOR[834]
+# HTML$RICTOR[836] <- NA
+# HTML$RICTOR[836]
+# 
+# # now for SIN1
+# HTML$SIN1[625] <- NA
+# HTML$SIN1[625]
+# HTML$SIN1[629] <- NA
+# HTML$SIN1[625]
+# HTML$SIN1[691] <- NA
+# HTML$SIN1[581] <- NA
+# HTML$SIN1[675] <- NA
+# HTML$SIN1[676] <- NA
+# HTML$SIN1[677] <- NA
+ # -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 
