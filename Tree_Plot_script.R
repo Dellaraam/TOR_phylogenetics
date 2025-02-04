@@ -77,6 +77,8 @@ HTML <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.cs
 
 
 
+HTML$Organism_Name <- str_replace(HTML$Organism_Name,"Neopyropia yezoensis","Pyropia yezoensis")
+
 
 
 
@@ -141,7 +143,7 @@ pal <- c(
 # ------------------------------------------------------------------------------
 
 
-StramenopileTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/StramenopileTreeP.phy")
+StramenopileTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/StramenopileTreeP.phy")
 StramenopileTree$tip.label
 StramenopileTree$tip.label <- gsub("'","", StramenopileTree$tip.label)
 StramenopileTree$tip.label
@@ -154,6 +156,7 @@ RISP <- STP + geom_tiplab( aes(color = RICTOR), size = 3, show.legend = FALSE)+g
   geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
+  geom_point2(aes(subset=(node==64)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
   geom_point2(aes(subset=(node==66)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
   geom_point2(aes(subset=(node==14)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
   geom_point2(aes(subset=(node==45)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
@@ -313,7 +316,7 @@ ARIC + ASinP
 
 # ------------------------------------------------------------------------------
 # Initial Setup for the tree
-RhizariaTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/RhizariaTreeP.phy")
+RhizariaTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/RhizariaTreeP.phy")
 RhizariaTree$tip.label
 RhizariaTree$tip.label <- gsub("'","", RhizariaTree$tip.label)
 RhizariaTree$tip.label
@@ -616,8 +619,7 @@ RicRh
 RapRh <- RhodoP + geom_tiplab(aes(color = RAPTOR), size = 3)+
   geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
   scale_fill_manual(values = pal)+
-  scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
+  scale_color_manual(values = pal)
 RapRh
 
 #SIN1
@@ -632,16 +634,14 @@ Sin1Rh
 lst8Rh <- RhodoP + geom_tiplab(aes(color = LST8), size = 3)+
   geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
   scale_fill_manual(values = pal)+
-  scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
+  scale_color_manual(values = pal)
 lst8Rh
 
 #TOR
 TorRh <- RhodoP + geom_tiplab(aes(color = TOR), size = 3)+
   geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
   scale_fill_manual(values = pal)+
-  scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
+  scale_color_manual(values = pal)
 TorRh
 
 
