@@ -37,8 +37,10 @@ library(tableHTML)
 
 Taxon <- read.csv("~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
 HTML <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
-# Clean up the Combined Data set. Apparently had some extra columns attached somewhere
-HTML <- HTML %>% select(-X) %>% select(-X.1) %>% select(-X.2)
+
+
+
+
 
 
 # ------------------------------------------------------------------------------
@@ -413,7 +415,7 @@ DiscobaTree$tip.label
 DiscobaTree$tip.label <- gsub("'","", DiscobaTree$tip.label)
 DiscobaTree$tip.label
 Discoba <- Discoba %>% relocate(Organism_Name)
-DTP <- ggtree(DiscobaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+10)
+DTP <- ggtree(DiscobaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
 DTP <- DTP%<+% Discoba
 
 DRAPTOR <- DTP + geom_tiplab(aes(color = RAPTOR), size = 3)+
@@ -646,7 +648,7 @@ TorCh
 
 
 #Rhodophyta
-RhodophytaTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/RhodophytaTreeP.phy")
+RhodophytaTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/RhodophytaTreeP.phy")
 RhodophytaTree$tip.label
 RhodophytaTree$tip.label <- gsub("'","", RhodophytaTree$tip.label)
 RhodophytaTree$tip.label 
@@ -666,6 +668,7 @@ RicRh
 #RAPTOR
 RapRh <- RhodoP + geom_tiplab(aes(color = RAPTOR), size = 3)+
   geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
+  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)
 RapRh
@@ -681,12 +684,14 @@ Sin1Rh
 #LST8
 lst8Rh <- RhodoP + geom_tiplab(aes(color = LST8), size = 3)+
   geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
+  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)
 lst8Rh
 
 #TOR
 TorRh <- RhodoP + geom_tiplab(aes(color = TOR), size = 3)+
+  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
   geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)
