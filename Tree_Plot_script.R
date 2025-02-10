@@ -37,6 +37,7 @@ library(tableHTML)
 
 Taxon <- read.csv("~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
 HTML <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Project.csv")
+Ndf <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
 
 
 
@@ -153,29 +154,38 @@ StramenopileTree$tip.label <- gsub("'","", StramenopileTree$tip.label)
 StramenopileTree$tip.label
 
 Stramenopiles <- Stramenopiles %>% relocate(Organism_Name)
-STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+10)
+STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
 STP <- STP  %<+% Stramenopiles
 #RICTOR Stramenopiles
 RISP <- STP + geom_tiplab( aes(color = RICTOR), size = 3, show.legend = FALSE)+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
+  geom_text(aes(label = node))+
+  geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   geom_rootedge()+
   geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==64)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
-  geom_point2(aes(subset=(node==66)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
   geom_point2(aes(subset=(node==14)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
   geom_point2(aes(subset=(node==45)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
-  geom_point2(aes(subset=(node==72)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
-  geom_point2(aes(subset=(node==73)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==116)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
   geom_point2(aes(subset=(node==2)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .3)+
   geom_point2(aes(subset=(node==111)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
-#RISP
+RISP
 #Sin1 Stramenopiles
 SSP <- STP + geom_tiplab(aes(color = SIN1), size = 3)+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
   geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
+  geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==105)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
@@ -190,6 +200,12 @@ SRAPTORS <- STP + geom_tiplab(aes(color = RAPTOR), size = 3)+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
   geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
+  geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==15)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
@@ -201,6 +217,12 @@ STORS <- STP + geom_tiplab(aes(color = TOR), size = 3)+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
   geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
+  geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==72)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
@@ -211,6 +233,12 @@ SLST8S <- STP + geom_tiplab(aes(color = LST8), size = 3)+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
   geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
+  geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==45)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
@@ -225,6 +253,8 @@ SLST8S <- STP + geom_tiplab(aes(color = LST8), size = 3)+
 
 
 # Generating the plots here
+
+
 RISP+SSP
 (SRAPTORS+SLST8S)
 
@@ -241,7 +271,7 @@ AlveolataTree$tip.label
 AlveolataTree$tip.label <- gsub("'","", AlveolataTree$tip.label)
 AlveolataTree$tip.label
 Alveolata <- Alveolata %>% relocate(Organism_Name)
-AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+10)
+AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
 AlvP <- AlvP  %<+% Alveolata
 # SIN1
 ASinP <- AlvP + geom_tiplab(aes(color = SIN1), size = 3)+
