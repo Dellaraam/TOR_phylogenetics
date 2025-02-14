@@ -237,6 +237,20 @@ CombinedRhizaria <- read.csv(file="~/GitHub/TOR_phylogenetics/GitHub_CSV/Combine
 CombinedRhizaria <- select(CombinedRhizaria, -C.score, -Frag.score, -X)
 CombinedRhizaria <- mutate(CombinedRhizaria, Source = "NCBI")
 
+#Read in BUSCO here:
+Busco_Chlorophyta_Original <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv")
+Busco_Chlorophyta_Original$
+
+
+
+
+Busco_Rhizaria_Original <- read.csv()
+Busco_Stramenopiles_Original <- read.csv()
+Busco_Discoba_Original <- read.csv()
+Busco_Metamonada_Original <- read.csv()
+Busco_ExcavataJGI <- read.csv()
+
+
 
 
 #For excavata, have to do some special additions
@@ -466,6 +480,12 @@ CombinedRhizariaJGI <- CombinedRhizariaJGI %>% left_join(select(Taxonomic_Inform
 CombinedRhizariaJGI <- CombinedRhizariaJGI %>% rename(Organism.Name = "Organism_Name")%>%mutate(Source = "JGI")
 
 
+CombinedExcavataJGI <- CombinedExcavataJGI %>% filter(!if_all(5:10, is.na))
+CombinedExcavataJGI <- CombinedExcavataJGI %>%left_join(select(Taxonomic_Information, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+CombinedExcavataJGI <- CombinedExcavataJGI %>% rename(Organism.Name = "Organism_Name")%>%mutate(Source = "JGI")
+
+
+
 #Need to add in if it was from JGI or from NCBI
 #Create a column named source
 #Chlorophyta
@@ -481,9 +501,13 @@ TestMerge <- distinct(TestMerge, Organism_Taxonomic_ID, .keep_all = TRUE)
 TestMerge3 <- rbind(CombinedRhizaria, CombinedRhizariaJGI)
 TestMerge3 <- distinct(TestMerge3, Organism_Taxonomic_ID, .keep_all = TRUE)
 
+TestMerge4 <- rbind(CombinedExcavates, CombinedExcavataJGI)
+TestMerge4 <- distinct(TestMerge4, Organism_Taxonomic_ID, .keep_all = TRUE)
+
 write.csv(TestMerge, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Stramenopiles_Combined.csv")
 
 write.csv(TestMerge3, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Rhizaria_Combined.csv")
+write.csv(TestMerge4, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Excavata_Combined.csv")
 
 # Don't forget I also have to make the "combined tables with the H/M/L
 # Do so here with a function call and any other combined things
@@ -492,6 +516,20 @@ write.csv(TestMerge3, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSV
 # Add in a source of the data (JGI vs NCBI)
 # Change any needed names to be more fitting/uniform
 # Clean up any extraneous issues as needed
+
+
+#Grab some Taxonomy Trees
+#Need the ID numbers from each of the combined dataframes
+
+write.table(TestMerge$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
+write.table(TestMerge2$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Chlorophyta.txt", sep = "\t", row.names = F, col.names = F)
+write.table(TestMerge3$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Rhizaria.txt", sep = "\t", row.names = F, col.names = F)
+write.table(TestMerge4$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Excavata.txt", sep = "\t", row.names = F, col.names = F)
+
+
+# Down here is where I will tie in the BUSCO data along with all of the other Combined Data sets
+# I will need to do the distinct command on all of the data that haven't been done alread
+# I will also need to make sure that the busco data is loaded in ahead of time
 
 
 
