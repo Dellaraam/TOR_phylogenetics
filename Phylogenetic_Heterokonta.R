@@ -239,8 +239,7 @@ CombinedRhizaria <- mutate(CombinedRhizaria, Source = "NCBI")
 
 #Read in BUSCO here:
 Busco_Chlorophyta_Original <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv")
-Busco_Chlorophyta_Original$
-
+Busco_Chlorophyta_Original <- select(Busco_Chlorophyta_Original, Name, Accession, C.score, Frag.score) %>% rename(Accn = "Accession")
 
 
 

@@ -71,8 +71,9 @@ JsontoCSV <- function(DirectoryPath,OutputDirectory){
 
 
 # Now to just run this multiple times
-
+# Need to do this for all of the 
 JsontoCSV("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Streptophyta_Jsons/", "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/StreptophytaBusco.csv")
-
-
-
+JsontoCSV("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_Jsons", "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/ExcavataJGIBusco.csv")
+JsontoCSV("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Heterokonta_Jsons", "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/HeterokontaJGIBusco.csv")
+JsontoCSV("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Chlorophyta_Jsons", "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/ChlorophytaJGIBusco.csv")
+JsontoCSV("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_Jsons", "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/RhizariaJGIBusco.csv" )
