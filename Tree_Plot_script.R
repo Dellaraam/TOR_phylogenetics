@@ -285,8 +285,6 @@ RISP+SSP
 (SRAPTORS+SLST8S)
 
 STORS
-
-
 # ------------------------------------------------------------------------------
 
 
@@ -326,7 +324,7 @@ ARIC <- AlvP + geom_tiplab(aes(color = RICTOR), size = 3)+
   geom_point2(aes(subset=(node==139)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==118)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==167)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
-  geom_point2(aes(subset=(node==1)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
+  geom_point2(aes(subset=(node==2)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==9)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==17)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)
 ARIC
@@ -344,34 +342,38 @@ ARAPT <- AlvP + geom_tiplab(aes(color = RAPTOR), size = 3)+
   geom_point2(aes(subset=(node==167)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==118)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==2)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)
-#ARAPT
+ARAPT
 
 ATOR <- AlvP + geom_tiplab(aes(color = TOR), size = 3)+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
   geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
+  geom_text(aes(label = node))+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==111)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
-  geom_point2(aes(subset=(node==112)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
-  geom_point2(aes(subset=(node==128)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
-  geom_point2(aes(subset=(node==123)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
+  geom_point2(aes(subset=(node==111)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==112)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==114)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==128)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==123)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==144)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
-  geom_point2(aes(subset=(node==29)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
-  geom_point2(aes(subset=(node==2)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
+  geom_point2(aes(subset=(node==29)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==2)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)
-#ATOR
+ATOR
 
 ALST8 <- AlvP + geom_tiplab(aes(color = LST8), size = 3)+
   geom_rootedge()+
   geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
+  geom_text(aes(label = node))+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==157)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==144)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==141)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==161)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
+  geom_point2(aes(subset=(node==111)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==112)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==114)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==115)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
@@ -380,7 +382,7 @@ ALST8 <- AlvP + geom_tiplab(aes(color = LST8), size = 3)+
   geom_point2(aes(subset=(node==125)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==128)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==2)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)
-#ALST8
+ALST8
 
 
 
@@ -402,17 +404,22 @@ Rhizaria <- Rhizaria %>% relocate(Organism.Name)
 RTP <- ggtree(RhizariaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+10)
 RTP <- RTP%<+% Rhizaria
 
+RTP$data$label
+
 # Generating the tree plots with markings at specific node locations
 RRICTOR <- RTP + geom_tiplab(aes(color = RICTOR), size = 3)+
-  
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
   geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
+  geom_text(aes(label = node))+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==13)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
-  geom_point2(aes(subset=(node==10)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)
-#RRICTOR
+  geom_tiplab(aes(subset = label == "'Lotharella oceanica'"), color = "orange", parse = FALSE)+
+  geom_point2(aes(subset=(node==15)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==4)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==2)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==1)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)
+RRICTOR
 
 RSIN <- RTP + geom_tiplab(aes(color = SIN1), size = 3)+
   geom_rootedge()+
@@ -432,7 +439,7 @@ RRAPTOR <-  RTP + geom_tiplab(aes(color = RAPTOR), size = 3)+
   geom_point2(aes(subset=(node==6)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==10)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)
-#RRAPTOR
+RRAPTOR
 
 RTOR <- RTP + geom_tiplab(aes(color = TOR), size = 3)+
   geom_rootedge()+
@@ -619,7 +626,7 @@ ChlorophytaTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/Chlorophyt
 ChlorophytaTree$tip.label
 ChlorophytaTree$tip.label <- gsub("'","", ChlorophytaTree$tip.label)
 ChlorophytaTree$tip.label
-Chlorophyta <- Chlorophyta %>% relocate(Organism_Name)
+Chlorophyta <- Chlorophyta %>% relocate(Organism.Name)
 ChloroP <- ggtree(ChlorophytaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+10)
 ChloroP <- ChloroP  %<+% Chlorophyta
 ChloroP
@@ -629,14 +636,15 @@ RicCh <- ChloroP + geom_tiplab(aes(color = RICTOR),size = 3)+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
   geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
+  geom_text(aes(label = node))+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==3)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
-  geom_point2(aes(subset=(node==6)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
-  geom_point2(aes(subset=(node==63)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) +
-  geom_point2(aes(subset=(node==64)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5) + 
-  geom_point2(aes(subset=(node==68)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
-#RicCh
+  geom_point2(aes(subset=(node==90)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==85)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==83)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==1)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
+  geom_point2(aes(subset=(node==89)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
+RicCh
 
 #RAPTOR
 RapCh <- ChloroP + geom_tiplab(aes(color = RAPTOR), size = 3)+
