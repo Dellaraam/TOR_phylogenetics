@@ -88,6 +88,32 @@ HTML <- relocate(HTML, Organism.Name, .after = Organism_Taxonomic_ID)
 
 
 HTML %>%rename("Super Group" = Super.Group) %>% filter(`Super Group` == "Alveolata") %>% filter(!is.na(RAPTOR))
+
+
+
+SARnoRICTOR <- HTML %>%
+  filter(`Super.Group` != "Streptophyta") %>%
+  filter(`Super.Group` != "Chlorophyta")%>%
+  filter(`Super.Group` != "Rhodophyta") %>%
+  filter(`Super.Group` != "Excavata") %>%
+  filter(`Super.Group` != "Discoba") %>%
+  filter(`Super.Group` != "Metamonada") %>% 
+  filter(is.na(RICTOR)) %>%
+  view()
+
+SARYRICTOR <- HTML %>%
+  filter(`Super.Group` != "Streptophyta") %>%
+  filter(`Super.Group` != "Chlorophyta")%>%
+  filter(`Super.Group` != "Rhodophyta") %>%
+  filter(`Super.Group` != "Excavata") %>%
+  filter(`Super.Group` != "Discoba") %>%
+  filter(`Super.Group` != "Metamonada") %>% 
+  filter(!is.na(RICTOR)) %>%
+  view()
+
+
+HTML %>% filter(`Super.Group` != "Streptophyta") %>% filter(!is.na(RICTOR)) %>% view()
+
 Chlorophyta <- HTML %>% filter(Super.Group == "Chlorophyta")
 Rhodophyta <- HTML %>% filter(Super.Group == "Rhodophyta")
 Streptophyta <- HTML %>% filter(Super.Group == "Streptophyta")
@@ -116,6 +142,13 @@ write.table(Discoba$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/ID
 write.table(Metamonada$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Metamonada.txt", sep = "\t", row.names = F, col.names = F)
 write.table(Excavata$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Excavata.txt", sep = "\t", row.names = F, col.names = F)
 
+
+write.table(SARnoRICTOR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/NoSARRICTOR.txt", sep = "\t", row.names = F, col.names = F)
+write.table(SARYRICTOR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/YSARRICTOR.txt", sep = "\t", row.names = F, col.names = F)
+
+
+
+
 # tree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
 # tree$tip.label <- gsub("'","", tree$tip.label)
 # tree$tip.label
@@ -139,6 +172,52 @@ pal <- c(
 )
 
 # ------------------------------------------------------------------------------
+#Test Ground
+
+tree1 <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/SARTREEYPHY.phy")
+tree1$tip.label <- gsub("'","", tree1$tip.label)
+
+dataset <- SARYRICTOR %>% relocate(Organism.Name)
+treeplot <- ggtree(tree1, branch.length = "none") + xlim(NA,+16)
+treeplot <- treeplot %<+% dataset
+
+
+Rtreeplot <- treeplot + geom_tiplab( aes(color = RICTOR), size = 3, show.legend = FALSE)+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
+  geom_text(aes(label = node))+
+  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_rootedge()+
+  geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)
+Rtreeplot
+
+
+tree2 <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/SARTREENOPHY.phy")
+tree2$tip.label <- gsub("'","", tree2$tip.label)
+
+dataset2 <- SARnoRICTOR %>% relocate(Organism.Name)
+treeplot2 <- ggtree(tree2, branch.length = "none") + xlim(NA,+16)
+treeplot2 <- treeplot2 %<+% dataset2
+
+
+Rtreeplot2 <- treeplot2 + geom_tiplab( aes(color = RICTOR), size = 3, show.legend = FALSE)+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
+  geom_text(aes(label = node))+
+  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_rootedge()+
+  geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
+  scale_fill_manual(values = pal)+
+  scale_color_manual(values = pal)
+Rtreeplot2
 
 
 
@@ -157,7 +236,7 @@ STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)+xlim(
 STP <- STP  %<+% Stramenopiles
 #RICTOR Stramenopiles
 RISP <- STP + geom_tiplab( aes(color = RICTOR), size = 3, show.legend = FALSE)+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
-  geom_text(aes(label = node))+
+  # geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
@@ -715,7 +794,7 @@ RhodophytaTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/RhodophytaT
 RhodophytaTree$tip.label
 RhodophytaTree$tip.label <- gsub("'","", RhodophytaTree$tip.label)
 RhodophytaTree$tip.label 
-Rhodophyta <- Rhodophyta %>% relocate(Organism_Name)
+Rhodophyta <- Rhodophyta %>% relocate(Organism.Name)
 RhodoP <- ggtree(RhodophytaTree, branch.length = "none", laddarize = FALSE)+xlim(NA,+15)
 RhodoP <- RhodoP %<+% Rhodophyta
 RhodoP
@@ -723,6 +802,7 @@ RhodoP
 #RICTOR
 RicRh <- RhodoP + geom_tiplab(aes(color = RICTOR), size = 3)+
   geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
+  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==15)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)

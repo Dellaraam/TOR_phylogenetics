@@ -155,7 +155,34 @@ TORAlveolata <- JoinInfo(TORAlveolata,"Alveolata",AlveolataInfo,Taxon,"NCBI")
 Alveolata <- ModCombine("Alveolata",AlveolataInfo,RICTORAlveolata,SIN1Alveolata,RAPTORAlveolata,LST8Alveolata,TORAlveolata)
 Alveolata <- Alveolata %>% mutate(source = "NCBI") %>% left_join(select(Taxon, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 #-------------------------------------------------------------------------------
+#Rhodophyta Here
 
+RhodophytaInfo <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/Rhodophyta_Names.tsv")
+RhodophytaInfo <- RhodophytaInfo %>%
+  rename(Accn = "Assembly Accession", Organism.Name = "Organism Name", Organism_Taxonomic_ID = "Organism Taxonomic ID")
+
+
+RICTORRhodo <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RICTOR_Rhodophyta.csv")
+RICTORRhodo <- JoinInfo(RICTORRhodo, "Rhodophyta",RhodophytaInfo, Taxon, "NCBI")
+
+RAPTORRhodo <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RAPTOR_Rhodophyta.csv")
+RAPTORRhodo <- JoinInfo(RAPTORRhodo, "Rhodophyta",RhodophytaInfo, Taxon, "NCBI")
+
+SIN1Rhodo <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/SIN1_Rhodophyta.csv")
+SIN1Rhodo <- JoinInfo(SIN1Rhodo, "Rhodophyta",RhodophytaInfo, Taxon, "NCBI")
+
+LST8Rhodo <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/LST8_Rhodophyta.csv")
+LST8Rhodo <- JoinInfo(LST8Rhodo, "Rhodophyta",RhodophytaInfo, Taxon, "NCBI")
+
+TORRhodo <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/TOR_Rhodophyta.csv")
+TORRhodo <- JoinInfo(TORRhodo, "Rhodophyta",RhodophytaInfo, Taxon, "NCBI")
+
+Rhodophyta <- ModCombine("Rhodophyta",RhodophytaInfo,RICTORRhodo,SIN1Rhodo,RAPTORRhodo,LST8Rhodo,TORRhodo)
+Rhodophyta <- Rhodophyta %>% 
+  mutate(source = "NCBI") %>%
+  left_join(select(Taxon, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+#-------------------------------------------------------------------------------
 StreptophytaInfo <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophytina_Information.tsv")
 StreptophytaInfo <- StreptophytaInfo %>%
   rename(Accn = "Assembly Accession", Organism.Name = "Organism Name", Organism_Taxonomic_ID = "Organism Taxonomic ID")
@@ -242,6 +269,61 @@ StramenopilesF <- rbind(Stramenopiles,Heterokonts)
 
 #-------------------------------------------------------------------------------
 
+RhizariaInfo <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_Information_2.csv")
+RhizariaInfo <- RhizariaInfo %>% rename(Accn = "Assembly.Accession", Organism.Name = "Organism.Name", Organism_Taxonomic_ID = "Organism_Taxonomic_ID")
+
+RhizariaJGI_Info <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/RhizariaJGI_Information.csv")
+RhizariaJGI_Info <- RhizariaJGI_Info %>% rename(Accn = "portal", Organism_Taxonomic_ID = "NCBI.Taxon", Organism.Name = "name")
+RhizariaJGI_Info$Accn <- sub("\\_.*", "", RhizariaJGI_Info$Accn)
+
+
+RICTORRhizaria <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RICTORRhizaria.csv")
+RICTORRhizaria <- JoinInfo(RICTORRhizaria,"Rhizaria",RhizariaInfo,Taxon,"NCBI")
+
+RAPTORRhizaria <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/RAPTORRhizaria.csv")
+RAPTORRhizaria <- JoinInfo(RAPTORRhizaria,"Rhizaria",RhizariaInfo,Taxon,"NCBI")
+
+SIN1Rhizaria <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/SIN1Rhizaria.csv")
+SIN1Rhizaria <- JoinInfo(SIN1Rhizaria,"Rhizaria",RhizariaInfo,Taxon,"JGI")
+
+LST8Rhizaria <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/LST8Rhizaria.csv")
+LST8Rhizaria <- JoinInfo(LST8Rhizaria,"Rhizaria",RhizariaInfo,Taxon,"JGI")
+
+TORRhizaria <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhizaria/TORRhizaria.csv")
+TORRhizaria <- JoinInfo(TORRhizaria,"Rhizaria",RhizariaInfo,Taxon,"JGI")
+
+RICTORRJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_JGI/RhizariaJGI_RICTOR.csv")
+RICTORRJGI <- JoinInfo(RICTORRJGI,"Rhizaria",RhizariaJGI_Info,Taxon,"JGI")
+
+RAPTORRJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_JGI/RhizariaJGI_RAPTOR.csv")
+RAPTORRJGI <- JoinInfo(RAPTORRJGI,"Rhizaria",RhizariaJGI_Info,Taxon,"JGI")
+
+SIN1RJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_JGI/RhizariaJGI_SIN1.csv")
+SIN1RJGI <- JoinInfo(SIN1RJGI,"Rhizaria",RhizariaJGI_Info,Taxon,"JGI")
+
+LST8RJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_JGI/RhizariaJGI_LST8.csv")
+LST8RJGI <- JoinInfo(LST8RJGI,"Rhizaria",RhizariaJGI_Info,Taxon,"JGI")
+
+TORRJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_JGI/RhizariaJGI_TOR.csv")
+TORRJGI <- JoinInfo(TORRJGI,"Rhizaria",RhizariaJGI_Info,Taxon,"JGI")
+
+Rhizaria <- ModCombine("Rhizaria",RhizariaInfo,RICTORRhizaria, SIN1Rhizaria, RAPTORRhizaria, LST8Rhizaria, TORRhizaria)
+Rhizaria <- Rhizaria %>%
+  mutate(source = "NCBI") %>%
+  left_join(select(Taxon, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+JGIRhizaria <- ModCombine("Rhizaria", RhizariaJGI_Info, RICTORRJGI, SIN1RJGI, RAPTORRJGI, LST8RJGI, TORRJGI)
+JGIRhizaria <- JGIRhizaria %>%
+  mutate(source = "JGI") %>%
+  left_join(select(Taxon, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+RhizariaF <- rbind(Rhizaria,JGIRhizaria)
+
+
+
+
+#-------------------------------------------------------------------------------
+
 ChlorophytaInfo <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Chlorophyta_Names.tsv")
 ChlorophytaInfo <- ChlorophytaInfo %>% rename(Accn = "Assembly Accession", Organism.Name = "Organism Name", Organism_Taxonomic_ID = "Organism Taxonomic ID")
 
@@ -310,6 +392,10 @@ DiscobaInfo <- read_tsv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHu
 DiscobaInfo <- DiscobaInfo %>%
   rename(Accn = "Assembly Accession", Organism.Name = "Organism Name", Organism_Taxonomic_ID = "Organism Taxonomic ID")
 
+ExcavataJGI_Info <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/ExcavatesJGI_Information.csv")
+ExcavataJGI_Info <- ExcavataJGI_Info %>% rename(Accn = "portal", Organism_Taxonomic_ID = "NCBI.Taxon", Organism.Name = "name")
+ExcavataJGI_Info$Accn <- sub("\\_.*", "", ExcavataJGI_Info$Accn)
+
 
 RICTORMetamonada <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RICTOR_Metamonada.csv")
 RICTORMetamonada <- JoinInfo(RICTORMetamonada,"Metamonada",MetamonadaInfo,Taxon,"NCBI")
@@ -321,11 +407,70 @@ SIN1Metamonada <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Gi
 SIN1Metamonada <- JoinInfo(SIN1Metamonada,"Metamonada",MetamonadaInfo,Taxon,"NCBI")
 
 LST8Metamonada <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/LST8_Metamonada.csv")
-LST8_Metamonada <- JoinInfo(LST8Metamonada,"Metamonada",MetamonadaInfo,Taxon,"NCBI")
+LST8Metamonada <- JoinInfo(LST8Metamonada,"Metamonada",MetamonadaInfo,Taxon,"NCBI")
 
 TORMetamonada <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/TOR_Metamonada.csv")
 TORMetamonada <- JoinInfo(TORMetamonada,"Metamonada",MetamonadaInfo,Taxon,"NCBI")
 
+RICTORDiscoba <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RICTOR_Discoba.csv")
+RICTORDiscoba <- JoinInfo(RICTORDiscoba, "Discoba", DiscobaInfo, Taxon, "NCBI")
+
+RAPTORDiscoba <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RAPTOR_Discoba.csv")
+RAPTORDiscoba <- JoinInfo(RAPTORDiscoba, "Discoba", DiscobaInfo, Taxon, "NCBI")
+
+SIN1Discoba <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/SIN1_Discoba.csv")
+SIN1Discoba <- JoinInfo(SIN1Discoba, "Discoba", DiscobaInfo, Taxon, "NCBI")
+
+LST8Discoba <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/LST8_Discoba.csv")
+LST8Discoba <- JoinInfo(LST8Discoba, "Discoba", DiscobaInfo, Taxon, "NCBI")
+
+TORDiscoba <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/TOR_Discoba.csv")
+TORDiscoba <- JoinInfo(TORDiscoba, "Discoba", DiscobaInfo, Taxon,"NCBI")
+
+RICTORExc <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/ExcavataJGI_RICTOR.csv")
+RICTORExc$Accn <- sub("\\_.*", "", RICTORExc$Accn)
+RICTORExc <- JoinInfo(RICTORExc, "Excavata", ExcavataJGI_Info, Taxon, "JGI")
+
+RAPTORExc <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/ExcavataJGI_RAPTOR.csv")
+RAPTORExc$Accn <- sub("\\_.*", "", RAPTORExc$Accn)
+RAPTORExc <- JoinInfo(RAPTORExc, "Excavata", ExcavataJGI_Info, Taxon, "JGI")
+
+SIN1Exc <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/ExcavataJGI_SIN1.csv")
+SIN1Exc$Accn <- sub("\\_.*", "", SIN1Exc$Accn)
+SIN1Exc <- JoinInfo(SIN1Exc, "Excavata", ExcavataJGI_Info, Taxon, "JGI")
+
+LST8Exc <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/ExcavataJGI_LST8.csv")
+LST8Exc$Accn <- sub("\\_.*", "", LST8Exc$Accn)
+LST8Exc <- JoinInfo(LST8Exc, "Excavata", ExcavataJGI_Info, Taxon, "JGI")
+
+TORExc <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/ExcavataJGI_TOR.csv")
+TORExc$Accn <- sub("\\_.*", "", TORExc$Accn)
+TORExc <- JoinInfo(TORExc, "Excavata", ExcavataJGI_Info, Taxon, "JGI")
 
 
 
+Metamonada <- ModCombine("Metamonada",MetamonadaInfo,RICTORMetamonada, SIN1Metamonada, RAPTORMetamonada, LST8Metamonada, TORMetamonada)
+Metamonada <- Metamonada %>%
+  mutate(source = "NCBI") %>%
+  left_join(select(Taxon, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+Discoba <- ModCombine("Discoba", DiscobaInfo, RICTORDiscoba, SIN1Discoba, RAPTORDiscoba, LST8Discoba, TORDiscoba)
+Discoba <- Discoba %>%
+  mutate(source = "NCBI") %>%
+  left_join(select(Taxon, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+
+ExcavataJGI <- ModCombine("Excavata", ExcavataJGI_Info, RICTORExc, SIN1Exc, RAPTORExc, LST8Exc, TORExc)
+ExcavataJGI <- ExcavataJGI %>%
+  mutate(source = "JGI") %>%
+  left_join(select(Taxon, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+ExcavataF <- rbind(Discoba, Metamonada, ExcavataJGI)
+
+#-------------------------------------------------------------------------------
+
+
+Final_Table <- rbind(StramenopilesF, Alveolata, RhizariaF, Rhodophyta, Streptophyta, ChlorophytaF, ExcavataF)
+Final_Table <- distinct(Final_Table, Organism_Taxonomic_ID, .keep_all = TRUE)
+
+write.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
