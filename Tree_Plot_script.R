@@ -35,6 +35,27 @@ install.packages("tableHTML")
 library(tableHTML)
 
 
+proteinPossible <- function(df,OrganismName,Protein){
+  
+  temp <- df %>% filter(Organism.Name == OrganismName)
+  df <- subset(df, Organism.Name != OrganismName)
+  temp[,Protein] <-"P"
+  df <- rbind(df,temp)
+  return(df)
+}
+
+proteinPossibleSwap <- function(dfNo,dfYes,OrganismName, Protein){
+  
+  temp<- dfNo %>% filter(Organism.Name == OrganismName)
+  temp[,Protein] <-"P"
+  dfYes <- rbind(dfYes, temp)
+  return(dfYes)
+}
+
+
+
+
+
 
 
 
@@ -89,6 +110,36 @@ HTML <- relocate(HTML, Organism.Name, .after = Organism_Taxonomic_ID)
 
 
 HTML %>%rename("Super Group" = Super.Group) %>% filter(`Super Group` == "Alveolata") %>% filter(!is.na(RAPTOR))
+
+# Add in the possible protein data here
+# Will come up with a more elegant solution in the future
+
+HTML <- HTML %>% proteinPossible("Symbiodinium microadriaticum","RAPTOR")%>%
+  proteinPossible("Effrenium voratum","RAPTOR")%>%
+  proteinPossible("Effrenium voratum","LST8") %>%
+  proteinPossible("Durusdinium trenchii","RAPTOR")%>%
+  proteinPossible("Polarella glacialis","SIN1")%>%
+  proteinPossible("Paramecium primaurelia","RICTOR")%>%
+  proteinPossible("Bonamia ostreae","RAPTOR")%>%
+  proteinPossible("Lotharella oceanica","RICTOR")%>%
+  proteinPossible("Lotharella oceanica","RAPTOR")%>%
+  proteinPossible("Lotharella oceanica","TOR")%>%
+  proteinPossible("Lotharella oceanica","LST8")%>%
+  proteinPossible("Paulinella micropora","RAPTOR")%>%
+  proteinPossible("Paulinella micropora","TOR")%>%
+  proteinPossible("Paulinella micropora","LST8")%>%
+  proteinPossible("Paulinella micropora","TOR")%>%
+  proteinPossible("Tetradesmus obliquus","RAPTOR")%>%
+  proteinPossible("Pseudo-nitzschia multistriata","LST8")%>%
+  proteinPossible("Triticum urartu","RAPTOR")%>%
+  proteinPossible("Bienertia sinuspersici","RAPTOR") %>%
+  proteinPossible("Nannochloropsis gaditana","RICTOR")%>%
+  proteinPossible("Phytophthora megakarya","RICTOR")%>%
+  proteinPossible("Euglena gracilis","RICTOR")%>%
+  proteinPossible("Nannochloropsis gaditana CCMP526","RICTOR")
+
+
+
 
 
 
@@ -170,6 +221,7 @@ pal <- c(
   "H" = "red",
   "M" = "blue",
   "L" = "green",
+  "P" = "orange",
   "NA" = "grey"
 )
 

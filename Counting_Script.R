@@ -33,6 +33,14 @@ proteinPossible <- function(df,OrganismName,Protein){
   
 }
 
+proteinPossibleSwap <- function(dfNo,dfYes,OrganismName, Protein){
+  
+  temp<- dfNo %>% filter(Organism.Name == OrganismName)
+  temp[,Protein] <-"P"
+  dfYes <- rbind(dfYes, temp)
+  return(dfYes)
+  
+}
 
 
 # alt + - is the shortcut for <-
@@ -85,7 +93,7 @@ temp$RICTOR <- "P"
 Yes <- rbind(Yes,temp)
 No <- subset(No, !grepl("Nannochloropsis", Organism.Name))
 
-
+#Change E.gracilis, others as needed
 
 
 
