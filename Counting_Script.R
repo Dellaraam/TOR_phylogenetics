@@ -22,9 +22,23 @@ library(patchwork)
 library(xtable)
 
 
+proteinPossible <- function(df,OrganismName,Protein){
+  
+  temp <- df %>% filter(Organism.Name == OrganismName)
+  df <- subset(df, Organism.Name != OrganismName)
+  temp[,Protein] <-"P"
+  df <- rbind(df,temp)
+  return(df)
+  
+  
+}
 
 
 
+# alt + - is the shortcut for <-
+
+Test <- Yes
+Test <- proteinPossible(Test,"Paramecium tetraurelia", "RAPTOR")
 
 
 #Load in the data
@@ -33,17 +47,72 @@ Yes %>% count(Yes$M.Strategy)
 Yes %>% count(Yes$Super.Group)
 Yes <- Yes %>% mutate(Has_Rictor = "Yes")
 
-
 No <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/No_RICTOR .csv")
 No %>%count(No$M.Strategy)
 No %>% count(No$Super.Group)
 No <- No %>% mutate(Has_Rictor = "No")
 
+
+HeterotrophNo <- No %>% filter(M.Strategy == "Heterotroph")
+MixotrophNo <- No %>% filter(M.Strategy == "Mixotroph")
+AutotrophicYes <- Yes %>% filter(M.Strategy == "Autotrophic")
+MixotrophYes <- Yes %>% filter(M.Strategy == "Mixotroph")
+
+
+
+temp <- No %>% filter(Organism.Name == "Phytophthora megakarya")
+temp$Has_Rictor <- "Yes"
+temp$RICTOR <- "P"
+Yes <- rbind(Yes,temp)
+No <- subset(No, Organism.Name != "Phytophthora megakarya")
+
+temp <- No %>% filter(Organism.Name == "Paramecium primaurelia")
+temp$Has_Rictor <- "Yes"
+temp$RICTOR <- "P"
+Yes <- rbind(Yes,temp)
+No <- subset(No, Organism.Name != "Paramecium primaurelia")
+
+temp <- No %>% filter(Organism.Name == "Lotharella oceanica")
+temp$Has_Rictor <- "Yes"
+temp$RICTOR <- "P"
+Yes <- rbind(Yes,temp)
+No <- subset(No, Organism.Name != "Lotharella oceanica")
+
+temp <- No %>% filter(grepl('Nannochloropsis', Organism.Name))
+temp$Has_Rictor <- "Yes"
+temp$M.Strategy <- "Mixotroph"
+temp$RICTOR <- "P"
+Yes <- rbind(Yes,temp)
+No <- subset(No, !grepl("Nannochloropsis", Organism.Name))
+
+
+
+
+
+
+
+
+
+test <- Yes %>% count(M.Strategy, Super.Group) %>% pivot_wider(names_from = M.Strategy, values_from = n) %>%
+  pivot_longer(cols = c("Heterotroph","Autotrophic","Mixotroph","Parasite"), names_to = "Strategies", values_to = "Count")
+
+ggplot(test)+
+  geom_col(aes(x = Super.Group, y = Count, fill = Strategies), stat = "identity", position = "dodge")
 # Definitely a strong correlation between autotrophy and not having RICTOR
 # Going to make a tree to examine this further
 
 #Make a bound table of Y/N
 YesNO <- rbind(Yes, No)
+
+
+write.csv(YesNO, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/YesNo.csv")
+write.csv(HeterotrophNo, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/HeterotrophNo.csv")
+write.csv(MixotrophNo, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/MixotrophNo.csv")
+write.csv(AutotrophicYes, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/AutotrohpicYes.csv")
+
+write.csv(Yes, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/UpdatedYes.csv")
+write.csv(No, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/UpdatedNo.csv")
+
 
 
 
@@ -52,19 +121,18 @@ write.table(No$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/No.
 write.table(YesNO$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/YN.txt", sep = "\t", row.names = F, col.names = F)
 
 
-ggplot(Yes)+
-  geom_bar(aes(x = M.Strategy, fill = M.Strategy))
+Yplot<- ggplot(Yes)+
+  geom_bar(aes(x = M.Strategy, fill = Super.Group), position = "dodge")+
+  labs(title = "Organisms with RICTOR")
 
-ggplot(No)+
-  geom_bar(aes(x = M.Strategy, fill = M.Strategy))
-
-
-
-
+Nplot <- ggplot(No)+
+  geom_bar(aes(x = M.Strategy, fill = Super.Group),position = "dodge")+
+  labs(title = "Organisms without RICTOR")
 
 
 
-
+Yplot
+Nplot
 
 
 
@@ -118,4 +186,23 @@ Ntreeplot <- treeplot2 + geom_tiplab( aes(color = M.Strategy), size = 3, show.le
   geom_rootedge()+
   geom_polygon(aes(color = `M.Strategy`, fill = `M.Strategy`, x = 0, y = 0))
 Ntreeplot
+
+
+
+tree3 <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/YNTreeP.phy")
+tree3$tip.label <- gsub("'","", tree3$tip.label)
+dataset3 <-YesNO %>% relocate(Organism.Name)
+treeplot3 <- ggtree(tree3, layout = "circular", branch.length = "none") + xlim(NA, +16)
+treeplot3 <- treeplot3 %<+% dataset3
+
+YNtreeplot <- treeplot3 + geom_tiplab( aes(color = Has_Rictor), size = 3, show.legend = FALSE)+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
+  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_rootedge()+
+  geom_polygon(aes(color = `Has_Rictor`, fill = `Has_Rictor`, x = 0, y = 0))
+YNtreeplot
 

@@ -35,6 +35,9 @@ install.packages("tableHTML")
 library(tableHTML)
 
 
+
+
+
 Taxon <- read.csv("~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
 Taxon <- rename(Taxon, Organism.Name = "Tax.name")
 HTML <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/New_Combined_Table_218.csv")
@@ -85,9 +88,8 @@ HTML <- relocate(HTML, Organism.Name, .after = Organism_Taxonomic_ID)
 
 
 
-
-
 HTML %>%rename("Super Group" = Super.Group) %>% filter(`Super Group` == "Alveolata") %>% filter(!is.na(RAPTOR))
+
 
 
 
