@@ -136,7 +136,10 @@ HTML <- HTML %>% proteinPossible("Symbiodinium microadriaticum","RAPTOR")%>%
   proteinPossible("Nannochloropsis gaditana","RICTOR")%>%
   proteinPossible("Phytophthora megakarya","RICTOR")%>%
   proteinPossible("Euglena gracilis","RICTOR")%>%
-  proteinPossible("Nannochloropsis gaditana CCMP526","RICTOR")
+  proteinPossible("Nannochloropsis gaditana CCMP526","RICTOR")%>%
+  proteinPossible("Cafeteria roenbergensis","RICTOR")%>%
+  proteinPossible("Monocercomonoides exilis","RICTOR")
+  
 
 
 
