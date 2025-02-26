@@ -22,9 +22,23 @@ library(patchwork)
 library(xtable)
 
 
+proteinPossible <- function(df,OrganismName,Protein){
+  
+  temp <- df %>% filter(Organism.Name == OrganismName)
+  df <- subset(df, Organism.Name != OrganismName)
+  temp[,Protein] <-"P"
+  df <- rbind(df,temp)
+  return(df)
+  
+  
+}
 
 
 
+# alt + - is the shortcut for <-
+
+Test <- Yes
+Test <- proteinPossible(Test,"Paramecium tetraurelia", "RAPTOR")
 
 
 #Load in the data
@@ -48,24 +62,35 @@ MixotrophYes <- Yes %>% filter(M.Strategy == "Mixotroph")
 
 temp <- No %>% filter(Organism.Name == "Phytophthora megakarya")
 temp$Has_Rictor <- "Yes"
+temp$RICTOR <- "P"
 Yes <- rbind(Yes,temp)
 No <- subset(No, Organism.Name != "Phytophthora megakarya")
 
 temp <- No %>% filter(Organism.Name == "Paramecium primaurelia")
 temp$Has_Rictor <- "Yes"
+temp$RICTOR <- "P"
 Yes <- rbind(Yes,temp)
 No <- subset(No, Organism.Name != "Paramecium primaurelia")
 
 temp <- No %>% filter(Organism.Name == "Lotharella oceanica")
 temp$Has_Rictor <- "Yes"
+temp$RICTOR <- "P"
 Yes <- rbind(Yes,temp)
 No <- subset(No, Organism.Name != "Lotharella oceanica")
 
 temp <- No %>% filter(grepl('Nannochloropsis', Organism.Name))
 temp$Has_Rictor <- "Yes"
 temp$M.Strategy <- "Mixotroph"
+temp$RICTOR <- "P"
 Yes <- rbind(Yes,temp)
 No <- subset(No, !grepl("Nannochloropsis", Organism.Name))
+
+
+
+
+
+
+
 
 
 test <- Yes %>% count(M.Strategy, Super.Group) %>% pivot_wider(names_from = M.Strategy, values_from = n) %>%
