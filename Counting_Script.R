@@ -44,10 +44,8 @@ proteinPossibleSwap <- function(dfNo,dfYes,OrganismName, Protein){
 
 
 # alt + - is the shortcut for <-
-
-Test <- Yes
-Test <- proteinPossible(Test,"Paramecium tetraurelia", "RAPTOR")
-
+# Honestly at this point yes and no are basically used to get the Metabolic Strategies
+# Rename as we go along
 
 #Load in the data
 Yes <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/Yes_RICTOR .csv")
@@ -60,57 +58,30 @@ No %>%count(No$M.Strategy)
 No %>% count(No$Super.Group)
 No <- No %>% mutate(Has_Rictor = "No")
 
-
-HeterotrophNo <- No %>% filter(M.Strategy == "Heterotroph")
-MixotrophNo <- No %>% filter(M.Strategy == "Mixotroph")
-AutotrophicYes <- Yes %>% filter(M.Strategy == "Autotrophic")
-MixotrophYes <- Yes %>% filter(M.Strategy == "Mixotroph")
+M_Strategies <- rbind(Yes,No)
 
 
+CompleteTable <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/Updated_Table.csv")
+CompleteTable <- left_join(CompleteTable, M_Strategies[c("Organism_Taxonomic_ID","M.Strategy")], by = "Organism_Taxonomic_ID")
+CompleteTable <- CompleteTable %>% mutate(Has_Rictor = NA) %>% select(-X)
 
-temp <- No %>% filter(Organism.Name == "Phytophthora megakarya")
-temp$Has_Rictor <- "Yes"
-temp$RICTOR <- "P"
-Yes <- rbind(Yes,temp)
-No <- subset(No, Organism.Name != "Phytophthora megakarya")
-
-temp <- No %>% filter(Organism.Name == "Paramecium primaurelia")
-temp$Has_Rictor <- "Yes"
-temp$RICTOR <- "P"
-Yes <- rbind(Yes,temp)
-No <- subset(No, Organism.Name != "Paramecium primaurelia")
-
-temp <- No %>% filter(Organism.Name == "Lotharella oceanica")
-temp$Has_Rictor <- "Yes"
-temp$RICTOR <- "P"
-Yes <- rbind(Yes,temp)
-No <- subset(No, Organism.Name != "Lotharella oceanica")
-
-temp <- No %>% filter(grepl('Nannochloropsis', Organism.Name))
-temp$Has_Rictor <- "Yes"
-temp$M.Strategy <- "Mixotroph"
-temp$RICTOR <- "P"
-Yes <- rbind(Yes,temp)
-No <- subset(No, !grepl("Nannochloropsis", Organism.Name))
-
-#Change E.gracilis, others as needed
+# Basic for loop to iterate through and add either Y or N to if they have RICTOR or not
+for(x in 1:nrow(CompleteTable)){
+  if(!is.na(CompleteTable$RICTOR[x])){
+    CompleteTable$Has_Rictor[x] <- "Y"
+  }else{
+    CompleteTable$Has_Rictor[x] <- "N"
+  }
+}
 
 
 
 
 
-
-
-test <- Yes %>% count(M.Strategy, Super.Group) %>% pivot_wider(names_from = M.Strategy, values_from = n) %>%
-  pivot_longer(cols = c("Heterotroph","Autotrophic","Mixotroph","Parasite"), names_to = "Strategies", values_to = "Count")
-
-ggplot(test)+
-  geom_col(aes(x = Super.Group, y = Count, fill = Strategies), stat = "identity", position = "dodge")
-# Definitely a strong correlation between autotrophy and not having RICTOR
-# Going to make a tree to examine this further
-
-#Make a bound table of Y/N
-YesNO <- rbind(Yes, No)
+HeterotrophNo <- CompleteTable %>% filter(M.Strategy == "Heterotroph" & Has_Rictor == "N")
+MixotrophNo <- CompleteTable %>% filter(M.Strategy == "Mixotroph" & Has_Rictor == "N")
+AutotrophicYes <- CompleteTable %>% filter(M.Strategy == "Autotrophic" & Has_Rictor == "Y")
+MixotrophYes <- CompleteTable %>% filter(M.Strategy == "Mixotroph" & Has_Rictor == "Y")
 
 
 write.csv(YesNO, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/YesNo.csv")
@@ -118,8 +89,8 @@ write.csv(HeterotrophNo, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogeneti
 write.csv(MixotrophNo, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/MixotrophNo.csv")
 write.csv(AutotrophicYes, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/AutotrohpicYes.csv")
 
-write.csv(Yes, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/UpdatedYes.csv")
-write.csv(No, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/UpdatedNo.csv")
+
+
 
 
 
@@ -129,13 +100,15 @@ write.table(No$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/No.
 write.table(YesNO$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/YN.txt", sep = "\t", row.names = F, col.names = F)
 
 
-Yplot<- ggplot(Yes)+
+Yplot<- ggplot(filter(CompleteTable, CompleteTable$Has_Rictor == "Y" & CompleteTable$Super.Group != "Streptophyta"))+
   geom_bar(aes(x = M.Strategy, fill = Super.Group), position = "dodge")+
-  labs(title = "Organisms with RICTOR")
+  labs(title = "Organisms with RICTOR")+
+  theme_bw()
 
-Nplot <- ggplot(No)+
+Nplot <- ggplot(filter(CompleteTable, CompleteTable$Has_Rictor == "N" & CompleteTable$Super.Group != "Streptophyta"))+
   geom_bar(aes(x = M.Strategy, fill = Super.Group),position = "dodge")+
-  labs(title = "Organisms without RICTOR")
+  labs(title = "Organisms without RICTOR")+
+  theme_bw()
 
 
 
