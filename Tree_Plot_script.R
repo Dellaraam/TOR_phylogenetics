@@ -153,9 +153,12 @@ HTML <- HTML %>%
   proteinPossible("Carex littledalei","LST8")%>%
   proteinPossible("Gossypium klotzschianum","LST8")%>%
   proteinPossible("Gossypium gossypioides","LST8")
-  
-  
 
+#Add cladocopium goreaui RAPTOR
+
+  
+  
+# Modifications to some of the organism names and also the supergroups
 which(HTML$Organism.Name == "Chlamydomonas reinhardtii", arr.ind = TRUE)
 which(HTML$Organism.Name == "Neopyropia yezoensis", arr.ind = TRUE)
 which(HTML$Organism.Name == "Euglena gracilis", arr.ind = TRUE)
@@ -199,6 +202,7 @@ SARYRICTOR <- HTML %>%
 
 #HTML %>% filter(`Super.Group` != "Streptophyta") %>% filter(!is.na(RICTOR)) %>% view()
 
+
 Chlorophyta <- HTML %>% filter(Super.Group == "Chlorophyta")
 Rhodophyta <- HTML %>% filter(Super.Group == "Rhodophyta")
 Streptophyta <- HTML %>% filter(Super.Group == "Streptophyta")
@@ -213,6 +217,8 @@ Excavata <- HTML %>% filter(Super.Group != "Chlorophyta") %>%
   filter(Super.Group != "Alveolata") %>%
   filter(Super.Group != "Stramenopiles") %>%
   filter(Super.Group != "Rhizaria")
+ProbableOrganisms <- HTML %>% filter(RICTOR == "P"| RAPTOR == "P"| LST8 == "P"| SIN1 == "P" | TOR == "P")
+
 
 
 
@@ -232,7 +238,7 @@ write.table(SARnoRICTOR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetic
 write.table(SARYRICTOR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/YSARRICTOR.txt", sep = "\t", row.names = F, col.names = F)
 
 write.csv(HTML, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/Updated_Table.csv")
-
+write.csv(ProbableOrganisms, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/Probable_Table.csv")
 
 # tree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
 # tree$tip.label <- gsub("'","", tree$tip.label)
@@ -465,6 +471,7 @@ ASinP <- AlvP + geom_tiplab(aes(color = SIN1), size = 3, show.legend = TRUE)+
   geom_point2(aes(subset=(node==1)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==10)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
+
 ASinP
 
 # RICTOR

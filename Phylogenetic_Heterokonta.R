@@ -4,12 +4,12 @@
 # Program to imput heterokonta csv files and perform data cleanup work
 
 
-if (!require("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("ggtree")
-if (!require("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("Biostrings")
+#if (!require("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
+#BiocManager::install("ggtree")
+#if (!require("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager")
+#BiocManager::install("Biostrings")
 library("Biostrings")
 library(tidyverse)
 library(ggplot2)
@@ -243,13 +243,6 @@ Busco_Chlorophyta_Original <- select(Busco_Chlorophyta_Original, Name, Accession
 
 
 
-Busco_Rhizaria_Original <- read.csv()
-Busco_Stramenopiles_Original <- read.csv()
-Busco_Discoba_Original <- read.csv()
-Busco_Metamonada_Original <- read.csv()
-Busco_ExcavataJGI <- read.csv()
-
-
 
 
 #For excavata, have to do some special additions
@@ -450,6 +443,8 @@ ExTOR <- JoinInfo(ExTORRaw,"Excavata",Phyco_Information,Taxonomic_Information)
 ExSIN1 <- JoinInfo(ExSIN1Raw,"Excavata",Phyco_Information,Taxonomic_Information)
 ExD1 <- JoinInfo(ExD1Raw,"Excavata",Phyco_Information,Taxonomic_Information)
 
+# Here is where I will output to a folder the information after adding in all relevant info
+# This will be for JGI Exclusively. This will then be used in the MSA protein ID script.
 
 
 
