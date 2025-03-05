@@ -4,6 +4,13 @@ library(purrr)
 
 
 
+Probable <- read_csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/Probable_Table.csv")
+
+
+
+
+
+
 N2951 <- read_tsv(file="C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/SRAs/TSVs/RAPTOR_smicro_matches1.tsv")
 view(N2951)
 colnames(N2951) <-c("Query", "Subject","Percent_ID","prot_len","x","y","Sub_start","Sub_end","Query_start","Query_end","E-val","Bit_score")
