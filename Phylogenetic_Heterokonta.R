@@ -422,6 +422,14 @@ HD1 <- HD1 %>% relocate(Super.Group)%>% rename(Organism_Name = "name")
 
 
 
+#Write out the cleaned data for future usage
+write.csv(HRictor, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/HRictor.csv")
+write.csv(HRaptor, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/HRaptor.csv")
+write.csv(HSIN1, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/HSIN1.csv")
+write.csv(HLST8, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/HLST8.csv")
+write.csv(HTor, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/HTOR.csv")
+
+
 ChRAPTOR <- JoinInfo(ChRaptorRaw,"Chlorophyta",Phyco_Information,Taxonomic_Information)
 ChRICTOR <- JoinInfo(ChRictorRaw, "Chlorophyta", Phyco_Information, Taxonomic_Information)
 ChLST8 <- JoinInfo(ChLST8Raw, "Chlorophyta", Phyco_Information, Taxonomic_Information)

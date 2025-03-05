@@ -64,6 +64,9 @@ Taxon <- rename(Taxon, Organism.Name = "Tax.name")
 HTML <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/New_Combined_Table_218.csv")
 # Need to update the numeric table next
 Ndf <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
+Ndf <- select(Ndf, -X, -Organism.Name)
+Ndf <- left_join(Ndf, Taxon[c("Organism.Name", "Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
+Ndf <- relocate(Ndf, Organism.Name, .after = Organism_Taxonomic_ID)
 
 
 # Replace the names in the HTML file with the Taxon as they are more correct
@@ -71,7 +74,7 @@ HTML <- select(HTML, -Organism.Name, -X)
 HTML <- left_join(HTML, Taxon[c("Organism.Name", "Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 HTML <- relocate(HTML, Organism.Name, .after = Organism_Taxonomic_ID)
 
-
+Ndf <- left_join(Ndf, HTML[c("C.score","Frag.score","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 
 # ------------------------------------------------------------------------------
 # Lets remove some of the RICTORS
@@ -219,6 +222,15 @@ Excavata <- HTML %>% filter(Super.Group != "Chlorophyta") %>%
   filter(Super.Group != "Rhizaria")
 ProbableOrganisms <- HTML %>% filter(RICTOR == "P"| RAPTOR == "P"| LST8 == "P"| SIN1 == "P" | TOR == "P")
 
+# This is where we will have a section for the numeric data that is divided out
+# One thing that needs to be done is to change the excavte data to discoba/metamonada
+# 
+which(Ndf$Group == "Excavata")
+which(Ndf$Organism.Name == "Euglena gracilis", arr.ind = TRUE)
+Ndf$Group[822] <- "Discoba"
+which(Ndf$Organism.Name == "Giardia lamblia ATCC 50803")
+Ndf$Group[823] <- "Metamonada"
+
 
 
 
@@ -266,50 +278,11 @@ pal <- c(
 # ------------------------------------------------------------------------------
 #Test Ground
 
-tree1 <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/SARTREEYPHY.phy")
-tree1$tip.label <- gsub("'","", tree1$tip.label)
+DiscobaNum <- filter(Ndf, Group == "Discoba")
+DiscobaNum %>%
+  ggplot(aes(x = SIN1All, y = SIN1Domain, color = C.score))+
+  geom_point()
 
-dataset <- SARYRICTOR %>% relocate(Organism.Name)
-treeplot <- ggtree(tree1, branch.length = "none") + xlim(NA,+16)
-treeplot <- treeplot %<+% dataset
-
-
-Rtreeplot <- treeplot + geom_tiplab( aes(color = RICTOR), size = 3, show.legend = FALSE)+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
-  geom_text(aes(label = node))+
-  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
-  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
-  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  geom_rootedge()+
-  geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
-  scale_fill_manual(values = pal)+
-  scale_color_manual(values = pal)
-Rtreeplot
-
-
-tree2 <- read.tree(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Trees/SARTREENOPHY.phy")
-tree2$tip.label <- gsub("'","", tree2$tip.label)
-
-dataset2 <- SARnoRICTOR %>% relocate(Organism.Name)
-treeplot2 <- ggtree(tree2, branch.length = "none") + xlim(NA,+16)
-treeplot2 <- treeplot2 %<+% dataset2
-
-
-Rtreeplot2 <- treeplot2 + geom_tiplab( aes(color = RICTOR), size = 3, show.legend = FALSE)+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
-  geom_text(aes(label = node))+
-  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
-  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
-  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  geom_rootedge()+
-  geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
-  scale_fill_manual(values = pal)+
-  scale_color_manual(values = pal)
-Rtreeplot2
 
 
 
@@ -1048,7 +1021,7 @@ TorExc <- ExcavataP + geom_tiplab(aes(color = TOR), size = 2)+
 TorExc
 
 # ------------------------------------------------------------------------------
-
+# A sort of "For fun tree". Much to large to be of any sort of importance
 AllTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
 AllTree$tip.label <- gsub("'", "", AllTree$tip.label)
 HTML <- HTML %>% relocate(Organism.Name)
@@ -1060,7 +1033,7 @@ AllTreeP <- AllTreeP %<+% HTML
 RicAll <- AllTreeP + geom_tiplab(aes(color = RICTOR), size = 2)+
   geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
   geom_rootedge()+
-  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2, color = "orange")+
+  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2, color = "black")+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==357)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
@@ -1069,7 +1042,7 @@ RicAll
 Sin1All <- AllTreeP + geom_tiplab(aes(color = SIN1), size = 2)+
   geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
   geom_rootedge()+
-  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2, color = "orange")+
+  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2, color = "black")+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==357)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
@@ -1078,7 +1051,7 @@ Sin1All
 RapAll <- AllTreeP + geom_tiplab(aes(color = RAPTOR), size = 2)+
   geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
   geom_rootedge()+
-  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2, color = "orange")+
+  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2, color = "black")+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==357)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)

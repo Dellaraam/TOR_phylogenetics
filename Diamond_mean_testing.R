@@ -8,6 +8,9 @@ Probable <- read_csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/T
 
 
 
+Cgoreaui <- read_tsv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/SRAs/TSVs/RAPTOR_cgoreaui_matches1.tsv", col_names = FALSE)
+colnames(Cgoreaui) <-c("Query", "Subject","Percent_ID","prot_len","x","y","Sub_start","Sub_end","Query_start","Query_end","E-val","Bit_score")
+summary(Cgoreaui)
 
 
 

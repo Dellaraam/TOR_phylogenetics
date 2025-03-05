@@ -39,7 +39,16 @@ ModCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TOR
   # Now create empty columns and rows that will be filled in later in the function
   # These will be the "checking" sections for each of the specified proteins
   
-  returnDF <- returnDF %>% add_column(SIN1 = NA, RICTOR = NA, RAPTOR = NA, TOR = NA, LST8 = NA)
+  returnDF <- returnDF %>% add_column(SIN1All = NA,
+                                      SIN1Domain = NA,
+                                      RICTORAll = NA,
+                                      RICTORDomain = NA,
+                                      RAPTORAll = NA,
+                                      RAPTORDomain = NA,
+                                      TORAll = NA,
+                                      TORDomain = NA,
+                                      LST8All = NA,
+                                      LST8Domain = NA)
   returnDF <- returnDF %>% add_column(Group = Grouping, .before = "Accn")
   
   #Check the input dataframes to see if they are of length 0. If they are, do something about it
@@ -50,7 +59,8 @@ ModCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TOR
       for (m in 1:nrow(RICTORdf)){
         #condition check to see if the taxIDs line up
         if(returnDF[n, "Organism_Taxonomic_ID"] == RICTORdf[m, "Organism_Taxonomic_ID"]){
-            returnDF$RICTOR[n] <- RICTORdf$scd[m]
+            returnDF$RICTORDomain[n] <- RICTORdf$scd[m]
+            returnDF$RICTORAll[n] <- RICTORdf$sca[m]
         } else{
           next
         }
@@ -64,7 +74,8 @@ ModCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TOR
       for (m in 1:nrow(SIN1df)){
         #condition check to see if the taxIDs line up
         if(returnDF[n, "Organism_Taxonomic_ID"] == SIN1df[m, "Organism_Taxonomic_ID"]){
-            returnDF$SIN1[n] <- SIN1df$scd[m]
+            returnDF$SIN1Domain[n] <- SIN1df$scd[m]
+            returnDF$SIN1All[n] <- SIN1df$sca[m]
         }else{
           next
         }
@@ -79,7 +90,8 @@ ModCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TOR
       for (m in 1:nrow(RAPTORdf)){
         #condition check to see if the taxIDs line up
         if(returnDF[n, "Organism_Taxonomic_ID"] == RAPTORdf[m, "Organism_Taxonomic_ID"]){
-            returnDF$RAPTOR[n] <- RAPTORdf$scd[m]
+            returnDF$RAPTORDomain[n] <- RAPTORdf$scd[m]
+            returnDF$RAPTORAll[n] <- RAPTORdf$sca[m]
         }else{
           next
         }
@@ -95,7 +107,8 @@ ModCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TOR
       for (m in 1:nrow(LST8df)){
         #condition check to see if the taxIDs line up
         if(returnDF[n,"Organism_Taxonomic_ID"] == LST8df[m, "Organism_Taxonomic_ID"]){
-            returnDF$LST8[n] <- LST8df$scd[m]
+            returnDF$LST8Domain[n] <- LST8df$scd[m]
+            returnDF$LST8All[n] <- LST8df$sca[m]
         } else{
           next
         }
@@ -110,7 +123,8 @@ ModCombine <- function(Grouping, Namedf, RICTORdf, SIN1df, RAPTORdf, LST8df, TOR
       for (m in 1:nrow(TORdf)){
         #condition check to see if the taxIDs line up
         if(returnDF[n, "Organism_Taxonomic_ID"] == TORdf[m, "Organism_Taxonomic_ID"]){
-            returnDF$TOR[n] <- TORdf$scd[m]
+            returnDF$TORDomain[n] <- TORdf$scd[m]
+            returnDF$TORAll[n] <- TORdf$sca[m]
         } else{
           next
         }
@@ -473,4 +487,4 @@ ExcavataF <- rbind(Discoba, Metamonada, ExcavataJGI)
 Final_Table <- rbind(StramenopilesF, Alveolata, RhizariaF, Rhodophyta, Streptophyta, ChlorophytaF, ExcavataF)
 Final_Table <- distinct(Final_Table, Organism_Taxonomic_ID, .keep_all = TRUE)
 
-write.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
+write.csv(Final_Table,file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
