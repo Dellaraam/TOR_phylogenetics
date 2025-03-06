@@ -59,11 +59,11 @@ proteinPossibleSwap <- function(dfNo,dfYes,OrganismName, Protein){
 
 
 
-Taxon <- read.csv("~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
+Taxon <- read.csv("~/Code/TOR_phylogenetics/Combined_Taxonomy.csv")
 Taxon <- rename(Taxon, Organism.Name = "Tax.name")
-HTML <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/New_Combined_Table_218.csv")
+HTML <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/New_Combined_Table_218.csv")
 # Need to update the numeric table next
-Ndf <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
+Ndf <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
 Ndf <- select(Ndf, -X, -Organism.Name)
 Ndf <- left_join(Ndf, Taxon[c("Organism.Name", "Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 Ndf <- relocate(Ndf, Organism.Name, .after = Organism_Taxonomic_ID)
@@ -155,7 +155,7 @@ HTML <- HTML %>%
   proteinPossible("Capsicum chinense","LST8")%>%
   proteinPossible("Carex littledalei","LST8")%>%
   proteinPossible("Gossypium klotzschianum","LST8")%>%
-  proteinPossible("Gossypium gossypioides","LST8")
+  proteinPossible("Cladocopium goreaui","RAPTOR")
 
 #Add cladocopium goreaui RAPTOR
 
@@ -422,7 +422,7 @@ STORS
 
 
 
-AlveolataTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AlveolataTreeP.phy")
+AlveolataTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/AlveolataTreeP.phy")
 AlveolataTree$tip.label
 AlveolataTree$tip.label <- gsub("'","", AlveolataTree$tip.label)
 AlveolataTree$tip.label
