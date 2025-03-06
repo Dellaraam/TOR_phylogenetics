@@ -67,14 +67,9 @@ Ndf <- read.csv("~/Github/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTabl
 Ndf <- select(Ndf, -X, -Organism.Name)
 Ndf <- left_join(Ndf, Taxon[c("Organism.Name", "Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 Ndf <- relocate(Ndf, Organism.Name, .after = Organism_Taxonomic_ID)
-
+Ndf <- left_join(Ndf, HTML[c("C.score","Frag.score","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 
 # Replace the names in the HTML file with the Taxon as they are more correct
-HTML <- select(HTML, -Organism.Name, -X, -D1)
-HTML <- left_join(HTML, Taxon[c("Organism.Name", "Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
-HTML <- relocate(HTML, Organism.Name, .after = Organism_Taxonomic_ID)
-
-Ndf <- left_join(Ndf, HTML[c("C.score","Frag.score","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 
 # ------------------------------------------------------------------------------
 # Lets remove some of the RICTORS
@@ -108,53 +103,6 @@ Ndf <- left_join(Ndf, HTML[c("C.score","Frag.score","Organism_Taxonomic_ID")], b
 # Everything should be replaced by what is found within the Taxon file
 # That should make everything work correctly
 
-
-
-
-
-# Add in the possible protein data here
-# Will come up with a more elegant solution in the future
-# Using results gather by Dell and her Diamond Analysis work
-
-HTML <- HTML %>%
-  proteinPossible("Effrenium voratum","RAPTOR")%>%
-  proteinPossible("Effrenium voratum","LST8") %>%
-  proteinPossible("Durusdinium trenchii","RAPTOR")%>%
-  proteinPossible("Paramecium primaurelia","RICTOR")%>%
-  proteinPossible("Bonamia ostreae","RAPTOR")%>%
-  proteinPossible("Lotharella oceanica","RICTOR")%>%
-  proteinPossible("Lotharella oceanica","RAPTOR")%>%
-  proteinPossible("Lotharella oceanica","TOR")%>%
-  proteinPossible("Lotharella oceanica","LST8")%>%
-  proteinPossible("Paulinella micropora","RAPTOR")%>%
-  proteinPossible("Paulinella micropora","TOR")%>%
-  proteinPossible("Paulinella micropora","LST8")%>%
-  proteinPossible("Paulinella micropora","TOR")%>%
-  proteinPossible("Tetradesmus obliquus","RAPTOR")%>%
-  proteinPossible("Pseudo-nitzschia multistriata","LST8")%>%
-  proteinPossible("Triticum urartu","RAPTOR")%>%
-  proteinPossible("Bienertia sinuspersici","RAPTOR") %>%
-  proteinPossible("Nannochloropsis gaditana","RICTOR")%>%
-  proteinPossible("Phytophthora megakarya","RICTOR")%>%
-  proteinPossible("Phytophthora megakarya","LST8")%>%
-  proteinPossible("Euglena gracilis","RICTOR")%>%
-  proteinPossible("Nannochloropsis gaditana CCMP526","RICTOR")%>%
-  proteinPossible("Monocercomonoides exilis","RICTOR")%>%
-  proteinPossible("Nelumbo nucifera", "LST8")%>%
-  proteinPossible("Nelumbo nucifera","RAPTOR")%>%
-  proteinPossible("Nelumbo nucifera", "TOR")%>%
-  proteinPossible("Apium graveolens", "RAPTOR")%>%
-  proteinPossible("Apium graveolens","LST8")%>%
-  proteinPossible("Apium graveolens","TOR")%>%
-  proteinPossible("Babesia caballi","TOR")%>%
-  proteinPossible("Ceratopteris richardii","LST8")%>%
-  proteinPossible("Stephania cephalantha","LST8")%>%
-  proteinPossible("Morus notabilis","LST8")%>%
-  proteinPossible("Capsicum chinense","LST8")%>%
-  proteinPossible("Carex littledalei","LST8")%>%
-  proteinPossible("Gossypium klotzschianum","LST8")
-
-#Add cladocopium goreaui RAPTOR
 
   
   
