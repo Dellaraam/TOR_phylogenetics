@@ -61,7 +61,7 @@ proteinPossibleSwap <- function(dfNo,dfYes,OrganismName, Protein){
 
 Taxon <- read.csv("~/Github/TOR_phylogenetics/Combined_Taxonomy.csv")
 Taxon <- rename(Taxon, Organism.Name = "Tax.name")
-HTML <- read.csv("~/Github/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/New_Combined_Table_218.csv")
+HTML <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/HTML.tsv",)
 # Need to update the numeric table next
 Ndf <- read.csv("~/Github/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
 Ndf <- select(Ndf, -X, -Organism.Name)
@@ -69,62 +69,9 @@ Ndf <- left_join(Ndf, Taxon[c("Organism.Name", "Organism_Taxonomic_ID")], by = "
 Ndf <- relocate(Ndf, Organism.Name, .after = Organism_Taxonomic_ID)
 Ndf <- left_join(Ndf, HTML[c("C.score","Frag.score","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 
-# Replace the names in the HTML file with the Taxon as they are more correct
-
-# ------------------------------------------------------------------------------
-# Lets remove some of the RICTORS
-# Doing further data cleanup
-
-# HTML$RICTOR[625] <- NA
-# HTML$RICTOR[625]
-# HTML$RICTOR[506] <- NA
-# HTML$RICTOR[506]
-# HTML$RICTOR[629] <- NA
-# HTML$RICTOR[629]
-# HTML$RICTOR[411] <- NA
-# HTML$RICTOR[411]
-# HTML$RICTOR[834] <- NA
-# HTML$RICTOR[834]
-# HTML$RICTOR[836] <- NA
-# HTML$RICTOR[836]
-# 
-# # now for SIN1
-# HTML$SIN1[625] <- NA
-# HTML$SIN1[625]
-# HTML$SIN1[629] <- NA
-# HTML$SIN1[625]
-# HTML$SIN1[691] <- NA
-# HTML$SIN1[581] <- NA
-# HTML$SIN1[675] <- NA
-# HTML$SIN1[676] <- NA
-# HTML$SIN1[677] <- NA
- # -----------------------------------------------------------------------------
 # Current Goal is to replace all of the names in the HTML file (really need to rename that)
 # Everything should be replaced by what is found within the Taxon file
 # That should make everything work correctly
-
-
-  
-  
-# Modifications to some of the organism names and also the supergroups
-which(HTML$Organism.Name == "Chlamydomonas reinhardtii", arr.ind = TRUE)
-which(HTML$Organism.Name == "Neopyropia yezoensis", arr.ind = TRUE)
-which(HTML$Organism.Name == "Euglena gracilis", arr.ind = TRUE)
-which(HTML$Organism.Name == "Giardia lamblia ATCC 50803")
-HTML$Super.Group[801] <- "Discoba"
-HTML$Organism.Name[801]
-HTML$Super.Group[696] <- "Metamonada"
-HTML$Organism.Name[696]
-HTML$Organism.Name[495]
-HTML$Organism.Name[495] <- "Pyropia yezoensis"
-HTML$Organism.Name[696]
-HTML$SIN1[696] <- NA
-HTML$SIN1[696]
-#Look into aphanomyces for RICTOR. What can we conclude about it?
-
-
-
-
 
 
 SARnoRICTOR <- HTML %>%
@@ -146,9 +93,6 @@ SARYRICTOR <- HTML %>%
   filter(`Super.Group` != "Metamonada") %>% 
   filter(!is.na(RICTOR)) %>%
   view()
-
-
-#HTML %>% filter(`Super.Group` != "Streptophyta") %>% filter(!is.na(RICTOR)) %>% view()
 
 
 Chlorophyta <- HTML %>% filter(Super.Group == "Chlorophyta")
@@ -193,8 +137,6 @@ write.table(Excavata$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/I
 
 write.table(SARnoRICTOR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/NoSARRICTOR.txt", sep = "\t", row.names = F, col.names = F)
 write.table(SARYRICTOR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/YSARRICTOR.txt", sep = "\t", row.names = F, col.names = F)
-
-write.csv(HTML, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/Updated_Table.csv")
 write.csv(ProbableOrganisms, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/Probable_Table.csv")
 
 # tree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
@@ -267,7 +209,13 @@ RISP <- STP + geom_tiplab(aes(color = RICTOR), size = 3, show.legend = TRUE)+geo
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA))
 RISP
-
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorStramenopile.png",
+       plot = RISP,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 #Sin1 Stramenopiles
 SSP <- STP + geom_tiplab(aes(color = SIN1), size = 3, show.legend = TRUE)+
@@ -292,6 +240,13 @@ SSP <- STP + geom_tiplab(aes(color = SIN1), size = 3, show.legend = TRUE)+
   
   
 SSP
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Stramenopile.png",
+       plot = SSP,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 # Note: Add in the dark blue locations to denote a possible error location
 SRAPTORS <- STP + geom_tiplab(aes(color = RAPTOR), size = 3, show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -311,6 +266,13 @@ SRAPTORS <- STP + geom_tiplab(aes(color = RAPTOR), size = 3, show.legend = TRUE)
   geom_point2(aes(subset=(node==92)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 SRAPTORS
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorStramenopile.png",
+       plot = SRAPTORS,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 STORS <- STP + geom_tiplab(aes(color = TOR), size = 3, show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -328,6 +290,13 @@ STORS <- STP + geom_tiplab(aes(color = TOR), size = 3, show.legend = TRUE)+
   geom_point2(aes(subset=(node==92)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 STORS
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORStramenopile.png",
+       plot = STORS,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 SLST8S <- STP + geom_tiplab(aes(color = LST8), size = 3)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -350,6 +319,13 @@ SLST8S <- STP + geom_tiplab(aes(color = LST8), size = 3)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
   
 SLST8S
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Stramenopile.png",
+       plot = RISP,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 
@@ -391,6 +367,13 @@ ASinP <- AlvP + geom_tiplab(aes(color = SIN1), size = 3, show.legend = TRUE)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 
 ASinP
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Alveolata.png",
+       plot = ASinP,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 # RICTOR
 ARIC <- AlvP + geom_tiplab(aes(color = RICTOR), size = 3,show.legend = TRUE)+
@@ -406,6 +389,13 @@ ARIC <- AlvP + geom_tiplab(aes(color = RICTOR), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==9)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 ARIC
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorAlveolata.png",
+       plot = ARIC,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 # RAPTOR
 
@@ -423,6 +413,13 @@ ARAPT <- AlvP + geom_tiplab(aes(color = RAPTOR), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==121)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 ARAPT
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorAlveolata.png",
+       plot = ARAPT,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 ATOR <- AlvP + geom_tiplab(aes(color = TOR), size = 3,show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -439,6 +436,13 @@ ATOR <- AlvP + geom_tiplab(aes(color = TOR), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==2)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 ATOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORAlveolata.png",
+       plot = ATOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 ALST8 <- AlvP + geom_tiplab(aes(color = LST8), size = 3,show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -461,9 +465,13 @@ ALST8 <- AlvP + geom_tiplab(aes(color = LST8), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==118)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 ALST8
-
-
-
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Alveolata.png",
+       plot = ALST8,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 ARIC + ASinP
 
@@ -482,8 +490,6 @@ Rhizaria <- Rhizaria %>% relocate(Organism.Name)
 RTP <- ggtree(RhizariaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+10)
 RTP <- RTP%<+% Rhizaria
 
-RTP$data$label
-
 # Generating the tree plots with markings at specific node locations
 RRICTOR <- RTP + geom_tiplab(aes(color = RICTOR), size = 3,show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -496,6 +502,13 @@ RRICTOR <- RTP + geom_tiplab(aes(color = RICTOR), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==1)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 RRICTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorRhziaria.png",
+       plot = RRICTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 RSIN <- RTP + geom_tiplab(aes(color = SIN1), size = 3,show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -505,6 +518,13 @@ RSIN <- RTP + geom_tiplab(aes(color = SIN1), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==10)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 RSIN
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Rhziaria.png",
+       plot = RSIN,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 RRAPTOR <-  RTP + geom_tiplab(aes(color = RAPTOR), size = 3,show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -516,6 +536,13 @@ RRAPTOR <-  RTP + geom_tiplab(aes(color = RAPTOR), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 RRAPTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorRhziaria.png",
+       plot = RRAPTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 RTOR <- RTP + geom_tiplab(aes(color = TOR), size = 3,show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -525,6 +552,13 @@ RTOR <- RTP + geom_tiplab(aes(color = TOR), size = 3,show.legend = TRUE)+
   # geom_text(aes(label=node))+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 RTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORRhziaria.png",
+       plot = RTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 RLST8 <- RTP + geom_tiplab(aes(color = LST8), size = 3,show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -536,6 +570,13 @@ RLST8 <- RTP + geom_tiplab(aes(color = LST8), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 RLST8
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Rhziaria.png",
+       plot = RLST8,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 # Plotting here
 RRICTOR+RSIN
@@ -568,6 +609,13 @@ DRAPTOR <- DTP + geom_tiplab(aes(color = RAPTOR), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==22)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 DRAPTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorDiscoba.png",
+       plot = DRAPTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 DRICTOR <- DTP + geom_tiplab(aes(color = RICTOR), size = 3,show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -581,6 +629,13 @@ DRICTOR <- DTP + geom_tiplab(aes(color = RICTOR), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==22)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 DRICTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorDiscoba.png",
+       plot = DRICTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 DSIN1 <- DTP + geom_tiplab(aes(color = SIN1), size = 3,show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -590,6 +645,13 @@ DSIN1 <- DTP + geom_tiplab(aes(color = SIN1), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==47)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 DSIN1
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Discoba.png",
+       plot = DSIN1,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 DTOR <- DTP + geom_tiplab(aes(color = TOR), size = 3,show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -600,6 +662,13 @@ DTOR <- DTP + geom_tiplab(aes(color = TOR), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==22)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 DTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORDiscoba.png",
+       plot = DTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 DLST8 <- DTP + geom_tiplab(aes(color = LST8), size = 3,show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -613,8 +682,14 @@ DLST8 <- DTP + geom_tiplab(aes(color = LST8), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==23)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==22)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
-  
 DLST8
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Discoba.png",
+       plot = DLST8,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 DRICTOR+DSIN1
@@ -645,6 +720,13 @@ MRICTOR <- MTP + geom_tiplab(aes(color = RICTOR), size = 3, show.legend = TRUE)+
   geom_point2(aes(subset=(node==31)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 MRICTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorDiscoba.png",
+       plot = MRICTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 MSIN1 <- MTP + geom_tiplab(aes(color = SIN1), size = 3, show.legend = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
@@ -657,7 +739,13 @@ MSIN1 <- MTP + geom_tiplab(aes(color = SIN1), size = 3, show.legend = TRUE)+
   geom_point2(aes(subset=(node==28)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 MSIN1
-
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Discoba.png",
+       plot = MSIN1,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 # No losses
 MRAPTOR <- MTP + geom_tiplab(aes(color = RAPTOR), size = 3, show.legend = TRUE)+
@@ -667,6 +755,13 @@ MRAPTOR <- MTP + geom_tiplab(aes(color = RAPTOR), size = 3, show.legend = TRUE)+
   # geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 MRAPTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorDiscoba.png",
+       plot = MRAPTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 # No losses
 MTOR <- MTP + geom_tiplab(aes(color = TOR), size = 3, show.legend = TRUE)+
@@ -676,6 +771,13 @@ MTOR <- MTP + geom_tiplab(aes(color = TOR), size = 3, show.legend = TRUE)+
   # geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 MTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORDiscoba.png",
+       plot = MTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 # One possible loss though skeptical of its veracity
 MLST8 <- MTP + geom_tiplab(aes(color = LST8), size = 3, show.legend = TRUE)+
@@ -686,6 +788,13 @@ MLST8 <- MTP + geom_tiplab(aes(color = LST8), size = 3, show.legend = TRUE)+
   geom_point2(aes(subset=(node==15)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 MLST8
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Discoba.png",
+       plot = MLST8,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 
@@ -723,6 +832,13 @@ RicCh <- ChloroP + geom_tiplab(aes(color = RICTOR),size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==89)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 RicCh
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorChlorophyta.png",
+       plot = RicCh,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 #RAPTOR
 RapCh <- ChloroP + geom_tiplab(aes(color = RAPTOR), size = 3,show.legend = TRUE)+
@@ -735,6 +851,13 @@ RapCh <- ChloroP + geom_tiplab(aes(color = RAPTOR), size = 3,show.legend = TRUE)
   geom_point2(aes(subset=(node==59)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 RapCh
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorChlorophyta.png",
+       plot = RapCh,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 #SIN1
 Sin1Ch <- ChloroP + geom_tiplab(aes(color = SIN1), size = 3,show.legend = TRUE)+
@@ -751,6 +874,13 @@ Sin1Ch <- ChloroP + geom_tiplab(aes(color = SIN1), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==1)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 Sin1Ch
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Chlorophyta.png",
+       plot = Sin1Ch,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 #LST8
 
@@ -762,6 +892,13 @@ lst8Ch <- ChloroP + geom_tiplab(aes(color = LST8), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==1)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 lst8Ch
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Chlorophyta.png",
+       plot = lst8Ch,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 #TOR
 TorCh <- ChloroP + geom_tiplab(aes(color = TOR), size = 3,show.legend = TRUE)+
@@ -771,6 +908,13 @@ TorCh <- ChloroP + geom_tiplab(aes(color = TOR), size = 3,show.legend = TRUE)+
   # geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 TorCh
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORChlorophyta.png",
+       plot = TorCh,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 # Create the plots
@@ -805,6 +949,13 @@ RicRh <- RhodoP + geom_tiplab(aes(color = RICTOR), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==15)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 RicRh
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorRhodophyta.png",
+       plot = RicRh,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 #RAPTOR
 RapRh <- RhodoP + geom_tiplab(aes(color = RAPTOR), size = 3,show.legend = TRUE)+
@@ -814,6 +965,13 @@ RapRh <- RhodoP + geom_tiplab(aes(color = RAPTOR), size = 3,show.legend = TRUE)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
   # geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
 RapRh
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorRhodophyta.png",
+       plot = RapRh,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 #SIN1
 Sin1Rh <- RhodoP + geom_tiplab(aes(color = SIN1), size = 3,show.legend = TRUE)+
@@ -823,8 +981,14 @@ Sin1Rh <- RhodoP + geom_tiplab(aes(color = SIN1), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==15)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
   # geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
-
 Sin1Rh
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Rhodophyta.png",
+       plot = Sin1Rh,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 #LST8
 lst8Rh <- RhodoP + geom_tiplab(aes(color = LST8), size = 3,show.legend = TRUE)+
@@ -834,6 +998,13 @@ lst8Rh <- RhodoP + geom_tiplab(aes(color = LST8), size = 3,show.legend = TRUE)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
   # geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
 lst8Rh
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Rhodophyta.png",
+       plot = Lst8Rh,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 #TOR
 TorRh <- RhodoP + geom_tiplab(aes(color = TOR), size = 3,show.legend = TRUE)+
@@ -843,6 +1014,13 @@ TorRh <- RhodoP + geom_tiplab(aes(color = TOR), size = 3,show.legend = TRUE)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
   # geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
 TorRh
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORRhodophyta.png",
+       plot = TorRh,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 RicRh+Sin1Rh
@@ -869,6 +1047,13 @@ RicStr <- StrephP + geom_tiplab(aes(color = RICTOR), size = 2)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==357)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
 RicStr
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorStreptophyta.png",
+       plot = RicStr,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 #RAPTOR
 RapStr <- StrephP + geom_tiplab(aes(color = RAPTOR), size = 2)+
@@ -880,6 +1065,13 @@ RapStr <- StrephP + geom_tiplab(aes(color = RAPTOR), size = 2)+
   geom_point2(aes(subset=(node==345)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
   geom_point2(aes(subset=(node==283)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
 RapStr
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorStreptophyta.png",
+       plot = RapStr,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 #SIN1
 SIN1Str <- StrephP + geom_tiplab(aes(color = SIN1), size = 2)+
@@ -888,6 +1080,13 @@ SIN1Str <- StrephP + geom_tiplab(aes(color = SIN1), size = 2)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==357)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
 SIN1Str
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Streptophyta.png",
+       plot = SIN1Str,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 #LST8
 LST8Str <- StrephP + geom_tiplab(aes(color = LST8), size = 2)+
@@ -899,6 +1098,13 @@ LST8Str <- StrephP + geom_tiplab(aes(color = LST8), size = 2)+
   geom_point2(aes(subset=(node==283)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   geom_point2(aes(subset=(node==48)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
 LST8Str
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Streptophyta.png",
+       plot = LST8Str,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 TorStr <- StrephP + geom_tiplab(aes(color = TOR), size = 2)+
   geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
@@ -906,6 +1112,13 @@ TorStr <- StrephP + geom_tiplab(aes(color = TOR), size = 2)+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)
 TorStr
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORStreptophyta.png",
+       plot = TorStr,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 #-------------------------------------------------------------------------------
