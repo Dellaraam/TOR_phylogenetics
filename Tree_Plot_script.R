@@ -154,8 +154,7 @@ HTML <- HTML %>%
   proteinPossible("Morus notabilis","LST8")%>%
   proteinPossible("Capsicum chinense","LST8")%>%
   proteinPossible("Carex littledalei","LST8")%>%
-  proteinPossible("Gossypium klotzschianum","LST8")%>%
-  proteinPossible("Cladocopium goreaui","RAPTOR")
+  proteinPossible("Gossypium klotzschianum","LST8")
 
 #Add cladocopium goreaui RAPTOR
 
