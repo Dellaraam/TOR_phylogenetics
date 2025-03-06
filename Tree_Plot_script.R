@@ -59,11 +59,11 @@ proteinPossibleSwap <- function(dfNo,dfYes,OrganismName, Protein){
 
 
 
-Taxon <- read.csv("~/Code/TOR_phylogenetics/Combined_Taxonomy.csv")
+Taxon <- read.csv("~/Github/TOR_phylogenetics/Combined_Taxonomy.csv")
 Taxon <- rename(Taxon, Organism.Name = "Tax.name")
-HTML <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/New_Combined_Table_218.csv")
+HTML <- read.csv("~/Github/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/New_Combined_Table_218.csv")
 # Need to update the numeric table next
-Ndf <- read.csv("~/Code/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
+Ndf <- read.csv("~/Github/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
 Ndf <- select(Ndf, -X, -Organism.Name)
 Ndf <- left_join(Ndf, Taxon[c("Organism.Name", "Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 Ndf <- relocate(Ndf, Organism.Name, .after = Organism_Taxonomic_ID)
@@ -165,10 +165,10 @@ which(HTML$Organism.Name == "Chlamydomonas reinhardtii", arr.ind = TRUE)
 which(HTML$Organism.Name == "Neopyropia yezoensis", arr.ind = TRUE)
 which(HTML$Organism.Name == "Euglena gracilis", arr.ind = TRUE)
 which(HTML$Organism.Name == "Giardia lamblia ATCC 50803")
-HTML$Super.Group[800] <- "Discoba"
-HTML$Organism.Name[800]
-HTML$Super.Group[695] <- "Metamonada"
-HTML$Organism.Name[695]
+HTML$Super.Group[801] <- "Discoba"
+HTML$Organism.Name[801]
+HTML$Super.Group[696] <- "Metamonada"
+HTML$Organism.Name[696]
 HTML$Organism.Name[495]
 HTML$Organism.Name[495] <- "Pyropia yezoensis"
 HTML$Organism.Name[696]
@@ -421,7 +421,7 @@ STORS
 
 
 
-AlveolataTree <- read.tree(file = "~/Code/TOR_phylogenetics/Trees/AlveolataTreeP.phy")
+AlveolataTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/AlveolataTreeP.phy")
 AlveolataTree$tip.label
 AlveolataTree$tip.label <- gsub("'","", AlveolataTree$tip.label)
 AlveolataTree$tip.label
