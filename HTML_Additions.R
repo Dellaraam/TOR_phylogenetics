@@ -89,5 +89,5 @@ HTML$SIN1[697] <- NA
 HTML$SIN1[697]
 #Look into aphanomyces for RICTOR. What can we conclude about it?
 
-write.table(HTML, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/HTML.tsv", sep = "\t")
+write.table(HTML, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/HTML.tsv", sep = "\t", row.names = F)
 
