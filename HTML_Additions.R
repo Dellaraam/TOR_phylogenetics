@@ -58,6 +58,7 @@ HTML <- HTML %>%
   proteinPossible("Phytophthora megakarya","LST8")%>%
   proteinPossible("Euglena gracilis","RICTOR")%>%
   proteinPossible("Nannochloropsis gaditana CCMP526","RICTOR")%>%
+  proteinPossible("Nannochloropsis gaditana CCMP526","LST8")%>%
   proteinPossible("Monocercomonoides exilis","RICTOR")%>%
   proteinPossible("Nelumbo nucifera", "LST8")%>%
   proteinPossible("Nelumbo nucifera","RAPTOR")%>%

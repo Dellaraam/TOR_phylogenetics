@@ -341,8 +341,6 @@ STORS
 # ------------------------------------------------------------------------------
 
 
-
-
 AlveolataTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/AlveolataTreeP.phy")
 AlveolataTree$tip.label
 AlveolataTree$tip.label <- gsub("'","", AlveolataTree$tip.label)
@@ -848,7 +846,6 @@ RapCh <- ChloroP + geom_tiplab(aes(color = RAPTOR), size = 3,show.legend = TRUE)
   # geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
   # geom_text(aes(label=node))+
   geom_point2(aes(subset=(node==1)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
-  geom_point2(aes(subset=(node==59)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 RapCh
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorChlorophyta.png",
@@ -1062,8 +1059,7 @@ RapStr <- StrephP + geom_tiplab(aes(color = RAPTOR), size = 2)+
   scale_color_manual(values = pal)+
   geom_text(aes(label=node), size = 2)+
   geom_point2(aes(subset=(node==65)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
-  geom_point2(aes(subset=(node==345)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
-  geom_point2(aes(subset=(node==283)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
+  geom_point2(aes(subset=(node==345)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
 RapStr
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorStreptophyta.png",
        plot = RapStr,
@@ -1094,6 +1090,7 @@ LST8Str <- StrephP + geom_tiplab(aes(color = LST8), size = 2)+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_text(aes(label=node), size = 2)+
+  geom_point2(aes(subset=(node==335)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   geom_point2(aes(subset=(node==330)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   geom_point2(aes(subset=(node==283)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   geom_point2(aes(subset=(node==48)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
@@ -1108,7 +1105,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Streptophyta.p
 
 TorStr <- StrephP + geom_tiplab(aes(color = TOR), size = 2)+
   geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
-  geom_point2(aes(subset=(node==283)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)
 TorStr
