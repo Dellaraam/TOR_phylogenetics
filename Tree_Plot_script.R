@@ -70,7 +70,7 @@ Ndf <- relocate(Ndf, Organism.Name, .after = Organism_Taxonomic_ID)
 
 
 # Replace the names in the HTML file with the Taxon as they are more correct
-HTML <- select(HTML, -Organism.Name, -X)
+HTML <- select(HTML, -Organism.Name, -X, -D1)
 HTML <- left_join(HTML, Taxon[c("Organism.Name", "Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 HTML <- relocate(HTML, Organism.Name, .after = Organism_Taxonomic_ID)
 
@@ -112,8 +112,6 @@ Ndf <- left_join(Ndf, HTML[c("C.score","Frag.score","Organism_Taxonomic_ID")], b
 
 
 
-HTML %>%rename("Super Group" = Super.Group) %>% filter(`Super Group` == "Alveolata") %>% filter(!is.na(RAPTOR))
-HTML <- select(HTML, -D1)
 # Add in the possible protein data here
 # Will come up with a more elegant solution in the future
 # Using results gather by Dell and her Diamond Analysis work
