@@ -444,6 +444,12 @@ RhizTOR <- JoinInfo(RhizTORRaw, "Rhizaria", Phyco_Information,Taxonomic_Informat
 RhizSIN1 <- JoinInfo(RhizSIN1Raw, "Rhizaria", Phyco_Information,Taxonomic_Information)
 RhizD1 <- JoinInfo(RhizD1Raw, "Rhizaria", Phyco_Information,Taxonomic_Information)
 
+write.csv(RhizRICTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/RhizRICTOR.csv")
+write.csv(RhizRAPTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/RhizRAPTOR.csv")
+write.csv(RhizSIN1, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/RhizSIN1.csv")
+write.csv(RhizLST8, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/RhizLST8.csv")
+write.csv(RhizTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/RhizTOR.csv")
+
 ExRAPTOR <- JoinInfo(ExRAPTORRaw,"Excavata",Phyco_Information,Taxonomic_Information)
 ExRICTOR <- JoinInfo(ExRICTORRaw,"Excavata",Phyco_Information,Taxonomic_Information)
 ExLST8 <- JoinInfo(ExLST8Raw,"Excavata",Phyco_Information,Taxonomic_Information)
