@@ -75,20 +75,11 @@ HTML <- HTML %>%
   proteinPossible("Gossypium klotzschianum","LST8")%>%
   proteinPossible("Dichanthelium oligosanthes", "RAPTOR")
 
-
+HTML$Organism.Name <- str_replace(HTML$Organism.Name, "Neopyropia yezoensis", "Pyropia yezoensis")
+HTML["716", "Super.Group"] <- "Metamonada"
+HTML["715", "Super.Group"] <- "Discoba"
 # Modifications to some of the organism names and also the supergroups
-which(HTML$Organism.Name == "Chlamydomonas reinhardtii", arr.ind = TRUE)
-which(HTML$Organism.Name == "Neoyropia yezoensis", arr.ind = TRUE)
-which(HTML$Organism.Name == "Euglena gracilis", arr.ind = TRUE)
-which(HTML$Organism.Name == "Giardia lamblia ATCC 50803")
-HTML$Super.Group[801] <- "Discoba"
-HTML$Organism.Name[801]
-HTML$Super.Group[696] <- "Metamonada"
-HTML$Organism.Name[696]
-HTML$Organism.Name[496] <- "Pyropia yezoensis"
-HTML$Organism.Name[496] 
-HTML$SIN1[697] <- NA
-HTML$SIN1[697]
+
 #Look into aphanomyces for RICTOR. What can we conclude about it?
 
 write.table(HTML, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/HTML.tsv", sep = "\t", row.names = F)
