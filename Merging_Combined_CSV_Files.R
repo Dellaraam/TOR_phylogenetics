@@ -34,7 +34,7 @@ CombinedStrep <- CombinedStrep %>% select(-X) %>% mutate(Source = "NCBI") %>% re
 
 CombinedExc <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Excavata_Combined.csv")
 CombinedExc <- CombinedExc %>% select(-X) %>% rename(Organism.Taxonomic.ID = "Organism_Taxonomic_ID") %>% distinct(Organism.Taxonomic.ID, .keep_all = TRUE)
-
+#Change this to the updated Alveolata version once the the data is added
 CombinedAlv <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Alveolata.csv")
 CombinedAlv <- CombinedAlv %>% select(-X) %>% mutate(Source = "NCBI") %>% rename(Organism.Taxonomic.ID = "Organism_Taxonomic_ID") %>% distinct(Organism.Taxonomic.ID, .keep_all = TRUE)
 
