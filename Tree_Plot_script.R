@@ -314,8 +314,7 @@ SLST8S <- STP + geom_tiplab(aes(color = LST8), size = 3)+
   geom_point2(aes(subset=(node==92)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   geom_point2(aes(subset=(node==52)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   geom_point2(aes(subset=(node==2)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
-  geom_point2(aes(subset=(node==99)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
-  geom_point2(aes(subset=(node==74)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+
+  geom_point2(aes(subset=(node==99)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)+ 
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
   
 SLST8S
