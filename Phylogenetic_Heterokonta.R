@@ -237,7 +237,14 @@ CombinedRhizaria <- read.csv(file="~/GitHub/TOR_phylogenetics/GitHub_CSV/Combine
 CombinedRhizaria <- select(CombinedRhizaria, -C.score, -Frag.score, -X)
 CombinedRhizaria <- mutate(CombinedRhizaria, Source = "NCBI")
 
+CombinedAlveolata <- read.csv(file="~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Alveolata.csv")
+CombinedAlveolata <- select(CombinedAlveolata, -C.score, -Frag.score, -X)
+CombinedAlveolata <- mutate(CombinedAlveolata, Source = "NCBI")
+
+
+
 #Read in BUSCO here:
+#May need more of this data as needed. Will doublecheck the output data
 Busco_Chlorophyta_Original <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Chlorophyta-BUSCO-Sheet1.csv")
 Busco_Chlorophyta_Original <- select(Busco_Chlorophyta_Original, Name, Accession, C.score, Frag.score) %>% rename(Accn = "Accession")
 
@@ -293,6 +300,13 @@ ExSIN1Raw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/Excava
 ExLST8Raw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/ExcavataJGI_LST8.csv")
 ExD1Raw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/ExcavataJGI_D1.csv")
 
+AlvRICTORRaw
+AlvRAPTORRaw
+AlvTORRaw
+AlvSIN1Raw
+AlvLST8Raw
+AlvD1Raw
+
 # Information from JGI that is needed to tie the data collected to the ncbi information
 Phyco_Information <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Phycocosm_Information.csv")
 Phyco_Information <- Phyco_Information %>% rename(Accn = "portal", Organism_Taxonomic_ID = "NCBI.Taxon")
@@ -309,7 +323,8 @@ RhizariaJGI_Information <- RhizariaJGI_Information %>% rename(Accn = "portal", O
 ExcavataJGI_Information <- read.csv(file="~/GitHub/TOR_phylogenetics/GitHub_CSV/ExcavatesJGI_Information.csv")
 ExcavataJGI_Information <- ExcavataJGI_Information %>% rename(Accn = "portal", Organism_Taxonomic_ID = "NCBI.Taxon", Organism_Name = "name")
 
-
+AlveolataJGI_Information <- read.csv()
+AlveolataJGI_Information <- AlveolataJGI_Information %>% rename(Accn = "portal", Organism_Taxonomic_ID = "NCBI.Taxon", Organism_Name = "name")
 
 Taxonomic_Information <- read.csv(file="~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
 
@@ -346,6 +361,14 @@ ExSIN1Raw$Accn <- sub("\\_.*", "", ExSIN1Raw$Accn)
 ExLST8Raw$Accn <- sub("\\_.*", "", ExLST8Raw$Accn)
 ExD1Raw$Accn <- sub("\\_.*", "", ExD1Raw$Accn)
 ExTORRaw$Accn <- sub("\\_.*", "", ExTORRaw$Accn)
+
+AlvRAPTORRaw$Accn <- sub("\\_.*", "", AlvRAPTORRaw$Accn)
+AlvRICTORRaw$Accn <- sub("\\_.*", "", AlvRICTORRaw$Accn)
+AlvSIN1Raw$Accn <- sub("\\_.*", "", AlvSIN1Raw$Accn)
+AlvLST8Raw$Accn <- sub("\\_.*", "", AlvLST8Raw$Accn)
+AlvD1Raw$Accn <- sub("\\_.*", "", AlvD1Raw$Accn)
+AlvTORRaw$Accn <- sub("\\_.*", "", AlvTORRaw$Accn)
+
 
 
 Phyco_Information$Accn <- sub("\\_.*", "", Phyco_Information$Accn)
@@ -437,6 +460,13 @@ ChSIN1 <- JoinInfo(ChSIN1Raw, "Chlorophyta", Phyco_Information, Taxonomic_Inform
 ChTor <- JoinInfo(ChTorRaw, "Chlorophyta", Phyco_Information, Taxonomic_Information)
 ChD1 <- JoinInfo(ChD1Raw, "Chlorophyta", Phyco_Information, Taxonomic_Information)
 
+write.csv(ChRAPTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChRAPTOR.csv")
+write.csv(ChRICTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChRICTOR.csv")
+write.csv(ChLST8, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChLST8.csv")
+write.csv(ChSIN1, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChSIN1.csv")
+write.csv(ChTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChTOR.csv")
+
+
 RhizRAPTOR <- JoinInfo(RhizRAPTORRaw,"Rhizaria",Phyco_Information,Taxonomic_Information)
 RhizRICTOR <- JoinInfo(RhizRICTORRaw, "Rhizaria", Phyco_Information,Taxonomic_Information)
 RhizLST8 <- JoinInfo(RhizLST8Raw, "Rhizaria", Phyco_Information,Taxonomic_Information)
@@ -457,10 +487,29 @@ ExTOR <- JoinInfo(ExTORRaw,"Excavata",Phyco_Information,Taxonomic_Information)
 ExSIN1 <- JoinInfo(ExSIN1Raw,"Excavata",Phyco_Information,Taxonomic_Information)
 ExD1 <- JoinInfo(ExD1Raw,"Excavata",Phyco_Information,Taxonomic_Information)
 
+write.csv(ExRAPTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ExRAPTOR.csv")
+write.csv(ExRICTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ExRICTOR.csv")
+write.csv(ExSIN1, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ExSIN1.csv")
+write.csv(ExLST8, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ExLST8.csv")
+write.csv(ExTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ExTOR.csv")
+
+AlvRAPTOR <- JoinInfo(AlvRAPTORRaw, "Alveolata", Phyco_Information, Taxonomic_Information)
+AlvRICTOR <- JoinInfo(AlvRICTORRaw, "Alveolata", Phyco_Information, Taxonomic_Information)
+AlvLST8 <- JoinInfo(AlvLST8Raw, "Alveolata", Phyco_Information, Taxonomic_Information)
+AlvTOR <- JoinInfo(AlvTORRaw, "Alveolata", Phyco_Information, Taxonomic_Information)
+AlvSIN1 <- JoinInfo(AlvSIN1Raw, "Alveolata", Phyco_Information, Taxonomic_Information)
+AlvD1 <- JoinInfo(AlvD1Raw, "Alveolata", Phyco_Information, Taxonomic_Information)
+
+#Put the write.csv commands here
+write.csv(AlvRAPTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/AlvRAPTOR.csv")
+write.csv(AlvRICTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/AlvRICTOR.csv")
+write.csv(AlvSIN1, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/AlvSIN1.csv")
+write.csv(AlvLST8, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/AlvLST8.csv")
+write.csv(AlvTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/AlvTOR.csv")
+
+
 # Here is where I will output to a folder the information after adding in all relevant info
 # This will be for JGI Exclusively. This will then be used in the MSA protein ID script.
-
-
 
 
 
@@ -469,11 +518,14 @@ CombinedHeterokonta <- mainCombine('Stramenopiles',Heterok_Information,HRictor,H
 CombinedChlorophytaJGI <- mainCombine('Chlorophyta', ChlorophytaJGI_Information, ChRICTOR, ChSIN1, ChRAPTOR, ChLST8, ChTor, ChD1)
 CombinedRhizariaJGI <- mainCombine("Rhizaria",RhizariaJGI_Information, RhizRICTOR,RhizSIN1,RhizRAPTOR,RhizLST8,RhizTOR,RhizD1)
 CombinedExcavataJGI <- mainCombine("Excavata", ExcavataJGI_Information, ExRICTOR, ExSIN1, ExRAPTOR, ExLST8, ExTOR, ExD1)
+CombinedAlveolataJGI <- mainCombine("Alveolata",AlveolataJGI_Information, AlvRICTOR, AlvSIN1, AlvRAPTOR, AlvLST8, AlvTOR, AlvD1)
 #Here is where I would add in the BUSCO data
 #Just finished here with the Excavata. Now I need to do the filtering and the joining
 
 #Now I need to remove anything that has na in all! columns of SIN1 etc
 # This would be columns 5 through 10
+# These are all the combined JGI information, hence the need for the mutate command to JGI
+
 CombinedHeterokonta <- CombinedHeterokonta %>% filter(!if_all(5:10, is.na))
 CombinedHeterokonta <- CombinedHeterokonta %>% left_join(select(Taxonomic_Information, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 CombinedHeterokonta <- CombinedHeterokonta %>% rename(Organism.Name = "Organism_Name")%>%mutate(Source = "JGI")
@@ -492,6 +544,10 @@ CombinedExcavataJGI <- CombinedExcavataJGI %>% filter(!if_all(5:10, is.na))
 CombinedExcavataJGI <- CombinedExcavataJGI %>%left_join(select(Taxonomic_Information, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 CombinedExcavataJGI <- CombinedExcavataJGI %>% rename(Organism.Name = "Organism_Name")%>%mutate(Source = "JGI")
 
+CombinedAlveolataJGI <- CombinedAlveolataJGI %>% filter(!if_all(5:10, is.na))
+CombinedAlveolataJGI <- CombinedAlveolataJGI %>% left_join(select(Taxonomic_Information, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+CombinedAlveolataJGI <- CombinedAlveolataJGI %>% rename(Organism.Name = "Organism_Name") %>% mutate(Source = "JGI")
+
 
 
 #Need to add in if it was from JGI or from NCBI
@@ -500,7 +556,7 @@ CombinedExcavataJGI <- CombinedExcavataJGI %>% rename(Organism.Name = "Organism_
 TestMerge2 <- rbind(CombinedChlorophyta, CombinedChlorophytaJGI)
 TestMerge2 <- distinct(TestMerge2, Organism_Taxonomic_ID, .keep_all = TRUE)
 
-write.csv(TestMerge2, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Chlorophyta_Combined.csv")
+
 
 #Stramenopiles
 TestMerge <- rbind(CombinedStramenopiles, CombinedHeterokonta)
@@ -512,8 +568,13 @@ TestMerge3 <- distinct(TestMerge3, Organism_Taxonomic_ID, .keep_all = TRUE)
 TestMerge4 <- rbind(CombinedExcavates, CombinedExcavataJGI)
 TestMerge4 <- distinct(TestMerge4, Organism_Taxonomic_ID, .keep_all = TRUE)
 
-write.csv(TestMerge, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Stramenopiles_Combined.csv")
+TestMerge5 <- rbind(CombinedAlveolata, CombinedAlveolataJGI)
+TestMerge5 <- distinct(TestMerge5, Organism_Taxonomic_ID, .keep_all = TRUE)
 
+
+write.csv(TestMerge, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Stramenopiles_Combined.csv")
+write.csv(TestMerge2, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Chlorophyta_Combined.csv")
+#write.csv(testMerge5, file = "Updated_Alveolata_Combined")
 write.csv(TestMerge3, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Rhizaria_Combined.csv")
 write.csv(TestMerge4, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Excavata_Combined.csv")
 
