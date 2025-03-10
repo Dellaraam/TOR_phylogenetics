@@ -9,12 +9,12 @@
 
 
 
-# if (!require("BiocManager", quietly = TRUE))
-#   install.packages("BiocManager")
-# BiocManager::install("ggtree")
-# if (!require("BiocManager", quietly = TRUE))
-#   install.packages("BiocManager")
-# BiocManager::install("Biostrings")
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("ggtree")
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("Biostrings")
 library("Biostrings")
 library(tidyverse)
 library(ggplot2)
@@ -61,13 +61,14 @@ proteinPossibleSwap <- function(dfNo,dfYes,OrganismName, Protein){
 
 Taxon <- read.csv("~/Github/TOR_phylogenetics/Combined_Taxonomy.csv")
 Taxon <- rename(Taxon, Organism.Name = "Tax.name")
-HTML <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/HTML.tsv",)
+HTML <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/HTML.tsv")
+HTML <- HTML %>% select(-Super.Group) %>% rename(Super.Group = "Group")
 # Need to update the numeric table next
 Ndf <- read.csv("~/Github/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
 Ndf <- select(Ndf, -X, -Organism.Name)
 Ndf <- left_join(Ndf, Taxon[c("Organism.Name", "Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 Ndf <- relocate(Ndf, Organism.Name, .after = Organism_Taxonomic_ID)
-Ndf <- left_join(Ndf, HTML[c("C.score","Frag.score","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
+#Ndf <- left_join(Ndf, HTML[c("C.score","Frag.score","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 
 # Current Goal is to replace all of the names in the HTML file (really need to rename that)
 # Everything should be replaced by what is found within the Taxon file
@@ -81,8 +82,7 @@ SARnoRICTOR <- HTML %>%
   filter(`Super.Group` != "Excavata") %>%
   filter(`Super.Group` != "Discoba") %>%
   filter(`Super.Group` != "Metamonada") %>% 
-  filter(is.na(RICTOR)) %>%
-  view()
+  filter(is.na(RICTOR))
 
 SARYRICTOR <- HTML %>%
   filter(`Super.Group` != "Streptophyta") %>%
@@ -91,8 +91,7 @@ SARYRICTOR <- HTML %>%
   filter(`Super.Group` != "Excavata") %>%
   filter(`Super.Group` != "Discoba") %>%
   filter(`Super.Group` != "Metamonada") %>% 
-  filter(!is.na(RICTOR)) %>%
-  view()
+  filter(!is.na(RICTOR))
 
 
 Chlorophyta <- HTML %>% filter(Super.Group == "Chlorophyta")
@@ -113,12 +112,7 @@ ProbableOrganisms <- HTML %>% filter(RICTOR == "P"| RAPTOR == "P"| LST8 == "P"| 
 
 # This is where we will have a section for the numeric data that is divided out
 # One thing that needs to be done is to change the excavte data to discoba/metamonada
-# 
-which(Ndf$Group == "Excavata")
-which(Ndf$Organism.Name == "Euglena gracilis", arr.ind = TRUE)
-Ndf$Group[822] <- "Discoba"
-which(Ndf$Organism.Name == "Giardia lamblia ATCC 50803")
-Ndf$Group[823] <- "Metamonada"
+
 
 
 
@@ -252,7 +246,7 @@ SRAPTORS <- STP + geom_tiplab(aes(color = RAPTOR), size = 3, show.legend = TRUE)
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   #geom_text(aes(label = node))+
-  # geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
+  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
   # geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+

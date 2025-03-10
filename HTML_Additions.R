@@ -22,8 +22,9 @@ proteinPossibleSwap <- function(dfNo,dfYes,OrganismName, Protein){
 
 Taxon <- read.csv("~/Github/TOR_phylogenetics/Combined_Taxonomy.csv")
 Taxon <- rename(Taxon, Organism.Name = "Tax.name")
-HTML <- read.csv("~/Github/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/New_Combined_Table_218.csv")
-HTML <- select(HTML, -Organism.Name, -X, -D1)
+HTML <- read.csv("~/Github/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/CompleteTable.csv")
+HTML <- select(HTML, -Organism.Name, -D1) %>%
+  rename(Organism_Taxonomic_ID = "Organism.Taxonomic.ID")
 HTML <- left_join(HTML, Taxon[c("Organism.Name", "Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 HTML <- relocate(HTML, Organism.Name, .after = Organism_Taxonomic_ID)
 
@@ -76,8 +77,9 @@ HTML <- HTML %>%
   proteinPossible("Dichanthelium oligosanthes", "RAPTOR")
 
 HTML$Organism.Name <- str_replace(HTML$Organism.Name, "Neopyropia yezoensis", "Pyropia yezoensis")
-HTML["716", "Super.Group"] <- "Metamonada"
-HTML["715", "Super.Group"] <- "Discoba"
+# which(HTML$Organism.Name == "Giardia lamblia ATCC 50803")
+HTML[296, "Group"] <- "Metamonada"
+HTML[801, "Group"] <- "Discoba"
 # Modifications to some of the organism names and also the supergroups
 
 #Look into aphanomyces for RICTOR. What can we conclude about it?

@@ -168,6 +168,41 @@ TORAlveolata <- JoinInfo(TORAlveolata,"Alveolata",AlveolataInfo,Taxon,"NCBI")
 
 Alveolata <- ModCombine("Alveolata",AlveolataInfo,RICTORAlveolata,SIN1Alveolata,RAPTORAlveolata,LST8Alveolata,TORAlveolata)
 Alveolata <- Alveolata %>% mutate(source = "NCBI") %>% left_join(select(Taxon, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+
+
+#-------------------------------------------------------------------------------
+
+AlveolataJGI_Info <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/AlveolataJGI_Information.csv")
+AlveolataJGI_Info <- AlveolataJGI_Info %>% rename(Accn = "portal", Organism_Taxonomic_ID = "NCBI.Taxon", Organism.Name = "name")
+AlveolataJGI_Info$Accn <- sub("\\_.*", "", AlveolataJGI_Info$Accn)
+
+RICTORAlveolataJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_JGI/AlveolataJGI_RICTOR.csv")
+RICTORAlveolataJGI$Accn <- sub("\\_.*", "", RICTORAlveolataJGI$Accn)
+RICTORAlveolataJGI <- JoinInfo(RICTORAlveolataJGI,"Alveolata",AlveolataJGI_Info,Taxon,"JGI")
+
+RAPTORAlveolataJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_JGI/AlveolataJGI_RAPTOR.csv")
+RAPTORAlveolataJGI$Accn <- sub("\\_.*", "", RAPTORAlveolataJGI$Accn)
+RAPTORAlveolataJGI <- JoinInfo(RAPTORAlveolataJGI,"Alveolata",AlveolataJGI_Info,Taxon,"JGI")
+
+SIN1AlveolataJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_JGI/AlveolataJGI_SIN1.csv")
+SIN1AlveolataJGI$Accn <- sub("\\_.*", "", SIN1AlveolataJGI$Accn)
+SIN1AlveolataJGI <- JoinInfo(SIN1AlveolataJGI,"Alveolata",AlveolataJGI_Info,Taxon,"JGI")
+
+LST8AlveolataJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_JGI/AlveolataJGI_LST8.csv")
+LST8AlveolataJGI$Accn <- sub("\\_.*", "", LST8AlveolataJGI$Accn)
+LST8AlveolataJGI <- JoinInfo(LST8AlveolataJGI,"Alveolata",AlveolataJGI_Info,Taxon,"JGI")
+
+TORAlveolataJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_JGI/AlveolataJGI_TOR.csv")
+TORAlveolataJGI$Accn <- sub("\\_.*", "", TORAlveolataJGI$Accn)
+TORAlveolataJGI <- JoinInfo(TORAlveolataJGI,"Alveolata",AlveolataJGI_Info,Taxon,"JGI")
+
+AlveolataJGI <- ModCombine("Alveolata", AlveolataJGI_Info, RICTORAlveolataJGI,SIN1AlveolataJGI,RAPTORAlveolataJGI,LST8AlveolataJGI,TORAlveolataJGI)
+AlveolataJGI %>% filter(!if_all(5:9, is.na))
+AlveolataJGI <- AlveolataJGI %>% mutate(source = "JGI") %>% left_join(select(Taxon, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
+#-------------------------------------------------------------------------------
+
+AlveolataF <- rbind(Alveolata,AlveolataJGI)
+
 #-------------------------------------------------------------------------------
 #Rhodophyta Here
 
@@ -484,7 +519,7 @@ ExcavataF <- rbind(Discoba, Metamonada, ExcavataJGI)
 #-------------------------------------------------------------------------------
 
 
-Final_Table <- rbind(StramenopilesF, Alveolata, RhizariaF, Rhodophyta, Streptophyta, ChlorophytaF, ExcavataF)
+Final_Table <- rbind(StramenopilesF, AlveolataF, RhizariaF, Rhodophyta, Streptophyta, ChlorophytaF, ExcavataF)
 Final_Table <- distinct(Final_Table, Organism_Taxonomic_ID, .keep_all = TRUE)
 
 write.csv(Final_Table,file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")

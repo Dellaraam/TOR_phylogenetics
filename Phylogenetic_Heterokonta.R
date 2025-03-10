@@ -26,10 +26,10 @@ library(knitr)
 library(patchwork)
 library(xtable)
 
-install.packages("tableHTML")
+#install.packages("tableHTML")
 library(tableHTML)
 
-install.packages("useful")
+#install.packages("useful")
 library(useful)
 # ------------------------------------------------------------------------------
 #Functions Here
@@ -300,12 +300,12 @@ ExSIN1Raw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/Excava
 ExLST8Raw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/ExcavataJGI_LST8.csv")
 ExD1Raw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/ExcavataJGI_D1.csv")
 
-AlvRICTORRaw
-AlvRAPTORRaw
-AlvTORRaw
-AlvSIN1Raw
-AlvLST8Raw
-AlvD1Raw
+AlvRICTORRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_JGI/AlveolataJGI_RICTOR.csv")
+AlvRAPTORRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_JGI/AlveolataJGI_RAPTOR.csv")
+AlvTORRaw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_JGI/AlveolataJGI_TOR.csv")
+AlvSIN1Raw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_JGI/AlveolataJGI_SIN1.csv")
+AlvLST8Raw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_JGI/AlveolataJGI_LST8.csv")
+AlvD1Raw <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_JGI/AlveolataJGI_D1.csv")
 
 # Information from JGI that is needed to tie the data collected to the ncbi information
 Phyco_Information <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Phycocosm_Information.csv")
@@ -323,7 +323,7 @@ RhizariaJGI_Information <- RhizariaJGI_Information %>% rename(Accn = "portal", O
 ExcavataJGI_Information <- read.csv(file="~/GitHub/TOR_phylogenetics/GitHub_CSV/ExcavatesJGI_Information.csv")
 ExcavataJGI_Information <- ExcavataJGI_Information %>% rename(Accn = "portal", Organism_Taxonomic_ID = "NCBI.Taxon", Organism_Name = "name")
 
-AlveolataJGI_Information <- read.csv()
+AlveolataJGI_Information <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/AlveolataJGI_Information.csv")
 AlveolataJGI_Information <- AlveolataJGI_Information %>% rename(Accn = "portal", Organism_Taxonomic_ID = "NCBI.Taxon", Organism_Name = "name")
 
 Taxonomic_Information <- read.csv(file="~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
@@ -464,7 +464,7 @@ write.csv(ChRAPTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Gi
 write.csv(ChRICTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChRICTOR.csv")
 write.csv(ChLST8, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChLST8.csv")
 write.csv(ChSIN1, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChSIN1.csv")
-write.csv(ChTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChTOR.csv")
+write.csv(ChTor, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChTOR.csv")
 
 
 RhizRAPTOR <- JoinInfo(RhizRAPTORRaw,"Rhizaria",Phyco_Information,Taxonomic_Information)
@@ -574,7 +574,7 @@ TestMerge5 <- distinct(TestMerge5, Organism_Taxonomic_ID, .keep_all = TRUE)
 
 write.csv(TestMerge, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Stramenopiles_Combined.csv")
 write.csv(TestMerge2, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Chlorophyta_Combined.csv")
-#write.csv(testMerge5, file = "Updated_Alveolata_Combined")
+write.csv(TestMerge5, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Alveolata_Combined.csv")
 write.csv(TestMerge3, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Rhizaria_Combined.csv")
 write.csv(TestMerge4, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Excavata_Combined.csv")
 
