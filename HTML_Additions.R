@@ -74,7 +74,9 @@ HTML <- HTML %>%
   proteinPossible("Capsicum chinense","LST8")%>%
   proteinPossible("Carex littledalei","LST8")%>%
   proteinPossible("Gossypium klotzschianum","LST8")%>%
-  proteinPossible("Dichanthelium oligosanthes", "RAPTOR")
+  proteinPossible("Dichanthelium oligosanthes", "RAPTOR")%>%
+  proteinPossible("Aphanomyces cochlioides", "RAPTOR")%>%
+  proteinPossible("Trypanosoma congolense IL3000", "LST8")
 
 HTML$Organism.Name <- str_replace(HTML$Organism.Name, "Neopyropia yezoensis", "Pyropia yezoensis")
  which(HTML$Organism.Name == "Giardia lamblia ATCC 50803")
