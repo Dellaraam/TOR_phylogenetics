@@ -37,23 +37,6 @@ install.packages("tableHTML")
 library(tableHTML)
 
 
-proteinPossible <- function(df,OrganismName,Protein){
-  
-  temp <- df %>% filter(Organism.Name == OrganismName)
-  df <- subset(df, Organism.Name != OrganismName)
-  temp[,Protein] <-"P"
-  df <- rbind(df,temp)
-  return(df)
-}
-
-proteinPossibleSwap <- function(dfNo,dfYes,OrganismName, Protein){
-  
-  temp<- dfNo %>% filter(Organism.Name == OrganismName)
-  temp[,Protein] <-"P"
-  dfYes <- rbind(dfYes, temp)
-  return(dfYes)
-}
-
 
 
 
@@ -275,7 +258,6 @@ SRAPTORS <- STP + geom_tiplab(aes(color = RAPTOR), size = 3, show.legend = TRUE)
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   geom_point2(aes(subset=(node==2)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
-  geom_point2(aes(subset=(node==20)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   geom_point2(aes(subset=(node==91)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   geom_point2(aes(subset=(node==92)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
@@ -369,8 +351,12 @@ ASinP <- AlvP + geom_tiplab(aes(color = SIN1), size = 3, show.legend = TRUE)+
   # geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
   geom_text(aes(label=node))+
   geom_point2(aes(subset=(node==163)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
+  geom_point2(aes(subset=(node==142)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
+  geom_point2(aes(subset=(node==137)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==135)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
-  geom_point2(aes(subset=(node==136)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
+  geom_point2(aes(subset=(node==13)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
+  geom_point2(aes(subset=(node==12)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
+  geom_point2(aes(subset=(node==11)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==1)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==2)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
@@ -632,6 +618,7 @@ DRICTOR <- DTP + geom_tiplab(aes(color = RICTOR), size = 3,show.legend = TRUE)+
   #geom_text(aes(label=node))+
   # geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
   geom_point2(aes(subset=(node==6)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==9)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==13)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==14)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==22)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
@@ -1068,7 +1055,6 @@ RapStr <- StrephP + geom_tiplab(aes(color = RAPTOR), size = 2)+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_text(aes(label=node), size = 2)+
-  geom_point2(aes(subset=(node==65)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   geom_point2(aes(subset=(node==345)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
 RapStr
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorStreptophyta.png",
@@ -1102,7 +1088,6 @@ LST8Str <- StrephP + geom_tiplab(aes(color = LST8), size = 2)+
   geom_text(aes(label=node), size = 2)+
   geom_point2(aes(subset=(node==335)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   geom_point2(aes(subset=(node==330)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
-  geom_point2(aes(subset=(node==283)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5) +
   geom_point2(aes(subset=(node==48)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .5)
 LST8Str
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Streptophyta.png",
