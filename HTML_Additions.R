@@ -77,7 +77,7 @@ HTML <- HTML %>%
   proteinPossible("Dichanthelium oligosanthes", "RAPTOR")
 
 HTML$Organism.Name <- str_replace(HTML$Organism.Name, "Neopyropia yezoensis", "Pyropia yezoensis")
-# which(HTML$Organism.Name == "Giardia lamblia ATCC 50803")
+ which(HTML$Organism.Name == "Giardia lamblia ATCC 50803")
 HTML[296, "Group"] <- "Metamonada"
 HTML[801, "Group"] <- "Discoba"
 # Modifications to some of the organism names and also the supergroups

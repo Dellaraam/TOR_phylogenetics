@@ -529,38 +529,46 @@ CombinedAlveolataJGI <- mainCombine("Alveolata",AlveolataJGI_Information, AlvRIC
 CombinedHeterokonta <- CombinedHeterokonta %>% filter(!if_all(5:10, is.na))
 CombinedHeterokonta <- CombinedHeterokonta %>% left_join(select(Taxonomic_Information, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 CombinedHeterokonta <- CombinedHeterokonta %>% rename(Organism.Name = "Organism_Name")%>%mutate(Source = "JGI")
+CombinedHeterokonta$Accn <- sub("\\_.*", "", CombinedHeterokonta$Accn)
 
 
 CombinedChlorophytaJGI <- CombinedChlorophytaJGI %>% filter(!if_all(5:10, is.na))
 CombinedChlorophytaJGI <- CombinedChlorophytaJGI %>% left_join(select(Taxonomic_Information, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 CombinedChlorophytaJGI <- CombinedChlorophytaJGI %>% rename(Organism.Name = "Organism_Name")%>%mutate(Source = "JGI")
+CombinedChlorophytaJGI$Accn <- sub("\\_.*", "", CombinedChlorophytaJGI$Accn)
 
 CombinedRhizariaJGI <- CombinedRhizariaJGI %>% filter(!if_all(5:10, is.na))
 CombinedRhizariaJGI <- CombinedRhizariaJGI %>% left_join(select(Taxonomic_Information, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 CombinedRhizariaJGI <- CombinedRhizariaJGI %>% rename(Organism.Name = "Organism_Name")%>%mutate(Source = "JGI")
+CombinedRhizariaJGI$Accn <- sub("\\_.*", "", CombinedRhizariaJGI$Accn)
 
 
 CombinedExcavataJGI <- CombinedExcavataJGI %>% filter(!if_all(5:10, is.na))
 CombinedExcavataJGI <- CombinedExcavataJGI %>%left_join(select(Taxonomic_Information, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 CombinedExcavataJGI <- CombinedExcavataJGI %>% rename(Organism.Name = "Organism_Name")%>%mutate(Source = "JGI")
+CombinedExcavataJGI$Accn <- sub("\\_.*", "", CombinedExcavataJGI$Accn)
+
 
 CombinedAlveolataJGI <- CombinedAlveolataJGI %>% filter(!if_all(5:10, is.na))
 CombinedAlveolataJGI <- CombinedAlveolataJGI %>% left_join(select(Taxonomic_Information, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 CombinedAlveolataJGI <- CombinedAlveolataJGI %>% rename(Organism.Name = "Organism_Name") %>% mutate(Source = "JGI")
+CombinedAlveolataJGI$Accn <- sub("\\_.*", "", CombinedAlveolataJGI$Accn)
 
 
 
 #Need to add in if it was from JGI or from NCBI
 #Create a column named source
 #Chlorophyta
-TestMerge2 <- rbind(CombinedChlorophyta, CombinedChlorophytaJGI)
-TestMerge2 <- distinct(TestMerge2, Organism_Taxonomic_ID, .keep_all = TRUE)
+
 
 
 
 #Stramenopiles
 TestMerge <- rbind(CombinedStramenopiles, CombinedHeterokonta)
 TestMerge <- distinct(TestMerge, Organism_Taxonomic_ID, .keep_all = TRUE)
+
+TestMerge2 <- rbind(CombinedChlorophyta, CombinedChlorophytaJGI)
+TestMerge2 <- distinct(TestMerge2, Organism_Taxonomic_ID, .keep_all = TRUE)
 
 TestMerge3 <- rbind(CombinedRhizaria, CombinedRhizariaJGI)
 TestMerge3 <- distinct(TestMerge3, Organism_Taxonomic_ID, .keep_all = TRUE)

@@ -77,3 +77,4 @@ JsontoCSV("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata
 JsontoCSV("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Heterokonta_Jsons", "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/HeterokontaJGIBusco.csv")
 JsontoCSV("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Chlorophyta_Jsons", "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/ChlorophytaJGIBusco.csv")
 JsontoCSV("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_Jsons", "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/RhizariaJGIBusco.csv" )
+JsontoCSV("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Jsons", "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/AlveolataJGIBusco.csv")

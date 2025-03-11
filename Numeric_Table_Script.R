@@ -342,19 +342,29 @@ TORRhizaria <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHu
 TORRhizaria <- JoinInfo(TORRhizaria,"Rhizaria",RhizariaInfo,Taxon,"JGI")
 
 RICTORRJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_JGI/RhizariaJGI_RICTOR.csv")
+RICTORRJGI$Accn <- sub("\\_.*", "", RICTORRJGI$Accn)
 RICTORRJGI <- JoinInfo(RICTORRJGI,"Rhizaria",RhizariaJGI_Info,Taxon,"JGI")
 
+
 RAPTORRJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_JGI/RhizariaJGI_RAPTOR.csv")
+RAPTORRJGI$Accn <- sub("\\_.*", "", RAPTORRJGI$Accn)
 RAPTORRJGI <- JoinInfo(RAPTORRJGI,"Rhizaria",RhizariaJGI_Info,Taxon,"JGI")
 
+
 SIN1RJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_JGI/RhizariaJGI_SIN1.csv")
+SIN1RJGI$Accn <- sub("\\_.*", "", SIN1RJGI$Accn)
 SIN1RJGI <- JoinInfo(SIN1RJGI,"Rhizaria",RhizariaJGI_Info,Taxon,"JGI")
 
+
 LST8RJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_JGI/RhizariaJGI_LST8.csv")
+LST8RJGI$Accn <- sub("\\_.*", "", LST8RJGI$Accn)
 LST8RJGI <- JoinInfo(LST8RJGI,"Rhizaria",RhizariaJGI_Info,Taxon,"JGI")
 
+
 TORRJGI <- read.csv("C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Rhizaria_JGI/RhizariaJGI_TOR.csv")
+TORRJGI$Accn <- sub("\\_.*", "", TORRJGI$Accn)
 TORRJGI <- JoinInfo(TORRJGI,"Rhizaria",RhizariaJGI_Info,Taxon,"JGI")
+
 
 Rhizaria <- ModCombine("Rhizaria",RhizariaInfo,RICTORRhizaria, SIN1Rhizaria, RAPTORRhizaria, LST8Rhizaria, TORRhizaria)
 Rhizaria <- Rhizaria %>%
