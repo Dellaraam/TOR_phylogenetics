@@ -426,9 +426,11 @@ ATOR <- AlvP + geom_tiplab(aes(color = TOR), size = 3,show.legend = TRUE)+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 3)+
   #geom_text(aes(label=node))+
   # geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+=
-  geom_point2(aes(subset=(node==162)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==113)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==112)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==132)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==127)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==115)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==147)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==3)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==8)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
@@ -454,7 +456,12 @@ ALST8 <- AlvP + geom_tiplab(aes(color = LST8), size = 3,show.legend = TRUE)+
   geom_point2(aes(subset=(node==144)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==164)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==166)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
-  geom_point2(aes(subset=(node==162)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==111)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==112)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==113)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==115)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==116)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
+  geom_point2(aes(subset=(node==118)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==3)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==8)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
