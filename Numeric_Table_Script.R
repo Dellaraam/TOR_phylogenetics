@@ -525,11 +525,15 @@ ExcavataJGI <- ExcavataJGI %>%
   left_join(select(Taxon, `Class.name`,`Phylum.name`,`Order.name`, `Family.name`, `Genus.name`, Organism_Taxonomic_ID), by=c("Organism_Taxonomic_ID"))
 
 ExcavataF <- rbind(Discoba, Metamonada, ExcavataJGI)
+which(ExcavataF$Organism.Name == "Euglena gracilis CCAP 1224/5Z v1.0")
 
 #-------------------------------------------------------------------------------
 
 
 Final_Table <- rbind(StramenopilesF, AlveolataF, RhizariaF, Rhodophyta, Streptophyta, ChlorophytaF, ExcavataF)
 Final_Table <- distinct(Final_Table, Organism_Taxonomic_ID, .keep_all = TRUE)
-
+which(Final_Table$Organism.Name == "Euglena gracilis CCAP 1224/5Z v1.0")
+Final_Table$Group[827] <- "Discoba"
+which(Final_Table$Organism.Name == "Giardia intestinalis ATCC 50803")
+Final_Table$Group[828] <- "Metamonada"
 write.csv(Final_Table,file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")

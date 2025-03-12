@@ -1000,7 +1000,7 @@ lst8Rh <- RhodoP + geom_tiplab(aes(color = LST8), size = 3,show.legend = TRUE)+
   # geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
 lst8Rh
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Rhodophyta.png",
-       plot = Lst8Rh,
+       plot = lst8Rh,
        width = 3840,
        height = 2160,
        units = "px",
