@@ -367,6 +367,18 @@ write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/StramenopileLST8N
 subset <- subset(StramenopilesTOR, Source =="NCBI")
 write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/StramenopileTORNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
+subset <- subset(AlveolataRaptor, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataRaptorNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(AlveolataRictor, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataRictorNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(AlveolataSIN1, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataSIN1NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(AlveolataLST8, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataLST8NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(AlveolataTOR, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataTORCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+
+
 
 #IDs for Alveolata
 write.table(AlveolataRictor$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataRictor.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
@@ -377,6 +389,7 @@ write.table(AlveolataTOR$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataTO
 
 
 #IDs for Rhizaria
+
 write.table(RhizariaRictor$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaRictor.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 write.table(RhizariaRaptor$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaRaptor.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 write.table(RhizariaSIN1$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaSIN1.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)

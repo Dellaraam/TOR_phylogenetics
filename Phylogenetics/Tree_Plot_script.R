@@ -722,7 +722,7 @@ MRICTOR <- MTP + geom_tiplab(aes(color = RICTOR), size = 3, show.legend = TRUE)+
   geom_point2(aes(subset=(node==31)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 MRICTOR
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorDiscoba.png",
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorMetamonada.png",
        plot = MRICTOR,
        width = 3840,
        height = 2160,
@@ -741,7 +741,7 @@ MSIN1 <- MTP + geom_tiplab(aes(color = SIN1), size = 3, show.legend = TRUE)+
   geom_point2(aes(subset=(node==28)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 MSIN1
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Discoba.png",
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Metamonada.png",
        plot = MSIN1,
        width = 3840,
        height = 2160,
@@ -757,7 +757,7 @@ MRAPTOR <- MTP + geom_tiplab(aes(color = RAPTOR), size = 3, show.legend = TRUE)+
   # geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 MRAPTOR
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorDiscoba.png",
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorMetamonada.png",
        plot = MRAPTOR,
        width = 3840,
        height = 2160,
@@ -773,7 +773,7 @@ MTOR <- MTP + geom_tiplab(aes(color = TOR), size = 3, show.legend = TRUE)+
   # geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 MTOR
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORDiscoba.png",
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORMetamonada.png",
        plot = MTOR,
        width = 3840,
        height = 2160,
@@ -790,7 +790,7 @@ MLST8 <- MTP + geom_tiplab(aes(color = LST8), size = 3, show.legend = TRUE)+
   geom_point2(aes(subset=(node==15)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .3)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 MLST8
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Discoba.png",
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Metamonada.png",
        plot = MLST8,
        width = 3840,
        height = 2160,
