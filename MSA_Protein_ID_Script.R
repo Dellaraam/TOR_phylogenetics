@@ -36,13 +36,31 @@ Taxon <- rename(Taxon, Organism.Name = "Tax.name")
 AlveolataNames <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Information_2.csv")
 AlveolataNames <- rename(AlveolataNames, Accn = "Assembly.Accession")
 AlveolataRictor <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RICTORAlveolata.csv")
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/AlvRICTOR.csv")
+Temp <- rename(Temp,Organism.Name = "Organism_Name")
+AlveolataJGIRictor <- Temp %>% select(tar, tid, qry, qid, eva, sca, bia, evd, scd, bid, Accn, Organism_Taxonomic_ID, Organism.Name, Source)
+
 AlveolataRaptor <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/RAPTORAlveolata.csv")
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/AlvRAPTOR.csv")
+Temp <- rename(Temp,Organism.Name = "Organism_Name")
+AlveolataJGIRaptor <- Temp %>% select(tar, tid, qry, qid, eva, sca, bia, evd, scd, bid, Accn, Organism_Taxonomic_ID, Organism.Name, Source)
+
 AlveolataSIN1 <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/SIN1Alveolata.csv")
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/AlvSIN1.csv")
+Temp <- rename(Temp,Organism.Name = "Organism_Name")
+AlveolataJGISIN1 <- Temp %>% select(tar, tid, qry, qid, eva, sca, bia, evd, scd, bid, Accn, Organism_Taxonomic_ID, Organism.Name, Source)
+
 AlveolataLST8 <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/LST8Alveolata.csv")
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/AlvRICTOR.csv")
+Temp <- rename(Temp,Organism.Name = "Organism_Name")
+AlveolataJGILST8 <- Temp %>% select(tar, tid, qry, qid, eva, sca, bia, evd, scd, bid, Accn, Organism_Taxonomic_ID, Organism.Name, Source)
+
 AlveolataTOR <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Alveolata/TORAlveolata.csv")
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/AlvRICTOR.csv")
+Temp <- rename(Temp,Organism.Name = "Organism_Name")
+AlveolataJGITOR <- Temp %>% select(tar, tid, qry, qid, eva, sca, bia, evd, scd, bid, Accn, Organism_Taxonomic_ID, Organism.Name, Source)
 
-
-
+#-------------------------------------------------------------------------------
 StramenopileNames <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Stramenopiles_Information_2.csv")
 StramenopileNames <- rename(StramenopileNames, Accn = "Assembly.Accession")
 StramenopilesRictor <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RICTORStramenopiles.csv" )
@@ -111,6 +129,83 @@ RhizariaTOR <- mutate(RhizariaTOR, Source = "NCBI")
 Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/RhizTOR.csv")
 Temp <- rename(Temp, Organism.Name = "Organism_Name")
 RhizariaJGITOR <- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
+#-------------------------------------------------------------------------------
+
+ChlorophytaNames <- read_tsv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/Chlorophyta_Names.tsv")
+ChlorophytaNames <- rename(ChlorophytaNames, Organism.Name = "Organism Name", Accn = "Assembly Accession", Organism_Taxonomic_ID = "Organism Taxonomic ID")
+
+ChlorophytaRictor <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/RICTOR_Chlorophyta.csv")
+ChlorophytaRictor <- mutate(ChlorophytaRictor, Source = "NCBI")
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChRICTOR.csv")
+Temp <- rename(Temp, Organism.Name = "Organism_Name")
+ChlorophytaJGIRictor <- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
+
+ChlorophytaRaptor <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/RAPTOR_Chlorophyta.csv")
+ChlorophytaRaptor <- mutate(ChlorophytaRaptor, Source = "NCBI")
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChRAPTOR.csv")
+Temp <- rename(Temp, Organism.Name = "Organism_Name")
+ChlorophytaJGIRaptor <- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
+
+ChlorophytaSIN1 <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/SIN1_Chlorophyta.csv")
+ChlorophytaSIN1 <- mutate(ChlorophytaSIN1, Source = "NCBI")
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChSIN1.csv")
+Temp <- rename(Temp, Organism.Name = "Organism_Name")
+ChlorophytaJGISIN1 <- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
+
+
+ChlorophytaLST8 <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/LST8_Chlorophyta.csv")
+ChlorophytaLST8 <- mutate(ChlorophytaLST8, Source = "NCBI")
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChLST8.csv")
+Temp <- rename(Temp, Organism.Name = "Organism_Name")
+ChlorophytaJGILST8 <- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
+
+ChlorophytaTOR <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/TOR_Chlorophyta.csv")
+ChlorophytaTOR <- mutate(ChlorophytaLST8, Source = "NCBI")
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChTOR.csv")
+Temp <- rename(Temp, Organism.Name = "Organism_Name")
+ChlorophytaJGITOR<- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
+
+#-------------------------------------------------------------------------------
+#Now we need to do something a little interesting for the Excavates.
+#Since JGI didn't divide them between Discoba and Metamonada, I may need to do some manual work here
+#First I will read in the Discoba and the metamonada
+#I will add Super Groups to these for distinguishing marks
+
+DiscobaNames <- read_tsv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/Discoba_Names.tsv")
+DiscobaNames <- rename(DiscobaNames, Organism.Name = "Organism Name", Accn = "Assembly Accession", Organism_Taxonomic_ID = "Organism Taxonomic ID")
+
+DiscobaRictor <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RICTOR_Discoba.csv")
+DiscobaRictor<- mutate(DiscobaRictor, Source = "NCBI", Super.Group = "Discoba")
+
+DiscobaRaptor <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RAPTOR_Discoba.csv")
+DiscobaRaptor <- mutate(DiscobaRaptor, Source = "NCBI", Super.Group = "Discoba")
+
+DiscobaSIN1 <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/SIN1_Discoba.csv")
+DiscobaSIN1 <- mutate(DiscobaSIN1, Source = "NCBI", Super.Group = "Discoba")
+
+DiscobaLST8 <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/LST8_Discoba.csv")
+DiscobaLST8 <- mutate(DiscobaLST8, Source = "NCBI", Super.Group = "Discoba")
+
+DiscobaTOR <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/TOR_Discoba.csv")
+DiscobaTOR <- mutate(DiscobaTOR, Source = "NCBI", Super.Group = "Discoba")
+
+MetamonadaNames <- read_tsv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/Metamonada_Names.tsv")
+MetamonadaNames <- rename(MetamonadaNames, Organism.Name = "Organism Name", Accn = "Assembly Accession", Organism_Taxonomic_ID = "Organism Taxonomic ID")
+
+MetamonadaRictor <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RICTOR_Metamonada.csv")
+MetamonadaRictor <- mutate(MetamonadaRictor, Source = "NCBI", Super.Group = "Metamonada")
+
+MetamonadaRaptor <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RAPTOR_Metamonada.csv")
+MetamonadaRaptor <- mutate(MetamonadaRaptor, Source = "NCBI", Super.Group = "Metamonada")
+
+MetamonadaSIN1 <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/SIN1_Metamonada.csv")
+MetamonadaSIN1 <- mutate(MetamonadaSIN1, Source = "NCBI", Super.Group = "Metamonada")
+
+MetamonadaLST8 <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/LST8_Metamonada.csv")
+MetamonadaLST8 <- mutate(MetamonadaLST8, Source = "NCBI", Super.Group = "Metamonada")
+
+MetamonadaTOR <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/TOR_Metamonada.csv")
+MetamonadaTOR <- mutate(MetamonadaTOR, Source = "NCBI", Super.Group = "Metamonada")
 
 
 
@@ -121,16 +216,7 @@ RhizariaJGITOR <- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,O
 
 
 
-
-
-
-
-
-
-
-
-
-
+#And Finally Rhodophyta and Streptophyta, Phew
 
 
 
@@ -144,22 +230,27 @@ RhizariaJGITOR <- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,O
 AlveolataRictor <- mergeClean(AlveolataRictor,AlveolataNames)
 AlveolataRictor <- distinct(AlveolataRictor, Organism_Taxonomic_ID, .keep_all = TRUE)
 AlveolataRictor <- mutate(AlveolataRictor, Source = "NCBI")
+AlveolataRictor <- rbind(AlveolataRictor, AlveolataJGIRictor)
 
 AlveolataRaptor <- mergeClean(AlveolataRaptor, AlveolataNames)
 AlveolataRaptor <- distinct(AlveolataRaptor, Organism_Taxonomic_ID, .keep_all = TRUE)
 AlveolataRaptor <- mutate(AlveolataRaptor, Source = "NCBI")
+AlveolataRaptor <- rbind(AlveolataRaptor, AlveolataJGIRaptor)
 
 AlveolataSIN1 <- mergeClean(AlveolataSIN1, AlveolataNames)
 AlveolataSIN1 <- distinct(AlveolataSIN1, Organism_Taxonomic_ID, .keep_all = TRUE)
 AlveolataSIN1 <- mutate(AlveolataSIN1, Source = "NCBI")
+AlveolataSIN1 <- rbind(AlveolataSIN1, AlveolataJGISIN1)
 
 AlveolataLST8 <- mergeClean(AlveolataLST8, AlveolataNames)
 AlveolataLST8 <- distinct(AlveolataLST8, Organism_Taxonomic_ID, .keep_all = TRUE)
 AlveolataLST8 <- mutate(AlveolataLST8, Source = "NCBI")
+AlveolataLST8 <- rbind(AlveolataLST8, AlveolataJGILST8)
 
 AlveolataTOR <- mergeClean(AlveolataTOR, AlveolataNames)
 AlveolataTOR <- distinct(AlveolataTOR, Organism_Taxonomic_ID, .keep_all = TRUE)
 AlveolataTOR <- mutate(AlveolataTOR, Source = "NCBI")
+AlveolataTOR <- rbind(AlveolataTOR, AlveolataJGITOR)
 
 
 StramenopilesRictor <- mergeClean(StramenopilesRictor,StramenopileNames)
@@ -202,6 +293,25 @@ RhizariaTOR <- mergeClean(RhizariaTOR,RhizariaNames)
 RhizariaTOR <- rbind(RhizariaTOR, RhizariaJGITOR)
 RhizariaTOR <- distinct(RhizariaTOR, Organism_Taxonomic_ID, .keep_all = TRUE)
 
+ChlorophytaRictor <- mergeClean(ChlorophytaRictor, ChlorophytaNames)
+ChlorophytaRictor <- rbind(ChlorophytaRictor, ChlorophytaJGIRictor)
+ChlorophytaRictor <- distinct(ChlorophytaRictor, Organism_Taxonomic_ID, .keep_all = TRUE)
+
+ChlorophytaRaptor <- mergeClean(ChlorophytaRaptor, ChlorophytaNames)
+ChlorophytaRaptor <- rbind(ChlorophytaRaptor, ChlorophytaJGIRaptor)
+ChlorophytaRaptor <- distinct(ChlorophytaRaptor, Organism_Taxonomic_ID, .keep_all = TRUE)
+
+ChlorophytaSIN1 <- mergeClean(ChlorophytaSIN1, ChlorophytaNames)
+ChlorophytaSIN1 <- rbind(ChlorophytaSIN1, ChlorophytaJGISIN1)
+ChlorophytaSIN1 <- distinct(ChlorophytaSIN1, Organism_Taxonomic_ID, .keep_all = TRUE)
+
+ChlorophytaLST8 <- mergeClean(ChlorophytaLST8, ChlorophytaNames)
+ChlorophytaLST8 <- rbind(ChlorophytaLST8, ChlorophytaJGILST8)
+ChlorophytaLST8 <- distinct(ChlorophytaLST8, Organism_Taxonomic_ID, .keep_all = TRUE)
+
+ChlorophytaTOR <- mergeClean(ChlorophytaTOR, ChlorophytaNames)
+ChlorophytaTOR <- rbind(ChlorophytaTOR, ChlorophytaJGITOR)
+ChlorophytaTOR <- distinct(ChlorophytaTOR, Organism_Taxonomic_ID, .keep_all = TRUE)
 
 
 
@@ -239,6 +349,14 @@ write.csv(RhizariaSIN1, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetic
 write.csv(RhizariaLST8, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/RhizariaLST8Final.csv")
 write.csv(RhizariaTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/RhizariaTORFinal.csv")
 
+write.csv(ChlorophytaRictor, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/ChlorophytaRICTORFinal.csv")
+write.csv(ChlorophytaRaptor, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/ChlorophytaRAPTORFinal.csv")
+write.csv(ChlorophytaSIN1, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/ChlorophytaSIN1Final.csv")
+write.csv(ChlorophytaLST8, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/ChlorophytaLST8Final.csv")
+write.csv(ChlorophytaTOR, file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/ChlorophytaTORFinal.csv")
+
+
+
 
 subset <- subset(StramenopilesRaptor, Source == "NCBI")
 write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/StramenopileRaptorNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
@@ -250,7 +368,6 @@ subset <- subset(StramenopilesTOR, Source =="NCBI")
 write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/StramenopileTORNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
 
-
 #IDs for Alveolata
 write.table(AlveolataRictor$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataRictor.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 write.table(AlveolataRaptor$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataRaptor.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
@@ -258,6 +375,8 @@ write.table(AlveolataSIN1$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataS
 write.table(AlveolataLST8$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataLST8.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 write.table(AlveolataTOR$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataTOR.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
+
+#IDs for Rhizaria
 write.table(RhizariaRictor$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaRictor.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 write.table(RhizariaRaptor$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaRaptor.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 write.table(RhizariaSIN1$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaSIN1.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)

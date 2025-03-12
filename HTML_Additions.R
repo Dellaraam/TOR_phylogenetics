@@ -2,11 +2,11 @@ library(tidyverse)
 
 
 
-proteinPossible <- function(df,OrganismName,Protein){
+proteinPossible <- function(df,OrganismName,Protein,value){
   
   temp <- df %>% filter(Organism.Name == OrganismName)
   df <- subset(df, Organism.Name != OrganismName)
-  temp[,Protein] <-"P"
+  temp[,Protein] <- value
   df <- rbind(df,temp)
   return(df)
 }
@@ -37,52 +37,78 @@ HTML <- relocate(HTML, Organism.Name, .after = Organism_Taxonomic_ID)
 # Using results gather by Dell and her Diamond Analysis work
 
 HTML <- HTML %>%
-  proteinPossible("Effrenium voratum","RAPTOR")%>%
-  proteinPossible("Effrenium voratum","LST8") %>%
-  proteinPossible("Durusdinium trenchii","RAPTOR")%>%
-  proteinPossible("Paramecium primaurelia","RICTOR")%>%
-  proteinPossible("Bonamia ostreae","RAPTOR")%>%
-  proteinPossible("Lotharella oceanica","RICTOR")%>%
-  proteinPossible("Lotharella oceanica","RAPTOR")%>%
-  proteinPossible("Lotharella oceanica","TOR")%>%
-  proteinPossible("Lotharella oceanica","LST8")%>%
-  proteinPossible("Paulinella micropora","RAPTOR")%>%
-  proteinPossible("Paulinella micropora","TOR")%>%
-  proteinPossible("Paulinella micropora","LST8")%>%
-  proteinPossible("Paulinella micropora","TOR")%>%
-  proteinPossible("Tetradesmus obliquus","RAPTOR")%>%
-  proteinPossible("Pseudo-nitzschia multistriata","LST8")%>%
-  proteinPossible("Triticum urartu","RAPTOR")%>%
-  proteinPossible("Bienertia sinuspersici","RAPTOR") %>%
-  proteinPossible("Nannochloropsis gaditana","RICTOR")%>%
-  proteinPossible("Phytophthora megakarya","RICTOR")%>%
-  proteinPossible("Phytophthora megakarya","LST8")%>%
-  proteinPossible("Euglena gracilis","RICTOR")%>%
-  proteinPossible("Nannochloropsis gaditana CCMP526","RICTOR")%>%
-  proteinPossible("Nannochloropsis gaditana CCMP526","LST8")%>%
-  proteinPossible("Monocercomonoides exilis","RICTOR")%>%
-  proteinPossible("Nelumbo nucifera", "LST8")%>%
-  proteinPossible("Nelumbo nucifera","RAPTOR")%>%
-  proteinPossible("Nelumbo nucifera", "TOR")%>%
-  proteinPossible("Apium graveolens", "RAPTOR")%>%
-  proteinPossible("Apium graveolens","LST8")%>%
-  proteinPossible("Apium graveolens","TOR")%>%
-  proteinPossible("Babesia caballi","TOR")%>%
-  proteinPossible("Ceratopteris richardii","LST8")%>%
-  proteinPossible("Stephania cephalantha","LST8")%>%
-  proteinPossible("Morus notabilis","LST8")%>%
-  proteinPossible("Capsicum chinense","LST8")%>%
-  proteinPossible("Carex littledalei","LST8")%>%
-  proteinPossible("Gossypium klotzschianum","LST8")%>%
-  proteinPossible("Dichanthelium oligosanthes", "RAPTOR")%>%
-  proteinPossible("Aphanomyces cochlioides", "RAPTOR")%>%
-  proteinPossible("Trypanosoma congolense IL3000", "LST8")
+  proteinPossible("Effrenium voratum","RAPTOR","P")%>%
+  proteinPossible("Effrenium voratum","LST8","P") %>%
+  proteinPossible("Durusdinium trenchii","RAPTOR","P")%>%
+  proteinPossible("Paramecium primaurelia","RICTOR","P")%>%
+  proteinPossible("Bonamia ostreae","RAPTOR","P")%>%
+  proteinPossible("Lotharella oceanica","RICTOR","P")%>%
+  proteinPossible("Lotharella oceanica","RAPTOR","P")%>%
+  proteinPossible("Lotharella oceanica","TOR","P")%>%
+  proteinPossible("Lotharella oceanica","LST8","P")%>%
+  proteinPossible("Paulinella micropora","RAPTOR","P")%>%
+  proteinPossible("Paulinella micropora","TOR","P")%>%
+  proteinPossible("Paulinella micropora","LST8","P")%>%
+  proteinPossible("Paulinella micropora","TOR","P")%>%
+  proteinPossible("Tetradesmus obliquus","RAPTOR","P")%>%
+  proteinPossible("Pseudo-nitzschia multistriata","LST8","P")%>%
+  proteinPossible("Triticum urartu","RAPTOR","P")%>%
+  proteinPossible("Bienertia sinuspersici","RAPTOR","P") %>%
+  proteinPossible("Nannochloropsis gaditana","RICTOR","P")%>%
+  proteinPossible("Phytophthora megakarya","RICTOR","P")%>%
+  proteinPossible("Phytophthora megakarya","LST8","P")%>%
+  proteinPossible("Euglena gracilis","RICTOR","P")%>%
+  proteinPossible("Nannochloropsis gaditana CCMP526","RICTOR","P")%>%
+  proteinPossible("Nannochloropsis gaditana CCMP526","LST8","P")%>%
+  proteinPossible("Monocercomonoides exilis","RICTOR","P")%>%
+  proteinPossible("Nelumbo nucifera", "LST8","P")%>%
+  proteinPossible("Nelumbo nucifera","RAPTOR","P")%>%
+  proteinPossible("Nelumbo nucifera", "TOR","P")%>%
+  proteinPossible("Apium graveolens", "RAPTOR","P")%>%
+  proteinPossible("Apium graveolens","LST8","P")%>%
+  proteinPossible("Apium graveolens","TOR","P")%>%
+  proteinPossible("Babesia caballi","TOR","P")%>%
+  proteinPossible("Ceratopteris richardii","LST8","P")%>%
+  proteinPossible("Stephania cephalantha","LST8","P")%>%
+  proteinPossible("Morus notabilis","LST8","P")%>%
+  proteinPossible("Capsicum chinense","LST8","P")%>%
+  proteinPossible("Carex littledalei","LST8","P")%>%
+  proteinPossible("Gossypium klotzschianum","LST8","P")%>%
+  proteinPossible("Dichanthelium oligosanthes", "RAPTOR","P")%>%
+  proteinPossible("Aphanomyces cochlioides", "RAPTOR","P")%>%
+  proteinPossible("Trypanosoma congolense IL3000", "LST8","P")
+
+
+#Make a for loop for the change of the excavates to the Discoba
+#Use conditional statements to determine to find the specific names and then change the data
+
 
 HTML$Organism.Name <- str_replace(HTML$Organism.Name, "Neopyropia yezoensis", "Pyropia yezoensis")
- which(HTML$Organism.Name == "Giardia lamblia ATCC 50803")
-HTML[296, "Group"] <- "Metamonada"
-HTML[801, "Group"] <- "Discoba"
+
+
+eug = which(HTML$Organism.Name == "Euglena gracilis")
+gia = which(HTML$Organism.Name == "Giardia lamblia ATCC 50803")
+HTML[eug, "Group"] <- "Discoba"
+HTML[gia, "Group"] <- "Metamonada"
+
 # Modifications to some of the organism names and also the supergroups
+
+#Removing the SIN1 and RICTOR Hits as they are, as it turns out, false positives
+#This was based upon BLAST results on the specific 
+HTML <- HTML %>%
+  proteinPossible("Cichorium endivia", "SIN1",NA) %>%
+  proteinPossible("Cichorium endivia","RICTOR",NA)%>%
+  proteinPossible("Salix suchowensis","SIN1",NA)%>%
+  proteinPossible("Adiantum nelumboides","SIN1",NA)%>%
+  proteinPossible("Adiantum nelumboides","RICTOR",NA)%>%
+  proteinPossible("Persea americana","SIN1",NA)%>%
+  proteinPossible("Sphagnum jensenii","RICTOR",NA)%>%
+  proteinPossible("Carpinus fangiana","RICTOR",NA)%>%
+  proteinPossible("Klebsormidium nitens","RICTOR",NA)
+  
+
+
+
 
 #Look into aphanomyces for RICTOR. What can we conclude about it?
 
