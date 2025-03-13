@@ -208,7 +208,31 @@ MetamonadaTOR <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenet
 MetamonadaTOR <- mutate(MetamonadaTOR, Source = "NCBI", Super.Group = "Metamonada")
 
 
+#Other Excavates (JGI)
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ExRAPTOR.csv")
+Temp <- rename(Temp, Organism.Name = "Organism_Name")
+ExcavataJGIRaptor<- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
+ExcavataJGIRaptor <- mutate(ExcavataJGIRaptor, Super.Group = "Excavata")
 
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ExRICTOR.csv")
+Temp <- rename(Temp, Organism.Name = "Organism_Name")
+ExcavataJGIRictor<- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
+ExcavataJGIRictor <- mutate(ExcavataJGIRictor, Super.Group = "Excavata")
+
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ExSIN1.csv")
+Temp <- rename(Temp, Organism.Name = "Organism_Name")
+ExcavataJGISIN1<- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
+ExcavataJGISIN1 <- mutate(ExcavataJGISIN1, Super.Group = "Excavata")
+
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ExLST8.csv")
+Temp <- rename(Temp, Organism.Name = "Organism_Name")
+ExcavataJGILST8<- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
+ExcavataJGILST8 <- mutate(ExcavataJGILST8, Super.Group = "Excavata")
+
+Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ExTOR.csv")
+Temp <- rename(Temp, Organism.Name = "Organism_Name")
+ExcavataJGITOR<- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
+ExcavataJGITOR <- mutate(ExcavataJGITOR, Super.Group = "Excavata")
 
 
 
@@ -313,7 +337,63 @@ ChlorophytaTOR <- mergeClean(ChlorophytaTOR, ChlorophytaNames)
 ChlorophytaTOR <- rbind(ChlorophytaTOR, ChlorophytaJGITOR)
 ChlorophytaTOR <- distinct(ChlorophytaTOR, Organism_Taxonomic_ID, .keep_all = TRUE)
 
+DiscobaRaptor <- mergeClean(DiscobaRaptor, DiscobaNames)
+DiscobaRaptor <- mutate(DiscobaRaptor, Source = "NCBI")
+DiscobaRictor <- mergeClean(DiscobaRictor, DiscobaNames)
+DiscobaRictor <- mutate(DiscobaRictor, Source = "NCBI")
+DiscobaSIN1 <- mergeClean(DiscobaSIN1, DiscobaNames)
+DiscobaSIN1 <- mutate(DiscobaSIN1, Source = "NCBI")
+DiscobaLST8 <- mergeClean(DiscobaLST8, DiscobaNames)
+DiscobaLST8 <- mutate(DiscobaLST8, Source = "NCBI")
+DiscobaTOR <- mergeClean(DiscobaTOR, DiscobaNames)
+DiscobaTOR <- mutate(DiscobaTOR, Source = "NCBI")
 
+MetamonadaRaptor <- mergeClean(MetamonadaRaptor, MetamonadaNames)
+MetamonadaRaptor <- mutate(MetamonadaRaptor, Source = "NCBI")
+MetamonadaRictor <- mergeClean(MetamonadaRictor, MetamonadaNames)
+MetamonadaRictor <- mutate(MetamonadaRictor, Source = "NCBI")
+MetamonadaSIN1 <- mergeClean(MetamonadaSIN1, MetamonadaNames)
+MetamonadaSIN1 <- mutate(MetamonadaSIN1, Source = "NCBI")
+MetamonadaLST8 <- mergeClean(MetamonadaLST8, MetamonadaNames)
+MetamonadaLST8 <- mutate(MetamonadaLST8, Source = "NCBI")
+MetamonadaTOR <- mergeClean(MetamonadaTOR, MetamonadaNames)
+MetamonadaTOR <- mutate(MetamonadaTOR, Source = "NCBI")
+
+#now to combine the Discobas and the Metamonadas for the time being
+
+
+
+
+ExcavataRaptor <- rbind(DiscobaRaptor, MetamonadaRaptor, ExcavataJGIRaptor)
+ExcavataRaptor <- distinct(ExcavataRaptor, Organism_Taxonomic_ID, .keep_all = TRUE)
+ExcavataRictor <- rbind(DiscobaRictor, MetamonadaRictor, ExcavataJGIRictor)
+ExcavataRictor <- distinct(ExcavataRictor, Organism_Taxonomic_ID, .keep_all = TRUE)
+ExcavataSIN1 <- rbind(DiscobaSIN1, MetamonadaSIN1, ExcavataJGISIN1)
+ExcavataSIN1 <- distinct(ExcavataSIN1, Organism_Taxonomic_ID, .keep_all = TRUE)
+ExcavataLST8 <- rbind(DiscobaLST8, MetamonadaLST8, ExcavataJGILST8)
+ExcavataLST8 <- distinct(ExcavataLST8, Organism_Taxonomic_ID, .keep_all = TRUE)
+ExcavataTOR <- rbind(DiscobaTOR, MetamonadaTOR, ExcavataJGITOR)
+ExcavataTOR <- distinct(ExcavataTOR, Organism_Taxonomic_ID, .keep_all = TRUE)
+
+
+
+#which(ExcavataTOR$Organism.Name == "Euglena gracilis CCAP 1224/5Z v1.0")
+
+
+#eug <- which(ExcavataTOR$Organism.Name == "Euglena gracilis CCAP 1224/5Z v1.0")
+#gia <- which(ExcavataTOR$Organism.Name == "Giardia intestinalis ATCC 50803")
+
+#Makes the Excavates have a proper super group based upon current data
+#ExcavataRaptor[eug, "Super.Group"] <- "Discoba"
+#ExcavataRaptor[gia, "Super.Group"] <- "Metamonada"
+#ExcavataRictor[eug, "Super.Group"] <- "Discoba"
+#ExcavataRictor[gia, "Super.Group"] <- "Metamonada"
+#ExcavataSIN1[eug, "Super.Group"] <- "Discoba"
+#ExcavataSIN1[gia, "Super.Group"] <- "Metamonada"
+#ExcavataLST8[eug, "Super.Group"] <- "Discoba"
+#ExcavataLST8[gia, "Super.Group"] <- "Metamonada"
+#ExcavataTOR[eug, "Super.Group"] <- "Discoba"
+#ExcavataTOR[gia, "Super.Group"] <- "Metamonada"
 
 
 
@@ -376,25 +456,35 @@ write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataSIN1NCBI
 subset <- subset(AlveolataLST8, Source == "NCBI")
 write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataLST8NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 subset <- subset(AlveolataTOR, Source == "NCBI")
-write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataTORCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataTORNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
+subset <- subset(RhizariaRaptor, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaRaptorNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(RhizariaRictor, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaRictorNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(RhizariaSIN1, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaSIN1NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(RhizariaLST8, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaLST8NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(RhizariaTOR, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaTORNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
+#Creating the Discoba ID's
+subset <- subset(ExcavataRaptor, Super.Group == "Discoba")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/DiscobaRaptorNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
-#IDs for Alveolata
-write.table(AlveolataRictor$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataRictor.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
-write.table(AlveolataRaptor$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataRaptor.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
-write.table(AlveolataSIN1$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataSIN1.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
-write.table(AlveolataLST8$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataLST8.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
-write.table(AlveolataTOR$tar, file = "~/GitHub/TOR_phylogenetics/IDs/AlveolataTOR.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(ExcavataRictor, Super.Group == "Discoba")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/DiscobaRictorNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
+subset <- subset(ExcavataSIN1, Super.Group == "Discoba")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/DiscobaSIN1NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
-#IDs for Rhizaria
+subset <- subset(ExcavataLST8, Super.Group == "Discoba")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/DiscobaLST8NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
-write.table(RhizariaRictor$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaRictor.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
-write.table(RhizariaRaptor$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaRaptor.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
-write.table(RhizariaSIN1$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaSIN1.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
-write.table(RhizariaLST8$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaLST8.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
-write.table(RhizariaTOR$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhizariaTOR.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(ExcavataTOR, Super.Group == "Discoba")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/DiscobaTORNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
+#Creating the Metamonada ID's
 
 
