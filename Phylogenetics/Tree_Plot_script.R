@@ -202,12 +202,12 @@ SSP <- STP + geom_tiplab(aes(color = SIN1), size = 2, show.legend = TRUE, nudge_
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(fill = `SIN1`, x = 0, y = 0))+
-  #geom_text(aes(label = node))+
+  geom_text(aes(label = node))+
   geom_point2(aes(subset=(node==150)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==132)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==142)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==140)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
-  geom_point2(aes(subset=(node==114)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
+  geom_point2(aes(subset=(node==113)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==30)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   geom_point2(aes(subset=(node==31)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   geom_point2(aes(subset=(node==40)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
