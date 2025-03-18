@@ -94,6 +94,7 @@ HTML[gia, "Group"] <- "Metamonada"
 #Removing the SIN1 and RICTOR Hits as they are, as it turns out, false positives
 #This was based upon BLAST results on the specific 
 HTML <- HTML %>%
+  proteinPossible("Chlamydomonas reinhardtii","SIN1",NA)%>%
   proteinPossible("Cichorium endivia", "SIN1",NA) %>%
   proteinPossible("Cichorium endivia","RICTOR",NA)%>%
   proteinPossible("Salix suchowensis","SIN1",NA)%>%

@@ -421,7 +421,9 @@ ALST8 <- AlvP + geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudg
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   #geom_text(aes(label = node))+
   geom_point2(aes(subset=(node==165)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
-  geom_point2(aes(subset=(node==144)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
+  geom_point2(aes(subset=(node==161)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
+  geom_point2(aes(subset=(node==148)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
+  geom_point2(aes(subset=(node==145)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .6)+
   geom_point2(aes(subset=(node==119)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==118)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==115)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
