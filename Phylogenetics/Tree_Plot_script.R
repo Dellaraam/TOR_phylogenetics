@@ -180,14 +180,11 @@ RISP <- STP + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nud
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
-  #geom_text(aes(label=node))+
+  geom_text(aes(label=node))+
   geom_point2(aes(subset=(node==19)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
-  geom_point2(aes(subset=(node==153)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
-  geom_point2(aes(subset=(node==142)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
-  geom_point2(aes(subset=(node==153)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
-  geom_point2(aes(subset=(node==70)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
-  geom_point2(aes(subset=(node==91)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
-  geom_point2(aes(subset=(node==92)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
+  geom_point2(aes(subset=(node==150)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
+  geom_point2(aes(subset=(node==140)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
+  geom_point2(aes(subset=(node==70)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA))
 RISP
@@ -206,18 +203,17 @@ SSP <- STP + geom_tiplab(aes(color = SIN1), size = 2, show.legend = TRUE, nudge_
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(fill = `SIN1`, x = 0, y = 0))+
   #geom_text(aes(label = node))+
-  geom_point2(aes(subset=(node==144)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
-  geom_point2(aes(subset=(node==153)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
-  geom_point2(aes(subset=(node==134)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
-  geom_point2(aes(subset=(node==115)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
+  geom_point2(aes(subset=(node==150)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
+  geom_point2(aes(subset=(node==132)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==142)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
+  geom_point2(aes(subset=(node==140)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
+  geom_point2(aes(subset=(node==114)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==30)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   geom_point2(aes(subset=(node==31)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   geom_point2(aes(subset=(node==40)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   geom_point2(aes(subset=(node==41)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
-  geom_point2(aes(subset=(node==140)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
-  geom_point2(aes(subset=(node==72)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
-  geom_point2(aes(subset=(node==70)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
+  geom_point2(aes(subset=(node==70)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
+  geom_point2(aes(subset=(node==138)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
   
   
@@ -243,8 +239,6 @@ SRAPTORS <- STP + geom_tiplab(aes(color = RAPTOR), size = 2, show.legend = TRUE,
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   geom_point2(aes(subset=(node==2)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8) +
-  geom_point2(aes(subset=(node==91)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8) +
-  geom_point2(aes(subset=(node==92)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8) +
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 SRAPTORS
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorStramenopile.png",
@@ -266,9 +260,7 @@ STORS <- STP + geom_tiplab(aes(color = TOR), size = 2, show.legend = TRUE, nudge
   # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  geom_point2(aes(subset=(node==91)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8) +
-  geom_point2(aes(subset=(node==92)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8) +
+  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+http://127.0.0.1:17413/graphics/plot_zoom_png?width=1707&height=912
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 STORS
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORStramenopile.png",
@@ -284,18 +276,16 @@ SLST8S <- STP + geom_tiplab(aes(color = LST8), size = 2, show.legend = TRUE, nud
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
-  #geom_text(aes(label = node))+
+  geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  geom_point2(aes(subset=(node==91)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8) +
-  geom_point2(aes(subset=(node==92)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8) +
-  geom_point2(aes(subset=(node==52)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8) +
-  geom_point2(aes(subset=(node==2)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8) +
-  geom_point2(aes(subset=(node==99)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+ 
+  geom_point2(aes(subset=(node==2)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
+  geom_point2(aes(subset=(node==52)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
+  geom_point2(aes(subset=(node==97)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+ 
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
   
 SLST8S
