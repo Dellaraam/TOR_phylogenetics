@@ -57,10 +57,8 @@ HTML <- HTML %>%
   proteinPossible("Nannochloropsis gaditana","RICTOR","P")%>%
   proteinPossible("Phytophthora megakarya","RICTOR","P")%>%
   proteinPossible("Phytophthora megakarya","LST8","P")%>%
-  proteinPossible("Euglena gracilis","RICTOR","P")%>%
   proteinPossible("Nannochloropsis gaditana CCMP526","RICTOR","P")%>%
   proteinPossible("Nannochloropsis gaditana CCMP526","LST8","P")%>%
-  proteinPossible("Monocercomonoides exilis","RICTOR","P")%>%
   proteinPossible("Nelumbo nucifera", "LST8","P")%>%
   proteinPossible("Nelumbo nucifera","RAPTOR","P")%>%
   proteinPossible("Nelumbo nucifera", "TOR","P")%>%
@@ -106,11 +104,8 @@ HTML <- HTML %>%
   proteinPossible("Carpinus fangiana","RICTOR",NA)%>%
   proteinPossible("Klebsormidium nitens","RICTOR",NA)
   
-
-
-
-
-#Look into aphanomyces for RICTOR. What can we conclude about it?
+HTML <- HTML %>%
+  filter(Organism_Taxonomic_ID != 1535356,Organism_Taxonomic_ID != 1535362,Organism_Taxonomic_ID != 2494336,Organism_Taxonomic_ID != 1055687,Organism_Taxonomic_ID != 1068625)
 
 write.table(HTML, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/HTML.tsv", sep = "\t", row.names = F)
 
