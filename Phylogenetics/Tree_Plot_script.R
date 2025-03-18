@@ -276,7 +276,7 @@ SLST8S <- STP + geom_tiplab(aes(color = LST8), size = 2, show.legend = TRUE, nud
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
-  geom_text(aes(label = node))+
+  # geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
@@ -677,11 +677,12 @@ MRICTOR <- MTP + geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, n
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
-  #geom_text(aes(label=node))+
+  geom_text(aes(label=node))+
   geom_point2(aes(subset=(node==32)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==21)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   geom_point2(aes(subset=(node==12)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
+  geom_point2(aes(subset=(node==5)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   geom_point2(aes(subset=(node==4)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
 MRICTOR
