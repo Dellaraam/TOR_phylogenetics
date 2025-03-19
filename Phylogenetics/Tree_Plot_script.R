@@ -161,8 +161,10 @@ pal <- c(
   "M" = "blue",
   "L" = "green",
   "P" = "orange",
-  "NA" = "grey"
+   "NA" = "purple"
 )
+
+##00000000
 
 # ------------------------------------------------------------------------------
 #Test Ground
@@ -1237,9 +1239,24 @@ AllTree$tip.label <- gsub("'", "", AllTree$tip.label)
 HTML <- HTML %>% relocate(Organism.Name)
 
 
-testTree <- AllTree
+tdf <- HTML
 
+tdf <- mutate(tdf, HasRictor = NA, HasRaptor = NA, HasTOR = NA, HasLST8 = NA, HasSIN1 = NA)
+
+tdf[!is.na(tdf$RICTOR),]$HasRictor <- "Yes"
+tdf[!is.na(tdf$RAPTOR),]$HasRaptor <- "Yes"
+tdf[!is.na(tdf$SIN1),]$HasSIN1 <- "Yes"
+tdf[!is.na(tdf$LST8),]$HasLST8 <- "Yes"
+tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
+
+
+Rictortdf <- tdf %>% filter(!is.na(HasRictor))
+Rictortdf <- 
+
+testTree <- AllTree
 testTree <- as_tibble(testTree)
+
+
 
 AllTreeP <- ggtree(AllTree, layout = "circular", branch.length = "none", laddarize = FALSE)
 AllTreeP <- AllTreeP %<+% HTML
@@ -1254,50 +1271,42 @@ P <- ggtree(AllTree, layout = "circular",branch.length = "none")+
   #Streptophyta
   geom_highlight(node =949,
                  fill="red",
-                 color="grey50",
                  size=0.05)+
   #Metamonada
   geom_highlight(node =770,
                  fill="blue",
-                 color="grey50",
                  size=0.05)+
   #Stramenopiles
   geom_highlight(node =853,
                  fill="brown",
-                 color="grey50",
                  size=0.05)+
   #Alveolata
   geom_highlight(node =813,
                  fill="purple",
-                 color="grey50",
                  size=0.05)+
   #Chlorophyta
   geom_highlight(node =913,
                  fill="green",
-                 color="grey50",
                  size=0.05)+
   #Rhodophyta
   geom_highlight(node =904,
                  fill="yellow",
-                 color="grey50",
                  size=0.05)+
   #Discoba
   geom_highlight(node =783,
                  fill="cyan",
-                 color="grey50",
                  size=0.05)+
   #Rhizaria
   geom_highlight(node =807,
                  fill="orange",
-                 color="grey50",
-                 size=0.05)+
-  geom_cladelab(node=949,
-                label='RAPTOR',
-                barsize = 3,
-                offset = 6,
-                hjust=0,
-                vjust=1.5,
-                fontsize=8)
+                 size=0.05)
+  # geom_cladelab(node=949,
+  #               label='RAPTOR',
+  #               barsize = 3,
+  #               offset = 6,
+  #               hjust=0,
+  #               vjust=1.5,
+  #               fontsize=8)
   
 
 
@@ -1305,13 +1314,15 @@ P <- ggtree(AllTree, layout = "circular",branch.length = "none")+
 P
 
 #Trying to add "fruit" to the tree
+P2 <- P %<+% Rictortdf +
+  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
+  geom_fruit(
+  geom = geom_point,
+  mapping = aes(x = HasRictor, color = RICTOR))+
+  scale_color_manual(values = pal, limits = c("H","M","L","P", NA), drop = FALSE, na.value = "#00000000")
 
-P <- P + geom_fruit()
 
-
-
-
-
+P2
 
 RicAll <- AllTreeP + geom_tiplab(aes(color = RICTOR), size = 2)+
   geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
