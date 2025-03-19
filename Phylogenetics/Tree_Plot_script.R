@@ -37,6 +37,7 @@ library(kableExtra)
 library(knitr)
 library(patchwork)
 library(xtable)
+install.packages("ggtreeExtra")
 library(ggtreeExtra)
 
 install.packages("tableHTML")
@@ -249,7 +250,7 @@ StramenopileTree$tip.label <- gsub("'","", StramenopileTree$tip.label)
 StramenopileTree$tip.label
 
 Stramenopiles <- Stramenopiles %>% relocate(Organism.Name)
-STP <- ggtree(StramenopileTree,layout = "circular", branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
+STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
 STP <- STP  %<+% Stramenopiles
 #RICTOR Stramenopiles
 
@@ -288,7 +289,7 @@ SSP <- STP + geom_tiplab(aes(color = SIN1), size = 2, show.legend = TRUE, nudge_
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(fill = `SIN1`, x = 0, y = 0))+
-  geom_text(aes(label = node))+
+  #geom_text(aes(label = node))+
   geom_point2(aes(subset=(node==150)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==132)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==142)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
@@ -335,6 +336,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorStramenopile
        dpi = 320,
        limitsize = FALSE)
 
+  
 STORS <- STP + geom_tiplab(aes(color = TOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
@@ -1251,7 +1253,6 @@ tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
 
 
 Rictortdf <- tdf %>% filter(!is.na(HasRictor))
-Rictortdf <- 
 
 testTree <- AllTree
 testTree <- as_tibble(testTree)
@@ -1318,7 +1319,7 @@ P2 <- P %<+% Rictortdf +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_fruit(
   geom = geom_point,
-  mapping = aes(x = HasRictor, color = RICTOR))+
+  mapping = aes(x = HasRictor, color = RICTOR), offset = 0.10)+
   scale_color_manual(values = pal, limits = c("H","M","L","P", NA), drop = FALSE, na.value = "#00000000")
 
 
