@@ -15,6 +15,11 @@
 #if (!require("BiocManager", quietly = TRUE))
 #  install.packages("BiocManager")
 #BiocManager::install("Biostrings")
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+BiocManager::install("ggtreeExtra")
+
 install.packages("reshape2")
 library("Biostrings")
 library(tidyverse)
@@ -32,6 +37,7 @@ library(kableExtra)
 library(knitr)
 library(patchwork)
 library(xtable)
+library(ggtreeExtra)
 
 install.packages("tableHTML")
 library(tableHTML)
@@ -57,7 +63,20 @@ Ndf <- left_join(Ndf, Taxon[c("Organism.Name", "Organism_Taxonomic_ID")], by = "
 Ndf <- relocate(Ndf, Organism.Name, .after = Organism_Taxonomic_ID)
 Ndf <- left_join(Ndf,FinalBusco, by = "Accn")
 Ndf <- distinct(Ndf, Organism_Taxonomic_ID, .keep_all = TRUE)
-#Ndf <- left_join(Ndf, HTML[c("C.score","Frag.score","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
+
+# Make a temp table that contains the streptophyta
+# Remove the SIN1 and RICTOR Results as they were found to be fungi
+# rebind the data back into the numeric data frame
+
+temp <- filter(Ndf, Group == "Streptophyta")
+temp$SIN1All <- NA
+temp$SIN1Domain <- NA
+temp$RICTORAll <- NA
+temp$RICTORDomain <- NA
+Ndf <- filter(Ndf, Group != "Streptophyta")
+Ndf <- rbind(Ndf,temp)
+
+
 
 # Current Goal is to replace all of the names in the HTML file (really need to rename that)
 # Everything should be replaced by what is found within the Taxon file
@@ -149,8 +168,73 @@ pal <- c(
 #Test Ground
 
 largeDataSet <- left_join(HTML, Ndf[c("SIN1All","SIN1Domain","RICTORAll","RICTORDomain","RAPTORAll","RAPTORDomain","TORAll","TORDomain","LST8All","LST8Domain","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
-temp <- filter(largeDataSet, Super.Group == "Streptophyta")
-subsetNdf <- select(Ndf, Phylum.name,RICTORDomain, SIN1Domain, RAPTORDomain, TORDomain, LST8Domain)
+
+
+
+
+largeDataSet %>%filter(!is.na(RICTOR) & RICTOR != "P") %>% ggplot(aes(x = RICTOR, y = RICTORDomain, color = Super.Group, size = C.score))+
+  geom_jitter(shape = 18)+
+  scale_color_brewer(palette = "Set2")+
+  labs(title = "RICTOR Domain Score Distribution")+
+  xlab(label = "RICTOR H/M/L")+
+  ylab(label = "RICTOR Domain Scores")+
+  theme_minimal()
+
+largeDataSet %>% ggplot(aes(x = SIN1, y = SIN1Domain, color = Super.Group))+
+  geom_jitter()
+
+largeDataSet %>% ggplot(aes(x = RAPTOR, y = RAPTORDomain, color = Super.Group))+
+  geom_jitter()
+
+largeDataSet %>% ggplot(aes(x = TOR, y = TORDomain, color = Super.Group))+
+  geom_jitter()
+
+
+largeDataSet %>% ggplot(aes(x = Super.Group, y = RICTORDomain))+
+  geom_boxplot(linetype = "dashed", outlier.shape = NA)+
+  geom_jitter()+
+  stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..), outlier.shape = 1)+
+  stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
+  stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
+  labs(title = "Figure N")+
+  xlab(label = "Super Groups")+
+  ylab(label = "RICTOR Domain Score")+
+  theme_classic()
+
+largeDataSet %>% ggplot(aes(x = Super.Group, y = RAPTORDomain))+
+  geom_boxplot(linetype = "dashed", outlier.shape = NA)+
+  geom_jitter()+
+  stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
+  stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
+  stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
+  labs(title = "Figure N")+
+  xlab(label = "Super Groups")+
+  ylab(label = "RAPTOR Domain Score")+
+  theme_classic()
+
+largeDataSet %>% ggplot(aes(x = Super.Group, y = TORDomain))+
+  geom_boxplot(linetype = "dashed", outlier.shape = NA)+
+  geom_jitter()+
+  stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
+  stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
+  stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
+  labs(title = "Figure N")+
+  xlab(label = "Super Groups")+
+  ylab(label = "TOR Domain Score")+
+  theme_classic()
+
+largeDataSet %>% ggplot(aes(x = Super.Group, y = SIN1Domain))+
+  geom_boxplot(linetype = "dashed", outlier.shape = NA)+
+  geom_jitter()+
+  stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
+  stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
+  stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
+  labs(title = "Figure N")+
+  xlab(label = "Super Groups")+
+  ylab(label = "SIN1 Domain Score")+
+  theme_classic()
+  
+
 
 
 
@@ -163,7 +247,7 @@ StramenopileTree$tip.label <- gsub("'","", StramenopileTree$tip.label)
 StramenopileTree$tip.label
 
 Stramenopiles <- Stramenopiles %>% relocate(Organism.Name)
-STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
+STP <- ggtree(StramenopileTree,layout = "circular", branch.length = "none", ladderize = FALSE)+xlim(NA,+15)
 STP <- STP  %<+% Stramenopiles
 #RICTOR Stramenopiles
 
@@ -180,7 +264,7 @@ RISP <- STP + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nud
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
-  geom_text(aes(label=node))+
+  #geom_text(aes(label=node))+
   geom_point2(aes(subset=(node==19)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   geom_point2(aes(subset=(node==150)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==140)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
@@ -1142,18 +1226,95 @@ TorExc
 
 # ------------------------------------------------------------------------------
 # A sort of "For fun tree". Much to large to be of any sort of importance
+
+#Update the All Tree
+
 AllTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
 AllTree$tip.label <- gsub("'", "", AllTree$tip.label)
 HTML <- HTML %>% relocate(Organism.Name)
 
 
+testTree <- AllTree
+
+testTree <- as_tibble(testTree)
+
 AllTreeP <- ggtree(AllTree, layout = "circular", branch.length = "none", laddarize = FALSE)
 AllTreeP <- AllTreeP %<+% HTML
+
+
+nodeids <- nodeid(AllTree, AllTree$node.label[nchar(AllTree$node.label)>6])
+nodelab <- gsub("[\\.0-9]", "", AllTree$node.label[nchar(AllTree$node.label)>6])
+nodedf <- data.frame(node=nodeids, label = nodelab)
+
+P <- ggtree(AllTree, layout = "circular",branch.length = "none")+
+  geom_tiplab(size = 1)+
+  #Streptophyta
+  geom_highlight(node =949,
+                 fill="red",
+                 color="grey50",
+                 size=0.05)+
+  #Metamonada
+  geom_highlight(node =770,
+                 fill="blue",
+                 color="grey50",
+                 size=0.05)+
+  #Stramenopiles
+  geom_highlight(node =853,
+                 fill="brown",
+                 color="grey50",
+                 size=0.05)+
+  #Alveolata
+  geom_highlight(node =813,
+                 fill="purple",
+                 color="grey50",
+                 size=0.05)+
+  #Chlorophyta
+  geom_highlight(node =913,
+                 fill="green",
+                 color="grey50",
+                 size=0.05)+
+  #Rhodophyta
+  geom_highlight(node =904,
+                 fill="yellow",
+                 color="grey50",
+                 size=0.05)+
+  #Discoba
+  geom_highlight(node =783,
+                 fill="cyan",
+                 color="grey50",
+                 size=0.05)+
+  #Rhizaria
+  geom_highlight(node =807,
+                 fill="orange",
+                 color="grey50",
+                 size=0.05)+
+  geom_cladelab(node=949,
+                label='RAPTOR',
+                barsize = 3,
+                offset = 6,
+                hjust=0,
+                vjust=1.5,
+                fontsize=8)
+  
+
+
+
+P
+
+#Trying to add "fruit" to the tree
+
+P <- P + geom_fruit()
+
+
+
+
+
 
 RicAll <- AllTreeP + geom_tiplab(aes(color = RICTOR), size = 2)+
   geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
   geom_rootedge()+
-  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2, color = "black")+
+  geom_text(aes(label=node))+
+  #geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2, color = "black")+
   scale_fill_manual(values = pal)+
   scale_color_manual(values = pal)+
   geom_point2(aes(subset=(node==357)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
