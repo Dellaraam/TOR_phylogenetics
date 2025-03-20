@@ -183,7 +183,10 @@ largeDataSet %>%filter(!is.na(RICTOR) & RICTOR != "P") %>% ggplot(aes(x = RICTOR
   ylab(label = "RICTOR Domain Scores")+
   theme_minimal()
 
-largeDataSet %>% ggplot(aes(x = SIN1, y = SIN1Domain, color = Super.Group))+
+largeDataSet %>% ggplot(aes(x = RAPTORDomain, y = RAPTORAll, color = Super.Group))+
+  geom_jitter()
+
+largeDataSet %>% ggplot(aes(x = SIN1, y = SIN1Domain, color = Super.Group, size = C.score))+
   geom_jitter()
 
 largeDataSet %>% ggplot(aes(x = RAPTOR, y = RAPTORDomain, color = Super.Group))+
@@ -236,6 +239,17 @@ largeDataSet %>% ggplot(aes(x = Super.Group, y = SIN1Domain))+
   xlab(label = "Super Groups")+
   ylab(label = "SIN1 Domain Score")+
   theme_classic()
+
+
+
+
+largeDataSet %>% ggplot()+
+  geom_histogram(aes(x = RICTORDomain, fill = Super.Group), position = "dodge", binwidth = 100)+
+  theme_minimal()
+
+largeDataSet %>% ggplot()+
+  geom_histogram(aes(x = RAPTORDomain, fill = Super.Group), position = "dodge", bindwidth = 100)+
+  theme_minimal()
   
 
 
@@ -1252,8 +1266,6 @@ tdf[!is.na(tdf$LST8),]$HasLST8 <- "Yes"
 tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
 
 
-Rictortdf <- tdf %>% filter(!is.na(HasRictor))
-
 testTree <- AllTree
 testTree <- as_tibble(testTree)
 
@@ -1267,11 +1279,14 @@ nodeids <- nodeid(AllTree, AllTree$node.label[nchar(AllTree$node.label)>6])
 nodelab <- gsub("[\\.0-9]", "", AllTree$node.label[nchar(AllTree$node.label)>6])
 nodedf <- data.frame(node=nodeids, label = nodelab)
 
+
+
+
 P <- ggtree(AllTree, layout = "circular",branch.length = "none")+
-  geom_tiplab(size = 1)+
+  geom_rootedge()+
   #Streptophyta
   geom_highlight(node =949,
-                 fill="red",
+                 fill= "Streptophyta",
                  size=0.05)+
   #Metamonada
   geom_highlight(node =770,
@@ -1300,7 +1315,17 @@ P <- ggtree(AllTree, layout = "circular",branch.length = "none")+
   #Rhizaria
   geom_highlight(node =807,
                  fill="orange",
-                 size=0.05)
+                 size=0.05)+
+  scale_color_manual(name='Super Groups',
+                     breaks=c('Streptophyta', 'Metamonada', 'Stramenopiles', 'Alveolata','Chlorophyta', 'Rhodophyta', 'Discoba', 'Rhizaria'),
+                     values=c('Streptophyta' ="red",
+                              'Metamonada' ="blue",
+                              'Stramenopiles' ="brown",
+                              'Alveolata' ="purple",
+                              'Chlorophyta' = "green",
+                              'Rhodophyta' ="yellow",
+                              'Discoba' ="cyan",
+                              'Rhizaria' ="orange"))
   # geom_cladelab(node=949,
   #               label='RAPTOR',
   #               barsize = 3,
@@ -1314,16 +1339,46 @@ P <- ggtree(AllTree, layout = "circular",branch.length = "none")+
 
 P
 
+
+
+
 #Trying to add "fruit" to the tree
-P2 <- P %<+% Rictortdf +
+P2 <- P %<+% tdf +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_fruit(
+    geom = geom_point,
+    mapping = aes(x = HasSIN1, color = SIN1), offset = .05,
+    shape = 15)+
+  geom_fruit(
   geom = geom_point,
-  mapping = aes(x = HasRictor, color = RICTOR), offset = 0.10)+
-  scale_color_manual(values = pal, limits = c("H","M","L","P", NA), drop = FALSE, na.value = "#00000000")
-
+  mapping = aes(x = HasRictor, color = RICTOR), offset = .05,
+  shape = 15)+
+  geom_fruit(
+    geom = geom_point,
+    mapping = aes(x = HasRaptor, color = RAPTOR), offset = .05,
+    shape = 15,
+    axis.params = list(title = "RAPTOR"))+
+  geom_fruit(
+    geom = geom_point,
+    mapping = aes(x = HasLST8, color = LST8), offset = .05,
+    shape = 15)+
+  geom_fruit(
+    geom = geom_point,
+    mapping = aes(x = HasTOR, color = TOR), offset = .05,
+    shape = 15)+
+  scale_color_manual(values = pal, limits = c("H","M","L","P", NA), drop = FALSE, na.value = "#00000000")+
+  guides(color = guide_legend(title = "Protein Score")) 
 
 P2
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TestImageYesNoTree.png",
+       plot = P2,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
 
 RicAll <- AllTreeP + geom_tiplab(aes(color = RICTOR), size = 2)+
   geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
