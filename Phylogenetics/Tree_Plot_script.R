@@ -165,6 +165,13 @@ pal <- c(
    "NA" = "purple"
 )
 
+pal2 <- c(
+  "H" = "red",
+  "M" = "blue",
+  "L" = "green",
+  "P" = "orange"
+)
+
 ##00000000
 
 # ------------------------------------------------------------------------------
@@ -220,7 +227,7 @@ largeDataSet %>% ggplot(aes(x = Super.Group, y = RAPTORDomain))+
 
 largeDataSet %>% ggplot(aes(x = Super.Group, y = TORDomain))+
   geom_boxplot(linetype = "dashed", outlier.shape = NA)+
-  geom_jitter()+
+  #geom_jitter()+
   stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
   stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
   stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
@@ -1252,6 +1259,7 @@ TorExc
 
 AllTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
 AllTree$tip.label <- gsub("'", "", AllTree$tip.label)
+AllTree$node.label <- gsub("'", "", AllTree$node.label)
 HTML <- HTML %>% relocate(Organism.Name)
 
 
@@ -1266,9 +1274,12 @@ tdf[!is.na(tdf$LST8),]$HasLST8 <- "Yes"
 tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
 
 
-testTree <- AllTree
-testTree <- as_tibble(testTree)
 
+
+
+
+testTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/MassiveTreeP.phy")
+tree1 <- ggtree(testTree, layout = "daylight", branch.length = "none")
 
 
 AllTreeP <- ggtree(AllTree, layout = "circular", branch.length = "none", laddarize = FALSE)
@@ -1280,13 +1291,31 @@ nodelab <- gsub("[\\.0-9]", "", AllTree$node.label[nchar(AllTree$node.label)>6])
 nodedf <- data.frame(node=nodeids, label = nodelab)
 
 
+names <- c('Streptophyta', 'Metamonada', 'Stramenopiles', 'Alveolata','Chlorophyta', 'Rhodophyta', 'Discoba', 'Rhizaria')
+clrs <- c("red",
+          "blue",
+          "brown",
+          "purple",
+           "green",
+          "yellow",
+          "cyan",
+          "orange")
 
 
-P <- ggtree(AllTree, layout = "circular",branch.length = "none")+
-  geom_rootedge()+
+P <- ggtree(AllTree, layout = "circular", branch.length = "none")
+P <- P %<+% tdf
+
+P$node
+P <- P + geom_highlight(data = P$data,
+                        mapping = aes(subset = node %in% c(949,770,853,813,913,904,783,807),
+                                      fill = Super.Group))+
+  scale_fill_manual(values = c("red","blue","brown","purple","green","yellow","cyan","orange"))
+
+
+P <- P + geom_rootedge()+
   #Streptophyta
   geom_highlight(node =949,
-                 fill= "Streptophyta",
+                 fill= "red",
                  size=0.05)+
   #Metamonada
   geom_highlight(node =770,
@@ -1315,31 +1344,17 @@ P <- ggtree(AllTree, layout = "circular",branch.length = "none")+
   #Rhizaria
   geom_highlight(node =807,
                  fill="orange",
-                 size=0.05)+
-  scale_color_manual(name='Super Groups',
-                     breaks=c('Streptophyta', 'Metamonada', 'Stramenopiles', 'Alveolata','Chlorophyta', 'Rhodophyta', 'Discoba', 'Rhizaria'),
-                     values=c('Streptophyta' ="red",
-                              'Metamonada' ="blue",
-                              'Stramenopiles' ="brown",
-                              'Alveolata' ="purple",
-                              'Chlorophyta' = "green",
-                              'Rhodophyta' ="yellow",
-                              'Discoba' ="cyan",
-                              'Rhizaria' ="orange"))
-  # geom_cladelab(node=949,
-  #               label='RAPTOR',
-  #               barsize = 3,
-  #               offset = 6,
-  #               hjust=0,
-  #               vjust=1.5,
-  #               fontsize=8)
-  
-
+                 size=0.05)
 
 
 P
-
-
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TestImageCladeTree.png",
+       plot = P,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 #Trying to add "fruit" to the tree
@@ -1366,8 +1381,9 @@ P2 <- P %<+% tdf +
     geom = geom_point,
     mapping = aes(x = HasTOR, color = TOR), offset = .05,
     shape = 15)+
-  scale_color_manual(values = pal, limits = c("H","M","L","P", NA), drop = FALSE, na.value = "#00000000")+
-  guides(color = guide_legend(title = "Protein Score")) 
+  scale_color_manual(values = pal2, limits = c("H","M","L","P"), drop = FALSE, na.value = "#00000000")+
+  guides(color = guide_legend(title = "Protein Score"))+
+  theme(legend.position = "none")
 
 P2
 
