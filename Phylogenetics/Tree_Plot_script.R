@@ -9,12 +9,12 @@
 
 
 
-#if (!require("BiocManager", quietly = TRUE))
-#  install.packages("BiocManager")
-#BiocManager::install("ggtree")
-#if (!require("BiocManager", quietly = TRUE))
-#  install.packages("BiocManager")
-#BiocManager::install("Biostrings")
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("ggtree")
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("Biostrings")
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
@@ -1278,8 +1278,8 @@ tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
 
 
 
-testTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/MassiveTreeP.phy")
-tree1 <- ggtree(testTree, layout = "daylight", branch.length = "none")
+# testTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/MassiveTreeP.phy")
+# tree1 <- ggtree(testTree, layout = "daylight", branch.length = "none")
 
 
 AllTreeP <- ggtree(AllTree, layout = "circular", branch.length = "none", laddarize = FALSE)
