@@ -1278,9 +1278,16 @@ tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
 
 
 
-# testTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/MassiveTreeP.phy")
-# tree1 <- ggtree(testTree, layout = "daylight", branch.length = "none")
-
+ testTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/TestingTreeP.phy")
+ tree1 <- ggtree(testTree, layout = "daylight", branch.length = "none")
+ tree1 <- tree1+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
+ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TestImageOpisthokontTree.png",
+        plot = tree1,
+        width = 3840,
+        height = 2160,
+        units = "px",
+        dpi = 320,
+        limitsize = FALSE)
 
 AllTreeP <- ggtree(AllTree, layout = "circular", branch.length = "none", laddarize = FALSE)
 AllTreeP <- AllTreeP %<+% HTML
@@ -1302,9 +1309,9 @@ clrs <- c("red",
           "orange")
 
 
-P <- ggtree(AllTree, layout = "circular", branch.length = "none")
+P <- ggtree(AllTree, layout = "daylight", branch.length = "none")
 P <- P %<+% tdf
-
+P +geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
 P$node
 P <- P + geom_highlight(data = P$data,
                         mapping = aes(subset = node %in% c(949,770,853,813,913,904,783,807),
@@ -1358,7 +1365,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TestImageCladeTree
 
 
 #Trying to add "fruit" to the tree
-P2 <- P %<+% tdf +
+P2 <- P +
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_fruit(
     geom = geom_point,
