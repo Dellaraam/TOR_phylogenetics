@@ -180,6 +180,14 @@ pal2 <- c(
 largeDataSet <- left_join(HTML, Ndf[c("SIN1All","SIN1Domain","RICTORAll","RICTORDomain","RAPTORAll","RAPTORDomain","TORAll","TORDomain","LST8All","LST8Domain","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 
 
+largeDataSet <- mutate(largeDataSet, HasRictor = NA, HasRaptor = NA, HasTOR = NA, HasLST8 = NA, HasSIN1 = NA)
+
+largeDataSet[!is.na(largeDataSet$RICTOR),]$HasRictor <- "Yes"
+largeDataSet[!is.na(largeDataSet$RAPTOR),]$HasRaptor <- "Yes"
+largeDataSet[!is.na(largeDataSet$SIN1),]$HasSIN1 <- "Yes"
+largeDataSet[!is.na(largeDataSet$LST8),]$HasLST8 <- "Yes"
+largeDataSet[!is.na(largeDataSet$TOR),]$HasTOR <- "Yes"
+
 
 
 largeDataSet %>%filter(!is.na(RICTOR) & RICTOR != "P") %>% ggplot(aes(x = RICTOR, y = RICTORDomain, color = Super.Group, size = C.score))+
@@ -263,6 +271,9 @@ largeDataSet %>% ggplot()+
 
 
 # ------------------------------------------------------------------------------
+Stramenopiles <- largeDataSet %>% filter(Super.Group == "Stramenopiles")
+subsetdataframe <- Stramenopiles %>% select(Organism.Name, SIN1Domain, RICTORDomain, RAPTORDomain, LST8Domain,TORDomain)
+subsetdataframe <- pivot_longer(subsetdataframe, !Organism.Name, names_to = "Protein", values_to = "Scores")
 
 
 StramenopileTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/StramenopileTreeP.phy")
@@ -276,7 +287,7 @@ STP <- STP  %<+% Stramenopiles
 #RICTOR Stramenopiles
 
 
-RISP <- STP + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+RISP <- STP + #geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -294,8 +305,33 @@ RISP <- STP + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nud
   geom_point2(aes(subset=(node==140)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==70)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
-  scale_color_manual(values = pal, limits = c("H","M","L","P",NA))
+  # geom_fruit(
+  #   geom = geom_point,
+  #   mapping = aes(x = HasSIN1, color = SIN1), offset = .1,
+  #   shape = 15,
+  #   )+
+  # geom_fruit(
+  #   geom = geom_point,
+  #   mapping = aes(x = HasRictor, color = RICTOR), offset = .1,
+  #   shape = 15)+
+  # geom_fruit(
+  #   geom = geom_point,
+  #   mapping = aes(x = HasRaptor, color = RAPTOR), offset = .1,
+  #   shape = 15,
+  #   axis.params = list(title = "RAPTOR"))+
+  # geom_fruit(
+  #   geom = geom_point,
+  #   mapping = aes(x = HasLST8, color = LST8), offset = .1,
+  #   shape = 15)+
+  # geom_fruit(
+  #   geom = geom_point,
+  #   mapping = aes(x = HasTOR, color = TOR), offset = .1,
+  #   shape = 15)+
+   scale_color_manual(values = pal, limits = c("H","M","L","P",NA))
 RISP
+
+
+gheatmap(STP,subsetdataframe)
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorStramenopile.png",
        plot = RISP,
@@ -1323,13 +1359,9 @@ clrs <- c("red",
           "orange")
 
 
-P <- ggtree(AllTree, layout = "daylight", branch.length = "none")
+P <- ggtree(AllTree, layout = "circular", branch.length = "none")
 P <- P %<+% tdf
 P +geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
-P <- P + geom_highlight(data = P$data,
-                        mapping = aes(subset = node %in% c(949,770,853,813,913,904,783,807),
-                                      fill = Super.Group))+
-  scale_fill_manual(values = c("red","blue","brown","purple","green","yellow","cyan","orange"))
 
 
 P <- P + geom_rootedge()+
