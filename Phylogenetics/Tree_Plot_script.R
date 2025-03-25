@@ -287,7 +287,7 @@ STP <- STP  %<+% Stramenopiles
 #RICTOR Stramenopiles
 
 
-RISP <- STP + #geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+RISP <- STP + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -305,28 +305,28 @@ RISP <- STP + #geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nu
   geom_point2(aes(subset=(node==140)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==70)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
-  # geom_fruit(
-  #   geom = geom_point,
-  #   mapping = aes(x = HasSIN1, color = SIN1), offset = .1,
-  #   shape = 15,
-  #   )+
-  # geom_fruit(
-  #   geom = geom_point,
-  #   mapping = aes(x = HasRictor, color = RICTOR), offset = .1,
-  #   shape = 15)+
-  # geom_fruit(
-  #   geom = geom_point,
-  #   mapping = aes(x = HasRaptor, color = RAPTOR), offset = .1,
-  #   shape = 15,
-  #   axis.params = list(title = "RAPTOR"))+
-  # geom_fruit(
-  #   geom = geom_point,
-  #   mapping = aes(x = HasLST8, color = LST8), offset = .1,
-  #   shape = 15)+
-  # geom_fruit(
-  #   geom = geom_point,
-  #   mapping = aes(x = HasTOR, color = TOR), offset = .1,
-  #   shape = 15)+
+  geom_fruit(
+    geom = geom_point,
+    mapping = aes(x = HasSIN1, color = SIN1), offset = .1,
+    shape = 15,
+    )+
+  geom_fruit(
+    geom = geom_point,
+    mapping = aes(x = HasRictor, color = RICTOR), offset = .1,
+    shape = 15)+
+  geom_fruit(
+    geom = geom_point,
+    mapping = aes(x = HasRaptor, color = RAPTOR), offset = .1,
+    shape = 15,
+    axis.params = list(title = "RAPTOR"))+
+  geom_fruit(
+    geom = geom_point,
+    mapping = aes(x = HasLST8, color = LST8), offset = .1,
+    shape = 15)+
+  geom_fruit(
+    geom = geom_point,
+    mapping = aes(x = HasTOR, color = TOR), offset = .1,
+    shape = 15)+
    scale_color_manual(values = pal, limits = c("H","M","L","P",NA))
 RISP
 
