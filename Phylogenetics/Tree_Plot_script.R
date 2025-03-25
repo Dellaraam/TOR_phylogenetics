@@ -296,6 +296,7 @@ RISP <- STP + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nud
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA))
 RISP
+
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorStramenopile.png",
        plot = RISP,
        width = 3840,
@@ -1280,7 +1281,20 @@ tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
 
  testTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/TestingTreeP.phy")
  tree1 <- ggtree(testTree, layout = "daylight", branch.length = "none")
- tree1 <- tree1+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
+ tree1 <- tree1 + geom_highlight(node = 804, fill = "blue", alpha = .4)+
+   geom_highlight(node = 891, fill = "brown", alpha = .4)+
+   geom_highlight(node = 986, fill = "cyan", alpha = .4)+
+   geom_highlight(node = 941, fill = "red", alpha = .4)+
+   geom_highlight(node = 849, fill = "orange", alpha = .4)+
+   geom_highlight(node = 819, fill = "purple", alpha = .4)+
+   geom_highlight(node = 791, fill = "yellow", alpha = .4)+
+   geom_highlight(node = 789, fill = "grey", alpha = .4)+
+   geom_highlight(node = 843, fill = "pink", alpha = .4)+
+   geom_highlight(node = 950, fill = "green", alpha = .4)
+ tree1
+ 
+
+ 
  ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TestImageOpisthokontTree.png",
         plot = tree1,
         width = 3840,
@@ -1312,7 +1326,6 @@ clrs <- c("red",
 P <- ggtree(AllTree, layout = "daylight", branch.length = "none")
 P <- P %<+% tdf
 P +geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
-P$node
 P <- P + geom_highlight(data = P$data,
                         mapping = aes(subset = node %in% c(949,770,853,813,913,904,783,807),
                                       fill = Super.Group))+
