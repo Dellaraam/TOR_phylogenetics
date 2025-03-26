@@ -6,6 +6,8 @@
 ## We will do this for each of the clades we are interested in
 ## We will also include the JGI dataset as well at a later point
 
+
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Phylogenetic_Heterokonta.R")
 library(tidyverse)
 
 JoinInfo <- function(RawData, cladeInfo, GroupInfo ,TaxonomicInformation, sourceInfo){
@@ -532,8 +534,10 @@ which(ExcavataF$Organism.Name == "Euglena gracilis CCAP 1224/5Z v1.0")
 
 Final_Table <- rbind(StramenopilesF, AlveolataF, RhizariaF, Rhodophyta, Streptophyta, ChlorophytaF, ExcavataF)
 Final_Table <- distinct(Final_Table, Organism_Taxonomic_ID, .keep_all = TRUE)
-which(Final_Table$Organism.Name == "Euglena gracilis CCAP 1224/5Z v1.0")
-Final_Table$Group[827] <- "Discoba"
-which(Final_Table$Organism.Name == "Giardia intestinalis ATCC 50803")
-Final_Table$Group[828] <- "Metamonada"
+Eug <- which(Final_Table$Organism.Name == "Euglena gracilis CCAP 1224/5Z v1.0")
+Final_Table$Group[Eug] <- "Discoba"
+GI <- which(Final_Table$Organism.Name == "Giardia intestinalis ATCC 50803")
+Final_Table$Group[GI] <- "Metamonada"
 write.csv(Final_Table,file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
+
+rm(list = ls())

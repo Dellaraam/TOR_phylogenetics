@@ -5,51 +5,13 @@
 
 
 
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Numeric_Table_Script.R")
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/HTML_Additions.R")
 
 
-
-
-if (!require("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("ggtree")
-if (!require("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("Biostrings")
-if (!require("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-
-BiocManager::install("ggtreeExtra")
-
-install.packages("reshape2")
-library("Biostrings")
-library(tidyverse)
-library(ggplot2)
-library(reshape2)
-library(ggtree) #Have citation requirements for their usage. See attached message
-# LG Wang, TTY Lam, S Xu, Z Dai, L Zhou, T Feng, P Guo, CW Dunn, BR Jones, T Bradley, H Zhu, Y Guan, Y Jiang, G Yu. treeio: an R package for
-# phylogenetic tree input and output with richly annotated and associated data. Molecular Biology and Evolution. 2020, 37(2):599-603. doi:
-#  10.1093/molbev/msz240
-library(treeio)
-library(ggrepel)
-library(gridExtra)
-library(plotly)
-library(kableExtra)
-library(knitr)
-library(patchwork)
-library(xtable)
-install.packages("ggtreeExtra")
-library(ggtreeExtra)
-
-install.packages("tableHTML")
-library(tableHTML)
-
-
-
-
-
-
-
-
+#Final Modifications to csv files required for script
 FinalBusco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/FinalBusco.csv")
 FinalBusco <- FinalBusco %>% select(-X)
 Taxon <- read.csv("~/Github/TOR_phylogenetics/Combined_Taxonomy.csv")
@@ -273,7 +235,16 @@ largeDataSet %>% ggplot()+
 # ------------------------------------------------------------------------------
 Stramenopiles <- largeDataSet %>% filter(Super.Group == "Stramenopiles")
 subsetdataframe <- Stramenopiles %>% select(Organism.Name, SIN1Domain, RICTORDomain, RAPTORDomain, LST8Domain,TORDomain)
-subsetdataframe <- pivot_longer(subsetdataframe, !Organism.Name, names_to = "Protein", values_to = "Scores")
+pivoteddf <- pivot_longer(subsetdataframe, !Organism.Name, names_to = "Protein", values_to = "Scores")
+
+nrow(pivoteddf)
+length(pivoteddf[,1])
+rownames(pivoteddf) <- pivoteddf[,1]
+
+column_to_rownames(pivoteddf, var = "Organism.Name")
+
+heatmap(as.matrix(pivoteddf), scale = "none")
+
 
 
 StramenopileTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/StramenopileTreeP.phy")
@@ -305,28 +276,6 @@ RISP <- STP + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nud
   geom_point2(aes(subset=(node==140)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==70)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
-  geom_fruit(
-    geom = geom_point,
-    mapping = aes(x = HasSIN1, color = SIN1), offset = .1,
-    shape = 15,
-    )+
-  geom_fruit(
-    geom = geom_point,
-    mapping = aes(x = HasRictor, color = RICTOR), offset = .1,
-    shape = 15)+
-  geom_fruit(
-    geom = geom_point,
-    mapping = aes(x = HasRaptor, color = RAPTOR), offset = .1,
-    shape = 15,
-    axis.params = list(title = "RAPTOR"))+
-  geom_fruit(
-    geom = geom_point,
-    mapping = aes(x = HasLST8, color = LST8), offset = .1,
-    shape = 15)+
-  geom_fruit(
-    geom = geom_point,
-    mapping = aes(x = HasTOR, color = TOR), offset = .1,
-    shape = 15)+
    scale_color_manual(values = pal, limits = c("H","M","L","P",NA))
 RISP
 
@@ -499,7 +448,6 @@ ARIC <- AlvP + geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nud
   geom_point2(aes(subset=(node==172)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==143)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==170)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
-  geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   geom_point2(aes(subset=(node==9)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
   geom_point2(aes(subset=(node==2)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)

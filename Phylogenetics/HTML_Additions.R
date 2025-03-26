@@ -1,7 +1,7 @@
 library(tidyverse)
 
 
-
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
 proteinPossible <- function(df,OrganismName,Protein,value){
   
   temp <- df %>% filter(Organism.Name == OrganismName)
@@ -110,3 +110,4 @@ HTML <- HTML %>%
 
 write.table(HTML, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/HTML.tsv", sep = "\t", row.names = F)
 
+rm(list = ls())

@@ -4,6 +4,10 @@
 # if (!require("BiocManager", quietly = TRUE))
 #   install.packages("BiocManager")
 # BiocManager::install("Biostrings")
+
+
+
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Phylogenetic_Heterokonta.R")
 library("Biostrings")
 library(tidyverse)
 library(ggplot2)
@@ -66,3 +70,5 @@ CompleteTable <- rbind(CombinedAlv, CombinedChlor, CombinedExc, CombinedRhiz, Co
 CompleteTable <- CompleteTable %>% distinct(Organism.Taxonomic.ID, .keep_all = TRUE)
 
 write.csv(CompleteTable, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/CompleteTable.csv", row.names = FALSE)
+
+rm(list = ls())

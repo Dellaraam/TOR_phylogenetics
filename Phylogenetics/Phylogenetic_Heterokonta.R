@@ -556,28 +556,30 @@ CombinedAlveolataJGI$Accn <- sub("\\_.*", "", CombinedAlveolataJGI$Accn)
 
 
 
-#Need to add in if it was from JGI or from NCBI
-#Create a column named source
-#Chlorophyta
 
 
+# Bind the two data sets together
+# Then arrange the data in order of source
+# We argue that the JGI data has more accurate information so when using distinct,
+# The first row is kept in the comparison. As such we want the JGI data to be at the top
+# And will replace the NCBI entry as it likely the weaker of the two
 
 
 #Stramenopiles
 TestMerge <- rbind(CombinedStramenopiles, CombinedHeterokonta)
-TestMerge <- distinct(TestMerge, Organism_Taxonomic_ID, .keep_all = TRUE)
+TestMerge <- TestMerge %>% arrange(Source) %>% distinct(Organism_Taxonomic_ID, .keep_all = TRUE)
 
 TestMerge2 <- rbind(CombinedChlorophyta, CombinedChlorophytaJGI)
-TestMerge2 <- distinct(TestMerge2, Organism_Taxonomic_ID, .keep_all = TRUE)
+TestMerge2 <- TestMerge2 %>% arrange(Source) %>% distinct(Organism_Taxonomic_ID, .keep_all = TRUE)
 
 TestMerge3 <- rbind(CombinedRhizaria, CombinedRhizariaJGI)
-TestMerge3 <- distinct(TestMerge3, Organism_Taxonomic_ID, .keep_all = TRUE)
+TestMerge3 <- TestMerge3 %>% arrange(Source) %>% distinct(Organism_Taxonomic_ID, .keep_all = TRUE)
 
 TestMerge4 <- rbind(CombinedExcavates, CombinedExcavataJGI)
-TestMerge4 <- distinct(TestMerge4, Organism_Taxonomic_ID, .keep_all = TRUE)
+TestMerge4 <- TestMerge4 %>% arrange(Source) %>% distinct(Organism_Taxonomic_ID, .keep_all = TRUE)
 
 TestMerge5 <- rbind(CombinedAlveolata, CombinedAlveolataJGI)
-TestMerge5 <- distinct(TestMerge5, Organism_Taxonomic_ID, .keep_all = TRUE)
+TestMerge5 <- TestMerge5 %>% arrange(Source) %>% distinct(Organism_Taxonomic_ID, .keep_all = TRUE)
 
 
 write.csv(TestMerge, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Updated_Stramenopiles_Combined.csv")
