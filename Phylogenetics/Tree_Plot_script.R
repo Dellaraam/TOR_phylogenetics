@@ -175,7 +175,7 @@ largeDataSet %>% ggplot(aes(x = TOR, y = TORDomain, color = Super.Group))+
 
 largeDataSet %>% ggplot(aes(x = Super.Group, y = RICTORDomain))+
   geom_boxplot(linetype = "dashed", outlier.shape = NA)+
-  geom_jitter()+
+  #geom_jitter()+
   stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..), outlier.shape = 1)+
   stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
   stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
@@ -186,7 +186,7 @@ largeDataSet %>% ggplot(aes(x = Super.Group, y = RICTORDomain))+
 
 largeDataSet %>% ggplot(aes(x = Super.Group, y = RAPTORDomain))+
   geom_boxplot(linetype = "dashed", outlier.shape = NA)+
-  geom_jitter()+
+  #geom_jitter()+
   stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
   stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
   stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
@@ -208,7 +208,7 @@ largeDataSet %>% ggplot(aes(x = Super.Group, y = TORDomain))+
 
 largeDataSet %>% ggplot(aes(x = Super.Group, y = SIN1Domain))+
   geom_boxplot(linetype = "dashed", outlier.shape = NA)+
-  geom_jitter()+
+  #geom_jitter()+
   stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
   stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
   stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
@@ -234,12 +234,7 @@ largeDataSet %>% ggplot()+
 
 # ------------------------------------------------------------------------------
 StramenopilesL <- largeDataSet %>% filter(Super.Group == "Stramenopiles")
-subsetdataframe <- StramenopilesL %>% select(Organism.Name, SIN1Domain, RICTORDomain, RAPTORDomain, LST8Domain,TORDomain) %>% distinct(Organism.Name, .keep_all = TRUE) %>%
-  rename(SIN1 = "SIN1Domain",
-         RICTOR = "RICTORDomain",
-         RAPTOR = "RAPTORDomain",
-         LST8 = "LST8Domain",
-         TOR = "TORDomain")
+subsetdataframe <- StramenopilesL %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
 df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
 
 
@@ -405,6 +400,7 @@ HeatTreeStram <- STP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, l
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
 
 StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 8, font.size = 3)
+StramHeatPlot
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStramenopile.png",
        plot = StramHeatPlot,
@@ -1298,12 +1294,7 @@ RhoHeatPlot
 
 StreptophytaL <- largeDataSet %>% filter(Super.Group == "Streptophyta")
 
-subsetdataframe <- StreptophytaL %>% select(Organism.Name, SIN1Domain, RICTORDomain, RAPTORDomain, LST8Domain,TORDomain) %>% distinct(Organism.Name, .keep_all = TRUE) %>%
-  rename(SIN1 = "SIN1Domain",
-         RICTOR = "RICTORDomain",
-         RAPTOR = "RAPTORDomain",
-         LST8 = "LST8Domain",
-         TOR = "TORDomain")
+subsetdataframe <- StreptophytaL %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
 df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
 
 
@@ -1398,7 +1389,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORStreptophyta.pn
        limitsize = FALSE)
 
 
-HeatTreeStrep <- StrephP + geom_tiplab(size = 1, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+HeatTreeStrep <- StrephP + geom_tiplab(size = 1.8, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -1411,13 +1402,14 @@ HeatTreeStrep <- StrephP + geom_tiplab(size = 1, show.legend = TRUE, nudge_x = .
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 1)
 
 StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 8, font.size = 1.5)
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStreptophyta.png",
-       plot = StrepHeatPlot,
-       width = 3840,
-       height = 2160,
-       units = "px",
-       dpi = 320,
-       limitsize = FALSE)
+StrepHeatPlot
+# ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStreptophyta.png",
+#        plot = StrepHeatPlot,
+#        width = 3840,
+#        height = 2160,
+#        units = "px",
+#        dpi = 320,
+#        limitsize = FALSE)
 
 StrepHeatPlot
 
@@ -1489,6 +1481,70 @@ TorExc
 # A sort of "For fun tree". Much to large to be of any sort of importance
 
 #Update the All Tree
+
+
+
+subsetdataframe <- largeDataSet %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
+df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
+
+HeatTree <- AllTreeP + geom_tiplab(size = .7, show.legend = TRUE, nudge_x = .6, linesize = 1, align = TRUE)+xlim(-175, NA)+
+  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
+  #Streptophyta
+  geom_highlight(node =949,
+                 fill= "red",
+                 size=0.05)+
+  #Metamonada
+  geom_highlight(node =770,
+                 fill="blue",
+                 size=0.05)+
+  #Stramenopiles
+  geom_highlight(node =853,
+                 fill="brown",
+                 size=0.05)+
+  #Alveolata
+  geom_highlight(node =813,
+                 fill="purple",
+                 size=0.05)+
+  #Chlorophyta
+  geom_highlight(node =913,
+                 fill="green",
+                 size=0.05)+
+  #Rhodophyta
+  geom_highlight(node =904,
+                 fill="yellow",
+                 size=0.05)+
+  #Discoba
+  geom_highlight(node =783,
+                 fill="cyan",
+                 size=0.05)+
+  #Rhizaria
+  geom_highlight(node =807,
+                 fill="orange",
+                 size=0.05)+
+  #geom_text(aes(label = node))+
+  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_rootedge()
+
+which(HeatTree$plot_env$tr$node.label == "Streptophyta")
+
+nodelab(AllTree, "Streptophyta")
+AllHeatPlot <- gheatmap(HeatTree, df, offset = 60, font.size = 1.5, colnames = FALSE)
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAll.png",
+       plot = AllHeatPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
 
 AllTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
 AllTree$tip.label <- gsub("'", "", AllTree$tip.label)
