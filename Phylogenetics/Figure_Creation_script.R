@@ -12,23 +12,6 @@ library(msa)
 library(tidyverse)
 library(ggrepel)
 
-#Has all of the associated tables and information prepared
-source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Tree_Plot_script.R")
-
-
-metamonadaMSA <- "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Comparative_MSA/Metamonada_NCBI_JGI/MSA/MetamonadaHRictorClustalO.fa"
-
-p1 <- ggmsa(metamonadaMSA, 0, 500, color = "Clustal", font = "DroidSansMono", char_width = .5, seq_name = FALSE)
-
-ggsave(filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Test_Ground/MSARTest.png",
-       plot = p1,
-       width = 3840,
-       height = 2160,
-       units = "px",
-       dpi = 320,
-       limitsize = FALSE)
-
-print(metamonadaMSA, show="complete")
 # ------------------------------------------------------------------------------
 #Test Ground
 
@@ -49,14 +32,12 @@ largeDataSet %>%filter(!is.na(RICTOR) & RICTOR != "P") %>% ggplot(aes(x = RICTOR
   facet_wrap(~Super.Group,nrow = 1)
 
 
-
 largeDataSet %>%filter(!is.na(RAPTOR) & RAPTOR != "P") %>% filter(Super.Group == "Metamonada") %>% ggplot(aes(x = RAPTOR, y = RAPTORDomain, color = Super.Group, size = C.score))+
   geom_jitter(shape = 18)+
   labs(title = "RAPTOR Domain Score Distribution")+
   xlab(label = "RAPTOR H/M/L")+
   ylab(label = "RAPTOR Domain Scores")+
-  facet_wrap(~Super.Group)+
-  ggmsa(metamonadaMSA, 0, 200, color = "Clustal", font = "DroidSansMono", char_width = .5, seq_name = TRUE)
+  facet_wrap(~Super.Group)
 
 largeDataSet %>%filter(!is.na(SIN1) & SIN1 != "P") %>% ggplot(aes(x = SIN1, y = SIN1Domain, color = Super.Group, size = C.score))+
   geom_jitter(shape = 18)+
@@ -80,7 +61,7 @@ largeDataSet %>%filter(!is.na(TOR) & TOR != "P") %>% ggplot(aes(x = TOR, y = TOR
   facet_wrap(~Super.Group)
 
 
-largeDataSet %>% ggplot(aes(x = Super.Group, y = RICTORDomain))+
+BoxRictor <- largeDataSet %>% ggplot(aes(x = Super.Group, y = RICTORDomain))+
   geom_boxplot(linetype = "dashed", outlier.shape = NA)+
   geom_jitter()+
   stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..), outlier.shape = 1)+
@@ -90,7 +71,15 @@ largeDataSet %>% ggplot(aes(x = Super.Group, y = RICTORDomain))+
   xlab(label = "Super Groups")+
   ylab(label = "RICTOR Domain Score")
 
-largeDataSet %>% ggplot(aes(x = Super.Group, y = RAPTORDomain))+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRictor.png",
+       plot = BoxRictor,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+BoxRaptor <- largeDataSet %>% ggplot(aes(x = Super.Group, y = RAPTORDomain))+
   geom_boxplot(linetype = "dashed", outlier.shape = NA)+
   #geom_jitter()+
   stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
@@ -100,8 +89,16 @@ largeDataSet %>% ggplot(aes(x = Super.Group, y = RAPTORDomain))+
   xlab(label = "Super Groups")+
   ylab(label = "RAPTOR Domain Score")+
   theme_classic()
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRaptor.png",
+       plot = BoxRaptor,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
-largeDataSet %>% ggplot(aes(x = Super.Group, y = TORDomain))+
+
+BoxTOR <- largeDataSet %>% ggplot(aes(x = Super.Group, y = TORDomain))+
   geom_boxplot(linetype = "dashed", outlier.shape = NA)+
   #geom_jitter()+
   stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
@@ -111,8 +108,15 @@ largeDataSet %>% ggplot(aes(x = Super.Group, y = TORDomain))+
   xlab(label = "Super Groups")+
   ylab(label = "TOR Domain Score")+
   theme_classic()
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxTOR.png",
+       plot = BoxTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
-largeDataSet %>% ggplot(aes(x = Super.Group, y = SIN1Domain))+
+BoxSIN1 <- largeDataSet %>% ggplot(aes(x = Super.Group, y = SIN1Domain))+
   geom_boxplot(linetype = "dashed", outlier.shape = NA)+
   geom_jitter()+
   stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
@@ -122,19 +126,32 @@ largeDataSet %>% ggplot(aes(x = Super.Group, y = SIN1Domain))+
   xlab(label = "Super Groups")+
   ylab(label = "SIN1 Domain Score")+
   theme_classic()
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxSIN1.png",
+       plot = BoxSIN1,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
-
-
-largeDataSet %>% ggplot()+
-  geom_histogram(aes(x = RICTORDomain, fill = Super.Group), position = "dodge", binwidth = 100)+
-  theme_minimal()
-
-largeDataSet %>% ggplot()+
-  geom_histogram(aes(x = RAPTORDomain, fill = Super.Group), position = "dodge", bindwidth = 100)+
-  theme_minimal()
-
-
+BoxLST8 <- largeDataSet %>% ggplot(aes(x = Super.Group, y = LST8Domain))+
+  geom_boxplot(linetype = "dashed", outlier.shape = NA)+
+  geom_jitter()+
+  stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
+  stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
+  stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
+  labs(title = "Figure N")+
+  xlab(label = "Super Groups")+
+  ylab(label = "LST8 Domain Score")+
+  theme_classic()
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxLST8.png",
+       plot = BoxLST8,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 
