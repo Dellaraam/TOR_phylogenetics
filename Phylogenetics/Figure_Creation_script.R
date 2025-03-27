@@ -1,6 +1,6 @@
 
 # Figure Creation Script: Plots
-
+#source(file = ")
 
 
 if (!requireNamespace("devtools", quietly=TRUE))
@@ -77,7 +77,6 @@ jitterLST8 <- largeDataSet %>%filter(!is.na(LST8) & LST8 != "P") %>% ggplot(aes(
   xlab(label = "LST8 H/M/L")+
   ylab(label = "LST8 Domain Scores")+
   facet_wrap(~Super.Group)
-
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterLST8.png",
        plot = jitterLST8,
        width = 3840,
@@ -86,15 +85,22 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterLST8.png",
        dpi = 320,
        limitsize = FALSE)
 
-
-
-
-largeDataSet %>%filter(!is.na(TOR) & TOR != "P") %>% ggplot(aes(x = TOR, y = TORDomain, color = Super.Group, size = C.score))+
+jitterTOR <- largeDataSet %>%filter(!is.na(TOR) & TOR != "P") %>% ggplot(aes(x = TOR, y = TORDomain, color = Super.Group, size = C.score))+
   geom_jitter(shape = 18)+
   labs(title = "TOR Domain Score Distribution")+
   xlab(label = "TOR H/M/L")+
   ylab(label = "TOR Domain Scores")+
   facet_wrap(~Super.Group)
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterTOR.png",
+       plot = jitterTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
 
 
 BoxRictor <- largeDataSet %>% ggplot(aes(x = Super.Group, y = RICTORDomain))+

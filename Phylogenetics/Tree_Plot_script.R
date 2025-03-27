@@ -6,9 +6,9 @@
 
 
 source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
-source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
-source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Numeric_Table_Script.R")
-source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/HTML_Additions.R")
+#source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
+#source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Numeric_Table_Script.R")
+#source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/HTML_Additions.R")
 
 
 #Final Modifications to csv files required for script
@@ -120,20 +120,37 @@ write.csv(ProbableOrganisms, file = "C:/Users/kajoh/Documents/GitHub/TOR_phyloge
 # If we want to change anything color wise, feel free to do so
 # These colors were chosen just for simplicity sake
 pal <- c(
-  "H" = "red",
-  "M" = "blue",
-  "L" = "green",
-  "P" = "orange",
-   "NA" = "purple"
+  "H" = "#7e2323",
+  "M" = "#d0771a",
+  "L" = "#ffc30b",
+  "P" = "#7dbe62"
 )
 
 pal2 <- c(
-  "H" = "red",
-  "M" = "blue",
-  "L" = "green",
-  "P" = "orange"
+  "H" = "#f4931f",
+  "M" = "#f5da5f",
+  "L" = "#41ad49",
+  "P" = "#027aa4"
 )
 
+pal3 <- c(
+  "H" = "#ae5a41",
+  "M" = "#c3cb71",
+  "L" = "#559e83",
+  "P" = "#1b85b8"
+)
+
+pal4 <- c(
+  "H" = "#f4649e",
+  "M" = "#49e5aa",
+  "L" = "#d2ebfb",
+  "P" = "#f0d14f"
+)
+
+
+
+
+# Blank
 ##00000000
 
 # ------------------------------------------------------------------------------
@@ -152,84 +169,10 @@ largeDataSet[!is.na(largeDataSet$TOR),]$HasTOR <- "Yes"
 
 
 
-largeDataSet %>%filter(!is.na(RICTOR) & RICTOR != "P") %>% ggplot(aes(x = RICTOR, y = RICTORDomain, color = Super.Group, size = C.score))+
-  geom_jitter(shape = 18)+
-  scale_color_brewer(palette = "Set2")+
-  labs(title = "RICTOR Domain Score Distribution")+
-  xlab(label = "RICTOR H/M/L")+
-  ylab(label = "RICTOR Domain Scores")+
-  theme_minimal()
-
-largeDataSet %>% ggplot(aes(x = RAPTORDomain, y = RAPTORAll, color = Super.Group))+
-  geom_jitter()
-
-largeDataSet %>% ggplot(aes(x = SIN1, y = SIN1Domain, color = Super.Group, size = C.score))+
-  geom_jitter()
-
-largeDataSet %>% ggplot(aes(x = RAPTOR, y = RAPTORDomain, color = Super.Group))+
-  geom_jitter()
-
-largeDataSet %>% ggplot(aes(x = TOR, y = TORDomain, color = Super.Group))+
-  geom_jitter()
-
-
-largeDataSet %>% ggplot(aes(x = Super.Group, y = RICTORDomain))+
-  geom_boxplot(linetype = "dashed", outlier.shape = NA)+
-  #geom_jitter()+
-  stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..), outlier.shape = 1)+
-  stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
-  stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
-  labs(title = "Figure N")+
-  xlab(label = "Super Groups")+
-  ylab(label = "RICTOR Domain Score")+
-  theme_classic()
-
-largeDataSet %>% ggplot(aes(x = Super.Group, y = RAPTORDomain))+
-  geom_boxplot(linetype = "dashed", outlier.shape = NA)+
-  #geom_jitter()+
-  stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
-  stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
-  stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
-  labs(title = "Figure N")+
-  xlab(label = "Super Groups")+
-  ylab(label = "RAPTOR Domain Score")+
-  theme_classic()
-
-largeDataSet %>% ggplot(aes(x = Super.Group, y = TORDomain))+
-  geom_boxplot(linetype = "dashed", outlier.shape = NA)+
-  #geom_jitter()+
-  stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
-  stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
-  stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
-  labs(title = "Figure N")+
-  xlab(label = "Super Groups")+
-  ylab(label = "TOR Domain Score")+
-  theme_classic()
-
-largeDataSet %>% ggplot(aes(x = Super.Group, y = SIN1Domain))+
-  geom_boxplot(linetype = "dashed", outlier.shape = NA)+
-  #geom_jitter()+
-  stat_boxplot(aes(ymin = ..lower.., ymax = ..upper..))+
-  stat_boxplot(geom = "errorbar", aes(ymin = ..ymax..))+
-  stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
-  labs(title = "Figure N")+
-  xlab(label = "Super Groups")+
-  ylab(label = "SIN1 Domain Score")+
-  theme_classic()
-
-
-
-
-largeDataSet %>% ggplot()+
-  geom_histogram(aes(x = RICTORDomain, fill = Super.Group), position = "dodge", binwidth = 100)+
-  theme_minimal()
-
-largeDataSet %>% ggplot()+
-  geom_histogram(aes(x = RAPTORDomain, fill = Super.Group), position = "dodge", bindwidth = 100)+
-  theme_minimal()
-  
-
-
+largeDataSet %>% filter(Super.Group == "Stramenopiles") %>% select(Organism.Name, SIN1)%>%
+  pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score") %>%
+  ggplot(aes(x = Protein, y = Organism.Name, fill = Score), width = 0)+
+  geom_tile()
 
 
 # ------------------------------------------------------------------------------
@@ -252,12 +195,12 @@ StramenopileTree$tip.label <- gsub("'","", StramenopileTree$tip.label)
 StramenopileTree$tip.label
 
 Stramenopiles <- Stramenopiles %>% relocate(Organism.Name)
-STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+40)
+STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)
 STP <- STP  %<+% Stramenopiles
 #RICTOR Stramenopiles
 
 
-RISP <- STP + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+RISP <- STP + xlim(NA, +20) + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -286,7 +229,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorStramenopile
        limitsize = FALSE)
 
 #Sin1 Stramenopiles
-SSP <- STP + geom_tiplab(aes(color = SIN1), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+SSP <- STP + xlim(NA, +20) + geom_tiplab(aes(color = SIN1), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
@@ -315,7 +258,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Stramenopile.p
        dpi = 320,
        limitsize = FALSE)
 # Note: Add in the dark blue locations to denote a possible error location
-SRAPTORS <- STP + geom_tiplab(aes(color = RAPTOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+SRAPTORS <- STP + xlim(NA, +20) + geom_tiplab(aes(color = RAPTOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   #geom_text(aes(label = node))+
@@ -339,7 +282,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorStramenopile
        limitsize = FALSE)
 
   
-STORS <- STP + geom_tiplab(aes(color = TOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+STORS <- STP + xlim(NA, +20)+  geom_tiplab(aes(color = TOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
@@ -361,7 +304,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORStramenopile.pn
        dpi = 320,
        limitsize = FALSE)
 
-SLST8S <- STP + geom_tiplab(aes(color = LST8), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+SLST8S <- STP + xlim(NA, +20) + geom_tiplab(aes(color = LST8), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
@@ -387,7 +330,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Stramenopile.p
        dpi = 320,
        limitsize = FALSE)
 
-HeatTreeStram <- STP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+HeatTreeStram <- STP + xlim(NA, +30) + geom_tiplab(size = 1.8, show.legend = FALSE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -397,9 +340,23 @@ HeatTreeStram <- STP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, l
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   geom_rootedge()+
-  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
-
-StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 8, font.size = 3)
+  labs(title = "Stramenopiles Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
+  #geom_nodelab(nudge_y = .5, nudge_x = -.7, size = 2)
+  
+StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 5, width = 1.3, font.size = 2)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P","NA"),
+                    values = pal4,
+                    limits = c("H","M","L","P", NA),
+                    drop = FALSE)+
+  theme(
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))
+    
 StramHeatPlot
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStramenopile.png",
@@ -409,19 +366,9 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStramenopil
        units = "px",
        dpi = 320,
        limitsize = FALSE)
-
-
-
-
 # ------------------------------------------------------------------------------
 AlveolataL <- largeDataSet %>% filter(Super.Group == "Alveolata")
-
-subsetdataframe <- AlveolataL %>% select(Organism.Name, SIN1Domain, RICTORDomain, RAPTORDomain, LST8Domain,TORDomain) %>% distinct(Organism.Name, .keep_all = TRUE) %>%
-  rename(SIN1 = "SIN1Domain",
-         RICTOR = "RICTORDomain",
-         RAPTOR = "RAPTORDomain",
-         LST8 = "LST8Domain",
-         TOR = "TORDomain")
+subsetdataframe <- AlveolataL %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
 df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
 
 
@@ -436,10 +383,10 @@ AlveolataTree$tip.label
 AlveolataTree$tip.label <- gsub("'","", AlveolataTree$tip.label)
 AlveolataTree$tip.label
 Alveolata <- Alveolata %>% relocate(Organism.Name)
-AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+40)
+AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)
 AlvP <- AlvP  %<+% Alveolata
 # SIN1
-ASinP <- AlvP + geom_tiplab(aes(color = SIN1), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+ASinP <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = SIN1), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
@@ -464,7 +411,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Alveolata.png"
        limitsize = FALSE)
 
 # RICTOR
-ARIC <- AlvP + geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+ARIC <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
@@ -487,7 +434,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorAlveolata.pn
 
 # RAPTOR
 
-ARAPT <- AlvP + geom_tiplab(aes(color = RAPTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+ARAPT <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = RAPTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
@@ -510,7 +457,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorAlveolata.pn
        dpi = 320,
        limitsize = FALSE)
 
-ATOR <- AlvP + geom_tiplab(aes(color = TOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+ATOR <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = TOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
@@ -533,7 +480,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORAlveolata.png",
        dpi = 320,
        limitsize = FALSE)
 
-ALST8 <- AlvP + geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+ALST8 <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   # geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
@@ -562,7 +509,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Alveolata.png"
        dpi = 320,
        limitsize = FALSE)
 
-HeatTreeAlv <- AlvP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 1.5, show.legend = TRUE, nudge_x = .3, linesize = .2, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -572,9 +519,23 @@ HeatTreeAlv <- AlvP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, li
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   geom_rootedge()+
-  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
+  #geom_nodelab(nudge_y = 1.2, nudge_x = -.7, size = 1.5)+
+  labs(title = "Alveolata Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
 
-AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 8, font.size = 2)
+AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 4.5, font.size = 2)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P","NA"),
+                    values = pal3,
+                    limits = c("H","M","L","P", NA),
+                    drop = FALSE)+
+  theme(
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))
+
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolata.png",
        plot = AlvHeatPlot,
        width = 3840,
@@ -594,13 +555,7 @@ AlvHeatPlot
 # Initial Setup for the tree
 
 RhizariaL <- largeDataSet %>% filter(Super.Group == "Rhizaria")
-
-subsetdataframe <- RhizariaL %>% select(Organism.Name, SIN1Domain, RICTORDomain, RAPTORDomain, LST8Domain,TORDomain) %>% distinct(Organism.Name, .keep_all = TRUE) %>%
-  rename(SIN1 = "SIN1Domain",
-         RICTOR = "RICTORDomain",
-         RAPTOR = "RAPTORDomain",
-         LST8 = "LST8Domain",
-         TOR = "TORDomain")
+subsetdataframe <- RhizariaL %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
 df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
 
 
@@ -613,11 +568,11 @@ RhizariaTree$tip.label
 RhizariaTree$tip.label <- gsub("'","", RhizariaTree$tip.label)
 RhizariaTree$tip.label
 Rhizaria <- Rhizaria %>% relocate(Organism.Name)
-RTP <- ggtree(RhizariaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+30)
+RTP <- ggtree(RhizariaTree, branch.length = "none", ladderize = FALSE)
 RTP <- RTP%<+% Rhizaria
 
 # Generating the tree plots with markings at specific node locations
-RRICTOR <- RTP + geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+RRICTOR <- RTP +xlim(NA,+30)+ geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = .5, nudge_x = -.5, size = 2)+
@@ -636,7 +591,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorRhziaria.png
        dpi = 320,
        limitsize = FALSE)
 
-RSIN <- RTP + geom_tiplab(aes(color = SIN1), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+RSIN <- RTP +xlim(NA,+30)+ geom_tiplab(aes(color = SIN1), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = .5, nudge_x = -.5, size = 2)+
@@ -652,7 +607,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Rhziaria.png",
        dpi = 320,
        limitsize = FALSE)
 
-RRAPTOR <-  RTP + geom_tiplab(aes(color = RAPTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+RRAPTOR <-  RTP +xlim(NA,+30)+ geom_tiplab(aes(color = RAPTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = .5, nudge_x = -.5, size = 2)+
@@ -670,7 +625,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorRhziaria.png
        dpi = 320,
        limitsize = FALSE)
 
-RTOR <- RTP + geom_tiplab(aes(color = TOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+RTOR <- RTP +xlim(NA,+30)+ geom_tiplab(aes(color = TOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = .5, nudge_x = -.5, size = 2)+
@@ -686,7 +641,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORRhziaria.png",
        dpi = 320,
        limitsize = FALSE)
 
-RLST8 <- RTP + geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+RLST8 <- RTP +xlim(NA,+30)+ geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = .5, nudge_x = -.5, size = 2)+
@@ -704,7 +659,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Rhziaria.png",
        dpi = 320,
        limitsize = FALSE)
 
-HeatTreeRhiz <- RTP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+HeatTreeRhiz <- RTP +xlim(NA,+30)+ geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -1487,12 +1442,106 @@ TorExc
 subsetdataframe <- largeDataSet %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
 df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
 
-HeatTree <- AllTreeP + geom_tiplab(size = .7, show.legend = TRUE, nudge_x = .6, linesize = 1, align = TRUE)+xlim(-175, NA)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
+
+AllTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
+AllTree$tip.label <- gsub("'", "", AllTree$tip.label)
+AllTree$node.label <- gsub("'", "", AllTree$node.label)
+HTML <- HTML %>% relocate(Organism.Name)
+
+
+AllTreeP <- ggtree(AllTree, layout = "circular", branch.length = "none", laddarize = FALSE)
+AllTreeP <- AllTreeP %<+% HTML
+
+AllTree$tip.label
+
+
+tempdataframe <- largeDataSet
+tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(Super.Group == "Streptophyta" ~ which(AllTree$node.label == "Streptophyta") + length(AllTree$tip.label),
+                                                                 Super.Group == "Alveolata" ~ which(AllTree$node.label == "Alveolata") + length(AllTree$tip.label),
+                                                                 Super.Group == "Stramenopiles" ~ which(AllTree$node.label == "Stramenopiles") + length(AllTree$tip.label),
+                                                                 Super.Group == "Rhizaria" ~ which(AllTree$node.label == "Rhizaria") + length(AllTree$tip.label),
+                                                                 Super.Group == "Discoba" ~ which(AllTree$node.label == "Discoba") + length(AllTree$tip.label),
+                                                                 Super.Group == "Metamonada" ~ which(AllTree$node.label == "Metamonada") + length(AllTree$tip.label),
+                                                                 Super.Group == "Rhodophyta" ~ which(AllTree$node.label == "Rhodophyta") + length(AllTree$tip.label),
+                                                                 Super.Group == "Chlorophyta" ~ which(AllTree$node.label == "Chlorophyta") + length(AllTree$tip.label))) %>%
+  select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
+
+
+temp1 <- filter(tempdataframe, Super.Group == "Alveolata")
+
+
+
+HeatTree <- AllTreeP+xlim(-30,NA)+
+  #Streptophyta
+  geom_highlight(data = tempdataframe,
+                 mapping = aes(node = NodeNumber, fill = Super.Group))+
+  scale_fill_manual(name = "Super Group",
+                     breaks = c("Alveolata",
+                                "Stramenopiles",
+                                "Rhizaria",
+                                "Streptophyta",
+                                "Chlorophyta",
+                                "Rhodophyta",
+                                "Discoba",
+                                "Metamonada"),
+                     values = c("Alveolata" = "purple",
+                                "Stramenopiles" = "brown",
+                                "Rhizaria" = "orange",
+                                "Streptophyta" = "red",
+                                "Chlorophyta" = "green",
+                                "Rhodophyta" = "yellow",
+                                "Discoba" = "cyan",
+                                "Metamonada" = "blue"
+                     ))+
+  new_scale_fill()
+
+
+HeatTree
+
+AllHeatPlot <- gheatmap(HeatTree, df, offset = 5, font.size = 1.5, width = 1.5, colnames = FALSE)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P","NA"),
+                    values = pal3,
+                    limits = c("H","M","L","P", NA),
+                    drop = FALSE)+
+  theme(
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))
+
+AllHeatPlot
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAll.png",
+       plot = AllHeatPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+testSIN1Data <- largeDataSet %>% select(Organism.Name, SIN1)%>%
+  pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score")
+
+testRICTORData <- largeDataSet %>% select(Organism.Name, RICTOR)%>%
+  pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score")
+
+testRAPTORData <- largeDataSet %>% select(Organism.Name, RAPTOR)%>%
+  pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score")
+
+testLST8Data <- largeDataSet %>% select(Organism.Name, LST8)%>%
+  pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score")
+
+testTORData <- largeDataSet %>% select(Organism.Name, TOR)%>%
+  pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score")
+
+testAllTree <- AllTreeP +
   #Streptophyta
   geom_highlight(node =949,
-                 fill= "red",
-                 size=0.05)+
+                 fill = "red",
+                 size=2)+
   #Metamonada
   geom_highlight(node =770,
                  fill="blue",
@@ -1521,23 +1570,37 @@ HeatTree <- AllTreeP + geom_tiplab(size = .7, show.legend = TRUE, nudge_x = .6, 
   geom_highlight(node =807,
                  fill="orange",
                  size=0.05)+
-  #geom_text(aes(label = node))+
-  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
-  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
-  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  geom_rootedge()
+  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
+  geom_fruit(data = testSIN1Data,
+             geom = geom_tile,
+             mapping = aes(x = Protein, y = Organism.Name, fill = Score),width = .8)+
+  geom_fruit(data = testRICTORData,
+             geom = geom_tile,
+             mapping = aes(x = Protein, y = Organism.Name, fill = Score), width = .8)+
+  geom_fruit(data = testRAPTORData,
+             geom = geom_tile,
+             mapping = aes(x = Protein, y = Organism.Name, fill = Score), width = .8)+
+  geom_fruit(data = testLST8Data,
+             geom = geom_tile,
+             mapping = aes(x = Protein, y = Organism.Name, fill = Score), width = .8)+
+  geom_fruit(data = testTORData,
+             geom = geom_tile,
+             mapping = aes(x = Protein, y = Organism.Name, fill = Score), width = .8)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P","NA"),
+                    values = pal3,
+                    limits = c("H","M","L","P", NA),
+                    drop = FALSE)+
+  theme(
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))
 
-which(HeatTree$plot_env$tr$node.label == "Streptophyta")
-
-nodelab(AllTree, "Streptophyta")
-AllHeatPlot <- gheatmap(HeatTree, df, offset = 60, font.size = 1.5, colnames = FALSE)
-
-
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAll.png",
-       plot = AllHeatPlot,
+testAllTree
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAllv2.png",
+       plot = testAllTree,
        width = 3840,
        height = 2160,
        units = "px",
@@ -1546,10 +1609,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAll.png",
 
 
 
-AllTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
-AllTree$tip.label <- gsub("'", "", AllTree$tip.label)
-AllTree$node.label <- gsub("'", "", AllTree$node.label)
-HTML <- HTML %>% relocate(Organism.Name)
+
+
+
+
+
+
 
 
 tdf <- HTML
@@ -1591,8 +1656,7 @@ tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
         dpi = 320,
         limitsize = FALSE)
 
-AllTreeP <- ggtree(AllTree, layout = "circular", branch.length = "none", laddarize = FALSE)
-AllTreeP <- AllTreeP %<+% HTML
+
 
 
 nodeids <- nodeid(AllTree, AllTree$node.label[nchar(AllTree$node.label)>6])

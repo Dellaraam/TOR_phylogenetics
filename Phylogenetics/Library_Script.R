@@ -3,11 +3,15 @@
 
 #Make sure to add in the commented out install packages here as necessary
 
-
+install.packages("ggnewscale")
 install.packages("tidyverse")
 install.packages("reshape2")
 install.packages("ggtreeExtra")
 install.packages("tableHTML")
+install.packages("ape")
+install.packages("remotes")
+remotes::install_github("djw533/micro.gen.extra")
+# https://rdrr.io/github/djw533/micro.gen.extra/
 
 
 if (!require("BiocManager", quietly = TRUE))
@@ -20,7 +24,7 @@ if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install("ggtreeExtra")
 
-
+library(remotes)
 library("Biostrings")
 library(tidyverse)
 library(ggplot2)
@@ -37,7 +41,8 @@ library(kableExtra)
 library(knitr)
 library(patchwork)
 library(xtable)
-
+library(ape)
+library(ggnewscale)
 library(ggtreeExtra)
 
 

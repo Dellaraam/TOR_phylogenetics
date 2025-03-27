@@ -1,7 +1,7 @@
 library(tidyverse)
 
 
-source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
+#source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
 proteinPossible <- function(df,OrganismName,Protein,value){
   
   temp <- df %>% filter(Organism.Name == OrganismName)
@@ -86,8 +86,12 @@ HTML$Organism.Name <- str_replace(HTML$Organism.Name, "Neopyropia yezoensis", "P
 
 eug = which(HTML$Organism.Name == "Euglena gracilis")
 gia = which(HTML$Organism.Name == "Giardia lamblia ATCC 50803")
+vig = which(HTML$Organism.Name == "Trichomonas vaginalis G3")
+bruc = which(HTML$Organism.Name == "Trypanosoma brucei brucei TREU927")
 HTML[eug, "Group"] <- "Discoba"
+HTML[vig, "Group"] <- "Metamonada"
 HTML[gia, "Group"] <- "Metamonada"
+HTML[bruc, "Group"] <- "Discoba"
 
 # Modifications to some of the organism names and also the supergroups
 
