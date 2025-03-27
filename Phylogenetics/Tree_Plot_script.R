@@ -201,7 +201,6 @@ STP <- STP  %<+% Stramenopiles
 
 
 RISP <- STP + xlim(NA, +20) + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -230,7 +229,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorStramenopile
 
 #Sin1 Stramenopiles
 SSP <- STP + xlim(NA, +20) + geom_tiplab(aes(color = SIN1), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(fill = `SIN1`, x = 0, y = 0))+
@@ -259,7 +257,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Stramenopile.p
        limitsize = FALSE)
 # Note: Add in the dark blue locations to denote a possible error location
 SRAPTORS <- STP + xlim(NA, +20) + geom_tiplab(aes(color = RAPTOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   #geom_text(aes(label = node))+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
@@ -283,7 +280,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorStramenopile
 
   
 STORS <- STP + xlim(NA, +20)+  geom_tiplab(aes(color = TOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
@@ -305,7 +301,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORStramenopile.pn
        limitsize = FALSE)
 
 SLST8S <- STP + xlim(NA, +20) + geom_tiplab(aes(color = LST8), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
@@ -388,7 +383,6 @@ AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)
 AlvP <- AlvP  %<+% Alveolata
 # SIN1
 ASinP <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = SIN1), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
@@ -413,7 +407,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Alveolata.png"
 
 # RICTOR
 ARIC <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   #geom_text(aes(label=node))+
@@ -436,7 +429,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorAlveolata.pn
 # RAPTOR
 
 ARAPT <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = RAPTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   #geom_text(aes(label=node))+
@@ -459,7 +451,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorAlveolata.pn
        limitsize = FALSE)
 
 ATOR <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = TOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   #geom_text(aes(label=node))+
@@ -482,7 +473,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORAlveolata.png",
        limitsize = FALSE)
 
 ALST8 <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   # geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
@@ -575,7 +565,6 @@ RTP <- RTP%<+% Rhizaria
 
 # Generating the tree plots with markings at specific node locations
 RRICTOR <- RTP +xlim(NA,+30)+ geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = .5, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
@@ -594,7 +583,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorRhziaria.png
        limitsize = FALSE)
 
 RSIN <- RTP +xlim(NA,+30)+ geom_tiplab(aes(color = SIN1), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = .5, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
@@ -610,7 +598,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Rhziaria.png",
        limitsize = FALSE)
 
 RRAPTOR <-  RTP +xlim(NA,+30)+ geom_tiplab(aes(color = RAPTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = .5, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
@@ -628,7 +615,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorRhziaria.png
        limitsize = FALSE)
 
 RTOR <- RTP +xlim(NA,+30)+ geom_tiplab(aes(color = TOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = .5, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
@@ -644,7 +630,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORRhziaria.png",
        limitsize = FALSE)
 
 RLST8 <- RTP +xlim(NA,+30)+ geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = .5, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
@@ -715,7 +700,6 @@ DTP <- ggtree(DiscobaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+3
 DTP <- DTP%<+% Discoba
 
 DRAPTOR <- DTP + geom_tiplab(aes(color = RAPTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_text(aes(label=node))+
@@ -733,7 +717,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorDiscoba.png"
        limitsize = FALSE)
 
 DRICTOR <- DTP + geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_text(aes(label=node))+
@@ -754,7 +737,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorDiscoba.png"
        limitsize = FALSE)
 
 DSIN1 <- DTP + geom_tiplab(aes(color = SIN1), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_text(aes(label=node))+
@@ -771,7 +753,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Discoba.png",
        limitsize = FALSE)
 
 DTOR <- DTP + geom_tiplab(aes(color = TOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
@@ -786,7 +767,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORDiscoba.png",
        limitsize = FALSE)
 
 DLST8 <- DTP + geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_text(aes(label=node))+
@@ -854,7 +834,6 @@ MTP <- ggtree(MetamonadaTree, branch.length = "none", ladderize = FALSE)+xlim(NA
 MTP <- MTP %<+% Metamonada
 
 MRICTOR <- MTP + geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
@@ -876,7 +855,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorMetamonada.p
        limitsize = FALSE)
 
 MSIN1 <- MTP + geom_tiplab(aes(color = SIN1), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
@@ -897,7 +875,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Metamonada.png
 
 # No losses
 MRAPTOR <- MTP + geom_tiplab(aes(color = RAPTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
@@ -913,7 +890,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorMetamonada.p
 
 # No losses
 MTOR <- MTP + geom_tiplab(aes(color = TOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `TOR`, fill = `TOR`, x = 0, y = 0))+
@@ -993,7 +969,6 @@ ChloroP <- ChloroP  %<+% Chlorophyta
 
 #RICTOR
 RicCh <- ChloroP + geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
@@ -1015,7 +990,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorChlorophyta.
 
 #RAPTOR
 RapCh <- ChloroP + geom_tiplab(aes(color = RAPTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
@@ -1033,7 +1007,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorChlorophyta.
 
 #SIN1
 Sin1Ch <- ChloroP + geom_tiplab(aes(color = SIN1), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_text(aes(label = node))+
@@ -1057,7 +1030,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Chlorophyta.pn
 #LST8
 
 lst8Ch <- ChloroP + geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   # geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
@@ -1090,7 +1062,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORChlorophyta.png
 
 HeatTreeChl <- ChloroP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"))+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -1142,7 +1113,6 @@ RhodoP <- RhodoP %<+% Rhodophyta
 
 #RICTOR
 RicRh <- RhodoP + geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   # geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
    geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
@@ -1159,7 +1129,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorRhodophyta.p
 
 #RAPTOR
 RapRh <- RhodoP + geom_tiplab(aes(color = RAPTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
@@ -1175,7 +1144,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RaptorRhodophyta.p
 
 #SIN1
 Sin1Rh <- RhodoP + geom_tiplab(aes(color = SIN1), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   geom_point2(aes(subset=(node==15)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)+
@@ -1192,7 +1160,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Rhodophyta.png
 
 #LST8
 lst8Rh <- RhodoP + geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
@@ -1208,7 +1175,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Rhodophyta.png
 
 #TOR
 TorRh <- RhodoP + geom_tiplab(aes(color = TOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
