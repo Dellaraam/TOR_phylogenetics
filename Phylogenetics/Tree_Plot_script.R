@@ -123,28 +123,32 @@ pal <- c(
   "H" = "#7e2323",
   "M" = "#d0771a",
   "L" = "#ffc30b",
-  "P" = "#7dbe62"
+  "P" = "#7dbe62",
+  "NA" = "#FF000000"
 )
 
 pal2 <- c(
   "H" = "#f4931f",
   "M" = "#f5da5f",
   "L" = "#41ad49",
-  "P" = "#027aa4"
+  "P" = "#027aa4",
+  "NA" = "#FF000000"
 )
 
 pal3 <- c(
   "H" = "#ae5a41",
   "M" = "#c3cb71",
   "L" = "#559e83",
-  "P" = "#1b85b8"
+  "P" = "#1b85b8",
+  "NA" = "#FF000000"
 )
 
 pal4 <- c(
   "H" = "#f4649e",
   "M" = "#49e5aa",
   "L" = "#d2ebfb",
-  "P" = "#f0d14f"
+  "P" = "#f0d14f",
+  "NA" = "#FF000000"
 )
 
 
@@ -1286,6 +1290,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SIN1Streptophyta.p
        limitsize = FALSE)
 
 #LST8
+
 LST8Str <- StrephP + geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
   scale_fill_manual(values = pal)+
@@ -1424,8 +1429,6 @@ HTML <- HTML %>% relocate(Organism.Name)
 AllTreeP <- ggtree(AllTree, layout = "circular", branch.length = "none", laddarize = FALSE)
 AllTreeP <- AllTreeP %<+% HTML
 
-AllTree$tip.label
-
 
 tempdataframe <- largeDataSet
 tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(Super.Group == "Streptophyta" ~ which(AllTree$node.label == "Streptophyta") + length(AllTree$tip.label),
@@ -1437,11 +1440,6 @@ tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(Super.Group == 
                                                                  Super.Group == "Rhodophyta" ~ which(AllTree$node.label == "Rhodophyta") + length(AllTree$tip.label),
                                                                  Super.Group == "Chlorophyta" ~ which(AllTree$node.label == "Chlorophyta") + length(AllTree$tip.label))) %>%
   select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
-
-
-temp1 <- filter(tempdataframe, Super.Group == "Alveolata")
-
-
 
 HeatTree <- AllTreeP+xlim(-30,NA)+
   #Streptophyta
@@ -1474,7 +1472,8 @@ AllHeatPlot <- gheatmap(HeatTree, df, offset = 5, font.size = 1.5, width = 1.5, 
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P","NA"),
                     values = pal3,
-                    limits = c("H","M","L","P", NA),
+                    limits = c("H","M","L","P", "NA"),
+                    na.value = "#FF000000",
                     drop = FALSE)+
   theme(
     legend.background=element_rect(fill=NA),
@@ -1510,39 +1509,27 @@ testTORData <- largeDataSet %>% select(Organism.Name, TOR)%>%
   pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score")
 
 testAllTree <- AllTreeP +
-  #Streptophyta
-  geom_highlight(node =949,
-                 fill = "red",
-                 size=2)+
-  #Metamonada
-  geom_highlight(node =770,
-                 fill="blue",
-                 size=0.05)+
-  #Stramenopiles
-  geom_highlight(node =853,
-                 fill="brown",
-                 size=0.05)+
-  #Alveolata
-  geom_highlight(node =813,
-                 fill="purple",
-                 size=0.05)+
-  #Chlorophyta
-  geom_highlight(node =913,
-                 fill="green",
-                 size=0.05)+
-  #Rhodophyta
-  geom_highlight(node =904,
-                 fill="yellow",
-                 size=0.05)+
-  #Discoba
-  geom_highlight(node =783,
-                 fill="cyan",
-                 size=0.05)+
-  #Rhizaria
-  geom_highlight(node =807,
-                 fill="orange",
-                 size=0.05)+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
+  geom_highlight(data = tempdataframe,
+                 mapping = aes(node = NodeNumber, fill = Super.Group))+
+  scale_fill_manual(name = "Super Group",
+                    breaks = c("Alveolata",
+                               "Stramenopiles",
+                               "Rhizaria",
+                               "Streptophyta",
+                               "Chlorophyta",
+                               "Rhodophyta",
+                               "Discoba",
+                               "Metamonada"),
+                    values = c("Alveolata" = "purple",
+                               "Stramenopiles" = "brown",
+                               "Rhizaria" = "orange",
+                               "Streptophyta" = "red",
+                               "Chlorophyta" = "green",
+                               "Rhodophyta" = "yellow",
+                               "Discoba" = "cyan",
+                               "Metamonada" = "blue"
+                    ))+
+  new_scale_fill()+
   geom_fruit(data = testSIN1Data,
              geom = geom_tile,
              mapping = aes(x = Protein, y = Organism.Name, fill = Score),width = .8)+
@@ -1561,7 +1548,8 @@ testAllTree <- AllTreeP +
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P","NA"),
                     values = pal3,
-                    limits = c("H","M","L","P", NA),
+                    limits = c("H","M","L","P", "NA"),
+                    na.value = "#FF000000",
                     drop = FALSE)+
   theme(
     legend.background=element_rect(fill=NA),
@@ -1587,12 +1575,10 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAllv2.png",
 
 
 
-
+#This may be redundant at this point, work to eliminate
 
 tdf <- HTML
-
 tdf <- mutate(tdf, HasRictor = NA, HasRaptor = NA, HasTOR = NA, HasLST8 = NA, HasSIN1 = NA)
-
 tdf[!is.na(tdf$RICTOR),]$HasRictor <- "Yes"
 tdf[!is.na(tdf$RAPTOR),]$HasRaptor <- "Yes"
 tdf[!is.na(tdf$SIN1),]$HasSIN1 <- "Yes"
@@ -1603,7 +1589,7 @@ tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
 
 
 
-
+# Opisthokonta Tree File & Image
  testTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/TestingTreeP.phy")
  tree1 <- ggtree(testTree, layout = "daylight", branch.length = "none")
  tree1 <- tree1 + geom_highlight(node = 804, fill = "blue", alpha = .4)+
@@ -1617,9 +1603,7 @@ tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
    geom_highlight(node = 843, fill = "pink", alpha = .4)+
    geom_highlight(node = 950, fill = "green", alpha = .4)
  tree1
- 
 
- 
  ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TestImageOpisthokontTree.png",
         plot = tree1,
         width = 3840,
@@ -1634,17 +1618,6 @@ tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
 nodeids <- nodeid(AllTree, AllTree$node.label[nchar(AllTree$node.label)>6])
 nodelab <- gsub("[\\.0-9]", "", AllTree$node.label[nchar(AllTree$node.label)>6])
 nodedf <- data.frame(node=nodeids, label = nodelab)
-
-
-names <- c('Streptophyta', 'Metamonada', 'Stramenopiles', 'Alveolata','Chlorophyta', 'Rhodophyta', 'Discoba', 'Rhizaria')
-clrs <- c("red",
-          "blue",
-          "brown",
-          "purple",
-           "green",
-          "yellow",
-          "cyan",
-          "orange")
 
 
 P <- ggtree(AllTree, layout = "circular", branch.length = "none")

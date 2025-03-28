@@ -8,7 +8,6 @@ if (!requireNamespace("devtools", quietly=TRUE))
 devtools::install_github("YuLab-SMU/ggmsa")
 
 library(ggmsa)
-library(msa)
 library(tidyverse)
 library(ggrepel)
 
@@ -20,10 +19,7 @@ summaryData <- summarise(largeDataSet)
 
 
 
-largeDataSet %>% ggplot(aes(x = ))
-
-
-jitterRICTOR<- largeDataSet %>%filter(!is.na(RICTOR) & RICTOR != "P") %>% ggplot(aes(x = RICTOR, y = RICTORDomain, color = Super.Group, size = C.score))+
+jitterRICTOR<- largeDataSet %>%filter(!is.na(RICTOR) & RICTOR != "P") %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICTORDomain, color = Super.Group, size = C.score))+
   geom_jitter(shape = 18)+
   labs(title = "RICTOR Domain Score Distribution")+
   xlab(label = "RICTOR H/M/L")+
@@ -41,13 +37,13 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRICTOR.png
 
 
 
-jitterRAPTOR<- largeDataSet %>%filter(!is.na(RAPTOR) & RAPTOR != "P") %>% filter(Super.Group == "Metamonada") %>% ggplot(aes(x = RAPTOR, y = RAPTORDomain, color = Super.Group, size = C.score))+
+jitterRAPTOR<- largeDataSet %>%filter(!is.na(RAPTOR) & RAPTOR != "P") %>% ggplot(aes(x = factor(RAPTOR,level = c("H", "M", "L")), y = RAPTORDomain, color = Super.Group, size = C.score))+
   geom_jitter(shape = 18)+
   labs(title = "RAPTOR Domain Score Distribution")+
   xlab(label = "RAPTOR H/M/L")+
   ylab(label = "RAPTOR Domain Scores")+
   facet_wrap(~Super.Group)
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRICTOR.png",
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRAPTOR.png",
        plot = jitterRAPTOR,
        width = 3840,
        height = 2160,
@@ -57,7 +53,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRICTOR.png
 
 
 
-jitterSIN1 <- largeDataSet %>%filter(!is.na(SIN1) & SIN1 != "P") %>% ggplot(aes(x = SIN1, y = SIN1Domain, color = Super.Group, size = C.score))+
+jitterSIN1 <- largeDataSet %>%filter(!is.na(SIN1) & SIN1 != "P") %>% ggplot(aes(x = factor(SIN1, level = c("H", "M", "L")), y = SIN1Domain, color = Super.Group, size = C.score))+
   geom_jitter(shape = 18)+
   labs(title = "SIN1 Domain Score Distribution")+
   xlab(label = "SIN1 H/M/L")+
@@ -71,7 +67,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterSIN1.png",
        dpi = 320,
        limitsize = FALSE)
 
-jitterLST8 <- largeDataSet %>%filter(!is.na(LST8) & LST8 != "P") %>% ggplot(aes(x = LST8, y = LST8Domain, color = Super.Group, size = C.score))+
+jitterLST8 <- largeDataSet %>%filter(!is.na(LST8) & LST8 != "P") %>% ggplot(aes(x = factor(LST8, level = c("H", "M", "L")), y = LST8Domain, color = Super.Group, size = C.score))+
   geom_jitter(shape = 18)+
   labs(title = "LST8 Domain Score Distribution")+
   xlab(label = "LST8 H/M/L")+
@@ -85,7 +81,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterLST8.png",
        dpi = 320,
        limitsize = FALSE)
 
-jitterTOR <- largeDataSet %>%filter(!is.na(TOR) & TOR != "P") %>% ggplot(aes(x = TOR, y = TORDomain, color = Super.Group, size = C.score))+
+jitterTOR <- largeDataSet %>%filter(!is.na(TOR) & TOR != "P") %>% ggplot(aes(x = factor(TOR, level = c("H", "M", "L")), y = TORDomain, color = Super.Group, size = C.score))+
   geom_jitter(shape = 18)+
   labs(title = "TOR Domain Score Distribution")+
   xlab(label = "TOR H/M/L")+
@@ -111,7 +107,8 @@ BoxRictor <- largeDataSet %>% ggplot(aes(x = Super.Group, y = RICTORDomain))+
   stat_boxplot(geom = "errorbar", aes(ymax = ..ymin..))+
   labs(title = "Figure N")+
   xlab(label = "Super Groups")+
-  ylab(label = "RICTOR Domain Score")
+  ylab(label = "RICTOR Domain Score")+
+  theme_classic()
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRictor.png",
        plot = BoxRictor,

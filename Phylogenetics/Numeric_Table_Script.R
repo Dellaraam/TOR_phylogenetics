@@ -538,6 +538,18 @@ Eug <- which(Final_Table$Organism.Name == "Euglena gracilis CCAP 1224/5Z v1.0")
 Final_Table$Group[Eug] <- "Discoba"
 GI <- which(Final_Table$Organism.Name == "Giardia intestinalis ATCC 50803")
 Final_Table$Group[GI] <- "Metamonada"
+
+# Final Edits and changes
+Final_Table$SIN1All[Final_Table$Organism_Taxonomic_ID == 3055] <- NA
+Final_Table$SIN1Domain[Final_Table$Organism_Taxonomic_ID == 3055] <- NA
+
+Final_Table$SIN1All[Final_Table$Group == "Streptophyta"] <- NA
+Final_Table$SIN1Domain[Final_Table$Group == "Streptophyta"] <- NA
+Final_Table$RICTORAll[Final_Table$Group == "Streptophyta"] <- NA
+Final_Table$RICTORDomain[Final_Table$Group == "Streptophyta"] <- NA
+
+
+
 write.csv(Final_Table,file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
 
 rm(list = ls())
