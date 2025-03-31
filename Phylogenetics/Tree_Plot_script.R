@@ -383,7 +383,7 @@ AlveolataTree$tip.label
 AlveolataTree$tip.label <- gsub("'","", AlveolataTree$tip.label)
 AlveolataTree$tip.label
 Alveolata <- Alveolata %>% relocate(Organism.Name)
-AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)
+AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE, key_glyph = 'rect')
 AlvP <- AlvP  %<+% Alveolata
 # SIN1
 ASinP <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = SIN1), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
@@ -476,8 +476,9 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORAlveolata.png",
        dpi = 320,
        limitsize = FALSE)
 
-ALST8 <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
+ALST8 <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = LST8), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE, key_glyph = "rect")+
   geom_rootedge()+
+  guides(color = guide_legend(override.aes = list(label = "", shape = 15, size = 5)))+
   # geom_polygon(aes(color = `LST8`, fill = `LST8`, x = 0, y = 0))+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
   #geom_text(aes(label = node))+
@@ -494,7 +495,12 @@ ALST8 <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = LST8), size = 2,show.lege
   geom_point2(aes(subset=(node==131)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==128)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .6)+
-  scale_color_manual(values = pal, limits = c("H","M","L","P",NA), drop = FALSE)
+  scale_color_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P","NA"),
+                    values = pal3,
+                    limits = c("H","M","L","P", "NA"),
+                    na.value = "#FF000000",
+                    drop = FALSE)
 ALST8
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Alveolata.png",
        plot = ALST8,
@@ -504,33 +510,30 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Alveolata.png"
        dpi = 320,
        limitsize = FALSE)
 
-HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 1.5, show.legend = TRUE, nudge_x = .3, linesize = .2, align = TRUE,aes(color=C.score), continuous = 'colour')+
+HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 1.5, show.legend = FALSE, nudge_x = .3, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"))+
-  guides(color = guide_legend(override.aes = list(label = "\u25A0", size = 10)))+
-  #geom_text(aes(label = node))+
-  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
-  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
-  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   geom_rootedge()+
   #geom_nodelab(nudge_y = 1.2, nudge_x = -.7, size = 1.5)+
   labs(title = "Alveolata Phylogenetic Tree",
-       subtitle = "With HMMER Score Map")
+       subtitle = "With HMMER Score Map")+
+  new_scale()
 
 AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 4.5, font.size = 2)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P","NA"),
                     values = pal3,
-                    limits = c("H","M","L","P", NA),
+                    limits = c("H","M","L","P", "NA"),
+                    na.value = "#FF000000",
                     drop = FALSE)+
   theme(
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
     legend.spacing.y = unit(0.02, "cm"),
-    legend.key.spacing.x = unit(1,"cm"))
+    legend.key.spacing.x = unit(1,"cm"))+
+  guides(fill = guide_legend(override.aes = list(label = "")))
+
+AlvHeatPlot
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolata.png",
        plot = AlvHeatPlot,
@@ -543,7 +546,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolata.p
 
 
 
-AlvHeatPlot
+
 
 
 
@@ -1475,6 +1478,7 @@ AllHeatPlot <- gheatmap(HeatTree, df, offset = 5, font.size = 1.5, width = 1.5, 
                     limits = c("H","M","L","P", "NA"),
                     na.value = "#FF000000",
                     drop = FALSE)+
+  guides(fill = guide_legend(override.aes = list(label = "")))+
   theme(
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
@@ -1491,7 +1495,16 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAll.png",
        dpi = 320,
        limitsize = FALSE)
 
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAll.pdf",
+       plot = AllHeatPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
+
+#Spacing In Between Tree
 
 testSIN1Data <- largeDataSet %>% select(Organism.Name, SIN1)%>%
   pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score")
