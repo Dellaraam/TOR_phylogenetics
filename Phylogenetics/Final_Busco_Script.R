@@ -85,4 +85,5 @@ ExcavataFinalBusco <- rbind(ExcavataBusco, ExcavataJGIBusco)
 
 
 FinalBusco <- rbind(ChlorophytaFinalBusco, StreptophytaFinalBusco, RhodophytaFinalBusco, ExcavataFinalBusco, AlveolataFinalBusco, StramenopileFinalBusco, RhizariaFinalBusco)
+FinalBusco <- distinct(FinalBusco, Accn, .keep_all = TRUE)
 write.csv(FinalBusco, "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/FinalBusco.csv")
