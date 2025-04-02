@@ -342,7 +342,7 @@ HeatTreeStram <- STP + xlim(NA, +30) + geom_tiplab(size = 1.8, nudge_x = .3, lin
   #geom_nodelab(nudge_y = .5, nudge_x = -.7, size = 2)
 
 HeatTreeStram
-StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 5, width = 1.3, font.size = 2)+
+StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 5, width = 1.3, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -350,6 +350,7 @@ StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 5, width = 1.3, font.size 
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -509,7 +510,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Alveolata.png"
        dpi = 320,
        limitsize = FALSE)
 
-HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 1.8, show.legend = TRUE, nudge_x = .3, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
+HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
@@ -518,7 +519,7 @@ HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 1.8, show.legend = TRUE,
   labs(title = "Alveolata Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 4, font.size = 2)+
+AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 4, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -526,6 +527,7 @@ AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 4, font.size = 2)+
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -668,7 +670,7 @@ HeatTreeRhiz <- RTP +xlim(NA,+20)+ geom_tiplab(size = 2, show.legend = TRUE, nud
   labs(title = "Rhizaria Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-RhizHeatPlot <- gheatmap(HeatTreeRhiz, df, offset = 7, font.size = 1.8)+
+RhizHeatPlot <- gheatmap(HeatTreeRhiz, df, offset = 7, font.size = 1.8, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -676,6 +678,7 @@ RhizHeatPlot <- gheatmap(HeatTreeRhiz, df, offset = 7, font.size = 1.8)+
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -700,7 +703,6 @@ RhizHeatPlot
 # ------------------------------------------------------------------------------
 
 DiscobaL <- largeDataSet %>% filter(Super.Group == "Discoba")
-
 subsetdataframe <- DiscobaL %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
 df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
 
@@ -814,9 +816,11 @@ HeatTreeDisc <- DTP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, li
   # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  geom_rootedge()
+  geom_rootedge()+
+  labs(title = "Discoba Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
 HeatTreeDisc
-DiscHeatPlot <- gheatmap(HeatTreeDisc, df, offset = 8, font.size = 2)+
+DiscHeatPlot <- gheatmap(HeatTreeDisc, df, offset = 8, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -825,6 +829,7 @@ DiscHeatPlot <- gheatmap(HeatTreeDisc, df, offset = 8, font.size = 2)+
                     guide = guide_legend(order = 2),
                     drop = FALSE)+
   theme(
+    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -838,14 +843,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapDiscoba.png
        units = "px",
        dpi = 320,
        limitsize = FALSE)
-
 DiscHeatPlot
 
 
 # ------------------------------------------------------------------------------
 
 MetamonadaL <- largeDataSet %>% filter(Super.Group == "Metamonada")
-
 subsetdataframe <- MetamonadaL %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
 df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
 
@@ -958,9 +961,10 @@ HeatTreeMet <- MTP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, lin
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   geom_rootedge()+
-  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 1.8)
+  labs(title = "Metamonada Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
 
-MetHeatPlot <- gheatmap(HeatTreeMet, df, offset = 8, font.size = 2)+
+MetHeatPlot <- gheatmap(HeatTreeMet, df, offset = 8, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -968,6 +972,7 @@ MetHeatPlot <- gheatmap(HeatTreeMet, df, offset = 8, font.size = 2)+
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1105,9 +1110,11 @@ HeatTreeChl <- ChloroP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3,
   # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  geom_rootedge()
+  geom_rootedge()+
+  labs(title = "Chlorophyta Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
 
-ChlHeatPlot <- gheatmap(HeatTreeChl, df, offset = 8, font.size = 2)+
+ChlHeatPlot <- gheatmap(HeatTreeChl, df, offset = 8, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -1115,6 +1122,7 @@ ChlHeatPlot <- gheatmap(HeatTreeChl, df, offset = 8, font.size = 2)+
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1242,9 +1250,11 @@ HeatTreeRho <- RhodoP+xlim(NA,+20)+ geom_tiplab(size = 2, show.legend = TRUE, nu
   # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  geom_rootedge()
+  geom_rootedge()+
+  labs(title = "Rhodophyta Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
 
-RhoHeatPlot <- gheatmap(HeatTreeRho, df, offset = 8, font.size = 1.8)+
+RhoHeatPlot <- gheatmap(HeatTreeRho, df, offset = 8, font.size = 1.8, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -1252,6 +1262,7 @@ RhoHeatPlot <- gheatmap(HeatTreeRho, df, offset = 8, font.size = 1.8)+
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1371,21 +1382,34 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORStreptophyta.pn
        dpi = 320,
        limitsize = FALSE)
 
+#
+StrephP+geom_text(aes(label=node))
 
-HeatTreeStrep <- StrephP + geom_tiplab(size = 1.75, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
+subset1 <- tree_subset(StreptophytaTree, node = 421, levels_back = 0)
+subset1 %>% ggtree(layout = "fan",open.angle = 180)+geom_tiplab(size = 1.5)
+
+subset2 <- tree_subset(StreptophytaTree, node = 465, levels_back = 0)
+subset2 %>% ggtree(branch.length = "none")+xlim(NA,30)+geom_tiplab(size = 1.5)+geom_nodelab()
+
+subset3 <- tree_subset(StreptophytaTree, node = 375, levels_back = 0)
+subset3 %>% ggtree(branch.length = "none")+xlim(NA,30)+geom_tiplab(size = 1.5)+geom_nodelab()
+
+
+HeatTreeStrep <- StrephP +xlim(NA, 25)+geom_tiplab(aes(subset),size = 1.5, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
-  #geom_text(aes(label = node))+
+  geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  geom_rootedge()
+  geom_rootedge()+
+  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
 
-StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 8, font.size = 1.5)+
+StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 2, font.size = 1.5)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
