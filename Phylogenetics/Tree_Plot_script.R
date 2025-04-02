@@ -5,7 +5,7 @@
 
 
 
-source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
+#source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
 #source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
 #source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Numeric_Table_Script.R")
 #source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/HTML_Additions.R")
@@ -147,8 +147,11 @@ pal4 <- c(
 )
 
 
-
-
+UChicagoPal <- pal_uchicago("light")(8)
+lancPal <- pal_lancet("lanonc")(5)
+AAAsPal <- pal_aaas("default")(5)
+NPGPal <- pal_npg("nrc")(5)
+NEJMPal <- pal_nejm("default")(5)
 # Blank
 ##00000000
 
@@ -326,7 +329,8 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Stramenopile.p
        limitsize = FALSE)
 
 HeatTreeStram <- STP + xlim(NA, +30) + geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
-  scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+  scale_color_viridis_c(direction = -1,
+                        option = "viridis",
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   #geom_text(aes(label = node))+
@@ -345,12 +349,12 @@ HeatTreeStram
 StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 5, width = 1.3, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
-                    values = pal3,
+                    values = NPGPal,
                     limits = c("H","M","L","P", NA),
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
-    legend.position = "none",
+    text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -358,7 +362,6 @@ StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 5, width = 1.3, font.size 
     legend.key.spacing.x = unit(1,"cm"))
     
 StramHeatPlot
-
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStramenopile.png",
        plot = StramHeatPlot,
        width = 3840,
@@ -510,7 +513,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Alveolata.png"
        dpi = 320,
        limitsize = FALSE)
 
-HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
+HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 1.8, show.legend = TRUE, nudge_x = .3, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
@@ -522,22 +525,29 @@ HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 2, show.legend = TRUE, n
 AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 4, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
-                    values = pal3,
+                    values = NPGPal,
                     limits = c("H","M","L","P", NA),
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
-    legend.position = "none",
+    text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
     legend.spacing.y = unit(0.02, "cm"),
-    legend.key.spacing.x = unit(1,"cm"))+
-  guides(fill = guide_legend(override.aes = list(label = "")))
+    legend.key.spacing.x = unit(1,"cm"))
 
 AlvHeatPlot
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolata.png",
+       plot = AlvHeatPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolata.pdf",
        plot = AlvHeatPlot,
        width = 3840,
        height = 2160,
@@ -1383,23 +1393,27 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORStreptophyta.pn
        limitsize = FALSE)
 
 #
-StrephP+geom_text(aes(label=node))
+StrephP+geom_nodelab(size = 2.5)
 
 subset1 <- tree_subset(StreptophytaTree, node = 421, levels_back = 0)
-subset1 %>% ggtree(layout = "fan",open.angle = 180)+geom_tiplab(size = 1.5)
+N421 <- subset1 %>%ggtree(branch.length = "none")
+N421 <- N421 %<+% Streptophyta
 
 subset2 <- tree_subset(StreptophytaTree, node = 465, levels_back = 0)
-subset2 %>% ggtree(branch.length = "none")+xlim(NA,30)+geom_tiplab(size = 1.5)+geom_nodelab()
+N465 <- subset2 %>% ggtree(branch.length = "none")
+N465 <- N465 %<+% Streptophyta
 
-subset3 <- tree_subset(StreptophytaTree, node = 375, levels_back = 0)
-subset3 %>% ggtree(branch.length = "none")+xlim(NA,30)+geom_tiplab(size = 1.5)+geom_nodelab()
+subset3 <- tree_subset(StreptophytaTree, node = 376, levels_back = 0)
+N376 <- subset3 %>% ggtree(branch.length = "none")
+N376 <- N376 %<+% Streptophyta
 
 
-HeatTreeStrep <- StrephP +xlim(NA, 25)+geom_tiplab(aes(subset),size = 1.5, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
+
+
+HeatTreeStrep <- N421+xlim(NA,60)+geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
-  geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
@@ -1407,9 +1421,10 @@ HeatTreeStrep <- StrephP +xlim(NA, 25)+geom_tiplab(aes(subset),size = 1.5, show.
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   geom_rootedge()+
-  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
+  labs(title = "Asterids Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
 
-StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 2, font.size = 1.5)+
+StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -1417,6 +1432,7 @@ StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 2, font.size = 1.5)+
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1424,7 +1440,7 @@ StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 2, font.size = 1.5)+
     legend.key.spacing.x = unit(1,"cm"))+
   guides(fill = guide_legend(override.aes = list(label = "")))
 StrepHeatPlot
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStreptophyta.png",
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAsterids.png",
        plot = StrepHeatPlot,
        width = 3840,
        height = 2160,
@@ -1432,9 +1448,81 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStreptophyt
        dpi = 320,
        limitsize = FALSE)
 
+HeatTreeStrep <- N465+xlim(NA,70)+geom_tiplab(size = 1.7, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
+  scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+                        guide = guide_colorbar(order =1),
+                        name = "Completeness Score")+
+  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_rootedge()+
+  labs(title = "Rosids Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
 
+StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, colnames = FALSE)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L",NA),
+                    values = pal3,
+                    limits = c("H","M","L",NA),
+                    na.value = "#FFFFFF",
+                    drop = FALSE)+
+  theme(
+    legend.position = "none",
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  guides(fill = guide_legend(override.aes = list(label = "")))
+StrepHeatPlot
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapRosids.png",
+       plot = StrepHeatPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
+HeatTreeStrep <- N376+xlim(NA,60)+geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
+  scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+                        guide = guide_colorbar(order =1),
+                        name = "Completeness Score")+
+  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_rootedge()+
+  labs(title = "Liliopsida Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
 
+StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, colnames = FALSE)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L",NA),
+                    values = pal3,
+                    limits = c("H","M","L",NA),
+                    na.value = "#FFFFFF",
+                    drop = FALSE)+
+  theme(
+    legend.position = "none",
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  guides(fill = guide_legend(override.aes = list(label = "")))
+StrepHeatPlot
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapLiliopsida.png",
+       plot = StrepHeatPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 
