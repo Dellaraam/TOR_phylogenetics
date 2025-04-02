@@ -7,8 +7,8 @@
 # phylogenetic tree input and output with richly annotated and associated data. Molecular Biology and Evolution. 2020, 37(2):599-603. doi:
 #  10.1093/molbev/msz240
 
-
-
+install.packages("paletteer")
+install.packages("dichromat")
 install.packages("tidytree")
 install.packages("ggnewscale")
 install.packages("tidyverse")
@@ -55,6 +55,6 @@ library(ggnewscale)
 library(ggtreeExtra)
 library(tidytree)
 library(ggsci)
-
-
+library(dichromat)
+library(paletteer)
 library(tableHTML)

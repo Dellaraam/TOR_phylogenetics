@@ -328,6 +328,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Stramenopile.p
        dpi = 320,
        limitsize = FALSE)
 
+
 HeatTreeStram <- STP + xlim(NA, +30) + geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_viridis_c(direction = -1,
                         option = "viridis",
