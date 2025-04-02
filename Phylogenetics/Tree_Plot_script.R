@@ -5,7 +5,7 @@
 
 
 
-#source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
 #source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
 #source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Numeric_Table_Script.R")
 #source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/HTML_Additions.R")
@@ -216,7 +216,8 @@ RISP <- STP + xlim(NA, +20) + geom_tiplab(aes(color = RICTOR), size = 2, show.le
   geom_point2(aes(subset=(node==140)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==70)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .8)+
   geom_point2(aes(subset=(node==7)), shape = 23, color = "darkblue", size = 6, fill = "darkblue", alpha = .8)+
-   scale_color_manual(values = pal, limits = c("H","M","L","P",NA))
+   scale_color_manual(values = pal, limits = c("H","M","L","P",NA),
+                      guide = guide_legend())
 RISP
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/RictorStramenopile.png",
        plot = RISP,
@@ -326,6 +327,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Stramenopile.p
 
 HeatTreeStram <- STP + xlim(NA, +30) + geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+                        guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -509,6 +511,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Alveolata.png"
 
 HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 1.8, show.legend = TRUE, nudge_x = .3, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+                        guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   geom_rootedge()+
   #geom_nodelab(nudge_y = 1.2, nudge_x = -.7, size = 1.5)+
@@ -652,6 +655,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Rhziaria.png",
 
 HeatTreeRhiz <- RTP +xlim(NA,+20)+ geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+                        guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -944,6 +948,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Metamonada.png
 
 HeatTreeMet <- MTP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+                        guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -1091,6 +1096,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORChlorophyta.png
 
 HeatTreeChl <- ChloroP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+                        guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -1227,6 +1233,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORRhodophyta.png"
 
 HeatTreeRho <- RhodoP+xlim(NA,+20)+ geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+                        guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -1367,6 +1374,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORStreptophyta.pn
 
 HeatTreeStrep <- StrephP + geom_tiplab(size = 1.75, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+                        guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
