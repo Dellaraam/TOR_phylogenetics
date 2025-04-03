@@ -123,9 +123,9 @@ pal2 <- c(
 
 pal3 <- c(
   "H" = "#ae5a41",
-  "M" = "#c3cb71",
-  "L" = "#559e83",
-  "P" = "#1b85b8",
+  "P" = "#DBC795",
+  "M" = "#559e83",
+  "L" = "#B2D4AD",
   na_value = "#FF000000"
 )
 
@@ -329,12 +329,10 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Stramenopile.p
        limitsize = FALSE)
 
 
-HeatTreeStram <- STP + xlim(NA, +30) + geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
-  scale_color_viridis_c(direction = -1,
-                        option = "viridis",
+HeatTreeStram <- STP + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
+  scale_color_gradientn(colours=c("#29AF7FFF", "#287D8EFF", "#39568CFF","#440154FF"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
-  #geom_text(aes(label = node))+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
   # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
@@ -347,10 +345,10 @@ HeatTreeStram <- STP + xlim(NA, +30) + geom_tiplab(size = 1.8, nudge_x = .3, lin
   #geom_nodelab(nudge_y = .5, nudge_x = -.7, size = 2)
 
 HeatTreeStram
-StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 5, width = 1.3, font.size = 2, colnames = FALSE)+
+StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 5, width = .4, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
-                    values = NPGPal,
+                    values = pal3,
                     limits = c("H","M","L","P", NA),
                     na.value = "#FFFFFF",
                     drop = FALSE)+
@@ -387,8 +385,9 @@ AlveolataTree$tip.label
 AlveolataTree$tip.label <- gsub("'","", AlveolataTree$tip.label)
 AlveolataTree$tip.label
 Alveolata <- Alveolata %>% relocate(Organism.Name)
-AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE, key_glyph = 'rect')
+AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)
 AlvP <- AlvP  %<+% Alveolata
+AlvP
 # SIN1
 ASinP <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = SIN1), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   geom_rootedge()+
@@ -515,7 +514,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Alveolata.png"
        limitsize = FALSE)
 
 HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 1.8, show.legend = TRUE, nudge_x = .3, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
-  scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+  scale_color_gradientn(colours=c("#29AF7FFF", "#287D8EFF", "#39568CFF","#440154FF"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   geom_rootedge()+
@@ -523,10 +522,10 @@ HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 1.8, show.legend = TRUE,
   labs(title = "Alveolata Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 4, font.size = 2, colnames = FALSE)+
+AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 4, font.size = 2,, width = .4, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
-                    values = NPGPal,
+                    values = pal3,
                     limits = c("H","M","L","P", NA),
                     na.value = "#FFFFFF",
                     drop = FALSE)+
@@ -667,7 +666,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Rhziaria.png",
        limitsize = FALSE)
 
 HeatTreeRhiz <- RTP +xlim(NA,+20)+ geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
-  scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+  scale_color_gradientn(colours=c("#29AF7FFF", "#287D8EFF", "#39568CFF","#440154FF"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   #geom_text(aes(label = node))+
@@ -681,7 +680,7 @@ HeatTreeRhiz <- RTP +xlim(NA,+20)+ geom_tiplab(size = 2, show.legend = TRUE, nud
   labs(title = "Rhizaria Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-RhizHeatPlot <- gheatmap(HeatTreeRhiz, df, offset = 7, font.size = 1.8, colnames = FALSE)+
+RhizHeatPlot <- gheatmap(HeatTreeRhiz, df, offset = 7, font.size = 1.8, width = .4, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -689,7 +688,6 @@ RhizHeatPlot <- gheatmap(HeatTreeRhiz, df, offset = 7, font.size = 1.8, colnames
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
-    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -817,7 +815,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Discoba.png",
 
 
 HeatTreeDisc <- DTP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
-  scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+  scale_color_gradientn(colours=c("#29AF7FFF", "#287D8EFF", "#39568CFF","#440154FF"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   # geom_text(aes(label = node))+
@@ -831,7 +829,7 @@ HeatTreeDisc <- DTP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, li
   labs(title = "Discoba Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 HeatTreeDisc
-DiscHeatPlot <- gheatmap(HeatTreeDisc, df, offset = 8, font.size = 2, colnames = FALSE)+
+DiscHeatPlot <- gheatmap(HeatTreeDisc, df, offset = 8, font.size = 2, width = .4, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -840,7 +838,6 @@ DiscHeatPlot <- gheatmap(HeatTreeDisc, df, offset = 8, font.size = 2, colnames =
                     guide = guide_legend(order = 2),
                     drop = FALSE)+
   theme(
-    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -961,7 +958,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LST8Metamonada.png
        limitsize = FALSE)
 
 HeatTreeMet <- MTP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
-  scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+  scale_color_gradientn(colours=c("#29AF7FFF", "#287D8EFF", "#39568CFF","#440154FF"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   #geom_text(aes(label = node))+
@@ -975,7 +972,7 @@ HeatTreeMet <- MTP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, lin
   labs(title = "Metamonada Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-MetHeatPlot <- gheatmap(HeatTreeMet, df, offset = 8, font.size = 2, colnames = FALSE)+
+MetHeatPlot <- gheatmap(HeatTreeMet, df, offset = 8, font.size = 2, width = .4, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -983,7 +980,6 @@ MetHeatPlot <- gheatmap(HeatTreeMet, df, offset = 8, font.size = 2, colnames = F
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
-    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1111,7 +1107,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORChlorophyta.png
        limitsize = FALSE)
 
 HeatTreeChl <- ChloroP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
-  scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+  scale_color_gradientn(colours=c("#29AF7FFF", "#287D8EFF", "#39568CFF","#440154FF"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   #geom_text(aes(label = node))+
@@ -1125,7 +1121,7 @@ HeatTreeChl <- ChloroP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3,
   labs(title = "Chlorophyta Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-ChlHeatPlot <- gheatmap(HeatTreeChl, df, offset = 8, font.size = 2, colnames = FALSE)+
+ChlHeatPlot <- gheatmap(HeatTreeChl, df, offset = 8, font.size = 2, width = .4,  colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -1133,7 +1129,6 @@ ChlHeatPlot <- gheatmap(HeatTreeChl, df, offset = 8, font.size = 2, colnames = F
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
-    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1251,7 +1246,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TORRhodophyta.png"
 
 
 HeatTreeRho <- RhodoP+xlim(NA,+20)+ geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
-  scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+  scale_color_gradientn(colours=c("#29AF7FFF", "#287D8EFF", "#39568CFF","#440154FF"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   #geom_text(aes(label = node))+
@@ -1265,7 +1260,7 @@ HeatTreeRho <- RhodoP+xlim(NA,+20)+ geom_tiplab(size = 2, show.legend = TRUE, nu
   labs(title = "Rhodophyta Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-RhoHeatPlot <- gheatmap(HeatTreeRho, df, offset = 8, font.size = 1.8, colnames = FALSE)+
+RhoHeatPlot <- gheatmap(HeatTreeRho, df, offset = 8, font.size = 1.8, width = .4,  colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -1273,7 +1268,6 @@ RhoHeatPlot <- gheatmap(HeatTreeRho, df, offset = 8, font.size = 1.8, colnames =
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
-    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1412,7 +1406,7 @@ N376 <- N376 %<+% Streptophyta
 
 
 HeatTreeStrep <- N421+xlim(NA,60)+geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
-  scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+  scale_color_gradientn(colours=c("#29AF7FFF", "#287D8EFF", "#39568CFF","#440154FF"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -1425,7 +1419,7 @@ HeatTreeStrep <- N421+xlim(NA,60)+geom_tiplab(size = 2, show.legend = TRUE, nudg
   labs(title = "Asterids Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, colnames = FALSE)+
+StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, width = .4, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -1433,7 +1427,6 @@ StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, colna
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
-    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1450,7 +1443,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAsterids.pn
        limitsize = FALSE)
 
 HeatTreeStrep <- N465+xlim(NA,70)+geom_tiplab(size = 1.7, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
-  scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+  scale_color_gradientn(colours=c("#29AF7FFF", "#287D8EFF", "#39568CFF","#440154FF"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -1463,7 +1456,7 @@ HeatTreeStrep <- N465+xlim(NA,70)+geom_tiplab(size = 1.7, show.legend = TRUE, nu
   labs(title = "Rosids Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, colnames = FALSE)+
+StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 16, font.size = 1.5, width = .4,  colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -1471,7 +1464,6 @@ StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, colna
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
-    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1488,7 +1480,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapRosids.png"
        limitsize = FALSE)
 
 HeatTreeStrep <- N376+xlim(NA,60)+geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE,aes(color=C.score), continuous = 'colour')+
-  scale_color_gradientn(colours=c("red", "orange", "green", "violet", "blue"),
+  scale_color_gradientn(colours=c("#29AF7FFF", "#287D8EFF", "#39568CFF","#440154FF"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
@@ -1501,7 +1493,7 @@ HeatTreeStrep <- N376+xlim(NA,60)+geom_tiplab(size = 2, show.legend = TRUE, nudg
   labs(title = "Liliopsida Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, colnames = FALSE)+
+StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, width = .4,  colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -1509,7 +1501,6 @@ StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, colna
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
-    legend.position = "none",
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1644,7 +1635,7 @@ HeatTree <- AllTreeP+xlim(-30,NA)+
 
 HeatTree
 
-AllHeatPlot <- gheatmap(HeatTree, df, offset = 5, font.size = 1.5, width = 1.5, colnames = FALSE)+
+AllHeatPlot <- gheatmap(HeatTree, df, offset = 5, font.size = 1.5, width = .8, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P","NA"),
                     values = pal3,
