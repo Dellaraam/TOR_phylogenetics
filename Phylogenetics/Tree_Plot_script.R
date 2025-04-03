@@ -832,9 +832,9 @@ HeatTreeDisc <- DTP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, li
 HeatTreeDisc
 DiscHeatPlot <- gheatmap(HeatTreeDisc, df, offset = 8, font.size = 2, width = .4, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
-                    breaks = c("H","M","L",NA),
+                    breaks = c("H","M","L","P",NA),
                     values = pal3,
-                    limits = c("H","M","L",NA),
+                    limits = c("H","M","L","P",NA),
                     na.value = "#FFFFFF",
                     guide = guide_legend(order = 2),
                     drop = FALSE)+
@@ -976,9 +976,9 @@ HeatTreeMet <- MTP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3, lin
 
 MetHeatPlot <- gheatmap(HeatTreeMet, df, offset = 8, font.size = 2, width = .4, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
-                    breaks = c("H","M","L",NA),
+                    breaks = c("H","M","L","P",NA),
                     values = pal3,
-                    limits = c("H","M","L",NA),
+                    limits = c("H","M","L","P",NA),
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
@@ -1126,9 +1126,9 @@ HeatTreeChl <- ChloroP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3,
 
 ChlHeatPlot <- gheatmap(HeatTreeChl, df, offset = 8, font.size = 2, width = .4,  colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
-                    breaks = c("H","M","L",NA),
+                    breaks = c("H","M","L","P",NA),
                     values = pal3,
-                    limits = c("H","M","L",NA),
+                    limits = c("H","M","L","P",NA),
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
@@ -1266,9 +1266,9 @@ HeatTreeRho <- RhodoP+xlim(NA,+20)+ geom_tiplab(size = 2, show.legend = TRUE, nu
 
 RhoHeatPlot <- gheatmap(HeatTreeRho, df, offset = 8, font.size = 1.8, width = .4,  colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
-                    breaks = c("H","M","L",NA),
+                    breaks = c("H","M","L","P",NA),
                     values = pal3,
-                    limits = c("H","M","L",NA),
+                    limits = c("H","M","L","P",NA),
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
@@ -1426,9 +1426,9 @@ HeatTreeStrep <- N421+xlim(NA,60)+geom_tiplab(size = 2, show.legend = TRUE, nudg
 
 StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 15, font.size = 1.5, width = .4, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
-                    breaks = c("H","M","L",NA),
+                    breaks = c("H","M","L","P",NA),
                     values = pal3,
-                    limits = c("H","M","L",NA),
+                    limits = c("H","M","L","P",NA),
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
@@ -1464,9 +1464,9 @@ HeatTreeStrep <- N465+xlim(NA,70)+geom_tiplab(size = 1.7, show.legend = TRUE, nu
 
 StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 16, font.size = 1.5, width = .4,  colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
-                    breaks = c("H","M","L",NA),
+                    breaks = c("H","M","L","P",NA),
                     values = pal3,
-                    limits = c("H","M","L",NA),
+                    limits = c("H","M","L","P",NA),
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
@@ -1502,9 +1502,9 @@ HeatTreeStrep <- N376+xlim(NA,60)+geom_tiplab(size = 2, show.legend = TRUE, nudg
 
 StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, width = .4,  colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
-                    breaks = c("H","M","L",NA),
+                    breaks = c("H","M","L","P",NA),
                     values = pal3,
-                    limits = c("H","M","L",NA),
+                    limits = c("H","M","L","P",NA),
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
