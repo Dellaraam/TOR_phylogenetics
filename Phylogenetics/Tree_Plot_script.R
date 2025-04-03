@@ -688,6 +688,7 @@ RhizHeatPlot <- gheatmap(HeatTreeRhiz, df, offset = 7, font.size = 1.8, width = 
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -838,6 +839,7 @@ DiscHeatPlot <- gheatmap(HeatTreeDisc, df, offset = 8, font.size = 2, width = .4
                     guide = guide_legend(order = 2),
                     drop = FALSE)+
   theme(
+    text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -980,6 +982,7 @@ MetHeatPlot <- gheatmap(HeatTreeMet, df, offset = 8, font.size = 2, width = .4, 
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1129,6 +1132,7 @@ ChlHeatPlot <- gheatmap(HeatTreeChl, df, offset = 8, font.size = 2, width = .4, 
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1268,6 +1272,7 @@ RhoHeatPlot <- gheatmap(HeatTreeRho, df, offset = 8, font.size = 1.8, width = .4
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1427,6 +1432,7 @@ StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 15, font.size = 1.5, width
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1464,6 +1470,7 @@ StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 16, font.size = 1.5, width
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1501,6 +1508,7 @@ StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, width
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1645,6 +1653,7 @@ AllHeatPlot <- gheatmap(HeatTree, df, offset = 5, font.size = 1.5, width = .8, c
                     drop = FALSE)+
   guides(fill = guide_legend(override.aes = list(label = "")))+
   theme(
+    text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
@@ -1697,12 +1706,12 @@ testAllTree <- AllTreeP +
                                "Rhodophyta",
                                "Discoba",
                                "Metamonada"),
-                    values = c("Alveolata" = "purple",
-                               "Stramenopiles" = "brown",
-                               "Rhizaria" = "orange",
-                               "Streptophyta" = "red",
-                               "Chlorophyta" = "green",
-                               "Rhodophyta" = "yellow",
+                    values = c("Alveolata" = "#EFB911",
+                               "Stramenopiles" = "#572100",
+                               "Rhizaria" = "#FFD0AB",
+                               "Streptophyta" = "#678516",
+                               "Chlorophyta" = "#525601",
+                               "Rhodophyta" = "#681114",
                                "Discoba" = "cyan",
                                "Metamonada" = "blue"
                     ))+
@@ -1763,17 +1772,30 @@ tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
 # Opisthokonta Tree File & Image
  testTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/TestingTreeP.phy")
  tree1 <- ggtree(testTree, layout = "daylight", branch.length = "none")
- tree1 <- tree1 + geom_highlight(node = 804, fill = "blue", alpha = .4)+
-   geom_highlight(node = 891, fill = "brown", alpha = .4)+
-   geom_highlight(node = 986, fill = "cyan", alpha = .4)+
-   geom_highlight(node = 941, fill = "red", alpha = .4)+
-   geom_highlight(node = 849, fill = "orange", alpha = .4)+
-   geom_highlight(node = 819, fill = "purple", alpha = .4)+
-   geom_highlight(node = 791, fill = "yellow", alpha = .4)+
-   geom_highlight(node = 789, fill = "grey", alpha = .4)+
-   geom_highlight(node = 843, fill = "pink", alpha = .4)+
-   geom_highlight(node = 950, fill = "green", alpha = .4)
+ tree1 <- tree1 +
+   #Opisthokonta
+   geom_highlight(node = 804, fill = "#48A8BF", alpha = .4)+
+   #Stramenopiles
+   geom_highlight(node = 891, fill = "#572100", alpha = .4)+
+   #Streptophyta
+   geom_highlight(node = 986, fill = "#678516", alpha = .4)+
+   #Rhodophyta
+   geom_highlight(node = 941, fill = "#681114", alpha = .4)+
+   #Alveolata
+   geom_highlight(node = 849, fill = "#EFB911", alpha = .4)+
+   #Discoba
+   geom_highlight(node = 819, fill = "#9382E3", alpha = .4)+
+   #Metamonada
+   geom_highlight(node = 791, fill = "#17057E", alpha = .4)+
+   #Amoebozoa
+   geom_highlight(node = 789, fill = "#C4DAE9", alpha = .4)+
+   #Rhizaria
+   geom_highlight(node = 843, fill = "#FFD0AB", alpha = .4)+
+   #Chlorophyta
+   geom_highlight(node = 950, fill = "#525601", alpha = .4)
  tree1
+ 
+
 
  ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TestImageOpisthokontTree.png",
         plot = tree1,
