@@ -1419,7 +1419,7 @@ HeatTreeStrep <- N421+xlim(NA,60)+geom_tiplab(size = 2, show.legend = TRUE, nudg
   labs(title = "Asterids Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 10, font.size = 1.5, width = .4, colnames = FALSE)+
+StrepHeatPlot <- gheatmap(HeatTreeStrep, df, offset = 15, font.size = 1.5, width = .4, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L",NA),
                     values = pal3,
@@ -1621,15 +1621,16 @@ HeatTree <- AllTreeP+xlim(-30,NA)+
                                 "Rhodophyta",
                                 "Discoba",
                                 "Metamonada"),
-                     values = c("Alveolata" = "purple",
-                                "Stramenopiles" = "brown",
-                                "Rhizaria" = "orange",
-                                "Streptophyta" = "red",
-                                "Chlorophyta" = "green",
-                                "Rhodophyta" = "yellow",
-                                "Discoba" = "cyan",
-                                "Metamonada" = "blue"
+                     values = c("Alveolata" = "#EFB911",
+                                "Stramenopiles" = "#572100",
+                                "Rhizaria" = "#FFD0AB",
+                                "Streptophyta" = "#678516",
+                                "Chlorophyta" = "#525601",
+                                "Rhodophyta" = "#681114",
+                                "Discoba" = "#9382E3",
+                                "Metamonada" = "#17057E"
                      ))+
+  geom_rootedge()+
   new_scale_fill()
 
 
@@ -1742,12 +1743,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAllv2.png",
        units = "px",
        dpi = 320,
        limitsize = FALSE)
-
-
-
-
-
-
 
 
 
@@ -1883,33 +1878,4 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TestImageYesNoTree
        units = "px",
        dpi = 320,
        limitsize = FALSE)
-
-
-RicAll <- AllTreeP + geom_tiplab(aes(color = RICTOR), size = 2)+
-  geom_polygon(aes(color = `RICTOR`, fill = `RICTOR`, x = 0, y = 0))+
-  geom_rootedge()+
-  geom_text(aes(label=node))+
-  #geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2, color = "black")+
-  scale_fill_manual(values = pal)+
-  scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==357)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
-RicAll
-
-Sin1All <- AllTreeP + geom_tiplab(aes(color = SIN1), size = 2)+
-  geom_polygon(aes(color = `SIN1`, fill = `SIN1`, x = 0, y = 0))+
-  geom_rootedge()+
-  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2, color = "black")+
-  scale_fill_manual(values = pal)+
-  scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==357)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
-Sin1All
-
-RapAll <- AllTreeP + geom_tiplab(aes(color = RAPTOR), size = 2)+
-  geom_polygon(aes(color = `RAPTOR`, fill = `RAPTOR`, x = 0, y = 0))+
-  geom_rootedge()+
-  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2, color = "black")+
-  scale_fill_manual(values = pal)+
-  scale_color_manual(values = pal)+
-  geom_point2(aes(subset=(node==357)), shape = 23, color = "darkred", size = 6, fill = "darkred", alpha = .5)
-RapAll
 
