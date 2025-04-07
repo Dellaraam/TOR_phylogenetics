@@ -1603,7 +1603,7 @@ HTML <- HTML %>% relocate(Organism.Name)
 
 AllTreeP <- ggtree(AllTree, layout = "circular", branch.length = "none", laddarize = FALSE)
 AllTreeP <- AllTreeP %<+% HTML
-
+AllTreeDaylight <- ggtree(AllTree, layout = "daylight", branch.length = "none", laddarize = FALSE)
 
 tempdataframe <- largeDataSet
 tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(Super.Group == "Streptophyta" ~ which(AllTree$node.label == "Streptophyta") + length(AllTree$tip.label),
@@ -1642,6 +1642,35 @@ HeatTree <- AllTreeP+xlim(-30,NA)+
   new_scale_fill()
 
 
+DaylightTreeP <- AllTreeDaylight+
+  #Streptophyta
+  geom_highlight(data = tempdataframe,
+                 mapping = aes(node = NodeNumber, fill = Super.Group))+
+  scale_fill_manual(name = "Super Group",
+                    breaks = c("Alveolata",
+                               "Stramenopiles",
+                               "Rhizaria",
+                               "Streptophyta",
+                               "Chlorophyta",
+                               "Rhodophyta",
+                               "Discoba",
+                               "Metamonada"),
+                    values = c("Alveolata" = "#EFB911",
+                               "Stramenopiles" = "#572100",
+                               "Rhizaria" = "#FFD0AB",
+                               "Streptophyta" = "#678516",
+                               "Chlorophyta" = "#525601",
+                               "Rhodophyta" = "#681114",
+                               "Discoba" = "#9382E3",
+                               "Metamonada" = "#17057E"
+                    ))+
+  geom_rootedge()+
+  theme(legend.position = "none")
+  new_scale_fill()
+
+
+
+DaylightTreeP
 HeatTree
 
 AllHeatPlot <- gheatmap(HeatTree, df, offset = 5, font.size = 1.5, width = .8, colnames = FALSE)+
@@ -1671,6 +1700,14 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAll.png",
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAll.pdf",
        plot = AllHeatPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/DaylightTreeNoOpisthokonta.png",
+       plot = DaylightTreeP,
        width = 3840,
        height = 2160,
        units = "px",
@@ -1796,7 +1833,7 @@ tdf[!is.na(tdf$TOR),]$HasTOR <- "Yes"
  tree1
  
 
-
+topptx(tree1, filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Images/Figures_PPT/DaylightTree.pptx")
  ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/TestImageOpisthokontTree.png",
         plot = tree1,
         width = 3840,

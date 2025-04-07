@@ -18,6 +18,7 @@ install.packages("tableHTML")
 install.packages("ape")
 install.packages("remotes")
 install.packages("ggsci")
+install.packages("eoffice")
 remotes::install_github("djw533/micro.gen.extra")
 # https://rdrr.io/github/djw533/micro.gen.extra/
 
@@ -58,3 +59,4 @@ library(ggsci)
 library(dichromat)
 library(paletteer)
 library(tableHTML)
+library(eoffice)
