@@ -202,7 +202,7 @@ Stramenopiles <- Stramenopiles %>% relocate(Organism.Name)
 STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)
 STP <- STP  %<+% Stramenopiles
 #RICTOR Stramenopiles
-
+STP +geom_text(aes(label = node))+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
 
 RISP <- STP + xlim(NA, +20) + geom_tiplab(aes(color = RICTOR), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   #geom_text(aes(label = node))+
@@ -390,7 +390,11 @@ AlveolataTree$tip.label
 Alveolata <- Alveolata %>% relocate(Organism.Name)
 AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)
 AlvP <- AlvP  %<+% Alveolata
-AlvP
+
+
+
+
+AlvP+geom_text(aes(label = node))+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
 # SIN1
 ASinP <- AlvP + xlim(NA,+40) + geom_tiplab(aes(color = SIN1), size = 2, show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   geom_rootedge()+
@@ -587,6 +591,8 @@ Rhizaria <- Rhizaria %>% relocate(Organism.Name)
 RTP <- ggtree(RhizariaTree, branch.length = "none", ladderize = FALSE)
 RTP <- RTP%<+% Rhizaria
 
+RTP+geom_text(aes(label = node))+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
+
 # Generating the tree plots with markings at specific node locations
 RRICTOR <- RTP +xlim(NA,+30)+ geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   geom_rootedge()+
@@ -733,6 +739,8 @@ Discoba <- Discoba %>% relocate(Organism.Name)
 DTP <- ggtree(DiscobaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+30)
 DTP <- DTP%<+% Discoba
 
+DTP+geom_text(aes(label = node))+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
+
 DRAPTOR <- DTP + geom_tiplab(aes(color = RAPTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   geom_rootedge()+
   geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+
@@ -859,7 +867,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapDiscoba.png
        dpi = 320,
        limitsize = FALSE)
 DiscHeatPlot
-
+topptx(DiscHeatPlot, filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Images/Figures_PPT/DiscobaHeatPlot.pptx")
 
 # ------------------------------------------------------------------------------
 
@@ -876,6 +884,7 @@ MetamonadaTree$tip.label
 Metamonada <- Metamonada %>% relocate(Organism.Name)
 MTP <- ggtree(MetamonadaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+30)
 MTP <- MTP %<+% Metamonada
+MTP+geom_text(aes(label = node))+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
 
 MRICTOR <- MTP + geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
   geom_rootedge()+
@@ -1003,7 +1012,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapMetamonada.
        limitsize = FALSE)
 
 MetHeatPlot
-
+topptx(MetHeatPlot, filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetamonadaHeatPlot.pptx")
 
 # ------------------------------------------------------------------------------
 
@@ -1019,6 +1028,8 @@ ChlorophytaTree$tip.label <- gsub("'","", ChlorophytaTree$tip.label)
 Chlorophyta <- Chlorophyta %>% relocate(Organism.Name)
 ChloroP <- ggtree(ChlorophytaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+30)
 ChloroP <- ChloroP  %<+% Chlorophyta
+
+ChloroP+geom_text(aes(label = node))+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
 
 
 #RICTOR
@@ -1153,7 +1164,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapChlorophyta
        limitsize = FALSE)
 ChlHeatPlot
 
-
+topptx(ChlHeatPlot, filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Images/Figures_PPT/ChlorophytaHeatPlot.pptx")
 
 
 # ------------------------------------------------------------------------------
@@ -1174,6 +1185,8 @@ RhodophytaTree$tip.label
 Rhodophyta <- Rhodophyta %>% relocate(Organism.Name)
 RhodoP <- ggtree(RhodophytaTree, branch.length = "none", laddarize = FALSE)
 RhodoP <- RhodoP %<+% Rhodophyta
+
+RhodoP+geom_text(aes(label = node))+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
 
 
 #RICTOR
@@ -1293,7 +1306,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapRhodophyta.
        limitsize = FALSE)
 
 RhoHeatPlot
-
+topptx(RhoHeatPlot, filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Images/Figures_PPT/RhodophytaHeatPlot.pptx")
 
 
 
@@ -1317,7 +1330,7 @@ StreptophytaTree$tip.label
 Streptophyta <- Streptophyta %>% relocate(Organism.Name)
 StrephP <- ggtree(StreptophytaTree, layout = "circular", branch.length = "none", laddarize = FALSE)
 StrephP <- StrephP %<+% Streptophyta
-StrephP 
+StrephP+geom_text(aes(label = node))+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
 
 #RICTOR
 RicStr <- StrephP + geom_tiplab(aes(color = RICTOR), size = 2,show.legend = TRUE, nudge_x = .3, linesize = .4, align = TRUE)+
@@ -1694,6 +1707,8 @@ AllHeatPlot <- gheatmap(HeatTree, df, offset = 5, font.size = 1.5, width = .8, c
     legend.key.spacing.x = unit(1,"cm"))
 
 AllHeatPlot
+
+topptx(AllHeatPlot, filename = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/HeatPlotTreeV1.pptx")
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAll.png",
        plot = AllHeatPlot,
        width = 3840,
