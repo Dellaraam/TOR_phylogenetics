@@ -160,7 +160,7 @@ Temp <- rename(Temp, Organism.Name = "Organism_Name")
 ChlorophytaJGILST8 <- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
 
 ChlorophytaTOR <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Chlorophyta/TOR_Chlorophyta.csv")
-ChlorophytaTOR <- mutate(ChlorophytaLST8, Source = "NCBI")
+ChlorophytaTOR <- mutate(ChlorophytaTOR, Source = "NCBI")
 Temp <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Cleaned_JGI_csv/ChTOR.csv")
 Temp <- rename(Temp, Organism.Name = "Organism_Name")
 ChlorophytaJGITOR<- Temp %>% select(tar,tid,qry,qid,eva,sca,bia,evd,scd,bid,Accn,Organism_Taxonomic_ID,Organism.Name,Source)
@@ -485,6 +485,14 @@ write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/DiscobaLST8NCBI.t
 subset <- subset(ExcavataTOR, Super.Group == "Discoba")
 write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/DiscobaTORNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
-#Creating the Metamonada ID's
-
+subset <- subset(ChlorophytaRaptor, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/ChlorophytaRaptorNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(ChlorophytaRictor, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/ChlorophytaRictorNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(ChlorophytaSIN1, Source =="NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/ChlorophytaSIN1NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(ChlorophytaLST8, Source =="NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/ChlorophytaLST8NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(ChlorophytaTOR, Source =="NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/ChlorophytaTORNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
