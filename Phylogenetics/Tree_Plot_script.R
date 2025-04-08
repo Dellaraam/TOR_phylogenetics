@@ -6,9 +6,9 @@
 
 
 source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
-source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
-source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Numeric_Table_Script.R")
-source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/HTML_Additions.R")
+# source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
+# source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Numeric_Table_Script.R")
+# source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/HTML_Additions.R")
 
 
 #Final Modifications to csv files required for script
@@ -1622,7 +1622,6 @@ tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(Super.Group == 
   select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
 
 HeatTree <- AllTreeP+xlim(-30,NA)+
-  #Streptophyta
   geom_highlight(data = tempdataframe,
                  mapping = aes(node = NodeNumber, fill = Super.Group))+
   scale_fill_manual(name = "Super Group",
