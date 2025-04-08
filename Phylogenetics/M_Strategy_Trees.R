@@ -193,3 +193,66 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapExcavates.p
        dpi = 320,
        limitsize = FALSE)
 
+
+
+
+# Experimental -----------------------------------------------------------------
+ARTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/ArTreeP.phy")
+ARTree$tip.label <- gsub("'","", ARTree$tip.label)
+
+AR <- MasterTable %>% filter(Super.Group == "Alveolata" | Super.Group == "Rhizaria")
+AR <- AR %>% relocate(Organism.Name)
+
+subsetdataframe4 <- AR %>% select(Organism.Name, 
+                                        SIN1, 
+                                        RICTOR, 
+                                        RAPTOR, 
+                                        LST8,
+                                        TOR) %>% 
+  distinct(Organism.Name, .keep_all = TRUE)
+df4 <- column_to_rownames(subsetdataframe4, var = "Organism.Name")
+
+
+
+ARTP <- ggtree(ARTree, branch.length = "none", ladderize = FALSE)
+ARTP <- ARTP  %<+% AR
+
+ARTP
+
+
+ARHeat <- ARTree %>% ggtree(branch.length = "none", ladderize = FALSE)+xlim(NA,40)
+
+ARHeatPlot <- gheatmap(ARHeat,df4, offset = 5, width = .8, font.size = 2, colnames = FALSE)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P",NA),
+                    values = pal3,
+                    limits = c("H","M","L","P", NA),
+                    na.value = "#FFFFFF",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))
+
+ARHeatPlot
+
+ARSavePlot <- ARHeatPlot %<+% AR+geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
+  scale_color_gradientn(colours=c("#29AF7FFF", "#287D8EFF", "#39568CFF","#440154FF"),
+                        guide = guide_colorbar(order =1),
+                        name = "Completeness Score")+
+  geom_rootedge()+
+  labs(title = "Alveolata and Rhizaria Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
+
+ARSavePlot
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataRhizaria.png",
+       plot = ARSavePlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)

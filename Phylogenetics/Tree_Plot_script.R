@@ -67,6 +67,8 @@ Excavata <- HTML %>% filter(Super.Group != "Chlorophyta") %>%
   filter(Super.Group != "Rhizaria")
 ProbableOrganisms <- HTML %>% filter(RICTOR == "P"| RAPTOR == "P"| LST8 == "P"| SIN1 == "P" | TOR == "P")
 
+AR <- HTML %>% filter(Super.Group == "Alveolata" | Super.Group == "Rhizaria")
+
 # This is where we will have a section for the numeric data that is divided out
 # One thing that needs to be done is to change the excavte data to discoba/metamonada
 
@@ -84,7 +86,7 @@ write.table(Rhodophyta$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics
 write.table(Discoba$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Discoba.txt", sep = "\t", row.names = F, col.names = F)
 write.table(Metamonada$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Metamonada.txt", sep = "\t", row.names = F, col.names = F)
 write.table(Excavata$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Excavata.txt", sep = "\t", row.names = F, col.names = F)
-
+write.table(AR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/AR.txt", sep = "\t", row.names = F, col.names = F)
 
 write.table(SARnoRICTOR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/NoSARRICTOR.txt", sep = "\t", row.names = F, col.names = F)
 write.table(SARYRICTOR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/YSARRICTOR.txt", sep = "\t", row.names = F, col.names = F)
@@ -361,6 +363,7 @@ StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 5, width = .4, font.size =
     legend.key.spacing.x = unit(1,"cm"))
     
 StramHeatPlot
+topptx(StramHeatPlot, filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Images/Figures_PPT/StramenopileHeatPlot.pptx")
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStramenopile.png",
        plot = StramHeatPlot,
        width = 3840,
@@ -539,6 +542,8 @@ AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 4, font.size = 2,, width = .4,
 
 AlvHeatPlot
 
+topptx(AlvHeatPlot, filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Images/Figures_PPT/AlveolataHeatPlot.pptx")
+
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolata.png",
        plot = AlvHeatPlot,
        width = 3840,
@@ -680,7 +685,7 @@ HeatTreeRhiz <- RTP +xlim(NA,+20)+ geom_tiplab(size = 2, show.legend = TRUE, nud
   labs(title = "Rhizaria Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-RhizHeatPlot <- gheatmap(HeatTreeRhiz, df, offset = 7, font.size = 1.8, width = .4, colnames = FALSE)+
+RhizHeatPlot <- gheatmap(HeatTreeRhiz, df, offset = 7, font.size = 1.8, width = 1.3, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -706,7 +711,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapRhizaria.pn
 RhizHeatPlot
 
 
-
+topptx(RhizHeatPlot, filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Images/Figures_PPT/RhizariaHeatPlot.pptx")
 
 
 
