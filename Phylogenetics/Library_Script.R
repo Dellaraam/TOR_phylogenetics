@@ -7,19 +7,19 @@
 # phylogenetic tree input and output with richly annotated and associated data. Molecular Biology and Evolution. 2020, 37(2):599-603. doi:
 #  10.1093/molbev/msz240
 
-install.packages("paletteer")
-install.packages("dichromat")
-install.packages("tidytree")
-install.packages("ggnewscale")
-install.packages("tidyverse")
-install.packages("reshape2")
-install.packages("ggtreeExtra")
-install.packages("tableHTML")
-install.packages("ape")
-install.packages("remotes")
-install.packages("ggsci")
-install.packages("eoffice")
-remotes::install_github("djw533/micro.gen.extra")
+#install.packages("paletteer")
+#install.packages("dichromat")
+#install.packages("tidytree")
+#install.packages("ggnewscale")
+#install.packages("tidyverse")
+#install.packages("reshape2")
+#install.packages("ggtreeExtra")
+#install.packages("tableHTML")
+#install.packages("ape")
+#install.packages("remotes")
+#install.packages("ggsci")
+#install.packages("eoffice")
+#remotes::install_github("djw533/micro.gen.extra")
 # https://rdrr.io/github/djw533/micro.gen.extra/
 
 if (!require("BiocManager", quietly = TRUE))
