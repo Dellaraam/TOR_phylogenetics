@@ -5,10 +5,10 @@
 
 
 
-#source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
-#source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
-#source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Numeric_Table_Script.R")
-#source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/HTML_Additions.R")
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Numeric_Table_Script.R")
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/HTML_Additions.R")
 
 
 #Final Modifications to csv files required for script
