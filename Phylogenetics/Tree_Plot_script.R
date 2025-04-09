@@ -347,7 +347,7 @@ HeatTreeStram <- STP + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x = .3, lin
   #geom_nodelab(nudge_y = .5, nudge_x = -.7, size = 2)
 
 HeatTreeStram
-StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 5, width = .4, font.size = 2, colnames = FALSE)+
+StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 9, width = .65, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -1018,16 +1018,23 @@ topptx(MetHeatPlot, filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetic
 
 ChlorophytaL <- largeDataSet %>% filter(Super.Group == "Chlorophyta")
 subsetdataframe <- ChlorophytaL %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
+subsetdataframe$Organism.Name <- gsub("'","", subsetdataframe$Organism.Name)
 df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
 
 
 
 
 ChlorophytaTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/ChlorophytaTreeP.phy")
+ChlorophytaTree$tip.label
 ChlorophytaTree$tip.label <- gsub("'","", ChlorophytaTree$tip.label)
 Chlorophyta <- Chlorophyta %>% relocate(Organism.Name)
+Chlorophyta$Organism.Name <- gsub("'","", Chlorophyta$Organism.Name)
 ChloroP <- ggtree(ChlorophytaTree, branch.length = "none", ladderize = FALSE)+xlim(NA,+30)
 ChloroP <- ChloroP  %<+% Chlorophyta
+
+
+ChlorophytaTree$tip.label
+ChlorophytaTree$node.label
 
 ChloroP+geom_text(aes(label = node))+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
 
@@ -1139,7 +1146,7 @@ HeatTreeChl <- ChloroP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3,
   geom_rootedge()+
   labs(title = "Chlorophyta Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
-
+HeatTreeCh1
 ChlHeatPlot <- gheatmap(HeatTreeChl, df, offset = 8, font.size = 2, width = .4,  colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
