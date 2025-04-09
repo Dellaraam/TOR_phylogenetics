@@ -37,9 +37,7 @@ HTML <- relocate(HTML, Organism.Name, .after = Organism_Taxonomic_ID)
 # Using results gather by Dell and her Diamond Analysis work
 
 HTML <- HTML %>%
-  proteinPossible("Effrenium voratum","RAPTOR","P")%>%
   proteinPossible("Effrenium voratum","LST8","P") %>%
-  proteinPossible("Durusdinium trenchii","RAPTOR","P")%>%
   proteinPossible("Paramecium primaurelia","RICTOR","P")%>%
   proteinPossible("Bonamia ostreae","RAPTOR","P")%>%
   proteinPossible("Lotharella oceanica","RICTOR","P")%>%
