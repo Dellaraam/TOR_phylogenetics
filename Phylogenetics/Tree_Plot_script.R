@@ -67,8 +67,8 @@ Excavata <- HTML %>% filter(Super.Group != "Chlorophyta") %>%
   filter(Super.Group != "Rhizaria")
 ProbableOrganisms <- HTML %>% filter(RICTOR == "P"| RAPTOR == "P"| LST8 == "P"| SIN1 == "P" | TOR == "P")
 
-AR <- HTML %>% filter(Super.Group == "Alveolata" | Super.Group == "Rhizaria")
-
+AR <- HTML %>% filter(Super.Group == "Alveolata" |Super.Group == "Rhizaria")
+SAR <- HTML %>% filter(Super.Group == "Alveolata"|Super.Group == "Rhizaria"|Super.Group == "Stramenopiles")
 # This is where we will have a section for the numeric data that is divided out
 # One thing that needs to be done is to change the excavte data to discoba/metamonada
 
@@ -87,6 +87,7 @@ write.table(Discoba$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/ID
 write.table(Metamonada$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Metamonada.txt", sep = "\t", row.names = F, col.names = F)
 write.table(Excavata$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Excavata.txt", sep = "\t", row.names = F, col.names = F)
 write.table(AR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/AR.txt", sep = "\t", row.names = F, col.names = F)
+write.table(SAR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/SAR.txt", sep = "\t", row.names = F, col.names = F)
 
 write.table(SARnoRICTOR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/NoSARRICTOR.txt", sep = "\t", row.names = F, col.names = F)
 write.table(SARYRICTOR$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/YSARRICTOR.txt", sep = "\t", row.names = F, col.names = F)
@@ -1146,7 +1147,7 @@ HeatTreeChl <- ChloroP + geom_tiplab(size = 2, show.legend = TRUE, nudge_x = .3,
   geom_rootedge()+
   labs(title = "Chlorophyta Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
-HeatTreeCh1
+HeatTreeChl
 ChlHeatPlot <- gheatmap(HeatTreeChl, df, offset = 8, font.size = 2, width = .4,  colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
@@ -1626,7 +1627,7 @@ AllTree$node.label <- gsub("'", "", AllTree$node.label)
 HTML <- HTML %>% relocate(Organism.Name)
 
 
-AllTreeP <- ggtree(AllTree, layout = "circular", branch.length = "none", laddarize = FALSE)
+AllTreeP <- ggtree(AllTree, layout = "fan", open.angle = 18 branch.length = "none", laddarize = FALSE)
 AllTreeP <- AllTreeP %<+% HTML
 AllTreeDaylight <- ggtree(AllTree, layout = "daylight", branch.length = "none", laddarize = FALSE)
 

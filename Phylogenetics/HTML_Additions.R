@@ -105,7 +105,12 @@ HTML <- HTML %>%
   proteinPossible("Persea americana","SIN1",NA)%>%
   proteinPossible("Sphagnum jensenii","RICTOR",NA)%>%
   proteinPossible("Carpinus fangiana","RICTOR",NA)%>%
-  proteinPossible("Klebsormidium nitens","RICTOR",NA)
+  proteinPossible("Klebsormidium nitens","RICTOR",NA)%>%
+  proteinPossible("Cymbomonas tetramitiformis","RICTOR",NA)%>%
+  proteinPossible("Cymbomonas tetramitiformis","SIN1",NA)%>%
+  proteinPossible("Chloropicon roscoffensis","RICTOR",NA)%>%
+  proteinPossible("Chloropicon primus","RICTOR",NA)
+  
   
 HTML <- HTML %>%
   filter(Organism_Taxonomic_ID != 1535356,Organism_Taxonomic_ID != 1535362,Organism_Taxonomic_ID != 2494336,Organism_Taxonomic_ID != 1055687,Organism_Taxonomic_ID != 1068625)

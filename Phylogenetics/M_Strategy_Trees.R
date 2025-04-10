@@ -256,3 +256,151 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataRh
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+
+
+# SAR --------------------------------------------------------------------------
+SARTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/SARTreeP.phy")
+SARTree$tip.label
+SARTree$tip.label <- gsub("'","", SARTree$tip.label)
+SARTree$tip.label
+
+
+SAR <- MasterTable %>% filter(Super.Group == "Alveolata" | Super.Group == "Rhizaria" | Super.Group == "Stramenopiles")
+SAR <- SAR %>% relocate(Organism.Name)
+
+subsetdataframe5 <- SAR %>% select(Organism.Name, 
+                                  SIN1, 
+                                  RICTOR, 
+                                  RAPTOR, 
+                                  LST8,
+                                  TOR) %>% 
+  distinct(Organism.Name, .keep_all = TRUE)
+df5 <- column_to_rownames(subsetdataframe5, var = "Organism.Name")
+
+
+SARHeat <- SARTree %>% ggtree(ladderize = FALSE, branch.length = "none", layout = "fan", open.angle = 180)+geom_rootedge()
+SARHeat
+
+
+
+SARHeatPlot <- gheatmap(SARHeat,df5, offset = 5, width = .8, font.size = 2, colnames = FALSE)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P",NA),
+                    values = pal3,
+                    limits = c("H","M","L","P", NA),
+                    na.value = "#FFFFFF",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))
+SARHeatPlot
+
+
+SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
+  scale_color_gradientn(colours=c("#29AF7FFF", "#287D8EFF", "#39568CFF","#440154FF"),
+                        guide = guide_colorbar(order =1),
+                        name = "Completeness Score")+
+  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_rootedge()+
+  labs(title = "SAR Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
+
+SARSavePlot
+
+
+
+
+
+
+
+tempdataframe <- SAR
+tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(
+                                                                 Super.Group == "Alveolata" ~ which(SARTree$node.label == "Alveolata") + length(SARTree$tip.label),
+                                                                 Super.Group == "Stramenopiles" ~ which(SARTree$node.label == "Stramenopiles") + length(SARTree$tip.label),
+                                                                 Super.Group == "Rhizaria" ~ which(SARTree$node.label == "Rhizaria") + length(SARTree$tip.label)))%>%
+select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
+
+
+
+
+
+
+
+
+testSIN1Data <- SAR %>% select(Organism.Name, SIN1)%>%
+  pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score")
+
+testRICTORData <- SAR %>% select(Organism.Name, RICTOR)%>%
+  pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score")
+
+testRAPTORData <- SAR %>% select(Organism.Name, RAPTOR)%>%
+  pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score")
+
+testLST8Data <- SAR %>% select(Organism.Name, LST8)%>%
+  pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score")
+
+testTORData <- SAR %>% select(Organism.Name, TOR)%>%
+  pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score")
+
+testAllTree <- SARHeat +
+  geom_highlight(data = tempdataframe,
+                 mapping = aes(node = NodeNumber, fill = Super.Group))+
+  scale_fill_manual(name = "Super Group",
+                    breaks = c("Alveolata","Stramenopiles","Rhizaria"),
+                    values = c("Alveolata" = "#EFB911",
+                               "Stramenopiles" = "#572100",
+                               "Rhizaria" = "#FFD0AB"
+                    ))+
+  geom_rootedge()+
+  new_scale_fill()+
+  geom_fruit(data = testSIN1Data,
+             geom = geom_tile,
+             mapping = aes(x = Protein, y = Organism.Name, fill = Score),width = .5, offset = 0.04)+
+  geom_fruit(data = testRICTORData,
+             geom = geom_tile,
+             mapping = aes(x = Protein, y = Organism.Name, fill = Score), width = .5, offset = 0.04)+
+  geom_fruit(data = testRAPTORData,
+             geom = geom_tile,
+             mapping = aes(x = Protein, y = Organism.Name, fill = Score), width = .5, offset = 0.04)+
+  geom_fruit(data = testLST8Data,
+             geom = geom_tile,
+             mapping = aes(x = Protein, y = Organism.Name, fill = Score), width = .5, offset = 0.04)+
+  geom_fruit(data = testTORData,
+             geom = geom_tile,
+             mapping = aes(x = Protein, y = Organism.Name, fill = Score), width = .5, offset =0.04)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P","NA"),
+                    values = pal3,
+                    limits = c("H","M","L","P", "NA"),
+                    na.value = "#FF000000",
+                    drop = FALSE)+
+  theme(
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  hexpand(.5, direction = -1)+
+  vexpand(1, direction = -1)
+
+testAllTree
+
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapSAR.png",
+       plot = testAllTree,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
