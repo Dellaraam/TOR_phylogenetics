@@ -145,6 +145,7 @@ df3 <- column_to_rownames(subsetdataframe3, var = "Organism.Name")
 
 
 
+
 ExcavataTP <- ggtree(ExcavataTree, branch.length = "none", ladderize = FALSE)
 ExcavataTP <- ExcavataTP  %<+% Excavata
 

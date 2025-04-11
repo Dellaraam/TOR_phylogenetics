@@ -27,6 +27,9 @@ Ndf <- relocate(Ndf, Organism.Name, .after = Organism_Taxonomic_ID)
 Ndf <- left_join(Ndf,FinalBusco, by = "Accn")
 Ndf <- distinct(Ndf, Organism_Taxonomic_ID, .keep_all = TRUE)
 
+MasterTable <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")
+MasterTable <- select(MasterTable, -X)
+
 # Current Goal is to replace all of the names in the HTML file (really need to rename that)
 # Everything should be replaced by what is found within the Taxon file
 # That should make everything work correctly
@@ -162,10 +165,9 @@ NEJMPal <- pal_nejm("default")(5)
 #Test Ground
 
 largeDataSet <- left_join(HTML, Ndf[c("SIN1All","SIN1Domain","RICTORAll","RICTORDomain","RAPTORAll","RAPTORDomain","TORAll","TORDomain","LST8All","LST8Domain","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
-
+largeDataSet <- left_join(largeDataSet, MasterTable[c("Organism_Taxonomic_ID","M.Strategy")], by = "Organism_Taxonomic_ID")
 
 largeDataSet <- mutate(largeDataSet, HasRictor = NA, HasRaptor = NA, HasTOR = NA, HasLST8 = NA, HasSIN1 = NA)
-
 largeDataSet[!is.na(largeDataSet$RICTOR),]$HasRictor <- "Yes"
 largeDataSet[!is.na(largeDataSet$RAPTOR),]$HasRaptor <- "Yes"
 largeDataSet[!is.na(largeDataSet$SIN1),]$HasSIN1 <- "Yes"
@@ -174,22 +176,15 @@ largeDataSet[!is.na(largeDataSet$TOR),]$HasTOR <- "Yes"
 
 
 
-largeDataSet %>% filter(Super.Group == "Stramenopiles") %>% select(Organism.Name, SIN1)%>%
-  pivot_longer(cols = !Organism.Name,names_to = "Protein", values_to = "Score") %>%
-  ggplot(aes(x = Protein, y = Organism.Name, fill = Score), width = 0)+
-  geom_tile()
-
 
 # ------------------------------------------------------------------------------
 StramenopilesL <- largeDataSet %>% filter(Super.Group == "Stramenopiles")
 subsetdataframe <- StramenopilesL %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
 df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
 
-
-
-
-
-
+Msubset <- StramenopilesL %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name, .keep_all = TRUE) #%>%
+ # pivot_longer(cols = !Organism.Name, names_to = "M.Strategy", values_to = "Type")
+mdf <- column_to_rownames(Msubset, var = "Organism.Name")
 
 
 
@@ -347,8 +342,8 @@ HeatTreeStram <- STP + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x = .3, lin
        subtitle = "With HMMER Score Map")
   #geom_nodelab(nudge_y = .5, nudge_x = -.7, size = 2)
 
-HeatTreeStram
-StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 9, width = .65, font.size = 2, colnames = FALSE)+
+HeatTreeStram 
+StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 10, width = .65, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -361,9 +356,16 @@ StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 9, width = .65, font.size 
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
     legend.spacing.y = unit(0.02, "cm"),
-    legend.key.spacing.x = unit(1,"cm"))
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
     
 StramHeatPlot
+
+
+experimentalStramPlot <- gheatmap(StramHeatPlot,mdf, offset = 7, width = .2, colnames = FALSE)
+
+experimentalStramPlot
+
 topptx(StramHeatPlot, filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Images/Figures_PPT/StramenopileHeatPlot.pptx")
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStramenopile.png",
        plot = StramHeatPlot,
@@ -372,6 +374,15 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStramenopil
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeStramHeatMetaPlot.png",
+       plot = experimentalStramPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
 # ------------------------------------------------------------------------------
 AlveolataL <- largeDataSet %>% filter(Super.Group == "Alveolata")
 subsetdataframe <- AlveolataL %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
@@ -1627,7 +1638,7 @@ AllTree$node.label <- gsub("'", "", AllTree$node.label)
 HTML <- HTML %>% relocate(Organism.Name)
 
 
-AllTreeP <- ggtree(AllTree, layout = "fan", open.angle = 18 branch.length = "none", laddarize = FALSE)
+AllTreeP <- ggtree(AllTree, layout = "fan", open.angle = 18, branch.length = "none", laddarize = FALSE)
 AllTreeP <- AllTreeP %<+% HTML
 AllTreeDaylight <- ggtree(AllTree, layout = "daylight", branch.length = "none", laddarize = FALSE)
 
