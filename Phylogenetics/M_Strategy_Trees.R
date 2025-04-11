@@ -213,6 +213,11 @@ subsetdataframe4 <- AR %>% select(Organism.Name,
   distinct(Organism.Name, .keep_all = TRUE)
 df4 <- column_to_rownames(subsetdataframe4, var = "Organism.Name")
 
+Msubset1 <- AR %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name, .keep_all = TRUE) #%>%
+# pivot_longer(cols = !Organism.Name, names_to = "M.Strategy", values_to = "Type")
+mdf1 <- column_to_rownames(Msubset1, var = "Organism.Name")
+
+
 
 
 ARTP <- ggtree(ARTree, branch.length = "none", ladderize = FALSE)

@@ -152,6 +152,12 @@ pal4 <- c(
   "NA" = "#FF000000"
 )
 
+Mpal <- c(
+  "Autotrophic" = "green",
+  "Heterotroph" = "brown",
+  "Mixotroph" = "#7dbe62",
+  "Parasite" = "red"
+)
 
 UChicagoPal <- pal_uchicago("light")(8)
 lancPal <- pal_lancet("lanonc")(5)
@@ -343,7 +349,7 @@ HeatTreeStram <- STP + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x = .3, lin
   #geom_nodelab(nudge_y = .5, nudge_x = -.7, size = 2)
 
 HeatTreeStram 
-StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 10, width = .65, font.size = 2, colnames = FALSE)+
+StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 6.5, width = .65, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -361,11 +367,22 @@ StramHeatPlot <- gheatmap(HeatTreeStram, df, offset = 10, width = .65, font.size
     
 StramHeatPlot
 
-
-experimentalStramPlot <- gheatmap(StramHeatPlot,mdf, offset = 7, width = .2, colnames = FALSE)
+experimentalStramPlot <- gheatmap(StramHeatPlot,mdf, offset = 12, width = .15, colnames = FALSE)+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
+                    values = Mpal,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
 
 experimentalStramPlot
-
 topptx(StramHeatPlot, filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Images/Figures_PPT/StramenopileHeatPlot.pptx")
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStramenopile.png",
        plot = StramHeatPlot,
