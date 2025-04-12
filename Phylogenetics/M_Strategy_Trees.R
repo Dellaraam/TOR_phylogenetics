@@ -48,6 +48,13 @@ pal4 <- c(
   "NA" = "#FF000000"
 )
 
+Mpal <- c(
+  "Autotrophic" = "green",
+  "Heterotroph" = "brown",
+  "Mixotroph" = "#7dbe62",
+  "Parasite" = "red"
+)
+
 #Agreed on using Pal3 for heat maps going forward
 
 
@@ -142,6 +149,9 @@ subsetdataframe3 <- Excavata %>% select(Organism.Name,
                                          TOR) %>% 
   distinct(Organism.Name, .keep_all = TRUE)
 df3 <- column_to_rownames(subsetdataframe3, var = "Organism.Name")
+Msubset2 <- Excavata %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name, .keep_all = TRUE) #%>%
+# pivot_longer(cols = !Organism.Name, names_to = "M.Strategy", values_to = "Type")
+mdf2 <- column_to_rownames(Msubset2, var = "Organism.Name")
 
 
 
@@ -167,7 +177,8 @@ ExcavataHeatPlot <- gheatmap(ExcavataHeat,df3, offset = 5, width = .8, font.size
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
     legend.spacing.y = unit(0.02, "cm"),
-    legend.key.spacing.x = unit(1,"cm"))
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
 
 
 
@@ -186,6 +197,25 @@ ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 1.8, nudge
   labs(title = "Excavates Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
+experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 13.5, width = .15, colnames = FALSE)+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
+                    values = Mpal,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
+experimentalExcplot
+
+
+
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapExcavates.png",
        plot = ExcavataSavePlot,
        width = 3840,
@@ -193,7 +223,13 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapExcavates.p
        units = "px",
        dpi = 320,
        limitsize = FALSE)
-
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeExcMetHeat.png",
+       plot = experimentalExcplot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 
@@ -222,13 +258,11 @@ mdf1 <- column_to_rownames(Msubset1, var = "Organism.Name")
 
 ARTP <- ggtree(ARTree, branch.length = "none", ladderize = FALSE)
 ARTP <- ARTP  %<+% AR
-
 ARTP
 
 
-ARHeat <- ARTree %>% ggtree(branch.length = "none", ladderize = FALSE)+xlim(NA,40)
-
-ARHeatPlot <- gheatmap(ARHeat,df4, offset = 5, width = .8, font.size = 2, colnames = FALSE)+
+ARHeat <- ARTree %>% ggtree(branch.length = "none", ladderize = FALSE)+xlim(NA,30)
+ARHeatPlot <- gheatmap(ARHeat,df4, offset = 6, width = .8, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -241,7 +275,8 @@ ARHeatPlot <- gheatmap(ARHeat,df4, offset = 5, width = .8, font.size = 2, colnam
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
     legend.spacing.y = unit(0.02, "cm"),
-    legend.key.spacing.x = unit(1,"cm"))
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
 
 ARHeatPlot
 
@@ -255,8 +290,33 @@ ARSavePlot <- ARHeatPlot %<+% AR+geom_tiplab(size = 1.8, nudge_x = .3, linesize 
 
 ARSavePlot
 
+experimentalARplot <- gheatmap(ARSavePlot,mdf1, offset = 12.5, width = .15, colnames = FALSE)+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
+                    values = Mpal,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
+experimentalARplot
+
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataRhizaria.png",
        plot = ARSavePlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeARMetHeatPlot.png",
+       plot = experimentalARplot,
        width = 3840,
        height = 2160,
        units = "px",
