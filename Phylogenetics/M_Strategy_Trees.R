@@ -55,6 +55,13 @@ Mpal <- c(
   "Parasite" = "red"
 )
 
+Mpal2 <- c(
+  "Autotrophic" = "#28965A",
+  "Heterotroph" = "#FB3640",
+  "Mixotroph" = "#7CFEF0",
+  "Parasite" = "#9B287B" 
+)
+
 #Agreed on using Pal3 for heat maps going forward
 
 
@@ -200,7 +207,7 @@ ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 1.8, nudge
 experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 13.5, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
-                    values = Mpal,
+                    values = Mpal2,
                     limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
                     na.value = "grey",
                     drop = FALSE)+
