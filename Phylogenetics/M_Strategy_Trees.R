@@ -40,6 +40,7 @@ pal3 <- c(
   "L" = "#B2D4AD",
   na_value = "#FF000000"
 )
+
 pal4 <- c(
   "H" = "#f4649e",
   "M" = "#49e5aa",
@@ -56,10 +57,10 @@ Mpal <- c(
 )
 
 Mpal2 <- c(
-  "Autotrophic" = "#28965A",
-  "Heterotroph" = "#FB3640",
-  "Mixotroph" = "#7CFEF0",
-  "Parasite" = "#9B287B" 
+  "Autotrophic" = "#40F99B",
+  "Heterotroph" = "#593D3B",
+  "Mixotroph" = "#9DB17C",
+  "Parasite" = "#FE4A49" 
 )
 
 #Agreed on using Pal3 for heat maps going forward
@@ -313,6 +314,33 @@ experimentalARplot <- gheatmap(ARSavePlot,mdf1, offset = 12.5, width = .15, coln
     legend.key.spacing.x = unit(1,"cm"))+
   new_scale_fill()
 experimentalARplot
+
+
+
+AnnotatedARPlot1 <- viewClade(experimentalARplot, MRCA(experimentalARplot, "Amoebophrya sp. A120", "Symbiodinium microadriaticum"))
+AnnotatedARPlot1
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataRhizariaSymbiodinium.png",
+       plot = AnnotatedARPlot1,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
+
+AnnotatedARPlot2 <- viewClade(experimentalARplot, MRCA(experimentalARplot, "Cardiosporidium cionae", "Eimeria acervulina"))
+AnnotatedARPlot2
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataRhizariaParasites.png",
+       plot = AnnotatedARPlot2,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataRhizaria.png",
        plot = ARSavePlot,
