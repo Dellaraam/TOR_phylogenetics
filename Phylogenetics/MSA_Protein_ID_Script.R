@@ -240,6 +240,7 @@ ExcavataJGITOR <- mutate(ExcavataJGITOR, Super.Group = "Excavata")
 
 RhodophytaNames <- read_tsv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/Rhodophyta_Names.tsv")
 RhodophytaNames <- rename(RhodophytaNames, Organism.Name = "Organism Name", Accn = "Assembly Accession", Organism_Taxonomic_ID = "Organism Taxonomic ID")
+
 RhodophytaRictor <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RICTOR_Rhodophyta.csv")
 RhodophytaRictor <- mutate(RhodophytaRictor, Source = "NCBI", Super.Group = "Rhodophyta")
 RhodophytaRaptor <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/RAPTOR_Rhodophyta.csv")
@@ -251,14 +252,18 @@ RhodophytaLST8 <- mutate(RhodophytaLST8, Source = "NCBI", Super.Group = "Rhodoph
 RhodophytaTOR <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Rhodophyta/TOR_Rhodophyta.csv")
 RhodophytaTOR <- mutate(RhodophytaTOR, Source = "NCBI", Super.Group = "Rhodophyta")
 
+#Streptophyta ------------------------------------------------------------------
 
 
+StreptophytaNames <- read_tsv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/Streptophyta_Names.tsv")
+StreptophytaNames <- rename(StreptophytaNames, Organism.Name = "Organism Name", Accn = "Assembly Accession", Organism_Taxonomic_ID = "Organism Taxonomic ID")
 
-
-
-
-#And Finally Rhodophyta and Streptophyta, Phew
-
+StreptophytaRaptor <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/RAPTOR_Streptophyta.csv")
+StreptophytaRaptor <- mutate(StreptophytaRaptor, Source = "NCBI", Super.Group = "Streptophyta")
+StreptophytaLST8 <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/LST8_Streptophyta.csv")
+StreptophytaLST8 <- mutate(StreptophytaLST8, Source = "NCBI", Super.Group = "Streptophyta")
+StreptophytaTOR <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Streptophyta/TOR_Streptophyta.csv")
+StreptophytaTOR <- mutate(StreptophytaTOR, Source = "NCBI", Super.Group = "Streptophyta")
 
 
 
@@ -375,6 +380,20 @@ MetamonadaLST8 <- mergeClean(MetamonadaLST8, MetamonadaNames)
 MetamonadaLST8 <- mutate(MetamonadaLST8, Source = "NCBI")
 MetamonadaTOR <- mergeClean(MetamonadaTOR, MetamonadaNames)
 MetamonadaTOR <- mutate(MetamonadaTOR, Source = "NCBI")
+
+RhodophytaRictor <- mergeClean(RhodophytaRictor, RhodophytaNames)
+RhodophytaRaptor <- mergeClean(RhodophytaRaptor, RhodophytaNames)
+RhodophytaLST8 <- mergeClean(RhodophytaLST8, RhodophytaNames)
+RhodophytaSIN1 <- mergeClean(RhodophytaSIN1, RhodophytaNames)
+RhodophytaTOR <- mergeClean(RhodophytaTOR, RhodophytaNames)
+
+StreptophytaRaptor <- mergeClean(StreptophytaRaptor, StreptophytaNames)
+StreptophytaLST8 <- mergeClean(StreptophytaLST8, StreptophytaNames)
+StreptophytaTOR <- mergeClean(StreptophytaTOR, StreptophytaNames)
+
+
+
+
 
 #now to combine the Discobas and the Metamonadas for the time being
 
@@ -512,4 +531,33 @@ subset <- subset(ChlorophytaLST8, Source =="NCBI")
 write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/ChlorophytaLST8NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 subset <- subset(ChlorophytaTOR, Source =="NCBI")
 write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/ChlorophytaTORNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+
+subset <- subset(RhodophytaRaptor, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhodophytaRaptorNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(RhodophytaLST8, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhodophytaLST8NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(RhodophytaTOR, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/RhodophytaTORNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+
+subset <- subset(StreptophytaRaptor, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/StreptophytaRaptorNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(StreptophytaLST8, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/StreptophytaLST8NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+subset <- subset(StreptophytaTOR, Source == "NCBI")
+write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/StreptophytaTORNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
