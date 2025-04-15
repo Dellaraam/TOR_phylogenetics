@@ -159,6 +159,14 @@ Mpal <- c(
   "Parasite" = "red"
 )
 
+Mpal2 <- c(
+  "Autotrophic" = "#40F99B",
+  "Heterotroph" = "#593D3B",
+  "Mixotroph" = "#9DB17C",
+  "Parasite" = "#FE4A49" 
+)
+
+
 UChicagoPal <- pal_uchicago("light")(8)
 lancPal <- pal_lancet("lanonc")(5)
 AAAsPal <- pal_aaas("default")(5)
@@ -199,6 +207,9 @@ StramenopileTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/Stramenop
 StramenopileTree$tip.label
 StramenopileTree$tip.label <- gsub("'","", StramenopileTree$tip.label)
 StramenopileTree$tip.label
+
+
+
 
 Stramenopiles <- Stramenopiles %>% relocate(Organism.Name)
 STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)
@@ -370,7 +381,7 @@ StramHeatPlot
 experimentalStramPlot <- gheatmap(StramHeatPlot,mdf, offset = 12, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
-                    values = Mpal,
+                    values = Mpal2,
                     limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
                     drop = FALSE)+
   theme(
@@ -383,6 +394,31 @@ experimentalStramPlot <- gheatmap(StramHeatPlot,mdf, offset = 12, width = .15, c
   new_scale_fill()
 
 experimentalStramPlot
+
+
+AnnotatedStramPlot <- viewClade(experimentalStramPlot, MRCA(experimentalStramPlot, "Parmales sp. scaly parma","Cylindrotheca closterium"))
+AnnotatedStramPlot
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStramenopileAutotrophs.png",
+       plot = AnnotatedStramPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+AnnotatedStramPlot2 <- viewClade(experimentalStramPlot, MRCA(experimentalStramPlot, "Achlya hypogyna", "Bremia lactucae"))
+AnnotatedStramPlot2
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStramenopileHeterotrophs.png",
+       plot = AnnotatedStramPlot2,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
 topptx(StramHeatPlot, filename = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/Images/Figures_PPT/StramenopileHeatPlot.pptx")
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapStramenopile.png",
        plot = StramHeatPlot,

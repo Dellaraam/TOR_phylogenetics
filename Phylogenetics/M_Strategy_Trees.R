@@ -171,7 +171,7 @@ ExcavataTP <- ExcavataTP  %<+% Excavata
 
 ExcavataHeat <- ExcavataTree %>% ggtree(branch.length = "none", ladderize = FALSE)+xlim(NA,40)
 
-ExcavataHeatPlot <- gheatmap(ExcavataHeat,df3, offset = 5, width = .8, font.size = 2, colnames = FALSE)+
+ExcavataHeatPlot <- gheatmap(ExcavataHeat,df3, offset = 7, width = .8, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -204,7 +204,7 @@ ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 1.8, nudge
   labs(title = "Excavates Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 13.5, width = .15, colnames = FALSE)+
+experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 15.5, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
                     values = Mpal2,
@@ -300,7 +300,7 @@ ARSavePlot
 experimentalARplot <- gheatmap(ARSavePlot,mdf1, offset = 12.5, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
-                    values = Mpal,
+                    values = Mpal2,
                     limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
                     na.value = "grey",
                     drop = FALSE)+
