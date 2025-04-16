@@ -40,6 +40,7 @@ HTML <- HTML %>%
   proteinPossible("Effrenium voratum","LST8","P") %>%
   proteinPossible("Paramecium primaurelia","RICTOR","P")%>%
   proteinPossible("Bonamia ostreae","RAPTOR","P")%>%
+  proteinPossible("Lotharella oceanica","RICTOR","P")%>%
   proteinPossible("Lotharella oceanica","RAPTOR","P")%>%
   proteinPossible("Lotharella oceanica","TOR","P")%>%
   proteinPossible("Lotharella oceanica","LST8","P")%>%
