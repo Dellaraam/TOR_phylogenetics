@@ -278,7 +278,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeExcMetHea
 
 
 # Experimental -----------------------------------------------------------------
-ARTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/ArTreeP.phy")
+ARTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/TruncatedARTreeP.phy")
 ARTree$tip.label <- gsub("'","", ARTree$tip.label)
 
 AR <- MasterTable %>% filter(Super.Group == "Alveolata" | Super.Group == "Rhizaria")
@@ -351,31 +351,32 @@ experimentalARplot <- gheatmap(ARSavePlot,mdf1, offset = 11, width = .15, colnam
   new_scale_fill()
 experimentalARplot
 
+#Replace these Comment blocks if we switch back to the non-truncated tree
 
 
-AnnotatedARPlot1 <- viewClade(experimentalARplot, MRCA(experimentalARplot, "Amoebophrya sp. A120", "Symbiodinium microadriaticum"))
-AnnotatedARPlot1
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataRhizariaSymbiodinium.png",
-       plot = AnnotatedARPlot1,
-       width = 3840,
-       height = 2160,
-       units = "px",
-       dpi = 320,
-       limitsize = FALSE)
+# AnnotatedARPlot1 <- viewClade(experimentalARplot, MRCA(experimentalARplot, "Amoebophrya sp. A120", "Symbiodinium microadriaticum"))
+# AnnotatedARPlot1
+# ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataRhizariaSymbiodinium.png",
+#        plot = AnnotatedARPlot1,
+#        width = 3840,
+#        height = 2160,
+#        units = "px",
+#        dpi = 320,
+#        limitsize = FALSE)
 
 
 
 
 
-AnnotatedARPlot2 <- viewClade(experimentalARplot, MRCA(experimentalARplot, "Cardiosporidium cionae", "Eimeria acervulina"))
-AnnotatedARPlot2
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataRhizariaParasites.png",
-       plot = AnnotatedARPlot2,
-       width = 3840,
-       height = 2160,
-       units = "px",
-       dpi = 320,
-       limitsize = FALSE)
+# AnnotatedARPlot2 <- viewClade(experimentalARplot, MRCA(experimentalARplot, "Cardiosporidium cionae", "Eimeria acervulina"))
+# AnnotatedARPlot2
+# ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataRhizariaParasites.png",
+#        plot = AnnotatedARPlot2,
+#        width = 3840,
+#        height = 2160,
+#        units = "px",
+#        dpi = 320,
+#        limitsize = FALSE)
 
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataRhizaria.png",
