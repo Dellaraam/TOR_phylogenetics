@@ -164,9 +164,9 @@ Mpal <- c(
   "Parasite" = "red"
 )
 Mpal2 <- c(
-  "Autotrophic" = "#0A3719",
-  "Heterotroph" = "#593D3B",
-  "Mixotroph" = "#559931",
+  "Autotrophic" = "#3CBA26",
+  "Heterotroph" = "#A87142",
+  "Mixotroph" = "#63E3C5",
   "Parasite" = "#FE4A49" 
 )
 

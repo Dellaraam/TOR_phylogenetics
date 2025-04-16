@@ -31,9 +31,14 @@ RhizSubset <- RhizSubset %>% filter(C.score > 70)
 ExcSubset <- MasterTable %>% filter(Super.Group == "Discoba" | Super.Group == "Metamonada")
 ExcSubset <- ExcSubset %>% filter(C.score > 90)
 
+
+ARSubset <- MasterTable %>% filter(Super.Group == "Rhizaria")
+ARSubset <- rbind(AlvSubset,ARSubset)
+
+
 write.table(StramSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedStram.txt", sep = "\t", row.names = F, col.names = F)
 write.table(AlvSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedAlv.txt", sep = "\t", row.names = F, col.names = F)
-
+write.table(ARSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedAR.txt", sep = "\t", row.names = F, col.names = F)
 
 #Palettes-----------------------------------------------------------------------
 pal <- c(
@@ -74,16 +79,26 @@ Mpal <- c(
 )
 
 Mpal2 <- c(
-  "Autotrophic" = "#0A3719",
-  "Heterotroph" = "#593D3B",
-  "Mixotroph" = "#559931",
+  "Autotrophic" = "#3CBA26",
+  "Heterotroph" = "#A87142",
+  "Mixotroph" = "#63E3C5",
   "Parasite" = "#FE4A49" 
 )
 
-#0A3719
+
+#Tomato
+#FE4A49
+
+#Copper
+#A87142
 
 
-#40F99B
+#Turquoise
+#63E3C5
+
+#Kelly Green
+#3CBA26
+
 #Agreed on using Pal3 for heat maps going forward
 
 
