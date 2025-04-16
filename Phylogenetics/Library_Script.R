@@ -6,7 +6,6 @@
 # LG Wang, TTY Lam, S Xu, Z Dai, L Zhou, T Feng, P Guo, CW Dunn, BR Jones, T Bradley, H Zhu, Y Guan, Y Jiang, G Yu. treeio: an R package for
 # phylogenetic tree input and output with richly annotated and associated data. Molecular Biology and Evolution. 2020, 37(2):599-603. doi:
 #  10.1093/molbev/msz240
-
 #install.packages("paletteer")
 #install.packages("dichromat")
 #install.packages("tidytree")
