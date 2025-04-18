@@ -24,6 +24,7 @@ StramSubset <- StramSubset %>% filter(C.score > 90)
 
 AlvSubset <- MasterTable %>% filter(Super.Group == "Alveolata")
 AlvSubset <- AlvSubset %>% filter(C.score > 90)
+AlvSubset <- AlvSubset %>% filter(Organism.Name != "Moneuplotes crassus")
 
 RhizSubset <- MasterTable %>% filter(Super.Group == "Rhizaria")
 RhizSubset <- RhizSubset %>% filter(C.score > 70)
