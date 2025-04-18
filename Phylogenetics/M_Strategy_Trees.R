@@ -115,63 +115,222 @@ Mpal2 <- c(
 
 
 #Stramenopile Tree -------------------------------------------------------------
+
+#Dataframe setup for Stramenopile Tree
+#Establish the Stramenopiles Subsection
+Stramenopiles <- MasterTable %>% filter(Super.Group == "Stramenopiles")
+Stramenopiles <- Stramenopiles %>% relocate(Organism.Name)
+
+#Make a subsection of the above dataframe and select only the values in SIN1, RICTOR, RAPTOR, LST8, and TOR.
+#Move the Organism.Name column to the front to align it with the tree object
+subsetdataframe <- Stramenopiles %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
+df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
+
+#Create the metabolic subset of the Stramenopiles Subsection
+Msubset <- Stramenopiles %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name, .keep_all = TRUE)
+mdf <- column_to_rownames(Msubset, var = "Organism.Name")
+
+
+#Read in the tree file for stramenopiles (truncated here).
+#Remove any ' marks and replace them with white space
 StramenopileTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/TruncatedStramTreeP.phy")
 StramenopileTree$tip.label <- gsub("'","", StramenopileTree$tip.label)
 
 
-Stramenopiles <- MasterTable %>% filter(Super.Group == "Stramenopiles")
-Stramenopiles <- Stramenopiles %>% relocate(Organism.Name)
+#Create the ggtree object using the Stramenopile tree
+#Attach the Stramenopile Subsection dataframe to the tree for additional information
+STP <- ggtree(StramenopileTree, branch.length = "none", ladderize = FALSE)
+STP <- STP  %<+% Stramenopiles
+
+#Create the first layer of the heatmap tree
+#This layer is the C.score heatmap along with the tip labels
+StramLayer1 <- STP + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
+  scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
+                        guide = guide_colorbar(order =1),
+                        name = "Completeness Score")+
+  geom_rootedge()+
+  labs(title = "Stramenopiles Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
+
+#Create the second layer of the heatmap tree
+#This layer is the first heatmap which is the H,M,L,P values
+#This takes in the df object which contains the relevant information
+#This layer also specifies that it has a unique scale_fill
+StramLayer2 <- gheatmap(StramLayer1, df, offset = 6.5, width = .65, font.size = 2, colnames = FALSE)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P",NA),
+                    values = pal3,
+                    limits = c("H","M","L","P", NA),
+                    na.value = "#FFFFFF",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
+
+#Create the third layer of the heatmap tree
+#This layer is the second heatmap which is the Metabolic Strategies
+#This takes in the mdf object which has the metabolic information
+StramLayer3 <- gheatmap(StramLayer2,mdf, offset = 12, width = .15, colnames = FALSE)+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
+                    values = Mpal2,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
+
+#Finally we have a completed heatmap image for Stramenopiles
+#We can then save the image to either a png or a pptx file format here
+
+StramLayer3
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeHeatMapStramenopileTruncated.png",
+       plot = StramLayer3,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 
-subsetdataframe1 <- Stramenopiles%>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
-df1 <- column_to_rownames(subsetdataframe1, var = "Organism.Name")
 
 
-HeatTreeStramenopile <- StramenopileTree %>% ggtree(branch.length = "none", ladderize = FALSE)+geom_tiplab(size = 2)+xlim(NA,30)+geom_text(aes(label = node))+
-  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 1)
 
-HeatTreeStramenopile
-StramHeatPlot <- gheatmap(HeatTreeStramenopile,df1, offset = 5, width = .8, font.size = 2, colnames = FALSE)
-StramHeatPlot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 #Alveolata ---------------------------------------------------------------------
 
-AlveolataTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/TruncatedAlvTreeP.phy")
-AlveolataTree$tip.label <- gsub("'","", AlveolataTree$tip.label)
-
+#Dataframe setup for Alveolata Tree
+#Establish the Alveolata Subsection
+#Follows an exact procedure to the Stramenopiles Section
 Alveolata <- MasterTable %>% filter(Super.Group == "Alveolata")
 Alveolata <- Alveolata %>% relocate(Organism.Name)
 
-subsetdataframe2 <- Alveolata %>% select(Organism.Name, 
-                                         SIN1, 
-                                         RICTOR, 
-                                         RAPTOR, 
-                                         LST8,
-                                         TOR) %>% 
-  distinct(Organism.Name, .keep_all = TRUE)
+subsetdataframe <- Alveolata %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
+df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
 
-df2 <- column_to_rownames(subsetdataframe2, var = "Organism.Name")
+Msubset <- Alveolata %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name, .keep_all = TRUE)
+mdf <- column_to_rownames(Msubset, var = "Organism.Name")
 
+#Load in the tree data
+#Clean up the tip labels
+AlveolataTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/TruncatedAlvTreeP.phy")
+AlveolataTree$tip.label <- gsub("'","", AlveolataTree$tip.label)
 
+#Create ggtree object
 AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)
 AlvP <- AlvP  %<+% Alveolata
-AlvP
-
-HeatTreeAlv <- AlveolataTree %>% ggtree(branch.length = "none", ladderize = FALSE)+geom_tiplab(size = 2)+xlim(NA,40)+geom_text(aes(label = node))+
-  geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 1)+geom_rootedge()
 
 
+#Alv Layer 1
+AlvLayer1 <- AlvP + xlim(NA,+20) + geom_tiplab(size = 1.8, show.legend = TRUE, nudge_x = .3, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
+  scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
+                        guide = guide_colorbar(order =1),
+                        name = "Completeness Score")+
+  geom_rootedge()+
+  #geom_nodelab(nudge_y = 1.2, nudge_x = -.7, size = 1.5)+
+  labs(title = "Alveolata Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
 
-HeatTreeAlv + geom_fruit(data = Alveolata, 
-                         geom = geom_tile,
-                         mapping = aes(x = M.Strategy, y = Organism.Name, fill = M.Strategy),width = .8)
+#Alv Layer 2
+AlvLayer2 <- gheatmap(AlvLayer1, df, offset = 4, font.size = 2,, width = .4, colnames = FALSE)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P",NA),
+                    values = pal3,
+                    limits = c("H","M","L","P", NA),
+                    na.value = "#FFFFFF",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
+
+#Alv Layer 3
+AlvLayer3 <- gheatmap(AlvLayer2,mdf, offset = 7, width = .15, colnames = FALSE)+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
+                    values = Mpal2,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
 
 
-AlvHeatPlot <- gheatmap(HeatTreeAlv,df2, offset = 5, width = .8, font.size = 2, colnames = FALSE)
-AlvHeatPlot
+
+AlvLayer3
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeHeatMapAlveolataTruncated.png",
+       plot = AlvLayer3,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -399,6 +558,11 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeARMetHeat
 
 
 # SAR --------------------------------------------------------------------------
+
+# Modify this tree to instead be a C.score filtered Tree
+# Only do this for Alveolata and for Stramenopiles
+
+
 SARTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/SARTreeP.phy")
 SARTree$tip.label
 SARTree$tip.label <- gsub("'","", SARTree$tip.label)
