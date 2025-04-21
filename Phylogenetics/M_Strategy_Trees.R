@@ -20,26 +20,51 @@ MasterTable %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICT
 # 
 
 StramSubset <- MasterTable %>% filter(Super.Group == "Stramenopiles")
-StramSubset <- StramSubset %>% filter(C.score > 90)
+StramSubset <- StramSubset %>% filter(C.score > 90)%>%
+  filter(Organism.Name != "Phytophthora citrophthora",
+         Organism.Name != "Aphanomyces stellatus",
+         Organism.Name != "Minidiscus trioculatus")
+  
 
 AlvSubset <- MasterTable %>% filter(Super.Group == "Alveolata")
-AlvSubset <- AlvSubset %>% filter(C.score > 90)
-AlvSubset <- AlvSubset %>% filter(Organism.Name != "Moneuplotes crassus")
+AlvSubset <- AlvSubset %>% filter(Organism.Name != "Moneuplotes crassus",
+                                  Organism.Name != "Symbiodinium pilosum",
+                                  Organism.Name != "Symbiodinium sp. CCMP2456",
+                                  Organism.Name != "Symbiodinium necroappetens",
+                                  Organism.Name != "Eimeria mitis",
+                                  Organism.Name != "Eimeria necatrix",
+                                  Organism.Name != "Eimeria praecox"
+                                  )
+  
 
 RhizSubset <- MasterTable %>% filter(Super.Group == "Rhizaria")
-RhizSubset <- RhizSubset %>% filter(C.score > 70)
+RhizSubset <- RhizSubset %>% filter(Organism.Name != "Marteilia pararefringens",
+                                    Organism.Name != "Paramarteilia canceri",
+                                    Organism.Name != "Cercozoa sp. M6MM")
 
 ExcSubset <- MasterTable %>% filter(Super.Group == "Discoba" | Super.Group == "Metamonada")
-ExcSubset <- ExcSubset %>% filter(C.score > 90)
+ExcSubset <- ExcSubset %>% filter(Organism.Name != "Trypanosoma brucei equiperdum",
+                                  Organism.Name != "Trpanosoma equiperdum",
+                                  Organism.Name != "Trypanosoma rangeli",
+                                  Organism.Name != "Trypanosoma rangeli SC58",
+                                  Organism.Name != "Strigomonas culicis",
+                                  Organism.Name != "Perkinsela sp. CCAP 1560/4",
+                                  Organism.Name != "Giardia lamblia ATCC 50803",
+                                  Organism.Name != "Spironucleus salmonicida",
+                                  Organism.Name != "Hexamita inflata",
+                                  Organism.Name != "Streblomastix strix",
+                                  Organism.Name != "Aduncisulcus paluster",
+                                  Organism.Name != "Monocercomonoides exilis",
+                                  Organism.Name != "Paratrimastix pyriformis")
 
 
-ARSubset <- MasterTable %>% filter(Super.Group == "Rhizaria")
-ARSubset <- rbind(AlvSubset,ARSubset)
+ARSubset <- rbind(AlvSubset,RhizSubset)
 
 
 write.table(StramSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedStram.txt", sep = "\t", row.names = F, col.names = F)
 write.table(AlvSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedAlv.txt", sep = "\t", row.names = F, col.names = F)
 write.table(ARSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedAR.txt", sep = "\t", row.names = F, col.names = F)
+write.table(ExcSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedExc.txt", sep = "\t", row.names = F, col.names = F)
 
 #Palettes-----------------------------------------------------------------------
 pal <- c(
@@ -339,7 +364,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeHeatMapAl
 
 # Excavata Combined Tree -------------------------------------------------------
 
-ExcavataTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/ExcavataTreeP.phy")
+ExcavataTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/TruncatedExcTreeP.phy")
 ExcavataTree$tip.label <- gsub("'","", ExcavataTree$tip.label)
 
 Excavata <- MasterTable %>% filter(Super.Group == "Discoba" | Super.Group == "Metamonada")
