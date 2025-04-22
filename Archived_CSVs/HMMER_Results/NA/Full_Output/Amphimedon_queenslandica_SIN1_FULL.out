@@ -1,0 +1,393 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/NA/Proteins/Amphimedon_queenslandica.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    3.5e-74  251.4   7.1    2.4e-63  215.5   4.8    2.0  2  XP_003389508.1  PREDICTED: target of rapamycin complex 2 subu
+    4.9e-05   22.9  11.9    7.2e-05   22.3  11.9    1.3  1  XP_019850178.1  PREDICTED: dnaJ homolog subfamily C member 16
+    0.00029   20.3   1.3    0.00031   20.2   1.3    1.1  1  XP_019850919.1  PREDICTED: uncharacterized protein LOC1095813
+     0.0013   18.2  16.2     0.0015   18.0  16.2    1.2  1  XP_011407924.1  PREDICTED: inner centromere protein-like [Amp
+     0.0015   18.0   9.5     0.0015   18.0   9.5    1.1  1  XP_019861926.1  PREDICTED: mediator of RNA polymerase II tran
+     0.0016   17.9  25.5      0.003   17.0  25.5    1.5  1  XP_003385321.1  PREDICTED: dnaJ homolog subfamily C member 16
+  ------ inclusion threshold ------
+       0.01   15.2  30.2      0.013   14.9  30.2    1.1  1  XP_011404590.1  PREDICTED: luc7-like protein 3 [Amphimedon qu
+      0.032   13.6   0.1      0.032   13.6   0.1    1.5  2  XP_019849527.1  PREDICTED: presenilin-1-like isoform X1 [Amph
+       0.05   12.9   6.7      0.064   12.6   6.7    1.2  1  XP_011406875.2  PREDICTED: probable serine/threonine-protein 
+       0.22   10.8  13.0        1.8    7.8  14.4    1.6  2  XP_019858926.1  PREDICTED: uncharacterized protein LOC1095871
+        0.3   10.4  18.0       0.38   10.0  18.0    1.0  1  XP_003383773.1  PREDICTED: dr1-associated corepressor-like [A
+       0.49    9.6  10.7       0.66    9.2  10.7    1.2  1  XP_019850920.1  PREDICTED: uncharacterized protein LOC1053124
+        1.1    8.5  24.8        1.8    7.8  24.8    1.3  1  XP_019859065.1  PREDICTED: heat shock 70 kDa protein 12A-like
+        1.8    7.7  11.2        2.2    7.5  11.2    1.1  1  XP_019855318.1  PREDICTED: probable serine/threonine-protein 
+        4.1    6.6  16.8          5    6.3  16.8    1.1  1  XP_019857944.1  PREDICTED: probable serine/threonine-protein 
+        4.3    6.5  29.0        4.8    6.4  29.0    1.0  1  XP_019855251.1  PREDICTED: ADP-ribosylation factor-like prote
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_003389508.1  PREDICTED: target of rapamycin complex 2 subunit MAPKAP1-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   39.3   1.8   3.5e-13   5.2e-10       1      71 [.       1      67 [.       1      91 [. 0.70
+   2 !  215.5   4.8   1.7e-66   2.4e-63     168     663 ..      45     479 ..      37     487 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 39.3 bits;  conditional E-value: 3.5e-13
+  PTHR13335.orig.30.pir  1 MafldnedillahlRtsyltsdddgmcerilndddvdlekihsapyppvsssssesll..srpksastpgdsg 71
+                           Ma  d++  llah+R+s++tsdd+gmce i++++dv+ e +   +y++      +sl+  +r k+a  + +++
+         XP_003389508.1  1 MAAFDDKKMLLAHIRHSFVTSDDTGMCELIMIKEDVEQEIENDHSYQK------KSLRmqQRYKQAEKRSTNN 67
+                           9*********************************98777777555554......4444423222222222222 PP
+
+  == domain 2  score: 215.5 bits;  conditional E-value: 1.7e-66
+  PTHR13335.orig.30.pir 168 rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkldseq................lsaeesdslfekks 239
+                            ++q+++ ++q+++++  k+++  +a                                                 +++++  +++ekk+
+         XP_003389508.1  45 SYQKKSLRMQQRYKQAEKRSTNNMA--------------------------------AsydiqasptlsrrpplKNTSDMFQIMEKKK 100
+                            3566666666665555555444444................................0112222222222333389999999999999 PP
+
+  PTHR13335.orig.30.pir 240 kssstktqkskkpssa.a.....kqsi.......sslssaLekkpsqlnnpfneyakfdgkgvgttaslkidiylplssepdkllplt 314
+                            +s +++ q +  p +  +     +q+i       s l + L ++++++ npf  y+kf+g++ g  +s k  ++l + ++  +l+p++
+         XP_003389508.1 101 ASRVRTVQWEITPLELvDrslfaPQPIrphptgpSPLKQLLAEQDKKKSNPFYKYSKFNGENHGPASSNKFLMFLSMAKD--PLYPVE 186
+                            77777776666666665588888788899999**999999**********************9999999***********..****** PP
+
+  PTHR13335.orig.30.pir 315 vvvkasatVqevIGlaLwqyteegrepklpdnkvnaycLrivEdDGevddDFPpLDrnepiskfgfselaLveatdsegktnndlqtp 402
+                            v v  +at+q+++G + w+y+eegr+p       ++y  +i++dDGe+d+D+P L    +iskfgf  l +ve+++ +  +       
+         XP_003389508.1 187 VTVLHTATIQDLVGVTFWKYYEEGRKPFYLKG-IESYAVMIADDDGEIDTDLPELQGDDYISKFGFKYLGIVERSNPDDVK------- 266
+                            ************************99965554.67*******************************************999....... PP
+
+  PTHR13335.orig.30.pir 403 lpreqkkrleeakrsagsaneagsslstesskeslfvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkkyrllkvsep 490
+                                                      +++ +++ + vkv+  + g+s    t+   + dv ++++l  + +kr+l+   y+l+k ++p
+         XP_003389508.1 267 --------------------------IEDVPAKYKIVKVYYENGGFS----TIAISEDDVEMSEILARVIRKRRLQIHGYELEKKDSP 324
+                            ..........................222388999************....************************************* PP
+
+  PTHR13335.orig.30.pir 491 nvivdldrtvesldgleflllrknssradgvlekteskssssanatissksaaedsqiqiatvqddlsssayksfkVsrkhkmrfktd 578
+                            +   +l ++++s+++l+f l+r  ++   ++++     ss              +++ + ++v  ++ s+ y sf V++ h+mr  t+
+         XP_003389508.1 325 GEFINLRSSLSSQGTLDFMLVRNTRQG--HTPS-----SS-------------VEDDVDSPDVGTEVTSHLYTSFSVTMLHRMRSNTR 392
+                            ******************999887753..3333.....11.............567777789************************** PP
+
+  PTHR13335.orig.30.pir 579 relgId..gdyieimPvenqkaatkfwekqKtisihisqvvackl..ssknpanFkivvrr.endeKrydfeavsaaeaaeIvskinn 661
+                            ++lgId   +++ei P e+ k++    +  K+ +++i+ ++ +++   ++  a F+iv  + e   K  dfea    + ++Iv+k++ 
+         XP_003389508.1 393 VQLGIDpqRERVEIQPIESLKGF--LAKPLKPMKYDINEISSVDIleEKPPNAVFRIVRLTkEGSVKNIDFEA-PHNITKKIVAKLKL 477
+                            ******7789*************..57888***************999999999***76557***********.99***********9 PP
+
+  PTHR13335.orig.30.pir 662 il 663
+                            i+
+         XP_003389508.1 478 II 479
+                            98 PP
+
+>> XP_019850178.1  PREDICTED: dnaJ homolog subfamily C member 16-like isoform X2 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.3  11.9   4.9e-08   7.2e-05      39     220 ..     395     650 ..     305     674 .] 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 22.3 bits;  conditional E-value: 4.9e-08
+  PTHR13335.orig.30.pir  39 ekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatg........................................ 86 
+                            +++ s++++ +sss ++sl     ++ ++g+s+  + + + e + + +                                        
+         XP_019850178.1 395 NRQTSLSNK-FSSSVESSL-----KKCNNGYSSRTILVLHREKADKAHyklfhnycgednkeleeilslgdrtlnklmvldpvedesi 476
+                            444444444.333333333.....3455667777777776664444448888888888888888888888888899999999999999 PP
+
+  PTHR13335.orig.30.pir  87 ....................................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsr 138
+                                                                ++++ ++++ ++ q++ +q+ + s +s+++++++++++++  +++ ++++ +
+         XP_019850178.1 477 tfwsqlidalprvwektmaifllpfplfilscylyyFNDTRPQGGNQQLQQNYGQRTQESHHSQQQRDQQQRDEQQGDEQQGDQQQGD 564
+                            9999999999999999999999999999999999995556666666666666666666666666666666666666555566666666 PP
+
+  PTHR13335.orig.30.pir 139 rrrantavkleklrke...rrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrq..... 217
+                            +++ +++++ e++r+e    ++++++ ++  +   + +++++q+  ++  ++++ + + +  + + + + d   ++      +     
+         XP_019850178.1 565 QQQRDQQQRDEQQRDEqqgDQQQGGQLQKVGQlE-RHQIEGGQQEGNQFPEQSKEKKQEEILAQDDDDNDD-GKKP------Kgndke 644
+                            6666777777777777333222344444444444.777777777744433333333333333333333333.1111......122112 PP
+
+  PTHR13335.orig.30.pir 218 ...snk 220
+                               ++k
+         XP_019850178.1 645 ltnEKK 650
+                            222222 PP
+
+>> XP_019850919.1  PREDICTED: uncharacterized protein LOC109581322 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.2   1.3   2.1e-07   0.00031      53     162 ..     344     445 ..     185     501 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 20.2 bits;  conditional E-value: 2.1e-07
+  PTHR13335.orig.30.pir  53 ssesllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrr 140
+                              +++    ++ s++g++ s +  ++ +  ++ +      + + + +q+re+++e+  + +e +++++++ q+ +i+++++++++r+r
+         XP_019850919.1 344 RRRPF---EQEISQKGERDSTIEERHQQEIQQLH-----LQMEERDQQAREREREMERQLQEMERELQQKIQELCIQNDDMERQFRER 423
+                            22333...34566666666666555555333333.....3445556778888888888999999************************ PP
+
+  PTHR13335.orig.30.pir 141 rantavkleklrkerrsksasi 162
+                             ++ +++l++ ++e + k ++ 
+         XP_019850919.1 424 EQQLQQQLKQSQQELEEKDRQL 445
+                            **********999966444333 PP
+
+>> XP_011407924.1  PREDICTED: inner centromere protein-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.0  16.2   9.9e-07    0.0015      92     191 ..     106     200 ..      65     499 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 18.0 bits;  conditional E-value: 9.9e-07
+  PTHR13335.orig.30.pir  92 rrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseerdqsscksiqwk 179
+                             +++  +++r ++++e+q  e++++ ++e e+q+ + ++++++e  +++r  ++ +++++r+++++k ++++ +++   +++ +++ +
+         XP_011407924.1 106 EEQEREQQEREQQEREQQEREQQEREQQEREQQEREQQEREQQEREQQER-EQQEQEQQEREQQEKKKEEHNCLKK---KKSINKSKN 189
+                            22222333333333333334455555555555555555555555555555.3333333333334444444444433...223333333 PP
+
+  PTHR13335.orig.30.pir 180 tessvkedsvqr 191
+                            ++s+  + +++ 
+         XP_011407924.1 190 PASKKGN-FPKK 200
+                            2222222.2222 PP
+
+>> XP_019861926.1  PREDICTED: mediator of RNA polymerase II transcription subunit 15-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.0   9.5     1e-06    0.0015      96     169 ..      98     194 ..      24     295 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 18.0 bits;  conditional E-value: 1e-06
+  PTHR13335.orig.30.pir  96 psldqrretqgekqssesesspsyeeelqs.vdissssldegsrrrra.ntavkleklrkerrsksasiassee.r............ 168
+                             + +q+re+++++q++ ++++++ e+++q+ ++ +++++++++r+r +  ++++++++r++ + + +++++++  r            
+         XP_019861926.1  98 EQEQQEREQREQEQQEREQQEREREQREQErEQREREQWEREQREREQrEQEQREQEQREREQREREQREREQReRereqqeqeqpvf 185
+                            2222222222222222222222222222220222234444444444442222222222222221111111111111222233344444 PP
+
+  PTHR13335.orig.30.pir 169 ........d 169
+                                    +
+         XP_019861926.1 186 mnqptntgA 194
+                            444333330 PP
+
+>> XP_003385321.1  PREDICTED: dnaJ homolog subfamily C member 16-like isoform X1 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.0  25.5     2e-06     0.003      71     218 ..     530     673 ..     383     698 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 17.0 bits;  conditional E-value: 2e-06
+  PTHR13335.orig.30.pir  71 gsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke...r 155
+                            g +++ s+         +++ ++++ + +q +e+qg++q+ +++++++++  +q+ d ++ ++++g++++r +++++ e++r+e    
+         XP_003385321.1 530 GQRTQESHH-------SQQQRDQQQRDEQQGDEQQGDQQQGDQQQRDQQQRDEQQGDEQQGDQQQGDQQQR-DQQQRDEQQRDEqqgD 609
+                            112222211.......2334444444444555555555555555555555555555555444444444444.4444444444442221 PP
+
+  PTHR13335.orig.30.pir 156 rsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrq........s 218
+                            ++++++ ++  +   + +++++q+  ++  ++++ + + +  + + + + d   ++      +        +
+         XP_003385321.1 610 QQQGGQLQKVGQlE-RHQIEGGQQEGNQFPEQSKEKKQEEILAQDDDDNDD-GKKP------KgndkeltnE 673
+                            22234444444433.666777777633333333333322222222222222.1111......1221122221 PP
+
+>> XP_011404590.1  PREDICTED: luc7-like protein 3 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.9  30.2   8.6e-06     0.013      59     278 ..      95     421 ..      18     424 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 14.9 bits;  conditional E-value: 8.6e-06
+  PTHR13335.orig.30.pir  59 srpksastpgdsgsedsgssneaetatg............................................................ 86 
+                            ++  + +++g +  ++s ++n      +                                                            
+         XP_011404590.1  95 RDLDKRVQRGKERLQRSEDANTN-A--Fdkkdsmlyseklktlgekiaelieeseelgaqgnveeaqqliskveelekekereraqlm 179
+                            44444555555555554444432.2..1224567777777777777777777777777777777777777778888888888888888 PP
+
+  PTHR13335.orig.30.pir  87 ....................................................gdtkarrkkpsldqrretqgekqssesesspsyeee 122
+                                                                                g  ++r++ + ++ +re+q+ k+++e+e ++++e  
+         XP_011404590.1 180 swslipstvagfevdpgnfhekneicdvcgcfliigdsqaridahlmgkqhmGYARIRNTLSEMKVEREKQNKKRMEEQEARREKERD 267
+                            8888888888888888888888888888888888888888888888888888888889999999999999999999999999999999 PP
+
+  PTHR13335.orig.30.pir 123 lqsvdissssldegsrrrrantavkleklrke.rrsksasiassee.rdqsscksiqwktessvkedsvqras.sesslsserssdss 207
+                            +  +d+ +ss+ + +r rr +++  +++ r++ rrs s+s+++ +  r  s++++ + +     ++++++  + ++ s s+er    s
+         XP_011404590.1 268 HSREDSRRSSQSDRYRGRRNSYQSWQNRSRDRrRRSRSRSHERKRRsR--SRSRDRRRR-----NRSRSRDRKnRSRSRSQERRNR-S 347
+                            999999999999999999998888888888886666666665554433..333333333.....3333333330334444444444.4 PP
+
+  PTHR13335.orig.30.pir 208 ssssapsr.rq.snkldseqlsaeesdslfe.kkskssstktqkskkpssaa..kqsisslssaLekkpsqlnnpf 278
+                             s+s++++ ++ s   + e ++ + s+s    ++s+s s++++k ++++s++  k+s s + ++Le+++ +  n++
+         XP_011404590.1 348 HSRSRSRDrKKrSRSRSHERKNRSRSRSRDRkRRSRSRSRDRKKRNRSRSHErkKRSRSRSKERLEENSDS--NHV 421
+                            44444444333544444444444444444330444455555555555555544667778889999999863..554 PP
+
+>> XP_019849527.1  PREDICTED: presenilin-1-like isoform X1 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.5   1.4       3.1   4.6e+03      96     132 ..      22      58 ..       3      65 .. 0.43
+   2 ?   13.6   0.1   2.2e-05     0.032      40     120 ..     297     404 ..     238     418 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: -3.5 bits;  conditional E-value: 3.1
+  PTHR13335.orig.30.pir  96 psldqrretqgekqssesesspsyeeelqsvdissss 132
+                            +++d+  e+q+e++   s + ++++ee+++++ ++++
+         XP_019849527.1  22 SDNDEGMEEQEEDGITVSPPLQGTREEEEETEQKDDE 58 
+                            2222333333333333333333333333333333322 PP
+
+  == domain 2  score: 13.6 bits;  conditional E-value: 2.2e-05
+  PTHR13335.orig.30.pir  40 kihsapyppvsssssesll...srpksastpgdsgsedsgssneaetatg........................gdtkarrkkpsldq 100
+                            ++++  ++ ++s    +l    +rp++++ ++ +++++sgss++     +                         ++ +r+  + + +
+         XP_019849527.1 297 RNETIFPSLIYSTTMVWLVgmaDRPTNKKKDKKNTDDTSGSSDGSHEEEEeeegggeregrrdnddgdddtdgiEMRSIRAAADTNRE 384
+                            5555556666666666666777899999999999999999977732222244445555555555555555544433333333333333 PP
+
+  PTHR13335.orig.30.pir 101 rretqgekqssesesspsye 120
+                            rr++++++q++e+e++ + +
+         XP_019849527.1 385 RRRERQQQQQQEEEEEEEEQ 404
+                            33333222222222222222 PP
+
+>> XP_011406875.2  PREDICTED: probable serine/threonine-protein kinase drkD [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.6   6.7   4.4e-05     0.064      53     156 ..     218     322 ..      77     384 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 12.6 bits;  conditional E-value: 4.4e-05
+  PTHR13335.orig.30.pir  53 ssesll.srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyee.elqsvdissssldegsr 138
+                            +++ ++ ++ ++ +++ ++  +++    e++ +++ ++ + r ++ +  + + q + q  e++++++ ++ +++++d+  ++l+e++ 
+         XP_011406875.2 218 QERERElQEERREKEQVRNRLQQQLQGREQQLQQVQQQGQERERQAREREENLQWQLQEREQQFQREVQQgGEREQDLR-RQLQESQE 304
+                            2222334444444444444444444444444444444455555555555444455555555554444333134444444.55555555 PP
+
+  PTHR13335.orig.30.pir 139 rrrantavkleklrkerr 156
+                            r+r  +++ +e+ r+e++
+         XP_011406875.2 305 RERGLEQQLRERDRQEKE 322
+                            555555555555555543 PP
+
+>> XP_019858926.1  PREDICTED: uncharacterized protein LOC109587128 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.8  14.4    0.0012       1.8      50     182 ..      15     329 ..       3     357 .. 0.80
+   2 ?   -1.7   0.0       0.9   1.3e+03      22      48 ..     402     494 ..     375     573 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 7.8 bits;  conditional E-value: 0.0012
+  PTHR13335.orig.30.pir  50 sssssesll..srpksastpgdsgsedsgssneaetatg................................................. 86 
+                            +++s+++    srp+s+s+ +++ s d  ss+ ae+ ++                                                 
+         XP_019858926.1  15 NEASEIYTIftSRPTSGSSEQSDDSNDIMSSKLAEMRQEqkklnqiitdlrakvsdndlhiaklvkerqetvpkigvqeesllpsetv 102
+                            455555555788888888888877777777777777766889********************************************** PP
+
+  PTHR13335.orig.30.pir  87 ........................................................................................ 86 
+                                                                                                                    
+         XP_019858926.1 103 eaavvalvggqfvfpkntvlvsavyavsvsksllkplrleiehcidlkgqqgltrflkfaiapvstpslpyqfsiveggefssnsgyg 190
+                            **************************************************************************************** PP
+
+  PTHR13335.orig.30.pir  87 ..............................................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdi 128
+                                                                           ++++ +++++++q+ ++ +++q++++++++++  + q+++ 
+         XP_019858926.1 191 siertkfclvcivglimvtigggptggggagqqqqqlvqhqvaggqDHQQQAAGGQDQQQQLAGGQDQQQAAGGQDQQQAAGGQDQQQ 278
+                            *************************999999999999999999988777888888888888888888888888888888888887777 PP
+
+  PTHR13335.orig.30.pir 129 ssssldegsrrrrantavkleklrkerrsksasiasseerdqsscksiqwktes 182
+                            +    +++++    ++++++++  + +++++a+ +     +q  +k +q+ +e+
+         XP_019858926.1 279 QAAGGQDQQQAAGGQDQLQQAAGGQDQQQQAAGGQDQ---QQQVLKVKQLLPEE 329
+                            7777777777777777777777777766333322211...23344444444222 PP
+
+  == domain 2  score: -1.7 bits;  conditional E-value: 0.9
+  PTHR13335.orig.30.pir  22 dddgmcerilndd..................................................................dvdlekihs 43 
+                             ddg+ e i+nd+                                                                  ++ + +  +
+         XP_019858926.1 402 SDDGYIELIFNDPqkkqftdgwtvmphfmpcrlnrfdikcfgeanyplppsclisvyassgavptlhysvpldgvadpkTLFITRALK 489
+                            3889999999998888888888888888888888887777777777777777777777766666666666666555555222222222 PP
+
+  PTHR13335.orig.30.pir  44 apypp 48 
+                            + +p+
+         XP_019858926.1 490 TTPPS 494
+                            22222 PP
+
+>> XP_003383773.1  PREDICTED: dr1-associated corepressor-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.0  18.0   0.00026      0.38     153     287 ..     104     238 ..      77     245 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 10.0 bits;  conditional E-value: 0.00026
+  PTHR13335.orig.30.pir 153 ke..rrsksasiasseer...dqsscksiqwktes..svkedsvqrassesslsserssdssssssapsrrqsnkldseqlsaeesds 233
+                            k+  +r+          +   +++s+ + ++k +   + +e++   +++e+++++e  sd+ss +sa s+  + ++++ + +++++  
+         XP_003383773.1 104 KRgrKRK----------NsasKAPSGSGSSSKKKLkkKAEEPEEEDEDKEQESEQEDESDTSSPASAQSS--NSTNKKPSVDPSPLAI 179
+                            2221111..........12222333333333333300334444444555555666666665555555555..3444444499999998 PP
+
+  PTHR13335.orig.30.pir 234 lfekkskssstktqkskkpssaa......kqsisslssaLekkpsqlnnpfneya.kfdgk 287
+                            l ++ s++ s++  ++ ++s ++      + ++s+l+++L++k   +  p+ +ya ++ ++
+         XP_003383773.1 180 LHKRLSANVSSSSPSPPSSSAPPpplsttQSPLSALAAKLNSKA--TPSPLLAYAsSLPSA 238
+                            88888877777775444444443554443344477766666665..789998888555554 PP
+
+>> XP_019850920.1  PREDICTED: uncharacterized protein LOC105312418 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.2  10.7   0.00045      0.66      71     166 ..     366     471 ..     264     528 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 9.2 bits;  conditional E-value: 0.00045
+  PTHR13335.orig.30.pir  71 gsedsgssneaetatg...........gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavk 147
+                              e++  + ++e  ++             +k +++++ ++ r ++++e+  +e++ + +++e++ + ++++++ +++ ++r+ + +++
+         XP_019850920.1 366 QQEIQQLHFQMEERDQqarereremerQLQKRDQQYQEMKRRLQREKERELQEVQREFQKREGQFQRELQERKRQFQENERQLQGELQ 453
+                            333333322222222244444444444999************************************************9999888888 PP
+
+  PTHR13335.orig.30.pir 148 leklrkerrsksasiasse 166
+                            + ++r++ + ++++i+s +
+         XP_019850920.1 454 QFQERER-QFQGEDISSGN 471
+                            8777777.33445554433 PP
+
+>> XP_019859065.1  PREDICTED: heat shock 70 kDa protein 12A-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.8  24.8    0.0012       1.8      54     177 ..      62     192 ..      43     246 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 7.8 bits;  conditional E-value: 0.0012
+  PTHR13335.orig.30.pir  54 sesll..srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrr 139
+                            ++ +l  ++  ++ +++d+++e++ ++++ + + + + + ++k +++d+++++ +e++++++++++++++++q++d  ++++++  ++
+         XP_019859065.1  62 PNAILivKDQGKGQENQDKYKEQDQDKEQDQDKGQEQEQDKGKDQDKDKEQDKDQEQDQDKGQEQDQDKGQEQDQDKGQEQDQDKGQE 149
+                            3444457788888899999999988855533333333333333444455555555555555555555555555555553333333333 PP
+
+  PTHR13335.orig.30.pir 140 rrantavkleklrkerrsksasiasseer..............dqsscksiq 177
+                            +  +++ +++++++ r +++++      +              +  +c+ i 
+         XP_019859065.1 150 QD-QDKGQEQEEEQDRGKEQDK------DqdkdqvcqkptkeeQ--QCTVIG 192
+                            32.3444444444443322221......1122334445556442..333333 PP
+
+>> XP_019855318.1  PREDICTED: probable serine/threonine-protein kinase drkD [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.5  11.2    0.0015       2.2      90     156 ..      10      80 ..       6     148 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 7.5 bits;  conditional E-value: 0.0015
+  PTHR13335.orig.30.pir  90 karrkkpsldqrretqgekqssesesspsyeeelqsvd..issssldegsrrrrantavkleklrke..rr 156
+                            +arr +++l+ + ++ +++ + ++e+ ++++++lq+ +  i+++  +e+  +++ ++a+++e+  ++  r+
+         XP_019855318.1  10 QARRAQQQLQRQLQEAQQREQIFQEQLREQDQQLQERErqIQEDMEIEQNLQQQLQQAQERERGLEQqlRE 80 
+                            45566666666666666666666666666666666555005555555555555545555555444444422 PP
+
+>> XP_019857944.1  PREDICTED: probable serine/threonine-protein kinase drkD, partial [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.3  16.8    0.0034         5      89     161 ..       9      80 ..       2     151 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 6.3 bits;  conditional E-value: 0.0034
+  PTHR13335.orig.30.pir  89 tkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksas 161
+                            ++ ++ +++ +++ ++ +e+ ++++++ ++++++lq +  + ++ ++g++r+ ++ +++l++ +++ r + ++
+         XP_019857944.1   9 QQLQQAQQQGQEKEREAREQEQNFQQQLQESQQQLQREVQQGEEREQGFQRQLQQAQQQLQESQERER-GLEQ 80 
+                            44556666666666666677788888888888888888888888999998888888888888887733.2222 PP
+
+>> XP_019855251.1  PREDICTED: ADP-ribosylation factor-like protein 6-interacting protein 4 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.4  29.0    0.0032       4.8     136     261 ..       5     122 ..       2     168 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 6.4 bits;  conditional E-value: 0.0032
+  PTHR13335.orig.30.pir 136 gsrrrrantavkleklrke.rrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkl 221
+                            +sr++ a+++ ++ek+r+  r  + +++ + +    +s++k  + + ++s++ +s+ +ass ss++ser+s+s+ s+           
+         XP_019855251.1   5 QSRDKMADYKKEREKEREGyRDRSRSPHKKHSAtEPSSKGKKSRRRSNRSSSPPSPESASSYSSSESERDSSSEESKTH--------- 83 
+                            4555555666666666666633333344333333367888888888999999999999999999999988874433333......... PP
+
+  PTHR13335.orig.30.pir 222 dseqlsaeesdslfekkskssstktqkskkpssaakqsi...s 261
+                               +++  +s+s  +kk+k +s+k+ k++k+++  k s     
+         XP_019855251.1  84 ---SKQSRHSSSSDHKKEKGKSKKKAKKEKKKKR-KHSEkgpV 122
+                            ...3667777777788888888888777777776.33333332 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      23542  (11521146 residues searched)
+Passed MSV filter:                      4193  (0.178107); expected 470.8 (0.02)
+Passed bias filter:                      830  (0.0352561); expected 470.8 (0.02)
+Passed Vit filter:                       212  (0.00900518); expected 23.5 (0.001)
+Passed Fwd filter:                        54  (0.00229377); expected 0.2 (1e-05)
+Initial search space (Z):              23542  [actual number of targets]
+Domain search space  (domZ):              16  [number of targets reported over threshold]
+# CPU time: 0.70u 0.18s 00:00:00.87 Elapsed: 00:00:00.45
+# Mc/sec: 17202.90
+//
+[ok]

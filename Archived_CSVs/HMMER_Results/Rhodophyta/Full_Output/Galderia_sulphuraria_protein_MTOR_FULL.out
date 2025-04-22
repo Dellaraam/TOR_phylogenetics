@@ -1,0 +1,317 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Rhodophyta/Proteins/Galderia_sulphuraria_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    8.6e-27   92.8   1.5    1.9e-10   39.6   0.0    6.9  8  XP_005708869.1  serine/threonine-protein kinase ATR [Galdieri
+    8.4e-21   73.3   3.4    2.6e-12   45.7   0.0    5.3  6  XP_005705168.1  serine/threonine-protein kinase ATR [Galdieri
+    7.3e-06   24.7   4.4        2.7    6.6   0.0    6.9  8  XP_005705287.1  hypothetical protein Gasu_38160 [Galdieria su
+     0.0038   15.9   5.3       0.36    9.5   0.0    5.2  5  XP_005707742.1  exportin 1 (Xpo1) [Galdieria sulphuraria]
+     0.0073   15.0   1.2        2.7    6.7   0.1    4.1  4  XP_005706920.1  hypothetical protein Gasu_23070 [Galdieria su
+  ------ inclusion threshold ------
+        2.2    6.9   8.0        1.6    7.4   0.1    3.4  4  XP_005704026.1  AP-3 complex subunit delta-1 [Galdieria sulph
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_005708869.1  serine/threonine-protein kinase ATR [Galdieria sulphuraria]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.2   0.0      0.22   2.7e+02      21      50 ..     366     395 ..     360     534 .. 0.75
+   2 ?    0.2   0.0      0.21   2.5e+02       5      41 ..     698     733 ..     695     741 .. 0.85
+   3 ?   -2.3   0.0       1.2   1.5e+03       8      36 ..     845     874 ..     843     876 .. 0.80
+   4 !   39.6   0.0   1.6e-13   1.9e-10       1      49 [.     883     931 ..     883     975 .. 0.90
+   5 !   39.5   0.0   1.8e-13   2.2e-10      71     138 ..    1027    1096 ..     993    1111 .. 0.83
+   6 ?   -0.2   0.0      0.29   3.5e+02     126     158 ..    1158    1192 ..    1148    1194 .. 0.72
+   7 ?   -4.2   0.0       4.9   5.9e+03     121     150 ..    1238    1267 ..    1216    1275 .. 0.70
+   8 ?    2.1   0.2     0.057        68      85     152 ..    1325    1388 ..    1279    1390 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 0.2 bits;  conditional E-value: 0.22
+        mTOR_dom  21 teqsqsiRrevikvlGilGALDPykhkeve 50 
+                     ++q+  iR ev+ +l +l  LDP+++ + +
+  XP_005708869.1 366 STQDIFIRTEVVICLPLLASLDPTTFCHST 395
+                     556777999999999999999999884443 PP
+
+  == domain 2  score: 0.2 bits;  conditional E-value: 0.21
+        mTOR_dom   5 yldypeLLeiLlnilkteqsqsiRrevikvlGilGAL 41 
+                     yl  p+LL+ Ll +l  e s s++r +i + G l  L
+  XP_005708869.1 698 YLAQPHLLNKLLVCLYDE-SLSVKRVAISLCGNLSFL 733
+                     8999***********977.999999999999877555 PP
+
+  == domain 3  score: -2.3 bits;  conditional E-value: 1.2
+        mTOR_dom   8 ypeLLeiLlnilkteq.sqsiRrevikvlG 36 
+                      peLL++L+ +++ ++ +++++  +++ ++
+  XP_005708869.1 845 LPELLNLLVGAVQDQTsEPKTKTAALNAFT 874
+                     59***********99648888888877665 PP
+
+  == domain 4  score: 39.6 bits;  conditional E-value: 1.6e-13
+        mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkev 49 
+                     V++Py ++p+LL  Ll +++te+++++R+ v ++lG+lGA+DP ++k  
+  XP_005708869.1 883 VISPYNNFPSLLPSLLHAIRTETDSQVRQGVEQLLGTLGAIDPKEYKYG 931
+                     9********************************************9965 PP
+
+  == domain 5  score: 39.5 bits;  conditional E-value: 1.8e-13
+        mTOR_dom   71 l..lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir 138 
+                      +  l++  +++eey+p+ ++ aL+++++d++ls+hh ++v+ai+ i+++lg kc ++lp  +++ll ++r
+  XP_005708869.1 1027 VsrLNHPYTANEEYFPSAALDALHRVISDSKLSHHHREAVNAITCIVQSLGPKCNEILPFTLSKLLWTLR 1096
+                      24457778999************************************************99999987776 PP
+
+  == domain 6  score: -0.2 bits;  conditional E-value: 0.29
+        mTOR_dom  126 lpqiipallsvirtces..slrefllqqLatLvsi 158 
+                      lp +  + l+ ++t+++  +lre++++ La+ v +
+  XP_005708869.1 1158 LPYVTTSTLTSTNTASNdpNLREYVFKALAEVVHV 1192
+                      5666666666666554336***********99976 PP
+
+  == domain 7  score: -4.2 bits;  conditional E-value: 4.9
+        mTOR_dom  121 kcvpflpqiipallsvirtcesslrefllq 150 
+                      +    lp i+p +++++ t +s  re  l 
+  XP_005708869.1 1238 EFAVHLPTILPCIVATLYTDTSANRENALP 1267
+                      456689999999999998877766666665 PP
+
+  == domain 8  score: 2.1 bits;  conditional E-value: 0.057
+        mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152 
+                      + vi++Ll+ l++p  +    +v   i++if  +  + + + + ++ ++++v+ +++s +   llq+L
+  XP_005708869.1 1325 SQVIHSLLNALEQPDAK----DVSLLITKIFGLIAERNTHVFSLFLDTIVHVLYSLSSPIDALLLQHL 1388
+                      44999******999987....56667777777777778888888888888888888888888888877 PP
+
+>> XP_005705168.1  serine/threonine-protein kinase ATR [Galdieria sulphuraria]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.7   0.0       3.4     4e+03     117     139 ..     826     848 ..     795     866 .. 0.64
+   2 !   45.7   0.0   2.1e-15   2.6e-12       1      69 [.     873     938 ..     873     983 .. 0.74
+   3 !   21.6   0.0   5.7e-08   6.9e-05      75     139 ..    1030    1094 ..    1004    1104 .. 0.87
+   4 ?   -1.7   0.0      0.82   9.8e+02     138     159 ..    1167    1188 ..    1163    1189 .. 0.84
+   5 ?   -0.9   0.1      0.46   5.5e+02      66     127 ..    1259    1322 ..    1239    1351 .. 0.68
+   6 ?    0.9   0.1      0.13   1.5e+02     102     149 ..    1332    1379 ..    1315    1384 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -3.7 bits;  conditional E-value: 3.4
+        mTOR_dom 117 tlglkcvpflpqiipallsvirt 139
+                      ++   +++lp +i++l+ ++++
+  XP_005705168.1 826 GQSFSLMKLLPDVISTLIMTVED 848
+                     35556678888888888777664 PP
+
+  == domain 2  score: 45.7 bits;  conditional E-value: 2.1e-15
+        mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvs 69 
+                     V +Py+ +peLL+ L++i++ +++ ++R+ v ++lG++GA+DP ++  ++ + +e   eee++++ ++ 
+  XP_005705168.1 873 VLTPYSSHPELLSKLMRIIQMDTNAEVRQAVERLLGTIGAIDPKEVEYTSLNETE---EEETVSTLESL 938
+                     789****************************************999555433322...33333222222 PP
+
+  == domain 3  score: 21.6 bits;  conditional E-value: 5.7e-08
+        mTOR_dom   75 lspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139 
+                        + s++y+ + ++  L++i+ dp+ +++h ++++a+ si+k+ +  c+ ++p  +++ll ++r 
+  XP_005705168.1 1030 PYSKSDDYFYAAALDCLHRIVLDPKSAQYHREALHAMASIVKSFHSTCMWLVPVTLSKLLWLLRP 1094
+                      456679*********************************************99999999887775 PP
+
+  == domain 4  score: -1.7 bits;  conditional E-value: 0.82
+        mTOR_dom  138 rtcesslrefllqqLatLvsiv 159 
+                      ++++++lref+l+ L++L+++ 
+  XP_005705168.1 1167 THLDPHLREFVLRLLCSLIEFA 1188
+                      567889************9875 PP
+
+  == domain 5  score: -0.9 bits;  conditional E-value: 0.46
+        mTOR_dom   66 tdvsel.lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflp 127 
+                      +++ +l + +    + + yp++  + L ++l+ +   + ++++++ i+ i+ ++++    +fl 
+  XP_005705168.1 1259 ITIHMLaMLEFFGPHLDDYPSILREILKTLLEVNLNVNTRKKILDFIVAIIPHIQVTEiGSFLM 1322
+                      4444444555566667778887666666666666666999999999999988877665455555 PP
+
+  == domain 6  score: 0.9 bits;  conditional E-value: 0.13
+        mTOR_dom  102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149 
+                      s  ++ v+ i++if  +g+ + ++l+ ++  +ls++  +e +l   +l
+  XP_005705168.1 1332 SDAKEFVSIITHIFYLVGVASPMLLSLFVDDILSILCRIEGTLDSQFL 1379
+                      567799***************************999887776666555 PP
+
+>> XP_005705287.1  hypothetical protein Gasu_38160 [Galdieria sulphuraria]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.2   0.0       0.3   3.6e+02      79     159 ..      80     161 ..      24     162 .. 0.78
+   2 ?   -2.2   0.1       1.1   1.4e+03     104     156 ..     189     242 ..     175     245 .. 0.70
+   3 !    6.6   0.0    0.0023       2.7      86     150 ..     361     425 ..     356     432 .. 0.86
+   4 ?    2.0   0.0     0.062        74      83     150 ..     442     510 ..     425     519 .. 0.79
+   5 ?   -1.4   0.0      0.68   8.2e+02       8      39 ..     527     562 ..     521     565 .. 0.70
+   6 !    5.7   0.0    0.0045       5.4     106     138 ..     598     630 ..     576     641 .. 0.86
+   7 ?   -0.5   0.0      0.37   4.4e+02      87     147 ..     879     939 ..     855     950 .. 0.78
+   8 ?    2.6   0.0     0.041        49      87     131 ..     962    1013 ..     934    1030 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: -0.2 bits;  conditional E-value: 0.3
+        mTOR_dom  79 seeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                     s+e   +++ +++ ++l+ +  + s +++  +++++   + g+   +  p+++p l++++++ +   +   l+ L+++v++v
+  XP_005705287.1  80 SDEASRKMAKENIFNVLRLELNNkSLRKKLCDTLTFLSCNCGTVDDQPWPELLPFLFQLMQSNNVGEKVCGLELLCQMVEYV 161
+                     5677777777777788876655557778888888888888888888888999999999999888788888888888888877 PP
+
+  == domain 2  score: -2.2 bits;  conditional E-value: 1.1
+        mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156
+                     ++ +++a  s++ t++ k  +  + + p +l++++++ s  l e   + L++Lv
+  XP_005705287.1 189 QSVALRATCSVLTTVESKLCAHFQDLAPLMLQTLNNLISqGLFEETESCLESLV 242
+                     455667778888888888888888888888888887655466666555555555 PP
+
+  == domain 3  score: 6.6 bits;  conditional E-value: 0.0023
+        mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150
+                     ++++ L + l  ++   h++a++ ai +i +  + ++v+ l+ ++  +l+ +++ ++++r   ++
+  XP_005705287.1 361 IAFQVLPHFLASQQSWVHRHAAILAISQIGEGCRDQMVEQLEAVVDMVLQRLQDPHPRVRWAAIN 425
+                     57777888888888889************************************999988766655 PP
+
+  == domain 4  score: 2.0 bits;  conditional E-value: 0.062
+        mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllq 150
+                      ++ +i  L+++++d +    ++ +  ai++ +++ +     p+l+ ++++ll+++ +  + ++e  ++
+  XP_005705287.1 442 LHQKIIPGLISLMNDTANPRVQAHAAAAIINFCEDASPDIiSPYLDGLLQKLLELLASNRRIVQEQAVS 510
+                     556677889999999999999999999999999999999978899999999999998876666666655 PP
+
+  == domain 5  score: -1.4 bits;  conditional E-value: 0.68
+        mTOR_dom   8 ypeLLeiLlnilkteq.sqsiRr...evikvlGilG 39 
+                     y + + +L nil +++ ++++Rr   +vi +++++G
+  XP_005705287.1 527 YDSFMPLLKNILYSTEgHKPLRRlrgKVIECISLIG 562
+                     677888888998777558777773336777777776 PP
+
+  == domain 6  score: 5.7 bits;  conditional E-value: 0.0045
+        mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvir 138
+                       +qa   i++ l+   vp+lp ++pall +++
+  XP_005705287.1 598 YLMQAYARICRCLREAFVPYLPYVMPALLIAAK 630
+                     5689999********************997665 PP
+
+  == domain 7  score: -0.5 bits;  conditional E-value: 0.37
+        mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+                      +++  ++l+++     ++a++ +   i++  g +   +++q++pal + +++ ++++r+ 
+  XP_005705287.1 879 LVAKFAEMLSNQVEPVERKAAICVFDDIIEWGGEEGRRYIRQVLPALDAFVTDKDANVRQS 939
+                     55666677777777777888888888888888888899*********99999988887765 PP
+
+  == domain 8  score: 2.6 bits;  conditional E-value: 0.041
+        mTOR_dom   87 vinaLlkil.....kdpslsshhtavvqaimsifktlglkc..vpflpqiip 131 
+                      v ++Ll+ l       +   s  ++v++a+m+++++++  c   +f++ i++
+  XP_005705287.1  962 VGQKLLSYLswqgaYTSENVSSTENVISALMKMVEYQRSLCdvSNFIDPILN 1013
+                      5555555555555444445577899*********999999984458887776 PP
+
+>> XP_005707742.1  exportin 1 (Xpo1) [Galdieria sulphuraria]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.2   0.0       2.5     3e+03     123     153 ..      15      45 ..      11      46 .. 0.85
+   2 !    9.5   0.0    0.0003      0.36      75     156 ..     505     589 ..     475     593 .. 0.85
+   3 ?    1.9   0.1     0.066        79     118     157 ..     600     639 ..     586     641 .. 0.77
+   4 ?    1.0   0.1      0.12   1.5e+02      87     133 ..     681     729 ..     653     779 .. 0.57
+   5 ?    0.9   0.0      0.13   1.6e+02     104     157 ..     877     908 ..     853     933 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: -3.2 bits;  conditional E-value: 2.5
+        mTOR_dom 123 vpflpqiipallsvirtcesslrefllqqLa 153
+                     +p+l+q ++ l+s + +++++  +  l qL+
+  XP_005707742.1  15 LPLLEQTVSLLYSSVDSSQRNAAQSTLTQLK 45 
+                     6889999999999999999999999999985 PP
+
+  == domain 2  score: 9.5 bits;  conditional E-value: 0.0003
+        mTOR_dom  75 lspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqqLatLv 156
+                     ls+ +e  +  +vi+ Ll++ + +  ++ ++ v + im+++ +    l+   +fl+ ++++l++ ++++++ ++++  + + ++v
+  XP_005707742.1 505 LSEQEERKFLVTVIKDLLHLCEMKRGKDNKAVVASNIMYVVGQypRFLQAhWKFLKTVVNKLFEFMHETHPGVQDMACDTFRKIV 589
+                     466667888999*****************************984423444589********************999988888877 PP
+
+  == domain 3  score: 1.9 bits;  conditional E-value: 0.066
+        mTOR_dom 118 lglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                     +  +  pf+ +ii +l+ +i+++e++  + l+  L+ +v+
+  XP_005707742.1 600 QYGETKPFIMEIIENLQDIISDLEPHQVQALYPALSRIVA 639
+                     4445589******************988888889988875 PP
+
+  == domain 4  score: 1.0 bits;  conditional E-value: 0.12
+        mTOR_dom  87 vinaLlkilkdpslsshhtavvqai..msifktlglkcvpflpqiipal 133
+                     v++ L++il+ +s +  h   +  i    if++l      + + ii+a+
+  XP_005707742.1 681 VMKRLVSILRTNSGAATHLGSLYMIqlRRIFSELMSCYSVYSEMIIQAI 729
+                     5666666666666665554444333225566554333344444444443 PP
+
+  == domain 5  score: 0.9 bits;  conditional E-value: 0.13
+        mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                                              +i+a+l +++++e+++ e+ lq L +L +
+  XP_005707742.1 877 FRL----------------------VINAILWAVKHTERNIAETGLQTLLELLK 908
+                     444......................55555555555555555555555555543 PP
+
+>> XP_005706920.1  hypothetical protein Gasu_23070 [Galdieria sulphuraria]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.0       0.3   3.6e+02      97     154 ..     267     327 ..     246     332 .. 0.74
+   2 ?   -0.9   0.0      0.48   5.7e+02      68     112 ..     396     441 ..     369     463 .. 0.64
+   3 !    6.7   0.1    0.0022       2.7      80     142 ..     556     615 ..     533     637 .. 0.73
+   4 ?    2.7   0.1     0.037        44      72     134 ..     743     784 ..     715     806 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.3
+        mTOR_dom  97 dpsls.shhtavvqaimsifktlglkcvpflpqiipalls.virtces.slrefllqqLat 154
+                     d+sl  + ++++++ ++   ++ + +  p+l+q+++a  s +ir+ +s +  +++   ++ 
+  XP_005706920.1 267 DNSLFdQVQAETLDNVTLCAEKYEEEFRPYLSQFVSATWSlLIRHGNStKYDQVVTAGMGL 327
+                     6666658888999999999999999999*****9999888346666665555555555555 PP
+
+  == domain 2  score: -0.9 bits;  conditional E-value: 0.48
+        mTOR_dom  68 vsellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaim 112
+                     v+ l ++++++ +e ++++v + L +  kdp+ + + + a++  ++
+  XP_005706920.1 396 VKGLCTHYENAITEIFSNYVYSMLQEFAKDPTNKwKGKDAAIYLVT 441
+                     3333445555668888888888888888999887555555655555 PP
+
+  == domain 3  score: 6.7 bits;  conditional E-value: 0.0022
+        mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                      e+ ++ v + Ll+++   ++ss+ + +v+ +m ++   g+ + pfl+ +++ ++++++ +++
+  XP_005706920.1 556 AEFVSALV-HRLLSLM--MNVSSQNEYTVKCLMRVIIFFGTDMAPFLETLLNGIVKTLEMISQ 615
+                     44444443.4444444..3667899999**************************999987664 PP
+
+  == domain 4  score: 2.7 bits;  conditional E-value: 0.037
+        mTOR_dom  72 lvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipall 134
+                      ++l  s+  +yy +  i+++++  + ++l+    ++vq                       +l
+  XP_005706920.1 743 FQNLVASKvHDYYGMSLIESIVETCDMSQLEPFLPEIVQ----------------------IML 784
+                     455555555555555555555555555555555555444......................444 PP
+
+>> XP_005704026.1  AP-3 complex subunit delta-1 [Galdieria sulphuraria]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.4   0.1    0.0013       1.6      97     157 ..     188     249 ..     142     250 .. 0.85
+   2 ?    3.1   0.0     0.028        33       9      46 ..     256     292 ..     253     331 .. 0.82
+   3 ?   -3.2   0.0       2.4   2.9e+03      80     106 ..     419     445 ..     406     458 .. 0.70
+   4 ?   -4.3   1.7       5.1   6.1e+03      48      78 ..     835     858 ..     823     865 .. 0.37
+
+  Alignments for each domain:
+  == domain 1  score: 7.4 bits;  conditional E-value: 0.0013
+        mTOR_dom  97 dpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157
+                     ++ l++  t+v+ a +++f +l  +  +++   ip l+++++++++  ++  +l+ L+ L +
+  XP_005704026.1 188 KERLEDSDTSVLCAAVTVFAELASRNPKLVVPYIPRLYHILQHSSNnWMSIKILKTLTALCQ 249
+                     56788999**********************************99997889999999999976 PP
+
+  == domain 2  score: 3.1 bits;  conditional E-value: 0.028
+        mTOR_dom   9 peLLeiLlnilkteqsqsiRrevikvlGilGALDPykh 46 
+                     ++LL ++ n+lk+++++s+  e  +++  +G LD  ++
+  XP_005704026.1 256 KKLLPLIQNMLKNTKAKSLLYECCRTVA-IGMLDQKEV 292
+                     58************************96.688888766 PP
+
+  == domain 3  score: -3.2 bits;  conditional E-value: 2.4
+        mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhta 106
+                        y   +++ L+ki  d+  s  h +
+  XP_005704026.1 419 FHWYLYSILHGLVKIYTDERFSIAHMM 445
+                     556777788889999999998865554 PP
+
+  == domain 4  score: -4.3 bits;  conditional E-value: 5.1
+        mTOR_dom  48 eveekseeeekeeenaeetdvsellvglsps 78 
+                     ++++     +k+++++++ d +    +++p+
+  XP_005704026.1 835 QTKK-----KKNKSRSKSKDAA--EHNIQPT 858
+                     1111.....1112222222222..2333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       7174  (3008406 residues searched)
+Passed MSV filter:                       416  (0.0579872); expected 143.5 (0.02)
+Passed bias filter:                      304  (0.0423752); expected 143.5 (0.02)
+Passed Vit filter:                        15  (0.00209088); expected 7.2 (0.001)
+Passed Fwd filter:                         6  (0.000836353); expected 0.1 (1e-05)
+Initial search space (Z):               7174  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.04u 0.04s 00:00:00.08 Elapsed: 00:00:00.06
+# Mc/sec: 7837.33
+//
+[ok]

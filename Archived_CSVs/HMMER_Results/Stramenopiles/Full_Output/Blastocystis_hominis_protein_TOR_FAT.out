@@ -1,0 +1,118 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Blastocystis_hominis_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    7.1e-43  145.6   1.1    7.1e-43  145.6   1.1    2.1  2  CBK24359.2  unnamed protein product [Blastocystis hominis]
+     0.0059   14.3   0.1     0.0076   14.0   0.1    1.1  1  CBK21648.2  unnamed protein product [Blastocystis hominis]
+     0.0071   14.0   3.6     0.0084   13.8   3.6    1.1  1  CBK24902.2  unnamed protein product [Blastocystis hominis]
+  ------ inclusion threshold ------
+      0.011   13.4   3.6      0.015   13.0   3.6    1.2  1  CBK23224.2  unnamed protein product [Blastocystis hominis]
+
+
+Domain annotation for each sequence (and alignments):
+>> CBK24359.2  unnamed protein product [Blastocystis hominis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.3   0.0      0.43   6.4e+02     231     259 ..    1147    1175 ..    1102    1184 .. 0.60
+   2 !  145.6   1.1   4.7e-46   7.1e-43       4     343 .]    1228    1601 ..    1225    1601 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: -2.3 bits;  conditional E-value: 0.43
+                  .........HHHHCCCTCCCCCCCCCCCT CS
+         FAT  231 ptnleeftkllarcylkkGewlaalqkln 259 
+                  +++  e  +++ + y k+G w +al+  +
+  CBK24359.2 1147 SQKYYEDITVMDELYEKLGRWEEALEAYE 1175
+                  34444444566899999999999999854 PP
+
+  == domain 2  score: 145.6 bits;  conditional E-value: 4.7e-46
+                  TTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.. CS
+         FAT    4 aaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls.. 98  
+                   a+aa  lg+W++++ ++  ++ +s + + +++ l +h +++++ae+li+++r+ + + l+ +++e y r y+ + +l  l Eleei+++ ++ +  
+  CBK24359.2 1228 GAKAAFDLGDWELLRMFITNASAHSTEISYYQVALYIHDREYEKAEKLISETRNAISRILAPIISEGYDRIYSHVTQLEELKELEEICSLRKNYApe 1324
+                  6889999*************************************************************************************99999 PP
+
+                  ...---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC....................HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCC CS
+         FAT   99 ...sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied....................lllkgakaemwlkfanlaRksgrlslAekaLk 172 
+                          ++l+   +kRl gvq+dv+vw+ +ls+R+l+++ ++                     +    ++ ++wlkf++laRks+r+ lA ++L 
+  CBK24359.2 1325 spdYFPAARHLVTIFNKRLDGVQRDVSVWHGLLSLRKLFVEQKNPrspepkrsyeleplneddrsSYDALCSYHHWLKFISLARKSNRPALALRTLE 1421
+                  88877788888999**************************9998899*****************87778899************************* PP
+
+                  CCCHCTT...................TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCC CS
+         FAT  173 klleedk.........eewlp.....pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaal 255 
+                  +l    k         +   +      ev yay k+l+++g  kea+ +Lr+ v + +    + s+   +q+ ++ e+ t ++ r+ l++++w    
+  CBK24359.2 1422 SLGIDIKscprlganpN---DendayAEVRYAYHKFLYDQGLTKEAIRRLRKLVDEDSP---KGSKL-LYQSVDQEEQMTVRV-RMRLRLAQWILDE 1510
+                  **666667777775432...2445778****************************4444...44444.445555556666665.999********** PP
+
+                  CCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS....STTTCHHHHHC CS
+         FAT  256 qklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse....kslqdllRlLt 343 
+                  ++ n s+e  ++i     +  ++++   ka+h+ a ++    +++ + + ee  +++ +++  a+  f+ ++sls+      +lqd+lRl+t
+  CBK24359.2 1511 NHRNLSHEVVSDIATIIDECSQFNQ-DHKAYHEIAMLHMTCAEYYNRLNTEEAHNEVTDHLKGAIGSFFDAISLSKDknssLVLQDILRLIT 1601
+                  ***********************99.589****************99999999**********************997544469******97 PP
+
+>> CBK21648.2  unnamed protein product [Blastocystis hominis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.0   0.1     5e-06    0.0076     267     343 .]      30      98 ..       8      98 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 14.0 bits;  conditional E-value: 5e-06
+                 SCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT 267 eilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343
+                  i+  y++  ++ +++ + +++wa++++ +++ +  k    e+ dl     +av+++  +l+ s+   + ++ Rl t
+  CBK21648.2  30 SIMDEYKKLLRVTDDQSEVHYHWARLHDSMVTSQMAK----ESFDL----QEAVRHYCLCLQTSDRFLYHSIIRLTT 98 
+                 68999****************************9333....34455....5***********************986 PP
+
+>> CBK24902.2  unnamed protein product [Blastocystis hominis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.8   3.6   5.6e-06    0.0084     203     251 ..      17      72 ..       5      95 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 13.8 bits;  conditional E-value: 5.6e-06
+                 HHSSCCHHHHCCTSSCCCSS-SS---..................HHHHCCCTCCCC CS
+         FAT 203 ealqkLrefvscllekkeelssglevq.......eptnleeftkllarcylkkGew 251
+                 e++ +++e ++++ ek eels++le +       ++++le++++l a+c l+k++ 
+  CBK24902.2  17 EQIASMQETTQQMEEKIEELSTELEKEkaerkeeSKQHLEKIKDLTAKCKLLKAKN 72 
+                 7888889999999888888888888888888888*******************993 PP
+
+>> CBK23224.2  unnamed protein product [Blastocystis hominis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.0   3.6     1e-05     0.015     203     251 ..      17      72 ..       5      94 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 13.0 bits;  conditional E-value: 1e-05
+                 HHSSCCHHHHCCTSSCCCSS-SS---..................HHHHCCCTCCCC CS
+         FAT 203 ealqkLrefvscllekkeelssglevq.......eptnleeftkllarcylkkGew 251
+                 e++ +++e ++++ ek eels++le +       ++++le++++l a+c l+k++ 
+  CBK23224.2  17 EQIASMQETTQQMEEKIEELSTELEKEkaerkeeSKQHLEKIKDLTAKCKLLKAKN 72 
+                 7888889999999888888888888888888888*******************993 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       6020  (2156219 residues searched)
+Passed MSV filter:                       409  (0.0679402); expected 120.4 (0.02)
+Passed bias filter:                      151  (0.0250831); expected 120.4 (0.02)
+Passed Vit filter:                        18  (0.00299003); expected 6.0 (0.001)
+Passed Fwd filter:                         4  (0.000664452); expected 0.1 (1e-05)
+Initial search space (Z):               6020  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.04u 0.00s 00:00:00.04 Elapsed: 00:00:00.02
+# Mc/sec: 29846.54
+//
+[ok]

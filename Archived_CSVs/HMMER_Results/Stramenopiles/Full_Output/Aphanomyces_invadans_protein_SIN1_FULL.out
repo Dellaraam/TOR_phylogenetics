@@ -1,0 +1,103 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Aphanomyces_invadans_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    3.8e-49  168.5   0.2    4.5e-49  168.2   0.2    1.1  1  ETV95354.1  hypothetical protein H310_11243 [Aphanomyces inva
+  ------ inclusion threshold ------
+      0.011   14.9   0.0      0.017   14.3   0.0    1.2  1  ETV95603.1  hypothetical protein H310_11035 [Aphanomyces inva
+       0.03   13.5   7.4      0.034   13.3   7.4    1.1  1  ETW02440.1  hypothetical protein H310_05953 [Aphanomyces inva
+
+
+Domain annotation for each sequence (and alignments):
+>> ETV95354.1  hypothetical protein H310_11243 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  168.2   0.2   6.4e-53   4.5e-49     195     666 ..      76     561 ..       2     564 .] 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 168.2 bits;  conditional E-value: 6.4e-53
+  PTHR13335.orig.30.pir 195 esslsserssdssssssapsr.rq.....snkldseqlsaeesdslfekkskssstkt.qkskkpssaa...............kqsi 260
+                            +   + + s d   ++s++s+  +     +  ++++++++  + +  + k+k+ +++  + s++  + a               +   
+             ETV95354.1  76 QLPNDDVVSCD--DDASVSSFkAKppaiqE-NKQTRNDTKDALAAAPNGKPKVVVFDAkKASSSNAD-AgagepptfvferedvP--S 157
+                            11122222222..22233333222344422.222222222222222222232333222022222222.14465555555444441..0 PP
+
+  PTHR13335.orig.30.pir 261 .......sslssaLekkpsqlnnpfneyakfdgkg..vgttaslkidiylplssepdkllpltvvvkasatVqevIGlaLwqyteegr 339
+                                   s l +aL  +    nn  n  +   ++     + + + ++iylp+  e      ++v++ + +tV+e+I  +L  + +eg+
+             ETV95354.1 158 fiqsvqtSLLDAALRGAMM-INNNGNGPSTMHKTHhaMVDAPMIPLQIYLPNRAE------MQVELYEISTVEEAIQTILMTHLQEGK 238
+                            4443344555556666655.44444555533333335449999************......*************************** PP
+
+  PTHR13335.orig.30.pir 340 epklpdnkvnaycLrivEdDGevddDFPpLDrnepiskf...gfselaLveatdsegktnndlqtplpreqkkrleeakrsagsanea 424
+                             p+l   ++++y Lr+ E +G  d+DFP+LDr+++i++f   g +e++L+e+++++           ++ ++++ +            
+             ETV95354.1 239 RPQLYYGHPECYDLRLHEANGYPDEDFPALDRSRKIKNFgdnGNHEFCLCERSEACPPP-------DGSPPSSADP------------ 307
+                            ******9999*****************************777789***********754.......2222222222............ PP
+
+  PTHR13335.orig.30.pir 425 gsslstes.....................skeslfvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkkyrllkvsepn 491
+                                   s                     s+++  +k+ +++++        i +   +t +d+l ++ kk++l + ++++lkvse +
+             ETV95354.1 308 -------SiihrggpqhsippgdsrriatSGDKNILKIIMPNENH-----SVIPIKDGTTGKDLLPMLKKKHRLPMLDEYILKVSEAD 383
+                            .......12222222222444555555669**********66555.....589999***********************999999976 PP
+
+  PTHR13335.orig.30.pir 492 vivdldrtve......sldgleflllrknssradgvlekteskssssanatissksaa...edsqiqiatvqddlsssayksfkVsrk 570
+                              + ld + e      +l+ l   ++   +++ ++++ +  +++s+ +  t   +  a   +  ++   ++++d+ +++yk+++V++ 
+             ETV95354.1 384 K-LRLDLPSEiidletNLKPLGLQEVTLARKVYADAPAPA-PPQSNVFGETAVESAEAinkNVRPPPSTFMYNDVKAAMYKEWTVIKT 469
+                            3.44444444447777444444444444444445555533.455666777766665557999************************** PP
+
+  PTHR13335.orig.30.pir 571 hkmrfktdrelgIdgdyieimPvenqkaatkfwekqKtisihisqvvacklssknpanFkivvrrendeKrydfeavsaaeaaeIvsk 658
+                            +k++ +++r lg d  ++++ +v ++ +   + ++ K+++++is++ + +   + p  F+i +  + de   d+ a sa e+aeIv+k
+             ETV95354.1 470 NKFGKRQHRMLGVDSHKVYNSKVGERAMI--SRTNIKVAERPISSITWLR-FLPGPCDFQIQYS-QPDEETIDYSAASAYECAEIVAK 553
+                            ****************************9..9*****************9.9*********444.667778888899*********** PP
+
+  PTHR13335.orig.30.pir 659 innileay 666
+                            i++i e+ 
+             ETV95354.1 554 IKYIQEMH 561
+                            ****9885 PP
+
+>> ETV95603.1  hypothetical protein H310_11035 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.3   0.0   2.4e-06     0.017     609     667 ..     218     273 ..     208     315 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 14.3 bits;  conditional E-value: 2.4e-06
+  PTHR13335.orig.30.pir 609 isihisqvvacklssknpanFkivvrrendeKrydfeavsaaeaaeIvskinnileaya 667
+                            +sih++++ ++++  + p ++++     +d++ y + a++ +++aeI +k++  +++ +
+             ETV95603.1 218 SSIHMTDILHIDVDEHYPRILTL---VRSDGRIYRLRAKDNETCAEISKKLQEAMQMFQ 273
+                            8************9999999999...79**************************99977 PP
+
+>> ETW02440.1  hypothetical protein H310_05953 [Aphanomyces invadans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.3   7.4   4.9e-06     0.034      64     148 ..     199     271 ..     102     290 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 13.3 bits;  conditional E-value: 4.9e-06
+  PTHR13335.orig.30.pir  64 astpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkl 148
+                            a+ p  +++  ++  +          +++ + ++++ + ++q+++ ++++++ +++ +++q+ ++++++ + +++r + +++  +
+             ETW02440.1 199 APVPPPTYPAAPTNPS----------QQSVQIQQQQAQLQQQQQQLNQQQQQMQQQAIQQQQAELQKQQAELQQQRAQLAQQ--Q 271
+                            3333333333333322..........22222222222222233332333444455555666666665554444444442222..1 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      20816  (10284592 residues searched)
+Passed MSV filter:                      2156  (0.103574); expected 416.3 (0.02)
+Passed bias filter:                      604  (0.0290161); expected 416.3 (0.02)
+Passed Vit filter:                        56  (0.00269024); expected 20.8 (0.001)
+Passed Fwd filter:                        10  (0.0004804); expected 0.2 (1e-05)
+Initial search space (Z):              20816  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.32u 0.02s 00:00:00.34 Elapsed: 00:00:00.15
+# Mc/sec: 43974.49
+//
+[ok]

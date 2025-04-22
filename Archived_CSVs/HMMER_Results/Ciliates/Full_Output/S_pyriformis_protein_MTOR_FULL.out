@@ -1,0 +1,331 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/S_pyriformis_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.8e-06   26.1   4.2      0.003   15.7   0.6    2.7  2  StePyr_10708  
+    9.6e-06   23.8   2.0      0.027   12.6   0.1    4.8  4  StePyr_13385  
+    0.00028   19.0   2.0       0.58    8.2   0.0    3.7  3  StePyr_11851  
+     0.0039   15.3   0.4      0.012   13.7   0.2    2.0  2  StePyr_10271  
+     0.0088   14.1   0.0       0.14   10.2   0.0    2.4  2  StePyr_41     
+  ------ inclusion threshold ------
+      0.011   13.9  16.4      0.051   11.7   0.0    6.8  7  StePyr_13785  
+      0.016   13.3   2.2       0.43    8.7   0.2    3.1  2  StePyr_10334  
+       0.25    9.4  10.4        3.8    5.6   0.0    5.2  5  StePyr_1339   
+       0.45    8.6  16.2        0.2    9.8   0.7    5.1  6  StePyr_11658  
+
+
+Domain annotation for each sequence (and alignments):
+>> StePyr_10708  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.9   0.2   0.00016     0.087      67     115 ..     175     227 ..     142     239 .. 0.79
+   2 !   15.7   0.6   5.6e-06     0.003      84     159 ..     603     684 ..     567     685 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 10.9 bits;  conditional E-value: 0.00016
+      mTOR_dom  67 dvsel....lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsif 115
+                   ++++l    l+++   +++ y + v++++++i++d +++++ +++++ +++ f
+  StePyr_10708 175 KLKDLcikiLKTMPVHNKDTYLQSVVAQMIQIISDYAYDEYVQKIIEQVLNYF 227
+                   44444444345555555********************************9877 PP
+
+  == domain 2  score: 15.7 bits;  conditional E-value: 5.6e-06
+      mTOR_dom  84 ptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce......sslrefllqqLatLvsiv 159
+                       ++ L+++++d s +   + +v +i +i+k+++  + ++lp ii+  + vi+ ++      ++++e   + L  L +iv
+  StePyr_10708 603 LDKNMKFLMRVVRDYSDTMIVNGAVVVISQIIKKIKFGSYSYLPDIISFSVCVIKASNsslvcgARISESTASALLLLYKIV 684
+                   4456789***********************************************9766222221455566666666666665 PP
+
+>> StePyr_13385  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.9   0.0     0.012       6.4      94     148 ..     172     227 ..     161     238 .. 0.81
+   2 !   12.6   0.1   5.1e-05     0.027      78     156 ..     457     537 ..     434     539 .. 0.85
+   3 ?   -3.8   0.0       5.4   2.9e+03     118     141 ..     582     605 ..     576     610 .. 0.76
+   4 ?    1.2   0.1      0.16        85      78     135 ..     699     759 ..     670     795 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 4.9 bits;  conditional E-value: 0.012
+      mTOR_dom  94 ilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefl 148
+                    l d s ++ ++++++a+ +   + + ++ v+++  +ip++++v+++c +sl e l
+  StePyr_13385 172 SLADGSSREIRKNALKALGNHAANSEEESsVNYILTLIPKIAEVLSECVDSLDEEL 227
+                   46788888899999999988887777776699**************9999998865 PP
+
+  == domain 2  score: 12.6 bits;  conditional E-value: 5.1e-05
+      mTOR_dom  78 ss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces..slrefllqqLatLv 156
+                    + e+y p+ v + +  i++d+  +  ++++++a++s +++ + k +++ + ii  l +++++ e+   l+   lq L+tL 
+  StePyr_13385 457 DDiEQYLPSLVSKLIALIIHDADNK-VKEMAISALTSAISSAEQKITSYFTPIIKILGEILQSPEKemGLKASALQCLGTLA 537
+                   4448999999999988999888855.99**********************************99987789999***999996 PP
+
+  == domain 3  score: -3.8 bits;  conditional E-value: 5.4
+      mTOR_dom 118 lglkcvpflpqiipallsvirtce 141
+                   l+ +  p+ +qi+ + l+ ++t e
+  StePyr_13385 582 LKENIAPYADQILEQALKSCETQE 605
+                   566778999999999999888765 PP
+
+  == domain 4  score: 1.2 bits;  conditional E-value: 0.16
+      mTOR_dom  78 ss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvp..flpqiipalls 135
+                   s+  ++  t vi+  ++ +++   ++    v++a  + +k++g+  +p  ++p +i ++l+
+  StePyr_13385 699 SNvHDFWYTKVIHRYIEYISEDESKEVVIRVLEAFEELVKKIGVSLIPdnVMPLLIDQVLQ 759
+                   4457777788888888888777767666666666666666666666544444444444444 PP
+
+>> StePyr_11851  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.2   0.0    0.0011      0.58      94     158 ..      83     148 ..      21     150 .. 0.78
+   2 ?    0.0   0.0      0.37     2e+02     112     155 ..     206     251 ..     199     278 .. 0.64
+   3 !    7.3   0.1    0.0021       1.1      57     117 ..     405     465 ..     382     485 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 8.2 bits;  conditional E-value: 0.0011
+      mTOR_dom  94 ilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                   +   +  +s+++a + a   i ++l+++   ++++ +i+ +ls +r+ +++++ + ++ L ++v++
+  StePyr_11851  83 VYLHSPEDSYRQAGLMAFSAISSSLNIRDdSEYMSDLINPVLSCCRDNNTKVKYYAVEALYNIVKV 148
+                   4444445689999999************9999***************999**********999987 PP
+
+  == domain 2  score: 0.0 bits;  conditional E-value: 0.37
+      mTOR_dom 112 msifktlglkc.vpflpqiipallsvirtces.slrefllqqLatL 155
+                   m  +k++ + + +p++++ + a l+v+ ++++ +l +f+ + L+ L
+  StePyr_11851 206 MDLIKEMATGSgIPYVQRMLVAWLTVLDSIPDfNLFNFIPNFLQGL 251
+                   5566666666666777777777777777666666666654444443 PP
+
+  == domain 3  score: 7.3 bits;  conditional E-value: 0.0021
+      mTOR_dom  57 ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt 117
+                   ++++ +a e+++++l+++ls+   +  + vv n+Ll + k ++++++  +v+++i++ f+t
+  StePyr_11851 405 QRKNPEALEPSMESLVNTLSSRLSDPEQVVVNNTLLILCKIAQYKQYFDKVISSILYEFST 465
+                   444445555666776666655559999999999999999*****************99987 PP
+
+>> StePyr_10271  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.3   0.0       1.9     1e+03     123     142 ..     102     121 ..      62     129 .. 0.69
+   2 !   13.7   0.2   2.3e-05     0.012      90     144 ..     221     274 ..     178     287 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: -2.3 bits;  conditional E-value: 1.9
+      mTOR_dom 123 vpflpqiipallsvirtces 142
+                   +++l+++++ +l ++ ++e+
+  StePyr_10271 102 LELLEEVLSDFLYTTAKLED 121
+                   44777777777777766655 PP
+
+  == domain 2  score: 13.7 bits;  conditional E-value: 2.3e-05
+      mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcessl 144
+                   +L++ lk++++s   ++ ++ i +++++l++k+v+ lp +i ++++v+  ++ ++
+  StePyr_10271 221 ELYSKLKKSNISIENNEKLKIIDQVCRDLSIKSVKELPDVIGKFQQVMVALP-NV 274
+                   6788899999**99*********************************98764.44 PP
+
+>> StePyr_41  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.2   0.0   0.00027      0.14     107     149 ..     100     142 ..      86     150 .. 0.86
+   2 ?    1.2   0.0      0.16        85      80     101 ..     221     242 ..     194     251 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 10.2 bits;  conditional E-value: 0.00027
+   mTOR_dom 107 vvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+                v+  + +i+++   + +p l++++p++++ i+t +++lr+  l
+  StePyr_41 100 VLVYLCKILQSSPSEITPHLDRVLPTIVNFIKTGSEDLRDHSL 142
+                6777899**************************9999988766 PP
+
+  == domain 2  score: 1.2 bits;  conditional E-value: 0.16
+   mTOR_dom  80 eeyyptvvinaLlkilkdpsls 101
+                +e   ++ ++ L+++l+d++ +
+  StePyr_41 221 NEEVLATLLEYLIELLQDENNT 242
+                4444444666666666665544 PP
+
+>> StePyr_13785  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.1      0.17        93     125     157 ..     125     157 ..     113     158 .. 0.85
+   2 ?    0.5   0.1      0.26   1.4e+02      87     119 ..     210     242 ..     176     274 .. 0.61
+   3 ?    1.4   0.0      0.14        74     106     158 ..     354     406 ..     344     407 .. 0.76
+   4 ?    1.3   0.1      0.15        80      93     155 ..     487     549 ..     483     554 .. 0.76
+   5 ?    0.9   0.2       0.2   1.1e+02      14     146 ..     523     662 ..     515     677 .. 0.57
+   6 ?   11.7   0.0   9.6e-05     0.051      93     158 ..     879     944 ..     867     945 .. 0.93
+   7 ?    1.0   0.8      0.18        96      87     152 ..     949    1013 ..     943    1018 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 0.17
+      mTOR_dom 125 flpqiipallsvirtcesslrefllqqLatLvs 157
+                   + + i+p ll+ i   ++++ e  l+ L++L++
+  StePyr_13785 125 VCDTIMPILLQCILRKNTNVAEEALEILTDLIK 157
+                   56789******9999999**********99985 PP
+
+  == domain 2  score: 0.5 bits;  conditional E-value: 0.26
+      mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlg 119
+                   v+n ++k+++ +  ++   + vq++  i +++g
+  StePyr_13785 210 VVNDIIKLISSRDSKKDIYSYVQSLSAISRNVG 242
+                   444444444444444445555555555555555 PP
+
+  == domain 3  score: 1.4 bits;  conditional E-value: 0.14
+      mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                   a+++++  ++k+      ++++ i+++l++ +++ e++++  +++ ++tL++ 
+  StePyr_13785 354 AALNTLEAVIKSRPEILSNYYTPIVNTLIQRFKEREENVKLDVFKTFSTLIKS 406
+                   55556666666655555789999999999999999999999999999999975 PP
+
+  == domain 4  score: 1.3 bits;  conditional E-value: 0.15
+      mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                   k l+d s s+ + + ++    i+++ +  +v+f   i++++++++r+   ++    l+ ++++
+  StePyr_13785 487 KNLEDVSNSQIRINSLNICRRIIRSNNNVSVSFFYAILSQIVRAVRDNYYKVTTEALKLIGNI 549
+                   557788888888888888889999999999999999999999999986656666666666555 PP
+
+  == domain 5  score: 0.9 bits;  conditional E-value: 0.2
+      mTOR_dom  14 iLlnilkte..qsqsiRrevikvlGilGALDPykhkeveeks.....eee..ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls 101
+                   iL++i++    +  ++  e++k++G +    P +++ v++       +    ++ ++++++ ++ ++++ +s ss    p  + +aL  i +  + +
+  StePyr_13785 523 ILSQIVRAVrdNYYKVTTEALKLIGNIAKAIPNEVRFVTSVFplvleK-LslTDIDQEVKQAAIYSTAAIISASSAHISPRDIAQALELITDRLKNE 618
+                   455555544213567777888888877766677776666444555431.133333444444444444555666667777777777766666666666 PP
+
+      mTOR_dom 102 shhtavvqaimsifktlglkc..vpflpqiipallsvirtcesslre 146
+                     + ++++a ++i ++ ++     ++l+ ++ +++++++++    r 
+  StePyr_13785 619 VTRGSCLKAWTKISQSPNVPTpdPELLKSLCEEFQNLLKKSL---RA 662
+                   777777777777777755544336677777777777777643...33 PP
+
+  == domain 6  score: 11.7 bits;  conditional E-value: 9.6e-05
+      mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                    i+++ s ++h+   +++i +++++ + ++ p++ qi+p l++  + +e+++r+ + + L++L+s+
+  StePyr_13785 879 VIFQEFSTETHRYLLLNSIEEVINYKSERMAPYIGQILPVLFENSERAEENVRNIVAECLGKLISV 944
+                   5788999999*****************************************************985 PP
+
+  == domain 7  score: 1.0 bits;  conditional E-value: 0.18
+      mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqL 152 
+                    +i+ +++ l++ s+   + ++v++i + ++t +++  +++++qi+p +l+ ++ ++ +l +  l  +
+  StePyr_13785  949 IISHIIRNLNQGSVF-CKITMVSSIKYAVNT-KIQLyTEYMEQILPIILECFNISDVNLVKACLISI 1013
+                    566666666666655.445567778787776.5555599***********99998888887776655 PP
+
+>> StePyr_10334  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.7   0.1     0.057        30      88     133 ..     532     577 ..     522     591 .. 0.86
+   2 ?    8.7   0.2   0.00081      0.43     104     153 ..     728     777 ..     700     781 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 2.7 bits;  conditional E-value: 0.057
+      mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipal 133
+                   i++Llki  +   +   +++++a+ +i+++ ++++vpf  +++++l
+  StePyr_10334 532 ISNLLKIYLNLINEIDSEEIIEALEHIVEHFSVEVVPFAVELVQQL 577
+                   678888887877888899********************99988876 PP
+
+  == domain 2  score: 8.7 bits;  conditional E-value: 0.00081
+      mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLa 153
+                   +  + ++ +s +++l+l   +++pq++p ++s +++++++l+   +q + 
+  StePyr_10334 728 QVFACKVFISLLEHLKLGLSSYIPQVLPLIYSKLTSSSDKLKTIAVQAIH 777
+                   344556779999*************************99***99999876 PP
+
+>> StePyr_1339  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.2      0.29   1.5e+02     106     154 ..     228     277 ..     150     299 .. 0.57
+   2 ?    5.6   0.0    0.0072       3.8      90     153 ..     355     417 ..     328     422 .. 0.76
+   3 ?    3.2   0.3     0.039        21      72     155 ..     420     510 ..     411     514 .. 0.71
+   4 ?    2.0   0.2     0.092        49      83     154 ..     520     596 ..     516     600 .. 0.61
+   5 ?   -0.1   0.0      0.39   2.1e+02      24      53 ..     755     782 ..     740     872 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 0.29
+     mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLat 154
+                  +v++++ + + + +   v  l++i++   ++i+++   +l+   ++ L+t
+  StePyr_1339 228 SVLTSVSELLDNNSRILVGSLEKIVNITSNIIKNTIFvQLQSGAIEILTT 277
+                  22333333333222222445555555555554443323333333333333 PP
+
+  == domain 2  score: 5.6 bits;  conditional E-value: 0.0072
+     mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLa 153
+                   + + lk p    h+++ + +i  + +  +  + p lpq++p+l +++ + +++++   l  La
+  StePyr_1339 355 MVEAHLKAPHWV-HQHTGIVSIGLVSEGCKASMAPCLPQLVPSLCNYAYSDNPRIKWAALTSLA 417
+                  345567777777.5555666899999999******************99988899888887776 PP
+
+  == domain 3  score: 3.2 bits;  conditional E-value: 0.039
+     mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vp....flpqiipallsvirtces..slrefllqqLatL 155
+                   +  sps +  y++v++   ++ +++p+l +  ++ ++++++ ++  + +  ++    + p +++++ls++++  +  ++++ ll+ L++L
+  StePyr_1339 420 CTYFSPSIQVSYHQVIMPCFMQSFSQPNLPKVTAQGLKSVINFCNGFENEEeLEvlklYSPSLMQSYLSIFTSQATspDVLKELLSSLSVL 510
+                  44558888999*****************************999987554443332223567777777777664332247777777777776 PP
+
+  == domain 4  score: 2.0 bits;  conditional E-value: 0.092
+     mTOR_dom  83 yptvvinaLlkilkdpsls..shhtavvqaimsifktlglkc.vpflpqi..ipallsvirtcesslrefllqqLat 154
+                  y+   +n L +il+++  s  + ++++++ i  i++  ++   +++l+ i  i   l+  + c +sl e+ ++ L++
+  StePyr_1339 520 YSDQFLNRLKSILSQNVCSndDLKNSAIKCIGCIVQATKTPDtINVLNLIlrIKDTLHENHLCYTSLMEVAIKSLCV 596
+                  55556677777777776664456677777777777777666656666666223445555556666666666666665 PP
+
+  == domain 5  score: -0.1 bits;  conditional E-value: 0.39
+     mTOR_dom  24 sqsiRrevikvlGilGALDPykhkeveeks 53 
+                  +  i+ ev+  +G+ GAL   +   ++e +
+  StePyr_1339 755 TIGIKSEVLTSIGLSGALKVSET--LSECI 782
+                  66789999999999999987766..22222 PP
+
+>> StePyr_11658  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.6   0.1       2.4   1.3e+03     105     145 ..      36      77 ..      13      89 .. 0.62
+   2 ?    9.8   0.7   0.00037       0.2      46     151 ..     181     283 ..     172     292 .. 0.76
+   3 ?   -1.2   0.0      0.91   4.8e+02      80     130 ..     333     380 ..     305     392 .. 0.64
+   4 ?   -2.1   0.0       1.6   8.6e+02      80     133 ..     599     655 ..     578     669 .. 0.63
+   5 ?   -0.7   0.1      0.62   3.3e+02      86     137 ..     685     738 ..     645     753 .. 0.73
+   6 ?    6.1   0.1    0.0049       2.6      87     149 ..     878     939 ..     834     950 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -2.6 bits;  conditional E-value: 2.4
+      mTOR_dom 105 tavvqaimsifktlglkc.vpflpqiipallsvirtcesslr 145
+                   +  ++ + +i  +l+    v+ +++i+  ++ +i+++++++ 
+  StePyr_11658  36 KVLLNIVPFINLDLSYTAnVQEMKRILERVIIMIKDTSAQVC 77 
+                   444555555555555555577777777777777777666554 PP
+
+  == domain 2  score: 9.8 bits;  conditional E-value: 0.00037
+      mTOR_dom  46 hkeveekseeeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                   ++++e    +e+ + + +++++++++++++++ s    y +v ++ L k+l+d++ +    ++++++ +i++ +g+   + ++qi+p  ++ + + +
+  StePyr_11658 181 MQQLED---QENWRYRVNAAQELENIVMNIENFSdVMPYIAVFVRFLNKLLEDSNFK-VSISAMNVVKEILNVQGVSHQANITQILPVCIQKLGDNK 273
+                   444442...22334455556778888888888884566999999*******999988.67788999************************9998876 PP
+
+      mTOR_dom 142 sslrefllqq 151
+                     +r+  ++ 
+  StePyr_11658 274 IAVRQSAFKV 283
+                   6888777765 PP
+
+  == domain 3  score: -1.2 bits;  conditional E-value: 0.91
+      mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqii 130
+                    ey++   + +L k+l+d++ +  +  + +a+    ++ + k +++l+ i+
+  StePyr_11658 333 YEYFSL--VPELAKLLDDQKTK-IRYVTTEALAILAQKDQAKLISILKPIV 380
+                   444444..45666666666544.4445556666666666666666666665 PP
+
+  == domain 4  score: -2.1 bits;  conditional E-value: 1.6
+      mTOR_dom  80 eeyyptvvinaLlkil...kdpslsshhtavvqaimsifktlglkcvpflpqiipal 133
+                   e ++++v+++++   l    d+  ss  ++++ +i +++++lg    + +++++  +
+  StePyr_11658 599 EVFISQVTLHNICLDLikwADSLRSSLSKNALIVIGEMCESLGRTLDNEVNELLKII 655
+                   555666666665422234356666788888888888888888776655444444444 PP
+
+  == domain 5  score: -0.7 bits;  conditional E-value: 0.62
+      mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkc..vpflpqiipallsvi 137
+                    +i+aLl+i + ++    +++v +   ++f+ l  ++  v  +++ii  l +++
+  StePyr_11658 685 KIIAALLAIAQTNKNPLARAKVANCFAKVFRRLMSNVskVRDIEKIILILSEYL 738
+                   467788888888877777888888888888876555444667777776666555 PP
+
+  == domain 6  score: 6.1 bits;  conditional E-value: 0.0049
+      mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+                   v+ +  k l+d++l+  h  +++a ++i+  lg    p l+ +i++ll  + +++ss+re   
+  StePyr_11658 878 VLDTFCKGLSDQNLK-VHIHTLNAFIKIIPVLGRSIEPHLSLVINSLLPGLGSANSSIREIAR 939
+                   6667777789***99.677899***************************99999999999765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       4783  (2027660 residues searched)
+Passed MSV filter:                       344  (0.0719214); expected 95.7 (0.02)
+Passed bias filter:                      186  (0.0388877); expected 95.7 (0.02)
+Passed Vit filter:                        17  (0.00355425); expected 4.8 (0.001)
+Passed Fwd filter:                         9  (0.00188166); expected 0.0 (1e-05)
+Initial search space (Z):               4783  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.04u 0.02s 00:00:00.06 Elapsed: 00:00:00.04
+# Mc/sec: 7881.45
+//
+[ok]

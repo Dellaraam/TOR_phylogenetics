@@ -1,0 +1,313 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Schistosoma_mansoni.Smansoni_v7.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    7.7e-72  242.1   0.1    4.7e-61  206.6   0.0    2.7  2  Smp_122910.4  pep scaffold:Smansoni_v7:SM_V7_2:23225943:23297
+    8.2e-72  242.0   0.1    4.9e-61  206.6   0.0    2.7  2  Smp_122910.3  pep scaffold:Smansoni_v7:SM_V7_2:23225943:23297
+    8.4e-72  242.0   0.1    4.8e-61  206.6   0.0    2.7  2  Smp_122910.1  pep scaffold:Smansoni_v7:SM_V7_2:23225943:23301
+    8.1e-27   94.0   2.6    1.4e-26   93.3   0.6    2.4  3  Smp_162340.1  pep scaffold:Smansoni_v7:SM_V7_ZW:64559474:6463
+    9.9e-15   54.3   1.4    9.9e-15   54.3   1.4    3.4  3  Smp_244380.1  pep scaffold:Smansoni_v7:SM_V7_ZW:57400306:5749
+    2.8e-08   33.1   0.2       0.19   10.6   0.0    5.8  4  Smp_046930.1  pep scaffold:Smansoni_v7:SM_V7_2:19714303:19718
+
+
+Domain annotation for each sequence (and alignments):
+>> Smp_122910.4  pep scaffold:Smansoni_v7:SM_V7_2:23225943:23297757:-1 gene:Smp_122910 transcript:Smp_122910.4 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  206.6   0.0     2e-64   4.7e-61       1     257 [.    2126    2412 ..    2126    2421 .. 0.88
+   2 !   32.5   0.0   1.7e-11   4.2e-08     262     342 ..    2528    2677 ..    2515    2678 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 206.6 bits;  conditional E-value: 2e-64
+                    CCCTTCCCCTSSSGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHH CS
+           FAT    1 aplaaeaaWrlgqWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqyk 94  
+                    apla  aaW l +Wd +e+y+++++ ++s+d+af++a+l++h +q+ +a ++i kar+ l+ +l+a++ esynray  lv  Q l+E ee+iqyk
+  Smp_122910.4 2126 APLACSAAWALNSWDRVERYTEALSaDNSFDGAFYRAVLNIHSEQYAKACDFIMKARDVLDSNLTAMAEESYNRAYADLVGTQLLSEAEEVIQYK 2220
+                    69***********************99******************************************************************** PP
+
+                    CSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.......... CS
+           FAT   95 qklssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk......eewl 183 
+                         +e+++ l++ W+ Rl+g+ + +e+w++i+++Rslvl+p ed        + wl+fa l+R+sgr+ l+ ++L +ll+ d+      +   
+  Smp_122910.4 2221 L---IPERRSILREAWQSRLLGCNSVIEDWSQIIQLRSLVLEPYED-------RRSWLRFAGLCRRSGRFILSRQVLENLLGLDPagippcD--- 2302
+                    *...8*****************************************.......********************************8875551... PP
+
+                    ......TSSCCCHHHHHHHCCHHHHHSSCC......................HHHHCCTSSCCC..............SS-SS---......... CS
+           FAT  184 p.....pevvyaylkylwakgeqkealqkL......................refvscllekke..............elssglevq.....ept 232 
+                    p     p +v+ y k+lwa g ++ea+++L                      +          +              e ++gl+++       +
+  Smp_122910.4 2303 PipssdPAIVFGYTKLLWAVGAHEEAVSRLcvlkthvlepllraetginsaqQ----------SsvfqllspnllnanETLDGLDSRqieiqIIN 2387
+                    2445689***********************99999999888877555554331..........12244433544555544444444367666999 PP
+
+                    .......HHHHCCCTCCCCCCCCCC CS
+           FAT  233 nleeftkllarcylkkGewlaalqk 257 
+                    + +e+++lla+c lk+G+w ++l+ 
+  Smp_122910.4 2388 ERKELRRLLAKCCLKLGSWYSELYT 2412
+                    ********************99986 PP
+
+  == domain 2  score: 32.5 bits;  conditional E-value: 1.7e-11
+                    ...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS................................................. CS
+           FAT  262 eekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee................................................ 308 
+                    ee++  + q+y++at ++p++ ++w +wa +n  v++++   k   e                                                
+  Smp_122910.4 2528 EESQAFVIQCYQTATLHAPDCRNTWQSWAMANYAVFNHLDTLKACLEraelelnkvggidnhslwtsrrnfssstgihgsgvnhmqssnlpvgni 2622
+                    45688899*******************************8886655578899******************************************* PP
+
+                    .....................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+           FAT  309 .....................pedlseyvvpavegflkslslssekslqdllRlL 342 
+                                         ++ ++ ++ p+v+gf +s+sls + +lqd lRl+
+  Smp_122910.4 2623 ssnfsplpppiaelvraktdlQRCMELHAAPSVKGFVNSISLSPTANLQDSLRLI 2677
+                    ********************9999999**************************97 PP
+
+>> Smp_122910.3  pep scaffold:Smansoni_v7:SM_V7_2:23225943:23297757:-1 gene:Smp_122910 transcript:Smp_122910.3 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  206.6   0.0     2e-64   4.9e-61       1     257 [.    2126    2412 ..    2126    2421 .. 0.88
+   2 !   32.5   0.0   1.8e-11   4.3e-08     262     342 ..    2528    2677 ..    2515    2678 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 206.6 bits;  conditional E-value: 2e-64
+                    CCCTTCCCCTSSSGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHH CS
+           FAT    1 aplaaeaaWrlgqWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqyk 94  
+                    apla  aaW l +Wd +e+y+++++ ++s+d+af++a+l++h +q+ +a ++i kar+ l+ +l+a++ esynray  lv  Q l+E ee+iqyk
+  Smp_122910.3 2126 APLACSAAWALNSWDRVERYTEALSaDNSFDGAFYRAVLNIHSEQYAKACDFIMKARDVLDSNLTAMAEESYNRAYADLVGTQLLSEAEEVIQYK 2220
+                    69***********************99******************************************************************** PP
+
+                    CSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.......... CS
+           FAT   95 qklssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk......eewl 183 
+                         +e+++ l++ W+ Rl+g+ + +e+w++i+++Rslvl+p ed        + wl+fa l+R+sgr+ l+ ++L +ll+ d+      +   
+  Smp_122910.3 2221 L---IPERRSILREAWQSRLLGCNSVIEDWSQIIQLRSLVLEPYED-------RRSWLRFAGLCRRSGRFILSRQVLENLLGLDPagippcD--- 2302
+                    *...8*****************************************.......********************************8875551... PP
+
+                    ......TSSCCCHHHHHHHCCHHHHHSSCC......................HHHHCCTSSCCC..............SS-SS---......... CS
+           FAT  184 p.....pevvyaylkylwakgeqkealqkL......................refvscllekke..............elssglevq.....ept 232 
+                    p     p +v+ y k+lwa g ++ea+++L                      +          +              e ++gl+++       +
+  Smp_122910.3 2303 PipssdPAIVFGYTKLLWAVGAHEEAVSRLcvlkthvlepllraetginsaqQ----------SsvfqllspnllnanETLDGLDSRqieiqIIN 2387
+                    2445689***********************99999999888877555554331..........12244433544555544444444367666999 PP
+
+                    .......HHHHCCCTCCCCCCCCCC CS
+           FAT  233 nleeftkllarcylkkGewlaalqk 257 
+                    + +e+++lla+c lk+G+w ++l+ 
+  Smp_122910.3 2388 ERKELRRLLAKCCLKLGSWYSELYT 2412
+                    ********************99986 PP
+
+  == domain 2  score: 32.5 bits;  conditional E-value: 1.8e-11
+                    ...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS................................................. CS
+           FAT  262 eekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee................................................ 308 
+                    ee++  + q+y++at ++p++ ++w +wa +n  v++++   k   e                                                
+  Smp_122910.3 2528 EESQAFVIQCYQTATLHAPDCRNTWQSWAMANYAVFNHLDTLKACLEraelelnkvggidnhslwtsrrnfssstgihgsgvnhmqssnlpvgni 2622
+                    45688899*******************************8886655578899******************************************* PP
+
+                    .....................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+           FAT  309 .....................pedlseyvvpavegflkslslssekslqdllRlL 342 
+                                         ++ ++ ++ p+v+gf +s+sls + +lqd lRl+
+  Smp_122910.3 2623 ssnfsplpppiaelvraktdlQRCMELHAAPSVKGFVNSISLSPTANLQDSLRLI 2677
+                    ********************9999999**************************97 PP
+
+>> Smp_122910.1  pep scaffold:Smansoni_v7:SM_V7_2:23225943:23301037:-1 gene:Smp_122910 transcript:Smp_122910.1 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  206.6   0.0     2e-64   4.8e-61       1     257 [.    2107    2393 ..    2107    2402 .. 0.88
+   2 !   32.5   0.0   1.8e-11   4.3e-08     262     342 ..    2509    2658 ..    2496    2659 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 206.6 bits;  conditional E-value: 2e-64
+                    CCCTTCCCCTSSSGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHH CS
+           FAT    1 aplaaeaaWrlgqWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqyk 94  
+                    apla  aaW l +Wd +e+y+++++ ++s+d+af++a+l++h +q+ +a ++i kar+ l+ +l+a++ esynray  lv  Q l+E ee+iqyk
+  Smp_122910.1 2107 APLACSAAWALNSWDRVERYTEALSaDNSFDGAFYRAVLNIHSEQYAKACDFIMKARDVLDSNLTAMAEESYNRAYADLVGTQLLSEAEEVIQYK 2201
+                    69***********************99******************************************************************** PP
+
+                    CSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.......... CS
+           FAT   95 qklssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk......eewl 183 
+                         +e+++ l++ W+ Rl+g+ + +e+w++i+++Rslvl+p ed        + wl+fa l+R+sgr+ l+ ++L +ll+ d+      +   
+  Smp_122910.1 2202 L---IPERRSILREAWQSRLLGCNSVIEDWSQIIQLRSLVLEPYED-------RRSWLRFAGLCRRSGRFILSRQVLENLLGLDPagippcD--- 2283
+                    *...8*****************************************.......********************************8875551... PP
+
+                    ......TSSCCCHHHHHHHCCHHHHHSSCC......................HHHHCCTSSCCC..............SS-SS---......... CS
+           FAT  184 p.....pevvyaylkylwakgeqkealqkL......................refvscllekke..............elssglevq.....ept 232 
+                    p     p +v+ y k+lwa g ++ea+++L                      +          +              e ++gl+++       +
+  Smp_122910.1 2284 PipssdPAIVFGYTKLLWAVGAHEEAVSRLcvlkthvlepllraetginsaqQ----------SsvfqllspnllnanETLDGLDSRqieiqIIN 2368
+                    2445689***********************99999999888877555554331..........12244433544555544444444367666999 PP
+
+                    .......HHHHCCCTCCCCCCCCCC CS
+           FAT  233 nleeftkllarcylkkGewlaalqk 257 
+                    + +e+++lla+c lk+G+w ++l+ 
+  Smp_122910.1 2369 ERKELRRLLAKCCLKLGSWYSELYT 2393
+                    ********************99986 PP
+
+  == domain 2  score: 32.5 bits;  conditional E-value: 1.8e-11
+                    ...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS................................................. CS
+           FAT  262 eekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee................................................ 308 
+                    ee++  + q+y++at ++p++ ++w +wa +n  v++++   k   e                                                
+  Smp_122910.1 2509 EESQAFVIQCYQTATLHAPDCRNTWQSWAMANYAVFNHLDTLKACLEraelelnkvggidnhslwtsrrnfssstgihgsgvnhmqssnlpvgni 2603
+                    45688899*******************************8886655578899******************************************* PP
+
+                    .....................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+           FAT  309 .....................pedlseyvvpavegflkslslssekslqdllRlL 342 
+                                         ++ ++ ++ p+v+gf +s+sls + +lqd lRl+
+  Smp_122910.1 2604 ssnfsplpppiaelvraktdlQRCMELHAAPSVKGFVNSISLSPTANLQDSLRLI 2658
+                    ********************9999999**************************97 PP
+
+>> Smp_162340.1  pep scaffold:Smansoni_v7:SM_V7_ZW:64559474:64630900:-1 gene:Smp_162340 transcript:Smp_162340.1 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.8   0.0      0.92   2.2e+03      78      96 ..     460     478 ..     455     485 .. 0.84
+   2 ?   -1.4   0.0      0.34   8.3e+02     169     261 ..    1638    1723 ..    1633    1749 .. 0.74
+   3 !   93.3   0.6   5.7e-30   1.4e-26       4     343 .]    1951    2317 ..    1948    2317 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: -2.8 bits;  conditional E-value: 0.92
+                   HHCCCCCHHHCHHCCHHCS CS
+           FAT  78 lvrlQqlaEleeiiqykqk 96 
+                   l +lQ l+El++iiq +++
+  Smp_162340.1 460 LSDLQSLMELKDIIQKLSA 478
+                   7899**********97765 PP
+
+  == domain 2  score: -1.4 bits;  conditional E-value: 0.34
+                    HHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S CS
+           FAT  169 kaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnws 261 
+                    +++++ll++ k +wl    + ++ + + ++ ++  a+q++ + v+ +l+ + + s+g+e + ++ l+ + +ll a++ l+ G++ +al +  w+
+  Smp_162340.1 1638 QTIFSLLDYLK-HWLR---IQQEYQATKSTVKSATAVQNVPKDVN-VLQHAVAPSEGIE-RVSSFLSNIPNLLqAKASLRCGSFARALLH--WE 1723
+                    56666666666.5555...56666777778888889999999999.7777778888877.58999******************9999987..44 PP
+
+  == domain 3  score: 93.3 bits;  conditional E-value: 5.7e-30
+                    TTCCCCTSSSGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---S...CCCCCHHHHHCCCCCHHHCHHCCHH CS
+           FAT    4 aaeaaWrlgqWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsge...synraydllvrlQqlaEleeiiqyk 94  
+                    +aeaaWrlg+W+ ++e++++   + s+   + + +la+  ++ ++ ++++ + r   vtel a + e    y rayd++vrl  l+++e i+++ 
+  Smp_162340.1 1951 RAEAAWRLGDWETLQETTNMNLlECSWSVGLGRLFLAMKDKRTSDWSKILARLRIDQVTELGAAALEgpgGYIRAYDTIVRLSSLSDIELISSLG 2045
+                    69***************9887778899999*************************************9999******************999998 PP
+
+                    CSS-...........---TTTTT....TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC......................HHCCS-STTCCC CS
+           FAT   95 qkls...........sseelksl....lktWrkRlpgvqddvevwqdilsvRslvlspied......................lllkgakaemwl 152 
+                    +              s+++l+ +    lk +++R +++ + ++  +++l++   +l+   +                      + l++a    wl
+  Smp_162340.1 2046 DVIMneirnptnsrsSESNLSNIvetsLKLLETRIRVSRPTFHTLEPVLAIQHAALQLVTSalssfnsdtyqisnrevlnstiSRLRTALGYNWL 2140
+                    8655888999998886666666688889****************************999999999******************999********* PP
+
+                    CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC....SS-SS---...........HHHH CS
+           FAT  153 kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke....elssglevqeptnleeftkllar 243 
+                    + a+laRksg++  A+ + +++++        p++ ++++k+lw++++++ a  +L + +  ++  +     + +s+ +++ +t+  +++++  +
+  Smp_162340.1 2141 ERAKLARKSGQFMAAYTCVLRAEDFGI-----PDALLERAKLLWKTDKREAAQTCLDKGIPDVFGCNIfnvrNKPSNENNEVSTEYRTISAQ--Q 2228
+                    **********************87777.....************************999988887777433355555555555555555555..5 PP
+
+                    CCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCH CS
+           FAT  244 cylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdl 338 
+                    ++l++  + +++++ +      e   + y +   ++++ ++a++++a++ +++ ++   +k++      + ++  a++++  +ls++s+ ++q++
+  Smp_162340.1 2229 ALLLRTRYCEETNRYD-----FETTGKLYEQVCSFNSGYEEAHFRLARYVDRARTQAVGCKQQ------NALIKVALQQYGLALSYGSQFIYQSM 2312
+                    9*************77.....*****************************9998888666543......257899******************** PP
+
+                    HHHHC CS
+           FAT  339 lRlLt 343 
+                    +RlLt
+  Smp_162340.1 2313 PRLLT 2317
+                    ****8 PP
+
+>> Smp_244380.1  pep scaffold:Smansoni_v7:SM_V7_ZW:57400306:57496018:-1 gene:Smp_244380 transcript:Smp_244380.1 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.5   0.1      0.76   1.8e+03     198     228 ..    1681    1717 ..    1669    1736 .. 0.65
+   2 ?   -1.0   0.1      0.26   6.3e+02       3      32 ..    3484    3513 ..    3483    3527 .. 0.78
+   3 !   54.3   1.4   4.1e-18   9.9e-15      99     343 .]    3712    3946 ..    3693    3946 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -2.5 bits;  conditional E-value: 0.76
+                    CCH..HHHHSSCCHHHHCCTSSCCC....SS-SS--- CS
+           FAT  198 kge..qkealqkLrefvscllekke....elssglev 228 
+                    k+e  ++ a+++Lref+s+++ + e    ++++  ++
+  Smp_244380.1 1681 KNEyiHETAFSCLREFISKTSIDIElrhaNMKQIVQN 1717
+                    55555899**********8877765443333333333 PP
+
+  == domain 2  score: -1.0 bits;  conditional E-value: 0.26
+                    CTTCCCCTSSSGHHCCCCT....TSSSS-- CS
+           FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdka 32  
+                    l a aaWr ++W ++   l  + +++p+ +
+  Smp_244380.1 3484 LKADAAWRRSDWSEVYYDLARLANECPRSE 3513
+                    6799*********98888888777777766 PP
+
+  == domain 3  score: 54.3 bits;  conditional E-value: 4.1e-18
+                    ---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC................HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHC CS
+           FAT   99 sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied................lllkgakaemwlkfanlaRksgrlslAekaLkkllee 177 
+                     +++ k+++k W+ R   + dd+ +w+d++s+R++v + i +                 l +   a   l+ a+ aRk   +s+A+++L +  + 
+  Smp_244380.1 3712 ALHDYKTVFKAWQSRPCSIGDDLGFWHDLFSWRQVVEECIISchpfsqklksensnliALCQRELALSQLQLARGARKCRFPSIAQQHLDRYTRM 3806
+                    67899*********************************999999999999999999998889999999999999999999999999999999333 PP
+
+                    TT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..SS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCC CS
+           FAT  178 dkeewlppevvyaylkylwakgeqkealqkLrefvscllekke..elssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeil 269 
+                                          +    ++k +++++ +l + +  el++gle  e+tn+++f+k+  a+++  k+ + ++++k        +e++
+  Smp_244380.1 3807 ----------------------NLPPLFEKTKQEIKLKLTDLRkdELLEGLELMEKTNIQQFEKKDrAKFFCYKAVFFSHFNK-------GDEAT 3872
+                    ......................3345666666666666666555699************************************.......89*** PP
+
+                    HHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS...STTTCHHHHHC CS
+           FAT  270 qaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse...kslqdllRlLt 343 
+                    + +  at++++++ k w   ++f ++v+s + + k+e+    +s+  + a+   ++++s s     ks+ d++++L+
+  Smp_244380.1 3873 KNFGYATQMQDNLHKVWSIYGDFLENVYSSYPSVKREVA---VSTTGIFAMLALMEAASVSGDverKSRSDIAKCLW 3946
+                    *******************************77776654...44445555555666666665556799999999998 PP
+
+>> Smp_046930.1  pep scaffold:Smansoni_v7:SM_V7_2:19714303:19718275:-1 gene:Smp_046930 transcript:Smp_046930.1 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.2   0.0   0.00087       2.1     246     334 ..     171     269 ..      76     271 .. 0.67
+   2 !    4.3   0.0    0.0063        15     232     290 ..     311     378 ..     277     383 .. 0.45
+   3 !   10.6   0.0   7.7e-05      0.19     242     292 ..     405     448 ..     381     452 .. 0.88
+   4 ?   -1.5   0.0      0.37   8.9e+02     265     293 ..     455     483 ..     448     507 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 7.2 bits;  conditional E-value: 0.00087
+                   CTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC............CCHHHHHCCHHHHHHSSSS................S-TCCHH CS
+           FAT 246 lkkGewlaalqklnwseekseeilqaysaateldpswykawht............walfnfevlskeeekkeeee...............pedlsey 315
+                     +G  l+al++        +e+ ++y++a+e++p+ + aw +            +a ++fe+           +                +++ + 
+  Smp_046930.1 171 SDLGNLLKALGR-------LDEAKSCYLKAIETCPTFAVAWSNlgcvfnaqneiwLAIHHFEKAV---------TldptfldayvnlgnvLKEA-RI 250
+                   457888888888.......8999999999999999999999993333333333333333333333.........34555555666666542222.35 PP
+
+                   HHCCT..CCHHHHTTTSST CS
+           FAT 316 vvpavegflkslslsseks 334
+                     +av  +l++l ls +++
+  Smp_046930.1 251 FDRAVAAYLRALTLSPNNA 269
+                   6777777888888877765 PP
+
+  == domain 2  score: 4.3 bits;  conditional E-value: 0.0063
+                   ........HH.HHCCCTCCC........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCC CS
+           FAT 232 tnleeftkll.arcylkkGe........wlaalqklnwseekseeilqaysaateldpswykawhtwa 290
+                   + l+e+ k+l a+ y   +          l++l + ++++ k+ee+   y +a e+ p+ + a+ ++a
+  Smp_046930.1 311 NALKEKGKVLeAEEYYNTALrlcpthadSLNNLANIKREQGKAEEAIRLYVRALEIYPEFAVAHSNLA 378
+                   22333333333333333333333333334444444444555555555555555555555555555555 PP
+
+  == domain 3  score: 10.6 bits;  conditional E-value: 7.7e-05
+                   HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+           FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalf 292
+                   a +y   G  l++lq+        ++++q+y++a++++p  ++a+ ++a+ 
+  Smp_046930.1 405 ADAYSNMGNTLKELQD-------VQGAMQCYQRAIQINPAFADAHSNLASI 448
+                   6677888888999999.......9************************986 PP
+
+  == domain 4  score: -1.5 bits;  conditional E-value: 0.37
+                   -SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+           FAT 265 seeilqaysaateldpswykawhtwalfn 293
+                     ++  +y++a +l p+  +a+ ++a+  
+  Smp_046930.1 455 LADAITSYKTALKLKPNFPDAFCNLAHCL 483
+                   6789999***************9999865 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      14499  (8563460 residues searched)
+Passed MSV filter:                      1326  (0.0914546); expected 290.0 (0.02)
+Passed bias filter:                      328  (0.0226222); expected 290.0 (0.02)
+Passed Vit filter:                        32  (0.00220705); expected 14.5 (0.001)
+Passed Fwd filter:                         6  (0.000413822); expected 0.1 (1e-05)
+Initial search space (Z):              14499  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.17u 0.04s 00:00:00.21 Elapsed: 00:00:00.09
+# Mc/sec: 30929.79
+//
+[ok]

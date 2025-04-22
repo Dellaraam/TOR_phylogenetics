@@ -1,0 +1,375 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Vitbras1_GeneModels_AllModels_20200717_aa.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                         -----------
+   4.5e-128  428.7   0.0    1.4e-68  231.7   0.0    3.3  3  jgi|Vitbras1|7187|Vbra_20831.t1   
+    0.00017   19.4   1.0    0.00018   19.4   1.0    1.0  1  jgi|Vitbras1|17310|Vbra_9865.t1   
+    0.00081   17.2   0.0     0.0094   13.6   0.0    2.1  1  jgi|Vitbras1|3371|Vbra_7640.t1    
+     0.0016   16.2   0.5       0.39    8.3   0.2    2.8  3  jgi|Vitbras1|20871|Vbra_18795.t1  
+     0.0021   15.8   0.0      0.003   15.3   0.0    1.1  1  jgi|Vitbras1|15925|Vbra_9642.t1   
+     0.0037   15.0   0.2     0.0068   14.1   0.2    1.4  1  jgi|Vitbras1|22582|Vbra_10593.t1  
+  ------ inclusion threshold ------
+       0.02   12.5   0.3       0.03   12.0   0.3    1.2  1  jgi|Vitbras1|16729|Vbra_3291.t1   
+        0.3    8.6   0.1       0.51    7.9   0.1    1.2  1  jgi|Vitbras1|5278|Vbra_7907.t1    
+        3.6    5.1   6.0          4    4.9   0.0    3.3  4  jgi|Vitbras1|9399|Vbra_14059.t1   
+
+
+Domain annotation for each sequence (and alignments):
+>> jgi|Vitbras1|7187|Vbra_20831.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  231.7   0.0   5.3e-72   1.4e-68      40     616 ..      44     945 ..       6     954 .. 0.84
+   2 !   44.2   0.0   2.1e-15   5.5e-12     649     747 ..    1198    1295 ..    1178    1307 .. 0.92
+   3 !  148.5   0.0   6.8e-47   1.8e-43     757    1163 ..    1600    2780 ..    1570    2791 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 231.7 bits;  conditional E-value: 5.3e-72
+            PTHR13298.orig.30.pir  40 ekkleslnnlikl.................................kaaakklnellgllkeeiiikedlvelelvsc 84 
+                                       +kle+ln+ +                                   +a+  +++++ +l++  +       +    s+
+  jgi|Vitbras1|7187|Vbra_20831.t1  44 RVKLELLNRVAHVaqgmswsgeaapgpapasapaplsvdaagalppSATHAQAQQQQQLQQPPPAF----DWILSFSL 117
+                                      556666666666677777777777777777777777777766666644444444444444444444....22233448 PP
+
+            PTHR13298.orig.30.pir  85 lrslllseskevraaalRllrylisdskvlrrllrlgldiliarsLdrdskn.........etEreqalkliramlev 153
+                                       r++l ++++++raaalR++ry++ ++ +l  + +l ++ +++ +L+r  ++         e Er++al++ir++ ++
+  jgi|Vitbras1|7187|Vbra_20831.t1 118 FRHFLFDQDTLTRAAALRACRYFLLSEAALAACSDLWVPEFVCVALERNPRSsavadqqavEWERIAALRFIRKWGSL 195
+                                      99************************************************777************************* PP
+
+            PTHR13298.orig.30.pir 154 .....apkliptaivralvaiaeseedrlrraclatlcelallnpelvaeagglrvlldallecqlperiaesllavl 226
+                                           +  ++p + vr+lvaiaes++d lrr+cl+tl+ la+ +p+lvaea g+ vl+dal ++++p  + es+  v+
+  jgi|Vitbras1|7187|Vbra_20831.t1 196 aasgrTSTRLPLCFVRSLVAIAESSADTLRRVCLETLRDLAIMRPRLVAEAWGVGVLMDALSDPCVPVGLRESIAFVI 273
+                                      8887778899*****************************************************888************ PP
+
+            PTHR13298.orig.30.pir 227 lyllnrpstrkylragvd.....lekllapft....dfhyra........kkdkqe....skskeerelsrleaskka 283
+                                       +ll +p+ r+ +  g+      ++kl + f                   ++++q     +++  +++++r+ea++ +
+  jgi|Vitbras1|7187|Vbra_20831.t1 274 GHLLADPKKRQAVAKGQVcwtteIQKLCSIFIeereS----DgtvtqpqpQQQTQTplppDQQPADERSARVEAASGS 347
+                                      *************9999888888*********54440....35555343544444499996666666666******** PP
+
+            PTHR13298.orig.30.pir 284 iltlLrSWaGllylckndkrgLkslvdvlrlp.nlevr...kaildlLydl........................... 330
+                                      il+l+rS +G+++l    ++gL +lv++lr p +++     + ++ lL d+                           
+  jgi|Vitbras1|7187|Vbra_20831.t1 348 ILALMRSVPGFIALAGA-PHGLSALVSFLRHPvSPDRSgdiSRVIRLLHDIlamalgtrgrvtfdhivsfararrrpy 424
+                                      **************553.78************9999987777788899999999999999999999999999999999 PP
+
+            PTHR13298.orig.30.pir 331 ........................................Lrlkepkwte.sftsgsalkavdsaal.qdswrlsdgf 366
+                                                                              ++l++    + ++ ++++ +a+ +a+   +++ +++g 
+  jgi|Vitbras1|7187|Vbra_20831.t1 425 hgsklrhlvqgtmgvhgaerfptlpplpslhpsrrsrtssFNLPNVPSLQdTSPTQRRATAAAQAQTqTQTQTQTQGG 502
+                                      999999999999999999999999999999999999999988888777664554444444444444423333333333 PP
+
+            PTHR13298.orig.30.pir 367 vaeesktil..................................................................... 375
+                                           +t                                                                       
+  jgi|Vitbras1|7187|Vbra_20831.t1 503 P----QTGVvgdvavdraksgpitasavgegtmsiqpmarsvsvkaaahsgggmmpssgsepslgqqsgqltnlpqig 576
+                                      2....333366668**************************************************************** PP
+
+            PTHR13298.orig.30.pir 376 .............................................................................. 375
+                                                                                                                    
+  jgi|Vitbras1|7187|Vbra_20831.t1 577 nrprafsgisagslsafsersaetpqhahsslssqqyfpqgqyvlsslgeglvglvdelgessfdgimgvgvgvgdgt 654
+                                      ****************************************************************************** PP
+
+            PTHR13298.orig.30.pir 376 ............pssarsrp.....dlldnylallLlalieagLleaLvevitssdss..vsvkAtiLLgellslant 434
+                                                       s        lld   ++++ +l+  g  +aL e++  +++   +   A+  L  lls a+ 
+  jgi|Vitbras1|7187|Vbra_20831.t1 655 ttatttsstsgaG----SGAidggcELLDVWGVFVVRCLVWLGVHQALAELVICPSAEpwLIAEASEVLSLLLSSASL 728
+                                      ****998854442....43355669*************************9987555555****************** PP
+
+            PTHR13298.orig.30.pir 435 lLPpelsaslhslptlvslaasfssekskrnraaaa......lalksldelkrsksksaslyldeilq.......... 496
+                                      lLPp+l a++++ p   s+a+ f s +++r ra ++       ++ ++++l+   + +a  ++ ++            
+  jgi|Vitbras1|7187|Vbra_20831.t1 729 LLPPHLLANVQAVPPISSAATLFPS-SHTRIRAHSVltqldlGGVPQMWRLNNGNNGTAAANEGQPQLlacnlavgpv 805
+                                      **********************933.33333333337899999999999999887777777666543367******** PP
+
+            PTHR13298.orig.30.pir 497 ....................kkllersssnssedskrkrlrq.....iledddeafkrmlkdsqvlstkdylkWnwdl 549
+                                                          + + ++    +  ds r++l       +    +e++  ++k + v++ ++ +kW w  
+  jgi|Vitbras1|7187|Vbra_20831.t1 806 sadggggadeeaieafaktvTCEVTHT---RLLDSTRTSLATalhvgTQAFGSEDIASAIKTTGVMNIREGTKWHWPS 880
+                                      **********99999996553333333...344444444444555677888899999********************* PP
+
+            PTHR13298.orig.30.pir 550 ilellegplnlnpkrleeavkvtkffkrLlsFykPskkrfssidktkqlekyvqvgcqllslLlssp 616
+                                      il ll+gpl+l +k+ + a+ vtkf++rLl F++P +++f  +++   +  +v++g++ + +L++ +
+  jgi|Vitbras1|7187|Vbra_20831.t1 881 ILHLLQGPLRLPLKHQD-AI-VTKFIRRLLRFFSPRSREFPLLEWRAAHLPMVEAGMEAIAMLVAGR 945
+                                      *********99999999.87.9*****************************************9855 PP
+
+  == domain 2  score: 44.2 bits;  conditional E-value: 2.1e-15
+            PTHR13298.orig.30.pir  649 derlfskerlsttlsqgyflfiGvLsstkeGlkiLeklnifqlllqlislktrdelvklivssLdysldgesRvil 724 
+                                        ++l+ ++ + +tl ++y +f+G++s+t+eG++iL+kl+++ +l +l++ +++d l +l+v +L ys   e R + 
+  jgi|Vitbras1|7187|Vbra_20831.t1 1198 TKGLLTESMVGRTLVREYATFLGLISCTQEGVTILTKLEFYRTLDRLVAIRDKDFLTSLFVPHLCYS-FRENRAVV 1272
+                                       5789999************************************************************.889***** PP
+
+            PTHR13298.orig.30.pir  725 skaLtsssesiRlyatkhLrvll 747 
+                                        k+  ++s s+Rl  +++   l 
+  jgi|Vitbras1|7187|Vbra_20831.t1 1273 DKIFAAGSPSLRLSTIRYFGLLF 1295
+                                       *************9999876665 PP
+
+  == domain 3  score: 148.5 bits;  conditional E-value: 6.8e-47
+            PTHR13298.orig.30.pir  757 WgielLvtqlydpskevakaAlkiLeeac.edkanileylvslkpsll........hlgdkgelLllrflstpkGf 823 
+                                       W++  L++   +++ +v++aAl++L  +c     +  eyl+ l    +         +      L l+ l  +kG 
+  jgi|Vitbras1|7187|Vbra_20831.t1 1600 WIAGHLLRTGVTQEYCVSEAALSVLSAMCrRGGREVVEYLIGLFIEEErhlafalpSASLWPTTLRLQCLRVDKGV 1675
+                                       777777777778888899999999999883234556666666666655633343333333345788********** PP
+
+            PTHR13298.orig.30.pir  824 rylkeenyvekelekWaeernaeYvllvEealsealtl...................................... 861 
+                                       +++  e+++++el +W + +n+ Y+  +++ +++a++                                       
+  jgi|Vitbras1|7187|Vbra_20831.t1 1676 ELMAREGWLQQELGRWVQTENRLYISCLDRLFARAFSSapqpttppppshqhpqahdngsvtsaawlgrlpfrlrv 1751
+                                       **************************************88888888888888888888888888888888888888 PP
+
+            PTHR13298.orig.30.pir  862 ............................................................................ 861 
+                                                                                                                   
+  jgi|Vitbras1|7187|Vbra_20831.t1 1752 qtfldqfttdsgatlgathlyrdkstdaerereggmvggggggevlldverdweysyddaqegevvsdgwvecsve 1827
+                                       8888877777777777777777777777777777777777777777777777777777777777777777777766 PP
+
+            PTHR13298.orig.30.pir  862 ............................................................................ 861 
+                                                                                                                   
+  jgi|Vitbras1|7187|Vbra_20831.t1 1828 riehsafaeseqgsgfpyaspypyppsalqsdttaaaantptppgrsgtpsaswqlactcpqpipfpvsapqlavr 1903
+                                       6666666666666666666665555555555555555555555555555555555555555555555555555555 PP
+
+            PTHR13298.orig.30.pir  862 ...........................ltreedgsdsrrrsngpdsslrnrks....................... 887 
+                                                                  +                        s                       
+  jgi|Vitbras1|7187|Vbra_20831.t1 1904 vspslgahplladgsvgavgeagvwytF------------------------Srakhvgslrpvpepgsdhreyrt 1955
+                                       5555555555555555555555555551........................055555555555555555555555 PP
+
+            PTHR13298.orig.30.pir  888 ......................................vilP.pHLygeLakteeGcelLekkghleelaetirsh 924 
+                                                                             ++ P pHLyg La+t++G+++L++   le+++e++++ 
+  jgi|Vitbras1|7187|Vbra_20831.t1 1956 arvrfifldnqedgqlylvqmvyplrgrggagadlsvaEVRPlPHLYGFLASTATGLDVLRTFRCLERISEVLTN- 2030
+                                       66666666666666666666777777777888888888444457*******************************. PP
+
+            PTHR13298.orig.30.pir  925 gledseeilklkaalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLe 1000
+                                         ed+ + +++++ lW+ g +gss  G +ll+e+n  l++d+++la +s+ l  rGt++y+l+l+a+t++    ++
+  jgi|Vitbras1|7187|Vbra_20831.t1 2031 --EDAYTPVEVRSQLWCAGWAGSSAMGVDLLKEYN--LLADMVNLALFSPQLATRGTALYALSLLAATPATLLPMS 2102
+                                       ..9999***************************77..*************************************** PP
+
+            PTHR13298.orig.30.pir 1001 elgWesvrhsrnal.............................................................. 1014
+                                         gW+ + +   +                                                               
+  jgi|Vitbras1|7187|Vbra_20831.t1 2103 AIGWDLLAKGPTDIsafltlprsmkrslhrmesdqdepsgggqqqpfmersgsmlstntaesptaksprvfgvssl 2178
+                                       ********98888777788888888888888888888888888888888888888888888888888888888888 PP
+
+            PTHR13298.orig.30.pir 1015 ............................................................................ 1014
+                                                                                                                   
+  jgi|Vitbras1|7187|Vbra_20831.t1 2179 vhvssrsrltrvdeeeeeeseeeanklydeiwadpppvvlplppsssahaqppqapqaaatqrekggadqpqrssl 2254
+                                       8888888888888888888888888888888888888777777777777777777777777777777777777777 PP
+
+            PTHR13298.orig.30.pir 1015 ............................................................................ 1014
+                                                                                                                   
+  jgi|Vitbras1|7187|Vbra_20831.t1 2255 npptssnssssssspsvpssnptvrrlrvektihhppplppphkptthqqqqqgwpsaaaaaaaaaadvpgdgtpd 2330
+                                       7777777777777777777777777777777777777777777777777777777777777777777777777777 PP
+
+            PTHR13298.orig.30.pir 1015 ............................................................................ 1014
+                                                                                                                   
+  jgi|Vitbras1|7187|Vbra_20831.t1 2331 redredeqdlyvgregedfeviqkplsdeeeefdhhraarqrpphppssrrrpsppspfciqqqqrqqtsaspslt 2406
+                                       7777777777777777777777777777777777777777777777777777777777777777777777777777 PP
+
+            PTHR13298.orig.30.pir 1015 ............................................................................ 1014
+                                                                                                                   
+  jgi|Vitbras1|7187|Vbra_20831.t1 2407 vsssaspanerhrsispsgsdtsgcldedsaaaaaaresessataptepqthdperpqpprewemvankrplvqqt 2482
+                                       7777777777777777777777777777776666666666666666666666666666666666666666666666 PP
+
+            PTHR13298.orig.30.pir 1015 ............................................................................ 1014
+                                                                                                                   
+  jgi|Vitbras1|7187|Vbra_20831.t1 2483 eihvppaipegneddesaassqmvyrdplatqhphqhpqqqhelsmrriqsgsgivlpataagerpeqrekhreke 2558
+                                       6666666666666666666666666666666666666666666666666666555555555555555555555555 PP
+
+            PTHR13298.orig.30.pir 1015 .............iGlciPsdvnelfsipehqqsssaesapitdekpeeiktslky.................... 1057
+                                                                                                                   
+  jgi|Vitbras1|7187|Vbra_20831.t1 2559 kememagkmirlgR-----------------------------------------Grvvavgvsatvleesssdes 2593
+                                       55555555555551.........................................055555555555555555555 PP
+
+            PTHR13298.orig.30.pir 1058 ............................................................................ 1057
+                                                                                                                   
+  jgi|Vitbras1|7187|Vbra_20831.t1 2594 rggesdqqrqtssdegsvdererarrrrfnryereyfgdggggadsdalrererpthaqqqqqqqhgltredsedd 2669
+                                       5555555555555555555666677777777777777777777777777777777777777777777777777777 PP
+
+            PTHR13298.orig.30.pir 1058 .....ptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpelfddpclfsevlkllseyrfrlqaRrfiqelf 1128
+                                                ++++e+l+  a+L+n v ak+ +++L k +++ p lf +++l ++v kl + yr+ l+ Rrf+ +lf
+  jgi|Vitbras1|7187|Vbra_20831.t1 2670 lrarfTDFGETHREVLEQTASLCNTVVAKSVHAALVKKRQSAPYLFLSIHLWMRVQKLKNLYRYPLPLRRFLSDLF 2745
+                                       7777766799****************************************************************** PP
+
+            PTHR13298.orig.30.pir 1129 ddavllsslrseerleveesqsemyeeaelsasep 1163
+                                       +++   ++  ++ +  ++ ++ +m+++ ++++ ++
+  jgi|Vitbras1|7187|Vbra_20831.t1 2746 NETFSCPEAFHTLDAIQRAHRLHMTQQQQREREAE 2780
+                                       ***99888777777766666666666666555443 PP
+
+>> jgi|Vitbras1|17310|Vbra_9865.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.4   1.0   6.8e-08   0.00018      84     221 ..       5     145 ..       1     185 [. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 19.4 bits;  conditional E-value: 6.8e-08
+            PTHR13298.orig.30.pir  84 clrslllseskevraaalRllrylisdskvlrrllrlgldiliarsLdrds..knetEreqa.lkliramlevapkli 158
+                                      c  ++  s++++  +a + llr l s  + + +++++ +d+ ++  L  ++  + e E ++a   l r  l+ a++ +
+  jgi|Vitbras1|17310|Vbra_9865.t1   5 CHLTASASDQQLWSRAMYQLLRLL-SIDHMAATIEQKAVDVVVVPVLVEQLsgREELESVAAaVALSRLALRHAAAVV 81 
+                                      5567888999999***********.999*******************9999556677777654778888888899999 PP
+
+            PTHR13298.orig.30.pir 159 ptaivralvaiaeseedrlrraclatlcel....allnpelvaeagglrvlldallecqlperiaes 221
+                                        + v  lv +++s++d  r ++++ lc +    +  + ++va+ag l  ll+a+ e   +++i   
+  jgi|Vitbras1|17310|Vbra_9865.t1  82 DASAVPPLVQLVSSPDDDVRTEAIEALCNVtegsVAGRDAVVAAAGVLEPLLKAMRE---STNIKVL 145
+                                      ****************************973332334457999**************...5666653 PP
+
+>> jgi|Vitbras1|3371|Vbra_7640.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.6   0.0   3.6e-06    0.0094     146     280 ..     241     438 ..      41     441 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 13.6 bits;  conditional E-value: 3.6e-06
+           PTHR13298.orig.30.pir 146 liramlevapkliptaivralvaiae.......................seedrlrraclatlcelallnpelv...ae 198
+                                     l  ++ +v  + + + +  +l+ ia+                       + ++  r  +  +l+e+a++ p+l+     
+  jgi|Vitbras1|3371|Vbra_7640.t1 241 LAKEISHV-DAALKRQVCGCLAQIAKhsvdlaevvveaeifprilhclkDTDELVRKNAATCLREIARHTPDLAkliVN 318
+                                     44444455.5556666666777777777777778888888888888886777777777888899*******99844359 PP
+
+           PTHR13298.orig.30.pir 199 agglrvlldallecqlperiaesllavllyll............................................nrp 233
+                                     agg+ +++d ++e  ++ r+    +++l y+                                              +p
+  jgi|Vitbras1|3371|Vbra_7640.t1 319 AGGVAAIVDFVTEARGNNRL--PGVMTLGYIAafsetlalavivskgipplkdtlmneqedhikaaaawslgqigrHSP 395
+                                     *************8888888..6888888888889999**************************************999 PP
+
+           PTHR13298.orig.30.pir 234 strkylragvdlekllapftdfhyrakkdkqeskskeerelsrleas 280
+                                      + + l +++ +++lla ++   ++++ d +  k+k++ ++  l+++
+  jgi|Vitbras1|3371|Vbra_7640.t1 396 DHARALAEADVFRRLLAVYL--YQESSEDLKT-KAKRALKS-VLQKC 438
+                                     99999999999*********..4444333333.55555555.55555 PP
+
+>> jgi|Vitbras1|20871|Vbra_18795.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.5   0.0     0.066   1.7e+02      75     126 ..     192     243 ..     159     252 .. 0.81
+   2 !    4.2   0.0    0.0026       6.8     345     438 ..     301     422 ..     197     439 .. 0.75
+   3 !    8.3   0.2   0.00015      0.39     726     794 ..     854     924 ..     850     951 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: -0.5 bits;  conditional E-value: 0.066
+             PTHR13298.orig.30.pir  75 dlvelelvsclrslllseskevraaalRllrylisdskvlrrllrlgldili 126
+                                        +v   lv+ l++ l +++ +vr a+l +l +l+++  v+  +++  l+ l 
+  jgi|Vitbras1|20871|Vbra_18795.t1 192 AKVGRPLVQSLARNLSHQHWKVRKATLEALGALLRQPDVCAAFMEDVLPTLA 243
+                                       466677888777899999999********99999999999999998888876 PP
+
+  == domain 2  score: 4.2 bits;  conditional E-value: 0.0026
+             PTHR13298.orig.30.pir 345 gsalkavdsaal.qdswrlsdgfvaeesktil...............................pssarsrpdlldny 389
+                                         +l+a+ +++  q++++++ + +a+e++++                                p+sa++    +d+ 
+  jgi|Vitbras1|20871|Vbra_18795.t1 301 YAHLQAIAQKRQrQKRSQQEASATAKENHDNDqvmepaspkaapnekesargmlplnvsafppPLSADR--PPTDDM 375
+                                       457788888877788888888888888888889999999999999999999999**9999965444444..889999 PP
+
+             PTHR13298.orig.30.pir 390 lallLlalieagLleaLvevitssdssvsvkAtiLLgellslantlLPp 438
+                                       +a+++  l+e  L+++L+++it      + +A+ LL+ l+ l++ +L p
+  jgi|Vitbras1|20871|Vbra_18795.t1 376 RAWVVG-LLEKLLPQVLTDIIT-WTVPHRLTASRLLKLLIVLCDSHLTP 422
+                                       999975.67889*********7.46778999*************99865 PP
+
+  == domain 3  score: 8.3 bits;  conditional E-value: 0.00015
+             PTHR13298.orig.30.pir 726 kaLtsssesiRlyatkhLrvllra....essdfsdWgielLvtqlydpskevakaAlkiLeeacedkaniley 794
+                                       k L +++++iRl a   L +l++a     s+++ + ++++L  +l+dp+  +  a  ++L+ a+ ++ +  ++
+  jgi|Vitbras1|20871|Vbra_18795.t1 854 KRLDDAQDDIRLAACSALTALMNAlpanWSPTLVEYILQTLFIHLDDPNAAIQDAVADVLKAAMKHNTE--AF 924
+                                       678999*****************87777888888899999999999****************9966554..33 PP
+
+>> jgi|Vitbras1|15925|Vbra_9642.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.3   0.0   1.1e-06     0.003      84     191 ..      46     152 ..      26     188 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 15.3 bits;  conditional E-value: 1.1e-06
+            PTHR13298.orig.30.pir  84 clrslllseskevraaalRllrylisdskvlrrllrlgldiliarsLdrdsknetEreqalkliramlevapkli.pt 160
+                                      ++  ++ ++++ ++ ++lR +r  i+ds+ +++ ++ g   +++r L+r +++++Ere++  l   +l+vapk +  +
+  jgi|Vitbras1|15925|Vbra_9642.t1  46 LAGLAVETNDTALQLSVLRTIREDIADSTQPQE-EAMGYAGFLTRLLERSRDSDVEREAV-VLLAHLLQVAPKMLiEP 121
+                                      55578999***********************99.8999********************99.78889999977765688 PP
+
+            PTHR13298.orig.30.pir 161 aivralvaiaeseedrlrraclatlcelall 191
+                                      + +   v +++ +++  + a+ a+l+++ + 
+  jgi|Vitbras1|15925|Vbra_9642.t1 122 STLMVAVQLLDRHDEFVVTAATALLAQISVA 152
+                                      88888999*******************9886 PP
+
+>> jgi|Vitbras1|22582|Vbra_10593.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.1   0.2   2.6e-06    0.0068     704     796 ..     324     415 ..     316     461 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 14.1 bits;  conditional E-value: 2.6e-06
+             PTHR13298.orig.30.pir 704 lvklivssLdysldgesRvilskaLtsssesiRlyatkhLrvllra.essdfsdWgielLvtqlydpskevakaAlk 779
+                                       l+ ++ + +d ++++ +  +l ++  s+  +iR+  ++ +++l    ++    +   el++ ql+ p+ ++++ Al+
+  jgi|Vitbras1|22582|Vbra_10593.t1 324 LIIHLEMDCDLTTKKMASSLLGNFVASKEANIRYLGLETMARLASDpDVLPQLKRHTELIIGQLQEPDISIRRQALN 400
+                                       777888999************************************334444445899******************** PP
+
+             PTHR13298.orig.30.pir 780 iLeeacedkanileylv 796
+                                       +L+ +c d++n+ +++v
+  jgi|Vitbras1|22582|Vbra_10593.t1 401 LLYGIC-DRDNW-QQIV 415
+                                       ******.88884.5554 PP
+
+>> jgi|Vitbras1|16729|Vbra_3291.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.0   0.3   1.1e-05      0.03     137     239 ..     162     263 ..      37     307 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 12.0 bits;  conditional E-value: 1.1e-05
+            PTHR13298.orig.30.pir 137 etEreqalkliramlevapkliptaiv...ralvaiaeseedrlrraclatlcelallnpelvaeagglrvlldalle 211
+                                        E + +++l+ +m +  ++ + ta +   +alv+ + + ++  +  +l tl el++ +pe   e  +l++l+++l +
+  jgi|Vitbras1|16729|Vbra_3291.t1 162 RREGVRVTQLMLKMWAF-EDALKTAFAnflQALVSMSHDTSEFAKVRALKTLSELLVAKPEQ--EQALLTTLVNKLGD 236
+                                      56777778888888888.5555555551116777777799999******************9..9************* PP
+
+            PTHR13298.orig.30.pir 212 cqlperiaesllavllylln.rpstrkyl 239
+                                         ++r+a +++  l  ll+ +p+ r+ +
+  jgi|Vitbras1|16729|Vbra_3291.t1 237 --AAPRVAVQASRHLADLLDtHPQMRRVV 263
+                                      ..78***************8456777654 PP
+
+>> jgi|Vitbras1|5278|Vbra_7907.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.9   0.1    0.0002      0.51     722     791 ..     311     378 ..     294     403 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 7.9 bits;  conditional E-value: 0.0002
+           PTHR13298.orig.30.pir 722 vilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkani 791
+                                     +il  +L++  ++iR+ a+  L+  +     +  +    ++v +l+dp+++++k+Al++ +  + +++ni
+  jgi|Vitbras1|5278|Vbra_7907.t1 311 NILGRFLMNRDNNIRYVALTTLQHVVT-VDMKAVQRHRSTIVDCLKDPDVSIRKRALDVTYALI-NEENI 378
+                                     6899**********************9.555555577899*******************99988.55554 PP
+
+>> jgi|Vitbras1|9399|Vbra_14059.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.9   1.0     0.086   2.2e+02     722     788 ..      69     136 ..      20     147 .. 0.75
+   2 ?   -0.6   0.0     0.071   1.9e+02     399     428 ..     231     260 ..     226     263 .. 0.63
+   3 ?    4.9   0.0    0.0015         4     905     971 ..     276     338 ..     272     352 .. 0.79
+   4 ?   -1.6   0.1      0.14   3.7e+02     935     973 ..     429     466 ..     408     479 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: -0.9 bits;  conditional E-value: 0.086
+            PTHR13298.orig.30.pir 722 vilskaLtsssesiRlyatkhLrvllraessdfsd..WgielLvtqlydpskevakaAlkiLee.acedk 788
+                                       +l+  L ss + + + a k L++   ae     +   ++ +L++ql+ p+ +v+    ++L++ +c  +
+  jgi|Vitbras1|9399|Vbra_14059.t1  69 PVLVRLLSSSCRWTAIEAAKCLAAIAAAEADVVIEhaAAVAALLQQLSSPHLDVRVYVASALCSiVC--S 136
+                                      5777888888888888888888888885333333346888899999999999998888888888555..3 PP
+
+  == domain 2  score: -0.6 bits;  conditional E-value: 0.071
+            PTHR13298.orig.30.pir 399 eagLleaLvevitssdssvsvkAtiLLgel 428
+                                      +ag +  Lv+++ s+d+ v+++A+  Lg++
+  jgi|Vitbras1|9399|Vbra_14059.t1 231 DAGAVPPLVQLLSSPDDDVRHQALWALGNI 260
+                                      566666666666666666666666666654 PP
+
+  == domain 3  score: 4.9 bits;  conditional E-value: 0.0015
+            PTHR13298.orig.30.pir 905 celLekkghleelaetirshgledseeilklkaalWAlghigsse.lGlelleeenedliediiklae 971
+                                      c+l  + g++e l++++r     +se++   + a WAl++ ++ + + +el+++ + ++++++i+  e
+  jgi|Vitbras1|9399|Vbra_14059.t1 276 CDLVLEAGVMEPLVKVLRH----ESENVSMMRTATWALSNLSQKPpRPFELVSK-VVSVVAELIRTPE 338
+                                      8999999************....9******************997244555555.5677777776655 PP
+
+  == domain 4  score: -1.6 bits;  conditional E-value: 0.14
+            PTHR13298.orig.30.pir 935 lkaalWAlghi..gsselGlelleeenedliediiklaees 973
+                                       + a WA+++i  gs e+  ++++    d+++++i +a++ 
+  jgi|Vitbras1|9399|Vbra_14059.t1 429 CREACWAISNImaGSGEQRQAVIDG---DVVPQLITMATTD 466
+                                      68999*****964555555555555...69******99975 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      23412  (12163461 residues searched)
+Passed MSV filter:                      1079  (0.0460875); expected 468.2 (0.02)
+Passed bias filter:                      639  (0.0272937); expected 468.2 (0.02)
+Passed Vit filter:                        80  (0.00341705); expected 23.4 (0.001)
+Passed Fwd filter:                         9  (0.000384418); expected 0.2 (1e-05)
+Initial search space (Z):              23412  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.63u 0.04s 00:00:00.67 Elapsed: 00:00:00.32
+# Mc/sec: 43340.74
+//
+[ok]

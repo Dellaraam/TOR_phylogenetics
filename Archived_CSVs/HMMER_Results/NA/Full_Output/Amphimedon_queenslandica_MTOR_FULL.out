@@ -1,0 +1,779 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/NA/Proteins/Amphimedon_queenslandica.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    6.7e-64  215.1   0.0    4.8e-60  202.5   0.0    2.7  3  XP_019859306.1  PREDICTED: serine/threonine-protein kinase mT
+    9.8e-07   29.3   6.2         10    6.5   0.0    7.7  8  XP_011405014.2  PREDICTED: importin-5 [Amphimedon queenslandi
+    1.4e-06   28.7  28.0    1.3e-05   25.6   0.2    7.9  8  XP_019849564.1  PREDICTED: cullin-associated NEDD8-dissociate
+    4.5e-06   27.1   1.8         11    6.4   0.0    8.0  8  XP_019853005.1  PREDICTED: eIF-2-alpha kinase activator GCN1 
+    4.7e-06   27.1   1.8         11    6.4   0.0    8.0  8  XP_019853006.1  PREDICTED: eIF-2-alpha kinase activator GCN1 
+    4.8e-06   27.0   1.8         11    6.4   0.0    7.9  8  XP_019853007.1  PREDICTED: eIF-2-alpha kinase activator GCN1 
+    0.00016   22.1   0.5       0.44   10.9   0.1    2.3  2  XP_019860968.1  PREDICTED: phosphoinositide 3-kinase regulato
+    0.00049   20.5   0.6        8.7    6.7   0.0    4.6  4  XP_011403511.1  PREDICTED: LOW QUALITY PROTEIN: splicing fact
+     0.0034   17.7   0.2      0.056   13.8   0.0    3.0  2  XP_019850314.1  PREDICTED: serine/threonine-protein kinase AT
+  ------ inclusion threshold ------
+       0.01   16.2   6.2        1.9    8.8   0.1    4.7  3  XP_019848972.1  PREDICTED: brefeldin A-inhibited guanine nucl
+      0.053   13.9   0.0      0.053   13.9   0.0    4.4  7  XP_003385603.3  PREDICTED: exportin-1 [Amphimedon queenslandi
+       0.15   12.4   0.2        6.8    7.0   0.0    3.5  3  XP_019850114.1  PREDICTED: CLIP-associating protein 1-like [A
+       0.15   12.4  11.3         40    4.5   0.0    7.6  8  XP_019849477.1  PREDICTED: importin-4-like [Amphimedon queens
+       0.28   11.5   0.4       0.35   11.2   0.4    1.1  1  XP_019859740.1  PREDICTED: uncharacterized protein LOC1095879
+       0.42   10.9   6.1        3.7    7.9   0.2    3.4  3  XP_019855585.1  PREDICTED: HEAT repeat-containing protein 1-l
+          2    8.7  13.8         11    6.3   0.1    5.4  6  XP_003387708.1  PREDICTED: importin subunit beta-1 isoform X1
+          2    8.7  13.8         11    6.3   0.1    5.4  6  XP_019853838.1  PREDICTED: importin subunit beta-1 isoform X2
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_019859306.1  PREDICTED: serine/threonine-protein kinase mTOR-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.7   0.0       1.2   1.6e+03       4      23 ..      12      31 ..      10      58 .. 0.69
+   2 !    9.2   0.0     0.001       1.4      83     156 ..      60     135 ..      38     138 .. 0.92
+   3 !  202.5   0.0   3.5e-63   4.8e-60       1     160 []     141     313 ..     141     313 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: -0.7 bits;  conditional E-value: 1.2
+        mTOR_dom  4 PyldypeLLeiLlnilkteq 23
+                    P +  p+L ++L++il + +
+  XP_019859306.1 12 PAYVMPTLRKVLIQILTELE 31
+                    67778999999999998654 PP
+
+  == domain 2  score: 9.2 bits;  conditional E-value: 0.001
+        mTOR_dom  83 yptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156
+                     y++ +++ L+  lk+p ++ +   +++ ai +  +  g+   p +++++p +++++++++s   re+ l  L++ v
+  XP_019859306.1  60 YQQPILKVLIPKLKEPGVNpNVTVNIMAAIGELAQVAGVGLRPWVKELCPIIMEMLQDASSvPKREVALWTLGQVV 135
+                     788889999999999999989999999*********************************99**********9987 PP
+
+  == domain 3  score: 202.5 bits;  conditional E-value: 3.5e-63
+        mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks............eeeekeeenaeetdvsellvglspss.eey 82 
+                     V+ePy++yp+LL++L+n+lkteq+++iRrevi+vlG+lGALDP+khk+ ++++             ++ ++ +  ++ + sellv++s  + +++
+  XP_019859306.1 141 VIEPYYEYPDLLDVLFNFLKTEQTPAIRREVIRVLGLLGALDPHKHKVRKGRTlrntmgmpiskpMDKGSKGTGGPADSASELLVQISGNNlDDF 235
+                     9***********************************************99999887777776654333667777788999999************ PP
+
+        mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                     yp+v+i++L+kilkd+sls+hh +++qa+ +ifk+lg+k+vp+lpq++p +lsvi+tce+++ref+++qL++++si+k
+  XP_019859306.1 236 YPAVAISSLMKILKDQSLSQHHVMAIQALGFIFKSLGMKSVPYLPQVMPPFLSVITTCEKHMREFMFKQLGQIISIIK 313
+                     ****************************************************************************97 PP
+
+>> XP_011405014.2  PREDICTED: importin-5 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.1   0.0      0.04        55      89     149 ..      82     143 ..      42     150 .. 0.84
+   2 ?    1.3   0.8      0.28   3.8e+02      90     155 ..     163     233 ..     156     236 .. 0.70
+   3 !    6.5   0.0    0.0073        10      93     155 ..     355     416 ..     342     418 .. 0.84
+   4 ?    4.0   0.0     0.043        60      70     135 ..     415     481 ..     408     510 .. 0.83
+   5 ?    2.3   0.0      0.14   1.9e+02     105     138 ..     592     625 ..     570     634 .. 0.89
+   6 ?   -2.8   0.0       5.3   7.4e+03     108     141 ..     761     796 ..     750     807 .. 0.71
+   7 ?    5.5   0.0     0.014        20     105     147 ..     831     874 ..     821     885 .. 0.79
+   8 ?   -2.2   0.0       3.3   4.5e+03     126     156 ..     979    1010 ..     957    1035 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.04
+        mTOR_dom  89 naLlkilkdpslsshhtavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefll 149
+                     ++Ll+i++ +s +s ++++ ++i +  +  ++ + v+  pq++  l++ + t++++l++  l
+  XP_011405014.2  82 SQLLQIIQSESNTSLRHKICDTIAELARAsIDENDVNHWPQLLTFLFECCDTTKPELYQNAL 143
+                     6899********************99987477777******999999999999988877666 PP
+
+  == domain 2  score: 1.3 bits;  conditional E-value: 0.28
+        mTOR_dom  90 aLlkilkdpslsshh...tavvqaimsifktlglkc.vpflpqiipallsvirtces.slrefllqqLatL 155
+                      + +++ ++ +ssh+   +++v+a  s + +l++    + ++ ++p+++sv+++  + +  +++l+ + +L
+  XP_011405014.2 163 LVSQMFYQAMISSHQalaEEAVTATSSFIISLEVPGvRQRMNDLLPHMISVLEQNIQsQSDDTVLKSFIDL 233
+                     55566777777776611145555556666667777747899***********9766659999999988877 PP
+
+  == domain 3  score: 6.5 bits;  conditional E-value: 0.0073
+        mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                     k+l  +   +h+  ++ a+  i +  + +++p+l+ +i  +l +++++++++r    + L+++
+  XP_011405014.2 355 KMLTSADW-KHRYGALMAVSAIAEGCEKQMTPILNDVITCVLPYCQDSHPRVRYAACNALGQM 416
+                     55543333.5899999***********************************999999988876 PP
+
+  == domain 4  score: 4.0 bits;  conditional E-value: 0.043
+        mTOR_dom  70 ellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipalls 135
+                     ++  + sp+ +e ++  +i +Ll il+d +     t +  a+++ ++     +  ++l+ iip+l +
+  XP_011405014.2 415 QMSSDFSPTIQEKFHDKIIPSLLPILDDFKNPRVLTHAGAALVNFCELCPKSVlSNYLSAIIPKLEA 481
+                     566778999999**************999999999999999999999888888789*******9855 PP
+
+  == domain 5  score: 2.3 bits;  conditional E-value: 0.14
+        mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvir 138
+                     + +++a   i+k +g + v++lp +++ l+++++
+  XP_011405014.2 592 SYMISAWARICKIIGPEFVAYLPFVVQPLIQAAS 625
+                     56799999*********************99865 PP
+
+  == domain 6  score: -2.8 bits;  conditional E-value: 5.3
+        mTOR_dom 108 vqaimsifktlglkc..vpflpqiipallsvirtce 141
+                     ++++ + ++ lgl+c  ++ +++i+  +   i+tc 
+  XP_011405014.2 761 ISSLCKCIELLGLNCftTEQYTKIVDIINDQIETCF 796
+                     666777777788888555577888888888888775 PP
+
+  == domain 7  score: 5.5 bits;  conditional E-value: 0.014
+        mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtces.slref 147
+                      ++ + ++s f t g   +pf +q++p++++++++ ++ s r+ 
+  XP_011405014.2 831 RKIADLMHSLFMTHGSALLPFFDQLLPTFTNMLSSDKPsSYRQW 874
+                     566677889999*********************99887566655 PP
+
+  == domain 8  score: -2.2 bits;  conditional E-value: 3.3
+        mTOR_dom  126 lpqiipallsvirtces.slrefllqqLatLv 156 
+                      l+ ++p  ls++  +e+ +    ++  L++L+
+  XP_011405014.2  979 LDTVLPLWLSWLPVVEDkEEASHVYTYLCDLI 1010
+                      45555555555444444333333333344433 PP
+
+>> XP_019849564.1  PREDICTED: cullin-associated NEDD8-dissociated protein 1-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.7   0.0      0.21   2.9e+02      68     119 ..       8      61 ..       2      92 .. 0.73
+   2 !   25.6   0.2   9.1e-09   1.3e-05      75     156 ..     203     284 ..     168     286 .. 0.83
+   3 ?    0.3   0.1      0.57   7.9e+02     110     158 ..     415     464 ..     391     466 .. 0.62
+   4 ?    4.3   0.4     0.034        47     120     160 .]     511     551 ..     481     551 .. 0.78
+   5 ?    1.7   0.3      0.21     3e+02     104     156 ..     625     678 ..     567     680 .. 0.80
+   6 !    7.3   1.5    0.0039       5.4      88     155 ..     692     763 ..     660     765 .. 0.77
+   7 ?   -0.6   0.0       1.1   1.5e+03      96     148 ..     974    1029 ..     926    1037 .. 0.74
+   8 ?   -2.7   0.0       4.8   6.7e+03      22      41 ..    1170    1189 ..    1162    1221 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 1.7 bits;  conditional E-value: 0.21
+        mTOR_dom  68 vsellvglspsseeyyptvvinaLlkilkdpsls...shhtavvqaimsifktlg 119
+                     +s+ll ++s+ ++++   ++ n L++ l+  s++   +   +vvqai+  +++ +
+  XP_019849564.1   8 ISSLLDKMSSVDKDF-RFMATNDLMTELQRDSIKlddDSERKVVQAILRLVEDKN 61 
+                     566667776666554.566999999999998876656788999999998887644 PP
+
+  == domain 2  score: 25.6 bits;  conditional E-value: 9.1e-09
+        mTOR_dom  75 lspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                      s +s++ y +++   L ++  d s      + +q i  i ++ g +++p+l+ i+p l++ +++ +++l+e  lq +++Lv
+  XP_019849564.1 203 SSCCSQDLYDSIMTLLLNNLKTDGSSLINTRTFIQCIGAISRQSGQRVIPYLDVIVPVLMNFVKSEDDELKESCLQTFEVLV 284
+                     3556699***987777767777777779999**********************************999***********998 PP
+
+  == domain 3  score: 0.3 bits;  conditional E-value: 0.57
+        mTOR_dom 110 aimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                      +m+  +t  l    + +p i+ +l + +++ + + r+  +  L++Lv++
+  XP_019849564.1 415 DVMETSETNPLSLlQTQVPLIVKSLHKQLKDKSIKARQGCFALLTDLVTV 464
+                     45555555555554455677777777777776667777777777777765 PP
+
+  == domain 4  score: 4.3 bits;  conditional E-value: 0.034
+        mTOR_dom 120 lkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                         +f++ iipa++++++++  ++    l  L+ +v+i++
+  XP_019849564.1 511 SSLYQFIDTIIPAVIRAVNDSFYKITSEALLVLQLIVKIIR 551
+                     344789999****9999999888999999999999999986 PP
+
+  == domain 5  score: 1.7 bits;  conditional E-value: 0.21
+        mTOR_dom 104 htavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                     + ++v+a++ i ++ l+l  +++l   +p l++ +r+ +++l+   l  L++L+
+  XP_019849564.1 625 RLTTVRALTVISRSpLKLDITMILADTVPLLATFLRKNHRDLKLATLACLTQLM 678
+                     557889999999988999999999999999999999988888888888888886 PP
+
+  == domain 6  score: 7.3 bits;  conditional E-value: 0.0039
+        mTOR_dom  88 inaLlkilkdpsls..shhtavvqaimsifkt.lglkcvpflpqiipallsvirtces.slrefllqqLatL 155
+                     +++L  +++d+ l   +h  + + +im+i  + ++   v++lp+i+  lls + + ++ +    +++qL  L
+  XP_019849564.1 692 LEELPPLISDNDLHiaQHVISLICTIMNISPSsMDGIKVSILPNIMTMLLSSLLQGNPlNTVANFFSQLVLL 763
+                     444445555665554488899999*****977477777*************9999999999999***99876 PP
+
+  == domain 7  score: -0.6 bits;  conditional E-value: 1.1
+        mTOR_dom   96 kdpsls...shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefl 148 
+                      k++  s   + + +v++a  + ++++     + l+  i ++++ i++++ ++r + 
+  XP_019849564.1  974 KENLASesaHVRGTVITAFKYTISDQPHPIDSQLQDCIEEFMKSISDSDLNVRRMS 1029
+                      44433321133457888888888888888888999999999999988877766655 PP
+
+  == domain 8  score: -2.7 bits;  conditional E-value: 4.8
+        mTOR_dom   22 eqsqsiRrevikvlGilGAL 41  
+                      e++++++r++i+++  l A+
+  XP_019849564.1 1170 EKQEEMKRSAIRCVIALLAI 1189
+                      35888899999886555454 PP
+
+>> XP_019853005.1  PREDICTED: eIF-2-alpha kinase activator GCN1 isoform X1 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   0.0      0.46   6.4e+02      77     117 ..     344     385 ..     314     404 .. 0.73
+   2 !    6.4   0.0    0.0077        11      80     160 .]    1418    1497 ..    1398    1497 .. 0.79
+   3 ?    0.3   0.0      0.55   7.7e+02     114     142 ..    1647    1675 ..    1626    1693 .. 0.73
+   4 ?   -0.9   0.0       1.4   1.9e+03     113     145 ..    1689    1721 ..    1665    1728 .. 0.73
+   5 ?   -1.1   0.0       1.5   2.1e+03     119     156 ..    1838    1879 ..    1782    1882 .. 0.71
+   6 ?    3.1   0.0     0.077   1.1e+02      80     156 ..    1922    1997 ..    1894    2000 .. 0.81
+   7 ?   -0.9   0.1       1.3   1.8e+03      96     140 ..    2029    2051 ..    2009    2070 .. 0.63
+   8 ?    4.0   0.0     0.041        57      85     156 ..    2232    2303 ..    2193    2306 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 0.46
+        mTOR_dom  77 pss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifkt 117
+                      ++  +  ++v++++Ll  lk+++ s  +  +v++i   +++
+  XP_019853005.1 344 AAQgMDSLSNVIVESLLLYLKQEAHSGTQLHIVRTISLFCSS 385
+                     4444788899****************9999999999766665 PP
+
+  == domain 2  score: 6.4 bits;  conditional E-value: 0.0077
+        mTOR_dom   80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160 
+                          +t ++ aLl+ l++ s +  ++  v+ + ++      +  + lp i+p++++v+ +++s+++    + L+++ s++k
+  XP_019853005.1 1418 SGHGMTLILPALLNALQQDSWR-TKAGSVELLGTMAYCAPKQLSACLPSIVPKIMEVLADSHSKVQLAGTEALKQIGSVIK 1497
+                      5555688899999999999998.5667788888888888888899***************999999888888888877765 PP
+
+  == domain 3  score: 0.3 bits;  conditional E-value: 0.55
+        mTOR_dom  114 ifktlglkcvpflpqiipallsvirtces 142 
+                      i + l+ + v+ l q++p +++ +++ +s
+  XP_019853005.1 1647 IAHLLKSQGVEQLHQFMPRFIQSAQDPHS 1675
+                      55556667788999999999999987655 PP
+
+  == domain 4  score: -0.9 bits;  conditional E-value: 1.4
+        mTOR_dom  113 sifktlglkcvpflpqiipallsvirtcesslr 145 
+                      +  +  g   +pf+++i+p +l+ + + ++ +r
+  XP_019853005.1 1689 YLPQLFGKDFLPFIDKILPPILKGLADESEYVR 1721
+                      45556677789***********99888776555 PP
+
+  == domain 5  score: -1.1 bits;  conditional E-value: 1.5
+        mTOR_dom  119 glkcvpflpqiipallsvirtce...s.slrefllqqLatLv 156 
+                       ++  ++l++i+p+l++++ +c      + r++  q L++Lv
+  XP_019853005.1 1838 VTNTAKTLREILPTLINILLSCLaspVyDKRQVAGQTLGDLV 1879
+                      444555666666666666555431112256666666666666 PP
+
+  == domain 6  score: 3.1 bits;  conditional E-value: 0.077
+        mTOR_dom   80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLv 156 
+                       ey +++  ++L+ +++  +l +  ++v  a  + f++l+  +  ++l+ i+  ll  + ++e+  re +l+ L++ +
+  XP_019853005.1 1922 REY-MNMYSSSLIPMVRS-ALCDKESDVRGAAAKTFESLHSAVgNSILEPILGPLLDQLGKAEEGKREIILDALQQVM 1997
+                      444.44467888888855.55568999999*************999****************************9876 PP
+
+  == domain 7  score: -0.9 bits;  conditional E-value: 1.3
+        mTOR_dom   96 kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtc 140 
+                                             g    ++l+++i+a+++++++ 
+  XP_019853005.1 2029 A----------------------GHSIYKYLNKVIQAIVTALQKK 2051
+                      3......................3333566666666666666554 PP
+
+  == domain 8  score: 4.0 bits;  conditional E-value: 0.041
+        mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                      + +   L+++l d+   + + +v++++++ ++++g+   +f+pq+  ++l+ + + ++ +r   +  + +Lv
+  XP_019853005.1 2232 MAIAGPLIRVLGDRYGGNVKVSVLETLVELVRKVGVAAKAFIPQLQTSYLKSLVDPNQPVRSQAVTGIIELV 2303
+                      44445699****************************************999999988877777777777666 PP
+
+>> XP_019853006.1  PREDICTED: eIF-2-alpha kinase activator GCN1 isoform X2 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   0.0      0.46   6.4e+02      77     117 ..     342     383 ..     312     402 .. 0.73
+   2 !    6.4   0.0    0.0077        11      80     160 .]    1416    1495 ..    1396    1495 .. 0.79
+   3 ?    0.4   0.0      0.55   7.6e+02     114     142 ..    1645    1673 ..    1624    1691 .. 0.73
+   4 ?   -0.9   0.0       1.4   1.9e+03     113     145 ..    1687    1719 ..    1663    1726 .. 0.73
+   5 ?   -1.1   0.0       1.5   2.1e+03     119     156 ..    1836    1877 ..    1780    1880 .. 0.71
+   6 ?    3.1   0.0     0.077   1.1e+02      80     156 ..    1920    1995 ..    1892    1998 .. 0.81
+   7 ?   -0.9   0.1       1.3   1.8e+03      96     140 ..    2027    2049 ..    2007    2068 .. 0.63
+   8 ?    4.0   0.0     0.041        57      85     156 ..    2230    2301 ..    2191    2304 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 0.46
+        mTOR_dom  77 pss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifkt 117
+                      ++  +  ++v++++Ll  lk+++ s  +  +v++i   +++
+  XP_019853006.1 342 AAQgMDSLSNVIVESLLLYLKQEAHSGTQLHIVRTISLFCSS 383
+                     4444788899****************9999999999766665 PP
+
+  == domain 2  score: 6.4 bits;  conditional E-value: 0.0077
+        mTOR_dom   80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160 
+                          +t ++ aLl+ l++ s +  ++  v+ + ++      +  + lp i+p++++v+ +++s+++    + L+++ s++k
+  XP_019853006.1 1416 SGHGMTLILPALLNALQQDSWR-TKAGSVELLGTMAYCAPKQLSACLPSIVPKIMEVLADSHSKVQLAGTEALKQIGSVIK 1495
+                      5555688899999999999998.5667788888888888888899***************999999888888888877765 PP
+
+  == domain 3  score: 0.4 bits;  conditional E-value: 0.55
+        mTOR_dom  114 ifktlglkcvpflpqiipallsvirtces 142 
+                      i + l+ + v+ l q++p +++ +++ +s
+  XP_019853006.1 1645 IAHLLKSQGVEQLHQFMPRFIQSAQDPHS 1673
+                      55556667788999999999999987655 PP
+
+  == domain 4  score: -0.9 bits;  conditional E-value: 1.4
+        mTOR_dom  113 sifktlglkcvpflpqiipallsvirtcesslr 145 
+                      +  +  g   +pf+++i+p +l+ + + ++ +r
+  XP_019853006.1 1687 YLPQLFGKDFLPFIDKILPPILKGLADESEYVR 1719
+                      45556677789***********99888776555 PP
+
+  == domain 5  score: -1.1 bits;  conditional E-value: 1.5
+        mTOR_dom  119 glkcvpflpqiipallsvirtce...s.slrefllqqLatLv 156 
+                       ++  ++l++i+p+l++++ +c      + r++  q L++Lv
+  XP_019853006.1 1836 VTNTAKTLREILPTLINILLSCLaspVyDKRQVAGQTLGDLV 1877
+                      444555666666666666555431112256666666666666 PP
+
+  == domain 6  score: 3.1 bits;  conditional E-value: 0.077
+        mTOR_dom   80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLv 156 
+                       ey +++  ++L+ +++  +l +  ++v  a  + f++l+  +  ++l+ i+  ll  + ++e+  re +l+ L++ +
+  XP_019853006.1 1920 REY-MNMYSSSLIPMVRS-ALCDKESDVRGAAAKTFESLHSAVgNSILEPILGPLLDQLGKAEEGKREIILDALQQVM 1995
+                      444.44467888888855.55568999999*************999****************************9876 PP
+
+  == domain 7  score: -0.9 bits;  conditional E-value: 1.3
+        mTOR_dom   96 kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtc 140 
+                                             g    ++l+++i+a+++++++ 
+  XP_019853006.1 2027 A----------------------GHSIYKYLNKVIQAIVTALQKK 2049
+                      3......................3333566666666666666554 PP
+
+  == domain 8  score: 4.0 bits;  conditional E-value: 0.041
+        mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                      + +   L+++l d+   + + +v++++++ ++++g+   +f+pq+  ++l+ + + ++ +r   +  + +Lv
+  XP_019853006.1 2230 MAIAGPLIRVLGDRYGGNVKVSVLETLVELVRKVGVAAKAFIPQLQTSYLKSLVDPNQPVRSQAVTGIIELV 2301
+                      44445699****************************************999999988877777777777666 PP
+
+>> XP_019853007.1  PREDICTED: eIF-2-alpha kinase activator GCN1 isoform X3 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   0.0      0.46   6.4e+02      77     117 ..     341     382 ..     311     401 .. 0.73
+   2 !    6.4   0.0    0.0077        11      80     160 .]    1415    1494 ..    1395    1494 .. 0.79
+   3 ?    0.4   0.0      0.55   7.6e+02     114     142 ..    1644    1672 ..    1623    1690 .. 0.73
+   4 ?   -0.9   0.0       1.4   1.9e+03     113     145 ..    1686    1718 ..    1662    1725 .. 0.73
+   5 ?   -1.1   0.0       1.5   2.1e+03     119     156 ..    1835    1876 ..    1779    1879 .. 0.71
+   6 ?    3.1   0.0     0.077   1.1e+02      80     156 ..    1919    1994 ..    1891    1997 .. 0.81
+   7 ?   -0.9   0.1       1.3   1.8e+03      96     140 ..    2026    2048 ..    2006    2067 .. 0.63
+   8 ?    4.0   0.0     0.041        57      85     156 ..    2229    2300 ..    2190    2303 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 0.46
+        mTOR_dom  77 pss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifkt 117
+                      ++  +  ++v++++Ll  lk+++ s  +  +v++i   +++
+  XP_019853007.1 341 AAQgMDSLSNVIVESLLLYLKQEAHSGTQLHIVRTISLFCSS 382
+                     4444788899****************9999999999766665 PP
+
+  == domain 2  score: 6.4 bits;  conditional E-value: 0.0077
+        mTOR_dom   80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160 
+                          +t ++ aLl+ l++ s +  ++  v+ + ++      +  + lp i+p++++v+ +++s+++    + L+++ s++k
+  XP_019853007.1 1415 SGHGMTLILPALLNALQQDSWR-TKAGSVELLGTMAYCAPKQLSACLPSIVPKIMEVLADSHSKVQLAGTEALKQIGSVIK 1494
+                      5555688899999999999998.5667788888888888888899***************999999888888888877765 PP
+
+  == domain 3  score: 0.4 bits;  conditional E-value: 0.55
+        mTOR_dom  114 ifktlglkcvpflpqiipallsvirtces 142 
+                      i + l+ + v+ l q++p +++ +++ +s
+  XP_019853007.1 1644 IAHLLKSQGVEQLHQFMPRFIQSAQDPHS 1672
+                      55556667788999999999999987655 PP
+
+  == domain 4  score: -0.9 bits;  conditional E-value: 1.4
+        mTOR_dom  113 sifktlglkcvpflpqiipallsvirtcesslr 145 
+                      +  +  g   +pf+++i+p +l+ + + ++ +r
+  XP_019853007.1 1686 YLPQLFGKDFLPFIDKILPPILKGLADESEYVR 1718
+                      45556677789***********99888776555 PP
+
+  == domain 5  score: -1.1 bits;  conditional E-value: 1.5
+        mTOR_dom  119 glkcvpflpqiipallsvirtce...s.slrefllqqLatLv 156 
+                       ++  ++l++i+p+l++++ +c      + r++  q L++Lv
+  XP_019853007.1 1835 VTNTAKTLREILPTLINILLSCLaspVyDKRQVAGQTLGDLV 1876
+                      444555666666666666555431112256666666666666 PP
+
+  == domain 6  score: 3.1 bits;  conditional E-value: 0.077
+        mTOR_dom   80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLv 156 
+                       ey +++  ++L+ +++  +l +  ++v  a  + f++l+  +  ++l+ i+  ll  + ++e+  re +l+ L++ +
+  XP_019853007.1 1919 REY-MNMYSSSLIPMVRS-ALCDKESDVRGAAAKTFESLHSAVgNSILEPILGPLLDQLGKAEEGKREIILDALQQVM 1994
+                      444.44467888888855.55568999999*************999****************************9876 PP
+
+  == domain 7  score: -0.9 bits;  conditional E-value: 1.3
+        mTOR_dom   96 kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtc 140 
+                                             g    ++l+++i+a+++++++ 
+  XP_019853007.1 2026 A----------------------GHSIYKYLNKVIQAIVTALQKK 2048
+                      3......................3333566666666666666554 PP
+
+  == domain 8  score: 4.0 bits;  conditional E-value: 0.041
+        mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                      + +   L+++l d+   + + +v++++++ ++++g+   +f+pq+  ++l+ + + ++ +r   +  + +Lv
+  XP_019853007.1 2229 MAIAGPLIRVLGDRYGGNVKVSVLETLVELVRKVGVAAKAFIPQLQTSYLKSLVDPNQPVRSQAVTGIIELV 2300
+                      44445699****************************************999999988877777777777666 PP
+
+>> XP_019860968.1  PREDICTED: phosphoinositide 3-kinase regulatory subunit 4-like, partial [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.2   0.1   0.00051       0.7      84     135 ..      51     102 ..       6     121 .. 0.86
+   2 !   10.9   0.1   0.00032      0.44      84     134 ..     125     175 ..      98     177 .] 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 10.2 bits;  conditional E-value: 0.00051
+        mTOR_dom  84 ptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135
+                     + v+++ +++ l+d+s  + h a  +ai+ +++++g +++ +l+ ++++  +
+  XP_019860968.1  51 KEVILSHMITFLNDKSNWELHIAFFEAIVDVVSQIGERSLDVLEALLQQDSN 102
+                     679999**********************************999998876555 PP
+
+  == domain 2  score: 10.9 bits;  conditional E-value: 0.00032
+        mTOR_dom  84 ptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipall 134
+                     + v+++ +++ l+d+s  + h a  +ai+ +++++g +++ +l+ +++++ 
+  XP_019860968.1 125 KEVILSHMITFLNDKSNWELHIAFFEAIVDVVSQIGERSLDVLEALLQQFS 175
+                     579999**************************************9999885 PP
+
+>> XP_011403511.1  PREDICTED: LOW QUALITY PROTEIN: splicing factor 3B subunit 1-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.0       2.1   2.9e+03      69     129 ..     510     571 ..     479     577 .. 0.67
+   2 !    6.7   0.0    0.0063       8.7       1     153 [.     631     790 ..     631     795 .. 0.80
+   3 ?    4.9   0.0     0.022        30     113     158 ..     913     958 ..     845     979 .. 0.73
+   4 ?    3.0   0.0     0.083   1.1e+02      15     131 ..    1059    1168 ..    1048    1186 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 2.1
+        mTOR_dom  69 sellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqi 129
+                     +++l +++    e+ +   +n++l +l  p+l+ + ++  v++i  ++ + +  + p++ +i
+  XP_011403511.1 510 KSALRKITDRAREFGADALFNQILPLLMSPTLEdQERHLLVKVIDRVLYKXDDLVRPYVHKI 571
+                     33346677777899999999999999999999966666777777776666665556666655 PP
+
+  == domain 2  score: 6.7 bits;  conditional E-value: 0.0063
+        mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGil....G.ALDPykhkeveeks....eeeekeeenaeetdvsellvglspsseeyyptv 86 
+                     Vv   l  p+LL  L  + ++++s++ R   ik++  +    G A+ P+ +  ve  +    ++e+++ ++ ++  +++l+   +p   e + +v
+  XP_011403511.1 631 VVASALGIPSLLPFLKAVCRSKKSWQARHTGIKIIQQIailmGcAVLPHLRSLVEI-IenglKDEQQKVRTITALGIAALAEAATPYGIESFDSV 724
+                     566667789*******************9888887654222445888888866653.334444447777777778888889999999999****9 PP
+
+        mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLa 153
+                      +     i++ +   +  +a ++ai + +  ++ ++   + ++++  l++ +++ ++++++ +l+ ++
+  XP_011403511.1 725 LVPLWTGIWNHQG--KGLAAFLKAIGYLIPLMDSEMaFRYTQEVMVILIRQFQSPDEEMKKIVLKVVK 790
+                     9999999996555..679999************999999**************999999999987655 PP
+
+  == domain 3  score: 4.9 bits;  conditional E-value: 0.022
+        mTOR_dom 113 sifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                      ++++lg+++ p+lpqi+ ++l  +++  +++r+   + ++ + si
+  XP_011403511.1 913 VVVNSLGMRVKPYLPQICGTILWRLNNKAAKVRQQAADLISRIASI 958
+                     4667788888888888888887777776666666666666655555 PP
+
+  == domain 4  score: 3.0 bits;  conditional E-value: 0.083
+        mTOR_dom   15 LlnilkteqsqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhta 106 
+                      Ll++lk   +++iRr +++++G +  A+ P+ +  +  ++     + ++ ++ +v  ++v +    e   p +v+ aL++  + p l+  ++ 
+  XP_011403511.1 1059 LLELLKAH-KKAIRRATVNTFGYIAkAIGPQDVLATLLNN-L---KVQERQN-RVC-TTVAIAIVAETCAPFTVLPALMNEYRVPELN-VQNG 1143
+                      55666644.7788999999998775588888883333222.1...1122111.111.2344556667788888888888888888887.6777 PP
+
+        mTOR_dom  107 vvqaimsifktlglkcvpflpqiip 131 
+                      v++++ + f+++g     ++  + p
+  XP_011403511.1 1144 VLKSLSFLFEYIGEMGKDYIYAVTP 1168
+                      8888888888777666666666655 PP
+
+>> XP_019850314.1  PREDICTED: serine/threonine-protein kinase ATR-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.4   0.2      0.96   1.3e+03     106     152 ..     930     984 ..     910     987 .. 0.72
+   2 !   13.8   0.0     4e-05     0.056       9      96 ..    1232    1330 ..    1224    1341 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: -0.4 bits;  conditional E-value: 0.96
+        mTOR_dom 106 avvqaimsifktlglkcvp........flpqiipallsvirtcesslrefllqqL 152
+                       v   ++if++l +kc +        fl+ i+p l  v+    s++++ ll qL
+  XP_019850314.1 930 LLVANFHYIFSNLICKCSEsrrslslqFLKTIMPDLDMVFVVRRSKILNQLLLQL 984
+                     5677778888888888876678888889999999987766655556666666555 PP
+
+  == domain 2  score: 13.8 bits;  conditional E-value: 4e-05
+        mTOR_dom    9 peLLeiLlnilkte..qsqsiRrevikvlGilGALDPykhkeveeks.......eeeekeeenaeetdvsel......lvglspsseeyyptv 86  
+                      p + +i+++++ +    ++s+R++   +lGilGA+DP +    + ++       e+    +  +e+++++++            ++e+   + 
+  XP_019850314.1 1232 PAIADIITSLVCNLkdADSSLRLKCGECLGILGAIDPGRISYQTVTTvkaivyfET----DMLSEKFSIELIehlkqvFLASRDAQEQNCCAF 1320
+                      55555555555443214899*****************9986655544333333311....111122222222221221333345557777777 PP
+
+        mTOR_dom   87 vinaLlkilk 96  
+                      +i+++l++l+
+  XP_019850314.1 1321 AIQEVLSVLN 1330
+                      7777777775 PP
+
+>> XP_019848972.1  PREDICTED: brefeldin A-inhibited guanine nucleotide-exchange protein 1 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.8   0.1    0.0014       1.9      78     147 ..     127     204 ..      89     211 .. 0.71
+   2 ?    4.4   0.1     0.032        45      94     154 ..    1135    1195 ..    1124    1199 .. 0.90
+   3 ?    2.6   0.0      0.12   1.6e+02     100     158 ..    1337    1396 ..    1322    1398 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 8.8 bits;  conditional E-value: 0.0014
+        mTOR_dom  78 ss.eeyyptvvinaLlkilkdpslsshhtavvqai...msifkt.....lglkcvpflpqiipallsvirtcesslref 147
+                      + +e  +  +i+aLl+il  + +s h  +v+q++    +i+        ++   + l+qii++l++ +++ e+sl+ +
+  XP_019848972.1 127 VHtDEGVQLQIIKALLTILTSKEVSVHGGTVLQSVrccYNIYLAsrnpiNQTTAKASLTQIISTLFQNLEN-EQSLQSM 204
+                     3448889999*************************6663333331222222333459********999997.4566655 PP
+
+  == domain 2  score: 4.4 bits;  conditional E-value: 0.032
+        mTOR_dom   94 ilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLat 154 
+                      i+k +   + + +vv+ +++i++t   + v+  ++i + +l ++ ++++++ e  +q  ++
+  XP_019848972.1 1135 IMKRNDSVTIRDMVVRCVTQIIQTKAQNIVSGWKNIFSVFLLAAGDSDQTIVELSFQTTSS 1195
+                      677777778999************99999************************99997665 PP
+
+  == domain 3  score: 2.6 bits;  conditional E-value: 0.12
+        mTOR_dom  100 lsshhtavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158 
+                      +++ ++ ++ a+m +f +  ++ c  +l++i+ +ll  +++ +++l     + L++Lv  
+  XP_019848972.1 1337 MTTTCNHTLYALMDVFMQyFDTLCSVLLEKILDQLLWCVQQDNEQLARSGTNCLENLVVS 1396
+                      55667778888999886658999999**********999999999999999999988865 PP
+
+>> XP_003385603.3  PREDICTED: exportin-1 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.9   0.1       5.4   7.5e+03     127     160 .]     115     150 ..      75     150 .. 0.65
+   2 ?   -2.5   0.1       4.2   5.9e+03     128     156 ..     340     367 ..     268     369 .. 0.57
+   3 ?   13.9   0.0   3.8e-05     0.053      74     152 ..     518     599 ..     478     607 .. 0.82
+   4 ?   -1.4   0.0       1.8   2.6e+03     118     151 ..     614     647 ..     608     654 .. 0.74
+   5 ?   -3.6   0.1       9.4   1.3e+04      93     145 ..     688     740 ..     677     744 .. 0.77
+   6 ?    0.8   0.0      0.39   5.4e+02     104     147 ..     808     852 ..     789     861 .. 0.79
+   7 ?   -2.8   0.1       5.2   7.2e+03      88     117 ..     933     962 ..     891     972 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: -2.9 bits;  conditional E-value: 5.4
+        mTOR_dom 127 pqiipallsvirtces.slrefllqqLat.Lvsivk 160
+                     + i+  ++++ +++++   ++++l++L++ Lv+ivk
+  XP_003385603.3 115 KYIVGLIIKYSSDADTlLEQKVYLSKLNIiLVQIVK 150
+                     446666666666666656677788888642677775 PP
+
+  == domain 2  score: -2.5 bits;  conditional E-value: 4.2
+        mTOR_dom 128 qiipallsvirtcesslrefllqqLatLv 156
+                      ++ + +++i++ +++++++ll+ L  Lv
+  XP_003385603.3 340 TFLKEHQQLIES-KAEMQNTLLEALHYLV 367
+                     223333334443.3455666666665555 PP
+
+  == domain 3  score: 13.9 bits;  conditional E-value: 3.8e-05
+        mTOR_dom  74 glspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqqL 152
+                      + + +e  +  +vi++Ll++ ++++ ++ ++ v + im+i+ +    l+   +fl+ ++++l++ ++++++ ++++  + +
+  XP_003385603.3 518 AMHEEDEKRFLVTVIKELLSMCEQKKGKDNKAIVASNIMYIVGQypRFLRAhWKFLKTVVNKLFEFMHETHEGVQDMACDTF 599
+                     345566899999******************************994433555699***************9999998876655 PP
+
+  == domain 4  score: -1.4 bits;  conditional E-value: 1.8
+        mTOR_dom 118 lglkcvpflpqiipallsvirtcesslrefllqq 151
+                     +  +++pf+++i++++ ++i ++e++  +++++ 
+  XP_003385603.3 614 QPQEVMPFIEEILNNIRAIICDLEPHQVHTFYEA 647
+                     4456799************999999666655555 PP
+
+  == domain 5  score: -3.6 bits;  conditional E-value: 9.4
+        mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+                     ++l++p   ++   v++  +  ++ +g   v  l +i   ll+v + ++++++
+  XP_003385603.3 688 TVLQNPDCIKQLGHVLKINVRACSAVGHPFVIQLARIYLDLLNVYKCLSENIS 740
+                     67777777788888888888888888888888888888888888887766665 PP
+
+  == domain 6  score: 0.8 bits;  conditional E-value: 0.39
+        mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvir.tcesslref 147
+                       +v+++++ i+++l+ + ++ +p i+ al++ +   ++++++ef
+  XP_003385603.3 808 EPEVLSTVTCIVEKLQEQAITDVPTIMEALFECTLeMLNKDMEEF 852
+                     5689999*********************99986540334466655 PP
+
+  == domain 7  score: -2.8 bits;  conditional E-value: 5.2
+        mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifkt 117
+                     ++ +l+++ d s +   t+  + + ++f+ 
+  XP_003385603.3 933 MQHVLAVVTDTSHTASLTMHATILAYMFQL 962
+                     233334444555544444444444555544 PP
+
+>> XP_019850114.1  PREDICTED: CLIP-associating protein 1-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.5   0.1       4.1   5.7e+03     128     159 ..      43      71 ..      32     113 .. 0.59
+   2 ?    7.0   0.0    0.0049       6.8      88     157 ..    1193    1263 ..    1179    1264 .. 0.91
+   3 ?    0.6   0.0      0.46   6.4e+02     107     159 ..    1330    1383 ..    1274    1384 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -2.5 bits;  conditional E-value: 4.1
+        mTOR_dom 128 qiipallsvirtcesslrefllqqLatLvsiv 159
+                     ++i  l++++++++     + lq +  L+ i+
+  XP_019850114.1  43 ELIKGLANWMSSSN---FRMSLQAMDLLIMII 71 
+                     55555555555432...333445555544443 PP
+
+  == domain 2  score: 7.0 bits;  conditional E-value: 0.0049
+        mTOR_dom   88 inaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                      i+ Llk +kd + s+ +t+++q+i s  k+ + +     ++  + +l+s +++++  +r + l+ + +Lv+
+  XP_019850114.1 1193 IALLLKQIKDTNNSKVRTTAIQSIFSLAKSFDYNNwKDHISDAMTTLVSCTNDSDGLVRTMSLRVIRELVK 1263
+                      78899****************************99899*************99998888888888888875 PP
+
+  == domain 3  score: 0.6 bits;  conditional E-value: 0.46
+        mTOR_dom  107 vvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                      +++ i +++++ +  c  + l+  +p +++  r+ ess+r+  +  L ++  iv
+  XP_019850114.1 1330 ALKLISKVVSHSDESCiSERLNDMVPGIVQGYRHEESSIRKASVFCLVEIHGIV 1383
+                      66778899999999996779**************99999998888888887776 PP
+
+>> XP_019849477.1  PREDICTED: importin-4-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.2   0.0       1.7   2.4e+03       6      29 ..      34      57 ..      31      63 .. 0.86
+   2 ?   -0.3   0.9      0.86   1.2e+03      76     149 ..     174     254 ..      76     260 .. 0.54
+   3 ?    2.3   0.1      0.14     2e+02      59     154 ..     321     418 ..     267     424 .. 0.68
+   4 ?    2.9   0.0     0.089   1.2e+02      79     137 ..     431     489 ..     343     513 .. 0.51
+   5 ?    4.5   0.0     0.029        40      87     158 ..     526     598 ..     499     600 .. 0.87
+   6 ?    1.1   0.0      0.33   4.5e+02      99     157 ..     674     732 ..     670     734 .. 0.89
+   7 ?   -2.2   0.0       3.4   4.7e+03     121     156 ..     863     899 ..     860     903 .. 0.77
+   8 ?   -2.2   0.1       3.5   4.8e+03     105     138 ..    1013    1046 ..     947    1067 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: -1.2 bits;  conditional E-value: 1.7
+        mTOR_dom  6 ldypeLLeiLlnilkteqsqsiRr 29
+                    ++ p+LL+ L+ ++  +++++iR+
+  XP_019849477.1 34 YKNPSLLNSLCHVMLHSEDPHIRQ 57
+                    678*********999999999996 PP
+
+  == domain 2  score: -0.3 bits;  conditional E-value: 0.86
+        mTOR_dom  76 spss.eeyyptvvinaLlkilkdpslsshht...avvqai...msifktlglkcvpflpqiipallsvirtcesslrefll 149
+                     + ss   +y+   ++ +++ lkd+ +s+ ++   ++++a+   ++i ++  ++ +++ ++++   ls+i+   ++l ef l
+  XP_019849477.1 174 TRSSmVPFYALKSLTYVIEYLKDEEMSHFRNlfpKAIEAVkklITIDEDKACEAMELFDELMECELSLISAFLQQLVEFCL 254
+                     222224555555555666666777776544312233333332245555555555666666666666666666666666665 PP
+
+  == domain 3  score: 2.3 bits;  conditional E-value: 0.14
+        mTOR_dom  59 eeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqq 151
+                      ++++++ + s++l ++      e   t v++ + + l+d++   +++++++ai  + +       ++ l+++++ ++  +++ ++ +++  l  
+  XP_019849477.1 321 GHSQSPQCEASRVLDKMALNLpPEKLFTSVMQYVQSWLQDEATPIQRKTAITAIGVMAEGCAEHIrTNHLRELVQVIFDGLSNPHQIVKNAALFS 415
+                     44455555555555555433346777777899999999999999999999999999998877777788888888888888888777777777766 PP
+
+        mTOR_dom 152 Lat 154
+                     L++
+  XP_019849477.1 416 LGQ 418
+                     665 PP
+
+  == domain 4  score: 2.9 bits;  conditional E-value: 0.089
+        mTOR_dom  79 seeyyptvvinaLlkilkdpsls......shhtavvqaimsifktlglkcvpflpqiipallsvi 137
+                     s e      + aL ++l d++ls         t +  a+ + +++lg + +p+lp+++ +l+ ++
+  XP_019849477.1 431 SSE-----LLPALFQLL-DHTLSssgtnqPSVTRIFYAVETFCENLGSELLPYLPNLMDKLIVLL 489
+                     233.....333444444.33333110001334455566666777788888888888888877655 PP
+
+  == domain 5  score: 4.5 bits;  conditional E-value: 0.029
+        mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                     v+++ +++  ++ l   ++++v+++  i kt+g      + ++ +   l+++++++++lr  ++  +a+L +i
+  XP_019849477.1 526 VLKTYINLPYQQELVVLQAQAVDTLGIIAKTIGADNfQGIANECVTLGLTLMNSTDPDLRRSVYGMMASLSTI 598
+                     6778888889999**********************9677889999999*********************9988 PP
+
+  == domain 6  score: 1.1 bits;  conditional E-value: 0.33
+        mTOR_dom  99 slsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                     s+ + ++++ +ai +i +++g+  +p+++   ++++  + ++++ lr+  +  L+ L +
+  XP_019849477.1 674 SYLEAKEDACNAIGEIANNVGILFLPYIDDCFQEIAINTDDSSPGLRKAAVTSLGLLLK 732
+                     55567788999*******************************99******999999876 PP
+
+  == domain 7  score: -2.2 bits;  conditional E-value: 3.4
+        mTOR_dom 121 kcvpflpqiipallsvirtces.slrefllqqLatLv 156
+                     k +p ++  +  l++ + tc++     f++  La++v
+  XP_019849477.1 863 KILPSIKPMMTLLIKKMMTCKTvANHSFVMGTLAEIV 899
+                     6677777788888888889988888888888888887 PP
+
+  == domain 8  score: -2.2 bits;  conditional E-value: 3.5
+        mTOR_dom  105 tavvqaimsifktlglkcvpflpqiipallsvir 138 
+                       +v + i + +++ ++  ++ l+ ++ a+++ ++
+  XP_019849477.1 1013 VTVYSCIFHLLQSGNVTIMNNLDLVLKAFAADLS 1046
+                      2333334444444444445566666666665554 PP
+
+>> XP_019859740.1  PREDICTED: uncharacterized protein LOC109587970 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.2   0.4   0.00025      0.35      56     119 ..      11      75 ..       2     100 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 11.2 bits;  conditional E-value: 0.00025
+        mTOR_dom  56 e.ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlg 119
+                     + +k+e++ ++t v +   + s+ss +yy++   +  ++  + +slss  t++ ++  si+k   
+  XP_019859740.1  11 ShNKDESSFSSTVVPQPSSSSSSSSSDYYSSNFYSHFVATTRSSSLSSVVTTTPSSSSSIIKATP 75 
+                     1133334444444444466668888***********************99999888888888765 PP
+
+>> XP_019855585.1  PREDICTED: HEAT repeat-containing protein 1-like [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.9   0.2    0.0026       3.7     102     156 ..      69     122 ..      19     144 .. 0.75
+   2 ?   -2.5   0.0       4.3     6e+03     111     141 ..     290     320 ..     281     325 .. 0.73
+   3 ?    4.5   0.4     0.029        40      79     140 ..     389     474 ..     357     489 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 7.9 bits;  conditional E-value: 0.0026
+        mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                     s  ++++  i + + +l ++ +p+lp i+++ l++i++++ + +  +l+ L  + 
+  XP_019855585.1  69 SATSNALLCISESCASLTVRLIPLLPTILSTALKYIEQSD-KSSGLVLSSLILIR 122
+                     4445556666777888*********************976.56666666666555 PP
+
+  == domain 2  score: -2.5 bits;  conditional E-value: 4.3
+        mTOR_dom 111 imsifktlglkcvpflpqiipallsvirtce 141
+                     i  + k+l++  + f +q++ +++s++++c+
+  XP_019855585.1 290 IRDVAKKLKVLFLLFADQLVDSIVSLLSSCH 320
+                     4556677777777788888888888888775 PP
+
+  == domain 3  score: 4.5 bits;  conditional E-value: 0.029
+        mTOR_dom  79 seeyyptvvinaLlkil........................kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtc 140
+                     ++e y t + + L   +                          +s    + +++q   s++++lg ++  +lp+iip l +++++ 
+  XP_019855585.1 389 DNELYLTLMRSHLSPCIaqlavaassgetqwkklnqqllmkTRESKPMVRLCALQIAGSMYSKLGSEVNVILPEIIPFLSELMEDE 474
+                     4555555555555544445555555555555555555555333333466778889999999****************999999853 PP
+
+>> XP_003387708.1  PREDICTED: importin subunit beta-1 isoform X1 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.5   0.0      0.03        41      83     145 ..     125     188 ..      87     198 .. 0.82
+   2 ?   -1.3   0.0       1.7   2.4e+03      70      95 ..     219     244 ..     190     279 .. 0.63
+   3 ?   -0.6   0.0       1.1   1.5e+03      83     139 ..     405     462 ..     381     480 .. 0.64
+   4 ?    2.2   0.3      0.15   2.1e+02      84     146 ..     504     566 ..     473     584 .. 0.64
+   5 ?    1.5   0.2      0.25   3.5e+02      72     138 ..     592     660 ..     552     664 .. 0.58
+   6 ?    6.3   0.1     0.008        11      88     142 ..     652     706 ..     646     725 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 4.5 bits;  conditional E-value: 0.03
+        mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslr 145
+                      p v+ +   ++ + +s +s + a +++i +i+++++ k+     ++i+ a+++ +r+ e+sl 
+  XP_003387708.1 125 WPEVIATLAFNVTSTQSSESLKIASLDSIGYICEEISPKVlSGASNEILTAIVQGMRKEEPSLH 188
+                     5665555556999999999*********************6778999**********9888765 PP
+
+  == domain 2  score: -1.3 bits;  conditional E-value: 1.7
+        mTOR_dom  70 ellvglspsseeyyptvvinaLlkil 95 
+                     +++++ +++ +e     ++++L+ki+
+  XP_003387708.1 219 QVVCEATQCPNEEVVIAALQNLVKIM 244
+                     33444444444333333444444444 PP
+
+  == domain 3  score: -0.6 bits;  conditional E-value: 1.1
+        mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkc..vpflpqiipallsvirt 139
+                     ++  v+  +++++k   l + + ++  +i  i++++   +  +++l++++pal+  ++ 
+  XP_003387708.1 405 ISE-VLLRIIELMKSDPLIQVKDSAAWTIGRICEQVPSTVlhLEVLSHLLPALIDGLKR 462
+                     333.3333455557777777788888888888888777765566788888888776665 PP
+
+  == domain 4  score: 2.2 bits;  conditional E-value: 0.15
+        mTOR_dom  84 ptvvinaLlkil.....kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146
+                     +++v +     l     +d+  s+ +ta+ +a+m  +k+    c  ++++ + ++l  ++++  ++ e
+  XP_003387708.1 504 EQIVSTI----LataerNDAVHSNLRTAAYEALMDLIKYSPKDCYIVVQKTVLHVLDSLQKV-VQIDE 566
+                     3333333....233344566667889999999999999999999777777666666655543.24444 PP
+
+  == domain 5  score: 1.5 bits;  conditional E-value: 0.25
+        mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpsls..shhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                     l ++++ +   ++   ++aL+++l+ +s      +++++ +i   +++lg+  ++++p + + l+++++
+  XP_003387708.1 592 LRKMTKEDVLQISDSLVQALIAMLSTSSGLvgGVQEDAILTIGALVESLGVDFLKYMPSLSNYLIAALK 660
+                     333333333334446778888888766633246777888888888888888888888777666666655 PP
+
+  == domain 6  score: 6.3 bits;  conditional E-value: 0.008
+        mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                      n L++ lk+ +  + ++a++  +   +++l+++ +p+ ++i++ ++ ++++ + 
+  XP_003387708.1 652 SNYLIAALKNYNDVQVCQAAIGLVGDLCRSLSVNLIPYCENIMQIMVDTLSNPTV 706
+                     57899999999999**********************************9996553 PP
+
+>> XP_019853838.1  PREDICTED: importin subunit beta-1 isoform X2 [Amphimedon queenslandica]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.5   0.0      0.03        41      83     145 ..     125     188 ..      87     198 .. 0.82
+   2 ?   -1.3   0.0       1.7   2.4e+03      70      95 ..     219     244 ..     190     279 .. 0.63
+   3 ?   -0.6   0.0       1.1   1.5e+03      83     139 ..     405     462 ..     381     480 .. 0.64
+   4 ?    2.2   0.3      0.15   2.1e+02      84     146 ..     504     566 ..     473     584 .. 0.64
+   5 ?    1.5   0.2      0.25   3.5e+02      72     138 ..     592     660 ..     552     664 .. 0.58
+   6 ?    6.3   0.1     0.008        11      88     142 ..     652     706 ..     646     725 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 4.5 bits;  conditional E-value: 0.03
+        mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslr 145
+                      p v+ +   ++ + +s +s + a +++i +i+++++ k+     ++i+ a+++ +r+ e+sl 
+  XP_019853838.1 125 WPEVIATLAFNVTSTQSSESLKIASLDSIGYICEEISPKVlSGASNEILTAIVQGMRKEEPSLH 188
+                     5665555556999999999*********************6778999**********9888765 PP
+
+  == domain 2  score: -1.3 bits;  conditional E-value: 1.7
+        mTOR_dom  70 ellvglspsseeyyptvvinaLlkil 95 
+                     +++++ +++ +e     ++++L+ki+
+  XP_019853838.1 219 QVVCEATQCPNEEVVIAALQNLVKIM 244
+                     33444444444333333444444444 PP
+
+  == domain 3  score: -0.6 bits;  conditional E-value: 1.1
+        mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkc..vpflpqiipallsvirt 139
+                     ++  v+  +++++k   l + + ++  +i  i++++   +  +++l++++pal+  ++ 
+  XP_019853838.1 405 ISE-VLLRIIELMKSDPLIQVKDSAAWTIGRICEQVPSTVlhLEVLSHLLPALIDGLKR 462
+                     333.3333455557777777788888888888888777765566788888888776665 PP
+
+  == domain 4  score: 2.2 bits;  conditional E-value: 0.15
+        mTOR_dom  84 ptvvinaLlkil.....kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146
+                     +++v +     l     +d+  s+ +ta+ +a+m  +k+    c  ++++ + ++l  ++++  ++ e
+  XP_019853838.1 504 EQIVSTI----LataerNDAVHSNLRTAAYEALMDLIKYSPKDCYIVVQKTVLHVLDSLQKV-VQIDE 566
+                     3333333....233344566667889999999999999999999777777666666655543.24444 PP
+
+  == domain 5  score: 1.5 bits;  conditional E-value: 0.25
+        mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpsls..shhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                     l ++++ +   ++   ++aL+++l+ +s      +++++ +i   +++lg+  ++++p + + l+++++
+  XP_019853838.1 592 LRKMTKEDVLQISDSLVQALIAMLSTSSGLvgGVQEDAILTIGALVESLGVDFLKYMPSLSNYLIAALK 660
+                     333333333334446778888888766633246777888888888888888888888777666666655 PP
+
+  == domain 6  score: 6.3 bits;  conditional E-value: 0.008
+        mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                      n L++ lk+ +  + ++a++  +   +++l+++ +p+ ++i++ ++ ++++ + 
+  XP_019853838.1 652 SNYLIAALKNYNDVQVCQAAIGLVGDLCRSLSVNLIPYCENIMQIMVDTLSNPTV 706
+                     57899999999999**********************************9996553 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      23542  (11521146 residues searched)
+Passed MSV filter:                      1480  (0.0628664); expected 470.8 (0.02)
+Passed bias filter:                     1021  (0.0433693); expected 470.8 (0.02)
+Passed Vit filter:                       106  (0.00450259); expected 23.5 (0.001)
+Passed Fwd filter:                        18  (0.000764591); expected 0.2 (1e-05)
+Initial search space (Z):              23542  [actual number of targets]
+Domain search space  (domZ):              17  [number of targets reported over threshold]
+# CPU time: 0.16u 0.20s 00:00:00.36 Elapsed: 00:00:00.25
+# Mc/sec: 7260.49
+//
+[ok]

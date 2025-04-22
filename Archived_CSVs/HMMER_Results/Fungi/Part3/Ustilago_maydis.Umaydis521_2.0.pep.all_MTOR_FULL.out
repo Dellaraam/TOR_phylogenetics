@@ -1,0 +1,356 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Ustilago_maydis.Umaydis521_2.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.5e-67  225.2   0.1    2.3e-62  208.3   0.0    5.8  6  KIS68642  pep chromosome:Umaydis521_2.0:8:272733:279965:1 gen
+    6.5e-05   21.6   3.7      0.029   13.0   0.4    4.4  5  KIS70172  pep chromosome:Umaydis521_2.0:4:553259:556948:1 gen
+     0.0041   15.7   0.5        3.7    6.1   0.1    5.0  7  KIS67298  pep chromosome:Umaydis521_2.0:14:320940:323823:-1 g
+     0.0072   14.9   3.7        1.6    7.3   0.0    3.9  3  KIS68383  pep chromosome:Umaydis521_2.0:9:247401:251300:1 gen
+     0.0075   14.9   1.9       0.84    8.2   0.4    2.9  2  KIS67732  pep chromosome:Umaydis521_2.0:12:415069:421416:-1 g
+     0.0088   14.7   0.0      0.038   12.6   0.0    2.1  1  KIS71202  pep chromosome:Umaydis521_2.0:2:899139:907052:-1 ge
+  ------ inclusion threshold ------
+      0.067   11.8   8.8         41    2.7   0.0    7.3  8  KIS67455  pep chromosome:Umaydis521_2.0:13:201243:205011:1 ge
+      0.093   11.3   1.2        7.9    5.1   0.0    3.5  4  KIS72364  pep chromosome:Umaydis521_2.0:1:2299617:2302445:1 g
+
+
+Domain annotation for each sequence (and alignments):
+>> KIS68642  pep chromosome:Umaydis521_2.0:8:272733:279965:1 gene:UMAG_03216 transcript:KIS68642 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.9   0.0       2.7   2.2e+03     103     153 ..     157     207 ..     139     213 .. 0.78
+   2 ?    0.6   0.0      0.22   1.9e+02      80     132 ..     300     358 ..     275     369 .. 0.79
+   3 !  208.3   0.0   2.7e-65   2.3e-62       1     160 []     748     907 ..     748     907 .. 0.97
+   4 ?    2.4   0.0     0.059        50     101     152 ..     929     981 ..     924     988 .. 0.81
+   5 ?    4.1   0.1     0.018        15      78     156 ..     989    1066 ..     971    1069 .. 0.85
+   6 ?    0.3   0.0      0.26   2.2e+02      59     146 ..    1691    1781 ..    1669    1790 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: -2.9 bits;  conditional E-value: 2.7
+  mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLa 153
+                + a+v  i ++ k +  +  p++p+++  +  ++r++   +re   + ++
+  KIS68642 157 GRYAAVLIIREMAKRVPQQFHPYVPRVLDRIWVALRDVRVIVREGAAEAMG 207
+               5567788889999999999999*****999999999887777776666665 PP
+
+  == domain 2  score: 0.6 bits;  conditional E-value: 0.22
+  mTOR_dom  80 eeyyptvvinaLlkil.......kdpslsshhtavvqaimsifktlglkcvpflpqiipa 132
+                 y++   ++a++ il       kd+s  +  +++ ++i ++   +g ++ pf++ ++  
+  KIS68642 300 PHYFAEEHLRAVMGILteqlrreKDRSP-KESAQTFETIGFVAAAMGPRMKPFIEPVLAC 358
+               5688888889999999888885444443.5789999******************999865 PP
+
+  == domain 3  score: 208.3 bits;  conditional E-value: 2.7e-65
+  mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls 101
+               Vv+Pyl+y +LL+++++ilkteqs+++Rre+i+v+GilGALDPy++k +e++ +e ++e+++ + td+ el+  + +s+++yy++++i aL++ilkdpsls
+  KIS68642 748 VVNPYLTYRNLLGTVVKILKTEQSKPVRRETIRVMGILGALDPYRYKLLEKNGDEGQDETSKGSGTDLFELALAIGTSTDDYYQNIAIDALITILKDPSLS 848
+               8**********************************************9998776668899999999*********************************** PP
+
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+               +hh+av++aim++fkt+glkcv+flpqiipa+l+virtc + l+ef++qqLa+L+si+k
+  KIS68642 849 THHHAVIEAIMYMFKTQGLKCVTFLPQIIPAFLNVIRTCGTGLSEFYFQQLAILISIIK 907
+               *********************************************************97 PP
+
+  == domain 4  score: 2.4 bits;  conditional E-value: 0.059
+  mTOR_dom 101 sshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqL 152
+               ss + ++v+ +  + k l+ +  ++lp ++p++l+++    + +++ +ll+ L
+  KIS68642 929 SSIQLTIVSLVEAVAKALEGEFKSYLPILLPNMLQTLDGEITsKRQPTLLRIL 981
+               56677899999999**********************99544437777776665 PP
+
+  == domain 5  score: 4.1 bits;  conditional E-value: 0.018
+  mTOR_dom   78 sseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                s+ e y + v+  ++k+++ p  s + + a++ ++ +  ++  +      +++i+ l++v+ t +s++r+ +++ L+ Lv
+  KIS68642  989 SNIEEYLHLVLPVVVKMFERPDASqTLRRAAILTVGNLSRK--VSFCDHASRVIHPLVRVLPTGTSDIRNAVMETLSALV 1066
+                666777788999999***99999967788889999998885..7789999****************************98 PP
+
+  == domain 6  score: 0.3 bits;  conditional E-value: 0.26
+  mTOR_dom   59 eeenaeetdvsellvglspsseeyyptvvi...naLlkilkdpsls...shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146 
+                +ee++e+++ +++++++ ps + ++ ++++   n+L   l+  +l     h+++v qa+ + f ++ +    +  ++ip++++ i+  ++++r 
+  KIS68642 1691 HEERNEQITPQMIAASIVPSVQGFFRSIALasgNSLQDTLRLLTLWfkyGHQEDVSQAVSEGFASVIV---DTWLEVIPQIIARITAPSPRVRR 1781
+                44444455555557888888888888888744456777777777654346889999999999998555...55555555555555555555555 PP
+
+>> KIS70172  pep chromosome:Umaydis521_2.0:4:553259:556948:1 gene:UMAG_05241 transcript:KIS70172 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.1   0.0       1.5   1.2e+03      68     130 ..     435     498 ..     408     502 .. 0.67
+   2 !    5.6   0.0    0.0062       5.2       3     150 ..     559     713 ..     557     719 .. 0.70
+   3 !   13.0   0.4   3.4e-05     0.029      40     147 ..     747     873 ..     747     886 .. 0.76
+   4 ?   -2.2   0.0       1.6   1.4e+03     106     152 ..     915     962 ..     911     966 .. 0.76
+   5 ?   -1.7   0.0       1.1   9.7e+02      78      78 ..    1042    1042 ..     984    1113 .. 0.46
+
+  Alignments for each domain:
+  == domain 1  score: -2.1 bits;  conditional E-value: 1.5
+  mTOR_dom  68 vsellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+                +++l +++    ++ p   + ++l +l +++l+ + ++  v++i  i+ +l+  + p++ +i+
+  KIS70172 435 RKTALRQITDRARDFGPGPLFDKILPLLMERTLEdQERHLLVKVIDRILYKLDDLVRPYVGRIL 498
+               3333566677778888888888888888899988667777888888888888777777777665 PP
+
+  == domain 2  score: 5.6 bits;  conditional E-value: 0.0062
+  mTOR_dom   3 ePyldypeLLeiLlnilkteqsqsiRrevikvlGil....G.ALDPykhkeveeks...eeeekeeenaeetdvsellvglspsseeyyptvvinaLlkil 95 
+                  l  p LL  L  + ++++s++ R   i+++  +    G A+ P+    v       e+e+++ +++++ ++++l+    p   e +++v ++ L   +
+  KIS70172 559 ASALGIPALLPFLKAVCRSKKSWQARHTGIRIVQQIaimmGcAILPHLKSLVDCVEkglEDEQQKVKTMTALSLAALAEAAAPYGIESFENV-LKPLWIGI 658
+               55566788888888888888888888887777654322234577777775555433333444666666666667777777777777777774.44444444 PP
+
+  mTOR_dom  96 kdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllq 150
+               +++   +  +a ++ai +i+  ++  + + f++++ p+l++ ++++++++++ +l+
+  KIS70172 659 RQHR-GKGLAAFLKAIGFIIPLMDSDStLYFVKEVTPTLIREFQSADEEMKKIVLK 713
+               4444.457889999*********99998999*************999999999887 PP
+
+  == domain 3  score: 13.0 bits;  conditional E-value: 3.4e-05
+  mTOR_dom  40 ALDPykhkeveeks....................eeeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlg 119
+               ALD  ++k+v e++                    ++e++  +++  +++++++ +l  ++ +e  +   i  L+  ++++++++  + +++ + ++++ lg
+  KIS70172 747 ALDRRNYKQVVETTvelankvgvaevvsrivnelKDESEPFRKMVMETIQQVVSNLGAADiDERLEVQLIDGLIYAFQEQTVED--HVMLEGVGTVVNALG 845
+               77777777777666777766666666555554433334455555567788889999999999***************9999995..5789*********** PP
+
+  mTOR_dom 120 lkcvpflpqiipallsvirtcesslref 147
+               +++ p+l+qi++++l  +++ +++ r+ 
+  KIS70172 846 MRVKPYLTQIVSTILWRLNNKNAKTRQQ 873
+               **************99998877765554 PP
+
+  == domain 4  score: -2.2 bits;  conditional E-value: 1.6
+  mTOR_dom 106 avvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqL 152
+               ++++a + i + +g+ +  p ++ ++p ++ ++r+ +++++e  ++ +
+  KIS70172 915 SIISAETAIANVVGMAQmNPPIKDLLPRMTPILRNRHEKVQEASINLI 962
+               567777778888888776788999999999999998888888776655 PP
+
+  == domain 5  score: -1.7 bits;  conditional E-value: 1.1
+  mTOR_dom   78 s 78  
+                 
+  KIS70172 1042 V 1042
+                2 PP
+
+>> KIS67298  pep chromosome:Umaydis521_2.0:14:320940:323823:-1 gene:UMAG_04397 transcript:KIS67298 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.2   0.0      0.14   1.2e+02      75     120 ..      83     126 ..      55     139 .. 0.80
+   2 !    6.1   0.1    0.0044       3.7     116     158 ..     164     206 ..     110     207 .. 0.81
+   3 ?   -2.6   0.0       2.1   1.8e+03      95     139 ..     226     269 ..     216     277 .. 0.63
+   4 ?   -2.1   0.0       1.4   1.2e+03     111     145 ..     443     477 ..     414     489 .. 0.64
+   5 ?    0.6   0.0      0.21   1.8e+02      87     158 ..     507     577 ..     488     579 .. 0.78
+   6 ?   -2.9   0.0       2.6   2.2e+03       9      36 ..     695     721 ..     693     725 .. 0.83
+   7 ?   -1.1   0.0      0.71     6e+02     123     139 ..     732     748 ..     706     757 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 1.2 bits;  conditional E-value: 0.14
+  mTOR_dom  75 lspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlgl 120
+               +sp s ey ++ +i aL   l +  l+   t+vv+ +m+i+  +g 
+  KIS67298  83 ISPQSFEYVKQAIIPAL--SLPEDMLRRTATQVVSMLMTILTPQGW 126
+               47777889999889886..5889999999***********987775 PP
+
+  == domain 2  score: 6.1 bits;  conditional E-value: 0.0044
+  mTOR_dom 116 ktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+               +  +++ v+ ++ +ip++l+++++++s++r   l+ L+++v+i
+  KIS67298 164 EMCEINGVKPIDILIPKFLEATQHTDSRIRMHALNCLNQFVQI 206
+               45567778889999***************************98 PP
+
+  == domain 3  score: -2.6 bits;  conditional E-value: 2.1
+  mTOR_dom  95 lkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                +d+s  + +  v qa++ i+     k +p +++++  +l  +++
+  KIS67298 226 ASDESA-NVRRYVCQALVLILGVRPDKLIPEMDNVVEYMLYSTQD 269
+               444443.35666777777777777777777777777777766665 PP
+
+  == domain 4  score: -2.1 bits;  conditional E-value: 1.4
+  mTOR_dom 111 imsifktlglkcvpflpqiipallsvirtcesslr 145
+               +  i +       p lp ++p l++ ++++++ +r
+  KIS67298 443 LGAIAEGCIAGIQPHLPTLVPFLINSLKDSKPLVR 477
+               44555555555566777777777777776665444 PP
+
+  == domain 5  score: 0.6 bits;  conditional E-value: 0.21
+  mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+               +++ Ll+++ d++ +  ++a  +a  +  ++ g    pfl+ ++ +l+ ++ + +++ +  l++ L+tL   
+  KIS67298 507 AMEGLLTMVLDNN-KRVQEAGCSAFATLEEEAGRSLEPFLEPVLKTLVFAFDKYQQKNLLILYDALGTLADS 577
+               5666666666666.44788888999999999999999***************99998888899999998765 PP
+
+  == domain 6  score: -2.9 bits;  conditional E-value: 2.6
+  mTOR_dom   9 peLLeiLlnilkteqsqsiRrevikvlG 36 
+               p+LL +L  ++ +  + ++R+++  +lG
+  KIS67298 695 PSLLPLLGHCITNV-EAPVRQSAYALLG 721
+               89999999999866.7899999998888 PP
+
+  == domain 7  score: -1.1 bits;  conditional E-value: 0.71
+  mTOR_dom 123 vpflpqiipallsvirt 139
+                pfl+ i+p+l++ i+ 
+  KIS67298 732 KPFLRSIMPELIRQIEP 748
+               479********999974 PP
+
+>> KIS68383  pep chromosome:Umaydis521_2.0:9:247401:251300:1 gene:UMAG_03477 transcript:KIS68383 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.7   2.5     0.024        20      13     150 ..      54     201 ..      47     207 .. 0.56
+   2 !    7.3   0.0    0.0019       1.6      98     155 ..     229     286 ..     199     288 .. 0.84
+   3 ?   -2.2   0.0       1.6   1.3e+03     108     152 ..     677     724 ..     666     726 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 3.7 bits;  conditional E-value: 0.024
+  mTOR_dom  13 eiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseee.....ekeeenaeetdvsel...lvglspsseeyyptvvinaLl.kil.......kd 97 
+               +++l ++k +++++++  v+++l il  +   + k + ++ +++     +   +n e  d+++l   +v+        y+t+++n+L  k+l         
+  KIS68383  54 RQVLALMK-DSNTEVKNMVVRCLAIL--VPRLREK-NMQHVQDTlieyiS--VNNDELRDIAALalkTVTANMPARSSYATIALNKLTpKLLnhvadasAS 148
+               55555555.67999**********98..4444444.44566555564332..333333555555433333334448999******9984444444332222 PP
+
+  mTOR_dom  98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150
+               + l     +++  +++ f  + +   ++ + ++ +++ ++r++ + +r+  l 
+  KIS68383 149 QELLIDSLDILAELITKFAAVVTGAASLQNALLKSVVPAMRHSRPAVRKRSLT 201
+               22222334444445666666666666666666666666666666666655555 PP
+
+  == domain 2  score: 7.3 bits;  conditional E-value: 0.0019
+  mTOR_dom  98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+               +++ + ++++vq i    +t   +    lp+++p+++++++  +++lre+ lq ++ +
+  KIS68383 229 KNVVDTRKTAVQLIAIFARTCPRRLGRRLPEFMPTIIETAKYDDDELRETCLQSIELI 286
+               5566788999999999999999999****************9999********98765 PP
+
+  == domain 3  score: -2.2 bits;  conditional E-value: 1.6
+  mTOR_dom 108 vqaimsifkt...lglkcvpflpqiipallsvirtcesslrefllqqL 152
+               v++i++i  +    g    +fl+  i+++++++r+++++lr   ++ L
+  KIS68383 677 VKVITQIAASpicAGAAFDAFLRDSISEVATLLRKSNRQLRLAAFDCL 724
+               66777777765556777788999999********99999998888766 PP
+
+>> KIS67732  pep chromosome:Umaydis521_2.0:12:415069:421416:-1 gene:UMAG_04230 transcript:KIS67732 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.8   0.1     0.011       9.2      12      71 ..       6      64 ..       4      86 .. 0.70
+   2 !    8.2   0.4   0.00099      0.84      80     159 ..    1390    1469 ..    1366    1470 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 4.8 bits;  conditional E-value: 0.011
+  mTOR_dom 12 LeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsel 71
+              L+ L+++l t ++++iR  + k lG + A+    +   ++++  +++ ++ +++t+++++
+  KIS67732  6 LDRLVSLLDTGSTPAIRATAAKQLGQIAAVRIRGQSTAQQAA-AHARPQKVESSTQSNAI 64
+              6789*************************9877665444433.32223333333333333 PP
+
+  == domain 2  score: 8.2 bits;  conditional E-value: 0.00099
+  mTOR_dom   80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                +e+  + ++++++ ++ dp+  + ++ +v+ i + +++l+lk +p++  +i  +l  +++ ++ +r +  + +a+Lv++v
+  KIS67732 1390 TEVALKHIVEKVVPLVGDPASITNRQGAVELIYHTVQQLDLKILPYVIFLIVPVLGRMSDNDEMVRLVATNTFASLVKMV 1469
+                5666667788888999999999**************************99999*******999**************998 PP
+
+>> KIS71202  pep chromosome:Umaydis521_2.0:2:899139:907052:-1 gene:UMAG_01110 transcript:KIS71202 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.6   0.0   4.5e-05     0.038      20      54 ..    1281    1321 ..    1270    1403 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 12.6 bits;  conditional E-value: 4.5e-05
+  mTOR_dom   20 kte.qsqsiRrevikvlGilGALDPykhkeveeks.....e 54  
+                +++ q+++iR    +++G++GA+DP +  +  e+      +
+  KIS71202 1281 RSDaQHTDIRDIGFRCFGLIGAVDPDRIEHAVEEPlkivlS 1321
+                33457999*******************97776655443331 PP
+
+>> KIS67455  pep chromosome:Umaydis521_2.0:13:201243:205011:1 gene:UMAG_15014 transcript:KIS67455 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.0      0.41   3.4e+02       5      29 ..      35      59 ..       7      65 .. 0.75
+   2 ?    2.7   0.0     0.049        41       8      36 ..     169     197 ..     165     200 .. 0.91
+   3 ?    1.4   0.0      0.12     1e+02      97     140 ..     444     484 ..     410     498 .. 0.61
+   4 ?    1.5   0.0      0.11        95     118     141 ..     590     613 ..     578     616 .. 0.82
+   5 ?   -1.5   0.0      0.98   8.3e+02     108     154 ..     672     718 ..     661     726 .. 0.74
+   6 ?   -2.8   0.0       2.3     2e+03     123     143 ..     747     768 ..     739     780 .. 0.66
+   7 ?   -0.4   0.0      0.44   3.7e+02     103     125 ..     874     896 ..     823     927 .. 0.59
+   8 ?   -1.9   0.0       1.3   1.1e+03     107     156 ..     996    1045 ..     980    1048 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.41
+  mTOR_dom  5 yldypeLLeiLlnilkteqsqsiRr 29
+              y++ p+ + +L++il t+ + ++R+
+  KIS67455 35 YYKNPQCIPALFEILATSPDLAVRQ 59
+              6777777777777777777776665 PP
+
+  == domain 2  score: 2.7 bits;  conditional E-value: 0.049
+  mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlG 36 
+                p++++++ + l+  +s ++R  +++ lG
+  KIS67455 169 LPQIMQLFAKSLQDPESLEVRVTTVRALG 197
+               5999*********99************99 PP
+
+  == domain 3  score: 1.4 bits;  conditional E-value: 0.12
+  mTOR_dom  97 dpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtc 140
+               d++    + ++ +a+ s ++ +g    ++lp i+  l+ +++t+
+  KIS67455 444 DAA---TQRSACTALDSLLEVMGSDISQYLPAIMERLAGLLETA 484
+               322...33445555556666666777778888888888777776 PP
+
+  == domain 4  score: 1.5 bits;  conditional E-value: 0.11
+  mTOR_dom 118 lglkcvpflpqiipallsvirtce 141
+                g + +pfl++++p l++ ++++e
+  KIS67455 590 FGEEFTPFLQHVVPRLIQSCQQSE 613
+               566789************999876 PP
+
+  == domain 5  score: -1.5 bits;  conditional E-value: 0.98
+  mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLat 154
+                +++ +if + +   +p++++ + +l+ ++++  + +r+  ++ L t
+  KIS67455 672 ADSLGEIFAHTKSGFLPYIQESVEQLVILLEHFYQGIRKSAVSALFT 718
+               56677889999999999998888888888888777777777666654 PP
+
+  == domain 6  score: -2.8 bits;  conditional E-value: 2.3
+  mTOR_dom 123 vpflpqiipallsvirtces.s 143
+                ++++ +ipa++++ ++ ++ +
+  KIS67455 747 QKLVNAVIPAVMEMWESEDDrT 768
+               5567788888888877766534 PP
+
+  == domain 7  score: -0.4 bits;  conditional E-value: 0.44
+  mTOR_dom 103 hhtavvqaimsifktlglkcvpf 125
+                +++++ ++ +i+  ++   +pf
+  KIS67455 874 DRSTAIGSLGEIITGMKGAITPF 896
+               33344444444444455555555 PP
+
+  == domain 8  score: -1.9 bits;  conditional E-value: 1.3
+  mTOR_dom  107 vvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                v++ +m+ ++  +    + ++ i++ +++v+   e++l   l  q++ +v
+  KIS67455  996 VLHCMMNLIQANNAVASQNIETILQLFAHVLAGDEDNLGALLRGQVCGFV 1045
+                67778888888888888899999999999998877777776666666555 PP
+
+>> KIS72364  pep chromosome:Umaydis521_2.0:1:2299617:2302445:1 gene:UMAG_00768 transcript:KIS72364 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.0   0.0      0.66   5.6e+02      68     101 ..     100     132 ..      76     145 .. 0.68
+   2 ?    2.0   0.3     0.079        67      66     124 ..     361     422 ..     341     433 .. 0.72
+   3 ?    5.1   0.0    0.0093       7.9      84     119 ..     435     470 ..     431     500 .. 0.87
+   4 ?   -3.0   0.0       2.8   2.4e+03     102     125 ..     704     730 ..     699     753 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: -1.0 bits;  conditional E-value: 0.66
+  mTOR_dom  68 vsellvglspsseeyyptvvinaLlkilkdpsls 101
+               +++++++++p  e  y   +i+ L +++ dps+ 
+  KIS72364 100 TASIMKDMQPNVEVIYRPNAIRGLSRVV-DPSMV 132
+               3344667777777777777777777776.66655 PP
+
+  == domain 2  score: 2.0 bits;  conditional E-value: 0.079
+  mTOR_dom  66 tdvsel...lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvp 124
+                +v++    + +l++ ++  ++t++i++Llk  +++s++   +++ + + +i  + ++ +v 
+  KIS72364 361 AAVQTCnvdMENLITDTNRSIATYAITTLLKTGNEASVDRLMKQISSFMSEISDEFKVIVVD 422
+               3333333467788888999999*********9999999988888877777777666665555 PP
+
+  == domain 3  score: 5.1 bits;  conditional E-value: 0.0093
+  mTOR_dom  84 ptvvinaLlkilkdpslsshhtavvqaimsifktlg 119
+               +tv+++ L  +l+d+   +++ avv+ai  ++k +g
+  KIS72364 435 QTVMLTFLAGVLRDEGGFEYKRAVVEAIFDMIKFIG 470
+               799***************************999765 PP
+
+  == domain 4  score: -3.0 bits;  conditional E-value: 2.8
+  mTOR_dom 102 shhtavvqaimsifkt...lglkcvpf 125
+               s  + vv+a+ +if +   ++ + +++
+  KIS72364 704 SETEYVVSAVKHIFADhvvVQYNITNT 730
+               556778899999988743334444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       6783  (3999663 residues searched)
+Passed MSV filter:                       331  (0.0487985); expected 135.7 (0.02)
+Passed bias filter:                      282  (0.0415745); expected 135.7 (0.02)
+Passed Vit filter:                        23  (0.00339083); expected 6.8 (0.001)
+Passed Fwd filter:                         8  (0.00117942); expected 0.1 (1e-05)
+Initial search space (Z):               6783  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.07u 0.04s 00:00:00.11 Elapsed: 00:00:00.28
+# Mc/sec: 2217.54
+//
+[ok]

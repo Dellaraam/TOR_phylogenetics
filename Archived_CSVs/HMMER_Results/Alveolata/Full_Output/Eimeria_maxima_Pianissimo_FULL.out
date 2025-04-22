@@ -1,0 +1,105 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Eimeria_maxima.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    0.00012   18.0   0.0      0.065    8.9   0.1    2.2  2  CDJ60426.1  hypothetical protein, conserved [Eimeria maxima]
+  ------ inclusion threshold ------
+      0.016   10.9   3.4      0.021   10.5   3.4    1.1  1  CDJ57863.1  gorasp2-prov protein, putative [Eimeria maxima]
+      0.056    9.1   0.0       0.07    8.8   0.0    1.1  1  CDJ57653.1  vacuolar ATP synthase subunit h, putative [Eimeri
+      0.071    8.8   0.2       0.99    5.0   0.0    1.9  2  CDJ61743.1  hypothetical protein, conserved [Eimeria maxima]
+
+
+Domain annotation for each sequence (and alignments):
+>> CDJ60426.1  hypothetical protein, conserved [Eimeria maxima]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.9   0.1   4.3e-05     0.065      13     109 ..     218     321 ..     211     327 .. 0.81
+   2 !    6.6   0.0   0.00022      0.34     720     782 ..     355     419 ..     352     431 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 8.9 bits;  conditional E-value: 4.3e-05
+  PTHR13298.orig.30.pir  13 kldlatklkdgaenllsn.llresrdsiekkleslnnlikl.......kaaakklnellgllkeeiiikedlvelelvs.clrsllls 91 
+                            +++ ++++++ + ++l++ l r+s + +   l++++ li+        + +   l+  ++++ +++++   l ++e v+  + s+l++
+             CDJ60426.1 218 PIEKSEEVRQTLLQVLQTvLNRTSDKYVWNHLDLITGLIRAatmdifhDIKFVALQTVVEFFDRHQNML--LHFTEPVArSILSCLVH 303
+                            577778888888888888888888888888999999999999999999778888999***********2..3333333346669**** PP
+
+  PTHR13298.orig.30.pir  92 eskevraaalRllrylis 109
+                            ++  +r +alR+l+++++
+             CDJ60426.1 304 QHARIRMGALRALTHVLA 321
+                            ***************976 PP
+
+  == domain 2  score: 6.6 bits;  conditional E-value: 0.00022
+  PTHR13298.orig.30.pir 720 sRvilskaLtsssesiRlyatkhLrvllra..essdfsdWgielLvtqlydpskevakaAlkiLe 782
+                            +R+ +++ L ++s  +R++  + L++ l    +++d ++W +++L+  l dp + + +  +++Le
+             CDJ60426.1 355 VRNYFAELLADQSPMVRMFFFDTLARWLYEfkDKADYETWLVPYLLSGLFDPFRPIQQLVFRLLE 419
+                            69999*********************99944699***************************9997 PP
+
+>> CDJ57863.1  gorasp2-prov protein, putative [Eimeria maxima]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.5   3.4   1.4e-05     0.021     474     533 ..     309     362 ..     263     375 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 10.5 bits;  conditional E-value: 1.4e-05
+  PTHR13298.orig.30.pir 474 ksldelkrsksksaslyldeilqkkllersssnssedskrkrlrqiledddeafkrmlkd 533
+                            +sl++ +++  ++ +l++++      ++++++++++++++++++q+ +++d+a+++mlk+
+             CDJ57863.1 309 ASLQQQQQQLQQQLQLQQQQ------QQQQQQQQQQQQQQQQQQQQQQQQDNAVEQMLKE 362
+                            44555555555555554444......4456666667777777777999**********98 PP
+
+>> CDJ57653.1  vacuolar ATP synthase subunit h, putative [Eimeria maxima]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.8   0.0   4.6e-05      0.07     560     635 ..     141     221 ..     108     230 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 8.8 bits;  conditional E-value: 4.6e-05
+  PTHR13298.orig.30.pir 560 lnpkrleeavkvtkffkrLlsFykPskkrfssid.........ktkqlekyvqvgcqllslLlsspeGialleesrlLkelleel 635
+                            + p      v +  f   LlsF   + +++ +++         k  + ek+v+vg+  ++ +ls+++ ++++ e   L+++l+ l
+             CDJ57653.1 141 MQPPSV---VYKAVFCVWLLSFHEGFPNQLTETGilkatcevlKESRVEKIVRVGLHVIDNFLSCEDAVEIIIE-ENLAQILTLL 221
+                            333333...356779999*************************999*********************9999988.5677777655 PP
+
+>> CDJ61743.1  hypothetical protein, conserved [Eimeria maxima]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.0    0.0048       7.2     762     790 ..      40      68 ..       9      83 .. 0.86
+   2 ?    5.0   0.0   0.00065      0.99     594     637 ..     130     173 ..     108     190 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 0.0048
+  PTHR13298.orig.30.pir 762 LvtqlydpskevakaAlkiLeeacedkan 790
+                            L+  l dp++ v++ A k+L e+c +k+ 
+             CDJ61743.1  40 LLLLLEDPETAVSSNAEKALAEICVTKPG 68 
+                            556689******************99987 PP
+
+  == domain 2  score: 5.0 bits;  conditional E-value: 0.00065
+  PTHR13298.orig.30.pir 594 ktkqlekyvqvgcqllslLlsspeGialleesrlLkelleelsq 637
+                              k++++   ++c+l++ L+++p+G+++  ++++ + ++  +++
+             CDJ61743.1 130 IKKDDPLASATACELITALIKCPWGLDYALDQKYPETIAGLIAE 173
+                            45777888899******************999987777766665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                       6057  (4025948 residues searched)
+Passed MSV filter:                      2452  (0.404821); expected 121.1 (0.02)
+Passed bias filter:                      398  (0.0657091); expected 121.1 (0.02)
+Passed Vit filter:                        85  (0.0140333); expected 6.1 (0.001)
+Passed Fwd filter:                         7  (0.00115569); expected 0.1 (1e-05)
+Initial search space (Z):               6057  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.36u 0.10s 00:00:00.46 Elapsed: 00:00:00.23
+# Mc/sec: 19729.74
+//
+[ok]

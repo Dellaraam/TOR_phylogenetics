@@ -1,0 +1,378 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/NA/Proteins/Capsapora_owczarzaki.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+      5e-49  165.5  11.2    1.3e-26   92.7   0.1    6.5  7  KJE94456.1  hypothetical protein CAOG_009819 [Capsaspora owcz
+    3.1e-09   36.2   3.9    0.00014   21.0   0.0    6.8  7  KJE95984.1  Cullin-associated and neddylation-dissociated 1 [
+    4.2e-08   32.5   6.3       0.19   10.9   0.0    7.3  8  KJE92079.1  hypothetical protein CAOG_003106 [Capsaspora owcz
+    7.8e-08   31.6   0.4          2    7.6   0.0    8.1  8  KJE95363.1  hypothetical protein CAOG_008919 [Capsaspora owcz
+    3.4e-07   29.6   0.1      0.092   11.9   0.0    4.3  3  KJE97226.1  hypothetical protein CAOG_009113 [Capsaspora owcz
+    0.00037   19.7   2.0        1.9    7.7   0.0    5.5  6  KJE88836.1  hypothetical protein CAOG_000415 [Capsaspora owcz
+     0.0059   15.8   0.1      0.024   13.8   0.1    2.2  1  KJE92911.1  hypothetical protein CAOG_003793 [Capsaspora owcz
+  ------ inclusion threshold ------
+      0.012   14.8   0.1      0.069   12.3   0.0    2.3  2  KJE95689.1  hypothetical protein CAOG_006116 [Capsaspora owcz
+
+
+Domain annotation for each sequence (and alignments):
+>> KJE94456.1  hypothetical protein CAOG_009819 [Capsaspora owczarzaki ATCC 30864]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.8   0.1       2.4   3.1e+03      81     133 ..    1557    1614 ..    1535    1621 .. 0.56
+   2 ?    1.8   0.1     0.092   1.2e+02      81     155 ..    1962    2036 ..    1878    2039 .. 0.56
+   3 !   69.8   0.0   1.1e-22   1.4e-19       1      53 [.    2043    2095 ..    2043    2126 .. 0.79
+   4 !   92.7   0.1     1e-29   1.3e-26      89     160 .]    2219    2290 ..    2192    2290 .. 0.93
+   5 ?    1.0   0.0      0.16     2e+02     109     145 ..    2320    2356 ..    2313    2368 .. 0.74
+   6 ?    0.8   0.0      0.19   2.4e+02      78     156 ..    2370    2446 ..    2354    2449 .. 0.68
+   7 ?   -4.2   0.0       6.7   8.4e+03     104     140 ..    3350    3383 ..    3348    3394 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: -2.8 bits;  conditional E-value: 2.4
+    mTOR_dom   81 eyyptvvinaLlkil.....kdpslsshhtavvqaimsifktlglkcvpflpqiipal 133 
+                   yy+   i++ lk       ++ + ++ ++ + q+i ++   +g    p+l+ i++ +
+  KJE94456.1 1557 SYYKDQFIKSYLKTCmahliSNLKKNTDRAVAFQSIGEMALAVGEHIRPYLDSILQPI 1614
+                  3344333333333331111133333344556678888888888888888888888766 PP
+
+  == domain 2  score: 1.8 bits;  conditional E-value: 0.092
+    mTOR_dom   81 eyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatL 155 
+                    y   ++++Ll+ l+d s     t+++ a+ +  +     +v  ++ ++p +++++ + +s   re+ l+ L++L
+  KJE94456.1 1962 KPYVEPILRTLLSKLRDLSPG-VSTNILAALGELAQVGAQDMVHHVNDLLPLIIETLLDQSSvAKREVALRTLGKL 2036
+                  334444666666666666544.566666666666665555557777777777777776666667777777777776 PP
+
+  == domain 3  score: 69.8 bits;  conditional E-value: 1.1e-22
+    mTOR_dom    1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks 53  
+                  V+ePyl+yp+LL+iLl++lkteq  ++RrevikvlGilGALDPy+h+  ++  
+  KJE94456.1 2043 VIEPYLRYPKLLRILLDLLKTEQVAPVRREVIKVLGILGALDPYRHRPDSRLP 2095
+                  9*********************************************8655433 PP
+
+  == domain 4  score: 92.7 bits;  conditional E-value: 1e-29
+    mTOR_dom   89 naLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160 
+                  + L++ilkd sl+ hht+vvqaim+i+k+lgl+cvpflpqi+p +l+v+rt e+ +refl+qqL+ Lv+ivk
+  KJE94456.1 2219 RRLMRILKDLSLAVHHTMVVQAIMFICKSLGLRCVPFLPQIMPPMLQVMRTREPGFREFLFQQLGALVAIVK 2290
+                  78*********************************************************************8 PP
+
+  == domain 5  score: 1.0 bits;  conditional E-value: 0.16
+    mTOR_dom  109 qaimsifktlglkcvpflpqiipallsvirtcesslr 145 
+                  + + si   lg +  +flp++ip++l+v+   +++ r
+  KJE94456.1 2320 SLVESISLALGGEFKAFLPELIPHILRVFMRDDAEYR 2356
+                  556677778999999************9876554444 PP
+
+  == domain 6  score: 0.8 bits;  conditional E-value: 0.19
+    mTOR_dom   78 sseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                  s+ + y + vi  ++++++    + + + +++q+++  +++  l    + ++ii+ l++v+  + ++lr+  +  L+ Lv
+  KJE94456.1 2370 SNLDDYLHLVIPPVVTLFESFETRvDVRRTAIQTLTLLCRK--LSFSDYASRIIHPLTRVLDGS-PELRQDAMLALTALV 2446
+                  55555556666666666665555547777888888888886..666778888888888888875.456666666677776 PP
+
+  == domain 7  score: -4.2 bits;  conditional E-value: 6.7
+    mTOR_dom  104 htavvqaimsifktlglkcvpflpqiipallsvirtc 140 
+                  h++v +a+++ +kt+++       q+ip+l++ i+t 
+  KJE94456.1 3350 HQEVHDAMVEGIKTVSIDT---WLQVIPQLIARIHTP 3383
+                  5555556555556554444...446677766666665 PP
+
+>> KJE95984.1  Cullin-associated and neddylation-dissociated 1 [Capsaspora owczarzaki ATCC 30864]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.1   0.0       3.1   3.9e+03      77     101 ..      12      36 ..       3      87 .. 0.59
+   2 !   21.0   0.0   1.1e-07   0.00014      88     156 ..     207     275 ..     195     276 .. 0.93
+   3 ?   -0.9   0.0      0.65   8.3e+02      22      38 ..     340     356 ..     336     388 .. 0.88
+   4 ?    0.1   0.1      0.32   4.1e+02     109     155 ..     461     513 ..     441     518 .. 0.61
+   5 ?    4.6   0.0     0.012        16     101     157 ..     639     696 ..     580     698 .. 0.85
+   6 ?    0.4   0.0      0.24   3.1e+02     118     159 ..     904     944 ..     885     945 .. 0.87
+   7 ?    1.6   0.0      0.11   1.3e+02      97     149 ..    1005    1056 ..     962    1061 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: -3.1 bits;  conditional E-value: 3.1
+    mTOR_dom  77 psseeyyptvvinaLlkilkdpsls 101
+                 +s+++ +  ++ n L++ l++p  +
+  KJE95984.1  12 TSNDNDFRFMACNDLMTELNKPEFK 36 
+                 5666666777777777777777655 PP
+
+  == domain 2  score: 21.0 bits;  conditional E-value: 1.1e-07
+    mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                 +++L + l+ p+ +   ++v+q + +i ++ g +  + l qi+p ++s +   +++lre+ +q L+++v
+  KJE95984.1 207 MQNLTTRLDTPKPTADTKTVIQCLATISRHAGSRLDNRLGQIVPRIVSFCAVQDDELREYCFQALESFV 275
+                 6788888999999999************************************999**********9886 PP
+
+  == domain 3  score: -0.9 bits;  conditional E-value: 0.65
+    mTOR_dom  22 eqsqsiRrevikvlGil 38 
+                 + s+++Rr++ k+l  +
+  KJE95984.1 340 DMSWKVRRSAAKCLAAI 356
+                 46999999999999765 PP
+
+  == domain 4  score: 0.1 bits;  conditional E-value: 0.32
+    mTOR_dom 109 qaimsifktlglkcvp....flpqiipallsvir.tces.slrefllqqLatL 155
+                 q  msi+k+     ++    +lpq++p +  +++ ++++ +l+   lq La +
+  KJE95984.1 461 QGCMSILKEAASAILSafssTLPQLVPGIKLALTdKASTsNLKIETLQLLALI 513
+                 55677777655544433333899999988554442555567887888877766 PP
+
+  == domain 5  score: 4.6 bits;  conditional E-value: 0.012
+    mTOR_dom 101 sshhtavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                 +s + a+v++   i ++ l l   ++l+ ++ +++  +r+ ++slr   l+ L+ +v+
+  KJE95984.1 639 ESTRLAAVRSFGRIAESsLTLPLNAVLSDVVREIAGFLRKNNRSLRVASLETLSAIVR 696
+                 45667888889999987799999*****************999***********9997 PP
+
+  == domain 6  score: 0.4 bits;  conditional E-value: 0.24
+    mTOR_dom 118 lglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                 lg+ +v  l+q +p +l+ i   +++++  ll+ L++++s +
+  KJE95984.1 904 LGCMSVGNLSQYLPFILAQIDA-QPKRQYLLLHSLKEIISCI 944
+                 56666999************97.67999*********99976 PP
+
+  == domain 7  score: 1.6 bits;  conditional E-value: 0.11
+    mTOR_dom   97 dpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149 
+                  dps    +++vv a+ + + +      +fl   +  +l++i++ +s++r + l
+  KJE95984.1 1005 DPSAF-TRATVVAAVKHTIADTTHSIDSFLLAHVARFLQMIQDPDSTVRRVAL 1056
+                  55544.46778888888888888888888888888888888888887776665 PP
+
+>> KJE92079.1  hypothetical protein CAOG_003106 [Capsaspora owczarzaki ATCC 30864]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.7   0.0       1.1   1.4e+03     102     155 ..     140     194 ..     126     198 .. 0.66
+   2 ?    1.0   0.0      0.17   2.1e+02     115     144 ..     330     359 ..     323     363 .. 0.80
+   3 ?   -3.9   0.0       5.2   6.6e+03     114     149 ..     418     455 ..     413     462 .. 0.62
+   4 !   10.9   0.0   0.00015      0.19      72     146 ..     500     576 ..     484     584 .. 0.74
+   5 !    5.8   0.0    0.0055       6.9     116     142 ..     587     613 ..     575     634 .. 0.64
+   6 !    6.8   0.0    0.0028       3.5      80     139 ..     642     698 ..     630     706 .. 0.88
+   7 ?   -0.7   0.0      0.56   7.1e+02     108     155 ..     774     821 ..     764     825 .. 0.65
+   8 ?    2.5   0.1     0.057        72     102     155 ..    1118    1173 ..    1070    1177 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: -1.7 bits;  conditional E-value: 1.1
+    mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatL 155
+                  h++  + ++  ++++ +    p lp +++ ++ ++ ++ + s+++  ++ ++ L
+  KJE92079.1 140 AHREIGIYVVRMMCESGDSFLEPHLPSLLQMFALALADAANpSIQQLAIEAMTFL 194
+                 4555556666666666666667777777777777666666557777777777666 PP
+
+  == domain 2  score: 1.0 bits;  conditional E-value: 0.17
+    mTOR_dom 115 fktlglkcvpflpqiipallsvirtcessl 144
+                 fk   l + ++++q+ipal++++ + +++l
+  KJE92079.1 330 FKRRALSSSKVIQQVIPALFNILAEHDEQL 359
+                 566677788899********9999877655 PP
+
+  == domain 3  score: -3.9 bits;  conditional E-value: 5.2
+    mTOR_dom 114 ifktlglkc..vpflpqiipallsvirtcesslrefll 149
+                 i+++ gl      +lp i+  ++s++++ ++ +r+  +
+  KJE92079.1 418 IIHHFGLSFpaSLVLPPILDLMASAMSSPNPYHRKAAM 455
+                 66665555531447888888888888888885555444 PP
+
+  == domain 4  score: 10.9 bits;  conditional E-value: 0.00015
+    mTOR_dom  72 lvglspsseey..yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slre 146
+                 l+++s++ ee+  y+  v+  L+  l dps + + +a   +i + + +lg +++p++p+++ +ll vi +++  + r 
+  KJE92079.1 500 LAEMSSTIEEVldYHEQVMPRLMLALTDPSERVQEKAGY-SIEHYCFHLGERVLPYVPHVVGQLLLVIANATHlNTRA 576
+                 455555556654466679999*********886666665.555555569*******************9988766665 PP
+
+  == domain 5  score: 5.8 bits;  conditional E-value: 0.0055
+    mTOR_dom 116 ktlglkcvpflpqiipallsvirtces 142
+                    + + vp+lpqi+p+ll+ +   ++
+  KJE92079.1 587 LAAKSEFVPYLPQILPSLLEFLAIEDD 613
+                 4566788************97764333 PP
+
+  == domain 6  score: 6.8 bits;  conditional E-value: 0.0028
+    mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                  e ++ vv++ L k  +d+ ls+   +   ++  +fk+      p+lp+++p+llsv+++
+  KJE92079.1 642 AEQIMPVVVAGLEKHADDAELSQSTFSLFASLAAVFKE---AFSPYLPHLMPTLLSVCES 698
+                 5667779999999************************7...889*************986 PP
+
+  == domain 7  score: -0.7 bits;  conditional E-value: 0.56
+    mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                 ++++ + + +      pf+p +++ l +++r   +++r+  +  L+++
+  KJE92079.1 774 INVLGELCVHCFSGFHPFIPAVMSVLCELTRYHYPEIRKASVVSLTDI 821
+                 445555555555555678888888888888877777777777666665 PP
+
+  == domain 8  score: 2.5 bits;  conditional E-value: 0.057
+    mTOR_dom  102 shhtavvqaimsifktlglkcvpflpqiipallsvirtces..slrefllqqLatL 155 
+                     ++v  +++  +++ +    +f+pq+i a ++v+r++ +  s    +  qL +L
+  KJE92079.1 1118 AENKTVYPVLIALVQQNNATIWKFMPQLIAASAHVLREAATelSTAPEVAAQLVEL 1173
+                  44556666677778888888899**************8876234444555666555 PP
+
+>> KJE95363.1  hypothetical protein CAOG_008919 [Capsaspora owczarzaki ATCC 30864]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.2   0.0      0.79   9.9e+02      35     114 ..     369     456 ..     360     514 .. 0.57
+   2 !    7.6   0.0    0.0016         2      76     153 ..    1557    1634 ..    1540    1641 .. 0.72
+   3 ?    3.2   0.0     0.036        45      91     157 ..    1691    1757 ..    1649    1760 .. 0.81
+   4 ?   -4.1   0.0       6.1   7.7e+03     121     147 ..    1839    1865 ..    1834    1868 .. 0.78
+   5 ?    0.7   0.0       0.2   2.5e+02     113     159 ..    2057    2104 ..    1987    2140 .. 0.54
+   6 ?   -1.0   0.0      0.68   8.6e+02      80     141 ..    2216    2277 ..    2177    2290 .. 0.81
+   7 !    6.9   0.0    0.0026       3.2      90     157 ..    2383    2450 ..    2348    2452 .. 0.89
+   8 ?   -0.5   0.0      0.48   6.1e+02      59     145 ..    2597    2684 ..    2577    2696 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: -1.2 bits;  conditional E-value: 0.79
+    mTOR_dom  35 lGilGALDPykhkeveekseee.....ekeeenaeetdvsellvgl.spsseeyyptvvinaLlkil....kdpslsshhtavvqaimsi 114
+                  GilGA+     k   + + ++     + ++e++   d  +l  +l  +ss+      ++++L  +l     + +  +h+++v++ai  +
+  KJE95363.1 369 AGILGAVRIDLSKYAAQLA-KSlctqlKANDESV-RADACLLFRNLaRQSSDPAAVDSILANLFDVLngvhGKLTAFEHRASVLEAIALV 456
+                 5888887666665555433.22343222222222.2233333344413444656666666777777755432233335666666666544 PP
+
+  == domain 2  score: 7.6 bits;  conditional E-value: 0.0016
+    mTOR_dom   76 spss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLa 153 
+                  + ++   y  + v+ +Ll+ l+d++ ++  +  v+ +  +      +  + lp i+p+l++v+++++++++e   + L 
+  KJE95363.1 1557 IMTNlSAYGVKLVLPSLLNALEDNAWRTK-QGSVELLGAMSYCAPKQLSSCLPMIVPKLTEVLTDSHAKVQEAGEDALR 1634
+                  3344366777899************9954.55567776666666677799***************99999997666655 PP
+
+  == domain 3  score: 3.2 bits;  conditional E-value: 0.036
+    mTOR_dom   91 Llkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                  L + l++++ ++ ++++ q i ++ +  + k  +p+l+ ++p l +v+ +  +++r    + L+tLv+
+  KJE95363.1 1691 LQRALRERA-TETKKMAAQIIGNMSSLADHKDlLPYLSSLLPGLKQVLLDPIPEVRGIAARALGTLVK 1757
+                  444455544.457889999999999999999889**************99999999999999999997 PP
+
+  == domain 4  score: -4.1 bits;  conditional E-value: 6.1
+    mTOR_dom  121 kcvpflpqiipallsvirtcesslref 147 
+                     pf++ ++p +l+ + + ++ +r+ 
+  KJE95363.1 1839 SFKPFINTVLPPVLKGLADESEAVRDA 1865
+                  55799*********9998877777665 PP
+
+  == domain 5  score: 0.7 bits;  conditional E-value: 0.2
+    mTOR_dom  113 sifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                  +i++t +    + ++ q+ipa+ +++ +  +++re   q + +L ++v
+  KJE95363.1 2057 EIMSTTSKDHiLVYVGQLIPAVRKALCDPLPEVRESAAQTFDHLFRVV 2104
+                  333333333223444444444444444444444444444444443333 PP
+
+  == domain 6  score: -1.0 bits;  conditional E-value: 0.68
+    mTOR_dom   80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141 
+                  +e  +   ++ Ll  lk p+ +s + a+ + ++  + + +    p l+ i+ all+ + +++
+  KJE95363.1 2216 NEAGMRLLVADLLDALKHPQQASRRLAAANLLLALCDESEFDWSPHLTPIMDALLRRFVDAD 2277
+                  5666677889999999****99***************9999999***999999998766655 PP
+
+  == domain 7  score: 6.9 bits;  conditional E-value: 0.0026
+    mTOR_dom   90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                   L++++ d+   + ++a++++++  +  +g+   pflpq+  ++++++++ ++ +r    + L++L+s
+  KJE95363.1 2383 PLIRVVGDKFSWQVKAAILDTLTLLIARVGIMLKPFLPQLQTTFIKALHDPTKVVRVRASNALTQLIS 2450
+                  588999999988999***********************************999999999999999997 PP
+
+  == domain 8  score: -0.5 bits;  conditional E-value: 0.48
+    mTOR_dom   59 eeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkcvpflpqiipallsvirtcesslr 145 
+                    ++a+  +++++l++    ++ + p+  i+aL   lk+ s s+ +  +++a+    kt   +  + + ++ ++p ++ ++r+ ++ +r
+  KJE95363.1 2597 PISTAAVHSIAAILQHFAAINQSVVPAGLIEALGLALKQGS-SDVKLVAIRAVKVLAKTpsTRGSVANQVKILVPPMVDAVREKNTAVR 2684
+                  44556667788889999999999999999999999999888.55788889999888888434555578888899999999998777665 PP
+
+>> KJE97226.1  hypothetical protein CAOG_009113 [Capsaspora owczarzaki ATCC 30864]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.9   0.0   7.3e-05     0.092      85     151 ..     153     218 ..     115     219 .. 0.84
+   2 ?    2.1   0.0     0.076        96      74     134 ..    1637    1698 ..    1556    1702 .. 0.88
+   3 !    9.7   0.0   0.00034      0.44      14      46 ..    1930    1961 ..    1923    2011 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 11.9 bits;  conditional E-value: 7.3e-05
+    mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqq 151
+                 +v +  L + l +p+      + v++++ if+ l+ kc++  +q+i + + ++ +++ ++++++lqq
+  KJE97226.1 153 AVLMGRLFTALAEPQWGAVADDLVNTLVAIFQLLRNKCLMHFRQLIAEAIDMMDDLN-TILDTFLQQ 218
+                 577888999999******************************************987.566666665 PP
+
+  == domain 2  score: 2.1 bits;  conditional E-value: 0.076
+    mTOR_dom   74 glspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipall 134 
+                  +  +++ e + +t v    l+ lk +sls   + +v ++++++   ++++ ++l++i+ +l+
+  KJE97226.1 1637 RAAQTQaELVLATRVWGYFLQSLKPESLSAVLQHAVFTLLTMLDACSVEVATILERIVLHLA 1698
+                  4445554666778888899999***********************************98776 PP
+
+  == domain 3  score: 9.7 bits;  conditional E-value: 0.00034
+    mTOR_dom   14 iLlnilkteqsqsiRrevikvlGilGALDPykh 46  
+                  +L+++ k ++s+++R+ v  ++G lGA+DP ++
+  KJE97226.1 1930 VLMQASK-DSSPTVRLLVGECVGALGAVDPARV 1961
+                  5555544.569*******************998 PP
+
+>> KJE88836.1  hypothetical protein CAOG_000415 [Capsaspora owczarzaki ATCC 30864]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.5   0.1      0.11   1.4e+02      78     151 ..      20     111 ..       3     120 .. 0.61
+   2 ?   -3.0   0.0       2.7   3.4e+03     123     142 ..     301     320 ..     237     327 .. 0.56
+   3 ?   -0.8   0.0      0.59   7.5e+02      91     145 ..     370     423 ..     359     435 .. 0.72
+   4 !    7.7   0.0    0.0015       1.9      87     137 ..     502     551 ..     498     561 .. 0.87
+   5 ?    3.4   0.0     0.029        37      91     138 ..     590     640 ..     568     649 .. 0.78
+   6 ?   -2.4   0.0       1.8   2.3e+03     108     139 ..     862     893 ..     832     900 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 1.5 bits;  conditional E-value: 0.11
+    mTOR_dom  78 sseeyyptvvi..naLlkilkdpslsshhtavvqaimsifktlglkcvp...............flpqiipallsvirtces.slrefllqq 151
+                 +se+y++ +++  ++L  i  +   +s h++v q  +  f+      v                + +q++ a+ls+++t ++  +r  +++ 
+  KJE88836.1  20 ASEDYFERIALipEQLFPICTQYMTQSAHSEVRQMAIALFRRKAFALVGpdndrkslwmttaheLREQVMAAFLSALQTETDrAVRRRIVDA 111
+                 55666666554345666676666666677777666666666655555555555555555555555566666666666665554555555555 PP
+
+  == domain 2  score: -3.0 bits;  conditional E-value: 2.7
+    mTOR_dom 123 vpflpqiipallsvirtces 142
+                   f   ++p ll+++ + ++
+  KJE88836.1 301 EGFAGVVVPVLLQMMVEYDE 320
+                 34667778888887776655 PP
+
+  == domain 3  score: -0.8 bits;  conditional E-value: 0.59
+    mTOR_dom  91 Llkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+                 + ++l+ +  + h+  ++ ai  i +  +    ++lp+i+ ++ + + + ++++r
+  KJE88836.1 370 ISQMLQSQDWR-HRLGALMAISAIGEGAHGVLKQYLPEILTQVSHSLVDPNPRVR 423
+                 45566555544.7778888888888888888899999999998888777766655 PP
+
+  == domain 4  score: 7.7 bits;  conditional E-value: 0.0015
+    mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvi 137
+                 +++ Ll++l+ p  +  h++v+++i  i   ++   vp++++++p l +v+
+  KJE88836.1 502 ILTRLLNLLSTPH-RFIHEQVITTIGIIADAVEESFVPYYNNFMPLLRTVL 551
+                 5788999998888.559****************************988876 PP
+
+  == domain 5  score: 3.4 bits;  conditional E-value: 0.029
+    mTOR_dom  91 Llkilkdpsls...shhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                 +++il  + ls    +   v++a + i+k l+   + +l+ i pal+++++
+  KJE88836.1 590 VMSILVAQPLSvedPQLPYVLTAATRICKVLRKDFIVYLDAIWPALIAAAS 640
+                 5666655555522234457999************************98766 PP
+
+  == domain 6  score: -2.4 bits;  conditional E-value: 1.8
+    mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirt 139
+                  ++ +  f++++ + + +++ i p+l+++ir 
+  KJE88836.1 862 AETFHVLFQYQRENALILYEAIAPKLIEMIRR 893
+                 45666778888899999999999999999996 PP
+
+>> KJE92911.1  hypothetical protein CAOG_003793 [Capsaspora owczarzaki ATCC 30864]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.8   0.1   1.9e-05     0.024      66     159 ..    1055    1151 ..    1027    1152 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 13.8 bits;  conditional E-value: 1.9e-05
+    mTOR_dom   66 tdvsellvglspsseeyyptvvinaLlkilkdpsls...shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                   +  +++++ s+   + + t  ++ L+ +++d+  +   s ++  ++ +  i++ l+   v+++p ++ +++ +++++++++r+  +  Lat+ + +
+  KJE92911.1 1055 YKCILAMCSASTPVHDEFVTNHVQDLMDLMSDALAAssvSAKKHRLKCLGAIIERLEPANVSLIPAVVGEVILATKEVSEKVRHAAFALLATIGEAI 1151
+                  23333366666655777778899*******9875542236677889999******************************************997666 PP
+
+>> KJE95689.1  hypothetical protein CAOG_006116 [Capsaspora owczarzaki ATCC 30864]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.6   0.0       2.2   2.7e+03      89     131 ..     566     610 ..     563     616 .. 0.67
+   2 ?   12.3   0.0   5.5e-05     0.069      86     141 ..     699     751 ..     677     760 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -2.6 bits;  conditional E-value: 2.2
+    mTOR_dom  89 naLlkilkdpslsshhta..vvqaimsifktlglkcvpflpqiip 131
+                 + Ll +l+ ++ s+h ta   ++ + +i+++ +  + + lp i++
+  KJE95689.1 566 ERLLPVLQSNNASEHETAerYIRILKFIVESSSRISRAALPLILS 610
+                 578888988888877654226777777777766666667766665 PP
+
+  == domain 2  score: 12.3 bits;  conditional E-value: 5.5e-05
+    mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                 +vi aLl+ l ++sls    ++v ai ++ ++     + f+++++p ++s +  ++
+  KJE95689.1 699 IVIDALLRTLTERSLSVLADEIVAAIFEMTRQ---HFTGFYEEFLPMFVSQCDGLT 751
+                 8************************9999886...778888888888888776554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      10123  (6361763 residues searched)
+Passed MSV filter:                       767  (0.0757681); expected 202.5 (0.02)
+Passed bias filter:                      550  (0.0543317); expected 202.5 (0.02)
+Passed Vit filter:                        60  (0.0059271); expected 10.1 (0.001)
+Passed Fwd filter:                         8  (0.00079028); expected 0.1 (1e-05)
+Initial search space (Z):              10123  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.09u 0.06s 00:00:00.15 Elapsed: 00:00:00.07
+# Mc/sec: 13543.79
+//
+[ok]

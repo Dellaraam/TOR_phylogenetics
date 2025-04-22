@@ -1,0 +1,526 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Saprolegnia_diclina_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    3.7e-45  153.8   5.9    4.9e-27   94.9   0.0    5.0  5  EQC27376.1  FKBP12-rapamycin complex-associated protein [Sapr
+    7.3e-41  139.8   0.4    1.4e-33  116.2   0.0    5.9  4  EQC28787.1  hypothetical protein SDRG_13470 [Saprolegnia dicl
+    8.9e-06   25.8   0.5         12    5.9   0.0    5.3  6  EQC35799.1  hypothetical protein SDRG_06558 [Saprolegnia dicl
+    0.00047   20.2   1.5         23    4.9   0.0    5.8  6  EQC29287.1  hypothetical protein SDRG_12955 [Saprolegnia dicl
+     0.0012   18.9   0.1        4.3    7.3   0.0    5.8  6  EQC40611.1  hypothetical protein SDRG_02496 [Saprolegnia dicl
+     0.0029   17.6   8.0        8.1    6.4   0.0    6.7  8  EQC40671.1  hypothetical protein SDRG_01749 [Saprolegnia dicl
+     0.0071   16.4   0.4        0.9    9.5   0.0    3.3  3  EQC30849.1  hypothetical protein SDRG_11331 [Saprolegnia dicl
+      0.008   16.2   0.6      0.065   13.2   0.1    2.7  2  EQC35870.1  hypothetical protein SDRG_06620 [Saprolegnia dicl
+  ------ inclusion threshold ------
+      0.041   13.9  13.3       0.15   12.0   0.1    6.1  6  EQC41287.1  hypothetical protein SDRG_01262 [Saprolegnia dicl
+       0.17   11.8   3.9         31    4.5   0.0    5.4  6  EQC37369.1  hypothetical protein SDRG_05586 [Saprolegnia dicl
+       0.45   10.5   9.6         13    5.7   0.0    5.0  5  EQC38838.1  hypothetical protein SDRG_03796 [Saprolegnia dicl
+
+
+Domain annotation for each sequence (and alignments):
+>> EQC27376.1  FKBP12-rapamycin complex-associated protein [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.2   0.1      0.54   8.9e+02      98     155 ..     693     752 ..     604     755 .. 0.72
+   2 !   57.1   0.0   1.2e-18     2e-15       1      53 [.     759     813 ..     759     858 .. 0.81
+   3 !   94.9   0.0   2.9e-30   4.9e-27      76     159 ..     925    1008 ..     874    1009 .. 0.92
+   4 ?   -1.4   0.0       1.3   2.1e+03     103     138 ..    1030    1066 ..    1020    1076 .. 0.65
+   5 ?   -4.3   0.1       9.6   1.6e+04      11      38 ..    1174    1202 ..    1173    1210 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: -0.2 bits;  conditional E-value: 0.54
+    mTOR_dom  98 psls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatL 155
+                 ++++ +  +av+++i +    ++  + ++ p ++p +l ++++  s + r++ l  L++L
+  EQC27376.1 693 NAMQqNLASAVLTTIGELALAVHEPMAAYEPALLPLILDALQDHGSiQKRQVALVTLGQL 752
+                 444434455566666666666666666666666666666666666666666666666665 PP
+
+  == domain 2  score: 57.1 bits;  conditional E-value: 1.2e-18
+    mTOR_dom   1 VvePyldypeLLeiLlnilkte..qsqsiRrevikvlGilGALDPykhkeveeks 53 
+                 Vv+Py+ yp++Le+Ll++l+ +  + +++Rre++k++GilGALDPyk+k   +++
+  EQC27376.1 759 VVQPYISYPKILEVLLDLLQHTaaTPWQLRREAMKTIGILGALDPYKYKLCISSA 813
+                 9*******************996449**********************9887655 PP
+
+  == domain 3  score: 94.9 bits;  conditional E-value: 2.9e-30
+    mTOR_dom   76 spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                    sse y+ptv+i+aLl+ilk+psls hh  v+qaim+ifk+l+l+cvpflp i+p +l+v+   e++lr+ l+ qL++L+siv
+  EQC27376.1  925 AVSSEAYFPTVAIHALLNILKEPSLSMHHYGVIQAIMFIFKSLSLQCVPFLPYIVPPFLHVLARGEPRLRDSLFLQLTVLTSIV 1008
+                  45779******************************************************************************9 PP
+
+  == domain 4  score: -1.4 bits;  conditional E-value: 1.3
+    mTOR_dom  103 hhtavvqaimsifktlglkc.vpflpqiipallsvir 138 
+                  h  ++v+ + +i   +     + + pq++p++l+v++
+  EQC27376.1 1030 HLPQIVRLVEKIAVAVPSDFrTVYFPQLLPKILEVLQ 1066
+                  5555666666666666666656677788888777776 PP
+
+  == domain 5  score: -4.3 bits;  conditional E-value: 9.6
+    mTOR_dom   11 LLeiLlnilkte.qsqsiRrevikvlGil 38  
+                  LL +L+++l+ + ++ +++ +++ +l  l
+  EQC27376.1 1174 LLPALTRLLEHSdTALEVKTSIVTLLAQL 1202
+                  78888888888745888888888888766 PP
+
+>> EQC28787.1  hypothetical protein SDRG_13470 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.6   0.0     0.018        30      88     144 ..     705     765 ..     623     781 .. 0.76
+   2 !  116.2   0.0   8.2e-37   1.4e-33       1     157 [.     788     998 ..     788    1001 .. 0.79
+   3 !    8.4   0.0    0.0012         2      97     145 ..    1018    1067 ..    1008    1082 .. 0.80
+   4 ?    3.0   0.3     0.054        89      66     156 ..    1068    1158 ..    1060    1161 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 4.6 bits;  conditional E-value: 0.018
+    mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifkt...lglkc.vpflpqiipallsvirtcessl 144
+                 ++ L+k l++++ ++ + +  +a++  + +   +g    +p+lpq+ip+l+  +r+++ss 
+  EQC28787.1 705 LKVLMKNLRQEASTDGRIQLNKAVVATLGDlavVGQDAlIPYLPQLIPELVDEMREIKSST 765
+                 6677777777766654444444444444331114444459***************988754 PP
+
+  == domain 2  score: 116.2 bits;  conditional E-value: 8.2e-37
+    mTOR_dom   1 VvePyldypeLLeiLlnilkte.q.sqsiRrevikvlGilGALDPykhkeveeks..................................eeeekeeena 63 
+                 V++Py+dyp+LLe L+ +l+++ + +  +R e+ ++lGi+GALDPy +k ++ ++                                            
+  EQC28787.1 788 VTRPYHDYPDLLEGLSAALQKSgDaNVLLRIEAGRTLGIIGALDPYSFKLFQLEKqgrmgsgllatkqveqlkanqvipddptwaglllG--------- 877
+                 789*****************996458889********************99988867777666665444444444444433333333330......... PP
+
+    mTOR_dom  64 eetdvsellvgl......................................spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvp 124
+                                                                   +   ++y+p+v+inaL++il++p  +sh++ ++ aim+i+k+lg k+ p
+  EQC28787.1 878 -----------NengveqlvikrlvadplssivkheikcvpaedllpslmIGEAQNYFPAVAINALIRILSEPRNASHYQGTILAIMYICKNLGKKMEP 965
+                 ...........0344444444445555566666666666677777776656677********************************************* PP
+
+    mTOR_dom 125 flpqiipallsvirtcesslrefllqqLatLvs 157
+                  l++iipa+l ++++++++lr f+++qL+tLv+
+  EQC28787.1 966 HLDKIIPAFLYALEHVTPDLRIFVFDQLSTLVR 998
+                 *******************************97 PP
+
+  == domain 3  score: 8.4 bits;  conditional E-value: 0.0012
+    mTOR_dom   97 dpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slr 145 
+                  ++  +sh  +v+  + +++++lg     +lp ++p+ll+virt  + s r
+  EQC28787.1 1018 QQFWDSHLPQVLGLVNEVINSLGEDFGVYLPDLVPELLRVIRTEREaSNR 1067
+                  555678999999******************************97764444 PP
+
+  == domain 4  score: 3.0 bits;  conditional E-value: 0.054
+    mTOR_dom   66 tdvsellvglspss..eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                  +++++++ +l++     + y + vi  L+k+++ ++    + +++ ++++ +k+  l++  f ++ii+ l++vi + +++l    ++ L+ +v
+  EQC28787.1 1068 PQTQLVMRTLISLGrlLDGYLHLVIPVLVKLIQSNADFLPRRQALGTLVTLVKK--LNVSVFASKIIHMLARVIASGHPELVYLAMDCLCAMV 1158
+                  444555555544433567788888888888887777777788888888888886..5566678888888888888877777777766666666 PP
+
+>> EQC35799.1  hypothetical protein SDRG_06558 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.2   0.0      0.52   8.6e+02     126     156 ..     127     157 ..      94     161 .. 0.82
+   2 ?   -0.8   0.0      0.83   1.4e+03      10      94 ..     172     200 ..     155     267 .. 0.57
+   3 !    5.6   0.0    0.0086        14      38     156 ..     313     431 ..     307     434 .. 0.60
+   4 !    5.9   0.0    0.0072        12      90     157 ..     448     520 ..     438     521 .. 0.75
+   5 ?   -0.0   0.0      0.47   7.8e+02     105     149 ..     563     607 ..     554     617 .. 0.82
+   6 ?    4.2   0.0     0.024        39      83     142 ..     624     683 ..     608     698 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -0.2 bits;  conditional E-value: 0.52
+    mTOR_dom 126 lpqiipallsvirtcesslrefllqqLatLv 156
+                  p+i+pal++ +++ +++ +++ l+ L+ L 
+  EQC35799.1 127 WPEILPALMTNVTSGTDNAKNYSLEALGYLC 157
+                 5899*****9999999999*99999999885 PP
+
+  == domain 2  score: -0.8 bits;  conditional E-value: 0.83
+    mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlki 94 
+                 ++L                                                        s+++ g+ +++ + +   +++aL + 
+  EQC35799.1 172 QVL--------------------------------------------------------SAIVDGIKTTNPDKIRLAAVSALRNS 200
+                 333........................................................33344444444445555555555444 PP
+
+  == domain 3  score: 5.6 bits;  conditional E-value: 0.0086
+    mTOR_dom  38 lGALDPykhkeveekseeeekeeenaeetdvsel....lvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkc.vpflpqii 130
+                 lG L P+    + ++ e++   e++  + ++s++    l+  s+  ++ +  vv+  + +  + +s + +h++a++ a  si+     ++  p+++q +
+  EQC35799.1 313 LGSLAPVLLNTLLQQEEDQ--FEDD--TWNLSMAgataLTLASQVVDNAIIPVVMPFVSS--NIQSADwHHKEAAIMAFGSILDGPTHEQiQPLVEQAM 405
+                 6777777775555433332..1111..122222211112222333344444444444443..4455565688899*********966655599****** PP
+
+    mTOR_dom 131 pallsvirtcesslrefllqqLatLv 156
+                 p l++ +++ ++ +r++    ++ + 
+  EQC35799.1 406 PLLITCMQDPHPLVRDTTAWTIGRIC 431
+                 *********99988888777776665 PP
+
+  == domain 4  score: 5.9 bits;  conditional E-value: 0.0072
+    mTOR_dom  90 aLlkilkdpsls.shhtavvqaimsifktlglkc...vpflpqiipallsvirtces.slrefllqqLatLvs 157
+                  +++ l+++s    h   +++ i + f++l+       +f+ q+  + l ++++ ++ +lr   ++ L+++++
+  EQC35799.1 448 LIMNGLDQESKVaAHMCYAIHYIFQAFSELQNGPeqlDQFYGQVFDKCLVTCQKPNDdNLRVSAFEALGMMIQ 520
+                 456666555544366666777777777776543211367*****************99***********9986 PP
+
+  == domain 5  score: -0.0 bits;  conditional E-value: 0.47
+    mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+                 t++ ++++ i++ ++    pf ++i++ ll +++t +++  e  +
+  EQC35799.1 563 TCACDVLVVIIQRVNDDIRPFADRIMQCLLDIFSTGHTTAGEEAF 607
+                 667788999**********************99998876655555 PP
+
+  == domain 6  score: 4.2 bits;  conditional E-value: 0.024
+    mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                 y+t     L++ l++ s    ++a+v ++  +++ lg  +  f +++i+ ll+++r+++ 
+  EQC35799.1 624 YMTAFYPVLVHGLSNTSEYMVCAAAVGVVGDVCRALGSDVKVFCDEFIQLLLTILRDTNL 683
+                 666677778888888998899999999999**********99******999999998654 PP
+
+>> EQC29287.1  hypothetical protein SDRG_12955 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.2   0.0       1.1   1.8e+03      14      36 ..      88     110 ..      79     114 .. 0.84
+   2 ?   -3.8   0.0       6.8   1.1e+04      13     113 ..     255     280 ..     249     309 .. 0.56
+   3 ?    4.2   0.0     0.024        40      97     142 ..     508     553 ..     460     559 .. 0.76
+   4 ?    2.5   0.0     0.078   1.3e+02     107     139 ..     615     647 ..     593     656 .. 0.84
+   5 ?    0.1   0.1      0.43   7.1e+02      99     157 ..     685     744 ..     660     747 .. 0.84
+   6 ?    4.9   0.0     0.014        23      15     138 ..     771     948 ..     759     961 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: -1.2 bits;  conditional E-value: 1.1
+    mTOR_dom  14 iLlnilkteqsqsiRrevikvlG 36 
+                  Ll++l  e ++siRr+   ++G
+  EQC29287.1  88 DLLQVLTHEANPSIRRKLCDTVG 110
+                 6999************9887776 PP
+
+  == domain 2  score: -3.8 bits;  conditional E-value: 6.8
+    mTOR_dom  13 eiLlnilkteq.sqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqa 110
+                 ++++ i +t++ s  +R+ ++ v                                                                            
+  EQC29287.1 255 RMMVAIAQTTSaSFGTRQLAMEV---------------------------------------------------------------------------- 277
+                 44444444442244444444433............................................................................ PP
+
+    mTOR_dom 111 ims 113
+                 ++s
+  EQC29287.1 278 LVS 280
+                 333 PP
+
+  == domain 3  score: 4.2 bits;  conditional E-value: 0.024
+    mTOR_dom  97 dpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                  p  +s ++ +v ai si    g     f+++++p l +++  c +
+  EQC29287.1 508 TPEGRSVQEHAVAAISSIAGCCGPSFARFYDKVLPPLKQLLYACLT 553
+                 45556889999**************************999988865 PP
+
+  == domain 4  score: 2.5 bits;  conditional E-value: 0.078
+    mTOR_dom 107 vvqaimsifktlglkcvpflpqiipallsvirt 139
+                  +qa    +ktl      +lp ++p+ll ++ +
+  EQC29287.1 615 LLQAWARLCKTLAEGFARYLPVVMPSLLDAAMQ 647
+                 67888999*******************987655 PP
+
+  == domain 5  score: 0.1 bits;  conditional E-value: 0.43
+    mTOR_dom  99 slsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157
+                 sl + ++++ q + s++ +l+    p+++q+   l+ +++++   ++r   ++ + +Lv 
+  EQC29287.1 685 SLLEEKATACQMLSSMVGDLKEAFFPYVEQVTTVLTPLMTDSVHtEIRAASISAMPSLVL 744
+                 566677888999999999999999*******99999999987776888888888888875 PP
+
+  == domain 6  score: 4.9 bits;  conditional E-value: 0.014
+    mTOR_dom  15 LlnilkteqsqsiRrevikv..lGilGALDPykhkeveeks.........................................eeeekeeenaeetdvse 70 
+                 Lln+l+te + +++  +++   + i  A+DP +   + +k+                                         +  e+e+e+  ++d +e
+  EQC29287.1 771 LLNALSTEPELELQMTIMQSikMCIAHAVDPEETNDLIGKKaptgllnhaqlvqlvegllivlaesfqrravrrarkaieelD--EEEAEEDMDNDATE 867
+                 66666666666666666554223455566666665555444555555555555555555555555555444444433333221..22222222222222 PP
+
+    mTOR_dom  71 l..lvgl.............spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                 +                   ++    +++ + + ++l++++ ++l + ++ +v  +  i+++ g   v+ l+ ++p l+  + 
+  EQC29287.1 868 AqlQ--FiladcigslakthTHVFFPVFQETLLDKVLEMVQPHCLPEDRKLAVYLVDDILEHTGPSAVAHLDTFVPMLVDCVG 948
+                 2220..1233334444322122224456678889999999************************************9998775 PP
+
+>> EQC40611.1  hypothetical protein SDRG_02496 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.7   0.0       6.2     1e+04      37      55 ..     281     299 ..     278     330 .. 0.69
+   2 !    7.3   0.0    0.0026       4.3      97     160 .]    1564    1627 ..    1551    1627 .. 0.86
+   3 ?   -1.2   0.0         1   1.7e+03      86     157 ..    1672    1744 ..    1642    1746 .. 0.63
+   4 ?   -3.3   0.0       4.8   7.9e+03       8      25 ..    1751    1768 ..    1749    1772 .. 0.69
+   5 ?    0.2   0.0      0.41   6.8e+02     104     157 ..    2399    2452 ..    2376    2453 .. 0.75
+   6 ?    2.0   0.0      0.11   1.9e+02      85     141 ..    2619    2675 ..    2591    2682 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -3.7 bits;  conditional E-value: 6.2
+    mTOR_dom  37 ilGALDPykhkeveeksee 55 
+                 i GAL P k k+v+   +e
+  EQC40611.1 281 IFGALFPAKLKSVKDDVRE 299
+                 7899999999888765533 PP
+
+  == domain 2  score: 7.3 bits;  conditional E-value: 0.0026
+    mTOR_dom   97 dpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160 
+                  d s    ++a++q +  + +       + lpqiip+l++ +++++++++e     L ++  +v+
+  EQC40611.1 1564 DDSAWRTKQAAIQLLGAMASCAPKPLGSCLPQIIPKLTASLSDSHPRVKEAGHAALIDIAHVVR 1627
+                  44455578899999999999999999************************99999999998886 PP
+
+  == domain 3  score: -1.2 bits;  conditional E-value: 1
+    mTOR_dom   86 vvinaLlkilkdpslsshhtavvqaimsifktl.glkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                   v+  L + l d+  +  ++++   + ++++ + + k   p+l+ i p l++ + +  +++r +  + L++Lv+
+  EQC40611.1 1672 LVMPVLQRGLTDRISE-TKKKAALIVGNMCSMVnDAKDlAPYLDTIAPCLQTQLLDPIPEVRTVASKALGMLVK 1744
+                  5555555666555433.333333344444444312344499*********999999999999999999999986 PP
+
+  == domain 4  score: -3.3 bits;  conditional E-value: 4.8
+    mTOR_dom    8 ypeLLeiLlnilkteqsq 25  
+                  +p+L+  Ll+++k+e+s+
+  EQC40611.1 1751 FPHLVPSLLQAIKSESSS 1768
+                  678888888888887543 PP
+
+  == domain 5  score: 0.2 bits;  conditional E-value: 0.41
+    mTOR_dom  104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                  ++a+++++   + + g+   pflpq+  +++++++++++s+r    + L +Lv+
+  EQC40611.1 2399 KAAILSTLEILLVKGGVALKPFLPQLQTTFVKALNDTSASVRACGGSALVHLVA 2452
+                  44445555555556677889****************999999988888888875 PP
+
+  == domain 6  score: 2.0 bits;  conditional E-value: 0.11
+    mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141 
+                  + v++aL+  l d+  ++   ++++++  + k    ++ + l  ++p ++++i++ +
+  EQC40611.1 2619 ADVVQALVVGLTDAVNKDVNRTALRVVKRMAKVAPKRVRQHLGALVPPIFALIKSPN 2675
+                  568999***********************************************9865 PP
+
+>> EQC40671.1  hypothetical protein SDRG_01749 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.9   0.0       1.8   2.9e+03      22      38 ..      57      73 ..      45      78 .. 0.61
+   2 ?    4.3   0.0     0.022        36       6      56 ..     164     215 ..     161     225 .. 0.75
+   3 !    6.4   0.0    0.0049       8.1      99     152 ..     218     272 ..     205     283 .. 0.78
+   4 ?   -0.6   0.0      0.72   1.2e+03      22      36 ..     344     358 ..     341     360 .. 0.85
+   5 ?   -0.5   0.0      0.65   1.1e+03     121     156 ..     476     511 ..     458     514 .. 0.79
+   6 ?   -0.6   0.2      0.68   1.1e+03      89     156 ..     508     572 ..     480     574 .. 0.60
+   7 ?    2.1   0.3       0.1   1.7e+02     101     157 ..     630     687 ..     594     772 .. 0.72
+   8 ?    2.0   0.0      0.11   1.8e+02      89     155 ..     892     958 ..     885     961 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -1.9 bits;  conditional E-value: 1.8
+    mTOR_dom 22 eqsqsiRrevikvlGil 38
+                ++s++++  ++k+lGil
+  EQC40671.1 57 DKSNDVQSIAVKCLGIL 73
+                34667777777777776 PP
+
+  == domain 2  score: 4.3 bits;  conditional E-value: 0.022
+    mTOR_dom   6 ldypeLLeiLlnilkteqsqsiRrevikvlGilG..ALDPykhkeveekseee 56 
+                 +++  ++++Ll+ l+ e +  +R+ v  +lG lG  A D   h+ ve   ++ 
+  EQC40671.1 164 SEHVAIMDLLLKELSDE-RAFVRKRVTSCLGALGvvAADALLHRLVEHLLQSV 215
+                 57888999999999977.889*************6666888898887544332 PP
+
+  == domain 3  score: 6.4 bits;  conditional E-value: 0.0049
+    mTOR_dom  99 slsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqL 152
+                 + +  + + +q+i +  +++g +    lp i+p +l+ + + ++ s+++ + ++L
+  EQC40671.1 218 NHEADKRTLIQTIGTLSRSVGHRLGRHLPVIVPLFLTFCGSPDDeSMQNDVSNEL 272
+                 334556789****************************999888777776665555 PP
+
+  == domain 4  score: -0.6 bits;  conditional E-value: 0.72
+    mTOR_dom  22 eqsqsiRrevikvlG 36 
+                 + s+++Rr +++v++
+  EQC40671.1 344 DASWKVRRAALRVMS 358
+                 469**********97 PP
+
+  == domain 5  score: -0.5 bits;  conditional E-value: 0.65
+    mTOR_dom 121 kcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                 +  pf++ ++p++l+++++ +ssl+   l  L +L+
+  EQC40671.1 476 QLGPFMDSLMPNILKALEDRNSSLKLDALLFLRQLM 511
+                 456899************999988877776666665 PP
+
+  == domain 6  score: -0.6 bits;  conditional E-value: 0.68
+    mTOR_dom  89 naLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                 ++L++   +psl  +h +a+v+  +   ++   k v+    +i ++++vir    s   +l+q +a++v
+  EQC40671.1 508 RQLMATH-EPSLFtKHMKAIVHLAVVNASDEWYKIVAKSLSLIGTIVHVIRP---STDAVLVQDMAVFV 572
+                 4444444.56666244444444444444445666677777788888888884...45666677776665 PP
+
+  == domain 7  score: 2.1 bits;  conditional E-value: 0.1
+    mTOR_dom 101 sshhtavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                 +  + a+++++ +i ++ l l    +l+  i  l +++r+ +++l+++ l+ L  Lv+
+  EQC40671.1 630 EITRIAAMKSLSTIARSpLPLDLSIILTDAIVCLSQLLRQQSRTLKQTALDTLIALVQ 687
+                 4444444555555555545555555555555555556665555666666665555554 PP
+
+  == domain 8  score: 2.0 bits;  conditional E-value: 0.11
+    mTOR_dom  89 naLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                 + L +il++ +  +h    ++a+ +++   +    +f++ ++p l s ++t e+ +r+++ + L++L
+  EQC40671.1 892 SYLPTILEELKKGKHTYLLLSALKEVLGCKSSDLKAFVSTVVPVLHSHCETEEEGVRNMVAECLGKL 958
+                 566778888887888888889999998888888899***************999****999999988 PP
+
+>> EQC30849.1  hypothetical protein SDRG_11331 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.5   0.0   0.00055       0.9      73     149 ..     508     587 ..     478     595 .. 0.86
+   2 ?    3.0   0.1     0.056        93      92     145 ..     678     732 ..     626     738 .. 0.69
+   3 ?   -2.2   0.0       2.2   3.7e+03     103     155 ..     877     933 ..     874     965 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 9.5 bits;  conditional E-value: 0.00055
+    mTOR_dom  73 vglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefll 149
+                   +s+ +e  +  +vi+ Ll + + +  ++ ++ v + im+++ +    l+   +fl+ ++++l++ ++++++ ++++  
+  EQC30849.1 508 GAMSEENEKRFLVTVIKDLLGLCEMKRGKDNKAVVASNIMYVVGQypRFLRAhWKFLKTVVNKLFEFMHELHPGVQDMAC 587
+                 4678999************************************994433555599***************9999888765 PP
+
+  == domain 2  score: 3.0 bits;  conditional E-value: 0.056
+    mTOR_dom  92 lkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslr 145
+                 ++il d+++ +   +++++  +++k +g +   + + qi + ll+v rt + ++ 
+  EQC30849.1 678 VEILFDSTVVKEIVKIIRTNGNVCKAIGPNGfNSQMGQIFQDLLNVYRTYTHRIA 732
+                 3666666666666666666666666666666566999999999999999876654 PP
+
+  == domain 3  score: -2.2 bits;  conditional E-value: 2.2
+    mTOR_dom 103 hhtavvqaimsifktlglkcvpf.lpqiipallsvirtce....sslrefllqqLatL 155
+                 h++ vv++i+  fk+ + ++  + l+ +   ll+v + ++    s  r f+l+ L+++
+  EQC30849.1 877 HQKLVVDSIVWAFKHTERNVADTgLETLYALLLNVRE-SPviaaSFYRSFYLSLLQDI 933
+                 5666666666666666665533303333333333322.22111124445555555444 PP
+
+>> EQC35870.1  hypothetical protein SDRG_06620 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.2   0.1     4e-05     0.065      10      53 ..    1304    1347 ..    1299    1400 .. 0.76
+   2 ?   -1.0   0.0      0.91   1.5e+03      98     118 ..    1554    1574 ..    1535    1578 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 13.2 bits;  conditional E-value: 4e-05
+    mTOR_dom   10 eLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks 53  
+                  ++L++Ll++ +te+s++i+    + lG lGA+D  +  +  +++
+  EQC35870.1 1304 QILKALLSLSRTETSEDIKTLLAQSLGALGAIDMARLPMQLSRT 1347
+                  799******************************99986555443 PP
+
+  == domain 2  score: -1.0 bits;  conditional E-value: 0.91
+    mTOR_dom   98 pslsshhtavvqaimsifktl 118 
+                   ++sshh+++ q++m  + tl
+  EQC35870.1 1554 DAVSSHHHQCAQTVMGLLDTL 1574
+                  5789***********998887 PP
+
+>> EQC41287.1  hypothetical protein SDRG_01262 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.0   0.1   9.1e-05      0.15      98     158 ..     108     168 ..      43     170 .. 0.83
+   2 ?   -3.3   0.1       4.8   7.9e+03     102     157 ..     574     630 ..     546     632 .. 0.77
+   3 ?   -0.2   0.0      0.52   8.6e+02       5      49 ..     639     682 ..     637     764 .. 0.65
+   4 ?    3.3   0.0     0.045        75     104     138 ..    1103    1137 ..    1087    1146 .. 0.77
+   5 ?    1.2   0.1       0.2   3.3e+02     103     147 ..    1613    1659 ..    1605    1667 .. 0.73
+   6 ?   -0.3   0.2      0.56   9.2e+02      98     138 ..    2168    2208 ..    2139    2229 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 12.0 bits;  conditional E-value: 9.1e-05
+    mTOR_dom  98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                 p   +  t v++ ++   k+lg +  p+ p + p++l++i+t++++l   +++ La+L ++
+  EQC41287.1 108 PEDPDVMTPVLKLLVALAKDLGKEFYPYFPALFPSILAIITTVNPELTTEVFKTLAMLFKY 168
+                 444456678999999******************************************9876 PP
+
+  == domain 2  score: -3.3 bits;  conditional E-value: 4.8
+    mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157
+                   ++ + +++++ ++   l++ + l+ + p+ +++ + +++   + f lq L  L +
+  EQC41287.1 574 GACSHTARVVLTLLHAKCLRVQANLESVAPTSAQLETYLDTyAASPFTLQALRALLK 630
+                 556667777888888888888899999999999999999998999999999999876 PP
+
+  == domain 3  score: -0.2 bits;  conditional E-value: 0.52
+    mTOR_dom   5 yldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkev 49 
+                  l ++ L+  L   l++   q++Rre+i ++G+  AL   +  e+
+  EQC41287.1 639 ALSFHALFAKLQHNLRS-PIQALRRETIELFGLHPALHYENTSEN 682
+                 56667777777777774.4899**********8766654444333 PP
+
+  == domain 4  score: 3.3 bits;  conditional E-value: 0.045
+    mTOR_dom  104 htavvqaimsifktlglkcvpflpqiipallsvir 138 
+                  +   ++ +  ++ +lg+k+++flpqi++ l+++++
+  EQC41287.1 1103 QVGFLKLLEDVIAHLGMKVTAFLPQILSVLTAILS 1137
+                  55566777789999*************99988775 PP
+
+  == domain 5  score: 1.2 bits;  conditional E-value: 0.2
+    mTOR_dom  103 hhtavvqaimsifkt..lglkcvpflpqiipallsvirtcesslref 147 
+                   ++ ++q + s f +  l l  +++l+ i+p l++vi + +++  e 
+  EQC41287.1 1613 RRSRAIQRLRSSFANekLPLSNTTVLNVIVPLLTHVIYENSNKSHEA 1659
+                  45667777777776633667779999999999999999877755554 PP
+
+  == domain 6  score: -0.3 bits;  conditional E-value: 0.56
+    mTOR_dom   98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvir 138 
+                  psl  + ++vv+ i +i++  g    + ++q +   l+v+ 
+  EQC41287.1 2168 PSLIAQLSTVVDRIFKIIQRAGAATKNEMTQTCYRALAVLI 2208
+                  56777778888888888888888887777776666665543 PP
+
+>> EQC37369.1  hypothetical protein SDRG_05586 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.6   0.2      0.69   1.1e+03     105     142 ..     181     218 ..      85     237 .. 0.76
+   2 ?   -0.3   0.0      0.55   9.1e+02      89     139 ..     252     305 ..     227     319 .. 0.56
+   3 ?    4.5   0.0     0.019        31      92     153 ..     443     504 ..     400     506 .. 0.74
+   4 ?   -0.3   0.0      0.56   9.3e+02      97     147 ..     533     584 ..     519     591 .. 0.81
+   5 ?    1.4   0.0      0.17   2.9e+02     120     158 ..     888     926 ..     882     928 .. 0.88
+   6 ?   -4.2   0.0       8.7   1.4e+04      37      44 ..    1059    1066 ..    1058    1068 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -0.6 bits;  conditional E-value: 0.69
+    mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                  ++++a    ++ l+ k+    +q+i  +l+v++ c +
+  EQC37369.1 181 IEAMHAACGLVEFLEKKQAIEFQQLIEPMLQVLQACIA 218
+                 44555666666677777877888888888888888765 PP
+
+  == domain 2  score: -0.3 bits;  conditional E-value: 0.55
+    mTOR_dom  89 naLlkilkdpsls.shhtavvqaimsifkt..lglkcvpflpqiipallsvirt 139
+                 + Ll+i+    l+ s ++a+ +a+  i++     l   +++pqi  ++l++i +
+  EQC37369.1 252 TLLLNIFVADGLEpSTRAAASSALNAIIEAkpKALAKAALVPQIFTTMLKLIAS 305
+                 444555544334333344444444444443223444456667777777766665 PP
+
+  == domain 3  score: 4.5 bits;  conditional E-value: 0.019
+    mTOR_dom  92 lkilkdpslsshhtavvqaimsifkt.lg.lkcvpflpqiipallsvirtcesslrefllqqLa 153
+                 l++l+dpsl    t+    ++++f + ++  +  pfl  ++ +l+ +irt ++s+++  ++ L+
+  EQC37369.1 443 LALLDDPSLPVKATS--CYVLEVFTEsMEpSEIKPFLAALVEKLVGLIRTQKPSIQKLAISALG 504
+                 467788888843333..345555554344145599***************999***99988886 PP
+
+  == domain 4  score: -0.3 bits;  conditional E-value: 0.56
+    mTOR_dom  97 dpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslref 147
+                 dp+  s + ++++ + + +  +g +   ++l+ i+p ++++i   + +l e 
+  EQC37369.1 533 DPKFYSLRGTAIECLGYLVVAMGAERfGATLQSIMPYVFQTIALNDVELTEL 584
+                 777778888899999999999999887889*********9998766677665 PP
+
+  == domain 5  score: 1.4 bits;  conditional E-value: 0.17
+    mTOR_dom 120 lkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                 ++ ++++p ++p +l+++   ++s++      L++Lv++
+  EQC37369.1 888 IQNLSYVPTVLPLMLKACAGENTSVQRNAAFALGMLVKM 926
+                 5678999************99999999999999999975 PP
+
+  == domain 6  score: -4.2 bits;  conditional E-value: 8.7
+    mTOR_dom   37 ilGALDPy 44  
+                  i+GA+DP 
+  EQC37369.1 1059 IVGAMDPA 1066
+                  89*****7 PP
+
+>> EQC38838.1  hypothetical protein SDRG_03796 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.0   0.1      0.46   7.5e+02      81     143 ..      44     106 ..      17     114 .. 0.71
+   2 ?    0.0   0.3      0.45   7.5e+02      93     157 ..     189     252 ..     141     253 .. 0.77
+   3 ?   -1.4   0.0       1.2     2e+03      97     153 ..     570     627 ..     515     633 .. 0.74
+   4 ?    5.4   0.0      0.01        17     102     159 ..     737     794 ..     717     795 .. 0.84
+   5 ?    5.7   0.0    0.0081        13     100     146 ..     860     911 ..     828     922 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 0.0 bits;  conditional E-value: 0.46
+    mTOR_dom  81 eyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcess 143
+                     t  ++aL++ l+    ++h ++++q +  ++ +++  +  +  + + + l++v+++++++
+  EQC38838.1  44 SISNTEYFAALMTALEST-DATHTHEILQLLSMVLPEVHEAVlRTKFDAVAHCLVRVMHDAQAN 106
+                 444555667788888444.456888888888888888777775677788888888888877665 PP
+
+  == domain 2  score: 0.0 bits;  conditional E-value: 0.45
+    mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                 +il  +++++ +t+v+q + +  + l l   ++++ +  al++++   +++l+ + lq L  Lvs
+  EQC38838.1 189 NIL-ASAVAKDQTKVLQLVGFLASALPLLPSEVVTSLTEALFKLLGANQKTLSLVTLQALDALVS 252
+                 566.4556678899999999999999999999999999999999999889999999999999987 PP
+
+  == domain 3  score: -1.4 bits;  conditional E-value: 1.2
+    mTOR_dom  97 dpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLa 153
+                 + +ls+  +  +  +++i++ l++++  + lp +  ++  +++ +e+ + + +++qL 
+  EQC38838.1 570 QMALSKFAARFIPLLITIVEGLDVEVdSERLPTLTDTIGGYAKLAEPAFIQSVFKQLM 627
+                 4566777777777788888888888877778888888888888877777777777775 PP
+
+  == domain 4  score: 5.4 bits;  conditional E-value: 0.01
+    mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                 +++  +++ i+s ++  +   v+f+p ++ +++  +++++++ re  ++ L  + ++v
+  EQC38838.1 737 KMRLRALNQIVSAMERTQHDDVSFIPGLVGEIMLCTKEANAKAREAAFELLLAMARLV 794
+                 556677888999999999999****************************999888776 PP
+
+  == domain 5  score: 5.7 bits;  conditional E-value: 0.0081
+    mTOR_dom 100 lsshhtavvqaimsifkt....lglkc.vpflpqiipallsvirtcesslre 146
+                 l +   +v+++++  +k     l+    v+flp ii  ll++i ++++++r 
+  EQC38838.1 860 LHEKAREVIKSVIGFMKLgiaiLSKDAlVEFLPSIIEGLLKWIGEAKQRFRA 911
+                 344445556665554443322244444589**************99998776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      18229  (8862079 residues searched)
+Passed MSV filter:                       683  (0.0374678); expected 364.6 (0.02)
+Passed bias filter:                      558  (0.0306106); expected 364.6 (0.02)
+Passed Vit filter:                        50  (0.00274288); expected 18.2 (0.001)
+Passed Fwd filter:                        11  (0.000603434); expected 0.2 (1e-05)
+Initial search space (Z):              18229  [actual number of targets]
+Domain search space  (domZ):              11  [number of targets reported over threshold]
+# CPU time: 0.10u 0.09s 00:00:00.19 Elapsed: 00:00:00.16
+# Mc/sec: 8732.90
+//
+[ok]

@@ -1,0 +1,61 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/O_trifallax_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.9e-05   20.3  26.3    6.8e-05   19.8  26.3    1.1  1  g36532    Hypothetical protein
+
+
+Domain annotation for each sequence (and alignments):
+>> g36532  Hypothetical protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.8  26.3   1.7e-08   6.8e-05      23     243 ..      81     363 ..      51     429 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 19.8 bits;  conditional E-value: 1.7e-08
+  PTHR13335.orig.30.pir  23 ddgmcerilndd..............................................................dvdlekihsapypp 48 
+                             d +c+ + n d                                                              +++++ +++ +  +
+                 g36532  81 YDLYCNLVPNEDesspiydwvprtgsfevsykgmlvfsklqstfwpntqligekcyllvqdesenkdltkylagSSPVKGNKNSRLAG 168
+                            4556666666667777777777777777777777777777777777777777777777777788777777777777788888888888 PP
+
+  PTHR13335.orig.30.pir  49 vsssssesll.srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdisssslde 135
+                            +++s+ + +  s+ k+as+p ++ + +  ss +      ++ +   + ps+ q +++ + +q+++++++++++e++q+++++++sl +
+                 g36532 169 ANRSPTRDMGnSSFKNASSPSRHETTQKFSSQQ------VAAPRN-QTPSAAQLQQQYQLQQQKAVQEEQEQREREQQEEFQRQSLLQ 249
+                            888888888777777777777777666666444......222222.223333333333334466777777777788888888888888 PP
+
+  PTHR13335.orig.30.pir 136 gsrrrrantavkleklrke....rrsksasiasseer.........dqsscksiqwktessvkedsvqrassesslsserssdsssss 210
+                            ++r++ +++++ +e++ ke    r+ + ++ ++   +          ++  + ++ ++e+s k ++  +a s++++s ++s +  s +
+                 g36532 250 QQREQEMKEQQIREQQAKEaeikRQEELKKQQQM--QqqqeerekhERAEAEKKKKQEEESKKVPTENSANSKHDISKDESNK--SIH 333
+                            8888888666666655555465533222222222..12224445555677777777777777777777777777777777666..334 PP
+
+  PTHR13335.orig.30.pir 211 sapsr.rq...snkldseqlsaeesdslfekksksss 243
+                            ++p++      +       +++ ++ s ++k+++++ 
+                 g36532 334 QDPKFlDHsksR-------QDTIPAQSSLHKQPSNTY 363
+                            444442222221.......333333333344443332 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       3987  (2350510 residues searched)
+Passed MSV filter:                      2151  (0.539503); expected 79.7 (0.02)
+Passed bias filter:                      256  (0.0642087); expected 79.7 (0.02)
+Passed Vit filter:                       174  (0.0436418); expected 4.0 (0.001)
+Passed Fwd filter:                         5  (0.00125408); expected 0.0 (1e-05)
+Initial search space (Z):               3987  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.35u 0.00s 00:00:00.35 Elapsed: 00:00:00.21
+# Mc/sec: 7348.21
+//
+[ok]

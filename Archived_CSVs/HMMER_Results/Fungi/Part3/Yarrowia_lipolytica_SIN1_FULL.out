@@ -1,0 +1,342 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Yarrowia_lipolytica.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+   6.9e-140  466.6  11.1   8.4e-140  466.4  11.1    1.0  1  XP_500780.1  YALI0B11924p [Yarrowia lipolytica CLIB122]
+    8.9e-06   23.5  15.9    1.8e-05   22.4  15.9    1.4  1  XP_503908.1  YALI0E13596p [Yarrowia lipolytica CLIB122]
+     0.0007   17.2  15.7    0.00074   17.1  15.7    1.1  1  XP_505584.1  YALI0F18568p [Yarrowia lipolytica CLIB122]
+     0.0025   15.4   5.5     0.0031   15.0   5.5    1.3  1  XP_503754.1  YALI0E09889p [Yarrowia lipolytica CLIB122]
+     0.0049   14.4  26.5     0.0065   14.0  26.5    1.1  1  XP_505375.1  YALI0F13475p [Yarrowia lipolytica CLIB122]
+     0.0076   13.8  10.3       0.01   13.3  10.3    1.1  1  XP_502408.1  YALI0D04510p [Yarrowia lipolytica CLIB122]
+     0.0085   13.6   9.9      0.012   13.1   9.9    1.3  1  XP_504095.1  YALI0E18216p [Yarrowia lipolytica CLIB122]
+     0.0091   13.5  21.0      0.012   13.1  21.0    1.2  1  XP_503763.1  YALI0E10087p [Yarrowia lipolytica CLIB122]
+  ------ inclusion threshold ------
+      0.044   11.2  17.4      0.051   11.0  17.4    1.2  1  XP_502494.1  YALI0D06633p [Yarrowia lipolytica CLIB122]
+      0.099   10.1  18.6       0.13    9.7  18.6    1.1  1  XP_502474.1  YALI0D06193p [Yarrowia lipolytica CLIB122]
+       0.56    7.6  30.8     0.0074   13.8  17.3    2.3  2  XP_502753.1  YALI0D12628p [Yarrowia lipolytica CLIB122]
+        2.1    5.7  21.3        2.4    5.5  21.3    1.2  1  XP_503124.1  YALI0D21747p [Yarrowia lipolytica CLIB122]
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_500780.1  YALI0B11924p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  466.4  11.1  1.6e-142  8.4e-140       1     667 [.       1     800 [.       1     804 [. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 466.4 bits;  conditional E-value: 1.6e-142
+  PTHR13335.orig.30.pir   1 MafldnedillahlRtsyltsdddgmcerilndd.............dvdlekihsapyppvsssssesll..srpksastpgdsgse 73 
+                            M++l+++d+l++hlR++y+ s++d++++ +++               + +l  + +a+ ppv sss +  +   r ++ + +  s  +
+            XP_500780.1   1 MSLLQDPDYLITHLRAKYVDSIHDSVAPALVKPVpgylrhdhskdwqNESLTILLKAESPPVASSSLNEKAlaYRRQKLRLDDMSDED 88 
+                            ***********************************************889999999999999999888888899************** PP
+
+  PTHR13335.orig.30.pir  74 dsgssneaetatg............gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkle 149
+                            ++  +++ ++++g             +  ++  ++++d+++  ++++ ++ +++s +y++++ s d ++ + +e+ ++   +  ++ +
+            XP_500780.1  89 EDEMADDENHTNGgvirlkrrntqkRASGVPLAQSYMDSSDTYKQQDIMASGGFSGQYDDSNSSGDDDDFDEEESEDEAGGSGVLDVH 176
+                            ****999999999**********99999999********************************************************* PP
+
+  PTHR13335.orig.30.pir 150 klrke...rrsksasiassee.r....................dqsscksiqwktessvkedsvqrassesslsserssdssssssap 213
+                            +l+ +   ++s+ +si+ss+e +                    + + + s++ + e   +++    ++++  +  + +sd++++++++
+            XP_500780.1 177 QLTPRiddHHSSDSSIMSSSEdDeeiivvpsmtfdegtslsgdAYAAISSANVDSELDPQSSYIYPTDEQGLVVDSDDSDEHLEMPIS 264
+                            ********9999*********88********************667777777777788888889999999999999999********* PP
+
+  PTHR13335.orig.30.pir 214 sr.rq....snkldseqlsaeesdslfekkskssstktqkskkpssaa....kqsi................................ 260
+                            ++ ++    + + ++++++a++s s +   ++s+ ++++++++++s++    +qs+                                
+            XP_500780.1 265 KTnTKssmpRATSTASVTTAGSSLSKTANSNTSWLSQRREPQRQTSVDvipePQSLknrrrmsgvvpprprsnttaslpaestqkvdt 352
+                            **88899886666666677777777777777788888887777777745777444455555555555555566666666666666677 PP
+
+  PTHR13335.orig.30.pir 261 ...................sslssaLekkpsqlnnpfneyakfdgkgvgttaslkidiylplssepdkllpltvvvkasatVqevIGl 329
+                                               s lss+++ ++s+l+np++ey++++gk+  t ++l+i +y+p s    + +p++v++  ++tV+ +IG+
+            XP_500780.1 353 klfekdfsrlqlvterqhtSLLSSQIQDRSSTLDNPLDEYMSASGKA--TKKPLNIYMYMPSSAC--PDTPWEVSLLPDVTVSHAIGF 436
+                            7777777777777888888999*************************..****************..889****************** PP
+
+  PTHR13335.orig.30.pir 330 aLwqyteegrepklpdnk..vnaycLrivEdDGevddDFPpLDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrleeak 415
+                            aL++y+ ++ ep l +++   n +++++v +DGevd+D  +LDr+ ++s +g +e+aLveat+se ++n+++++++ ++q+k + +++
+            XP_500780.1 437 ALYKYSLNHLEPALTPAQcdANLWNCYMV-EDGEVDEDI-VLDRTTELSRYG-EEFALVEATPSEYIENKKRTPNKFGVQAKTEASPG 521
+                            ******************8777*******.77*******.***********9.*********************************** PP
+
+  PTHR13335.orig.30.pir 416 rsagsaneagsslstes..........skeslfvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkkyrllkvsepnvi 493
+                            ++ g  ++++ +++ ++          ++e++ ++++l  +  +    +t++v+  ++la+vle++ck+r++d + y +l++ ++++i
+            XP_500780.1 522 ATGGVPVPIPPTMIIDDdsttalpttiERETVRLRIHL-ESTNT----VTLNVDRGSYLAEVLETICKRRSCDTSLY-TLALFGTKII 603
+                            ****************9*********************.53444....9****************************.********** PP
+
+  PTHR13335.orig.30.pir 494 vdldrtvesldgleflllrknssradgvlekteskssssanatissksaa.........................edsqiqiatvqdd 556
+                            +++drtve+l+g+++l+l +++++++ v    ++ks+++a+++i+++saa                         ++   ++++++dd
+            XP_500780.1 604 APGDRTVEALQGHHELELLQKKYVSQSVGYIYPPKSQNPAAPIIPRGSAAlfthtgsvaggalgklsgkslkhapQNFLLGPSSPSDD 691
+                            **************************************************************************************** PP
+
+  PTHR13335.orig.30.pir 557 lsssayksfkVsrkhkmrfktdrel..gIdgdyieimPvenqkaatkfwekqKtisihisqvvacklssknpanFkivvrrendeKry 642
+                            l s ay++++V+r+++m+f++++e+  ++dg+yi+imP+++++++    e++Kt+s+h+  +++ck+s+k+p+nFkivv+++++ Kry
+            XP_500780.1 692 LGSDAYQKYQVWRRQPMSFISKHEKvlAFDGEYIHIMPSDDKTKF----ETSKTSSFHVGRIIKCKQSRKVPSNFKIVVNKPSGPKRY 775
+                            *************************99******************....*************************************** PP
+
+  PTHR13335.orig.30.pir 643 dfeavsaaeaaeIvskinnileaya 667
+                            d+eavs a+++eIv+ki++ ++ay 
+            XP_500780.1 776 DLEAVSVAQCVEIVTKIRHRCSAYV 800
+                            ***********************97 PP
+
+>> XP_503908.1  YALI0E13596p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.4  15.9   3.3e-08   1.8e-05      20     154 ..      39     359 ..      26     409 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 22.4 bits;  conditional E-value: 3.3e-08
+  PTHR13335.orig.30.pir  20 tsdddgmcerilndd.............dvdlekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatg........ 86 
+                            + +dd+++  + n++                                           st ++s+s  ++     ++ t+        
+            XP_503908.1  39 MRNDDSLADALTNNEsehsnvstssaasA-----------------------------STAATSASMMDSQVYTNKQNTAannvtpap 97 
+                            45677777777777533333333333331.............................222222222222211111111122333344 PP
+
+  PTHR13335.orig.30.pir  87 ........................................................................................ 86 
+                                                                                                                    
+            XP_503908.1  98 nntdmrppespgpgssasrkrkapmasseeidaelrraaeqlvglpiedivetlrrqdspagrghgnertkqtfgmawlmkfcelneq 185
+                            46666666666666666666668888888888888899999999******************************************** PP
+
+  PTHR13335.orig.30.pir  87 ........................................................................................ 86 
+                                                                                                                    
+            XP_503908.1 186 ssvlrsriyaryvtmcsqhnvrpmnpasfgklvrviypdlttrrlgvrgqskyhycgirltgeaeeistpgpgspdraftpeltpfds 273
+                            **************************************************************************************** PP
+
+  PTHR13335.orig.30.pir  87 ...................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke 154
+                                                +  ++++ ++  q++++q+ +q+ ++  +++++++++++  + ++++++++++++++++++++++++
+            XP_503908.1 274 pygfrgktetpdyalglnsMMASQPGTPQQHIQNHQQQHLQQNHQQHHQQQQQQQQHQQHQQ-QQQQQQQQQQQQQQQQQQQQQQQH 359
+                            *****************996666666667777777777766333333333333333333333.333333333333333333333333 PP
+
+>> XP_505584.1  YALI0F18568p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.1  15.7   1.4e-06   0.00074      35     160 ..     134     252 ..      49     285 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 17.1 bits;  conditional E-value: 1.4e-06
+  PTHR13335.orig.30.pir  35 dvdlekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeee 122
+                            ++ ++++h++ + +v++s +    +    +  +  s  + ++++ + ++a +    + r +p+ +q++++q++ q+ +++ ++  +++
+            XP_505584.1 134 TDTVQRLHEKFNLTVHESGKLRPVK----VDLSVPSKRRSDVDAARIQRAEQ--LIQERLGPQIQQQQQQQQQLQQGQQQGQQ-GQQQ 214
+                            4555555655555554443322211....11112222222222222222222..22333444444444444444444444444.4458 PP
+
+  PTHR13335.orig.30.pir 123 lqsvdissssldegsrrrrantavkleklrke..rrsksa 160
+                             q++d ++++ ++g+++++++++++++  r +  +  +++
+            XP_505584.1 215 GQNMDQQQQYPMDGQQQQQQQQQQQQQGHRPQgqM--QQG 252
+                            89999999999999999999888888888888442..333 PP
+
+>> XP_503754.1  YALI0E09889p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.0   5.5   5.8e-06    0.0031      83     221 ..      11     160 ..       2     382 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 15.0 bits;  conditional E-value: 5.8e-06
+  PTHR13335.orig.30.pir  83 tatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseer.. 168
+                            ++++g ++++ ++p++  +r+t++++++ e e ++++++++++ d +++   +++ rrr +++v++e++r+++r   ++      r  
+            XP_503754.1  11 QTQRGLDTQQPPRPRSHDSRDTERDVRDRERERDRDFRDRDRERDRERDRYRNQRWRRR-DDSVDRERERERHRD--RDY-----Rdr 90 
+                            445577888889999********************************999999999999.89**********662..222.....123 PP
+
+  PTHR13335.orig.30.pir 169 ..........dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrq........snkl 221
+                                      ++ ++++ + +  +   +d+++  +++ + + +r+ d + ++++ ++ +        ++++
+            XP_503754.1  91 gdrgdrrdrySRDGGRDRRDRRDDDRTRDRPRDRDRDRDRDRDRDRDRDRDRDRDRD-RdrgdreraRDRT 160
+                            333455666644444444444444444444444444444444444444433333333.0234544443333 PP
+
+>> XP_505375.1  YALI0F13475p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.0  26.5   1.2e-05    0.0065      71     272 ..      15     306 ..       2     326 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: 14.0 bits;  conditional E-value: 1.2e-05
+  PTHR13335.orig.30.pir  71 gsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsk 158
+                             +++   ++ ++ +++ + +++  + s+++++e+  e+                 +d+s+++++e s+ ++++++   ++  +   s+
+            XP_505375.1  15 KTDK---KSKVSSKKAEAIEKSIAELSKKKKDESSSES-----------------SDSSDDEDEEMSDASSSSDSDSDSSSDSDSDSD 82 
+                            2222...1222222223333333333333333333333.................333333333333333322222222222221111 PP
+
+  PTHR13335.orig.30.pir 159 sasiasseer..dqssck.siqwktessvkedsvqrassesslsserssdssssssapsr.rq......snkldseq........... 225
+                            s+s +s        ++++  +  k ++  ++ds++++s +s+++s++ sds+s+s++ ++ ++             +           
+            XP_505375.1  83 SDSDSSDD-EkkEDKKVEeKVVKKAKKEDSSDSSDSDSDSSDSDSDSGSDSDSDSDDEKTeEKtevkaeT------Kaepaaepeaaa 163
+                            11111111.0121222220222233334455567777777888888888888888888886666654430......133566777788 PP
+
+  PTHR13335.orig.30.pir 226 ................................................................lsaeesdslfekkskssstktqks 249
+                                                                                            ++++e d  +++ + s+   +  +
+            XP_505375.1 164 epefktvfvgglswnvdddwltkefadagavsarvitekatgrskgfgyvdfasgadaqkcveeFQDKEIDGRTVRLDISTNVRQTPE 251
+                            8999999999999999999999999999999999999999999999999999999999999999555555555455443333333322 PP
+
+  PTHR13335.orig.30.pir 250 kkpssa.a........kqsi.........................sslssaLekkps 272
+                            +k+++  +        +                            s +s +L ++p 
+            XP_505375.1 252 QKQRDRsSqygdqlseP--AdtlfvgnlsfdtnrddlfgifgeygSVVSIRLPTHPE 306
+                            22222211333334441..13335555555555555566666666666777777776 PP
+
+>> XP_502408.1  YALI0D04510p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.3  10.3   1.9e-05      0.01      39     205 ..      43     200 ..      12     334 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 13.3 bits;  conditional E-value: 1.9e-05
+  PTHR13335.orig.30.pir  39 ekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsv 126
+                            e++h a ++++ +  ++++       ++++ +  e + +           ++++r +  +  r +  + ++ss++++    +e++q++
+            XP_502408.1  43 EETHRALRQKAARECERVR------LVHSKVRENEAQKRRQV------LENRNSRLQEAQARRESVIQKRRSSAQSFVAMIRESQQEM 118
+                            4445444454444444444......33444444444444333......5556666666677777777777777888999999888888 PP
+
+  PTHR13335.orig.30.pir 127 dissssldegsrrrra.ntavkleklrkerrsksasiassee.r..............dqsscksiqwktessvkedsvqrassessl 198
+                            +++ +s++++  ++++   + +l++++ +++++++s++s+ +                d +s+ ++ ++       +s  +a    s+
+            XP_502408.1 119 SSE-QSVEDEVPDEKQpPGKSDLSTMSTNQQNQTDSTRSPVTtAttssegepininnnD-KSGGGAGSS-------SSDPSA----ST 193
+                            888.999999888887688999*****************99955666666444444421.222222222.......122222....22 PP
+
+  PTHR13335.orig.30.pir 199 sserssd 205
+                             serss 
+            XP_502408.1 194 ASERSSV 200
+                            2222222 PP
+
+>> XP_504095.1  YALI0E18216p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.1   9.9   2.2e-05     0.012      36     124 ..      35     320 ..       4     322 .] 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 13.1 bits;  conditional E-value: 2.2e-05
+  PTHR13335.orig.30.pir  36 vdlekihsapyppvsssssesll..srpksastpgdsgsedsgssneaetatg................................... 86 
+                            ++++  h +++p+v+s  s s +  +    ++++g sg+ +++ +   + +t                                    
+            XP_504095.1  35 LPAHDHHPQRRPSVHSPTSTSTAagQVVAPSGQQGPSGPSGPSVQAPSGAQTTsnqiaapgqmsrppstghfgmqpvpqphefipgpl 122
+                            5566677778888888888888888777777777777777777666655555578899999999999999999999999999999999 PP
+
+  PTHR13335.orig.30.pir  87 ........................................................................................ 86 
+                                                                                                                    
+            XP_504095.1 123 hapqpyyphhlqhqghfpplqpiqipqwtaphhghhpsltpgpsptatapehrhrrnssvyspyqrprggsvghlgpvpttsshlppp 210
+                            9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 PP
+
+  PTHR13335.orig.30.pir  87 ...........................................................................gdtkarrkkpsld 99 
+                                                                                                           ar+ + +++
+            XP_504095.1 211 atvtfarggfedktsdgsqrkrskapnstwtmeddnrlldlvlatlprqdyaeyarllnkrdsqtvryrwkvlvrR---ARGEGEQQQ 295
+                            999999999999999999999999**************************99999999999999999999996541...333333333 PP
+
+  PTHR13335.orig.30.pir 100 qrretqgekqssesesspsyeeelq 124
+                            q++++q+++q++++++++++++++q
+            XP_504095.1 296 QQQQQQQQQQQQQQQQQQQQQQQQQ 320
+                            3333333333333333333333332 PP
+
+>> XP_503763.1  YALI0E10087p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.1  21.0   2.3e-05     0.012      15     218 ..      28     265 ..      20     351 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 13.1 bits;  conditional E-value: 2.3e-05
+  PTHR13335.orig.30.pir  15 Rtsyltsdddgmcerilndddvdlekihsapyppvsssssesll.srpksastpgdsgsedsgssneaetatg............... 86 
+                            R s++t d +  c+r ++ +  + +  h  + p         ++ +r +s+s   d+  e +g + ++++++g               
+            XP_503763.1  28 RRSHMTCDNNRPCSRCVKRN--ISHLCHDEAKP---------VRgKRQQSQS---DDEEEVQGQQQQQQQQQGqgqqgqgqvsglntp 101
+                            77888888888999999997..34444433333.........2222222222...222222233222222222444557777788888 PP
+
+  PTHR13335.orig.30.pir  87 ............................................gdtkarrkkpsldqrretqgekqssesesspsyee..elqsvdi 128
+                                                                        g++ ++   + + q++ + +++++se++   +y++  ++++++ 
+            XP_503763.1 102 nagmsaqfmnaggiqnglffsehagsefsslndfltmfddvvyeGQPSQG---QNQGQQQGQGQSQGQSENGTGTQYRQgqGMHQTQ- 185
+                            89***********************************9999555444444...4444444444444445555555555300333444. PP
+
+  PTHR13335.orig.30.pir 129 ssssldegsrrrrantavkleklrkerrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsr 215
+                               s+  ++++++++t+++  ++ +++++ + +++++++    ++ + +q++          q  +s+++++s   s++s+++ +p +
+            XP_503763.1 186 ---SQNHSQTQSQTQTQAQAMSQGQRQQP-GHQHQQLQSpG-MAHPAVTQQQ----------QQGQSQAQAQSQNLSNASLTHEDPPQ 258
+                            ...44444444444444444444444332.22233333333.2222222222..........44566666666666666677766666 PP
+
+  PTHR13335.orig.30.pir 216 .rq...s 218
+                             ++   +
+            XP_503763.1 259 vSEaarN 265
+                            4444431 PP
+
+>> XP_502494.1  YALI0D06633p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.0  17.4   9.5e-05     0.051     112     208 ..     136     235 ..      58     327 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 11.0 bits;  conditional E-value: 9.5e-05
+  PTHR13335.orig.30.pir 112 esesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r...dqsscksiqwktessvkedsvqrasse 195
+                             s+ + + ++++qs+d ++++ + +s +++++ + +++++++++ s+++++ ss + +   ++s+  s++ +++++++ +s+q ++s+
+            XP_502494.1 136 SSQGEGDGQSQDQSQDQTQDQTQSQS-QSQSQSQSQSQSQPSATGSSGDGSDSSGSgSgsdSGSGAGSGSGSPSDPSSVSSPQQSPSA 222
+                            22222233335566666633333333.3333556666666666777777777777766677788888888888899999999999999 PP
+
+  PTHR13335.orig.30.pir 196 sslsserssdsss 208
+                             +++s + s s  
+            XP_502494.1 223 GDSGSGSGSGSGT 235
+                            9998888886554 PP
+
+>> XP_502474.1  YALI0D06193p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.7  18.6   0.00025      0.13      93     179 ..      96     190 ..      54     264 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 9.7 bits;  conditional E-value: 0.00025
+  PTHR13335.orig.30.pir  93 rkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke........rrsksasiassee.rdqs 171
+                            ++ p++++ +++ ++++++++++++++++ l++++ + +++ +++++++++ ++++e  +++           k++++ s ++ ++ +
+            XP_502474.1  96 SPPPQQQHHHQQHQQHHHQHHQQQQQQQQHLHQQQQQ-QQQHQQQHQQHQQHQQQQEIFPQNiqmptyisDPDKQEEMDSNNDqDSPP 182
+                            3334444444444444444444454555444444444.77777777777777777777777743333332111122222222222333 PP
+
+  PTHR13335.orig.30.pir 172 scksiqwk 179
+                             ++s+ ++
+            XP_502474.1 183 TLQSTPLQ 190
+                            33333332 PP
+
+>> XP_502753.1  YALI0D12628p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.6   5.5      0.31   1.7e+02      71     120 ..      99     154 ..      60     198 .. 0.47
+   2 ?   13.8  17.3   1.4e-05    0.0074      55     155 ..     649     751 ..     619     859 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: -0.6 bits;  conditional E-value: 0.31
+  PTHR13335.orig.30.pir  71 gsedsgssneaetatg.........gdtkarrkkpsldqrretqgekqssesesspsye 120
+                             s++ +  + ++ +++         ++++a+++ +  +q++++q+++  +++++ + + 
+            XP_502753.1  99 ESDEGSV-PPQAPSNAssstasspnTAPTAQQRLMHFQQETKQQQYQ--QHEGETKPDA 154
+                            1111111.111111112222333224444444444444444444444..2222222222 PP
+
+  == domain 2  score: 13.8 bits;  conditional E-value: 1.4e-05
+  PTHR13335.orig.30.pir  55 esll.srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrr 141
+                            + +  s+p  a++++    + ++s++ ++ +++ ++++r  +++++q++  ++++   +++++++++  +q++++++ + ++ ++++ 
+            XP_502753.1 649 HARGvSKPDAAKQQQMPQAQHQASQPPHGAQQHHAQQQRHAQQQQQQQQHARQQQ---QQQQQQQQQHTQQQQQTHQPQPERKFNNHA 733
+                            3333566666666666667777777777776664444443333333333333333...333333333333444444444555555555 PP
+
+  PTHR13335.orig.30.pir 142 antavkleklrke....r 155
+                             +++++++++ +e    r
+            XP_502753.1 734 FDQQQQSQQEGEEylgdR 751
+                            555555555555544443 PP
+
+>> XP_503124.1  YALI0D21747p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.5  21.3    0.0045       2.4      64     192 ..      20     155 ..       2     290 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 5.5 bits;  conditional E-value: 0.0045
+  PTHR13335.orig.30.pir  64 astpgdsgsedsgssneaetatg...............gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldeg 136
+                            +++pg+sg   ++         +                ++ a+  ++++++ +++ + +q+++ + +++ +++ q+ + + ++l+++
+            XP_503124.1  20 PASPGTSGGASNAA--------AspsttsgglgglasqAQNLASKSQQQVQNVQQQGQNVQQQARDLQQQAQQQGQNIQQQARDLQQQ 99 
+                            22222222222222........122233444555433333333334444444444444443333333333333333333333333333 PP
+
+  PTHR13335.orig.30.pir 137 srrrrantavkleklrkerrsksasiasseer..........dqsscksiqwktessvkedsvqra 192
+                             +++ +n +++ ++l++  +   +                   q + ++++++ ++  ++ s q +
+            XP_503124.1 100 AQQQGQNLQQQAQNLPQSAK---G-------GfsgmqqgfngVQQGFQNASSQAQQGYNNASAQAQ 155
+                            33333333333333333322...1.......12221122233233333333333333333333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       6472  (3148702 residues searched)
+Passed MSV filter:                      1429  (0.220797); expected 129.4 (0.02)
+Passed bias filter:                      332  (0.0512979); expected 129.4 (0.02)
+Passed Vit filter:                       128  (0.0197775); expected 6.5 (0.001)
+Passed Fwd filter:                        34  (0.0052534); expected 0.1 (1e-05)
+Initial search space (Z):               6472  [actual number of targets]
+Domain search space  (domZ):              12  [number of targets reported over threshold]
+# CPU time: 0.46u 0.02s 00:00:00.48 Elapsed: 00:00:00.30
+# Mc/sec: 6845.99
+//
+[ok]

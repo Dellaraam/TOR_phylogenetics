@@ -1,0 +1,123 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Excavata/Proteins/Leishmania_major.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.5e-06   24.8   0.0    7.8e-05   20.7   0.0    2.0  2  CAJ07001.1  conserved hypothetical protein [Leishmania major 
+     0.0011   16.9   4.1     0.0015   16.4   4.1    1.1  1  CAJ03359.1  MGT1 magnesium transporter [Leishmania major stra
+  ------ inclusion threshold ------
+        1.7    6.4   6.8          2    6.2   6.8    1.1  1  CBZ11996.1  conserved hypothetical protein [Leishmania major 
+        5.1    4.8  16.1        7.2    4.3  16.1    1.2  1  CAJ04351.1  conserved hypothetical protein [Leishmania major 
+
+
+Domain annotation for each sequence (and alignments):
+>> CAJ07001.1  conserved hypothetical protein [Leishmania major strain Friedlin]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.9   0.0     0.019        39     293     361 ..     139     210 ..     129     214 .. 0.81
+   2 !   20.7   0.0   3.7e-08   7.8e-05     558     653 ..     377     466 ..     358     479 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 1.9 bits;  conditional E-value: 0.019
+  PTHR13335.orig.30.pir 293 aslkidiylplssepdkllpltvvvka.satVqevIGlaLwqyteegrepklpdnk.vnaycLrivEdD.Ge 361
+                            +++ ++++  +  ++ k++++tv++++ + +  +v+ + L q +  +++ +   +  ++ y L i+++D Ge
+             CAJ07001.1 139 STREVRVFSTFLNAEGKRMTVTVNMTQpTYRGVDVVAAFLQQAVATNESLSQRYSTnPRLYKLFIADEDtGE 210
+                            688899999999998999999999999555788999999999988887777776644669*********888 PP
+
+  == domain 2  score: 20.7 bits;  conditional E-value: 3.7e-08
+  PTHR13335.orig.30.pir 558 sssayksfkVsrkhkmrfktdrelgIdgdyieimPvenqkaatkfwekqKtisihisqvvacklssknpanFkivvrrendeKrydfe 645
+                            ++ ++++f+V+ ++k++ +++r l  dg+  + m +  ++a        Kt+++ i+++  +++ + +p++  i +++++ +    fe
+             CAJ07001.1 377 EAVSFQQFEVICINKYGARQQRLLCVDGEHLYTMRPNASEAL------PKTTERTIKDIEEVRIFADKPKYMEIAYTKSSHFEEDHFE 458
+                            667899***********************************9......9*************************************** PP
+
+  PTHR13335.orig.30.pir 646 avsaaeaa 653
+                            + ++  +a
+             CAJ07001.1 459 CTTTYNCA 466
+                            99998887 PP
+
+>> CAJ03359.1  MGT1 magnesium transporter [Leishmania major strain Friedlin]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.4   4.1   7.3e-07    0.0015     103     246 ..     103     421 ..      90     499 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 16.4 bits;  conditional E-value: 7.3e-07
+  PTHR13335.orig.30.pir 103 etqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.rdqsscksiqwktessvkedsv 189
+                            ++ g ++ ++++ +++  ++++s+ ++ +s  + sr rr     ++++++++  s+s  ++ s++ r         ++ ++ v +   
+             CAJ03359.1 103 QKGGLTREEFAQAKQQILDSAASSASTYKSKSKRSRGRRHRRRGRRSRNSSRSASTSTRTRPSRNaR---------SRATTGVDT--- 178
+                            5555666666666677777777777776776666666666655555555555443333333333333.........222222222... PP
+
+  PTHR13335.orig.30.pir 190 qrassesslsserssdssssssapsr.rq............snkldseq....................................... 225
+                               s++++ s ++ss++sssss +s+  +                   +                                       
+             CAJ03359.1 179 --RSASHRPSRSSSSSKSSSSSSSSSsNRfiivprsnvwrtL------Ndpiegllghhsteghhvrvayndaprlvrspllsrggav 258
+                            ..2222221111111111111111111222333443333231......2444444555555556666666677777777777777777 PP
+
+  PTHR13335.orig.30.pir 226 ........................................................................................ 225
+                                                                                                                    
+             CAJ03359.1 259 vgfgsrerggqeeccagahgrhgyqeipsedpltsnlasgaavptptlatapgtkdgvfaspsgsaigaataatgssvaryatvpdgr 346
+                            7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777 PP
+
+  PTHR13335.orig.30.pir 226 ......................................................lsaeesdslfekkskssstkt 246
+                                                                                   + +  d++f++k +s++ + 
+             CAJ03359.1 347 gkatygaflhrdddaraggpaphihavlnkedvvciqyfnsrggsgnhfrdvelHTSQLRDPIFVHKGQSQVIPA 421
+                            777777777777777777777777777777777777777777777777777777777777777777776655444 PP
+
+>> CBZ11996.1  conserved hypothetical protein [Leishmania major strain Friedlin]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.2   6.8   0.00095         2      59     202 ..     133     295 ..      80     330 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 6.2 bits;  conditional E-value: 0.00095
+  PTHR13335.orig.30.pir  59 srpksastpgdsgsedsgssneaetatg......gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrr 140
+                             r  +a+  g++g+e+s++ ++a++ ++      + t+ +rkk  +  +re++++       ++ ++e + q +d ++  + e   r+
+             CBZ11996.1 133 ERGGNARRGGSDGDENSYDGDDAGGIPEtdangvKLTRLQRKKLAKEREREERRQA------QEAALEAQRQRMDVNELRDAEAALRE 214
+                            45566677788888888888888888888888777777777777777777777666......88999999999****99999999999 PP
+
+  PTHR13335.orig.30.pir 141 rantavkleklrkerrsksasiassee.r......................dqsscksiqwktessvkedsvqrassesslsser 202
+                               +a+++++l++ rr k +     e+                        +q + +s  ++ + +v+   +++a++++s+ se+
+             CBZ11996.1 215 EELKAAEEAALQQLRRDKKK----AEDeEyakwvshigveergelgdeereRQTRMQSFLLDRAAQVQARARRSAAGAKSSPSEE 295
+                            99999999999999884322....2222234577777777778888888776666666666666666666666666666666665 PP
+
+>> CAJ04351.1  conserved hypothetical protein [Leishmania major strain Friedlin]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.3  16.1    0.0034       7.2      76     205 ..      57     191 ..      28     308 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 4.3 bits;  conditional E-value: 0.0034
+  PTHR13335.orig.30.pir  76 gssneaetatg...............gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkl 148
+                            +s++ea+ at+                     + ++ + ++ e+  e +  ++e++++ eee++  ++++++++e++rr+      kl
+             CAJ04351.1  57 TSEEEARAATAavqaaeteaaavrqlE-----AEEQARREEEEKLAELHRRQQEEERRREEEEKLAELHRRQQEEERRREEEE---KL 136
+                            222333333333334444444322221.....222222222222222222233334444444444455544444444444433...22 PP
+
+  PTHR13335.orig.30.pir 149 eklrkerrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssd 205
+                            ++lr++++   ++++++ee +  + +++ q+ +e+  +e++++r+ ++ +l+    ++
+             CAJ04351.1 137 AELRRRQQ--EEERRREEEeK-LAELRRRQQEEERRRQEEERRRQEEQEELERRDEEE 191
+                            23332222..12222333323.556666666666666666666555554444333222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       8316  (5231242 residues searched)
+Passed MSV filter:                      1228  (0.147667); expected 166.3 (0.02)
+Passed bias filter:                      418  (0.0502646); expected 166.3 (0.02)
+Passed Vit filter:                        55  (0.00661376); expected 8.3 (0.001)
+Passed Fwd filter:                        13  (0.00156325); expected 0.1 (1e-05)
+Initial search space (Z):               8316  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.36u 0.06s 00:00:00.42 Elapsed: 00:00:00.28
+# Mc/sec: 12487.67
+//
+[ok]

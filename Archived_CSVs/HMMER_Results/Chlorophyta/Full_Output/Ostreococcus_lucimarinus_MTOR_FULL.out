@@ -1,0 +1,289 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Chlorophyta/Proteins/Ostreococcus_lucimarinus.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.3e-45  153.2   0.0      2e-44  150.2   0.0    2.8  2  ABO93925.1  predicted protein [Ostreococcus lucimarinus CCE99
+    7.7e-05   21.5   0.0      0.081   11.7   0.0    4.4  4  ABP00438.1  predicted protein [Ostreococcus lucimarinus CCE99
+    0.00022   20.0   0.0         30    3.3   0.0    6.7  8  ABO96963.1  predicted protein, partial [Ostreococcus lucimari
+    0.00044   19.1   1.2      0.023   13.5   0.0    3.7  4  ABO94399.1  predicted protein [Ostreococcus lucimarinus CCE99
+    0.00059   18.6   0.3       0.66    8.7   0.0    3.1  2  ABO97047.1  predicted protein [Ostreococcus lucimarinus CCE99
+    0.00061   18.6   1.8       0.53    9.0   0.0    5.1  5  ABO94826.1  predicted protein [Ostreococcus lucimarinus CCE99
+  ------ inclusion threshold ------
+      0.051   12.3   0.4        2.2    7.0   0.0    3.0  3  ABP00711.1  predicted protein, partial [Ostreococcus lucimari
+
+
+Domain annotation for each sequence (and alignments):
+>> ABO93925.1  predicted protein [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.3   0.0         3   3.2e+03      77     107 ..      61      91 ..      21      93 .. 0.59
+   2 !  150.2   0.0   1.9e-47     2e-44       1     160 []     563     731 ..     563     731 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -3.3 bits;  conditional E-value: 3
+    mTOR_dom  77 psseeyyptvvinaLlkilkdpslsshhtav 107
+                 p+  ++   + i+++ + l+dpsl+    av
+  ABO93925.1  61 PTIFNVHVPIFISSIWTALRDPSLRVREVAV 91 
+                 4444445557899999999999998766655 PP
+
+  == domain 2  score: 150.2 bits;  conditional E-value: 1.9e-47
+    mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks.......eee.....ekeeenaeetdvsel.lvglspsseeyyptv 86 
+                 V eP++++p+LL +Ll++l +e +  +R ev+++lGilGALDP+ h+ +e +        e e      ++++   +++++ l + +l++ s++yypt+
+  ABO93925.1 563 VAEPFTTHPQLLPQLLRMLANE-RGIVRSEVLRTLGILGALDPHAHRGNEIRLhgegvlsE-EgvddlGNNDDG--DEELDILpMLHLTSLSDDYYPTI 657
+                 789*****************99.899************************99955555431.243322111122..233333388999*********** PP
+
+    mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                 ++n+Ll++l+dps +s +++vv++i++if+ l++ cv++lp ++p +lsvirt+++slre ++ +LatLv ++k
+  ABO93925.1 658 ALNSLLRVLRDPSRTSVRHMVVRSIVYIFQVLDTACVQYLPSVVPVMLSVIRTSDDSLREGMFVELATLVGVIK 731
+                 ***********************************************************************997 PP
+
+>> ABP00438.1  predicted protein [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.7   0.0   7.5e-05     0.081      38     153 ..     310     422 ..     308     425 .. 0.84
+   2 ?    2.4   0.0     0.053        57     107     136 ..     507     536 ..     485     544 .. 0.88
+   3 ?   -2.8   0.0       2.2   2.4e+03     118     135 ..     598     615 ..     581     636 .. 0.73
+   4 ?    0.6   0.0      0.19   2.1e+02     124     153 ..     656     686 ..     648     687 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 11.7 bits;  conditional E-value: 7.5e-05
+    mTOR_dom  38 lGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipalls 135
+                 +GA+ P  h   +      + + + a+ + + ++ ++l p  +e  ++ v+  Ll+ ++d +    ++ +  a ++  ++   +c  p+l+ ++++lls
+  ABP00438.1 310 VGAIQPCLHALATD----PHPRVRWAAINGLGQMCTDLGPRLQEQAHANVVPLLLNAMDDVKNPRCQAHAAAATVNFSEDCPPECmAPYLDTLMNKLLS 404
+                 67777777743332....2334445555667778888899999999999***********99999999999**************99************ PP
+
+    mTOR_dom 136 virtcesslrefllqqLa 153
+                 ++++ ++s++e  l  La
+  ABP00438.1 405 LLQSGNKSVQEAALTALA 422
+                 *************99997 PP
+
+  == domain 2  score: 2.4 bits;  conditional E-value: 0.053
+    mTOR_dom 107 vvqaimsifktlglkcvpflpqiipallsv 136
+                 ++qa +  +k lg + vp+l+ +++ ll+ 
+  ABP00438.1 507 MLQAWTRLCKCLGEEFVPYLEVVMQPLLKS 536
+                 67899999*****************99986 PP
+
+  == domain 3  score: -2.8 bits;  conditional E-value: 2.2
+    mTOR_dom 118 lglkcvpflpqiipalls 135
+                 l+   +p+l+qi+++++ 
+  ABP00438.1 598 LKDGILPYLEQILQTMIP 615
+                 555567888888887764 PP
+
+  == domain 4  score: 0.6 bits;  conditional E-value: 0.19
+    mTOR_dom 124 pflpqiipallsvirtces.slrefllqqLa 153
+                 +++++iip l++++ + ++ +++  +l+ La
+  ABP00438.1 656 QLVNHIIPPLIQAMAKEPDiEIQARMLESLA 686
+                 67899**********9999999999999886 PP
+
+>> ABO96963.1  predicted protein, partial [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.3   0.0      0.72   7.9e+02     106     153 ..      90     138 ..      58     142 .. 0.63
+   2 ?    1.9   0.0     0.077        84     119     155 ..     281     317 ..     247     322 .. 0.78
+   3 ?    0.5   0.0       0.2   2.2e+02      91     156 ..     372     438 ..     357     441 .. 0.71
+   4 ?    0.2   0.0      0.26   2.8e+02     106     140 ..     652     687 ..     634     707 .. 0.74
+   5 ?   -4.1   0.0       5.2   5.6e+03     117     136 ..     747     766 ..     725     786 .. 0.57
+   6 ?   -1.8   0.0       1.1   1.1e+03     118     143 ..     853     879 ..     824     891 .. 0.74
+   7 ?    3.3   0.0     0.028        30      86     156 ..    1063    1133 ..    1023    1136 .. 0.76
+   8 ?    2.1   0.0     0.067        73      84     140 ..    1262    1320 ..    1220    1327 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: -1.3 bits;  conditional E-value: 0.72
+    mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLa 153
+                 a+++ ++++++t +  +   +   +p l++ ++  e+  l + llqqL+
+  ABO96963.1  90 AILTRLLEVLSTPSEAVQRSVADCLPPLMKKLSAEEQqALVDALLQQLT 138
+                 4444445555555555555566666666666666665567777777775 PP
+
+  == domain 2  score: 1.9 bits;  conditional E-value: 0.077
+    mTOR_dom 119 glkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                   +  + lpqi+p l +++ ++++++ e   q L+  
+  ABO96963.1 281 PKQLGACLPQIVPRLSETLIDTHPKVVEAATQALKAV 317
+                 4555679************99999*999999999865 PP
+
+  == domain 3  score: 0.5 bits;  conditional E-value: 0.2
+    mTOR_dom  91 Llkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                 L++ l++++ + + ++a +   ms +      + p++p ++p+l +++ +  +++r +  q La L+
+  ABO96963.1 372 LVRGLREQKADmKKKAAKIAGNMSALVADPKDMAPYIPMLVPELKKALMDPIPEVRGVAAQALAGLI 438
+                 5666666665534444445555555555566678999999999999999988899999999888887 PP
+
+  == domain 4  score: 0.2 bits;  conditional E-value: 0.26
+    mTOR_dom 106 avvqaimsifktlglkcvpflpqiipalls.virtc 140
+                 +v +a ++i kt+  +  ++l+ i+p l++ vi+t+
+  ABO96963.1 652 SVRNAAVHIWKTVVANTPKTLRVILPLLMQrVISTM 687
+                 566788899999999999999999988766344444 PP
+
+  == domain 5  score: -4.1 bits;  conditional E-value: 5.2
+    mTOR_dom 117 tlglkcvpflpqiipallsv 136
+                   + +  + ++ +ip+++ +
+  ABO96963.1 747 ATDSQLENHYDVVIPTVQDA 766
+                 33333344444444444444 PP
+
+  == domain 6  score: -1.8 bits;  conditional E-value: 1.1
+    mTOR_dom 118 lglkcvpflpqiipallsvirtces.s 143
+                  g+   p lp +ip ll+++ + ++ s
+  ABO96963.1 853 AGTALPPHLPLLIPPLLEAMADDDEeS 879
+                 455778999*********999877733 PP
+
+  == domain 7  score: 3.3 bits;  conditional E-value: 0.028
+    mTOR_dom   86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                   +   L++++ d+  s  ++a+++++   +++ g+   pf+pq+  ++++ +++++ s+r      ++ L+
+  ABO96963.1 1063 AITGPLIRVVGDKHPSAVKSAILESLGVLINKGGIALKPFVPQLQTTFVKCLSDVQISVRMKAATAIGLLM 1133
+                  34456999********************************************9998888877777666665 PP
+
+  == domain 8  score: 2.1 bits;  conditional E-value: 0.067
+    mTOR_dom   84 ptvvinaLlkilkdpsls..shhtavvqaimsifktlglkcvpflpqiipallsvirtc 140 
+                  +++++naL++  +d+        +  + a+  i  t +    p+l++++p l +++r++
+  ABO96963.1 1262 ASITLNALVRAASDERPPsrAAAARGLGALAAISATTSGGASPYLSKLMPVLSKLLRDA 1320
+                  45888999999987765512556667999***********************9999975 PP
+
+>> ABO94399.1  predicted protein [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.8   0.0      0.53   5.7e+02      80     153 ..      86     159 ..      39     165 .. 0.74
+   2 !   13.5   0.0   2.1e-05     0.023      72     148 ..     494     573 ..     454     582 .. 0.79
+   3 ?    1.2   0.0      0.12   1.3e+02      70     120 ..     656     686 ..     598     715 .. 0.68
+   4 ?   -3.4   0.0       3.2   3.4e+03     132     155 ..     866     889 ..     849     915 .. 0.46
+
+  Alignments for each domain:
+  == domain 1  score: -0.8 bits;  conditional E-value: 0.53
+    mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllqqLa 153
+                  e +++ v n ++k+  d++      a ++ i +++ + l+       + +ip l+ ++rt+e sl e  ++ L+
+  ABO94399.1  86 REGIKNFVSNLIIKLSADETTFRRDRAYINKINNVLVQiLKHDWPHRWQSFIPDLVGAARTSE-SLCENCMSILK 159
+                 566677777778888888888888888888888887763555557788889999999988854.66666555555 PP
+
+  == domain 2  score: 13.5 bits;  conditional E-value: 2.1e-05
+    mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefl 148
+                   ++++ +e+ +  ++i+ Ll++ +   +++h++ + + im+++ +    l+   +fl+ ++++l++ ++++++ ++++ 
+  ABO94399.1 494 SGSMQEDQENRFLVTAIRDLLNLCEIMRMKDHKAVIASNIMYVVGQypRFLRLhWKFLKTVVNKLFEFMHETHPGVQDMA 573
+                 55678888************************************994434566689***************999988876 PP
+
+  == domain 3  score: 1.2 bits;  conditional E-value: 0.12
+    mTOR_dom  70 ellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlgl 120
+                 +++++                     +++s     ++v++ i++i+k+   
+  ABO94399.1 656 QIMTQA--------------------RQNSECLKNQDVIKNILNILKSNTH 686
+                 333333....................4444444455566666666665444 PP
+
+  == domain 4  score: -3.4 bits;  conditional E-value: 3.2
+    mTOR_dom 132 allsvirtcesslrefllqqLatL 155
+                 +++ ++r++e+++ +  l+ L ++
+  ABO94399.1 866 SIVWAFRHTERNVADEGLNLLLEM 889
+                 333333333333333333222222 PP
+
+>> ABO97047.1  predicted protein [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.5   0.1    0.0029       3.2      88     158 ..    1199    1268 ..    1146    1270 .. 0.74
+   2 !    8.7   0.0   0.00061      0.66      21      53 ..    1437    1469 ..    1420    1506 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 6.5 bits;  conditional E-value: 0.0029
+    mTOR_dom   88 inaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158 
+                  ++ + ++l d+s +   h+  +++++ ++  +g    +f p+++ +l++++++  ++lr + lq  ++Lv++
+  ABO97047.1 1199 FTRMEMVLFDKSGDtLSHKRYIRSLTIMVWIIGKHLPQFAPKVMAHLAHALNN--PELRRTALQSWKILVQV 1268
+                  4455566667777756899*********************************8..67********9999987 PP
+
+  == domain 2  score: 8.7 bits;  conditional E-value: 0.00061
+    mTOR_dom   21 teqsqsiRrevikvlGilGALDPykhkeveeks 53  
+                  +e s  ++r + ++l+ lGA+DP +    +++ 
+  ABO97047.1 1437 SEASRRVQRAAAQCLSELGAIDPGRLLIASQQV 1469
+                  345778899**************9983333322 PP
+
+>> ABO94826.1  predicted protein [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.5   0.0       0.2   2.2e+02      67     130 ..     297     361 ..     269     368 .. 0.74
+   2 ?   -1.2   0.1      0.67   7.2e+02      13      35 ..     432     454 ..     420     584 .. 0.52
+   3 !    9.0   0.0   0.00049      0.53      62     154 ..     652     744 ..     609     750 .. 0.64
+   4 ?   -1.4   0.0      0.76   8.3e+02       9      35 ..     801     826 ..     771     830 .. 0.54
+   5 ?    2.6   0.0     0.047        51      24     130 ..     857     957 ..     836     978 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 0.5 bits;  conditional E-value: 0.2
+    mTOR_dom  67 dvsellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+                 + ++ l +++   +e+ +   +n++l +l  p+l+ + ++  v++i  i+ +l+  + p++ +i+
+  ABO94826.1 297 QRKTSLRQITDRAKEFGAGPLFNQILPLLMSPTLEdQERHLLVKVIDRILYKLDDLVRPYVHKIL 361
+                 333335677777799999999999999*******9777888999999999999988888888887 PP
+
+  == domain 2  score: -1.2 bits;  conditional E-value: 0.67
+    mTOR_dom  13 eiLlnilkteqsqsiRrevikvl 35 
+                   L  + ++++s++ R   ik++
+  ABO94826.1 432 PFLKAVCQSKKSWQARHTGIKIV 454
+                 55555555555555554444433 PP
+
+  == domain 3  score: 9.0 bits;  conditional E-value: 0.00049
+    mTOR_dom  62 naeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLat 154
+                 ++  +++++++ +l +++ +   +   i  +l  +++++ s+    +++ + +i++ lgl+  p+lpqi+ ++   +++ ++++re   + ++ 
+  ABO94826.1 652 RMVMETITKVIEELGTADvDTRMEELLIDGMLYAFQEQT-SDENDIMLKGVGTIVNALGLRAKPYLPQICGTIKWRMNNKSADIREQAADLISA 744
+                 333344444455555555555555555666555555554.66788889999*********************9999999888998877666655 PP
+
+  == domain 4  score: -1.4 bits;  conditional E-value: 0.76
+    mTOR_dom   9 peLLeiLlnilkteqsqsiRrevikvl 35 
+                 ++LL  L+ ilk+  +++++ ++i ++
+  ABO94826.1 801 KDLLPRLTPILKNR-HEKVQENTIDLI 826
+                 34555555555533.444555555444 PP
+
+  == domain 5  score: 2.6 bits;  conditional E-value: 0.047
+    mTOR_dom  24 sqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglk 121
+                 +++iRr +++++G +  A+ P+ +  +  ++     + ++  +++v + +v +    e   p +v+ aL++  + p l+  ++ v++++ + f+++g  
+  ABO94826.1 857 KKAIRRATVNTFGYIAkAIGPQDVLATLLNN----LKVQER-QMRVCT-TVAIAIVAETCAPFTVLPALMNEYRVPELN-VQNGVLKSLAFLFEYIGEM 948
+                 6777888888888764477777773322211....111111.122222.344555667777777777777777777776.5667777777777776666 PP
+
+    mTOR_dom 122 cvpflpqii 130
+                    ++  + 
+  ABO94826.1 949 GKDYIYAVT 957
+                 566655555 PP
+
+>> ABP00711.1  predicted protein, partial [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.9   0.0     0.018        20      99     142 ..     198     241 ..     194     245 .. 0.86
+   2 ?    7.0   0.0    0.0021       2.2      16      98 ..     233     315 ..     224     331 .. 0.61
+   3 ?   -3.2   0.0       2.8     3e+03     108     158 ..     374     424 ..     370     426 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 3.9 bits;  conditional E-value: 0.018
+    mTOR_dom  99 slsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                 +l++  ++vvqa ++++++l +   +++  + p++++++++++s
+  ABP00711.1 198 CLDDDDQSVVQAAVTVLSELAMHNPKTYLPLAPKFYKLLTSSSS 241
+                 6778889*****************88888899999999998776 PP
+
+  == domain 2  score: 7.0 bits;  conditional E-value: 0.0021
+    mTOR_dom  16 lnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsel.lvglspsseeyyptvvinaLlkilkdp 98 
+                 +++l +++s+ +  + +kv+G l  L P   k++ + ++e   e++na++   + + +v +  +s+e     ++ +L  +l+d+
+  ABP00711.1 233 YKLLTSSSSNWMTIKLVKVFGALTPLEPRLAKKLAGPISE-ILETTNAKSLMYECVrTVVMGMTSQEKVVRQAVDKLKDMLEDH 315
+                 5566666666666666666666666666666666655544.3333333333333335445555666666666889999999876 PP
+
+  == domain 3  score: -3.2 bits;  conditional E-value: 2.8
+    mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                 +++  + ++ +g     f ++++ ++++++ +    l   ++  L++L  +
+  ABP00711.1 374 IDTTAHLMNAMGKADQRFRDELVLSVIHICMNERYALVTDFVWYLSVLADL 424
+                 556666677777777777777777777777765556666666666666555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       7603  (3069386 residues searched)
+Passed MSV filter:                       264  (0.0347231); expected 152.1 (0.02)
+Passed bias filter:                      249  (0.0327502); expected 152.1 (0.02)
+Passed Vit filter:                        31  (0.00407734); expected 7.6 (0.001)
+Passed Fwd filter:                         7  (0.000920689); expected 0.1 (1e-05)
+Initial search space (Z):               7603  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 0.04u 0.07s 00:00:00.11 Elapsed: 00:00:00.11
+# Mc/sec: 4328.84
+//
+[ok]

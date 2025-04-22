@@ -1,0 +1,81 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Mitosporidium_daphniae.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    5.7e-14   50.0  12.7    2.9e-13   47.7   0.0    5.3  5  KGG50405.1  phosphatidylinositol 3-kinase Tor2, partial [Mito
+
+
+Domain annotation for each sequence (and alignments):
+>> KGG50405.1  phosphatidylinositol 3-kinase Tor2, partial [Mitosporidium daphniae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.8   0.4     0.012        39      77     143 ..     277     352 ..     258     368 .. 0.59
+   2 !   47.7   0.0   8.7e-17   2.9e-13       6     156 ..     446     595 ..     442     599 .. 0.84
+   3 !    4.6   0.1    0.0016       5.4     121     158 ..     601     638 ..     595     640 .. 0.90
+   4 ?   -0.7   0.1     0.069   2.3e+02      91     138 ..     777     830 ..     726     844 .. 0.77
+   5 ?   -1.4   0.1      0.11   3.8e+02      86     116 ..    1687    1716 ..    1643    1772 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 1.8 bits;  conditional E-value: 0.012
+    mTOR_dom  77 psseeyyptvvinaLlkil........kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.s 143
+                 +   e  p++++++L++ +          +s ++ +++ +  i + +k+ +  + p+++q+   l + +r+++   
+  KGG50405.1 277 SKISEKNPMIILKSLHQSIemllntlmATSSNAKLKQNSIYMIRQFLKYFHSYMRPYIKQLFDILHASLRESDGmA 352
+                 4445555555555555444444444455555557777777777777777778888888888888877777776433 PP
+
+  == domain 2  score: 47.7 bits;  conditional E-value: 8.7e-17
+    mTOR_dom   6 ldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslssh 103
+                 + +pe  ++Ll++l+ + ++++R  +i  lG +G +D  ++    +++++  ++++n ++  + +  ++ s++  e+ ++  +++ Llkil+dp l +h
+  KGG50405.1 446 SSFPEFQNALLSVLRFDLHKKTRILAISYLGYIGPVDYETFSDKISSIPS--QRHHNGAAHPLLLCNKTSSSMIaEDHFAYHIFSILLKILSDPLLCQH 542
+                 56899999*****************************9999776666655..33334333333333333333346************************ PP
+
+    mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                 ht ++q+i++ + +lg   +++++ i + l+ ++++++s ++e l ++L tL 
+  KGG50405.1 543 HTITLQTIVFAITSLGEAATSLYEPIFSVLIGLFSSSSSAFLENLCHHLITLS 595
+                 *************************************************9985 PP
+
+  == domain 3  score: 4.6 bits;  conditional E-value: 0.0016
+    mTOR_dom 121 kcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                 +  p+lp+i+ +l+++++  e sl+ ++++ L +Lv+i
+  KGG50405.1 601 NFRPYLPRILGNLFKLLELNELSLSSTIFSLLHSLVKI 638
+                 5679**************9888**************98 PP
+
+  == domain 4  score: -0.7 bits;  conditional E-value: 0.069
+    mTOR_dom  91 Llkil......kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                 L++ l      ++ps +  ++a +++i  i++  g++ +++ + i+ ++ s+  
+  KGG50405.1 777 LMRTLrslsidSKPSEDLFKEALLESIFIIISMSGIQATSIFTDILEKISSYSD 830
+                 555554444445666666788899999999999999999999999988877655 PP
+
+  == domain 5  score: -1.4 bits;  conditional E-value: 0.11
+    mTOR_dom   86 vvinaLlkilkdpslsshhtavvqaimsifk 116 
+                  ++i+a+  ++k  sl+  h++ +q ++ i+ 
+  KGG50405.1 1687 IIISAISGLIKSISLN-KHESSIQDLLRILT 1716
+                  5555555555555555.45555555555544 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       3330  (1273895 residues searched)
+Passed MSV filter:                       176  (0.0528529); expected 66.6 (0.02)
+Passed bias filter:                      139  (0.0417417); expected 66.6 (0.02)
+Passed Vit filter:                        14  (0.0042042); expected 3.3 (0.001)
+Passed Fwd filter:                         1  (0.0003003); expected 0.0 (1e-05)
+Initial search space (Z):               3330  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.02s 00:00:00.04 Elapsed: 00:00:00.04
+# Mc/sec: 4751.83
+//
+[ok]

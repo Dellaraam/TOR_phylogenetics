@@ -1,0 +1,327 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Batrachochytrium_dendrobatidis_jam81_gca_000203795.v1.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   6.5e-112  373.1   1.6   6.5e-112  373.1   1.6    2.1  2  EGF78893  pep supercontig:v1.0:GL882887:712698:722863:1 gene:
+     3e-107  357.8   1.0   4.7e-107  357.1   0.1    1.9  2  EGF77027  pep supercontig:v1.0:GL882894:466610:474345:-1 gene
+    6.5e-79  264.6   4.2    1.3e-78  263.6   4.2    1.6  1  EGF78892  pep supercontig:v1.0:GL882887:698360:710788:1 gene:
+    1.1e-33  115.9   2.3    4.7e-33  113.8   0.9    2.5  2  EGF84391  pep supercontig:v1.0:GL882879:3785885:3789871:-1 ge
+    4.9e-09   34.8   3.7    1.4e-08   33.3   0.3    2.9  3  EGF77650  pep supercontig:v1.0:GL882891:639228:654759:1 gene:
+     0.0027   16.0   9.7      0.074   11.2   1.0    4.1  4  EGF80860  pep supercontig:v1.0:GL882883:177090:179867:-1 gene
+     0.0095   14.2  16.5       0.17   10.1   0.2    5.9  6  EGF83052  pep supercontig:v1.0:GL882879:729976:735088:1 gene:
+
+
+Domain annotation for each sequence (and alignments):
+>> EGF78893  pep supercontig:v1.0:GL882887:712698:722863:1 gene:BATDEDRAFT_35558 transcript:EGF78893 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.3      0.44   5.5e+02     200     284 ..    1249    1326 ..    1211    1352 .. 0.72
+   2 !  373.1   1.6  5.3e-115  6.5e-112       2     343 .]    1365    1712 ..    1364    1712 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 0.44
+                HHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS CS
+       FAT  200 eqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswyk 284 
+                 + + l+ + e +++++e   +++++l++   + +  +t+ +   +  +k +w ++l++        e+ l+ay + +  dp++ +
+  EGF78893 1249 LHYKELEFISEPLTNTIEALISINNQLQQ-PDSAIGVLTHAQqNHNVELKESWYEKLNR-------WEDGLAAYERKQAEDPNSVE 1326
+                45555666666666666766667766664.56667777777768888888888888888.......66777777777666666555 PP
+
+  == domain 2  score: 373.1 bits;  conditional E-value: 5.3e-115
+                CCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS--- CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklsss 100 
+                +laa+aaW++gqWd m+ey+s+mk+ds d  ff+ailalhrn + +a  +iek+r+ll+ el a+++esy+ray+++vr+Q+laEleeii+ykq+ +++
+  EGF78893 1365 SLAAAAAWGVGQWDVMDEYISMMKQDSHDSVFFRAILALHRNLYPQALGYIEKTRDLLDAELPAIVSESYTRAYNTVVRIQMLAELEEIIMYKQAYDQP 1463
+                79************************************************************************************************* PP
+
+                -TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT............TSSCCCHH CS
+       FAT  101 eelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp.......pevvyayl 192 
+                + ++ ++ktW+ R +g++ +vevwq+il+vR+lv+ p++d       +e+w+kfa+l+Rksgrlsl+ k+L+ ll e +++ ++       p vvya+l
+  EGF78893 1464 DIQAFIRKTWMARIKGCKCNVEVWQRILKVRTLVVAPKDD-------VEIWIKFASLCRKSGRLSLSCKSLSILLTEPSKDLKTmsfvndhPAVVYASL 1555
+                ****************************************.......***************************9999966666788999********* PP
+
+                HHHHHCCHHHHHSSCCHHHHCCTSSCCC...SS-SS---...............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS CS
+       FAT  193 kylwakgeqkealqkLrefvscllekke...elssglevq....eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswyk 284 
+                k++wa g++++a+++++ef + l+ek +   e s g++v+    +  + + ++ +larcylk+G+w+ al++ + +e  + eil +y aat++d++wyk
+  EGF78893 1556 KHMWAAGDREQAYLHMKEFSKVLSEKHGiliESSGGNTVCindkSTPEQNGLQSRLARCYLKLGDWTLALKE-ELTESIIPEILDSYFAATQCDKNWYK 1653
+                *********************77777779998888888889866555556667778****************.89************************ PP
+
+                TTCCCCHHHHHCCHHHHHHSSSS.S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  285 awhtwalfnfevlskeeekkeeeepedls.eyvvpavegflkslslssekslqdllRlLt 343 
+                awh+wal+nfevl ++e+  +++ p+++   ++vp+v+gf++s++ls ++slqd+lRlLt
+  EGF78893 1654 AWHAWALANFEVLAYQEKIHDQI-PNNVLiAHAVPSVQGFFRSIALSTGSSLQDTLRLLT 1712
+                ****************9999999.555555*****************************8 PP
+
+>> EGF77027  pep supercontig:v1.0:GL882894:466610:474345:-1 gene:BATDEDRAFT_20976 transcript:EGF77027 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.9   0.1       1.2   1.5e+03     201     266 ..    1251    1309 ..    1212    1344 .. 0.49
+   2 !  357.1   0.1  3.8e-110  4.7e-107       1     343 []    1365    1712 ..    1365    1712 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: -2.9 bits;  conditional E-value: 1.2
+                HHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-S CS
+       FAT  201 qkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekse 266 
+                + + l+++ ++++ +++   +++++l++ ++      ++++ ++  +k ewl++l++        +
+  EGF77027 1251 HYKELEYMSDSAETNADALITINHQLQQMDSAFGVIAHTRQFKNADLKVEWLEKLNR-------WD 1309
+                334444444444444444444444433321111111112223444555555555555.......22 PP
+
+  == domain 2  score: 357.1 bits;  conditional E-value: 3.8e-110
+                CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+       FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                apl a+aaW+l  W +m+ey+ lmk++spd aff+ai+a+hrn+f ea++lie +r+ll+tel+al+gesy+ray+++vr+Q+l+Eleeiiqykq+ + 
+  EGF77027 1365 APLSAAAAWGLNHWGLMDEYVALMKQESPDSAFFRAIVAIHRNNFIEAQKLIEVTRELLDTELTALIGESYSRAYNIVVRIQMLTELEEIIQYKQSFEH 1463
+                69***********************************************************************************************9* PP
+
+                --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT..............TSSCC CS
+       FAT  100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk.......eewlp..pevvy 189 
+                +e +  +++ W+kR  g+q++vevwq+il+vR+lv+ p++d       + +w+kfanl+Rksgr++l++k+L++ll   +          ++  p v+y
+  EGF77027 1464 PEHQIFIRRIWTKRIYGCQNSVEVWQRILRVRALVVPPKDD-------IGIWVKFANLCRKSGRMNLSQKTLSRLLVVPSsdfmftsF--EEnhPAVIY 1553
+                *****************************************.......***************************9888876776432..22669**** PP
+
+                CHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---................HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCC CS
+       FAT  190 aylkylwakgeqkealqkLrefvscllekkeelssglevq.....eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpsw 282 
+                a +k+lwa+g++ +a++++++f+++l  k +++  +  +       p+n      ++ arc+lk+G+w+ al++    e +++ei  +y+aat++d +w
+  EGF77027 1554 ACMKHLWATGKRTQAFNQMKDFANSLVLKLGSDAREEKATymdfnRPDNPPSPMSSQvARCFLKLGDWQMALNN-PLDEPSISEIIRSYLAATQCDGTW 1651
+                **************************99999444444444557888999888888888****************.79999******************* PP
+
+                HSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  283 ykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                yk wh+wal++ +vl+++e ++ e++ e +  +v+p + gf+ks+s s+++slqd+lRlLt
+  EGF77027 1652 YKGWHAWALAHVKVLQYYETTNAEVSHEVFLSHVIPGIYGFFKSISISKGNSLQDTLRLLT 1712
+                ********************999998777779****************************8 PP
+
+>> EGF78892  pep supercontig:v1.0:GL882887:698360:710788:1 gene:BATDEDRAFT_12558 transcript:EGF78892 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  263.6   4.2   1.1e-81   1.3e-78       2     343 .]    2687    3037 ..    2686    3037 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 263.6 bits;  conditional E-value: 1.1e-81
+                CCTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.....--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHH CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhr.....nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleei 90  
+                +l +e++Wrl++W+  +e l l         + +k++f+a+l l++     ++  e+++l++++ ql+++ +++l++ + n+++++++ +Qq +El+e+
+  EGF78892 2687 DLLLECMWRLSDWNTDKENLALSLqscsePATARKKMFQAFLVLQNrqddpENQGEFQRLCNEGMQLVLRRWTSLPSIVSNSHIGTFHAFQQFVELQEA 2785
+                689***************998888999989999999********997666666********************************************** PP
+
+                CCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.....................HHCCS-STTCCC..CCCCC CS
+       FAT   91 iqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.....................lllkgakaemwl..kfanl 157 
+                  + ++l          +s+elk +l+tWr+Rlp+ +dd++ w+d+l++R++v++ i++                     + ++g+++++w+  +fa++
+  EGF78892 2786 GHIQNNLVstnttnidsKSQELKGILQTWRERLPNRWDDINLWSDLLAWRQHVFTSINNayiplipqmsqplsngnptssYTFRGYHETAWIinRFAHV 2884
+                *******9******************************************************************************************* PP
+
+                HCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCC CS
+       FAT  158 aRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaal 255 
+                aRk+  +++++++L+k+                   y+++++e++ea+ kLre+++c+l+  +e+s+gl+v+++tnl +ft  + a+++++kG++l +l
+  EGF78892 2885 ARKHQLPEVCINSLSKI-------------------YTLPNIEIQEAFFKLREQAKCHLKALSEYSTGLDVINNTNLLYFTVGQkAEFFTLKGQFLFKL 2964
+                *****************...................*************************************************************** PP
+
+                CCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT  256 qklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                +        +e+++qa+s+a+ +d s  kaw++w+++n+ ++++         p++l+ y v av+++l+++sl+++  s++ l+R+L+
+  EGF78892 2965 NL-------HEDAVQAFSSAVNMDLSYPKAWASWGKYNDSMMNDF--------PQKLE-YGVGAVNCYLHAASLYNNgRSRKFLARILW 3037
+                **.......9***********************************........99998.*****************************8 PP
+
+>> EGF84391  pep supercontig:v1.0:GL882879:3785885:3789871:-1 gene:BATDEDRAFT_8065 transcript:EGF84391 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.0      0.19   2.4e+02      28      64 ..     227     263 ..     217     270 .. 0.88
+   2 !  113.8   0.9   3.7e-36   4.7e-33       4     210 ..     962    1164 ..     959    1195 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.19
+               SSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCT CS
+       FAT  28 spdkaffeailalhrnqfdeaeeliekarqllvtels 64 
+                 dk+++e + a+ +nq++++++l+  +r  l+t+l+
+  EGF84391 227 PGDKNILERFNAMSTNQITSIHQLLFSCRLTLITNLT 263
+               568899999999999********************98 PP
+
+  == domain 2  score: 113.8 bits;  conditional E-value: 3.7e-36
+                TTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.... CS
+       FAT    4 aaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls.... 98  
+                 +eaaWrlg+W ++e++lsl  k++++  + + +l++  +q d +++l+++ar +++  ++a s+esy+r yd++++l +l+Ele + ++++++s    
+  EGF84391  962 GIEAAWRLGDWPLLERFLSLPHKPGFQTYIGQLLLSINSRQDDTVADLLSQARASMTAFIAAASMESYQRGYDSVLQLSMLNELETMYSFIKNSSndan 1060
+                689******************************************************************************************997776 PP
+
+                .---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHH CS
+       FAT   99 .sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylw 196 
+                 +  + ++l++ W+ Rl+ + ++++ +++ils+R+++ls   +    + + + wl++a+ aRk+g +++A+ a + +++ +      p+v+++++k+lw
+  EGF84391 1061 tQMVDISKLFQSWDMRLKITFPSYRQREPILSLRRVLLSEYIS----KENGQLWLQTAKDARKAGYFQTAYGATLHAMHFKV-----PQVIVEQAKLLW 1150
+                666667777*****************************88777....799*********************99999988888.....9*********** PP
+
+                HCCHHHHHSSCCHH CS
+       FAT  197 akgeqkealqkLre 210 
+                  g++++a+ +L+ 
+  EGF84391 1151 TFGQRHQAIWELER 1164
+                *********99975 PP
+
+>> EGF77650  pep supercontig:v1.0:GL882891:639228:654759:1 gene:BATDEDRAFT_35970 transcript:EGF77650 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.2   0.0      0.72     9e+02     120     141 ..     528     566 ..     523     592 .. 0.64
+   2 !   33.3   0.3   1.1e-11   1.4e-08      37     176 ..    2887    3028 ..    2861    3056 .. 0.83
+   3 ?    0.7   0.1     0.096   1.2e+02     288     343 .]    3168    3225 ..    3150    3225 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: -2.2 bits;  conditional E-value: 0.72
+               GCCCTTTCCCCTCCCHCCCHC.................H CS
+       FAT 120 dvevwqdilsvRslvlspied.................l 141
+               ++ +w+ il +Rsl+l+ + d                  
+  EGF77650 528 YLLFWNEILNTRSLMLENNIDpksieqfidlmideiihA 566
+               5669************98888666666666544444440 PP
+
+  == domain 2  score: 33.3 bits;  conditional E-value: 1.1e-11
+                CCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCH CS
+       FAT   37 ilalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklssseelksllktWrkRlpgvqddvevwqdilsvRslvl 135 
+                ++++ ++++d+a  +++   + +    sal + s    ++ll +lQ+++E  ++++ ++    ++++ ++lk+W  R p+  dd+++w d+l  R +v+
+  EGF77650 2887 LVSILKDDYDQAWHYVNSSFSRFSDCFSALGMYSKLGKLKLLSSLQMITEVYDALTRLR----DNSQFEILKQWSSRFPNPEDDIDIWGDLLLSREIVM 2981
+                4557789************************************************9999....589999****************************** PP
+
+                CCCHCHHCCS-STTCCC.......CCCCCHCHHHHCCSTTHHCCCCCH CS
+       FAT  136 spiedlllkgakaemwl.......kfanlaRksgrlslAekaLkklle 176 
+                s   +  + + ++++ +       ++++ a ++ +++lA  ++++++ 
+  EGF77650 2982 SRWPK-TGDKDTESIQIavekshrEMIRHAYNQQNFQLATLSISRMMP 3028
+                65555.33344444444445555599999999******9999999865 PP
+
+  == domain 3  score: 0.7 bits;  conditional E-value: 0.096
+                CCCHHHHHCCHHHHHH.SSSS...S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  288 twalfnfevlskeeek.keeee..pedls.eyvvpavegflkslslssekslqdllRlLt 343 
+                + a  +++vl+  e + ++  +      + ey+  +++  + s  +++ +s++ ++RlL+
+  EGF77650 3168 AIAEQCDQVLRWIEAQdPNVLNwsV--SKyEYAFLVIRLVISSMMYGNRSSRELFPRLLQ 3225
+                5566666666666555333333322..3347***************************96 PP
+
+>> EGF80860  pep supercontig:v1.0:GL882883:177090:179867:-1 gene:BATDEDRAFT_29905 transcript:EGF80860 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.6   0.0      0.49   6.1e+02     126     182 ..     271     327 ..     262     354 .. 0.72
+   2 ?   -2.5   0.0      0.89   1.1e+03     186     186 ..     447     447 ..     415     506 .. 0.51
+   3 !   11.2   1.0   5.9e-05     0.074     135     177 ..     648     686 ..     559     757 .. 0.84
+   4 !    6.5   0.7    0.0016         2     151     304 ..     729     879 ..     724     904 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: -1.6 bits;  conditional E-value: 0.49
+               TCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT...... CS
+       FAT 126 dilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk...eew 182
+               di + R+l+ s       + ++a  w+  a+l   +g ls A +++++  +e +   + w
+  EGF80860 271 DIKKARTLLRSVTTT---NPKHAPGWIAAARLEEHAGKLSAARDVISRGCDECPvneDVW 327
+               566667777666666...7788999*****************999998877666443333 PP
+
+  == domain 2  score: -2.5 bits;  conditional E-value: 0.89
+               S CS
+       FAT 186 e 186
+               e
+  EGF80860 447 E 447
+               2 PP
+
+  == domain 3  score: 11.2 bits;  conditional E-value: 5.9e-05
+               HCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHC CS
+       FAT 135 lspiedlllkgakaemwlkfanlaRksgrlslAekaLkkllee 177
+                s +e    ++ ++++w+k+a l R++gr++ A+++L++  ++
+  EGF80860 648 ASARE----RADTERVWMKSAVLERQQGRFQDAIELLNQGIQK 686
+               34444....48899***********************986555 PP
+
+  == domain 4  score: 6.5 bits;  conditional E-value: 0.0016
+               CCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---............HHHHCCCTCCC CS
+       FAT 151 wlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq.eptnleeftkllarcylkkGe 250
+               wl  ++l  k+g +  A  +L k++  +    ++pe   + +++    g+  +a   L ++++ +  +    s+ + ++  p+++   ++ l +c     +
+  EGF80860 729 WLLASRLEEKAGLPIKARATLEKARIMNA---KVPEFWCEAIRVEVRAGNAPMAKALLAKSLQDCPTSGLLWSEAILMEaRPQRKARSADALKKC-ENDPM 825
+               66666777777777777777777744444...447777777777777777777777777777777665433333333335677777777777555.44556 PP
+
+               CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHS CS
+       FAT 251 wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekk 304
+                 a + +l w+e+k +++ + + +a++++p++ + w  w +f+  + ++e++ +
+  EGF80860 826 VVATIARLFWAERKLDKARNWFNRAVKTNPDLGDSWGWWYKFELTHGTAEQQLE 879
+               788899999*********************************999988887764 PP
+
+>> EGF83052  pep supercontig:v1.0:GL882879:729976:735088:1 gene:BATDEDRAFT_21378 transcript:EGF83052 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.2   0.0     0.067        83     167     253 ..      54     155 ..      50     179 .. 0.63
+   2 ?    1.8   0.1     0.043        53     147     213 ..     529     595 ..     518     633 .. 0.78
+   3 !   10.1   0.2   0.00013      0.17     151     209 ..     631     696 ..     623     767 .. 0.69
+   4 ?    2.1   1.5     0.035        44     154     295 ..     808     941 ..     785    1029 .. 0.61
+   5 ?   -1.7   0.0       0.5   6.3e+02     125     174 ..     981    1023 ..     950    1057 .. 0.61
+   6 !    4.6   0.1     0.006       7.5     143     207 ..    1203    1264 ..    1113    1312 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 1.2 bits;  conditional E-value: 0.067
+               TTHHCCCCCHCTT........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---.............HHHHCCCTCCC............ CS
+       FAT 167 AekaLkklleedkeewlp...pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq..eptnleeftkllarcylkkGe............ 250
+               + +aL++l + +++  l+   p    a + y   k   +ea+q+L+  ++  +++ e++++   ++     ++ + +  +a++y+k+++            
+  EGF83052  54 CAEALNELGQLQDKRDLTlayP--LAAIFAYESCKHIDHEAIQELQAKLT-IASSSENITERA-YIlaGLLCMHTERPDMAKAYFKQASikegpttigyvy 150
+               6677777777777333333232..33344467777778999****99999.555544444443.3445777888888888******999666666666665 PP
+
+               ..CCC CS
+       FAT 251 ..wla 253
+                 wl+
+  EGF83052 151 lgWLE 155
+               55554 PP
+
+  == domain 2  score: 1.8 bits;  conditional E-value: 0.043
+               STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCHHHHHSSCCHHHHC CS
+       FAT 147 kaemwlkfanlaRksgrlslAekaLkklleedkeewlp.pevvyaylkylwakgeqkealqkLrefvs 213
+               + +++l +a++   +g ++ A+++L ++l +d e   + p  ++ +++ l  +g  +eal  L+   +
+  EGF83052 529 NSKVYLLMAEIHMSNGLYKPAISCLEMALSYDFEIR-HlPLFHLLKAQALKLNGSYDEALTALKTAMN 595
+               56778899*************************444.45***********************987766 PP
+
+  == domain 3  score: 10.1 bits;  conditional E-value: 0.00013
+               CCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCC.......H CS
+       FAT 151 wlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkL.......r 209
+                l+ +++  k++ +  +++a++++l+  +   ++p++++a++ +l++++++++al++L        
+  EGF83052 631 HLEVIDVYTKQKAMHDCNRAIQEALRIFSGTNQEPRITIANANVLLSNQNVENALNMLesirsdqP 696
+               578889999***************99999677779***********************44443331 PP
+
+  == domain 4  score: 2.1 bits;  conditional E-value: 0.035
+               CCCCHCHHHHCCSTTHHCCCCCHCTT.......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---............HH.HHCCCTCCC CS
+       FAT 154 fanlaRksgrlslAekaLkklleedkeewlp..pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq.eptnleeftkll.arcylkkGe 250
+               +a+l  k +r++ Aek+++++l        +  p v   y k+     ++ ++  k  +  s++++ + ++ s l++q  +   +e + ll   cy +   
+  EGF83052 808 IAELFMKLKRFEDAEKLITEALAHPV----DnePGVLAMYGKLHMLLAQIFKQTAKPDQAFSSYMSAQ-DIYSRLISQgVAVDANEAKCLLaDVCYELAEI 903
+               56666666667777777777643333....12344444444444444444444455555555555554.33333333334445555555553333433333 PP
+
+               CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+       FAT 251 wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfe 295
+                + ++++       s+ + + y +a++++ s  ka  ++a+++ +
+  EGF83052 904 SQFNIKD-------SDRAISFYNEAIQHHTSHKKAAIALARLYIR 941
+               3333333.......7777777777777777777777777766543 PP
+
+  == domain 5  score: -1.7 bits;  conditional E-value: 0.5
+                TTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCC CS
+       FAT  125 qdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkkl 174 
+                q i+ +R+l+ +          ++e+  +f++l+R++ +++  e +L ++
+  EGF83052  981 QAIFHLRQLLDKNPL-------HFEALAQFIELSRRNASMDEIEGLLISA 1023
+                333333333322222.......3555555555555555555544444444 PP
+
+  == domain 6  score: 4.6 bits;  conditional E-value: 0.006
+                CCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH.HHHHSSC CS
+       FAT  143 lkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakge.qkealqk 207 
+                + +  +++wl  +++  + g ++lA ++Lkk+   +k++ +     y+yl y  +k+   k+a ++
+  EGF83052 1203 YGDDLERCWLLLSDIYIQGGKYDLATELLKKVITHNKSSGK----AYEYLGYIMEKEAsYKDAAEH 1264
+                5677899*************************999994444....488888887777644555554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       8700  (3904006 residues searched)
+Passed MSV filter:                       585  (0.0672414); expected 174.0 (0.02)
+Passed bias filter:                      197  (0.0226437); expected 174.0 (0.02)
+Passed Vit filter:                        17  (0.00195402); expected 8.7 (0.001)
+Passed Fwd filter:                         7  (0.000804598); expected 0.1 (1e-05)
+Initial search space (Z):               8700  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 0.09u 0.02s 00:00:00.11 Elapsed: 00:00:00.06
+# Mc/sec: 20325.44
+//
+[ok]

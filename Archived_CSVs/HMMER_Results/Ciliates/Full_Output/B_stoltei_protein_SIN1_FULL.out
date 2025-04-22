@@ -1,0 +1,95 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/B_stoltei_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------          -----------
+    1.3e-08   34.1  16.6      2e-08   33.5   5.0    2.2  2  BSTOLATCC_MAC1429  
+    2.5e-07   29.9   0.2    3.9e-07   29.2   0.1    1.3  1  BSTOLATCC_MAC1294  
+  ------ inclusion threshold ------
+        3.1    6.4  34.6        5.3    5.6  34.6    1.3  1  BSTOLATCC_MAC1254  
+
+
+Domain annotation for each sequence (and alignments):
+>> BSTOLATCC_MAC1429  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.1   3.9   0.00076         4     285     406 ..     114     221 ..      18     242 .. 0.77
+   2 !   33.5   5.0   3.8e-12     2e-08     551     666 ..     329     461 ..     254     464 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 6.1 bits;  conditional E-value: 0.00076
+  PTHR13335.orig.30.pir 285 dgkgvgttaslkidiylplssepdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnk.vnaycLrivEdD.GevddDFP.pL 369
+                             g          +++yl+  +e      l ++v +s t    I  +L + ++ + + +l+     + y+L +vEd   e d D+P pL
+      BSTOLATCC_MAC1429 114 EGNQ-------DVKVYLFGTKE-----FLLIKVEKSLTFKTIIKKILNELQKRNSKIPLKHGNrIEGYELWLVEDFtLEPDKDLPiPL 189
+                            5555.......78999999999.....66689*******************999888888876755*******776677*****8888 PP
+
+  PTHR13335.orig.30.pir 370 DrnepiskfgfselaLveatdsegktnndlqtplpre 406
+                            D  +++ +f+++ la+ e  + + +++++    +p+e
+      BSTOLATCC_MAC1429 190 D--KTLEDFSVDMLAITESKNINLSSSQS---DIPQE 221
+                            8..5699**************99988544...44444 PP
+
+  == domain 2  score: 33.5 bits;  conditional E-value: 3.8e-12
+  PTHR13335.orig.30.pir 551 atvqddlsss..ayksfkVsrkhkmrfktdrelgIdgdyieimPvenqkaatkfwekqKtisihisqvvackl.ssknpanFki.... 631
+                            ++ +++  ++  ayk+++V++ +  + +++r+ gId+ +i++m   ++k     + ++K+ ++ i+ + ++ + ++++p+   i    
+      BSTOLATCC_MAC1429 329 ESLFNMSKAQvcAYKEYEVIKENSRGKRQRRIMGIDQLRIYNMTESQAKLL--RKQTSKQRKVYINKIQGIFKkIAHHPE---Ipien 411
+                            5555555554338*************************************9..899999999999999999886444444...44466 PP
+
+  PTHR13335.orig.30.pir 632 ...............vvrrendeKrydfeavsaaeaaeIvskinnileay 666
+                                            + ++   K+  +e+ s+ +aaeIv+kin++l+++
+      BSTOLATCC_MAC1429 412 vkrieqeqnlkcfmlEYIENGSLKSKMYETASSLTAAEIVAKINKLLQLR 461
+                            6666666666664446777****************************988 PP
+
+>> BSTOLATCC_MAC1294  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   29.2   0.1   7.5e-11   3.9e-07     342     413 ..     108     177 ..      83     198 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 29.2 bits;  conditional E-value: 7.5e-11
+  PTHR13335.orig.30.pir 342 klpdnkvnaycLrivEdDGevddDFPpLDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrlee 413
+                            + p++ ++ay Lr ++  G+  +D+P+LD+ + + +++f  +aL+e+   e k++++ q+  + +  ++ ++
+      BSTOLATCC_MAC1294 108 SAPRD-PSAYLLRFADKKGKPKTDMPVLDSGQSVIETNFVRFALCEKRFDE-KSRDKMQPVVNLDDETSFTA 177
+                            45666.78***************************************9888.55566666555444444444 PP
+
+>> BSTOLATCC_MAC1254  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.6  34.6     0.001       5.3      54     179 ..     705     827 ..     681     845 .. 0.33
+
+  Alignments for each domain:
+  == domain 1  score: 5.6 bits;  conditional E-value: 0.001
+  PTHR13335.orig.30.pir  54 sesll.srpksastpgdsgsedsgssneaetatg...gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegs 137
+                             +sl+ + ++++  ++ + +++   +++ +++++   +d+k + ++++++ +++++ +k++++++ +++++++ ++ d +++++++ +
+      BSTOLATCC_MAC1254 705 TKSLEnQNSQKSQKDQKDQKDQKDQKDQKDQKDQkdqKDQKDQKDQKDQKDQKDQKDQKDQKDQKDQKDQKDQKDQKDQKDQKDQKDQ 792
+                            2222221111111111111111111111111111000122222222222222222222222222222222222222222222222222 PP
+
+  PTHR13335.orig.30.pir 138 rrrrantavkleklrkerrsksasiasseer.....dqsscksiqwk 179
+                            +++++++++k ++ rk+           + +     +  ++ +++w 
+      BSTOLATCC_MAC1254 793 KDQKDQKDQKDKRIRKA-----------K-NlnggeSYCKGGNGKWW 827
+                            22222222222222222...........2.13355544555555554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      15663  (6612529 residues searched)
+Passed MSV filter:                      2415  (0.154185); expected 313.3 (0.02)
+Passed bias filter:                      377  (0.0240695); expected 313.3 (0.02)
+Passed Vit filter:                        56  (0.0035753); expected 15.7 (0.001)
+Passed Fwd filter:                        10  (0.000638447); expected 0.2 (1e-05)
+Initial search space (Z):              15663  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.21u 0.17s 00:00:00.38 Elapsed: 00:00:00.22
+# Mc/sec: 19991.12
+//
+[ok]

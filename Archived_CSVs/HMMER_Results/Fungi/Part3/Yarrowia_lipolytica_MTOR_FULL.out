@@ -1,0 +1,337 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Yarrowia_lipolytica.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    3.1e-64  214.3  12.9    9.5e-59  196.5   0.7    5.1  5  XP_505106.1  YALI0F07084p [Yarrowia lipolytica CLIB122]
+    3.8e-06   25.5   2.7    0.00094   17.7   0.0    4.1  4  XP_502730.1  YALI0D12144p [Yarrowia lipolytica CLIB122]
+    4.2e-06   25.4   0.3      0.027   13.0   0.1    4.5  4  XP_505419.1  YALI0F14575p [Yarrowia lipolytica CLIB122]
+    0.00021   19.8   0.0       0.73    8.4   0.0    5.0  6  XP_504876.1  YALI0F01793p [Yarrowia lipolytica CLIB122]
+     0.0062   15.1   0.9       0.66    8.5   0.0    3.8  3  XP_505234.2  YALI0F10098p [Yarrowia lipolytica CLIB122]
+  ------ inclusion threshold ------
+      0.071   11.6   0.4       0.47    9.0   0.0    2.3  2  XP_504500.1  YALI0E28292p [Yarrowia lipolytica CLIB122]
+       0.89    8.1   7.2        5.7    5.4   0.3    4.8  4  XP_501349.1  YALI0C02057p [Yarrowia lipolytica CLIB122]
+        6.3    5.3  13.5        5.7    5.4   0.0    5.9  6  XP_503151.1  YALI0D22440p [Yarrowia lipolytica CLIB122]
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_505106.1  YALI0F07084p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.9   0.0       2.6   2.1e+03     102     141 ..     151     190 ..     129     208 .. 0.68
+   2 ?   -3.3   0.0       3.4   2.8e+03      93     135 ..     308     350 ..     280     366 .. 0.73
+   3 !   15.3   0.0   6.7e-06    0.0054      82     156 ..     656     729 ..     570     731 .. 0.80
+   4 !  196.5   0.7   1.2e-61   9.5e-59       1     160 []     735     892 ..     735     892 .. 0.96
+   5 !    6.0   1.4    0.0047       3.8       9     158 ..     939    1010 ..     934    1077 .. 0.46
+
+  Alignments for each domain:
+  == domain 1  score: -2.9 bits;  conditional E-value: 2.6
+     mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                  s ++a+v +i s+ ++  +    +++qi+  +   +r+ +
+  XP_505106.1 151 SRRHAAVMVIKSMAQHCATLLYGYMSQILDLIWVGLRDPK 190
+                  5566777777777777777777788888777666666655 PP
+
+  == domain 2  score: -3.3 bits;  conditional E-value: 3.4
+     mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135
+                   +l++ + ++ ++ v  +i +i  +++  + p+l+ i+ ++ +
+  XP_505106.1 308 YLLSQLKKDKDRNLVFLSIGQISFSVRSAMAPYLDAILENIRE 350
+                  4455555556667788889999999999999999999988766 PP
+
+  == domain 3  score: 15.3 bits;  conditional E-value: 6.7e-06
+     mTOR_dom  82 yyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                   y + +i+ Ll+  +d s s+  +av++ai +   t +  +++++p+i+p +l+++++ +++ +   l+ L++L 
+  XP_505106.1 656 PYVKPIIKVLLARARDTS-SNVASAVITAIGELAATGREGMIEYIPEIMPIFLETFSDQNAQKKLAGLKSLGQLS 729
+                  455668888999999988.7799***********************************99999999999999885 PP
+
+  == domain 4  score: 196.5 bits;  conditional E-value: 1.2e-61
+     mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdp 98 
+                  V++P+ldyp+LL++L+n lk++ + ++Rre+++++GilGALDPykh+eve+++++ ++ e ++  tdv++l++g+spss+ey +tvvi++L++ilkd+
+  XP_505106.1 735 VIQPLLDYPQLLTLLTNTLKSD-NVDTRRETVRLMGILGALDPYKHREVERSTQD-DSAEYDSIPTDVALLIQGMSPSSDEYNHTVVITTLMAILKDQ 830
+                  9*******************88.899************************88877.5566666789******************************** PP
+
+     mTOR_dom  99 slsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                  sl shh+avvqai+ ifk+lglkcvpfl+qiip  l+v+r++++s+ ef++qqLa Lv ivk
+  XP_505106.1 831 SLVSHHNAVVQAIVIIFKSLGLKCVPFLNQIIPGWLQVLRSSTPSMAEFFVQQLALLVLIVK 892
+                  ************************************************************98 PP
+
+  == domain 5  score: 6.0 bits;  conditional E-value: 0.0047
+     mTOR_dom    9 peLLeiLlnilkteq..sqsiRrevikvlGilGA.LDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls 101 
+                   p+LL +Ll +l++++  ++ +  +v++++ +lGA +  y h                                                       
+  XP_505106.1  939 PTLLPLLLGVLENDKstTKLTSIKVLQTFVVLGAnIEDYIH------------------------------------------------------- 979 
+                   66777777777766422444555666666666665555555....................................................... PP
+
+     mTOR_dom  102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158 
+                                              iip ++++++ ++ +l++  +q +++L ++
+  XP_505106.1  980 --------------------------LIIPIIVRMFEYSTHQLKKRAIQTIGQLSRT 1010
+                   ..........................3333333333222222322222222222222 PP
+
+>> XP_502730.1  YALI0D12144p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.9   0.1      0.01       8.4      87     143 ..     133     191 ..      63     208 .. 0.63
+   2 !   17.7   0.0   1.2e-06   0.00094      80     157 ..     440     525 ..     412     527 .. 0.84
+   3 ?   -3.1   0.1       3.1   2.5e+03      10      21 ..     571     582 ..     543     585 .. 0.76
+   4 ?   -3.6   0.0       4.2   3.4e+03      91     137 ..     641     686 ..     640     697 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 4.9 bits;  conditional E-value: 0.01
+     mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkc...vpflpqiipallsvirtcess 143
+                   +++L++  kd++ s+ + a++q+i +i++  + +    v+  + i+ a+++++++ e s
+  XP_502730.1 133 LMTTLVENTKDEQPSHIKMAALQSIGFICERADRNNagvVSQASGILTAIVQAAQSKE-S 191
+                  2334444448888888889999999999998666551115555556666666666533.3 PP
+
+  == domain 2  score: 17.7 bits;  conditional E-value: 1.2e-06
+     mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvp........flpqiipallsvirtces..slrefllqqLatLvs 157
+                  e++   v++n+Llk l+d+   +  t++  +im+if++lg   v+        ++pq++pall++++  ++  + r   ++ L+tLv 
+  XP_502730.1 440 EQVHLPVIMNTLLKGLQDEP--KVITNCCWTIMNIFEQLGHGGVNqettvvspYYPQVLPALLNAASRNDNenNARTAAYEALSTLVV 525
+                  556667999*******9988..568999**********999988888888889***********998555446999**********95 PP
+
+  == domain 3  score: -3.1 bits;  conditional E-value: 3.1
+     mTOR_dom  10 eLLeiLlnilkt 21 
+                  +LL++L+ni+++
+  XP_502730.1 571 NLLGLLTNIIRR 582
+                  577777777765 PP
+
+  == domain 4  score: -3.6 bits;  conditional E-value: 4.2
+     mTOR_dom  91 Llkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvi 137
+                  Ll+ l+dpsl   ++++v  +  + + lg    +f +q ++ +++ +
+  XP_502730.1 641 LLRALEDPSLI-VCNTAVGLVADVSNALGPAIDQFSDQYMQLFVTDL 686
+                  78889999988.56667777777777777777777777666666555 PP
+
+>> XP_505419.1  YALI0F14575p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.0       1.9   1.5e+03     125     140 ..     261     276 ..     192     294 .. 0.52
+   2 ?    4.4   0.0     0.015        12      72     146 ..     438     513 ..     384     516 .. 0.84
+   3 !   13.0   0.1   3.3e-05     0.027      72     143 ..     481     552 ..     464     562 .. 0.79
+   4 !    5.8   0.0    0.0055       4.5     106     140 ..     607     641 ..     597     648 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 1.9
+     mTOR_dom 125 flpqiipallsvirtc 140
+                  + p +i+  +s+i+++
+  XP_505419.1 261 VFPDLISFCVSIIENA 276
+                  3333333333344433 PP
+
+  == domain 2  score: 4.4 bits;  conditional E-value: 0.015
+     mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslre 146
+                   ++  p+ ++ y++ v+  L++il+ +     +t +  a+++  ++   ++  p+l+ ++++l+++++  ++ l++
+  XP_505419.1 438 STDFAPTIQNEYHARVVPGLISILRGKLPPRVQTHAAAAMVNFAENATKEVlEPYLDDLLSSLVTLLNRPQRYLQD 513
+                  55567777777888899999****999999999999999999999988888789*******999999988777666 PP
+
+  == domain 3  score: 13.0 bits;  conditional E-value: 3.3e-05
+     mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.s 143
+                  + + ++   e y    +++L+++l+ p+    + +v+++i +i ++ + k  +++++++p ll+v+rt  + +
+  XP_505419.1 481 AENATKEVLEPYLDDLLSSLVTLLNRPQR-YLQDQVLTTISTIAESSSEKFSKYYDELMPLLLTVLRTPATdE 552
+                  445555557777788999******99885.5999*********************************977644 PP
+
+  == domain 4  score: 5.8 bits;  conditional E-value: 0.0055
+     mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtc 140
+                    v a   i+k lg   +pfl+ ++p ll++++  
+  XP_505419.1 607 HLVLAWSRICKLLGRDFMPFLDVVMPPLLRAASAK 641
+                  56778889*********************988765 PP
+
+>> XP_504876.1  YALI0F01793p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.4   0.0      0.92   7.4e+02       8      24 ..      10      26 ..       7      35 .. 0.76
+   2 ?    2.4   0.0     0.063        51     103     159 ..     142     203 ..     128     205 .. 0.63
+   3 ?   -0.1   0.0      0.35   2.9e+02     106     146 ..     235     276 ..     217     287 .. 0.81
+   4 ?   -0.2   0.0      0.37     3e+02      79     154 ..     393     471 ..     340     477 .. 0.61
+   5 !    8.4   0.0    0.0009      0.73      76     158 ..     480     561 ..     467     562 .. 0.78
+   6 ?   -0.6   0.0       0.5     4e+02      83     156 ..     760     835 ..     676     837 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: -1.4 bits;  conditional E-value: 0.92
+     mTOR_dom  8 ypeLLeiLlnilkteqs 24
+                 + +LLe+L n l+++++
+  XP_504876.1 10 HAQLLEVLQNSLRGNNA 26
+                 789*******9998853 PP
+
+  == domain 2  score: 2.4 bits;  conditional E-value: 0.063
+     mTOR_dom 103 hhtavvqaimsifktlglkcvp......flpqiipallsvirtcesslrefllqqLatLvsiv 159
+                   +   ++a+ +i++++ ++  +       l+  +p++l+ +r+ +ss+ +  +q L+ L  iv
+  XP_504876.1 142 AQLGGMDALSKICEDMPVELDQtygsqrPLEYMVPKFLEFVRSPDSSH-QKRVQALTCLNHIV 203
+                  555556666677776655553323333368999*********976544.44567777776666 PP
+
+  == domain 3  score: -0.1 bits;  conditional E-value: 0.35
+     mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtces.slre 146
+                  ++ +a + i++t   k  p l  +i+  l+ i+ +e+ + ++
+  XP_504876.1 235 QICNAFTGILRTNAEKIAPHLGGVIQYALHCISASEEgDTLD 276
+                  677889999999999***************999988755555 PP
+
+  == domain 4  score: -0.2 bits;  conditional E-value: 0.37
+     mTOR_dom  79 seeyyptvvinaLlkilkdpsls...shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLat 154
+                    +  p  v++a +  lk+  +s     ++a++ a   i    +  + p lp+++p l++ +++ +  +r++    L+ 
+  XP_504876.1 393 LSNILPEEVLEAAMPYLKQTIVSdewPAREAAILAFGAIADGCQDMVAPHLPELVPFLIQRLSDPQFPVRQVCCWTLGR 471
+                  3566666677777777777777732234678888888888888888899999999999998888666777766666665 PP
+
+  == domain 5  score: 8.4 bits;  conditional E-value: 0.0009
+     mTOR_dom  76 spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                  s s+++ y   +++ L +   d++ ++ + a  +a+ +   + +   +p+l qi+ +++  +r  +++ + fl++ ++tLv++
+  XP_504876.1 480 SMSEQDTYFIPTLTGLFTCALDRN-KKVQVAGCSAVATFTDEARNMLTPYLGQILEQFALCFRRYQKKSLLFLYDAVSTLVKY 561
+                  555555555556666666665555.4467778889999889989999*********************************986 PP
+
+  == domain 6  score: -0.6 bits;  conditional E-value: 0.5
+     mTOR_dom  83 yptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156
+                   ++ + + L+++l+ +  s    +++ +ai  i  t+     + +p +i a    ++++ + s +e  +  ++t++
+  XP_504876.1 760 LQASAAERLIALLRTRDASpRVLENASTAIGRIGITMPDIFAQRIPDFIIAWCLNMHDAMDnSEKESAFVGMCTII 835
+                  4555666677777766666666666667777777776666666677666666555555555477777777777776 PP
+
+>> XP_505234.2  YALI0F10098p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.1      0.41   3.3e+02      99     152 ..     167     218 ..     133     222 .. 0.73
+   2 !    8.5   0.0   0.00082      0.66      80     152 ..     518     593 ..     481     601 .. 0.82
+   3 ?    1.8   0.0     0.095        77      93     150 ..     682     739 ..     606     743 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.41
+     mTOR_dom  99 slsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqL 152
+                    +  ++++ qa ++    l+ ++v+  ++i    l+v++++++ sl +  l+ L
+  XP_505234.2 167 VFDFSQETMTQAKTNT---LKSQMVSEFSKIFELCLKVLEKADRpSLIQATLHSL 218
+                  4444444555554444...445889999999999999999998877777766655 PP
+
+  == domain 2  score: 8.5 bits;  conditional E-value: 0.00082
+     mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqqL 152
+                  e  +   v+++Ll++ ++   ++ ++ v + im+i+ +    lk   +fl+ ++ +l++ ++++++ ++++  + +
+  XP_505234.2 518 EKRFLVSVVKKLLSLTDQMRGKDNKAVVASDIMYIVGQypRFLKAhWKFLKTVVKKLFEFMKETHEGVQDMACDTF 593
+                  6777788999999999888888999999999*****995534666699***************9999998876665 PP
+
+  == domain 3  score: 1.8 bits;  conditional E-value: 0.095
+     mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150
+                   il++p   +  ++v+++ +  +  lg    p l+ i   +l++ r ++s+++e + +
+  XP_505234.2 682 DILSNPEPVKTFSNVMKTNVATCTALGAGFQPQLKLIYMDMLHLYRAVSSTISEAVAS 739
+                  6888999999999999999999************************999999988765 PP
+
+>> XP_504500.1  YALI0E28292p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.0   0.0   0.00058      0.47      19      57 ..      68     110 ..      64     145 .. 0.73
+   2 ?   -0.3   0.1      0.41   3.3e+02      38      67 ..     359     392 ..     358     429 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 9.0 bits;  conditional E-value: 0.00058
+     mTOR_dom  19 lkteqsqsiRrevikvlGilGALDPykhkeveekseee....e 57 
+                  l  eq+ +++     ++  +GALD  + kev+++ +e      
+  XP_504500.1  68 LTPEQTAQLKDMWAHLMAAIGALDDENLKEVTRAVQEMdfeaG 110
+                  667889999999999****************998855433331 PP
+
+  == domain 2  score: -0.3 bits;  conditional E-value: 0.41
+     mTOR_dom  38 lGALDPykhkeveekseee....ekeeenaeetd 67 
+                  +G  DPy++  ve k  e+    ++e++++ e+d
+  XP_504500.1 359 MGGTDPYQYVYVEPKEGEAakteDSETRKKLEND 392
+                  5778999997777655332221122222222222 PP
+
+>> XP_501349.1  YALI0C02057p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.1     0.074        59      77     122 ..      71     117 ..      11     148 .. 0.61
+   2 ?   -0.7   0.1      0.56   4.5e+02     112     142 ..     218     248 ..     215     257 .. 0.78
+   3 ?   -2.1   0.0       1.5   1.2e+03       3      21 ..     561     579 ..     560     581 .. 0.92
+   4 ?    5.4   0.3    0.0071       5.7      95     141 ..    1523    1570 ..    1512    1578 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 0.074
+     mTOR_dom  77 pss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc 122
+                  + s e+   + +++ Ll++  +  l+ + +a ++ imsi++t + + 
+  XP_501349.1  71 SISvEQKLRSSILEILLRLQTNDLLKPYSSALLEQIMSILRTDNEEN 117
+                  22334445555555566666667777777777777777777643333 PP
+
+  == domain 2  score: -0.7 bits;  conditional E-value: 0.56
+     mTOR_dom 112 msifktlglkcvpflpqiipallsvirtces 142
+                  +  f+t +  + ++lpq++p++++++r   +
+  XP_501349.1 218 VLLFSTHRAMVPTLLPQFLPHVIEMLRIQAP 248
+                  56788888888999***********996655 PP
+
+  == domain 3  score: -2.1 bits;  conditional E-value: 1.5
+     mTOR_dom   3 ePyldypeLLeiLlnilkt 21 
+                  +P++d   L++ L+n+lkt
+  XP_501349.1 561 DPLEDARYLFKNLMNFLKT 579
+                  799**************98 PP
+
+  == domain 4  score: 5.4 bits;  conditional E-value: 0.0071
+     mTOR_dom   95 lkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtce 141 
+                   l  ++ls ++  +++ ai+++f+ l     +f++ i++ ++ + r++ 
+  XP_501349.1 1523 LATHNLSlQQNVQIIVAILNVFHLLPSTAHTFMNDIVNMIVYLERNLR 1570
+                   45667777999***************************9998777665 PP
+
+>> XP_503151.1  YALI0D22440p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.1       1.9   1.5e+03      92     131 ..     397     436 ..     379     445 .. 0.44
+   2 ?   -0.9   0.1      0.62     5e+02     102     157 ..    1358    1414 ..    1263    1415 .. 0.70
+   3 ?    5.4   0.0     0.007       5.7      80     158 ..    1616    1697 ..    1535    1699 .. 0.69
+   4 ?    3.7   0.2     0.025        20      13     153 ..    1936    2087 ..    1925    2089 .. 0.64
+   5 ?   -0.9   0.0      0.63   5.1e+02      85     118 ..    2315    2349 ..    2310    2357 .. 0.82
+   6 ?   -2.6   0.1       2.1   1.7e+03      89     138 ..    2409    2458 ..    2403    2469 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 1.9
+     mTOR_dom  92 lkilkdpslsshhtavvqaimsifktlglk..cvpflpqiip 131
+                  l+ l+ +s +  +  v   i+  +++++    cv+++pq+i+
+  XP_503151.1 397 LTTLSSKSRE--QYFVAFQILAKVQSQRFTdiCVKYIPQLIS 436
+                  3333222222..111222222222222222114555555554 PP
+
+  == domain 2  score: -0.9 bits;  conditional E-value: 0.62
+     mTOR_dom  102 shhtavvqaimsifktlglkcvpflpq.iipallsvirtcesslrefllqqLatLvs 157 
+                   +  t v+    + +++ +   +++++  ++p+l+  +r+ + ++r  ++q L++Lv+
+  XP_503151.1 1358 QNSTLVLMRFFESIQESQPDKIELIDDiVMPELVVGMREPQFNIRIEFVQVLENLVK 1414
+                   444444444444444455555666665157999999999877999999999999997 PP
+
+  == domain 3  score: 5.4 bits;  conditional E-value: 0.007
+     mTOR_dom   80 eeyyptvvinaLlkilkdpslsshhtav...vqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158 
+                     +    vi  + k l+ +s ++    +   + ++ +i+     +++++lp  + +l +v+r  +++lr+ + + L+++ +i
+  XP_503151.1 1616 SAFLLENVIPPIRKTLRAHSNEQLTDRIplgIPVVRFIVALPPAQVMTVLPGTLTTLCQVMRAKQQELRDEMRKLLGQIAEI 1697
+                   4444556666666666555555444433222889999999999999999*************99999999999999999887 PP
+
+  == domain 4  score: 3.7 bits;  conditional E-value: 0.025
+     mTOR_dom   13 eiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseee.....ekeeenaeetdvsel......lvglspss..eeyyptvvinaLlkil 95  
+                   + L++ l++ ++++++  +++vl+++  LD   + + ++k  +e     +    n+++t+++++      l++l ++s   e+ ++   n L +il
+  XP_503151.1 1936 QPLTQSLSN-THENVQVGALRVLSMICDLDFPDMDSWTQKWGTEtlkiiA----NSSDTKTQLVqnafrlLTKLFECSesFEVKESALGNILTRIL 2026
+                   344444443.48999***************99998888877444443431....3333222222222333555555541356677788899999** PP
+
+     mTOR_dom   96 kdpslsshhtavvqaimsifkt..lglkcvpflpqiipallsvirtces.slrefllqqLa 153 
+                    d   s+ ++ + + +  ++    +  ++  +++qi + +++  ++ ++ + re ++  L+
+  XP_503151.1 2027 PDLVESQGQNITFNLVNAVLGRqiVISEVYDVMKQIANIMITHQQSETRdHCRELYFTFLT 2087
+                   8888888777777777777755223344466777777777776666666688888887665 PP
+
+  == domain 5  score: -0.9 bits;  conditional E-value: 0.63
+     mTOR_dom   85 tvvinaLlkilkdpsls.shhtavvqaimsifktl 118 
+                   ++v + L++ l+ p+ s + +t++v+ +++i+++ 
+  XP_503151.1 2315 QTVAYRLVRQLSTPNASdKLCTQAVKNLTYIVQEW 2349
+                   467788999999999998999**********9975 PP
+
+  == domain 6  score: -2.6 bits;  conditional E-value: 2.1
+     mTOR_dom   89 naLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir 138 
+                   + L+++l+++ + +  + v+ a+ + + + +  + ++l+++ ++ l++++
+  XP_503151.1 2409 AVLVSLLSESRVMEISEHVIYALFTTMDQHEAAVDSTLRELASETLEMLK 2458
+                   56888888888889999999999999888888888888888887777776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       6472  (3148702 residues searched)
+Passed MSV filter:                       423  (0.0653585); expected 129.4 (0.02)
+Passed bias filter:                      337  (0.0520705); expected 129.4 (0.02)
+Passed Vit filter:                        31  (0.00478986); expected 6.5 (0.001)
+Passed Fwd filter:                         8  (0.00123609); expected 0.1 (1e-05)
+Initial search space (Z):               6472  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.07u 0.01s 00:00:00.08 Elapsed: 00:00:00.12
+# Mc/sec: 4122.82
+//
+[ok]

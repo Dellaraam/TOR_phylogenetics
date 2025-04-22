@@ -1,0 +1,600 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Streptophyta/Proteins/Arabidopsis_thaliana.TAIR10.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    8.2e-05   21.5   2.1    9.6e-05   21.3   2.1    1.1  1  AT2G35930.1  pep chromosome:TAIR10:2:15082855:15084559:-1 gen
+  ------ inclusion threshold ------
+       0.02   13.6   2.8      0.043   12.5   0.4    1.9  2  AT3G01400.1  pep chromosome:TAIR10:3:151725:153263:1 gene:AT3
+      0.036   12.7   0.2      0.045   12.4   0.2    1.0  1  AT2G21030.1  pep chromosome:TAIR10:2:9024536:9025764:-1 gene:
+       0.15   10.7   1.5          8    5.0   0.2    3.2  4  AT5G49310.1  pep chromosome:TAIR10:5:19991946:19994672:-1 gen
+       0.17   10.5   0.1       0.23   10.1   0.1    1.0  1  AT1G31880.1  pep chromosome:TAIR10:1:11445490:11450232:1 gene
+       0.19   10.4   0.1       0.25   10.0   0.1    1.0  1  AT1G31880.2  pep chromosome:TAIR10:1:11447287:11450192:1 gene
+       0.19   10.3   0.0       0.32    9.6   0.0    1.3  1  AT1G23180.2  pep chromosome:TAIR10:1:8215721:8219631:1 gene:A
+       0.22   10.2   7.2        0.5    9.0   0.1    3.0  3  AT1G20780.1  pep chromosome:TAIR10:1:7217021:7220842:1 gene:A
+       0.22   10.2   7.2        0.5    9.0   0.1    3.0  3  AT1G20780.2  pep chromosome:TAIR10:1:7217059:7220818:1 gene:A
+       0.22   10.2   7.2        0.5    9.0   0.1    3.0  3  AT1G20780.3  pep chromosome:TAIR10:1:7217128:7220819:1 gene:A
+       0.25    9.9   0.0       0.64    8.6   0.0    1.6  1  AT3G53800.1  pep chromosome:TAIR10:3:19930798:19932892:1 gene
+       0.31    9.7   0.1        1.1    7.9   0.1    1.7  1  AT3G53800.2  pep chromosome:TAIR10:3:19930798:19932961:1 gene
+       0.39    9.3   3.7       0.54    8.8   3.7    1.1  1  AT5G14510.1  pep chromosome:TAIR10:5:4677925:4679317:-1 gene:
+       0.95    8.0  19.8        2.5    6.7   0.0    6.2  6  AT1G77460.1  pep chromosome:TAIR10:1:29103642:29111931:1 gene
+       0.95    8.0  19.8        2.5    6.7   0.0    6.2  6  AT1G77460.2  pep chromosome:TAIR10:1:29103608:29111956:1 gene
+       0.95    8.0  19.8        2.5    6.7   0.0    6.2  6  AT1G77460.3  pep chromosome:TAIR10:1:29103608:29111956:1 gene
+       0.95    8.0  19.8        2.5    6.7   0.0    6.2  6  AT1G77460.4  pep chromosome:TAIR10:1:29103642:29111931:1 gene
+
+
+Domain annotation for each sequence (and alignments):
+>> AT2G35930.1  pep chromosome:TAIR10:2:15082855:15084559:-1 gene:AT2G35930 transcript:AT2G35930.1 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.3   2.1   3.4e-08   9.6e-05      53     235 ..     115     309 ..      41     346 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 21.3 bits;  conditional E-value: 3.4e-08
+  PTHR13298.orig.30.pir  53 kaaakklnellgllkeeiiikedlvelelvs.clr.slllseskevraaalRllrylisdskvlrrllrlgldiliarsLdrds.kne 137
+                            ++++k l++l ++  e+ + k  l+   +++ +++    +se+ ++   al ll++l ++++vl+ ll ++ d  i++sL++ + +  
+            AT2G35930.1 115 ENQVKCLKRLRQIVSENATNKRCLEAAGVPEfLANiVSNDSENGSLTDEALNLLYHLETSETVLKNLLNNKKDNNIVKSLTKIMqRGM 202
+                            5667777777777777777777777777777444445567788899***********99*********************98776888 PP
+
+  PTHR13298.orig.30.pir 138 tE.reqalkliramlev....apkliptaivralvaiae.seedrlrraclatlcelal..lnpelvaeagglrvlldalle.cqlpe 216
+                             E r+ a+ l   +lev    +   + + +   +v i++   +++ + a++ +l+ ++   +n   + eag ++v+++ l++ + ++e
+            AT2G35930.1 203 YEsRVYATLLLKNILEVadpmQSMTLKPEVFTEVVQILDdRISQKATKAAMHILVNICPwgRNRHKAVEAGVISVIIELLMDeSFTSE 290
+                            8878*************877667777999999999999976677888888888888874225667778**************777788 PP
+
+  PTHR13298.orig.30.pir 217 riaesllavllyllnrpst 235
+                            r  + + +v+l ll ++++
+            AT2G35930.1 291 RRGPEMAMVVLDLLCQCAE 309
+                            8888**********88766 PP
+
+>> AT3G01400.1  pep chromosome:TAIR10:3:151725:153263:1 gene:AT3G01400 transcript:AT3G01400.1 gene_biotype:protein_codin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.5   0.4   1.5e-05     0.043     695     797 ..      54     227 ..      49     262 .. 0.88
+   2 ?    1.6   0.2     0.029        82     150     233 ..     255     341 ..     249     343 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 12.5 bits;  conditional E-value: 1.5e-05
+  PTHR13298.orig.30.pir 695 lislktrdelvklivssLdys................................................................... 715
+                             +++++ d+l++++vs+Ld s                                                                   
+            AT3G01400.1  54 SCASENSDDLINHLVSHLDSSysideqkqaameirllsknkpenrikiakagaikplislisssdlqlqeygvtailnlslcdenkes 141
+                            58999*************99999***************************************************************99 PP
+
+  PTHR13298.orig.30.pir 716 .ldgesRvilskaLtsssesiRlyatkhLrvllraessdfsd...WgielLvtqlydpskevakaAlkiLeeacedkanileylvs 797
+                              ++ + + l+ aL+ ++ +++  a + L +l + e ++ +     +i+lLv+ l +      k A  +L++ c  k+n ++++ s
+            AT3G01400.1 142 iASSGAIKPLVRALKMGTPTAKENAACALLRLSQIEENKVAIgrsGAIPLLVNLLETGGFRAKKDASTALYSLCSAKENKIRAVQS 227
+                            988999999********************9999976666666788*****************************999998777665 PP
+
+  == domain 2  score: 1.6 bits;  conditional E-value: 0.029
+  PTHR13298.orig.30.pir 150 mlev...apkliptaivralvaiae....seedrlrraclatlcelallnpelvaeagglrvlldallecqlperiaesllavllyll 230
+                            +++v   +p+ + ++ v  lv i+e     +++  +++ l ++ e ++++  +va++g++  l+   +   +++r+  +  ++l+ ll
+            AT3G01400.1 255 LMSVpesKPAIVEEGGVPVLVEIVEvgtqRQKEMAVSILLQLCEESVVYR-TMVAREGAIPPLVALSQA--GTSRAK-QKAEALIELL 338
+                            55556667788888889999999995553333333334444444444555.899999999999877766..556665.6666666666 PP
+
+  PTHR13298.orig.30.pir 231 nrp 233
+                             +p
+            AT3G01400.1 339 RQP 341
+                            665 PP
+
+>> AT2G21030.1  pep chromosome:TAIR10:2:9024536:9025764:-1 gene:AT2G21030 transcript:AT2G21030.1 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.4   0.2   1.6e-05     0.045     815     896 ..      15     112 ..       7     113 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 12.4 bits;  conditional E-value: 1.6e-05
+  PTHR13298.orig.30.pir 815 rflstpkGfrylkeenyvekelekWaeer..naeYvllvEealsealtlltree.................dgsdsrrrsngpdsslr 883
+                             f+s+p G + lk + + ++ ++kW+ +r   ++Y ++vE    + +++   ++                 +  ds r s++++++++
+            AT2G21030.1  15 TFASLPTGGNDLKRIRFSREMYNKWQAQRrwGENYDKIVELYNVQRFNR---QAlqtparsddqsqrdstySKMDSARESKDWTPRHN 99 
+                            69***********************999988889988888776666665...333345577777777777788888899999999999 PP
+
+  PTHR13298.orig.30.pir 884 nrksvilPpHLyg 896
+                             r+ + +P H+yg
+            AT2G21030.1 100 FRPPGSVPHHFYG 112
+                            9999********8 PP
+
+>> AT5G49310.1  pep chromosome:TAIR10:5:19991946:19994672:-1 gene:AT5G49310 transcript:AT5G49310.1 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.9   0.0     0.049   1.4e+02     909     969 ..     110     164 ..     107     192 .. 0.70
+   2 ?    0.7   0.0     0.055   1.6e+02     938     975 ..     260     300 ..     246     317 .. 0.58
+   3 ?    0.3   0.0     0.075   2.1e+02     397     434 ..     278     315 ..     274     345 .. 0.80
+   4 ?    5.0   0.2    0.0028         8     929     969 ..     378     418 ..     356     437 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 0.9 bits;  conditional E-value: 0.049
+  PTHR13298.orig.30.pir 909 ekkghleelaetirshgledseeilklkaalWAlghigsselGlelleeenedliediikl 969
+                            +k+g++++++e++++    d+   l+   a WAl +i+s     + +   ++++++ +++l
+            AT5G49310.1 110 IKSGVVPRFVEFLKK----DDNPKLQF-EAAWALTNIASGASEHTKVVI-DHGVVPLFVQL 164
+                            678899999999999....44444444.567999999986555444444.35677777766 PP
+
+  == domain 2  score: 0.7 bits;  conditional E-value: 0.055
+  PTHR13298.orig.30.pir 938 alWAlghig.sselGlelleeenedliediiklaees....ev 975
+                            a WAl++ + +s+++++ ++e   ++++++++l +++     v
+            AT5G49310.1 260 ACWALSNLSdASNENIQSVIE--AGVVPRLVELLQHAspvvLV 300
+                            566666665445555555555..44666666666665322222 PP
+
+  == domain 3  score: 0.3 bits;  conditional E-value: 0.075
+  PTHR13298.orig.30.pir 397 lieagLleaLvevitssdssvsvkAtiLLgellslant 434
+                             ieag +  Lve+++  +++v v+A+  +g+++s  ++
+            AT5G49310.1 278 VIEAGVVPRLVELLQHASPVVLVPALRCIGNIVSGNSQ 315
+                            5899**********************999999876555 PP
+
+  == domain 4  score: 5.0 bits;  conditional E-value: 0.0028
+  PTHR13298.orig.30.pir 929 seeilklkaalWAlgh..igsselGlelleeenedliediikl 969
+                             +e+  +k a+WA+++  +g s++ +++l e+n  +i+ ++ +
+            AT5G49310.1 378 HAEFDIKKEAIWAISNasVGGSPNQIKYLVEQN--CIKALCDI 418
+                            4566679*******874489***********55..99988876 PP
+
+>> AT1G31880.1  pep chromosome:TAIR10:1:11445490:11450232:1 gene:AT1G31880 transcript:AT1G31880.1 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.1   0.1   8.1e-05      0.23     815     896 ..     152     249 ..     148     250 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 10.1 bits;  conditional E-value: 8.1e-05
+  PTHR13298.orig.30.pir 815 rflstpkGfrylkeenyvekelekWaeer..naeYvllvEealsealtlltree.................dgsdsrrrsngpdsslr 883
+                             f+s+p G + lk + + ++  +kW+ +r   ++Y ++vE    + +++   ++                 +  ds r s++++++++
+            AT1G31880.1 152 TFASLPTGGNDLKRIRFSREMFDKWQAQRwwGENYDKIVELYNVQRFNR---QAlqtparsddqsqrdstySKMDSARESKDWTPRHN 236
+                            79***************************99999999999886666666...223344477777777777788888899999999999 PP
+
+  PTHR13298.orig.30.pir 884 nrksvilPpHLyg 896
+                             r+ + +P H+yg
+            AT1G31880.1 237 FRPPGSVPHHFYG 249
+                            9999********8 PP
+
+>> AT1G31880.2  pep chromosome:TAIR10:1:11447287:11450192:1 gene:AT1G31880 transcript:AT1G31880.2 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.0   0.1   8.7e-05      0.25     815     896 ..     166     263 ..     162     264 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 10.0 bits;  conditional E-value: 8.7e-05
+  PTHR13298.orig.30.pir 815 rflstpkGfrylkeenyvekelekWaeer..naeYvllvEealsealtlltree.................dgsdsrrrsngpdsslr 883
+                             f+s+p G + lk + + ++  +kW+ +r   ++Y ++vE    + +++   ++                 +  ds r s++++++++
+            AT1G31880.2 166 TFASLPTGGNDLKRIRFSREMFDKWQAQRwwGENYDKIVELYNVQRFNR---QAlqtparsddqsqrdstySKMDSARESKDWTPRHN 250
+                            79***************************99999999999886666666...223344477777777777788888899999999999 PP
+
+  PTHR13298.orig.30.pir 884 nrksvilPpHLyg 896
+                             r+ + +P H+yg
+            AT1G31880.2 251 FRPPGSVPHHFYG 263
+                            9999********8 PP
+
+>> AT1G23180.2  pep chromosome:TAIR10:1:8215721:8219631:1 gene:AT1G23180 transcript:AT1G23180.2 gene_biotype:protein_cod
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.6   0.0   0.00011      0.32      21     195 ..     248     602 ..     239     618 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 9.6 bits;  conditional E-value: 0.00011
+  PTHR13298.orig.30.pir  21 kdgaenllsn.llresrdsiekkleslnnlikl....................................................... 52 
+                            k+ a  +l+n +l++s+ +i ++++ + +l+kl                                                       
+            AT1G23180.2 248 KEAAGGVLANlALSRSTHKILVEVGVIPKLAKLlkadntenkgskvirkearnvllelakdeyyrilvieegvvpipiigadayksfr 335
+                            5555666666666666666666666666666666666666666666666666666666666666677777777777777777777777 PP
+
+  PTHR13298.orig.30.pir  53 ........................................................................................ 52 
+                                                                                                                    
+            AT1G23180.2 336 pdlyswpslpdginieqtakapsrfgaselllglnvdknvddvdeakmkaivgrtnqqflarigaiefekeiksegpgksqqltllpc 423
+                            7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777 PP
+
+  PTHR13298.orig.30.pir  53 ...............kaaakklnellgllkeeiiikedlvelelvs.clrslllseskevraaalRllrylisdskvlrrllrlgldi 124
+                                           + aa+++ e ++ +  ++ ++ +  e   v+ +++ l  +++  v+  ++R+l  l  +++v++r+++ g+ +
+            AT1G23180.2 424 vdgvarlvlilgladELAATRAAESIADASINEDMRVSFMEAGAVKpLVQLLANNNKETVKLPVIRALKNLSLSRTVCQRIEAEGAVW 511
+                            777777777777777344444444444444444444445666677778888888888889999********88*************** PP
+
+  PTHR13298.orig.30.pir 125 liarsLdrdsknetEreqalkliramlev...................apkli.ptaivralvaiaeseedrlrraclatlcelalln 192
+                            +++  L +   +    e +l++i  +l+                     +k++   a+  +lv ia++++++l r ++ ++   +++n
+            AT1G23180.2 512 FLINLLKQPEISLNVTEHVLDIIAHILDPskemeskfyegpvngskadSRKEVlDAAVFSRLVQIAKTASPNLLRNAISVIEFGIISN 599
+                            **********7777788899*******9988888777777777777664666659999999************999999887777777 PP
+
+  PTHR13298.orig.30.pir 193 pel 195
+                            p +
+            AT1G23180.2 600 PNM 602
+                            766 PP
+
+>> AT1G20780.1  pep chromosome:TAIR10:1:7217021:7220842:1 gene:AT1G20780 transcript:AT1G20780.1 gene_biotype:protein_cod
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.0   0.1   0.00017       0.5     717     801 ..     142     229 ..      60     237 .. 0.80
+   2 ?    0.5   0.1     0.063   1.8e+02     393     470 ..     437     514 ..     416     529 .. 0.81
+   3 ?    3.1   0.3      0.01        30     162     230 ..     673     746 ..     648     790 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 9.0 bits;  conditional E-value: 0.00017
+  PTHR13298.orig.30.pir 717 dgesRvilskaLtsssesiRlyatkhLrvllr....aessdfsd....WgielLvtqlydpskevakaAlkiLeeacedkanileylv 796
+                            +++   ++  +L+s+s+ +R+ a++ L+v +     ++           ++++Lv+ l+++ ++ ++aA+++L e +  +a   e++ 
+            AT1G20780.1 142 NSQLIHMIIDMLKSTSHRVRYKALQTLQVVVEgddeSKA----IvaegDTVRTLVKFLSHEPSKGREAAVSLLFELSKSEAL-CEKIG 224
+                            55666677789*********************3322233....1445699***************************66666.68877 PP
+
+  PTHR13298.orig.30.pir 797 slkps 801
+                            s+  +
+            AT1G20780.1 225 SIHGA 229
+                            76655 PP
+
+  == domain 2  score: 0.5 bits;  conditional E-value: 0.063
+  PTHR13298.orig.30.pir 393 lLlalieagLleaLvevits.sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfssekskrnraaaa 470
+                            +++a   +g + +Lv+ i+  +++ ++ +++ LL +l   +++ L + l+ +   l +lv+  ++ +++  +++ aaa+
+            AT1G20780.1 437 VVYAIKTSGAIISLVQFIEVrENDDLRLASIKLLHNLSPFMSEELAKALCGTAGQLGSLVAIISE-KTPITEEQAAAAG 514
+                            5677777888888888886689999*****************************99999998888.4444444444444 PP
+
+  == domain 3  score: 3.1 bits;  conditional E-value: 0.01
+  PTHR13298.orig.30.pir 162 ivralvaiaeseedrlrraclatlcelal......lnpelvaeagglrvlldallecqlperiaesllavllyll 230
+                             v+ lva++++e+ + ++a+la l  l+       ++++++ ea+g+r +l+ l e   +er+   +++++ ++l
+            AT1G20780.1 673 AVEKLVALLDHENVKVVEAALAALSSLLEdgldveKGVKILDEADGIRHILNVLRENR-TERLTRRAVWMVERIL 746
+                            5677777777777777777777777776411111144556777777777777777744.3676665555555555 PP
+
+>> AT1G20780.2  pep chromosome:TAIR10:1:7217059:7220818:1 gene:AT1G20780 transcript:AT1G20780.2 gene_biotype:protein_cod
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.0   0.1   0.00017       0.5     717     801 ..     142     229 ..      60     237 .. 0.80
+   2 ?    0.5   0.1     0.063   1.8e+02     393     470 ..     437     514 ..     416     529 .. 0.81
+   3 ?    3.1   0.3      0.01        30     162     230 ..     673     746 ..     648     790 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 9.0 bits;  conditional E-value: 0.00017
+  PTHR13298.orig.30.pir 717 dgesRvilskaLtsssesiRlyatkhLrvllr....aessdfsd....WgielLvtqlydpskevakaAlkiLeeacedkanileylv 796
+                            +++   ++  +L+s+s+ +R+ a++ L+v +     ++           ++++Lv+ l+++ ++ ++aA+++L e +  +a   e++ 
+            AT1G20780.2 142 NSQLIHMIIDMLKSTSHRVRYKALQTLQVVVEgddeSKA----IvaegDTVRTLVKFLSHEPSKGREAAVSLLFELSKSEAL-CEKIG 224
+                            55666677789*********************3322233....1445699***************************66666.68877 PP
+
+  PTHR13298.orig.30.pir 797 slkps 801
+                            s+  +
+            AT1G20780.2 225 SIHGA 229
+                            76655 PP
+
+  == domain 2  score: 0.5 bits;  conditional E-value: 0.063
+  PTHR13298.orig.30.pir 393 lLlalieagLleaLvevits.sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfssekskrnraaaa 470
+                            +++a   +g + +Lv+ i+  +++ ++ +++ LL +l   +++ L + l+ +   l +lv+  ++ +++  +++ aaa+
+            AT1G20780.2 437 VVYAIKTSGAIISLVQFIEVrENDDLRLASIKLLHNLSPFMSEELAKALCGTAGQLGSLVAIISE-KTPITEEQAAAAG 514
+                            5677777888888888886689999*****************************99999998888.4444444444444 PP
+
+  == domain 3  score: 3.1 bits;  conditional E-value: 0.01
+  PTHR13298.orig.30.pir 162 ivralvaiaeseedrlrraclatlcelal......lnpelvaeagglrvlldallecqlperiaesllavllyll 230
+                             v+ lva++++e+ + ++a+la l  l+       ++++++ ea+g+r +l+ l e   +er+   +++++ ++l
+            AT1G20780.2 673 AVEKLVALLDHENVKVVEAALAALSSLLEdgldveKGVKILDEADGIRHILNVLRENR-TERLTRRAVWMVERIL 746
+                            5677777777777777777777777776411111144556777777777777777744.3676665555555555 PP
+
+>> AT1G20780.3  pep chromosome:TAIR10:1:7217128:7220819:1 gene:AT1G20780 transcript:AT1G20780.3 gene_biotype:protein_cod
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.0   0.1   0.00017       0.5     717     801 ..     142     229 ..      60     237 .. 0.80
+   2 ?    0.5   0.1     0.063   1.8e+02     393     470 ..     437     514 ..     416     529 .. 0.81
+   3 ?    3.1   0.3      0.01        30     162     230 ..     673     746 ..     648     790 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 9.0 bits;  conditional E-value: 0.00017
+  PTHR13298.orig.30.pir 717 dgesRvilskaLtsssesiRlyatkhLrvllr....aessdfsd....WgielLvtqlydpskevakaAlkiLeeacedkanileylv 796
+                            +++   ++  +L+s+s+ +R+ a++ L+v +     ++           ++++Lv+ l+++ ++ ++aA+++L e +  +a   e++ 
+            AT1G20780.3 142 NSQLIHMIIDMLKSTSHRVRYKALQTLQVVVEgddeSKA----IvaegDTVRTLVKFLSHEPSKGREAAVSLLFELSKSEAL-CEKIG 224
+                            55666677789*********************3322233....1445699***************************66666.68877 PP
+
+  PTHR13298.orig.30.pir 797 slkps 801
+                            s+  +
+            AT1G20780.3 225 SIHGA 229
+                            76655 PP
+
+  == domain 2  score: 0.5 bits;  conditional E-value: 0.063
+  PTHR13298.orig.30.pir 393 lLlalieagLleaLvevits.sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfssekskrnraaaa 470
+                            +++a   +g + +Lv+ i+  +++ ++ +++ LL +l   +++ L + l+ +   l +lv+  ++ +++  +++ aaa+
+            AT1G20780.3 437 VVYAIKTSGAIISLVQFIEVrENDDLRLASIKLLHNLSPFMSEELAKALCGTAGQLGSLVAIISE-KTPITEEQAAAAG 514
+                            5677777888888888886689999*****************************99999998888.4444444444444 PP
+
+  == domain 3  score: 3.1 bits;  conditional E-value: 0.01
+  PTHR13298.orig.30.pir 162 ivralvaiaeseedrlrraclatlcelal......lnpelvaeagglrvlldallecqlperiaesllavllyll 230
+                             v+ lva++++e+ + ++a+la l  l+       ++++++ ea+g+r +l+ l e   +er+   +++++ ++l
+            AT1G20780.3 673 AVEKLVALLDHENVKVVEAALAALSSLLEdgldveKGVKILDEADGIRHILNVLRENR-TERLTRRAVWMVERIL 746
+                            5677777777777777777777777776411111144556777777777777777744.3676665555555555 PP
+
+>> AT3G53800.1  pep chromosome:TAIR10:3:19930798:19932892:1 gene:AT3G53800 transcript:AT3G53800.1 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.6   0.0   0.00022      0.64      52     132 ..      60     236 ..      22     248 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 8.6 bits;  conditional E-value: 0.00022
+  PTHR13298.orig.30.pir  52 l....................................................................................... 52 
+                                                                                                                    
+            AT3G53800.1  60 Mpeqvleaqgvtpddlegmlaelqehvesidlandlhsigglvpllsylknsnakiraksadvlttvvqnnprsqqlvmeangfepll 147
+                            4444444444444444444444444444444444444444444448888888888888888888888888888888888888888888 PP
+
+  PTHR13298.orig.30.pir  53 ............kaaakklnellgllkeeiiikedlvelelvs.clrslllseskevraaalRllrylis.dskvlrrllrlgldili 126
+                                        ++a++ +++l++ ++  i+     ++l+     lr +l+s+    ++ al ll yl++ ++++++++++lg+++++
+            AT3G53800.1 148 tnfiadpdirvrTKALGAISSLIRNNQPGITA----FRLANGYaGLRDALVSDTVRFQRKALNLLHYLLQeSNSDCKIVRDLGFPRIM 231
+                            88888888888877777777777777777777....77777777999***********************999************977 PP
+
+  PTHR13298.orig.30.pir 127 arsLdr 132
+                            + +L  
+            AT3G53800.1 232 I-HLAS 236
+                            5.5555 PP
+
+>> AT3G53800.2  pep chromosome:TAIR10:3:19930798:19932961:1 gene:AT3G53800 transcript:AT3G53800.2 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.9   0.1   0.00037       1.1      17     132 ..      29     197 ..      17     209 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 7.9 bits;  conditional E-value: 0.00037
+  PTHR13298.orig.30.pir  17 atklkdgaenllsn.llresrdsiekkleslnnlikl................................................... 52 
+                            +    d +e +l++ + ++++ + +  l+s+  l+ l                                                   
+            AT3G53800.2  29 QGVTPDDLEGMLAElQEHVESIDLANDLHSIGGLVPLlsylknsnakiraksadvlttvvqnnprsqqlvmeangfeplltnfiadpd 116
+                            5555556666665555566666666666666666666666666666666666666666666677777777777777777777777777 PP
+
+  PTHR13298.orig.30.pir  53 ....kaaakklnellgllkeeiiikedlvelelvs.clrslllseskevraaalRllrylis.dskvlrrllrlgldiliarsLdr 132
+                                ++a++ +++l++ ++  i+     ++l+     lr +l+s+    ++ al ll yl++ ++++++++++lg++++++ +L  
+            AT3G53800.2 117 irvrTKALGAISSLIRNNQPGITA----FRLANGYaGLRDALVSDTVRFQRKALNLLHYLLQeSNSDCKIVRDLGFPRIMI-HLAS 197
+                            777666666666666666666666....66666666899***********************999************9775.5555 PP
+
+>> AT5G14510.1  pep chromosome:TAIR10:5:4677925:4679317:-1 gene:AT5G14510 transcript:AT5G14510.1 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.8   3.7   0.00019      0.54      56     232 ..      15     238 ..       7     252 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 8.8 bits;  conditional E-value: 0.00019
+  PTHR13298.orig.30.pir  56 akklnellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylis.dskvlrrllrlgldiliarsLdrdskn.etEre 141
+                             +++++ ++l+   +  +++l e e++s l s+l+s+++ +   al +l  l + ++++  r++++g+   +   L+ + k+   E  
+            AT5G14510.1  15 ESQIEAAIELTNLSRKQRQKLAEREIISPLLSMLQSQDCITTEVALSALLSLAFgSERNKVRIVKSGAVPTLLEILQSETKMvVLELA 102
+                            56777888888888999999********6667********************999777777777777777777778888854388999 PP
+
+  PTHR13298.orig.30.pir 142 qalkliramlevapkli.ptaivralvaiae.............................................seedrlrracla 183
+                             a+ li   ++ +  ++ +t +v+ lv +                                               +++  l   ++a
+            AT5G14510.1 103 MAFLLILSSCNKNKVKMaSTRLVQLLVGLIGldrltiqakvdgiatlqnlstlhqivplviasgapyallqvinfcDKSSELADKAVA 190
+                            99999999999977777799999999999999999999999999999999999999999999999999999999************** PP
+
+  PTHR13298.orig.30.pir 184 tlcelallnpelva.eagglrvlldallecqlperiaesllavllyllnr 232
+                            +l  ++ + pe v+   g++ vl++a+ e  ++++  e ++++ll + n+
+            AT5G14510.1 191 LLENIISHSPESVSsIGGAIGVLVEAIEE--GSAQCKEHAVGILLGICNN 238
+                            ***********99736778999**99999..8899999999999877765 PP
+
+>> AT1G77460.1  pep chromosome:TAIR10:1:29103642:29111931:1 gene:AT1G77460 transcript:AT1G77460.1 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.9   0.0     0.024        69     103     210 ..     195     309 ..     134     325 .. 0.69
+   2 ?   -0.1   0.0     0.093   2.7e+02     722     796 ..     474     551 ..     470     555 .. 0.78
+   3 ?    3.6   0.2    0.0075        21     302     331 ..     633     682 ..     625     771 .. 0.68
+   4 ?    6.7   0.0   0.00087       2.5     759     801 ..     860     902 ..     836     923 .. 0.87
+   5 ?   -2.9   0.9      0.67   1.9e+03     728     802 ..    1268    1345 ..    1220    1436 .. 0.59
+   6 ?    3.9   1.0    0.0059        17     159     250 ..    1801    1893 ..    1779    1918 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 1.9 bits;  conditional E-value: 0.024
+  PTHR13298.orig.30.pir 103 llrylis.dskvlrrllrlgldiliarsLdrds.knetEreqal.kliramlevapkliptaivralvaiaeseedrlrraclatlce 187
+                            +lr l+  d   +r +l+     +++  L+ d+ ++++    +l +l+  +++  +k + +++v++l+ ++e+++d  +ra+ a  +e
+            AT1G77460.1 195 ALRNLCGvDDGYWRLTLEGSGVDIVVSLLSSDNpNSQANAASLLaRLVLSFCDSIQKILNSGVVKSLIQLLEQKNDINVRASAADALE 282
+                            5555555555555555555555555555555553333322222225555566555666688999999999999999888888888888 PP
+
+  PTHR13298.orig.30.pir 188 lallnpe....lvaeagglrvlldall 210
+                             +  n +    +v  agg+ +l++a++
+            AT1G77460.1 283 ALSANSDeakkCVKDAGGVHALIEAIV 309
+                            777775422226667788888877776 PP
+
+  == domain 2  score: -0.1 bits;  conditional E-value: 0.093
+  PTHR13298.orig.30.pir 722 vilskaLtsssesiRlyatkhLrvllra....essdfsd...WgielLvtqlydpskevakaAlkiLeeacedkanileylv 796
+                            +++ ++L  sse+ + ya+++L+ l  +    + +   +    gi+ Lv+ l + s++  + A  iL + c ++++ ++ +v
+            AT1G77460.1 474 QLFISFLGLSSEQHQEYAVEMLKILTAQvddsKWA---VtaaGGIPPLVQLLETGSQKAKEDAACILWNLCCHSEE-IRDCV 551
+                            5677899999************8888844222333...2555899************************8866666.55555 PP
+
+  == domain 3  score: 3.6 bits;  conditional E-value: 0.0075
+  PTHR13298.orig.30.pir 302 krgLkslvdvlrlpnlevrkaildlLydl....................L 331
+                            ++gL+slv++l++  +e+++   ++L dl                    +
+            AT1G77460.1 633 NKGLRSLVESLTSSREETKEHTASVLADLfssrqdicghlatddiinpwI 682
+                            67999999999999999999999999999555555555555555555552 PP
+
+  == domain 4  score: 6.7 bits;  conditional E-value: 0.00087
+  PTHR13298.orig.30.pir 759 ielLvtqlydpskevakaAlkiLeeacedkanileylvslkps 801
+                            +e+Lv++l   ++ v  +A+++L   c d++ +l +l+  +p+
+            AT1G77460.1 860 LETLVQCLAEGHTLVQDKAIEVLSRLCSDQQFLLSELIVSRPK 902
+                            699****************************999877666554 PP
+
+  == domain 5  score: -2.9 bits;  conditional E-value: 0.67
+  PTHR13298.orig.30.pir  728 LtsssesiRlyatkhLrvllra...essdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileylvslkpsl 802 
+                             L  +s+s+R+ a   L +l  a   + s+++  +++ L+  l   s++  + Al++L + +  + ++++ l++++ sl
+            AT1G77460.1 1268 LRLGSRSARYSAAGALNELFDAeniRNSEIACQAVQPLMDILGSVSESEQEVALSALIKLSSGNTSNTALLIDVEGSL 1345
+                             444444444444444444444333333333334444444444444444444444444444444444444444444443 PP
+
+  == domain 6  score: 3.9 bits;  conditional E-value: 0.0059
+  PTHR13298.orig.30.pir  159 ptaivralvaiae.seedrlrraclatlcelal...lnpelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylr 240 
+                             +++  ral++++e ++ + ++ ++++ l+ +++   +n + vaeagg+  + + ll c   ++++ ++  ++ +l+ ++   +y+ 
+            AT1G77460.1 1801 SVSACRALISVLEeQPTEEMKVVAICALQNFVMnsrTNRRAVAEAGGVLLIQELLLSCN--PEVSGQAALMVKFLFSNHTLQEYVS 1884
+                             67889********999***************973336899***********99999965..8999888888888888888888866 PP
+
+  PTHR13298.orig.30.pir  241 agvdleklla 250 
+                                 +++l a
+            AT1G77460.1 1885 NEL-IRSLTA 1893
+                             544.666665 PP
+
+>> AT1G77460.2  pep chromosome:TAIR10:1:29103608:29111956:1 gene:AT1G77460 transcript:AT1G77460.2 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.9   0.0     0.024        69     103     210 ..     195     309 ..     134     325 .. 0.69
+   2 ?   -0.1   0.0     0.093   2.7e+02     722     796 ..     474     551 ..     470     555 .. 0.78
+   3 ?    3.6   0.2    0.0075        21     302     331 ..     633     682 ..     625     771 .. 0.68
+   4 ?    6.7   0.0   0.00087       2.5     759     801 ..     860     902 ..     836     923 .. 0.87
+   5 ?   -2.9   0.9      0.67   1.9e+03     728     802 ..    1268    1345 ..    1220    1436 .. 0.59
+   6 ?    3.9   1.0    0.0059        17     159     250 ..    1801    1893 ..    1779    1918 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 1.9 bits;  conditional E-value: 0.024
+  PTHR13298.orig.30.pir 103 llrylis.dskvlrrllrlgldiliarsLdrds.knetEreqal.kliramlevapkliptaivralvaiaeseedrlrraclatlce 187
+                            +lr l+  d   +r +l+     +++  L+ d+ ++++    +l +l+  +++  +k + +++v++l+ ++e+++d  +ra+ a  +e
+            AT1G77460.2 195 ALRNLCGvDDGYWRLTLEGSGVDIVVSLLSSDNpNSQANAASLLaRLVLSFCDSIQKILNSGVVKSLIQLLEQKNDINVRASAADALE 282
+                            5555555555555555555555555555555553333322222225555566555666688999999999999999888888888888 PP
+
+  PTHR13298.orig.30.pir 188 lallnpe....lvaeagglrvlldall 210
+                             +  n +    +v  agg+ +l++a++
+            AT1G77460.2 283 ALSANSDeakkCVKDAGGVHALIEAIV 309
+                            777775422226667788888877776 PP
+
+  == domain 2  score: -0.1 bits;  conditional E-value: 0.093
+  PTHR13298.orig.30.pir 722 vilskaLtsssesiRlyatkhLrvllra....essdfsd...WgielLvtqlydpskevakaAlkiLeeacedkanileylv 796
+                            +++ ++L  sse+ + ya+++L+ l  +    + +   +    gi+ Lv+ l + s++  + A  iL + c ++++ ++ +v
+            AT1G77460.2 474 QLFISFLGLSSEQHQEYAVEMLKILTAQvddsKWA---VtaaGGIPPLVQLLETGSQKAKEDAACILWNLCCHSEE-IRDCV 551
+                            5677899999************8888844222333...2555899************************8866666.55555 PP
+
+  == domain 3  score: 3.6 bits;  conditional E-value: 0.0075
+  PTHR13298.orig.30.pir 302 krgLkslvdvlrlpnlevrkaildlLydl....................L 331
+                            ++gL+slv++l++  +e+++   ++L dl                    +
+            AT1G77460.2 633 NKGLRSLVESLTSSREETKEHTASVLADLfssrqdicghlatddiinpwI 682
+                            67999999999999999999999999999555555555555555555552 PP
+
+  == domain 4  score: 6.7 bits;  conditional E-value: 0.00087
+  PTHR13298.orig.30.pir 759 ielLvtqlydpskevakaAlkiLeeacedkanileylvslkps 801
+                            +e+Lv++l   ++ v  +A+++L   c d++ +l +l+  +p+
+            AT1G77460.2 860 LETLVQCLAEGHTLVQDKAIEVLSRLCSDQQFLLSELIVSRPK 902
+                            699****************************999877666554 PP
+
+  == domain 5  score: -2.9 bits;  conditional E-value: 0.67
+  PTHR13298.orig.30.pir  728 LtsssesiRlyatkhLrvllra...essdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileylvslkpsl 802 
+                             L  +s+s+R+ a   L +l  a   + s+++  +++ L+  l   s++  + Al++L + +  + ++++ l++++ sl
+            AT1G77460.2 1268 LRLGSRSARYSAAGALNELFDAeniRNSEIACQAVQPLMDILGSVSESEQEVALSALIKLSSGNTSNTALLIDVEGSL 1345
+                             444444444444444444444333333333334444444444444444444444444444444444444444444443 PP
+
+  == domain 6  score: 3.9 bits;  conditional E-value: 0.0059
+  PTHR13298.orig.30.pir  159 ptaivralvaiae.seedrlrraclatlcelal...lnpelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylr 240 
+                             +++  ral++++e ++ + ++ ++++ l+ +++   +n + vaeagg+  + + ll c   ++++ ++  ++ +l+ ++   +y+ 
+            AT1G77460.2 1801 SVSACRALISVLEeQPTEEMKVVAICALQNFVMnsrTNRRAVAEAGGVLLIQELLLSCN--PEVSGQAALMVKFLFSNHTLQEYVS 1884
+                             67889********999***************973336899***********99999965..8999888888888888888888866 PP
+
+  PTHR13298.orig.30.pir  241 agvdleklla 250 
+                                 +++l a
+            AT1G77460.2 1885 NEL-IRSLTA 1893
+                             544.666665 PP
+
+>> AT1G77460.3  pep chromosome:TAIR10:1:29103608:29111956:1 gene:AT1G77460 transcript:AT1G77460.3 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.9   0.0     0.024        69     103     210 ..     195     309 ..     134     325 .. 0.69
+   2 ?   -0.1   0.0     0.093   2.7e+02     722     796 ..     474     551 ..     470     555 .. 0.78
+   3 ?    3.6   0.2    0.0075        21     302     331 ..     633     682 ..     625     771 .. 0.68
+   4 ?    6.7   0.0   0.00087       2.5     759     801 ..     860     902 ..     836     923 .. 0.87
+   5 ?   -2.9   0.9      0.67   1.9e+03     728     802 ..    1268    1345 ..    1220    1436 .. 0.59
+   6 ?    3.9   1.0    0.0059        17     159     250 ..    1801    1893 ..    1779    1918 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 1.9 bits;  conditional E-value: 0.024
+  PTHR13298.orig.30.pir 103 llrylis.dskvlrrllrlgldiliarsLdrds.knetEreqal.kliramlevapkliptaivralvaiaeseedrlrraclatlce 187
+                            +lr l+  d   +r +l+     +++  L+ d+ ++++    +l +l+  +++  +k + +++v++l+ ++e+++d  +ra+ a  +e
+            AT1G77460.3 195 ALRNLCGvDDGYWRLTLEGSGVDIVVSLLSSDNpNSQANAASLLaRLVLSFCDSIQKILNSGVVKSLIQLLEQKNDINVRASAADALE 282
+                            5555555555555555555555555555555553333322222225555566555666688999999999999999888888888888 PP
+
+  PTHR13298.orig.30.pir 188 lallnpe....lvaeagglrvlldall 210
+                             +  n +    +v  agg+ +l++a++
+            AT1G77460.3 283 ALSANSDeakkCVKDAGGVHALIEAIV 309
+                            777775422226667788888877776 PP
+
+  == domain 2  score: -0.1 bits;  conditional E-value: 0.093
+  PTHR13298.orig.30.pir 722 vilskaLtsssesiRlyatkhLrvllra....essdfsd...WgielLvtqlydpskevakaAlkiLeeacedkanileylv 796
+                            +++ ++L  sse+ + ya+++L+ l  +    + +   +    gi+ Lv+ l + s++  + A  iL + c ++++ ++ +v
+            AT1G77460.3 474 QLFISFLGLSSEQHQEYAVEMLKILTAQvddsKWA---VtaaGGIPPLVQLLETGSQKAKEDAACILWNLCCHSEE-IRDCV 551
+                            5677899999************8888844222333...2555899************************8866666.55555 PP
+
+  == domain 3  score: 3.6 bits;  conditional E-value: 0.0075
+  PTHR13298.orig.30.pir 302 krgLkslvdvlrlpnlevrkaildlLydl....................L 331
+                            ++gL+slv++l++  +e+++   ++L dl                    +
+            AT1G77460.3 633 NKGLRSLVESLTSSREETKEHTASVLADLfssrqdicghlatddiinpwI 682
+                            67999999999999999999999999999555555555555555555552 PP
+
+  == domain 4  score: 6.7 bits;  conditional E-value: 0.00087
+  PTHR13298.orig.30.pir 759 ielLvtqlydpskevakaAlkiLeeacedkanileylvslkps 801
+                            +e+Lv++l   ++ v  +A+++L   c d++ +l +l+  +p+
+            AT1G77460.3 860 LETLVQCLAEGHTLVQDKAIEVLSRLCSDQQFLLSELIVSRPK 902
+                            699****************************999877666554 PP
+
+  == domain 5  score: -2.9 bits;  conditional E-value: 0.67
+  PTHR13298.orig.30.pir  728 LtsssesiRlyatkhLrvllra...essdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileylvslkpsl 802 
+                             L  +s+s+R+ a   L +l  a   + s+++  +++ L+  l   s++  + Al++L + +  + ++++ l++++ sl
+            AT1G77460.3 1268 LRLGSRSARYSAAGALNELFDAeniRNSEIACQAVQPLMDILGSVSESEQEVALSALIKLSSGNTSNTALLIDVEGSL 1345
+                             444444444444444444444333333333334444444444444444444444444444444444444444444443 PP
+
+  == domain 6  score: 3.9 bits;  conditional E-value: 0.0059
+  PTHR13298.orig.30.pir  159 ptaivralvaiae.seedrlrraclatlcelal...lnpelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylr 240 
+                             +++  ral++++e ++ + ++ ++++ l+ +++   +n + vaeagg+  + + ll c   ++++ ++  ++ +l+ ++   +y+ 
+            AT1G77460.3 1801 SVSACRALISVLEeQPTEEMKVVAICALQNFVMnsrTNRRAVAEAGGVLLIQELLLSCN--PEVSGQAALMVKFLFSNHTLQEYVS 1884
+                             67889********999***************973336899***********99999965..8999888888888888888888866 PP
+
+  PTHR13298.orig.30.pir  241 agvdleklla 250 
+                                 +++l a
+            AT1G77460.3 1885 NEL-IRSLTA 1893
+                             544.666665 PP
+
+>> AT1G77460.4  pep chromosome:TAIR10:1:29103642:29111931:1 gene:AT1G77460 transcript:AT1G77460.4 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.9   0.0     0.024        69     103     210 ..     195     309 ..     134     325 .. 0.69
+   2 ?   -0.1   0.0     0.093   2.7e+02     722     796 ..     474     551 ..     470     555 .. 0.78
+   3 ?    3.6   0.2    0.0075        21     302     331 ..     633     682 ..     625     771 .. 0.68
+   4 ?    6.7   0.0   0.00087       2.5     759     801 ..     860     902 ..     836     923 .. 0.87
+   5 ?   -2.9   0.9      0.67   1.9e+03     728     802 ..    1268    1345 ..    1220    1436 .. 0.59
+   6 ?    3.9   1.0    0.0059        17     159     250 ..    1801    1893 ..    1779    1918 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 1.9 bits;  conditional E-value: 0.024
+  PTHR13298.orig.30.pir 103 llrylis.dskvlrrllrlgldiliarsLdrds.knetEreqal.kliramlevapkliptaivralvaiaeseedrlrraclatlce 187
+                            +lr l+  d   +r +l+     +++  L+ d+ ++++    +l +l+  +++  +k + +++v++l+ ++e+++d  +ra+ a  +e
+            AT1G77460.4 195 ALRNLCGvDDGYWRLTLEGSGVDIVVSLLSSDNpNSQANAASLLaRLVLSFCDSIQKILNSGVVKSLIQLLEQKNDINVRASAADALE 282
+                            5555555555555555555555555555555553333322222225555566555666688999999999999999888888888888 PP
+
+  PTHR13298.orig.30.pir 188 lallnpe....lvaeagglrvlldall 210
+                             +  n +    +v  agg+ +l++a++
+            AT1G77460.4 283 ALSANSDeakkCVKDAGGVHALIEAIV 309
+                            777775422226667788888877776 PP
+
+  == domain 2  score: -0.1 bits;  conditional E-value: 0.093
+  PTHR13298.orig.30.pir 722 vilskaLtsssesiRlyatkhLrvllra....essdfsd...WgielLvtqlydpskevakaAlkiLeeacedkanileylv 796
+                            +++ ++L  sse+ + ya+++L+ l  +    + +   +    gi+ Lv+ l + s++  + A  iL + c ++++ ++ +v
+            AT1G77460.4 474 QLFISFLGLSSEQHQEYAVEMLKILTAQvddsKWA---VtaaGGIPPLVQLLETGSQKAKEDAACILWNLCCHSEE-IRDCV 551
+                            5677899999************8888844222333...2555899************************8866666.55555 PP
+
+  == domain 3  score: 3.6 bits;  conditional E-value: 0.0075
+  PTHR13298.orig.30.pir 302 krgLkslvdvlrlpnlevrkaildlLydl....................L 331
+                            ++gL+slv++l++  +e+++   ++L dl                    +
+            AT1G77460.4 633 NKGLRSLVESLTSSREETKEHTASVLADLfssrqdicghlatddiinpwI 682
+                            67999999999999999999999999999555555555555555555552 PP
+
+  == domain 4  score: 6.7 bits;  conditional E-value: 0.00087
+  PTHR13298.orig.30.pir 759 ielLvtqlydpskevakaAlkiLeeacedkanileylvslkps 801
+                            +e+Lv++l   ++ v  +A+++L   c d++ +l +l+  +p+
+            AT1G77460.4 860 LETLVQCLAEGHTLVQDKAIEVLSRLCSDQQFLLSELIVSRPK 902
+                            699****************************999877666554 PP
+
+  == domain 5  score: -2.9 bits;  conditional E-value: 0.67
+  PTHR13298.orig.30.pir  728 LtsssesiRlyatkhLrvllra...essdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileylvslkpsl 802 
+                             L  +s+s+R+ a   L +l  a   + s+++  +++ L+  l   s++  + Al++L + +  + ++++ l++++ sl
+            AT1G77460.4 1268 LRLGSRSARYSAAGALNELFDAeniRNSEIACQAVQPLMDILGSVSESEQEVALSALIKLSSGNTSNTALLIDVEGSL 1345
+                             444444444444444444444333333333334444444444444444444444444444444444444444444443 PP
+
+  == domain 6  score: 3.9 bits;  conditional E-value: 0.0059
+  PTHR13298.orig.30.pir  159 ptaivralvaiae.seedrlrraclatlcelal...lnpelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylr 240 
+                             +++  ral++++e ++ + ++ ++++ l+ +++   +n + vaeagg+  + + ll c   ++++ ++  ++ +l+ ++   +y+ 
+            AT1G77460.4 1801 SVSACRALISVLEeQPTEEMKVVAICALQNFVMnsrTNRRAVAEAGGVLLIQELLLSCN--PEVSGQAALMVKFLFSNHTLQEYVS 1884
+                             67889********999***************973336899***********99999965..8999888888888888888888866 PP
+
+  PTHR13298.orig.30.pir  241 agvdleklla 250 
+                                 +++l a
+            AT1G77460.4 1885 NEL-IRSLTA 1893
+                             544.666665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      48321  (20833192 residues searched)
+Passed MSV filter:                      2843  (0.0588357); expected 966.4 (0.02)
+Passed bias filter:                     1076  (0.0222678); expected 966.4 (0.02)
+Passed Vit filter:                       133  (0.00275243); expected 48.3 (0.001)
+Passed Fwd filter:                        20  (0.000413899); expected 0.5 (1e-05)
+Initial search space (Z):              48321  [actual number of targets]
+Domain search space  (domZ):              17  [number of targets reported over threshold]
+# CPU time: 1.09u 0.02s 00:00:01.11 Elapsed: 00:00:00.52
+# Mc/sec: 46258.90
+//
+[ok]

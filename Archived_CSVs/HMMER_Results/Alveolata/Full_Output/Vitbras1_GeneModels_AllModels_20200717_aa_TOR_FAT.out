@@ -1,0 +1,304 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Vitbras1_GeneModels_AllModels_20200717_aa.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                         -----------
+    1.9e-71  241.4   0.2    1.3e-57  196.0   2.0    3.5  3  jgi|Vitbras1|10828|Vbra_14744.t1  
+    6.4e-15   55.6   0.5      1e-07   31.9   1.7    2.4  2  jgi|Vitbras1|710|Vbra_6836.t1     
+    3.2e-05   23.7   0.1     0.0008   19.1   0.0    2.5  2  jgi|Vitbras1|17646|Vbra_17473.t1  
+    0.00023   20.9   0.0    0.00067   19.4   0.0    1.7  1  jgi|Vitbras1|4731|Vbra_12380.t1   
+     0.0022   17.6   0.9      0.027   14.1   0.1    2.7  2  jgi|Vitbras1|13622|Vbra_9365.t1   
+     0.0089   15.7   2.7        3.2    7.3   0.0    3.9  2  jgi|Vitbras1|6318|Vbra_5320.t1    
+  ------ inclusion threshold ------
+      0.073   12.7   4.8       0.59    9.7   0.6    3.3  2  jgi|Vitbras1|11491|Vbra_8998.t1   
+      0.087   12.4   0.1       0.11   12.0   0.1    1.1  1  jgi|Vitbras1|4275|Vbra_3882.t1    
+      0.093   12.3   1.1       0.46   10.0   0.4    1.9  2  jgi|Vitbras1|15057|Vbra_16538.t1  
+
+
+Domain annotation for each sequence (and alignments):
+>> jgi|Vitbras1|10828|Vbra_14744.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.1      0.58   1.5e+03     273     293 ..    1902    1922 ..    1817    1963 .. 0.52
+   2 !  196.0   2.0   4.9e-61   1.3e-57       2     214 ..    1981    2190 ..    1980    2227 .. 0.95
+   3 !   38.9   0.0     3e-13   7.7e-10     239     343 .]    2303    2528 ..    2294    2528 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 0.58
+                                        HCCHHCTCCCHSTTCCCCHHH CS
+                               FAT  273 saateldpswykawhtwalfn 293 
+                                        ++++ l  swy++ h+w ++ 
+  jgi|Vitbras1|10828|Vbra_14744.t1 1902 HLNVTLKESWYEKLHRWEDAL 1922
+                                        222233333333333333322 PP
+
+  == domain 2  score: 196.0 bits;  conditional E-value: 4.9e-61
+                                        CCTTCCCCTSSSGHHCCCCT.......TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCC CS
+                               FAT    2 plaaeaaWrlgqWdsmeeylslmk...kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynr 73  
+                                         laa+a  +l +Wd+m + + +++   ++++++ f++a+la+h+++++ a +li k r++l+ el+al+gesy+r
+  jgi|Vitbras1|10828|Vbra_14744.t1 1981 YLAAAAEFNLRKWDKMNDWVAALEatpSHTYEGCFYSALLAIHQEDYRLATRLITKSREILDPELTALVGESYER 2055
+                                        699***************99999988899********************************************** PP
+
+                                        CHHHHHCCCCCHHHCHHCCHHCSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-ST CS
+                               FAT   74 aydllvrlQqlaEleeiiqykqklssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgaka 148 
+                                        ay++lv++Qql+Eleeii+ykq  +s++++++++k+W +Rl+g+q++vevwq il+vRs+vl p ed       +
+  jgi|Vitbras1|10828|Vbra_14744.t1 2056 AYGALVKVQQLTELEEIIAYKQT-ASESRRQMMRKMWATRLQGCQPKVEVWQAILQVRSMVLPPTED-------I 2122
+                                        **********************5.7999999************************************.......* PP
+
+                                        TCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCC CS
+                               FAT  149 emwlkfanlaRksgrlslAekaLkklleedk..eewlppevvyaylkylwakgeqkealqkLrefvsc 214 
+                                         +wl+f +l+Rk+ +lsl+++  k+ll  ++  +++ +++vv+a+lk l+a g+++ a ++Lr+f ++
+  jgi|Vitbras1|10828|Vbra_14744.t1 2123 PIWLRFCSLCRKQEQLSLSINIVKELLTASDtqPPMTDSRVVVAHLKNLYAGGHKETAQSQLRDFCTS 2190
+                                        **************************9999964444449*************************9765 PP
+
+  == domain 3  score: 38.9 bits;  conditional E-value: 3e-13
+                                        .HHHHCCCTCCCCCCCCCC....CT..S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS. CS
+                               FAT  239 kllarcylkkGewlaalqk....lnw.seekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee 308 
+                                        +ll++c+lk+G w++++ +    ++w + ++ +e+l +++a+++l+p+ ykaw++wa  nf+v++     k+++ 
+  jgi|Vitbras1|10828|Vbra_14744.t1 2303 HLLSKCHLKLGLWTKEVLEekrgADWiNDQTLQEVLLYFRASVRLSPTYYKAWNAWANTNFHVVQLFDLYKSQHP 2377
+                                        678*********99887551111344345679********************************98744455544 PP
+
+                                        ........................................................................... CS
+                               FAT  309 ........................................................................... 308 
+                                                                                                                   
+  jgi|Vitbras1|10828|Vbra_14744.t1 2378 ahvhphacppppmvrsaspsqhqhqhhpslpvspahphhpspyihpishhpllphhgghasdrampdihtqppsl 2452
+                                        7899*********************************************************************** PP
+
+                                        ...............................S-TCC.HHHHCCT..CCHHHHTTTS.........STTTCHHHHH CS
+                               FAT  309 ...............................pedls.eyvvpavegflkslslsse.........kslqdllRlL 342 
+                                                                         dl  +yvv+av+gf ks++l+            +lqd+lRlL
+  jgi|Vitbras1|10828|Vbra_14744.t1 2453 faeakdggegdvegflsaassvadrervgrgGMDLHlQYVVEAVRGFVKSIALGTRkargklnckANLQDVLRLL 2527
+                                        *****************************994566668****************984444443434567777777 PP
+
+                                        C CS
+                               FAT  343 t 343 
+                                        t
+  jgi|Vitbras1|10828|Vbra_14744.t1 2528 T 2528
+                                        6 PP
+
+>> jgi|Vitbras1|710|Vbra_6836.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   31.9   1.7   3.9e-11     1e-07      12     174 ..    4260    4479 ..    4249    4574 .. 0.77
+   2 !   19.9   0.0   1.8e-07   0.00046     266     343 .]    4624    4693 ..    4616    4693 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 31.9 bits;  conditional E-value: 3.9e-11
+                                     SSGHHCCCCT..................TSSSS--CCCHCCCCHH--CCHCHHCCCHCC.......CCCCCCCTS--- CS
+                            FAT   12 gqWdsmeeylslmk..............kdspdkaffeailalhrnqfdeaeeliekar.......qllvtelsalsg 68  
+                                     g+W ++++ +s+                  s+++ ++++  +l ++  +ea+++++ a          l+ ++++l+ 
+  jgi|Vitbras1|710|Vbra_6836.t1 4260 GEWGLLQSVISKGAaagaspaalklglaYSSLQQVLYQTDSNLLTESREEAQKHLNDAErqrwdgvRVLLHQWQRLPP 4337
+                                     55555555555555555555555555555566666777777777777777777777665222222257999******* PP
+
+                                     SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.......................---TTTTTTT----TTS-TTTGCCC CS
+                            FAT   69 esynraydllvrlQqlaEleeiiqykqkls.......................sseelksllktWrkRlpgvqddvev 123 
+                                      +++++++ll  ++q++El e   +++  +                        +++++ +l++Wr+Rlp+ + ++  
+  jgi|Vitbras1|710|Vbra_6836.t1 4338 IVAESHVPLLRLCHQYSELVEGMDLLDGIRrefrlpdlrrhareytsrlqhqlPLKQCRNVLQQWRNRLPNKWESMIS 4415
+                                     ***************************9989**************9999988888888888***************** PP
+
+                                     TTTCCCCTCCCHCCCHC............HHCCS-STTCCCCCCCCHCH.HHHCCSTTHHCCCC CS
+                            FAT  124 wqdilsvRslvlspied............lllkgakaemwlkfanlaRk.sgrlslAekaLkkl 174 
+                                     w di  +R ++++  e             +++ +    + +k a +aR  + + ++A ++L++l
+  jgi|Vitbras1|710|Vbra_6836.t1 4416 WTDICVWRNFLFTLVECcfglivpecrelSAFLHDLPWTMIKLAGIARStHRQADVAVRQLYRL 4479
+                                     ***************99***********9999999999**********7256789*******99 PP
+
+  == domain 2  score: 19.9 bits;  conditional E-value: 1.8e-07
+                                     SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+                            FAT  266 eeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                                     +++ + y  a +++p   + w +w++f + ++++        +++dl+ y+++a+++++  +   +ek + +++R+L+
+  jgi|Vitbras1|710|Vbra_6836.t1 4624 RDADEDYNVAMRINPVYGQGWLAWGRFADSMFERG-------DMRDLN-YAINAITCYMMGIVIRQEKMRLYMPRVLW 4693
+                                     677788999************************99.......367887.****************************9 PP
+
+>> jgi|Vitbras1|17646|Vbra_17473.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.5   0.0     0.069   1.8e+02       3      26 ..    2781    2805 ..    2779    2847 .. 0.83
+   2 !   19.1   0.0   3.1e-07    0.0008      52     162 ..    2887    3000 ..    2881    3078 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 1.5 bits;  conditional E-value: 0.069
+                                        CTTCCCCTSSSGHHCCCCT.....T CS
+                               FAT    3 laaeaaWrlgqWdsmeeylslmk.k 26  
+                                          ++a W+l+qW +++ +l+ +  k
+  jgi|Vitbras1|17646|Vbra_17473.t1 2781 EGLQALWQLSQWGDIKPALDRAPtK 2805
+                                        5799**************9887753 PP
+
+  == domain 2  score: 19.1 bits;  conditional E-value: 3.1e-07
+                                        CCHCCCCCCCCCTS---S.......CCCCCHHHHHCCCCCHHHCHHCCHHCSS----TTTTTTT----TTS-TTT CS
+                               FAT   52 iekarqllvtelsalsge.......synraydllvrlQqlaEleeiiqykqklssseelksllktWrkRlpgvqd 119 
+                                        i++arq l    +a +         + +ray+ l  +++l++le ++++ + + +++  ++l +t+ +Rl ++++
+  jgi|Vitbras1|17646|Vbra_17473.t1 2887 IDQARQELFSAFTAGAQDshehssgLLERAYGFLEEFHMLSDLEWAVKLWKGK-KDNWEAELGRTIFERLAVTKP 2960
+                                        5666666666666665554445555889***********************84.6666777889*********** PP
+
+                                        GCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHH CS
+                               FAT  120 dvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksg 162 
+                                        + + + ++l+  + v + i++   ++ ++e+++k  +  R+ +
+  jgi|Vitbras1|17646|Vbra_17473.t1 2961 SADTRARLLTANAAVCECIDQ---RELSMECIVKACRAIREEK 3000
+                                        *********************...9999***999998888654 PP
+
+>> jgi|Vitbras1|4731|Vbra_12380.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.4   0.0   2.6e-07   0.00067      38     217 ..    3847    4062 ..    3820    4109 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 19.4 bits;  conditional E-value: 2.6e-07
+                                       CC..CHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-............. CS
+                              FAT   38 la..lhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls............. 98  
+                                        a  + + ++d+a++++ ++   + + +++ls     ++++l+ ++  l Ele+++ +++ +s             
+  jgi|Vitbras1|4731|Vbra_12380.t1 3847 AAhaTLQADYDKAQQVLLHGYTTVQQLWTRLSPLALPAHHSLVSSIALLRELEHFLHFMTGKSvpgtkvvkvdhpg 3922
+                                       332255599***************************************************999********99888 PP
+
+                                       ---TTTTTTT----TT.....S-TTTGCCCTTTCCCCTCCCHCCCHC...............HHCCS-STTCCC.. CS
+                              FAT   99 sseelksllktWrkRl.....pgvqddvevwqdilsvRslvlspied...............lllkgakaemwl.. 152 
+                                       + ++  + l+ +++R      + + d++ +w d+ ++R+l ++ ++                l  +++k+++ +  
+  jgi|Vitbras1|4731|Vbra_12380.t1 3923 QVDRGVQCLEWLEQRCdatslSFTFDPFVAWADMGMLRCLGVQYHNGvvtgkglpegqrvvdLDERQKKMTARIhf 3998
+                                       5555555567777777666645555*************************************77777777777744 PP
+
+                                       CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSS CS
+                              FAT  153 kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvsclle 217 
+                                       +  + aRk g+l+ A+ ++ k l   k++++p  +  + +k l+++ + +e l k+ + +++++ 
+  jgi|Vitbras1|4731|Vbra_12380.t1 3999 SVGSAARKLGNLEGAKALMAKSLSIHKDNSNP-LMPKETIKTLLKEADLQEDLAKVAQCLTKVAG 4062
+                                       6679***************9998888866666.66667888888888888888888776665554 PP
+
+>> jgi|Vitbras1|13622|Vbra_9365.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.1   0.1     1e-05     0.027     256     296 ..     392     432 ..     284     449 .. 0.83
+   2 ?    0.3   0.1      0.17   4.3e+02     232     294 ..     517     572 ..     490     577 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 14.1 bits;  conditional E-value: 1e-05
+                                      CCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+                              FAT 256 qklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+                                      ++l++++ ++  ++q + +a +ldp+   awh+wa+++++ 
+  jgi|Vitbras1|13622|Vbra_9365.t1 392 GSLESRHGDPVRAEQLFDRALKLDPTRGAAWHSWAKLCEQL 432
+                                      5566677778999*************************986 PP
+
+  == domain 2  score: 0.3 bits;  conditional E-value: 0.17
+                                      ........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+                              FAT 232 tnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnf 294
+                                      +++ + +  +a c l  +++ aa+++       + ++ q + +a   ++s+ ++w + alf++
+  jgi|Vitbras1|13622|Vbra_9365.t1 517 RQVAYRAVDQALCTLAWAQFEAAMRN-------PPKARQLFEEALTAQRSLKSIWESYALFEE 572
+                                      55556666666666666666666666.......999999999999999999999999988875 PP
+
+>> jgi|Vitbras1|6318|Vbra_5320.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.3   0.0    0.0012       3.2     210     297 ..      42     130 ..      26     147 .. 0.70
+   2 ?    2.1   2.3     0.047   1.2e+02     255     307 ..     184     229 ..     146     344 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 7.3 bits;  conditional E-value: 0.0012
+                                     HHHCCTSSCCC.......SS-SS---.............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCT CS
+                             FAT 210 efvscllekke.......elssglevq..eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateld 279
+                                     + +++              l++    +   p++  ++ ++ +rc+   G++++al +++ + +  + + ++y +  ++ 
+  jgi|Vitbras1|6318|Vbra_5320.t1  42 KKAQNQ----AdfehiisILTDA---ItlRPNRAAYYFTR-GRCFISMGQFQRALFDFSMAIRLESTVAKYYGSRGYCF 112
+                                     333322....1222233122223...24455555555555.69****************99999**********99999 PP
+
+                                     CCCHSTTCCCCHHHHHCC CS
+                             FAT 280 pswykawhtwalfnfevl 297
+                                     +++  +  +++++n+ v 
+  jgi|Vitbras1|6318|Vbra_5320.t1 113 RKLGRIQEALKDYNDAVR 130
+                                     999999999999999864 PP
+
+  == domain 2  score: 2.1 bits;  conditional E-value: 0.047
+                                     CCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS CS
+                             FAT 255 lqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeee 307
+                                     +++        +e l+  + a  ld+s ++a+++++l   e++ +++ ++e +
+  jgi|Vitbras1|6318|Vbra_5320.t1 184 VKR-------LDESLKDLKHALSLDNSHAEAHNQLGLSLCEAKDYQTASSEFT 229
+                                     444.......5566666666666666666666666666655555554443332 PP
+
+>> jgi|Vitbras1|11491|Vbra_8998.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.7   0.6   0.00023      0.59     149     275 ..     813     937 ..     805     945 .. 0.55
+   2 ?    1.7   0.1     0.062   1.6e+02     143     216 ..    1235    1299 ..    1185    1327 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 9.7 bits;  conditional E-value: 0.00023
+                                      TCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT............TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCC CS
+                              FAT 149 emwlkfanlaRksgrlslAekaLkklleedk....eewlp...pevvyaylkylwakgeqkealqkLrefvscllekk 219
+                                      ++wl++a+ + k  rl++A k+L +l +           +   pev    + + ++ g +        +++s+l+e+ 
+  jgi|Vitbras1|11491|Vbra_8998.t1 813 TVWLSMAKMCVKTQRLDVAAKCLAELGHATAaaalR---EceePEVDARLAVVALHLGLV--------DEASRLYEQC 879
+                                      78************************6666632221...133344443333333333333........3333333333 PP
+
+                                      C..SS-SS---.............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCC CS
+                              FAT 220 e..elssglevq..eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaa 275
+                                      +  +l+++l +   + ++  + +  + r++l++  + aa ++  +s+ + +++ + y aa
+  jgi|Vitbras1|11491|Vbra_8998.t1 880 GryDLLNQLHQTcaQFDKALQVASDKDRIHLRSTHYAAAQYH--ESTGQTQDAISDYEAA 937
+                                      322111111111234444445555555666666666666666..4555555666666555 PP
+
+  == domain 2  score: 1.7 bits;  conditional E-value: 0.062
+                                       CCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTS CS
+                              FAT  143 lkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscll 216 
+                                       lk+ +++ ++ fa  aR++  + lA ++L+ l+ +++     p    +  +  ++   + +a+ kL +f  +++
+  jgi|Vitbras1|11491|Vbra_8998.t1 1235 LKAGDTQKIVFFAGTARQAEVYILAANYLQGLEWQSD-----P----EVTRNIISFYTKAKAFDKLSQFYDSCS 1299
+                                       3333333344444444444444444444444422222.....2....222333333444444444444444444 PP
+
+>> jgi|Vitbras1|4275|Vbra_3882.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.0   0.1   4.4e-05      0.11       7      61 ..      41     102 ..      37     111 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 12.0 bits;  conditional E-value: 4.4e-05
+                                     CCCTSSSGHHCCCCT...........TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCC CS
+                             FAT   7 aaWrlgqWdsmeeylslmk.......kdspdkaffeailalhrnqfdeaeeliekarqllvt 61 
+                                     +aW  ++++ m++   ++k        d +++++    la+ +nq+d++ +li+  r   ++
+  jgi|Vitbras1|4275|Vbra_3882.t1  41 SAWDKKDYQTMRKDAHALKgssgyaaADHLQRTCEAIQLAVDKNQLDSLPQLIDDFRTVSTE 102
+                                     79******************99999999999999999999***************9988766 PP
+
+>> jgi|Vitbras1|15057|Vbra_16538.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.0   0.4   0.00018      0.46     203     300 ..      94     190 ..      85     197 .. 0.72
+   2 ?    0.1   0.0      0.18   4.7e+02     156     197 ..     215     269 ..     206     287 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 10.0 bits;  conditional E-value: 0.00018
+                                       HHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHC CS
+                               FAT 203 ealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaatel 278
+                                       ++ +++ e ++ l++   +  s   v++++ + +  +l+ a++ ++ Ge + + +  +  ++ +e++l  +++a  +
+  jgi|Vitbras1|15057|Vbra_16538.t1  94 KCREMMLENLKYLAQGS-HVVSTDSVEHNEAKRKEIELKlAEVCHEIGEVTLENNL-HDDRDVNEKALLFFREACDH 168
+                                       56677778888555554.5666666665555555555555*********5555444.446777************** PP
+
+                                       TCCCHSTTCCCCHHHHHCCHHH CS
+                               FAT 279 dpswykawhtwalfnfevlske 300
+                                       dps+y  w++ +  ++++ +++
+  jgi|Vitbras1|15057|Vbra_16538.t1 169 DPSSYAHWYKRGGTHQKMNQDN 190
+                                       ********98777777666655 PP
+
+  == domain 2  score: 0.1 bits;  conditional E-value: 0.18
+                                       CCHCHHHHCCSTTHHCCCCCHCTT.....................TSSCCCHHHHHHH CS
+                               FAT 156 nlaRksgrlslAekaLkklleedk.........eewlp.......pevvyaylkylwa 197
+                                        +  k++ ++ A+ +  ++l+ ++             +       pe  + y++ l++
+  jgi|Vitbras1|15057|Vbra_16538.t1 215 VVKKKHNKFQEAHHMFEQVLRLQPdnrgglnmlA---DlseklgcPEEALDYCRRLHS 269
+                                       5678999999999999999999885544433331...133345566666666666665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      23412  (12163461 residues searched)
+Passed MSV filter:                      1225  (0.0523236); expected 468.2 (0.02)
+Passed bias filter:                      551  (0.0235349); expected 468.2 (0.02)
+Passed Vit filter:                        65  (0.00277635); expected 23.4 (0.001)
+Passed Fwd filter:                         9  (0.000384418); expected 0.2 (1e-05)
+Initial search space (Z):              23412  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.25u 0.02s 00:00:00.27 Elapsed: 00:00:00.12
+# Mc/sec: 34205.69
+//
+[ok]

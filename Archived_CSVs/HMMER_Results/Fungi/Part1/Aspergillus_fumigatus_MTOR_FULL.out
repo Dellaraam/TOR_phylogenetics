@@ -1,0 +1,339 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Aspergillus_fumigatus.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    2.6e-65  218.4   6.2    5.5e-60  201.1   0.5    5.6  5  XP_755360.1  TOR pathway phosphatidylinositol 3-kinase TorA, 
+      3e-09   36.2   3.9     0.0015   17.7   0.1    6.4  8  XP_750428.1  importin beta-3 subunit, putative [Aspergillus f
+    0.00022   20.4   3.4       0.14   11.2   0.1    5.2  5  XP_755711.1  splicing factor 3B subunit 1, putative [Aspergil
+    0.00032   19.8   3.6        1.4    8.0   0.0    4.1  5  XP_752938.1  importin beta-1 subunit [Aspergillus fumigatus A
+      0.003   16.6   0.2         25    3.9   0.0    4.5  5  XP_751167.1  vacuole-associated enzyme activator complex comp
+     0.0094   15.1   1.7         41    3.2   0.0    5.0  4  XP_750926.1  cullin binding protein CanA, putative [Aspergill
+  ------ inclusion threshold ------
+      0.037   13.1   0.0      0.047   12.8   0.0    1.1  1  XP_751234.1  conserved hypothetical protein [Aspergillus fumi
+       0.36    9.9   2.5       0.51    9.4   0.8    2.1  2  XP_752151.1  serine-threonine kinase SepH [Aspergillus fumiga
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_755360.1  TOR pathway phosphatidylinositol 3-kinase TorA, putative [Aspergillus fumigatus Af293]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.4   0.0       0.9   1.1e+03      82     130 ..     304     349 ..     256     361 .. 0.54
+   2 !    9.3   0.0   0.00046      0.55      63     156 ..     637     729 ..     582     731 .. 0.70
+   3 !  201.1   0.5   4.6e-63   5.5e-60       1     160 []     735     895 ..     735     895 .. 0.96
+   4 ?    3.6   0.0     0.025        30     102     142 ..     918     958 ..     903     974 .. 0.82
+   5 ?    1.4   0.1      0.12   1.5e+02      81     152 ..     979    1049 ..     958    1057 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: -1.4 bits;  conditional E-value: 0.9
+     mTOR_dom  82 yyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+                   y     +  +  l+ +  + + + a+  ai +i + +g    ++l+ ii
+  XP_755360.1 304 TYL----HRFMIYLQAQLKRdKERDAAFIAIGKIANAVGAAIAQYLDGII 349
+                  222....2222222222222245556666777777777777777777666 PP
+
+  == domain 2  score: 9.3 bits;  conditional E-value: 0.00046
+     mTOR_dom  63 aeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156
+                  ++++ +s+++ + ++    y   +v + L k   d++     +++++a+ +  +  g ++ ++lp+++p +l  +++++s s re  l+ L++L 
+  XP_755360.1 637 ESAQLISLFVSNATKLIRSYVDPMVTTLLPKAT-DANP-GVASTTLKAVGELASVGGAEMRNYLPRLMPIILDSLQDLSShSKRESALRTLGQLA 729
+                  333445555666666666666665555555544.3332.356788999999999999999*******************99***********997 PP
+
+  == domain 3  score: 201.1 bits;  conditional E-value: 4.6e-63
+     mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLl.kilkd 97 
+                  V++P+l+yp+LL +L+ni+kteq+ s+R+e+ik+lGilGALDPyk+++++e  ++ ++ +e ++ +dv+++++gl+ps+eeyyptvvi++L+ +il++
+  XP_755360.1 735 VIDPFLEYPHLLAVLINIIKTEQTGSLRKETIKLLGILGALDPYKYQQISEIEPDVHHINEIQTVSDVALIMQGLTPSNEEYYPTVVIHTLMqNILRE 832
+                  9***********************************************99766665777777888999************************99**** PP
+
+     mTOR_dom  98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                  +sl+++h+av++ai++ifktlglkcvpfl qiip ++svir +++s++e +++q+a+Lv+iv+
+  XP_755360.1 833 NSLAQYHSAVIDAIVTIFKTLGLKCVPFLGQIIPGFISVIRGSPPSRLESYFNQMAILVNIVR 895
+                  *************************************************************97 PP
+
+  == domain 4  score: 3.6 bits;  conditional E-value: 0.025
+     mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                  + ++++++ +  i k+l+ +  ++l   ip++l ++++ ++
+  XP_755360.1 918 QVQATILSLVEAIAKSLEGEFKKYLAAMIPSMLDTLEKDNT 958
+                  467788899999**********************9997655 PP
+
+  == domain 5  score: 1.4 bits;  conditional E-value: 0.12
+     mTOR_dom   81 eyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152 
+                   e y++ +i +++++++ ++   s ++++++++++  ++  +++  f +  i++l++v+   +++lr+  ++ +
+  XP_755360.1  979 EEYMHLIIPSMVRLFERAQNPqSIRKSAIDSLTKLSRQ--VNVSDFASLMIHSLARVVAGNDRTLRQAAMDCI 1049
+                   44445555555555543333225555666666665554..344445555566666666655555555555555 PP
+
+>> XP_750428.1  importin beta-3 subunit, putative [Aspergillus fumigatus Af293]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.6   0.0       1.1   1.3e+03      90     147 ..     104     160 ..      77     172 .. 0.56
+   2 ?   -2.5   0.0         2   2.4e+03     106     146 ..     198     239 ..     191     255 .. 0.70
+   3 ?   -1.4   0.0      0.89   1.1e+03     103     153 ..     386     436 ..     374     440 .. 0.75
+   4 !   17.7   0.1   1.2e-06    0.0015      73     155 ..     440     522 ..     428     525 .. 0.85
+   5 !    6.1   0.1    0.0044       5.3       8      34 ..     534     560 ..     532     603 .. 0.88
+   6 !    5.6   0.0    0.0063       7.6     114     139 ..     612     637 ..     599     645 .. 0.85
+   7 ?   -0.9   0.0      0.64   7.7e+02     109     148 ..     849     888 ..     841     898 .. 0.82
+   8 ?   -1.1   0.0      0.72   8.6e+02     132     149 ..     954     971 ..     905    1048 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: -1.6 bits;  conditional E-value: 1.1
+     mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+                  +L++ l  +s s+ ++++ +a+ ++ ++  +      p+++  l+++ ++ e+ lre 
+  XP_750428.1 104 KLVSCLTTESGSDVRKKIGDAVAEVARQ-YTDNGDQWPELLGVLFQASQSPEAGLREA 160
+                  4555555555555555555555554442.33334444444444444444444444444 PP
+
+  == domain 2  score: -2.5 bits;  conditional E-value: 2
+     mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtces.slre 146
+                  a+++a  s f++++ k+ p    ++p +l+++  +++ s +e
+  XP_750428.1 198 AAMEAFASFFRSISKKSQPKFFGLVPDMLNILPPLKEsSESE 239
+                  567888889999999998888889999998887555534444 PP
+
+  == domain 3  score: -1.4 bits;  conditional E-value: 0.89
+     mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLa 153
+                   ++a++ ai  i +  +  +v  l+q++  ++ ++++ ++++r    + L+
+  XP_750428.1 386 DRHAALMAISAISEGCRDLMVGELDQVLALVVPALQDPHPRVRYAGCNALG 436
+                  456778888889888888889999999999999999988887766666555 PP
+
+  == domain 4  score: 17.7 bits;  conditional E-value: 1.2e-06
+     mTOR_dom  73 vglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+                  ++   + +e y++vv+n+++ +l++ +    ++ +  a+++ +++ + k+  p+l  ++ +ll+++r+ ++ ++e  l+ +at+
+  XP_750428.1 440 TDFAGTMQEKYHSVVLNNIIPVLDN-AEPRVQAHAAAALVNFCEEAEKKVlEPYLADLLRHLLQLLRSEKRYVQEQALSTIATI 522
+                  455556699**************55.555677788899************899***************999****999999887 PP
+
+  == domain 5  score: 6.1 bits;  conditional E-value: 0.0044
+     mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikv 34 
+                  y +L+ +L+n+lk+eqs++ R+   k 
+  XP_750428.1 534 YETLMPLLFNVLKEEQSKEYRLLRAKA 560
+                  889***************999765555 PP
+
+  == domain 6  score: 5.6 bits;  conditional E-value: 0.0063
+     mTOR_dom 114 ifktlglkcvpflpqiipallsvirt 139
+                  +++ lg   vp+lp ++p llsv+  
+  XP_750428.1 612 MCRVLGQDFVPYLPAVMPPLLSVAAA 637
+                  78899999**************9875 PP
+
+  == domain 7  score: -0.9 bits;  conditional E-value: 0.64
+     mTOR_dom 109 qaimsifktlglkcvpflpqiipallsvirtcesslrefl 148
+                  +a ++ifk++g+  +p  ++++p + + i++ +++ r+  
+  XP_750428.1 849 KAFHTIFKNQGTTFLPSWQRLLPFYDAFITSQDPTQRQWA 888
+                  68899******************99999998888666655 PP
+
+  == domain 8  score: -1.1 bits;  conditional E-value: 0.72
+     mTOR_dom 132 allsvirtcesslrefll 149
+                  +l++v++  +++ +e ++
+  XP_750428.1 954 SLFQVTQINQARTEEHVF 971
+                  444444433333333333 PP
+
+>> XP_755711.1  splicing factor 3B subunit 1, putative [Aspergillus fumigatus Af293]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.0   0.0       2.8   3.4e+03      88     130 ..     477     520 ..     448     523 .. 0.72
+   2 ?    3.2   0.0     0.034        41      75     127 ..     698     752 ..     579     775 .. 0.66
+   3 !   11.2   0.1   0.00012      0.14      65     155 ..     814     903 ..     769     908 .. 0.63
+   4 ?   -1.6   0.0         1   1.2e+03     107     149 ..     938     981 ..     929     988 .. 0.68
+   5 ?    1.0   0.0      0.17     2e+02      72     131 ..    1058    1116 ..    1003    1140 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: -3.0 bits;  conditional E-value: 2.8
+     mTOR_dom  88 inaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+                  +n++l +l ++sl+ + ++  v++i  ++ +l+  + p++ +i+
+  XP_755711.1 477 FNQILPLLMEKSLEdQERHLLVKVIDRVLYKLDDLVRPYVHKIL 520
+                  67777888888888666677778887777777777777777765 PP
+
+  == domain 2  score: 3.2 bits;  conditional E-value: 0.034
+     mTOR_dom  75 lspsseeyyptvvinaLlkilkdpsls..shhtavvqaimsifktlglkcvpflp 127
+                  ++p  +e y+++  +++++il  +  s  +  ++vv  ++s + + +    ++l+
+  XP_755711.1 698 IIPLMDEEYANYYTSQIMEILLREFSSpdEEMKKVVLKVVSQCASTDGVTASYLK 752
+                  3555666666667777777763332222366666776666666666666666664 PP
+
+  == domain 3  score: 11.2 bits;  conditional E-value: 0.00012
+     mTOR_dom  65 etdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                   ++v++l++ l  ++  e  +   i  +l  ++++s++     +++   ++++ lg++c p+lpqi++++l  +++ ++++r+   + ++ +
+  XP_755711.1 814 VETVEKLIAALGAADiSERLEERLIDGVLYAFQEQSIE--DIVILNGFGTVVNALGTRCKPYLPQIVSTILWRLNNKSATVRQQAADLISRI 903
+                  44455555555555555555555666666666666655..34556667889999*****************999998887777666666555 PP
+
+  == domain 4  score: -1.6 bits;  conditional E-value: 1
+     mTOR_dom 107 vvqaimsifktlglkc.vpflpqiipallsvirtcesslrefll 149
+                  ++ a+ si+  +g+++  p ++ ++p l+ ++r+ +++++e  +
+  XP_755711.1 938 ILGALRSIVTVVGINQmQPPIRDLLPRLTPILRNRHEKVQENTI 981
+                  45566677777777776677777777777777777777776655 PP
+
+  == domain 5  score: 1.0 bits;  conditional E-value: 0.17
+     mTOR_dom   72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiip 131 
+                   +v +    e   p +v+ aL++  + p l+  ++ v++a+ + f+++g     ++  + p
+  XP_755711.1 1058 AVAIGIVAETCAPFTVLPALMNEYRVPELN-VQNGVLKAMSFLFEYIGEMAKDYVYAVTP 1116
+                   334445566677777777777777777776.56777777777777777766666666666 PP
+
+>> XP_752938.1  importin beta-1 subunit [Aspergillus fumigatus Af293]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.0   0.0       2.9   3.4e+03       5      25 ..     125     145 ..     123     157 .. 0.72
+   2 ?   -2.2   0.0       1.6   1.9e+03      12      35 ..     177     201 ..     168     203 .. 0.73
+   3 ?   -1.0   0.0      0.68   8.1e+02     103     146 ..     385     429 ..     325     439 .. 0.70
+   4 !    8.0   1.6    0.0012       1.4      93     154 ..     565     628 ..     510     634 .. 0.79
+   5 !    8.0   0.0    0.0012       1.4      91     158 ..     648     715 ..     631     717 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -3.0 bits;  conditional E-value: 2.9
+     mTOR_dom   5 yldypeLLeiLlnilkteqsq 25 
+                    + peL++ L++ + t ++q
+  XP_752938.1 125 RNEWPELMNHLVQSVATGTDQ 145
+                  568899999999999887543 PP
+
+  == domain 2  score: -2.2 bits;  conditional E-value: 1.6
+     mTOR_dom  12 LeiLlnilkteq.sqsiRrevikvl 35 
+                  L+++++  ++e+ + +iR  +ik l
+  XP_752938.1 177 LTAVVQGARREEpNMDIRNAAIKAL 201
+                  5555555566644999***999988 PP
+
+  == domain 3  score: -1.0 bits;  conditional E-value: 0.68
+     mTOR_dom 103 hhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslre 146
+                  h+ a+v a   i+   + k   p+++q ++ l+s++++++ ++r+
+  XP_752938.1 385 HRDAAVAAFGAIMDGPDPKIlEPLVKQALSVLISMMEDSSIQVRD 429
+                  566666666666666666665666677777777777766655554 PP
+
+  == domain 4  score: 8.0 bits;  conditional E-value: 0.0012
+     mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces..slrefllqqLat 154
+                  ++ +  +l++++t+  ++++ i++ l+++  p  ++i++ +l+v++t+++  s+ ++++  ++ 
+  XP_752938.1 565 SVEDRITLEEMQTSLTSVLLAIVQRLETEIKPQADRIMHVMLQVLSTVPPksSVPDVVFATVGA 628
+                  44455689999***********************************998755566666666655 PP
+
+  == domain 5  score: 8.0 bits;  conditional E-value: 0.0012
+     mTOR_dom  91 LlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                  L++ l ++     +++++  +  i + l+ k+ p+ + +++ ll+ +r+++++l+  +l+ ++++ + 
+  XP_752938.1 648 LYNALGNQEEPALCSMAIGLVSDIARALNEKVQPYCDAFMNYLLNNLRSATNQLKPAILETFGDIAQA 715
+                  5566666666677899999*****************************************99999876 PP
+
+>> XP_751167.1  vacuole-associated enzyme activator complex component (Vac14), putative [Aspergillus fumigatus Af293]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.9   0.0     0.021        25     122     158 ..      80     116 ..      71     118 .. 0.86
+   2 ?   -2.5   0.0         2   2.4e+03     120     155 ..     187     222 ..     183     225 .. 0.82
+   3 ?    3.9   0.0     0.021        26       5      34 ..     343     372 ..     341     375 .. 0.89
+   4 ?   -2.9   0.0       2.7   3.2e+03     125     143 ..     391     409 ..     384     424 .. 0.49
+   5 ?    2.7   0.1     0.048        57      50     155 ..     463     570 ..     453     597 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 3.9 bits;  conditional E-value: 0.021
+     mTOR_dom 122 cvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                  + p+l++i+p +l+ +++ ++++r +  + + ++ ++
+  XP_751167.1  80 VAPYLKEIVPPVLACFSDQDARVRYYACESMYNIAKV 116
+                  479***************999**99999999888766 PP
+
+  == domain 2  score: -2.5 bits;  conditional E-value: 2
+     mTOR_dom 120 lkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                  l     l ++ip l + i+ +++s r fl++ L+ L
+  XP_751167.1 187 LPTAFSLAKFIPLLKERIHVISPSTRTFLVSWLTLL 222
+                  5556679999**********999*****99999887 PP
+
+  == domain 3  score: 3.9 bits;  conditional E-value: 0.021
+     mTOR_dom   5 yldypeLLeiLlnilkteqsqsiRrevikv 34 
+                   +dyp++L+iL+ ++ t+ ++++++ +++ 
+  XP_751167.1 343 HIDYPKILDILVGFVDTSFDEEMQLTALRW 372
+                  589***************999999999886 PP
+
+  == domain 4  score: -2.9 bits;  conditional E-value: 2.7
+     mTOR_dom 125 flpqiipallsvirtcess 143
+                  +l+q++pa+ s   ++ + 
+  XP_751167.1 391 LLTQVLPAMSSGSDQVRQA 409
+                  4555555554433333322 PP
+
+  == domain 5  score: 2.7 bits;  conditional E-value: 0.048
+     mTOR_dom  50 eekseee.....ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                  e++++e+     ++e +n++  + s+++ +  p  +  y++ v +  l+ l+++  +  + a+++ ++   ++   k+v+f +   pall+++++  +
+  XP_751167.1 463 ETSTSESkkqasQQELSNEQ-ASRSSVIPTPVPPADLDYAAAVNSLTLQFLNENEAT--RVAALSWLIMLHRKAPKKVVAFNDGTFPALLKTLSDPAE 557
+                  44332222222122222222.233333444444444444443444445888777655..778888888888889999999999999999999998777 PP
+
+     mTOR_dom 143 slrefllqqLatL 155
+                   +    lq L+++
+  XP_751167.1 558 AVVTKDLQLLSQI 570
+                  6666666666655 PP
+
+>> XP_750926.1  cullin binding protein CanA, putative [Aspergillus fumigatus Af293]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.0   0.2     0.041        49       8      38 ..     340     370 ..     334     507 .. 0.51
+   2 ?    0.3   0.0      0.27   3.3e+02     104     157 ..     517     571 ..     510     574 .. 0.74
+   3 ?    1.9   0.0     0.088   1.1e+02      13      38 ..     595     620 ..     585     622 .. 0.88
+   4 ?    3.2   0.0     0.034        41      66     135 ..    1002    1073 ..     951    1088 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 3.0 bits;  conditional E-value: 0.041
+     mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlGil 38 
+                  y ++  +L+   k+e+++s+++ev+ +++ l
+  XP_750926.1 340 YQQIAPALIARFKKEREESVKLEVVSTMTAL 370
+                  7778888899999999999999999988876 PP
+
+  == domain 2  score: 0.3 bits;  conditional E-value: 0.27
+     mTOR_dom 104 htavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157
+                  +t++++ +  i +t      +pfl  +ip ++ ++++ + +++   l  ++++++
+  XP_750926.1 517 QTETLSLVAAIAETHTSDAlLPFLIALIPGVIGAVNDRNYKVSSEALGAVEQIIK 571
+                  5667777788888877777789999999999988888777777777777776665 PP
+
+  == domain 3  score: 1.9 bits;  conditional E-value: 0.088
+     mTOR_dom  13 eiLlnilkteqsqsiRrevikvlGil 38 
+                  eiL++i  t+ + ++R+ +i v+G+l
+  XP_750926.1 595 EILSRITDTSADLEVRQRAIHVFGVL 620
+                  58999999999*************98 PP
+
+  == domain 4  score: 3.2 bits;  conditional E-value: 0.034
+     mTOR_dom   66 tdvsel...lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135 
+                     +s++   l++   s +++    ++  L+++l+d+ l +h+ a  +    i +++++  +p l++++pa++ 
+  XP_750926.1 1002 VVISAFrytLTDSRGSYNDVLRPLIVPLLVNMLSDRDLGNHRLALTTLNSAIHNKMNI-ILPHLSELLPAVFG 1073
+                   444444332344444558888999999************8887776666666665444.58899999998875 PP
+
+>> XP_751234.1  conserved hypothetical protein [Aspergillus fumigatus Af293]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.8   0.0   3.9e-05     0.047      91     156 ..      43     107 ..       5     109 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 12.8 bits;  conditional E-value: 3.9e-05
+     mTOR_dom  91 LlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                  + + l++ +ls+ hta +++++ i+k  ++    +l++ ++ +++++r ++ s re + +++++Lv
+  XP_751234.1  43 ISNHLENGTLSEEHTASIESVIDIIKGTEVSHRRTLERKVQRYARLARRLK-SEREWMRREFGNLV 107
+                  4578999***************************************99975.66777777777666 PP
+
+>> XP_752151.1  serine-threonine kinase SepH [Aspergillus fumigatus Af293]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.0       1.8   2.2e+03      87     133 ..     745     795 ..     712     797 .. 0.50
+   2 ?    9.4   0.8   0.00042      0.51      70     155 ..     981    1066 ..     939    1069 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 1.8
+     mTOR_dom  87 vinaLlkil...kdpsls..shhtavvqaimsifktlglkc.vpflpqiipal 133
+                  + ++Ll+i+        +   + +  +  i++i+ t + +  v+ l +i++a+
+  XP_752151.1 745 ISEQLLTIFcdlP--ETKniIMSAHGMLPILEILDTCRRRNvVSCLLKIVNAI 795
+                  3444444442221..11111233334445666666666655566777777665 PP
+
+  == domain 2  score: 9.4 bits;  conditional E-value: 0.00042
+     mTOR_dom   70 ellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155 
+                   +l ++l + ++     v    L + +k p  ++  ++++++i ++++  + ++  + l+ i+p l+++++t e+ l+ef l  L+++
+  XP_752151.1  981 MLSTTLDSLQNSNAIDVLTDLLRSTIKRPHFREVSNQILNTIYNMCRLNKSRQeDAALNGIVPLLQKIVKT-ERPLKEFALPILCDM 1066
+                   2222333333333344444455556699999999*************999999899**************8.679****99888876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       9630  (4737899 residues searched)
+Passed MSV filter:                       344  (0.0357217); expected 192.6 (0.02)
+Passed bias filter:                      314  (0.0326064); expected 192.6 (0.02)
+Passed Vit filter:                        37  (0.00384216); expected 9.6 (0.001)
+Passed Fwd filter:                         8  (0.000830737); expected 0.1 (1e-05)
+Initial search space (Z):               9630  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.08u 0.04s 00:00:00.12 Elapsed: 00:00:00.08
+# Mc/sec: 9124.06
+//
+[ok]

@@ -1,0 +1,66 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Rozella_allomycis_csf55_gca_000442015.Rozella_k41_t100.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    1.6e-63  214.3   5.4    2.1e-63  213.9   5.4    1.2  1  EPZ33515  pep supercontig:Rozella_k41_t100:KE561054:117319:11
+
+
+Domain annotation for each sequence (and alignments):
+>> EPZ33515  pep supercontig:Rozella_k41_t100:KE561054:117319:118703:-1 gene:O9G_001266 transcript:EPZ33515 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  213.9   5.4   3.3e-67   2.1e-63     224     599 ..      72     408 ..      19     414 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 213.9 bits;  conditional E-value: 3.3e-67
+  PTHR13335.orig.30.pir 224 eqlsaeesdslfekkskssstktqkskkpssaa...........kqsi.........sslssaLekkpsqlnnpf.neyakfdgkgvg 290
+                            e++++ e+d ++ +++       +++++ +s++           +            s ls+ +++k +  +npf  +y  f  ++  
+               EPZ33515  72 ENKTPIEEDFINAAQE-------EDEESAKSVSndtdlnlhlslQ--KsecitlathSNLSKLFQQKGQ-HINPFeKQYRIFGVSK-N 148
+                            4477777777777777.......4444444442234444445442..0457788888888888888876.9****55555777666.4 PP
+
+  PTHR13335.orig.30.pir 291 ttaslkidiylplssepdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnkvnaycLrivEdDGevddDFPpLDrnepiskf 378
+                            ++ +lki + + + + +++  +++++v +satV+ vIG++L++++eeg+  +lp+  v +y+Lri+EdDG++d+DFP+LD+n+ i+kf
+               EPZ33515 149 EGITLKIWLAFANPE-ESRYRSISICVNKSATVENVIGYILYRCVEEGKV-SLPSKSVGSYSLRITEDDGTADEDFPALDKNRNIQKF 234
+                            555555555555555.59*****************************755.48887799***************************** PP
+
+  PTHR13335.orig.30.pir 379 gfselaLveatdsegktnndlqtplpreqkkrleeakrsagsaneagsslstesskeslfvkvnlaypgdsvrskttivvptdvtlad 466
+                            +f+ +aL+    +++++  +                                  +k + ++kv++ y+  +vr++tti v+ ++t ++
+               EPZ33515 235 SFDAFALCVDRMNDIEQ-GQ----------------------------------EKRKQYIKVHV-YSTLEVRQTTTITVTDEMTFQQ 286
+                            ********999999877.22..................................899********.*9******************** PP
+
+  PTHR13335.orig.30.pir 467 vlekackkrkldqkkyrllkvsepnvivdldrtvesldgleflllrknssradgvlekteskssssanatissksaaedsqiqiatvq 554
+                            vl  +ckkrk ++ +y +lk+s++++ v+l +t  +l+  e  llrk++  ++g     ++            ++++  s ++ +t  
+               EPZ33515 287 VLNVVCKKRKVSPDDY-TLKMSDTKTDVPLHKTAGQLNVTELYLLRKDRGISAGDIFLRPP------------DEIIDLSLKSNQTLR 361
+                            ****************.*******************************9766665442222............33449999999**** PP
+
+  PTHR13335.orig.30.pir 555 ddlsssayksfkVsrkhkmrfktdrel..gIdgdyieimPvenqkaa 599
+                             +  +s yk+f V ++ +m f t++e+  +Idgdy ++ ++e+++++
+               EPZ33515 362 TGEYASNYKQFVVFKRVPMTFGTKHEKilAIDGDYLHLINSESKYFF 408
+                            ***************************99***************998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       6350  (2473668 residues searched)
+Passed MSV filter:                       886  (0.139528); expected 127.0 (0.02)
+Passed bias filter:                      165  (0.0259843); expected 127.0 (0.02)
+Passed Vit filter:                        25  (0.00393701); expected 6.4 (0.001)
+Passed Fwd filter:                         3  (0.000472441); expected 0.1 (1e-05)
+Initial search space (Z):               6350  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.09u 0.02s 00:00:00.11 Elapsed: 00:00:00.05
+# Mc/sec: 30254.97
+//
+[ok]

@@ -1,0 +1,308 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Smittium_culicis.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.4e-34  119.5  68.3    1.4e-30  106.3  53.3    2.3  2  OMJ19032.1  Stress-activated map kinase-interacting protein 1
+    6.3e-31  107.5  63.5    1.4e-26   93.1  49.7    2.3  2  OMJ12083.1  Stress-activated map kinase-interacting protein 1
+     0.0011   17.5  18.2     0.0011   17.5  18.2    1.1  1  OMJ09938.1  hypothetical protein AYI70_g10637, partial [Smitt
+  ------ inclusion threshold ------
+      0.013   13.9  13.9      0.015   13.7  13.9    1.0  1  OMJ10304.1  hypothetical protein AYI70_g10408 [Smittium culic
+      0.024   13.0  20.0       0.03   12.7  20.0    1.2  1  OMJ10683.1  Prothrombin [Smittium culicis]
+      0.029   12.8  13.5      0.031   12.6  13.5    1.0  1  OMJ10305.1  hypothetical protein AYI70_g10409 [Smittium culic
+       0.09   11.1  11.9      0.098   11.0  11.9    1.0  1  OMJ16418.1  hypothetical protein AYI70_g6612 [Smittium culici
+       0.21    9.9  30.9       0.25    9.7  30.9    1.2  1  OMJ23404.1  hypothetical protein AYI70_g2273 [Smittium culici
+        1.7    6.9  25.2        2.3    6.5  25.2    1.3  1  OMJ14276.1  Cell wall adhesin EAP1, partial [Smittium culicis
+        8.3    4.6  41.3         11    4.2  41.3    1.2  1  OMJ15467.1  hypothetical protein AYI70_g7249 [Smittium culici
+
+
+Domain annotation for each sequence (and alignments):
+>> OMJ19032.1  Stress-activated map kinase-interacting protein 1 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.2   7.6   5.3e-07   0.00065       1     282 [.       1     300 [.       1     326 [. 0.55
+   2 !  106.3  53.3   1.1e-33   1.4e-30     120     657 ..     435    1121 ..     317    1131 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 18.2 bits;  conditional E-value: 5.3e-07
+  PTHR13335.orig.30.pir   1 MafldnedillahlRtsyltsdddgmcerilndddvdl.ekihsapyppvsssssesll..srpksastpgdsgsedsgssneaetat 85 
+                            M+++ ++ +l+++lR+ +l++ +dg +e ++ ++d+ l ++ h+ py ++++      +   +p +a+ +  s++ + +s n  +  +
+             OMJ19032.1   1 MSIISDKQFLIYQLRQLFLKN-KDGSSENVISHHDLNLfQTSHNIPYLKIIEL-----QdtLTPDTAPADPPSSFPNEASPNPLDPFQ 82 
+                            9*******************6.88**********7665234455555543222.....222223344444445555555555544444 PP
+
+  PTHR13335.orig.30.pir  86 g....................................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegs 137
+                                                                 +++  ++kk s +++ ++ + +   +s+s   ++++++ +  s+ + ++++
+             OMJ19032.1  83 LgfenqfkpydynfskkdsinldfnkklpdrrlknlsNPRIYPNKKHSFSHNLNHLKRV---KSKSGFISDDSSKTPIKSDLDIIKHF 167
+                            45555555555555555777777777776666655553333333333333333333333...33333333333333333334444444 PP
+
+  PTHR13335.orig.30.pir 138 rrrrantavkleklrkerrsksasiasseerdqsscksiqwktessvkedsvqras.sesslsserssdssssssapsrrqsnkldse 224
+                            ++ +   +v+ +    + rs+s+++ +       ++ ++++k++s++++  ++ +s +  ++ s+ s + +          +n ld+e
+             OMJ19032.1 168 DQLNNPAPVDPNIS--NPRSTSDTSDR----LPRKISNKNLKPPSPSSNLLSKKKSlNNYTITSDHSKIIY----------ENYLDNE 239
+                            44442222222222..22333333333....3678899999988888885554443133333333333322..........3333333 PP
+
+  PTHR13335.orig.30.pir 225 q........lsaeesdslfekkskssstktqkskkpssaakqsi...sslssaLekkpsqlnnpfneya 282
+                                     +++ +++s f+k++        +s+++s   +q i   s+ls  +ek++++++ p n + 
+             OMJ19032.1 240 EyieinvltKNTPPPKSFFNKTP-------SSSSSSSRF-PQNIpfySKLSPLIEKNSLSNDYPPNSFK 300
+                            35555566699999999999999.......444444455.66666679999999999886555544443 PP
+
+  == domain 2  score: 106.3 bits;  conditional E-value: 1.1e-33
+  PTHR13335.orig.30.pir  120 eeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r.................................... 168 
+                             ++++ s+++   +l+   +   +n  ++ ++ +++  s  +s +s+++ +                                    
+             OMJ19032.1  435 NQNSNSPNLGFLDLIMDPDHLETNAYQNKSNFKQR--SRLKSKRSTSNlNknrflrplsmrfdipkkgtiaairpisvlfssgesd 518 
+                             44444444444444444444444444444444444..3333444444444556777777888888888888888888888888888 PP
+
+  PTHR13335.orig.30.pir  169 ...........dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq......snkldseq........... 225 
+                                        +    k i ++t+ss k+ s + ++ +ss s  rs  s ++s+ p + ++      +                  
+             OMJ19032.1  519 sdydlddddelSYLAYKKILLQTSSSNKQNSIKPKPISSSYSRKRS-LSLPKSDFPNSpTPlqqsnnH------Tkikpaiihsks 597 
+                             8888888888844444444444444444433333322222222222.223333333332224433321......123445567766 PP
+
+  PTHR13335.orig.30.pir  226 .....................lsaeesdslfekkskssstktqkskkpssaa....kqsi..........sslssaLekkpsqlnn 276 
+                                                  +         ++ks+s + +++ +++ +s +                  s ls ++ +k   ++n
+             OMJ19032.1  598 lnlsssiksspdslepisiieT--------KPTKSTSIILDKRLTQQLNSSKlnpnT--AstispkpdapSGLSLMFRNKIE-TKN 672 
+                             6666655555434333333331........333333333333333333333123220..2334555556677788******9.89* PP
+
+  PTHR13335.orig.30.pir  277 pf.neyakfdgkgvgttaslkidiylplsse....pdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnk.vn..aycLr 354 
+                             pf  ey+k+   g    ++ k  i+lp +           +lt++v  s++ +++IG++L+qy e+ ++++l d+k  n  ++++r
+             OMJ19032.1  673 PFqSEYSKYYMVG---KSAQKFVIFLPENLVikseNLSISSLTISVNNSVSTEQTIGFVLYQYLEKSQSNSLLDEKlMNviYWSMR 755 
+                             **99***988888...77788889999653332114455678889999****************************96677***** PP
+
+  PTHR13335.orig.30.pir  355 ivEdDGevddDFPpLDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrleeakrsagsaneagsslstes........ 432 
+                             i+E DGe+d DFP+LDr++ iskfg++ +aL+ a+  e + n+ +   + +++ k   +      +++ +++++++++        
+             OMJ19032.1  756 IAEPDGEIDFDFPVLDRSQSISKFGSTDFALCLASQQEVEANRLIKEKSDQSFNKPTVDKFFNDNTSDLNQNKSIQKNipelknla 841 
+                             **************************************999777666666666554444444455555555555555577799*** PP
+
+  PTHR13335.orig.30.pir  433 ...............................skeslfvkvnlaypgdsvrsk................ttivvptdvtladvleka 471 
+                                                             +    vkv++ + +d+ ++                 tt+++ +   ++dvl+ +
+             OMJ19032.1  842 eidnnnddssfdlsnnisklnelamgkitnqAGIVRLVKVFFWH-SDEFNQPnssqntqssntqlinsTTVQIKVSQSIYDVLLIV 926 
+                             *******************************9**********88.55555556789999*************************** PP
+
+  PTHR13335.orig.30.pir  472 ckkrkldqkkyrllkvsepnvivdldrtve..sldglefl......llrknssradgvlekteskssssanatissksaa...... 543 
+                             ckk  ++   y    ++++n +  ld++++  +l++ ++l      l++k  s  +  l+ ++++    +n+++     +      
+             OMJ19032.1  927 CKKFGYSARSY--SLTDSKNPTQYLDPSISihNLSAATELylmpinLISKEDSNLKSELSSSNYAL--VSNSSL-----Iigspin 1003
+                             ***********..44556666666666666557777777722221133444433333333333332..233333.....2444457 PP
+
+  PTHR13335.orig.30.pir  544 ...........edsqiqiatvqddlsssayksfkVsrkhkmrfktdrelgIdgdyieimPvenqkaatkfwekqKtisihisqvva 618 
+                                          ++    t++ ++  s y++f+V+rk +++ k +++l+Idg  i  +P  ++         + ti+i++ +v  
+             OMJ19032.1 1004 qsqtsfnnsklDPTPF-YRTFSSTNDQSLYYTFTVTRKMQLFSKYQQNLVIDGKFIAMVPIGQRSDV------SNTITIPVLNVT- 1081
+                             8888886555322222.236677888899***********************************999......899999999986. PP
+
+  PTHR13335.orig.30.pir  619 cklssknpanFkivvrr.endeKrydfeavsaaeaaeIvs 657 
+                             +k+ssk  + +k++  +     K yd ea +a ea+eI+ 
+             OMJ19032.1 1082 VKKSSKYSKKLKLITVDdLKHKKTYDIEAANANEAEEIFV 1121
+                             66699999999996555588899***************75 PP
+
+>> OMJ12083.1  Stress-activated map kinase-interacting protein 1, partial [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.6   8.5   8.2e-07     0.001       1     282 [.       1     300 [.       1     338 [. 0.56
+   2 !   93.1  49.7   1.1e-29   1.4e-26     119     592 ..     434    1062 ..     316    1066 .] 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 17.6 bits;  conditional E-value: 8.2e-07
+  PTHR13335.orig.30.pir   1 MafldnedillahlRtsyltsdddgmcerilndddvdl.ekihsapyppvsssssesll..srpksastpgdsgsedsgssneaetat 85 
+                            M+++ ++ +l+++lR+ +l++ +dg +e ++ ++d+ l ++ h+ py ++++      +   +p +a+ +  s++ + +s n  +  +
+             OMJ12083.1   1 MSIISDKQFLIYQLRQLFLKN-KDGSSENVISHHDLNLfQTSHNIPYLKIIEL-----QdtLTPDTAPADPPSSFPNEASPNPLDPFQ 82 
+                            9*******************6.88**********7665234455555543222.....222223344444445555555555544444 PP
+
+  PTHR13335.orig.30.pir  86 g....................................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegs 137
+                                                                 +++  ++kk s +++ ++ + +   +s+s   ++++++ +  s+ + ++++
+             OMJ12083.1  83 LgfenqfkpydynfskkdsinldfnkklpdrrlknlsNPRIYPNKKHSFSHNLNHLKRV---KSKSGFISDDSSKTPIKSDLDIIKHF 167
+                            45555555555555555777777777776666655553333333333333333333333...33333333333333333334444444 PP
+
+  PTHR13335.orig.30.pir 138 rrrrantavkleklrkerrsksasiasseerdqsscksiqwktessvkedsvqras.sesslsserssdssssssapsrrqsnkldse 224
+                            ++ +   +v+ +    + rs+s+++ +       ++ ++++k++s++++  ++ +s +  ++ s+ s + +          +n ld+e
+             OMJ12083.1 168 DQLNNPAPVDPNIS--NPRSTSDTSDR----LPRKISNKNLKPPSPSSNLLSKKKSlNNYTITSDHSKIIY----------ENYLDNE 239
+                            44442222222222..22333333333....3678899999988888885554443133333333333322..........3333333 PP
+
+  PTHR13335.orig.30.pir 225 q........lsaeesdslfekkskssstktqkskkpssaakqsi...sslssaLekkpsqlnnpfneya 282
+                                     +++ +++s f+k+++       +s+++s   +q i   s+ls  +ek++++++ p n + 
+             OMJ12083.1 240 EyieinvltKNTPPPKSFFNKTPS-------SSSSSSRF-PQNIpfySKLSPLIEKNSLSNDYPPNSFK 300
+                            355555666999999999999994.......44444445.56666678888888888886555544443 PP
+
+  == domain 2  score: 93.1 bits;  conditional E-value: 1.1e-29
+  PTHR13335.orig.30.pir  119 yeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r................................... 168 
+                             +++++ s+++   +l+   +   +n  ++ ++ +++  s  +s +s+++ +                                   
+             OMJ12083.1  434 LNQNSNSPNLGFLDLIMDPDHLETNAYQNKSNFKQR--SRLKSKRSTSNlNknrflrplsmrfdipkkgtiaairpisvlfssges 517 
+                             444444444444444444444444444444444444..333344444444455677777788888888888888888888888888 PP
+
+  PTHR13335.orig.30.pir  169 ............dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq......snkldseq.......... 225 
+                                         +    k i ++t+ss k+ s + ++ +ss s  rs  s ++s+ p + ++      +                 
+             OMJ12083.1  518 dsdydlddddelSYLAYKKILLQTSSSNKQNSIKPKPISSSYSRKRS-LSLPKSDFPNSpTPlqqsnnH------Tkikpaiihsk 596 
+                             88888888888844444444444444444433333322222222222.223333333332224433321......12344556776 PP
+
+  PTHR13335.orig.30.pir  226 ......................lsaeesdslfekkskssstktqkskkpssaa....kqsi..........sslssaLekkpsqln 275 
+                                                   +         ++ks+s + +++ +++ +s +                  s ls ++ +k   ++
+             OMJ12083.1  597 slnlsssiksspdslepisiieT--------KPTKSTSIILDKRLTQQLNSSKlnpnT--AstispkpdapSGLSLMFRNKIE-TK 671 
+                             66666655555434333333331........333333333333333333333123220..2334555556777788******9.89 PP
+
+  PTHR13335.orig.30.pir  276 npf.neyakfdgkgvgttaslkidiylplsse....pdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnk.vn..aycL 353 
+                             npf  ey+k+   g    ++ k  i+lp +           +lt++v  s++ +++IG++L+qy e+ ++++l d+k  n  ++++
+             OMJ12083.1  672 NPFqSEYSKYYMVG---KSAQKFVIFLPENLVikseNLSISSLTISVNNSVSTEQTIGFVLYQYLEKSQSNSLLDEKlMNviYWSM 754 
+                             ***99***988888...77788889999653332114455678889999****************************96677**** PP
+
+  PTHR13335.orig.30.pir  354 rivEdDGevddDFPpLDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrleeakrsagsaneagsslstes....... 432 
+                             ri+E DGe+d DFP+LDr++ iskfg++ +aL+ a+  e + n+ +   + +++ k   +      +++ +++++++++       
+             OMJ12083.1  755 RIAEPDGEIDFDFPVLDRSQSISKFGSTDFALCLASQQEVEANRLIKEKSDQSFNKPTVDKFFNDNTSDLNQNKSIQKNipelknl 840 
+                             ***************************************999777666666666554444444455555555555555577799** PP
+
+  PTHR13335.orig.30.pir  433 ................................skeslfvkvnlaypgdsvrsk................ttivvptdvtladvlek 470 
+                                                              +    vkv++ + +d+ ++                 tt+++ +   ++dvl+ 
+             OMJ12083.1  841 aeidnnnddssfdlsnnisklnelamgkitnqAGIVRLVKVFFWH-SDEFNQPnssqntqssntqlinsTTVQIKVSQSIYDVLLI 925 
+                             ********************************9**********88.55555556789999************************** PP
+
+  PTHR13335.orig.30.pir  471 ackkrkldqkkyrllkvsepnvivdldrtve..sldglefl......llrknssradgvlekteskssssanatissksaa..... 543 
+                             +ckk  ++   y    ++++n +  ld++++  +l++ ++l      l++k  s  +  l+ ++++    +n+++     +     
+             OMJ12083.1  926 VCKKFGYSARSY--SLTDSKNPTQYLDPSISihNLSAATELylmpinLISKEDSSLKSELSSSNYAL--VSNSSL-----Iigspi 1002
+                             ************..44555555556666655557777777722221133333333333333333333..223333.....244444 PP
+
+  PTHR13335.orig.30.pir  544 ............edsqiqiatvqddlsssayksfkVsrkhkmrfktdrelgIdgdyieimP 592 
+                                           ++    t++ ++  s y++f+V+rk +++ k +++l+Idg  i  +P
+             OMJ12083.1 1003 nqsqtsfnnsklDPTPF-YRTFSSTNDQSLYYTFTVTRKMQLFSKYQQNLVIDGKFIAMVP 1062
+                             77888885555322222.236677788899************************9998888 PP
+
+>> OMJ09938.1  hypothetical protein AYI70_g10637, partial [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.5  18.2   8.7e-07    0.0011     105     211 ..       5     106 ..       1     211 [. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 17.5 bits;  conditional E-value: 8.7e-07
+  PTHR13335.orig.30.pir 105 qgekqssesesspsyee.elqsvdissssldegsrrrrantavkleklrkerrsksasiassee.rdqsscksiqwktessvkedsvq 190
+                            q e+++ses +s s+++ ++qs++++s+s  + s++++  t+ k+++ ++  +++s +++s+++ + q+ ++       +s++++s+q
+             OMJ09938.1   5 QSESTQSESTQSESTQSeSTQSESTQSESTLFKSTMSQ-LTQSKSTQPEST-QPESTQPESTQSeSTQPESTQS-----KSTQSESTQ 85 
+                            22222222222222222022233333333333333333.333333333333.3333333333222211222211.....222333333 PP
+
+  PTHR13335.orig.30.pir 191 rassesslsserssdssssss 211
+                            ++s +s++ + +s+ s+s+ss
+             OMJ09938.1  86 SESTQSESTQPESTQSESTSS 106
+                            333333333333333333333 PP
+
+>> OMJ10304.1  hypothetical protein AYI70_g10408 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.7  13.9   1.2e-05     0.015      77     141 ..      55     119 ..      33     184 .. 0.47
+
+  Alignments for each domain:
+  == domain 1  score: 13.7 bits;  conditional E-value: 1.2e-05
+  PTHR13335.orig.30.pir  77 ssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrr 141
+                            ++ + +++++ +++++++ ++++ ++++ +++q +++++++s+++++++ ++s+++l+ +++++r
+             OMJ10304.1  55 RQQQKQQQQQQQQPQQQQPQQQQPQQQQPQQQQPQQQQPQQSQQSQDTAGLSSDDDLMLSQINNR 119
+                            11111111111111111111111112222222222222222222222223333333332222222 PP
+
+>> OMJ10683.1  Prothrombin [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.7  20.0   2.5e-05      0.03     149     241 ..     284     380 ..     262     487 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 12.7 bits;  conditional E-value: 2.5e-05
+  PTHR13335.orig.30.pir 149 eklrkerrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq..snkldseqlsaeesd 232
+                            ++++ e+ s+s+s +sse+ + +ss++s +++  +s++++sv+++ s+s +sse+ss +ss+ss  ++ ++     ++s++ s  es+
+             OMJ10683.1 284 AEVQPEISSSSSSESSSESsTESSSVTSSESSSVTSSESSSVTSSESSSVTSSESSSVTSSESSGVTStESssVSSTESSSVSSTESS 371
+                            4555566666666666666667888888888888888888888888888888888888777777744422222222222223333333 PP
+
+  PTHR13335.orig.30.pir 233 slfekksks 241
+                            s++++ s+s
+             OMJ10683.1 372 SVTSTESSS 380
+                            333333322 PP
+
+>> OMJ10305.1  hypothetical protein AYI70_g10409 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.6  13.5   2.6e-05     0.031      90     169 ..      54     127 ..      28     196 .. 0.44
+
+  Alignments for each domain:
+  == domain 1  score: 12.6 bits;  conditional E-value: 2.6e-05
+  PTHR13335.orig.30.pir  90 karrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r....d 169
+                            ++++++ +++++ +++    +++  ++p+++++ q+++ ++++ ++++ +++          + ++ ++s+++a +++ +    +
+             OMJ10305.1  54 PQQQQQAPKQTNPRRRPKN-KQKYPQQPQQQQQPQQQQPQQQQPQQQQPQQQ----------QPQQSQQSQDTAGLSSdDdlmlS 127
+                            2222222222222222222.11111112222222222222122222222222..........11111111122222221122221 PP
+
+>> OMJ16418.1  hypothetical protein AYI70_g6612 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.0  11.9     8e-05     0.098     102     145 ..      54      96 ..      37     170 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 11.0 bits;  conditional E-value: 8e-05
+  PTHR13335.orig.30.pir 102 retqgekqssesesspsyeeelqsvdissssldegsrrrranta 145
+                            +++q+ +q+++++++p++++++q+++ + ++ ++++ ++++nta
+             OMJ16418.1  54 SRQQQKQQQQQQQQQPQQQQPQQQQPQQ-QQPQQQQPQQSQNTA 96 
+                            1122222222222222222222222222.344444444443333 PP
+
+>> OMJ23404.1  hypothetical protein AYI70_g2273 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.7  30.9    0.0002      0.25     162     272 ..     101     220 ..      42     244 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 9.7 bits;  conditional E-value: 0.0002
+  PTHR13335.orig.30.pir 162 iassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrq.snkldseqlsaeesdslfekkskssstktq 247
+                             +s+++ +  ss+ks +++ +s+++++++ ++ss++++ss++ss+ssss+s  s+++ s + d+   ++ e  s+++k + +s+++t 
+             OMJ23404.1 101 ESSTSTpT-TSSSKSSSSSSSSKTSSSKSSSSSSSKASSSSSSSSSSSSKSSKSSTKsSATIDAIIVTEVETVSVTSKVKVTSTSETP 187
+                            12222222.2333333333222222222222222222222222222222222222222333444446666666677777777777777 PP
+
+  PTHR13335.orig.30.pir 248 kskkpssaa.......kqsi.sslssaLekkps 272
+                            ks++++s++        qs+ ss s+aL +k  
+             OMJ23404.1 188 KSNSSKSTStldasasTQSLlSSASAALRSKGE 220
+                            777777773355555434445555666666555 PP
+
+>> OMJ14276.1  Cell wall adhesin EAP1, partial [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.5  25.2    0.0019       2.3     113     218 ..       5     107 ..       1     199 [. 0.48
+
+  Alignments for each domain:
+  == domain 1  score: 6.5 bits;  conditional E-value: 0.0019
+  PTHR13335.orig.30.pir 113 sesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseerdqsscksiqwktessvkedsvqrassesslss 200
+                            s++s+++ e+++s+++s ss    s +++a+t+   ++++ +    ++s+as+e+   +s +s+ + ++s + e+s  ++ssess+ss
+             OMJ14276.1   5 SSESSASSESSASSESSASSESSASSESSASTESTASTESTAS---TESTASTES--TASTESTASTESSASTESSESSTSSESSISS 87 
+                            3333333334444444433333333333333333333333331...122222222..2333344444344444444444444444555 PP
+
+  PTHR13335.orig.30.pir 201 erssdssssssapsrrq......s 218
+                            +++s+    ss ps+++      +
+             OMJ14276.1  88 DSNSS----SSCPSSSSfpsmslN 107
+                            54444....333332112223442 PP
+
+>> OMJ15467.1  hypothetical protein AYI70_g7249 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.2  41.3    0.0093        11      45     203 ..      63     226 ..      20     233 .. 0.43
+
+  Alignments for each domain:
+  == domain 1  score: 4.2 bits;  conditional E-value: 0.0093
+  PTHR13335.orig.30.pir  45 pyppvsssssesll.srpksastpgdsgsedsgssneaetatg..gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdis 129
+                             ++++s ++s++l   ++++++ ++ +  +d  ++++++  +    ++  ++  + +++++ + +++ +s+++  ++ ++ ++ +d s
+             OMJ15467.1  63 DITSASDNLSKTLVwVTHSNGVVHQHTVGVDEHDHDDHSDHDDhsDHDDHSNHDDHSNHNDHSDHDD-HSDHDDHSDHDDHSDHYDHS 149
+                            4445555566666664444444444444444444444333222442222222333333333333333.33333333333344445544 PP
+
+  PTHR13335.orig.30.pir 130 sssldegsrrrrantavkleklrkerrsksasiassee.r....dqsscksiqwktessvkedsvqrassesslssers 203
+                             + +d ++++ + ++  + +   ++  ++ as++s+++ +    ++ss++s +++ ++s++++s+ ++ss+ss+ss ++
+             OMJ15467.1 150 -DHDDHSDHDDH-SDHDDHSDHGEHEGHDHASSNSTSNtSssssSSSSSRSSSSSSSRSSSSSSSSSSSSSSSSSSKKN 226
+                            .34444444444.223333333333233333333333322111113333333333333333333333333333333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      12166  (4855677 residues searched)
+Passed MSV filter:                      2997  (0.246342); expected 243.3 (0.02)
+Passed bias filter:                      432  (0.0355088); expected 243.3 (0.02)
+Passed Vit filter:                       185  (0.0152063); expected 12.2 (0.001)
+Passed Fwd filter:                        25  (0.00205491); expected 0.1 (1e-05)
+Initial search space (Z):              12166  [actual number of targets]
+Domain search space  (domZ):              10  [number of targets reported over threshold]
+# CPU time: 0.49u 0.06s 00:00:00.55 Elapsed: 00:00:00.30
+# Mc/sec: 10780.20
+//
+[ok]

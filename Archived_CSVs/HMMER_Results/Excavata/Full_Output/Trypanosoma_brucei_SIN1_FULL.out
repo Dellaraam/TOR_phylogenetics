@@ -1,0 +1,47 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Excavata/Proteins/Trypanosoma_brucei.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+  ------ inclusion threshold ------
+      0.011   13.7  25.5      0.015   13.2  25.5    1.2  1  AAZ11649.1  hypothetical protein, conserved [Trypanosoma bruc
+
+
+Domain annotation for each sequence (and alignments):
+>> AAZ11649.1  hypothetical protein, conserved [Trypanosoma brucei brucei TREU927]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.2  25.5   1.7e-06     0.015      88     154 ..      48     114 ..       3     146 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 13.2 bits;  conditional E-value: 1.7e-06
+  PTHR13335.orig.30.pir  88 dtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke 154
+                            ++++++ +++++q++++ +++q++++ + +++++++q+++ +++++++++ ++++++++++++++++
+             AAZ11649.1  48 AQQQQQLQQQQQQQQAQLQQQQQQQQAQLQQQQQQQQAQLQQQQQQQQQQLQQQQQQQAQQQQQQQQ 114
+                            3333333333344444333443444444444444444444443333333333333333333333322 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       8758  (4387069 residues searched)
+Passed MSV filter:                       972  (0.110984); expected 175.2 (0.02)
+Passed bias filter:                      332  (0.0379082); expected 175.2 (0.02)
+Passed Vit filter:                        64  (0.0073076); expected 8.8 (0.001)
+Passed Fwd filter:                         8  (0.000913451); expected 0.1 (1e-05)
+Initial search space (Z):               8758  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.21u 0.02s 00:00:00.23 Elapsed: 00:00:00.12
+# Mc/sec: 22829.60
+//
+[ok]

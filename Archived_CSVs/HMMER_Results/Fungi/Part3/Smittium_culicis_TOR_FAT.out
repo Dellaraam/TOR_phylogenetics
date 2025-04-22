@@ -1,0 +1,279 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Smittium_culicis.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+      8e-55  185.9  13.3      5e-41  140.5   3.9    3.0  2  OMJ20268.1  Target of rapamycin [Smittium culicis]
+    1.1e-50  172.3   3.0    1.1e-50  172.3   3.0    2.1  2  OMJ16016.1  Transcription-associated protein 1 [Smittium culi
+    1.4e-50  171.9   3.3    1.4e-50  171.9   3.3    2.1  2  OMJ15098.1  Transcription-associated protein 1 [Smittium culi
+      0.001   17.8   2.2      0.041   12.5   0.2    2.9  2  OMJ15004.1  Pre-mRNA-processing factor 6 [Smittium culicis]
+     0.0012   17.6   2.3      0.047   12.4   0.2    2.9  2  OMJ07249.1  Pre-mRNA-processing factor 6 [Smittium culicis]
+     0.0012   17.6   2.3      0.047   12.4   0.2    2.9  2  OMJ07336.1  Pre-mRNA-processing factor 6 [Smittium culicis]
+     0.0013   17.5   2.3      0.047   12.3   0.2    2.8  2  OMJ21660.1  Pre-mRNA-processing factor 6 [Smittium culicis]
+
+
+Domain annotation for each sequence (and alignments):
+>> OMJ20268.1  Target of rapamycin [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  140.5   3.9   2.9e-44     5e-41       2     174 ..    1349    1514 ..    1348    1531 .. 0.96
+   2 !   49.4   1.9   1.5e-16   2.5e-13     173     343 .]    1593    1802 ..    1589    1802 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 140.5 bits;  conditional E-value: 2.9e-44
+                  CCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS- CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls 98  
+                  ++ ++ aW lg+ d +e+yl+ + + +++++ff+a+la+h+n+fdea+++i+  r  +++e+sa  +es +r y+l + +Q+l+Elee+i yk+ ++
+  OMJ20268.1 1349 SIGVNMAWALGDMDMLEKYLKYLPSSDQKCSFFRALLAVHNNNFDEARKYISISRANIDKEMSAQLSESFQRGYSLAIYCQMLSELEEVILYKSLED 1445
+                  678899****************************************************************************************988 PP
+
+                  ---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCC CS
+         FAT   99 sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkkl 174 
+                  s+ + k + ktW+kRl+g+q+dv  wq +l++Rslvl             emw++f + + +s+ lsl+ ++L+ +
+  OMJ20268.1 1446 SHFQKKLIIKTWEKRLEGCQKDVGNWQHFLQIRSLVLPRTRI-------LEMWVEFMQMCLNSNKLSLCDQTLRLV 1514
+                  88888899*****************************99988.......***********************9865 PP
+
+  == domain 2  score: 49.4 bits;  conditional E-value: 1.5e-16
+                  CCCHCTT...............TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..........SS-SS---..................... CS
+         FAT  173 klleedk...eewlp.......pevvyaylkylwakgeqkealqkLrefvscllekke..........elssglevq................eptn 233 
+                  k+l e++   e   +       pe++++  ky w+++e++ a+++++   ++l+++ +          +       +                + ++
+  OMJ20268.1 1593 KVLAEEPrsiE---KsiessifPELMLTFYKYKWENNEKSYAISQINNLRKRLSFSVGfdfnslnfdeN-------IlkqsqkkafgdggesiNLNT 1679
+                  55556664331...23345679************************99999999998887766544331.......133355668888887766677 PP
+
+                  ......HHHHCCCTCCC............CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHC CS
+         FAT  234 leeftkllarcylkkGe............wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvp 318 
+                   +   kll++ y   ++            + ++ +   +s  +   il+   a+t l++++y  wh+ al + e+ ++ e++ + ++ +++ ++++p
+  OMJ20268.1 1680 YDRTVKLLSELYYTEAKwkmvllkhesesYDKSENVSFNSDSSMTRILSLLEASTILNRKSYISWHSFALRHYEMTQNFEREDNTISTQMVDTHIIP 1776
+                  777777778888888886666655555552222222224456678899999****************************9999999788888***** PP
+
+                  CT..CCHHHHTTTS.STTTCHHHHHC CS
+         FAT  319 avegflkslslsse.kslqdllRlLt 343 
+                  +++gf+k+++ls+   +lqd+lRlLt
+  OMJ20268.1 1777 SIHGFFKAIQLSNMdTTLQDTLRLLT 1802
+                  **************9**********8 PP
+
+>> OMJ16016.1  Transcription-associated protein 1 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.6   0.0       1.9   3.4e+03     208     258 ..    3460    3513 ..    3441    3523 .. 0.75
+   2 !  172.3   3.0   6.2e-54   1.1e-50      25     343 .]    3623    4035 ..    3583    4035 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: -3.6 bits;  conditional E-value: 1.9
+                  CHHHHCCTSSCCC...SS-SS---...........HHHHCCCTCCCCCCCCCCC CS
+         FAT  208 Lrefvscllekke...elssglevqeptnleeftkllarcylkkGewlaalqkl 258 
+                  L+ ++ +  e+++   e +sg+e  + ++l+++  +l++ y++ G w ++ q +
+  OMJ16016.1 3460 LESSLLNGVENQRmlfEQNSGIEFGSFESLSDLYSQLGEDYMFYGLWSRNCQYA 3513
+                  55555555555555667788888889**********************999984 PP
+
+  == domain 2  score: 172.3 bits;  conditional E-value: 6.2e-54
+                  .......TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.........---TTTT CS
+         FAT   25 k......kdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls.........sseelks 105 
+                  +      +ds  + +  a+ ++ +  q  ++++l+++ ++  + ++++l+   ++++++ll+ +Q  +El +++++++             s elks
+  OMJ16016.1 3623 QayltliNDSSPEPMSAALSSTSQaVQNPKFQSLLNESINASLVKWTQLPLVGTSQHLELLHMFQLQVELLDALNIYNTFPltnsenldkRSLELKS 3719
+                  03333334444445555555566668899************************************************97768889999988889999 PP
+
+                  TTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.............................................................. CS
+         FAT  106 llktWrkRlpgvqddvevwqdilsvRslvlspied.............................................................. 140 
+                  + + Wr+Rlp + d++++w+d++s+R +v++ i++                                                              
+  OMJ16016.1 3720 IIQSWRERLPCSTDSINIWSDLVSWRLHVFESINSvympfvstlanssnknsgalgskpastsqslksslnspelsllsdskkipkglevktngdsh 3816
+                  9************************************************************************************************ PP
+
+                  ...............................................HHCCS-STTCCC..CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSC CS
+         FAT  141 ...............................................lllkgakaemwl..kfanlaRksgrlslAekaLkklleedkeewlppevv 188 
+                                                                 ++++g+++ +w+  +fa+++Rk+g l++++++L+k+              
+  OMJ16016.1 3817 kslkhsldstesnsgisnsisssqnnksnvvhnstdganaggsavtsYAYRGYHEMAWIinQFAKISRKHGLLEVSIQQLNKI-------------- 3899
+                  ***********************************************************************************.............. PP
+
+                  CCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS CS
+         FAT  189 yaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswyk 284 
+                       y+++++e++ea++kL  +++c+l++k+++++gl+v+ +tnl++f++++ a+++++kG +l++  k        ++++ a++a +++d s+  
+  OMJ16016.1 3900 -----YTLPNIEIQEAFLKLCGQAKCYLQRKKDYQTGLDVIGNTNLMYFSASQrAEFFMLKGIFLSKQLK-------LDDANYAFAAGIQVDLSSGP 3984
+                  .....*****************************************************************.......99****************** PP
+
+                  TTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+         FAT  285 awhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                   w +w++fn+e+++ +        ++d+  ++v+a++++l+++   +  +s+  l+R+L+
+  OMJ16016.1 3985 SWSAWGRFNDERFRSN--------SNDTG-HAVNAISCYLQAAGIIKHpSSRRFLARILW 4035
+                  ****************........88887.***************999999999999998 PP
+
+>> OMJ15098.1  Transcription-associated protein 1 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.7   0.0         2   3.5e+03     208     258 ..    3459    3512 ..    3440    3522 .. 0.75
+   2 !  171.9   3.3   8.1e-54   1.4e-50      25     343 .]    3622    4034 ..    3582    4034 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: -3.7 bits;  conditional E-value: 2
+                  CHHHHCCTSSCCC...SS-SS---...........HHHHCCCTCCCCCCCCCCC CS
+         FAT  208 Lrefvscllekke...elssglevqeptnleeftkllarcylkkGewlaalqkl 258 
+                  L+ ++ +  e+++   e +sg+e  + ++l+++  +l++ y++ G w ++ q +
+  OMJ15098.1 3459 LESSLLNGVENQRmlfEQNSGIEFGSFESLSDLYSQLGEDYMFYGLWSRNCQYA 3512
+                  55555555555555667788888889**********************999984 PP
+
+  == domain 2  score: 171.9 bits;  conditional E-value: 8.1e-54
+                  .......TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.........---TTTT CS
+         FAT   25 k......kdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls.........sseelks 105 
+                  +      +ds  + +  a+ ++ +  q  ++++l+++ ++  + ++++l+   ++++++ll+ +Q  +El +++++++             s elks
+  OMJ15098.1 3622 QayltliNDSSPEPMSAALSSTSQaVQNPKFQSLLNESINASLVKWTQLPLVGTSQHLELLHMFQLQVELLDALNIYNTFPltnsenldkRSLELKS 3718
+                  03333334444445555555566668899************************************************97768889999988889999 PP
+
+                  TTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.............................................................. CS
+         FAT  106 llktWrkRlpgvqddvevwqdilsvRslvlspied.............................................................. 140 
+                  + + Wr+Rlp + d++++w+d++s+R +v++ i++                                                              
+  OMJ15098.1 3719 IIQSWRERLPCSTDSINIWSDLVSWRLHVFESINSvympfvstlanssnknsgalgskpastsqslksslnspelsllsdskkipkglevktngdsh 3815
+                  9************************************************************************************************ PP
+
+                  ...............................................HHCCS-STTCCC..CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSC CS
+         FAT  141 ...............................................lllkgakaemwl..kfanlaRksgrlslAekaLkklleedkeewlppevv 188 
+                                                                 ++++g+++ +w+  +fa+++Rk+g l++++++L+k+              
+  OMJ15098.1 3816 kslkhsldstesnsgisnstsssqnnksnmvhnstdganaggsavtsYAYRGYHEMAWIinQFAKISRKHGLLEVSIQQLNKI-------------- 3898
+                  ***********************************************************************************.............. PP
+
+                  CCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS CS
+         FAT  189 yaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswyk 284 
+                       y+++++e++ea++kL  +++c+l++k+++++gl+v+ +tnl++f++++ a+++++kG +l++  k        ++++ a++a +++d s+  
+  OMJ15098.1 3899 -----YTLPNIEIQEAFLKLCGQAKCYLQRKKDYQTGLDVIGNTNLMYFSASQrAEFFMLKGIFLSKQLK-------LDDANYAFAAGIQVDLSSGP 3983
+                  .....*****************************************************************.......99****************** PP
+
+                  TTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+         FAT  285 awhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                   w +w++fn+e+++ +        ++d+  ++v+a++++l+++   +  +s+  l+R+L+
+  OMJ15098.1 3984 SWSAWGRFNDERFRSN--------SNDTG-HAVNAISCYLQAAGIIKHpSSRRFLARILW 4034
+                  ****************........88887.***************999999999999998 PP
+
+>> OMJ15004.1  Pre-mRNA-processing factor 6 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    4.1   0.1    0.0088        15     143     272 ..     523     663 ..     427     683 .. 0.63
+   2 !   12.5   0.2   2.4e-05     0.041     255     308 ..     806     859 ..     738     926 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.0088
+                 CCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC........SS-SS---..... CS
+         FAT 143 lkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke........elssglevq.... 229
+                   +++ e w++ a l R++g +    ++L+++ e+ ++ ++   ++ a+ k+ w ++ ++ a   Lre    +  + +        e ss+ e+     
+  OMJ15004.1 523 TVTTDSELWISAAMLERNHGTPASFDSLLRRAVEYCPKTESL-WLMAAKEKWVWGND-VDGARTILREAFRFNPRSESiwlaavklE-SSNQEYDrarl 618
+                 44567789****************99******9999933333.34556777777654.56667777666664444444555544421.22222224556 PP
+
+                 ............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHH CS
+         FAT 230 ..eptnleeftkllarcylkkGewlaalqklnwseekseeilqay 272
+                   +  + e++ +  ar+ +k+  + ++l++ n++++ ++++++++
+  OMJ15004.1 619 llDRARDEKNGAGTARVWMKSIVFERQLNDYNKASDLANQAVEKF 663
+                 655555555555557777777777777777766666666666555 PP
+
+  == domain 2  score: 12.5 bits;  conditional E-value: 2.4e-05
+                 CCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS. CS
+         FAT 255 lqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee 308
+                 + +l wse+k++++ + + ++ +ldp+  + w+ w +f++e++  e +k e + 
+  OMJ15004.1 806 IARLFWSERKIDKARSWFERSCKLDPKYGDGWAWWLKFEQEIFALESKKVETNA 859
+                 556679*************************************99966633332 PP
+
+>> OMJ07249.1  Pre-mRNA-processing factor 6 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    4.1   0.1    0.0088        15     143     272 ..     523     663 ..     427     683 .. 0.63
+   2 !   12.4   0.2   2.7e-05     0.047     255     308 ..     806     859 ..     738     918 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.0088
+                 CCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC........SS-SS---..... CS
+         FAT 143 lkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke........elssglevq.... 229
+                   +++ e w++ a l R++g +    ++L+++ e+ ++ ++   ++ a+ k+ w ++ ++ a   Lre    +  + +        e ss+ e+     
+  OMJ07249.1 523 TVTTDSELWISAAMLERNHGTPASFDSLLRRAVEYCPKTESL-WLMAAKEKWVWGND-VDGARTILREAFRFNPRSESiwlaavklE-SSNQEYDrarl 618
+                 44567789****************99******9999933333.34556777777654.56667777666664444444555544421.22222224556 PP
+
+                 ............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHH CS
+         FAT 230 ..eptnleeftkllarcylkkGewlaalqklnwseekseeilqay 272
+                   +  + e++ +  ar+ +k+  + ++l++ n++++ ++++++++
+  OMJ07249.1 619 llDRARDEKNGAGTARVWMKSIVFERQLNDYNKASDLANQAVEKF 663
+                 655555555555557777777777777777766666666666555 PP
+
+  == domain 2  score: 12.4 bits;  conditional E-value: 2.7e-05
+                 CCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS. CS
+         FAT 255 lqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee 308
+                 + +l wse+k++++ + + ++ +ldp+  + w+ w +f++e++  e +k e + 
+  OMJ07249.1 806 IARLFWSERKIDKARSWFERSCKLDPKYGDGWAWWLKFEQEIFALESKKVETNA 859
+                 556679*************************************99966633332 PP
+
+>> OMJ07336.1  Pre-mRNA-processing factor 6 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    4.1   0.1    0.0088        15     143     272 ..     523     663 ..     427     683 .. 0.63
+   2 !   12.4   0.2   2.7e-05     0.047     255     308 ..     806     859 ..     738     918 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.0088
+                 CCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC........SS-SS---..... CS
+         FAT 143 lkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke........elssglevq.... 229
+                   +++ e w++ a l R++g +    ++L+++ e+ ++ ++   ++ a+ k+ w ++ ++ a   Lre    +  + +        e ss+ e+     
+  OMJ07336.1 523 TVTTDSELWISAAMLERNHGTPASFDSLLRRAVEYCPKTESL-WLMAAKEKWVWGND-VDGARTILREAFRFNPRSESiwlaavklE-SSNQEYDrarl 618
+                 44567789****************99******9999933333.34556777777654.56667777666664444444555544421.22222224556 PP
+
+                 ............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHH CS
+         FAT 230 ..eptnleeftkllarcylkkGewlaalqklnwseekseeilqay 272
+                   +  + e++ +  ar+ +k+  + ++l++ n++++ ++++++++
+  OMJ07336.1 619 llDRARDEKNGAGTARVWMKSIVFERQLNDYNKASDLANQAVEKF 663
+                 655555555555557777777777777777766666666666555 PP
+
+  == domain 2  score: 12.4 bits;  conditional E-value: 2.7e-05
+                 CCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS. CS
+         FAT 255 lqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee 308
+                 + +l wse+k++++ + + ++ +ldp+  + w+ w +f++e++  e +k e + 
+  OMJ07336.1 806 IARLFWSERKIDKARSWFERSCKLDPKYGDGWAWWLKFEQEIFALESKKVETNA 859
+                 556679*************************************99966633332 PP
+
+>> OMJ21660.1  Pre-mRNA-processing factor 6 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    4.1   0.1    0.0089        15     143     272 ..     530     670 ..     434     690 .. 0.63
+   2 !   12.3   0.2   2.7e-05     0.047     255     308 ..     813     866 ..     745     925 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.0089
+                 CCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC........SS-SS---..... CS
+         FAT 143 lkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke........elssglevq.... 229
+                   +++ e w++ a l R++g +    ++L+++ e+ ++ ++   ++ a+ k+ w ++ ++ a   Lre    +  + +        e ss+ e+     
+  OMJ21660.1 530 TVTTDSELWISAAMLERNHGTPASFDSLLRRAVEYCPKTESL-WLMAAKEKWVWGND-VDGARTILREAFRFNPRSESiwlaavklE-SSNQEYDrarl 625
+                 44567789****************99******9999933333.34556777777654.56667777666664444444555544421.22222224556 PP
+
+                 ............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHH CS
+         FAT 230 ..eptnleeftkllarcylkkGewlaalqklnwseekseeilqay 272
+                   +  + e++ +  ar+ +k+  + ++l++ n++++ ++++++++
+  OMJ21660.1 626 llDRARDEKNGAGTARVWMKSIVFERQLNDYNKASDLANQAVEKF 670
+                 655555555555557777777777777777766666666666555 PP
+
+  == domain 2  score: 12.3 bits;  conditional E-value: 2.7e-05
+                 CCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS. CS
+         FAT 255 lqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee 308
+                 + +l wse+k++++ + + ++ +ldp+  + w+ w +f++e++  e +k e + 
+  OMJ21660.1 813 IARLFWSERKIDKARSWFERSCKLDPKYGDGWAWWLKFEQEIFALESKKVETNA 866
+                 556679*************************************99966633332 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      12166  (4855677 residues searched)
+Passed MSV filter:                       787  (0.0646885); expected 243.3 (0.02)
+Passed bias filter:                      287  (0.0235903); expected 243.3 (0.02)
+Passed Vit filter:                        28  (0.0023015); expected 12.2 (0.001)
+Passed Fwd filter:                         7  (0.000575374); expected 0.1 (1e-05)
+Initial search space (Z):              12166  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 0.08u 0.04s 00:00:00.12 Elapsed: 00:00:00.06
+# Mc/sec: 27149.90
+//
+[ok]

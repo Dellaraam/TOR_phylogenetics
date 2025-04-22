@@ -1,0 +1,446 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Phytophthora_infestans_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    8.3e-78  262.0   0.3    1.6e-77  261.1   0.3    1.5  1  EEY63188.1  phosphatidylinositol kinase (PIK-L1) [Phytophthor
+    7.9e-59  199.6   0.9    2.3e-57  194.7   0.3    3.0  2  EEY59643.1  Phosphatidylinositol kinase (PIK-L2) [Phytophthor
+      4e-40  138.1   4.7    1.2e-39  136.6   4.7    1.9  1  EEY63983.1  phosphatidylinositol kinase (PIK-L4) [Phytophthor
+      3e-39  135.2   7.5      3e-39  135.2   7.5    2.6  2  EEY66032.1  phosphatidylinositol kinase (PIK-L3) [Phytophthor
+    1.5e-18   67.1  17.8    3.5e-18   65.9  17.8    1.6  1  EEY58194.1  phosphatidylinositol kinase (PIK-5) [Phytophthora
+    1.4e-10   41.0   0.3       0.56    9.3   0.0    6.6  5  EEY67702.1  UDP-N-acetylglucosamine-peptide N-acetylglucosami
+    4.6e-06   26.1   1.6       0.13   11.5   0.0    4.2  3  EEY66486.1  conserved hypothetical protein [Phytophthora infe
+    0.00075   18.8   1.0     0.0026   17.1   0.6    2.1  2  EEY59985.1  phosphatidylinositol kinase [Phytophthora infesta
+     0.0075   15.5   0.7     0.0075   15.5   0.7    2.4  2  EEY57364.1  DnaJ subfamily C protein [Phytophthora infestans 
+  ------ inclusion threshold ------
+      0.024   13.8   5.4      0.093   11.9   0.1    3.4  3  EEY57619.1  conserved hypothetical protein [Phytophthora infe
+       0.52    9.5   6.8        8.6    5.5   1.5    3.8  3  EEY65802.1  anaphase-promoting complex subunit, putative [Phy
+
+
+Domain annotation for each sequence (and alignments):
+>> EEY63188.1  phosphatidylinositol kinase (PIK-L1) [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  261.1   0.3   9.8e-81   1.6e-77       3     343 .]    1868    2295 ..    1866    2295 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 261.1 bits;  conditional E-value: 9.8e-81
+                  CTTCCCCTSSSGHHCCCCT..........................................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCC CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmk......................................kdspdkaffeailalhrnqfdeaeeliekarqllvt 61  
+                  l a a+W l+qWdsm +y+ +                                        +d  + +++e +la+hr++fd+a +li+ +r+ l+t
+  EEY63188.1 1868 LGARASWCLSQWDSMTQYVTECAaqndksnanstvisraangngqgygyghthghgifgadEDVTELSLYESVLAVHRGNFDQATTLIDATRKTLDT 1964
+                  7899***************88889**********************************9966666777***************************** PP
+
+                  CCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCC CS
+         FAT   62 elsalsgesynraydllvrlQqlaEleeiiqykqkls.......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemw 151 
+                  +l al+gesy+ray ++v lQql+Elee+++yk+ ++        ++  ++l ++Wr+Rl+g+++ vevwq++++vR+l+lsp+ed       ++++
+  EEY63188.1 1965 KLGALVGESYSRAYRSMVTLQQLSELEEVVTYKKLRAqiskgeeAARYKRHLMRMWRDRLSGCKRVVEVWQQLIAVRALILSPHED-------IDTY 2054
+                  **********************************9989997776556666779*********************************.......**** PP
+
+                  CCCCCCHCHHHHCCSTTHHCCCCCHCTT...................T................SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSC CS
+         FAT  152 lkfanlaRksgrlslAekaLkklleedk.........eewlp.....p................evvyaylkylwakgeqkealqkLrefvscllek 218 
+                  l+fa+l+R+sg+lsl+ k+ +++l+            +   +     p                +v +aylk+lwa g+++eal+ L+  v + +++
+  EEY63188.1 2055 LQFASLCRQSGNLSLSLKVFTNALHVHGgsgsngtgiS---EmlsvaPsssaatsfgfgekdrnRVAFAYLKHLWAAGQKQEALSDLHRLVVRISSM 2148
+                  ***********************999997666555552...13335625667777777788888***********************8888888888 PP
+
+                  CC..........SS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSS CS
+         FAT  219 ke..........elssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekke 305 
+                  ++           ++s  ++      +e ++ll +c+lk +ew+ a+++ + ++   e +l++ ++ tel p++ykawh+wal+nf+v+++ +++++
+  EEY63188.1 2149 AKhrsqppggmgGMPSPAPA-MMPMRSEEEELLVKCHLKMAEWQLAVHDQQIEHVPVESVLSSLRLCTELEPRSYKAWHAWALMNFQVVEHSTHSQH 2244
+                  77777777454444444444.5555667777778***************9999***************************************99966 PP
+
+                  SS..........S-TCCHHHHCCT..CCHHHHTTTS....STTTCHHHHHC CS
+         FAT  306 eee.........pedlseyvvpavegflkslslsse....kslqdllRlLt 343 
+                   +          ++ +  y+ pa+egf++s++l+ +    ++ qd+lR+Lt
+  EEY63188.1 2245 ISAnatasavapSASVAPYIAPAIEGFFRSVALGRSrwaaNVQQDILRVLT 2295
+                  555889999*96666669********************************8 PP
+
+>> EEY59643.1  Phosphatidylinositol kinase (PIK-L2) [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.2   0.0      0.56   9.1e+02     185     219 ..    1481    1520 ..    1428    1536 .. 0.66
+   2 !  194.7   0.3   1.4e-60   2.3e-57      10     343 .]    1554    1948 ..    1546    1948 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: -1.2 bits;  conditional E-value: 0.56
+                  T.....SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCC CS
+         FAT  185 p.....evvyaylkylwakgeqkealqkLrefvscllekk 219 
+                        e+++ +++ lwa ge ++   +++e  s+ + + 
+  EEY59643.1 1481 DnpnnvEAIFGKMRCLWAIGEWRKLNDHVQETWSKIYGEG 1520
+                  0334448899999999999999999999999998877754 PP
+
+  == domain 2  score: 194.7 bits;  conditional E-value: 1.4e-60
+                  TSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCH.HHHHCCCCCHHHCHHCCHHCSS-....... CS
+         FAT   10 rlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynray.dllvrlQqlaEleeiiqykqkls....... 98  
+                  +l++Wds+ +y+   + d  + ++f+a+++++r ++dea   i  +r+ ++  l++l++esy+ray +++v+lQ+l+Eleei++y++  +       
+  EEY59643.1 1554 SLQNWDSIPKYI-NSDMDATESHLFKAVVSIRRMELDEAMNSIGDCRKEMDPTLRSLVSESYARAYlPAVVNLQMLTELEEIVSYLKTFAyknngel 1649
+                  7899*******9.5667777888******************************************9788*****************98889999*** PP
+
+                  ........................................---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCC CS
+         FAT   99 ........................................sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfa 155 
+                                                          ++  lk+l   W++R +gv ++++vwq+++ vRslv++p+ed       +++wlk+a
+  EEY59643.1 1650 tllstpasstsmsttasrrkqsisslnfvssssstsygheKQVALKKLQTIWTRRMLGVERNIQVWQSLMLVRSLVFDPRED-------VDIWLKYA 1739
+                  *****************************9999999988888888888999*******************************.......******** PP
+
+                  CCHCHHHHCCSTTHHCCCCCHCTT................T............................SSCCCHHHHHHHCCHHHHHSSCCHHHHC CS
+         FAT  156 nlaRksgrlslAekaLkklleedk.......eewlp....p............................evvyaylkylwakgeqkealqkLrefvs 213 
+                  +l+ ksg+++lA +aL ++ + ++       +   p    p                            +v ++yl++lwa+++ + al+++  f++
+  EEY59643.1 1740 RLCLKSGHINLAASALWRV-GAQPfirsverD---PyapiPinlggnagasqgfangllsladsaaqdpRVAFSYLRHLWAENREDVALKQMDYFIE 1832
+                  *******************.888888655442...1333426666666666666666677777777777**************************** PP
+
+                  CTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S- CS
+         FAT  214 cllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepe 310 
+                   l +               + e+++kl  ++y  +Gew+ +l +    +++ +++l++  +at+ldp+   awh+wal+nf++l++     +e+++ 
+  EEY59643.1 1833 ALEQH-----------GDPTNEDLRKLRVQVYIQLGEWQMSLTE--PHKQSYDHVLECLETATKLDPTNDRAWHEWALMNFRALEAT---VKESGQG 1913
+                  55443...........344457788888999*************..56888***********************************9...3445589 PP
+
+                  TCCHHHHCCT..CCHHHHTTTS..STTTCHHHHHC CS
+         FAT  311 dlseyvvpavegflkslslsse..kslqdllRlLt 343 
+                  d ++y+v+a++gf++s+s +++   + +d+lRlLt
+  EEY59643.1 1914 DPKRYAVRAIQGFFRSISFGHTsyDVTKDVLRLLT 1948
+                  99********************9999********8 PP
+
+>> EEY63983.1  phosphatidylinositol kinase (PIK-L4) [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  136.6   4.7   7.2e-43   1.2e-39       2     343 .]    2100    2454 ..    2099    2454 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 136.6 bits;  conditional E-value: 7.2e-43
+                  CCTTCCCCTSSSGHHCCCCT.......................TSSSS--...CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHH CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk...................kdspdka...ffeailalhrnqfdeaeeliekarqllvtelsalsgesynrayd 76  
+                  p+a+e++Wrl+ W+++ + ls+ k                    +++d +   +++++++lh +q +e++++++ ar  ++  l+a s esy+ray+
+  EEY63983.1 2100 PYALECSWRLSRWELLTDLLSTEKqnpllhlsgssvhdtastrLKGFDVSqlmLVRVLHSLHGGQQEEFQRHLKAARLEVMGPLAAASAESYQRAYP 2196
+                  89******************9999************999888866666668889999999************************************* PP
+
+                  HHHCCCCCHHHCHHCCHHCSS-...---TTTTT...TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCST CS
+         FAT   77 llvrlQqlaEleeiiqykqkls...sseelksl...lktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslA 167 
+                  ll++l+ l+E e+   ++q+ +   ++++++ l      W+ R+  ++++++ +++il++R+++l+ +     ++   e wl +a+l Rk g + +A
+  EEY63983.1 2197 LLHDLHFLHEAEQGFIFLQNAKesdDLSRRSLLwkkQTPWNIRYDAMATQLKYRDPILALRRVILHEAGL---RNEVSENWLVYAKLTRKEGFIRTA 2290
+                  ******************999966444444444775556999***********************99866...999********************* PP
+
+                  THHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S... CS
+         FAT  168 ekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseek 264 
+                   +a   ++  ++       v ++++k+l ++++  ealq L e v         + s l++       e  +l a+++l+   w+++ ++      +
+  EEY63983.1 2291 TSAVMHAQAMNN-----QYVSIEKAKLLVSQDRMYEALQVL-EPVD-------IDASTLDYD-----VEDPHLCAKNLLLATNWMQKSGQR-----Q 2364
+                  *******88888.....67999*******************.4555.......122223322.....3456677****************4.....5 PP
+
+                  -SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS............S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  265 seeilqaysaateldpswykawhtwalfnfevlskeeekkeeee...........pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                   +++ + y+a +++dp+w+k ++ +a++++  l++    + + +            + +  y+++ ++++ ++l+++ + ++q+l+RlLt
+  EEY63983.1 2365 GKKVIERYQAVIRFDPKWEKGYFFLAKYYEYLLNMSHPDALNGSmssdeaadlllDSVFHGYLISLMKNYVQALAHGTKFVFQSLPRLLT 2454
+                  9**********************************96664333366778999999788889****************************8 PP
+
+>> EEY66032.1  phosphatidylinositol kinase (PIK-L3) [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.6   0.3         3   4.9e+03     107     127 ..    3478    3498 ..    3453    3499 .. 0.78
+   2 !  135.2   7.5   1.8e-42     3e-39       2     343 .]    3509    3838 ..    3508    3838 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: -3.6 bits;  conditional E-value: 3
+                  TT----TTS-TTTGCCCTTTC CS
+         FAT  107 lktWrkRlpgvqddvevwqdi 127 
+                  l+ W++R  g+++++  wq +
+  EEY66032.1 3478 LRLWEERWVGCAKQLCQWQLM 3498
+                  689***************965 PP
+
+  == domain 2  score: 135.2 bits;  conditional E-value: 1.8e-42
+                  CCTTCCCCTSSSGHHCCCCT..........TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHC CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk......kdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeii 91  
+                  +l + +aW+ g+W s ++ l + +        +p+  + + ++++   ++  ++ +l++++ +l + +++ l+  + +++++l++ ++  +E +e+i
+  EEY66032.1 3509 ELLLDCAWKRGDWASAKQLLLAPSmqssaeLGCPQTRLQRLYISILDaDKRGAIDTLASQTAELALHQWQGLPRILSRAHLPLMHLFHKFVEVKESI 3605
+                  7999***********88877433366666666677779999999666699*********************************************** PP
+
+                  CHHCSS-.......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.........HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCC CS
+         FAT   92 qykqkls.......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.........lllkgakaemwlkfanlaRksgrlslAekaLk 172 
+                  q++++ +       s+ +lk   +tWr+Rlp+ + ++  w+dil++Rs++++  +          l+  + +    +k a+ aRk+  ++++  aL 
+  EEY66032.1 3606 QMMEDIKsasaqhaSLPNLKPSINTWRERLPNKWEPILLWDDILTWRSHMFQVVKTtfawsdaqvLACMHDSPWSVIKLAHTARKQRLPDVCLGALA 3702
+                  ****988888888888888888******************************9999999999987777777788889******************** PP
+
+                  CCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSC CS
+         FAT  173 klleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseei 268 
+                  kl                   y+ +  ++++a++kLre+vs ++e++ e+s gl   + tnl++f+ ++ a+++ +k+ +l+a ++         e+
+  EEY66032.1 3703 KL-------------------YSVPAMDVQDAFSKLREQVSICYESATEYSGGLSILNTTNLDYFSLRQkAEMFRLKALFLEAQGS-------LGEA 3773
+                  **...................*****************************************************************.......89** PP
+
+                  CHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  269 lqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                  ++ +s   ++++s  k w +w++++ + +            +dl  ++ + + ++l+++++  ++++  ++R+L+
+  EEY66032.1 3774 NKTFSHCLQICDSYGKGWLSWGHYCYRLFLVR---------KDLA-LASQTIACYLQAIHHRCNSARLMIARVLW 3838
+                  ******************************99.........6776.99**************************9 PP
+
+>> EEY58194.1  phosphatidylinositol kinase (PIK-5) [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   65.9  17.8   2.2e-21   3.5e-18       8     343 .]    2431    2854 ..    2426    2854 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 65.9 bits;  conditional E-value: 2.2e-21
+                  CCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCC..CTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.... CS
+         FAT    8 aWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvte..lsalsgesynraydllvrlQqlaEleeiiqykqkls.... 98  
+                  aW+  qW+ +        + s++ ++++ + a+ +++f++++++   a+q ++++  ls  s es++  y++lv+lQ+++E+ee+++  ++l+    
+  EEY58194.1 2431 AWKSLQWEVVLPSW--STSFSQQHTIYQSLRAIAHGDFTHLQRVTTDAKQQILQSvqLSLHSFESTKDSYSALVDLQAIHEIEELAKAVRALKatra 2525
+                  88888898876665..568899999***********************9988885337888999********************************* PP
+
+                  .........................---TTTTT.....TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCC CS
+         FAT   99 .........................sseelksl.....lktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrls 165 
+                                             e    l     l++Wr+R  ++++d++  +++l++  ++l+ ++ + + ++ ++++l+ a+l+Rk+gr+ 
+  EEY58194.1 2526 scirattsitglrpyssldealvvsRVEA---LtamplLERWRQRRGQIKNDFDKAESLLALEEILLQVSKPVDAAQVITKVYLNLASLSRKAGRTA 2619
+                  **********9999988888886653333...244477*****************************99999999********************** PP
+
+                  STTHHCCCCCHCTT..........TSSCCCHHHHHHHCCHHHHHS...SCCHHHHCCTSSCCC....SS-SS---...................... CS
+         FAT  166 lAekaLkklleedk.eewlp....pevvyaylkylwakgeqkeal...qkLrefvscllekke....elssglevq..................... 229 
+                  +A++aL kl+e +    +l      ++ ++++k++w+++e+++a+   +k+   + ++l++      e +s l  q                     
+  EEY58194.1 2620 VAYRALMKLEELETrG-SLSiyetMQWRIQKAKFMWKQQESRSAIwtgKKISADLASHLHDSTlsatEVTSLLLLQvkvltitgkwiacqrsessqv 2715
+                  *********9999952.33347778****************99996666788888888888666666333333333667777788877788888888 PP
+
+                  ..........................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS.TTCC..........CCHHHHHCCHH CS
+         FAT  230 ................eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswyk.awht..........walfnfevlsk 299 
+                                  +++ + e ++  a++++ ++e++aa+++  +++ +s+e l+  +     ++++ +   ++             +n ev+  
+  EEY58194.1 2716 iledfftkatdiisnmDAEAIAERSRDAAKAHFALAEFMAAMYQQVSARVTSREWLAGKRVVKARHDELQElQTMEqkmqnenrahIHALNKEVV-- 2810
+                  89999999999999999999999999999999999999999999888888899999888888888888887444444544444444444444444.. PP
+
+                  HHHHSSSS.........S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  300 eeekkeeee........pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                          +        ++ + ++++ a+  + k l lss+  l  ++R+L+
+  EEY58194.1 2811 --------HdmnerakvEASVDQFLIGALCSYGKGLTLSSQAELDMVFRVLS 2854
+                  ........14444555467888***************************995 PP
+
+>> EEY67702.1  UDP-N-acetylglucosamine-peptide N-acetylglucosaminyltransferase, putative [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.8   0.0    0.0005      0.81     233     329 ..      95     201 ..      74     209 .. 0.79
+   2 !    9.3   0.0   0.00035      0.56     242     332 ..     240     340 ..     212     355 .. 0.76
+   3 ?    1.6   0.0     0.078   1.3e+02     259     295 ..     352     388 ..     345     390 .. 0.83
+   4 !    8.3   0.1   0.00072       1.2     265     301 ..     392     428 ..     364     489 .. 0.59
+   5 ?   -2.2   0.0       1.2   1.9e+03     266     300 ..     461     499 ..     454     541 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 8.8 bits;  conditional E-value: 0.0005
+                 .......HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS..................S-TCCH CS
+         FAT 233 nleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee.................pedlse 314
+                 ++   +   a++y  +G  l++l++         +++q y +a++l+p+  +a++++a  +    ++ee  +  +                    +++ 
+  EEY67702.1  95 QCIRVAPDFAEAYGNLGNALKELGD-------VAGAVQFYVRAIKLNPRFGDAYNNLANCYMLLGQTEEAVETYKMaimldprlvdahsnlgnLYKVQG 186
+                 455556677999999**********.......9**************************9999999996664444477788888777777777555666 PP
+
+                 HHHCCT..CCHHHHT CS
+         FAT 315 yvvpavegflkslsl 329
+                  +v+a +++ ++++ 
+  EEY67702.1 187 RLVDAKHCYAQAIRV 201
+                 677788888888765 PP
+
+  == domain 2  score: 9.3 bits;  conditional E-value: 0.00035
+                 HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.....................S-TCC.HHHHCC CS
+         FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee....................pedls.eyvvpa 319
+                 a +y  +G  l++ ++        +e+ qay++a +++p+ + a+ ++a+ +  + ++e       +                     +  +  ++ +a
+  EEY67702.1 240 ADAYSNLGNALKESGR-------VDEAIQAYKSALQIRPNFAIAHGNLASCYYDAGQMELAI----HtfrhaiqlepnfpdaynnlgNALREcGHLEQA 327
+                 5666666666666666.......999999999999999999999999999998888888444....234456778888988888887444446699999 PP
+
+                 T..CCHHHHTTTS CS
+         FAT 320 vegflkslslsse 332
+                 v+++  +l+l   
+  EEY67702.1 328 VTCYRTALQLKPD 340
+                 9999999988765 PP
+
+  == domain 3  score: 1.6 bits;  conditional E-value: 0.078
+                 T.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+         FAT 259 nwseekseeilqaysaateldpswykawhtwalfnfe 295
+                  + +   +e+l++y++a++l p+ + a+ + +++  e
+  EEY67702.1 352 LKDKGLVKEALHCYTTAARLLPQFAAAHSNIGSVLKE 388
+                 45567799*********************99987766 PP
+
+  == domain 4  score: 8.3 bits;  conditional E-value: 0.00072
+                 -SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHH CS
+         FAT 265 seeilqaysaateldpswykawhtwalfnfevlskee 301
+                  +++l++y++a+ +dp+ ++a+ +++ +     + ee
+  EEY67702.1 392 LDQALAHYQQAITIDPNFADAYSNMGNVFKDLCRLEE 428
+                 5666666666666666666666666654444333332 PP
+
+  == domain 5  score: -2.2 bits;  conditional E-value: 1.2
+                 SSCCHHHHCCHHCTCCCHSTTCC....CCHHHHHCCHHH CS
+         FAT 266 eeilqaysaateldpswykawht....walfnfevlske 300
+                 +++  +y++a  l+p+  +a+++    ++  ++ + +k+
+  EEY67702.1 461 DDAITCYRKALALRPQFPDAFANyfhsMVFICDWQSRKQ 499
+                 777888888888888888877653333555555554444 PP
+
+>> EEY66486.1  conserved hypothetical protein [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.5   0.0     8e-05      0.13     239     301 ..     181     244 ..     178     327 .. 0.88
+   2 !    5.6   0.0    0.0048       7.7     263     303 ..     508     548 ..     461     621 .. 0.82
+   3 !    4.9   0.1    0.0078        13     135     287 ..    1034    1222 ..    1014    1289 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 11.5 bits;  conditional E-value: 8e-05
+                 .HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHH CS
+         FAT 239 kll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskee 301
+                 +ll arc  ++G w++a+++l  + + + e    y++ + l+++  +a +++a++n   + + +
+  EEY66486.1 181 ALLrARCCRRLGLWTQAIKDLAHALQLRPEDQRLYLLRACLHSKMGEAENALADVNRALVLHPQ 244
+                 6889****************************************************99998875 PP
+
+  == domain 2  score: 5.6 bits;  conditional E-value: 0.0048
+                 ..-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH CS
+         FAT 263 ekseeilqaysaateldpswykawhtwalfnfevlskeeek 303
+                  + +++lq ++aa+ +dp++ + w + al++ +++ + ee+
+  EEY66486.1 508 LRFNNALQDFKAAVATDPTLSEVWLQIALVYLNHYHDSEEC 548
+                 45899**************************9999998776 PP
+
+  == domain 3  score: 4.9 bits;  conditional E-value: 0.0078
+                  HCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---... CS
+         FAT  135 lspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq.. 229 
+                  l+p         ++++ l+ an  Rk + +  A+++   + +e++   ++  +    l ++   g+q+ea+ ++   +  + ++  +l +  ++   
+  EEY66486.1 1034 LQP--------SNVDIRLNLANCLRKEKAFRAAISQCDVISREQP--LNHACLESKALALFQLPGRQEEAITCMDAAIRTCVSSSANLENAFYAFtn 1120
+                  333........457999***********************99999..22222222333344445779999999988888888887755555544333 PP
+
+                  ............................................................HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCC CS
+         FAT  230 ..................................................eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaa 275 
+                                                                     + +l   ++++ a  +l +G  l++++k          + q y ++
+  EEY66486.1 1121 giihrnaldrktlrrkgtrrlstgfttaltdnneymsaaaallaqmetpaPKVHLTGSNEQVlALYMLNRGVMLEKMGK-------LARARQDYEDS 1210
+                  3333344444444444444444444444555555555555555555555544444444444446666666666666666.......55555666666 PP
+
+                  HHCTCCCHSTTC CS
+         FAT  276 teldpswykawh 287 
+                   ++d  + +a+ 
+  EEY66486.1 1211 LHFDAFSVHAHV 1222
+                  666655555555 PP
+
+>> EEY59985.1  phosphatidylinositol kinase [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.0   0.0       4.1   6.6e+03     147     179 ..    1128    1162 ..    1115    1170 .. 0.80
+   2 !   17.1   0.6   1.6e-06    0.0026     151     307 ..    1193    1371 ..    1184    1425 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: -4.0 bits;  conditional E-value: 4.1
+                  STTCCCCCCCCHCHHH.HCCSTT.HHCCCCCHCTT CS
+         FAT  147 kaemwlkfanlaRksg.rlslAe.kaLkklleedk 179 
+                   +e+ l++a+ a ks  +++ ++ +aL++l++ ++
+  EEY59985.1 1128 AEETLLRMAEAAKKSSlSTGFCHnEALTNLQRLNP 1162
+                  57889999999999883478888678999988887 PP
+
+  == domain 2  score: 17.1 bits;  conditional E-value: 1.6e-06
+                  CCCCCCCHCHHHHCCSTTHHCCCCCHCTT........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.....SS-SS---........... CS
+         FAT  151 wlkfanlaRksgrlslAekaLkklleedk.eewlp..pevvyaylkylwakgeqkealqkLrefvscllekke.....elssglevq.......... 229 
+                   +  a+laR++++l+ A+++L++++  +k +   +    + y+++k+l   g  +e  q L+ + +  le  +     + +++  v+          
+  EEY59985.1 1193 LTGVARLARRQHNLDFAQSLLREAASLEKtSR--VsaMALNYEKAKLLELVGMDDEGRQLLEAQCETSLEVLRldhsfSGQENVAVRsilhlaksit 1287
+                  5578********************99999433..235799*************99999999999998888877886665555555557777777776 PP
+
+                  ..........HHHHCCCTCCC...........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS CS
+         FAT  230 eptnleeftkllarcylkkGe...........wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeee 307 
+                  +++n + ++ + +r++   ++               +     ++ +se + ++++aa+ ++p++ kaw++  + + e+ ++e e+ +e+
+  EEY59985.1 1288 DAENTKLLSPVASRILESASDpatsvdseevdA---AAF--PNNFQSESAHKCFQAAIAVSPKSPKAWAHYSHWCYERGKREVEQISEQ 1371
+                  555555555554555555554998888875431...222..2334589**********************9999999988886664443 PP
+
+>> EEY57364.1  DnaJ subfamily C protein [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.5   0.7   4.6e-06    0.0075     163     280 ..     169     278 ..     166     340 .. 0.66
+   2 ?   -1.4   0.3      0.63     1e+03     188     251 ..     350     391 ..     315     431 .. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 15.5 bits;  conditional E-value: 4.6e-06
+                 HCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S CS
+         FAT 163 rlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnws 261
+                 r++ A  +L++l++ d+   + pe+ y +++ l+ +ge  +a+++L++ +    +++ + ++ +e +  ++le+ +++ a + +k G   +a++    +
+  EEY57364.1 169 RYDEAFAVLTQLMRTDS---SSPELLYLRARCLYYQGEFPSAIKHLQQALR---SDPDNSKCMKEIKRIRHLETSKEE-ANNAFKGGRMAEAVEM-YTE 259
+                 56678899******999...558**************************99...444445555555555555555555.4444455553333333.233 PP
+
+                 ...-SSCCHHHHCCHHCTC CS
+         FAT 262 eekseeilqaysaateldp 280
+                   k++  ++a+ + +++++
+  EEY57364.1 260 CLKIDPQNKAFNSKIHCNR 278
+                 3334444444444444433 PP
+
+  == domain 2  score: -1.4 bits;  conditional E-value: 0.63
+                 CCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCC CS
+         FAT 188 vyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGew 251
+                  + + k+ ++k ++k++++ L+ + s +                        ++ ++y k++  
+  EEY57364.1 350 NIRQTKLDIKKAKRKDYYKILNVSQSATEA----------------------EIKKAYKKLALK 391
+                 445555555555555555555322222222......................222222222222 PP
+
+>> EEY57619.1  conserved hypothetical protein [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.8   1.2     0.071   1.1e+02     250     292 ..     217     259 ..      89     263 .. 0.49
+   2 ?   11.9   0.1   5.7e-05     0.093     237     305 ..     376     443 ..     308     521 .. 0.79
+   3 ?   -2.0   0.0      0.97   1.6e+03     153     183 ..     460     490 ..     443     557 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 1.8 bits;  conditional E-value: 0.071
+                 CCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+         FAT 250 ewlaalqklnwseekseeilqaysaateldpswykawhtwalf 292
+                   ++a++ ++ + ++   + + ++ a+ + +   + wh+wa++
+  EEY57619.1 217 LIMQAYGVFEAKCQHVGLARSIFQNAVSHPRATGQVWHAWAKA 259
+                 3444444444444446666677777888888888888888876 PP
+
+  == domain 2  score: 11.9 bits;  conditional E-value: 5.7e-05
+                 ...HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSS CS
+         FAT 237 ftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekke 305
+                 f+k l +++   G  l+a++++++++ + +++ + y +at ++p+  + w ++a+++ + +++e+ ++ 
+  EEY57619.1 376 FEKAL-ENLQHTGPILHAFGDFEEQHGELDNARELYDEATNVQPTTVESWRALARVEARLKNYEAARSA 443
+                 33443.677777889*******************************************99999977643 PP
+
+  == domain 3  score: -2.0 bits;  conditional E-value: 0.97
+                 CCCCCHCHHHHCCSTTHHCCCCCHCTT.... CS
+         FAT 153 kfanlaRksgrlslAekaLkklleedkeewl 183
+                 + a++  ++ r+  A  aL k+l+ d+++ +
+  EEY57619.1 460 ELAKIEQRNRRFPAARTALEKALKIDSSDAA 490
+                 5566666666666666666666665552222 PP
+
+>> EEY65802.1  anaphase-promoting complex subunit, putative [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.0   0.0      0.49     8e+02     235     259 ..      34      59 ..       8      99 .. 0.72
+   2 ?    5.5   1.5    0.0053       8.6     261     293 ..     465     497 ..     330     507 .. 0.90
+   3 ?    3.2   0.2     0.026        42     221     281 ..     567     621 ..     496     627 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: -1.0 bits;  conditional E-value: 0.49
+                 .....HH.HHCCCTCCCCCCCCCCCT CS
+         FAT 235 eeftkll.arcylkkGewlaalqkln 259
+                 +e ++ll a cy +kG+  +a++ l+
+  EEY65802.1  34 SEENALLlASCYYRKGQVDRAVEVLS 59 
+                 55566666888888888666666543 PP
+
+  == domain 2  score: 5.5 bits;  conditional E-value: 0.0053
+                 S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+         FAT 261 seekseeilqaysaateldpswykawhtwalfn 293
+                 ++e+ e+++++y+ a+++d++ y+aw+ ++  +
+  EEY65802.1 465 ANEDFEKAVNCYRHAIRTDSRHYNAWYGLGTIY 497
+                 445699********************9998755 PP
+
+  == domain 3  score: 3.2 bits;  conditional E-value: 0.026
+                 SS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCC CS
+         FAT 221 elssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldps 281
+                 +l++  e+ e  ++ ++ +   + +++  G+  ++l++       +ee+++++ +a +++p+
+  EEY65802.1 567 TLQQYEEALEELHVVKNFAPReSSVHFMMGKVAKKLGR-------IEEAMKYFILALHFHPK 621
+                 33333333345555555555558899999999999999.......99999999999999986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      17797  (7477656 residues searched)
+Passed MSV filter:                      1148  (0.0645053); expected 355.9 (0.02)
+Passed bias filter:                      391  (0.02197); expected 355.9 (0.02)
+Passed Vit filter:                        42  (0.00235995); expected 17.8 (0.001)
+Passed Fwd filter:                        11  (0.000618082); expected 0.2 (1e-05)
+Initial search space (Z):              17797  [actual number of targets]
+Domain search space  (domZ):              11  [number of targets reported over threshold]
+# CPU time: 0.18u 0.12s 00:00:00.30 Elapsed: 00:00:00.13
+# Mc/sec: 19046.13
+//
+[ok]

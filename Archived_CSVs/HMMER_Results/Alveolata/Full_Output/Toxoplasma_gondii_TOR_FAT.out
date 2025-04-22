@@ -1,0 +1,159 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Toxoplasma_gondii.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.8e-49  167.1   8.0    7.5e-21   73.6   0.3    4.6  4  EPT25651.1  target of rapamycin (TOR), putative [Toxoplasma g
+      4e-21   74.5   0.0    7.6e-21   73.6   0.0    1.5  1  EPT28238.1  non-specific serine/threonine protein kinase [Tox
+    4.5e-07   28.3   0.0      0.029   12.5   0.0    4.6  3  EPT28661.1  O-linked N-acetylglucosamine transferase [Toxopla
+
+
+Domain annotation for each sequence (and alignments):
+>> EPT25651.1  target of rapamycin (TOR), putative [Toxoplasma gondii ME49]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.6   0.3   2.7e-24   7.5e-21       2     100 ..    3230    3329 ..    3229    3336 .. 0.92
+   2 !   73.5   0.2   2.9e-24     8e-21     103     211 ..    3444    3544 ..    3431    3586 .. 0.83
+   3 !    5.0   0.1     0.002       5.7     275     302 ..    3878    3905 ..    3866    3934 .. 0.81
+   4 !   16.0   0.0   8.9e-07    0.0025     303     342 ..    4152    4196 ..    4139    4197 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 73.6 bits;  conditional E-value: 2.7e-24
+                  CCTTCCCCTSSSGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkl 97  
+                  +laa  a +  +W  +e+y++     ds + af+ a+l +hr++f++a e i++arqll+ el+al gesy+ray++lv lQqlaEleei++++q++
+  EPT25651.1 3230 SLAASVAFHFRDWAALERYVQWFPaTDSCEHAFYMAVLRVHRGEFEAALEEIQRARQLLDPELTALLGESYKRAYPALVTLQQLAELEEIVELLQRQ 3326
+                  68888888999*********999989999999***************************************************************97 PP
+
+                  --- CS
+         FAT   98 sss 100 
+                  ++ 
+  EPT25651.1 3327 RDR 3329
+                  743 PP
+
+  == domain 2  score: 73.5 bits;  conditional E-value: 2.9e-24
+                  TTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHC CS
+         FAT  103 lksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp.pevvyaylkylwak 198 
+                   ++l+  Wr+Rl  + ++ e+wq++l+vRsl++sp+ed       a++wl+f++l+R++++  lA + ++ l +  + ++++ p+vv++++k+l+a 
+  EPT25651.1 3444 SEQLRHLWRTRLATCESNAEIWQKLLRVRSLIMSPHED-------ATTWLRFSSLCRQQHHARLAVEIIQCL-RDHP-HSRHdPRVVLESFKVLHAV 3531
+                  5889999*******************************.......***************************.4444.45556************** PP
+
+                  CHHHHHSSCCHHH CS
+         FAT  199 geqkealqkLref 211 
+                  g++ ea + L  f
+  EPT25651.1 3532 GRKLEAQLLLTSF 3544
+                  ***9998888444 PP
+
+  == domain 3  score: 5.0 bits;  conditional E-value: 0.002
+                  CHHCTCCCHSTTCCCCHHHHHCCHHHHH CS
+         FAT  275 ateldpswykawhtwalfnfevlskeee 302 
+                   + ++++  kaw +wal nf+v +++++
+  EPT25651.1 3878 GVLFQSRNSKAWSAWALTNFQVAEALKN 3905
+                  566788899*************999855 PP
+
+  == domain 4  score: 16.0 bits;  conditional E-value: 8.9e-07
+                  HSSSS.....S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHH CS
+         FAT  303 kkeeee....pedlseyvvpavegflkslslsse.kslqdllRlL 342 
+                  ++ee+e     ++l +++v+av+ fl+s+ l  + +slqd+lRl+
+  EPT25651.1 4152 NEEEKEvlllTTMLPHFIVEAVRAFLRSIELRPStSSLQDILRLI 4196
+                  223333677677777******************99********97 PP
+
+>> EPT28238.1  non-specific serine/threonine protein kinase [Toxoplasma gondii ME49]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.6   0.0   2.7e-24   7.6e-21       3     343 .]    7085    7508 ..    7083    7508 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 73.6 bits;  conditional E-value: 2.7e-24
+                  CTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCC..................CHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCC CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdkaffeaila..................lhrnqfdeaeeliekarqllvtelsalsgesynraydllvrl 81  
+                  l + +a +l++Wd++e+ +++   ++p  ++ +a++a                  +++++++e+   + +++ ll+ ++++l+  ++ +++ llv++
+  EPT28238.1 7085 LGLDCASKLQNWDLLEHMVDAYGVHTPYTKLCQAYQAlhevvyprgrqdgevapwMQTQKLREMDLRCCEGQRLLLSSWRRLPAVITDAHIALLVQF 7181
+                  6778888999********************999999966677766666666666555566999999999**************************** PP
+
+                  CCCHHHCHHCCHHCSS-.......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC................HHCCS-STTCCCCCC CS
+         FAT   82 QqlaEleeiiqykqkls.......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied................lllkgakaemwlkfa 155 
+                  Q ++El e   +  +ls       +    +++l+tWr+Rlp+++d+++ w+d++ +R +++s i++                +++ + +  + lkf+
+  EPT28238.1 7182 QLYVELLEGYHLVVHLSrrlqkggEFPAARTTLNTWRERLPNTWDSIDSWNDLFVWRNFIFSIIQStvtsspvltpsqktswPAYVQDMPWTMLKFV 7278
+                  ********9998888888888998888888889*************************************************9***999******** PP
+
+                  CCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---........................ CS
+         FAT  156 nlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq....................... 229 
+                  ++aR  +rl     aL++ +++ +               +       ea+  + e ++ +l ++ ++ +gl+                         
+  EPT28238.1 7279 SIARSPNRLREVSLALLMKMDNLP--------------AMKNPAYATEAFIAMTEKAKLCLGDPAQYATGLQLLnafdfdfpgpssvssaaaspval 7361
+                  *********977777777767777..............33334445666666666666666666655555444445555555555555555556666 PP
+
+                  ...........HH.HHCCCTCCC.........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS........ CS
+         FAT  230 .eptnleeftkll.arcylkkGe.........wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee....... 308 
+                      +++++ + +  + + +k+            +a+q   ++ee  +++ +  ++   ++p +  aw twa++n+  +    +++   +       
+  EPT28238.1 7362 cADPHVQQQLDAQrLQLLRLKAIlmfrlytldRPNAFQG-VSREELLSGADSLLRSTLAVQPLCGAAWLTWAKMNESLFFLH-NGPATLSalsasae 7456
+                  655555555555544444455545555554443355666.35678899999**************************99887.44333335788889 PP
+
+                  .................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  309 .................pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                                   +e+l +y+ +a+ gfl  l+l   k + +l R+L+
+  EPT28238.1 7457 aaegessdacethkkeeEETLVRYLLSAMVGFLMNLQLRPAKGRLYLSRILW 7508
+                  999*************888888*****************************8 PP
+
+>> EPT28661.1  O-linked N-acetylglucosamine transferase [Toxoplasma gondii ME49]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.5   0.0     1e-05     0.029     229     326 ..     215     382 ..     127     390 .. 0.52
+   2 !    5.4   0.5    0.0015       4.3     245     294 ..     393     435 ..     330     456 .. 0.79
+   3 ?    1.9   0.0     0.017        48     241     304 ..     491     549 ..     438     601 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 12.5 bits;  conditional E-value: 1e-05
+                 ................................................HH.H.HCCCTCCC........CCCCCCCCT.S...-SSCCHHHHCCHHCTC CS
+         FAT 229 q.....................................eptnleeftkll.a.rcylkkGe........wlaalqklnwseekseeilqaysaateldp 280
+                                                         t+l++ +kl+ a  cy++              +l+  + +++++  +lq y++at+l+p
+  EPT28661.1 215 AlkergellqavehyraslvanphqptcrtnlavaltdLGTKLKQEKKLQaAlVCYTEA-LtadptyapCYYNLGVIHAETDDPHTALQMYREATRLNP 312
+                 14444444444445555555333333333333333444333333333333211222222.134455555333333344455669999999999999999 PP
+
+                 CCHSTTCCCCHHHHHCCHHHHHHSSSS.........................S-TCCHHHHCCT..CCHH CS
+         FAT 281 swykawhtwalfnfevlskeeekkeeee........................pedlseyvvpavegflks 326
+                 s  +a+++++ ++ +  + e   +  e+                        ++++se + +a++ + k+
+  EPT28661.1 313 SYVEAYNNMGAVCKNLGKLEDAISFYEKalacnanyqmslsnmavaltdlgtQQKASEGAKKAISLYKKA 382
+                 9999999999999876555533322222555555566666666666666665555556666666666555 PP
+
+  == domain 2  score: 5.4 bits;  conditional E-value: 0.0015
+                 CCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+         FAT 245 ylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnf 294
+                 y  +G   a l+k        +++l  y++a+ ++p++++a+++++  + 
+  EPT28661.1 393 YYNLGVAYADLHK-------FDKALVNYQLAVAFNPRCAEAYNNMGVIHK 435
+                 5555666666666.......899999999999999999999999987766 PP
+
+  == domain 3  score: 1.9 bits;  conditional E-value: 0.017
+                 HHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC..CCHHHHHCCHHHHHHS CS
+         FAT 241 larcylkkGewlaalqklnwseekseeilqaysaateldpswykawht..walfnfevlskeeekk 304
+                  a++y  +G   +  ++       +e+ ++ay +   ldp++ +a+h+  +al + e+l ++e + 
+  EPT28661.1 491 YAEAYNNLGVLYRDQGD-------IEDSVKAYDKCLLLDPNSPNAFHNklLALNYLENLPENEICR 549
+                 35666666665555555.......888888888888888888888888777777777777766554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       8322  (6669204 residues searched)
+Passed MSV filter:                       431  (0.0517904); expected 166.4 (0.02)
+Passed bias filter:                      177  (0.0212689); expected 166.4 (0.02)
+Passed Vit filter:                        12  (0.00144196); expected 8.3 (0.001)
+Passed Fwd filter:                         3  (0.00036049); expected 0.1 (1e-05)
+Initial search space (Z):               8322  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.11u 0.03s 00:00:00.14 Elapsed: 00:00:00.06
+# Mc/sec: 34035.90
+//
+[ok]

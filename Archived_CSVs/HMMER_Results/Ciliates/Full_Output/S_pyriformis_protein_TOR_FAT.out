@@ -1,0 +1,156 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/S_pyriformis_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    3.4e-15   54.2   3.7    3.4e-15   54.2   3.7    2.4  2  StePyr_13634  
+     0.0021   15.5  11.5       0.18    9.1   2.4    3.6  3  StePyr_12817  
+  ------ inclusion threshold ------
+       0.13    9.5   7.2      0.015   12.6   0.2    2.9  4  StePyr_10252  
+
+
+Domain annotation for each sequence (and alignments):
+>> StePyr_13634  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.2   0.1      0.61   9.7e+02      17      99 ..    2120    2212 ..    2114    2228 .. 0.79
+   2 !   54.2   3.7   2.1e-18   3.4e-15      38     342 ..    2658    2975 ..    2571    2976 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: -3.2 bits;  conditional E-value: 0.61
+                    CCCCT....TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCC.CCCHHHCHHCCHHCSS-........- CS
+           FAT   17 meeylslmkkdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsgesynraydllvrl.QqlaEleeiiqykqkls........s 99  
+                     +e++s  ++ds + a+++ +++l   n+  ++++ ++  + ll   l + + e+ ++ y+l+ +       lee +++k+k++        +
+  StePyr_13634 2120 DREKISNDNEDSHRLALLKLLHSLIDlNKSPSVKKSVSGYIPLLKSFLLSPNTEIRKNLYGLMRKAyDESKNLEEPLKIKRKSQeillkgltD 2212
+                    578999999999999999999998888999999999999999999999999999999999999774266777888888888777666666664 PP
+
+  == domain 2  score: 54.2 bits;  conditional E-value: 2.1e-18
+                    CCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-......---TTTTTTT----TTS-TT.TGCCCTT CS
+           FAT   38 lalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls......sseelksllktWrkRlpgvq.ddvevwq 125 
+                    l++ + + d+a++++++  + +v+++++l+  sy+++++l+++lQ + El e+++++  ++       se+  ++l+ W+ R p ++ dd++vw+
+  StePyr_13634 2658 LNITQADPDRARYYLDQEFSRFVEKWQSLNPLSYSARHKLVQKLQKIFELSEFLSIYHIKKqeseeeYSERIGTVLRGWKSRPPSIAmDDLSVWD 2752
+                    3355589************************************************99988888889999999999******************** PP
+
+                    TCCCCTCCCHCCCHC......HHCCS-STTCCC...CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCC.HH CS
+           FAT  126 dilsvRslvlspied......lllkgakaemwl...kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkL.re 210 
+                    dil  R l++++i++        ++   + + l    +++   k g l+++e++L+++l  + ++++  +v++ +  + +  +e+k+  ++   e
+  StePyr_13634 2753 DILFSRVLFFDKINSikrlenEEFT---EYASLlcaDTSECPLKLGWLEVSERYLREALNRRVDKSRS-SVTIYSPALRLRAKEIKKGSEHHdTE 2843
+                    *************996664332223...2233333366666678899999999999998888755555.55555555555555555555444356 PP
+
+                    HHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHS CS
+           FAT  211 fvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekk 304 
+                    f+ ++++k    +s    + pt+ +++++ l ++ y  + + l   +     e  ++++ +a+s   +l++s      + a+f++  l+++ee +
+  StePyr_13634 2844 FILSKFDKL--FQSAAVHKVPTEEKDQHNFLiGQLYKSLTKILIYRRPC---ESLPKCAKEAFSYLSQLNNSTS--SLKFARFCDLLLREYEEDE 2931
+                    666666664..33333333455556666655588888888877766664...3557777777777777777544..4567888888888888888 PP
+
+                    SSS.......S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+           FAT  305 eeee......pedlseyvvpavegflkslslssekslqdllRlL 342 
+                    + ++      + +  +++   v + l++ + +++ +   ++Rl+
+  StePyr_13634 2932 RGMQdcirglEVKPDTLAKIIVGCTLQAMKRNNQRAHDMFPRLI 2975
+                    77778888774444456677888888888888888888888875 PP
+
+>> StePyr_12817  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    5.0   2.9     0.002       3.2     206     269 ..      31      85 ..      16     165 .. 0.70
+   2 !    9.1   2.4   0.00011      0.18     214     315 ..     198     299 ..      84     313 .. 0.76
+   3 !    3.6   0.0    0.0054       8.6     229     284 ..     369     423 ..     325     458 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 5.0 bits;  conditional E-value: 0.002
+                   SCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCC CS
+           FAT 206 qkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeil 269
+                   ++ +           +l+s    +++++++ ++kl ++cy k+G   +a+++ +++ e se++l
+  StePyr_12817  31 SCFKS--------YIKLNSKESLINQDQIKAYEKL-GQCYEKLGNVSEAYNNYEKALEVSENVL 85 
+                   33333........3357777888899999999999.8999999999999999766665555555 PP
+
+  == domain 2  score: 9.1 bits;  conditional E-value: 0.00011
+                   CTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHH.HHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S CS
+           FAT 214 cllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqa.ysaateldpswykawhtwalfnfevlskeeekkeeeep 309
+                    ++ek +++ ++   ++ + l+++  ++++cy k+ +  +al  l++s+e +e+il+  +++ +++ +s++ +++++++ n+  l +e+ k+  +++
+  StePyr_12817 198 GNFEKSKNIMEEASGKTDKALSDLYYNIGECYNKQKKKFEALTYLEKSKEIREAILAPnHQDLAQIYSSLALCYFRLGRNNEALLLYEKCKE--IRQ 292
+                   344444466666666689999999999******************99999999999853677899999999999999999999999886663..334 PP
+
+                   -TCC.HH CS
+           FAT 310 edls.ey 315
+                   e l   +
+  StePyr_12817 293 EALTpSH 299
+                   5444444 PP
+
+  == domain 3  score: 3.6 bits;  conditional E-value: 0.0054
+                   ................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS CS
+           FAT 229 q.....eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswyk 284
+                   q       ++le ++  ++r+y   G+ l  l++ n      +e+l +y +a e++    +
+  StePyr_12817 369 QdckkiREESLENYHPDIGRIYNSMGSCLLGLGN-N-----DQEALIYYEKAKEIREAILH 423
+                   1333336778888888888888888888888888.3.....78888888888888776655 PP
+
+>> StePyr_10252  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.6   0.2   9.5e-06     0.015     140     293 ..      88     267 ..      23     292 .. 0.74
+   2 ?   -2.6   0.0      0.41   6.5e+02     171     213 ..     301     353 ..     294     359 .. 0.62
+   3 ?   -2.7   0.1      0.43   6.8e+02      33      62 ..     515     544 ..     486     553 .. 0.55
+   4 ?   -1.3   0.0      0.17   2.7e+02     162     225 ..     702     763 ..     687     805 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 12.6 bits;  conditional E-value: 9.5e-06
+                   C........................HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCC..HH CS
+           FAT 140 d........................lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkL..re 210
+                   +                        l +k+  ++ wl+   +  k g++s A++ L+k+l+ed+   ++ e+ ++++  +  ++e ++a+  L    
+  StePyr_10252  88 NrdlrsttrlanghpgpgdleetteLKYKKEVIASWLERGLSEQKLGEYSSAISFLTKVLKEDP---NHTEALLQRAYCMMNTNEYRQAIPDLlaIS 181
+                   055555555555566666666666678999**********************************...4457899****************9997744 PP
+
+                   HHCCTSSCCC...........SS-SS---..............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+           FAT 211 fvscllekke...........elssglevq...eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                   + + l++kk            ++++         ++ l ++ + + ++y  +G+  a+  k        e++lq +++a+ l++s   a+  +++++
+  StePyr_10252 182 QDNPLYDKKVylalamcfagvNDLDT---AirqLNRGLLKYPRYI-EAYVARGQLYAEQMK-------WEKALQDFHKAISLNSSDGPAHIGLGDAY 267
+                   44445555556666667754433333...2344777777777777.777777775555555.......67777777777777777777776666665 PP
+
+  == domain 2  score: -2.6 bits;  conditional E-value: 0.41
+                   CCCCCHCTT..................TSSCCCHHHHHHHCCHHHHHSSCCHHHHC CS
+           FAT 171 Lkklleedk.....eewlp........pevvyaylkylwakgeqkealqkLrefvs 213
+                   L+ l+++++     e            +e++y ++ ++++k++  ea ++L++ ++
+  StePyr_10252 301 LFDLQDYSNslndiE---LalsynaedSELYYYKALIMLSKENLTEAALCLEQTIK 353
+                   555555555443220...12333334567778888888888888888888877765 PP
+
+  == domain 3  score: -2.7 bits;  conditional E-value: 0.43
+                   CCCHCCCCHH--CCHCHHCCCHCCCCCCCC CS
+           FAT  33 ffeailalhrnqfdeaeeliekarqllvte 62 
+                    ++a + l +++ ++ ++l+eka++ll++ 
+  StePyr_10252 515 AYQASIYLSQSRATANKKLAEKAKSLLDKA 544
+                   455555555555555556666666555554 PP
+
+  == domain 4  score: -1.3 bits;  conditional E-value: 0.17
+                   HHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS CS
+           FAT 162 grlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssg 225
+                   +r++lA   L ++l  ++ + +  e  ++ lk+l   ++++++++++ +++s l++ ++  ++g
+  StePyr_10252 702 NRPDLALLDLESALTVKS-SKE-IEFDLEILKILSIPIDINDYISTIIKQISLLSKAMQLGTEG 763
+                   677777777888877777.333.4889999**********************665555444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       4783  (2027660 residues searched)
+Passed MSV filter:                       629  (0.131507); expected 95.7 (0.02)
+Passed bias filter:                      140  (0.0292703); expected 95.7 (0.02)
+Passed Vit filter:                        16  (0.00334518); expected 4.8 (0.001)
+Passed Fwd filter:                         3  (0.000627221); expected 0.0 (1e-05)
+Initial search space (Z):               4783  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.07u 0.00s 00:00:00.07 Elapsed: 00:00:00.04
+# Mc/sec: 15977.19
+//
+[ok]

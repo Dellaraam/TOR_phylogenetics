@@ -1,0 +1,115 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Batrachochytrium_dendrobatidis_jam81_gca_000203795.v1.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.2e-156  522.5  14.2   1.4e-156  522.2  14.2    1.1  1  EGF79682  pep supercontig:v1.0:GL882885:444975:449024:1 gene:
+  ------ inclusion threshold ------
+      0.016   13.1   6.7      0.014   13.3   6.7    1.0  1  EGF83766  pep supercontig:v1.0:GL882879:267204:268399:-1 gene
+
+
+Domain annotation for each sequence (and alignments):
+>> EGF79682  pep supercontig:v1.0:GL882885:444975:449024:1 gene:BATDEDRAFT_89072 transcript:EGF79682 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  522.2  14.2  3.3e-160  1.4e-156       1     668 [.       1     975 [.       1     980 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 522.2 bits;  conditional E-value: 3.3e-160
+  PTHR13335.orig.30.pir   1 MafldnedillahlRtsyltsdddgmcerilndd...................................................... 34 
+                            M++++++d+l+++lR+++l++ ++++++ri++++                                                      
+               EGF79682   1 MSLAQDQDLLIYKLRLGLLNT-RESVAQRIVTMPkkdeyeyisamiprmaacaavqddtggstyglfrpqngprrktmhfqeasgpdh 87 
+                            ********************7.99**************************************************************** PP
+
+  PTHR13335.orig.30.pir  35 ..................dvdlekihsapyppvsssssesll..srpksastpgdsgsedsgssneaetatg................ 86 
+                                              + +l++i++  ++++s+++s  +   +r ++++++++s+ e+s+ss  a++  +                
+               EGF79682  88 ehigsttisshadltkrsNGSLGTIFQGGNSTASRGASVAMGsfARLTDDPQYQRSAIEGSTSSAVAQRGLVklldsilrpcqassaa 175
+                            ***************************************************************888766666**************** PP
+
+  PTHR13335.orig.30.pir  87 ........................................................................................ 86 
+                                                                                                                    
+               EGF79682 176 tttvipsnapssrnplastalqtilhttsenfkglatshknlhqvnhvestpsviqnfnikstttnsdtlpvgsttsvpvvpstrvtt 263
+                            **************************************************************************************** PP
+
+  PTHR13335.orig.30.pir  87 ...........gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrra...ntavkleklrke...rrs 157
+                                       g ++a+ +kp++++++e+ +++++++++  +++ ++++s+++s+++l+++  +  a   ++++k ++ +++   r+s
+               EGF79682 264 kfpcppspvaaGLPEASVPKPPATHATERVYDRRNVHADGVRGNFQRNASSSFSKDELKKSVPKVPAtlrSPPAKDQAIHCNfpeRQS 351
+                            ******************************************************************9999**************9999 PP
+
+  PTHR13335.orig.30.pir 158 ksasiassee.r..............................dqsscksiqwktessvkedsvqrassesslsserssdssssssaps 214
+                            +++s++++ + r                              d+++ +s+ ++++ sv+ +++ ++++ +++s+e  +d+ s++++++
+               EGF79682 352 HQRSNSEPGNvRtvqplphcrsfnneipeenmggldnspdraDSVKAESTPQSYPVSVEPSELILEDQIHDISFEAIEDQLSAENDST 439
+                            999999999999**************************************************************************** PP
+
+  PTHR13335.orig.30.pir 215 r.rq.............snkldseq............................................................... 225
+                            + ++             +nk+d+ +                                                               
+               EGF79682 440 EfEEqgidldavklvvvHNKTDAPSldvnseqtnthkttsypagvtststaksipldatvaqvmptpnpvitstdqlkgaqseaqvaa 527
+                            99889********9999777777778888888888999************************************************** PP
+
+  PTHR13335.orig.30.pir 226 ......lsaeesdslfekkskssstktqkskkpssa.a.......................kqsisslssaLekkpsqlnnpf.neya 282
+                                  +s+e+s++l+ ++ +s+s++t++s +p+++ +                       ++ is+ls++++kk+s ++npf + ya
+               EGF79682 528 sivsvdKSDEHSNPLLGAATTSQSMFTKQSLSPTKVtQfsygsqlsigssdlldyttqlheQKHISALSAMMDKKSS-KINPFaQTYA 614
+                            ************************************99***997777766666666665554555**********99.7********* PP
+
+  PTHR13335.orig.30.pir 283 kfdgkgvgttaslkidiylplssepdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnk..vnaycLrivEdDGevddDFPp 368
+                             f+gk+  ++++++++++lp+s++  +l+pl+v+vk++a+V+evIG++L++y++  r+p lp+++   ++++LrivEdDG++ddDFP+
+               EGF79682 615 IFSGKS--DGNPMRLQMFLPFSQD--PLKPLFVSVKQDASVEEVIGYTLFEYFDAARQPILPESAwlISNWNLRIVEDDGTIDDDFPA 698
+                            ******..****************..**************************************99977******************* PP
+
+  PTHR13335.orig.30.pir 369 LDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrleeakrsagsaneagsslstesskeslfvkvnlaypgdsvrsktti 456
+                            LDr ++i+kf f+ +aL+e  + e  + n++++++p+++++++e++++sag ++ +gs++    +++++++kv+l y+  +v+++tt+
+               EGF79682 699 LDRARKIQKFAFDRFALCETIPIEVVNPNTQAHGTPMVSHSQAEDVNSSAGIETVSGSAS----TAATVYLKVHL-YSTLEVKQTTTM 781
+                            ***********************************************************9....***********.************ PP
+
+  PTHR13335.orig.30.pir 457 vvptdvtladvlekackkrkldqkkyrllkvsepnvivdldrtvesldgleflllrknssradgvlekteskssssanatissksaae 544
+                            ++p+++++++v++ +c+krk+d+k+y +lk++++++ v+ld+t+++l+++ef++l++ s  a++ + +++++++              
+               EGF79682 782 QMPVNIPMSEVFDLICRKRKYDPKDY-VLKMADTKTDVQLDKTLAQLEAIEFCVLKRSSGGAGDIFLRPPDEPT-------------D 855
+                            **************************.****************************************9999998.............8 PP
+
+  PTHR13335.orig.30.pir 545 dsqiqiatvqddlsssayksfkVsrkhkmrfktdrelgIdgdyieimPvenqkaatkfwekqKtisihisqvvacklssknpanFkiv 632
+                            ++++++ + + +++ s yk++ V++kh ++++++r+l+Idg+yi+++ +e++  +   +++++t+s+h+s vv ck+++k+ anFk++
+               EGF79682 856 EDADDRLFLTTEDLRSVYKQYSVIYKH-LMGRHERNLTIDGEYIHLVASEGKALF---DMGKTTNSFHVSAVVSCKQIKKKSANFKLI 939
+                            99999**********************.**************************8...****************************** PP
+
+  PTHR13335.orig.30.pir 633 vrrendeKrydfeavsaaeaaeIvskinnileayas 668
+                            vrr++d K yd+eavs a+a++I++++++++++ ++
+               EGF79682 940 VRRNHDAKVYDLEAVSDADARNICMRVTAMHQLIQI 975
+                            *******************************99875 PP
+
+>> EGF83766  pep supercontig:v1.0:GL882879:267204:268399:-1 gene:BATDEDRAFT_84487 transcript:EGF83766 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.3   6.7   3.2e-06     0.014      94     164 ..     107     146 ..      20     173 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 13.3 bits;  conditional E-value: 3.2e-06
+  PTHR13335.orig.30.pir  94 kkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasias 164
+                            k+++++                               +++++++++++++++++++++++  +s++++++s
+               EGF83766 107 KQQQQQ-------------------------------HQQEQQQQQQQQQQQQQQQQQTDSEKSGTSGSES 146
+                            222222...............................2222222222222222222222222223333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       8700  (3904006 residues searched)
+Passed MSV filter:                      1646  (0.189195); expected 174.0 (0.02)
+Passed bias filter:                      290  (0.0333333); expected 174.0 (0.02)
+Passed Vit filter:                        60  (0.00689655); expected 8.7 (0.001)
+Passed Fwd filter:                         9  (0.00103448); expected 0.1 (1e-05)
+Initial search space (Z):               8700  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.28u 0.07s 00:00:00.35 Elapsed: 00:00:00.19
+# Mc/sec: 13488.31
+//
+[ok]

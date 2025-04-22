@@ -1,0 +1,227 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Saitoella_complicata_nrrl_y_17804_gca_000227095.Scomplicata_3.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+          0 1047.1   0.0          0 1046.6   0.0    1.0  1  GAO46847  pep supercontig:Scomplicata_3.0:contig006:44410:483
+    0.00043   16.4   2.2      0.079    8.9   0.1    2.1  2  GAO48354  pep supercontig:Scomplicata_3.0:contig014:146945:14
+     0.0064   12.5   0.0       0.02   10.9   0.0    1.7  2  GAO47383  pep supercontig:Scomplicata_3.0:contig008:319554:32
+  ------ inclusion threshold ------
+      0.045    9.7   0.4      0.057    9.3   0.4    1.0  1  GAO49622  pep supercontig:Scomplicata_3.0:contig024:106978:10
+      0.065    9.1   0.1       0.21    7.4   0.1    1.8  1  GAO48206  pep supercontig:Scomplicata_3.0:contig013:200136:20
+       0.99    5.2   4.4        3.7    3.3   0.1    2.8  4  GAO49932  pep supercontig:Scomplicata_3.0:contig027:114106:11
+
+
+Domain annotation for each sequence (and alignments):
+>> GAO46847  pep supercontig:Scomplicata_3.0:contig006:44410:48363:1 gene:G7K_1065-t1 transcript:GAO46847 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1046.6   0.0         0         0       8    1138 ..      69    1255 ..      63    1279 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 1046.6 bits;  conditional E-value: 0
+  PTHR13298.orig.30.pir    8 eeltvkldlatklkdgaenll.............snllresrdsiekkleslnnlikl............................ 52  
+                             +el  +ld+++k+k+gaenll             +n  ++ r+++e +l+ +n++i+                             
+               GAO46847   69 SELLSQLDIESKIKEGAENLLvmfekgrkkngteDNPRERARRKAEHELDAANMRIAHlkeqvesvqvsspvkrrpgrpgnevkkh 154 
+                             566789***********************9997555999999******************************************** PP
+
+  PTHR13298.orig.30.pir   53 ......................................................kaaakklnellgllkeeiiikedlvelelvsc 84  
+                                                                                   +++++++n l++ll +++ +k+dl ++++ ++
+               GAO46847  155 qqrpsltsrpslptlnsfqsgalasdeirednndsptwslsdilqsleethhepQFYVDRANTLVRLLSRHPLLKYDLAWSAFGAR 240 
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir   85 lrslllseskevraaalRllrylisdskvlrrllrlgldiliarsLdrdsknetEreqalkliramlev..apkliptaivralva 168 
+                             ++ ll  + kev aaa+R++r+++sd  +l++l +l+++ +i+++L ++sk + Ereqa kl+r  l++  ++ l+p+++vra+va
+               GAO46847  241 IQWLLGYPVKEVSAAAYRVARHAMSDLDSLQILDALQIELFIIKTLAKESKDNLEREQAVKLVRVYLDIpgGTRLLPRSVVRAVVA 326 
+                             *********************************************************************9999999********** PP
+
+  PTHR13298.orig.30.pir  169 iaeseedrlrraclatlcelallnpelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlekllapftd 254 
+                             +ae+ ed+l +++++tl+el++ +p+l+  agg+r+ll+ l++  +p+ i + l+++++y+l +p+tr+y++ g dl+++l+ ft+
+               GAO46847  327 VAEHTEDKLSNISIETLAELLIIDPALLVDAGGMRILLHTLTD--GPAGITQPLITAFMYILGSPHTRNYIHNGADLDIVLSAFTE 410 
+                             *******************************************..9***************************************6 PP
+
+  PTHR13298.orig.30.pir  255 fhyrakkdkqeskskeerelsrleaskkailtlLrSWaGllylckndkrgLkslvdvlrlpnlevrkaildlLydlLrlkepkwte 340 
+                             +h +a          ++ e+ rl++++++++t+L+ W+G+++lc+++ r ++s+vd+lr+p  +vr a++dl  d+L +k p+wt 
+               GAO46847  411 AHAKA----------HVSED-RLNIARSVVTTMLKGWPGVFALCMDGMRPIRSVVDALRIPASGVRVAVMDLVADVLGIKDPSWTT 485 
+                             65555..........33444.***************************************************************** PP
+
+  PTHR13298.orig.30.pir  341 sftsgsalkavdsaalqdswrlsdgfvaeesktilpssarsrpdlldnylallLlalieagLleaLvevits.sdssvsvkAtiLL 425 
+                             +f +g+++++ ++++l     + +g+ a e+k+    ++++r  l +++ allL +l++ gLl+aL  vi++ + +s  +kAt+L+
+               GAO46847  486 TFLAGRRITMFGRPSL-----QVSGISAYEQKR---KPEENRMALKEHFEALLLCILFDVGLLDALQVVIEDrDEESTMRKATLLI 563 
+                             ***************9.....566666555444...5788889***************************997777789******* PP
+
+  PTHR13298.orig.30.pir  426 gellslantlLPpelsaslhslptlvslaasfssekskrnraaaalalksldelkrsksksaslyldeilqkkllersssnsseds 511 
+                             gell+la ++LP ++s++l +l +l+++a +f    +k++++a++ al ++++++r ++++  ++  e  +           s+ +
+               GAO46847  564 GELLQLAGRVLPLSYSSRLSTLGRLFEAAVEF---GHKDRFVATS-ALMQIESFNRIGNRPQWVSYRERYS-----------SSND 634 
+                             ********************************...**********.***************9998777666...........2222 PP
+
+  PTHR13298.orig.30.pir  512 krkrlrq........iledddeafkrmlkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPskkrf 589 
+                             +++++rq         l++dd++f++m+ ++qv stk+++kWnwd++lel++gpl  npkrlee+++++ +++rL+sF+kP+k r+
+               GAO46847  635 QQRGQRQveqvkikmNLNIDDTHFRNMVMETQVPSTKNFTKWNWDTLLELVQGPL-RNPKRLEESIRASHLMRRLISFFKPFKFRY 719 
+                             2333333333556669***************************************.****************************** PP
+
+  PTHR13298.orig.30.pir  590 ssidktkqlekyvqvgcqllslLlsspeGialleesrlLkelleelsqelldsssekspderlfskerlsttlsqgyflfiGvLss 675 
+                             s+++ktk++++y++ gc ll++Lls++eGi++l es+l+k+++e+lsq  l++++   ++e +fsk r+++tls gyf+++G+Lss
+               GAO46847  720 SNMKKTKPNQRYTTFGCALLKTLLSNQEGIRYLTESKLVKQIAECLSQ--LEPVATFVNEEPVFSKRRMEDTLSSGYFALLGTLSS 803 
+                             ************************************************..899999666677************************ PP
+
+  PTHR13298.orig.30.pir  676 tkeGlkiLeklnifqlllqlislktrdelvklivssLdysldgesRvilskaLtsssesiRlyatkhLrvllr.aessdfsdWgie 760 
+                             +keG++++e ++if++ +++ +lk+rd+lv  +v+++dysl+g+sR+ilskaLt++s+++R++atkhL+   + ++s++ ++W+++
+               GAO46847  804 QKEGIALMEHHHIFNMCYHISDLKNRDDLVMAFVENMDYSLEGHSRIILSKALTTGSKAVRMFATKHLASITKnSKSAEQAQWALK 889 
+                             ***********************************************************************99669999999**** PP
+
+  PTHR13298.orig.30.pir  761 lLvtqlydpskevakaAlkiLeeacedkanileylvslkpsllhlgdkgelLllrflstpkGfrylkeenyvekelekWaeernae 846 
+                             lL tqlydp ++v++ A+++Leeac d  ++l+y+v+lkp+l+hlg++g++L+lrflst+ Gf+yl+e +y+ ke+++W+++rn++
+               GAO46847  890 LLTTQLYDPFVDVCEVAVRVLEEAC-DLMCNLQYVVKLKPALDHLGEIGAPLMLRFLSTSIGFQYLNELDYIGKEMDDWFHGRNES 974 
+                             *************************.************************************************************ PP
+
+  PTHR13298.orig.30.pir  847 YvllvEealsealtlltreedgsdsrrrsngpdsslrnrksvilPpHLygeLakteeGcelLekkghleelaetirshgle..dse 930 
+                             Yv lvE+ l++ ++        +d r++ +  d++     +++ PpH+ygeLakteeGc+ L +kgh+++++++ir+ g e  d++
+               GAO46847  975 YVALVEACLAKVFSG-------DDLRSSRS--DNDASSVFDGTAPPHFYGELAKTEEGCRALAEKGHFQQFCNYIREFGQEsrDED 1051
+                             **************9.......44443333..344455689************************************998889999 PP
+
+  PTHR13298.orig.30.pir  931 eilklkaalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrnaliG 1016
+                              ilk+k++lWA+g+igs+  G++++ e   ++ e+i+++a +s+v+s+ Gt+++vlg i  te+ga iL+elgWe+v +  + + G
+               GAO46847 1052 IILKVKSCLWAVGNIGSTAGGAPFICE--AGVAEHIVQIAATSKVMSLKGTAYFVLGAIVNTERGAAILGELGWETVTNALGIPLG 1135
+                             9**************************..67******************************************************* PP
+
+  PTHR13298.orig.30.pir 1017 lciPsdvnelfsipehqqsssaesapitdekpeeiktslkyptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpelfddpc 1102
+                             lc+P+d+ ++  i ++++   +     ++ + e+++t +    +++v +eil  ++ Lsn++la++a+++L klk+++ + f +p+
+               GAO46847 1136 LCVPDDLGKFLTITKDEPAPDKATG-RRESSGEAEFT-VLNLVDDPVDREILAAISGLSNHILANEASRTLAKLKSRYGAKFGSPS 1219
+                             ***********99988555544444.33445555555.556679****************************************** PP
+
+  PTHR13298.orig.30.pir 1103 lfsevlkllseyrfrlqaRrfiqelfddavllsslr 1138
+                             l+++vl ll+ yr+rl++Rrf++elf++    +++ 
+               GAO46847 1220 LYKAVLYLLEVYRYRLPVRRFLMELFKKDIIQRVID 1255
+                             **************************9877655555 PP
+
+>> GAO48354  pep supercontig:Scomplicata_3.0:contig014:146945:149502:1 gene:G7K_2527-t1 transcript:GAO48354 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.1   0.2   0.00022      0.27     700     804 ..     113     221 ..      84     228 .. 0.81
+   2 !    8.9   0.1   6.6e-05     0.079     724     780 ..     312     367 ..     282     388 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 7.1 bits;  conditional E-value: 0.00022
+  PTHR13298.orig.30.pir 700 trdelvklivssL.dysldgesRvi...lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLee 783
+                            t++ +v l ++++ ++s  + sR +   l+k+L ss+  iR+ a     + +r ++++++d +++   t l+d++  v  + +    +
+               GAO48354 113 TNQYIVGLALATFgNISSPEMSRDLcqdLEKCLSSSNAYIRKKAALCAMRVIR-KVPELQDNFVDRAKTLLSDRNHGVLLCGVTFATD 199
+                            445555566666677777888887666699***********998877778888.8********************************* PP
+
+  PTHR13298.orig.30.pir 784 acedkanileylvslkpsll.h 804
+                             ce+++ + ++  s+ p ll +
+               GAO48354 200 LCENDPDLVDQFKSFTPILLrQ 221
+                            ***************9998744 PP
+
+  == domain 2  score: 8.9 bits;  conditional E-value: 6.6e-05
+  PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlki 780
+                            l k+Lt++ ++iR+ a++ L + +    ++  +   ++++ +l+dp+++++++Al++
+               GAO48354 312 LGKFLTNKDNNIRYVALNTLSKVVA-IEPNAVQRHRNTILDCLRDPDVSIRRRALDL 367
+                            89******************99999.8899999999*******************97 PP
+
+>> GAO47383  pep supercontig:Scomplicata_3.0:contig008:319554:322412:1 gene:G7K_1591-t1 transcript:GAO47383 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.5   0.0      0.18   2.2e+02     202     282 ..     313     401 ..     309     408 .. 0.68
+   2 !   10.9   0.0   1.7e-05      0.02     731     803 ..     475     550 ..     465     562 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -2.5 bits;  conditional E-value: 0.18
+  PTHR13298.orig.30.pir 202 lrvlldalle.cqlperiaesllavllyllnrpst...rkylragvdlekllapftdfhyra....kkdkqe...skskeerelsrle 278
+                            +r+l++a+ e c   ++  e++  ++ ++ +  +     +y++a  +l+ ++a ++d+  ++    ++d+ +   ++  +++ +++++
+               GAO47383 313 FRALVEAIAEvCAY-DEDLEAVKFTFYFWYDLKQMltiERYAEARAELRDIYAGLVDIMIKHlhypNGDNPNdlfDG--DREAEEKFR 397
+                            68899999996665.44446999999888876654222788888899*********999999887755555545433..222333577 PP
+
+  PTHR13298.orig.30.pir 279 askk 282
+                            ++++
+               GAO47383 398 SFRH 401
+                            7666 PP
+
+  == domain 2  score: 10.9 bits;  conditional E-value: 1.7e-05
+  PTHR13298.orig.30.pir 731 ssesiRlyatkhLrvllr..aessdfsdWgielLvtqlydpskevakaAlkiLeeace.dkanileylvslkpsll 803
+                            ++e+iR+ at  L ++ +  ++ ++f +  ++++    ++psk+v++aA ++L++ c+ +++ +++y+ +l p  +
+               GAO47383 475 EHEKIRYAATLVLGRYTQwtSRHPQFLEYQLQYITSGFKNPSKDVMSAAAQALKHFCQdCNQLLIDYVPQLHPFYQ 550
+                            5789*************9766**********************************775146666677777777555 PP
+
+>> GAO49622  pep supercontig:Scomplicata_3.0:contig024:106978:107808:-1 gene:G7K_3771-t1 transcript:GAO49622 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.3   0.4   4.8e-05     0.057     221     290 ..     100     165 ..      88     167 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 9.3 bits;  conditional E-value: 4.8e-05
+  PTHR13298.orig.30.pir 221 sllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqeskskeerelsrleaskkailtlLrS 290
+                            +++ ++l+l  + s+r  lra + l+ l+apf    +r+     + +s+++r++   ++sk a++  ++S
+               GAO49622 100 TVTLTVLRLYRDRSRRTVLRAMQGLHDLAAPFAVHVTRH---LHD-QSTTRRSTYIKQNSKTAMTLNMKS 165
+                            7899*****************************555555...333.445777777778888888776666 PP
+
+>> GAO48206  pep supercontig:Scomplicata_3.0:contig013:200136:202388:1 gene:G7K_2386-t1 transcript:GAO48206 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.4   0.1   0.00018      0.21     722     796 ..     160     235 ..     106     370 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 7.4 bits;  conditional E-value: 0.00018
+  PTHR13298.orig.30.pir 722 vilskaLtsssesiRlyatkhLrvllra.essdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileylv 796
+                            + l+k L+++s  +R+ a    ++l     + ++++ ++e+L + l d +  v++ A+ +L e++e++++  ++++
+               GAO48206 160 EPLRKTLKDESPYVRKTAAICVAKLFDLnPTMCIENGFLETLQEMLADANPMVVANAVTALSEIMETSPETQAFIM 235
+                            5578888888888888888888888884477888888888888888888888888888888888888888555554 PP
+
+>> GAO49932  pep supercontig:Scomplicata_3.0:contig027:114106:119165:-1 gene:G7K_4068-t1 transcript:GAO49932 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.4   0.0      0.67   7.9e+02     395     412 ..     299     316 ..     298     350 .. 0.74
+   2 ?   -3.3   0.0      0.31   3.7e+02     735     786 ..     382     439 ..     373     452 .. 0.82
+   3 ?    1.7   0.7    0.0097        11     728     785 ..     512     573 ..     506     595 .. 0.86
+   4 ?    3.3   0.1    0.0031       3.7     731     798 ..     599     671 ..     584     686 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: -4.4 bits;  conditional E-value: 0.67
+  PTHR13298.orig.30.pir 395 lalieagLleaLvevits 412
+                            +al++ag ++aL+ vi++
+               GAO49932 299 YALADAGVIDALIAVIEQ 316
+                            789999999999999987 PP
+
+  == domain 2  score: -3.3 bits;  conditional E-value: 0.31
+  PTHR13298.orig.30.pir 735 iRlyatkhLrvllra......essdfsdWgielLvtqlydpskevakaAlkiLeeace 786
+                            +Rl a   L  ++ra       + +++ +++++Lv+  +d++ +va+ A  +L + + 
+               GAO49932 382 TRLSAASVLSYMYRAgsipkkHTGQIALVVVPILVRLFDDEDLSVAETAPLVLAHLVT 439
+                            79999999******87677667777777*******************99888877665 PP
+
+  == domain 3  score: 1.7 bits;  conditional E-value: 0.0097
+  PTHR13298.orig.30.pir 728 LtsssesiRlyatkhLrvllra....essdfsdWgielLvtqlydpskevakaAlkiLeeac 785
+                            L +++ s+R  a +  r + r+    ++   ++  ++ ++++l d+s+ev+ aA  +L++ +
+               GAO49932 512 LSNPNASVRAAACQCVRSMSRSvcilRTTLTDVALVPPMMKCLEDESVEVRVAASAALCNLV 573
+                            88999****************77776777777799***********************9954 PP
+
+  == domain 4  score: 3.3 bits;  conditional E-value: 0.0031
+  PTHR13298.orig.30.pir 731 ssesiRlyatkhLrvllra.....essdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileylvsl 798
+                            +  ++Rl a+  L+ l        ++s +++ g+e+ ++ ++d++  + + Al++ ++ + d a++l+ l s+
+               GAO49932 599 NEPALRLNAIWTLKHLFYKqktsvKQSVLQNLGLEIFMERINDDDIAIQEQALDCFQNLTADGAENLDLLFSV 671
+                            5557888888888888874455678899999************************************999875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                       7119  (3658863 residues searched)
+Passed MSV filter:                       373  (0.052395); expected 142.4 (0.02)
+Passed bias filter:                      218  (0.0306223); expected 142.4 (0.02)
+Passed Vit filter:                        28  (0.00393314); expected 7.1 (0.001)
+Passed Fwd filter:                         6  (0.000842815); expected 0.1 (1e-05)
+Initial search space (Z):               7119  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.25u 0.01s 00:00:00.26 Elapsed: 00:00:00.13
+# Mc/sec: 32738.17
+//
+[ok]

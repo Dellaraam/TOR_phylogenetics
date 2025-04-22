@@ -1,0 +1,351 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Ustilago_maydis.Umaydis521_2.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   3.2e-166  553.7   0.3   3.7e-166  553.5   0.3    1.1  1  KIS71031  pep chromosome:Umaydis521_2.0:2:389356:392301:-1 ge
+    7.4e-06   23.8  11.4    7.4e-06   23.8  11.4    2.6  1  KIS68645  pep chromosome:Umaydis521_2.0:8:284283:287366:1 gen
+    9.6e-05   20.1  17.1    9.6e-05   20.1  17.1    1.4  1  KIS66586  pep chromosome:Umaydis521_2.0:18:436832:439000:1 ge
+     0.0011   16.6   1.0     0.0011   16.6   1.0    1.6  2  KIS66549  pep chromosome:Umaydis521_2.0:18:307043:313399:1 ge
+     0.0011   16.6  15.1     0.0014   16.3  15.1    1.2  1  KIS72328  pep chromosome:Umaydis521_2.0:1:2176053:2178353:-1 
+     0.0019   15.9  27.1     0.0023   15.6  27.1    1.2  1  KIS70268  pep chromosome:Umaydis521_2.0:3:7647:8721:-1 gene:U
+      0.005   14.5  25.3     0.0054   14.3  25.3    1.1  1  KIS65813  pep chromosome:Umaydis521_2.0:22:143817:145244:1 ge
+  ------ inclusion threshold ------
+       0.17    9.4  12.8       0.05   11.1   9.6    1.7  2  KIS69270  pep chromosome:Umaydis521_2.0:6:358808:362893:1 gen
+       0.22    9.0  29.2        0.3    8.5  29.2    1.1  1  KIS66917  pep chromosome:Umaydis521_2.0:16:246981:250928:-1 g
+       0.77    7.2  19.2        1.1    6.7  19.2    1.2  1  KIS67087  pep chromosome:Umaydis521_2.0:15:228702:230890:1 ge
+        1.6    6.2  32.3        2.8    5.4  32.3    1.4  1  KIS66908  pep chromosome:Umaydis521_2.0:16:223400:227983:-1 g
+
+
+Domain annotation for each sequence (and alignments):
+>> KIS71031  pep chromosome:Umaydis521_2.0:2:389356:392301:-1 gene:UMAG_00947 transcript:KIS71031 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  553.5   0.3    6e-169  3.7e-166       1     664 [.       1     978 [.       1     981 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 553.5 bits;  conditional E-value: 6e-169
+  PTHR13335.orig.30.pir   1 MafldnedillahlRtsyltsdddgmcerilndd...................................................... 34 
+                            M++l ++d+l++ lR++yl+ +dd+++++i++++                                                      
+               KIS71031   1 MSLLVDPDHLIHSLRLAYLKRIDDHYGPKIITFPsfaagkqdastpiatqtdappslsasssstsffassstaarrddvliravpsla 88 
+                            **************************************************************************************** PP
+
+  PTHR13335.orig.30.pir  35 .................dvdlekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatg..............gdtka 91 
+                                             d++++++  + y+pv ++ ++ l+  p +++ +g+++s+ ++ + +++ a++              g+ + 
+               KIS71031  89 hfkpfgsdthvvvagltDSSIHPELATVYSPVPTAGESGLFGGPGRKGGRGSHNSDADALDGRFDAADVsnrsgglaytqtiyGPGRS 176
+                            *****************************************99********************************************* PP
+
+  PTHR13335.orig.30.pir  92 rrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r.......... 168
+                            ++ ++++++rr++++++ s++++++p++ e++++++++ ++  ++s++  ++ +++++++ ++  ++s +i s++  r          
+               KIS71031 177 GALGMRVNGRRASKRVSISATHSPAPATVEKNAETECQAQQSTDQSTTDTSTGSADRQAVGEALTHESPEILSCSPgRkkeeksmepy 264
+                            ***************************************************************999**********99********** PP
+
+  PTHR13335.orig.30.pir 169 .....dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq.............snkldseq............ 225
+                                 d s +  +  +++  v +d +++ s++ sl+ erssds+s s++p+  ++             s      +            
+               KIS71031 265 tdptsDPSTGIVMGKRVNFAVPDDLPDLGSARLSLEAERSSDSQSISPRPQGpSTiqhgsiyaeslteS------Ntalsslgsagsl 346
+                            ****************************************************888*9999986655554......2455555999999 PP
+
+  PTHR13335.orig.30.pir 226 ...................................................................lsaeesdslfekkskssstkt 246
+                                                                                               +s+e+sd+  +++++ss tk+
+               KIS71031 347 pdgslgltminsaitggphsphssasqsrdnvltarsspvmsrpalpsradmaelpvpprmvisttdDSDENSDMNKSAYDHSSRTKR 434
+                            99999999999999999999999999999*********************************************************** PP
+
+  PTHR13335.orig.30.pir 247 qkskkpssa.a...........kqsi.................sslssaLekkpsqlnnpfneya..kfdgkgvgttaslkidiylpl 303
+                            ++s++ s+  +           +  i                 s lss+Lek++s ++npf +++   +  ++  t++s++++iy+p+
+               KIS71031 435 RNSRRISQLhPsrltsqsdyfsS--IrvsrsqletqhanrpkgSMLSSMLEKQDSGPENPFAAFYagIAGRAA--TVPSMTVEIYFPW 518
+                            *********88888766665550..155554456677777778888*****************9998888888..************* PP
+
+  PTHR13335.orig.30.pir 304 sse................pdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnk..vn...........aycLrivEdDGev 362
+                             ++                ++k ++++++++++at++evIG+ L++y+ee+++p+l +++  ++            ++L+iv +DGev
+               KIS71031 519 AESrqpppssplasgaisvHPKTKSMKLNIRKDATMEEVIGYGLYCYVEERWKPELDSAAssLSssereaktttiGWTLMIV-EDGEV 605
+                            *****99999999999999889999999*******************************9762257899*************.77*** PP
+
+  PTHR13335.orig.30.pir 363 ddDFPpLDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrleeakr.....sagsaneagsslstes............. 432
+                            ddDFP++D++  ++kfg +e+a+++at+++  +++d++t++ r+++++++++k+     +ag++++ag+++ ++s             
+               KIS71031 606 DDDFPAIDQSLVLGKFGGDEFAICQATPNQVRQHRDAYTNIARRTVRAPTTSKTgnkmgGAGESVAAGTGTVDASqstlvggaksgak 693
+                            ***********************************************************9**************************** PP
+
+  PTHR13335.orig.30.pir 433 .......................................................skeslfvkvnlaypgdsvrskttivvptdvtla 465
+                                                                                   s++s+f++v + +p+++vr+ktt++vp+d++la
+               KIS71031 694 aisanpslanrlgvagagagagagagaqvtagslvniqgtpifasgalsrsalgsSSQSIFLRVLV-TPNPEVRYKTTLQVPSDMYLA 780
+                            ******************************************************************.88******************* PP
+
+  PTHR13335.orig.30.pir 466 dvlekackkrkldqkkyrllkvsepnvivdldrtvesldgleflllrknssradgvlekteskssssanatissksaa..edsqiqia 551
+                            dvle++c+kr+l+++++++l+v+++ ++v+ldrtvesl+g+++l+l+++ss ++    +  s+ss+++na+i+++++a  +++  q++
+               KIS71031 781 DVLEMICRKRHLSNVDDWALIVPDKSIVVPLDRTVESLQGNHDLALVRRSSLGALGGAGALSSSSTNPNASIFKRYSAdpNTALGQPK 868
+                            *******************************************************************************99******* PP
+
+  PTHR13335.orig.30.pir 552 tvqddlsssayksfkVsrkhkmrfktdrel..gIdgdyieimPvenqkaatkfwekqKtisihisqvvacklssknpanFkivvrr.. 635
+                            ++++ + ++ayks++V+rk ++++  ++e+  ++dgd+ +imP +++++        K +s+h+s+vvacklssk +++Fk+vv+r  
+               KIS71031 869 YTKALDIAAAYKSYTVYRKSPVFGGRHNERslTLDGDWLHIMPTDMKTFG-------KAASFHVSSVVACKLSSKLVNGFKLVVWRes 949
+                            ************************99999999*****************8.......******************************* PP
+
+  PTHR13335.orig.30.pir 636 endeKrydfeavsaaeaaeIvskinnile 664
+                            ++d+Krydfea+sa++aaeIv++in +++
+               KIS71031 950 PRDTKRYDFEADSARIAAEIVREINLLRS 978
+                            *************************8875 PP
+
+>> KIS68645  pep chromosome:Umaydis521_2.0:8:284283:287366:1 gene:UMAG_10645 transcript:KIS68645 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.8  11.4   1.2e-08   7.4e-06      43     161 ..     654     774 ..     487     920 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 23.8 bits;  conditional E-value: 1.2e-08
+  PTHR13335.orig.30.pir  43 sapyppvsssssesll.srpksastpgdsgsedsgssneaetatg................gdtkarrkkpsldqrretqgekqsses 113
+                             a++++++++++e l+ +  +++ ++ +                +                 ++++ ++++ l+ ++++ +++q++ +
+               KIS68645 654 AAARQAAIAAHEEMLRkQALQEQQEQMTQQQ-------------QaaalaaqpipqwqqqqLMQQQLQQQQMLQRQQDQAQQQQQQRQ 728
+                            3334444444444444333333333222222.............13334455555454443222222222222222222222222222 PP
+
+  PTHR13335.orig.30.pir 114 esspsyeeelqsvdissssldegsrrrrantavkleklrke.....rrsksas 161
+                            +++++ ++++q      +++ ++ ++++a++++++++  ++     ++++ ++
+               KIS68645 729 QQQQRRQQQQQ------QQQLQQAQQQKAQQSQQQQAFLEQqqrslQQAH-GP 774
+                            22222222222......222223333333333333332222111113322.22 PP
+
+>> KIS66586  pep chromosome:Umaydis521_2.0:18:436832:439000:1 gene:UMAG_05574 transcript:KIS66586 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.1  17.1   1.6e-07   9.6e-05      35     202 ..     145     447 ..      83     519 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 20.1 bits;  conditional E-value: 1.6e-07
+  PTHR13335.orig.30.pir  35 dvdlekihsapyppvsssssesll..srpksastpgdsgsedsgssneaetatg.................................. 86 
+                            +++++++hs++ +  s s   s+   + ++ +  +++s+ + s s + a+  +                                   
+               KIS66586 145 SFAAHRRHSKKLSLGSLSEAVSFSvrDLHNAVEAHARSAVDSSHSRPTASERSNdprllrlfprrrftdfvrnmlnttqvsksviila 232
+                            5667777777777666666666667555555556677777777776665555559999999999999999999999999999999999 PP
+
+  PTHR13335.orig.30.pir  87 ........................................................................................ 86 
+                                                                                                                    
+               KIS66586 233 llyihrlksknpglrgqdgsefrlfvtalmlankflddhtytnktwselsglklkdvtkmeiefwlglssnihasdadfrswigtlei 320
+                            9999999999999999999*****************************************************************9999 PP
+
+  PTHR13335.orig.30.pir  87 ......gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseer 168
+                                   +  a + ++ ++ + ++ g+ q++++++++++++++q+++ + ++++++++++++++++++++++    + +a+      +
+               KIS66586 321 laerrrLALGAHEAEQMRQAALRQHGFAQQQQQQQQQQQQQQQQQQQQQ-QQQQQQQQQQQQQQQQDSTRQPALLSPVQAPGFG---S 404
+                            9999994445555667777777777777666666666666555555555.4444444444445555555555554433333333...1 PP
+
+  PTHR13335.orig.30.pir 169 ..........dqsscksiqwktessvkedsvqrassesslsser 202
+                                      ++  ++s +w+ ++  + ds+ r+ss++s+ s  
+               KIS66586 405 tydaprriahNSRVSQSRSWS-PEHLALDSRPRSSSATSATSHL 447
+                            333566666444445555565.4444444444444444444443 PP
+
+>> KIS66549  pep chromosome:Umaydis521_2.0:18:307043:313399:1 gene:UMAG_05540 transcript:KIS66549 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.6   1.0   1.8e-06    0.0011      94     169 ..     937    1016 ..     801    1382 .. 0.77
+   2 ?   -2.5   0.2       1.1   6.6e+02      86      86 ..    1939    1939 ..    1867    2117 .. 0.41
+
+  Alignments for each domain:
+  == domain 1  score: 16.6 bits;  conditional E-value: 1.8e-06
+  PTHR13335.orig.30.pir   94 kkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseer........... 168 
+                             ++ps+  ++++q+++q+++++++ ++++          +   ++++++a+ +++l+ +r+++++ s+++a    +           
+               KIS66549  937 NRPSAELQQQQQQQQQQQQQQQQHQSRGH--------LQHLSQQQQQQAAAQMQLQHQRQHQQQLSQQPA----Tgiaqdlerlsl 1010
+                             33443333333333322222222222222........222333344444555555555555443222221....011222334444 PP
+
+  PTHR13335.orig.30.pir  169 .....d 169 
+                                  +
+               KIS66549 1011 aggysA 1016
+                             444442 PP
+
+  == domain 2  score: -2.5 bits;  conditional E-value: 1.1
+  PTHR13335.orig.30.pir   86 g 86  
+                             g
+               KIS66549 1939 G 1939
+                             1 PP
+
+>> KIS72328  pep chromosome:Umaydis521_2.0:1:2176053:2178353:-1 gene:UMAG_00735 transcript:KIS72328 gene_biotype:protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.3  15.1   2.2e-06    0.0014      53     218 ..      51     367 ..      22     557 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 16.3 bits;  conditional E-value: 2.2e-06
+  PTHR13335.orig.30.pir  53 ssesll.srpksastpgdsgsedsgssneaetatg..................................................... 86 
+                            +sesl  + ++s+ t  +s   + gs+ +a +a++                                                     
+               KIS72328  51 LSESLDgQAASSSITTTSSERTQTGSAGSACHAQHggvnedddewteadivasfspvdshvgissslveptgsarassaaptadrpag 138
+                            3444444333333333334444444444444444445555777888888888888888888888888888888888888888888888 PP
+
+  PTHR13335.orig.30.pir  87 .................................................................................gdtkarr 93 
+                                                                                                             g      
+               KIS72328 139 grkvsgrgassewadwntflaahtlpmqpprscdsgcssgskpsnaagvntwnaaddaffdafevatnsnrapsppiidlrG------ 220
+                            8888888888888888888999999999999999999999999999999999999999999999999999999997653331...... PP
+
+  PTHR13335.orig.30.pir  94 kkpsldqrretqgekq.ssesesspsyeeelqsvdissssldegsrrrrantavkleklrke....rrsksasiassee.r...dqss 172
+                             +++l q++e+q++kq +++++++++++ ++q +++s s++d+ + r + +++  l + +       + +s  +a+++  +   +q++
+               KIS72328 221 VEKQLEQKKEQQKQKQhQNQNQNQNQNQNQNQIEPLSHSTDDDFFSRFQRAPQTALGRSSPLvlepEQLESIHHARTSHmDtasAQPQ 308
+                            3333333333333333033444555555566666666677777777777777777777777777775555555555555557774555 PP
+
+  PTHR13335.orig.30.pir 173 cksiqwktessvkedsvqrassesslsserssdssssssapsr.rq............s 218
+                              +i  + ++s +  + + ++++ s+ss + s s+s+s+a+s+ +             +
+               KIS72328 309 NIGIGNSNSGSGSGAHARADTGRGSISSASASASASASAAASSwTGslkktwttlrgiQ 367
+                            55555555557788889999999999999999999999999987777655555544441 PP
+
+>> KIS70268  pep chromosome:Umaydis521_2.0:3:7647:8721:-1 gene:UMAG_12138 transcript:KIS70268 gene_biotype:protein_codin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.6  27.1   3.7e-06    0.0023      90     226 ..       5     203 ..       2     312 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 15.6 bits;  conditional E-value: 3.7e-06
+  PTHR13335.orig.30.pir  90 karrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke....rrsksasiassee.rdqss 172
+                            k ++++ s++ rr++q+ ++  +++s++++ +++ s+++sss++d++s++ r++ +  l+k++k      rs s+s+ass+  +++ss
+               KIS70268   5 KRKATGASANPRRRRQRKTRTLAVSSEDESSSSASSSSSSSSEDDDESDQDRSSMKSSLRKRPKIsefrPRSNSSSSASSSAsSSASS 92 
+                            4566677777788888888888888888888888888888899999999999899999999999877774444444444444344666 PP
+
+  PTHR13335.orig.30.pir 173 cksiqwktessvkedsvqrassesslsserssdssssssapsrrq.................snkldseq.................. 225
+                            ++s++++ + s+ + ++ +++ +s ++s++s+     s  + + +                 +      +                  
+               KIS70268  93 SASVESDSSASTLS-TSSSSADSSITDSDSSPH----SIGNLS-PrsrrkingpkasaagssN------Nivescdkkrhifrltpep 168
+                            66666662222222.111111222222222222....222222.0223357766665555432......1333333555555555554 PP
+
+  PTHR13335.orig.30.pir 226 ..................................l 226
+                                                              l
+               KIS70268 169 evtestkicrsterssasrmlkslepqalrlpthL 203
+                            44444444444444444444443333333333330 PP
+
+>> KIS65813  pep chromosome:Umaydis521_2.0:22:143817:145244:1 gene:UMAG_06193 transcript:KIS65813 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.3  25.3   8.7e-06    0.0054      67     226 ..      13     192 ..       2     347 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 14.3 bits;  conditional E-value: 8.7e-06
+  PTHR13335.orig.30.pir  67 pgdsgsedsgssneaetatg....gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavklek 150
+                            p+ +++  s +++ a+ a      +++ ++ k ++++++ +++  k+  + e++p++e+e++s+     s d++s+  +++ +  +++
+               KIS65813  13 PAVNAKKASKKDKKAAPAANvvepKANGVDKKAKYNNKKGKKEATKKEPTPEPEPESESESESE-----SSDDSSDSDNDKSKSSSDS 95 
+                            4444444444433333333333333333333333333333333222222222222222222222.....2222222222222222222 PP
+
+  PTHR13335.orig.30.pir 151 lrkerrsksasiasseer......dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq.........snkld 222
+                             ++   s+s++ +    +       +++  ++    +   +++s+++++ +s+++s++ sds+s+ss++s+  +         s+k +
+               KIS65813  96 SSDSDSSDSSDDE----QvetkaaPAAKTNGKPAAAPVAEASSSSDSSDDSSDSDSSSESDSDSDSSDSSDdDEdekpaaaadSKKRK 179
+                            2222222222222....12222333333333333333333333333333333344444444444444444322222344444422222 PP
+
+  PTHR13335.orig.30.pir 223 seq.........l 226
+                            +e+         +
+               KIS65813 180 AEDeapsakkvkT 192
+                            2222222222220 PP
+
+>> KIS69270  pep chromosome:Umaydis521_2.0:6:358808:362893:1 gene:UMAG_10285 transcript:KIS69270 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.1      0.99   6.1e+02     169     237 ..     527     627 ..     496     687 .. 0.53
+   2 ?   11.1   9.6   8.1e-05      0.05      59     225 ..     944    1206 ..     862    1313 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 0.99
+  PTHR13335.orig.30.pir 169 dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrq...............snkldseq................ 225
+                            +++ +++i +++++s ++ +v r++++ss++ +rs+ ss +   p r +               +                       
+               KIS69270 527 NAADGTRIGLGVKQSAAKAFVNRTDAASSSQGSRSPVSSEA--FPNR-SisertfkvkgeatyeH------Lveieedieaelravea 605
+                            36666677777666666666666666555555555542211..1111.11122333433333331......03333334444455555 PP
+
+  PTHR13335.orig.30.pir 226 ..........lsaeesdslfek 237
+                                      +++e  d+l +k
+               KIS69270 606 dhmlaaldnpRHTELIDQLAQK 627
+                            5555555555445555554444 PP
+
+  == domain 2  score: 11.1 bits;  conditional E-value: 8.1e-05
+  PTHR13335.orig.30.pir   59 srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrant 144 
+                              +++ ++  g++g  ++g + +++t+   + +  + +++ +q++ +q++ +++++++++ ++++++ ++ +s+s+d ++   +a++
+               KIS69270  944 NHTRFGPPLGTHGEAGQGHKRSMSTSADRH-QHEQHQQGGQQQQHEQHQAGQYHHQQQQLLQGQQAGQSQQSQSQDPSQ---QASQ 1025
+                             444445555555555555555544443222.222233334444444444445555555554444333333333322222...2233 PP
+
+  PTHR13335.orig.30.pir  145 avkleklrkerrsksasiasseer.............................................................. 168 
+                             ++  +  +++             +                                                              
+               KIS69270 1026 QQGGTGGSSN------------GDgsgngsneqgshpaalsptrtsygpsffesdvlpplrrshqtsapggyipddvvegyldtye 1099
+                             4444444444............1112333333345666667777888888888888888888888888888888888888888888 PP
+
+  PTHR13335.orig.30.pir  169 ................................................dqsscksiqwktessvkedsvqrasse.sslsserssd 205 
+                                                                               +++ s+ w   + +  +++++++s+ +s++s++  d
+               KIS69270 1100 dvlgevfgenvfypsgeaghdgtggkegdaqdgqgdasdsgwssgkwgLTAQGSSTAWARLGEILGETPDSDTSSlHSADSSSIAD 1185
+                             88888888888888888888888888888888888888888888888844555555555444444444444333224555555555 PP
+
+  PTHR13335.orig.30.pir  206 ssssssapsr.rqsnkldseq 225 
+                             sss+ ++++  r +n++d e 
+               KIS69270 1186 SSSATDDADGvRDENRNDWEH 1206
+                             555555555544455544444 PP
+
+>> KIS66917  pep chromosome:Umaydis521_2.0:16:246981:250928:-1 gene:UMAG_15084 transcript:KIS66917 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.5  29.2   0.00049       0.3     167     306 ..      31     173 ..      18     231 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 8.5 bits;  conditional E-value: 0.00049
+  PTHR13335.orig.30.pir 167 e.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkldseq.lsaeesdslfekkskssstktqkskkp 252
+                            + +d+ss  s++++ +s+++++s+++++s+s++s+++s+++ ++ss  s+  s +++s++   +  s s ++++s++s+t+t    +p
+               KIS66917  31 TsTDSSSTSSTSSSASSTSSSTSTTSTTSSSTSSTTSSTSTTPTSSSTSS--STTFTSSSsVPTTTSTSNTPTTSSTSTTPTSTDPPP 116
+                            11223333333333333333333333333333333333332222222222..222222222666666677777776667777555555 PP
+
+  PTHR13335.orig.30.pir 253 ssaakqsisslssaLekkps.qlnnpf.neya...kfdgkg.vgttaslkidiylplsse 306
+                            s+    s ss+ s L++ +s   n p   e++   + + +  v tt++  + + lp+ ++
+               KIS66917 117 SPR--PSASSS-SSLSSSSSsRENEPTsSEAVistSTSRTPsVITTQTSLTTVTLPNGQT 173
+                            555..233444.455555552588888777777666666668999999999999999666 PP
+
+>> KIS67087  pep chromosome:Umaydis521_2.0:15:228702:230890:1 gene:UMAG_04956 transcript:KIS67087 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.7  19.2    0.0018       1.1      86     168 ..     126     224 ..      62     298 .. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: 6.7 bits;  conditional E-value: 0.0018
+  PTHR13335.orig.30.pir  86 g................................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrr 141
+                            +                                + + a+r  +                +++++ y +++q+++ +++++++ +++++
+               KIS67087 126 AsqqqglqapnsgymqrapgaspinrspspsarPLNAAPRSPQ---------------PHGQAQTYSQQQQQQQQQQQQQQFYQQQQQ 198
+                            0222233344455555556565554444433332222222222...............223344444444444444333444443333 PP
+
+  PTHR13335.orig.30.pir 142 antavkleklrkerrsksasiassee.r 168
+                            ++++++++++++ ++s+++   s++  +
+               KIS67087 199 QQQQQQQQQQQQYTQSGGS--TSPNPaN 224
+                            3333333333333443332..3333333 PP
+
+>> KIS66908  pep chromosome:Umaydis521_2.0:16:223400:227983:-1 gene:UMAG_05692 transcript:KIS66908 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.4  32.3    0.0045       2.8      43     226 ..      69     356 ..      49     496 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 5.4 bits;  conditional E-value: 0.0045
+  PTHR13335.orig.30.pir  43 sapyppvsssssesllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdiss 130
+                            + +y ++ss+  + + s+++s++   ds s +++ sn a        + +++ p++d   +    +qs++++ss+s++ ++ s++ ss
+               KIS66908  69 KGKYAGASSADASQIDSKITSSVKVTDSRSGQPATSNAA--------ERSSRTPQVDDVLKADDNSQSAKQSSSSSNKASSSSEQASS 148
+                            344444444444444455555555555555555555554........44455566666666665555555555555555555555554 PP
+
+  PTHR13335.orig.30.pir 131 ssldegsrrrrantavkleklrkerrsksasiassee.r................................................d 169
+                            ++++++s ++  +++v++++  +++ +  a+ as+   +                                                 
+               KIS66908 149 QQQQQTSSTNFRQQDVQSSASGQQTSN--AAAASTGPaTgedllkqrffhaqeqnkrvysgltsppnpaalypsfttpssdqsllppG 234
+                            444444444444777777777777554..44455555446699999999999****************************99998875 PP
+
+  PTHR13335.orig.30.pir 170 qsscksiqwktessvkedsvqrassesslsserssdssssssapsrrq................snkldseq................ 225
+                             ss+ + +w+  s+++++ ++ +s+++++ s++ssd   +s++p+ ++                +  +++++                
+               KIS66908 235 TSSGSTSTWS--SPSSSSASTDDSQQTTSTSSSSSD---ASGTPQPTTppsgdaggdvefdqrlHRHVSPQSlqslqvpfdthgfvkr 317
+                            5566666666..444444455555555555555566...3344333223567777766644444222222223333444444444444 PP
+
+  PTHR13335.orig.30.pir 226 ......................................l 226
+                                                                  l
+               KIS66908 318 leaggwistatrmqraaanvktvkgkqnqikssahelqL 356
+                            444444444444333333333333333333333333330 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       6783  (3999663 residues searched)
+Passed MSV filter:                      1962  (0.289253); expected 135.7 (0.02)
+Passed bias filter:                      376  (0.0554327); expected 135.7 (0.02)
+Passed Vit filter:                       115  (0.0169542); expected 6.8 (0.001)
+Passed Fwd filter:                        43  (0.00633938); expected 0.1 (1e-05)
+Initial search space (Z):               6783  [actual number of targets]
+Domain search space  (domZ):              11  [number of targets reported over threshold]
+# CPU time: 0.49u 0.20s 00:00:00.69 Elapsed: 00:00:00.35
+# Mc/sec: 7639.44
+//
+[ok]

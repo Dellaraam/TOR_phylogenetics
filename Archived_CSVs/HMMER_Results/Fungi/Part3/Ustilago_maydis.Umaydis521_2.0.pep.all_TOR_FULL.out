@@ -1,0 +1,1089 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Ustilago_maydis.Umaydis521_2.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR11139.orig.30.pir  [M=2684]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+          0 1589.2  17.6          0 1588.9  17.6    1.0  1  KIS68642  pep chromosome:Umaydis521_2.0:8:272733:279965:1 gen
+   1.6e-270  900.4  63.6   2.2e-270  900.0  63.6    1.0  1  KIS67059  pep chromosome:Umaydis521_2.0:15:131149:142251:-1 g
+   2.6e-243  810.2  34.0   3.8e-243  809.6  34.0    1.2  1  KIS71202  pep chromosome:Umaydis521_2.0:2:899139:907052:-1 ge
+   3.8e-144  481.2  90.8   8.2e-144  480.1  90.8    1.3  1  KIS67678  pep chromosome:Umaydis521_2.0:12:265684:275202:-1 g
+    1.8e-15   54.3   3.2      4e-09   33.2   0.2    2.2  2  KIS72031  pep chromosome:Umaydis521_2.0:1:1285297:1288224:-1 
+    5.6e-10   36.1   0.0    5.6e-10   36.1   0.0    2.0  2  KIS67060  pep chromosome:Umaydis521_2.0:15:143987:147895:1 ge
+    1.6e-09   34.5   1.3    1.6e-09   34.5   1.3    3.4  3  KIS66011  pep chromosome:Umaydis521_2.0:21:354174:360737:-1 g
+    7.8e-07   25.6   2.5    2.2e-05   20.8   2.5    2.7  1  KIS69857  pep chromosome:Umaydis521_2.0:5:1001433:1004069:1 g
+  ------ inclusion threshold ------
+        1.1    5.2   6.8          2    4.4   6.8    1.4  1  KIS67732  pep chromosome:Umaydis521_2.0:12:415069:421416:-1 g
+
+
+Domain annotation for each sequence (and alignments):
+>> KIS68642  pep chromosome:Umaydis521_2.0:8:272733:279965:1 gene:UMAG_03216 transcript:KIS68642 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1588.9  17.6         0         0      27    2684 .]      10    2410 .]       6    2410 .] 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 1588.9 bits;  conditional E-value: 0
+  PTHR11139.orig.30.pir   27 nllsallsalssplessrsraar.aaaellkavveelldllmvllendsaeaflqflsklssllqselqsepsfadsldvlasell 111 
+                             + l+++++ l+s+     + a r aa e lk +v+ + + l         + + +f   l     ++++ e   a s +v  +e+l
+               KIS68642   10 DALNRIFAGLKSR-----DEATRqAAGEELKSHVALVVSEL-------KGDSLSSFNNDL-----HRRIFEL--AHSQHV--HEKL 74  
+                             569999**99998.....44455455555555555555442.......444444444444.....3222222..123333..6777 PP
+
+  PTHR11139.orig.30.pir  112 alllslaslitllespivvvllrslselakgllsqllnqllpllllavrhilatdsrvvlalaldllldelladlihhvrkglsla 197 
+                             +   +++ li               se  +  l ++  +l p       ++ + ++++v+++a+ +l     ++++ h  +g+   
+               KIS68642   75 GGVIAIEDLIEQ------------ESEDNSARLYRFYQYLKP-------NL-PCNDASVMIAASRAL-----GRVAYH--GGQ--- 130 
+                             777777777666............455556669*********.......44.5566677********.....******..887... PP
+
+  PTHR11139.orig.30.pir  198 qavravlllssnlvdaslplliqtalewlllilerlea.....vlil.........lflvhvqlfflliwlalrdpvleirelait 269 
+                                     l++ + +     ++ ++l+ l+  ++r+e      vli           f+  v+  ++ iw+alrd  + +re+a +
+               KIS68642  131 -------SLGEQFIE----YEVLRVLDFLQA-GDRNESgryaaVLIIremakrvpqQFHPYVPRVLDRIWVALRDVRVIVREGAAE 204 
+                             .......67777888....889999888884.666666777554444788888888999999************************ PP
+
+  PTHR11139.orig.30.pir  270 lLaallslllsiegkirilsssfypaaydaaldglg.llsllelfssllvllellvfseafsarlpallerllslaallqlllall 354 
+                             ++ a+l++++++e +  ++   f++  y++a  gl  +++ + +++sll++ +ll +++   ++++ +++r  +            
+               KIS68642  205 AMGACLGIIAAREKQMGSH---FFESIYEEAEKGLKmSAP-EAIHGSLLAVQQLL-QHSK--TFMRNRFQRACE------------ 271 
+                             **************99998...***************999.**************.4444..344444433332............ PP
+
+  PTHR11139.orig.30.pir  355 qsvvtsaalagllefltlklllksvvrvvkllllavaapeplgflllrllfrslgskdlllellllellplleallnplfallayt 440 
+                                                                             l fr   ++d+l+++++++l p l+ ++++ fa     
+               KIS68642  272 ------------------------------------------------LVFRLHKHRDPLIRRTITNLVPVLARYDPHYFAE---- 305 
+                             ................................................236678899********************99965.... PP
+
+  PTHR11139.orig.30.pir  441 halhlrdlllelcltlpvrlsllpllsfllqplvrdelasqllrtlelildnlepe.p..asersdlflalgalllallkaggnrk 523 
+                               +hlr+++ +l+                                     ++l++e +  ++e +  f  +g++++a+   g+ +k
+               KIS68642  306 --EHLRAVMGILT-------------------------------------EQLRREkDrsPKESAQTFETIGFVAAAM---GPRMK 349 
+                             ..55555555555.....................................5566665346788888888999999998...54444 PP
+
+  PTHR11139.orig.30.pir  524 flkqplplltdaaelsgllelp.........pkllplplsvqafeflavalpsvsnls...gvfvittlalsdellavlsvrllsl 597 
+                              +++p                          +          + ++ ++++ +v+nl+   g ++ t +  +++ll+++++++ls 
+               KIS68642  350 PFIEPVLAC------------VkeglqmrgkK----------NAPPEGPIFLCVGNLAtavG-PHLTRY--MHDLLDLMFSCGLSI 410 
+                             222222222............02222233431..........22334889999999999875.444444..56************* PP
+
+  PTHR11139.orig.30.pir  598 llaalaaaldllesapsllsivlerllnllssslealvlslisaaldllscllgsalsavlsalatalqeaalsglsvwlrtalfl 683 
+                             +l  ++    + +++p+l++ v++rll++ls +l + ++  + a+ +l +     a ++v++a + ++      g++         
+               KIS68642  411 PLVTAL--DGIVKAIPPLMKVVQDRLLDMLSMTLIGQPYRPLGAPASLRP--SANASRDVVAAQTVESK-----GVE--------- 478 
+                             ****99..*************************99999988888888666..45555566666666655.....233......... PP
+
+  PTHR11139.orig.30.pir  684 lglaeasealavallllllstlgallfsgsseealllclvlfvrellvllLlnpnldvrkaaaaalalLlassgnssvlsllspls 769 
+                                           ++ +l+tlg ++f g   + l +    fvr++ + +L +++++vr+aaa+++a L+ + +++ ++s      
+               KIS68642  479 -------------TITVALQTLGRFDFQG---HILNE----FVRNCTLPYLEDDHAAVRQAAAETCADLFVNDPICRQTS------ 538 
+                             .............566789**********...99999....*******************************87553332...... PP
+
+  PTHR11139.orig.30.pir  770 svlldarpeeka.vvvleilekllllaildldplvrlsvleslaedlaafdehasqafslsllfallndeslevreaaisllgrls 854 
+                                       +a  vv+++l kl++++i+d+dp++r +vl+ + + ++ fd+h++q +  + lf +lnde ++vre+ai ++grl+
+               KIS68642  539 ---------MHAiEVVNDVLDKLMTVGIADPDPELRWTVLSKFGAQEQ-FDRHLAQSEYVRSLFIALNDEKFKVREVAIVIIGRLA 614 
+                             .........3346899************************99888888.99*********************************** PP
+
+  PTHR11139.orig.30.pir  855 lksllnpalrlallrkllsqlLtrLelellsskllehl.dsrleeesakllgtlirkseaeellppyavsilpaLvallaeennel 939 
+                                 +npa+++++lrk+l+qlLt+L          e++ +sr +ee+akll+ ++r   +++l++ ya ++l++L++++ ++    
+               KIS68642  615 K---HNPAYVMPSLRKALIQLLTEL----------EYStVSRHKEEAAKLLTEVVR--ASQRLVKSYALPMLEVLLPKANDP---- 681 
+                             *...*******************77..........4444*****************..5567***************88434.... PP
+
+  PTHR11139.orig.30.pir  940 rsallkt....ladlletllaevglleaaerrqllvallplilaallqlwdsesseerlllkrlllleseakllvalallgqlves 1021
+                             + ++++     l++     la+vg +++a+     ++l+ l ++ l+     ++++ ++  kr+          +al++lg+++++
+               KIS68642  682 SVGVAARvmecLGE-----LAKVGGEDLAP---NVDQLMRLAIDQLS-----STAPGSSTAKRD----------AALKTLGLVASN 744 
+                             44444444444777.....88888666654...44999999***888.....577777777999..........************ PP
+
+  PTHR11139.orig.30.pir 1022 tgeviepllfdsiwlglepaypsllaellklllkflelshserrealavlgllgald.................sldalrrallql 1090
+                             tg v+ p+l           y+ ll+ ++k+ lk++ +s++ rre+++v g+lgald                 ++ + + +l  l
+               KIS68642  745 TGHVVNPYL----------TYRNLLGTVVKI-LKTE-QSKPVRRETIRVMGILGALDpyrykllekngdegqdeTSKGSGTDLFEL 818 
+                             *********..........***********6.9**9.9*******************98888888887665555444343333333 PP
+
+  PTHR11139.orig.30.pir 1091 ttllvkhapealipaqeseldysttkvaillllqlilrdlslpssyvlqvlvallkalasealqllvlpa...dkvllapslllrl 1173
+                             +  ++               d+  +  ai +l+  il+d+sl s++++ v+ a+++++++ +l++    +   ++++  p++l+++
+               KIS68642  819 ALAIG------------TSTDDYYQNIAIDALI-TILKDPSL-STHHHAVIEAIMYMFKTQGLKC----VtflPQII--PAFLNVI 884 
+                             33333............444557778*******.********.*********************9....66777999..******* PP
+
+  PTHR11139.orig.30.pir 1174 kdgqlhssvsrirellvrhatrvlilqqLallvsivnaharklaldlapllvlwerrw........tilalleqlvlsaaareflg 1251
+                             +     + ++++ e         + +qqLa l+si+++h r +  ++ +   l  + w        ti++l+e++ ++a+ +ef++
+               KIS68642  885 R-----TCGTGLSE---------FYFQQLAILISIIKQHVRSYLEPIFE---LVQENWnpnssiqlTIVSLVEAV-AKALEGEFKS 952 
+                             8.....44559999.........*******999*********5555554...456778**************999.9999999999 PP
+
+  PTHR11139.orig.30.pir 1252 sylpellllesggvlpllgpllkellnllqqalgavlwinsdfllqklrelgsklklekllllallLpilnkllekllelailvra 1337
+                              ylp    l     lp++++ l      +++ ++++l      +lq++ ++gs  + e++  l+l+Lp+++k++e  +++++  r+
+               KIS68642  953 -YLPI---L-----LPNMLQTLDG---EITSKRQPTLLR----ILQAFYVFGS--NIEEY--LHLVLPVVVKMFER-PDASQTLRR 1017
+                             .8888...6.....6777655543...345666555444....89********..88***..*************9.999999999 PP
+
+  PTHR11139.orig.30.pir 1338 aals.slaalrassvtkiasallhslvrvlqllaaqdstnskllaadalgalgalvfnlgldyskilpllkklglflrsrrdwdle 1422
+                             aa+   +  +r+ s+ ++as+++h+lvrvl       +t+++  +++ +++l+alv++lg +y++++p+++k++  +r+ +     
+               KIS68642 1018 AAILtVGNLSRKVSFCDHASRVIHPLVRVL-------PTGTSDIRNAVMETLSALVVQLGASYAIFIPVVNKVLIQNRIQHA---T 1093
+                             9999455555888*****************.......889999*******************************99999999...8 PP
+
+  PTHR11139.orig.30.pir 1423 ltllskvlarrlskatllagallqrqllaqelaslaiellseeggsslsnggilglrdsdlrsgvvhlvlsekgsgqkllrvfeay 1508
+                             +    + l+++l   ++l++ l +++++ +                                         +k     + ++ ++ 
+               KIS68642 1094 Y----DQLVSKLLNGERLPQDLSAADNALG-----------------------------------------SKI----DESPQAE- 1129
+                             8....9999999999966666655544222.........................................222....2333333. PP
+
+  PTHR11139.orig.30.pir 1509 vkelipprltsklevalgvls.....sersmksdwleWlrgfsllLlkespspalracqllglaqsdpqlarrlfpaaflslwssl 1589
+                                        k+ v++++l      s+ s+ +dw+eWlr+++++  +esps+alrac++  la  +p+la  lf++af+s+w++l
+               KIS68642 1130 ---------ANKMTVNQQHLKqawdtSKVSTSEDWQEWLRRMAVEFMRESPSHALRACRS--LADVYPALAYGLFNVAFVSCWTEL 1204
+                             .........678889999999999977799999***************************..************************ PP
+
+  PTHR11139.orig.30.pir 1590 ...qldqlleellsalwsktippeilqtllalleflehdddtvaqglllfgsvwssvdlallpidllqlgeaanacqayakalhyl 1672
+                                +++ l+++l++a+++++ p  ++  ll+l+ef+ehd                  d+ +lpi++++lg +a + ++yakalhy+
+               KIS68642 1205 yeqYQSDLVKALETAFDAPEVPGDVVHMLLNLAEFMEHD------------------DK-ALPINIRVLGDRAYKFHSYAKALHYK 1271
+                             *9548999******************************9..................88.************************** PP
+
+  PTHR11139.orig.30.pir 1673 epefreppslikllgallspp.leaLaelyssLgepdalyGilesra..ldletkaawaeklggweeAlaayeralqkasqdagsl 1755
+                             e ef + p          sp+ +e+L++++++L+++da+ G l++++  ld++  + w+ekl++weeAl+ay+r+  ++++     
+               KIS68642 1272 EAEFLTDP----------SPQvVESLIDINTKLQQSDAAFGALTYARehLDITHHEEWYEKLHRWEEALTAYDRKAMLDPD----- 1342
+                             *******9..........6668*****************************************************997665..... PP
+
+  PTHR11139.orig.30.pir 1756 ea...tlgrlrcllaLgqw..............epeaeeellplaleaawslrlgkwdsmleyllalaaaeasselrllqallalh 1824
+                                    g++rcl aLg+w              + e + +++pla++aaw   lg+wd+m++y++a+   ++sse+++++a+l  h
+               KIS68642 1343 -DygvAFGKMRCLHALGEWehlsdlvqqkwgraDMEDRRHMAPLAAAAAW--SLGQWDTMDDYISAMR--SDSSERSFYRAILHTH 1423
+                             .344499***********************9986899*************..************7553..9*************** PP
+
+  PTHR11139.orig.30.pir 1825 qgdfdeaqeliqkarqlllgaelsa.vdesysrayalllvklqqLsElqelee...sqislaa........lldlksiletWrnRl 1898
+                             +++ ++a + i+kar  l+ +el+a ++esy ray  l+v+ q+LsE   lee   +     +        ++   +i++tW  Rl
+               KIS68642 1424 RSQRAAANKQIAKARESLD-SELTAlISESYGRAY-DLMVRTQMLSE---LEEalaY-----KldykeqpdRQ--ATIRSTWMKRL 1497
+                             *******************.***************.88888******...8885543.....15555666755..999******** PP
+
+  PTHR11139.orig.30.pir 1899 pgtwqddvevwedllavRrlvlppieddaelwlklaslaRkqgnlslalkll.......................rvlieylkllw 1961
+                              g+ q  vevw+++l+vR+ vl p++ d e+w+k+a l+Rk+g++ la+k+l                        v +++lk +w
+               KIS68642 1498 KGC-QPEVEVWQRILSVRSIVLTPAD-DTETWIKFANLCRKSGRMVLAEKTLnsllgpertnadprspigprappPVIYAHLKFMW 1581
+                             ***.********************87.99**********************************************999******** PP
+
+  PTHR11139.orig.30.pir 1962 alaaveegksflleqeealldlqqllielsstaleeells.....tn...........rkllakvllllgkWlsal.....sqlsv 2026
+                             a+     g +      e l+ lq ++++l+++ + + +++     t+           ++lla+++ ++g+W+ +l      +++ 
+               KIS68642 1582 AS-----GAR-----IESLSYLQEFTLNLAEDLGVHTVDEhgnlvTQdwqssphlgefARLLARCFFKQGEWQMSLrenwvTDDN- 1656
+                             **.....999.....*************998777666666866652277777888889**********************96666. PP
+
+  PTHR11139.orig.30.pir 2027 eevlsslksaasaalqlapklekawhswalfndellehsqesgasaatlrllsaekaalqylvaavtcylkalala.ggnslqdtl 2111
+                               v++s+++    a++l+ +++kawh+wal+n+e+ +h +e++++        ++  ++  +v++v+++++++ala g nslqdtl
+               KIS68642 1657 SNVIESYRR----ATELDRNWYKAWHAWALANFEVISHHEERNEQI-------TPQMIAASIVPSVQGFFRSIALAsG-NSLQDTL 1730
+                             8999*****....***********************9987766544.......4455556777***********9754.******* PP
+
+  PTHR11139.orig.30.pir 2112 rlLtLwfdhgaatevndalekalssvplwpWlpviPQLiarlsh.nrevrkllknLLvriakqhPqalvyplrvaakslssearse 2196
+                             rlLtLwf++g+ ++v++a  +++ sv++++Wl+viPQ+iar++  +++vr+l++nLL++++ +hPqalvypl vaaks +s++r +
+               KIS68642 1731 RLLTLWFKYGHQEDVSQAVSEGFASVIVDTWLEVIPQIIARITApSPRVRRLIHNLLSDVGLAHPQALVYPLTVAAKS-PSHMRIQ 1815
+                             ******************************************666*********************************.999**** PP
+
+  PTHR11139.orig.30.pir 2197 aaleildklrkkvpalaseletlvqqlirsafleeelllaqlvsdeliklai..........ee.s.....skniakasavlkplk 2266
+                             aa  i+d++       +++++ lv q             a lvs+eli++ai          ee s     + ni+ ++a l+pl+
+               KIS68642 1816 AAMGIMDNV-------REHSPVLVEQ-------------ALLVSNELIRVAIlwhemwheglEEaSrlyftEDNIDAMFATLEPLH 1881
+                             ********9.......9*********.............***************98887544224477888999************ PP
+
+  PTHR11139.orig.30.pir 2267 amlekegp....epdfiqallelle...........................klktltkqlpalsslgp.lleeis....alr..e 2314
+                             ++le +gp    e++f q+++++l                             +k+++kqlpa  s     l+++s    a+r  e
+               KIS68642 1882 DALE-KGPetlrETSFAQTHGRDLAearecgrrfrqygdisdlnqawdlyyhVFKKIAKQLPAGNSV-QlDLQYVSpkllAMRdlE 1965
+                             ****.9999************99999999999555555555555555555555555*******9996.23566666999977889* PP
+
+  PTHR11139.orig.30.pir 2315 lavPGt.ykasplvtIssFspqvevlsskqrPkkltirGSDGkeypfLlKgheDLRqDeRimQLfrlvNtlLskdre.rrRkLsIr 2398
+                             lavPGt  +++p+v I++F++ v v+ skq+P++l++ GSDGk+y++LlKgheDLRqDeR+mQLf+lvNtlLs d+e ++R+L Ir
+               KIS68642 1966 LAVPGTyQSGKPIVCITRFEQIVLVIASKQHPRRLKMKGSDGKTYQYLLKGHEDLRQDERVMQLFGLVNTLLSIDSEsYKRRLEIR 2051
+                             ******7777**************************************************************************** PP
+
+  PTHR11139.orig.30.pir 2399 tYsViPLsprsGLieWVpntdtLhsilrgcadyrearakipsdlniehrlmrqaapqaay.......kvevfkevleetepplLhk 2477
+                             +++ViPLsp++G+++WV+ntdtLh +++   +yre + ki   lniehrlm+q+ap+  y       kvevf+++l++t++++L++
+               KIS68642 2052 RFPVIPLSPNTGMLGWVENTDTLHVLIK---EYREQH-KI--LLNIEHRLMLQMAPD--YdhltlmqKVEVFEYALDNTPGQDLYR 2129
+                             ****************************...***986.99..***************..44455566******************* PP
+
+  PTHR11139.orig.30.pir 2478 elwlkssspeaWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnal 2563
+                             +lwlks+++e+Wl+rR +ytrSlAv+S++GyiLGLGDRHpsN+Lldr tG +vHIDFgdcf+ a +r+++PE+VPFRLTr+lvna+
+               KIS68642 2130 VLWLKSRNSESWLERRLAYTRSLAVSSVAGYILGLGDRHPSNLLLDRLTGQIVHIDFGDCFEIACHRPKFPEKVPFRLTRMLVNAM 2215
+                             ************************************************************************************** PP
+
+  PTHR11139.orig.30.pir 2564 gptGiEGvFrssceavlrvLRknkesLlavLeaFvhDPLvdWt........................................... 2606
+                             ++ Gi G+F  + e+++rvLR+nkes+la+LeaFvhDPL++W+                                           
+               KIS68642 2216 EVGGIKGTFKVTAENTMRVLRDNKESVLALLEAFVHDPLISWRlvaddgaerapdakeneavaaeggaasgtatgavtgaanvgag 2301
+                             ********************************************999987777777766666666666666666666655555555 PP
+
+  PTHR11139.orig.30.pir 2607 ..........kaerlkllssqqaeaelgeal............................................aavvirrvkak 2638
+                                                                                                        a  v+rr+++k
+               KIS68642 2302 gtvapnqrqdQ-------------------AlypaagapgggialpptatatataaaaaapnavqaggqdmrnqrALEVVRRIQNK 2368
+                             55544444440...................1555555555555555555555555554444444455555555558899******* PP
+
+  PTHR11139.orig.30.pir 2639 LeGrddfgderkgsegLsvegQVqrLIqqAtdpeNLcrmYeGWcP.W 2684
+                             L+Grd       + e+Lsv++Q +rL+q+At++eNLc  + GWc  W
+               KIS68642 2369 LSGRDF-----NPAESLSVAAQIERLVQDATSKENLCVAFVGWCSfW 2410
+                             ***887.....89999****************************988 PP
+
+>> KIS67059  pep chromosome:Umaydis521_2.0:15:131149:142251:-1 gene:UMAG_12008 transcript:KIS67059 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  900.0  63.6  2.9e-273  2.2e-270      13    2410 ..      46    3673 ..      18    3673 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 900.0 bits;  conditional E-value: 2.9e-273
+  PTHR11139.orig.30.pir   13 kesieaishraeysnllsallsalssplessrsraaraaa........................ellkavveelldllmvllend. 73  
+                              ++++       y+ +l++ ++a++++l+s +       +                        e+lk++++ l+++++++l++d 
+               KIS67059   46 FQNLD-------YALFLKHVVPAFVALLDSTPC------SftadapeqrlrhilletthrlpqqEVLKPYADSLMTAMLNVLRDDn 118 
+                             44444.......555666666666666665532......1333445666667779******************************* PP
+
+  PTHR11139.orig.30.pir   74 ........................saeaflqflskl.ssl........lq.................................... 90  
+                                                     ++++fl ++ kl  ++        ++                                    
+               KIS67059  119 ednavlalkviidlhrsfkavlqdQVQPFLEIVKKLyANMkntvehafESeasqlqasasspapptaapvaapaaapaaapttasa 204 
+                             ************************************88887766665511666678999999************************ PP
+
+  PTHR11139.orig.30.pir   91 ................................................selqsepsfadsldvlasellalllslaslitllespi 128 
+                                                                             s   +++++a+   +la + + l +s++s+++l+e+pi
+               KIS67059  205 sastsdpasttstatdstlaasattpatitadstatlsatpaasagtpS-AAPSTPAATATAALATTSKPLPKSMSSFKVLTECPI 289 
+                             ***********************************************63.55666667777888899999**************** PP
+
+  PTHR11139.orig.30.pir  129 vvvllrslselakgllsqllnqllp........l.................................................... 154 
+                             v+vl ++ +   + +++q +n+++p        l                                                    
+               KIS67059  290 VIVLIFQSY---RSVVPQAINVFVPliiesclsLqakpqreahnaananadifvgvapgiknrslytdmivaqvktmsflayvlrg 372 
+                             *********...999**********8877765505666777788888889999999999999999999999999999998888888 PP
+
+  PTHR11139.orig.30.pir  155 .................................lllavrhilatdsrvvlalaldllldel....................ladli 187 
+                                                              ll+a+rh+l+t+ r++++ ++d+llde+                    ladl+
+               KIS67059  373 sapvmrpfahvlpeisvrllkdcppeasatrkeLLVATRHVLSTEYRAHFVGQIDTLLDERvligtgvtshetqrplaismLADLV 458 
+                             888888888888877777665555555555555444************************************************** PP
+
+  PTHR11139.orig.30.pir  188 hhvrkglslaqavravlllssnlvdaslplliqtalewlll....................ilerlea.........vlil..... 239 
+                             hhvr++ls+aq+vr+v++ s  l+d++l+ +iqt++++lll                    il+++++         +  +     
+               KIS67059  459 HHVRQELSPAQLVRVVHIHSQILHDPTLAPSIQTMCVKLLLnlvetiltkhpdgatqtlasILDVFVEklsslhrlrS--Dmerir 542 
+                             ****************************************99999988888888888777766666666665555551..055555 PP
+
+  PTHR11139.orig.30.pir  240 ...............lflvhvqlfflliwla......lrdpvleirelaitlLaallslllsiegkirilsssfypaaydaaldgl 304 
+                                            l +++ +++ + i++a        dp+++ r+l  ++L ++++l+  + ++       ++p      +++l
+               KIS67059  543 qirlasdhpphpphtLVDAVAIERAKPIQAAatmldtAGDPLKDARFLFRNILFGFKTLIPVLRHRNA-----AHP------DGAL 617 
+                             6667779999999996666677777777777788888*************************999933.....333......4444 PP
+
+  PTHR11139.orig.30.pir  305 g..lls...................llelfssllvllellvfseafsarlpallerllslaallqlllallqsvvtsaalag.lle 368 
+                             +  ll+                   +l lf  +++ le+ vf+e+f++ +p+l+ ++l+ ++ll ++++ll++  +s+ ++g ll+
+               KIS67059  618 AgrLLVdgvkcwslhedrdgreekeVLDLFTTVFIDLEPQVFHEVFTTHMPFLFRQMLDSPSLLGIPQNLLSNDAVSKRFVGiLLR 703 
+                             4443336677899************99***********************************************99*******888 PP
+
+  PTHR11139.orig.30.pir  369 f.................ltlkl.llksvv..................rvvkllllavaapeplg.flllrllfrslgskdlllel 417 
+                             f                 ++l+l ++++++                   + ++++la++a+ep++ flllr+lfrs+g++  ++el
+               KIS67059  704 FlvdrleelgksdkkhasISLRLfKMAFMAvtifpednevvlqphlshLIMESMKLASKADEPTNyFLLLRALFRSIGGG--RFEL 787 
+                             88888999999999999888888655777788****************889*****************************..**** PP
+
+  PTHR11139.orig.30.pir  418 lllellplleallnplfallaythalhlrdlllelcltlpvrls.llpllsfllqplv.....rdelasqllrtlelildnlepe. 496 
+                             l+++ lpll+ ll  l+all++   ++ r++++ lclt+pvrls llp+l +l++plv     + el+sq+lrtlel++dnl++e 
+               KIS67059  788 LYKDVLPLLPVLLENLNALLNA-AEPSRREVFVDLCLTVPVRLSvLLPYLGYLMKPLVlalqsSTELVSQGLRTLELCIDNLTQEf 872 
+                             *******************999.66666********************************************************** PP
+
+  PTHR11139.orig.30.pir  497 ..p..asersdlflalgalllall...........ka....ggnrkflkqplpllt.daae.lsgllelp.........pkllplp 552 
+                               p  a    d+++al+++l++l+           ++    g+nrk+l  p++l++ ++ +        p                
+               KIS67059  873 ldPimAPYAQDIMAALWQHLQPLPhnhqhshttmrILgkmgGRNRKLLQNPPRLSYvSHKSaTF-----PvhfeakaqsM------ 947 
+                             9758955555****************99887655522777***************977777333.....25444466552...... PP
+
+  PTHR11139.orig.30.pir  553 lsv.....................qafeflavalpsvsnls....gvfvittlalsdellavlsvrllslllaalaaaldllesap 613 
+                               +                     +afe l+ + ++++  s    +         ++ ++      l++ l+ a     dl+++a 
+               KIS67059  948 --TltpvtelalanirrtdpyyrkHAFELLRHTTALFLDGSlmdvD---------RETVFG----KLIKGLFDA-TRSDDLRDEAV 1017
+                             ..02333444556667777778889999999999999999987543.........779999....999**9999.999******** PP
+
+  PTHR11139.orig.30.pir  614 sllsivlerllnllssslealvlslisaaldllscllgsalsavlsalatalqeaalsglsvwlrtalfllgl....aea.se... 691 
+                             ++l  ++++ ++   + ++ ++  + s++l +++ +l+ +l+ +l+  ++ + +  l +l+ ++        +    a++ +    
+               KIS67059 1018 QYLFGICKHVFHAEIKRDMPSSSGASSRHLWPMTISLLEGLTNALALNEAGNDPTPLIELQLHI--------IreflAACeKTpat 1095
+                             *********9997777799999999999999999888888887777777766766666666443........14433333333677 PP
+
+  PTHR11139.orig.30.pir  692 ..........................................alav.allllllstlgallfsg............sseealllc. 721 
+                                                                       +l+  +   ++l++++allf +              +e+ll+  
+               KIS67059 1096 rsdlghivmhsfaskfcsqcyeqlwqrktggwlgvdmlvrraDLGQiWVRDHQLEIVRALLFMLkdmpndppgnidEVSETLLQVi 1181
+                             77888888888888888999******************987655559*****************9999999999775556666655 PP
+
+  PTHR11139.orig.30.pir  722 lvl.........................fvrellvllLlnpnldvrkaaaaalalLlassgnssvlsllsplssvlldarpe..ek 780 
+                             + +                          ++ +lv +L+++n+ vr+  ++a+ lL++++  ++v++ll+p++ +ll+++++   +
+               KIS67059 1182 R-QaytvkpstadgkpeppvperpshltYLIGILVPELSSSNATVRTTTQTAFKLLAELRK-CTVTELLTPQKDRLLQPIFTkpLR 1265
+                             2.2467788999999999999*******889999**************************8.99**************99988855 PP
+
+  PTHR11139.orig.30.pir  781 a.............vvvleile..................kllllaildl...............dplvrlsvleslaedlaafd. 819 
+                             a              ++    +                   +l+la++d+                  +r+ ++++l++++a+ d 
+               KIS67059 1266 AlpfgmqighidaiTFA----LnltpplpefneelyrvltEALALADADDqaligrtsqyknmiaVTKLRVVAIRLLSSAMACGDf 1347
+                             58888888885555333....35555888888888887774444444444666666666666666446699999999999999988 PP
+
+  PTHR11139.orig.30.pir  820 ....ehasqafslsllfallndeslevreaaisllgrlsl......ksllnpalr.....lallrkllsqlLtrL.e.lellss.. 886 
+                                 ++  +  ++s++f++l+++s ev ++a++ l   ++      k+ll+++lr     la++++l+ + L++L   l+ll++  
+               KIS67059 1348 lstkHTQMRMRIISVYFKSLYSRSEEVVQVAYESLKTVLSqqsklpKDLLQSGLRpilmtLADRNRLTASGLEGLaRlLQLLTNyf 1433
+                             88755555***************************99888***********************************97689999988 PP
+
+  PTHR11139.orig.30.pir  887 ......kllehldsrleeesakllgtlirkseaee.....................llppyavsilpaLvall..aeen....... 936 
+                                   kll+hl+s+ e++ +                                   llp ++  +lp L +++    e+       
+               KIS67059 1434 kveigtKLLDHLTSLAEPAVLHRA----------AvgslrdneqiktlvaivnvfrLLPEASFQFLPRLTTTVaeI-ESqlrragp 1508
+                             888888888888777775544222..........02333345568999999*99**99999999999999888632.225888888 PP
+
+  PTHR11139.orig.30.pir  937 ..................................................nelrsallktlad.lletllaevglleaaerrqllv 971 
+                                                                               ++++s+  k l   + ++ +a  ++++ ++++ql +
+               KIS67059 1509 tpftkpltlflnrfaekavtyffegdklsnpkflrvvklslsldegselrSHVTSGREKLLFPlFANDASAAQVQAGISIVQQLVD 1594
+                             88888888888888888888888888889998888888888888886766666666666655555666666666788888888877 PP
+
+  PTHR11139.orig.30.pir  972 allpl......ilaallqlwdsesseerlllkrlllles.....................eakllvalallgqlvestgeviepll 1030
+                             +  ++      +++ l +lw+s++s er  ++ ++++ +                     e+k+l +l+l +++ e+  e+++ +l
+               KIS67059 1595 RDPNWlvtnrdVFEKLITLWNSPASKERRREEANSSATKadaasanatstpapsvtrsnsETKQLIELFLSYLRIEPHVEAYAAIL 1680
+                             77777999********************88888877777**************************************999999777 PP
+
+  PTHR11139.orig.30.pir 1031 fd.....siwlg.........lepaypsllaellklllkflelshserrealavlg.............................. 1072
+                             +      +  +          +++   ++ + ++ ++ +fl ++ ++  +++  l+                              
+               KIS67059 1681 DAytykvA--CDltfatrfiyDHLCIKASNSFKKQMFSRFLTMFEDKNASQM--LKtqalrvlinpmllasygphptsspsaspkp 1762
+                             66877442..33557788999666666666677789*****99999988888..889999999*********************** PP
+
+  PTHR11139.orig.30.pir 1073 ...................................................................................... 1072
+                                                                                                                   
+               KIS67059 1763 vaaviaaekpaaagsqlttagasvnaddkdgdvemeesaakdkkpesaatassstatvaasddtsteknneteaklastpiekpav 1848
+                             ********************************************************************************999999 PP
+
+  PTHR11139.orig.30.pir 1073 ................................llgaldsldalrrallqlttllvkhapeal..........i.pa..qeseldys 1113
+                                                             +     s+dalr++ll+ +t +++h + +l          i +   +   +d +
+               KIS67059 1849 addvevidvelvtqivnrmwkpfqnakaanelC-----SDDALRIELLHMSTMILEHCSDHLapngqlkkdtIkFGwaNLTAED-V 1928
+                             999999999999999999555555555555554.....*************************887776554343386555555.* PP
+
+  PTHR11139.orig.30.pir 1114 ttkvaillllqlilrdlslpssyvlqvlvallkalasealqllvlpa.dkvllapslllrlkd....................gql 1178
+                             t k+++++ ++++l+ ++ p ++v qv+  ll+a++se++  +v+ a d  +l+p+l++r                       g+ 
+               KIS67059 1929 TVKNVAYIFIARFLEVFESPIKIVGQVYFGLLRAHQSEGRS-MVKKAlD--ILVPALPKRAGAsengqppqwakwtkrqlvdeGHN 2011
+                             *****************************************.7998877..889999999988*********************** PP
+
+  PTHR11139.orig.30.pir 1179 hssvsrirellvrhat............rvlilqqLallvsivnaharklaldlapllvlwerrw..................... 1231
+                             +s+++ i+ llvrha+             v+ l +L+ lv +vn + r la+dl++ll +we+r+                     
+               KIS67059 2012 VSQLFAILSLLVRHADlfyssremfiphIVSNLTKLG-LVANVNVESRMLAVDLVELLHKWEKRRqehvrsqqastedasahkgte 2096
+                             ***********************99999999999999.88******************************9999999998887777 PP
+
+  PTHR11139.orig.30.pir 1232 ...........................................tilalleqlvlsaaareflgsylpellllesggvlpllgpll. 1273
+                                                                                                                   
+               KIS67059 2097 aepaaagaavaakrgldapeealavkkvridesgisssasaskS----------------------------------------Ss 2142
+                             66666665555555555555443332222222222222222220........................................02 PP
+
+  PTHR11139.orig.30.pir 1274 ...............................................................kellnllqqalgavlwinsdfll 1296
+                                                                                            +++ nll++ l+a  w+++   +
+               KIS67059 2143 pvsahatapnaaalsanapsadptqspadheylmpmnlremtvgflvrfvslsmepiskagivSKAANLLSEVLKAPYWSDV---Q 2225
+                             22344444444555555555555556667777777778888888888888888888888888888889************98...9 PP
+
+  PTHR11139.orig.30.pir 1297 qklrelgsklkleklll.....lallLpilnkllekllelailvraaals.slaalrassvtkias.allhslvrvl......... 1366
+                               l ++ + l + +++      ++++L+ l+ ++e  +++ i+  +++l+  l++++  s+++++  +   + ++++         
+               KIS67059 2226 VRLSIFQRPLIHTEINEqntpvICNALRTLQIVVEDKTDAYIAPHVPQLQkLLEKSA--STDEASLvEAQKPVLERIfrvipdppp 2309
+                             ************************************999999999999999998885..3444433344444444447777***** PP
+
+  PTHR11139.orig.30.pir 1367 .................................qllaaqdstnskllaadalgalgalvfnlgldyskilpllkklglflrsrrdw 1419
+                                                              +      +++ +++++ a  ++   + ++++ +s + ++l + +++++  +d 
+               KIS67059 2310 eedadgeadmdtgddkkpdeddaavtkdpkeseA------TDELSAFRKFAETLIADGLKQSQNLHSVF-SMLDAWSQSKPEKIDA 2388
+                             ***************************9875532......56888899999888888888886655555.58*************9 PP
+
+  PTHR11139.orig.30.pir 1420 dleltllskvlarrlskatllagallqrqllaqelaslaiellseeggsslsnggilgl..r..d..sdlrsg.vvh.lvlsekgs 1497
+                               +l+ lsk+l ++l+k++l+a a ++++ +  +l+                 + +l+l  r      d+r+  ++  + l+e++s
+               KIS67059 2389 --HLPALSKAL-SKLTKEHLAAAAPVPANDANLKLL-----------------MLVLELlkRriSnlGDQRRWlLSAlVQLVERSS 2454
+                             ..9999*****.*******88877777766555554.................556666674463457777774444544455554 PP
+
+  PTHR11139.orig.30.pir 1498 gqkllrvfeayvkelipprltskle.....valgvls................sersmksdwleWlrgfsllLlke.......... 1552
+                                +l+ +      ++++ ++++++     +                      s                                
+               KIS67059 2455 ---SLELCR-----FLLSTMSKWILeqretF-----PtvkekagillkmmsfeS---------------------Rdndqllrdyl 2506
+                             ...444444.....48899999998333331.....133333444444433222.....................02233333333 PP
+
+  PTHR11139.orig.30.pir 1553 .................spspalracqllglaqsdpqlarrlfpaaflslwssl.....q..ldqlleellsalwskt........ 1606
+                                              + +  l+ ++llg + +dp++++++ ++++  l++       +   +q +e l++++w+ +        
+               KIS67059 2507 dlihsiyttpafartelTVR--LENAFLLGCRHKDPEVRQKFIDIFDRTLVRDAagrlqYllGHQSWEYLAEHYWINQvldltlas 2590
+                             33344788889999966666..**********9***********************9975778888******************** PP
+
+  PTHR11139.orig.30.pir 1607 .........................ippeilqtllalleflehdddtvaqgl..llfgsvwss................vdlallp 1649
+                                                        +  + ++l++l+ l++ d+++a++    +f  +w s                      +
+               KIS67059 2591 idtnwpllahssvqlgkagssfvptLKSLRVGDMLSSLRALQYTDHDLAHQIwvSFFAAAWRSmsrkdhdditraligvL---TRE 2673
+                             *************************66789**********************************9999877777775430...344 PP
+
+  PTHR11139.orig.30.pir 1650 idllqlgeaanacqayakalhylepefreppslikllga..............ll..spp..........leaLaelyssLgepda 1709
+                              +l+q+++++n++q+++++++ + p++++pp+++k+lg+              ll  + p          ++aL ely+ L e+d+
+               KIS67059 2674 YNLRQVSKRPNVVQTLLEGALACKPQLELPPHVVKYLGRnfnawhtsiellqnLLrsL-PrqddaireagQDALTELYAELSEEDM 2758
+                             4445***********************************9999998887655411433.2477788889***************** PP
+
+  PTHR11139.orig.30.pir 1710 lyGilesraldletkaawaeklgg.weeAlaayeralqkasqda.gslea...........tlgrlrcllaLgqw....epeaeee 1778
+                             +yG++++r+ ++et+ a++ ++ g w +A+  ye a+ ka ++  + ++                  c+++L qw    + ++ e 
+               KIS67059 2759 FYGLWRRRCVYAETNSAISFEQIGmWNQAQVQYETAQIKARSGVlN-FTEaeyhlwedqwvF-----CAQKLQQWdiltDLAKMEG 2838
+                             **************************************99998853.444588898777666.....********99965888888 PP
+
+  PTHR11139.orig.30.pir 1779 llplaleaawslrlgkwd....smleyllalaaa....easselrllqallalhqgdfdeaqeliqkarqlllgaelsavdesysr 1856
+                              ++l+le+aw  rl +w     +++++l     +    +a++++r++ a++al +++                ++++++ ++ +++
+               KIS67059 2839 DNDLLLECAW--RLYDWTaereTLEQAL-----EslsaSATPRRRVFEAYMALLKSQSG--------------QDKPAEFGRICDE 2903
+                             8899******..7777776664434443.....44445999************965444..............7999999999999 PP
+
+  PTHR11139.orig.30.pir 1857 ayalllvk..................lqqLsElqeleesqi..slaa.......ll..dlksiletWrnRlpgtwqddvevwedll 1913
+                             a +l l k                  +qq++Elqe+  s+i  sla        ++  +lk  ++tWr+Rlp+  +dd+++w dl 
+               KIS67059 2904 AIQLTLKKwhslptavtvahvpllqiFQQFVELQEA--STIfaSLAHtnatnldQRsaELKAQMQTWRERLPNL-WDDINAWSDLV 2986
+                             99999999999999999999999999******9999..8888877779999987447999**************.88889****** PP
+
+  PTHR11139.orig.30.pir 1914 avRrlvlppi.............................eddaelwlklaslaRkqgnlslalkllrvlieylkllwalaaveegk 1970
+                             a+R++v+++i                             +++a+ ++++a++aRk+ + +++ ++       l+ +++l+++e+++
+               KIS67059 2987 AWRQHVFGAInkaylplvpviqqrdgqnastnsyayrgyHETAWIINRFAHVARKHYLNDVCISS-------LTKIYTLPNIEIQE 3065
+                             ***************************************99******************988877.......************** PP
+
+  PTHR11139.orig.30.pir 1971 sf..lleqeealldlqqllielsstaleeells.......tn.....rkllakvllllgkWlsalsqlsveevlsslksaasaalq 2042
+                             +f  l+eq++++ +  +            el +       tn     ++ +a ++ l g  ++ l++++       ++ a++ a+q
+               KIS67059 3066 AFlkLREQAKCHFQNPN------------ELTQgldvinnTNlmffaAPQKAEFFTLKGMFMARLGLND------DANHAFATAIQ 3133
+                             **977**********88............5555666676655778885555556655555555556444......58889999*** PP
+
+  PTHR11139.orig.30.pir 2043 lapklekawhswalfndellehsqesgasaatlrllsaekaalqylvaavtcylkalalaggnslq..dtlrlL..tLw.....fd 2119
+                             ++ +l+kaw++w+++nd+l+++   ++                  + +av+cyl+a+ l+        +++++L  +Lw     ++
+               KIS67059 3134 MDLNLAKAWTEWGRYNDRLFRDRPTEL----------------SAAGNAVSCYLQAAGLY-----KnaKVRKVLirVLWllscdDN 3198
+                             ********************9964443................3333***********98.....556999********9997555 PP
+
+  PTHR11139.orig.30.pir 2120 hgaatevndalekalssvplwpWlpviPQLiarlshnrevrkllknLLvriakqhPqalvyplrvaaks.ls.............. 2190
+                              g  t+++ a+e    ++p+w+W++ iPQL+ +l  +++++k  +  L +iak +Pq+l++ lr+  ++  +              
+               KIS67059 3199 KG--TVWQ-AFEAFKGDAPIWYWITFIPQLLQSL--SHKEAKFARKMLMSIAKTFPQSLYFYLRTTKEDfVAmkrqslmaaqraaq 3279
+                             54..6666.*************************..9999*************************9998666************** PP
+
+  PTHR11139.orig.30.pir 2191 ...................................................................................... 2190
+                                                                                                                   
+               KIS67059 3280 qqarqqqaaaaaaaaaasaanangkpaasaeaakapsgdgqtaaagnpvktdggiggaaaestttasasgnitsdtgankatpgas 3365
+                             ************************************************************************************** PP
+
+  PTHR11139.orig.30.pir 2191 ...................................................searseaaleildklrkkvpalaseletlvqqlir 2225
+                                                                                   ++e ++eil++l++++p l  ++e++   +i+
+               KIS67059 3366 lapptsgaagatasvpataaaaaagasgangatagtapaaaaaaaaaaanmPRQPWEYVDEILNILKTAFPLLTLTMENIAE-QIQ 3450
+                             ***************************************************889***************************9.799 PP
+
+  PTHR11139.orig.30.pir 2226 safleee.......llla..qlvsdeliklai....ee....sskniakasavlkplkamlekegp.....epdf...iqallell 2286
+                              +f+++           a   + ++ +i++a+    ++    ss+++ +++a++      l+ +gp     e+df     +l+++ 
+               KIS67059 3451 QRFKPTNeediyrlTN-AllNDALQQYIQRAVsptdSGvlpaSSQANVIRFAEN------LP-PGPlktsfEEDFvksKPTLRDYV 3528
+                             9999999999663322.2333333788899988844223333355544444444......45.77798888888899********* PP
+
+  PTHR11139.orig.30.pir 2287 eklktltkqlpalsslg.p...lleeis........alr.elavPGtyka.....splvtIssFspqvev.lsskqrPkkltirGS 2353
+                              kl++++   ++    + p   +le +s         +  e +vPG+y       s++v+I++F+p +e   ss  + ++lti+ +
+               KIS67059 3529 SKLQRWRDRYETSLD-RrPskqHLEHCShylvefqhQKFdEVEVPGQYLKlednnSDFVKIARFMPVFEMvRSSGMCTRRLTILSN 3613
+                             *****9999999999.6677987777778888898644489******9888*****************8879999*********** PP
+
+  PTHR11139.orig.30.pir 2354 DGkeypfLlK.gheDLR...qDeRimQLfrlvNtlLskdre.rrRkLsIrtYsViPLsprsG 2410
+                              G  + f +  +    R   ++eRi QL+r  N++L++ +e r+R+L ++++   PL+p+++
+               KIS67059 3614 KGTMHAFAVQlP--SGRycrREERIFQLLRFFNRILERRKEtRKRGLAFHVPLALPLAPQVR 3673
+                             ***999999977..67788****************************************986 PP
+
+>> KIS71202  pep chromosome:Umaydis521_2.0:2:899139:907052:-1 gene:UMAG_01110 transcript:KIS71202 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  809.6  34.0    5e-246  3.8e-243     239    2684 .]     319    2636 ..      27    2636 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 809.6 bits;  conditional E-value: 5e-246
+  PTHR11139.orig.30.pir  239 l......................................lflvhvqlfflliwlalrdpvleirelaitlLaallslllsiegkir 286 
+                                                                    lflv+ + +   + +a    +l+   +++ l+  +l++ +++  +  
+               KIS71202  319 AlsslqmdaafsfplsgavvgstsvsmkpdesvinraeaLFLVSIDICI-RLAKAYPVYFLDLADHSVVLFVEHLQHGWTCARQ-- 401 
+                             1233333333333333444444444444444433344433333333222.2222233334444445555555555555555543.. PP
+
+  PTHR11139.orig.30.pir  287 ilsssfypaaydaaldglg..lls.......................llelfssllvllellvfseafsarlpallerllslaall 347 
+                                    + +++a  + l+  ++s                       + e+ ssl  ++++l+ +    ++l ++++++ ++ +++
+               KIS71202  402 -------NSLFPASCMTLAanAYSiigshakflgecysshlvrflqvVAEHMSSLVDVFDHLDAQDKAHSNLVHVFDSIGDCFSAC 480 
+                             .......444444444454433337777777777777789999999988888999999999999999999999*999999998888 PP
+
+  PTHR11139.orig.30.pir  348 qlllallqsvvtsaalagllefltlklllksvvrvvkllllavaapeplgflllrllfrslgskdlllellllellplleall.np 432 
+                             +l +                                              ++l+ +l                   p+l  +  + 
+               KIS71202  481 ALETPD--------------------------------------------PQLAIVLQ------------------PYLFLITtQI 504 
+                             776432............................................22222222..................2222222223 PP
+
+  PTHR11139.orig.30.pir  433 lfallaythalhlrdlllelcltlpvrlsllpllsfllqplv..rdelasqllrtlelildnlepe...p...asersdlflalga 510 
+                             ++a+ ++++  ++ + + ++c+       l    s  ++p +   +el +ql  +l++ +d  ++    +    +   + ++ l++
+               KIS71202  505 RLAARSLADSSDPMQRSAHICYVSAL---LFSVVSNGHCPEAtlAQELGEQLTTLLRFAVDEQQAHdarKgkgHA---EKLQRLYC 584 
+                             33333444444444444444442111...0011122333333433444444444444444333333222122211...11111111 PP
+
+  PTHR11139.orig.30.pir  511 lllallkaggnrkflkqplplltdaaelsgllelp...........pkllplplsvqafeflavalpsvsnls...gvfvittlal 582 
+                             l + +                                         +                             + + ++++  
+               KIS71202  585 LWRDQ-----------------------------VhagapteqhgrK-------------------------NstrDRLDRFKRRK 616 
+                             11111.............................0111112222221.........................02222222333333 PP
+
+  PTHR11139.orig.30.pir  583 sdellavls.vrllslllaalaaaldllesapsllsivlerllnllssslealvlslisaaldllscllgsalsavlsalatalqe 667 
+                                + +++   ++l++ll+a ++ +++ + a  +l  +++r  +l+s+s  ++++   s + d   +++++        +++a + 
+               KIS71202  617 LGNSATPTKaNAVLDALLQARLSSPEFEG-ADIYLRELSRR--RLISQSFARSAQREDSTDSDGVQSSYIDD-------SPAAAAQ 692 
+                             44777777777889999999888888888.55666666665..56677777888888888888777788885.......6666666 PP
+
+  PTHR11139.orig.30.pir  668 aalsglsvwlrtalfllgl....aease................alavallllllstlgallfsgsseealllclvl......... 724 
+                             a  +gl ++l++++    l    +  s+                +                               +         
+               KIS71202  693 AEQEGLNTKLDSTAVAG-LwkdaH--SSvkaslpvsagtlnmlcR-------------------------------Cvehsavtes 744 
+                             66666666666653222.234321..1134433333222222110...............................1223334444 PP
+
+  PTHR11139.orig.30.pir  725 ...........fvrellvllLlnpnldvrkaaaaalalLlassgnssvlsllsplssvlldarpeekavvvleilekllllaildl 799 
+                                          +++l++   +++l+  + a  +   Ll+++++s+  +++     v           + ++il    l+   + 
+               KIS71202  745 lpdngdryvvsIISHSLRSKARSSRLAANELALLYQMRLLQQRDTSNEEEWMAHFLQVP---------KSYENILADSNLAFGHE- 820 
+                             44455555667889999999999999*****************9887777776543332.........22333333333333322. PP
+
+  PTHR11139.orig.30.pir  800 dplvrlsvl.es.laedlaafdehasqafslsllfallndeslevreaaisllgrlsl...............ksllnpalr.... 864 
+                               l++l+ l e+  + +         q++ l  l+ +l ++++ +++ a++ + + ++               k       +    
+               KIS71202  821 TALIGLARLfELpVEGC---------QEACLLTLILHLGHPNPFIKACAYTQVVQIAAaqrcttyqlvqkhfeK-------Vstsi 890 
+                             45777777777766554.........9********************999999998878887665555544331.......03333 PP
+
+  PTHR11139.orig.30.pir  865 ......lallrkllsqlLtrL..elellss........................kllehldsrleeesakllgtlirkseaeellp 918 
+                                   +++l +++++l+ +                                  +       +++e  a+ lgt     + ++l  
+               KIS71202  891 verfisMPDLWTSFLSLIKMNqaT-----FfnltkeytlphlitmicagdgtaeV-----GTKMIELIARALGT-----DVPRLCH 961 
+                             355666777777777777654430.....23334445455555556664433332.....77777777888888.....7788888 PP
+
+  PTHR11139.orig.30.pir  919 pyavsilpaLvallaeennelrsallktladlletllaevglleaaerrqllvallplilaallqlwdsesseerlllkrlllles 1004
+                               + +i+  ++          rsa+l+ l   l+tl++ +g ++aa             l+all    s +s++ + l        
+               KIS71202  962 DNITPIFRSFFM---------RSATLRDL--GLNTLVQLIG-VDAA------------SLKALL---RSRQSDIVGYL-------- 1012
+                             888888888887.........66666643..3344444433.2222............123333...22222221111........ PP
+
+  PTHR11139.orig.30.pir 1005 eakllvalallgqlvestgeviepllfdsiwlg.............lepaypsllaellklllkflelshserrealavlgllgal 1077
+                                  v+l + + + e ++                           ++ + +     +++ +lk ++l+  +  +++         
+               KIS71202 1013 ----VVKLGNRATRKEAYAG------------LefiietisgtaaaSRSKDSLMHKSKVATFLKGEILAILTWINQE--------- 1073
+                             ....1222222222222111............112221112222222223333333344445556655555555555......... PP
+
+  PTHR11139.orig.30.pir 1078 dsldalrrallqlttllvkhapealipaqeseldysttkvaillllqlilrdlslpssyvlqvlvallkalasealqllvlpadkv 1163
+                               +++++r +  ++  ++                      +i++l+ +i++  ++ s++ +q++ +l   l  +al l  l+    
+               KIS71202 1074 -LSGEHGRRTATDLAFAL---------------------RSIGALV-EIIGP-PI-SAVTPQIMATLNSHLEPDALSLATLES--- 1131
+                             .57777777755555544.....................899999*.****9.88.***************999999977766... PP
+
+  PTHR11139.orig.30.pir 1164 llapslllrlkdgqlhssvsrirellvrhatrvlilqqLallvsivnaharklaldlapllvlwerrwtilalleqlvlsaaaref 1249
+                             +    ++++l+      +v  +            ++++L +++ + n++ +k a+                ++l++l+l++ +   
+               KIS71202 1132 W--KIFIRTLR----FDDVGPFVG---------QTAAALLSAWDRFNPEKKKIAI----------------SILHYLILENVSY-- 1184
+                             7..77888888....666666666.........6666666799999999999555................3578888877777.. PP
+
+  PTHR11139.orig.30.pir 1250 lgsylpellll.esggvlpllgpllkellnllqqalgavlwinsdfllqklrelgsklklekllllallLpilnkllekl.lelai 1333
+                             l+ ++  +++l + + ++p++ + l++ +++++               + +r +++   +e+  ++   L++l+++l  +  ++  
+               KIS71202 1185 LKNFIDDIPSLdRLDAEIPDICRGLRSERETWN-------------TDRRFRNILDRSAHENTSICIESLRELQAFLGEErAYIES 1257
+                             666666666654322223333333333332222.............4577788888888888777777778888776665544444 PP
+
+  PTHR11139.orig.30.pir 1334 lvraaalsslaalrassvtkiasallhslvrvl...qllaaqdstnskllaadalgalgalvfnlgldyskilpllkklglfl.rs 1415
+                             l +++++s                l+++++r+l   + ++ + +t  +    +++g++ga+++ + ++++ ++p lk +++++ +s
+               KIS71202 1258 LTSGDSFS---------------PLIGQCIRTLmhvATRSDAQHTDIRDIGFRCFGLIGAVDPDR-IEHAVEEP-LKIVLSNFeDS 1326
+                             44444444...............777888888888833444445566667779************.*******9.77777777788 PP
+
+  PTHR11139.orig.30.pir 1416 rrdwdleltllskvlarrlskatllagallqrqllaqelaslai.ellseeggs.sl.snggilglrdsdlrsgvvh..lvlse.k 1495
+                                 d+ ++l+++ l++++++at         ++++q+ +++ai ell+++g++ s                    +  +  ++  
+               KIS71202 1327 EEAIDFSIHLIRDLLVPAFRAAT---------DTTQQNGLAYAIqELLKVAGFNsSIlA-----------------TgsNARTVgI 1386
+                             888888*****************.........9********************988855.................2354555545 PP
+
+  PTHR11139.orig.30.pir 1496 gsgqkllrvfeayvkelipprltsklevalgvlsse...rsmksd........wleWlrgfsllLlke.................. 1552
+                              ++q+l   ++++v ++i p l s++ +       +   +sm++         +++Wl+ + + L+ +                  
+               KIS71202 1387 KTKQRLAD-LPPDVVDTITPLLDSRYGA-------QvgkPSMRETpiythsrsYSDWLQSWTSRLITKtversdasvavfavagat 1464
+                             55555555.5555666677777777763.......2223666666777777778889999999999889999************** PP
+
+  PTHR11139.orig.30.pir 1553 ......spspalracqllglaqsdpqlarrlfpaaflslwssl..q.ldqlleellsalwskt...........ippeilqtllal 1618
+                                    +   + + ++ +++++d+ +ar+l+p+++l+   s+  + ++ +++e+ ++l ++                ++qtl++ 
+               KIS71202 1465 ksaagiAST--IFGVFRVAIRSHDVGIARHLLPHLVLHSIISGddAeREAIVDEIQTVLRDQVeshtnyeaerkL--LTAQTLFTI 1546
+                             ****76333..77888889*************************9559999*******999999********743..69******* PP
+
+  PTHR11139.orig.30.pir 1619 leflehdddtvaqgl...llfgsvwss.................vdlallpidllqlgeaanacqayakalhylepefreppslik 1684
+                              ++ + + ++  q l      +++ +                   ++        ++++a+ +c+ay +al+ +e+ +r  +s++k
+               KIS71202 1547 MDHVGVWMRRKRQDLaktS--RRPRVAqggeevlvivesimhriSQE--------LMAQASLQCKAYSRALLNFELRVRAIRSEGK 1622
+                             ****888888888887443..33333345666665544445554333........9999*********************887776 PP
+
+  PTHR11139.orig.30.pir 1685 llgallspp...leaLaelyssLgepdalyGilesra.ldletkaawaeklggweeAlaayeralqkasqdagsleatlgrlrcll 1766
+                               ++    +    e + ++y++L+epd+ +Gi+++   ++le ++ ++e  g+w  A++++e  +q  ++   ++e +lg+lrcl+
+               KIS71202 1623 DDHH----LqgyYENMHRIYAQLDEPDGMEGISTRVIsPSLEHQIREHESTGRWTSAQSCWEVEIQQRPD---DPELHLGLLRCLR 1701
+                             5544....456678889*************************************************9995...9************ PP
+
+  PTHR11139.orig.30.pir 1767 aLgqw.............epeaeeellplaleaawslrlgkwdsmleyllalaaa...easselrllqallalhqgdfdeaqeliq 1836
+                             +Lg++              pe+e+ l  + +e a    lg+wd ++        +     s+e+++ +alla++q+d + + + + 
+               KIS71202 1702 NLGHYdtmrthirgvlsaHPEWEDLLDSFRVEGAC--ILGDWDEVEART-----KgseAKSPEHSVGRALLAMRQNDAEVFGKVLV 1780
+                             **************99744****************..******544444.....1333567**************99999999999 PP
+
+  PTHR11139.orig.30.pir 1837 karqlllgaelsa...vdesysrayalllvklqqLsElqelee....sqislaa.............ll..dlksiletWrnRlpg 1900
+                             +arq l   +l a   +  sy   y++ l+ l++L+E   le     +                   +     +++  + + Rl+ 
+               KIS71202 1781 QARQDLG-KPLVAagkA--SYGGVYGSVLH-LHMLQE---LEMirshA-----RvheddrarelmgvVApdAGSDLNRSLTARLNA 1854
+                             9*99888.999998776..99999*99999.******...87655343.....3444566778777622676699999******** PP
+
+  PTHR11139.orig.30.pir 1901 twqddvevwedllavRrlvlppi.......eddaelwlklaslaRkqgnlslalkllrvlieylkllwalaaveegksf.l....l 1974
+                             t   ++++ e+ll++Rr+ + ++        +++e w++ a++aR++g+++ a ++       l++   +a++  +++  l     
+               KIS71202 1855 T-LPSFRTQEPLLSLRRTAFAALlsrlgsgNEVGEAWIATAKIARRAGHIQAAYSAT------LQAGQNQATFAFVQRVkLlakeD 1933
+                             *.9**************9888889999***6699*******************9998......55555555555555555234555 PP
+
+  PTHR11139.orig.30.pir 1975 eqeealldlqqllielsstaleeells............tn...........rkllakvllllgkWlsalsqlsveevlsslksaa 2037
+                               +ea++dl+++l++l st       +            ++           r   ak+ lll++ + ++ +  v+e+l  +k+  
+               KIS71202 1934 KTHEAIRDLANSLNTLTSTFKPG---QlgrdsvtrlielEKtdstgralrieRATFAKARLLLARLQDSTLRYTVNEILDRYKE-- 2014
+                             55********9998887665444...1545887666655005666677778888999999****99*99999999*********.. PP
+
+  PTHR11139.orig.30.pir 2038 saalqlapklekawhswalfndellehsqesgasaatlrllsaekaalqylvaavtcylkalalagg..nslqdtlrlLtLw.... 2117
+                               a++ +pk+ek w+++++f d + + + +  ++++                ++  ++l++++   g    +  ++r+Lt+w    
+               KIS71202 2015 --ATKEQPKSEKMWYHLGHFQDTHEGLLPNMTMQRY----------------NVCRAFLRSAHV--GtkFFYRTLPRVLTIWmdla 2080
+                             ..**********************999888888887................***********4..4543335889******5555 PP
+
+  PTHR11139.orig.30.pir 2118 .....fdhga...............atevndalekalssvplwpWlpviPQLiarlsh.nrevrkllknLLvriakqhPqalvypl 2182
+                                  + hg                 te+nd ++k+ +++ + +Wl v PQL+ar+ + n+    +l++++++++ ++Pq+ + ++
+               KIS71202 2081 adeqiLAHGKkssssdaelgqkvaaFTELNDQMTKYTRRLKPFQWLAVFPQLVARIVQkNEDAWLVLQEIILQVLLAYPQQAMWLM 2166
+                             5555555555*****999999999999999**************************5559999999**************666666 PP
+
+  PTHR11139.orig.30.pir 2183 rvaakslssearseaaleildklrkkvpalaseletlvqqlirsafleeelllaqlvsdeliklaieesskniakasavlkplkam 2268
+                             + +a+s ++ +r+++  ei++ ++ k++++++e++ +v               +q++++el + ++     +++k+ +vl+  k  
+               KIS71202 2167 VAGASS-KDAERKKRYGEIVHRISFKGGSSHREVSKVVSS-------------SQRLAKELLRMCD----YHVSKNETVLSIEKL- 2233
+                             666677.8999*****************************.............************6....444444444433332. PP
+
+  PTHR11139.orig.30.pir 2269 lekegp.epdfiqallelleklkt.ltkqlpalsslgplleeisalrelavPGt.ykasplvtIssFspqvevlsskqrPkkltir 2351
+                               ++g+ e   + + +ell++l++ +t  lp++  +       s ++      + ++as+l+tI sF++++ev++s+q+P k+ i+
+               KIS71202 2234 --FPGLlE---VANTSELLLPLQSsMTVLLPSNHLI-------S-AD------HrPFASNLPTIMSFEDTIEVMNSLQKPLKMMIV 2300
+                             ..333331...3344999999999888888888887.......2.23......667779*************************** PP
+
+  PTHR11139.orig.30.pir 2352 GSDGkeypfLlKgheDLRqDeRimQLfrlvNtlLskdre.rrRkLsIrtYsViPLsprsGLieWVpntdtLhsilrgcadyreara 2436
+                             G+DG++ypfL+K+++DLR+D+R m++ +++N+lL++++e r+RkL++rtY+V  L+++ GLieWVp+t+++++il ++++ ++   
+               KIS71202 2301 GNDGNRYPFLCKPRDDLRKDARLMEFDSMINKLLQSQPEsRKRKLYVRTYAVLILNEEHGLIEWVPHTVGFRHILTKLYNAKGV-- 2384
+                             ****************************************************************************66644433.. PP
+
+  PTHR11139.orig.30.pir 2437 kipsdlniehrlmrqaapqaa......ykvevfkevleetepplLhkelwlkssspeaWlarRknytrSlAvmSmvGyiLGLGDRH 2516
+                                   +i  +  ++++++a+          +f++ ++  + p++h++++ ++++p aWl++R++y+r+ AvmSmvG++LGLGDRH
+               KIS71202 2385 ------QIYTSEVKTNMDDARmardsrTSEIIFETRVLAKFAPVFHEWFLATFPDPTAWLQARSAYARTAAVMSMVGFVLGLGDRH 2464
+                             ......2444444444444443333225778******999********************************************** PP
+
+  PTHR11139.orig.30.pir 2517 psNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalgptGiEGvFrssceavlrvLRknkesLlavLeaFvhDPL 2602
+                             ++NiL+d+n+G+ vH+D+ +c+f++gqr+++PE+VPFRLT+n+v+a+g+tG +GvFr+s e++++ LR+n++sL++vLea vhDPL
+               KIS71202 2465 GENILFDSNSGDTVHVDL-NCLFDKGQRFEIPERVPFRLTQNMVDAMGVTGCDGVFRKSAEITMGILRDNRDSLMSVLEAMVHDPL 2549
+                             ******************.******************************************************************* PP
+
+  PTHR11139.orig.30.pir 2603 vdWt...........kaerlkllssqqaeaelgeal........aavvirrvkakLeGrdd.fgderkgsegLsvegQVqrLIqqA 2668
+                              +W+           +            + ++g           a++++  v++kL+Gr+  + ++r++s + s++  V+ LI++A
+               KIS71202 2550 GEWSvpedrhrskgtG------------RKNDG--RgedprvveARRALDPVANKLDGRLYrL-GSREPSPPFSTSNLVDALIKEA 2620
+                             ****887443333221............22222..233567777999***********99963.44555557999999******** PP
+
+  PTHR11139.orig.30.pir 2669 tdpeNLcrmYeGWcPW 2684
+                             t++ NL++mY+GW  W
+               KIS71202 2621 TSHSNLAKMYIGWSSW 2636
+                             **************99 PP
+
+>> KIS67678  pep chromosome:Umaydis521_2.0:12:265684:275202:-1 gene:UMAG_15011 transcript:KIS67678 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  480.1  90.8  1.1e-146  8.2e-144     126    2683 ..      77    3136 ..      51    3137 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 480.1 bits;  conditional E-value: 1.1e-146
+  PTHR11139.orig.30.pir  126 spivvvllrslselakgllsqllnqllpllllavrhilatdsrvvlalaldllldel..ladlihhvrkglsl.aqavravll.ls 207 
+                             +pi +  l ++ ++++     l++q+ +        +la+ +  +l++++  +++ +  l ++i++      + ++a++a+l  ++
+               KIS67678   77 QPIAIARLQRAANMFRS----LVEQAAA--------LLARKVVKALVTHILQMMNHRgtLLRPIAS------AyTSALCAILShQH 144 
+                             45555556665544444....3333444........667788888888888888888665555555......44667777777788 PP
+
+  PTHR11139.orig.30.pir  208 snlvdas..lplliqtalewlllilerleavlillflvhvqlfflliwlalrdpvleirelaitlLaallslllsiegkirilsss 291 
+                             ++ +     +      ++++ll  +++l+                     ++  ++++++la  +++  l             +s+
+               KIS67678  145 HVDHLEPedWRATASLCFDILL--GRDLDG--------------------SAATSDPDERLATLAISPTLV------------ASQ 196 
+                             8877777888888888888888..566665....................444444445565555553333............344 PP
+
+  PTHR11139.orig.30.pir  292 fypaaydaaldglg...lls.....................................llelfssllvllellvfseafsarlpall 337 
+                               + + da++++++   +                                       +    s l +lle+l              
+               KIS67678  197 RGLSLEDAVTAHCLchlM-ActvapllgstgqgillladytrffltfpvessahlpaM----SGLNILLEHL-------------- 263 
+                             556667777777776542.235677666666666666655555555555444433333....5555555555.............. PP
+
+  PTHR11139.orig.30.pir  338 erllslaallqlllallqsvvtsaalagllefltlklllksvvrvvkllllavaapeplgflllrllfrslgskdlllellllell 423 
+                                 +l+ ++q+lla l                                            l+l++    l+  +++  +l ++l+
+               KIS67678  264 ----ELNYPCQVLLASL-------------------------------------------ALRLTV----LTLWKTKNLMLKKQLE 298 
+                             ....3444455554332...........................................333333....3444444444444444 PP
+
+  PTHR11139.orig.30.pir  424 plleallnplfallaythalhlrdlllelcltlpvrls.llpllsfllqplv......rdelasqllrtlelildnlepep.aser 501 
+                               +++l++p+++l++ t a+ ++  + e+ l  p +++ l+p    +l  +       r++  s  l+ l + +      p +se 
+               KIS67678  299 --VAPLQDPAARLSKRTEAAAFLRSIHETLLRDPETRWaLEPIRLDALTFHWtlpdgtRSSRPSSILSNLAFYFG-----PfPSE- 376 
+                             ..5777777777766666655555555555555557777777664333322246444322222222222222222.....12221. PP
+
+  PTHR11139.orig.30.pir  502 sdlflalgalllall.....kaggnrkflkqplpllt.daae.lsgllelp..........................pkllplpl. 553 
+                               ++la +++ l +      +       +++p +l+  + a   +g +e p                          ++++++++ 
+               KIS67678  377 -QASLAWCRIGLQVDliellV-------AIEPVQLENgTPALaRQGEAEEPpstatttqrtmlrampsngkrgaeivSSSPQKRRr 454 
+                             .33334444443333333331.......2233333333333334444444455555555533344446666666666333444443 PP
+
+  PTHR11139.orig.30.pir  554 .sv......................................qafeflavalpsvsnls............................ 572 
+                              s+                                      q ++fl+ + ps++ +s                            
+               KIS67678  455 kSPtgaadnladsspirqliekvsittssptagvaarlgalQLLTFLLLTRPSLLDSStlsetrkellqlvadtdpvlvswslvgl 540 
+                             32268888889999999888888888888888888888888999999988888888889999999999999999999999999999 PP
+
+  PTHR11139.orig.30.pir  573 ..................................gvfvittlalsdellavls.vrllslllaalaaaldllesapsllsivlerl 623 
+                                                                +++++t  +++ ll v+   ++l+ +++    +   +e  ++ ++i+++  
+               KIS67678  541 gaivlafepvkvaerdhgissghpglhdwgiavrKLQFRETCRAAAFLLGVMLsRAVLPNAMLQSEITRLVAEVDLQGPPILCDSV 626 
+                             99999999999999999999999999999999995555566666778999999999999999998877777777788888888877 PP
+
+  PTHR11139.orig.30.pir  624 lnllsss.......lealvlslisaaldllscllgsalsavlsalatalqeaalsglsvwlrtalfllglaease........... 691 
+                              +l+                                           +++++a  ++ +w+ +a + +      e           
+               KIS67678  627 CHLMTLLlhrttsnR-------------------------------MLHHLDARRKVGAWFASAYSPA------Eafrpstqvavg 675 
+                             777765533333331...............................4455555555666655543333......122234445555 PP
+
+  PTHR11139.orig.30.pir  692 ...alav.allllllstlgallfsg.............sseealllclvl...............fvrellvllLln......pnl 739 
+                                +  + + +++ll++l+++                  +++++ll                     ++l+v +  n      + +
+               KIS67678  676 rdnS--MlVPYHDLLRLLSSIIAGPeldhtdhcmpvtyEDDVTQLLK--RqarlqplrdlslrssVALDLAVVRTANisadqaEPT 757 
+                             4320..24455555555444444442222222222222111111111..0111222222222222111111111111111111122 PP
+
+  PTHR11139.orig.30.pir  740 dvrkaaaaalalLlassgnssvlsllsplssvlldarpeeka.....vvvleilekllllaildldplvrlsvl.eslaedlaafd 819 
+                              + ++  + +a++l+ ++     s+l+ l+sv ld ++   +     + + +++++  l+          ls   +sl+++++   
+               KIS67678  758 LLSMQDFDRIAAILDKKI----DSCLDVLNSVGLDDGT---KpaiafQTAISVIHAGILAV--------ELSSKaKSLESAAR--- 825 
+                             444444445555555553....3333444443333333...22444444444444332222........22333233333332... PP
+
+  PTHR11139.orig.30.pir  820 ehasqafslsllfallnd..eslevreaaisllgrlsl.......................ksllnpalr..lallrkllsqlLtr 878 
+                                    s +++++++n    s++  ++a+s++  ++                        + +++ a+r  la  +k +s+  + 
+               KIS67678  826 ----VKRSCQVIVKAVNLvsKSKDMPAQAFSFVLAQLGlldpfnlsivtddatpnellvvpGLASGVASRlhLAKMKKGHSRSPE- 906 
+                             ....122333333333333344444444444442222243444444443333333333333222333333557777777777777. PP
+
+  PTHR11139.orig.30.pir  879 Le.lellsskllehldsrleeesakllgtlirkseaee.............llppyavsilpaLvallaeennelrsallktladl 950 
+                              e   ++s        ++++++ a +l t+ +++e+                ++p+a++ ++a+      +    +s++l++    
+               KIS67678  907 -EgTKHRSK------RLWTAIQEAGMLETMLSSCETALdlalfgrshigndSASPAASKRHDAFDD----MPESGNSSTLRA---- 977 
+                             .54568888......888888888888888888877445566666666666555555555555332....222234444443.... PP
+
+  PTHR11139.orig.30.pir  951 letllaevglleaaerrqllvallplilaallqlwdsesseerlllkrlllleseakllvalallgqlvestgeviepllfdsiwl 1036
+                               +++ +v+ +++++++++       +++ l++++ + +s+++ +  ++           ++ ll+ ++      ++         
+               KIS67678  978 -RNSSSTVPTESTEMAVHV-------LVHLLAGVPRLLTSSADTQRDEN-----------IVSLLFECP------VD--------- 1029
+                             .122344444577787888.......55666666665566555333322...........222333333......33......... PP
+
+  PTHR11139.orig.30.pir 1037 glepaypsllaellklllkflelshserrealavlg......llgaldsldalrrallqlttllvkhapeal...........ipa 1105
+                                 a  +l+ ++ +ll k +              +      l++ald ++   ++ll + + ++  +p a            +  
+               KIS67678 1030 ----AMIALAPVIFELLNKGK--------------LwmsqrdLVDALDRIG---SELLASYQFAR--QPVARiaairalrsvvP-L 1091
+                             ....44444445444433333..............0122222555555444...44444444444..33333334443333221.1 PP
+
+  PTHR11139.orig.30.pir 1106 .......qeseldysttkvaillllqlilrdlslpssyvlqvlvallkal....asealqllvlpadkvllapslllrlkd..... 1175
+                                    q ++ d ++  + + +   + +++   ps++  q+  a+ + l     ++a  +l +       + +  ++ ++     
+               KIS67678 1092 lleefdeQSDLFDKVQ--KLASFFA-DQIGRTKWPSPWEVQL--ACARFLadclEQDAEGCLSRAG-----SARASKFSPRrsmls 1167
+                             2233335557777777..4444444.4555556667777664..3333333334777777766644.....233333333344446 PP
+
+  PTHR11139.orig.30.pir 1176 .....................gqlhssvsrirellvrhat..............rvlilqqLallvsivnaharklaldlapllvl 1226
+                                                  ++++ + +++++l ++  +              r+l+l++ a + s+v++ a ++ l+++    l
+               KIS67678 1168 lntdvdirvrglgsplaacvfDTASFDEEQMLHLYNDFRDdlpsdssspqhiltRALSLSNVAIANSAVRQSALFHLLEII----L 1249
+                             666777777777777777777333333334444333333344444444444444449999999888*********999988....7 PP
+
+  PTHR11139.orig.30.pir 1227 werrw..tilalleqlvlsaaareflgsylpellllesggvlpllgpll............................kellnllqq 1282
+                             + ++   t+++l++q++++++  +  ++   +++              +                            +       +
+               KIS67678 1250 ATEQLptTVQHLFAQVAARLGFTDAPSC---YQA--------------FagqitwgmatnnydplqvpwkalgftskR-------E 1311
+                             7888899999999999866666644443...333..............222223333333332223333333333331.......2 PP
+
+  PTHR11139.orig.30.pir 1283 algavlwinsdfllqklrelgsklkleklll............................lallLpilnkllekl.....lelailv 1335
+                             +l+a++                                                     + + L+++  +l+ +      ++a++ 
+               KIS67678 1312 CLDATF------------------------AasgsmllaaqthegrtqfdalvqltkrsQQQGLQECLPFLTAAylgfaVQSAQQQ 1373
+                             222222........................02222222223333333344444556666888888888886666555554444444 PP
+
+  PTHR11139.orig.30.pir 1336 raaalsslaal.............rassvtkiasallhsl....vrvl.....qllaaqdstnskllaadalgalgalvfnlgldy 1399
+                             +++ l +   +             ++s+ ++  ++ + s+    v++l     +     + ++ +++++ a+ al+ ++ ++g  +
+               KIS67678 1374 DRPDLPA---AgaqtlqelaqlgfAESDRHEQLPRMIASAddliVTTLlslyfE-----PASSLEESRKFAIAALKTQDARSGRIL 1451
+                             4444442...23335776666666444444444344444444443333665773.....34577889***************9999 PP
+
+  PTHR11139.orig.30.pir 1400 skilpllkklglfl..........................rsrrdwdleltllskvlarrlskatllagallqrqllaqelas... 1456
+                             s++ p +++++l l                          ++r+d   ++ +  ++++ r+++           + + + +a+   
+               KIS67678 1452 SCLTPTSNSSCLGLhepsrpfftsavlcatlstlpslgvePFRKD---VMYNVLHHIFHRIASSK-------FQNDQLRLSAAlri 1527
+                             999997777777777777777777666666666666666555555...55555555556666655.......22222222222112 PP
+
+  PTHR11139.orig.30.pir 1457 .laiellseeggsslsnggilglrdsdlrsgvvh..........lvlsekgsgqkllrvfeayvke...lipprltsklevalgvl 1528
+                              la                              +          + +++ +s ++ll++   + +    l+ ++  s+++      
+               KIS67678 1528 yLA------------------------------McgdsfwtdrlNACFLVSSIEQLLGQQHLHDDFrpfLVYACNRSSMAQ----- 1578
+                             211..............................122333355555555555544455544444442222222222222221..... PP
+
+  PTHR11139.orig.30.pir 1529 ssersmksd........wleWlrgfsllLlke.....spspalracqllglaqsdpqlarrlfpaaflslwsslqldqlleellsa 1601
+                                              + +W r  +++L+++        +a ra  +    +   ++   l+p+ + s          + +++  
+               KIS67678 1579 --------HspealvscIVTWSREIADQLVASpdsgdWLLEAARAVAK--TSSIATSVTMLLWPVKRTST--------EQAAIEGL 1646
+                             ........1222223333368888888888888877644444555555..44445666666665444443........23333333 PP
+
+  PTHR11139.orig.30.pir 1602 lwskt................................................................................. 1606
+                              +++t                                                                                 
+               KIS67678 1647 IDIDTiafaiqacprmsvqlpsllrvrsvlkktskaqieafchgpawkllermtevrathasridgdspsdvisdiyaciasasep 1732
+                             33333555555588888888888888888888888889999999999999999999999999999999999999999999999999 PP
+
+  PTHR11139.orig.30.pir 1607 ...................................................................................... 1606
+                                                                                                                   
+               KIS67678 1733 allqrtrksveagakgdklasetylatidtsqarnlsaaavlkiheltqslplelsfrafetlrsiaclvggrltdmvpsttreel 1818
+                             99999999999999999999999999999999999999999999999999999999999999999999999999999999999999 PP
+
+  PTHR11139.orig.30.pir 1607 ...................................................................................... 1606
+                                                                                                                   
+               KIS67678 1819 grirpsispmtnrpgpfhperflepalldasassnnwicritatmceaiasfknqdlfqpigqfvsmnhvaaetlfhvlllcftvv 1904
+                             99999999999999999999999999999999999999999999999998888888888888888888888888888888888888 PP
+
+  PTHR11139.orig.30.pir 1607 ......................................................ippeilqtllalleflehdddtvaqglllfgs 1638
+                                                                                    +++i+q+lla+ +f +               
+               KIS67678 1905 dtepawtnpssggrkrtsgrrsdlegqlsslqmyraaiathfehvlsapnadptCSSMIVQSLLAVRSFRP--------------- 1975
+                             88888888888888888888888888888888888888888888888888888877788888888776663............... PP
+
+  PTHR11139.orig.30.pir 1639 vwss.....vdlallpidllqlgeaanacqayakalhylepefreppslikllgallspp.....leaLaelyssLgepdalyGil 1714
+                                      ++ ++++ d ++l++++ ac+ y  a+ + e+   e    +++++   ++p      + L++ y ++++pda+yGi 
+               KIS67678 1976 ---VqeepdEVCFWFQVDTNLLARRCIACGLYSAAIFFVEHGNWEQ---DESQAC--FAPqaqirADLLQQAYMNIDDPDAFYGIK 2053
+                             ...02335578889999999*******************8644443...222222..222477889*******************9 PP
+
+  PTHR11139.orig.30.pir 1715 esraldletkaawaeklgg.weeAlaayeralqkasqdagslea......tlgrlrcllaLgqw...................... 1771
+                                  +l +k   +++  g w +A+++  + ++ as    s+++      +      + aLgq                       
+               KIS67678 2054 DGDVRELLLK---RLHHEGqWLRAFQYHAADCE-AS----SFDGgkvapaQ------ANALGQTfsmlgfqhlangvdltlepsgg 2125
+                             9877555555...5555577****996655554.33....33334444431......23445555555555556667776655555 PP
+
+  PTHR11139.orig.30.pir 1772 ................e.peaeeellplaleaawslrlg.kwdsmleyllalaaaeasselrllqallalhqgdfdeaqeliqkar 1839
+                                             + p +++el             g + +s+l+ l  ++                    d +++ e +  a 
+               KIS67678 2126 aapslairtdvdstswDlPVTSNEL-----------VGGkRVESVLRILQQAN--------------------DEQDVDEPLSLAI 2180
+                             5444444433333332223333333...........22234445555553332....................3333344444443 PP
+
+  PTHR11139.orig.30.pir 1840 qlllgaelsavdesysrayalllvklqq.LsElqelee....sqislaa.........lldlksiletWrnRlpgtw.qddvevwe 1910
+                             q  l ++l ++   +++++ + +++ q  L  l  + +    s     +         +         +r+  + +   d +ev e
+               KIS67678 2181 QSQL-QLLCSI---PAESV-TVMRSIQGdLLSLGQIKDwrkaS-----TllgleeavvK---------FRSVWCRADvGDQFEVAE 2247
+                             4445.777776...77777.77777666666633333344443.....13332223331.........23333335559999**** PP
+
+  PTHR11139.orig.30.pir 1911 dllavRrlvlppi.........................eddaelwlklaslaRkqgnlslalkll...............rvliey 1956
+                             ++l++R+l+l+++                              l+ +l++ aR +  l+ a ++                  + e 
+               KIS67678 2248 KILRTRQLLLQAVrqrlqsdqigdaldrpaeeiarverL----LLVQLSRQAREHEKLQKAINATaraesievalgdganLAREEF 2329
+                             ***********99*****999999888888555544433....9999999999999999999998999998888888888555788 PP
+
+  PTHR11139.orig.30.pir 1957 lkllwalaaveegksflleqeealldlqqllielsstaleeellstnrkllakvllllgkWlsalsqlsveevlsslksaasaalq 2042
+                             +  lw +     +++       a ++l+q++++l  t ++     ++++  a+ l ll+ W +  ++++++e+   l++ a+++l 
+               KIS67678 2330 AAVLWDQ-----KEH-----SPAMQLLSQIVDDLGVTTRSTM---QQKRRGARLLSLLAQWRATARSQHPREIDGTLFEPALKLLV 2402
+                             8888888.....555.....*********9987765554433...33888899****************9***9999998888888 PP
+
+  PTHR11139.orig.30.pir 2043 lapkleka............whswalfndellehsqesgasaa........................................... 2073
+                             + p +e a             + wa+f++e+ + s     ++a                                           
+               KIS67678 2403 TPPASEVAkdaevsaeqseiAYRWARFAEEHHRGS-----DMAeimrlrvyiqrrteeiaqnqreydktssktdrgkllqfqrqae 2483
+                             85555555668888888888899999999996554.....3334677899999999999999999999999**9999999988888 PP
+
+  PTHR11139.orig.30.pir 2074 .tlrl.....lsaekaalqylvaavtcylkalalaggnslq.dtlrlLtLwfdhgaatevndalekalssvplwpWlpviPQLiar 2152
+                              +lr+     + +e+++  +l  ++++y++al+++  +++  ++ rl++Lwf+++ ++e+n++l  +l s+p+ +++  + QL ar
+               KIS67678 2484 kILRQdqtrlSELEASRTLFLRRSIAMYARALSSS--DVHDdAVARLISLWFENSDNAELNRLLVNCLASIPSRKFVALMHQLSAR 2567
+                             855557788899*********************76..33346777***************************************** PP
+
+  PTHR11139.orig.30.pir 2153 l..sh.nr....evrkllknLLvriakqhPq....alvyplrvaaksls...........................searseaale 2200
+                             l   + +r    +++ +l +LL+r++++hP     a++ ++ ++    +                             +rs aa++
+               KIS67678 2568 LteLPdQRdpmaPFQSNLGQLLLRMCQEHPFhclyAIFALIKTG----AdtkaasnrstsrsslgvpdtlsassssPILRSTAAEK 2649
+                             *6644333678889****************99555444444444....2346789999999999999999999999779******* PP
+
+  PTHR11139.orig.30.pir 2201 ildklrkkvpalaseletlvqqlirsafleee...lllaqlvsdeliklaiees..........skniakasavlkplkamlekeg 2273
+                             i++ +++ +   +s++  +   ++ + + +e+   +l+  + +d++     ++s            + + ++a ++ l + +    
+               KIS67678 2650 IWNHIKR-H---SSHGKRIRIFEELCLAYVEWaefDLA--SRPDRYF----QGSgaikkgalrmPPSGELRLARMRDLDVPV---- 2721
+                             ****887.3...66666666654444444444335433..2335555....6654444444444333444444443333311.... PP
+
+  PTHR11139.orig.30.pir 2274 pepdfiqallelleklktltkqlpalsslgplleeisalrelavPGtykasplvtIssFspqvevlsskqrPkkltirGSDGkeyp 2359
+                                               +t  l+ + ++          +       y    +v I++ s++++  +++  Pk   ++GSDGk+y+
+               KIS67678 2722 ------------------ATARLEIDATC----------K-------Y--EKVVSIVRYSETFTTAGGIHLPKISECIGSDGKRYK 2770
+                             ..................33333333333..........1.......1..346********************************* PP
+
+  PTHR11139.orig.30.pir 2360 fLlKgheDLRqDeRimQLfrlvNtlLskdre.rrRkLsIrtYsViPLsprsGLieWVpntdtLhsilrgca.dyrearakipsdln 2443
+                             +L+K  +DLRqD+ ++Q+fr+vN lL+ dr  r RkL IrtY V PL+p++G++e+V nt++L+++l +++ +yr    ++     
+               KIS67678 2771 QLFKRDDDLRQDAVMQQVFRMVNELLKADRRtRERKLVIRTYTVLPLGPQCGMLEFVTNTVPLGEVLIALHaKYRP--GDL----- 2849
+                             ******************************9999**********************************77777776..445..... PP
+
+  PTHR11139.orig.30.pir 2444 iehrlmrqaapqaa.....ykvevfkevleetepplLhkelwlkssspeaWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldr 2524
+                              + ++ r+ + +a+     +k+e+f++v+e++ +p + +++  + + p +W++ R +ytrS+ ++S+vG++LGLGDRH sN+Lld+
+               KIS67678 2850 -TPSQARTKMRDAQslgaeAKLEAFLDVCEQM-RPAFGYFFSDAQRMPRDWYETRLRYTRSVSTSSIVGHVLGLGDRHVSNMLLDK 2933
+                             .3444444444444455445************.***************************************************** PP
+
+  PTHR11139.orig.30.pir 2525 ntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalgptGiEGvFrssceavlrvLRknkesLlavLeaFvhDPLvdWtkaer 2610
+                             ++Ge+vHIDFg + f++g+ Lp+PElVPFRLTr++v+++g  G+EG+Fr++ce +lrvLR +++ + +vLe+F hDPL++Wt +++
+               KIS67678 2934 ESGELVHIDFG-VAFDQGKLLPIPELVPFRLTRDIVDGMGMHGVEGTFRRCCEETLRVLRAHQDVIKTVLEVFRHDPLFAWT-SNP 3017
+                             **********5.55556699**************************************************************.555 PP
+
+  PTHR11139.orig.30.pir 2611 lkllssqqaeaelgeal............................................................aavvirrvk 2636
+                              k l +q+  +e+   +                                                            a +++  v 
+               KIS67678 3018 IKVLRAQEDKEEEE--QdslaatsversgttmgvsrstpaptptllqargtasrsttpfaapyeatgvlgtdtaelsADRAVTSVM 3101
+                             55555553333322..23467788888888999999998888888888888888888888888888888888877777799***** PP
+
+  PTHR11139.orig.30.pir 2637 akLeGrddfgderkgsegLsvegQVqrLIqqAtdpeNLcrmYeGWcP 2683
+                              kL+              Ls+e+ V+ LIqqAtd   L+  + GW++
+               KIS67678 3102 SKLSSS------------LSIEYTVNDLIQQATDAGHLSAIFHGWQA 3136
+                             ***993............***************************97 PP
+
+>> KIS72031  pep chromosome:Umaydis521_2.0:1:1285297:1288224:-1 gene:UMAG_00453 transcript:KIS72031 gene_biotype:protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.3   0.3     2e-08   1.5e-05    2358    2405 ..     718     762 ..     716     777 .. 0.80
+   2 !   33.2   0.2   5.3e-12     4e-09    2495    2539 ..     814     857 ..     809     869 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 21.3 bits;  conditional E-value: 2e-08
+  PTHR11139.orig.30.pir 2358 ypfLlKgheDLRqDeRimQLfrlvNtlLskdrerrRkLsIrtYsViPL 2405
+                             y+  +K ++DLRqD+ + QLf+l+ +lL++      +L+ + Y+V   
+               KIS72031  718 YTLIFKNGDDLRQDQLVIQLFSLMDRLLRNEN---LDLKMTPYRVLAT 762 
+                             9999**99********************9955...5788888888765 PP
+
+  == domain 2  score: 33.2 bits;  conditional E-value: 5.3e-12
+  PTHR11139.orig.30.pir 2495 nytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcff 2539
+                             ++ rS+A  ++v y+LG+GDRH++N+Ll+ + G+  H+DFg++++
+               KIS72031  814 TFIRSCAGYCVVTYLLGVGDRHLDNLLLS-SDGHFFHVDFGYILG 857 
+                             79***********************9999.59*********9876 PP
+
+>> KIS67060  pep chromosome:Umaydis521_2.0:15:143987:147895:1 gene:UMAG_04931 transcript:KIS67060 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?  -19.3  19.3         9   6.8e+03     538     706 ..     165     306 ..      33     559 .. 0.37
+   2 !   36.1   0.0   7.4e-13   5.6e-10    2397    2536 ..    1067    1177 ..    1032    1192 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: -19.3 bits;  conditional E-value: 9
+  PTHR11139.orig.30.pir 538 lsgllelp..pkllplpl.svqafeflavalpsvsnlsgvfvittlalsdellavlsvrllslllaalaaaldllesapsllsivler 622
+                             sgl  l+  +++l++++ s+qa++  a++++  s+l++v+++++la    + a   +r  + +++ ++aa dl++++        ++
+               KIS67060 165 HSGLQRLLvaTTSLGRQKvSPQAPL--ANIVAIGSLLASVPAMPQLASITGTIAIQQARQPPDPIQDALAARDLHSAIDN-----EDD 245
+                            3333333366555555555555333..33333334455556666666666666666666666666666666666665554.....222 PP
+
+  PTHR11139.orig.30.pir 623 llnllsss.....lealvlslisaaldllscllgsalsavlsalatalqeaalsglsvwlrtalfllglaeasealavallllllstl 705
+                            ll     s           +   ++ d   +  +++    ++a+++++q+a+++++ +                       ++lls +
+               KIS67060 246 LLYAET-ShhppaA----DHKNNNSDDNDDDDGLDSSDNDSLAETRMSQPASNVAQPT-----------------------QYLLSSF 305
+                            222222.1333221....2222222222222233333333333444444444433332.......................2222222 PP
+
+  PTHR11139.orig.30.pir 706 g 706
+                            +
+               KIS67060 306 A 306
+                            2 PP
+
+  == domain 2  score: 36.1 bits;  conditional E-value: 7.4e-13
+  PTHR11139.orig.30.pir 2397 IrtYsViPLsprsGLieWVpntdtLhsilrgcadyrearakipsdlniehrlmrqaapqaaykvevfkevleetepplLhkelwlk 2482
+                             +r++++   s++sGL+e +   ++ hsi +      ea+ ++        +++ +aa++     +++++ l+              
+               KIS67060 1067 VRYFRILVTSENSGLMETITDAVSVHSIKK------EAYSRM--------SQQDKAASA---GFSLYDHFLAAY-----------G 1124
+                             5777777789*******************9......665333........222333332...566888877766...........6 PP
+
+  PTHR11139.orig.30.pir 2483 ssspeaWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgd 2536
+                             +s+++++ a+R ++  SlA  S+++y+L + DRH  NiL+d n G+++HIDFg 
+               KIS67060 1125 PSTSKSFNAARDRFIESLAGYSIISYLLQIKDRHNGNILVD-NHGRLIHIDFGF 1177
+                             7888888899*******************************.89********64 PP
+
+>> KIS66011  pep chromosome:Umaydis521_2.0:21:354174:360737:-1 gene:UMAG_06103 transcript:KIS66011 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.6   5.8       1.3   9.9e+02     855    1073 ..      66     249 ..       4     407 .. 0.50
+   2 ?  -16.8  23.7         9   6.8e+03     202     575 ..     605    1204 ..     482    1661 .. 0.40
+   3 !   34.5   1.3   2.2e-12   1.6e-09    2488    2564 ..    2014    2088 ..    2009    2089 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -4.6 bits;  conditional E-value: 1.3
+  PTHR11139.orig.30.pir  855 l....................ksllnpalrlallrkllsqlLtrLe.lellss....kllehldsrleeesakllgtlirkseaee 915 
+                             l                    k++++++ + ++l +ll ql      +   +     ++ ++ d++ ++  +++l + i       
+               KIS66011   66 LalfassissasrstehttdiKNDEHLVPVIDDLEQLLRQLTL--VdF---DQemswSHHSLPDQLAFALVSSFLRVSI------- 139 
+                             1223333333333333344443344444444444444444322..111...1111111111113333322222222222....... PP
+
+  PTHR11139.orig.30.pir  916 llppyavsilpaLvallaeennelrsallktlad.lletllaevglleaaerrqllvallplilaallqlwdsesseerlllkrll 1000
+                              +p++ ++ + a++ l+                + l+++l a++g  +a++++  lv+l++ ++ a++     ++s +++l +   
+               KIS66011  140 NAPQHRSRCINAIFDLA----------------AkLSDALGATAG--DAQIVVVKLVPLFNGLYRAIA-----STSFAWKLHEFA- 201 
+                             22222222222222222................212222222222..344444445666666666666.....244444333222. PP
+
+  PTHR11139.orig.30.pir 1001 lleseakllvalallgqlvestgeviepllfdsiwlglepaypsllaellklllkflelshserrealavlg......l 1073
+                                                 ++++++ p+l           + ++++ l ++ll ++  ++++r+ a+++         
+               KIS66011  202 --------------------RLADILNPIL----------TSVQTVRRLNEVLLLLD-DQFDIRQQAVRATRrapkvaT 249 
+                             ....................4456666666..........66666666666655555.444444444433323444330 PP
+
+  == domain 2  score: -16.8 bits;  conditional E-value: 9
+  PTHR11139.orig.30.pir  202 avlllssnlvdaslplliqtalewlll....ilerlea....vlil........................................ 239 
+                             ++  +  n + as+p+l+ +a + + +    ++++l++    +l+                                         
+               KIS66011  605 PIPVFLPNAHGASSPVLLAAARCLASCvtiaPGDDLVVstmyNLLNylgrdtpgglglggvagsgvsvrsgasravtardqvngis 690 
+                             33334444444444444444443333343332222222222211111112222222222222222222222222222222222222 PP
+
+  PTHR11139.orig.30.pir  240 ...................................................................................... 239 
+                                                                                                                   
+               KIS66011  691 msgsqanisarsedqrrlinlstitvisrlalevgkpdvtaltismllqrlrnadvsaeaaildnvvplalagprsayidvvrals 776 
+                             22222222222222222222333333333333333333333333333333333333333333333333333333333333322222 PP
+
+  PTHR11139.orig.30.pir  240 .....................................................................................l 240 
+                                                                                                                  l
+               KIS66011  777 avsrsaltgganrraavavesaqlklarglgrlderderdsassgeneatggrkeiflvellqlfaekgiqlqtvassgkssaeeL 862 
+                             22222222222222222222222222222222222222222222222222222222222222222222222222222222222222 PP
+
+  PTHR11139.orig.30.pir  241 flvhvqlfflliwla..lrdpvleirelaitlLaallslllsiegkirilsssf.......................ypaaydaal 301 
+                             ++++ +l+ ll+ +a  l + ++ ++    t + +l+++++ ++ ++      f                                
+               KIS66011  863 AELNTDLATLLPAIAavLEHKDIHPEVQPTTEIVSLFRNMWFLSVLFG-----FaspsnirshvtadgnavsrpssaA-------- 935 
+                             222222222222222221111111111111111111111111111111.....0111111111111111111111110........ PP
+
+  PTHR11139.orig.30.pir  302 dglglls........................................................................llelfss 315 
+                                                                                                                   
+               KIS66011  936 ------EaqaeivgkslssislktptlvpesahnylesdleynsvlkrefsnqtldsqrkalstvipthasevrsfsyaQ------ 1009
+                             ......01111111111111111111111111111111111111111111111110000000000001111111111110...... PP
+
+  PTHR11139.orig.30.pir  316 llvllellvfseafsarlpallerllslaallqlllallqsvvtsaalagllef.......ltlkl...ll.ksvv.......... 380 
+                                                                                           +++l   +   s +          
+               KIS66011 1010 -----------------------------------------------------VtflstiyDLECLrsrMGrPS-Mvlsyftnegl 1041
+                             .....................................................011111111111111111111.01222211111 PP
+
+  PTHR11139.orig.30.pir  381 ...rvvkllllavaapeplg.flllrllfrslgskdlllellllellplleall.nplfallaythalhlrdlllelcltlpvrls 461 
+                                  v+++++       ++ ++ +++++ +lg +         +l p++++   n+++                       v   
+               KIS66011 1042 ndsALVGAMQA-------IAdKVIDFFIR-DLGTQV-----NRHLLDPRVANEVkNLMLGCCHR------------------V--- 1093
+                             11111111111.......11122222222.111111.....11112222222222222221111..................0... PP
+
+  PTHR11139.orig.30.pir  462 llpllsfllqplv..rdelasqllrtlelildnlepepasersdlflalgalllallkaggnrkflkqplpllt.daae.lsglle 543 
+                                         +  r       +++l+++l +l      ++++++  l+ l l+    +g+ + +k++ ++++ +++e +++  +
+               KIS66011 1094 ------------AkvR----QVSQSILNKLLYALPSL-LCDQDVVTTMLEILTLLR---EGCEAEYKDEFAPTYhYVSErANISFD 1159
+                             ............0111....11111111111111111.222333333333333333...344444444444444444443333333 PP
+
+  PTHR11139.orig.30.pir  544 lp..pkllplplsvqafeflavalpsvsnls............gvf 575 
+                             l+  + ++++ l  q +++++++l++v +l+            g+f
+               KIS66011 1160 LSdsYVQRNEIL-SQFLTKSREYLSLVMKLAplelqgilerylGTF 1204
+                             333321111111.122222233333333333333333333333333 PP
+
+  == domain 3  score: 34.5 bits;  conditional E-value: 2.2e-12
+  PTHR11139.orig.30.pir 2488 aWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDF...gdcffeagqrLpvPElVPFRLTrnlvnalg 2564
+                             a+ ++R n+ +S A+ S+v++iL + DRH  N+++d   G++vHIDF   +d+   +++++p+     F L + +++ +g
+               KIS66011 2014 AFQRARINFIQSMAAYSVVCHILQIRDRHNGNMMID-GDGHLVHIDFgflFDIGPGGMRFEPY----SFKLSHEMIDVMG 2088
+                             5668899*****************************.69********5553333345666666....7999999999997 PP
+
+>> KIS69857  pep chromosome:Umaydis521_2.0:5:1001433:1004069:1 gene:UMAG_02375 transcript:KIS69857 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.8   2.5   2.9e-08   2.2e-05     724    1017 ..     114     544 ..       3     712 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 20.8 bits;  conditional E-value: 2.9e-08
+  PTHR11139.orig.30.pir  724 l..........fvrellvllLln.....pnldvrkaaaaalalLlassgnssvlsllsplssvlldarpeekavvvleilekllll 794 
+                             +          ++ ++l+++Ll+     +n ++r+aa  a++  ++             +s vl+++++        e        
+               KIS69857  114 VaaiaaielpvGLWNELISQLLSamgdaNNMRLRQAALQAIGFTCEGI-----------SSDVLAAQSN--------E-------- 172 
+                             022333333332233333333333333344466666666666666663...........2222222222........1........ PP
+
+  PTHR11139.orig.30.pir  795 aildl.............dplvrlsvl.eslaedlaafd.....ehasqafslsllfallndeslevreaaisllgrlsl...ksl 858 
+                                                p+v+l++l +++++++         ++  + ++++++ ++ ++++++v+ aa+++l r  +   +  
+               KIS69857  173 ----IltaviqgarkeepAPEVQLAALqALFNSLEF--VranfeREGERNYIMQVVCEATQSPNMPVKVAAYECLVR--ImqlY-- 248 
+                             ....12222222233334555555555222444332..122332444488888888888888888888888888877..42221.. PP
+
+  PTHR11139.orig.30.pir  859 lnpalrlallrkllsqlLtrL...elellss.........kllehldsrleeesakllgtlirkseaee..............llp 918 
+                                    +  r  ++q L +L                   +++e+++  + ee +  l +     e  e              +++
+               KIS69857  249 ------YDKMRFYMEQALFGLtvlG-----MrdsepkvalQAVEFWSTVCDEEIELALEA-----E--EaaefgeepervcynFAR 316 
+                             ......2223333444444333221.....123334456677777766666666655544.....3..244577778999999999 PP
+
+  PTHR11139.orig.30.pir  919 pyavsilpaLvallaeen.................................................................... 936 
+                              +++ i+p+L+ ll+ ++                                                                    
+               KIS69857  317 IALPDIVPVLLELLKTQDedadedewdvskaagtcvgllaqvvgddivrlavpfvegniknpdwhareaavmcfgsimegpdrktl 402 
+                             99999999999999444555889999999999999999999999999999999999999999999999999999999998888888 PP
+
+  PTHR11139.orig.30.pir  937 ..............................................................................nelrsall 944 
+                                                                                                           ++++ a +
+               KIS69857  403 aplvesalpiiiemlrdqsiavkdtaawtlgrisdlccdsiktdvhlpalvqalvlglqdeprivtnccwaimnlseqLGTNAAAY 488 
+                             88888888888888888887777777777777777766666666666666666666666666666666555554433311222222 PP
+
+  PTHR11139.orig.30.pir  945 ktladlletllaevglleaaerrqllvallplilaallqlwdsesseerlllkrlllleseakllvalallgq 1017
+                               +++ ++         + a++  +l + ++ i++ llq++ ++s e+   ++r +++e +a++++      +
+               KIS69857  489 DNAGEPTD---------ASAVPTTPLSPFFEGIVSSLLQATGRSSNES---NSRTSAYEALASSITH-----C 544 
+                             22222111.........2222222335555557777775555444433...3666666664444322.....2 PP
+
+>> KIS67732  pep chromosome:Umaydis521_2.0:12:415069:421416:-1 gene:UMAG_04230 transcript:KIS67732 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.4   6.8    0.0026         2      53     769 ..     738    1402 ..     525    1560 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 4.4 bits;  conditional E-value: 0.0026
+  PTHR11139.orig.30.pir   53 ellkavveelldllmvllendsaeaflqflsklssllqselqsepsfadsldvlasellalllslaslitllespivvvllrslse 138 
+                             ++l ++v+ +l++           ++ ++l +l        + +    d  d+las+  +  ++la l  +   p +v++lr    
+               KIS67732  738 SVLVPIVDVILEK--------LPTEVGRLLNQL--------WDCLG--DLKDDLASSIGGVMDLLAKLVEH---PGIVIHLRAEAQ 802 
+                             3333333333333........222222222222........22222..23344446666666666665555...556666666443 PP
+
+  PTHR11139.orig.30.pir  139 lakgllsqllnqllpllllavrhilatdsrvvlalaldllldelladlihhvrkglslaqavravlllssnlvdas.lplliqtal 223 
+                               ++ ls l++ l+p     +rh  ++++ +vl ++   l                        v  l ++  d   l ll+q + 
+               KIS67732  803 E-QRALSLLIPRLFP----FFRHTITSVRLSVLNALRVFL-----------------------TVPSLPKDWIDERvLRLLFQNL- 859 
+                             3.3336666666666....555555555544442222222.......................2222333333322333333333. PP
+
+  PTHR11139.orig.30.pir  224 ewlllilerleavlillflvhvqlfflliwlalrdpvleirelaitlLaallslllsiegkiril.sssf................ 292 
+                                                             + +++l+ir+++ ++ +++l +++      ++l  +                  
+               KIS67732  860 --------------------------------VVEEKLPIRRASADAWRHALAHVAGDAATVQSLlGPYIvdffriimtplgspid 913 
+                             ................................455555555555555555555555554443333222223333333333333333 PP
+
+  PTHR11139.orig.30.pir  293 ..........................................ypaaydaaldglglls............................ 308 
+                                                                       ++ a++a  d+l+                               
+               KIS67732  914 ftlfynasfgssghadtnrhnvdksiltqdlslvgvdavirgRLSAAEALGDALA--Rfpraedeltfgavlreylestsalqkcl 997 
+                             3333333333333333333333333333333222222222221111111111111..01112222222222222111111111111 PP
+
+  PTHR11139.orig.30.pir  309 ............................................llelfssllvllellvfseafsarlpallerllslaallqll 350 
+                                                                         +    + + v+l+++ + e++  +                  
+               KIS67732  998 saaiiqewaqacatlgidlkdsstivpdiagrlisaletpapptY----AEMTVMLQRI-QAECQGLY------------------ 1060
+                             111111111111112222222222333333333333333333331....3333333333.22221111.................. PP
+
+  PTHR11139.orig.30.pir  351 lallqsvvtsaalagllefltlklllksvv....................rvvkllllavaape.....plg.flllrllfrslgs 410 
+                                                                               +  + +  a ++++     ++g  +ll+  +  + +
+               KIS67732 1061 -----------------------------NsfqrdakvakakipalpatvDPLGMMADAFTVDTakavaSTGfDSLLT--HAGSKA 1115
+                             .............................0111111112222222233332222222233333333344334333333..445555 PP
+
+  PTHR11139.orig.30.pir  411 kdlllellllellplleall.nplfallaythalhlrdlllelcltlpvrlsllpllsfllqplvrdelasqllrtlelildnlep 495 
+                             k++ l ll      l++a+   +++  +++t+ + +++  +++ + lp                      s l+ +++ i ++++ 
+               KIS67732 1116 KKAALPLLEDRRRKLIAAIGfYQANKEKQDTQVFASIASAVISLKVLP----------------------SKLNPVIRSIMNSVKF 1179
+                             554444444444444445555566666677777777777777777655......................3344444444444444 PP
+
+  PTHR11139.orig.30.pir  496 e...p...asersdlflalgalllall.........ka...ggnrkflkqplpllt.daae.lsgllelppkllplplsvqafefl 561 
+                             e   +   +s r ++  +++   ++ +         k      ++     ++  ++ +++e +                       
+               KIS67732 1180 EenmDlqtRSAR-SVARLVEYCVSPTAksnpsdkivKNlcaFVCQDTTRVAIFAASkNVREgIL---------------------- 1242
+                             432212222222.222222222222212332222220022222222222222222223333332...................... PP
+
+  PTHR11139.orig.30.pir  562 avalpsvsnls....gvfvittlalsdellavlsvrllslllaalaaaldllesapsllsivlerllnllssslealvlslisaal 643 
+                                       s     v  + ++ +s + ++v s ++l   l+  +aa+ l++ a ++  ++++   +l                 
+               KIS67732 1243 ----------SmnepTVVPRGPGRTSVKDETVESEEVLQGKLIRRGAAAALAQLADLFGDTLFDVVPMLW---------------- 1302
+                             ..........033332333334444444444555455555555555555555444444444444333333................ PP
+
+  PTHR11139.orig.30.pir  644 dllscllgsalsavlsalatalqeaalsglsvwlrtalfllglaeasealav...allllllstlgallfsgsseealllclvlfv 726 
+                              ++s++l+ ++ +++++  ++ +++   g+s ++ +a+ ++       +l++    l+  ++++l al  +++se+          
+               KIS67732 1303 QCMSSSLVGTFGSTSADADALIEKQDDLGQSILDACAVLDV-------NLPNlkgSLCDKVVELLPALTLAIQSEF---------- 1371
+                             35555566666666667777777777788888888888888.......7777777788888888888888885552.......... PP
+
+  PTHR11139.orig.30.pir  727 rellvllLlnpnldvrkaaaaalalLlassgnssvlsllspls 769 
+                                         +++r+aaa ++a++++   ++ +++  + + 
+               KIS67732 1372 ------------AVIRSAAAKCFAVVASCLTEVALKHIVEKVV 1402
+                             ............4566666666555555533333332222222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (2684 nodes)
+Target sequences:                       6783  (3999663 residues searched)
+Passed MSV filter:                       446  (0.0657526); expected 135.7 (0.02)
+Passed bias filter:                       85  (0.0125313); expected 135.7 (0.02)
+Passed Vit filter:                        15  (0.00221141); expected 6.8 (0.001)
+Passed Fwd filter:                         9  (0.00132685); expected 0.1 (1e-05)
+Initial search space (Z):               6783  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 1.10u 0.11s 00:00:01.21 Elapsed: 00:00:00.63
+# Mc/sec: 17023.30
+//
+[ok]

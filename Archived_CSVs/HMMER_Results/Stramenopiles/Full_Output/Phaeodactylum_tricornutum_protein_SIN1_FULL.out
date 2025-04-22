@@ -1,0 +1,100 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Phaeodactylum_tricornutum_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+     0.0069   14.6   5.6     0.0086   14.3   5.6    1.2  1  EEC50363.1  predicted protein [Phaeodactylum tricornutum CCAP
+  ------ inclusion threshold ------
+       0.03   12.5   0.5      0.033   12.3   0.5    1.3  1  EEC49875.1  predicted protein [Phaeodactylum tricornutum CCAP
+      0.037   12.2  30.4      0.013   13.7  24.3    2.1  2  EEC51986.1  predicted protein [Phaeodactylum tricornutum CCAP
+
+
+Domain annotation for each sequence (and alignments):
+>> EEC50363.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.3   5.6   2.5e-06    0.0086      67     148 ..     195     263 ..      26     300 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 14.3 bits;  conditional E-value: 2.5e-06
+  PTHR13335.orig.30.pir  67 pgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkl 148
+                            + +s  e+ g            + +++++  +dq++++ g++++ +++  +++++e+q++d ++++ +++ + +  n++v+ 
+             EEC50363.1 195 NRRSLNEGEG------------DGNGEQQNNQDQDQANNGQQGQGDGQDNNDKDDEQQQQDQNDQQKQNEEQGEE-NDDVDT 263
+                            3333333333............34456666666666666677667777777777777777777666666666555.555443 PP
+
+>> EEC49875.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.3   0.5   9.6e-06     0.033      93     165 ..     247     316 ..     104     394 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 12.3 bits;  conditional E-value: 9.6e-06
+  PTHR13335.orig.30.pir  93 rkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiass 165
+                            ++++ +  + et++  + +e+e +++++ee q++++  ++  e +rr+ +++ ++ +++++ r+  +++ +++
+             EEC49875.1 247 QRQQHMAAELETRRLLREQEQELRRQQDEEYQQTLLA-DQERERIRREEQDEILQTQREEELRQ--QREVEQT 316
+                            6788888999999999999999999999999999999.66666666666655555555555544..1112222 PP
+
+>> EEC51986.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.7  24.3   3.8e-06     0.013      88     271 ..      14     242 ..       2     254 .. 0.70
+   2 ?    2.3   0.4      0.01        35     103     217 ..     266     437 ..     250     655 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 13.7 bits;  conditional E-value: 3.8e-06
+  PTHR13335.orig.30.pir  88 dtkarrkkpsldqrretqge.kqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r..... 168
+                            ++++  ++p+++q++++qg+ ++ ++++s++++   lq +++++++++++++r++++++++ ++ + + +  ++s++  +  +     
+             EEC51986.1  14 MPTNHHQHPQQQQQQQQQGYtVGPNTNSSPQQKARLLQLQQLQQQQQQQQQQRQQQSYQQRPQQSQPNLQGYGGSSMPQSPsKygngr 101
+                            4444555555555555555516777888888888889999****************************666666666665645789** PP
+
+  PTHR13335.orig.30.pir 169 ........................................dqsscksiqwktessvkedsvqras.sesslsserssdssssssapsr 215
+                                                                       s++  + ++ s  k++s+ +as s++ + + +   +s +ss+++ 
+             EEC51986.1 102 vepsplsaappallqrpppnvgvppqpplypppqnsampsP--SVAARSTSVGSVRKISSLPMASkSQKPTTTGMIRQTSMTSSTADN 187
+                            **************************************553..444444444455555555555416677888888888888888776 PP
+
+  PTHR13335.orig.30.pir 216 .rq.snkldseqlsaeesdslfekkskssstktqkskkpssaakqsi..sslssaLekkp 271
+                             ++  n ++   +s+ ++ +l  ++ + +  +t ++ +++s +  s+   +++s L++++
+             EEC51986.1 188 pKSsANPTP---FSNLKAAPLSAMTTTQTKPNTGNPVPSQSQP--SLsdAQMQSLLNQCD 242
+                            444433333...6677777766666655566665555555552..223366677777776 PP
+
+  == domain 2  score: 2.3 bits;  conditional E-value: 0.01
+  PTHR13335.orig.30.pir 103 etqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke.rrsksasiasseer..................... 168
+                            +t  +++ ++++ ++ + +++++v+i+s s+ +  r+    ++v +e+l+++ + + +a       +                     
+             EEC51986.1 266 STATVQRIKKQRARQVKLKSTDDVSITSASVNDKKRDLP--DQVAEEALKQQvMNARTA-------Kklkaemdaglqfcallhgtvr 344
+                            455556666677777777788888888777777776666..567777777774221111.......0122233456777888888888 PP
+
+  PTHR13335.orig.30.pir 169 ..................................................dqsscksiqwktessvkedsvqrassesslsserssds 206
+                                                                               +  +k  + + +++v++  +q  +s++++ s  +++ 
+             EEC51986.1 345 silqdmnanagipippvlgspesaammgsipppagyiasqqgtasggmptTSQALKQNRNGASQPVSTAGTQYVTSQKTTASPGNPN- 431
+                            888888888888888888888888888888876666666666666666665555555555555566666666666666666666666. PP
+
+  PTHR13335.orig.30.pir 207 sssssapsr.rq 217
+                                   s+ r+
+             EEC51986.1 432 ------GSTlRK 437
+                            ......222222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      10408  (4834366 residues searched)
+Passed MSV filter:                      1415  (0.135953); expected 208.2 (0.02)
+Passed bias filter:                      322  (0.0309377); expected 208.2 (0.02)
+Passed Vit filter:                        41  (0.00393928); expected 10.4 (0.001)
+Passed Fwd filter:                         5  (0.0004804); expected 0.1 (1e-05)
+Initial search space (Z):              10408  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.20u 0.03s 00:00:00.23 Elapsed: 00:00:00.12
+# Mc/sec: 26680.26
+//
+[ok]

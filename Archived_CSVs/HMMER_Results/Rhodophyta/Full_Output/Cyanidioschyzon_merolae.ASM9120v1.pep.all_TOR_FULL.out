@@ -1,0 +1,789 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Rhodophyta/Proteins/Cyanidioschyzon_merolae.ASM9120v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR11139.orig.30.pir  [M=2684]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+          0 1087.7  69.5          0 1087.4  69.5    1.0  1  CMR018CT  pep chromosome:ASM9120v1:18:48580:56793:1 gene:CMR0
+   1.3e-194  648.2  87.9   1.8e-194  647.7  87.9    1.1  1  CMO046CT  pep chromosome:ASM9120v1:15:116083:128922:1 gene:CM
+   3.2e-175  583.8  65.7   4.9e-175  583.2  65.7    1.3  1  CMN075CT  pep chromosome:ASM9120v1:14:178693:187519:-1 gene:C
+    1.6e-07   27.4   0.1    3.4e-07   26.4   0.1    1.4  1  CMS267CT  pep chromosome:ASM9120v1:19:673086:676529:1 gene:CM
+    3.1e-05   19.9   6.7    0.00097   14.9   0.1    2.8  2  CMI255CT  pep chromosome:ASM9120v1:9:678024:681711:-1 gene:CM
+  ------ inclusion threshold ------
+      0.083    8.5  13.4       0.24    7.0  13.4    1.7  1  CMD050CT  pep chromosome:ASM9120v1:4:135088:136909:-1 gene:CM
+
+
+Domain annotation for each sequence (and alignments):
+>> CMR018CT  pep chromosome:ASM9120v1:18:48580:56793:1 gene:CMR018C transcript:CMR018CT gene_biotype:protein_coding tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1087.4  69.5         0         0     215    2682 ..     187    2734 ..      55    2737 .] 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 1087.4 bits;  conditional E-value: 0
+  PTHR11139.orig.30.pir  215 lplliqtalewlll................ilerlea...vlil.......................................... 239 
+                             + + +q++++ l++                +l+rl++   vl+                                           
+               CMR018CT  187 YRTKVQRTYNGLRPilrrppdweaaraaadMLGRLSRlggVLVNrfveaeavraleylntnsvllkgmaimvlnalcehvpasmyt 272 
+                             33444444444444444444443333333322222223331111222222222222333333333344444444433333332111 PP
+
+  PTHR11139.orig.30.pir  240 ..lflvhvqlfflliwlalrdpvleirelaitlLaallslllsiegkiril.sssfypaaydaaldglglls.............. 308 
+                               +      +  +++w  l+d+ +  r  + +lL+++l ll+++ + ++                      +              
+               CMR018CT  273 srV------QLAQVVWRGLTDSRPILRLESASLLRSFLALLEQRASDDSARtC------------------Qmiiqrclemlisde 334 
+                             110......12222333355555555555555555555555555554333311..................011112222222233 PP
+
+  PTHR11139.orig.30.pir  309 ....llelfssllvllellvfseafsarlpallerllslaallqlllallqsvvtsaalagllefltlklllksvvrvvkllllav 390 
+                                   e+++sll+l el    +  + +l++ + r+ ++                                               
+               CMR018CT  335 rettPPETHGSLLALHELVRNRFSAT-FLDEHISRIRKR----------------------------------------------- 372 
+                             33332233444444444443333211.111111111111............................................... PP
+
+  PTHR11139.orig.30.pir  391 aapeplgflllrllfrslgskdlllellllellplleallnplfallaythalhlrdlllelcltlpvrls.llpllsfllqplvr 475 
+                                       l +       +d l+++++l+llp l  l++ l +l  +            l++   v l+ l  +          
+               CMR018CT  373 ----------LES---LRLTRDNLIRAAILQLLPDLVRLDRTLIELGMS----------MALENEDLVALGkLAVAVG-------- 427 
+                             ..........111...112233344444444444444444333333222..........1111111111111111111........ PP
+
+  PTHR11139.orig.30.pir  476 delasqllrtlelildnlepepasersdlflalgalllallkaggnrkflkqplplltdaaelsgllelp..pkllplplsvqafe 559 
+                                 +++l ++e+i+ +l+++      ++ +a  +         ++ ++l++                    +++  ++       
+               CMR018CT  428 ---PTAALPWMEHIFVVLRNS------EVAAAA-K--------HECIALLAP-----------------IivESEQSER------- 471 
+                             ...444555555555555543......111111.1........111111111.................1111111111....... PP
+
+  PTHR11139.orig.30.pir  560 flavalpsvsnlsgvfvittlalsdellavlsvrllslllaalaaaldllesapsllsivlerllnllssslealvlslisaaldl 645 
+                                                  +l+d+ l    +++ls+ l +++  +  +e++psl   v  + l+l+ ++++ +  ++   al  
+               CMR018CT  472 ------------------LAELLEDSIL----TQGLSPSLVEAL--ERVCEHVPSLRDLVHGHVLRLCAETTDIACALQ---ALQ- 529 
+                             ..................1111223333....366666666666..666666666666666666665555542221111...111. PP
+
+  PTHR11139.orig.30.pir  646 lscllgsalsavlsalatalqeaalsglsvwlrtalfllglaeasealavallllllstlgallfsgsseealllclvlfvrellv 731 
+                                 + +          +  +++ +++++v+ +                                                     
+               CMR018CT  530 ----RFT--------FGRRPCLDDYVRQHVLPY----------------------------------------------------- 550 
+                             ....111........112222222233332222..................................................... PP
+
+  PTHR11139.orig.30.pir  732 llLlnpnl....dvr.kaaaaalalLlassgnssvlsllsplssvlldarpeeka..vvvleilekllllaildldplvrlsvles 810 
+                                         ++r  a+aa l++L a+ ++ +  +                 +  + + e l++l  + ++d+d+ +r+ vl+ 
+               CMR018CT  551 -------IygkrSLRsAAFAASLHVLTAAVQSATPGR-----------------PlqPKIFETLQQLIVVVVADPDSRIRAEVLLH 612 
+                             .......223334440456666666666654332222.................24555666677*******************77 PP
+
+  PTHR11139.orig.30.pir  811 laedlaafd...ehasqafslsllfallndeslevreaaisllgrlslksllnpalrlallrkllsqlLtrL..elellssklleh 891 
+                             la+ +  f    + ++q+++l++l  +l de++ vre a+sl+grls     npa  l++lr+l+++l   L  e e l+      
+               CMR018CT  613 LAKPAY-FPvfeRYLAQPELLRALCLALHDEDATVRERALSLVGRLST---VNPAHTLPSLRRLFMNLRIILecESEPLQ------ 688 
+                             776554.666889999*******************************9...**********9999998443354223433...... PP
+
+  PTHR11139.orig.30.pir  892 ldsrleeesakllgtlirkseaeellppyavsilpaLvall.aeennelrsallkt.........ladlletllaevglleaaerr 967 
+                                 + e++++ll  l++  +a++l+ py ++  + Lv++l    n+  +sa+++          +     ++lae g   aae +
+               CMR018CT  689 -G--SQEDALRLLLRLVQ--DAPQLIEPYTPTTAKLLVQRLqQ--NS--TSAVAVDtsvihtlhsI-----ACLAERG--VAAELQ 758 
+                             .3..5566999*******..8888****************953..33..44444444474444442.....3355533..556667 PP
+
+  PTHR11139.orig.30.pir  968 qllvallplilaallqlwdsesseerlllkrlllleseakllvalallgqlvestgeviepllfdsiwlglepaypsllaellkll 1053
+                              ll +++p +l +l++++     e++l +             + +  l++l++  g+  e +            ypsll+ ll++ 
+               CMR018CT  759 TLLHDAMPHLLRILQHTSV----EADLRE-------------AVCRALSSLARAAGATTELYT----------QYPSLLSTLLRM- 816 
+                             88899**********5444....444333.............555555555555566666667..........***********8. PP
+
+  PTHR11139.orig.30.pir 1054 lkflelshserrealavlgllgald............................................................. 1078
+                             l+++ ++   r+e +++lg lga d                                                             
+               CMR018CT  817 LRTE-TNLFVRLEIERTLGTLGAVDpdrtapllldrtrypytrlesltevyhqqtapmhyaprptatgtgatnafttdtrcglvae 901 
+                             7777.788899999999**8888888888888888866666666666666666666666666666666666666666644444444 PP
+
+  PTHR11139.orig.30.pir 1079 ......sldalrrallqlttllvkhapeal....................................i..pa..qeseldysttkva 1118
+                                   +                                                              p+  + +e++++    a
+               CMR018CT  902 epalpgT----------------------AaaaaaattttttttltgqalraqlrfeapneletlvGrlPHpfTANEEYFPS--AA 963 
+                             4444442......................03333344555555555555577888887777676652688889889999888..55 PP
+
+  PTHR11139.orig.30.pir 1119 illllqlilrdlslpssyvlqvlvallkalasealqllvlpadkvllapslllrlkdgqlhssvsrirellvrhatrvlilqqLal 1204
+                               +l  +il +  l ++ +   ++a+  +  s+++++  +     +++p+ll+ l++ ++ + +  +re          +   La+
+               CMR018CT  964 LDAL-HRILANAKL-TTLHYDTVGAIVNIMSSLGMKCAPFLS---VVVPRLLWMLRPRTEDTHDLAFRE---------YVIRGLAS 1035
+                             5555.599999899.9***9****************955544...667*********888888989999.........88888888 PP
+
+  PTHR11139.orig.30.pir 1205 lvsivnaharklaldlapllvlwerrw.......tilalleqlvlsaaareflgsylpellllesggvlpllgpllkellnllqqa 1283
+                             +v  +++ +r++a++l++   l+ ++w        ++al+e l   a+++ef+  ++p    l     lpl++            +
+               CMR018CT 1036 VVLSARQYIRPYAASLVA---LILEYWplqvlhrSMFALMECL-RVALHDEFRP-FVPV---L-----LPLIL-----------PW 1097
+                             989999999998887776...5668889989999888888888.5555555554.4444...3.....44443...........56 PP
+
+  PTHR11139.orig.30.pir 1284 lgavlwinsdfllqklrelgsklklekllllallLpilnkllekllelailvraaalsslaal...rassvtkiasallhslvrvl 1366
+                             +++        +l  l ++g+    +++  + l+Lp + ++le +   +++ r ++l+ l++l   +  + ++ as l+h+l r+l
+               CMR018CT 1098 MSLR-------VLKVLLVFGT--HTSEY--VVLVLPPVMRFLEDA-TRPLAARIEVLKRLPRLfamL--DLSDMASQLMHPLCRML 1169
+                             6555.......6888999988..66899..999999999999975.355666666777777776552..4444445********** PP
+
+  PTHR11139.orig.30.pir 1367 qllaaqdstnskllaadalgalgalvfnlgldyskilpllkklglfl................rsrrdwdleltllskvlarrlsk 1436
+                                      +++++   a  +l +l+++lgld +++  l+++ +l                  + + d d   ++ +++ ar  ++
+               CMR018CT 1170 ---------RTSEFQWHARQLLESLLPRLGLDAAYYTLLVREMLLGDaasasaaatgnddeddDGNDDEDDDQHPTDEASARGAAA 1246
+                             .........555555555557899999**********9999999999999999**999*****77777777778888888777777 PP
+
+  PTHR11139.orig.30.pir 1437 atllagallqrqllaqelas..........laiellseeggs.slsnggilgl.r.d..sdlrsg...vvh.............lv 1491
+                              t  + a++q+ ++ q + +          ++++ ls++++  sl  +g++++ + +   dl sg   ++h             + 
+               CMR018CT 1247 ST--ESASTQAGAALQSSSAsalhrlaryrHERTALSRSESLdSL--NGVPRTtSlGslADLASGdalLAHspdslldsthvslVA 1328
+                             66..66677777777777777799966544333444444444444..333333333235677777666666777777777777755 PP
+
+  PTHR11139.orig.30.pir 1492 lse.kgsgqkllrvfeayvkeli.pprltsklevalgvls....................sersmksdwleWlrgfsllLlkesps 1555
+                             +++ ++  q+l+++    ++  + ++ +t+   +++++++                    ++r +++dw +W+  ++++L +es s
+               CMR018CT 1329 SASmLDLQQQLQQQQQQQALLGSgASNTTTTNTNNNNNSGhnsarrhhvnekmlqkawqvGRRTTRDDWNDWMMALASALFRESGS 1414
+                             55556666666666555555533144444444455555559999999999999888877555999999***************999 PP
+
+  PTHR11139.orig.30.pir 1556 palracqllglaqsdpqlarrlfpaaflslwssl...qldqlleellsalwsktippeilqtllalleflehdddtvaqglllfgs 1638
+                             p lr+c +  la  +p+lar+lf+aafls+w++l   ++ +l+++l  al+s  ip  +lq ll+l ef+ehd             
+               CMR018CT 1415 PSLRSCAR--LAEVHPPLARELFNAAFLSCWTELsdpCRASLVRNLVLALSSESIPLDVLQVLLSLVEFMEHD------------- 1485
+                             99******..*************************9659*********************************8............. PP
+
+  PTHR11139.orig.30.pir 1639 vwssvdlallpidllqlgeaanacqayakalhylepefreppslikllgallspp...leaLaelyssLgepdalyGilesra..l 1719
+                                  ++ +lpidl+ql++ a++c+ayakal+y+e e+ + p   +        +    ++L+ +y  Lg+ +a++G l  +   +
+               CMR018CT 1486 -----EK-PLPIDLRQLAAMAFRCGAYAKALRYKEAEYMQNP--AS--------AmegDDSLIAIYEALGQREAAMGALLDAErhQ 1555
+                             .....88.**************************99999988..43........234468*****************666666664 PP
+
+  PTHR11139.orig.30.pir 1720 dletkaawaeklggweeAlaayeralqkasqdagsleatlgrlrcllaLgqw...............e.peaeeellplaleaaws 1789
+                              +   +a +e+l+ w+ Al+ayer          s+ +  gr+rc+++Lg+                e p+ ++el++ a++ a  
+               CMR018CT 1556 VTIRHEACYERLQQWDLALSAYERQGP---A--HSFANRRGRMRCMAQLGELhrmealcndlwseaaEqPSLRQELAEEAAQVAY- 1635
+                             45555788999999**********954...3..3566699************************99857****************. PP
+
+  PTHR11139.orig.30.pir 1790 lrlgkwd.smleyllalaaa..easselrllqallalhqgdfdeaqeliqkarqlllgaelsa.vdesysrayalllvklqqLsEl 1871
+                              +l  wd + ++ +         +s ++++++a+la+hqgd ++a+ +i   r ll+ + ++a v+e+y ray+  l   qqL+E 
+               CMR018CT 1636 -QLQLWDkFTERVA-----YtsRDSIRGNVFRAMLAIHQGDDEAARGYIRAGRRLLD-TGVTArVGEGYPRAYGDILL-TQQLVE- 1712
+                             .9999997433333.....2449**********************************.********************.******. PP
+
+  PTHR11139.orig.30.pir 1872 qeleesqislaa.........lldlksiletWrnRlpgtwqddvevwedllavRrlvlppieddaelwlklaslaRkqgnlslalk 1948
+                               lee      +         +  ++ + + W++Rl g+ + d  +w++ l vRrl+l p + d + wl+++sl+R++++l+ a+ 
+               CMR018CT 1713 --LEE------ClmvrqrilpQ--RHVVEQLWNTRLYGC-RFDYTTWQQTLLVRRLLLEPRH-DKDVWLRFVSLCRRANRLPMANE 1786
+                             ..666......44445443333..4888999********.********************99.*********************** PP
+
+  PTHR11139.orig.30.pir 1949 ll...........rvlieylkllwalaaveegksflleqeealldlqqllielsstaleeells..tnrkllakvllll...gkWl 2018
+                             +l            v++++lkl w++     g++     +ea+  l + ++            +   +++l a+ +l+l   g++l
+               CMR018CT 1787 ALamlqdeqhpdpEVTYASLKLCWSQ-----GRH-----HEAYECLRRCAE------------QpvPSARLAARRFLKLcvwGRAL 1850
+                             **************************.....999.....999999988332............23333889999999999999999 PP
+
+  PTHR11139.orig.30.pir 2019 sal..........sqlsveevlsslksaasaalqlapklekawhswalfndellehsqesgasaa..................... 2073
+                              a+          s+l  ++ ++ +++    a+  +p+++ +wh+wa  n ++  +        +                     
+               CMR018CT 1851 RAEgtstfvsspsSSLRWHTLMEHARR----AVVSDPSWSSGWHTWAALNADAAAAH-------Stghrfggawparptavaaaes 1925
+                             999887777765433333666666666....9999************9888885432.......2444454555555554444333 PP
+
+  PTHR11139.orig.30.pir 2074 ..tlrllsaekaalqylvaavtcylkalala.gg.nslqdtlrlLtLwfdhgaatevndalekalssvplwpWlpviPQLiarlsh 2155
+                                         +  y+ +av+++++a+al+ +  +  qd+l+lLtLwf++ga +e+++al  ++ +++++ W++viPQ++arl++
+               CMR018CT 1926 nvL---------VRAYVLNAVNGFFRAIALGeSYaEQAQDVLKLLTLWFRYGAVPEIEQALLNGFAETNVDIWVDVIPQIVARLHS 2002
+                             330.........335888***********9986677778*********************************************66 PP
+
+  PTHR11139.orig.30.pir 2156 .nrevrkllknLLvriakqhPqalvyplrvaakslssearseaaleildklrkkvpalaseletlvqqlirsafleeelllaqlvs 2240
+                              +++v++ ++ LL+ri+++hPqalv+pl+vaaks s+  r+eaa  +l+ l       + e+++lv q             a lvs
+               CMR018CT 2003 pVPPVQAGVRALLIRIGRAHPQALVFPLAVAAKS-SNARRREAAIDVLQAL-------RLESPALVAQ-------------AELVS 2067
+                             6*********************************.9999************.......7788888888.............88888 PP
+
+  PTHR11139.orig.30.pir 2241 deliklai..........ee.s.....skniakasavlkplkamlekegp....epdfiqallelle................... 2287
+                              el ++a+          ee s     ++n+++++a+l+pl++++e +gp    e +fi +++++l                    
+               CMR018CT 2068 RELVRIAVlwpemwhealEEaSrvyfgEHNVPGMLAILSPLHDLVE-AGPstarEASFIREFGRELAearewcrrylasgrdsdln 2152
+                             888888888887776544223477788*******************.999999999999999988887777777666666666566 PP
+
+  PTHR11139.orig.30.pir 2288 ........klktltkqlpalsslgplleeis....alr..elavPGt.ykasplvtIssFspqvevlsskqrPkkltirGSDGkey 2358
+                                      +++++k+l + ++l  +l+e+s     +r   lavPGt ++    vtI+sF+p ++v+sskqrP+ lti+GSDG ey
+               CMR018CT 2153 qawelyysIFRRINKSLSSMTQL--QLAEVSpallEARnlALAVPGTrEQ----VTIVSFAPVLNVISSKQRPRTLTIYGSDGHEY 2232
+                             666555555666***********..9******999445588******665....******************************** PP
+
+  PTHR11139.orig.30.pir 2359 pfLlKgheDLRqDeRimQLfrlvNtlLskdrerrRkLsIrtYsViPLsprsGLieWVpntdtLhsilrgcadyrearakipsdlni 2444
+                             pfLlKgheDLRqDeR++Q+f+lvNtlL    e    +sI tY+V PLs+++GLi+WV n+dtLh ++r   +yre r ki   ln 
+               CMR018CT 2233 PFLLKGHEDLRQDERVQQFFGLVNTLLPP--E----MSIVTYAVLPLSQQVGLIGWVKNCDTLHALIR---EYREQR-KI--ILNV 2306
+                             ***************************55..3....68******************************...***988.88..9*** PP
+
+  PTHR11139.orig.30.pir 2445 ehrlmrqaapqaay.......kvevfkevleetepplLhkelwlkssspeaWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLld 2523
+                             ehr m++aap+  y       kve+f++vl++t +++L+ ++wl+s+s+e Wl+rR+ny+rSlAvmSmvGyi+GLGDRHpsN+L+ 
+               CMR018CT 2307 EHRIMLSAAPD--YdnltllqKVEIFEYVLANTSGNDLANIMWLRSRSAEMWLERRTNYARSLAVMSMVGYIIGLGDRHPSNMLIT 2390
+                             ***********..44455566***************************************************************** PP
+
+  PTHR11139.orig.30.pir 2524 rntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalgptGiEGvFrssceavlrvLRknkesLlavLeaFvhDPLvdWt... 2606
+                             r+tG+v+HID gdcf++a++r+++PE+VPFRLTr+lv alg++G+EG+Fr +ce+++  LR nk  L+a+Le+FvhDPL+  t   
+               CMR018CT 2391 RDTGKVIHIDHGDCFETAMHREKYPEKVPFRLTRMLVRALGVSGVEGIFRVTCESTMEILRANKPVLMAMLEIFVHDPLLVRTlqp 2476
+                             *********************************************************************************99*** PP
+
+  PTHR11139.orig.30.pir 2607 ...................................................................................... 2606
+                                                                                                                   
+               CMR018CT 2477 aaapgatttgleatglaavaagsplhtpavwprqatgataaataatataatataaaatgqwgtvstfpvqearlgerageeqpqpa 2562
+                             ****9999999999999999999999999999999999988888888888888888888888888888888887777777777777 PP
+
+  PTHR11139.orig.30.pir 2607 ..................................................................kaerlkllssqqaeaelgea 2626
+                                                                                               +                   
+               CMR018CT 2563 stlvqvpraptrmrrvdmsgaeataaaaaageaslslrllqgtmslraalrleqsnagtveevaeeG------------------- 2629
+                             7777777777777777777777777777666666666666666666644444444444444444440................... PP
+
+  PTHR11139.orig.30.pir 2627 l......................................................aavvirrvkakLeGrddfgderkgsegLsve 2658
+                                                                                    a+++++r+++kL+Grd      ++ + L+v+
+               CMR018CT 2630 IaetpsplttrrpgagsltprtlgngtlttgagagagaptilpedllgdenrgerAVAIVQRMSQKLSGRDF-----DPRRVLTVA 2710
+                             1444444444444444444444444444444444444444444444555559999**************887.....66667**** PP
+
+  PTHR11139.orig.30.pir 2659 gQVqrLIqqAtdpeNLcrmYeGWc 2682
+                             +QV+rLIqqAt+ eNL+  Y GWc
+               CMR018CT 2711 EQVERLIQQATNSENLAPAYVGWC 2734
+                             ***********************9 PP
+
+>> CMO046CT  pep chromosome:ASM9120v1:15:116083:128922:1 gene:CMO046C transcript:CMO046CT gene_biotype:protein_coding tr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  647.7  87.9  2.2e-197  1.8e-194      22    2684 .]      40    4278 ..      18    4278 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 647.7 bits;  conditional E-value: 2.2e-197
+  PTHR11139.orig.30.pir   22 raeysnllsallsalssplessrsraar.aaa.................ellkavveelldllmvllend................ 73  
+                             + +y+++l++l++ + ++l+   +++ +  a                  e+l++++  ll++++ +l+ d                
+               CMO046CT   40 STDYQQFLDQLIPCFEQILTTLTRPQLEeNAEqalrrtvlevlsrlphgEALRPHARRLLQMCQYVLDVDdaepnavlalqimfec 125 
+                             56899**************9988777775555****************************************************** PP
+
+  PTHR11139.orig.30.pir   74 ..........saeaflqflskl.ssl......lq.....................selqsepsfadsldvlasellalllslasli 121 
+                                       ++ +fl+f+ ++   +      ++                             +a s     +++++   +l+s+ 
+               CMO046CT  126 hkayrpqlaaAIPPFLDFVLRIyGVFewresdDDslvaedtgqqdtylepgleqdG-----SVEAASRNR--PTNVRYAPALRSYR 204 
+                             **********8889*******95555888765115666667778888877544441.....333333333..7899999******* PP
+
+  PTHR11139.orig.30.pir  122 tllespivvvllrslselakgllsqllnqllp..........l........................................... 154 
+                             t+ e+p + ++l +++     l+++ l +ll+                                                      
+               CMO046CT  205 TVRECPPLFMYLSQHY---PALIEPRLDELLAvmvraieiqvPptsparalpiyhdfitaqmktvsfisfllrqfesrmlqyaerv 287 
+                             ****************...9*************99998875505556666677777888888899998987788888887777777 PP
+
+  PTHR11139.orig.30.pir  155 .......lll...............avrhilatdsrvvlalaldllldel....................ladlihhvrkglslaq 198 
+                                    l l               a rh+lat++r++++l+ dlllde+                    la+l+h vr +++l+q
+               CMO046CT  288 prsvvnlL-LncpdsavsirkelliASRHLLATEFRRGFFLQTDLLLDEKvligtsraayetlrplaysfLAELVHFVRLEVTLPQ 372 
+                             77777752.2567777777777777************************************************************* PP
+
+  PTHR11139.orig.30.pir  199 avravlllssnlvdaslplliqtalewlll...............................ilerleavlil.............. 239 
+                             ++r+++l+s+n++dasl++++q+++ +lll                               ++        +              
+               CMO046CT  373 LSRIIYLFSTNVHDASLSFSMQATSIRLLLnliegimhrredlntrgrqllerifetivtkLM--------Evaevvpsllvstga 450 
+                             *************************99998777777666666666666654444444333322........144444455558888 PP
+
+  PTHR11139.orig.30.pir  240 ........................................lflvhvqlfflliwla....lrdpvleirelaitlLaallslllsi 281 
+                                                                      ++            +     +++v+e+r+l+ tl+ +l+++++s 
+               CMO046CT  451 adgndaedkangsassqrasspipepsastetgamrpsavPDE------------KsqeeRSKEVQECRQLVRTLVLGLKTIVWSM 524 
+                             8899999988888888888888888888888888777665333............03334999*********************** PP
+
+  PTHR11139.orig.30.pir  282 egkiril.sssfypaaydaaldglglls...............................llelfssllvllellvfseafsarlpa 335 
+                             ++ +  +                    +                                l  f+ +++++ +++f+ ++  rlp+
+               CMO046CT  525 SNAFGDSrTRGL---------------TewecilvsrmlpaartcfqlykfgepaeqkeILDQFAQVFTVMTPRNFQDIIGGRLPQ 595 
+                             *99777733222...............134445566677788888888889999999998999*********************** PP
+
+  PTHR11139.orig.30.pir  336 llerllslaallqlllallqsvvtsaalag.llef.................ltlkl.llksvv.................rvvkl 385 
+                             ll  +++ +++l++++++l+++ ts+ +a+ l+ f                 ++l+l + ++ +                 +v ++
+               CMO046CT  596 LLAFMVEHQTALSIPQHFLANTSTSRFFADiLITFltehleqvvsddaarasVLLRLfKIMFASvtlfadnepvlkphlgtIVRRC 681 
+                             *******************************6666556788777777776655555532244448999*************999** PP
+
+  PTHR11139.orig.30.pir  386 lllavaapeplg.flllrllfrslgskdlllellllellplleallnplfallaythalhlrdlllelcltlpvrls.llpllsfl 469 
+                             l+la +a+ p++ +++lr+lf+sl ++  ++ell++e+ p l  ll++l +l +++  ++   ll elclt p+r+s   p+l + 
+               CMO046CT  682 LELAATAENPTNaLQVLRALFKSLAGG--RFELLYREFVPMLYYLLHSLERLMQGPLGESHGLLLIELCLTAPARPStIFPYLRMH 765 
+                             ***************************..9999*************9999999999**9*9************************* PP
+
+  PTHR11139.orig.30.pir  470 lqplv.....rdelasqllrtlelildnlepe..p...asersdlflalgalllall.......................ka.... 518 
+                             ++plv      +el+s+  rt+e+++d l pe  +    + +++l  al++ l++                         ++    
+               CMO046CT  766 MRPLVrgldsESELTSLSFRTFEFWIDTLHPEvlErlmQAVQPELERALWRYLSPTSpfsaqavrilgklgglnrktpreLTplpw 851 
+                             *********************************736899999*************99*9988877766544444433333004444 PP
+
+  PTHR11139.orig.30.pir  519 .......ggnrkflkqplplltdaae.lsgllelp.......pkllplplsvqafeflavalpsvsnls...............gv 574 
+                                     ++++++  + pl+++ +e ++   ++                   a++ l +++ + ++++               +v
+               CMO046CT  852 qqpvqaiHAALAWCDRAEPLTVALDEvINAAVDAVlfqasykV---------AAYTLLQQVMIAALSSAlppqikgcpadllpaSV 928 
+                             4444556666666666666665444433333333345555330.........5555555555555555567777777999999988 PP
+
+  PTHR11139.orig.30.pir  575 fvittlalsdellavlsvrllslllaalaaaldllesapsllsivlerllnllsss.............................. 630 
+                              ++t+   + ++ +++ +r+l++l+ a +   d+l++++  +    + l ++++                                
+               CMO046CT  929 YTMTSAFPRLQVSKTIYTRMLTALFFASG--DDALQQTRN-AVEFARQLCDYFCRIwmapvlmekstlsaleaaalnahrtppeni 1011
+                             88999998989999888888888888866..888888765.777777788888888899999999999999988888877765544 PP
+
+  PTHR11139.orig.30.pir  631 lealvlslisaaldllscllgsalsavlsalatalqeaalsglsvwlrtalfllglaea.se........................ 691 
+                             +     ++ + + + +++++++al++++   +++l +aa     ++      +l+l++  ++                        
+               CMO046CT 1012 T-----EWTRFPAAVTIDCFLDALVEAAVLQQKTLDLAAA----AK------DLNLFALsRCvelfkgdfrgpqrpvvpasdaaev 1082
+                             2.....2233333333334555544444433333332222....22......2222222233445677778888899999999999 PP
+
+  PTHR11139.orig.30.pir  692 ...................................................................................... 691 
+                                                                                                                   
+               CMO046CT 1083 aapdskpltaaakgarateapsaetaattavdapehesvdrlrddhrgadtatcvdeeiapplhsvagasrlteqlallverishl 1168
+                             99***********************************************************9999999999999988888888888 PP
+
+  PTHR11139.orig.30.pir  692 ....................................................alavallllllstlgallfsgsseealllclvl. 724 
+                                                                                 +                                 
+               CMO046CT 1169 gyrerwqdrlscamllagiieqlptvvfldrsyclyearlvrvllqvlkgcaQ-------------------------------Eg 1223
+                             88888888886666666666666666665555555554444444444444440...............................03 PP
+
+  PTHR11139.orig.30.pir  725 ..........................................................fvrellvllLlnpnldvrkaaaaalalL 752 
+                                                                                       +v+ +lv  L +++++vr+ + a la+L
+               CMO046CT 1224 masrkpaplvrqtletllrrcheptspawaledvtsstipetdrpsktnastprarcgDVVACLVFDLASEHQAVRETVHASLAQL 1309
+                             333344444444444445555666666666677788888888999999999999999*99************************** PP
+
+  PTHR11139.orig.30.pir  753 lassgnssvlsllsplssvlldarpe....eka.........vvvleile.................................... 789 
+                             l         +++  +  +++++++     +           v +++ l+                                    
+               CMO046CT 1310 LRYGV----GQNMAEVLALAQTQILRpllsR-RvrtlhyssqVGHVDCLHyclengiirpfidqetsllrtslvaameifedpint 1390
+                             **964....5778877777777766554431.245678888844444444666888888888888888888888888888889988 PP
+
+  PTHR11139.orig.30.pir  790 ......................kllllaildldplvrlsvleslaedlaafd....ehas.......qafslsllfallndeslev 842 
+                                                   ++++  +l      r  vl+ la +l++ d    +           a +   +f  +++++  v
+               CMO046CT 1391 rlgeadalmlnrllenrfvdqeTITAIVML------REKVLQFLALCLRQIDqlvhT--PnedirslYARLVACFFRGVESRHEAV 1468
+                             888888777777777776666644444444......888998888888888888551..3345555599999999999999***** PP
+
+  PTHR11139.orig.30.pir  843 reaaisllgrlsl..ksllnpalrlallrkllsqlLtrL..elellsskllehldsrleeesakllgtlirkseaee......... 915 
+                               aa  +l+   +  +s   p ++l++ ++ ++q+L++                ++ ++++ a++l +l+ + + +          
+               CMO046CT 1469 TRAAKHGLRV--FteRSRQLPRGILSSNLRPILQNLSDTnkL------------SLPYAQTLANVLEVLSNWFNVQLgerlvehlm 1540
+                             9999888866..345777777777888888888877754321............33334444444444444444422223444444 PP
+
+  PTHR11139.orig.30.pir  916 ......................llppyavsilpaLvall.aeen.......................................... 936 
+                                                   llpp+a+++l+ L+a + + e+                                          
+               CMO046CT 1541 nlragnprnpsllaariidlfhLLPPAASRFLDRLIAIVlSFEDemgpadtgaghhglqsrwagsmspyrapllrylekhanlaig 1626
+                             4445566688899999999999**************99863333778999999999999999999999999999999999999999 PP
+
+  PTHR11139.orig.30.pir  937 ....................nelrsallktladlletllaevglleaaerrqllvallpl...........ilaallqlwdsesse 991 
+                                                 ++ + +l ++la+     +a ++  +++ + +l+v++l++           i+ + lq+w s  + 
+               CMO046CT 1627 yflerirfanyallfqsllrAHNAENLRRELANDVSRFIAATFDRGHLLQGLLIVDALESfqagwiatqrpIYNIALQIWQSAERL 1712
+                             99999999999999999999555888888888888888999999999999*******999************************** PP
+
+  PTHR11139.orig.30.pir  992 erlllkrlllles..eakllvalallgqlvestgeviepllfd.siwlg..............lepaypsllaellklllkflels 1060
+                             erl  ++ l + +  e++ll+ + l ++ v+    +++ l +  si+                 ++a+++ + + +k+  +fle  
+               CMO046CT 1713 ERLRREETLPVDQlaESSLLAHVILAYCAVHH--GEVDGLYALlSIFSLrtlrdfsfvrrfltETVAQSYPILYRKKIVERFLERY 1796
+                             9988888888888*******************..7788777667665553445555555555533344443334444555555555 PP
+
+  PTHR11139.orig.30.pir 1061 hserrealavlg.............................llgald....................................... 1078
+                              +                                       +   ld                                       
+               CMO046CT 1797 LDP--------ElsdevkmyallylvipilrqafrageglaI---LDavtlevlvkrlftstppasealtdasadgggggdtapml 1871
+                             555........0455555889999999999999999996662...33444666666666666666666666777777777777777 PP
+
+  PTHR11139.orig.30.pir 1079 ....sldalrrallqlttllvkhapeal.......i.pa..qeseldysttkvaillllqlilrdlslpssyvlqvlvallkalas 1150
+                                  +d l+ allql+tll++  p  l       i +   + +  d+s  k++++l+++++ ++++ p+++vlqv+vall+a +s
+               CMO046CT 1872 aspaESDVLGEALLQLSTLLIEEMPIELvqyrreiIrFGwnYLKR-DDSIAKPWAFLNVARFFEAYQAPEKIVLQVFVALLRASQS 1956
+                             7777*****************9999999**998853744543444.55************************************** PP
+
+  PTHR11139.orig.30.pir 1151 ealqllvlpa...dkvllapslllrlkd....gqlhssvsrirellvrhat.............................rvlilq 1200
+                             e +  lv++a   +    ++ l++rl+     + +++    ++ +lv+++                              +v++l 
+               CMO046CT 1957 EQRA-LVRQAlriV----TSILPSRLPAtlgkARHAPWIRFTKKILVEESYsalhlahiwslvidkqelffpgyaslmphMVNSLP 2037
+                             *999.8999*9663....455555555555565555555555555555555555555555666669999999************** PP
+
+  PTHR11139.orig.30.pir 1201 qLallvsivnaharklaldlapllvlwerrw................................tilalleqlvlsaaareflgsyl 1254
+                             +L +  s + +++r+lal+la+l+v+w +r                                 + +++ ++l+  +a  e+  ++l
+               CMO046CT 2038 RLVSG-SVSAREHRRLALELAGLVVAWQQRLlqvgnnasissnapsengesanaspqtgsapmASPDVARRLEDLSAVTEVVLQFL 2122
+                             ***99.9**********************999999777777766666666666666666555544444777777777777777777 PP
+
+  PTHR11139.orig.30.pir 1255 pellllesggvlpllgpllkellnllqqalgavlwinsdfllqklrelgsklkleklll.lallLpilnkllekl..........l 1329
+                             + l++l     +  +g   ++++ l ++a++         ll k++ ++++l  e+  + ++ +L++l   l+            +
+               CMO046CT 2123 IRLPFL-----VSEPG---EHTE-LFTRARS---------LLVKAQRVWNHLGSERSPIaQMSCLDKLLDNLAATaaaspttatgQ 2190
+                             776666.....33332...2222.3333332.........5666666666555566555777776666555554455544444443 PP
+
+  PTHR11139.orig.30.pir 1330 elailvraaals.slaal........rassvtkiasallhslvrvl........................................ 1366
+                              +a   ++aa+  + a++         ++s+t+            +                                        
+               CMO046CT 2191 TSASGTNTAAMPgAPAPAqshsttstISTSTTS------------Agaasaahhrtanagtasatvappnnprdapasrarealar 2264
+                             333333444444222222544444442223333............23333333333344666666666655555555555555555 PP
+
+  PTHR11139.orig.30.pir 1367 ..........................qllaaqdstnskllaadalgalgalvfnlgldyskil....................... 1403
+                                                       +                                   +                       
+               CMO046CT 2265 srrlvlehivelcelfldwqgirwilA-----------------------------------Nsnslrklvrpvlaagmlplayrf 2315
+                             555555555555555555555555541...................................033333333333333333333333 PP
+
+  PTHR11139.orig.30.pir 1404 ...........................pllkklglflrsrrdwdleltllskvlarrlskatllagallqrqllaqelaslai.el 1461
+                                                                            +  +++l+++l++a ++     ++++++ ++      + 
+               CMO046CT 2316 alllcklwlqigdalrtpestedqranL-------------------ETVRRDLEQALFEALDI-----HSDTATLHRSL-LLaQT 2376
+                             3333333333333333322222222220...................22234444444444411.....22222222211.11222 PP
+
+  PTHR11139.orig.30.pir 1462 lseeggs.sl.sn.ggilglrdsdlrsgvvh.......lvlse.kgsgqkllrvfeayvkelipprltsklevalgvls....... 1529
+                             l +e ++  + ++ +                         l+  +    ++l + +a+ ++  +++  + l +++g++s       
+               CMO046CT 2377 LDPERFTtKHvELiV---------------RilqilmrECLAGiQTNRRMVLIPAPASGDRPQASSSRAQLGTSAGRSShppeasv 2447
+                             222222222222222...............02222222111111222222333333322222222222233333333334333322 PP
+
+  PTHR11139.orig.30.pir 1530 ..sersmksd............................................................................ 1537
+                               s                                                                                   
+               CMO046CT 2448 tgS------Gtgaswpaatgtvtktgtfstmtrlaqvagesaplgsvadptasvketksahvasgdehlpakggfeypgvanpllv 2527
+                             221......13333333344445555555555556666666666666666666666666777777777777777777777777777 PP
+
+  PTHR11139.orig.30.pir 1538 .................................................................................wleWl 1542
+                                                                                                              +le +
+               CMO046CT 2528 cleilerlfhgladyrrsflqmlwvlldkccysevlmhvvrvlsqwilmdaddpgaflqpkekvhflvkmtvferitgaeaHLEAF 2613
+                             77777777777777766666667666666776666666666666666666667777777777777777777777777777877777 PP
+
+  PTHR11139.orig.30.pir 1543 rgfsllLlke.........spspalracqllglaqsdpqlarrlfpaaflslwssl.....q..ldqlleellsalwskt...... 1606
+                               + l Ll+e            p l++ +++gl++s+pql++ +f+ +++s+ ++      +  + q +e+l++ lw+ +      
+               CMO046CT 2614 LPLVLRLLAEpchalprdwL--PRLERPFMIGLRASNPQLRQAFFQLLDESIIRNPvdrlyYifEYQSWESLADSLWIRQatalll 2697
+                             77777777779999999555..55************************************84669********************* PP
+
+  PTHR11139.orig.30.pir 1607 .................................................................................ippei 1611
+                                                                                                              + ++ 
+               CMO046CT 2698 alvqvpgsrieltpdcvrlgcvsyrsgtaaddamtwevsrpgadaptdaadapretltkgaqrsptddayveafagawtalDGHVD 2783
+                             *********************************************************************************77788 PP
+
+  PTHR11139.orig.30.pir 1612 lqtllalleflehdddtvaqgl..llfgsvwss.........vdlallpidll.........qlgea..anacqayakalhylepe 1675
+                             + +++ +l++l h d    q+l  +lfg vws                  d l         +++++  +n++q  + a+  + p+
+               CMO046CT 2784 TNAFFEALHELLHHDVSTLQSLwtQLFGAVWSLlsdreerlaM------QDALiallcrdylLTQCRwrVNVVQIILDAATKCAPQ 2863
+                             999********888888889999************96555552......33335555668876666688***************** PP
+
+  PTHR11139.orig.30.pir 1676 freppslikllga.........................llspp................leaLaelyssLgepdalyGilesrald 1720
+                             + +pp l  +l+                          +   +                l+a aely++L+e+d++ G++++ra d
+               CMO046CT 2864 VVIPPQLALHLAThwnawhialtylerrsrsstlgvarH---SdfvfdslpdghefagiLDAKAELYRQLNEYDLYIGLWKRRAMD 2946
+                             *****9999999899999998888877666555555551...14444445577779999*************************** PP
+
+  PTHR11139.orig.30.pir 1721 letkaawaeklgg.weeAlaayeral.qkasqdagslea..........tlgrlrcllaLgqw....epeaeeellplaleaawsl 1790
+                             + t +a++++++g +  A+++y+ a+ +++s+  ++ ea          +     c+++L+qw    e +      +l+ ea+w  
+               CMO046CT 2947 SRTLLALSLEQQGhLPAAQNLYYDAMtNTESRV-AVTEAeaalwedrwlH-----CAEELNQWdaltEFSRTVMHPTLLHEALW-- 3024
+                             *************************93333333.3444466888777666.....********998645555555578889***.. PP
+
+  PTHR11139.orig.30.pir 1791 rlgkwdsmleyllalaaaeasselrllqallalhqgdfdeaqeliqka.rqlllgaelsavdesysrayalllvklqqLsElqele 1875
+                             rl +w + l++ll+ +  e+s++l++lq++  l++++ d+++  i    r +l+ ++   +++s  +a++++lv +qq++El e+ 
+               CMO046CT 3025 RLPDWAA-LKELLMKMPPEDSPRLKILQSFVQLQENRLDQVEPFISSGiRRALE-EWQGLPENSSITAFEPSLVLFQQFVELSESA 3108
+                             7777776.6676655534**********99999999999999999999555555.66666*********************66664 PP
+
+  PTHR11139.orig.30.pir 1876 esqi.slaa......ll.....dlksiletWrnRlpgtwqddvevwedllavRrlvlppi........................ed 1925
+                              s++ +l +      ll      + ++l +Wr+R  + w+++ + w++l+++R++vl ++                         +
+               CMO046CT 3109 -SILqELNNalqnptLLethaeNIRLVLAMWRDRQANHWDRL-SDWNRLICWRNHVLTAVvhtlqglrnrsrvdipqpllcmgiNE 3192
+                             .55575555667788335666666778***********7555.9**************99************************66 PP
+
+  PTHR11139.orig.30.pir 1926 daelwlklaslaRkqgnlslalkllrvlieylkllwalaaveegksf.l.leqeealldlqqllielsstaleeells...tn... 2003
+                             +a++ + +a+ aRkq + +++ ++       l+ ++ ++++++++ f + +eq++a+l+l + +      al ++l++   tn   
+               CMO046CT 3193 TAWNVNCYARAARKQRLSEVCMQA-------LQRMYPYSTMDVQDFFmKtKEQAKAHLLLPSND----DVALRAGLVQlqhTNrey 3267
+                             ************************.......9*************88956**********8843....233344455577644566 PP
+
+  PTHR11139.orig.30.pir 2004 .........rkllakvllllgkWlsalsqlsveevlsslksaasaalqlapklekawhswalfndellehsqesgasaatlrllsa 2080
+                                      + l + ++++l       +      ++ ++++a++++++   + +  w  wa+++d++ +                 
+               CMO046CT 3268 fntrqkaylSALEGEFYHRL-------G------EFGAANQAFASSVREYGEHGGVWLRWARYCDQRGRL---------------- 3324
+                             66666677777788888888.......4......5669*****************************333................ PP
+
+  PTHR11139.orig.30.pir 2081 ekaalqylvaavtcylkalala.ggnslq......dtlrlL.tLwfdhga.................................... 2122
+                                     ++av cyl++++++      q      +++r++ +L                                          
+               CMO046CT 3325 --------ASAVHCYLQGIRFGsR----QarehlvSVFRIVfALD----Gassnavadsssleamqteqaaatttttttttgtada 3394
+                             ........29999*******9951....33332234444432211....1223445555555666666666888888889999999 PP
+
+  PTHR11139.orig.30.pir 2123 ............................................atevndalekalssvplwpWlpviPQLiarlshnrevrkllk 2164
+                                                                         +t+  d+ e+ +  +p+w W+p+   Li+ l + +++ kll+
+               CMO046CT 3395 aapaspltttsapvavssssaavsagasaevhasqtpseglgesRTDACDVCESFVGVLPVWIWVPWSHELISLL-SLGRELKLLR 3479
+                             99999999999999999999999999977777776666666666555559*************************.7999****** PP
+
+  PTHR11139.orig.30.pir 2165 nLLvriakqhPqalvyplrvaaks.ls........................................................... 2190
+                             ++L+r+a  +P al+++lr+  +  ++                                                           
+               CMO046CT 3480 HILLRVAGYYPEALFFQLRTFIEErRLldrptrmlcprvdqiqlpvmhplrsqvasgippssssssstssakrndpttitaaaaaa 3565
+                             ********************9888666*********************************************************** PP
+
+  PTHR11139.orig.30.pir 2191 ...................................................................................... 2190
+                                                                                                                   
+               CMO046CT 3566 attagadrsrkpesttttttttlsaagnepssvaasagntagnsaqkdaenasasganaastgatpapnqprgsgtsalpsveqni 3651
+                             ************************************************************************************** PP
+
+  PTHR11139.orig.30.pir 2191 ........searseaaleildklrkkvpalaseletlvqqlirsafleeellla...............................q 2237
+                                     +  ++e a+++l+ + k++p+l+ elet+  +             +                               +
+               CMO046CT 3652 lsmlqlplGDTPFEIADTVLAFMVKQHPQLLVELETIARE-------------LslrmkpsaeeqvlhvlnallhrcwslpplmhR 3724
+                             ********668**************************998.............222335556666655556667777777755552 PP
+
+  PTHR11139.orig.30.pir 2238 lvs.......deliklai..........ees..................skniakasavlkplkamlekegpepdfiqallellek 2288
+                             +vs       +e+ k ++            +                  +kn++k ++ +   +a+l                   
+               CMO046CT 3725 EVSsgmrsalEEVSKMCFgtglaadefhV-PptladlreafeaelapqtAKNFPKTIEPF---VALLR------------------ 3788
+                             22233333335555666665444333320.023333333333333433344444444333...32222.................. PP
+
+  PTHR11139.orig.30.pir 2289 lktltkqlpalsslg.p..lleeis.................alrelavPGtyka..........splvtIssFspqvevlssk.q 2343
+                               +++  + + ++++ +  +le +s                             +           +lv+I+sFs +v+v  +  +
+               CMO046CT 3789 --KWRGIFSRRVQAMpEtlRLERVSrklvdvrdsqlhvfgqlI-----------QlaqedgeplpDLLVHIQSFSVDVQVVHHCgS 3861
+                             ..29999999999776699999999999887666665555550...........33444444443556************66669* PP
+
+  PTHR11139.orig.30.pir 2344 rPkkltirGSDGkeypfLlKgheDLR.....qDeRimQLfrlvNtlLskdre.rrRkLsIrtYsViPLsprsGLieWVpntdtLhs 2423
+                             + + ++  GSDG+ y+fL+ +   L       + R+  + r +N+l+++d+e rrR+L + ++   PLsp+++L+   +nt  +++
+               CMO046CT 3862 SARGIAVTGSDGRQYRFLVET--ALGaslqrSEDRVGHVCRFMNALFQRDSEaRRRRLVALVPFSLPLSPQARLVAYQENTLRIQH 3945
+                             ******************664..222334457779*************************************************** PP
+
+  PTHR11139.orig.30.pir 2424 ilr...gca.dyrearakipsdlniehrlmrqaapqaa.................ykvevfkevleetepplLhkelwlkssspea 2488
+                              l+    c+ +      +   +l        ++ + +a                 y++++fk++++ ++ ++L++++    +++ +
+               CMO046CT 3946 ALQafcECHgFDM----DD--TL-------VAFRDTCAlrleslgnvasrelaleYRLDAFKRACLSLPDSVLAHWAAASLPDANS 4018
+                             ***8665552222....22..22.......33333333444455666677888878************999*******77777777 PP
+
+  PTHR11139.orig.30.pir 2489 WlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqr..LpvPElVPFRLTrnlvnalgptGiEGvF 2572
+                              ++ Rk+++ Sl ++S+  y+LG+G R p  i ++ +tG+vvH   +++  + gq+    + E VPFRLTrn+ ++  +tG+EG+F
+               CMO046CT 4019 LFMVRKRFALSLGTSSLLLYLLGVGSRTPMHIGIHGSTGDVVHLETHPIVVSRGQQvyIGFDEAVPFRLTRNIRSLIRLTGVEGPF 4104
+                             77*****************************************8885555555555114667999********************* PP
+
+  PTHR11139.orig.30.pir 2573 rssceavlrvLRknkesLlavLeaFvhDPLvdWt................kaerlkllssqqaeaelgeal............... 2627
+                               s +a+l v   n   L  ++ +    +L++ t                                    l               
+               CMO046CT 4105 AGSIAATLNVVYRNWALLRDLMGIVYTMELFERTsretlrvedlaqaveeS-------------------Lvrswarveplpfsaa 4171
+                             ***********9999999999999999999997733333333332222221...................1334444444444443 PP
+
+  PTHR11139.orig.30.pir 2628 ............aavvirrvkakLeGrdd.............................................f.gderkgsegL 2655
+                                         a        a  + + +                                             + + ++  +e+ 
+               CMO046CT 4172 plvqsptapayaA--------ATATATANgkrvphpesshggdhdhdhdhdhevtqtlpppvntkanglefaerCgPATSVRDEPE 4249
+                             3333333333331........22222222333333344444444444333333333333333333333334666334444445555 PP
+
+  PTHR11139.orig.30.pir 2656 svegQVqrLIqqAtdpeNLcrmYeGWcPW 2684
+                              v+  V  LI  A dp  L++m + W PW
+               CMO046CT 4250 GVARRVAELIANAGDPAHLSQMEPLWYPW 4278
+                             55556778********************* PP
+
+>> CMN075CT  pep chromosome:ASM9120v1:14:178693:187519:-1 gene:CMN075C transcript:CMN075CT gene_biotype:protein_coding t
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  583.2  65.7  5.9e-178  4.9e-175     782    2683 ..     444    2939 ..       4    2941 .] 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 583.2 bits;  conditional E-value: 5.9e-178
+  PTHR11139.orig.30.pir  782 vvvleile.................................................kllllaildldplvrlsvleslaedlaaf 818 
+                              vv+++++                                                 ++ +                         
+               CMN075CT  444 DVVDTLIHktitlaepswpqmrllalllhtqeraaaqrmllderlapflarciswawRAPA------------------------- 504 
+                             3333333344444444444443332222222222222211111111111111111112222......................... PP
+
+  PTHR11139.orig.30.pir  819 dehas.........qafslsllfallndeslevreaaisllgrlsl.............................ksllnpalr.. 864 
+                                 +          + + +l+  ++ de+++v +++++ l ++ +                                     +  
+               CMN075CT  505 ----AalspdtacvMRVLATLIQHCCGDEHAPVVMVLVQELDQAMHaslgdwrfiqalgviarnacsrlatvalaA-------Lie 579 
+                             ....023333333222222223357777888888877777766433666665544444433333332222222221.......022 PP
+
+  PTHR11139.orig.30.pir  865 .....lallrkllsqlLtrLelellss...kllehldsrleeesakllgtlirksea.eellppyavsilpaLvallaeen..... 936 
+                                     +r++++q +t        +   +      s++ e+ a+  ++  +  e+ ++l+p  +  +l++     +e++     
+               CMN075CT  580 qastlERRRRRRSPQSVT--V-----PaidQ-----ISWELERTASPHHVSRLLGEQgPRLFPLLLHQLLHH-----EELAdllqs 648 
+                             222224444444444444..2.....02230.....333333333333332222222333333333333333.....111122222 PP
+
+  PTHR11139.orig.30.pir  937 ................nelrsallkt.lad.lletllaevglleaaerrqllvallplilaallqlwdsesseerlllkrlllles 1004
+                                             +  + a+l++ +++  le+l+a+v++++aa            i +  + l d  s  +++  kr+     
+               CMN075CT  649 wlqlsdsdavftfvyrC--SFAFLVShIHErNLEALSARVSAAAAAL----------GIEEQVQALAD--SLLLSNRVKRD----- 715 
+                             22222222222222222..2233333567777777777777555553..........23333332225..55555556666..... PP
+
+  PTHR11139.orig.30.pir 1005 eakllvalallgqlvestgeviepllfdsiwlglepaypsllaellklllkflelshserrealavlgllgaldsldalrrallql 1090
+                                   a+all+  + st+ +i              a++++ +++l+ll  ++    +  r+al+ l +       da    +l++
+               CMN075CT  716 -----KAFALLATYTGSTIHDI--------------ARTYTTRVILRLLTALDTRPEAVVRDALDELAI-----LVDARDTVTLIA 777 
+                             .....66666666666655555..............677888888777666664444444444444332.....333333555666 PP
+
+  PTHR11139.orig.30.pir 1091 ttllvkhapeal...ipaqeseldysttkvaillllqlilrdlslpssyvlqvlvallkalasealqllvlpadkvllapslllrl 1173
+                             ++ll+      l   i      +d+ +   +il ll +++   +l   +v++vl +l  al   +l+l    a   l+  + +++l
+               CMN075CT  778 HDLLRILDA--LnrrI---FRRQDHQA--IRILDLLFKVIAP-EL-HLFVPKVLATLKNALEIPDLRL---HA---LVIQCWVTFL 848 
+                             666662222..23342...12223333..7777777666666.66.7888888888888884444442...22...2223333333 PP
+
+  PTHR11139.orig.30.pir 1174 kd.......gqlhssvsrirellvrhat..rvlilqqLallvsivnaharklaldlapllvlwerrw................... 1231
+                             +         +l +  +++  +l+ +++   vl++ + a++       a+  +ld++         +                   
+               CMN075CT  849 EQlgweraaPHLGTAFAVLGPYLEGEPAlaQVLLDLTRACA----ASPAKSTYLDEI---------Flppadstssarptnwadsa 921 
+                             33334555544445555777777777766555555444432....222222344444.........12444445666666667766 PP
+
+  PTHR11139.orig.30.pir 1232 ..tilalleqlvlsaaareflgsylpellll....e....sggvlpllgpll........kellnllqqalgavlwinsdfllqkl 1299
+                               ++ +  e  +++aaa++ +++++  l+++    +    +g + p+++++           ++ ll++ +++ + +      q +
+               CMN075CT  922 plEAAHPAETCASAAAAAAAATTTTTTLCPErelqTlsipTGESSPDTHRPApartnevlGAIRTLLNERKQQRQPA-----EQLI 1002
+                             66444447777788888888888888877777765145666666666666667777777655555555665555444.....899* PP
+
+  PTHR11139.orig.30.pir 1300 relgsklklekllllallLpilnkllekl.........lelailvraaalsslaalrassvtkiasallhslvrvlqllaaqdstn 1376
+                             r l+  +k++  l+++l+L++l ++l+++         l                   ++ t + s+ll+  +   +l+ +++++n
+               CMN075CT 1003 RLLPIATKHHSRLVRLLALRELTSVLRQYrnqlyvdivL-------------------HQRTQLVSELLQEGL---LLAVTDGDAN 1066
+                             ***************************995554432222...................233333333333332...4456778888 PP
+
+  PTHR11139.orig.30.pir 1377 skllaadalgalgalvfnlgldyskil...........................................pllkklglfl.rsrrd 1418
+                              +  a+ al +lga+++++   +s ++                                           p+l+ + + + r + +
+               CMN075CT 1067 CRDEALLALALLGAVDPAR---LSLEHrqppplslpslqqhavvsqssgsegeslldqvviptlleqcliPALRRVESAQaREWQN 1149
+                             8888888888888888887...3333355777777444444444444444444333333333333333334444444444455555 PP
+
+  PTHR11139.orig.30.pir 1419 wdleltllskvlarrlskatllagallqrqllaqelaslaiellseeggsslsnggilglrdsdlrsgvvh............... 1489
+                                + +++ +vl+ +ls + +    +++                                          h               
+               CMN075CT 1150 R--IGFVIQEVLRLALSLEDTTDITSTA------------------------------------------Hplptspssspkrpqt 1191
+                             5..5566666665555555522222222..........................................0222222333333345 PP
+
+  PTHR11139.orig.30.pir 1490 lvlsekgsgqkllrvfeayvkelipprltsklevalgvls.........sersmksd............................. 1537
+                             ++ +e+ +   ++r ++++  ++i p l s++ + +++++                +                             
+               CMN075CT 1192 RSTEERIQQRAFWRALSEHTRQIIRPFLYSRYILRTVAQRktssetigrE------Nqgvaasllpctssgttvetgapaatllkh 1271
+                             56666999999**********************77777777765555440......344444445555555557888999999999 PP
+
+  PTHR11139.orig.30.pir 1538 .........................................wleWlrgfsllLlke.............................. 1552
+                                                                      ++ W++gf++ L+                                
+               CMN075CT 1272 tnteahaaassdavpasmectaspatsraacarcavapgksAAQWICGFAVHLVDVldqvmcavdvtfihsddmrmdsgigpeast 1357
+                             999999999999999999999*******************9888********9988****************************** PP
+
+  PTHR11139.orig.30.pir 1553 ....................................................................spspalracqllglaqsd 1570
+                                                                                                 ++   +rac++  l  +d
+               CMN075CT 1358 vaaagmepaapeaipstgstgvtsatsstgavpesvsaagtkqkpeaaaaiaptgsptpnatlsrkyrCWWGLFRACRT--LTGHD 1441
+                             *************************************************************999999955555999999..999** PP
+
+  PTHR11139.orig.30.pir 1571 pqlarrlfpaaflslwsslqldqlleellsa.lwskt................................................. 1606
+                              ++a +l+p+++  +       q+  +l s  ++  +                                                 
+               CMN075CT 1442 QHTAIYLLPYLVQTM------LQIASDLDSInMDT-Qlaisdldvepsatapealaalsaprdasaqhqttaapdslpltgghtha 1520
+                             ***********9999......55544444442222.23555699999999999999999999************************ PP
+
+  PTHR11139.orig.30.pir 1607 ................................ippeilqtllallefl....ehdddtvaqglllfgsvwss.............. 1642
+                                                             +++e++q ++ ll+ l     hd              w s              
+               CMN075CT 1521 taaaatkanrskhwitrisaflrshlvavlssDLTEAIQLVFLLLDRLaeqrDHD--------------WMSrvrgldpcalatce 1592
+                             ********************************99999999999999995333332..............33355555555555577 PP
+
+  PTHR11139.orig.30.pir 1643 .................vdlallpidllqlgeaanacqayakalhylepefreppslikllgallsppleaLaelyssLgepdaly 1711
+                                              ++ +  +++  +l++aa +++a+ +al+yl  ++ +  s+++            L++ly+ Lg+ da  
+               CMN075CT 1593 yaalaaaaaqqpehicpFNALERALPAALLARAALTSGALHRALLYL-DQCTGSCSESQ---------RRVLQRLYRELGDLDAMQ 1668
+                             8889999999999999977779999999*******************.45666663333.........44699************* PP
+
+  PTHR11139.orig.30.pir 1712 Gilesra................ldlet..........................kaawaeklggweeAlaayeralqkasqdagsl 1755
+                              i ++ra                l   +                           ++ ae  +  eeAl  yer+l+ +++   +l
+               CMN075CT 1669 AITTRRApvvvasggrtpdaspsL---LpgtaangyeqglsspssssafvdwesFTLDAEAYHATEEALIGYERGLRAFPT---DL 1748
+                             *******97777777666655550...05555555555555555555555555566666667778***************7...99 PP
+
+  PTHR11139.orig.30.pir 1756 eatlgrlrcllaLgqw........epeaeeellplaleaawslrlgkwdsmleyllalaaaeas.selrllqallalhqg...... 1826
+                              a+ g l++l  Lg w        +   ++ +++l++eaa+  rlg+wd++++  + +++  a+ ++  l+++  alhq       
+               CMN075CT 1749 AAMRGYLQSLMTLGLWetmlhpilTHPERSAVADLGIEAAL--RLGRWDALETLSASVEDPAARgTRSALANIAKALHQAqqpghe 1832
+                             99******************9998788899***********..******8777776666668888999999999999955445544 PP
+
+  PTHR11139.orig.30.pir 1827 dfdeaqeliqkarqlllgaelsa.vdesysrayalllvklqqLsElqeleesqi.slaa....................lldlksi 1890
+                             + ++ +e++ +ar+ l  +++++ ++esy+r+y ++lv+l++       e  ++ ++a+                           
+               CMN075CT 1833 SGAQLSETLRRARSGLS-DTVATaALESYARTY-PALVQLHAVAD---VE-CILgDHADleavlqryahdwlaggadvgA------ 1906
+                             666669******99777.7777789********.****9***999...77.66677777777766666666555443331...... PP
+
+  PTHR11139.orig.30.pir 1891 letWrnRlpgtwqddvevwedllavRrlvlppi..................................................... 1923
+                              +  + Rl+++  ++  ++e++la+ r     +                                                     
+               CMN075CT 1907 ANWLEARLQCV-ASSWQAREPILAIQRA----Allvqverarhlvarnesaaaaaaaaaaaapctslrvpwtlaggerangsswaa 1987
+                             3444679****.99999*******6663....1445578999999999************************************** PP
+
+  PTHR11139.orig.30.pir 1924 ...................................................................................... 1923
+                                                                                                                   
+               CMN075CT 1988 pkndndtssstssggggggierpapatvlaagrsqpasvqfpdqtwlvsastkpavlvpgttrppasfvtpersaqqfleralvfq 2073
+                             ***********************************************************************999999988888887 PP
+
+  PTHR11139.orig.30.pir 1924 ....eddaelwlklaslaRkqgnlslalkll...........rvlieylkllwalaaveegksflleqeealldlqqllielssta 1994
+                                       +l+la+laRk+g++  a   l             +ie +k   a+     g+        al +l  +l++l+   
+               CMN075CT 2074 eaadA----VTLRLARLARKSGHHAAAIAYLqqlpraslfqgPACIELAKIYRAR-----GET-----RRALAQLPLSLTDLQLGR 2145
+                             65544....99****************9999999966666665556666666666.....555.....999999999999988666 PP
+
+  PTHR11139.orig.30.pir 1995 leeells....tn........rkllakvllllgkWlsalsqlsveevlsslksaasaalqlapklekawhswalfndellehsqes 2068
+                               ++ ++    ++        ++l++k+l l++ W++++++ +++e++  + +    al+ +p+ ek + ++++f+d+l  + +++
+               CMN075CT 2146 KTASTSNssstGTwrsssgsaARLVSKALCLQAQWMQEDRSAQPQEIIDCFQR----ALSIQPETEKIYVLLGRFYDSL--TPERD 2225
+                             655555577661155556668********************************....**********************..44444 PP
+
+  PTHR11139.orig.30.pir 2069 gasaatlrllsaekaalqylvaavtcylkalalagg.nslqdtlrlLtLwfdhga.......................atevndal 2130
+                             ++ +       + ++++ y ++a+++y+++l++ g+ +++ +++r++tLw+d  +                               
+               CMN075CT 2226 AEPRI------QARQQWLYRQSALEHYARSLRY-GCrYVYHSLPRIITLWLDEDSepvleehtndsssnssssdkrmtP------- 2297
+                             43333......5589999999***********7.5799999*********55444223333333333445544444440....... PP
+
+  PTHR11139.orig.30.pir 2131 eka.................................................................lss.vplwpWlpviPQLi 2150
+                                                                                                 l++ +pl+ W++v+PQL+
+               CMN075CT 2298 --DtashierskvlcairtntraldsnnnnnsssssisrpdidsyeardspsiarrsaaeyllpivrrLRTrLPLYIWFVVLPQLL 2381
+                             ..0444444445555555555666666777777777777777777777777777777777777777775555************** PP
+
+  PTHR11139.orig.30.pir 2151 arl..shnrevrkllknLLvriakqhP.qalvyplrvaakslssearseaaleildklrkk....vpalaseletlvqqlirsafl 2229
+                             +r   +h+ +vr+ l++LL++   ++P qa++y   +a    ++  r   a  ild +r+             +tl++        
+               CMN075CT 2382 SRVtaHHSAAVRAELCSLLADCVVAYPgQAVWYVVPLAG-A-LDANRAATARAILDQARQRgdlgL-------STLLDA------- 2451
+                             ****888********************55******9984.4.7888************99754444.......555554....... PP
+
+  PTHR11139.orig.30.pir 2230 eeelllaqlvsdeliklaiees.....skniakasavlkplkamlekegp....epdfiqallelleklktltkqlpalsslgpll 2306
+                                     +++  l +++   +     ++++a+   +l++l+++l  e++     p++ qa+l+l +    +t+   +++ +    
+               CMN075CT 2452 ------GLELCAQLARVCT-QVpprglKQMTASV--HLRALRRLLR-ERLqglaIPVPYQAYLRLFL----PTSGRFRDDLH---- 2519
+                             ......4555555667774.21111112222222..3444444443.22234443344555555555....66665555554.... PP
+
+  PTHR11139.orig.30.pir 2307 eeisalrelavPGtykasplvtIssFspqvevlsskqrPkkltirGSDGkeypfLlKgheDLR...qDeRimQLfrlvNtlLskdr 2389
+                                            +a +++t++ +++ v v++s+ rPk++ ++ SDG  ypfL+K  eD     +D+R+m L+ +vN+lL+k +
+               CMN075CT 2520 -------------EGFAVSVPTLVDVDEPVWVMNSLMRPKRIGLLASDGHVYPFLCKR-EDAGdmrKDARMMDLLNVVNRLLAKTA 2591
+                             .............1233566*************************************4.7777788******************88 PP
+
+  PTHR11139.orig.30.pir 2390 e.rrRkLsIrtYsViPLsprsGLieWVpntdtLhsilr.........gca.dyrearakipsdlniehrlmrqaapqaaykvevfk 2464
+                             +  +R+L +rtY+V PL++++G++eW+p+ ++L+             + a +++   ++i   l +e+ + ++  p     v  + 
+               CMN075CT 2592 DaQQRRLVLRTYAVLPLNEECGILEWMPHLVPLRAAVAmlhralgyeKTAtSST---EEI--RLAYERHAKARPEP---DQVRWYT 2669
+                             8888********************************999876542221111111...122..33333333333333...389999* PP
+
+  PTHR11139.orig.30.pir 2465 evleetepplLhkelw...lkssspeaWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpv 2547
+                             e l++ +pp+L+++      +  sp+aW+a+R++++rS+A++SmvGy++GLGDRH++N+Lld  +Ge+vH+DF  c+f++g+rL+v
+               CMN075CT 2670 EWLLPRFPPVLRHFYSihfGRRHSPAAWFAARQAFARSCALWSMVGYVVGLGDRHGENVLLDTRSGECVHVDF-ACLFDQGLRLKV 2754
+                             *************99877755679*************************************************.************ PP
+
+  PTHR11139.orig.30.pir 2548 PElVPFRLTrnlvnalgptGiEGvFrssceavlrvLRknkesLlavLeaFvhDPLvdWt..................kaerlklls 2615
+                             PE+VPFRLT+n+++a+g +G+ GvF++s  ++l+vLR+++e+Ll+vLe+F+hDPL+dW+                  +        
+               CMN075CT 2755 PETVPFRLTPNMIDAMGTAGYQGVFYRSAQIALSVLRNHRETLLSVLETFLHDPLLDWAaaardartaaameasatrG-------- 2832
+                             ***********************************************************5555555555555555550........ PP
+
+  PTHR11139.orig.30.pir 2616 sqqaeaelgeal......................................................aavvirrvkakLeGrddfgd 2647
+                                                                                               a  ++r v +k++G ++   
+               CMN075CT 2833 -----------PvllpgpaaamrlprepadtarlrrpadkrgkaahpgndmpprqqrqqccernaqALEMLRVVDRKCRGLHG--- 2904
+                             ...........25555555555555555555555555555555455555555556666667776668899**********987... PP
+
+  PTHR11139.orig.30.pir 2648 erkgsegLsvegQVqrLIqqAtdpeNLcrmYeGWcP 2683
+                              ++ +++Lsveg V rL+ +At+ +NL+rmY++W P
+               CMN075CT 2905 -AQSGTPLSVEGDVARLVAEATSARNLARMYIWWLP 2939
+                             .466678***************************88 PP
+
+>> CMS267CT  pep chromosome:ASM9120v1:19:673086:676529:1 gene:CMS267C transcript:CMS267CT gene_biotype:protein_coding tr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.4   0.1   4.1e-10   3.4e-07    2490    2563 ..     975    1046 ..     968    1048 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 26.4 bits;  conditional E-value: 4.1e-10
+  PTHR11139.orig.30.pir 2490 larRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDF.........gdcffeagqrLpvPElVPFRLTrnlvnal 2563
+                             la R n+ +S A+ S++ y+L + DRH  N+L+d + G+++HIDF         g       +  ++ E+ PF LT  l + +
+               CMS267CT  975 LAVR-NFVKSMAAYSVITYLLNIKDRHNGNLLID-AEGHIIHIDFgffftnspgG-------N-IEF-EKAPFKLTWELADVM 1046
+                             5556.*****************************.699*******5444443322.......2.444.667777776666666 PP
+
+>> CMI255CT  pep chromosome:ASM9120v1:9:678024:681711:-1 gene:CMI255C transcript:CMI255CT gene_biotype:protein_coding tr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.9   0.1   1.2e-06   0.00097     697     937 ..     165     610 ..       3     678 .. 0.55
+   2 !    7.6   0.1   0.00018      0.15     736     844 ..     767     884 ..     610     898 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 14.9 bits;  conditional E-value: 1.2e-06
+  PTHR11139.orig.30.pir 697 llllllstlgallfsgsseealllc..lvl...........fvrellvllLlnpnldvrkaaaaalalLlassgnssvlsllsplssv 771
+                             ++l+ st+   + sg   + ll+c    +           ++ e+l+  L +p+++vr+ a +al ++l+  +++         + +
+               CMI255CT 165 VYALATSTVTRHRASG---LNLLACllD-YldddalrphlrQLHEILRPGLMDPDAEVREHAIEALRAILETAESK--------DCMQ 240
+                            2222222222222233...344444430.13333444444566777788888899999999999999999997643........3448 PP
+
+  PTHR11139.orig.30.pir 772 lldarpe.....eka...........vvvleile...................................................... 789
+                            ++d++p      e               ++ei+e                                                      
+               CMI255CT 241 FRDMIPLlgasiE-TamsagdeedtrKTIEEIIEmlqceprlfrdhfgslassmlalmgntdledetrqialefltvcaehlrsstrk 327
+                            9999998755532.26888888889977777777888999999999998888888888888888888888888888888888888888 PP
+
+  PTHR11139.orig.30.pir 790 ......................................................kllllaildl........................ 799
+                                                                                           +                        
+               CMI255CT 328 nqqiveqlitacmhmmteiddekewyekdslsasegdaaeddsgysnleaaqgsL--------Driaialggkivvpkafryidqflq 407
+                            8877776666666666666666666666666666666666666666444444440........1555555555555555555633333 PP
+
+  PTHR11139.orig.30.pir 800 ...dplvrlsvl.eslaedlaafdehas........qafslsllfallndeslevreaaisllgrlsl........ksllnpalrlal 867
+                               d   r++++ ++ +  +       +          ++l+l++ +  d+++ vr aai+++g++s         k           
+               CMI255CT 408 rsdDWRFRYAAImTINQIGE-------GcekhmerqLGDVLKLVVGATKDPHPRVRWAAINCIGQMSTdfggtlqrK----------- 477
+                            33344555555533344333.......133334456999**************************998554444430........... PP
+
+  PTHR11139.orig.30.pir 868 lrkllsqlLtrL....el...ellss.......................kllehldsrleeesakllgtlirksea.eellppyavsi 924
+                            ++++ ++ L +          +++++                       kl ++l s+++ + ++ ++++   +++    +++y+  +
+               CMI255CT 478 FHRHVVPTLIDAmddaCNrvrSHAAAalinfcdeasaanlipyldtvvgKLISLLNSNSRLAIEQAMTAVAAVAGCvGTAFNKYYDDF 565
+                            3444444443222222002221111122222333333334444555555444445555555566666666666677666777777777 PP
+
+  PTHR11139.orig.30.pir 925 lpaLvall.aeen...............................n 937
+                            +p+L+ ll   ++                               +
+               CMI255CT 566 MPPLKHLLrQTSAddkwnrllrskamecmtligvavgaerfradA 610
+                            777777774222244454444444444444444444443333332 PP
+
+  == domain 2  score: 7.6 bits;  conditional E-value: 0.00018
+  PTHR11139.orig.30.pir 736 n......pnl......dvrkaaaaalalLlassgnssvlsllsplssvlldarpeekavvvleilekllllaildldplvrlsvlesl 811
+                            +      +nl      ++r+ aa+a+  L++ ++ ++ ++   + s  + +         v+ +l+kl+ +a ++++++v++s++e+l
+               CMI255CT 767 DitqiivENLefwyhdECRQFAAEAIPDLVECTADHFTSQGDVQRSAEAVR-------EIVSFFLPKLCHAAQNEPEVEVQVSMIEAL 847
+                            222222233344444599***************977655544444444444.......44599999********************99 PP
+
+  PTHR11139.orig.30.pir 812 aedlaafd..ehas...qafslsllfallndeslevre 844
+                             + l  ++  +++s     +  + +f+ l  ++  vre
+               CMI255CT 848 DNMLE-VAgdGVLStqqCLDAACFIFSVLKERQERVRE 884
+                            75442.22442232566333333344555556666666 PP
+
+>> CMD050CT  pep chromosome:ASM9120v1:4:135088:136909:-1 gene:CMD050C transcript:CMD050CT gene_biotype:protein_coding tr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.0  13.4   0.00029      0.24     661     945 ..     127     550 ..      27     603 .. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 7.0 bits;  conditional E-value: 0.00029
+  PTHR11139.orig.30.pir 661 latalqeaalsglsvwlrtalfllglaease......................................................... 691
+                            la+ ++++ ++ l +++  +  l+ +                                                              
+               CMD050CT 127 LARCCEPGEHWFLDAFYPLLKRLAEG----Dwftsrisatalfattyaglvasetdaraelrslflslakddtpmvrraaashlaefa 210
+                            44444444433333333322222222....0222223333333344444444444444444444444444444445555555555554 PP
+
+  PTHR11139.orig.30.pir 692 .alav.allllllstlgallfsgsseealllc...lvl.........................................fvrellvll 733
+                             al+     ++ll+++++l  ++++++ ll     +++                                         +++ ++ +l
+               CMD050CT 211 aALEPvHVSGFLLKLFAELAEDDQDSVRLLVVenaEKIvsllpetdrptlfalvlrlaadkswrvrylvadrlstikpdGMVGIFCRL 298
+                            4222234667777777777777766666666666633344666666666666777777788888888888888888899888888889 PP
+
+  PTHR11139.orig.30.pir 734 LlnpnldvrkaaaaalalLlassgnssvlsllsplssvlldarpeekavvvleilekllllaildldplvrlsvl.eslaedlaafd. 819
+                            L +  ++vr+aaa  la ++ +        ++ +      ++ +              + +++ d++  vr +v  ++la +++ +  
+               CMD050CT 299 LRDGEAEVRTAAALKLADVVRAAS------SEAT-----VQELV------------PVMKELVHDANQHVRTAVAgSILALAPI-MGr 362
+                            999999999999999999999952......2222.....22222............4566667777778888888666877665.444 PP
+
+  PTHR11139.orig.30.pir 820 ehasqafslsllfallndeslevreaaisllgrlsl.......ksllnpalr.................lallrkllsqlLtrL.... 879
+                             h     ++ l++ ll d+ ++vr+  is l +ls+        s+l pa +                 +        +l+ +L    
+               CMD050CT 363 SHT-LQVLFPLVLILLKDDCPDVRLGVISNLDQLSAvvgierlVSDLLPAIVelaedrnwrvrlaiiqhM-------ASLAKQLgrqy 442
+                            444.457777777899999999999999999999996666666444444444444444444442222221.......22222222111 PP
+
+  PTHR11139.orig.30.pir 880 e.l.................ellss.........kllehldsrleeesakllgtlirkseaee......................... 915
+                            + l                 +                                                                   
+               CMD050CT 443 FdLdrklgllcvawltdavyA---VreaaiknlaE---------------------------Lvrlfgaswaieqaipcvqrifetst 500
+                            111111111222211111111...01111111221...........................01111111122211111112222222 PP
+
+  PTHR11139.orig.30.pir 916 ...........................llppyavsilpaLvallaeennelrsallk 945
+                                                       llp  ++++ +  v++       +r +++k
+               CMD050CT 501 sylyritalqamgelatvldpgtnekyLLPLLVQKASSDPVPN-------VRLVTAK 550
+                            2222222222223333333333333333333333333333332.......2333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (2684 nodes)
+Target sequences:                       4973  (2501354 residues searched)
+Passed MSV filter:                       321  (0.0645486); expected 99.5 (0.02)
+Passed bias filter:                      114  (0.0229238); expected 99.5 (0.02)
+Passed Vit filter:                        16  (0.00321737); expected 5.0 (0.001)
+Passed Fwd filter:                         6  (0.00120652); expected 0.0 (1e-05)
+Initial search space (Z):               4973  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.83u 0.15s 00:00:00.98 Elapsed: 00:00:00.55
+# Mc/sec: 11996.83
+//
+[ok]

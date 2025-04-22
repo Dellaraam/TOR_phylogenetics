@@ -1,0 +1,586 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Caenorhabditis_elegans.WBcel235.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    1.9e-63  215.6   0.0    4.3e-62  211.1   0.0    3.3  3  B0261.2b.1   pep chromosome:WBcel235:I:5245781:5263424:1 gene
+    2.2e-63  215.4   0.0    5.2e-62  210.9   0.0    3.3  3  B0261.2a.1   pep chromosome:WBcel235:I:5245743:5263424:1 gene
+    1.3e-12   48.4  13.9    2.4e-12   47.6  11.3    2.8  3  T06E4.3c.1   pep chromosome:WBcel235:V:9634980:9638781:-1 gen
+    1.5e-07   31.8   4.9        2.1    8.3   0.2    6.1  4  K04G7.3b.1   pep chromosome:WBcel235:III:7146469:7150590:-1 g
+    2.8e-07   30.9   6.6       0.95    9.4   0.5    6.0  3  K04G7.3a.1   pep chromosome:WBcel235:III:7145842:7153797:-1 g
+    1.7e-06   28.3   1.0    1.7e-06   28.3   1.0    2.2  3  C47D12.1c.1  pep chromosome:WBcel235:II:11661800:11675856:-1 
+    1.7e-06   28.3   1.0    1.7e-06   28.3   1.0    2.2  3  C47D12.1b.1  pep chromosome:WBcel235:II:11661569:11675856:-1 
+    1.7e-06   28.3   1.0    1.7e-06   28.3   1.0    2.2  3  C47D12.1a.1  pep chromosome:WBcel235:II:11661582:11675927:-1 
+    0.00041   20.5  16.7      0.066   13.3   1.2    4.6  6  ZK328.7b.1   pep chromosome:WBcel235:III:6033806:6039433:-1 g
+     0.0014   18.7  19.3      0.085   12.9   1.2    5.1  6  ZK328.7a.1   pep chromosome:WBcel235:III:6032563:6039470:-1 g
+  ------ inclusion threshold ------
+      0.044   13.8   0.5       0.56   10.2   0.2    2.4  2  T25F10.5.1   pep chromosome:WBcel235:V:6762467:6765072:-1 gen
+       0.14   12.2   0.8       0.59   10.1   0.0    2.1  2  Y37E3.1.1    pep chromosome:WBcel235:I:2061667:2063998:-1 gen
+
+
+Domain annotation for each sequence (and alignments):
+>> B0261.2b.1  pep chromosome:WBcel235:I:5245781:5263424:1 gene:WBGene00002583 transcript:B0261.2b.1 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.4   0.1      0.72   1.9e+03     223     275 ..     156     217 ..      98     225 .. 0.58
+   2 ?   -1.8   0.3      0.94   2.5e+03     224     259 ..    1492    1535 ..    1458    1555 .. 0.57
+   3 !  211.1   0.0   1.6e-65   4.3e-62       3     342 ..    1619    2074 ..    1617    2075 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: -1.4 bits;  conditional E-value: 0.72
+                 -SS---....................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCC CS
+         FAT 223 ssglevq.........eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaa 275
+                 +++ +v+          +t++++ ++l+ rc+    ewl +    +++ ++++ei q  ++a
+  B0261.2b.1 156 LDEDTVKmaskalaflIATCKSYAAELVDRCLDHCHEWLGQNVPHSQQPKNQQEIDQIRRLA 217
+                 33333334445555545566666666668888888888877777666777777776655444 PP
+
+  == domain 2  score: -1.8 bits;  conditional E-value: 0.94
+                  SS---..................HH.HHCCCTCCCCCCCCCCCT CS
+         FAT  224 sglevq.......eptnleeftkll.arcylkkGewlaalqkln 259 
+                  + l+vq        + + +e + ++ +r y k+ ew +al+  +
+  B0261.2b.1 1492 NKLNVQeeaagvvRYAERNEMNFQMrGRWYEKLNEWEKALGAYE 1535
+                  44444452223333333344444444455555555555554433 PP
+
+  == domain 3  score: 211.1 bits;  conditional E-value: 1.6e-65
+                  CTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                  +aa  aW + +W+ m++y+s+++++++d+a+++a++a+h+++ ++a  liek+r+ ++ el+a+++esy+ray  +v++Qq+aElee+i+yk+    
+  B0261.2b.1 1619 IAARGAWAVDNWERMADYVSVISENTQDGAMLRAVVAVHNDENTKAMGLIEKVREMIDSELTAMANESYERAYIPMVSVQQMAELEEAIEYKT---R 1712
+                  68899****************************************************************************************...6 PP
+
+                  --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.............TSSC CS
+         FAT  100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp........pevv 188 
+                  +e++ ++   W +Rl+g+ ++ve wq+++++R lvlsp+e            +kf++ +Rk+g  s++  +L++ll    ++ l+        p +v
+  B0261.2b.1 1713 PERRPRIALLWSRRLQGCRRNVEQWQRLIMLRGLVLSPQEM-------HPLRVKFSSMCRKQGKNSMSRAVLRELLSLPANSDLVrakapfdkPLLV 1802
+                  9****************************************.......9999***********************9988844444567779999*** PP
+
+                  CCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.SS-SS---............HH.HHCCCTCCC...........................CCCCC CS
+         FAT  189 yaylkylwakgeqkealqkLrefvscllekke.elssglevq.eptnleeftkll.arcylkkGe...........................wlaal 255 
+                  +a +k l+++++++ea+  L++ ++ + +k    +++ +  +  p + +e  +++ a+++lk+Ge                           ++ + 
+  B0261.2b.1 1803 LALAKQLYQDDHKDEAIRALEDLAN-HWNKRInPIPKATGRElIPPSTKE-PARIcAKVLLKLGEwtelksktsnnmqvgelsfvrqqvspqYRTKE 1897
+                  ********************99888.666665433333333333444444.44555*****************************998887766666 PP
+
+                  CCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS............................................. CS
+         FAT  256 qklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee............................................ 308 
+                  ++ + ++   e+  ++y++at++dp+w k wh++a+ +f ++ +e+  +   +                                            
+  B0261.2b.1 1898 SR-TPETIAFENTINYYQQATQYDPGWHKVWHKLASTHFYAVCRERPHPT--Tvisppqqpqqpkkmhippvtratsppppaqkspqpapfhsitep 1991
+                  65.34555689999*****************************9966533..3457999999*********************************** PP
+
+                  ................................................S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+         FAT  309 ................................................pedls.eyvvpavegflkslslssekslqdllRlL 342 
+                                                                  +++l  +++  av++f k+l +s ++ l+d+lRl 
+  B0261.2b.1 1992 lsdypvppplgslvglppmpaylssnsslppqhhhvsplsndspsnsaENKLYlKHAAHAVRCFAKALMCSPGSRLEDTLRLM 2074
+                  ************************************************8888889**************************97 PP
+
+>> B0261.2a.1  pep chromosome:WBcel235:I:5245743:5263424:1 gene:WBGene00002583 transcript:B0261.2a.1 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.4   0.1      0.72   1.9e+03     223     275 ..     156     217 ..      98     225 .. 0.58
+   2 ?   -1.8   0.3      0.94   2.5e+03     224     259 ..    1492    1535 ..    1458    1555 .. 0.57
+   3 !  210.9   0.0   1.9e-65   5.2e-62       3     342 ..    1619    2077 ..    1617    2078 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: -1.4 bits;  conditional E-value: 0.72
+                 -SS---....................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCC CS
+         FAT 223 ssglevq.........eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaa 275
+                 +++ +v+          +t++++ ++l+ rc+    ewl +    +++ ++++ei q  ++a
+  B0261.2a.1 156 LDEDTVKmaskalaflIATCKSYAAELVDRCLDHCHEWLGQNVPHSQQPKNQQEIDQIRRLA 217
+                 33333334445555545566666666668888888888877777666777777776655444 PP
+
+  == domain 2  score: -1.8 bits;  conditional E-value: 0.94
+                  SS---..................HH.HHCCCTCCCCCCCCCCCT CS
+         FAT  224 sglevq.......eptnleeftkll.arcylkkGewlaalqkln 259 
+                  + l+vq        + + +e + ++ +r y k+ ew +al+  +
+  B0261.2a.1 1492 NKLNVQeeaagvvRYAERNEMNFQMrGRWYEKLNEWEKALGAYE 1535
+                  44444452223333333344444444455555555555554433 PP
+
+  == domain 3  score: 210.9 bits;  conditional E-value: 1.9e-65
+                  CTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                  +aa  aW + +W+ m++y+s+++++++d+a+++a++a+h+++ ++a  liek+r+ ++ el+a+++esy+ray  +v++Qq+aElee+i+yk+    
+  B0261.2a.1 1619 IAARGAWAVDNWERMADYVSVISENTQDGAMLRAVVAVHNDENTKAMGLIEKVREMIDSELTAMANESYERAYIPMVSVQQMAELEEAIEYKT---R 1712
+                  68899****************************************************************************************...6 PP
+
+                  --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.............TSSC CS
+         FAT  100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp........pevv 188 
+                  +e++ ++   W +Rl+g+ ++ve wq+++++R lvlsp+e            +kf++ +Rk+g  s++  +L++ll    ++ l+        p +v
+  B0261.2a.1 1713 PERRPRIALLWSRRLQGCRRNVEQWQRLIMLRGLVLSPQEM-------HPLRVKFSSMCRKQGKNSMSRAVLRELLSLPANSDLVrakapfdkPLLV 1802
+                  9****************************************.......9999***********************9988844444567779999*** PP
+
+                  CCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.SS-SS---............HH.HHCCCTCCC...........................CCCCC CS
+         FAT  189 yaylkylwakgeqkealqkLrefvscllekke.elssglevq.eptnleeftkll.arcylkkGe...........................wlaal 255 
+                  +a +k l+++++++ea+  L++ ++ + +k    +++ +  +  p + +e  +++ a+++lk+Ge                           ++ + 
+  B0261.2a.1 1803 LALAKQLYQDDHKDEAIRALEDLAN-HWNKRInPIPKATGRElIPPSTKE-PARIcAKVLLKLGEwtelksktsnnmqvgelsfvrqqvspqYRTKE 1897
+                  ********************99888.666665433333333333444444.44555*****************************998887766666 PP
+
+                  CCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS............................................. CS
+         FAT  256 qklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee............................................ 308 
+                  ++ + ++   e+  ++y++at++dp+w k wh++a+ +f ++ +e+  +   +                                            
+  B0261.2a.1 1898 SR-TPETIAFENTINYYQQATQYDPGWHKVWHKLASTHFYAVCRERPHPT--Tvisppqqpqqpkkmhippvtratsppppaqkspqpapfhsitep 1991
+                  65.34555689999*****************************9966533..3457999999*********************************** PP
+
+                  ...................................................S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+         FAT  309 ...................................................pedls.eyvvpavegflkslslssekslqdllRlL 342 
+                                                                     +++l  +++  av++f k+l +s ++ l+d+lRl 
+  B0261.2a.1 1992 lsviidypvppplgslvglppmpaylssnsslppqhhhvsplsndspsnsaENKLYlKHAAHAVRCFAKALMCSPGSRLEDTLRLM 2077
+                  ***************************************************8888889**************************97 PP
+
+>> T06E4.3c.1  pep chromosome:WBcel235:V:9634980:9638781:-1 gene:WBGene00000226 transcript:T06E4.3c.1 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.0       1.4   3.8e+03     202     227 ..     120     145 ..     117     162 .. 0.77
+   2 !   47.6  11.3   9.1e-16   2.4e-12      36     294 ..     182     482 ..     142     512 .. 0.71
+   3 ?   -2.8   0.0       1.9     5e+03      45      77 ..     757     789 ..     736     831 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 1.4
+                 HHHSSCCHHHHCCTSSCCCSS-SS-- CS
+         FAT 202 kealqkLrefvscllekkeelssgle 227
+                  ea+qkL ++++cl  ++ e +++ +
+  T06E4.3c.1 120 TEAIQKLIDELNCLEYSQIERNEQED 145
+                 69999999999999888776665554 PP
+
+  == domain 2  score: 47.6 bits;  conditional E-value: 9.1e-16
+                 HCCC.CHH--CCH.CHHCCCHCCCCCCCCCTS---S...CCCCCHHHHHCCCCCHHHCHHCCHHCSS----TTTTTTT----TTS-TTTGCCCTTTCCC CS
+         FAT  36 aila.lhrnqfde.aeeliekarqllvtelsalsge...synraydllvrlQqlaEleeiiqykqklssseelksllktWrkRlpgvqddvevwqdils 129
+                 +il+ +++++ de ++  ie+a++ +++ ls+++     sy+ a + lv lQ l+E+ e+ ++ +++ s+ + + + k+++kR  ++ +++++ ++il+
+  T06E4.3c.1 182 TILKmIRNDERDEiVNNAIENAKSKVIERLSECAIGgscSYEIATPFLVELQKLNEIVELKNVSNDELSAFNSDFW-KNIQKRTDDSEQKISILEPILR 279
+                 566655665555526899*************99877778*********************9999987677766666.9********************* PP
+
+                 CTCCCHCCCHC.......HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCC CS
+         FAT 130 vRslvlspied.......lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp..pevvyaylkylwakgeqkealqkLrefvscllekk 219
+                 vR+ +l+ + +         +++  +e+ l++a++aR  g ++ A+ +L ++++       p   ++v++++k+++++++  + ++ L   +s+++ + 
+  T06E4.3c.1 280 VRRSMLDIRMQsmtgrdkENIRSRIVEVHLQSARIARLTGCFERAQLSLINAKKVL-----PfeNKIVLEEAKLQLQTSDELNGMSLLDSIISKNFGDL 373
+                 ******8888888888999999******************************5555.....345699*************9777777766666666665 PP
+
+                 CSS-SS---.....................................................HHHHCCCTCCC......CCCCCCCCT.S...-SSCCH CS
+         FAT 220 eelssglevq..........................................eptnleeftkllarcylkkGe......wlaalqklnwseekseeilq 270
+                 +++ ++++++                                            +++ + t++l +c++ +G        l              + l+
+  T06E4.3c.1 374 HTIYTDTQQSvnldvqksaklkiehyqeetknlfssvqmlrishmikagntiGFDKVYHETTQLLQCFAHSGVmyeaawLL--------------DYLS 458
+                 533333333322233344444222222233333333333333333344444477777777777777777777743333222..............3333 PP
+
+                 HHHCCHHCTCCCHSTTCCCCHHHH CS
+         FAT 271 aysaateldpswykawhtwalfnf 294
+                  y++  ++   + ka+ + a+++ 
+  T06E4.3c.1 459 NYKERSKHVLPLLKAYKEVAKYEK 482
+                 333333333334444444444433 PP
+
+  == domain 3  score: -2.8 bits;  conditional E-value: 1.9
+                 CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHH CS
+         FAT  45 fdeaeeliekarqllvtelsalsgesynraydl 77 
+                  +++ +++e++++ll+++ +  + ++++  y++
+  T06E4.3c.1 757 DYHFTKMVEMCNDLLMKDEQTRIQKMTATTYSV 789
+                 567889999999999998888888777777776 PP
+
+>> K04G7.3b.1  pep chromosome:WBcel235:III:7146469:7150590:-1 gene:WBGene00003858 transcript:K04G7.3b.1 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.3   0.1    0.0016       4.1     239     292 ..      11      58 ..       2      83 .. 0.88
+   2 ?    4.2   0.0     0.014        38     249     334 ..      90     185 ..      84     188 .. 0.68
+   3 !    8.3   0.2   0.00078       2.1     251     296 ..     255     300 ..     197     336 .. 0.57
+   4 !    6.9   0.0    0.0021       5.4     249     301 ..     328     373 ..     315     420 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 7.3 bits;  conditional E-value: 0.0016
+                 .HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+         FAT 239 kll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalf 292
+                 +++ a++y  +G + ++ ++        +++l+ y++a++l p+ ++a+ ++a +
+  K04G7.3b.1  11 NNQcAEAYSNLGNYYKEKGQ-------LQDALENYKLAVKLKPEFIDAYINLAAA 58 
+                 45669999999999998888.......89********************999976 PP
+
+  == domain 2  score: 4.2 bits;  conditional E-value: 0.014
+                 CCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC............CCHHHHHCCHHHHHHSSSS............S-TCCHHHHCCT..CC CS
+         FAT 249 Gewlaalqklnwseekseeilqaysaateldpswykawht............walfnfevlskeeekkeeee...........pedlseyvvpavegfl 324
+                 G  l+a+++        ee+  +y++a+e++p+ + aw +            +a ++fe+  ++       +            +++ +   +av+ +l
+  K04G7.3b.1  90 GNLLKAMGR-------LEEAKVCYLKAIETQPQFAVAWSNlgcvfnsqgeiwLAIHHFEKAVTLDP-----NfldayinlgnvLKEA-RIFDRAVSAYL 175
+                 445555555.......88999999999999999999999966666666666666666666666633.....0333455566543333.36778888899 PP
+
+                 HHHHTTTSST CS
+         FAT 325 kslslsseks 334
+                 ++l+ls +++
+  K04G7.3b.1 176 RALNLSGNHA 185
+                 9988887775 PP
+
+  == domain 3  score: 8.3 bits;  conditional E-value: 0.00078
+                 CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+         FAT 251 wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+                  +++l + ++++ k+e+++  y++a e+ p+ + a+ ++a+  +++
+  K04G7.3b.1 255 SQNNLANIKREQGKIEDATRLYLKALEIYPEFAAAHSNLASILQQQ 300
+                 4555566666666666666666666666666666666666665554 PP
+
+  == domain 4  score: 6.9 bits;  conditional E-value: 0.0021
+                 CCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHH CS
+         FAT 249 Gewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskee 301
+                 G  l+++++       s+++ ++y +a++++p  ++a+ ++a+ +  + ++ e
+  K04G7.3b.1 328 GNTLKEMGD-------SSAAIACYNRAIQINPAFADAHSNLASIHKDAGNMAE 373
+                 555555555.......7777777777777777777777777777665555443 PP
+
+>> K04G7.3a.1  pep chromosome:WBcel235:III:7145842:7153797:-1 gene:WBGene00003858 transcript:K04G7.3a.1 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.4   0.5   0.00036      0.95     234     292 ..     184     236 ..     121     366 .. 0.70
+   2 !    8.1   0.2   0.00091       2.4     251     296 ..     433     478 ..     375     516 .. 0.56
+   3 !    6.7   0.1    0.0024       6.3     248     301 ..     505     551 ..     488     597 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 9.4 bits;  conditional E-value: 0.00036
+                 ......HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+         FAT 234 leeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalf 292
+                 l  + +++ a++y  +G + ++ ++        +++l+ y++a++l p+ ++a+ ++a +
+  K04G7.3a.1 184 LAIKVNNQcAEAYSNLGNYYKEKGQ-------LQDALENYKLAVKLKPEFIDAYINLAAA 236
+                 2222333334444444444444444.......4455555555555555555555555543 PP
+
+  == domain 2  score: 8.1 bits;  conditional E-value: 0.00091
+                 CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+         FAT 251 wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+                  +++l + ++++ k+e+++  y++a e+ p+ + a+ ++a+  +++
+  K04G7.3a.1 433 SQNNLANIKREQGKIEDATRLYLKALEIYPEFAAAHSNLASILQQQ 478
+                 4555555556666666666666666666666666666666655554 PP
+
+  == domain 3  score: 6.7 bits;  conditional E-value: 0.0024
+                 CCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHH CS
+         FAT 248 kGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskee 301
+                  G  l+++++       s+++ ++y +a++++p  ++a+ ++a+ +  + ++ e
+  K04G7.3a.1 505 MGNTLKEMGD-------SSAAIACYNRAIQINPAFADAHSNLASIHKDAGNMAE 551
+                 5555555555.......6777777777777777777777777777665554443 PP
+
+>> C47D12.1c.1  pep chromosome:WBcel235:II:11661800:11675856:-1 gene:WBGene00007028 transcript:C47D12.1c.1 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.1   1.0       4.5   1.2e+04     183     257 ..      36     111 ..      17     129 .. 0.48
+   2 ?   -3.9   0.0       4.1   1.1e+04      52      84 ..    1222    1254 ..    1220    1256 .. 0.82
+   3 !   28.3   1.0   6.4e-10   1.7e-06      10     343 .]    2963    3326 ..    2957    3326 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -4.1 bits;  conditional E-value: 4.5
+                  ..TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---.............HHHHCCCTCCCCCCCCCC CS
+          FAT 183 lppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq..eptnleeftkllarcylkkGewlaalqk 257
+                  +  +v +  l+  w+++e + +l++ ++ v++l+ +  +  +++  q    +n ++++kl+ ++ l+++   +a+++
+  C47D12.1c.1  36 QRDDVKLKMLQEIWSTIENHFTLSSHEKVVERLILSFLQVFCNTSPQfiAENNTQQLRKLMLEIILRLSN-VEAMKH 111
+                  2245555555555555555554444444444444443333333333344666666666666666666665.333333 PP
+
+  == domain 2  score: -3.9 bits;  conditional E-value: 4.1
+                   CCHCCCCCCCCCTS---SCCCCCHHHHHCCCCC CS
+          FAT   52 iekarqllvtelsalsgesynraydllvrlQql 84  
+                   i +++   v+e+s+ s  s++ +++++ r+  +
+  C47D12.1c.1 1222 IMEVILGTVEEISSGSADSAYDCLKKMMRVYFI 1254
+                   5667778899999*******9999999998665 PP
+
+  == domain 3  score: 28.3 bits;  conditional E-value: 6.4e-10
+                   TSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.--.......CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCC CS
+          FAT   10 rlgqWdsmeeylslmk.....kdspdkaffeailalhr.nq.......fdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiq 92  
+                   + ++W+ +ee+ s++      +  +d ++f+ +  + r n+        ++ +  i+++ +  +  ++al++ + + ++++l+ ++ + E+ee+  
+  C47D12.1c.1 2963 HIPDWNVVEECKSQIAgcippSFHLDYTLFNLMSTVMRmNEnsspthmKERCKIAIQECTEAHISRWRALPSVVSYGHVKILQAMNLVREIEESTD 3058
+                   66889999999999999998877788888888888666522345555577777788889999999*****************************98 PP
+
+                   HHCSS-..........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC...................HHCCS-STTCCCCCCCCHC CS
+          FAT   93 ykqkls..........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied...................lllkgakaemwlkfanlaR 159 
+                   +  +l              ++ksl k  r+R p + dd+ + +  + +R  +  +  +                    +  + +a++ l  a+ a 
+  C47D12.1c.1 3059 IRIALLeapsnkvdqaLMGDMKSLMKVFRNRTPTTSDDMGFVSTWYDWRNQIHGMMLQrfeywdkvglnvaatgnqsIVPIHSMAQAQLAVAKHAK 3154
+                   877666678899987777899999*************************99997777779999999999999999885556677999999999999 PP
+
+                   HHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...SS-SS---...........HH.HHCCCTCCCC CS
+          FAT  160 ksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke...elssglevqeptnleeftkll.arcylkkGew 251 
+                   + g ++l +++L+kl++               + ++ a++++  + ++Lr+++++ +++      l + lev e  ++++++k + a  +  ++  
+  C47D12.1c.1 3155 NLGFHNLTKDLLNKLAGLTA------------IPMMDAQDKVCTYGKTLRDMANSAADERVkneLLCEALEVLEDVRIDDLQKDQvAALLYHRANI 3238
+                   99999999999999988888............223444444444555555555544444322225666677779********************** PP
+
+                   CCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+          FAT  252 laalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                    + l +++++  + +++ q   + + +  + +k   +w+++  +++   + +k     e+ +++  +a+ +++ +++  +  k+++ ++++L+
+  C47D12.1c.1 3239 HSVLDQAENADYTFSAASQLVDLQNSVTTTGIKLMKNWGHHLYKRFFSTTVCK-----ETGNNFGRQALACYFIAARVDNDiKARKPIAKILW 3326
+                   *************************************************9994.....4455899**************************98 PP
+
+>> C47D12.1b.1  pep chromosome:WBcel235:II:11661569:11675856:-1 gene:WBGene00007028 transcript:C47D12.1b.1 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.1   1.0       4.6   1.2e+04     183     257 ..      36     111 ..      17     129 .. 0.48
+   2 ?   -3.9   0.0       4.1   1.1e+04      52      84 ..    1228    1260 ..    1226    1262 .. 0.82
+   3 !   28.3   1.0   6.5e-10   1.7e-06      10     343 .]    2974    3337 ..    2968    3337 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -4.1 bits;  conditional E-value: 4.6
+                  ..TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---.............HHHHCCCTCCCCCCCCCC CS
+          FAT 183 lppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq..eptnleeftkllarcylkkGewlaalqk 257
+                  +  +v +  l+  w+++e + +l++ ++ v++l+ +  +  +++  q    +n ++++kl+ ++ l+++   +a+++
+  C47D12.1b.1  36 QRDDVKLKMLQEIWSTIENHFTLSSHEKVVERLILSFLQVFCNTSPQfiAENNTQQLRKLMLEIILRLSN-VEAMKH 111
+                  2245555555555555555554444444444444443333333333344666666666666666666665.333333 PP
+
+  == domain 2  score: -3.9 bits;  conditional E-value: 4.1
+                   CCHCCCCCCCCCTS---SCCCCCHHHHHCCCCC CS
+          FAT   52 iekarqllvtelsalsgesynraydllvrlQql 84  
+                   i +++   v+e+s+ s  s++ +++++ r+  +
+  C47D12.1b.1 1228 IMEVILGTVEEISSGSADSAYDCLKKMMRVYFI 1260
+                   5667778899999*******9999999998665 PP
+
+  == domain 3  score: 28.3 bits;  conditional E-value: 6.5e-10
+                   TSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.--.......CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCC CS
+          FAT   10 rlgqWdsmeeylslmk.....kdspdkaffeailalhr.nq.......fdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiq 92  
+                   + ++W+ +ee+ s++      +  +d ++f+ +  + r n+        ++ +  i+++ +  +  ++al++ + + ++++l+ ++ + E+ee+  
+  C47D12.1b.1 2974 HIPDWNVVEECKSQIAgcippSFHLDYTLFNLMSTVMRmNEnsspthmKERCKIAIQECTEAHISRWRALPSVVSYGHVKILQAMNLVREIEESTD 3069
+                   66889999999999999998877788888888888666522345555577777788889999999*****************************98 PP
+
+                   HHCSS-..........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC...................HHCCS-STTCCCCCCCCHC CS
+          FAT   93 ykqkls..........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied...................lllkgakaemwlkfanlaR 159 
+                   +  +l              ++ksl k  r+R p + dd+ + +  + +R  +  +  +                    +  + +a++ l  a+ a 
+  C47D12.1b.1 3070 IRIALLeapsnkvdqaLMGDMKSLMKVFRNRTPTTSDDMGFVSTWYDWRNQIHGMMLQrfeywdkvglnvaatgnqsIVPIHSMAQAQLAVAKHAK 3165
+                   877666678899987777899999*************************99997777779999999999999999885556677999999999999 PP
+
+                   HHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...SS-SS---...........HH.HHCCCTCCCC CS
+          FAT  160 ksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke...elssglevqeptnleeftkll.arcylkkGew 251 
+                   + g ++l +++L+kl++               + ++ a++++  + ++Lr+++++ +++      l + lev e  ++++++k + a  +  ++  
+  C47D12.1b.1 3166 NLGFHNLTKDLLNKLAGLTA------------IPMMDAQDKVCTYGKTLRDMANSAADERVkneLLCEALEVLEDVRIDDLQKDQvAALLYHRANI 3249
+                   99999999999999988888............223444444444555555555544444322225666677779********************** PP
+
+                   CCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+          FAT  252 laalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                    + l +++++  + +++ q   + + +  + +k   +w+++  +++   + +k     e+ +++  +a+ +++ +++  +  k+++ ++++L+
+  C47D12.1b.1 3250 HSVLDQAENADYTFSAASQLVDLQNSVTTTGIKLMKNWGHHLYKRFFSTTVCK-----ETGNNFGRQALACYFIAARVDNDiKARKPIAKILW 3337
+                   *************************************************9994.....4455899**************************98 PP
+
+>> C47D12.1a.1  pep chromosome:WBcel235:II:11661582:11675927:-1 gene:WBGene00007028 transcript:C47D12.1a.1 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.1   1.0       4.6   1.2e+04     183     257 ..      36     111 ..      17     129 .. 0.48
+   2 ?   -3.9   0.0       4.1   1.1e+04      52      84 ..    1228    1260 ..    1226    1262 .. 0.82
+   3 !   28.3   1.0   6.5e-10   1.7e-06      10     343 .]    2974    3337 ..    2968    3337 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -4.1 bits;  conditional E-value: 4.6
+                  ..TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---.............HHHHCCCTCCCCCCCCCC CS
+          FAT 183 lppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq..eptnleeftkllarcylkkGewlaalqk 257
+                  +  +v +  l+  w+++e + +l++ ++ v++l+ +  +  +++  q    +n ++++kl+ ++ l+++   +a+++
+  C47D12.1a.1  36 QRDDVKLKMLQEIWSTIENHFTLSSHEKVVERLILSFLQVFCNTSPQfiAENNTQQLRKLMLEIILRLSN-VEAMKH 111
+                  2245555555555555555554444444444444443333333333344666666666666666666665.333333 PP
+
+  == domain 2  score: -3.9 bits;  conditional E-value: 4.1
+                   CCHCCCCCCCCCTS---SCCCCCHHHHHCCCCC CS
+          FAT   52 iekarqllvtelsalsgesynraydllvrlQql 84  
+                   i +++   v+e+s+ s  s++ +++++ r+  +
+  C47D12.1a.1 1228 IMEVILGTVEEISSGSADSAYDCLKKMMRVYFI 1260
+                   5667778899999*******9999999998665 PP
+
+  == domain 3  score: 28.3 bits;  conditional E-value: 6.5e-10
+                   TSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.--.......CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCC CS
+          FAT   10 rlgqWdsmeeylslmk.....kdspdkaffeailalhr.nq.......fdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiq 92  
+                   + ++W+ +ee+ s++      +  +d ++f+ +  + r n+        ++ +  i+++ +  +  ++al++ + + ++++l+ ++ + E+ee+  
+  C47D12.1a.1 2974 HIPDWNVVEECKSQIAgcippSFHLDYTLFNLMSTVMRmNEnsspthmKERCKIAIQECTEAHISRWRALPSVVSYGHVKILQAMNLVREIEESTD 3069
+                   66889999999999999998877788888888888666522345555577777788889999999*****************************98 PP
+
+                   HHCSS-..........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC...................HHCCS-STTCCCCCCCCHC CS
+          FAT   93 ykqkls..........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied...................lllkgakaemwlkfanlaR 159 
+                   +  +l              ++ksl k  r+R p + dd+ + +  + +R  +  +  +                    +  + +a++ l  a+ a 
+  C47D12.1a.1 3070 IRIALLeapsnkvdqaLMGDMKSLMKVFRNRTPTTSDDMGFVSTWYDWRNQIHGMMLQrfeywdkvglnvaatgnqsIVPIHSMAQAQLAVAKHAK 3165
+                   877666678899987777899999*************************99997777779999999999999999885556677999999999999 PP
+
+                   HHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...SS-SS---...........HH.HHCCCTCCCC CS
+          FAT  160 ksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke...elssglevqeptnleeftkll.arcylkkGew 251 
+                   + g ++l +++L+kl++               + ++ a++++  + ++Lr+++++ +++      l + lev e  ++++++k + a  +  ++  
+  C47D12.1a.1 3166 NLGFHNLTKDLLNKLAGLTA------------IPMMDAQDKVCTYGKTLRDMANSAADERVkneLLCEALEVLEDVRIDDLQKDQvAALLYHRANI 3249
+                   99999999999999988888............223444444444555555555544444322225666677779********************** PP
+
+                   CCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+          FAT  252 laalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                    + l +++++  + +++ q   + + +  + +k   +w+++  +++   + +k     e+ +++  +a+ +++ +++  +  k+++ ++++L+
+  C47D12.1a.1 3250 HSVLDQAENADYTFSAASQLVDLQNSVTTTGIKLMKNWGHHLYKRFFSTTVCK-----ETGNNFGRQALACYFIAARVDNDiKARKPIAKILW 3337
+                   *************************************************9994.....4455899**************************98 PP
+
+>> ZK328.7b.1  pep chromosome:WBcel235:III:6033806:6039433:-1 gene:WBGene00022696 transcript:ZK328.7b.1 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.5   0.0       1.5   4.1e+03     166     225 ..     136     201 ..     106     236 .. 0.71
+   2 ?   -4.0   0.0       4.4   1.2e+04     168     214 ..     288     336 ..     281     342 .. 0.56
+   3 ?   -2.6   0.0       1.7   4.4e+03      42      65 ..     428     453 ..     411     457 .. 0.68
+   4 !    7.5   3.1    0.0014       3.7     135     298 ..     621     792 ..     618     804 .. 0.60
+   5 !   13.3   1.2   2.5e-05     0.066     147     275 ..     803     927 ..     781     972 .. 0.77
+   6 !    6.3   0.0    0.0031       8.3     150     206 ..     998    1054 ..     945    1065 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -2.5 bits;  conditional E-value: 1.5
+                 STTHHCCCCCHCTT.........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..SS-SS CS
+         FAT 166 lAekaLkklleedk.eewlp...pevvyaylkylwakgeqkealqkLrefvscllekke..elssg 225
+                 +A ++L+ + e++k +++l+    +++  ++k+    g ++ al k ++++++l+ek++  e+++g
+  ZK328.7b.1 136 TASEVLYFAGEYQKsKQMLDiarKRATEKHAKHYCLLGWIELALGKKQKSTQELFEKAGgqEYPDG 201
+                 555666666666664444445556677777777777777777777777777777777766655554 PP
+
+  == domain 2  score: -4.0 bits;  conditional E-value: 4.4
+                 THHCCCCCHCTT.....TSSCCCHH.HHHHH.CCHHHHHSSCCHHHHCC CS
+         FAT 168 ekaLkklleedkeewlppevvyayl.kylwa.kgeqkealqkLrefvsc 214
+                 +++L+ ll++ +e++++ +v ya++ k+l + +g+ ++ l + r+f+++
+  ZK328.7b.1 288 KRTLQLLLKSLDENEATNHVLYARItKLLVSiSGRDEKILRHARDFLTR 336
+                 4666666666665555567777775244443133456666666666665 PP
+
+  == domain 3  score: -2.6 bits;  conditional E-value: 1.7
+                 H..--CCHCHHCCCHCCCCCCCCCTS CS
+         FAT  42 r..nqfdeaeeliekarqllvtelsa 65 
+                    + f++++++ie+  + l ++l++
+  ZK328.7b.1 428 SkdKSFENFRQHIENLVEMLRNQLQS 453
+                 13466999999999998888887776 PP
+
+  == domain 4  score: 7.5 bits;  conditional E-value: 0.0014
+                 HCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCC.......HHHHCCTSSCCCSS-SS- CS
+         FAT 135 lspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkL.......refvscllekkeelssgl 226
+                 ++p+e+  + + k+++ l+ ++     +r++ Ae +++ +l e   ++++ ++v+a++++ + kg+++ al  L                 + +ls  +
+  ZK328.7b.1 621 FQPKES--ADTHKISVQLELIDTLQHMKRIQEAETTMTDALAEWAGQPEQDQLVIAQAQLYLTKGHVERALGILkkiqpgqS---------NFHLSRIK 708
+                 667777..66677888889999999999************99999666667***********************44443330.........33333333 PP
+
+                 --.........................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCH CS
+         FAT 227 evq..............eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevls 298
+                 +++              ++++l + ++     y ++G+   ++q+ + + +  e++l+  s+ ++l+ +  +a+  +a+++ ++++
+  ZK328.7b.1 709 MAEiyleekkdkrmfaaCYRELLKVEATP-GSYSLLGDAFMKVQEPEDAINFYEQALKMQSKDVQLAEKIGEAYV-MAHLYSKAVN 792
+                 33322222222233333444444444432.455556665566666344444444555555555555555555544.4555555555 PP
+
+  == domain 5  score: 13.3 bits;  conditional E-value: 2.5e-05
+                 STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCC CS
+         FAT 147 kaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcy 245
+                 + +m lk anl  k  +++ +ek+L+   e d+e++ + e + +y+++l+   e++e + ++ e  +   +  ++l+s ++  ++t    ++k+ ar+ 
+  ZK328.7b.1 803 DKNMRLKLANLLLKLRNFEKCEKVLRAPFERDPEPVGT-ETIQTYIQFLLLLAECHEMMDNVPEAMNDFEKA-KSLHSRIQ--DKTLTAALKKEGARIC 897
+                 5689*****************************77776.***********************9999955444.35555543..6677777777778888 PP
+
+                 CTCCCCCCCCCCCT.S...-SSCCHHHHCC CS
+         FAT 246 lkkGewlaalqklnwseekseeilqaysaa 275
+                  +++e l + ++++++++  +++l+++ + 
+  ZK328.7b.1 898 NLQAELLYRRREFSQAVDICKQALAYHETD 927
+                 888888877777776666666666666554 PP
+
+  == domain 6  score: 6.3 bits;  conditional E-value: 0.0031
+                  CCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSS CS
+         FAT  150 mwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealq 206 
+                  +  + ++l  ++g+ + Aek+L +++e ++  + ++ + + + ++ w +g+q+eal 
+  ZK328.7b.1  998 ALSRVVELFCRNGEQNAAEKHLDRAKEVNPRCVTESGYNVCRGRFEWYTGDQNEALR 1054
+                  4447788888999*****************66666999*****************97 PP
+
+>> ZK328.7a.1  pep chromosome:WBcel235:III:6032563:6039470:-1 gene:WBGene00022696 transcript:ZK328.7a.1 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.0   0.1       2.2   5.9e+03     166     225 ..     136     201 ..     111     233 .. 0.71
+   2 ?   -3.0   0.0       2.2   5.8e+03      42      65 ..     428     453 ..     412     456 .. 0.67
+   3 !    7.5   2.6    0.0014       3.7     135     294 ..     621     788 ..     617     800 .. 0.60
+   4 !   12.9   1.2   3.2e-05     0.085     147     275 ..     803     927 ..     782     972 .. 0.77
+   5 !    6.7   0.0    0.0024       6.5     151     208 ..     999    1056 ..     945    1120 .. 0.79
+   6 ?   -0.7   0.0      0.44   1.2e+03     131     178 ..    1173    1235 ..    1171    1264 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -3.0 bits;  conditional E-value: 2.2
+                 STTHHCCCCCHCTT.........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..SS-SS CS
+         FAT 166 lAekaLkklleedk.eewlp...pevvyaylkylwakgeqkealqkLrefvscllekke..elssg 225
+                 +A ++L+ + e++k +++l+    +++  ++k+    g ++ al k ++++++l+ek++  e+++g
+  ZK328.7a.1 136 TASEVLYFAGEYQKsKQMLDiarKRATEKHAKHYCLLGWIELALGKKQKSTQELFEKAGgqEYPDG 201
+                 455666666666664334445555667777777777777777777777777777777666655444 PP
+
+  == domain 2  score: -3.0 bits;  conditional E-value: 2.2
+                 H..--CCHCHHCCCHCCCCCCCCCTS CS
+         FAT  42 r..nqfdeaeeliekarqllvtelsa 65 
+                    + f++++++ie+  + l ++l++
+  ZK328.7a.1 428 SkdKSFENFRQHIENLVEMLRNQLQS 453
+                 13466999999999998888877766 PP
+
+  == domain 3  score: 7.5 bits;  conditional E-value: 0.0014
+                 HCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCC.......HHHHCCTSSCCCSS-SS- CS
+         FAT 135 lspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkL.......refvscllekkeelssgl 226
+                 ++p+e+  + + k+++ l+ ++     +r++ Ae +++ +l e   ++++ ++v+a++++ + kg+++ al  L                 + +ls  +
+  ZK328.7a.1 621 FQPKES--ADTHKISVQLELIDTLQHMKRIQEAETTMTDALAEWAGQPEQDQLVIAQAQLYLTKGHVERALGILkkiqpgqS---------NFHLSRIK 708
+                 667777..66677888889999999999************99999666667***********************44433330.........33333333 PP
+
+                 --.........................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+         FAT 227 evq..............eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnf 294
+                 +++              ++++l + ++     y ++G+   ++q+ + + +  e++l+  s+ ++l+ +  +a+  +a+++ 
+  ZK328.7a.1 709 MAEiyleekkdkrmfaaCYRELLKVEATP-GSYSLLGDAFMKVQEPEDAINFYEQALKMQSKDVQLAEKIGEAYV-MAHLYS 788
+                 33322222222233323344444443332.455555555555555333333444444444444555555555443.455555 PP
+
+  == domain 4  score: 12.9 bits;  conditional E-value: 3.2e-05
+                 STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCC CS
+         FAT 147 kaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcy 245
+                 + +m lk anl  k  +++ +ek+L+   e d+e++ + e + +y+++l+   e++e + ++ e  +   +  ++l+s ++  ++t    ++k+ ar+ 
+  ZK328.7a.1 803 DKNMRLKLANLLLKLRNFEKCEKVLRAPFERDPEPVGT-ETIQTYIQFLLLLAECHEMMDNVPEAMNDFEKA-KSLHSRIQ--DKTLTAALKKEGARIC 897
+                 5689*****************************77776.***********************9999955444.35555543..6677777777778888 PP
+
+                 CTCCCCCCCCCCCT.S...-SSCCHHHHCC CS
+         FAT 246 lkkGewlaalqklnwseekseeilqaysaa 275
+                  +++e l + ++++++++  +++l+++ + 
+  ZK328.7a.1 898 NLQAELLYRRREFSQAVDICKQALAYHETD 927
+                 888888877777776666666666666554 PP
+
+  == domain 5  score: 6.7 bits;  conditional E-value: 0.0024
+                  CCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCC CS
+         FAT  151 wlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkL 208 
+                    + ++l  ++g+ + Aek+L +++e ++  + ++ + + + ++ w +g+q+eal + 
+  ZK328.7a.1  999 LSRVVELFCRNGEQNAAEKHLDRAKEVNPRCVTESGYNVCRGRFEWYTGDQNEALRYY 1056
+                  3477778888999999999999999999966666899999999999999999999765 PP
+
+  == domain 6  score: -0.7 bits;  conditional E-value: 0.44
+                  TCCCHCCCHC...............HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCT CS
+         FAT  131 Rslvlspied...............lllkgakaemwlkfanlaRksgrlslAekaLkklleed 178 
+                  R +vl ++ +               +  +++ +++wl  a++  +++  ++A   L  + +++
+  ZK328.7a.1 1173 RGHVLLKQVQkaktvlkmvngrvwnFDDSDYLEKCWLMLADIYINQNKNDQAVTFLDLVFKYN 1235
+                  556665555556666666666777777889999*********999999999988887776665 PP
+
+>> T25F10.5.1  pep chromosome:WBcel235:V:6762467:6765072:-1 gene:WBGene00000244 transcript:T25F10.5.1 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.2   0.2   0.00021      0.56     237     273 ..     218     254 ..     193     275 .. 0.77
+   2 ?    0.8   0.0      0.15     4e+02     255     303 ..     428     476 ..     421     500 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 10.2 bits;  conditional E-value: 0.00021
+                 ...HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHH CS
+         FAT 237 ftkll.arcylkkGewlaalqklnwseekseeilqays 273
+                 + k++ a+cyl++G+ + a+++l++s e+ ++  + ++
+  T25F10.5.1 218 YWKNQlAKCYLRLGMLQDATKQLQSSLEQ-KKLIETFA 254
+                 444555****************9866664.44444444 PP
+
+  == domain 2  score: 0.8 bits;  conditional E-value: 0.15
+                 CCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH CS
+         FAT 255 lqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek 303
+                 l+ l+ +e k++e+ + ys+at  +p   +  ++++l+ f + ++ e +
+  T25F10.5.1 428 LGILKHREGKIDEARSLYSSATSKNPYMFEGNYNLGLVSFTQGKYHECR 476
+                 5556678899*****************9999999999999887777655 PP
+
+>> Y37E3.1.1  pep chromosome:WBcel235:I:2061667:2063998:-1 gene:WBGene00021346 transcript:Y37E3.1.1 gene_biotype:protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.1   0.0   0.00022      0.59     222     292 ..      39     103 ..       6     209 .. 0.87
+   2 ?    0.4   0.2       0.2   5.4e+02     214     264 ..     231     280 ..     196     295 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 10.1 bits;  conditional E-value: 0.00022
+                S-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+        FAT 222 lssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalf 292
+                +++ l+++ +t+  + t+++a  +++ G+  + l++       +e +++  s++++++p+ ++awh+++l 
+  Y37E3.1.1  39 IQEILPTIISTSRAYDTNQKALLLAEGGKMYNVLEDY------NETAEKMLSKSVRMNPKNADAWHELGLC 103
+                4555666688888999999999999999999999994......89**********************9975 PP
+
+  == domain 2  score: 0.4 bits;  conditional E-value: 0.2
+                CTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S... CS
+        FAT 214 cllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseek 264
+                ++ e    l++  e+ +p+n  e +++la +   +++++ a+qk+ ++++k
+  Y37E3.1.1 231 KYDEALAVLQKAVEY-DPRNELETREKLASFVSYLSKFTDAIQKKGKMKAK 280
+                333333344444444.55555555566678888888888888875555444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      31865  (14970386 residues searched)
+Passed MSV filter:                      2309  (0.0724619); expected 637.3 (0.02)
+Passed bias filter:                      746  (0.0234113); expected 637.3 (0.02)
+Passed Vit filter:                        80  (0.00251059); expected 31.9 (0.001)
+Passed Fwd filter:                        12  (0.000376589); expected 0.3 (1e-05)
+Initial search space (Z):              31865  [actual number of targets]
+Domain search space  (domZ):              12  [number of targets reported over threshold]
+# CPU time: 0.34u 0.06s 00:00:00.40 Elapsed: 00:00:00.20
+# Mc/sec: 25284.18
+//
+[ok]

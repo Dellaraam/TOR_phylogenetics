@@ -1,0 +1,74 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Nematostella_vectensis.ASM20922v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-34  119.8   0.1      5e-34  118.7   0.1    1.5  1  EDO48758  pep supercontig:ASM20922v1:NEMVEscaffold_6:2305849:
+     0.0026   17.3  44.4      0.003   17.0  44.4    1.1  1  EDO47333  pep supercontig:ASM20922v1:NEMVEscaffold_14:381474:
+
+
+Domain annotation for each sequence (and alignments):
+>> EDO48758  pep supercontig:ASM20922v1:NEMVEscaffold_6:2305849:2307135:1 gene:NEMVEDRAFT_v1g82732 transcript:EDO48758 g
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.7   0.1     4e-38     5e-34     320     396 ..       8      83 ..       2     124 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 118.7 bits;  conditional E-value: 4e-38
+  PTHR13335.orig.30.pir 320 satVqevIGlaLwqyteegrepklpdnkvnaycLrivEdDGevddDFPpLDrnepiskfgfselaLveatdsegktn 396
+                            +atVq++IGl+ ++yt e  +p+l+dn +n+ycL+i+EdDGevd+DFP+LDr+e i+kfgf+ laLvea +s+ +t 
+               EDO48758   8 TATVQDLIGLIMYKYTAESLDPPLKDN-LNHYCLMIAEDDGEVDTDFPALDRKEIITKFGFTSLALVEAISSKKITT 83 
+                            8**************************.********************************************99984 PP
+
+>> EDO47333  pep supercontig:ASM20922v1:NEMVEscaffold_14:381474:387344:-1 gene:NEMVEDRAFT_v1g239362 transcript:EDO47333 
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.0  44.4   2.4e-07     0.003      39     226 ..      22     286 ..       4     377 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 17.0 bits;  conditional E-value: 2.4e-07
+  PTHR13335.orig.30.pir  39 ekihsapyppvsssssesll...srpksastpgdsgsedsgssneaetatg...................gdtkarrkkpsldqrret 104
+                             + + ++++ +s+ ss+s +   s+ ++++++g+s+s+d+gs ++ +++ +                   +++k+r+ ++s+++++++
+               EDO47333  22 LECEDKSRNYDSKVSSISKTspdSSKHRSRSRGRSTSVDDGSRSRSRRK-RlsrsssrssdrdgekhdygNNRKQRNAQSSSSTETSQ 108
+                            4455566666777777777777788999999999999999997773332.24667777777777777776777777777777777777 PP
+
+  PTHR13335.orig.30.pir 105 qgekqssesesspsyeeelqsvdissssldegsrrrra...ntavkleklrkerrsksasiassee.rdqsscksiqwktessvkeds 188
+                            +   ++ +s+ss+s+++++ + +i+++s +   r++++   + + + +k ++ +r ks++++s  + ++++s+   +++  +++ + s
+               EDO47333 109 RSRARKRQSSSSSSTTSSSPERNIKKKSSKAPKRQSSSsssSLPKRKTKKKQ-HRLKSGNTRSQTSsSSAASSPERKSG--NKTHSRS 193
+                            7777777777777777777777777777777776666522111222222222.22222222222111112222222222..2222222 PP
+
+  PTHR13335.orig.30.pir 189 vqrassesslsserssdssssssapsr.rq.snkldseq................................................. 225
+                            +  ++s+   ss++ss+s+s++++ +r ++ +    +++                                                 
+               EDO47333 194 RSKTKSKRLYSSSESSESDSDYKRQKRsKKkK----KQMkkekkkglkkvkltavnqnkygkygilvdsdmytkqpefycwlmeikkv 277
+                            22222222233333333344444444332232....2222222445555555555555555555555555555555555555555555 PP
+
+  PTHR13335.orig.30.pir 226 ........l 226
+                                     
+               EDO47333 278 npeivgrfE 286
+                            555555551 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      24780  (8294118 residues searched)
+Passed MSV filter:                      2443  (0.0985876); expected 495.6 (0.02)
+Passed bias filter:                      596  (0.0240517); expected 495.6 (0.02)
+Passed Vit filter:                       129  (0.00520581); expected 24.8 (0.001)
+Passed Fwd filter:                        19  (0.000766747); expected 0.2 (1e-05)
+Initial search space (Z):              24780  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.45u 0.02s 00:00:00.47 Elapsed: 00:00:00.23
+# Mc/sec: 23967.37
+//
+[ok]

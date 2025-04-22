@@ -1,0 +1,52 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/I_multifiliis_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+  ------ inclusion threshold ------
+      0.019   10.2  17.9       0.04    9.2  17.9    1.4  1  IMG5_013020  protein kinase domain protein
+
+
+Domain annotation for each sequence (and alignments):
+>> IMG5_013020  protein kinase domain protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.2  17.9     9e-06      0.04     442     543 ..     325     424 ..     287     435 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 9.2 bits;  conditional E-value: 9e-06
+  PTHR13298.orig.30.pir 442 aslhslptlvslaasfssekskrnraaaalalksldelkrsksksaslyldeilqkkllersssnssedskrkrlrqiledddeafkr 529
+                            +s+ s+ +  +l+++ ++ k  +n +  a   + ++++++++ ++ + y++++ q + ++++++++++  ++++++q+ +++++ fkr
+            IMG5_013020 325 NSILSMKNIKNLKTKSQQLKTISNSNLLA-QNQIFNSMQQQQQQQQQQYQQQQQQ-QQQQQQQQQQQQYLQQQQFQQTQQNSNSNFKR 410
+                            44555555555555555555555444444.3334455555555555555555444.444555555566666666667*********** PP
+
+  PTHR13298.orig.30.pir 530 mlkdsqvlstkdyl 543
+                             +++sq l +++ +
+            IMG5_013020 411 IITESQNLYKNNLQ 424
+                            ********999887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                       4462  (1867145 residues searched)
+Passed MSV filter:                       819  (0.18355); expected 89.2 (0.02)
+Passed bias filter:                      100  (0.0224115); expected 89.2 (0.02)
+Passed Vit filter:                        18  (0.00403407); expected 4.5 (0.001)
+Passed Fwd filter:                         1  (0.000224115); expected 0.0 (1e-05)
+Initial search space (Z):               4462  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.13u 0.02s 00:00:00.15 Elapsed: 00:00:00.07
+# Mc/sec: 27788.61
+//
+[ok]

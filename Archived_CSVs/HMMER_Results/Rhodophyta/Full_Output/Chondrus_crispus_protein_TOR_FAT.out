@@ -1,0 +1,292 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Rhodophyta/Proteins/Chondrus_crispus_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.4e-48  163.4   2.5    3.4e-46  157.2   0.1    2.4  2  CDF35341.1  unnamed protein product [Chondrus crispus]
+    1.7e-39  135.2   4.4    1.7e-39  135.2   4.4    2.4  2  CDF32511.1  unnamed protein product [Chondrus crispus]
+    2.2e-20   72.3   0.0    4.1e-20   71.4   0.0    1.5  1  CDF36547.1  unnamed protein product [Chondrus crispus]
+    2.3e-05   22.9  17.9      0.054   11.8   0.2    6.5  7  CDF39100.1  TPR repeat-containing protein [Chondrus crispus]
+     0.0037   15.7   2.8       0.83    7.9   0.2    2.8  2  CDF33966.1  similar to PRP6 pre-mRNA splicing factor 6 homolo
+  ------ inclusion threshold ------
+      0.016   13.5   2.1      0.019   13.3   2.1    1.1  1  CDF38011.1  unnamed protein product [Chondrus crispus]
+      0.039   12.3   0.0        0.8    8.0   0.0    3.0  2  CDF35957.1  UDP-GlcNAc: peptide-N-acetylglucosaminyltransfera
+
+
+Domain annotation for each sequence (and alignments):
+>> CDF35341.1  unnamed protein product [Chondrus crispus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    5.7   0.3    0.0028         4      10      68 ..    1427    1492 ..    1417    1497 .. 0.85
+   2 !  157.2   0.1   2.5e-49   3.4e-46      11     343 .]    1506    1877 ..    1504    1877 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 5.7 bits;  conditional E-value: 0.0028
+                  TSSSGHH.CCCCT.........TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS--- CS
+         FAT   10 rlgqWds.meeylslmk.....kdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsg 68  
+                  +l+qWd+ +++y ++++     +++ + ++++a+ +l   ++ +e+++l+++arq +  ++ al  
+  CDF35341.1 1427 KLQQWDDaLKSYRKTIRfhsgnEEERESTLLGALRCLNEiGEWREMNTLLQEARQACHGNMNALRQ 1492
+                  3569***99999999999998777777779******9999********************999975 PP
+
+  == domain 2  score: 157.2 bits;  conditional E-value: 2.5e-49
+                  SSSGHHCCCCT....TSSSS--CCCHCCC..CHH--...CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.... CS
+         FAT   11 lgqWdsmeeylslmkkdspdkaffeaila..lhrnq...fdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls.... 98  
+                  lg Wd+ e+++++++ d++d+ f++++l+  l ++q   +d+ae+++ +ar  l+ el+a ++e y ray  +v+ Q l+E+eeiiq+++ ++    
+  CDF35341.1 1506 LGLWDEFEQCVDVLETDTYDGCFYHTLLSieLGKEQpiyLDKAEKFLHQARRKLDLELTARVSEAYPRAYVHVVNAQLLVEMEEIIQFLRLSRkdai 1602
+                  567**************************6655577999***************************************************9999996 PP
+
+                  ..---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.............T CS
+         FAT   99 ..sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp........p 185 
+                     + +l+++   W++Rl+g+++d+  w ++l++R+lv  p +         e+wl f n+++k++rl  A +aL+kl  + +e+++         p
+  CDF35341.1 1603 afGKGRLDDV---WTERLKGCKHDMFSWYRLLMIRALVQRPVDV-------KEHWLDFTNICWKNKRLPWASEALRKLVSSCSEQSQGdnaytsqhP 1689
+                  6666666666...***************************9999.......9**************************8777733333455555453 PP
+
+                  .......................SSCCCHHHHHHHCCHHHHHSSCC.....HHHHCCTSSCCC.SS-SS---............HH.HHCCCTCCCC CS
+         FAT  186 .......................evvyaylkylwakgeqkealqkL.....refvscllekke.elssglevqeptnleeft.kll.arcylkkGew 251 
+                                         ev +a +k+lw  g++ ea+++L         s+l  + + e+s+     e +++  +  ++l + ++l+++ew
+  CDF35341.1 1690 vsannvplvgewntnfllsirevEVRFACIKHLWNVGRRVEAFKTLdacrdDFAFSRLEPRVRfENSHSE---EVRHIGNNGqAVLtSDVFLRLAEW 1783
+                  6677778999999999999**99***********************666643333444433324444444...4455555541445799******** PP
+
+                  CCCCCCCT.S...-SSCCHHH.HCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCC.HHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+         FAT  252 laalqklnwseekseeilqay.saateldpswykawhtwalfnfevlskeeekkeeeepedls.eyvvpavegflkslslsse.kslqdllRlLt 343 
+                   + +     + + s++    y  +a++++p+w++awh+w+ +n ++++++ ++++++ +++l  +y  +av+  + ++ l  + ++l+d l++Lt
+  CDF35341.1 1784 GETIICDGLEANISDDLPLTYaDRAVRIRPDWAEAWHYWGNLNANRFKALVKGNKSK-RRHLGrRYFDQAVKALFTAIDLDTSmSTLEDSLKVLT 1877
+                  ****99888888888875555168**************************9998887.788888*****************************98 PP
+
+>> CDF32511.1  unnamed protein product [Chondrus crispus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.2   4.4   1.2e-42   1.7e-39       2     342 ..    3218    3625 ..    3217    3626 .. 0.91
+   2 ?   -1.9   2.0       0.6   8.3e+02     205     277 ..    3809    3879 ..    3795    3909 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 135.2 bits;  conditional E-value: 1.2e-42
+                  CCTTCCCCTSSSGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHH.HHCCCCCHHHCHHCCHHCS CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydl.lvrlQqlaEleeiiqykqk 96  
+                  +l  e+ Wr ++W  ++e l +   +d+p+ ++++a+++l+ n++d a ++i+ + +  ++ ++al+      ay+  +v++Qql+El+e+  ++++
+  CDF32511.1 3218 ELLHECLWRIPDWSALKELLIKNPvEDGPQLKLYQAYMQLQENKLDVADSYIQGGYERSLKRYCALPESWDLDAYGPiFVQFQQLVELQESRRILSE 3314
+                  57789************99955558*************************************************97549****************** PP
+
+                  S-..............---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC....................................... CS
+         FAT   97 ls..............sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied....................................... 140 
+                  l+              + ++ + +l+tWr+Rlp  + ++  w+dil++R +v     +                                       
+  CDF32511.1 3315 LNalsrhgnttinveqKIDNVRLILNTWRERLPSQHESLTTWNDILTWRNHVHAVVVNvlealkeaasakvaaaqnapgnggvgnrnanslhaqtpq 3411
+                  ****99999999966666666666*****************************9999999999********************************** PP
+
+                  ..............HHCCS-STTCCC..CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC. CS
+         FAT  141 ..............lllkgakaemwl..kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke. 220 
+                                +l+ g+++++w   +fa+ +Rk+g +++A  aL+kl                   y   + e  e++ k +e +++ + ++  
+  CDF32511.1 3412 vqaaaaiaqalpqqVLVMGVNETAWSvhRFAKACRKQGFPDMALYALQKL-------------------YPFGTMELTEYFVKTKETAKSFMAQPLg 3489
+                  **************99999999999999**********************...................8899999999999999999988877654 PP
+
+                  ...SS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH..SSSS.... CS
+         FAT  221 ...elssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek..keeee... 308 
+                     + + gl   ++ n+++f+ ++ a+ ++ +G+  aal+k         +++ a++ a  +++++ +aw +w+l+++ +l+++ ++  +       
+  CDF32511.1 3490 idnSTKYGLHELNKCNMDHFNSRQkAQLFTVRGKLCAALGK-------EADAVDAFTVALSTSSDVSSAWLAWGLHCDAQLQRLSSQltS---Aprr 3576
+                  433444444444*****************************.......99**********************************777440...1456 PP
+
+                  ..............S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+         FAT  309 ..............pedls.eyvvpavegflkslslssekslqdllRlL 342 
+                                ++++  e    av+++l++++ +s ks+ +l+R+L
+  CDF32511.1 3577 dgiqgakasndnkkETEAAlEWREAAVNCYLQAVRFGSRKSRLYLPRVL 3625
+                  679999999999995555559***************************9 PP
+
+  == domain 2  score: -1.9 bits;  conditional E-value: 0.6
+                  SSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHH CS
+         FAT  205 lqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaate 277 
+                  +q L+  v+++ ++ + +++ l+ +e+t    + ++  a + +k+ +  + l+++   ++ +e+ +q y+aa++
+  CDF32511.1 3809 IQILKGHVQRTHQRYQMIQKALQRIESTVNASQGTSEhAANVAKRNQLKEDLGHT---HQVHEKYVQEYAAAQQ 3879
+                  4555555555555544555555544333333333333355555555555555552...2334555555555544 PP
+
+>> CDF36547.1  unnamed protein product [Chondrus crispus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.4   0.0     3e-23   4.1e-20       2     343 .]    1886    2258 ..    1885    2258 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 71.4 bits;  conditional E-value: 3e-23
+                  CCTTCCCCTSSSGHHCCCCT..................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCC CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk..............kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQql 84  
+                   l + aaWrlg Wd+++++ ++                  +++ +f +++ +l++++  ++++ + +ar+ l   + +l+ e y+ray+ l  l+ l
+  CDF36547.1 1886 ALGIDAAWRLGRWDKVADFGKFSAdtdrqkpssgstawTLDFNVSFGRMLTSLRNRRTVQMRRAACEARSHLRVPIVRLAREGYSRAYPMLTLLHSL 1982
+                  57899***************99999999999998887767777779999999********************************************* PP
+
+                  HHHCHHCCHHCSS-....---TTTTT....TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCC CS
+         FAT   85 aEleeiiqykqkls....sseelksl....lktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkk 173 
+                  +++e+ i  +++      + +++ ++    l  +  R   +++++++++++ls  ++ ++   +   k+  a++ l+ a+la + ++l  A  + ++
+  CDF36547.1 1983 SDIEDTIYACEAMTesseDTDSRHEVsytpLISLAGRFAATAPSLKIREPLLSAKRVCYELLHK---KSEAAAVDLQLAQLAHEEDNLRAASVYAFN 2076
+                  *******99998888666555555557888999*****************************99...9999*********************99999 PP
+
+                  CCHCTT......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCC CS
+         FAT  174 lleedk.eewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeil 269 
+                  +  + + +e++  e+v++ +++ +++g+ + al++++++++  l+   + +    v+ ++  + +  +l  +y + G w +++++     e se il
+  CDF36547.1 2077 ASSKVSiDEVRF-EAVLQMARLCHDQGDASGALLMVEKEIH-SLQI--TEQASEKVCGKNAPSPIPGRLCTAYVLAGRWIEEARS-----EPSEVIL 2164
+                  944444555555.****************************.4454..4555566779999999999******************.....46999** PP
+
+                  HHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.....................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  270 qaysaateldpswykawhtwalfnfevlskeeekkeeee....................pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                  + + +a+ l ps ++ +++++++++  l++  ++ ++++                    p   seyv   ++ f ++l +++e +++ l+R+ t
+  CDF36547.1 2165 SFFEQAAVLGPSREEPFYALGRHYDALLQAGSNTDSNVSlpviksaarssrraleggsdPLSGSEYVPMIIKSFAQALCNGNERIYEALPRMMT 2258
+                  *******************************88888888******************77666669**************************987 PP
+
+>> CDF39100.1  TPR repeat-containing protein [Chondrus crispus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.0   0.0       0.3   4.2e+02     253     291 ..     161     199 ..      60     203 .. 0.77
+   2 ?   -2.7   0.0         1   1.4e+03     230     291 ..     264     318 ..     235     325 .. 0.73
+   3 !    8.2   0.1   0.00051      0.71     256     294 ..     353     391 ..     328     416 .. 0.88
+   4 !   11.8   0.2   3.9e-05     0.054     259     304 ..     463     508 ..     452     525 .. 0.84
+   5 ?    3.1   0.2     0.017        24     261     295 ..     568     602 ..     511     635 .. 0.63
+   6 !    6.1   0.5    0.0021         3     136     184 ..     652     703 ..     641     724 .. 0.76
+   7 ?   -1.4   0.1      0.41   5.7e+02     260     294 ..     746     780 ..     740     788 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -1.0 bits;  conditional E-value: 0.3
+                 CCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCH CS
+         FAT 253 aalqklnwseekseeilqaysaateldpswykawhtwal 291
+                 +a+++l+ + ++ e++  a++ a+ +dp+ +  + +w++
+  CDF39100.1 161 RAIGELEGRDRNFEKARTAFQNAIAIDPHDARLFLAWGK 199
+                 566677777788888888888888888887777777776 PP
+
+  == domain 2  score: -2.7 bits;  conditional E-value: 1
+                 ..........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCH CS
+         FAT 230 eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwal 291
+                 ++tn+    +lla ++ +++   a+ ++        ++ +   ++a ++ p+++  w  +a+
+  CDF39100.1 264 NNTNVALTPHLLADALRERAILAARNGQ-------LDDSVTLLTRASQIEPDCATGWRLLAS 318
+                 6677777777777777777776666666.......788888888999999999888887775 PP
+
+  == domain 3  score: 8.2 bits;  conditional E-value: 0.00051
+                 CCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+         FAT 256 qklnwseekseeilqaysaateldpswykawhtwalfnf 294
+                 ++ ++s  +++++ + +++at  +++  +aw++w+l++ 
+  CDF39100.1 353 GQDERSAGDIDAARERFRLATCANSDYMSAWMSWGLLEK 391
+                 556778888**************************9876 PP
+
+  == domain 4  score: 11.8 bits;  conditional E-value: 3.9e-05
+                 T.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHS CS
+         FAT 259 nwseekseeilqaysaateldpswykawhtwalfnfevlskeeekk 304
+                 ++++ ++e++ + ++++  +dp+  +awh+wal++ ++ ++e+ ++
+  CDF39100.1 463 EERRGNIEKARELFAKSSTTDPTHGSAWHSWALLEARRCNYERASE 508
+                 5678889******************************999997763 PP
+
+  == domain 5  score: 3.1 bits;  conditional E-value: 0.017
+                 S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+         FAT 261 seekseeilqaysaateldpswykawhtwalfnfe 295
+                 +  + e++ q +++a+e++p+  + wht++ ++ e
+  CDF39100.1 568 TAGSLEKAQQLFQKAIEVRPDDPSPWHTLGVLESE 602
+                 33344555555555555555555555555555444 PP
+
+  == domain 6  score: 6.1 bits;  conditional E-value: 0.0021
+                 CCCHCHHCCS-STTCCC.CCCCCHCHHHHCCSTTHHCCCCCHCTT........ CS
+         FAT 136 spiedlllkgakaemwl.kfanlaRksgrlslAekaLkklleedk...eewlp 184
+                  ++e   lk+a+++m l + a+l  ++g++++A k+L+k le d    e w+ 
+  CDF39100.1 652 AMQEA-KLKQADMAMLLqSWASLEEQHGEFDQARKLLRKGLEVDRrraETWQS 703
+                 44444.78999999999888999999999999999999999988866555554 PP
+
+  == domain 7  score: -1.4 bits;  conditional E-value: 0.41
+                 .S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+         FAT 260 wseekseeilqaysaateldpswykawhtwalfnf 294
+                  +e ++ e+   ++a ++++ps  k+w++ a +++
+  CDF39100.1 746 AEEGNIGEARDLFAAGVRVNPSNVKTWNAYAAAEN 780
+                 5667799999*****************99888765 PP
+
+>> CDF33966.1  similar to PRP6 pre-mRNA splicing factor 6 homolog [Chondrus crispus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.0   0.3    0.0011       1.6     148     229 ..     589     667 ..     569     728 .. 0.79
+   2 !    7.9   0.2   0.00059      0.83     244     300 ..     847     896 ..     726     917 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 7.0 bits;  conditional E-value: 0.0011
+                 TTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---. CS
+         FAT 148 aemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq 229
+                 ++ wl  a+  +ks+  + A  +L ++le ++   +   v +a +k++ ++ge ++a + L +  +++ +    ++s l  +
+  CDF33966.1 589 ETLWLMLAKDKWKSDGADEARVVLARALEANP--GS-QAVRLAAAKVQTESGEYQKARSILAQAREQVPSARVFMKSALLER 667
+                 688****************************9..33.3689********************887776666665555555444 PP
+
+  == domain 2  score: 7.9 bits;  conditional E-value: 0.00059
+                 CCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+         FAT 244 cylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlske 300
+                 + l+ +++ ++ +k       ++++    ++++e+dp+w + w+t+  f+ e+ s+ 
+  CDF33966.1 847 VILEVAKYIWRSGK-------QDKARTWLKRSVEVDPDWGDSWATLLAFEREHGSAD 896
+                 44566666666666.......899999999999999999999999999999987766 PP
+
+>> CDF38011.1  unnamed protein product [Chondrus crispus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.3   2.1   1.4e-05     0.019     209     329 ..      44     179 ..      27     193 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 13.3 bits;  conditional E-value: 1.4e-05
+                 HHHHCCTSSCCC.................SS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCC CS
+         FAT 209 refvscllekke.................elssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwa 290
+                  ++v+++l++                   +l+s+  ++ +t+l+ ++++la +++k    +++lq+ +  +ek ee ++   a +e  +++ k   ++a
+  CDF38011.1  44 SQSVKEVLQSLVddnlvntdkcgvqtvfwSLPSEASQKRKTKLSNIKEELAAALMKGTRLQEELQQEKLGREKTEERTALLEAIAEKEDRLKKVTVELA 142
+                 45555555555533334433334555555666666666****************************999999999999999999999999999999999 PP
+
+                 HHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHT CS
+         FAT 291 lfnfevlskeeekkeeeepedlseyvvpavegflkslsl 329
+                 +f +    ++++ ++++  +++++ + + v++ +++ s 
+  CDF38011.1 143 RFAEFDPLEMTKLEDNI--KKTRQCANRWVDNIFNCQSW 179
+                 87665555555555554..66667788888887777665 PP
+
+>> CDF35957.1  UDP-GlcNAc: peptide-N-acetylglucosaminyltransferase, family GT41 [Chondrus crispus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.0   0.0   0.00057       0.8     151     331 ..     152     344 ..     133     351 .. 0.58
+   2 ?   -0.7   0.0      0.26   3.6e+02     266     295 ..     330     359 ..     319     401 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 8.0 bits;  conditional E-value: 0.00057
+                 CCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCC CS
+         FAT 151 wlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkG 249
+                 +l   n++R+ grl+lA ++ +  +  ++++++  ++ y  + y+ +  e ++ + ++  f + ++++ ++++  l   +  ++ + ++l+  +  + +
+  CDF35957.1 152 YLAVGNVCREIGRLDLAASTFRACMTISPDSMEA-RAAYNACYYSQSFFEPSMEIGTV--FPEDTFNDVGNALRSLGHTSEAECAYRAALK--IAPRHA 245
+                 5666677777777777777777777777766666.66666666666666655555555..3333334444333333333333333333332..333333 PP
+
+                 CCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS...................S-TCCHHHHCCT..CCHHHHTT CS
+         FAT 250 ewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee..................pedlseyvvpavegflkslsls 330
+                    ++l+++ +++ ++ e++q+y+++   +p+ + a+ ++a +   + + +e +++                      +d+     +av+ + +++sl+
+  CDF35957.1 246 HAWNNLGNAMRAKGQIMEAMQCYTSSLTSQPGFAAAHCNLAGLLRDQGKPQEAEAQYRAaimsspnlpeaaaglgtaLRDMG-RTEEAVSFYVRAVSLQ 343
+                 3333333333334447777777777777777777777777766655555554444443367788888777777776644444.5777888888888776 PP
+
+                 T CS
+         FAT 331 s 331
+                  
+  CDF35957.1 344 P 344
+                 5 PP
+
+  == domain 2  score: -0.7 bits;  conditional E-value: 0.26
+                 SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+         FAT 266 eeilqaysaateldpswykawhtwalfnfe 295
+                 ee+++ y +a+ l+p+ ++ ++++a  +  
+  CDF35957.1 330 EEAVSFYVRAVSLQPGAADHHANLANTYKD 359
+                 555566666666666666666666555543 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       9807  (3430526 residues searched)
+Passed MSV filter:                       332  (0.0338534); expected 196.1 (0.02)
+Passed bias filter:                      203  (0.0206995); expected 196.1 (0.02)
+Passed Vit filter:                        27  (0.00275314); expected 9.8 (0.001)
+Passed Fwd filter:                         7  (0.000713776); expected 0.1 (1e-05)
+Initial search space (Z):               9807  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 0.09u 0.01s 00:00:00.10 Elapsed: 00:00:00.05
+# Mc/sec: 22063.65
+//
+[ok]

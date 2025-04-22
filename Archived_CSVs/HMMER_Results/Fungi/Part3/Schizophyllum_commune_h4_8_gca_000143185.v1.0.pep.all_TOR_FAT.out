@@ -1,0 +1,198 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Schizophyllum_commune_h4_8_gca_000143185.v1.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.7e-112  374.9   3.3   7.7e-112  373.5   3.3    1.8  1  EFJ02305  pep supercontig:v1.0:GL377302:4392922:4401056:1 gen
+    8.4e-75  251.7   1.1    9.2e-73  245.0   0.3    2.7  2  EFJ03049  pep supercontig:v1.0:GL377302:1209728:1220988:-1 ge
+    1.5e-42  145.6   0.5    2.8e-42  144.7   0.5    1.4  1  EFJ01689  pep supercontig:v1.0:GL377302:1304885:1311973:1 gen
+     0.0059   15.4   2.8      0.033   13.0   0.4    2.3  2  EFI94486  pep supercontig:v1.0:GL377309:1324674:1326253:1 gen
+  ------ inclusion threshold ------
+       0.34    9.7   1.9         18    3.9   0.0    3.4  3  EFI95018  pep supercontig:v1.0:GL377309:2006765:2011200:-1 ge
+
+
+Domain annotation for each sequence (and alignments):
+>> EFJ02305  pep supercontig:v1.0:GL377302:4392922:4401056:1 gene:SCHCODRAFT_64312 transcript:EFJ02305 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  373.5   3.3  2.9e-115  7.7e-112       1     343 []    1337    1681 ..    1337    1681 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 373.5 bits;  conditional E-value: 2.9e-115
+                CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+       FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                ap+aa+aaW+l +Wdsm++y+ +m++dspd++f++ail++hrnqf +a   i++ar+ll+ el++ +ge y r y+++vr Q+l+Eleeii+ykq  ++
+  EFJ02305 1337 APMAAAAAWSLNDWDSMDDYITTMRNDSPDRSFYRAILCVHRNQFPKALVNISRARDLLDPELQSFVGEGYGRSYGIMVRAQMLSELEEIIMYKQYADQ 1435
+                69************************************************************************************************* PP
+
+                --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT............TSSCCCH CS
+       FAT  100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk...eewlp....pevvyay 191 
+                ++++++++ktW+kRl+g+q+dvevwq+il+vR+lvl+p++d        +mw+kfanl+Rks+r+ lAek++++ll  +     ++++    p+vvya+
+  EFJ02305 1436 PDRQTTMRKTWMKRLQGCQPDVEVWQRILQVRTLVLNPEDD-------PDMWIKFANLCRKSDRMALAEKTIRSLLSPRHghgYDMHHikapPNVVYAQ 1527
+                *****************************************.......***************************88888888444446789******* PP
+
+                HHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S.....-SSCCHHHHCCHHCTCCCHSTTCC CS
+       FAT  192 lkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseek..seeilqaysaateldpswykawht 288 
+                lky+wa g+ +e lq Lref  +l  + ++ +s     +++++ + +kllarcy+k+++w+a+ ++ +w +++  +++i+ ay+ at++dp+wykawht
+  EFJ02305 1528 LKYMWACGNYDESLQFLREFSAKLEADVKDPRSTA---SADKHATSAKLLARCYFKQASWQAQRNE-EWHNDEtlRQQIMYAYLFATQCDPQWYKAWHT 1622
+                **********************8888775555554...579999*********************9.777665559*********************** PP
+
+                CCHHHHHCCHHHHHHSSSS....S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  289 walfnfevlskeeekkeeee...pedls.eyvvpavegflkslslssekslqdllRlLt 343 
+                wal+nfev+ + e++++      p ++   +v++a++gf+ s+sl +e+slqd+lRlLt
+  EFJ02305 1623 WALANFEVVGHIESQADTRLsdiPGEILaGHVMQAIRGFFCSISLRNEESLQDTLRLLT 1681
+                ************99855444778999999*****************************8 PP
+
+>> EFJ03049  pep supercontig:v1.0:GL377302:1209728:1220988:-1 gene:SCHCODRAFT_12680 transcript:EFJ03049 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    4.4   0.0    0.0049        13     103     140 ..    1442    1479 ..    1417    1522 .. 0.76
+   2 !  245.0   0.3   3.5e-76   9.2e-73       2     343 .]    2429    2779 ..    2428    2779 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 4.4 bits;  conditional E-value: 0.0049
+                TTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC CS
+       FAT  103 lksllktWrkRlpgvqddvevwqdilsvRslvlspied 140 
+                 ++l++ Wr+ l+  q+d +v ++i+++R ++++  ++
+  EFJ03049 1442 VDALVDLWRNDLKIAQSDPSVVERIVATRDVFITALKQ 1479
+                578999***************************98887 PP
+
+  == domain 2  score: 245.0 bits;  conditional E-value: 3.5e-76
+                CCTTCCCCTSSSGHH....CCCCT.....TSSSS--CCCHCCCCHH.....--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHH CS
+       FAT    2 plaaeaaWrlgqWds....meeylslmk.kdspdkaffeailalhr.....nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleei 90  
+                +l +e+aWr ++Wd+    +ee++ l+   ++ ++ +fea+l+l +     ++  e+ + +e a ql ++++  l++ +  ++++ll+++Qq +El+e+
+  EFJ03049 2429 ELLLESAWRTKNWDEnislIEEQMALLPqPPTIRRLIFEAFLSLVKgseppEKNAEFTKALEDATQLSLRKWVNLPSHLSPAHVPLLQNFQQFVELQEA 2527
+                689************77777777766668999***********9988777888********************************************** PP
+
+                CCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.....................HHCCS-STTCCC..CCCCC CS
+       FAT   91 iqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.....................lllkgakaemwl..kfanl 157 
+                ++++ +l+         +s +lk +l+ Wr+Rlp+++dd+++w+d++ +R+ v++ i++                     + ++g ++++w+  +fa++
+  EFJ03049 2528 VSIYASLAttvagnlekKSGDLKVVLQAWRERLPNIHDDISIWSDLVNWRQNVFNSINKiyvplipqqgqnggttsntntFGFRGFHETAWIinRFAHV 2626
+                *************************************************************************************************** PP
+
+                HCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCC CS
+       FAT  158 aRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaal 255 
+                aRk+  l+++++aL+k+                   y+++++e++ea++kLre++ c+++k+ el sglev+++tnl  ft+++ +++y++kG++ a++
+  EFJ03049 2627 ARKHELLDVCMSALTKI-------------------YTLPNIEISEAFLKLREQARCHYQKPAELASGLEVINNTNLVFFTASQkSEFYTLKGMFSAKM 2706
+                *****************...................*************************************************************** PP
+
+                CCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT  256 qklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                ++       ++++  a+++a++ld ++ kaw++w++f ++ ++++        ++dl+ ++ +av+++l+++ l+++ ks+  l R+L+
+  EFJ03049 2707 GR-------HDDAGLAFAQAVQLDMQQPKAWAQWGRFSDRLFKEN--------SSDLN-HAASAVTCYLQAAGLYKNgKSRPLLGRVLW 2779
+                **.......9***********************************........99998.*****************************9 PP
+
+>> EFJ01689  pep supercontig:v1.0:GL377302:1304885:1311973:1 gene:SCHCODRAFT_12700 transcript:EFJ01689 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  144.7   0.5   1.1e-45   2.8e-42       3     343 .]    1088    1413 ..    1086    1413 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 144.7 bits;  conditional E-value: 1.1e-45
+                CTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-... CS
+       FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls... 98  
+                +a+e+aW++g Wd+++  +s +  + p+  + +++la++ ++  +++  +e ar  l +   a  +  y+r y++ ++l++ +Ele i   +++++   
+  EFJ01689 1088 YAVESAWMVGAWDDVAALTSGTTTNAPQILIAKVMLAMREDDAAQVNAALEIARAALGRTVVAAGVSGYRRSYEATLDLHMTHELELIYRTLRDDDsvr 1186
+                799******************************************************************************************999888 PP
+
+                ---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC..HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHH CS
+       FAT   99 sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied..lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkyl 195 
+                  ++++ l  ++ +Rl  + + ++++++ils+R+ ++s+  +  + ++++  + wl+++++aRk+g+ ++A++aL+++++++      p  +++++ky 
+  EFJ01689 1187 RRHSMANLMHELSTRLDATLPAFRIREPILSMRRAAFSMDPNadSNASDQVGRLWLSSSKIARKAGQWQTAYSALLQAQQSKA-----PYSFIESAKYV 1280
+                88888888*****************************7776655889999****************************99999.....999******** PP
+
+                HHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+       FAT  196 wakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnf 294 
+                 a ge   alq+L+ + + l+    ++  +l+v      +e+++ +a+++l+++ w+++  + +     ++ il+ y++at ++p+w++  +++++f++
+  EFJ01689 1281 KAIGEPLRALQELENSMK-LIGILDDNMYDLTV----DQSELKAIKAKAHLLRARWMNESDRYD-----PSTILKGYTKATDFSPQWENGQFRLGQFHD 1369
+                ******************.77766555555555....556666667999*************77.....****************************** PP
+
+                HCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  295 evlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                ++++++ e+    +p++ + ++  +v+ f k+ + +s+ ++q ++RlLt
+  EFJ01689 1370 NAYKDVLEN----TPRMCR-MLFHVVKAFAKAMRFGSKYIYQTVPRLLT 1413
+                ******555....587776.****************************8 PP
+
+>> EFI94486  pep supercontig:v1.0:GL377309:1324674:1326253:1 gene:SCHCODRAFT_78251 transcript:EFI94486 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.0   0.4   1.3e-05     0.033     164     301 ..      64     202 ..      51     231 .. 0.73
+   2 ?    2.2   0.0     0.024        64      18      64 ..     235     288 ..     223     297 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 13.0 bits;  conditional E-value: 1.3e-05
+               CCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC......SS-SS---...........HHHHCCCTCCCCCCCCCCC CS
+       FAT 164 lslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke......elssglevqeptnleeftkllarcylkkGewlaalqkl 258
+               ++ Ae++   + e d+  ++  e+v  y+ +l+ ++++ +  +  +efv  l+++         ++  l +++ + +++f++      ++ G w+   ++l
+  EFI94486  64 YDRAEQQFDHIFEMDP--QR-IEWVDMYSNVLLVTQQKVKLAKIAHEFVA-LAKDRPevcvaiGNHFALRAEHMKAVKYFRRAAELDCTLTGPWTLMGHEL 160
+               4555555555655555..33.38999999999999999999999999999.44443347775444444444588999999999866678899999999997 PP
+
+               T.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHH CS
+       FAT 259 nwseekseeilqaysaateldpswykawhtwalfnfevlskee 301
+                 + ++s e++ ay++a  l+++ y aw+ +a++ +    ke 
+  EFI94486 161 -VEMKNSHEAMDAYRRALSLNRRDYRAWYGLAQASELLSMKEN 202
+               .56667***************************9876666654 PP
+
+  == domain 2  score: 2.2 bits;  conditional E-value: 0.024
+               CCCT........TSSSS--CCCHCCC.CHH..--CCHCHHCCCHCCCCCCCCCT CS
+       FAT  18 eeylslmk....kdspdkaffeaila.lhr..nqfdeaeeliekarqllvtels 64 
+               +e++++++      sp+++f    la lhr  ++++ea+++  ++ q++  e +
+  EFI94486 235 REAVDCLRrvlyAASPHEQFSTLKLAsLHRimGEYREAASYHHRIVQICNAENR 288
+               3444444477789999***999999999*9***********9999999988765 PP
+
+>> EFI95018  pep supercontig:v1.0:GL377309:2006765:2011200:-1 gene:SCHCODRAFT_59047 transcript:EFI95018 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.6   0.2     0.018        48     243     294 ..      41      85 ..       4     126 .. 0.66
+   2 ?    3.9   0.0    0.0069        18     147     183 ..     699     735 ..     679     751 .. 0.85
+   3 ?   -0.9   0.0       0.2   5.4e+02     151     200 ..     986    1032 ..     916    1047 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 2.6 bits;  conditional E-value: 0.018
+               HCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+       FAT 243 rcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnf 294
+                ++ ++G    +l++       +++ ++ay++a+ l+ps+  aw  + +f++
+  EFI95018  41 NAHVFLGLACLELGE-------HDNSEKAYRTAIDLNPSQLLAWQGLSKFYE 85 
+               334444444444555.......566667777777777777777776666665 PP
+
+  == domain 2  score: 3.9 bits;  conditional E-value: 0.0069
+               STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.... CS
+       FAT 147 kaemwlkfanlaRksgrlslAekaLkklleedkeewl 183
+               +a+ w++  +   k+gr+  A+kaL  ++e ++++w 
+  EFI95018 699 DAQLWVRLGEAYGKAGRHAAAIKALEHAQELAPDDWV 735
+               6899**************************9996653 PP
+
+  == domain 3  score: -0.9 bits;  conditional E-value: 0.2
+                CCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH CS
+       FAT  151 wlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakge 200 
+                w++   l   ++ ++lA++aL++++  d+++ l     + ++ + +a+++
+  EFI95018  986 WTRLGLLYLHHDDVQLANEALYRAQVLDPDYTLA---WIGQAMVAIANDH 1032
+                5555555666778888888888888887766555...4555555555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      13194  (5897161 residues searched)
+Passed MSV filter:                       486  (0.0368349); expected 263.9 (0.02)
+Passed bias filter:                      295  (0.0223586); expected 263.9 (0.02)
+Passed Vit filter:                        31  (0.00234955); expected 13.2 (0.001)
+Passed Fwd filter:                         5  (0.00037896); expected 0.1 (1e-05)
+Initial search space (Z):              13194  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.09u 0.03s 00:00:00.12 Elapsed: 00:00:00.06
+# Mc/sec: 32622.91
+//
+[ok]

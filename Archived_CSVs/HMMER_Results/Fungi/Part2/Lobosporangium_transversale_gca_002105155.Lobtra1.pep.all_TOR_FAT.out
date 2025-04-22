@@ -1,0 +1,279 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Lobosporangium_transversale_gca_002105155.Lobtra1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.9e-120  401.6   1.1   1.9e-120  401.6   1.1    2.0  3  ORZ10331  pep supercontig:Lobtra1:BCR41scaffold_31:282699:291
+   2.9e-112  374.7   1.6   2.9e-112  374.7   1.6    2.5  3  ORY99616  pep supercontig:Lobtra1:BCR41scaffold_67:159923:169
+    5.7e-75  252.1  10.1    5.7e-75  252.1  10.1    4.6  6  ORZ09687  pep supercontig:Lobtra1:BCR41scaffold_33:198460:212
+    1.1e-34  119.7   4.4    2.3e-34  118.6   4.4    1.6  1  ORZ11293  pep supercontig:Lobtra1:BCR41scaffold_28:120830:127
+    2.5e-15   55.9   5.3    1.8e-14   53.1   5.3    2.5  1  ORZ06122  pep supercontig:Lobtra1:BCR41scaffold_47:128727:146
+
+
+Domain annotation for each sequence (and alignments):
+>> ORZ10331  pep supercontig:Lobtra1:BCR41scaffold_31:282699:291884:1 gene:BCR41DRAFT_423880 transcript:ORZ10331 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.7   0.2       1.5   3.4e+03     102     140 ..    1130    1163 ..    1127    1185 .. 0.77
+   2 ?   -2.8   0.1      0.77   1.8e+03     210     251 ..    1322    1354 ..    1273    1372 .. 0.50
+   3 !  401.6   1.1  8.2e-124  1.9e-120       2     343 .]    1378    1727 ..    1377    1727 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: -3.7 bits;  conditional E-value: 1.5
+                TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC CS
+       FAT  102 elksllktWrkRlpgvqddvevwqdilsvRslvlspied 140 
+                +++sl++ W+++ + ++dd  +w     +R+l l++ ++
+  ORZ10331 1130 NQASLRRAWDTQPRSTKDDWADW-----IRRLCLEMLKE 1163
+                67899999999999999999999.....78888887777 PP
+
+  == domain 2  score: -2.8 bits;  conditional E-value: 0.77
+                HHHCCTSSCCCSS-SS---...........HHHHCCCTCCCC CS
+       FAT  210 efvscllekkeelssglevqeptnleeftkllarcylkkGew 251 
+                + +  +  k+ e++++          ++t++ +rc++ +Gew
+  ORZ10331 1322 DALAAYERKQLENPND---------LTLTNKRMRCLHALGEW 1354
+                3333222222222222.........22344445777777776 PP
+
+  == domain 3  score: 401.6 bits;  conditional E-value: 8.2e-124
+                CCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS--- CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklsss 100 
+                ++aa+aaW+lgqW++++ey+s+m+++  d+aff+ailalhrnqf+eae++i+k+r+ l+tel+al+gesynray ++vr+Q++aEleeii+ykq ++++
+  ORZ10331 1378 SFAAAAAWGLGQWELLDEYISAMQEN-SDRAFFKAILALHRNQFQEAEKYIDKTRNMLDTELTALVGESYNRAYATVVRVQMMAELEEIIAYKQYHDQP 1475
+                789********************865.69********************************************************************** PP
+
+                -TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT................TSSC CS
+       FAT  101 eelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk.....eewlp......pevv 188 
+                ++++++++tW+kRl+g+q++vevwq++++v+++v++p++d       +em +kf nl+Rk+grl lAe++++ l++ d                 p++v
+  ORZ10331 1476 DRQATIRRTWMKRLKGCQRNVEVWQKLIKVHAIVVTPAQD-------MEMRIKFMNLCRKNGRLRLAENTMSTLMGPDTanmsfT---AmtqvtpPQIV 1564
+                ****************************************.......********************************665552...1555788**** PP
+
+                CCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC........SS-SS---...............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCC CS
+       FAT  189 yaylkylwakgeqkealqkLrefvscllekke........elssglevq....eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaa 275 
+                ya+lky+wa+g ++ +l +Lr+f+++l+++ +         +            + n+ ++++llarcylk+Gew+ alq+  w+++++e+il  y+ a
+  ORZ10331 1565 YAKLKYMWATGVREHTLDCLRQFTERLASDLGlgtvedagIAM-----TganqLNGNVVDYSRLLARCYLKQGEWQFALQD-GWTHDSIEDILTPYLYA 1657
+                ******************************9988766654222.....133449***************************.6**************** PP
+
+                HHCTCCCHSTTCCCCHHHHHCCHHHHHH..SSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  276 teldpswykawhtwalfnfevlskeeek..keeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                 +ld++wykawhtwal+nfev++ +e++  ++ ++++   +yv+p++ gf+ks++ls+++slqd+lRlLt
+  ORZ10331 1658 KHLDKDWYKAWHTWALANFEVITFYEKNppPNHSGRDPCLQYVIPSIMGFFKSIALSQGNSLQDTLRLLT 1727
+                ****************************8756666888889****************************8 PP
+
+>> ORY99616  pep supercontig:Lobtra1:BCR41scaffold_67:159923:169841:-1 gene:BCR41DRAFT_426455 transcript:ORY99616 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.1   0.3       1.9   4.5e+03     273     293 ..    1303    1323 ..    1282    1335 .. 0.73
+   2 !  374.7   1.6  1.2e-115  2.9e-112       1     343 []    1376    1736 ..    1376    1736 .. 0.91
+   3 ?   -0.9   0.3      0.21     5e+02     189     254 ..    2282    2363 ..    2261    2381 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: -4.1 bits;  conditional E-value: 1.9
+                HCCHHCTCCCHSTTCCCCHHH CS
+       FAT  273 saateldpswykawhtwalfn 293 
+                +  +el  swy+  h+w ++ 
+  ORY99616 1303 HHDIELKESWYERLHRWEDAL 1323
+                455678889999999998876 PP
+
+  == domain 2  score: 374.7 bits;  conditional E-value: 1.2e-115
+                CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+       FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                ap+ a+aaW+lgqW++++ey+s+m+++spd+aff+ai+alhrnqf +aee i+++r ll+tel+al++esy+ray+++vr+Q++aEleeii+yk+ +++
+  ORY99616 1376 APYVAAAAWGLGQWEQLDEYISAMQDESPDRAFFKAIIALHRNQFGQAEEQIQHTRTLLDTELTALVSESYSRAYNTVVRVQMMAELEEIISYKRYENQ 1474
+                6899*********************************************************************************************** PP
+
+                --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT................TSS CS
+       FAT  100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk...eewlp........pev 187 
+                +e++++++ktW+kRl+g+ +++e+wq++++v++++l+p+ed       + m +kf nl+Rk+grl lAe+a+ +l++ +    e            p+v
+  ORY99616 1475 PERQATIRKTWMKRLLGCERNIEIWQRVIKVHAMALTPAED-------MVMRIKFMNLCRKAGRLRLAEQAMVSLMGRETtdmE---FvkmiqvtpPQV 1563
+                *****************************************.......******************************996551...334556688*** PP
+
+                CCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC......SS-SS---......................HHHHCCCTCCCCCCCCCCCT.S.....-SS CS
+       FAT  188 vyaylkylwakgeqkealqkLrefvscllekke......elssglevq...........eptnleeftkllarcylkkGewlaalqklnws..eeksee 267 
+                vya+lky+wa+g ++++l++Lr+f+ +l+++ e      +       +           +  + e+f +llarcylk+Gew+ alq+  w+  +++++ 
+  ORY99616 1564 VYAKLKYMWATGVHEQTLKCLRQFTDRLASDLEhrqgtgT-------EpngialtaanpTHGSDEDFWRLLARCYLKQGEWQFALQD-GWTpaSDSIDY 1654
+                *******************************976555553.......223444558845555567899*******************.58622567*** PP
+
+                CCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS........S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  268 ilqaysaateldpswykawhtwalfnfevlskeeekkeeee.......pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                il +ys a  ld++wykawhtwal+nf v+s++e+++   +       ++ +  yv+p+v+gf++s++ls ++slqd+lRlLt
+  ORY99616 1655 ILLHYSNAKDLDKNWYKAWHTWALANFDVISYYERNTATASvnagagaSRGIP-YVIPSVTGFFRSIALSAGNSLQDTLRLLT 1736
+                *********************************99966555788999666665.****************************8 PP
+
+  == domain 3  score: -0.9 bits;  conditional E-value: 0.21
+                CCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..........SS-SS---.......................HH.HHCCCTCCCCCCC CS
+       FAT  189 yaylkylwakgeqkealqkLrefvscllekke..........elssglevq............eptnleeftkll.arcylkkGewlaa 254 
+                 a+++ + ++++q+++lq+ +++v+ + +             +                    e+t+le + ++l ar+++ +   +++
+  ORY99616 2282 AASAQQQPQQQQQQQQLQHQQQSVQPVRHPSVvqgsykdqarS-------MrrplpseqelvsENTELEILPEQLnARALTILNRVTNK 2363
+                5677888888888888888888888665544465554444442.......134444446666699999999999988888766655555 PP
+
+>> ORZ09687  pep supercontig:Lobtra1:BCR41scaffold_33:198460:212124:-1 gene:BCR41DRAFT_424041 transcript:ORZ09687 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.8   0.0       1.6   3.7e+03     220     273 ..    1199    1256 ..    1171    1261 .. 0.66
+   2 ?   -2.6   0.1      0.68   1.6e+03     288     334 ..    1327    1396 ..    1319    1401 .. 0.76
+   3 !  252.1  10.1   2.4e-78   5.7e-75       2     341 ..    2685    3040 ..    2684    3042 .. 0.96
+   4 ?   -7.0   4.4         5   1.2e+04     199     229 ..    3115    3147 ..    3077    3165 .. 0.42
+   5 ?  -14.5  27.5         5   1.2e+04     165     288 ..    3240    3363 ..    3235    3410 .. 0.38
+   6 ?    0.5   0.1     0.078   1.8e+02      16      66 ..    3444    3498 ..    3423    3560 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -3.8 bits;  conditional E-value: 1.6
+                C.....SS-SS---............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHH CS
+       FAT  220 e.....elssglevq.eptnleeftkllarcylkkGewlaalqklnwseekseeilqays 273 
+                      +ls+ l v+  p+ + e ++++ +++ + G   ++l++ n+s+  +e i ++++
+  ORZ09687 1199 VddatqTLSHVLKVCnRPEDIGESADRQVKFNNLIGLLISELSNSNSSV--RETIQSSFQ 1256
+                2333334555555558899999999999999999999999999965544..555555555 PP
+
+  == domain 2  score: -2.6 bits;  conditional E-value: 0.68
+                CCCHHHHHCCHHHHHHSSSS...........................S-TCCHHHHCCT..CCHHHHTTTSST CS
+       FAT  288 twalfnfevlskeeekkeeee..........................pedlseyvvpavegflkslslsseks 334 
+                ++a++ +++l +++++ ++ +                          ++   +   + ++ f+ksl + s+++
+  ORZ09687 1327 ALADADDQALVHKTSQYKSASslinlrivcikllsaamacndfssnkQN---QTRQRIISVFFKSLYSKSSEV 1396
+                6889999999999888544445888999999999999999999644333...556777777999999998876 PP
+
+  == domain 3  score: 252.1 bits;  conditional E-value: 2.4e-78
+                CCTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.--.........CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCH CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhr.nq.........fdeaeeliekarqllvtelsalsgesynraydllvrlQqla 85  
+                +l +e++Wrl++W s +e ++++       ++p++ +fea+lal + nq          +e+++l++++ ql + +++ l+  + + +++ll+ +Qq +
+  ORZ09687 2685 ELLLESNWRLSDWTSEREVMEQLVysiteAPTPRRRVFEAFLALIKaNQphgqsteanTSEFAKLCDEGVQLSLWKWHTLPEVVSQTHVPLLQVFQQFV 2783
+                689************88888777778889**************555444444555666***************************************** PP
+
+                HHCHHCCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.......................HHCCS-STTCCC CS
+       FAT   86 Eleeiiqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.......................lllkgakaemwl 152 
+                El e+ q++q+l+         +s++lks+l+tWr+Rlp+++dd++vw+d++++R++++s i++                       ++++g+++++w+
+  ORZ09687 2784 ELTEANQIYQSLAsttalnlesKSQDLKSTLQTWRERLPNTWDDINVWSDLVAWRQHIFSAINKtylplihqlpsvtpgtggsnsnsFAYRGYHETAWI 2882
+                *************************************************************************************************** PP
+
+                ..CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTC CS
+       FAT  153 ..kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkk 248 
+                  +fa++aRk+   ++++++L+k+                   y+++++e++ea++kLre+++c++++  el++glev+++tnl++f+ ++ a++++ k
+  ORZ09687 2883 inRFAHVARKHQLADVCINQLTKI-------------------YTLPNIEIQEAFLKLREQAKCHFQNEAELTTGLEVINNTNLMYFSSNQkAEFFTMK 2962
+                ************************...................******************************************************** PP
+
+                CCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHH CS
+       FAT  249 Gewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRl 341 
+                G++la+l+        ++e++ a+  a+++d +++kaw++w+ +n+++++++        p+++  ++  av+++l+++  +++ ks+++l R+
+  ORZ09687 2963 GMFLAKLSL-------HDEANLAFVNAVQIDLGLAKAWAAWGNYNDQQFKEK--------PKEIT-LASHAVSCYLQAAGIYKSsKSRKYLVRI 3040
+                *********.......9***********************************........99998.**************99999******997 PP
+
+  == domain 4  score: -7.0 bits;  conditional E-value: 5
+                CHHHHHSSCCHHHHCCTSSCCC..SS-SS---. CS
+       FAT  199 geqkealqkLrefvscllekke..elssglevq 229 
+                  +    q+ ++++++l+++++  e + g+ +q
+  ORZ09687 3115 YASMRKGQQAQQQAQQLAQNQQakEQQAGHATQ 3147
+                333333333444444444443333222222222 PP
+
+  == domain 5  score: -14.5 bits;  conditional E-value: 5
+                CSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH......HHHHSSCCHHHHCCTSSCCC....SS-SS---................HH.HHCCCT CS
+       FAT  165 slAekaLkklleedkeewlppevvyaylkylwakge......qkealqkLrefvscllekke....elssglevq.....eptnleeftkll.arcylk 247 
+                ++A ++L+    ++++++   +v+ a+   + ++g+      q+++ q+ ++++++  +++     + +  +++q     ++++l + +++l +++   
+  ORZ09687 3240 NTASNQLTAQTANQPSQQG-QQVQQAQQAQQNPQGQqnvpaqQQQQTQQAQQQTQQQVQQQAqqqqAQQLLMQAQaqvqaTAQHLAQAQAQLqMQAQ-- 3335
+                5666666666555552222.35555555555555553333333555555555555444444333222222222112233333333333332222222.. PP
+
+                CCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+       FAT  248 kGewlaalqklnwseekseeilqaysaateldpswykawht 288 
+                      al++       +++ lqa  + ++ +p +++a ++
+  ORZ09687 3336 ------ALNQ-------AQANLQALVQQAQQNPAQAQAQAQ 3363
+                ......2222.......222222222222222222222221 PP
+
+  == domain 6  score: 0.5 bits;  conditional E-value: 0.078
+                HCCCCT.......TSSSS--CCCHCCCCHH--CCH.CHHCCCHCCCCCCCCCTS- CS
+       FAT   16 smeeylslmk...kdspdkaffeailalhrnqfde.aeeliekarqllvtelsal 66  
+                sme+ +++++   k+sp++ +++ i+al ++ f++ +++li +  +  + + ++ 
+  ORZ09687 3444 SMESIVDQIQqrlKPSPEEDMYRLIVALLTDSFQQlFQRLILNNESEQLSNVTEA 3498
+                4777777777888**************9997765427888877777666666655 PP
+
+>> ORZ11293  pep supercontig:Lobtra1:BCR41scaffold_28:120830:127533:-1 gene:BCR41DRAFT_110660 transcript:ORZ11293 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  118.6   4.4   9.6e-38   2.3e-34       4     343 .]     883    1263 ..     880    1263 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 118.6 bits;  conditional E-value: 9.6e-38
+                TTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.... CS
+       FAT    4 aaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls.... 98  
+                ++ +aW++++Wds+e +ls   + s+d  + + +l ++ n+++++e+ ++++r+ ++  l+a s+esy+ray+ +vrl++l+Elee+ ++ +++     
+  ORZ11293  883 RVSSAWKVQNWDSLEAALSRSVHASFDVGLGQLLLDMRENRVSDFEKNLQHVRSMMIAPLAAASMESYQRAYEHIVRLHMLHELEEAFKIANERFeiat 981 
+                5789****************************************************************************************8769*** PP
+
+                .............---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.........HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCC CS
+       FAT   99 .............sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.........lllkgakaemwlkfanlaRksgrlslAekaLkkll 175 
+                               ++l+++   ++ R + ++++++ ++++ ++R++++ +i           + l++   e wl++a+ aRk g+ + ++ a+++++
+  ORZ11293  982 dhvmlephqinssFVHCLREYQPALDVRFESMAPSFRLREQVSTLRRIAFYTICIpdtisheelSFLNASCGELWLQSARMARKYGHGQASYAAMLNAE 1080
+                *****999987666678888899***************************666555567778899999999***************************7 PP
+
+                HCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.......SS-SS---....................................... CS
+       FAT  176 eedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.......elssglevq............................eptnleeftk 239 
+                  ++      +++++++ky    ++ ++a++++   +s+++  ++       +                                    +  n ++   
+  ORZ11293 1081 SLKN-----RSATIERAKYEFIHNNERQAIKTIDLTLSRTMPGASalqssgtR-------AlsstrlrqasnsvhrapsfntelmrvydHVVNTNDTGY 1167
+                7777.....899*****************************999954444441.......235555566778788888999999997663333333333 PP
+
+                HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTC CS
+       FAT  240 ll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqd 337 
+                 + a+++l++  w+ + +  +     ++eil+ y++at  +++w+k ++  +++  + +++ ++ k+++ p  + +++++a + + k+l l+ +  +q 
+  ORZ11293 1168 -IrAKAHLLRTRWMDRGNLVS-----PNEILEGYRQATVEADRWEKGYYFAGQYFLKLYENSKRYKNRI-P--TFTHMTNACRLYGKALTLGPKYLFQA 1257
+                .34889**********99965.....*********************9877777666666665555554.4..3469********************** PP
+
+                HHHHHC CS
+       FAT  338 llRlLt 343 
+                l+RlLt
+  ORZ11293 1258 LPRLLT 1263
+                *****8 PP
+
+>> ORZ06122  pep supercontig:Lobtra1:BCR41scaffold_47:128727:146084:-1 gene:BCR41DRAFT_327207 transcript:ORZ06122 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   53.1   5.3   7.7e-18   1.8e-14      37     343 .]    3043    3390 ..    3017    3390 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 53.1 bits;  conditional E-value: 7.7e-18
+                CCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-...---TTTTTTT----TTS-TT.TGCCCTTTCCCCT CS
+       FAT   37 ilalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls...sseelksllktWrkRlpgvq.ddvevwqdilsvR 131 
+                + a+ r++f++a+ ++ +  + ++  +s l   s + ++  l +lQ ++Elee++   +k      ++ l+sl ++W+ R p v  d +  w+++l  R
+  ORZ06122 3043 LAAVMRRDFKQASHYVRRSYNRFLSIWSNLHPLSEKPRLHELANLQRVVELEEFLGAVDKALrdpMASFLASLISKWDHRFPSVStDTMVTWSNVLDDR 3141
+                334788************************************************99888766799999*****************9************* PP
+
+                CCCHCCCHC.........HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH....HHHHSSCCHHHHCCTSS CS
+       FAT  132 slvlspied.........lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakge....qkealqkLrefvsclle 217 
+                +l+++  ed          l+++ +++  +k++  aR++g++ +A+ +  ++++ +   ++  +++y++lk+ +a+      +      L +++s+  e
+  ORZ06122 3142 KLMIQRLEDytaysrrqeTLVTNHRIRSFMKMSAAARNQGNFYVANTCVASMQKLQA--SSY-NIHYSQLKLDLARATlemdRVVKAGILADSLSKFEE 3237
+                *****************99999************************98888877777..333.789999999999998655533333445555553333 PP
+
+                CCC.....................SS-SS---...........HH.HHCCC..TCCC..CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCC CS
+       FAT  218 kke.....................elssglevqeptnleeftkll.arcyl..kkGe..wlaalqklnwseekseeilqaysaateldpswykawhtwa 290 
+                  +                     +l+ +l++ + t +++++ ++ a+ +   k Ge    ++lq+      +  e l a +a     + + k   + a
+  ORZ06122 3238 YISndrdfdstqiaglnmlgskaySLLRELITDDRTIWSHLKSNVwAQSLIssKAGEadIFRKLQQ------RGYECLRAAAALEIGEDMVRKLRLNTA 3330
+                322222233444444433333333333333333666666666666666543114444556666666......3677777766666667777888888** PP
+
+                HHHHHCCHHHHHHSSSS........S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  291 lfnfevlskeeekkeeee.......pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                +++++vl++ e++ ++e+        +dl  ++  ++++ l s++ ++  + + ++RlL+
+  ORZ06122 3331 SYCDKVLRHHENERSKEGgessilsTKDLAVHANLVIKNTLLSIRDGELGATELFPRLLQ 3390
+                **********99977777999***9999999***************************96 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      11822  (5530382 residues searched)
+Passed MSV filter:                       961  (0.0812891); expected 236.4 (0.02)
+Passed bias filter:                      281  (0.0237692); expected 236.4 (0.02)
+Passed Vit filter:                        30  (0.00253764); expected 11.8 (0.001)
+Passed Fwd filter:                         5  (0.00042294); expected 0.1 (1e-05)
+Initial search space (Z):              11822  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.13u 0.02s 00:00:00.15 Elapsed: 00:00:00.09
+# Mc/sec: 20832.29
+//
+[ok]

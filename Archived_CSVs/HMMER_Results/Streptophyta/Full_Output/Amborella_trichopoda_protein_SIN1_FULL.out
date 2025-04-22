@@ -1,0 +1,65 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Streptophyta/Proteins/Amborella_trichopoda_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+  ------ inclusion threshold ------
+      0.053   13.1   0.0      0.067   12.7   0.0    1.2  1  ERN13300.1  hypothetical protein AMTR_s00041p00064960 [Ambore
+       0.14   11.6   0.0       0.17   11.4   0.0    1.1  1  ERM97625.1  hypothetical protein AMTR_s00130p00016510 [Ambore
+
+
+Domain annotation for each sequence (and alignments):
+>> ERN13300.1  hypothetical protein AMTR_s00041p00064960 [Amborella trichopoda]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.7   0.0   4.9e-06     0.067     313     354 ..      86     127 ..      58     128 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 12.7 bits;  conditional E-value: 4.9e-06
+  PTHR13335.orig.30.pir 313 ltvvvkasatVqevIGlaLwqyteegrepklpdnkvnaycLr 354
+                            + vv+    tV ++I +a+  y++egr p l   ++++y+L+
+             ERN13300.1  86 VHVVMSPENTVDDLIKAAINAYVKEGRRPLLSQVDPSCYELH 127
+                            556777789********************999988889*998 PP
+
+>> ERM97625.1  hypothetical protein AMTR_s00130p00016510 [Amborella trichopoda]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.4   0.0   1.2e-05      0.17     297     401 ..      63     155 ..      34     164 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 11.4 bits;  conditional E-value: 1.2e-05
+  PTHR13335.orig.30.pir 297 idiylplssepdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnkvnaycLrivEdDGevddDFPpLDrnepiskfgfsela 384
+                            i i ++ s+      pl   v+ + tV  vI  aL  y  egr p l  n  n++ L+ +        +F +L + epi+  g   ++
+             ERM97625.1  63 ISINVQESTG-----PLRFLVRVDDTVGSVIDTALRSYAREGRLPVLGTN-FNNFYLHCAN------SEFKALSPVEPIGMHGGRNFV 138
+                            4444444444.....44444555789999999******************.9********4......47******************* PP
+
+  PTHR13335.orig.30.pir 385 Lveatdsegktnndlqt 401
+                            L+++   e +  +++q 
+             ERM97625.1 139 LCKKQQQEHIDEEHQQQ 155
+                            *****999888766654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      27313  (8575860 residues searched)
+Passed MSV filter:                      2454  (0.0898473); expected 546.3 (0.02)
+Passed bias filter:                      695  (0.0254458); expected 546.3 (0.02)
+Passed Vit filter:                        91  (0.00333175); expected 27.3 (0.001)
+Passed Fwd filter:                         8  (0.000292901); expected 0.3 (1e-05)
+Initial search space (Z):              27313  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.37u 0.03s 00:00:00.40 Elapsed: 00:00:00.19
+# Mc/sec: 29385.96
+//
+[ok]

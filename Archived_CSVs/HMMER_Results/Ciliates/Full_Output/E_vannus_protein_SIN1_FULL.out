@@ -1,0 +1,52 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/E_vannus_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------          -----------
+  ------ inclusion threshold ------
+      0.085   10.8  12.7      0.089   10.7  12.7    1.0  1  MSTRG.13526.2_fr1  UNIQ_LONG STOP:3 ANY(X):0 LONGEST:158 TOTA
+
+
+Domain annotation for each sequence (and alignments):
+>> MSTRG.13526.2_fr1  UNIQ_LONG STOP:3 ANY(X):0 LONGEST:158 TOTAL_LENGTH:395 MULTIPLE_ORFs:4
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.7  12.7     1e-05     0.089      23     167 ..       3     148 ..       1     158 [] 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 10.7 bits;  conditional E-value: 1e-05
+  PTHR13335.orig.30.pir  23 ddgmcerilndd........dvdlekihsapyppvsssssesll.srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqr 101
+                            ++ + er+ln+d        +++++++++++++       + +   r+++  ++ +++s + ++++e++++  g ++++   p ++++
+      MSTRG.13526.2_fr1   3 REKIKERLLNFDrefqtrplNLQIHPRQKLADS-------QAFVtTRNNQEIMNTETNSKTFSDFEEFNMQAIGLNTCKIAFPTSTKN 83 
+                            567899******999988888888888877666.......56778999*************************999999888888887 PP
+
+  PTHR13335.orig.30.pir 102 retqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee 167
+                              +++ kq++ s s+ + +++ q  + ++ ++ ++s+r+r ++++++++ +k   s +++ +   +
+      MSTRG.13526.2_fr1  84 IVRRKKKQDKISASKCQERSQKQHISQNKIQDLQNSKRNR-DQQIRFSNGTKPVGSNTGPLENNLT 148
+                            7777777666666666666667777777777888888888.8999999999998877777655444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       8856  (2176206 residues searched)
+Passed MSV filter:                      2313  (0.261179); expected 177.1 (0.02)
+Passed bias filter:                      241  (0.0272132); expected 177.1 (0.02)
+Passed Vit filter:                        83  (0.00937218); expected 8.9 (0.001)
+Passed Fwd filter:                         7  (0.000790425); expected 0.1 (1e-05)
+Initial search space (Z):               8856  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.22u 0.00s 00:00:00.22 Elapsed: 00:00:00.11
+# Mc/sec: 12382.01
+//
+[ok]

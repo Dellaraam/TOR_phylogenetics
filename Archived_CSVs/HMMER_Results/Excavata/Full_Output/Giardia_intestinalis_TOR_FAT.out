@@ -1,0 +1,77 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Excavata/Proteins/Giardia_intestinalis.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.5e-29  101.5   0.8    2.2e-26   91.1   0.1    3.5  3  XP_001706690.1  GTOR [Giardia intestinalis]
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_001706690.1  GTOR [Giardia intestinalis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   91.1   0.1   4.4e-30   2.2e-26       2     179 ..    1939    2146 ..    1938    2162 .. 0.95
+   2 !    4.4   0.0     0.001       5.1     183     213 ..    2298    2329 ..    2276    2361 .. 0.74
+   3 !    2.2   0.0    0.0048        24     309     343 .]    2574    2610 ..    2538    2610 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 91.1 bits;  conditional E-value: 4.4e-30
+                      CCTTCCCCTSSSGHH..CCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCC CS
+             FAT    2 plaaeaaWrlgqWds..meeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiq 92  
+                      ++a+ aaW+l + d+  +e  l ++ +d+ d+++++a   +  n++ ea++l+ k r  ++ +l  ls esy+ray+l + lQ+++El++ii+
+  XP_001706690.1 1939 DIATYAAWSLLEQDQedVEIWLRVLPEDNIDGTIIRATSYIKANKMLEAHKLLCKLRLRIDPDLIGLSAESYTRAYNLCILLQTITELQNIIS 2031
+                      68899******8777779999************************************************************************ PP
+
+                      HHCSS-...................................---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTC CS
+             FAT   93 ykqkls...................................sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaem 150 
+                      yk +l+                                    + e ++l+ +W ++ +++  d e w+ +l+vR+l++ pied        e+
+  XP_001706690.1 2032 YKLALNglkldapstlikeggnpyenifettlisfnpppgfADTEKERLRLMWSRKISMIRWDCESWEALLRVRRLIIFPIED-------QEV 2117
+                      *****************************************99999*************************************.......*** PP
+
+                      CCCCCCCHCHHHHCCSTTHHCCCCCHCTT CS
+             FAT  151 wlkfanlaRksgrlslAekaLkklleedk 179 
+                      w++f+ l+ +sgr++lA k+L     +++
+  XP_001706690.1 2118 WIRFSVLCLQSGRVQLARKTLETFINSSS 2146
+                      *********************99877766 PP
+
+  == domain 2  score: 4.4 bits;  conditional E-value: 0.001
+                      ....TSSCCCHHHHHHHCCHHHHHSSCCHHHHC CS
+             FAT  183 lp..pevvyaylkylwakgeqkealqkLrefvs 213 
+                      ++  p+v yay+k+lw +++ ++ l+kL  f++
+  XP_001706690.1 2298 NHvyPHVLYAYCKHLWVSSN-ENVLEKLVAFTH 2329
+                      33589***********8876.556666666654 PP
+
+  == domain 3  score: 2.2 bits;  conditional E-value: 0.0048
+                      S-TCC.HHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+             FAT  309 pedls.eyvvpavegflkslslsse.kslqdllRlLt 343 
+                       e+++ ey+v+++   +k++  + + ++l  +lRl t
+  XP_001706690.1 2574 LEKAKlEYLVESIIAHFKCIETGRSiEALPTTLRLMT 2610
+                      4556667****************************87 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       4965  (3153173 residues searched)
+Passed MSV filter:                       366  (0.073716); expected 99.3 (0.02)
+Passed bias filter:                      148  (0.0298087); expected 99.3 (0.02)
+Passed Vit filter:                        13  (0.00261833); expected 5.0 (0.001)
+Passed Fwd filter:                         1  (0.00020141); expected 0.0 (1e-05)
+Initial search space (Z):               4965  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.06u 0.00s 00:00:00.06 Elapsed: 00:00:00.03
+# Mc/sec: 29077.94
+//
+[ok]

@@ -1,0 +1,82 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/O_trifallax_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+  ------ inclusion threshold ------
+       0.15    9.9  14.0        4.2    5.2   0.0    6.5  5  g31546    Importin beta
+
+
+Domain annotation for each sequence (and alignments):
+>> g31546  Importin beta
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.5   0.0    0.0072        29       7      27 ..     124     144 ..     120     158 .. 0.81
+   2 ?    2.7   0.2    0.0062        25      10     114 ..     174     289 ..     167     327 .. 0.56
+   3 ?    1.8   1.1     0.012        48      77      77 ..     504     504 ..     418     594 .. 0.46
+   4 ?    5.2   0.0    0.0011       4.2      89     135 ..     609     655 ..     596     671 .. 0.78
+   5 ?   -1.3   0.1      0.11   4.3e+02      81     117 ..     729     762 ..     685     801 .. 0.48
+
+  Alignments for each domain:
+  == domain 1  score: 2.5 bits;  conditional E-value: 0.0072
+  mTOR_dom   7 dypeLLeiLlnilkteqsqsi 27 
+               +ypeL+++L+ +l+++++ +i
+    g31546 124 NYPELIQQLVGVLQSQDQDQI 144
+               7*************9965444 PP
+
+  == domain 2  score: 2.7 bits;  conditional E-value: 0.0062
+  mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvlG.ilGALDPykhkeveeks......eee....ekeeenaeetdvsellvglspsseeyyptvvinaLl...kilk 96 
+               + ++++l++lk +++ +++ +++k ++  lG +D     +++ +       +        ++++ +  ++ e + +l++s+ e   +v+ + +    +i++
+    g31546 174 QFMSLFLDCLK-DTNIQVKVSALKAITsFLGSIDDEAT-VLKYQDlmdgilD-VvidvL-RSDEDQGKSSLESMIELTQSHGEIWGKVTEKLIFvvsQIIQ 270
+               67778888888.55888999999988526899988766.3333333344441.143321.11222222223335777777777777754333222225555 PP
+
+  mTOR_dom  97 dpsls.shhtavvqaimsi 114
+               ++s + s ++++++ i + 
+    g31546 271 NKSFDnSIRQSALELISTL 289
+               5555544445555544444 PP
+
+  == domain 3  score: 1.8 bits;  conditional E-value: 0.012
+  mTOR_dom  77 p 77 
+               p
+    g31546 504 P 504
+               1 PP
+
+  == domain 4  score: 5.2 bits;  conditional E-value: 0.0011
+  mTOR_dom  89 naLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135
+               ++Ll+  k +  + +  a+ +++ +i   l+ +  +flpqi+pall+
+    g31546 609 TQLLNSGKINEADPQSLAIQNTLSQIGACLKNEFKQFLPQIMPALLR 655
+               55555556666677777777888999999999************996 PP
+
+  == domain 5  score: -1.3 bits;  conditional E-value: 0.11
+  mTOR_dom  81 eyyptvvinaLlkilkdpslsshhtavvqaimsifkt 117
+               e  ++ + ++Ll+    +     ++++ q+i++ +++
+    g31546 729 EAVAQLITSELLTYTYSR---AVRKNATQTIVFLLNS 762
+               222222222333322222...3334444444444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       3987  (2350510 residues searched)
+Passed MSV filter:                       675  (0.1693); expected 79.7 (0.02)
+Passed bias filter:                      164  (0.0411337); expected 79.7 (0.02)
+Passed Vit filter:                         8  (0.00200652); expected 4.0 (0.001)
+Passed Fwd filter:                         1  (0.000250815); expected 0.0 (1e-05)
+Initial search space (Z):               3987  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.01s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 15813.46
+//
+[ok]

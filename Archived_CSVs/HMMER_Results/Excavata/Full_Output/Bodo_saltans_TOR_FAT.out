@@ -1,0 +1,278 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Excavata/Proteins/Bodo_saltans.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.8e-63  213.5   2.6      1e-62  212.4   2.6    1.6  1  CUG94241.1  phosphatidylinositol 3-kinase, putative [Bodo sal
+    2.3e-39  135.6   0.0      5e-39  134.5   0.0    1.6  1  CUF10682.1  phosphatidylinositol 3-kinase, putative [Bodo sal
+    9.7e-35  120.4   0.9      2e-34  119.4   0.1    2.0  2  CUG89686.1  Phosphoinositide 3-kinase-like protein, putative 
+    2.4e-29  102.7   0.7    4.4e-29  101.8   0.7    1.4  1  CUI12700.1  phosphatidylinositol 3-kinase, putative [Bodo sal
+     0.0087   15.3   0.1       0.46    9.7   0.2    2.3  2  CUG91953.1  Hypothetical protein, putative [Bodo saltans]
+  ------ inclusion threshold ------
+       0.01   15.1   4.6       0.35   10.1   0.2    3.5  3  CUG91755.1  Hypothetical protein, putative [Bodo saltans]
+      0.022   14.0   0.1        1.6    7.9   0.0    2.6  2  CUG86712.1  phosphatidylinositol 3-kinase, putative [Bodo sal
+      0.073   12.3   0.0       0.14   11.4   0.0    1.4  1  CUG86048.1  phosphatidylinositol 3-kinase, putative [Bodo sal
+
+
+Domain annotation for each sequence (and alignments):
+>> CUG94241.1  phosphatidylinositol 3-kinase, putative [Bodo saltans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  212.4   2.6   4.6e-66     1e-62       3     342 ..    1535    1862 ..    1533    1863 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 212.4 bits;  conditional E-value: 4.6e-66
+                  CTTCCCCTSSSGHHCCCCT....TSSSS--...CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCS CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdka...ffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqk 96  
+                    a aaW l++W++me+++sl+k+++++++   f++a++a+h+++f++ae+li ++r  l+  l+al+ esy ray+llv  Qql+Eleeii+ ++ 
+  CUG94241.1 1535 TGARAAWILQSWEDMEQFTSLVKSEGYQGTtavFYNAVIAVHKREFRKAESLIGRCRRELDGALAALVAESYDRAYELLVGNQQLCELEEIIMALR- 1630
+                  5789*************************9999***************************************************************. PP
+
+                  S----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.............T CS
+         FAT   97 lssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk.....eewlp...p 185 
+                    ++++ ++++  W++Rl +++  +e wq  l+++slvl   e+        +mw++f++l+R +gr+ +++++L+kll+ +k      ++ +   p
+  CUG94241.1 1631 --EPKSISHWKGLWERRLGNMA--YEGWQGTLATHSLVLPHTEE-------LDMWIQFVSLCRSNGRHRVSMEVLQKLLGDRKvadafTHPTDiprP 1716
+                  ..79******************..********************.......********************************98655444448899 PP
+
+                  SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT...S...-SSCCHHHHCCHHCTC CS
+         FAT  186 evvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnw..seekseeilqaysaateldp 280 
+                   v +a + +++++g+q +al  L+  v++++    + ++ l+          ++  arc +++Gew+aa +++    +++  +++l+  ++at ldp
+  CUG94241.1 1717 IVALAAVTHMYESGKQANALTLLKSYVERYSTTEATTLDVLN---------DQADYARCRARLGEWTAAQNNAALcyNKALTDDVLHNLQLATVLDP 1804
+                  ****************************99886533333332.........345559**************97652266779*************** PP
+
+                  CCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+         FAT  281 swykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlL 342 
+                  s  ++whtwa+++ +++ k +++    +++ + ++v++a++g+lks+ ++++  lqd+l +L
+  CUG94241.1 1805 SNGSTWHTWARVHHNIVIKGQSS--LLDSQAMDHHVISALQGYLKSIESQQN--LQDVLGFL 1862
+                  *****************999665..34478888******************9..99999888 PP
+
+>> CUF10682.1  phosphatidylinositol 3-kinase, putative [Bodo saltans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  134.5   0.0   2.2e-42     5e-39       2     343 .]    1649    1969 ..    1648    1969 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 134.5 bits;  conditional E-value: 2.2e-42
+                  CCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS- CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls 98  
+                  p+ a aa rl +W+++ ++l  + kds++  +  a l++ ++ + +a+e i +ar+ll++e++ l +esy+rayd +v+ Qql+E+eeii  +   +
+  CUF10682.1 1649 PFVADAAVRLNSWEDLSDALTWVPKDSLTFGTSTAALQISQRALGSAKESITQARELLLEEITGLLHESYARAYDHIVSAQQLVEFEEIIGTLGVTE 1745
+                  77889999**************************************************************************************999 PP
+
+                  ...---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTT.HHCCCCCHCTT............ CS
+         FAT   99 ...sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAe.kaLkklleedk...eewlp.... 184 
+                      +++ +++   W++R   ++++v+ w++++  R l+++p++d       +++ + f++l+R+ g     e  +L ++l++++   +   +    
+  CUF10682.1 1746 plhRAQQSDDVSLLWQERICSSAHSVSSWKRMMGHRGLLIHPSKD-------ISTQILFVKLCREYGGSRRLErFTLEQMLGSSSpsyD---Qlidp 1832
+                  99999999999**********************************.......*************9877766648*********96541...34567 PP
+
+                  ...TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHC CS
+         FAT  185 ...pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaatel 278 
+                     p+vv++y+ yl + g+ +++ ++  e     lek  e++ g +        e+++l ar++l++G     + +       +  + ++y++at +
+  CUF10682.1 1833 smnPRVVFEYITYLSSCGQLSKYASHGDERSI--LEKLIEIHGGVP--------ENKTLEARMHLRRGI----AAD-------PATAAECYKLATDC 1908
+                  7789***************9999999866544..777777777755........666777********9....444.......8899********** PP
+
+                  TCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS..STTTCHHHHHC CS
+         FAT  279 dpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse..kslqdllRlLt 343 
+                  dp+w  aw +wa++n   l+ +++ ++        e  ++a++gf k++ l  +  + lqd+l+lL+
+  CUF10682.1 1909 DPTWFRAWRSWADANVLYLEGNANHQKT------DEPFMNAIDGFVKAIELAPTtsNKLQDVLKLLS 1969
+                  **********************776544......45699*************9999*********95 PP
+
+>> CUG89686.1  Phosphoinositide 3-kinase-like protein, putative [Bodo saltans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.9   0.1       1.3   3.1e+03     213     253 ..    1468    1507 ..    1463    1518 .. 0.74
+   2 !  119.4   0.1   8.6e-38     2e-34       3     343 .]    1601    1915 ..    1599    1915 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -2.9 bits;  conditional E-value: 1.3
+                  CCTSSCCCSS-SS---...........HHHHCCCTCCCCCC CS
+         FAT  213 scllekkeelssglevqeptnleeftkllarcylkkGewla 253 
+                  ++l+++ ++ ++ +++ e++++ +  ++l++cy ++G  ++
+  CUG89686.1 1468 QQLYKNLGAGKNRKDA-EAQQVLQVVESLMKCYNRLGLPME 1507
+                  5566667777777777.5677777777778****9998665 PP
+
+  == domain 2  score: 119.4 bits;  conditional E-value: 8.6e-38
+                  CTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                   +a+aa  lg+W   +e+  +  +++   ++ + ++ l+++q +++ ++i   r+    + s+    sy r++d+l  lQ l+ leei+qy   ++s
+  CUG89686.1 1601 HRAAAALALGDWGTFDEAA-AF-SPESLDTVERGVYLLRNGQREALTKFIRDERDARFDQFSETFDDSYLRCIDILAELQHLTHLEEIVQYQF-SAS 1694
+                  5677777788888888875.22.3333345778888899****************************************************99.579 PP
+
+                  --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT..........TSSCCCH CS
+         FAT  100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk...eewlp..pevvyay 191 
+                  +e++++l+  Wr+R  ++ ++ +vw+ ++++ slvl+p+ed           +  +n++ k+g +s Ae +L++  + ++   e+ ++  p+v+y y
+  CUG89686.1 1695 DERRSTLRGVWRRRAAQLTRQPRVWKTMVTLNSLVLTPEED-------LLNRVDCINVCSKQGWVSYAEHLLQQFVGGNPisiENLSVmdPNVTYVY 1784
+                  *****************************************.......999*****************************876666669******** PP
+
+                  HHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+         FAT  192 lkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawht 288 
+                  lk+l+ ++++ ea+ ++ e ++    +++  +s++           +++ +rc ++ Gew+ +l++ +        +  a s+atel+p++ +a+h+
+  CUG89686.1 1785 LKHLYNTNRKMEAYTTMMEVLQ----SAHVSPSDTH----------SEVWGRCWFLFGEWTIQLNSSD-----VPIAIDALSKATELSPRSSSAFHS 1862
+                  *****************98888....3323334433..........3455****************65.....************************ PP
+
+                  CCHHHHHCCHHHHHHSSSS.S-TCC.HHHHCCT..CCHHHHTTTS...STTTCHHHHHC CS
+         FAT  289 walfnfevlskeeekkeeeepedls.eyvvpavegflkslslsse...kslqdllRlLt 343 
+                  ++ ++ e+ +++ +      p++ + +  v av+  ++s++lss    +++qd+lR+Lt
+  CUG89686.1 1863 LGILHYERSRDVSQ------PAESRhDSCVAAVNALINSVQLSSDgknSVMQDMLRILT 1915
+                  ************44......444444889*************99888899********8 PP
+
+>> CUI12700.1  phosphatidylinositol 3-kinase, putative [Bodo saltans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  101.8   0.7     2e-32   4.4e-29       5     343 .]     152     487 ..     150     487 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 101.8 bits;  conditional E-value: 2e-32
+                 TCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH....--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+         FAT   5 aeaaWrlgqWdsmeeylslmkkdspdkaffeailalhr....nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99 
+                 a+aaW l +Wd+++++ + + ++  +  f++a++  h     n  ++   +i  ar +l  +l +l   sy+ ayd++  lQ  +E+ e++++ ++ ++
+  CUI12700.1 152 ATAAWILNEWDEVADFAQRITNEPMQYFFVNAVVFNHVndnpNGNQDQLICIRDARLSLEASLKSLLPVSYTHAYDSITLLQNFQEIWEAVAFRRA-KT 249
+                 89********************************96663244336777789****************************************99995.8* PP
+
+                 --TTTTTTT----TTS-TT.TGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.................. CS
+         FAT 100 seelksllktWrkRlpgvq.ddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk......eewlp....... 184
+                 + ++++++++W  R   ++ d++  + + l+++slvl+p++         e+wl+f ++ R    ++lA+ a+++l+          ++ +        
+  CUI12700.1 250 ATRRNQIKEMWAARVNSMKsDNYFQKLRSLMIHSLVLTPADM-------PETWLQFCESVRPT-YPQLANWAMRSLQ-LGRlastasDDISAavvakgt 339
+                 *******************9********************99.......***********975.7788777776663.3333444444444478999** PP
+
+                 TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT..S...-SSCCHHHHCCHHCTCC CS
+         FAT 185 pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqkln.wseekseeilqaysaateldps 281
+                 p+v + y+ +lw +g+ ++a++ ++  v   ++   ++s         +lee+  +  +  +lk+G w ++++  n w+ e +++i ++ ++a++ +p+
+  CUI12700.1 340 PSVRVGYFMHLWNTGKLSDAVSGMQSLVAPPTQ---TCS--------CKLEEIDPRSfGMGHLKLGLWKQEIHADNfWKGELRDGIIHHLHSAIRACPD 427
+                 **************************9993333...444........55556665555999***********997779999****************** PP
+
+                 CHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS..STTTCHHHHHC CS
+         FAT 282 wykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse..kslqdllRlLt 343
+                  y++wh+wal+n ++ ++e +  +   +++ + +v +a egf  ++ ls +   slqd+ RlL+
+  CUI12700.1 428 DYDTWHAWALMNYRIQQRESDLDR---RSQSI-FVSKAHEGFVAAICLSPSaaISLQDVMRLLQ 487
+                 *******************77744...55666.9*****************999********96 PP
+
+>> CUG91953.1  Hypothetical protein, putative [Bodo saltans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.7   0.2    0.0002      0.46     260     299 ..      12      58 ..       2     162 .. 0.76
+   2 ?    3.5   0.0     0.015        34     243     309 ..     215     274 ..     189     311 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 9.7 bits;  conditional E-value: 0.0002
+                 .S...-SSCCHHHHCCHHCTCCCHSTTCC.......CCHHHHHCCHH CS
+         FAT 260 wseekseeilqaysaateldpswykawht.......walfnfevlsk 299
+                  ++ +  ++l +ys+a++ld s++ aw +       ++++++    +
+  CUG91953.1  12 FASGRFTDALRCYSDAVQLDASCARAWSNrsaclakLGKYEDALEDA 58 
+                 3344599********************99777766666666655444 PP
+
+  == domain 2  score: 3.5 bits;  conditional E-value: 0.015
+                 HCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S CS
+         FAT 243 rcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeep 309
+                 r yl++G+ l++ q+        +e+  a  + t+ldp+   a  ++ ++  e+ ++ + +++++++
+  CUG91953.1 215 RGYLRLGMSLRSSQR-------LDEAKTALETCTRLDPENSMAKEEMSSLLSEIAERDKTNAQRVRE 274
+                 669999999999999.......899999999999999999999999999999999999888666543 PP
+
+>> CUG91755.1  Hypothetical protein, putative [Bodo saltans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.9   0.1     0.023        53     203     278 ..      73     148 ..      24     193 .. 0.69
+   2 ?   10.1   0.2   0.00015      0.35     265     330 ..     232     348 ..     218     355 .. 0.78
+   3 ?    2.1   0.0     0.041        94     165     285 ..     507     631 ..     428     650 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 2.9 bits;  conditional E-value: 0.023
+                 HHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHC CS
+         FAT 203 ealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaatel 278
+                 ++++kL e    l++   +++ + ++q+++++ ++  + + c+  kG+   ++ ++ ++++   +  + y++    
+  CUG91755.1  73 SCYSKLGEYKLALFDYTMAIQIEEPQQDKKKVAQYYGSRGNCFRQKGKLEDSIADFRKAKKLDPDNAAWYLEIGVS 148
+                 4555555555555555556666777777777777777777777777777777777776666666666666555555 PP
+
+  == domain 2  score: 10.1 bits;  conditional E-value: 0.00015
+                 -SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS......................................................S- CS
+         FAT 265 seeilqaysaateldpswykawhtwalfnfevlskeeekkeeee.....................................................pe 310
+                  +++ q++++a e+d+s +  +++++l++f+  ++ e+  + ++                                                     +e
+  CUG91755.1 232 YKQAAQHFLRACEFDNSNAVYYNNLGLAHFQLQRYDESLHNFHDaqsrdpenaniyfnrgnselvlrmyeeaiadfdeaisrlpddeniyhskgivfQE 330
+                 67899***************************9999888544446678889999999999877777777777777777777777777777777776543 PP
+
+                 TCCHHHHCCT..CCHHHHTT CS
+         FAT 311 dlseyvvpavegflkslsls 330
+                 + +  v +a+e+f k+l l+
+  CUG91755.1 331 MKQ--VQNAIEQFHKALELN 348
+                 333..667777777777776 PP
+
+  == domain 3  score: 2.1 bits;  conditional E-value: 0.041
+                 CSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC................SS-SS---..............HHHHC CS
+         FAT 165 slAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke................elssglevq...eptnleeftkllarc 244
+                   A + L+++ ++d+    +++++y + k +++ g  ++++  Lr+ +   l+ +                 +++++   +   + tn   ++ + a  
+  CUG91755.1 507 HSAARDLTEAIGSDP---TESKLYYLRGKAQYPLGWYDKTIADLRKALD--LDANApdahdcyysmgialanSNRHE---EaleCFTNAVALRPNTATY 597
+                 444444555555555...2234455555555555555555555555554..22222223344443333332222222...0233555555555555555 PP
+
+                 CCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHST CS
+         FAT 245 ylkkGewlaalqklnwseekseeilqaysaateldpswyka 285
+                 ++++++ l+ +++        ee++  +++ + l+p  ++a
+  CUG91755.1 598 LHERAKSLQCVGR-------YEEAVVDFTKVISLQPANAQA 631
+                 5555555555555.......445555555555555444444 PP
+
+>> CUG86712.1  phosphatidylinositol 3-kinase, putative [Bodo saltans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.9   0.0   0.00071       1.6       4      50 ..    2461    2510 ..    2459    2556 .. 0.75
+   2 ?    3.2   0.0     0.019        44     177     220 ..    2649    2695 ..    2629    2790 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 7.9 bits;  conditional E-value: 0.00071
+                  TTCCCCTSSSGHHCCCCT.......TSSSS--CCCHCCCCHH--CCHCHH CS
+         FAT    4 aaeaaWrlgqWdsmeeylslmk...kdspdkaffeailalhrnqfdeaee 50  
+                   aeaaWr  qWd  e    l++     ++++a+f+a+ a++ +++ +++ 
+  CUG86712.1 2461 LAEAAWRSAQWDTTEVVSRLLQgesTMTLHEAIFSALRACRSKDILSFRI 2510
+                  589**********5444444446669999999999999999999887765 PP
+
+  == domain 2  score: 3.2 bits;  conditional E-value: 0.019
+                  CTT.........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC CS
+         FAT  177 edkeewlp....pevvyaylkylwakgeqkealqkLrefvscllekke 220 
+                  +++e+++     p++v+ ++k+l ++ge + a+  L++ v+ +++k+ 
+  CUG86712.1 2649 SAPESVKRiaalPSLVHCRAKLLVQQGEPSLAIRILQDVVE-KAHKAA 2695
+                  4444455567789***********************99999.555543 PP
+
+>> CUG86048.1  phosphatidylinositol 3-kinase, putative [Bodo saltans]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.4   0.0   6.1e-05      0.14       3     134 ..    1543    1684 ..    1541    1686 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 11.4 bits;  conditional E-value: 6.1e-05
+                  CTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCC...CHH..--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHH CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdkaffeaila...lhr..nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqyk 94  
+                  l  ea+Wr+g+W + ++ +  +  + p++++f+ i++   + r  + + ++ + i + rq +v  + + s+        ll +l +la+ e+++  +
+  CUG86048.1 1543 LGQEASWRMGEWGDEASMTTDVVPPPPRESLFKSIQSlieTSRdaHHLPHLVRTIHQQRQGVVARIVKRSSAGDITEQALLEDLCILADAESAAHHL 1639
+                  5679***************9999**************655344677799999999999999999887777765555555677777777777777777 PP
+
+                  CSS-.....---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCC CS
+         FAT   95 qkls.....sseelksllktWrkRlpgvqddvevwqdilsvRslv 134 
+                  +k +     +++  ++ll+    R     +  e +  +lsvR+++
+  CUG86048.1 1640 CKVEtigenKENHNERLLSFFVGRADRADPTAELKATFLSVRRVF 1684
+                  777677777777777777777777777777777777777777776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      18190  (9814175 residues searched)
+Passed MSV filter:                       945  (0.0519516); expected 363.8 (0.02)
+Passed bias filter:                      371  (0.0203958); expected 363.8 (0.02)
+Passed Vit filter:                        41  (0.00225399); expected 18.2 (0.001)
+Passed Fwd filter:                         8  (0.000439802); expected 0.2 (1e-05)
+Initial search space (Z):              18190  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.18u 0.02s 00:00:00.20 Elapsed: 00:00:00.08
+# Mc/sec: 39281.51
+//
+[ok]

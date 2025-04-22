@@ -1,0 +1,384 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Plasmopara_halstedii_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.3e-76  257.0   2.1    4.4e-76  256.1   2.1    1.5  1  CEG47092.1  Phosphatidylinositol kinase (PIK-L1) [Plasmopara 
+    1.5e-57  195.2   6.5    2.9e-57  194.3   3.2    2.9  2  CEG44747.1  Phosphatidylinositol kinase (PIK-L2) [Plasmopara 
+    3.8e-40  137.9   9.2    3.8e-40  137.9   9.2    2.8  3  CEG40573.1  Phosphatidylinositol kinase (PIK-L3) [Plasmopara 
+    5.1e-40  137.5   2.4    1.7e-39  135.8   2.4    2.0  1  CEG40920.1  Phosphatidylinositol kinase (PIK-L4) [Plasmopara 
+    8.7e-16   57.8  14.6    1.8e-15   56.8  14.6    1.5  1  CEG44196.1  Phosphatidylinositol kinase (PIK-L5) [Plasmopara 
+    1.4e-09   37.5   0.6       0.33    9.9   0.0    5.8  5  CEG49920.1  probable udp-n-acetylglucosamine--peptide n-acety
+     0.0015   17.6   6.5     0.0067   15.5   0.1    4.0  3  CEG46469.1  Tetratricopeptide TPR1 [Plasmopara halstedii]
+  ------ inclusion threshold ------
+      0.034   13.2   0.0       0.13   11.2   0.0    1.9  2  CEG38024.1  hypothetical protein PHALS_06066 [Plasmopara hals
+       0.14   11.1   9.0       0.47    9.4   0.4    3.2  3  CEG40236.1  tpr repeat-containing protein [Plasmopara halsted
+
+
+Domain annotation for each sequence (and alignments):
+>> CEG47092.1  Phosphatidylinositol kinase (PIK-L1) [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  256.1   2.1   2.6e-79   4.4e-76       3     343 .]    1853    2280 ..    1851    2280 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 256.1 bits;  conditional E-value: 2.6e-79
+                  CTTCCCCTSSSGHHCCCCT..........................................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCC CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmk......................................kdspdkaffeailalhrnqfdeaeeliekarqllvt 61  
+                  l a a+W l+qWdsm++y+ + +                                      +d  + +++e +la+h+n+fd+a++li+k+r+ l+t
+  CEG47092.1 1853 LGARASWCLSQWDSMAQYVTECSaqydksnfnstvisraandnshgygyghmhshgifgadEDVTELSLYESVLAVHHNKFDQAAMLIDKTRKTLDT 1949
+                  7899***************9999***********************************9966666777***************************** PP
+
+                  CCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCC CS
+         FAT   62 elsalsgesynraydllvrlQqlaEleeiiqykqkls.......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemw 151 
+                  +l al+gesy+ray ++v lQql+Eleei++yk+ ++        ++  ++l ++Wr+Rl+g+++ v+vwq++l vR+l+l p+ed       ++++
+  CEG47092.1 1950 KLGALVGESYSRAYRSIVTLQQLSELEEIVTYKKLRAqiskaeeAARYKRHLMQMWRDRLSGCKRVVDVWQQVLVVRALILAPHED-------IDTY 2039
+                  **********************************9999986655444555669*********************************.......**** PP
+
+                  CCCCCCHCHHHHCCSTTHHCCCCCHCTT................T................SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC. CS
+         FAT  152 lkfanlaRksgrlslAekaLkklleedk.........eewlp..p................evvyaylkylwakgeqkealqkLrefvscllekke. 220 
+                  l+fa+l+R+sg+l l+ k+ +++l+  +         +e+l   p                +v +aylk+lwa g+++eal  L+  v + ++ ++ 
+  CEG47092.1 2040 LQFASLCRQSGNLPLSLKVFTNALHVYNgagskgtgiSEMLSmaPtssgsttfgigendrhRVGFAYLKHLWAAGQKQEALADLHRLVVRISSAARh 2136
+                  ***********************99888776666555333335535667777777788888***********************7777777776666 PP
+
+                  .....SS-SS---..............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH...SSS CS
+         FAT  221 .....elssglevq...eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek...kee 306 
+                          +gl+++   +   ++e ++ll +c+lk +ew+ a+++ + +e   e +l++ ++ tel p++ykawh+wal+nf+v+++ +++   +  
+  CEG47092.1 2137 rpqpsGGMNGLQSStpaTMPIKSEEEELLVKCHLKMAEWQLAVHDQQIKEVPVESVLSSLRLCTELEPRSYKAWHAWALMNFQVVEHSTHSqyfS-- 2231
+                  66666777888877553444456666777****************999999*************************************9994442.. PP
+
+                  S..........S-TCCHHHHCCT..CCHHHHTTTS....STTTCHHHHHC CS
+         FAT  307 ee.........pedlseyvvpavegflkslslsse....kslqdllRlLt 343 
+                             ++ +  ++ pa+egf++s++l+ +    ++ qd+lR+Lt
+  CEG47092.1 2232 -AnttasavaaSSSVAPFIAPAIEGFFRSIALGRSrwaaNVQQDILRVLT 2280
+                  .3556899999888889********************************8 PP
+
+>> CEG44747.1  Phosphatidylinositol kinase (PIK-L2) [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.7   0.1       2.7   4.7e+03     185     212 ..    1481    1508 ..    1448    1522 .. 0.61
+   2 !  194.3   3.2   1.7e-60   2.9e-57      10     343 .]    1549    1943 ..    1542    1943 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: -3.7 bits;  conditional E-value: 2.7
+                  TSSCCCHHHHHHHCCHHHHHSSCCHHHH CS
+         FAT  185 pevvyaylkylwakgeqkealqkLrefv 212 
+                   e+++ +++ lwa ge ++   +++e  
+  CEG44747.1 1481 VEAIFGKMRCLWAIGEWHKLNDHVKETW 1508
+                  3556666666666666666665555555 PP
+
+  == domain 2  score: 194.3 bits;  conditional E-value: 1.7e-60
+                  TSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCH.HHHHCCCCCHHHCHHCCHHCSS-....... CS
+         FAT   10 rlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynray.dllvrlQqlaEleeiiqykqkls....... 98  
+                  +l++Wds+ +y+   + d  + ++f+a+++++r ++dea + i ++r+ ++  l++l++esy+ray +++v+lQ+l+Eleei++y++  +       
+  CEG44747.1 1549 SLQNWDSISKYI-NSDMDATESHLFKAVVSIRRMELDEAMSSITNCRKEMDPTLRSLVSESYARAYiPVVVNLQMLTELEEIVAYLKTFAhnnngel 1644
+                  7899*******9.5667777888******************************************9789*****************98778899*** PP
+
+                  ........................................---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCC CS
+         FAT   99 ........................................sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfa 155 
+                                                          ++  lk+l   W++R +gv ++++vwq+++ vRslv++p+ed       +++wlk+a
+  CEG44747.1 1645 tllsiptsstptftslsrrkqsisslnfvssssftsygheKQVALKKLQTIWTRRMLGVERNIQVWQSLMLVRSLVFDPRED-------VDIWLKYA 1734
+                  *******************************99999999888888899999*******************************.......******** PP
+
+                  CCHCHHHHCCSTTHHCCCCCHCTT................T............................SSCCCHHHHHHHCCHHHHHSSCCHHHHC CS
+         FAT  156 nlaRksgrlslAekaLkklleedk.......eewlp....p............................evvyaylkylwakgeqkealqkLrefvs 213 
+                  +l+ ksg+l+lA +aL ++ + ++       +   p    p                            +v ++yl++lwa+++ + al+++  f++
+  CEG44747.1 1735 RLCLKSGHLNLAASALWRV-GAKPfirsierD---PyapiPinlggnagasqgfangllsladsaaqdpRVAFSYLRHLWAENREDVALKQMDYFIE 1827
+                  *******************.777788654442...1343426666666666666677777777777777**************************** PP
+
+                  CTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S- CS
+         FAT  214 cllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepe 310 
+                   l +   e+         ++ ee++kl  ++y  +Gew+ + ++    ++  + +l++  +at ldp+   awh+wal+nf++l++  ++   +++ 
+  CEG44747.1 1828 ALEQH--ED---------SSNEELRKLRVQVYIQLGEWQMSNSE--PHQQAYDYVLECLEKATTLDPTNNRAWHEWALMNFRALEATVKE---SDQG 1908
+                  55553..33.........4446778888999********99999..456679**********************************9444...3489 PP
+
+                  TCCHHHHCCT..CCHHHHTTTS..STTTCHHHHHC CS
+         FAT  311 dlseyvvpavegflkslslsse..kslqdllRlLt 343 
+                  d ++y+v+a++gf++s+s +++   + +d+lRlLt
+  CEG44747.1 1909 DSKRYAVRAIQGFFRSISFGHTsyDVTKDVLRLLT 1943
+                  999*******************9999********8 PP
+
+>> CEG40573.1  Phosphatidylinositol kinase (PIK-L3) [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -8.6   9.3         9   1.5e+04     187     303 ..    1939    2017 ..    1882    2057 .. 0.43
+   2 ?   -3.5   0.1       2.3   3.9e+03     107     126 ..    3454    3473 ..    3419    3474 .. 0.78
+   3 !  137.9   9.2   2.2e-43   3.8e-40       2     343 .]    3485    3814 ..    3484    3814 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: -8.6 bits;  conditional E-value: 9
+                  SCCCHHHHHHHCCH.HHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCC CS
+         FAT  187 vvyaylkylwakge.qkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpsw 282 
+                  +v a++k ++a++e + +  ++L   + + +  + ++ss   +q++++l+ + ++ a+  + ++                                 
+  CEG40573.1 1939 LVQAQAKAQLASKEyIAKVQSHLSSAALQAALPNTAMSSFVSQQQAQQLQAQIQVNAQKVHAQA--------------------------------- 2002
+                  2233333333333322222222222222222222233333333333333333333333333333................................. PP
+
+                  HSTTCCCCHHHHHCCHHHHHH CS
+         FAT  283 ykawhtwalfnfevlskeeek 303 
+                        +a +  + l+ ++ +
+  CEG40573.1 2003 ------LATAQAQGLKPLQAQ 2017
+                  ......333333333333222 PP
+
+  == domain 2  score: -3.5 bits;  conditional E-value: 2.3
+                  TT----TTS-TTTGCCCTTT CS
+         FAT  107 lktWrkRlpgvqddvevwqd 126 
+                  l+ W++R  g+++++  wq 
+  CEG40573.1 3454 LRLWEERWVGCAKQLCQWQL 3473
+                  689************99996 PP
+
+  == domain 3  score: 137.9 bits;  conditional E-value: 2.2e-43
+                  CCTTCCCCTSSSGHHCCCCT..........TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHC CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk......kdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeii 91  
+                  +l + +aW+ g+W s ++ l + +        +p+  + + ++++   ++ + +e+l++++ +l + +++ l+  + +++++l++ ++  +E ee+i
+  CEG40573.1 3485 DLLLDCAWKRGDWASAKQLLLAPSmqssteLGCPQTRLQRLYISILDvEKRTTIETLASQTAELALHQWQGLPRILSQAHLPLMHLFHKFVEVEESI 3581
+                  7899***********887774433556555666666699999998878************************************************* PP
+
+                  CHHCSS-.......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.........HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCC CS
+         FAT   92 qykqkls.......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.........lllkgakaemwlkfanlaRksgrlslAekaLk 172 
+                  q++q+ +       s+ +lk   +tWr+Rlp+ + ++  w+dil++Rs++++  +          l+  + +    +k a+ aRk+  ++++  aL 
+  CEG40573.1 3582 QMMQDIKtatmqhaSLPNLKPSINTWRERLPNKWEPILLWDDILTWRSHMFQVVKTtfarsdaqvLACMHDSPWSVIKLAQTARKQRLPDVCLGALA 3678
+                  ****999999999999999999*****************************99999999999987777777788889******************** PP
+
+                  CCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSC CS
+         FAT  173 klleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseei 268 
+                  kl                   y+ +  ++++a++kLre+vs ++e++ e+s gl   + tnl++f+ ++ a+++ +k+ +l+a ++         e+
+  CEG40573.1 3679 KL-------------------YSVPAMDVQDAFSKLREQVSICYESATEYSGGLSILNTTNLDYFSLRQkAEMFRLKALFLEAQGS-------LTEA 3749
+                  **...................*****************************************************************.......89** PP
+
+                  CHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  269 lqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                  +  +s   ++++s  k w +w++++ + +  +         +dl  ++ + + ++l+++++  ++++  ++R+L+
+  CEG40573.1 3750 NMTFSHCLQICDSYGKGWLSWGHYCYKLFVVQ---------KDLA-LASQTIACYLQAIHHRCNSARLMIARVLW 3814
+                  ******************************99.........6776.99**************************9 PP
+
+>> CEG40920.1  Phosphatidylinositol kinase (PIK-L4) [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  135.8   2.4     1e-42   1.7e-39       2     343 .]    2080    2431 ..    2079    2431 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 135.8 bits;  conditional E-value: 1e-42
+                  CCTTCCCCTSSSGHHCCCCT....................TSSSS--...CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHH CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk................kdspdka...ffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllv 79  
+                  p+a+e++Wrl+ Wd++++ ls+ k                ++++d +   +++++++lh +q  e++++++ ar  ++  l+a s esy+ray+ l+
+  CEG40920.1 2080 PFALECSWRLSRWDLLANLLSAEKqnpllhsstsflsdpvSNGFDVShfmLVRVLHSLHSGQQIEFQRHLKAARLEVMGPLAAASAESYQRAYPFLH 2176
+                  789********************9****************99999998889999999**************************************** PP
+
+                  CCCCCHHHCHHCCHHCSS-..---TTTTT....TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHH CS
+         FAT   80 rlQqlaEleeiiqykqkls..sseelksl....lktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAeka 170 
+                  +l+ l+E e+    +q+ +  +++ ++ l       W+ R+  ++++++ +++il++R+++l  i     ++   + wl +++laRk g + +A +a
+  CEG40920.1 2177 DLHFLHEAEQGYIAIQRAKilDDSTRRGLvwktQTPWKVRYDAMATQLKYRDPILALRRVILLEIGL---QDEVSQNWLVYSKLARKEGFFRTATSA 2270
+                  **********98888888878555555444665666**************************99966...8999*********************** PP
+
+                  CCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SS CS
+         FAT  171 LkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseeksee 267 
+                     ++  ++      ++  +++k+l ++++  ealq L e v   ++   +   + +v       + ++l a+++l+   w+++ ++      + ++
+  CEG40920.1 2271 VMHAHAMSN-----QHALTEKAKLLVSQDRLYEALQIL-EPVD--ID---ASMLDFNV-------DDRHLCAKNLLLATNWMQESGQR-----QGKK 2344
+                  ****99999.....68999*******************.4444..11...22223333.......345666****************4.....59** PP
+
+                  CCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS............S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  268 ilqaysaateldpswykawhtwalfnfevlskeeekkeeee...........pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                  + + y+a +++dp+w+k ++ +a++++  l+     + + +            + +  y+++ ++++  +l+++ + ++q+l+RlLt
+  CEG40920.1 2345 VIERYQAVIRFDPKWEKGYFFLAKYYEYLLNVSHPDALNGSmssdeaadllvDSVFHAYLISLMKNYVLALAHGTKFVFQSLPRLLT 2431
+                  ***************************9998885553333356778999998788889****************************8 PP
+
+>> CEG44196.1  Phosphatidylinositol kinase (PIK-L5) [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.8  14.6   1.1e-18   1.8e-15       6     343 .]    2451    2889 ..    2447    2889 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 56.8 bits;  conditional E-value: 1.1e-18
+                  CCCCTSSSGHHCCCCT..................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCC..CTS---SCCCCCHHHHHCCCCCHH CS
+         FAT    6 eaaWrlgqWdsmeeylslmk..............kdspdkaffeailalhrnqfdeaeeliekarqllvte..lsalsgesynraydllvrlQqlaE 86  
+                  + aW  +qWd     ls+                + s++++++e + ++ +++f +++ +  +a+  ++++  ls ls es++   ++l +lQ++ E
+  CEG44196.1 2451 KRAWVSMQWDAALPRLSEPViswndqscekatpaRFSQQQTIYESLRSIAHRDFPHLQHVMTNAKTNILRSiqLSLLSFESTKESFSALAHLQAIRE 2547
+                  679********77776665567778999999999999*****************************9999633799********************* PP
+
+                  HCHHCCHHCSS-..........................---TTTTT..TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCC CS
+         FAT   87 leeiiqykqkls..........................sseelksl..lktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfa 155 
+                  +ee+++++q++                           ++eel+++   ++W++R   +  d+   +++l++  ++++ +e + + +++a+  l  a
+  CEG44196.1 2548 IEELANLIQDSCptqkesnsltqatlglssqlnafvdpQKEELTAMplHERWQRRRGRIRGDFITTESLLALEEILIQVSEPSDGDQVTARLFLDLA 2644
+                  *********887999************9999999997777777777989********************************9999999999999*** PP
+
+                  CCHCHHHHCCSTTHHCCCCCHCTT..........TSSCCCHHHHHHHCCHHHHHS...SCCHHHHCCTSSCCC......SS-SS---.......... CS
+         FAT  156 nlaRksgrlslAekaLkklleedk.eewlp....pevvyaylkylwakgeqkeal...qkLrefvscllekke......elssglevq......... 229 
+                   l+Rk+gr+ +A++aL++l++  +   +l      ++ ++++k+lw ++e ++a+   +kL  +++ +++k++      ++                
+  CEG44196.1 2645 ALSRKAGRIAVAYRALYRLDQLHQrG-SLStfetVSWRIQKAKLLWTQQEPRSAIwsgKKLSSELTMHIQKQSlsatdtAA------Lkllhvkvlt 2734
+                  *******************9999942.33347777*******************966678888888888887654444422......1222333445 PP
+
+                  ..........................................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+         FAT  230 ................................eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnf 294 
+                                                  +++ l+      a++++ ++++++a+++  +s+ +s+e l+  +  +  ++++ +          
+  CEG44196.1 2735 mtgrwiscqrsessqvvledffqkatsiissmDANALSSRPIDAAKAHFSLASFMSAMYQQVSSRVNSREWLAGKKVVQARHDELRE---------- 2821
+                  555555555555555556666666666666656666666666666666666666666666555555566655555555555555555.......... PP
+
+                  HCCHHHHHHSSSS.................................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  295 evlskeeekkeeee................................pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                                                                ++ + ++++ a+  + k lsls e  l  ++R+L+
+  CEG44196.1 2822 -------------LqtmeqsmqnenrahihtlnrevvydmnerskvEASVDQFLIGALYSYGKGLSLSPEAELDTVFRVLS 2889
+                  .............03333333344444444444444455566665578888***************************995 PP
+
+>> CEG49920.1  probable udp-n-acetylglucosamine--peptide n-acetylglucosaminyltransferase sec-like [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    5.3   0.0     0.005       8.6     231     293 ..      80     135 ..      37     154 .. 0.83
+   2 !    8.7   0.4   0.00044      0.76     252     300 ..     162     210 ..     130     291 .. 0.60
+   3 ?    2.5   0.0     0.034        58     246     293 ..     299     339 ..     286     346 .. 0.81
+   4 ?    1.4   0.0     0.076   1.3e+02     258     295 ..     338     375 ..     331     377 .. 0.83
+   5 !    9.9   0.0   0.00019      0.33     260     328 ..     374     455 ..     360     491 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 5.3 bits;  conditional E-value: 0.005
+                 .........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+         FAT 231 ptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                 ++++  ++   a++y  +G  l++l++        +++ q y++a++++p+  +a+++ a  +
+  CEG49920.1  80 NQQCIRLAPTFAEAYGNLGNALKELGD-------LSGAIQFYLRAIKVNPNFRDAYNQVANCY 135
+                 5556666777799**************.......89*********************988766 PP
+
+  == domain 2  score: 8.7 bits;  conditional E-value: 0.00044
+                 CCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+         FAT 252 laalqklnwseekseeilqaysaateldpswykawhtwalfnfevlske 300
+                 +++l++l + + ++e++ ++y++a +l+p+ + aw ++a +  e  + e
+  CEG49920.1 162 QSNLGNLYKLQGRREDAKECYCQALRLNPKFAIAWSNLAGLMKEEGQVE 210
+                 3444444444444555666666666666666666666655555443333 PP
+
+  == domain 3  score: 2.5 bits;  conditional E-value: 0.034
+                 CTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+         FAT 246 lkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                   +G  l++ ++        e++  +y++a +l p+  +a+++++ + 
+  CEG49920.1 299 NNLGNALRECGE-------LEQAIDCYRTALQLKPDHPHAYNNLGNAL 339
+                 455555555555.......8999*********************9875 PP
+
+  == domain 4  score: 1.4 bits;  conditional E-value: 0.076
+                 CT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+         FAT 258 lnwseekseeilqaysaateldpswykawhtwalfnfe 295
+                 + + +  ++e+lq+y+ a+++ p+ + a+ + ++   e
+  CEG49920.1 338 ALKDKGLIKEALQCYTIAIRFMPQFAAAHSNIGSILKE 375
+                 44557789*********************999887766 PP
+
+  == domain 5  score: 9.9 bits;  conditional E-value: 0.00019
+                 .S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS..............S-TCCHHHHCCT..CCHHHH CS
+         FAT 260 wseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee.............pedlseyvvpavegflksls 328
+                 +++ k +++l++y++a+ +dp+ ++a+ +++ +    + +    +  ++               +l+ +  +a+ ++++sl 
+  CEG49920.1 374 KEQGKFDQALAHYQEAISIDPKFADAYSNMGNVFKDLYAYSNLASAYKDggrleeaigfyrkALTLRPHFPEAFANYFHSLV 455
+                 445569*************************986666655533333333677777899997756666888899999999985 PP
+
+>> CEG46469.1  Tetratricopeptide TPR1 [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.1      0.15   2.6e+02     184     225 ..     400     445 ..     373     483 .. 0.75
+   2 !   15.5   0.1   3.9e-06    0.0067     149     273 ..     541     667 ..     528     677 .. 0.76
+   3 ?    1.4   0.2     0.075   1.3e+02     230     296 ..     891     953 ..     799    1055 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 0.15
+                 ....TSSCCCHHHHHHHCCH.HHHHSSCCHHHHCCTSSCCCSS-SS CS
+         FAT 184 p...pevvyaylkylwakge.qkealqkLrefvscllekkeelssg 225
+                      + ++ ++ ++w+k++ + +++++Lr++ + +++k ++  +g
+  CEG46469.1 400 IgasASFTFLQALLSWEKDRdRVKQVNYLRQSMKIHMDKLNTTIKG 445
+                 133467889999999*9999899***********999998755554 PP
+
+  == domain 2  score: 15.5 bits;  conditional E-value: 3.9e-06
+                 TCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........H....H. CS
+         FAT 149 emwlkfanlaRksgrlslAekaLkklleedkeewlp.pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkl....l. 241
+                 ++ l  a+++ + g++  A  +L ++l +d  ++++  ++++ ++++l + g++++alq+L+   + +++++++ ss +   +p+++ e t        
+  CEG46469.1 541 KAHLMHARVSLERGHFRAASASLDRALSYDF-SVRQsLSYYIIRARILEHAGNVRDALQTLQTAMK-MIQNNGSSSSLNR--QPKHVAESTSTispfDk 635
+                 667778999999******************9.33333579***********************999.9999874444433..44444444443111122 PP
+
+                 HHCCCTCCCCCCCCCCCT.S...-SSCCHHHH CS
+         FAT 242 arcylkkGewlaalqklnwseekseeilqays 273
+                 a  y   ++ l++l++l  ++++ +e+l  ++
+  CEG46469.1 636 ASLYINMAQVLSQLNDLPGATKTVREALDVFR 667
+                 56788888899999998888888888888876 PP
+
+  == domain 3  score: 1.4 bits;  conditional E-value: 0.075
+                 ..........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+         FAT 230 eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+                 +p+ l+++++ +   c+   + + +a ++      +s+++ ++ ++a + d s ++   ++a++++++
+  CEG46469.1 891 QPDVLNKQRAAIaETCFQIAAIYSNASSNS-----ESNNVIKYCTLALQSDESHEDSLLYMARAYQQI 953
+                 566666777777555565566666666663.....488888888888888888888888888888765 PP
+
+>> CEG38024.1  hypothetical protein PHALS_06066 [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.6   0.0       0.3   5.1e+02     229     265 ..      49      88 ..      11     101 .. 0.69
+   2 ?   11.2   0.0   7.5e-05      0.13     184     220 ..     160     198 ..     127     276 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: -0.6 bits;  conditional E-value: 0.3
+                 ..............HHHHCCCTCCCCCCCCCCCT.S...- CS
+         FAT 229 q...eptnleeftkllarcylkkGewlaalqklnwseeks 265
+                 +    p+ ++e++ l  +   ++G ++++l++ ++ +e+ 
+  CEG38024.1  49 ErgnGPDIINEISVLTDKLAIELGTFQKHLKSSEKIVEDD 88 
+                 1455677778888888899999999999999966555555 PP
+
+  == domain 2  score: 11.2 bits;  conditional E-value: 7.5e-05
+                 ...TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC CS
+         FAT 184 p..pevvyaylkylwakgeqkealqkLrefvscllekke 220
+                 +   ++++a+++y  + +++k++++kLre++++l+ +  
+  CEG38024.1 160 DydLRIIFAKSRYDVDCINRKDQFEKLREEIKSLALDGP 198
+                 133479**************************9877655 PP
+
+>> CEG40236.1  tpr repeat-containing protein [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.4   1.4    0.0094        16     125     293 ..      97     263 ..      77     266 .. 0.70
+   2 ?    9.4   0.4   0.00027      0.47     223     305 ..     361     446 ..     315     463 .. 0.68
+   3 ?   -1.4   0.0      0.54   9.3e+02      26      84 ..     487     549 ..     470     567 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 4.4 bits;  conditional E-value: 0.0094
+                 TTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCS CS
+         FAT 125 qdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk..eewlppevvyaylkylwakgeqkealqkLrefvscllekkee 221
+                 +d+ + R l+ +  ++     +++ mw k     +k+g+++lA    +k+ + +   e w        ++ +   +++  + + k+   +     +++ 
+  CEG40236.1  97 EDVPTARNLFRNVLQR--HYPKDMGMWNKWGVMEWKAGNHELARMIFSKASKISYhtELWTS----WGSMELEVNNSQEAKRIFKVILATDPQNPMAGL 189
+                 5666666666666666..33457888888888889999999998888888555553333333....444555555555555555555555522222222 PP
+
+                 S-SS---...................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+         FAT 222 lssglevq........eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                                   +  e+f++ll r++ +    ++a+  ++ + +++  + + +++a+   +   + wh+wa+++
+  CEG40236.1 190 GM-----AlweaqaghPDKAREKFEDLL-RHHPRDVLIMQAFAVFEAQCQHIGLARKIFQSAVSNPRATGQVWHAWAKAE 263
+                 22.....222333554566777777777.99999999999999999999999999*********************9985 PP
+
+  == domain 2  score: 9.4 bits;  conditional E-value: 0.00027
+                 -SS---...........HHHHC...CCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSS CS
+         FAT 223 ssglevqeptnleeftkllarc...ylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekke 305
+                 s  + +q+  ++ + +kl  ++   +   G  l+a++++++++ k  ++ + y +at+++p+  + w ++a+++ +  ++e+ ++ 
+  CEG40236.1 361 SLAILYQKRGQMHYARKLFEKAlesLQHTGPILQAFGSFEEQHGKLGNARELYEEATKVQPTAVESWRALARVEAKLENYEAARSA 446
+                 44444444444444444444430003344569****************************************99988887766644 PP
+
+  == domain 3  score: -1.4 bits;  conditional E-value: 0.54
+                 TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCC....CCCCTS---SCCCCCHHHHHCCCCC CS
+         FAT  26 kdspdkaffeailalhr.nqfdeaeeliekarqll....vtelsalsgesynraydllvrlQql 84 
+                  ds d +++++   l    + d+a++++e+a +++     t++s l +  y r y +l +lQq 
+  CEG40236.1 487 VDSSDASIWNMRALLELpLNPDRAKTIVENALSIVpeheKTSWSILMC-TYGRIYAALGDLQQA 549
+                 566666665555555555677888888888887762211334444444.488888888888874 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      15469  (5878678 residues searched)
+Passed MSV filter:                       961  (0.0621242); expected 309.4 (0.02)
+Passed bias filter:                      328  (0.0212037); expected 309.4 (0.02)
+Passed Vit filter:                        28  (0.00181007); expected 15.5 (0.001)
+Passed Fwd filter:                         9  (0.000581809); expected 0.2 (1e-05)
+Initial search space (Z):              15469  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.10u 0.06s 00:00:00.16 Elapsed: 00:00:00.08
+# Mc/sec: 24779.75
+//
+[ok]

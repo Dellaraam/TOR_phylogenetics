@@ -1,0 +1,458 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Streptophyta/Proteins/Oryza_sativa_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    2.2e-89  301.5   2.6    2.7e-89  301.2   0.1    2.2  2  BAS92935.1  Os05g0235300, partial [Oryza sativa Japonica Grou
+    2.8e-10   41.4   0.2    6.7e-10   40.1   0.1    1.7  2  BAT02896.1  Os07g0645100, partial [Oryza sativa Japonica Grou
+      2e-05   25.4   0.9    0.00041   21.1   0.3    2.3  2  BAS81951.1  Os03g0113800 [Oryza sativa Japonica Group]
+    5.5e-05   24.0   7.4       0.26   11.9   1.1    3.1  3  BAT11506.1  Os10g0498600, partial [Oryza sativa Japonica Grou
+    8.4e-05   23.4   0.2        7.1    7.2   0.0    4.3  4  BAS78732.1  Os02g0489550 [Oryza sativa Japonica Group]
+    0.00012   22.9   2.2    0.00047   20.9   0.5    2.4  2  BAT11677.1  Os10g0518300 [Oryza sativa Japonica Group]
+     0.0038   17.9   0.3        7.1    7.2   0.0    3.1  3  BAT01453.1  Os07g0476200 [Oryza sativa Japonica Group]
+  ------ inclusion threshold ------
+      0.029   15.0   0.3      0.046   14.4   0.3    1.3  1  BAT11170.1  Os10g0460900 [Oryza sativa Japonica Group]
+       0.19   12.3   0.0       0.27   11.9   0.0    1.2  1  BAS80430.1  Os02g0697500, partial [Oryza sativa Japonica Grou
+       0.45   11.1  11.5        3.4    8.2   0.3    3.7  3  BAS83838.1  Os03g0308800, partial [Oryza sativa Japonica Grou
+       0.71   10.4   7.6        6.1    7.4   1.6    3.6  5  BAT02888.1  Os07g0644300 [Oryza sativa Japonica Group]
+          1    9.9   1.4         24    5.4   0.0    3.7  4  BAT06686.1  Os08g0559300 [Oryza sativa Japonica Group]
+          5    7.7  17.2        4.7    7.7   0.7    4.5  5  BAS83837.1  Os03g0308800 [Oryza sativa Japonica Group]
+
+
+Domain annotation for each sequence (and alignments):
+>> BAS92935.1  Os05g0235300, partial [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.5   0.3       0.4   1.5e+03     235     298 ..     275     348 ..     157     365 .. 0.67
+   2 !  301.2   0.1   7.3e-93   2.7e-89       1     343 []     399     765 ..     399     765 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: -0.5 bits;  conditional E-value: 0.4
+                 .....HH.HHCCCTCCC.......CCCCCCCCT.S...-SSCCHHHHC..CHHCTCCCHSTTCCCCHHHHHCCH CS
+         FAT 235 eeftkll.arcylkkGe.......wlaalqklnwseekseeilqaysa..ateldpswykawhtwalfnfevls 298
+                  +++ +  a c  k G         l ++++   ++e + +il + ++   ++l  swy++ h+w  +    + 
+  BAS92935.1 275 HYKEMEFeAVCSKKMGAnpvtvveSLIHINNQLHQHEAAIGILTYSQQhlEVQLKESWYEKLHRWDEALKAYKA 348
+                 55555555555555555555555544444444444455555555554311578888999999999777655444 PP
+
+  == domain 2  score: 301.2 bits;  conditional E-value: 7.3e-93
+                 CCCTTCCCCTSSSGHHCCCCT.....................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCC CS
+         FAT   1 aplaaeaaWrlgqWdsmeeylslmk.................kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQ 82 
+                 ap+aa+aaW++g+Wd m+ey+s ++                 + s ++aff+a+l+++ ++++ea+ ++e+ar +l tel+al+ esy+ray+ +vr+Q
+  BAS92935.1 399 APMAANAAWHMGEWDHMAEYVSRLDdgdenklrilgnttasgDGSSNGAFFRAVLSVRCKKYEEARVYVERARRCLATELAALVLESYERAYNNMVRVQ 497
+                 69************************************99999999999************************************************** PP
+
+                 CCHHHCHHCCHHCSS-....---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHC CS
+         FAT  83 qlaEleeiiqykqkls....sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkkllee 177
+                 ql+Elee+i y++ +      +++++ ++++W++R +g++++vevwq +l+vR lvl p+ed        ++w+kfa+l++ksgr+s+A+++L kll+ 
+  BAS92935.1 498 QLSELEEVIDYCTLPMespiADSRRELIRNMWNERIKGTKRNVEVWQALLAVRELVLPPNED-------RDTWIKFAKLCWKSGRISQAKSTLVKLLQF 589
+                 *************99999999999**************************************.......****************************** PP
+
+                 TT............TSSCCCHHHHHHHCCH...HHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-S CS
+         FAT 178 dkeewlp.......pevvyaylkylwakge...qkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekse 266
+                 d+e++ +       p+vv+aylky++a g+   +++a+ +L++   +l+    +  sg+ +++  + +    l+ar+yl +++w +al+      ++++
+  BAS92935.1 590 DPESSPEltlyhghPQVVLAYLKYQYAVGDelkRRDAFCRLQDLSVQLATAT-NSYSGTLASQVATSNAGVPLIARVYLTLASWKRALSP-GLDDDSIQ 686
+                 **33333568899*****************9989*******88777677665.777777777777777777888****************.699***** PP
+
+                 SCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCC.HHHHCCT..CCHHHHTTTS.....STTTCHHHHHC CS
+         FAT 267 eilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedls.eyvvpavegflkslslsse.....kslqdllRlLt 343
+                 eil +y+ at  +++w kawh walfn ev+s+++ +    ++ d+  +yvv av+g++ s+++ s+      slqd+lRlLt
+  BAS92935.1 687 EILVSYKNATLNAKDWGKAWHLWALFNTEVMSRYTLR----GRPDIAgKYVVAAVTGYFYSIACASTtkgvdDSLQDILRLLT 765
+                 **********************************555....3456666****************999989999*********8 PP
+
+>> BAT02896.1  Os07g0645100, partial [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.1   0.1   1.8e-13   6.7e-10     230     342 ..       2      98 ..       1      99 [. 0.93
+   2 ?   -2.9   0.0       2.1   7.9e+03     203     263 ..     372     424 ..     358     432 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 40.1 bits;  conditional E-value: 1.8e-13
+                 ..........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHH CS
+         FAT 230 eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflksl 327
+                 ++tnle f  +  a+++ ++G++l ++++        e+++ ays a+ l +++ kaw +w+ +++ v+++         ++++   +  av++f++ +
+  BAT02896.1   2 NNTNLEFFPVKNkAEIFRLRGDFLLKMND-------CENANVAYSNAITLFKHLPKAWISWGNYCDMVFKET--------KDEI--WLEYAVSCFFQGI 83 
+                 6899999998888****************.......99**********************************........4445..6999********* PP
+
+                 HTTTSSTTTCHHHHH CS
+         FAT 328 slssekslqdllRlL 342
+                 +++ ++s+  l+R+L
+  BAT02896.1  84 KYGVSNSRSHLARIL 98 
+                 *************98 PP
+
+  == domain 2  score: -2.9 bits;  conditional E-value: 2.1
+                 HHSSCCHHHHCCTSSCCCSS-SS---............HHHHCCCTCCCCCCCCCCCT.S.. CS
+         FAT 203 ealqkLrefvscllekkeelssglevq.eptnleeftkllarcylkkGewlaalqklnwsee 263
+                 +a++k  +fv+++ ++        e   +p++  +f + la+   ++  w + lq+  + e+
+  BAT02896.1 372 DAVNKHVDFVKEYKQD-------FERDlDPESATTFPATLAELTERLKHWKNVLQS--NVED 424
+                 4455555555544443.......333345666667777777777777777777776..3444 PP
+
+>> BAS81951.1  Os03g0113800 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.8   0.0     0.041   1.5e+02     268     300 ..     137     169 ..     125     178 .. 0.82
+   2 !   21.1   0.3   1.1e-07   0.00041     262     327 ..     178     281 ..     171     289 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 2.8 bits;  conditional E-value: 0.041
+                 CCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+         FAT 268 ilqaysaateldpswykawhtwalfnfevlske 300
+                 + + y +a+e +p+  +a+++wal+ +e   ++
+  BAS81951.1 137 AAKRYVSAIERNPEDPDAYYNWALVLQESADNV 169
+                 67999********************99977665 PP
+
+  == domain 2  score: 21.1 bits;  conditional E-value: 1.1e-07
+                 ...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.......................................S-TCCHHHHCCT.. CS
+         FAT 262 eekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee......................................pedlseyvvpaveg 322
+                     ee+ ++y++at+l+p++y+a+++wa +   + ++  ++ke ee                                       +d ++ +  a+++
+  BAS81951.1 178 DSLLEEACKKYAEATRLCPTLYDAYYNWAIAIADRAKMRGRTKEAEElwkqaimnydkavqlnwnspqalnnwglglqelsaivpARDKQTIIKTAISK 276
+                 45689**********************************888766655555555555555555555555555555555555555433444455555555 PP
+
+                 CCHHH CS
+         FAT 323 flksl 327
+                 f  ++
+  BAS81951.1 277 FRSAI 281
+                 55555 PP
+
+>> BAT11506.1  Os10g0498600, partial [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.9   1.1     7e-05      0.26     148     296 ..      54     202 ..      17     221 .. 0.80
+   2 !    6.2   0.2    0.0038        14     150     215 ..     225     287 ..     221     300 .. 0.89
+   3 !    8.1   0.0     0.001       3.7     184     262 ..     316     403 ..     297     417 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 11.9 bits;  conditional E-value: 7e-05
+                 TTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCC CS
+         FAT 148 aemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcyl 246
+                  ++wlk a+l   +g  +  +++L+k+  +++   +   + + ++k  w  g++  a   L+e   +l ++ e  +         ++e ++ + ar++l
+  BAT11506.1  54 KSIWLKAAQLEKSHGTKESLYNLLRKAVTYNP---RAEVLWLMSAKEKWLAGDVPAARAILQEAYASLPNSEEIWLAAFKL----EFENNEPERARILL 145
+                 579*****************************...222456889**********************888887755555444....45555555566666 PP
+
+                 TCCC........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+         FAT 247 kkGe........wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+                  k+         w++++   +++  + +e+ +   +  +l ps  k w ++++++++ 
+  BAT11506.1 146 SKARerggtervWMKSAIV-ERELGNVDEERKLLEEGLKLFPSFFKLWLMLGQMEDRL 202
+                 6666666668888888777.67778899999999999999999999999999999875 PP
+
+  == domain 2  score: 6.2 bits;  conditional E-value: 0.0038
+                 CCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCT CS
+         FAT 150 mwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscl 215
+                  wl+ anl  k + ls +  +L++++++++   ++pe+ +a ++  +  g++kea   L + ++++
+  BAT11506.1 225 LWLSLANLEEKINGLSKSRAVLTMARKKNP---ATPELWLAAVRAELRHGNKKEADALLAKALQEC 287
+                 5************************88888...66999**************99987777777665 PP
+
+  == domain 3  score: 8.1 bits;  conditional E-value: 0.001
+                 .....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...SS-SS---..............HHHHCCCTCCC....CCCCCCCCT.S. CS
+         FAT 184 p....pevvyaylkylwakgeqkealqkLrefvscllekke...elssglevq...eptnleeftkllarcylkkGe....wlaalqklnwse 262
+                      p+v+ a +k++w++ ++++a + L+  v+ l+ + +   +    l+++   +  n ++++++l rc +   +    w+a ++  ++s+
+  BAT11506.1 316 RcdhdPHVIAAVAKLFWHDRKVDKARSWLNRAVT-LAPDIGdfwA----LYYKfelQHGNADTQKDVLQRCVAAEPKhgerWQAITKAVENSH 403
+                 244479***********************99999.6666544442....33333334556666666667777655553335555555555554 PP
+
+>> BAS78732.1  Os02g0489550 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.4   0.0      0.39   1.4e+03     263     292 ..      98     126 ..      89     130 .. 0.84
+   2 ?    3.4   0.0     0.026        96     255     291 ..     123     159 ..     118     170 .. 0.84
+   3 !    6.5   0.1     0.003        11     237     332 ..     180     285 ..     162     293 .. 0.71
+   4 !    7.2   0.0    0.0019       7.1     230     294 ..     343     400 ..     295     414 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: -0.4 bits;  conditional E-value: 0.39
+                 ..-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+         FAT 263 ekseeilqaysaateldpswykawhtwalf 292
+                 +  +e+ q+ ++a  ++p++ +a+ +++ +
+  BAS78732.1  98 R-LNEAAQCCRQALAINPRLVDAHSNLGNL 126
+                 3.7899********************9976 PP
+
+  == domain 2  score: 3.4 bits;  conditional E-value: 0.026
+                 CCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCH CS
+         FAT 255 lqklnwseekseeilqaysaateldpswykawhtwal 291
+                 l++l +++  ++e+ ++y +a ++dp+ + aw ++a 
+  BAS78732.1 123 LGNLMKAQGFIQEAYNCYIEALRIDPQFAIAWSNLAG 159
+                 55555566669***********************996 PP
+
+  == domain 3  score: 6.5 bits;  conditional E-value: 0.003
+                 ...HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS...................S-TCCHHHH CS
+         FAT 237 ftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee..................pedlseyvv 317
+                 ++ + a +yl +G   + ++        s+e+  +y++a++ +p+ + a+ ++a  + e+ +        ++                   +d+   v 
+  BAS78732.1 180 LKPSFADAYLNQGNVYKTMGM-------SQEAIISYQRAVQARPDYAMAYGNLATIYYEQGQLDIAIRCYNQaiicdpqfveaynnmgnaLKDAG-RVE 270
+                 556668888888988888888.......8899999999999999999999999988887766553333333356667666666666655433443.577 PP
+
+                 CCT..CCHHHHTTTS CS
+         FAT 318 pavegflkslslsse 332
+                 +a++++  +l+l+ +
+  BAS78732.1 271 EAINCYRSCLALQAN 285
+                 777777777777766 PP
+
+  == domain 4  score: 7.2 bits;  conditional E-value: 0.0019
+                 ..........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+         FAT 230 eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnf 294
+                 ++t++       a ++  +G   +++++        +e+ q y +a+ ++p+ ++a++++a+++ 
+  BAS78732.1 343 CYTEVLRVDPTAADALVNRGNTFKEIGR-------VNEAIQDYIQAATIRPTMAEAHANLASAYK 400
+                 5566666666667788888888889999.......99************************9986 PP
+
+>> BAT11677.1  Os10g0518300 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.1      0.14   5.2e+02     268     300 ..     127     159 ..     115     169 .. 0.80
+   2 !   20.9   0.5   1.3e-07   0.00047     260     309 ..     166     252 ..     161     279 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 0.14
+                 CCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+         FAT 268 ilqaysaateldpswykawhtwalfnfevlske 300
+                 + + y +a+e + +  +a+++wal+ +e   ++
+  BAT11677.1 127 AAKRYISAIERNHDDPDAYYNWALVLQESADNV 159
+                 678899999999999**********99987776 PP
+
+  == domain 2  score: 20.9 bits;  conditional E-value: 1.3e-07
+                 .S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS......................................S CS
+         FAT 260 wseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee.....................................p 309
+                 ++ +  ee+ ++y++at+l+p++y+a+++wa +   + ++  ++ke ee                                     p
+  BAT11677.1 166 SKDALLEEACKKYAEATRLCPTLYDAYYNWAIAIADRAKMRGRTKEAEElwkqailnyekavqlnwnspqalnnwglglqelsaivP 252
+                 4566789**********************************8887766566666666666666666666666666666666666652 PP
+
+>> BAT01453.1  Os07g0476200 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.2   0.0    0.0019       7.1     241     287 ..      89     131 ..      44     206 .. 0.77
+   2 ?    0.1   0.0      0.26   9.8e+02     257     292 ..     222     250 ..     214     258 .. 0.84
+   3 !    6.7   0.0    0.0027       9.9     186     293 ..     316     430 ..     297     440 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 7.2 bits;  conditional E-value: 0.0019
+                 HHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTC CS
+         FAT 241 larcylkkGewlaalqklnwseekseeilqaysaateldpswykawh 287
+                 l+ +++++G+  +a qk    e + +e++q+y +a ++d +  ++w 
+  BAT01453.1  89 LGAFHTFLGKVERAQQK----EVHFKEATQCYNRASRIDETEPSTWI 131
+                 35566667775555555....789***************99999986 PP
+
+  == domain 2  score: 0.1 bits;  conditional E-value: 0.26
+                 CCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+         FAT 257 klnwseekseeilqaysaateldpswykawhtwalf 292
+                 +       s+++ qa+++  +ldp+ ++a  ++a +
+  BAT01453.1 222 Q-------SDKARQAFQRVLQLDPENIDALVALAIM 250
+                 4.......89999************99999888865 PP
+
+  == domain 3  score: 6.7 bits;  conditional E-value: 0.0027
+                 SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.........SS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCC CS
+         FAT 186 evvyaylkylwakgeqkealqkLrefvscllekke.........elssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaa 275
+                 +++y  ++  ++kg+++ a  +   +v++ ++ +          +++    +  +++l  f+k+l +++ +  e l+a+++   ++ +++++ + +++ 
+  BAT01453.1 316 HAFYNLARSYHSKGDIETAGRYYMASVNEISKPQDfvlpffglgQIQLK-FADYKSSLASFEKVL-EVHPENCESLKAIGHIYAKSGENDKAIETFKKV 412
+                 5555555555666665555555544444433333344444442122222.222678889999998.999999999******99999************* PP
+
+                 HHCTCCCHSTTCCCCHHH CS
+         FAT 276 teldpswykawhtwalfn 293
+                 t++dp+  +a+++++ + 
+  BAT01453.1 413 TRIDPKDHQAFMELGELL 430
+                 *************99765 PP
+
+>> BAT11170.1  Os10g0460900 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.4   0.3   1.2e-05     0.046     230     299 ..     275     337 ..     231     366 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 14.4 bits;  conditional E-value: 1.2e-05
+                 ..........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHH CS
+         FAT 230 eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlsk 299
+                   ++++  ++ la++y  +G   ++ +k        ++  q++ +a+el+p+   aw+++++++++++  
+  BAT11170.1 275 AIQKWDRDEQDLAQVYNALGVSYKRDNK-------LDKSIQQFEKAVELQPGYVTAWNNLGDAYEQKKDL 337
+                 5566777778888999999985555555.......99***************************998765 PP
+
+>> BAS80430.1  Os02g0697500, partial [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.9   0.0   7.1e-05      0.27     149     179 ..     119     149 ..      84     170 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 11.9 bits;  conditional E-value: 7.1e-05
+                 TCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT CS
+         FAT 149 emwlkfanlaRksgrlslAekaLkklleedk 179
+                 ++w +  n +R +g+l+lAe+aL++l++   
+  BAS80430.1 119 TAWRSLLNACRIHGNLELAERALQELERLGA 149
+                 6899999*******************88766 PP
+
+>> BAS83838.1  Os03g0308800, partial [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.2   0.3   0.00092       3.4     256     292 ..      27      63 ..       2      67 .. 0.76
+   2 ?    5.9   0.3    0.0046        17     263     296 ..      68     101 ..      62     118 .. 0.86
+   3 ?    2.2   1.3     0.062   2.3e+02     242     296 ..     193     240 ..     106     261 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 8.2 bits;  conditional E-value: 0.00092
+                 CCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+         FAT 256 qklnwseekseeilqaysaateldpswykawhtwalf 292
+                   l+ + e+ e++   +++at+++p++   w +wa++
+  BAS83838.1  27 ALLEARAERFEQARTLFQQATQCNPKSCASWLAWAQV 63 
+                 4445677889*************************87 PP
+
+  == domain 2  score: 5.9 bits;  conditional E-value: 0.0046
+                 ..-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+         FAT 263 ekseeilqaysaateldpswykawhtwalfnfev 296
+                 e++  + + + +a++ +p+    wh walf+ e+
+  BAS83838.1  68 ENNAMARKLFEKAVQASPKNRFSWHVWALFEAEQ 101
+                 55777889**********************9987 PP
+
+  == domain 3  score: 2.2 bits;  conditional E-value: 0.062
+                 HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+         FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+                 arc+   G   +++++         ++    +++  ++++++ +w+twa +++e+
+  BAS83838.1 193 ARCLQAWGVLEQRAGN-------YTAARRLLRSSLNINSQSEVTWMTWAALEDEQ 240
+                 4444444444444444.......56666677777788888888899999888886 PP
+
+>> BAT02888.1  Os07g0644300 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.5   0.0       1.7   6.3e+03     234     288 ..      35      86 ..      24      96 .. 0.78
+   2 ?   -3.6   0.0       3.5   1.3e+04      50      77 ..     137     164 ..     136     168 .. 0.81
+   3 ?   -2.6   0.0       1.8   6.6e+03     278     303 ..     265     290 ..     263     321 .. 0.74
+   4 ?    7.4   1.6    0.0016       6.1     148     218 ..     434     505 ..     396     632 .. 0.67
+   5 ?    4.1   0.0     0.017        63     130     179 ..     690     739 ..     687     768 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -2.5 bits;  conditional E-value: 1.7
+                 ......HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+         FAT 234 leeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawht 288
+                 l + ++ l + + +kG w+  + +   + +   +    y +a +  p++yk wh+
+  BAT02888.1  35 LAYEEEILREPFKLKGWWRYLVAR---AAAPFAKRAVIYERALKALPGSYKLWHA 86 
+                 555566668888888888877777...34557888889999**********9996 PP
+
+  == domain 2  score: -3.6 bits;  conditional E-value: 3.5
+                 HCCCHCCCCCCCCCTS---SCCCCCHHH CS
+         FAT  50 eliekarqllvtelsalsgesynraydl 77 
+                 +l+ +ar  +++ l+al+++   r  +l
+  BAT02888.1 137 RLLTRARRAFDRALRALPVTQHDRIWPL 164
+                 78899************99988776665 PP
+
+  == domain 3  score: -2.6 bits;  conditional E-value: 1.8
+                 CTCCCHSTTCCCCHHHHHCCHHHHHH CS
+         FAT 278 ldpswykawhtwalfnfevlskeeek 303
+                 + +++ k w ++a+++ ++  +e+ +
+  BAT02888.1 265 FTDEVGKLWTSLADYYVRRTLYEKAR 290
+                 7789999********99988887655 PP
+
+  == domain 4  score: 7.4 bits;  conditional E-value: 0.0016
+                 TTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSC CS
+         FAT 148 aemwlkfanlaRksgrlslAekaLkklleedkeewlp.pevvyaylkylwakgeqkealqkLrefvscllek 218
+                  + w+ fa+   k++rl+ Ae+  kk+ + + + + +  ++  + + + +  ++ ++a++ +r+ + + + +
+  BAT02888.1 434 HTLWVAFAKMYEKHNRLDSAEEIFKKATQVNYKAVDHlASIWCEWAEMELRHSNFDKAIELMRQATAEPSVE 505
+                 578************************999996666666777777777777777888888888888754444 PP
+
+  == domain 5  score: 4.1 bits;  conditional E-value: 0.017
+                 CTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT CS
+         FAT 130 vRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk 179
+                 +R+++ + ie+ l     ++m +kfa+l R+ g+++ A      +  +++
+  BAT02888.1 690 TRQIYEQAIESGLPDRDVMTMCMKFAELERNLGEIDRARAIYVHASNYAD 739
+                 567777777776777789******************99877766666666 PP
+
+>> BAT06686.1  Os08g0559300 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.4   0.0    0.0064        24     242     303 ..     143     197 ..      27     249 .. 0.66
+   2 ?   -0.3   0.0      0.36   1.3e+03     236     280 ..     381     419 ..     301     431 .. 0.54
+   3 ?    0.2   0.1      0.26   9.5e+02     278     290 ..     439     451 ..     334     494 .. 0.66
+   4 ?   -1.2   0.0      0.69   2.6e+03     229     262 ..     843     888 ..     790     896 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 5.4 bits;  conditional E-value: 0.0064
+                 HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH CS
+         FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek 303
+                 a +++ +G  l+ +++        ee  q+y++a e+d++ + a+++++ ++ e+++     
+  BAT06686.1 143 AIVLTDLGTSLKLAGN-------TEEGIQKYCEALEVDSHYAPAYYNLGVVYSEMMQFDLAL 197
+                 5555555555555555.......89999**************************99976555 PP
+
+  == domain 2  score: -0.3 bits;  conditional E-value: 0.36
+                 ....HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTC CS
+         FAT 236 eftkll.arcylkkGewlaalqklnwseekseeilqaysaateldp 280
+                  f+++  a++y  +G   + +++       +  ++qay +  ++dp
+  BAT06686.1 381 IFANSTyAEAYNNLGVLYRDAGS-------ITSAVQAYEKCLQIDP 419
+                 23333334444444444444444.......5555555555555555 PP
+
+  == domain 3  score: 0.2 bits;  conditional E-value: 0.26
+                 CTCCCHSTTCCCC CS
+         FAT 278 ldpswykawhtwa 290
+                 +d+++y+a+ +w+
+  BAT06686.1 439 FDDKLYQAHREWG 451
+                 4555555555555 PP
+
+  == domain 4  score: -1.2 bits;  conditional E-value: 0.69
+                 ......................HH.HHCCCTCCCCCCCCCCCT.S. CS
+         FAT 229 q...........eptnleeftkll.arcylkkGewlaalqklnwse 262
+                             +++n+++f +++ a+   +k++   a+ ++++++
+  BAT06686.1 843 LrrldllqeepcSNNNKQDFDDNQvAKLADLKAQRVDAAVDGDKQS 888
+                 044444445566999*********9***999999888877766544 PP
+
+>> BAS83837.1  Os03g0308800 [Oryza sativa Japonica Group]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.4   0.2     0.055     2e+02     262     291 ..     190     219 ..     148     226 .. 0.81
+   2 ?    7.7   0.7    0.0013       4.7     242     293 ..     230     289 ..     221     296 .. 0.74
+   3 ?    5.3   0.3    0.0068        25     263     297 ..     293     327 ..     287     369 .. 0.86
+   4 ?   -1.2   0.1      0.69   2.6e+03     263     293 ..     361     391 ..     347     414 .. 0.68
+   5 ?    1.7   0.2     0.088   3.3e+02     243     296 ..     419     465 ..     399     484 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 2.4 bits;  conditional E-value: 0.055
+                 ...-SSCCHHHHCCHHCTCCCHSTTCCCCH CS
+         FAT 262 eekseeilqaysaateldpswykawhtwal 291
+                   +++ + + + aat  d + + awh wa 
+  BAS83837.1 190 GGNIRRARELFDAATVADAKHIAAWHGWAI 219
+                 4568889999******************95 PP
+
+  == domain 2  score: 7.7 bits;  conditional E-value: 0.0013
+                 HHCCCTCCC........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+         FAT 242 arcylkkGe........wlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                 ar++l kG           + l  l+ + e+ e++   +++at+++p++   w +wa+++
+  BAS83837.1 230 ARNLLAKGLkycggneyIYQTLALLEARAERFEQARTLFQQATQCNPKSCASWLAWAQVE 289
+                 4455555555555566634445555677888**************************875 PP
+
+  == domain 3  score: 5.3 bits;  conditional E-value: 0.0068
+                 ..-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCC CS
+         FAT 263 ekseeilqaysaateldpswykawhtwalfnfevl 297
+                 e++  + + + +a++ +p+    wh walf+ e+ 
+  BAS83837.1 293 ENNAMARKLFEKAVQASPKNRFSWHVWALFEAEQG 327
+                 55677889**********************99875 PP
+
+  == domain 4  score: -1.2 bits;  conditional E-value: 0.69
+                 ..-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+         FAT 263 ekseeilqaysaateldpswykawhtwalfn 293
+                  +++ +   +++a ++dp+    w +w+ ++
+  BAS83837.1 361 SSPNTARVLFRKASQIDPRHQPVWIAWGWME 391
+                 5567777788888888887666666666554 PP
+
+  == domain 5  score: 1.7 bits;  conditional E-value: 0.088
+                 HCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+         FAT 243 rcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+                 rc+   G   +++++         ++    +++  ++++++ +w+twa +++e+
+  BAS83837.1 419 RCLQAWGVLEQRAGN-------YTAARRLLRSSLNINSQSEVTWMTWAALEDEQ 465
+                 555555554444444.......66777777888899999999********9997 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      48407  (14578621 residues searched)
+Passed MSV filter:                      1664  (0.0343752); expected 968.1 (0.02)
+Passed bias filter:                      984  (0.0203276); expected 968.1 (0.02)
+Passed Vit filter:                        95  (0.00196253); expected 48.4 (0.001)
+Passed Fwd filter:                        13  (0.000268556); expected 0.5 (1e-05)
+Initial search space (Z):              48407  [actual number of targets]
+Domain search space  (domZ):              13  [number of targets reported over threshold]
+# CPU time: 0.28u 0.06s 00:00:00.34 Elapsed: 00:00:00.14
+# Mc/sec: 34190.75
+//
+[ok]

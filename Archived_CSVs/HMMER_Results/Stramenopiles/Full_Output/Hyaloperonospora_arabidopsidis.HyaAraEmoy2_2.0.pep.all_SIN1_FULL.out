@@ -1,0 +1,95 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Hyaloperonospora_arabidopsidis.HyaAraEmoy2_2.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    6.8e-59  200.1   0.1    1.3e-58  199.2   0.1    1.4  1  HpaP804407  pep scaffold:HyaAraEmoy2_2.0:scaffold_28:400035:4
+  ------ inclusion threshold ------
+        1.9    7.0   7.7        2.5    6.6   7.7    1.1  1  HpaP803419  pep scaffold:HyaAraEmoy2_2.0:scaffold_20:139347:1
+
+
+Domain annotation for each sequence (and alignments):
+>> HpaP804407  pep scaffold:HyaAraEmoy2_2.0:scaffold_28:400035:402563:1 gene:HpaG804407 transcript:HpaT804407 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  199.2   0.1   1.9e-62   1.3e-58     186     662 ..      54     591 ..      17     596 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 199.2 bits;  conditional E-value: 1.9e-62
+  PTHR13335.orig.30.pir 186 edsvqrassesslsserssdssssssapsr.rq.........snkldseq..lsaeesdslfekkskssstktqkskkpssa.a.... 256
+                            ++ + +++++ss+ s + + s s ++ap+  r+         sn +++ +  ++++ ++s+ +  s+++s+ +  ++++s   +    
+             HpaP804407  54 DKMTAFKPQASSAASGSGTASLSGKKAPKClRKgstsggfvvSNGVKAGDetTRDGREKSVAVSGSTVQSRRR--PSPQSGRgDkksa 139
+                            4455566666666667777766666677766667777777775555555455555555555555553333333..2222222222222 PP
+
+  PTHR13335.orig.30.pir 257 ............kqsi................................sslssaLekkpsqlnnpfneya.kfdgkgvgttaslkidi 299
+                                        +                                    + ss L+k+ + +      +     g+   ++a+l++ i
+             HpaP804407 140 aaaaavggyggqS--EikeetetavaaeeakdrddgftfereevlpmsFHESSLLDKALKGPAASTLGARpPMMGAD--GSAVLHLTI 223
+                            2333444444320..13444444444444444444445555444444422266788887654444433334555555..799****** PP
+
+  PTHR13335.orig.30.pir 300 ylplssepdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnkvnaycLrivEdDGevddDFPpLDrnepiskf...gfsela 384
+                            ylp   e      +++ +   +tV e+I   L  ++ + r+p l   ++++y+Lr+ ++DG  d+DFP+LDr+++i++f   g +e +
+             HpaP804407 224 YLPTRDE------MKIDLYDVSTVDEAIQELLRVHQANARQPTLYYGHPECYELRLHDSDGIPDEDFPALDRSRKIKNFgdaGGHEYC 305
+                            *******......*********************************9999*****************************8888***** PP
+
+  PTHR13335.orig.30.pir 385 Lveatdsegktnndlqtplpreqkkrleeakrsagsaneagsslstesskeslfvkvnlaypgdsvrskttivvptdvtladvlekac 472
+                            L+e++d++  t+++             +++++ a  a ++++++ t+s +++ f+k+++++++d+    t + ++ ++  +d+l +++
+             HpaP804407 306 LCERPDACPPTSDA------------TPDTASPAAVAKPSAAAAKTPSANDKAFLKIFMPKSDDY----TVVAIDGTTVGQDLLPTLN 377
+                            *********99444............34444556666777788889999************9999....******************* PP
+
+  PTHR13335.orig.30.pir 473 kkrkldqkky.........................rllkvsepnvivdldrtve.....sldgleflllrknssradgvlekteskss 530
+                            kk++l+  ++                          l+ ++   v++ + ++++      +     +llr  s   +++++ + +++s
+             HpaP804407 378 KKHRLQLFQElyvlkisevdrdrldlasdeidmhtKLRPLNLHEVTLATSKSISsfctlLVARSKTKLLRLFSEIFADAPQISAPAPS 465
+                            ***********77777777777777777666666655555555555555555554444444445555666666667777777777777 PP
+
+  PTHR13335.orig.30.pir 531 ssanatissksaaedsqiqiatvqddlsssayksfkVsrkhkmrfktdrelgIdgdyieimPvenqkaatkfwekqKtisihisqvva 618
+                            s  ++t+  +    + ++ + ++++d+ ++++k++++++k+k++ k++r lgId ++i++ +v ++ +   +++++K +++++s vv+
+             HpaP804407 466 SMEETTNLDS---RSRPPPETFMFNDVTAAMFKEWHIIKKNKYGKKQQRMLGIDLNKIYNRKVGERVIT--SSKSTKIAERPMSGVVW 548
+                            7777777777...9******************************************************9..9**************** PP
+
+  PTHR13335.orig.30.pir 619 cklssknpanFkivvrrendeKrydfeavsaaeaaeIvskinni 662
+                            ++  ++ p+ F+i+++++ +e   d+ a+s+ e+aeIv+k+n+ 
+             HpaP804407 549 VR-FNQDPSEFQIYFKDSIEEIITDYTADSPYECAEIVAKLNSY 591
+                            *9.9*************************************975 PP
+
+>> HpaP803419  pep scaffold:HyaAraEmoy2_2.0:scaffold_20:139347:141699:-1 gene:HpaG803419 transcript:HpaT803419 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.6   7.7   0.00035       2.5      49     148 ..       6      99 ..       2     167 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 6.6 bits;  conditional E-value: 0.00035
+  PTHR13335.orig.30.pir  49 vsssssesll..srpksastpgdsgsedsgssneaetatg...........................gdtkarrkkpsldqrretqge 107
+                            ++   ++s++  s p+++s +++ ++++ gs +++ +  +                           g                    
+             HpaP803419   6 AYYQRERSFTtpSAPPDVSGYQTPAPDRRGSLPSQHRFVQppymqqpqqhglypdigqhtcpsvlsrG-------------------- 73 
+                            55667889999999*****************9995555557777777777777777777777775441.................... PP
+
+  PTHR13335.orig.30.pir 108 kqssesesspsyeeelqsvdissssldegsrrrrantavkl 148
+                                           + s+   +++l+++++++++++++++
+             HpaP803419  74 ---------------SFSQHQPQQQLQQQQQQQQQQQQQRQ 99 
+                            ...............33222222222222222222222111 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      14321  (4626395 residues searched)
+Passed MSV filter:                      1697  (0.118497); expected 286.4 (0.02)
+Passed bias filter:                      479  (0.0334474); expected 286.4 (0.02)
+Passed Vit filter:                        73  (0.00509741); expected 14.3 (0.001)
+Passed Fwd filter:                        10  (0.000698275); expected 0.1 (1e-05)
+Initial search space (Z):              14321  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.30u 0.05s 00:00:00.35 Elapsed: 00:00:00.17
+# Mc/sec: 18257.96
+//
+[ok]

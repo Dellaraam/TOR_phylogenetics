@@ -1,0 +1,198 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Tilletiaria_anomala_ubc_951_gca_000711695.Tilletiaria_anomala_UBC_951_v1.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   2.8e-116  387.1   1.8   6.8e-116  385.9   0.4    2.3  2  KDN41769  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+    1.2e-75  253.5   6.1    1.2e-75  253.5   6.1    2.6  2  KDN49215  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+    6.3e-18   63.7   1.1    6.3e-18   63.7   1.1    2.0  3  KDN44907  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+  ------ inclusion threshold ------
+      0.026   12.4   1.4      0.079   10.8   0.4    2.2  2  KDN45071  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+
+
+Domain annotation for each sequence (and alignments):
+>> KDN41769  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_76:2383:10117:-1 gene:K437DRAFT_169985 transc
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.0   0.0      0.17   2.9e+02      67      99 ..    1355    1390 ..    1311    1397 .. 0.70
+   2 !  385.9   0.4    4e-119  6.8e-116       1     343 []    1398    1746 ..    1398    1746 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: -1.0 bits;  conditional E-value: 0.17
+                --SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-...- CS
+       FAT   67 sgesynraydllvrlQqlaEleeiiqykqkls...s 99  
+                +  s   a + + +l++l E+e+++ + q++    +
+  KDN41769 1355 DPDSMDTAFGRMRCLHALGEWEHLADVVQQKWvdaT 1390
+                344666677777788888888888877776545443 PP
+
+  == domain 2  score: 385.9 bits;  conditional E-value: 4e-119
+                CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-. CS
+       FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls. 98  
+                aplaa+aaW++g+Wd+m+e++ +m++ds +++ff+ail +hr+q  +a++ i +ar++l++el+ l++esy+raydl+vr Q+l+Elee+++yk + + 
+  KDN41769 1398 APLAAAAAWSMGEWDLMDEFIAAMRSDSSERSFFRAILYVHRSQRAQASKNIGRARDSLDQELTTLISESYTRAYDLMVRTQMLSELEEALSYKLDYRd 1496
+                79*********************************************************************************************9999 PP
+
+                ---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT..............TSSC CS
+       FAT   99 sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk..eewlp.......pevv 188 
+                ++++++++++tW+kRl+g+q++vevwq+ilsvRs+vl+p++d       +e+w+kfanl+Rksgr+ lAek+L++ll+ d   ++++        p+v+
+  KDN41769 1497 QPDRQATIRSTWMKRLKGCQPEVEVWQRILSVRSVVLTPADD-------TETWIKFANLCRKSGRMVLAEKTLNSLLGPDTlvSDPRSatgpkapPPVI 1588
+                ******************************************.......*******************************9993433346778889*** PP
+
+                CCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...SS-SS---..............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCC CS
+       FAT  189 yaylkylwakgeqkealqkLrefvscllekke...elssglevq...eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldps 281 
+                ya+lk++wa+g + e l++Lr+f+ +l+e+ +   + + +l +q   +  ++ eft+llarcy+k+Gew+a l++ +w +++  ++  +y+ ateld++
+  KDN41769 1589 YAHLKFMWASGARVESLNYLRDFTVNLSEDLGlngTENGNLSMQnwhSHPRFGEFTRLLARCYFKQGEWQAVLKE-DWVTDDTCDVIDSYRHATELDRN 1686
+                ******************************9887766666666688899**************************.9********************** PP
+
+                CHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  282 wykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                wykawh+wal+nf v+s+ e+k +    + +   +vpav+gf++s++l  +++lqd+lRlLt
+  KDN41769 1687 WYKAWHAWALANFDVISHHERKGDA--AQLMAASIVPAVQGFFRSIALARGNALQDTLRLLT 1746
+                *******************766443..4445589***************************8 PP
+
+>> KDN49215  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_22:72414:84913:-1 gene:K437DRAFT_79486 transc
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  253.5   6.1   7.2e-79   1.2e-75       2     343 .]    2857    3210 ..    2856    3210 .. 0.97
+   2 ?   -2.1   0.1      0.39   6.7e+02     107     179 ..    3550    3670 ..    3536    3684 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 253.5 bits;  conditional E-value: 7.2e-79
+                CCTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.....--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHH CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhr.....nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleei 90  
+                ++ +e+aWrl++W   +e l+++      + +p++ +fea++al +     ++++e+ +++++a+ql ++++++l+  +++++++ll+ +Qq +El+e+
+  KDN49215 2857 DMLLECAWRLSDWTVEREILEQALdslsvSATPRRRVFEAYMALLKshsgqDKLSEFGRICDEAIQLTLRKWHSLPAQVTQAHVPLLQVFQQFVELQEA 2955
+                5889***********9999999888999***************6665667777********************************************** PP
+
+                CCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC......................HHCCS-STTCCC..CCCC CS
+       FAT   91 iqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied......................lllkgakaemwl..kfan 156 
+                ++++++l+          s elk+l +tWr+Rlp+++dd+++w+d++++R++v+   ++                      ++++g+++++w+  +fa+
+  KDN49215 2956 STVFSSLAvtnatnldqRSAELKTLMQTWRERLPNLWDDINAWSDLVAWRQHVFGAVNRaylplvpliqqqsgaagsstnsYAYRGYHETAWIinRFAH 3054
+                ****************99********************************************************************************* PP
+
+                CHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..SS-SS---...........HH.HHCCCTCCCCC CS
+       FAT  157 laRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke..elssglevqeptnleeftkll.arcylkkGewl 252 
+                +aRk+   ++++++L+k+                   y+++++e++ea++kLre++++++++++  el +glev+++tnl+ f + + a+++++kG+++
+  KDN49215 3055 VARKHYLNDVCISSLTKI-------------------YTLPNIEIQEAFLKLREQAKSHFQQNNpnELAQGLEVINNTNLMFFGAPQkAEFFTLKGMFM 3134
+                ******************...................*************************9999********************************* PP
+
+                CCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT  253 aalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                a+l+         ee+++a+s+a+++d  ++kaw +w++fn++ ++++        p d+   +v+av+++l+++ l+++ k+++ l R+L+
+  KDN49215 3135 AKLGL-------TEEANSAFSTAIQMDLYVAKAWTEWGRFNDRTFRDK--------PGDTF-CAVNAVSCYLQAAGLYKNsKVRKILIRVLW 3210
+                *****.......8***********************************........99998.******************99*********8 PP
+
+  == domain 2  score: -2.1 bits;  conditional E-value: 0.39
+                TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC................................................HHCCS-STTCCCCCCCC CS
+       FAT  107 lktWrkRlpgvqddvevwqdilsvRslvlspied................................................lllkgakaemwlkfanl 157 
+                l++Wr+R++ v d+   +q +     ++++ + +                                                + ++  ++++ l +a+ 
+  KDN49215 3550 LQRWRDRYEEVLDKRTSKQHLEHCSHFLVEFQHQkfddievpgqylklednnsdfvkiarfeptfelirssgictrritilsHKGSLHSFAIQLPSARY 3648
+                688888888888888888887777777776666667777777777777777777777777777777777777777777776655555668888888888 PP
+
+                HCHHHHCCSTTHHCCCCCHCTT CS
+       FAT  158 aRksgrlslAekaLkklleedk 179 
+                +R+  r+ +  ++L+++le++k
+  KDN49215 3649 CRREERILQLLRCLNRVLEKRK 3670
+                8888888888888888888777 PP
+
+>> KDN44907  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_47:105856:112342:1 gene:K437DRAFT_224659 tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.9   0.0       1.4   2.4e+03      98     119 ..     342     372 ..     322     376 .. 0.64
+   2 ?   -3.4   0.1      0.96   1.6e+03     186     209 ..     419     442 ..     384     480 .. 0.46
+   3 !   63.7   1.1   3.7e-21   6.3e-18      11     343 .]     951    1249 ..     944    1249 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -3.9 bits;  conditional E-value: 1.4
+               -........---TTTTTTT----TTS-TT.T CS
+       FAT  98 s........sseelksllktWrkRlpgvq.d 119
+                        +++ + ++lktWrk  +++q +
+  KDN44907 342 IatltsnfaNADLRHEVLKTWRKLISVLQaS 372
+               0444444558888999999999988777755 PP
+
+  == domain 2  score: -3.4 bits;  conditional E-value: 0.96
+               SSCCCHHHHHHHCCHHHHHSSCCH CS
+       FAT 186 evvyaylkylwakgeqkealqkLr 209
+               e v+++++ + +  e   alq+L+
+  KDN44907 419 ETVLSQVRTSQSMREEVTALQQLK 442
+               333333333333333333333331 PP
+
+  == domain 3  score: 63.7 bits;  conditional E-value: 3.7e-21
+                SSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS----TTTTTTT- CS
+       FAT   11 lgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklssseelksllkt 109 
+                l+qW ++++ ++l + +s + a+ + +la++ ++  ++   +  arq l + + a  ++ y+  yd++++lQ +++le i   k+     ++ ++l   
+  KDN44907  951 LSQWGEVARLVDLPNATSDKHALARLLLAMRSGDQVAVLAALRDARQQLGRPIIAAGKTRYALIYDSVLQLQVIQDLETIFVHKEG---TQDITAL--- 1043
+                689********99999999999**********99999999******************************************9994...5555555... PP
+
+                ---TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCC CS
+       FAT  110 WrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkL 208 
+                + +R  ++ ++++v++ +ls ++ +l    +   k+  a++w+++++ aR++++ +++++a +++++ d      +  +++++k+l  +++ + a+q +
+  KDN44907 1044 LSDRVAQTLPSFRVREVLLSAHRTALRSVMK-DNKASVAAAWIQTSKFARRADHRQTSYSAVLQAARLDA-----SFSFVQRAKLLRLDDQLQAAIQVM 1136
+                9*************************44433.36999*********************************.....78899******************* PP
+
+                HHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS CS
+       FAT  209 refvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeee 307 
+                +  + +  e +++ +              +  +a+++l++++ ++a+++ +     ++e+l++y++ +++d + +  w++++++ +    +  ++    
+  KDN44907 1137 NNNLASF-ETPSSELA--------GYHASKSDIAKANLLRSSLMEATGRYS-----RNEVLESYRRTAKIDETAERPWYQLGHYADISRDTA-DG---- 1216
+                9999933.33333333........345567788****************76.....***************************998655555.22.... PP
+
+                .S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  308 epedlseyvvpavegflkslslssekslqdllRlLt 343 
+                 ++++     ++v+  l++l+++ +  +  l+R+Lt
+  KDN44907 1217 -SAHVV--DAKVVNYLLRALKYGIKYFFRTLPRILT 1249
+                .22222..3456777789999999999999999997 PP
+
+>> KDN45071  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_45:15646:20392:-1 gene:K437DRAFT_268532 trans
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.4   0.0      0.24   4.1e+02      13      54 ..     277     334 ..     272     342 .. 0.76
+   2 ?   10.8   0.4   4.6e-05     0.079     147     295 ..     452     605 ..     440     657 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: -1.4 bits;  conditional E-value: 0.24
+               SGHHCCCCT.................TSSSS--.CCCHCCCCHH..--CCHCHHCCCH CS
+       FAT  13 qWdsmeeylslmk.............kdspdka.ffeailalhr..nqfdeaeeliek 54 
+                W s++++ ++m+             +++p+    ++ai +++r  +qfd+a e+ ++
+  KDN45071 277 TWLSIASAAEAMEdydraiaanesalRHNPRSVpALSAIASVYRsmDQFDKAVEYFQH 334
+               4888888888888888888887777766666667899999999999999999988766 PP
+
+  == domain 2  score: 10.8 bits;  conditional E-value: 4.6e-05
+               STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH.....HHHHSSCCHHHHCCTSSCCC.SS-SS---...........HH CS
+       FAT 147 kaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakge.....qkealqkLrefvscllekke.elssglevqeptnleeftkll 241
+               ++++w ++ ++  +++ +slA++a  k+l e++ + ++    +++l +l+++ +     q+ a+q L +++++  ++ +  ++ g  +   +n ++  +  
+  KDN45071 452 EIDIWFQIGHVYEQQKDFSLAKEAYEKVLAENPTHAKV----LQQLGWLYHQANtgftnQDRAVQFLTHSLESDPNDSQsWYLLGRAYMAEQNYNKAYEAY 548
+               4799*****************************55555....55666666665555555999*****9999977777667555565555666666655555 PP
+
+               HHCCCTCCC..........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+       FAT 242 arcylkkGe..........wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfe 295
+                ++  + G+                    + ++ +++l ays+a++l+p   + w+ ++++++ 
+  KDN45071 549 QQAVYRDGKnptfwcsigvL-------YYQINQFRDALDAYSRAIRLNPYISEVWFDLGSLYES 605
+               67888999999965443333.......44455599**********************9998875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       6808  (3543999 residues searched)
+Passed MSV filter:                       317  (0.0465629); expected 136.2 (0.02)
+Passed bias filter:                      153  (0.0224736); expected 136.2 (0.02)
+Passed Vit filter:                        18  (0.00264395); expected 6.8 (0.001)
+Passed Fwd filter:                         4  (0.000587544); expected 0.1 (1e-05)
+Initial search space (Z):               6808  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.07u 0.02s 00:00:00.09 Elapsed: 00:00:00.04
+# Mc/sec: 26687.66
+//
+[ok]

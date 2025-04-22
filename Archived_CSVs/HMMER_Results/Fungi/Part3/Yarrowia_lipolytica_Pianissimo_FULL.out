@@ -1,0 +1,129 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Yarrowia_lipolytica.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+          0 1025.7   0.1          0 1025.6   0.1    1.0  1  XP_504847.1  YALI0F01056p [Yarrowia lipolytica CLIB122]
+     0.0022   13.9   0.1     0.0083   12.0   0.0    2.0  1  XP_505993.1  YALI0F28501p [Yarrowia lipolytica CLIB122]
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_504847.1  YALI0F01056p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1025.6   0.1         0         0       4    1150 ..       9    1167 ..       1    1168 [] 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 1025.6 bits;  conditional E-value: 0
+  PTHR13298.orig.30.pir    4 kqeseeltvkldlatklkdgaenll..........sn.llresrdsiekkleslnnlikl.......................... 52  
+                             kq + el  kl+++ k+kdgaen+l          ++ + + +r ++e++l+ + ++i+l                          
+            XP_504847.1    9 KQWRMELLDKLEIEAKIKDGAENMLqvldkkekskTDtTREGMRSRVESELNASVARIALlneqlrevpvghdvpirgihqqnhih 94  
+                             5677888899***************88888887652257888888888888888888888************************** PP
+
+  PTHR13298.orig.30.pir   53 ........................................kaaakklnellgllkeeiiikedlvelelvsclrslllseskevra 98  
+                                                                     +  ++k+nel++++++ +  k+dlv +++ +++++lll++ +ev a
+            XP_504847.1   95 tnnhmngggdgmdtddtnnespswlisnivqalddpavnaDDLVTKCNELVRVFTRYPLQKYDLVLSHVGDRIQRLLLHKRTEVVA 180 
+                             ****************************************999******************************************* PP
+
+  PTHR13298.orig.30.pir   99 aalRllrylisdskvlrrllrlgldiliarsLdrdsknetEreqalkliramlev..apkliptaivralvaiaeseedrlrracl 182 
+                             a++R++r++++d  +l++ +  ++d +++rsL rd++   Er+qalk+ira+ +v  + ++i+ ++vra+va+ae+ +drlr a+l
+            XP_504847.1  181 AGYRVARHALTDIYSLKTARGFQTDLFVIRSLARDNRCHFERLQALKFIRAFTDVpqGVAEISIGVVRAIVAVAEQTDDRLRVAAL 266 
+                             *******************************************************8888889************************ PP
+
+  PTHR13298.orig.30.pir  183 atlcelallnpelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqesks 268 
+                             +tl+el++l+  lv +agg+r ll  ++e  +p ++a  ++ vlly l++p tr+ l+ g dle l++ +t+++++          
+            XP_504847.1  267 ETLAELLVLDSHLVHRAGGVRPLLALCVE--GPFELAALATRVLLYTLDSPTTRHVLQGGKDLEFLVSVLTEVQQKG--------- 341 
+                             *****************************..99**************************************664444......... PP
+
+  PTHR13298.orig.30.pir  269 keerelsrleaskkailtlLrSWaGllylckndkrgLkslvdvlrlpnlevrkaildlLydlLrlkepkwtesftsgsalkavdsa 354 
+                                 + ++l++s ++i ++L+SWaGl+  + +  + +++l+++l lp +  r+++l+lL+dl+rl++p w+ sf +g++l+++++ 
+            XP_504847.1  342 --HVNPETLRNSCMVIGVVLSSWAGLMSSEGS--SLVRALIQCLALPLPLLRDIVLSLLFDLFRLEAPFWSHSFVAGKKLTSHGKI 423 
+                             ..455568*******************99666..9***************************************99*******999 PP
+
+  PTHR13298.orig.30.pir  355 alqdswrlsdgfvaeesktilpssarsrpdlldnylallLlalieagLleaLvevits.sdssvsvkAtiLLgellslantlLPpe 439 
+                             +                    +   r+rp  ++++lallL ++++ gLl  L +vit+ +d+++++kA++L  el +la ++LP+e
+            XP_504847.1  424 EP-------------------KANNRRRPRYINHFLALLLTVFFKEGLLRELQQVITTkEDETSTRKALLLVSELHKLAGEVLPRE 490 
+                             96...................22246677****************************999************************** PP
+
+  PTHR13298.orig.30.pir  440 lsaslhslptlvslaasfssekskrnraaaalalksldelkrsksksaslyldeilqkkllersssnssedskrkrlrqileddde 525 
+                             l +++  l+tlv +a   ss+ ++++ a+a+ a+ ++d+++r++ k+a l++++ ++                   ++ + ++dd+
+            XP_504847.1  491 LLSEIERLETLVISAQVQSSSGPNAAAANAICAIHRIDAISRNQHKTAALNSSTTVK-------------------VQMGVQIDDA 557 
+                             **************************************************9888776...................33467***** PP
+
+  PTHR13298.orig.30.pir  526 afkrmlkdsqvlstkdylkWnwdlilellegplnlnpkrleeav..kvtkffkrLlsFykPskkrfssidktkqlekyvqvgcqll 609 
+                             +f+++++d++vl+tk+y+kWnw+++lel+egpl lnpkrlee +  + +kf krL+sFy+P+k+rfs i++tk ++kyv++gc ll
+            XP_504847.1  558 HFRQLITDTRVLQTKNYTKWNWNVLLELIEGPL-LNPKRLEEVTikHFSKFAKRLMSFYRPFKYRFSAIKRTKYNRKYVETGCALL 642 
+                             *********************************.*******8889***************************************** PP
+
+  PTHR13298.orig.30.pir  610 slLlsspeGialleesrlLkelleelsqelldssse.kspderlfskerlsttlsqgyflfiGvLsstkeGlkiLeklnifqlllq 694 
+                             ++Ll+++eG+++l e++lL+++ e+l+q  ld++s+     e lfs +rl++tls+gyf+++G+Ls++k+Gl+++e++++f++l++
+            XP_504847.1  643 KTLLATQEGVDYLTENKLLRQMGECLAQ--LDPMSGiI-SLEPLFSAQRLESTLSYGYFELLGTLSQDKNGLAMMERWRMFNMLYH 725 
+                             ****************************..9*****63.4578******************************************* PP
+
+  PTHR13298.orig.30.pir  695 lislktrdelvklivssLdysldgesRvilskaLtsssesiRlyatkhLrvllra....essdfsdWgielLvtqlydpskevaka 776 
+                             l +  +r++l+ li+ sLdy++ ++ R+ilskaLt++ + +Rl+atk L  ll      + +   +W+i lLv qlydp++ev+k 
+            XP_504847.1  726 LTDVHERQDLLILIIGSLDYTIPNHTRIILSKALTTGPSPVRLFATKRLGSLLHVggytQPQSSPHWAISLLVGQLYDPDVEVCKL 811 
+                             ******************************************************656535555555******************** PP
+
+  PTHR13298.orig.30.pir  777 AlkiLeeacedkanileylvslkpsllhlgdkgelLllrflstpkGfrylkeenyvekelekWaeernaeYvllvEealsealtll 862 
+                             A+++L+e+c   +n    +v+++p+l+hlg  g++Lllrfl t++Gf+yl+++++v  e+++W++++n++Yv  +E  l++ +   
+            XP_504847.1  812 AVQLLQEYCSVTEN-VPHVVKCRPALDHLGAVGAPLLLRFLCTSSGFQYLQKMDFVALEMDSWFHGQNEAYVGRIEYYLEQCMVP- 895 
+                             *********99999.9********************************************************************9. PP
+
+  PTHR13298.orig.30.pir  863 treedgsdsrrrsngpdsslrnrksvilPpHLygeLakteeGcelLekkghleelaetirshgle..dseeilklkaalWAlghig 946 
+                                ++g+  + ++++ +++         PpH+ygeLa teeGc+lL+k gh++e+a +ir+hgl+  d +++lklk++lWA+gh+g
+            XP_504847.1  896 ---SFGTVLDLQEKDAKDDA----LASPPPHFYGELAMTEEGCQLLQKRGHFTEFADFIREHGLTaqDRDTVLKLKGCLWAVGHVG 974 
+                             ...88888888888876555....4899**************************************99999*************** PP
+
+  PTHR13298.orig.30.pir  947 sselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrnaliGlciPsdvnelfsipeh 1032
+                             ++elG+++l++  +++  d+ ++a++s+v+s+ Gt+fyvlgl+ +t+ g+ei++e gW+s+++ ++++ G ++P++ + lf  +++
+            XP_504847.1  975 ATELGAPFLDQ--SGVAVDVANIAKHSPVWSLKGTAFYVLGLMGTTNLGSEIIDECGWNSTLDVYGNPRGYALPYEWDGLFTEKST 1058
+                             ***********..56*********************************************************************** PP
+
+  PTHR13298.orig.30.pir 1033 qqsssaesapitdekpeeiktslkyptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpelfddpclfsevlkllseyrfrl 1118
+                              + +s++ +pi +  +  i        s+++r++i++ ++nLsn++la+ a+++L kl +k+ + fd+  lf ev +ll++yr+rl
+            XP_504847.1 1059 VVRTSQTVPPILELPK--I-------SSDPIRRKIMTALSNLSNHILANDASRTLIKLDAKYHDRFDSLTLFLEVVELLEIYRYRL 1135
+                             ***********88443..3.......359********************************************************* PP
+
+  PTHR13298.orig.30.pir 1119 qaRrfiqelfddavllsslrseerleveesqs 1150
+                             ++Rrfi+elf+  ++l++  +++r+++++sq+
+            XP_504847.1 1136 PQRRFIFELFNTPKMLERNARRQRERKRRSQR 1167
+                             ***************99999988888887775 PP
+
+>> XP_505993.1  YALI0F28501p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.0   0.0   2.6e-06    0.0083     929    1010 ..     171     246 ..      91     358 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 12.0 bits;  conditional E-value: 2.6e-06
+  PTHR13298.orig.30.pir  929 seeilklkaalWAlghi.gsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhs 1010
+                             s e++    a+WAlg+i g s++  +++ +   d ++ +i++a++++ ls+   +++ l+ ++r+++      +  We++ h 
+            XP_505993.1  171 SPETNVREQAVWALGNIaGDSPQCRDYVLK--CDALQPLINIATNTKKLSMIRNATWTLSNFCRGKYP-----QPDWEVIKHA 246 
+                             456667779*******94579999999999..69*****************************99987.....7777777774 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                       6472  (3148702 residues searched)
+Passed MSV filter:                       436  (0.0673671); expected 129.4 (0.02)
+Passed bias filter:                      157  (0.0242583); expected 129.4 (0.02)
+Passed Vit filter:                        15  (0.00231768); expected 6.5 (0.001)
+Passed Fwd filter:                         2  (0.000309023); expected 0.1 (1e-05)
+Initial search space (Z):               6472  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.16u 0.02s 00:00:00.18 Elapsed: 00:00:00.09
+# Mc/sec: 38969.58
+//
+[ok]

@@ -1,0 +1,538 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Trichoplax_adhaerens.ASM15027v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+   4.9e-109  364.1  18.3   4.9e-109  364.1  18.3    2.4  3  TriadP57462  pep scaffold:ASM15027v1:scaffold_6:3206386:32221
+    2.1e-61  207.4  12.5    2.6e-61  207.1   7.4    3.5  3  TriadP23101  pep scaffold:ASM15027v1:scaffold_3:8881444:89018
+    5.5e-47  160.0   2.6      9e-47  159.3   2.6    1.4  1  TriadP54713  pep scaffold:ASM15027v1:scaffold_3:6567069:65737
+    1.2e-31  109.6  11.8      2e-31  108.9  11.8    1.4  1  TriadP33879  pep scaffold:ASM15027v1:scaffold_40:188690:19581
+      3e-23   82.0   3.6      3e-23   82.0   3.6    2.9  3  TriadP20924  pep scaffold:ASM15027v1:scaffold_2:8128926:81551
+    5.7e-08   31.7   1.8       0.11   11.1   0.3    5.8  5  TriadP56833  pep scaffold:ASM15027v1:scaffold_5:7076502:70833
+    2.7e-05   23.0   0.5    0.00011   20.9   0.5    2.1  1  TriadP60833  pep scaffold:ASM15027v1:scaffold_18:212231:23356
+     0.0003   19.5  13.9         19    3.7  11.0    4.6  2  TriadP51004  pep scaffold:ASM15027v1:scaffold_21:981627:98852
+    0.00085   18.0   1.8    0.00085   18.0   1.8    2.2  2  TriadP55686  pep scaffold:ASM15027v1:scaffold_4:4433087:44363
+     0.0093   14.6   3.7       0.33    9.5   0.1    3.1  2  TriadP22709  pep scaffold:ASM15027v1:scaffold_3:2977601:29847
+  ------ inclusion threshold ------
+      0.018   13.6   1.8       0.15   10.6   0.5    2.1  2  TriadP37307  pep scaffold:ASM15027v1:scaffold_3:1010023:10137
+      0.024   13.3   2.2       0.14   10.7   1.6    1.9  2  TriadP20399  pep scaffold:ASM15027v1:scaffold_2:140719:141228
+       0.42    9.1  38.5      0.045   12.3   0.3    6.5  5  TriadP53605  pep scaffold:ASM15027v1:scaffold_2:6148952:61586
+
+
+Domain annotation for each sequence (and alignments):
+>> TriadP57462  pep scaffold:ASM15027v1:scaffold_6:3206386:3222182:1 gene:TriadG57462 transcript:TriadT57462 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.8   0.0       4.1   3.6e+03     147     184 ..     939     976 ..     911     989 .. 0.79
+   2 ?   -3.7   0.1         4   3.5e+03     239     279 ..    1340    1377 ..    1329    1386 .. 0.44
+   3 !  364.1  18.3  5.5e-112  4.9e-109       1     343 []    1523    1871 ..    1523    1871 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: -3.8 bits;  conditional E-value: 4.1
+                  STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT..... CS
+          FAT 147 kaemwlkfanlaRksgrlslAekaLkklleedkeewlp 184
+                   +em ++++++  +   + +A+ aL ++l+ ++ ++++
+  TriadP57462 939 VTEMLVSMSSVQMDEFYPAVAIAALMRILKDSSLSSHH 976
+                  6789999999999999999*********9999844444 PP
+
+  == domain 2  score: -3.7 bits;  conditional E-value: 4
+                   .HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCT CS
+          FAT  239 kllarcylkkGewlaalqklnwseekseeilqaysaateld 279 
+                   +++   +lk+ e  ++++k   +++++ ei+qa +  +e+ 
+  TriadP57462 1340 EEQ--QNLKQDELVQSIEK-ALESQNNPEITQALLNLAEFM 1377
+                   222..33344444444444.233334444444444444433 PP
+
+  == domain 3  score: 364.1 bits;  conditional E-value: 5.5e-112
+                   CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCS CS
+          FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqk 96  
+                   a++aa+aaW+lg W+smeey +l+ ++++d+af++a+lalh++    a+++++ ar++l+tel+a+s+esynray+++v  Q+l+Eleeiiqy   
+  TriadP57462 1523 ARMAAAAAWGLGHWESMEEYSCLIPRETLDGAFYRAVLALHQEHRVLAQQCVDTARDILDTELTAMSSESYNRAYGAMVTAQMLSELEEIIQYNL- 1617
+                   579********************************************************************************************. PP
+
+                   S----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT............T CS
+          FAT   97 lssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk....eewlp...p 185 
+                      +e+++++++ W+ Rl+g+q+ ve+wq+il+vRslv++p+ed       +e+wlk+a+l+Rks+r  l++k+L  ll++d+    +++lp   p
+  TriadP57462 1618 --IPERRAAIKQIWWSRLQGCQNLVEDWQRILQVRSLVITPQED-------METWLKYASLCRKSKRQALSHKTLALLLGSDPskytDQPLPtkyP 1704
+                   ..8*****************************************.......********************************87665555599** PP
+
+                   SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...SS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHH CS
+          FAT  186 evvyaylkylwakgeqkealqkLrefvscllekke...elssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaate 277 
+                   +v+++y+k++w +g+q+ea+q+L+ fv+ ++ ++    +lss+ e  ++++++e +++l arcylk+Gew+ +l++ln  e+++ +i q+y+ ate
+  TriadP57462 1705 KVTFSYMKHMWLSGQQEEAFQHLQYFVQTMITQNAavaSLSSNEE--TQQSIKEANNRLlARCYLKLGEWMLSLSQLN--EQTITQIIQYYACATE 1796
+                   *********************************997755555544..4566666666666****************76..677************* PP
+
+                   CTCCCHSTTCCCCHHHHHCCHHHHHHSSSS..........S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+          FAT  278 ldpswykawhtwalfnfevlskeeekkeeee.........pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                   +d++wykawh+wa +nfe+l ++++++++++            l++y+v+av+gf +s+ ls+++slqd+lRlLt
+  TriadP57462 1797 HDKNWYKAWHSWAFMNFEALLNMKNNEKSQHtivsddskaGVSLQNYAVSAVNGFVRSITLSKGNSLQDTLRLLT 1871
+                   ********************9998886655579999998877899*****************************8 PP
+
+>> TriadP23101  pep scaffold:ASM15027v1:scaffold_3:8881444:8901825:-1 gene:TriadG23101 transcript:TriadT23101 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.0   0.0      0.28   2.5e+02     242     331 ..    2474    2568 ..    2434    2581 .. 0.78
+   2 ?   -1.4   0.1      0.79     7e+02      89     129 ..    2676    2721 ..    2670    2724 .. 0.84
+   3 !  207.1   7.4   2.9e-64   2.6e-61       3     343 .]    2733    3075 ..    2731    3075 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: 0.0 bits;  conditional E-value: 0.28
+                   HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS.TTCCCCHHHHHCCHHHHHHSSSS.........S-TCC.HHHHCCT..CCHHH CS
+          FAT  242 arcylkkGewlaalqklnwseekseeilqaysaateldpswyk.awhtwalfnfevlskeeekkeeee........pedls.eyvvpavegflksl 327 
+                        k++++l++l++ +     +++ l +  +  ++d+++ +  w t      + l++ ++++ ++e        ++ ++ ++  +a++ fl+sl
+  TriadP23101 2474 EDLSDKQSKFLESLRRYQ-----ISALLDSLIQLCHYDSELSHdVWITILPQIWQLLNRPQQQQLSIEmgpflcsgSHVIQrNLSRSAINTFLESL 2564
+                   555678999999999976.....*****************99989***9888899999998888888899999999888888899**********9 PP
+
+                   HTTT CS
+          FAT  328 slss 331 
+                    +++
+  TriadP23101 2565 CHCK 2568
+                   8776 PP
+
+  == domain 2  score: -1.4 bits;  conditional E-value: 0.79
+                   HHCCHHCSS-.....---TTTTTTT----TTS-TTTGCCCTTTCCC CS
+          FAT   89 eiiqykqkls.....sseelksllktWrkRlpgvqddvevwqdils 129 
+                   ei++ k++++      s+e+ s+++ W+++   + +++  w+ +l 
+  TriadP23101 2676 EIAMAKSREDyaltsISNEMFSVYQLWEEHWIKCSKELGQWDLLLD 2721
+                   566666666677777999***********************99885 PP
+
+  == domain 3  score: 207.1 bits;  conditional E-value: 2.9e-64
+                   CTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.--..CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHH CS
+          FAT    3 laaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhr.nq..fdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleei 90  
+                   l +e+aWr+++W  m+e+l++++        ++ ++++ ++a+ + ++  ++ +e++++ a    +++++ l++ + ++++++l+  Q ++El+e+
+  TriadP23101 2733 LVLESAWRVPDWAAMKEALNQVEvncpeTFAYKLNLYRGYIAVCQsEDphVSLVEKFVDFAATQAIRQWRHLPKLVSYAHIPILQAAQLIVELQEA 2828
+                   789********************6665444455559999999666444669********************************************* PP
+
+                   CCHHCSS-........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC...............HHCCS-STTCCCCCCCCHCHHHH CS
+          FAT   91 iqykqkls........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied...............lllkgakaemwlkfanlaRksgr 163 
+                    q++++l+        s +++k++ ktWr+Rlp   dd+++w+d++ +R ++++ i +               +l+ +a+a+ ++++a++aRk++ 
+  TriadP23101 2829 GQIHSSLQssnvgrnsSVHDMKAVIKTWRNRLPLRSDDLSHWNDVFLWRHHLYQAIIKaydnsthveghashaMLGVHATATSIISYAEVARKQDL 2924
+                   ************************************************************************************************ PP
+
+                   CCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.....SS-SS---...........HH.HHCCCTCCCCCC CS
+          FAT  164 lslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.....elssglevqeptnleeftkll.arcylkkGewla 253 
+                    +++ ++L+++                   +++++  + +++qk+r++++c+l++++     el++glev+e+tnl +f+k++ a+++++kG +la
+  TriadP23101 2925 CGVCLDTLSRI-------------------HTIPSVPIFDCFQKIRQQIKCYLQMAGvmgkqELQEGLEVIESTNLRYFSKEMqAEFFALKGIFLA 3001
+                   ***********...................*************************9999999********************************** PP
+
+                   CCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+          FAT  254 alqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                   ++++       s++++ ++s+a++l+++++kaw+ wa + +ev+ ++         + ++    +av+++l++++ ++  k ++ l++ L+
+  TriadP23101 3002 KVGR-------SDDANVSFSSAVQLHDNLIKAWALWAAYLEEVFMQK---------KSMQ-AGASAVTCYLQACRQQNAsKHREHLAKTLW 3075
+                   ****.......9********************************999.........3344.7899************99899999999887 PP
+
+>> TriadP54713  pep scaffold:ASM15027v1:scaffold_3:6567069:6573725:1 gene:TriadG54713 transcript:TriadT54713 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  159.3   2.6     1e-49     9e-47       2     343 .]     243     607 ..     242     607 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 159.3 bits;  conditional E-value: 1e-49
+                  CCTTCCCCTSSSGHHCCCCT.................................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---S. CS
+          FAT   2 plaaeaaWrlgqWdsmeeylslmk.............................kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsge. 69 
+                  ++++ea+Wrl +Wd +++yl  ++                             +++++  + + +l+ + ++ +e+ + ++ +r+ l+++ sa ++e 
+  TriadP54713 243 TYRVEASWRLANWDCLQDYLGYVElyrhywfslalfylvknehfiasvssdqdSNDWNVGLGRLLLNARDRNHEEFGKQLKIVRKGLMESFSASIMEs 340
+                  6789*******************************************95553333344446666666788***************************9 PP
+
+                  .CCCCCHHHHHCCCCCHHHCHHCCHHCSS-....---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCH...CCCHCHHCCS-STTCCCCCCCCHC CS
+          FAT  70 .synraydllvrlQqlaEleeiiqykqkls....sseelksllktWrkRlpgvqddvevwqdilsvRslvl...spiedlllkgakaemwlkfanlaR 159
+                   s ++ yd+lvrl++l+E e+ + ++   s     + + + ll +W+ Rl+ +q+++++++++l +R+++l   + ++   lk+++ ++wl +a+ aR
+  TriadP54713 341 gSLQQGYDSLVRLHMLHEVEDCVRLFLGISisnfRKIDEQVLLTNWNSRLQITQHSFKIREPLLNLRRVLLgfgNSSQ--QLKEQQGSCWLLSAKEAR 436
+                  99*************************9888866666666779****************************6544444..59**************** PP
+
+                  HHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---..............HH.HHCCCTCCCCCC CS
+          FAT 160 ksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq...eptnleeftkll.arcylkkGewla 253
+                  k+g +++A ++L++    +      + ++++++k+lw++g +++al++L++  s   +k+ ++++g +     +  ++   +k+  a+++l+ + w++
+  TriadP54713 437 KAGYIQTAFSSLLNPCSFNL-----SGYHIEKAKLLWKQGGCSQALKCLKDAFS---DKNIRINEGGMIDwgdKDGSFPSEEKVGhAKALLLVARWTE 526
+                  ***************99999.....9**************************99...77889999988779999999999999999************ PP
+
+                  CCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+          FAT 254 alqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343
+                   +++ n     s ++l++y+  te++++w+  ++++a+++++ ++++ ++   + p+ + e++  +++++  sl+ +++ ++++++RlLt
+  TriadP54713 527 DTSHSN-----SHAVLKQYKNITEIRNQWELGHFYLAKYYDRFMKYVPDN---K-PARMLEFIPHVIKHYALSLQFGNKFIYESMPRLLT 607
+                  ****66.....9***********************************555...4.888999****************************8 PP
+
+>> TriadP33879  pep scaffold:ASM15027v1:scaffold_40:188690:195813:-1 gene:TriadG33879 transcript:TriadT33879 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  108.9  11.8   2.2e-34     2e-31       2     342 ..     728    1138 ..     727    1139 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 108.9 bits;  conditional E-value: 2.2e-34
+                   CCTTCCCCTSSSGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCS CS
+          FAT    2 plaaeaaWrlgqWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqk 96  
+                   ++ +e aWr + W ++   ++++   d++++++++ i a+  ++   + +li+k r+ +++e+s+ s es +r yd++ +lQql Elee+  y+  
+  TriadP33879  728 EYLYENAWRSTCWTEISLDTQKLIpTDGFHCNLYKSIRAIDDKDELTLTTLIKKSRSGIMKEISENSLESITRMYDSMMKLQQLLELEEFGRYIF- 822 
+                   57899**********6666665555**********************************************************************. PP
+
+                   S----TTTTTTT----TT..S-TTTGCCCTTTCCCCTCCCHCCCHC.................HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCC CS
+          FAT   97 lssseelksllktWrkRl..pgvqddvevwqdilsvRslvlspied.................lllkgakaemwlkfanlaRksgrlslAekaLkk 173 
+                     +  +l++l+k+W++Rl   ++++d++  ++i+++R+  l+ i                     + +a +++   +a+laR++gr++lAe++L++
+  TriadP33879  823 --DGLDLADLFKEWDQRLstHNLKSDFSLIEPIITLRCTSLNLILAsnypqynisnpqykvevAPILNALTKHLQMYAKLARQAGRYQLAENVLFR 916 
+                   ..8999************888999*****************99999999*************96666677888888*******************9 PP
+
+                   CCHCTT............TSSCCCHHHHHHHCCH...HHHHSSCCHHHHCCTSSCCC...SS-SS---...................HHHHCCCTC CS
+          FAT  174 lleedkeewlp.......pevvyaylkylwakge...qkealqkLrefvscllekke...elssglevq........eptnleeftkllarcylkk 248 
+                    ++   ++ ++        + ++++++++wakge   +k  +q+L   +++  ++++   ++ + l+++          ++ +e+ +++ ++yl k
+  TriadP33879  917 WKQLLIKYNQDkvdicsnWHCQLEESQLFWAKGEqdvCKCIIQSLISDIERQQKSNGyndNNVKALYCRalglygkwLGDSYSENPNNIIENYLSK 1012
+                   86555433333445574447799***********444455666665555543333334445555555559999999*9****************99 PP
+
+                   CCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS.TTCCCCHHHHHCCHHHHHHSSSS.................................... CS
+          FAT  249 Gewlaalqklnwseekseeilqaysaateldpswyk.awhtwalfnfevlskeeekkeeee................................... 308 
+                   +   + lq+  + ee ++    a+++   +++ +y+ +  ++++ +fe ++++ ++++++                                    
+  TriadP33879 1013 SI--QLLQN--SIEEMQSISIDAFLSLGCYADAQYQkIVTYLKSNEFEEKKHLIRQSKSDLellkgtksvntqdnarrykklleiqsrideseekq 1104
+                   98..33333..333446666667766666666666659999************8886655579******************************999 PP
+
+                   ..S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+          FAT  309 ..pedlseyvvpavegflkslslssekslqdllRlL 342 
+                      ++++ ++  a+++++++l+ ++ +++  ++Rl+
+  TriadP33879 1105 llDDKIK-FLKLAITNYIHCLQFGDDHDV-RVFRLC 1138
+                   9656665.******************999.699998 PP
+
+>> TriadP20924  pep scaffold:ASM15027v1:scaffold_2:8128926:8155121:-1 gene:TriadG20924 transcript:TriadT20924 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.4   0.1      0.76   6.8e+02     308     332 ..     985    1048 ..     954    1054 .. 0.66
+   2 ?   -1.1   0.1       0.6   5.3e+02      25      69 ..    1818    1881 ..    1800    1889 .. 0.74
+   3 !   82.0   3.6   3.4e-26     3e-23      39     343 .]    3009    3377 ..    2923    3377 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -1.4 bits;  conditional E-value: 0.76
+                   .......................................S-TCC.HHHHCCT..CCHHHHTTTS CS
+          FAT  308 e......................................pedls.eyvvpavegflkslslsse 332 
+                   +                                      +++l  +++ + + ++ +sl+ls++
+  TriadP20924  985 SnnaksllkrlyslashpsaikrlgaalafnniyvvlreESTLVdTFIFEILVNYVNSLALSHT 1048
+                   1334456666666666666666666666666666666666677779***************997 PP
+
+  == domain 2  score: -1.1 bits;  conditional E-value: 0.6
+                   ....................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---S CS
+          FAT   25 k...................kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsge 69  
+                   +                    ++ +k++++a +a+  ++++   + +e  rq++   + al++ 
+  TriadP20924 1818 DvntaessivkaytgrptedGKEITKSITKAAHACKSDDLRGETRSVELHRQCCCAAYNALISV 1881
+                   2555556666666666666678899999999999999******************999999876 PP
+
+  == domain 3  score: 82.0 bits;  conditional E-value: 3.4e-26
+                   C.....CHH..--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-...---TTTTTTT----TTS-TT.TGCCC CS
+          FAT   39 a.....lhr..nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls...sseelksllktWrkRlpgvq.ddvev 123 
+                   +     +h   +++d+a+++++  +q +++++sal++++ +++ ++l++lQ+l+E++e++q++++ +   s     sl ++W +R p+   d+++v
+  TriadP20924 3009 CdclalIHVllEKYDRARYYLDFSIQKFLQDWSALDSTLSYSRASKLQSLQTLTEMQEFLQFMDDGRnfeSVTPVLSLISKWSTRFPNEViDPINV 3104
+                   3333333335589***************************************************988666666666779*******99888***** PP
+
+                   TTTCCCCTCCCHCCCHC..........................HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT..........TSSC CS
+          FAT  124 wqdilsvRslvlspied..........................lllkgakaemwlkfanlaRksgrlslAekaLkklleedk..eewlp...pevv 188 
+                   w+d++ +R  +++   +                            + + +++ +lk a+ aR + ++ +A+k+L++ l   +  +   +    +++
+  TriadP20924 3105 WDDVIVNRLSYINAYISycygylndsmeidgedrviytfpvlkKRIAEEEVSLYLKLADTARLQSNYPVAIKHLRQTLYHINqvN---ElltVKWT 3197
+                   ************888888*********************9999888899999999*******************99876666443...23347999 PP
+
+                   CCHHHHHHHCCH...HHHHSSCC.....HHHHCCTSSCCC...........SS-SS---.............H..H.HHCCCTCCCCCCCCCCCT. CS
+          FAT  189 yaylkylwakge...qkealqkL.....refvscllekke...........elssglevq..eptnleeftkl..l.arcylkkGewlaalqklnw 260 
+                   + y k+  +k+     +e l++L     +  + +++ +              ++++        ++l   ++l  + +++++++G  l++++k   
+  TriadP20924 3198 HIYTKVHCDKSLltpPDERLKTLltansQFGIASHYPMLAykyyyltfhlsVILEN---TtlMREHLLLRSRLldMtSKILAESGNILSRIHKI-- 3288
+                   99999999999877778888888777776667777777667777666655422222...13333343333333114567889999999999995.. PP
+
+                   S...-SSCCHHHHCC....HHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCC..HHHHCCT..C.CHHHHTTTSSTTTCHHHHHC CS
+          FAT  261 seekseeilqaysaa....teldpswykawhtwalfnfevlskeeekkeeeepedls..eyvvpavegf.lkslslssekslqdllRlLt 343 
+                   +++ ++   q++         l++s ++a ++++ f++ +l++ee+++ ++ p+ l+  +   +++  + l++ +++s  ++q ++RlL+
+  TriadP20924 3289 RVNIADILYQSFVNQlcfiYSLNSSYIEAMMMMVNFCDDILRHEEDGQANQ-PKGLIdtKIFPEVIIRYtLEAMAYNSMDARQRFPRLLQ 3377
+                   55556666677765511115667888889******************8877.6555544444455555549*****************96 PP
+
+>> TriadP56833  pep scaffold:ASM15027v1:scaffold_5:7076502:7083346:-1 gene:TriadG56833 transcript:TriadT56833 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.4   0.0      0.11        95     242     293 ..      68     112 ..      26     115 .. 0.83
+   2 !    5.0   0.0    0.0085       7.5     246     290 ..     140     177 ..     112     237 .. 0.79
+   3 !   11.1   0.3   0.00012      0.11     158     295 ..     248     386 ..     221     391 .. 0.60
+   4 !    9.3   0.0   0.00042      0.37     249     293 ..     381     418 ..     374     422 .. 0.82
+   5 ?   -0.2   0.0      0.34     3e+02     259     294 ..     418     453 ..     413     457 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 1.4 bits;  conditional E-value: 0.11
+                  HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+          FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                  +++y  +G   ++ ++        +e+l+ y+ a +l+p+ ++ + ++a++ 
+  TriadP56833  68 SEAYSNLGNVFKERNQ-------LKEALENYRYALRLRPDFIDGYINLASAL 112
+                  6667777777777677.......99***********************9875 PP
+
+  == domain 2  score: 5.0 bits;  conditional E-value: 0.0085
+                  CTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCC CS
+          FAT 246 lkkGewlaalqklnwseekseeilqaysaateldpswykawhtwa 290
+                    +G  l+al++        ee+ ++y++a+e++p+ + aw +++
+  TriadP56833 140 NDLGNLLKALGR-------LEEAKACYLKAIETQPNFAVAWSNLG 177
+                  557888899999.......899*******************9975 PP
+
+  == domain 3  score: 11.1 bits;  conditional E-value: 0.00012
+                  HCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---.......................HHH CS
+          FAT 158 aRksgrlslAekaLkklleedkeewlp.pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq............eptnleeftklla 242
+                    ++g ++lA ++ k++ e ++      p+++   +  l + g++ ea ++ +  +s +   + + +++l ++             +++  e+  + a
+  TriadP56833 248 YYEQGLMDLAVDTYKRAIELQP----NfPDAYCNLANALKELGKVTEAEECYNTALSLCPTHADS-LNNLANIkrekgqigeaskLYRKALEIFPEFA 340
+                  5578888888888888888887....335555555555555555555555554444444333322.22222222333444511124444444444444 PP
+
+                  HCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+          FAT 243 rcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfe 295
+                   ++  +++ l++         k +e+l++y++a++++ps ++a+ +++    e
+  TriadP56833 341 AAHSNLASVLQQQ-------GKLQEALAHYKEAIRINPSFADAYSNMGNTLKE 386
+                  4444444444444.......4599***********************988776 PP
+
+  == domain 4  score: 9.3 bits;  conditional E-value: 0.00042
+                  CCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+          FAT 249 Gewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                  G  l+++q+        +++ q+y++a++++p+ ++a+ ++a+ +
+  TriadP56833 381 GNTLKEMQD-------VQGAIQCYTRAIQINPNFADAHSNLASIH 418
+                  555555555.......9*************************876 PP
+
+  == domain 5  score: -0.2 bits;  conditional E-value: 0.34
+                  T.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+          FAT 259 nwseekseeilqaysaateldpswykawhtwalfnf 294
+                  ++ + ++ e+ + y++a +l p+  +a+ ++a+ ++
+  TriadP56833 418 HKDSGSIPEAIANYRTALKLKPDFPDAFCNLAHCYQ 453
+                  44567899***********************99875 PP
+
+>> TriadP60833  pep scaffold:ASM15027v1:scaffold_18:212231:233560:-1 gene:TriadG60833 transcript:TriadT60833 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.9   0.5   1.3e-07   0.00011     119     175 ..    1267    1323 ..    1256    1395 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 20.9 bits;  conditional E-value: 1.3e-07
+                   TGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCC CS
+          FAT  119 ddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkkll 175 
+                   +d++ wq il++   +++ ++d+++ +   ++ +++a++aRk+ ++ lA+++L+k++
+  TriadP60833 1267 QDISLWQHILRISDAIYDISNDPAFFEHLLNINVRTAHIARKQSNYALAKRLLTKAM 1323
+                   699****************************************************93 PP
+
+>> TriadP51004  pep scaffold:ASM15027v1:scaffold_21:981627:988524:-1 gene:TriadG51004 transcript:TriadT51004 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.4   0.1     0.026        23     149     293 ..     298     432 ..     275     453 .. 0.66
+   2 ?    3.7  11.0     0.022        19     103     282 ..     524     730 ..     430     905 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 3.4 bits;  conditional E-value: 0.026
+                  TCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH...HHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHH CS
+          FAT 149 emwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakge...qkealqkLrefvscllekkeelssglevqeptnleeftkllar 243
+                    w+ +a+l    gr++ A + ++k  e  +   +  +v ++ ++++ +++    +++a+ ++  +v+  ++ + el +    ++ +++  f+k l +
+  TriadP51004 298 PGWIASARLEEVTGRMQKARNIITKGCETCP---KSEDVWLEAIRLQPKETSlsiVSQAIRNMPNSVKLWIKAA-ELEE----ETISKKRVFRKALEQ 387
+                  5588888888888888888888888877776...2235666666666555554444555555555555332221.2222....233455556666666 PP
+
+                  CCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+          FAT 244 cylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                  +      w +a++      e++e++    s+a+e++p++ + w ++a+++
+  TriadP51004 388 IPNSVRLWKEAVEL-----EDPEDARIMLSRAVECCPHSVDLWLALARLE 432
+                  66666668888887.....3499999999999999999999999988765 PP
+
+  == domain 2  score: 3.7 bits;  conditional E-value: 0.022
+                  TTTTTT----TTS-TT.TGCCCTTTCCCCTCCCHCCCHC..........................HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCC CS
+          FAT 103 lksllktWrkRlpgvq.ddvevwqdilsvRslvlspied..........................lllkgakaemwlkfanlaRksgrlslAekaLkk 173
+                   ++l++tW++  + +  ++  +  + +  +sl + p+++                          ++   + +  wl  a++ + sg ++ A + L  
+  TriadP51004 524 EEDLKDTWMEDAESCIaHNAYACARAIYAHSLTVFPNKKgiwlraayleknhgtkesleellqkaVAHCPKAEVLWLMGAKSKWLSGDIQSARQILAL 621
+                  55566666666666655666666666666666666666633333333333333333333333332111122233455555555555555555555555 PP
+
+                  CCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...........SS-SS---...........HHHHCCCTCCCCCCCCCCCT. CS
+          FAT 174 lleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke...........elssglevqeptnleeftkllarcylkkGewlaalqklnw 260
+                  + + ++   +  e+ +a +k+  +++e + a   L++  s                  ++++g  +  ++ +e++ +  a++y+  G+  +++++   
+  TriadP51004 622 AFQANP---NSEEIWLAAVKLESENNEDERARILLQKARSTAPTARVfmksanlewclKNLDGALMLLKEGIEHYPTF-AKFYMMTGQIYEQIGN--- 712
+                  555444...112445555555555555555554444444433222223222222222222222222255555555544.4555555555555555... PP
+
+                  S...-SSCCHHHHCCHHCTCCC CS
+          FAT 261 seekseeilqaysaateldpsw 282
+                      ++++ ++ys+ ++ +p++
+  TriadP51004 713 ----IDKARESYSDGVKKCPKS 730
+                  ....455555555555444444 PP
+
+>> TriadP55686  pep scaffold:ASM15027v1:scaffold_4:4433087:4436367:-1 gene:TriadG55686 transcript:TriadT55686 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.0   1.8   9.6e-07   0.00085     166     303 ..      15     130 ..       6     174 .. 0.73
+   2 ?   -0.1   0.7      0.31   2.7e+02     263     290 ..     243     270 ..     204     305 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 18.0 bits;  conditional E-value: 9.6e-07
+                  STTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---................HH.HHCCCTCCCCCCCCCC CS
+          FAT 166 lAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq.....eptnleeftkll.arcylkkGewlaalqk 257
+                  +Aek+L++l + ++           ++  l++ + +++ +++Lre  s l+            +     e+t +  ++k+   +c   kG+ l+ l +
+  TriadP55686  15 TAEKSLQELYHMRD-----------HFFELYPVKLSDKKYSMLREKMSALIA-----------IidqiqEQTDFRLQSKEYkFKCSYIKGKALNVLPD 90 
+                  45555555533333...........222344555555666666666664444...........122233666666666666679999****9999999 PP
+
+                  CT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH CS
+          FAT 258 lnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek 303
+                         s+e+++a s+a++ldp++++aw++++  + +++++e+ k
+  TriadP55686  91 ------YSDEAEKASSLAVKLDPTSIDAWNNLGECYWKKKNMEAAK 130
+                  ......49****************************9999999665 PP
+
+  == domain 2  score: -0.1 bits;  conditional E-value: 0.31
+                  ..-SSCCHHHHCCHHCTCCCHSTTCCCC CS
+          FAT 263 ekseeilqaysaateldpswykawhtwa 290
+                  e+ +++++ y +a +l p+w+++  ++ 
+  TriadP55686 243 EEYQKAMEGYDRALQLEPTWTQCKERLE 270
+                  3355666666666666666666555544 PP
+
+>> TriadP22709  pep scaffold:ASM15027v1:scaffold_3:2977601:2984739:-1 gene:TriadG22709 transcript:TriadT22709 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.5   0.1   0.00037      0.33     246     300 ..     524     571 ..     478     633 .. 0.65
+   2 ?    2.9   0.6     0.037        33     146     292 ..     668     815 ..     649     825 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 9.5 bits;  conditional E-value: 0.00037
+                  CTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+          FAT 246 lkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlske 300
+                    +G  l+++++        +e+lq+y +a+e++++++ a+ + + ++++  +k 
+  TriadP22709 524 YNLGILLQNAKR-------YNEALQCYEKAIEFRKKLAAAYLNIGVVYEKLGKKD 571
+                  444444444444.......677777777777777777777777777766665554 PP
+
+  == domain 2  score: 2.9 bits;  conditional E-value: 0.037
+                  -STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.SS-SS---...........HHH CS
+          FAT 146 akaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.elssglevqeptnleeftklla 242
+                   +  ++l +a++    g+l++Ae++ k + + ++e+    ++   y ++l++ +++ e  +   + +    ++ +  ++ g+  +e++  ++ ++   
+  TriadP22709 668 NHLPAYLTYAKSMASKGNLKVAERLYKTAIQLKPEN---ADALAHYGQFLLDHNRKIEGAEIFGQAARIAPNQLSvIYNAGNAFREAELYSKAEEYFK 762
+                  467889999***************999999999933...34577788888888888777777766666444443345555555555554444444443 PP
+
+                  HCCCTCCC...CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+          FAT 243 rcylkkGe...wlaalqklnwseekseeilqaysaateldpswykawhtwalf 292
+                   ++ ++ +      +l+  n  + k +e++++ys a +l+p+      ++a++
+  TriadP22709 763 AALNLSNKdinIYVNLGAINHIQGKLDEAEHYYSIALKLNPDNQILLTNMAKL 815
+                  33333333666444444444455778888888888888888766666666655 PP
+
+>> TriadP37307  pep scaffold:ASM15027v1:scaffold_3:1010023:1013754:1 gene:TriadG37307 transcript:TriadT37307 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.0     0.064        57      32      55 ..     106     133 ..      78     142 .. 0.69
+   2 ?   10.6   0.5   0.00017      0.15     162     276 ..     150     267 ..     143     278 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 0.064
+                  -....CCCHCCCCHH--CCHCHHCCCHC CS
+          FAT  32 a....ffeailalhrnqfdeaeelieka 55 
+                  +    ++ a + lh++++d+a ++++++
+  TriadP37307 106 SdsflLMTATMYLHKHDYDNALRYLNQV 133
+                  133358899999************9886 PP
+
+  == domain 2  score: 10.6 bits;  conditional E-value: 0.00017
+                  HHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---............HHHHCCCTCCC...CCCCC CS
+          FAT 162 grlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq.eptnleeftkllarcylkkGe...wlaal 255
+                  +r++lA+k Lkk+++ed++  l+ ++ +a + + +  ++ ++a++  +e++ ++    + l+s+  ++  + + +e ++ll +++ k +     l +l
+  TriadP37307 150 DRVDLAKKDLKKMQDEDEDATLT-QLALAWFNLAIGGDKLQDAFYIFQEMADKHGATVSLLNSQACCHiLQGKYDEAETLLQEAFDKDSNdpeTLVNL 246
+                  799**********9999955555.5555555555566667************8888776666665555899999999999999999999888855555 PP
+
+                  CCCT.S...-SSCCHHHHCCH CS
+          FAT 256 qklnwseekseeilqaysaat 276
+                     ++  ek+ ei++ y++ +
+  TriadP37307 247 AMISQHLEKAPEIFNRYLSQI 267
+                  555556667999999998765 PP
+
+>> TriadP20399  pep scaffold:ASM15027v1:scaffold_2:140719:141228:1 gene:TriadG20399 transcript:TriadT20399 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.7   1.6   0.00015      0.14     210     284 ..      23     100 ..      10     117 .. 0.80
+   2 ?    1.2   0.0      0.13   1.1e+02     163     185 ..     118     143 ..     101     158 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 10.7 bits;  conditional E-value: 0.00015
+                  HHHCCTSSCCCSS-SS---.................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS CS
+          FAT 210 efvscllekkeelssglevq......eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswyk 284
+                  +  +++++  +++++ le +      +  n+ ++ ++la +y k+G++ +al+ ++   ++++ + q + +++     wy+
+  TriadP20399  23 DDQKKYSQALNNYKTALEICkhvyddNHPNVAQLYASLASIYYKQGKHKQALSMFE---KSIKMVKQVHGENHADIAVWYQ 100
+                  5556788888899999988899999999*************************985...6677777777777766667776 PP
+
+  == domain 2  score: 1.2 bits;  conditional E-value: 0.13
+                  HCCSTTHHCCCCCHCTT........T CS
+          FAT 163 rlslAekaLkklleedkeewlp...p 185
+                  ++++A+k+L++l +e+ ++  +    
+  TriadP20399 118 MYNQAIKVLRNLFGESHPDITQinsK 143
+                  68999999999999999333333331 PP
+
+>> TriadP53605  pep scaffold:ASM15027v1:scaffold_2:6148952:6158634:1 gene:TriadG53605 transcript:TriadT53605 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.7   0.2     0.044        39      19      59 ..      99     140 ..      90     171 .. 0.81
+   2 ?    6.2   0.1    0.0038       3.3      56     228 ..     234     444 ..     218     469 .. 0.80
+   3 ?   12.3   0.3   5.1e-05     0.045     154     213 ..     537     596 ..     530     612 .. 0.86
+   4 ?   -3.2   9.1       2.8   2.5e+03     170     300 ..     643     777 ..     607     932 .. 0.48
+   5 ?    2.0   4.6      0.07        62     160     270 ..    1096    1217 ..    1088    1260 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 2.7 bits;  conditional E-value: 0.044
+                  CCT....TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCC CS
+          FAT  19 eylslmkkdspdkaffeailalhr.nqfdeaeeliekarqll 59 
+                    l++ ++++ dka++ a + l + n+ d+a+e+i+++ ++ 
+  TriadP53605  99 ARLKTERQNCSDKALYFAAMYLWHmNRNDKAREYIDRMLKIS 140
+                  445555589999998888888666699*********998876 PP
+
+  == domain 2  score: 6.2 bits;  conditional E-value: 0.0038
+                  CCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.........---TTTTT..TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.. CS
+          FAT  56 rqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls.........sseelksl..lktWrkRlpgvqddvevwqdilsvRslvlspied.. 140
+                   q ++t+ + l+  s n a + ++ l+ l+ + +  q  ++l+         ++++ + +        Rl g q +v ++   l+ R++ l ++++  
+  TriadP53605 234 DQAVDTSRRTLIQDSDNIAATNVLVLHSLCRIGDYTQAVDNLGelilridknEPKNAELYykCAVTFSRLCGRQLQVIHQTYTLTERAMTLAKNNSky 331
+                  55666666666677777777777777777777777777777777777776643333333333334457999999999999**************99** PP
+
+                  ........................HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH.HHHHSSCCHHHHC CS
+          FAT 141 ........................lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakge.qkealqkLrefvs 213
+                                          l l g+++ + + +++     ++++ A+++L  l+e +++  ++ ev y ++ + ++ +  +++   +L+  v 
+  TriadP53605 332 ttevgnqlllmgktkeamnyfskaLTLDGTSVPALIGIIKCQIAENQFDEAKQQLELLQEVQQSIGKVAEVPYLSAVMAHKINSdIEKVTGMLNSAVD 429
+                  ***********************9999*******************************9999955555888888888888755548888889999999 PP
+
+                  CTSSCCCSS-SS--- CS
+          FAT 214 cllekkeelssglev 228
+                   ++++ ++l+ g+e+
+  TriadP53605 430 IHFSSLGRLPLGMEY 444
+                  888888888888876 PP
+
+  == domain 3  score: 12.3 bits;  conditional E-value: 5.1e-05
+                  CCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCHHHHHSSCCHHHHC CS
+          FAT 154 fanlaRksgrlslAekaLkklleedkeewlp.pevvyaylkylwakgeqkealqkLrefvs 213
+                  +a++   +g ++lA++aL ++l ++ e   + p++++ ++++l +++e +eal+ L+   +
+  TriadP53605 537 MAQINAYQGKFNLANQALDMALSYNFEIR-DsPSYHLIKARILKKNNEYEEALKILKTAMN 596
+                  8999999*******************444.45************************87665 PP
+
+  == domain 4  score: -3.2 bits;  conditional E-value: 2.8
+                  HCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC............SS-SS---...........HHHHCCCTCCCCCCCC CS
+          FAT 170 aLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke............elssglevqeptnleeftkllarcylkkGewlaal 255
+                  +++ +l+e  + ++++++ +a++ + + +g++++al+ Lr  + ++ +  +            +  + l+++++++l e++++  ++yl++G+   ++
+  TriadP53605 643 VMQDALHEFANTSEESRLNIANADLALGRGDIDQALSILRSITPSHPFYVKarermadiylnyRKDKRLYASCYRELAEQEANP-QTYLLLGDAYMSI 739
+                  555554444433333566666666666666677777777666665555554444444443333333333333666666665553.6666666655555 PP
+
+                  CCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+          FAT 256 qklnwseekseeilqaysaateldpswykawhtwalfnfevlske 300
+                  q+       +e++  a+ aa + +p+ ++   + +++ f+  ++ 
+  TriadP53605 740 QE-------PEKAIDAFEAALRKNPHDASLVSKIGQALFKTHQYI 777
+                  55.......444444444444444433333333333333333333 PP
+
+  == domain 5  score: 2.0 bits;  conditional E-value: 0.07
+                   HHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..SS-SS---......................... CS
+          FAT  160 ksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke..elssglevq........................ 229 
+                   +s  l++A+k+Lk+l+ ++  +++  ++ + +   l++++++++  + L  f+s l+e++   +    l +                         
+  TriadP53605 1096 QSSALKTANKLLKELKPKSA-PSK-KQLDLLENYALISTKQKQSVEKALSSFISMLSEDQTniT--ALLGTAtaymflkqvpkarnqlkkiaklew 1187
+                   6778999********66666.222.47999999999******************8888887552..333333345666666666666666677778 PP
+
+                   ..........H..H.HHCCCTCCCCCCCCCCCT.S...-SSCCH CS
+          FAT  230 eptnleeftkl..l.arcylkkGewlaalqklnwseekseeilq 270 
+                   ++ n e+f+++  l a +y  +G++              +++++
+  TriadP53605 1188 NSANAEDFERSwlLlADVYIQSGKY--------------DNATE 1217
+                   6666666666411235555555553..............33333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      11520  (5219283 residues searched)
+Passed MSV filter:                       993  (0.0861979); expected 230.4 (0.02)
+Passed bias filter:                      331  (0.0287326); expected 230.4 (0.02)
+Passed Vit filter:                        42  (0.00364583); expected 11.5 (0.001)
+Passed Fwd filter:                        13  (0.00112847); expected 0.1 (1e-05)
+Initial search space (Z):              11520  [actual number of targets]
+Domain search space  (domZ):              13  [number of targets reported over threshold]
+# CPU time: 0.12u 0.06s 00:00:00.18 Elapsed: 00:00:00.09
+# Mc/sec: 19816.78
+//
+[ok]

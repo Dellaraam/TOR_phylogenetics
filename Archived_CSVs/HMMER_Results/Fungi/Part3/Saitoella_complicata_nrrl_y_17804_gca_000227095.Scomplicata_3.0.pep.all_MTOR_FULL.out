@@ -1,0 +1,362 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Saitoella_complicata_nrrl_y_17804_gca_000227095.Scomplicata_3.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    4.5e-72  239.9   9.0    1.7e-71  238.0   0.5    4.5  4  GAO47492  pep supercontig:Scomplicata_3.0:contig009:173192:18
+    4.5e-08   31.9   0.0     0.0076   14.9   0.0    6.0  7  GAO46477  pep supercontig:Scomplicata_3.0:contig004:112943:11
+    0.00014   20.5   4.6       0.58    8.8   0.1    5.8  5  GAO51267  pep supercontig:Scomplicata_3.0:contig043:88272:919
+    0.00055   18.6   0.1        0.1   11.2   0.0    2.9  2  GAO52708  pep supercontig:Scomplicata_3.0:contig082:4864:1226
+     0.0041   15.8   0.0        2.8    6.6   0.0    4.8  4  GAO50076  pep supercontig:Scomplicata_3.0:contig029:45539:497
+     0.0052   15.5   0.2         18    3.9   0.0    5.7  7  GAO51500  pep supercontig:Scomplicata_3.0:contig047:34150:378
+  ------ inclusion threshold ------
+       0.01   14.5   0.0       0.17   10.5   0.0    3.2  3  GAO52224  pep supercontig:Scomplicata_3.0:contig063:25467:287
+      0.021   13.5   0.5        2.7    6.6   0.0    3.0  2  GAO46999  pep supercontig:Scomplicata_3.0:contig006:333466:33
+      0.026   13.2   0.2       0.19   10.4   0.0    2.7  2  GAO48285  pep supercontig:Scomplicata_3.0:contig014:23436:254
+
+
+Domain annotation for each sequence (and alignments):
+>> GAO47492  pep supercontig:Scomplicata_3.0:contig009:173192:181338:1 gene:G7K_1698-t1 transcript:GAO47492 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.0   0.0       1.5   1.2e+03      74     135 ..     481     543 ..     452     570 .. 0.58
+   2 ?    2.3   0.0     0.073        57      96     156 ..     861     921 ..     798     923 .. 0.69
+   3 !  238.0   0.5   2.2e-74   1.7e-71       1     160 []     927    1085 ..     927    1085 .. 0.97
+   4 ?    0.9   0.7      0.19   1.5e+02      81     154 ..    1169    1241 ..    1110    1245 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: -2.0 bits;  conditional E-value: 1.5
+  mTOR_dom  74 glspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135
+               +l   + +e+ +++  + +l++l   + ++ +ta  +a+  +   +g  + p+l+ i+ ++ +
+  GAO47492 481 TLAAYNpNEFVASYLHKCMLHLLGLLKKEKDRTAPFDAVGRVAIAVGSSMGPYLDAILASIKE 543
+               334444456666666666666665555566666667777777777777777777777766665 PP
+
+  == domain 2  score: 2.3 bits;  conditional E-value: 0.073
+  mTOR_dom  96 kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156
+               +d+s s   ++v++a+ +  +  g   + +++ ++p ++ ++++ +s   r+  l+ L++L 
+  GAO47492 861 RDAS-SGVASSVLSALGELANVGGEDLLVYIKDLMPLIIDTLHDQSSsVKRDAALKALGQLA 921
+               4544.345666777777777766666688888888888888887777567778888888775 PP
+
+  == domain 3  score: 238.0 bits;  conditional E-value: 2.2e-74
+  mTOR_dom    1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdps 99  
+                V++Pyl+yp+LL+iL+ ilkteqs++iRre++k++GilGALDPy+h+ +e+ +ee ++ e+++ +tdvs+l+vg++psseeyyptvvi++L++ilkdps
+  GAO47492  927 VIDPYLEYPQLLNILIGILKTEQSSDIRRETVKLMGILGALDPYRHQIIERGTEE-HTLEQKSVSTDVSLLMVGMTPSSEEYYPTVVISSLMNILKDPS 1024
+                9*********************************************999987766.778888899********************************** PP
+
+  mTOR_dom  100 lsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160 
+                l  hhtav+qaim+ifkt+glkcvpfl+qiip +l+v+rtc+++++ef++qqL++Lvsivk
+  GAO47492 1025 LGAHHTAVIQAIMYIFKTMGLKCVPFLSQIIPGFLHVMRTCSPTILEFYFQQLGILVSIVK 1085
+                ************************************************************8 PP
+
+  == domain 4  score: 0.9 bits;  conditional E-value: 0.19
+  mTOR_dom   81 eyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLat 154 
+                e y++ ++  ++k++++     + ++a++q++ +  ++  ++     ++ii+ l +v++t++ +l+   ++ L+ 
+  GAO47492 1169 EEYMHLILPVVVKMFEKVDAPvTLRKAAIQTVAQLSRK--VNFSDHASRIIHPLSRVLSTANHELKMASMDTLCA 1241
+                44444555555666654444446666777777776664..55556667777777777777777777766666665 PP
+
+>> GAO46477  pep supercontig:Scomplicata_3.0:contig004:112943:116648:-1 gene:G7K_0708-t1 transcript:GAO46477 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.4   0.0      0.48   3.8e+02      87     149 ..     102     163 ..      83     174 .. 0.69
+   2 ?    1.0   0.0      0.19   1.5e+02     104     158 ..     197     252 ..     184     254 .. 0.80
+   3 ?    0.8   0.0      0.22   1.7e+02      87     147 ..     373     432 ..     303     442 .. 0.72
+   4 !   14.9   0.0   9.6e-06    0.0076      73     142 ..     484     552 ..     446     560 .. 0.81
+   5 ?    4.0   0.0     0.023        18     108     138 ..     609     639 ..     584     648 .. 0.84
+   6 ?   -3.7   0.0       5.1     4e+03     109     146 ..     848     885 ..     841     896 .. 0.78
+   7 ?    0.1   0.0      0.36   2.8e+02      80     132 ..     967    1026 ..     949    1048 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: -0.4 bits;  conditional E-value: 0.48
+  mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+               v   Ll+ + ++++   +++v +ai +i ++ gl +    p +++al+s  ++ e+ +re  +
+  GAO46477 102 VHDLLLASFAEEQVVGVRHKVCDAIAEIARH-GLYSSYKWPDLLQALFSCSKSPEAAHRESAY 163
+               5556666667777777777888888888775.7777777777777777777776666666544 PP
+
+  == domain 2  score: 1.0 bits;  conditional E-value: 0.19
+  mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvsi 158
+               + a+++a    + + g +  ++l+ ++pa l+v+  +++ + +e+l   L++L+++
+  GAO46477 197 RLAALRAYCAFLLEAGSNTRSTLSVLLPACLNVLPPLSTtHDSETLATALTSLIEL 252
+               555666666666778899999**************999988999999999999975 PP
+
+  == domain 3  score: 0.8 bits;  conditional E-value: 0.22
+  mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+               +++ L ++++  + + +++a++ ai  i +  +  + + l++++  +l ++r+ ++++r  
+  GAO46477 373 AFAYLPNMISSTNWR-QRHAALMAISAIAEGCEKIMKAELSRVLDMVLPLLRDPHPRVRWA 432
+               566677777666665.566788899999999999999999999999999999988877755 PP
+
+  == domain 4  score: 14.9 bits;  conditional E-value: 9.6e-06
+  mTOR_dom  73 vglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                +  +++ e y   +++ Ll++l+ p+    ++++v++i ++    + k v++++ i+p l++v++  ++
+  GAO46477 484 EECDNATLEPYLDGILERLLALLQSPKK-YVQEQAVTTIATVADAAEAKFVKYYDAIMPLLVNVLKAPDA 552
+               4445566788889999*******99985.588999******************************98665 PP
+
+  == domain 5  score: 4.0 bits;  conditional E-value: 0.023
+  mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvir 138
+               + a   i++ +g + +p+l  ++p ll++++
+  GAO46477 609 IPAWGRICRVMGKEFLPYLGAVMPPLLEAAK 639
+               666678*********************9877 PP
+
+  == domain 6  score: -3.7 bits;  conditional E-value: 5.1
+  mTOR_dom 109 qaimsifktlglkcvpflpqiipallsvirtcesslre 146
+               +a +  fkt+++  +p  ++++p + + +++ e+s r+
+  GAO46477 848 KAFHMTFKTINTAFLPHWERLLPYIGAFLNHPEQSSRQ 885
+               57778899999999999999999999999888887665 PP
+
+  == domain 7  score: 0.1 bits;  conditional E-value: 0.36
+  mTOR_dom   80 eeyypt.vvinaLlkil.....kdpslsshhtavvqaimsifktlglkc.vpflpqiipa 132 
+                e+ y+t  + +a+ kil     k ++l++   a +q++  i+ + +     +fl+++i +
+  GAO46477  967 ENIYATeNACAAIAKILrfnssKVQNLDQTVVAWIQTLPIICDDEEAPYaYSFLSELIEQ 1026
+                556665578888888886655566666677777777777888777777667777777765 PP
+
+>> GAO51267  pep supercontig:Scomplicata_3.0:contig043:88272:91931:-1 gene:G7K_5373-t1 transcript:GAO51267 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.0      0.19   1.5e+02      69     130 ..     417     479 ..     388     486 .. 0.79
+   2 ?    1.9   0.1     0.098        77       8     139 ..     545     600 ..     538     720 .. 0.53
+   3 !    8.8   0.1   0.00073      0.58     105     147 ..     813     855 ..     724     868 .. 0.66
+   4 ?   -0.3   0.0      0.48   3.8e+02     106     149 ..     897     941 ..     846     948 .. 0.70
+   5 ?    3.2   0.0      0.04        31      15     142 ..     967    1087 ..     960    1101 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 0.19
+  mTOR_dom  69 sellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+               +++l +l+    e+ ++  +n++l +l +++l+ + ++  v++i  i+ +l+  + pf  +i+
+  GAO51267 417 KTALRQLTDKAREFGAAALFNQILPLLMERTLEdQERHLLVKVIDRILYKLDDLVRPFTHKIL 479
+               3345777888899999999*************9777888999999999999988888888886 PP
+
+  == domain 2  score: 1.9 bits;  conditional E-value: 0.098
+  mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavv 108
+                p LL  L  + ++++s++ R   +k++                                                                         
+  GAO51267 545 IPALLPFLRAVCRSKKSWQARHTGVKIV------------------------------------------------------------------------- 572
+               5666666666666666666665544443......................................................................... PP
+
+  mTOR_dom 109 qaimsifktlglkcvpflpqiipallsvirt 139
+                   +i   +g+  +p l++++  +++ +++
+  GAO51267 573 ---QQIAILMGCAILPHLKNLVDCIANGLED 600
+               ...3333333333333333333333333332 PP
+
+  == domain 3  score: 8.8 bits;  conditional E-value: 0.00073
+  mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+               + +++   ++++ lg++c ++lpqi++++l  +++ ++++r+ 
+  GAO51267 813 NIMLNGFGTVVNALGTRCKSYLPQIVSTILWRLNNKSAKVRQQ 855
+               4455556788999***************999988877776665 PP
+
+  == domain 4  score: -0.3 bits;  conditional E-value: 0.48
+  mTOR_dom 106 avvqaimsifktlglkc.vpflpqiipallsvirtcesslrefll 149
+               +++ a+ si++ +g+ + +p ++ ++p l+ ++r+ +++++e  +
+  GAO51267 897 SILGALKSIVNVVGMTSmTPPIKDLLPRLTPILRNRHEKVQENTI 941
+               555666777777777776777888888888888877777777655 PP
+
+  == domain 5  score: 3.2 bits;  conditional E-value: 0.04
+  mTOR_dom   15 LlnilkteqsqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaim 112 
+                Ll++lk   ++ iRr +++++G +  A+ P+ +  +  ++     + ++ ++ +v  ++v +    e   p +v+ aL++  + p l+  ++ v++++ 
+  GAO51267  967 LLDMLKAH-KKGIRRAAVNTFGYIAkAIGPQDVLATLLNN-L---KVQERQN-RVC-TTVAIAIVAETCAPFTVLPALMNEYRVPELN-VQNGVLKSLS 1057
+                56666654.6788888888888775588888883333222.1...1222211.122.2345556778888888999999999888887.6788888888 PP
+
+  mTOR_dom  113 sifktlglkcvpflpqiipallsvirtces 142 
+                + f+++g     ++  + p l  ++++ ++
+  GAO51267 1058 FLFEYIGELAKDYVYAVTPLLEDALTDRDQ 1087
+                888888888888888887777777766665 PP
+
+>> GAO52708  pep supercontig:Scomplicata_3.0:contig082:4864:12267:-1 gene:G7K_6779-t1 transcript:GAO52708 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.0   0.1     0.021        17      90     118 ..     148     176 ..     105     202 .. 0.81
+   2 !   11.2   0.0   0.00013       0.1      10      50 ..    1101    1143 ..    1094    1199 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 4.0 bits;  conditional E-value: 0.021
+  mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktl 118
+                + k+l  p+l++ h++++q++  ifktl
+  GAO52708 148 YVTKLLGHPKLTDLHEDIIQTLEDIFKTL 176
+               6778999********************96 PP
+
+  == domain 2  score: 11.2 bits;  conditional E-value: 0.00013
+  mTOR_dom   10 eLLeiLlnilkte.q.sqsiRrevikvlGilGALDPykhkeve 50  
+                +L++ Ll+i ++  + + +i r    +lGi+GA+DP ++   +
+  GAO52708 1101 DLIRSLLDICSKYhNeHREIERLCAECLGIVGAVDPNRVNAAR 1143
+                57777888877664348999999**************995433 PP
+
+>> GAO50076  pep supercontig:Scomplicata_3.0:contig029:45539:49724:1 gene:G7K_4211-t1 transcript:GAO50076 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.6   0.0    0.0036       2.8      87     158 ..     401     477 ..     397     478 .. 0.82
+   2 ?    0.9   0.0       0.2   1.6e+02     117     137 ..     561     581 ..     527     589 .. 0.84
+   3 ?   -0.7   0.0      0.63     5e+02     106     147 ..     699     740 ..     642     747 .. 0.77
+   4 ?   -0.4   0.0      0.48   3.8e+02       9      40 ..    1038    1070 ..    1034    1123 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 6.6 bits;  conditional E-value: 0.0036
+  mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifkt......lglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+               v+  L+ +l d+s    ++ + +a+ +i+++      ++ +    l+  ip++l+ +++ +++lre  +  L+++v i
+  GAO50076 401 VLPRLMDML-DNSTGATQEGAFSALCKICEDssheldQDYNGQRPLNFMIPKFLTFCENPNPKLRENAIFCLNQFVMI 477
+               566899999.888888999999*******9844333333444558999********************9999999987 PP
+
+  == domain 2  score: 0.9 bits;  conditional E-value: 0.2
+  mTOR_dom 117 tlglkcvpflpqiipallsvi 137
+               +l+lk  p+lp+i+p ll+ +
+  GAO50076 561 DLRLKLEPYLPRIVPMLLKGM 581
+               489999**********99865 PP
+
+  == domain 3  score: -0.7 bits;  conditional E-value: 0.63
+  mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+               a v a+  i        +p lp+i p l+s++++ ++ +r+ 
+  GAO50076 699 AGVLALGAIADGCMDGIMPHLPEIFPYLISLLKDPKPLVRQI 740
+               556666666666666778999999999999999988766665 PP
+
+  == domain 4  score: -0.4 bits;  conditional E-value: 0.48
+  mTOR_dom    9 peLLeiLlnilkte.qsqsiRrevikvlGilGA 40  
+                 +L++ L+ +l+ + + +++R ++  +lG lG 
+  GAO50076 1038 EQLMGRLVPLLNAKgTPHTVRENAAITLGRLGL 1070
+                589999*****99967999**********9995 PP
+
+>> GAO51500  pep supercontig:Scomplicata_3.0:contig047:34150:37806:-1 gene:G7K_5599-t1 transcript:GAO51500 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.6   0.1       1.2   9.5e+02      76     101 ..      29      55 ..      10      65 .. 0.54
+   2 ?    1.1   0.0      0.17   1.3e+02     110     140 ..     191     221 ..     160     243 .. 0.77
+   3 ?   -3.6   0.0       4.8   3.8e+03      67      95 ..     254     284 ..     244     292 .. 0.67
+   4 ?    0.5   0.0      0.26   2.1e+02       9      36 ..     467     494 ..     426     513 .. 0.85
+   5 ?   -0.8   0.0      0.65   5.2e+02     118     141 ..     588     611 ..     580     616 .. 0.77
+   6 ?   -1.0   0.0      0.74   5.9e+02     110     157 ..     654     701 ..     643     703 .. 0.90
+   7 ?    3.9   0.0     0.023        18     102     157 ..     988    1043 ..     922    1046 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -1.6 bits;  conditional E-value: 1.2
+  mTOR_dom  76 spsseeyypt.vvinaLlkilkdpsls 101
+                + ++++y+    + aL++il++++  
+  GAO51500  29 KTLKDNVYSRpQSLPALIHILQQNANV 55 
+               444444444434555555555555443 PP
+
+  == domain 2  score: 1.1 bits;  conditional E-value: 0.17
+  mTOR_dom 110 aimsifktlglkcvpflpqiipallsvirtc 140
+                + +i+   +  +v++ ++i+p++++v++++
+  GAO51500 191 KVSEILDGEDKHSVKMFREILPSMVNVLQEV 221
+               5667777777888999999999999999865 PP
+
+  == domain 3  score: -3.6 bits;  conditional E-value: 4.8
+  mTOR_dom  67 dvsellvglspss..eeyyptvvinaLlkil 95 
+               d+ +++v+l +s+  +e + +++++ +++ +
+  GAO51500 254 DLVNFMVQLAQSKeiDETFRCMALSFIMTCV 284
+               4445566665555478888888888888765 PP
+
+  == domain 4  score: 0.5 bits;  conditional E-value: 0.26
+  mTOR_dom   9 peLLeiLlnilkteqsqsiRrevikvlG 36 
+               p+L+e L+ +l++  ++s+++ v   +G
+  GAO51500 467 PRLMERLCAVLQSGAATSVKLTVAAAIG 494
+               7788888888888888888877776666 PP
+
+  == domain 5  score: -0.8 bits;  conditional E-value: 0.65
+  mTOR_dom 118 lglkcvpflpqiipallsvirtce 141
+                g    pfl+ i+p l++ +++ e
+  GAO51500 588 YGADFAPFLEYIVPDLIKSCEQEE 611
+               577789**********99888754 PP
+
+  == domain 6  score: -1.0 bits;  conditional E-value: 0.74
+  mTOR_dom 110 aimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+               a+ +if + +   +p+ ++   al+ ++++  + +r+  +  L  +vs
+  GAO51500 654 AMGEIFAHTKHAFMPYFEKCTEALMGLTTHFYEGVRKAAFGSLWRFVS 701
+               7789***************************99*******99998887 PP
+
+  == domain 7  score: 3.9 bits;  conditional E-value: 0.023
+  mTOR_dom  102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                +  t v + i++ ++t +  ++ +  q++p l+sv+ +++++l+  + ++L +Lv+
+  GAO51500  988 QENTPVYNMIIQLYRTNDAIVMGLTGQLLPVLASVLAKADEQLKPKVKEELVELVR 1043
+                56677888999999999999999****************************99997 PP
+
+>> GAO52224  pep supercontig:Scomplicata_3.0:contig063:25467:28757:1 gene:G7K_6306-t1 transcript:GAO52224 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.9   0.0       1.5   1.2e+03      26      84 ..     247     309 ..     241     340 .. 0.57
+   2 ?   10.5   0.0   0.00021      0.17      74     152 ..     505     586 ..     472     594 .. 0.84
+   3 ?   -3.0   0.0         3   2.4e+03     120     147 ..     603     631 ..     596     637 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: -1.9 bits;  conditional E-value: 1.5
+  mTOR_dom  26 siRrevikvlGilGALDPykhkeveeks...eee..ekeeenaeetdvsellvglspsseeyyp 84 
+               ++R  ++k+l+ +G L    +  +e+     ++   + ++    +t+++++  + s+ ++++++
+  GAO52224 247 EFRNVTLKCLTEIGGLSVGAQ-YNEKFVvmfKSVmtSIQAMVPIATSIKDVYENASSNDQDFIQ 309
+               567777888888887764433.222222222111111112222224444444444444455555 PP
+
+  == domain 2  score: 10.5 bits;  conditional E-value: 0.00021
+  mTOR_dom  74 glspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqqL 152
+                + + +e  +  +vi+ Ll + + +  ++ ++ v + im+i+ +    lk   +fl+ ++++l++ ++++++ ++++  + +
+  GAO52224 505 AMNEETEKRFLVTVIKDLLGLCEMKRGKDNKAVVASNIMYIVGQypRFLKAhWKFLKTVVNKLFEFMHELHEGVQDMACDTF 586
+               456667999999******************************995534666699***************9999998876655 PP
+
+  == domain 3  score: -3.0 bits;  conditional E-value: 3
+  mTOR_dom 120 lkcvpflpqiipallsvirtces.slref 147
+                +  pf+++i+ +l ++++++++ ++  f
+  GAO52224 603 GEHEPFIDEIVRNLSRITNDLQPqQVHTF 631
+               45568899999999888888887555555 PP
+
+>> GAO46999  pep supercontig:Scomplicata_3.0:contig006:333466:338753:-1 gene:G7K_1213-t1 transcript:GAO46999 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.6   0.0    0.0035       2.7     103     146 ..     397     440 ..     367     451 .. 0.90
+   2 ?    3.7   0.1     0.028        22      59     153 ..     530     640 ..     471     647 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 6.6 bits;  conditional E-value: 0.0035
+  mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146
+                + ++v++  + ++++ + c  +++ ++p l++v++++++++ e
+  GAO46999 397 VQRTAVTTAANCCRSIPVDCFGTVRDVMPILQNVVTSSDQRVVE 440
+               567889999****************************9987655 PP
+
+  == domain 2  score: 3.7 bits;  conditional E-value: 0.028
+  mTOR_dom  59 eeenaeetdvsellvglspss.eeyypt.vvinaLlkil.............kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.s 143
+               e+e+ +++++ ++++ l++ss e++y+t  vi +Ll  +             +  + +   +a+v+  + ++k  + ++  f + ++p+l+ v  ++ + +
+  GAO46999 530 ENEEDRKNNSIMVMQALIHSSkEQVYETlNVIGELLPGIpkkekeedkekegEGDTPARKSKAAVENRLAMLKGCKPEVARFAKILLPTLIDVYASTINlN 630
+               22222233333347777777779999996677777755568888888887774444455678888888888888888888888888888888887766667 PP
+
+  mTOR_dom 144 lrefllqqLa 153
+               +r+ +l  L 
+  GAO46999 631 VRQKVLTALL 640
+               7777777765 PP
+
+>> GAO48285  pep supercontig:Scomplicata_3.0:contig014:23436:25472:1 gene:G7K_2463-t1 transcript:GAO48285 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.4   0.0   0.00024      0.19      72     155 ..     272     353 ..     206     356 .. 0.81
+   2 ?   -1.9   0.1       1.4   1.1e+03     119     147 ..     510     540 ..     480     553 .. 0.48
+
+  Alignments for each domain:
+  == domain 1  score: 10.4 bits;  conditional E-value: 0.00024
+  mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+               ++   + s  + ++v i+a +++l+d   +  +ta+   i   f +l   +  f+++iip++++++++ ++++r  l +qL+ L
+  GAO48285 272 VTLAASVSASVVKSVLIEAFIRLLSDTEAE-VRTAIAGQIPG-FAKLVDDSALFVERIIPKIQELVNDGSQHVRAALASQLGGL 353
+               33445666889999**********999866.66777777666.5557778899****************************977 PP
+
+  == domain 2  score: -1.9 bits;  conditional E-value: 1.4
+  mTOR_dom 119 glkc.vpflpq.iipallsvirtcesslref 147
+                  + v++++q i+p++++++++  +++r  
+  GAO48285 510 APAVdVSVVDQyILPTITQLVEDPIPNIRFN 540
+               2222244444436666666666655555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       7119  (3658863 residues searched)
+Passed MSV filter:                       288  (0.0404551); expected 142.4 (0.02)
+Passed bias filter:                      250  (0.0351173); expected 142.4 (0.02)
+Passed Vit filter:                        29  (0.00407361); expected 7.1 (0.001)
+Passed Fwd filter:                         9  (0.00126422); expected 0.1 (1e-05)
+Initial search space (Z):               7119  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.06u 0.01s 00:00:00.06 Elapsed: 00:00:00.07
+# Mc/sec: 8050.41
+//
+[ok]

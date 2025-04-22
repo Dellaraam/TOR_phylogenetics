@@ -1,0 +1,193 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Ustilago_maydis.Umaydis521_2.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   4.9e-123  409.3   2.9   4.9e-123  409.3   2.9    2.5  3  KIS68642  pep chromosome:Umaydis521_2.0:8:272733:279965:1 gen
+    2.1e-76  256.0   7.2    2.1e-76  256.0   7.2    2.0  2  KIS67059  pep chromosome:Umaydis521_2.0:15:131149:142251:-1 g
+    1.8e-28   98.4   0.0    3.8e-28   97.3   0.0    1.6  1  KIS71202  pep chromosome:Umaydis521_2.0:2:899139:907052:-1 ge
+    0.00062   17.7   3.0        2.2    6.1   0.1    3.8  4  KIS69758  pep chromosome:Umaydis521_2.0:5:741341:744121:-1 ge
+
+
+Domain annotation for each sequence (and alignments):
+>> KIS68642  pep chromosome:Umaydis521_2.0:8:272733:279965:1 gene:UMAG_03216 transcript:KIS68642 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.5   0.2       0.5   8.5e+02     161     201 ..    1108    1149 ..    1086    1175 .. 0.74
+   2 ?   -1.1   0.0      0.19   3.2e+02      71      97 ..    1344    1370 ..    1300    1382 .. 0.76
+   3 !  409.3   2.9  2.9e-126  4.9e-123       1     343 []    1383    1734 ..    1383    1734 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: -2.5 bits;  conditional E-value: 0.5
+                HHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCHH CS
+       FAT  161 sgrlslAekaLkklleedkeewlp.pevvyaylkylwakgeq 201 
+                   ls A +aL +  +e+++ ++    v  ++lk  w+++++
+  KIS68642 1108 PQDLSAADNALGSKIDESPQAEANkMTVNQQHLKQAWDTSKV 1149
+                566789999999999999933333468999999999999884 PP
+
+  == domain 2  score: -1.1 bits;  conditional E-value: 0.19
+                CCCCHHHHHCCCCCHHHCHHCCHHCSS CS
+       FAT   71 ynraydllvrlQqlaEleeiiqykqkl 97  
+                y  a +++ +l++l E+e+++ + q++
+  KIS68642 1344 YGVAFGKMRCLHALGEWEHLSDLVQQK 1370
+                777888888999999999988888864 PP
+
+  == domain 3  score: 409.3 bits;  conditional E-value: 2.9e-126
+                CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-. CS
+       FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls. 98  
+                aplaa+aaW+lgqWd m++y+s+m++ds +++f++ail++hr+q  +a++ i kar++l+ el+al++esy raydl+vr Q+l+Elee+++yk + + 
+  KIS68642 1383 APLAAAAAWSLGQWDTMDDYISAMRSDSSERSFYRAILHTHRSQRAAANKQIAKARESLDSELTALISESYGRAYDLMVRTQMLSELEEALAYKLDYKe 1481
+                79*********************************************************************************************9999 PP
+
+                ---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.................T CS
+       FAT   99 sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk...eewlp.........p 185 
+                ++++++++++tW+kRl+g+q++vevwq+ilsvRs+vl+p++d       +e+w+kfanl+Rksgr+ lAek+L++ll+ +    +   p         p
+  KIS68642 1482 QPDRQATIRSTWMKRLKGCQPEVEVWQRILSVRSIVLTPADD-------TETWIKFANLCRKSGRMVLAEKTLNSLLGPERtnaD---PrspigprapP 1570
+                ******************************************.......***************************999996642...23358888899 PP
+
+                SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC....SS-SS---..............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHH CS
+       FAT  186 evvyaylkylwakgeqkealqkLrefvscllekke....elssglevq...eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaate 277 
+                +v+ya+lk++wa+g + e l++L+ef+ +l+e+ +    + + +l +q   ++ +l ef++llarc++k+Gew+ +l++ nw +++++++ ++y++ate
+  KIS68642 1571 PVIYAHLKFMWASGARIESLSYLQEFTLNLAEDLGvhtvDEHGNLVTQdwqSSPHLGEFARLLARCFFKQGEWQMSLRE-NWVTDDNSNVIESYRRATE 1668
+                *********************************999986333333333677****************************.9****************** PP
+
+                CTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  278 ldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                ld++wykawh+wal+nfev+s+ ee++e+++p+++   +vp+v+gf++s++l s++slqd+lRlLt
+  KIS68642 1669 LDRNWYKAWHAWALANFEVISHHEERNEQITPQMIAASIVPSVQGFFRSIALASGNSLQDTLRLLT 1734
+                *****************************************************************8 PP
+
+>> KIS67059  pep chromosome:Umaydis521_2.0:15:131149:142251:-1 gene:UMAG_12008 transcript:KIS67059 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.3   0.0      0.45   7.7e+02     311     336 ..    1351    1376 ..    1305    1393 .. 0.69
+   2 !  256.0   7.2   1.2e-79   2.1e-76       2     343 .]    2841    3191 ..    2840    3191 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: -2.3 bits;  conditional E-value: 0.45
+                TCCHHHHCCT..CCHHHHTTTSSTTT CS
+       FAT  311 dlseyvvpavegflkslslssekslq 336 
+                +  ++ ++ ++ ++ksl + se+++q
+  KIS67059 1351 KHTQMRMRIISVYFKSLYSRSEEVVQ 1376
+                33457788888889998888888776 PP
+
+  == domain 2  score: 256.0 bits;  conditional E-value: 1.2e-79
+                CCTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.....--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHH CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhr.....nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleei 90  
+                +l +e+aWrl +W   +e+l+++      + +p++ +fea++al +     ++  e+ +++++a+ql ++++++l+  ++ ++++ll+ +Qq +El+e+
+  KIS67059 2841 DLLLECAWRLYDWTAERETLEQALeslsaSATPRRRVFEAYMALLKsqsgqDKPAEFGRICDEAIQLTLKKWHSLPTAVTVAHVPLLQIFQQFVELQEA 2939
+                799************9999999999999***************88756665669********************************************* PP
+
+                CCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.....................HHCCS-STTCCC..CCCCC CS
+       FAT   91 iqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.....................lllkgakaemwl..kfanl 157 
+                ++++ +l+          s elk+  +tWr+Rlp+++dd+++w+d++++R++v+  i++                     ++++g+++++w+  +fa++
+  KIS67059 2940 STIFASLAhtnatnldqRSAELKAQMQTWRERLPNLWDDINAWSDLVAWRQHVFGAINKaylplvpviqqrdgqnastnsYAYRGYHETAWIinRFAHV 3038
+                *******9*******9999999999************************************************************************** PP
+
+                HCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCC CS
+       FAT  158 aRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaal 255 
+                aRk+   ++++++L+k+                   y+++++e++ea++kLre+++c++++++el++gl+v+++tnl+ f++ + a+++++kG+++a+l
+  KIS67059 3039 ARKHYLNDVCISSLTKI-------------------YTLPNIEIQEAFLKLREQAKCHFQNPNELTQGLDVINNTNLMFFAAPQkAEFFTLKGMFMARL 3118
+                *****************...................*************************************************************** PP
+
+                CCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT  256 qklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                +        ++++++a+++a+++d +++kaw +w+++n++ +++         p++ls  + +av+++l+++ l+++ k+++ l R+L+
+  KIS67059 3119 GL-------NDDANHAFATAIQMDLNLAKAWTEWGRYNDRLFRDR--------PTELS-AAGNAVSCYLQAAGLYKNaKVRKVLIRVLW 3191
+                **.......9***********************************........****9.*****************************9 PP
+
+>> KIS71202  pep chromosome:Umaydis521_2.0:2:899139:907052:-1 gene:UMAG_01110 transcript:KIS71202 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   97.3   0.0   2.2e-31   3.8e-28      11     343 .]    1738    2074 ..    1729    2074 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 97.3 bits;  conditional E-value: 2.2e-31
+                SSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-........... CS
+       FAT   11 lgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls........... 98  
+                lg+Wd++e  ++  + +sp+ ++ +a+la+++n+ + + +++ +arq l + l a  + sy   y+++++l++l+Ele+i +  + ++           
+  KIS71202 1738 LGDWDEVEARTKGSEAKSPEHSVGRALLAMRQNDAEVFGKVLVQARQDLGKPLVAAGKASYGGVYGSVLHLHMLQELEMIRSHARVHEddrarelmgvv 1836
+                79*********************************************************************************9999955555555555 PP
+
+                ---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHH CS
+       FAT   99 sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylw 196 
+                 ++  ++l + ++ Rl  + ++++ ++++ls+R+ ++    + l   +   e+w+ +a++aR++g+++ A++a +++ +++        ++++++k+l 
+  KIS71202 1837 APDAGSDLNRSLTARLNATLPSFRTQEPLLSLRRTAFAALLSrLGSGNEVGEAWIATAKIARRAGHIQAAYSATLQAGQNQA-----TFAFVQRVKLLA 1930
+                555555559****************************66555366678899**************************88888.....68999******* PP
+
+                HCCHHHHHSSCCHHHHCCTSSCCC.......SS-SS---.....................HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHH CS
+       FAT  197 akgeqkealqkLrefvscllekke.......elssglevq..........eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaate 277 
+                ++++ +ea+  L  +++ l++  +       +                  +  +   +++   a++ l+++  + ++ +      + +eil  y++at+
+  KIS71202 1931 KEDKTHEAIRDLANSLNTLTSTFKpgqlgrdS-------VtrlielektdSTGRALRIERATfAKARLLLARLQDSTLR-----YTVNEILDRYKEATK 2017
+                *****************999887755555541.......3334454344455555555555556666666666666555.....45************* PP
+
+                CTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  278 ldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                 +p+++k w+++++f + +   +        p+++     ++ + fl+s++ + +  +  l+R+Lt
+  KIS71202 2018 EQPKSEKMWYHLGHFQDTHEGLL--------PNMTM-QRYNVCRAFLRSAHVGTKFFYRTLPRVLT 2074
+                *****************998888........54444.33455667**********99999****98 PP
+
+>> KIS69758  pep chromosome:Umaydis521_2.0:5:741341:744121:-1 gene:UMAG_02281 transcript:KIS69758 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.9   0.1      0.33   5.6e+02     128     177 ..     269     315 ..     259     371 .. 0.72
+   2 !    6.1   0.1    0.0013       2.2     146     204 ..     585     640 ..     556     651 .. 0.79
+   3 !    4.8   0.0    0.0031       5.2     147     175 ..     653     681 ..     647     715 .. 0.86
+   4 !    4.5   0.0    0.0037       6.3     255     296 ..     833     873 ..     727     881 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: -1.9 bits;  conditional E-value: 0.33
+               CCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHC CS
+       FAT 128 lsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkkllee 177
+                + Rsl+ s i+    +  +a  w+  a++   +g +s A k +++  + 
+  KIS69758 269 KKARSLLDSVIKT---NPSHAPGWIAAARVEEVAGKMSNARKIIQQGCDH 315
+               5566666666666...6777888888899999999999888888775444 PP
+
+  == domain 2  score: 6.1 bits;  conditional E-value: 0.0013
+               -STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHH CS
+       FAT 146 akaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkea 204
+               + ++ wl  a + R++g +  A ++L ++ + +    +  ++ +a +++  ++g+   a
+  KIS69758 585 KAEDLWLALATVHRDAGDTAAARQTLIRAFDANI--GS-EKISLAAAQLESSQGQLVAA 640
+               45899************************66555..33.47899999999999986655 PP
+
+  == domain 3  score: 4.8 bits;  conditional E-value: 0.0031
+               STTCCCCCCCCHCHHHHCCSTTHHCCCCC CS
+       FAT 147 kaemwlkfanlaRksgrlslAekaLkkll 175
+               +a++w+k+a+  R++g +s+A +++ ++l
+  KIS69758 653 SARVWMKSAQFERDHGYTSTALSLIDEAL 681
+               5789******************9998886 PP
+
+  == domain 4  score: 4.5 bits;  conditional E-value: 0.0037
+               CCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+       FAT 255 lqklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+               +q+  w e k+ ++ + +++at+ +p+  + ++ w +f++++
+  KIS69758 833 AQQ-FWLEGKPAQARKWFQRATHAAPNIGDHYAIWYKFEQQH 873
+               445.48899999**************************9987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       6783  (3999663 residues searched)
+Passed MSV filter:                       345  (0.0508625); expected 135.7 (0.02)
+Passed bias filter:                      129  (0.0190181); expected 135.7 (0.02)
+Passed Vit filter:                        12  (0.00176913); expected 6.8 (0.001)
+Passed Fwd filter:                         4  (0.00058971); expected 0.1 (1e-05)
+Initial search space (Z):               6783  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.09u 0.02s 00:00:00.11 Elapsed: 00:00:00.06
+# Mc/sec: 21031.11
+//
+[ok]

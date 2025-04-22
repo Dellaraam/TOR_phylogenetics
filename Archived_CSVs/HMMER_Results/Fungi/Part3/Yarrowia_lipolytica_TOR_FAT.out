@@ -1,0 +1,145 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Yarrowia_lipolytica.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+   3.8e-136  452.4   6.9   4.9e-136  452.0   2.7    2.8  2  XP_505106.1  YALI0F07084p [Yarrowia lipolytica CLIB122]
+      6e-87  290.6   1.7    1.3e-86  289.5   1.7    1.6  1  XP_501349.1  YALI0C02057p [Yarrowia lipolytica CLIB122]
+    2.6e-17   61.6   0.7    2.2e-14   52.0   0.7    2.5  1  XP_505672.1  YALI0F20636p [Yarrowia lipolytica CLIB122]
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_505106.1  YALI0F07084p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.1     0.031        66      61      96 ..    1321    1356 ..    1220    1365 .. 0.73
+   2 !  452.0   2.7  2.2e-139  4.9e-136       1     343 []    1370    1716 ..    1370    1716 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 0.031
+                   CCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCS CS
+          FAT   61 telsalsgesynraydllvrlQqlaEleeiiqykqk 96  
+                   + + +l+  s +  ++++ +l++l E+e+++++ q+
+  XP_505106.1 1321 EAYDKLDDNSMEVTMGKMRCLHALGEWESLAEIAQE 1356
+                   344455555777777777777777777777777665 PP
+
+  == domain 2  score: 452.0 bits;  conditional E-value: 2.2e-139
+                   CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCS CS
+          FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqk 96  
+                   aplaa+a+W+l+qW+ m+ y+s+mk ds dk+ff+a++++hrn+fdea+++i +ar+ll tel+al++esynray+++vr+Q+laEleeii yk  
+  XP_505106.1 1370 APLAAAASWGLSQWERMDTYISVMKVDSADKSFFNAVVSIHRNNFDEAHTHITRARDLLATELTALISESYNRAYGVVVRFQMLAELEEIIVYKGL 1465
+                   79*********************************************************************************************9 PP
+
+                   S----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.........TSSC CS
+          FAT   97 lssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp....pevv 188 
+                    ++see+++++ tW+kRl+g+q++ve+wq++l+vRslv++p++d       +emw+kfanl+RksgrlslAek+L+ ll+ d++++++    p+vv
+  XP_505106.1 1466 GRNSEEQAAMRATWMKRLKGCQRNVEDWQRMLKVRSLVVKPKQD-------MEMWIKFANLCRKSGRLSLAEKSLNALLDPDDPDSQTsrapPPVV 1554
+                   99******************************************.......******************************99555556789**** PP
+
+                   CCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCH CS
+          FAT  189 yaylkylwakgeqkealqkLrefvscllekkeelssglevq........eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaat 276 
+                   ya+lky+wa+g+ ++al++L +f+++++ + + ++++l++q         p++++++t+llarc+lk+Gew+ +lq+ +w+e++++ il ++++at
+  XP_505106.1 1555 YAQLKYMWATGNWEDALNHLVDFTNRMSLDLGLDPEDLITQklpsegaaVPKKIQDYTRLLARCFLKQGEWQISLQD-DWKEKNPDSILGSFLLAT 1649
+                   ********************************99999999999999*******************************.9***************** PP
+
+                   HCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+          FAT  277 eldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                   ++d +wykawh+wal+nf+v+s   ++kee   ed+s+yvvpa++gf++s+sls+++slqd+lRlLt
+  XP_505106.1 1650 HFDAKWYKAWHNWALANFQVVSLRYSEKEELALEDVSQYVVPAIKGFFHSISLSNGSSLQDTLRLLT 1716
+                   ******************************************************************8 PP
+
+>> XP_501349.1  YALI0C02057p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  289.5   1.7   5.8e-90   1.3e-86       2     343 .]    2806    3160 ..    2805    3160 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 289.5 bits;  conditional E-value: 5.8e-90
+                   CCTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.....--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHH CS
+          FAT    2 plaaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhr.....nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEl 87  
+                   +l +e+ Wr+ +W+  +e l++        ++p++++fe++l+l+      ++++ +++++++++ql++++++al+  ++ ++++ll+ +Qq++E+
+  XP_501349.1 2806 DLLLECGWRVADWNADKEPLEQSIrtvmdVPTPRRQIFETFLCLQSyaqkgETLQTLSKYCDEGIQLVLQNWAALPTPITGAHLPLLHTFQQYVEF 2901
+                   689************99999998888888**************8877666777******************************************* PP
+
+                   CHHCCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.........................HHCCS-STT CS
+          FAT   88 eeiiqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.........................lllkgakae 149 
+                   +e++q++++l+         +s+elk +l+ Wr+Rlp+v+dd+++w d++++R++++  i++                         ++++g+++ 
+  XP_501349.1 2902 MEASQVYTSLAsttaqnldaKSQELKGVLQAWRERLPNVWDDINIWGDLVTWRQHAFGVINRvylglvpqgqqgqqgqqgagastssFAYRGYHEI 2997
+                   *********99************************************************************************************* PP
+
+                   CCC..CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.H CS
+          FAT  150 mwl..kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.a 242 
+                   +w+  +fa++aR ++++++++++L+k+                   y+++++e++ea++kLre+++c+++++ el++gl+v+++tnl +f +++ a
+  XP_501349.1 2998 AWIinRFAHVARVHNMPDVCINQLSKI-------------------YTLPNIEIQEAFLKLREQAKCHYQNQAELNTGLDVISNTNLAYFVAQQkA 3074
+                   ***************************...................************************************************** PP
+
+                   HCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTC CS
+          FAT  243 rcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqd 337 
+                   +++++kG++la+l+        +++++qa+++a+++d  + kaw++w++fn+++++++        p+d++ y+ +a++++l+++ l+++ k+++ 
+  XP_501349.1 3075 EFFTLKGMFLAKLNV-------QDDANQAFATAVQIDLYLPKAWAEWGYFNDKRFKEN--------PKDII-YANNAISCYLQAAGLYKNgKARKL 3154
+                   ***************.......9***********************************........*****.************************ PP
+
+                   HHHHHC CS
+          FAT  338 llRlLt 343 
+                   l R+L+
+  XP_501349.1 3155 LGRILW 3160
+                   *****8 PP
+
+>> XP_505672.1  YALI0F20636p [Yarrowia lipolytica CLIB122]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   52.0   0.7     1e-17   2.2e-14       4     342 ..    1050    1341 ..    1048    1342 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 52.0 bits;  conditional E-value: 1e-17
+                   TTCCCCTSSSGHHCCCCT.......TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCS CS
+          FAT    4 aaeaaWrlgqWdsmeeylslmk...kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqk 96  
+                    +eaaWrlg+ d+++e ++ ++   ++s+   + +a++a+  ++ d +++ i +ar+ + ++l      s      ++ rl++la++e+++++ ++
+  XP_505672.1 1050 TVEAAWRLGNVDKVREWCDIARsrgHESYSTCMAQAMIAFGDGDTDCVSSQIRMARNFVKRDLVNPHTLSL-----SFDRLHALADFESVAKVAEC 1140
+                   689******************99999999999******************************998888865.....489***************** PP
+
+                   S----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHH CS
+          FAT   97 lssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyayl 192 
+                      s++ +s+ + ++kRl++v d++     il +R++++s ++ + ++   a++w+k a   R +gr++lA  a ++ + + +      +  ++y+
+  XP_505672.1 1141 --FSQDHRSISEALDKRLEDVSDQL----YILDIRKFIFSVSKLPFATVEVAHIWTKLAAQYRHAGRVELATAAALQGMVYTP------RGRMEYA 1224
+                   ..8899999999******9988665....6889*********99999999**********************77666667777......889**** PP
+
+                   HHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+          FAT  193 kylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawht 288 
+                   +++w++g+ + al +L++      ++                       +++ l+ + wla+ ++        + + + y aatel++  +ka+++
+  XP_505672.1 1225 QLQWQEGDMQGALRTLEKDRG---HD-----------------------GEVALLYAGWLAQSGHVG-----FSVASKTYIAATELAK-TEKAYYE 1288
+                   ****************87766...22.......................68899***********76.....**************99.8****** PP
+
+                   CCHHHHHCCHHHHHHSSSS.S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+          FAT  289 walfnfevlskeeekkeeeepedls.eyvvpavegflkslslssekslqdllRlL 342 
+                   +a+f+  v++++  +++ +  e  + ++   +++    +l+l+++ + + l+ lL
+  XP_505672.1 1289 LARFYHGVIQDQDGNNKVN--EYENgQLTLTMITALVSALQLGNKYATETLPMLL 1341
+                   ************7776655..334447999***************9998888777 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       6472  (3148702 residues searched)
+Passed MSV filter:                       452  (0.0698393); expected 129.4 (0.02)
+Passed bias filter:                      163  (0.0251854); expected 129.4 (0.02)
+Passed Vit filter:                        17  (0.0026267); expected 6.5 (0.001)
+Passed Fwd filter:                         3  (0.000463535); expected 0.1 (1e-05)
+Initial search space (Z):               6472  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.09u 0.01s 00:00:00.10 Elapsed: 00:00:00.05
+# Mc/sec: 20202.52
+//
+[ok]

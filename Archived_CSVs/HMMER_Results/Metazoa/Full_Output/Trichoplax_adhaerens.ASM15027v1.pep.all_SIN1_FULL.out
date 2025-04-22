@@ -1,0 +1,122 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Trichoplax_adhaerens.ASM15027v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    7.1e-99  331.9   3.2      1e-75  255.4   0.2    3.0  3  TriadP52453  pep scaffold:ASM15027v1:scaffold_1:9928602:99325
+  ------ inclusion threshold ------
+       0.21    9.9  23.4       0.24    9.6  23.4    1.1  1  TriadP60614  pep scaffold:ASM15027v1:scaffold_16:1227652:1231
+        6.5    4.9  34.7        7.9    4.6  33.8    1.5  1  TriadP51537  pep scaffold:ASM15027v1:scaffold_1:2592511:25981
+
+
+Domain annotation for each sequence (and alignments):
+>> TriadP52453  pep scaffold:ASM15027v1:scaffold_1:9928602:9932511:-1 gene:TriadG52453 transcript:TriadT52453 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   38.2   0.3   1.4e-13   5.5e-10       1      56 [.       1      57 [.       1      77 [. 0.78
+   2 !  255.4   0.2   2.6e-79     1e-75     226     563 ..      73     336 ..      52     337 .. 0.89
+   3 !   38.4   0.0   1.2e-13   4.6e-10     610     667 ..     338     399 ..     336     423 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 38.2 bits;  conditional E-value: 1.4e-13
+  PTHR13335.orig.30.pir  1 MafldnedillahlRtsyltsdddgmcerilndddv.dlekihsapyppvssssses 56
+                           Ma+ld++d++++h+R+s++tsdd+gm+e ++ ++d+ ++ k  ++ +++++ ss+e 
+            TriadP52453  1 MALLDDADFIITHIRHSCVTSDDTGMSELVIVNEDDeIITKKAKKCITKLYNSSKEH 57
+                           *******************************99965145666666666666666554 PP
+
+  == domain 2  score: 255.4 bits;  conditional E-value: 2.6e-79
+  PTHR13335.orig.30.pir 226 lsaeesdslfekkskssstktqkskkpssaakqsisslssaLekkpsqlnnpfneyakfdgkg.vgttaslkidiylplssepdkllp 312
+                            ls+ e  ++f+k++          k+ + +  qsi++l   Le+  +  +npf  y+kfdg+g vg+ a++ki+iy+ + +e +++ p
+            TriadP52453  73 LSDDEMAEMFKKYD----------KPFKAP-NQSILAL--LLEQVGN-VDNPFKDYCKFDGEGnVGEAATKKINIYFTMLPEGENGIP 146
+                            66666666666666..........788888.8999999..*****98.9*************************************** PP
+
+  PTHR13335.orig.30.pir 313 ltvvvka.satVqevIGlaLwqyteegrepklpdnkvnaycLrivEdDGevddDFPpLDrnepiskfgfselaLveatdsegktnndl 399
+                            +t+ v+  +a+Vq++IGlaLw+yt+egr+p+l++n  + y L+i+EdDGevd+DFP+LD++e i  fgf+ laLve++  e+++    
+            TriadP52453 147 MTIIVTGdNACVQDAIGLALWKYTNEGRKPPLKSNSAHGYALHIAEDDGEVDMDFPALDPKESIFRFGFTSLALVEKETPEEQK---- 230
+                            ***99877***************************966*****************************************99875.... PP
+
+  PTHR13335.orig.30.pir 400 qtplpreqkkrleeakrsagsaneagsslstesskeslfvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkky..rll 485
+                                                              k++++vkv+l+ +g+s      +v+  dv+++d+l+k+++kr+l+++     l+
+            TriadP52453 231 ----------------------------------KKNIVVKVYLPFNGFS----SVQVDRLDVPMKDILDKMMRKRRLKKTGPeyILE 280
+                            ..................................9***************....************************9986666*** PP
+
+  PTHR13335.orig.30.pir 486 kvsepnvivdldrtvesldgleflllrknssradgvlekteskssssanatissksaaedsqiqiatvqddlsssayk 563
+                            k sep v+ dl rt+es+++lef+l+r+ns+r+++  e                      +++++++ q+ l s++yk
+            TriadP52453 281 KKSEPRVTIDLSRTLESMGTLEFCLIRQNSKRSQDKEE----------------------DIAGTSSIQASLASHQYK 336
+                            ********************************999855......................666666666667777666 PP
+
+  == domain 3  score: 38.4 bits;  conditional E-value: 1.2e-13
+  PTHR13335.orig.30.pir 610 sihisqvvackl.....ssknpanFkivvrrendeKrydfeavsaaeaaeIvskinnileaya 667
+                            s++i++vvac++     ++ n + F+iv   +n +K+ df+   +++ +eIv+ki+ni+e+++
+            TriadP52453 338 SFDIDLVVACEKigepnKHNNRQAFRIVRFSANTYKYTDFDG-PTDITDEIVTKITNIIESRS 399
+                            9**************************8777***********.99****************97 PP
+
+>> TriadP60614  pep scaffold:ASM15027v1:scaffold_16:1227652:1231351:1 gene:TriadG60614 transcript:TriadT60614 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.6  23.4   6.3e-05      0.24      34     174 ..      96     264 ..      42     267 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 9.6 bits;  conditional E-value: 6.3e-05
+  PTHR13335.orig.30.pir  34 d..................................dvdlekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatg. 86 
+                            d                                  ++ +e+ + a+ p              +s ++ + +  +d+   +e +++++ 
+            TriadP60614  96 DeldryvsqsirnsrfrsfkginledmlksrnafnELTPERKELAAKP--------------PSRVDEKGDDRDDNETTSENDNSSQd 169
+                            055555555555555666665555444444444443333333333333..............33333333333333333333333333 PP
+
+  PTHR13335.orig.30.pir  87 .........gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiass 165
+                                     +d++++ + +++d  +++++++q+++++   +ye++ q v+ +++ l+e+  +r+++++  +e+ +ke+ ++ +++   
+            TriadP60614 170 dkihgesseNDKNNGDDSKQSDLLKQQKQQQQQQQQQDNEEYEKQKQKVEQQQKLLQEQEEMRKQKQKFLEETGKKENDKDKEPS--- 254
+                            3444444446667776666777667777777778999999999999******999999999999888877777777755444433... PP
+
+  PTHR13335.orig.30.pir 166 ee.rdqssck 174
+                            ++ ++q++ck
+            TriadP60614 255 KDkNKQKGCK 264
+                            3334455555 PP
+
+>> TriadP51537  pep scaffold:ASM15027v1:scaffold_1:2592511:2598114:-1 gene:TriadG51537 transcript:TriadT51537 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.6  33.8    0.0021       7.9      86     279 ..     372     602 ..     212     611 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 4.6 bits;  conditional E-value: 0.0021
+  PTHR13335.orig.30.pir  86 g..................................................gdtkarrkkpsldqrretqgekqssesesspsyeeel 123
+                            +                                                  +++k r+++++++q +++  +  +s ++++   ++++
+            TriadP51537 372 QnkvvafisfqgislnpeeklrlliltynpkknftgyiprdqmdfvqkfqvVMKKSRETQKQKQQMQSGG-YPPHSVGQPQMYVNQQQ 458
+                            0555555555555555555555555555555666666666655555556655555565555555555555.33355555666666566 PP
+
+  PTHR13335.orig.30.pir 124 qsvdissssldegsrrrrantavkleklrkerrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdsssss 210
+                            q+++ + +sl ++   ++++t+v  ++l++   s+s++i s+++        +++ +           + +++  l + r+ ++  ++
+            TriadP51537 459 QQPQPQ-QSLLQS---HSMKTPVGAQQLSSLSTSQSGPITSTKNsM-----VNMTRSS-------NFELGANSLHLNQQRQGNTMQQQ 530
+                            666666.444444...467999999999999999999999996633.....3333332.......33344444444455555522111 PP
+
+  PTHR13335.orig.30.pir 211 sapsrrq.......snkldseqlsaeesdslfekkskssstktqkskkpssaa.....kqsisslssaLekkpsqlnnpfn 279
+                                  q        n++++++ ++ ++ +l+++++  +++++q+++++ s++     +q ++ ++sa ++ + ql n +n
+            TriadP51537 531 ------QqsqvrnfLNQQQQSNVTQPPQQQLLNQQQ--QQQQQQQQRQSMSHQhnwalQQRLQRMQSAQNQSQ-QLANTLN 602
+                            ......123345576777777788888888888877..44455555555555345665444444433333333.3555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      11520  (5219283 residues searched)
+Passed MSV filter:                      1770  (0.153646); expected 230.4 (0.02)
+Passed bias filter:                      340  (0.0295139); expected 230.4 (0.02)
+Passed Vit filter:                        68  (0.00590278); expected 11.5 (0.001)
+Passed Fwd filter:                         6  (0.000520833); expected 0.1 (1e-05)
+Initial search space (Z):              11520  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.25u 0.01s 00:00:00.26 Elapsed: 00:00:00.13
+# Mc/sec: 26232.68
+//
+[ok]

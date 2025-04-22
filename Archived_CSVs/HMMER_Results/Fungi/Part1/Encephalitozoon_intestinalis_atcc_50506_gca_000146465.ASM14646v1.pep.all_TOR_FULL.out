@@ -1,0 +1,267 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Encephalitozoon_intestinalis_atcc_50506_gca_000146465.ASM14646v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR11139.orig.30.pir  [M=2684]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   1.5e-106  354.7   0.0   2.2e-106  354.1   0.0    1.2  1  ADM11106  pep chromosome:ASM14646v1:II:118224:123647:1 gene:E
+    7.5e-34  113.5   0.0    1.4e-33  112.6   0.0    1.3  1  ADM11504  pep chromosome:ASM14646v1:V:69076:79380:1 gene:Eint
+    4.5e-07   24.6   0.6    1.7e-06   22.7   0.2    2.0  2  ADM12530  pep chromosome:ASM14646v1:XI:35707:39969:-1 gene:Ei
+    2.9e-06   21.9   0.6    5.6e-06   21.0   0.0    1.6  2  ADM11243  pep chromosome:ASM14646v1:III:118133:120268:1 gene:
+    1.4e-05   19.7   0.2    4.5e-05   18.0   0.1    1.7  2  ADM12379  pep chromosome:ASM14646v1:X:57901:59232:-1 gene:Ein
+    0.00025   15.5   0.1    0.00029   15.3   0.1    1.1  1  ADM12215  pep chromosome:ASM14646v1:IX:99019:100872:-1 gene:E
+
+
+Domain annotation for each sequence (and alignments):
+>> ADM11106  pep chromosome:ASM14646v1:II:118224:123647:1 gene:Eint_021090 transcript:ADM11106 gene_biotype:protein_codi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  354.1   0.0  6.8e-109  2.2e-106    2077    2683 ..    1305    1805 ..    1216    1807 .] 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 354.1 bits;  conditional E-value: 6.8e-109
+  PTHR11139.orig.30.pir 2077 l...lsaekaalqylvaavtcylkalalaggnslq.....dtlrlLtLw.......fdhgaatevndalekalssvplwpWlpviP 2147
+                                 l+a+k+    +v+a+++y+ ++ ++     +     +++r++ L        + +++++++++ le++ls +p+++      
+               ADM11106 1305 KlflLGAKKFESTEPVKAMEMYINSVVHD-----SqysdeAIPRIFHLFsemtppgDINASSALIKKFLESCLSLLPPYY-----N 1380
+                             1356677777777789*********9977.....22357799999988877777776666688999999999999**996.....* PP
+
+  PTHR11139.orig.30.pir 2148 QLiarlsh.nrevrkllknLLvriakqhPqalvyplrvaakslssearseaaleildklrkkvpalaseletlvqqlirsafleee 2232
+                             Q+++rlsh nr v+ ++ n+++ + + +P           k+      +++ l  ++ +   vp++++++e+++ +l  + ++   
+               ADM11106 1381 QILSRLSHpNRDVVDVVSNIVLELMENYPS----------KT------FWRSLIMMNSQ---VPNTRKRMEGIISELTLDNKV--- 1444
+                             ******888*********************..........43......67777777777...99**********992222221... PP
+
+  PTHR11139.orig.30.pir 2233 llla....qlvsdeliklaieesskniakasavlkplkamlekegp.epdfiqallelleklktltkqlpalsslgplleeisalr 2313
+                                +    +  s+ l+    e  sk+ ++++              + e+df+ +          +++  p++++            
+               ADM11106 1445 ---VlsniRKISEGLM----EI-SKSKKNEL--------------AmEEDFPGF----------IRMF-PTNVMV----------- 1486
+                             ...0111122222222....11.11111111..............122233322..........4444.777775........... PP
+
+  PTHR11139.orig.30.pir 2314 elavPGtykaspl.vtIssFspqvevlsskqrPkkltirGSDGkeypfLlKgheDLRqDeRimQLfrlvNtlLskdrerrRkLsIr 2398
+                                       ++  + I ++ ++++v++s+qrPk++ ++G+DGk y +L+K ++DLR+D R m L+ ++N++L+k+++ ++  +Ir
+               ADM11106 1487 ----------PNTgILINGVKNEIKVFNSLQRPKRICFVGNDGKNYYWLCKNQDDLRKDSRFMDLNLIINSILRKQSN-KK--YIR 1559
+                             ..........2334***************************************************************5.55..9** PP
+
+  PTHR11139.orig.30.pir 2399 tYsViPLsprsGLieWVpntdtLhsilrgcadyrearakipsdlniehrlmrqaapqaaykvevfkevleetepplLhkelwlkss 2484
+                             tY+ViP s +sG+ieW+ +  +L+ i     +y  ++  i+   ++   ++r   ++++ ++e + +v++++ +p +h ++   ++
+               ADM11106 1560 TYAVIPFSHESGIIEWIKGLNSLKVICD---SYYSKD-GIS-ISET---ACRFVQNKKIGPREWH-KVISKF-GPKFHLWFSDNFP 1635
+                             ************************9998...333322.222.2333...3333333333365555.789999.************* PP
+
+  PTHR11139.orig.30.pir 2485 speaWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalgptGiEG 2570
+                             +p +Wl +R+nytr++A m +vG+  GLGDRH++NiL+d+ntG+ vH+D+ +c f +g+ L vPE+VP RLT+n+v+a+g++G EG
+               ADM11106 1636 HPYSWLSARNNYTRTYAIMNIVGWFMGLGDRHAENILFDSNTGDTVHVDL-NCIFGKGRELQVPEKVPYRLTQNIVDAFGVLGLEG 1720
+                             **************************************************.*********************************** PP
+
+  PTHR11139.orig.30.pir 2571 vFrssceavlrvLRknkesLlavLeaFvhDPLvdWtkaerlkllssqqaeaelgealaavvirrvkakLeGrddfgderkgsegLs 2656
+                             ++ +s +++l ++ knk +L + L  Fv+DPL++W+ +   k           +        r +++ ++  dd          L+
+               ADM11106 1721 SYNASLCSTLDLFLKNKNILVSNLLSFVYDPLFEWR-R---K----------STTTP----KRIIEDLCRKMDD----------LD 1778
+                             ************************************.2...2..........22222....3457888888888..........88 PP
+
+  PTHR11139.orig.30.pir 2657 vegQVqrLIqqAtdpeNLcrmYeGWcP 2683
+                             v+   + L+++At  eNLc+mY+GW P
+               ADM11106 1779 VSSKCDVLNEEATKSENLCMMYIGWLP 1805
+                             9888889******************99 PP
+
+>> ADM11504  pep chromosome:ASM14646v1:V:69076:79380:1 gene:Eint_050550 transcript:ADM11504 gene_biotype:protein_coding 
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  112.6   0.0   4.3e-36   1.4e-33    1553    2393 ..    2019    3078 ..    1887    3085 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 112.6 bits;  conditional E-value: 4.3e-36
+  PTHR11139.orig.30.pir 1553 spspalracqllglaqsdpqlarrlfpaaflslwssl...qldqlleellsalwskt............................. 1606
+                             s   +++ ++ll+ + +d+++  + + +af++ + s+   + + l++ + + ++sk+                             
+               ADM11504 2019 SLADKIEMACLLSNRGHDNEFLSEMLLPAFNNYLYSGvtfP-SGLQKFFMKGVSSKNsilrngyldlmnrivpvskwmrlkyllem 2103
+                             5555699999999****888888888888888877778964.777899999999999999999999999***************** PP
+
+  PTHR11139.orig.30.pir 1607 ....................................................ippeilqtllallefl.....ehdddtvaqglll 1635
+                                                                                 +++ +   + +lle+                   
+               ADM11504 2104 ewkhnakigytmtammilschtaeleaekyseirpskdieypwsregmrckgNVSRCSGLVANLLEDVglyrsK------------ 2177
+                             ****************************************************7777777778888777333221............ PP
+
+  PTHR11139.orig.30.pir 1636 fgsvwss.........vdlallpidll...............qlgea.anacqayakalhylepefreppslikllga........ 1688
+                                                                       +++ + +++c++ +++ + + +e+ ++    kllga        
+               ADM11504 2178 ------AskpdlleilY---------HfddsllpvlsgvlrtTVCGLdSEKCKSIFEGFVKFCSEVTGEG---KLLGAlvrglgpi 2245
+                             ......01222222230.........1333333333567788666668******************9985...7777766698887 PP
+
+  PTHR11139.orig.30.pir 1689 .....................llsppleaLa.........elyssLgepdalyGilesraldletkaawaeklgg.weeAlaayer 1743
+                                                  l        +         e+y++L   d + G ++s +  +et  a ++++ g  +eA+++ye+
+               ADM11504 2246 yrhadlyelikvfrggegwytL--------LeyaddrqktEIYRRLMNLDEYFGMSRSVCIFPETMQAYFLQQVGkTKEAQDLYEE 2323
+                             7777666666555554444440........23334444449999999999************************************ PP
+
+  PTHR11139.orig.30.pir 1744 alqkasqdagslea.........tlgrlrcllaLgqw......epeaeeellplaleaawslrlgkwd...smleyllalaaa... 1808
+                              +  a +++ s++          +   + c+++L qw        e  + ll    e++w  +l+++    +    +     +   
+               ADM11504 2324 IQARAGKHKISFDEreyklwqdeW---VACAKELQQWdvcydaGVEIGDGLL--SGESLW--HLSNFTsqkA----V-----Eklk 2393
+                             866554444444445566664442...5699999999988754144444554..667888..7776663322....2.....1222 PP
+
+  PTHR11139.orig.30.pir 1809 ....eas.selrllqallal.hqgdfdeaqeliqkarqlllgaelsavdesysrayalllvk...lqqLsElqelee...sqisla 1882
+                                  +  +e+ +l  ++ + ++  ++  +e+i+      l +++ a+++sy  + +++l+    lq + E++e+e          
+               ADM11504 2394 svigKGVgFEREFLDVFADIfMK--YS--AERIKGI----L-TKNIAELRSYPVGSGANLRNlmyLQIIIEMVEAEPifnD----- 2465
+                             34664444666666644433021..11..3444433....2.33333333343333344443333******9999876542..... PP
+
+  PTHR11139.orig.30.pir 1883 a.....lldlksiletWrnRlpgtwqddvevwedllavRrlvlppi........................................ 1923
+                             +        l si   W++  p++  +++  w    ++R +v++ +                                        
+               ADM11504 2466 KidsieA--LTSISFRWKDKEPSI-YSSFAEWSLFKTWRKHVYSRLgmgekmcgremgykqpergyteemgnslgrkpiashlfsp 2548
+                             0333331..3667679********.************************************************************* PP
+
+  PTHR11139.orig.30.pir 1924 ....................eddaelwlklaslaRkqgnlslalkllrvlieylkllwalaaveegksflleqeealldlqqllie 1989
+                                                 e  a++++ +++ a  +g +++al +       lk  + l+ v +g++f    ++++++l  +l +
+               ADM11504 2549 kemnenyakikkelvargtnE-LAKTLNMFSKAAIDHGYYDVALFH-------LKEVFDLSSVKVGDAF----QKVVYELLCFLGK 2622
+                             ***********9999999953.7779999**************999.......8888888888888887....5555555444322 PP
+
+  PTHR11139.orig.30.pir 1990 lsstaleeells.........tn...rkllakvllllgkWlsalsqlsveevlsslksaasaalqlapklekawhswalfndelle 2063
+                             +    + e ++s         +n     +++ +  +lgk++ a+         +++ +    + q + + ++ w +wa+f++ +  
+               ADM11504 2623 KEYKIGAEQCMSaniqhfsdtQNsvlFNIKGLFNEKLGKASDAE---------KFYLQ----SAQICNTVGENWLTWASFLFGRID 2695
+                             22222222222233333444311444223344447775544333.........58888....****************99877754 PP
+
+  PTHR11139.orig.30.pir 2064 hsqesgasaatlrl.lsaekaalqylvaavtcylkalalaggnslqdtlrlLtLwfdhgaatevndalekalssvplwpWlpviPQ 2148
+                                          + +  e+ +  +l+a  +c   +++++       +l+++ L+ +h++ ++v+ +++k l+++ +  ++  iPQ
+               ADM11504 2696 GD-----------ApEVKEDVFVALLQAITYCNGPNARKG-------ILKMILLMGEHSSLCDVE-LFHKVLQEIDISRFIYFIPQ 2762
+                             32...........244556666777777777777777766.......88999899****999988.******************** PP
+
+  PTHR11139.orig.30.pir 2149 LiarlshnrevrkllknLLvriakqhPqalvyplrvaaksls............................................ 2190
+                             Li  l  ++e ++l++ +L +i++++Pqa++ pl  a +  +                                            
+               ADM11504 2763 LIGLL--EKEDSRLVQAILGKISEEYPQAVIGPLKAAKER-Irrslglgkedieckvgehkvegrssedskslgtglvtgeknmfl 2845
+                             *****..9999*************************9777.467****************************************** PP
+
+  PTHR11139.orig.30.pir 2191 ...........searseaaleildklrkkvpalaseletlvqqlirsafleee...llla...............qlvsdeli... 2244
+                                        +  + +++ +il++l       +++l+++   ++  + le e   +  a               +  ++eli   
+               ADM11504 2846 envmciynrikNAQPGKEFWKILHYL-------HNSLNSFAFKEEELVYLEIEkifNS-AvshvvhgavpsglghAKILNELIfqv 2923
+                             *********99667778888999999.......4444444444444444444444333.134666666777777744445555522 PP
+
+  PTHR11139.orig.30.pir 2245 .......klaiee..s..........skniakasavlkplk.amlekegpepdfiqallelleklktltkqlpalsslgplleeis 2310
+                                    kl  ee  s           +ni+++   +k  + +++e                e +++++k+ ++           +
+               ADM11504 2924 svsslsrKLK-EEltSsilkmrcicpLENIDEMV-RFKSKVqKIVE----------------ESFHRMDKSEES-----------E 2980
+                             2222222111.22221233333332222233332.22222222222................123334444333...........1 PP
+
+  PTHR11139.orig.30.pir 2311 ......alr.elavPGtyka.....splvtIssFspqvevlssk.qrPkkltirGSDGkeypfLlKgheDLR....qDeRimQLfr 2379
+                                     + + +v G+y++     ++l  I+ F+p+ + + +k     ++ +rGSDGk y++  K   +LR     +    Q   
+               ADM11504 2981 vnlllyRSDyKHRVFGQYSEirrsyKSLASIEMFEPRQPYMYRKrMGCNRIHLRGSDGKMYRYEMK---ELRkmrfSEFVLPQISL 3063
+                             444454334778899998888998888999**********99999*******************99...67744455555666666 PP
+
+  PTHR11139.orig.30.pir 2380 lvNtlLskdre.rrR 2393
+                             ++N  +  d++ rrR
+               ADM11504 3064 MINEAMGEDTNlRRR 3078
+                             666666666666665 PP
+
+>> ADM12530  pep chromosome:ASM14646v1:XI:35707:39969:-1 gene:Eint_110300 transcript:ADM12530 gene_biotype:protein_codin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.3   0.0      0.18        58      37     155 ..     423     550 ..     368     834 .. 0.56
+   2 !   22.7   0.2   5.2e-09   1.7e-06    2483    2539 ..    1246    1301 ..    1166    1303 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: -2.3 bits;  conditional E-value: 0.18
+  PTHR11139.orig.30.pir  37 ssplessrsraar.aaaellkavveelldllmvllend.......saeaflqflsklssllqselqsepsfadsldvlasellallls 116
+                             + + s  +++++      l ++++  +++l vl+e         +                       ++ d +  ++++l+++  s
+               ADM12530 423 LKFFLS--TKNRElIGVLPLVPYIPSKREVLYVLYEIYsflfeneA----------------------IEQVDLFLLKTPALVGISSS 486
+                            222222..22222222334444444444444444432222222222......................22222333333555555555 PP
+
+  PTHR11139.orig.30.pir 117 laslitllespivvvllrslselakgllsqllnqllp.....l........................l 155
+                            +     +l++++   +lr+      + ++ +l ++++     l                        l
+               ADM12530 487 IYYNVKYLHQLAAGLNLRNVE----PRMLVFLGIVYYcesrkLynsnytgileyiqdedgirmardgL 550
+                            555555555555555555544....3355555555553222202233333333333333333333331 PP
+
+  == domain 2  score: 22.7 bits;  conditional E-value: 5.2e-09
+  PTHR11139.orig.30.pir 2483 ssspeaWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcff 2539
+                             + ++e +l++  n+++SlA  S+v y L + DRH  Ni++d + G+++HIDFg++++
+               ADM12530 1246 FKESEGYLTAICNFASSLAGYSLVVYFLNIKDRHNGNIMID-DKGRMIHIDFGYILE 1301
+                             557888999999*****************************.89*********9876 PP
+
+>> ADM11243  pep chromosome:ASM14646v1:III:118133:120268:1 gene:Eint_031000 transcript:ADM11243 gene_biotype:protein_cod
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.1       0.1        32    1087    1212 ..      13     106 ..       7     365 .. 0.59
+   2 !   21.0   0.0   1.7e-08   5.6e-06    2422    2535 ..     472     591 ..     466     607 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 0.1
+  PTHR11139.orig.30.pir 1087 llqlttllvkhapealipaqeseldysttkvaillllqlilrdlslpssyvlqvlvallkalasealqllvlpadkvllapslllr 1172
+                             ll+++++ + +  +++     +   ++   v++++   +i+  ++    y +q+++ +l+ ++ ++ ++        +  ++ll+ 
+               ADM11243   13 LLSSPHTDLLQIMQYM-----H--EHPSVGVWQYICS-RIRHSSPQ-IRYLPQLVHVFLYNKDRMSSKP--------M--HALLSH 79  
+                             5555555554455555.....2..3455557776664.44444444.7777777777777775555555........3..444443 PP
+
+  PTHR11139.orig.30.pir 1173 lkdgqlhssvsrirellvrhatrvlilqqLallvsivnah 1212
+                              +     ++++ +           l ++  ++l s++ + 
+               ADM11243   80 WA----GKDREFCCA---------LYFHLRSALESNSDIR 106 
+                             33....223322222.........3333333333333333 PP
+
+  == domain 2  score: 21.0 bits;  conditional E-value: 1.7e-08
+  PTHR11139.orig.30.pir 2422 hsilrgca.dyrearakipsdlniehrlmrqaapqaa........y.kvevfkevleetepp.lLhkelw.lkssspeaWlarRkn 2495
+                             h++l+ ++ ++r+ + +i  + +  +++++  ++ +         +  +++ k+ ++e+ ++  L+ ++  ++ +++e +    +n
+               ADM11243  472 HQVLQEMKkIWRKENSPI--WVQ--AYQIYLVSDTSGiietvvdaLsIHKIKKKMMSEN-KNySLKNYFTeSFEPNSEKYRSCLRN 552 
+                             566666666777654333..333..4555544443225555444304233556666667.777889999988899999999***** PP
+
+  PTHR11139.orig.30.pir 2496 ytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFg 2535
+                             +  Sl   S++ yiL + DRH  Ni++d   G+++H+DFg
+               ADM11243  553 FLYSLVGYSLATYILQVKDRHNGNIMIDG-QGHIIHVDFG 591 
+                             ****************************5.79*******5 PP
+
+>> ADM12379  pep chromosome:ASM14646v1:X:57901:59232:-1 gene:Eint_100530 transcript:ADM12379 gene_biotype:protein_coding
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.1   0.0     0.081        26    2400    2419 ..     233     252 ..     231     253 .. 0.95
+   2 !   18.0   0.1   1.4e-07   4.5e-05    2504    2539 ..     292     326 ..     274     332 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: -1.1 bits;  conditional E-value: 0.081
+  PTHR11139.orig.30.pir 2400 YsViPLsprsGLieWVpntd 2419
+                             Y ViPLs + G++e V+++d
+               ADM12379  233 YKVIPLSREEGIVEVVDGVD 252 
+                             99***************986 PP
+
+  == domain 2  score: 18.0 bits;  conditional E-value: 1.4e-07
+  PTHR11139.orig.30.pir 2504 SmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcff 2539
+                             S+++y+ G+GDR p N++++r  G+  H+DF ++f+
+               ADM12379  292 SVACYMMGVGDRNPGNMMVSR-DGRFFHVDFSYVFG 326 
+                             99******************9.89*******99997 PP
+
+>> ADM12215  pep chromosome:ASM14646v1:IX:99019:100872:-1 gene:Eint_090860 transcript:ADM12215 gene_biotype:protein_codi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.3   0.1     9e-07   0.00029     663     880 ..      43     290 ..       7     435 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 15.3 bits;  conditional E-value: 9e-07
+  PTHR11139.orig.30.pir 663 talqeaalsglsvwlrtalfllglaease........................................................... 691
+                            t+ +  + ++l+v+l++al+                                                                    
+               ADM12215  43 TSEC--NDHHLIVYLENALCRG------Tqveyedisrmllhrnskvrrislmlhyrnfpdiippsfqddpdhsvravylsqrwnlri 122
+                            3322..2222444444443322......244444444466666655555555555555555555555543333333333333332222 PP
+
+  PTHR11139.orig.30.pir 692 ....alavallllllstlgallfsgsseealllclvl...........................fvrellvllLlnpnldvrkaaaaa 748
+                                +                               +                             ++++ ++++++ l +r  + +a
+               ADM12215 123 ssliK-------------------------------QaedenpdvriaalhqlmrfsedekykiKILRSVCHRIHDRELTIRVFVSRA 179
+                            22220...............................0222222333333333444444445556667777778888888888888888 PP
+
+  PTHR11139.orig.30.pir 749 lalLlassgnssvlsllsplssvlldarpeekavvvleilekllllaildldplvrlsvleslaedlaafd..ehasqafslsllfal 834
+                            ++++ ++s+   v  lls + ++l d+++           + +l+ ++ d +++vr+  ++s  ++ +      + +++f+     ++
+               ADM12215 180 IGEFKDLSD-EVVEKLLSKQVTSLDDQKL-----------CGALIYGVEDEYSDVRRNTISSVYSLVT--PgiVSRAFDFIV----DS 249
+                            888888887.4455666666666666555...........47777777777*********99988775..334555566666....** PP
+
+  PTHR11139.orig.30.pir 835 lndeslevreaaisllgrlslksllnpalrlallrkllsqlLtrL.e 880
+                            lnde+ ++re +  +l ++s+       + l   r +  q+ + L e
+               ADM12215 250 LNDEDGDLRELSTLCLKKMSI------KYTLVIDREIVRQICESLkE 290
+                            ******************999......33344444444444443332 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (2684 nodes)
+Target sequences:                       1939  (660935 residues searched)
+Passed MSV filter:                        65  (0.0335224); expected 38.8 (0.02)
+Passed bias filter:                       62  (0.0319752); expected 38.8 (0.02)
+Passed Vit filter:                         9  (0.00464157); expected 1.9 (0.001)
+Passed Fwd filter:                         6  (0.00309438); expected 0.0 (1e-05)
+Initial search space (Z):               1939  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.29u 0.03s 00:00:00.31 Elapsed: 00:00:00.23
+# Mc/sec: 7624.27
+//
+[ok]

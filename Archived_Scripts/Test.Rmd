@@ -1,0 +1,1022 @@
+---
+title: "Alveolata & Stramenopiles TORC 1 & 2 Analysis"
+author: "Kyle Johnson"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+install.packages("tidyverse")
+install.packages("rentrez")
+install.packages("gridExtra")
+
+library(tidyverse)
+library(rentrez)
+library(ggrepel)
+library(gridExtra)
+
+# Loading CSVs of the Alveolata and Stramenopiles
+D1AlveolataRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Alveolata_CSV/D1_Alveolata.csv")
+RAPTORAlveolataRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Alveolata_CSV/RAPTOR_Alveolata.csv")
+RICTORAlveolataRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Alveolata_CSV/RICTOR_Alveolata.csv")
+SIN1AlveolataRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Alveolata_CSV/SIN1_Alveolata.csv")
+TORAlveolataRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Alveolata_CSV/TOR_Alveolata.csv")
+LST8AlveolataRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Alveolata_CSV/LST8_Alveolata.csv")
+
+D1StramenopilesRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Stramenopiles_CSV/D1_Stramenopiles.csv")
+RAPTORStramenopilesRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Stramenopiles_CSV/RAPTOR_Stramenopiles.csv")
+RICTORStramenopilesRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Stramenopiles_CSV/RICTOR_Stramenopiles.csv")
+SIN1StramenopilesRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Stramenopiles_CSV/SIN1_Stramenopiles.csv")
+TORStramenopilesRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Stramenopiles_CSV/TOR_Stramenopiles.csv")
+LST8StramenopilesRaw <- read.csv("C:/Users/kajoh/Desktop/Tables/Stramenopiles_CSV/LST8_Stramenopiles.csv")
+
+MetazoaShioRICTOR <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/RICTOR_Metazoa")
+MetazoaShioSIN1 <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/SIN1_Metazoa")
+
+FungiShioRICTOR <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/RICTOR_Fungi")
+FungiShioSIN1 <- read.csv("C:/Users/kajoh/Desktop/Tables/Original_Tables/SIN1_Fungi")
+
+Alveolata_Names <- read.csv("C:/Users/kajoh/Desktop/Tables/Alveolata_Information_2.csv")
+Stramenopiles_Names <- read.csv("C:/Users/kajoh/Desktop/Tables/Stramenopiles_Information_2.csv")
+Alveolata_Busco <- read.csv("C:/Users/kajoh/Desktop/Tables/Alveolata BUSCO - Sheet1.csv")
+Ciliates <- read_tsv("C:/Users/kajoh/Desktop/Tables/Ciliates_Names.tsv")
+
+
+
+
+
+# Global Variables for Analysis
+
+# Score Values
+LRTScoresA <- 150
+LRTScoreD <- 150
+
+RSDScoreA <- 100
+RSDScoreD <- 100
+
+
+```
+
+## An Analysis of Alveolata and RICTOR TOR Complex Components
+
+This report details the collected HMMER Results for the clades Alveolata and Stramenopila. These datasets were downloaded from the NCBI website using the following command (Put Command here about what was done). The purpose of this analysis was to determine an appropriate cutoff point for scores (bit and E-value) relating to the principle component proteins that comprise the TOR Complex 1 and 2. For TORC1, these proteins include TOR, LST8, and RAPTOR. For TORC 2; TOR, LST8, SIN1, and RICTOR are the primary protein components. All CSVs used in this project are results from a HMMER table translated into csv file and then concatenated depending on the clade and the protein of interest (ex. Avleolata RICTORs, Alveolata RAPTORS, etc etc.) 
+
+
+These Functions are used in facilitating the addition of information and for filtering purposes:
+```{r}
+# Functions for filtering purposes and addition of information
+
+Species_Name <- function(maincsv, namecsv){
+  #First add the organism name column to the maincsv
+  #Filling it with NA
+  #Check to see if it has it already
+  if ("Organism" %in% colnames(maincsv)){
+  }else{
+    maincsv <- maincsv %>% add_column(Organism=NA, .before = "tid")
+  }
+  #Iterate through the rows of the main csv file
+  for (i in 1:nrow(maincsv)){
+    #print(maincsv[i, "taxid"])
+    
+    #Iterate through the name csv file
+    for (n in 1:nrow(namecsv)){
+      if (maincsv[i, "taxid"] == namecsv[n, "Organism_Taxonomic_ID"]){
+        #print(namecsv[n,"Organism"])
+        maincsv$Organism[i] <- namecsv$Organism.Name[n]
+      } else{
+        next
+      }
+    }
+  }
+  return(maincsv) 
+}
+
+Taxon_Add <- function(csvToAdd){
+  temp <- csvToAdd
+  if("taxid" %in% colnames(temp)){
+  }else{
+    temp <- temp %>%
+      add_column(taxid = NA, .before = "tar")
+  }
+    for (r in 1:nrow(temp)){
+      print(r)
+      targ <- temp[r, "tar"]
+      eSearch <- entrez_search(db ="protein", term = targ)
+      eSummary <- entrez_summary(db="protein", id=eSearch$ids)
+      print(eSummary$taxid)
+      if(is.null(eSummary$taxid)){
+        next
+      } else{}
+      
+      taxID <- extract_from_esummary(eSummary, "taxid")
+      ID <- unname(taxID)
+      if(nrow(temp) >0){
+        temp$taxid[r] <- ID
+      } else {}
+    }
+# Finally, return the value held within temp to the output of the function
+  return(temp)
+}
+
+Check_Ciliates <- function (toBeCompared, ciliate){
+  # Add in a column that will have values for comparing. Default is false
+  # Adding the column after the Organism column (requires that it exists)
+  if ("Ciliate_Check" %in% colnames(toBeCompared)){
+  }else{
+    toBeCompared <- toBeCompared %>%
+      add_column(Ciliate_Check = FALSE, .after = "bid")
+  }
+  #print(toBeCompared)
+  # Get rid of any spaces and replace them with _
+  colnames(ciliate) = gsub(" ", "_", colnames(ciliate))
+  #print(nrow(ciliate))
+  #print(ciliate)
+  
+  # Iterate through the toBeCompared dataframe and the ciliates dataframe
+  for (n in 1:nrow(toBeCompared)){
+    for(c in 1:nrow(ciliate)){
+      if(toBeCompared[n, "taxid"] == ciliate[c, "Organism_Taxonomic_ID"]){
+        toBeCompared$Ciliate_Check[n] <- TRUE
+      } else{}
+      }
+  }
+  return(toBeCompared)
+  }
+  
+photoCheck <- function(inputCSV , photoCSV){
+  if ("Has_D1" %in% colnames(inputCSV)){
+  }else{
+    inputCSV <- inputCSV %>% add_column(Has_D1 = FALSE, .after = "bid")
+  }
+  for(n in 1:nrow(photoCSV)){
+    #print("PhotoCSV Values")
+    #print(photoCSV$Has_D1[n])
+    for(m in 1:nrow(inputCSV)){
+      #print("InputCSV Values")
+      #print(inputCSV$Has_D1[m])
+      if(inputCSV[m, "taxid"] == photoCSV[n,"taxid"]){
+        inputCSV$Has_D1[m] <- TRUE
+      }else{
+      }
+    }
+  }
+  #print(inputCSV$Has_D1)
+  return(inputCSV)
+}
+
+BuscoAdd <- function(inputCSV, BUSCO){
+  
+  inputCSV$Organism <- tolower(inputCSV$Organism)
+  if ("C_score" %in% colnames(inputCSV) & "Fragmentation" %in% colnames(inputCSV)){
+  }else{
+    inputCSV <- inputCSV %>% add_column(C_score = NA, .after = "bid")
+    inputCSV <- inputCSV %>% add_column(Fragmentation = NA, .after = "C_score")
+  }
+  BUSCO$Name <- tolower(BUSCO$Name)
+  
+  for(n in 1:nrow(inputCSV)){
+    for(m in 1:nrow(BUSCO)){
+      if (inputCSV[n, "Organism"] == BUSCO[m, "Name"]){
+        inputCSV$C_score[n] <- BUSCO$C.score[m]
+        inputCSV$Fragmentation[n] <- BUSCO$Frag.score[m]
+      }else{}
+    }
+    
+  }
+  return(inputCSV)
+}
+
+
+
+AccnAdd <- function(input, names){
+  
+  if ("Assembly_Acc" %in% colnames(input)){
+  }else{
+    input <- input %>% add_column(Assembly_Acc = NA, .before = "tar")
+  }
+  if("SeqLen" %in% colnames(input)){
+  }else{
+    input <- input %>% add_column(Seqlen = NA, .after = "bid")
+  }
+  
+  for (n in 1:nrow(input)){
+    for (m in 1:nrow(names)){
+      if (input[n, "taxid"] == names[m, "Organism_Taxonomic_ID"] ){
+        input$Assembly_Acc[n] <- names$Assembly.Accession[m]
+      }
+    }
+  }
+}
+
+TaxonAccn <- function (input, namecsv){
+  if ("taxid" %>% in colnames(input)){
+  }else{
+    input <- input %>% add_column(taxid = NA, .before = "tar")
+  }
+  for (n in 1:nrow(input)){
+    for(m in 1:nrow(namecsv)){
+      
+      
+      
+      
+      
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
+
+
+# numericPercentReplace <- function(df, col1, col2){
+#   # Do this for the first column
+#   df <- df %>% mutate(!!col1 = ifelse(!!is.na(col1), 0, !!col1))
+#   df[[col1]] <- gsub("%$","",df[[col1]])
+#   df[[col1]] <- as.numeric(as.character(df[[col1]]))
+#   
+#   # Do this for the second column
+#   df <- df %>% mutate(!!col2 = ifelse(!!is.na(col2), 0, !!col2))
+#   df[[col2]] <- gsub("%$","",df[[col2]])
+#   df[[col2]] <- as.numeric(as.character(df[[col2]]))
+#   
+#   return(df)
+#   
+# }
+
+```
+
+For initial filtering steps, the csvs are first filtered to remove any values that are considered below acceptable. For LST8, RAPTOR, TOR, this score will be 150 and 150 respectively due to the large presence of WD-40 Repeats. For RICTOR, SIN1, and D1 this will be 100 respectively. Prior analysis work indicates that for all proteins, any value below this cutoff threshold is most likely a false positive at best and can therefore be safely discarded.
+The following code blocks do the initial filtering steps and then add in the taxonomic ID for each of the proteins within the CSV, add in the organism name, checks to see if the organisms belong to the ciliate family, checks if any of the organisms contain the D1 Protein while also containing the others, and finally adds in BUSCO scores for each of the organisms:
+
+
+```{r include=FALSE}
+# Alveolata
+D1Alveolata <- D1AlveolataRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RICTORAlveolata <- RICTORAlveolataRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RAPTORAlveolata <- RAPTORAlveolataRaw %>% filter(sca >= LRTScoresA & scd >= LRTScoreD)
+SIN1Alveolata <- SIN1AlveolataRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+LST8Alveolata <- LST8AlveolataRaw %>% filter(sca >= LRTScoresA & scd >= LRTScoreD)
+TORAlveolata <- TORAlveolataRaw %>% filter(sca >= LRTScoresA & scd >= LRTScoreD)
+
+
+
+# Stramenopiles
+D1Stramenopiles <- D1StramenopilesRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RICTORStramenopiles <- RICTORStramenopilesRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+RAPTORStramenopiles <- RAPTORStramenopilesRaw %>% filter(sca >= LRTScoresA & scd >= LRTScoreD)
+SIN1Stramenopiles <- SIN1StramenopilesRaw %>% filter(sca >= RSDScoreA & scd >= RSDScoreD)
+LST8Stramenopiles <- LST8StramenopilesRaw %>% filter(sca >= LRTScoresA & scd >= LRTScoreD)
+TORStramenopiles <- TORStramenopilesRaw %>% filter(sca >= LRTScoresA & scd >= LRTScoreD)
+  
+#Rhizaria (Future)
+
+
+
+
+
+
+
+
+# Add in the Taxonomic Information
+# Note that this section takes the longest to run due to the web based approach
+## Alveolata
+D1Alveolata <- Taxon_Add(D1Alveolata)
+RICTORAlveolata <- Taxon_Add(RICTORAlveolata)
+RAPTORAlveolata <- Taxon_Add(RAPTORAlveolata)
+SIN1Alveolata <- Taxon_Add(SIN1Alveolata)
+LST8Alveolata <- Taxon_Add(LST8Alveolata)
+TORAlveolata <- Taxon_Add(TORAlveolata)
+## Stramenopiles
+D1Stramenopiles <- Taxon_Add(D1Stramenopiles)
+RICTORStramenopiles <- Taxon_Add(RICTORStramenopiles)
+RAPTORStramenopiles <- Taxon_Add(RAPTORStramenopiles)
+SIN1Stramenopiles <- Taxon_Add(SIN1Stramenopiles)
+LST8Stramenopiles <- Taxon_Add(LST8Stramenopiles)
+TORStramenopiles <- Taxon_Add(TORStramenopiles)
+##Rhizaria (Future)
+
+
+```
+
+
+
+
+
+
+
+```{r}
+# Add the Species Name
+## Alveolata
+D1Alveolata <- Species_Name(D1Alveolata, Alveolata_Names)
+RICTORAlveolata <- Species_Name(RICTORAlveolata, Alveolata_Names)
+RAPTORAlveolata <- Species_Name(RAPTORAlveolata, Alveolata_Names)
+SIN1Alveolata <- Species_Name(SIN1Alveolata, Alveolata_Names)
+LST8Alveolata <- Species_Name(LST8Alveolata, Alveolata_Names)
+TORAlveolata <- Species_Name(TORAlveolata, Alveolata_Names)
+## Stramenopiles
+D1Stramenopiles <- Species_Name(D1Stramenopiles, Stramenopiles_Names)
+RICTORStramenopiles <- Species_Name(RICTORStramenopiles, Stramenopiles_Names)
+RAPTORStramenopiles <- Species_Name(RAPTORStramenopiles, Stramenopiles_Names)
+SIN1Stramenopiles <- Species_Name(SIN1Stramenopiles, Stramenopiles_Names)
+LST8Stramenopiles <- Species_Name(LST8Stramenopiles, Stramenopiles_Names)
+TORStramenopiles <- Species_Name(TORStramenopiles, Stramenopiles_Names)
+
+
+# Check for Ciliates
+## Alveolata
+D1Alveolata <- Check_Ciliates(D1Alveolata, Ciliates)
+RICTORAlveolata <- Check_Ciliates(RICTORAlveolata, Ciliates)
+RAPTORAlveolata <- Check_Ciliates(RAPTORAlveolata, Ciliates)
+SIN1Alveolata <- Check_Ciliates(SIN1Alveolata, Ciliates)
+LST8Alveolata <- Check_Ciliates(LST8Alveolata, Ciliates)
+TORAlveolata <- Check_Ciliates(TORAlveolata, Ciliates)
+## Stramenopiles (None should be)
+D1Stramenopiles <- Check_Ciliates(D1Stramenopiles, Ciliates)
+RICTORStramenopiles <- Check_Ciliates(RICTORStramenopiles, Ciliates)
+RAPTORStramenopiles <- Check_Ciliates(RAPTORStramenopiles, Ciliates)
+SIN1Stramenopiles <- Check_Ciliates(SIN1Stramenopiles, Ciliates)
+LST8Stramenopiles <- Check_Ciliates(LST8Stramenopiles, Ciliates)
+TORStramenopiles <- Check_Ciliates(TORStramenopiles, Ciliates)
+
+# Check to see if the D1 Protein exists with the other proteins (Basically, if D1 protein containing organisms contain the other proteins of RICTOR, SIN1)
+## Alveolata
+D1Alveolata <- photoCheck(D1Alveolata, D1Alveolata)
+RICTORAlveolata <- photoCheck(RICTORAlveolata, D1Alveolata)
+RAPTORAlveolata <- photoCheck(RAPTORAlveolata, D1Alveolata)
+SIN1Alveolata <- photoCheck(SIN1Alveolata, D1Alveolata)
+LST8Alveolata <- photoCheck(LST8Alveolata, D1Alveolata)
+TORAlveolata <- photoCheck(TORAlveolata, D1Alveolata)
+
+## Stramenopiles
+D1Stramenopiles <- photoCheck(D1Stramenopiles, D1Stramenopiles)
+RICTORStramenopiles <- photoCheck(RICTORStramenopiles, D1Stramenopiles)
+RAPTORStramenopiles <- photoCheck(RAPTORStramenopiles, D1Stramenopiles)
+SIN1Stramenopiles <- photoCheck(SIN1Stramenopiles, D1Stramenopiles)
+LST8Stramenopiles <- photoCheck(LST8Stramenopiles, D1Stramenopiles)
+TORStramenopiles <- photoCheck(TORStramenopiles, D1Stramenopiles)
+
+
+
+```
+
+
+
+
+```{r}
+# Create some dummy csv files to test the busco addition function and the Accession addition function
+D1Alveolata <- BuscoAdd(D1Alveolata, Alveolata_Busco)
+RICTORAlveolata <- BuscoAdd(RICTORAlveolata, Alveolata_Busco)
+RAPTORAlveolata <- BuscoAdd(RAPTORAlveolata, Alveolata_Busco)
+SIN1Alveolata <- BuscoAdd(SIN1Alveolata, Alveolata_Busco)
+LST8Alveolata <- BuscoAdd(LST8Alveolata, Alveolata_Busco)
+TORAlveolata <- BuscoAdd(TORAlveolata, Alveolata_Busco)
+
+```
+
+```{r}
+# Create cleaned up dataframes that contain only the best possible hit from each taxon ID
+# This should be done using the maximum scd value as this denotes the best possible domain score
+cleanedD1Alveolata <- D1Alveolata %>%
+  group_by(taxid) %>%
+  slice_max(scd) %>%
+  ungroup
+
+cleanedTORAlveolata <- TORAlveolata %>%
+  group_by(taxid) %>%
+  slice_max(scd) %>%
+  ungroup()
+
+cleanedLST8Alveolata <- LST8Alveolata %>%
+  group_by(taxid) %>%
+  slice_max(scd) %>%
+  ungroup()
+
+cleanedRICTORAlveolata <- RICTORAlveolata %>%
+  group_by(taxid) %>%
+  slice_max(scd) %>%
+  ungroup()
+
+cleanedRAPTORAlveolata <- RAPTORAlveolata %>%
+  group_by(taxid) %>%
+  slice_max(scd) %>%
+  ungroup()
+
+cleanedSIN1Alveolata <- SIN1Alveolata %>%
+  group_by(taxid) %>%
+  slice_max(scd) %>%
+  ungroup()
+
+
+```
+
+More data cleanup. This time we are changing the values within the C_score and Fragmentation columns to be proper numeric values as opposed to character values (due to the presence of the % sign)
+
+
+```{r}
+LST8Alveolata <- LST8Alveolata %>% mutate(C_score = ifelse(is.na(C_score), 0, C_score))
+LST8Alveolata$C_score <- gsub("%$","",LST8Alveolata$C_score)
+LST8Alveolata$C_score <- as.numeric(as.character(LST8Alveolata$C_score))
+LST8Alveolata <- LST8Alveolata %>% mutate(Fragmentation = ifelse(is.na(Fragmentation), 0, Fragmentation))
+LST8Alveolata$Fragmentation <- gsub("%$","",LST8Alveolata$Fragmentation)
+LST8Alveolata$Fragmentation <- as.numeric(as.character(LST8Alveolata$Fragmentation))
+
+dummy <- RICTORAlveolata
+
+dummy <- numericPercentReplace(dummy,"C_score","Fragmentation")
+
+```
+
+
+
+
+
+
+
+```{r}
+# Lets create some graphs here that have the busco score as a color gradient.
+# We can alter the other graphs as time moves along and as we get closer to presentation
+LST8Alveolata_NA_replace <- LST8Alveolata %>% mutate(C_score = ifelse(is.na(C_score), 0, C_score))
+LST8Alveolata_NA_replace$C_score <-gsub("%$","",LST8Alveolata_NA_replace$C_score)
+
+
+LST8AlveolataPlot <- ggplot (data = LST8Alveolata_NA_replace, aes(x = sca, y = scd))+
+  geom_point(aes(color = as.numeric(C_score)))+
+  scale_color_gradient(low = "blue", high = "red")+
+  xlab("Overall BIT Score")+
+  ylab("Best Domain Score")
+  
+  
+
+LST8AlveolataPlot
+  
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In order to determine the initial cut off values, graphs were made for the Raw data for each of the proteins regarding the clades Alveolata and Stramenopila
+
+Here is a comparison between the scores for Alveolata (L) and Stramenopila (R)
+```{r echo=FALSE}
+RICTORAlveolataRawPlot <- ggplot(RICTORAlveolataRaw, aes(x = sca, y = scd))+
+  geom_point()+
+  ggtitle("RICTOR HMMER Results Alveolata")+
+  xlab("Overall HMMER BIT Score")+
+  ylab("Best Domain HMMER BIT Score")
+
+RICTORStramenopilesRawPlot <- ggplot(RICTORStramenopilesRaw, aes(x = sca, y = scd))+
+  geom_point()+
+  ggtitle("RICTOR HMMER Results Stramenopiles")+
+  xlab("Overall HMMER BIT Score")+
+  ylab("Best Domain HMMER BIT Score")
+
+grid.arrange(RICTORAlveolataRawPlot, RICTORStramenopilesRawPlot, ncol=2)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Based upon the Results, a good potential cutoff value is likely between at the 250 Bit score mark for RICTOR. An annotation is added to represent the cutoff region.
+```{r echo=FALSE}
+RICTORAlveolataRawPlot <- ggplot(RICTORAlveolataRaw, aes(x = sca, y = scd))+
+  geom_point()+
+  annotate("rect",
+           xmin = 0,
+           xmax = 250,
+           ymin = 0,
+           ymax = 250,
+           alpha = .1,
+           color = "blue")+
+  ggtitle("RICTOR Alveolata")+
+  xlab("Overall HMMER BIT Score")+
+  ylab("Best Domain HMMER BIT Score")
+
+RICTORStramenopilesRawPlot <- ggplot(RICTORStramenopilesRaw, aes(x = sca, y = scd))+
+  geom_point()+
+    annotate("rect",
+           xmin = 0,
+           xmax = 250,
+           ymin = 0,
+           ymax = 250,
+           alpha = .1,
+           color = "blue")+
+  ggtitle("RICTOR Stramenopiles")+
+  xlab("Overall HMMER BIT Score")+
+  ylab("Best Domain HMMER BIT Score")
+
+grid.arrange(RICTORAlveolataRawPlot, RICTORStramenopilesRawPlot, ncol=2)
+
+```
+To compare these results to prior known, a third graph has been added
+
+
+```{r echo=FALSE}
+RICTORAlveolataRawPlot <- ggplot(RICTORAlveolataRaw, aes(x = sca, y = scd))+
+  geom_point()+
+  annotate("rect",
+           xmin = 0,
+           xmax = 250,
+           ymin = 0,
+           ymax = 250,
+           alpha = .1,
+           color = "blue")+
+  ggtitle("RICTOR Alveolata")+
+  xlab("Overall HMMER BIT Score")+
+  ylab("Best Domain HMMER BIT Score")
+
+RICTORStramenopilesRawPlot <- ggplot(RICTORStramenopilesRaw, aes(x = sca, y = scd))+
+  geom_point()+
+    annotate("rect",
+           xmin = 0,
+           xmax = 250,
+           ymin = 0,
+           ymax = 250,
+           alpha = .1,
+           color = "blue")+
+  ggtitle("RICTOR Stramenopiles")+
+  xlab("Overall HMMER BIT Score")+
+  ylab("Best Domain HMMER BIT Score")
+
+MetazoaRictorPlot <- ggplot(MetazoaShioRICTOR, aes(x = sca, y = scd))+
+  geom_point()+
+  ggtitle("RICTOR Metazoa")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 250,
+           ymin = 0,
+           ymax = 250,
+           alpha = .1,
+           color = "blue")+
+  annotate("segment",
+           x = 0,
+           xend = 1600,
+           y = 450,
+           yend = 450,
+           color = "red")+
+  annotate("text",
+           x = 750,
+           y = 500,
+           label = "Borderline")+
+  xlab("Overall HMMER BIT Score")+
+  ylab("Best Domain HMMER BIT Score")
+
+
+
+grid.arrange(RICTORAlveolataRawPlot, RICTORStramenopilesRawPlot, MetazoaRictorPlot, ncol=2, nrow = 2)
+```
+Now considering the fact that there exists points that may or may not be true hits due to falling between the cutoff zone and the always accept zone (determined via reversed searching the proteins as evidenced by the Metazoa Graph with annotation), we therefore have to label this region as the "Unknown Zone". This Unknown zone is where manual work is most needed, specifically aligning these particular proteins with confirmed hits to determine whether or not they are genuine protein hits. The graphs are redrawn below with said Borderline denoting the specific "Unknown Region" as well as an additional reference clade to further cement the borderline idea: 
+
+```{r echo=FALSE}
+RICTORAlveolataRawPlot <- ggplot(RICTORAlveolataRaw, aes(x = sca, y = scd))+
+  geom_point()+
+  annotate("rect",
+           xmin = 0,
+           xmax = 250,
+           ymin = 0,
+           ymax = 250,
+           alpha = .1,
+           color = "blue")+
+    annotate("segment",
+           x = 0,
+           xend = 1600,
+           y = 450,
+           yend = 450,
+           color = "red")+
+  ggtitle("RICTOR Alveolata")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+RICTORStramenopilesRawPlot <- ggplot(RICTORStramenopilesRaw, aes(x = sca, y = scd))+
+  geom_point()+
+    annotate("rect",
+           xmin = 0,
+           xmax = 250,
+           ymin = 0,
+           ymax = 250,
+           alpha = .1,
+           color = "blue")+
+    annotate("segment",
+           x = 0,
+           xend = 1600,
+           y = 450,
+           yend = 450,
+           color = "red")+
+  ggtitle("RICTOR Stramenopiles")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+MetazoaRictorPlot <- ggplot(MetazoaShioRICTOR, aes(x = sca, y = scd))+
+  geom_point()+
+  ggtitle("RICTOR Metazoa")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 250,
+           ymin = 0,
+           ymax = 250,
+           alpha = .1,
+           color = "blue")+
+  annotate("segment",
+           x = 0,
+           xend = 1600,
+           y = 450,
+           yend = 450,
+           color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+FungiRictorPlot <- ggplot(FungiShioRICTOR, aes(x = sca, y = scd))+
+  geom_point()+
+  ggtitle("RICTOR Fungi")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 250,
+           ymin = 0,
+           ymax = 250,
+           alpha = .1,
+           color = "blue")+
+  annotate("segment",
+           x = 0,
+           xend = 1600,
+           y = 450,
+           yend = 450,
+           color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+
+
+grid.arrange(RICTORAlveolataRawPlot, RICTORStramenopilesRawPlot, MetazoaRictorPlot, FungiRictorPlot, ncol=2, nrow = 2)
+```
+
+Now we do the same procedure with SIN1. First a borderline is established along with a cut off zone using prior done analysis work as a reference point. In this case we will use the SIN1 from Fungi and from Metazoa:
+
+```{r echo = FALSE}
+SIN1AlveolataRawPlot <- ggplot(SIN1AlveolataRaw, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Alveolata")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 250,
+           ymin = 0,
+           ymax = 250,
+           alpha = .1,
+           color = "blue")+
+  # annotate("segment",
+  #          x = 0,
+  #          xend = 1600,
+  #          y = 450,
+  #          yend = 450,
+  #          color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+SIN1StramenopilesRawPlot <- ggplot(SIN1StramenopilesRaw, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Stramenopiles")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 250,
+           ymin = 0,
+           ymax = 250,
+           alpha = .1,
+           color = "blue")+
+  # annotate("segment",
+  #          x = 0,
+  #          xend = 1600,
+  #          y = 450,
+  #          yend = 450,
+  #          color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+MetazoaShioSIN1Plot <- ggplot (MetazoaShioSIN1, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Metazoa")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 200,
+           ymin = 0,
+           ymax = 200,
+           alpha = .1,
+           color = "blue")+
+  # annotate("segment",
+  #          x = 0,
+  #          xend = 1600,
+  #          y = 450,
+  #          yend = 450,
+  #          color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+FungiShioSIN1Plot <- ggplot(FungiShioSIN1, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Fungi")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 200,
+           ymin = 0,
+           ymax = 200,
+           alpha = .1,
+           color = "blue")+
+  # annotate("segment",
+  #          x = 0,
+  #          xend = 1600,
+  #          y = 450,
+  #          yend = 450,
+  #          color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+
+grid.arrange(MetazoaShioSIN1Plot, FungiShioSIN1Plot, ncol = 2)
+
+```
+With the border added in at roughly 230 Overall Score and Domain Score as shown via reverse searching specific proteins via BLAST
+
+```{r echo=FALSE}
+MetazoaShioSIN1Plot <- ggplot (MetazoaShioSIN1, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Metazoa")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 200,
+           ymin = 0,
+           ymax = 200,
+           alpha = .1,
+           color = "blue")+
+  annotate("segment",
+           x = 0,
+           xend = 1600,
+           y = 230,
+           yend = 230,
+           color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+FungiShioSIN1Plot <- ggplot(FungiShioSIN1, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Fungi")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 100,
+           ymin = 0,
+           ymax = 100,
+           alpha = .1,
+           color = "blue")+
+  annotate("segment",
+           x = 0,
+           xend = 1600,
+           y = 230,
+           yend = 230,
+           color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+
+grid.arrange(MetazoaShioSIN1Plot, FungiShioSIN1Plot, ncol = 2)
+```
+As such a good cutoff value may be in the range of roughly 100 Overall Score and Domain Score
+And now combined with the Alveolata and Stramenopiles SIN1 Proteins:
+
+
+```{r echo=FALSE}
+SIN1AlveolataRawPlot <- ggplot(SIN1AlveolataRaw, aes(x = sca, y = scd))+
+    geom_point()+
+  # ggtitle("SIN1 Alveolata")+
+  #     annotate("rect",
+  #          xmin = 0,
+  #          xmax = 250,
+  #          ymin = 0,
+  #          ymax = 250,
+  #          alpha = .1,
+  #          color = "blue")+
+  # annotate("segment",
+  #          x = 0,
+  #          xend = 1600,
+  #          y = 450,
+  #          yend = 450,
+  #          color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+SIN1StramenopilesRawPlot <- ggplot(SIN1StramenopilesRaw, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Stramenopiles")+
+      # annotate("rect",
+      #      xmin = 0,
+      #      xmax = 250,
+      #      ymin = 0,
+      #      ymax = 250,
+      #      alpha = .1,
+      #      color = "blue")+
+  # annotate("segment",
+  #          x = 0,
+  #          xend = 1600,
+  #          y = 450,
+  #          yend = 450,
+  #          color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+MetazoaShioSIN1Plot <- ggplot (MetazoaShioSIN1, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Metazoa")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 100,
+           ymin = 0,
+           ymax = 100,
+           alpha = .1,
+           color = "blue")+
+  annotate("segment",
+           x = 0,
+           xend = 1600,
+           y = 230,
+           yend = 230,
+           color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+FungiShioSIN1Plot <- ggplot(FungiShioSIN1, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Fungi")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 200,
+           ymin = 0,
+           ymax = 200,
+           alpha = .1,
+           color = "blue")+
+  annotate("segment",
+           x = 0,
+           xend = 1600,
+           y = 230,
+           yend = 230,
+           color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+
+grid.arrange(MetazoaShioSIN1Plot, FungiShioSIN1Plot, SIN1AlveolataRawPlot, SIN1StramenopilesRawPlot, ncol=2, nrow = 2)
+```
+
+```{r}
+SIN1AlveolataRawPlot <- ggplot(SIN1AlveolataRaw, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Alveolata")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 100,
+           ymin = 0,
+           ymax = 100,
+           alpha = .1,
+           color = "blue")+
+  annotate("segment",
+           x = 0,
+           xend = 1000,
+           y = 230,
+           yend = 230,
+           color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+SIN1StramenopilesRawPlot <- ggplot(SIN1StramenopilesRaw, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Stramenopiles")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 100,
+           ymin = 0,
+           ymax = 100,
+           alpha = .1,
+           color = "blue")+
+  annotate("segment",
+           x = 0,
+           xend = 1000,
+           y = 230,
+           yend = 230,
+           color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+MetazoaShioSIN1Plot <- ggplot (MetazoaShioSIN1, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Metazoa")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 100,
+           ymin = 0,
+           ymax = 100,
+           alpha = .1,
+           color = "blue")+
+  annotate("segment",
+           x = 0,
+           xend = 1000,
+           y = 230,
+           yend = 230,
+           color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+FungiShioSIN1Plot <- ggplot(FungiShioSIN1, aes(x = sca, y = scd))+
+    geom_point()+
+  ggtitle("SIN1 Fungi")+
+      annotate("rect",
+           xmin = 0,
+           xmax = 200,
+           ymin = 0,
+           ymax = 200,
+           alpha = .1,
+           color = "blue")+
+  annotate("segment",
+           x = 0,
+           xend = 1000,
+           y = 230,
+           yend = 230,
+           color = "red")+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+
+grid.arrange(MetazoaShioSIN1Plot, FungiShioSIN1Plot, SIN1AlveolataRawPlot, SIN1StramenopilesRawPlot, ncol=2, nrow = 2)
+```
+
+
+
+```{r}
+
+fSIN1AlveolataPlot <- ggplot(fSIN1Alveolata, aes(x = sca, y = scd, label = Organism))+
+    geom_point()+
+  ggtitle("SIN1 Alveolata")+
+      # annotate("rect",
+      #      xmin = 0,
+      #      xmax = 100,
+      #      ymin = 0,
+      #      ymax = 100,
+      #      alpha = .1,
+      #      color = "blue")+
+  annotate("segment",
+           x = 0,
+           xend = 1000,
+           y = 230,
+           yend = 230,
+           color = "red")+
+    geom_text_repel(direction = "y",
+                  min.segment.length = Inf,
+                  force = 10,
+                  max.time = 10,
+                  max.overlaps = 10,
+                  nudge_x = -50,
+                  nudge_y = .1,
+                  point.padding = 0.6)+
+  xlab("Overall Score")+
+  ylab("Best Domain Score")
+
+
+fSIN1AlveolataPlot
+
+```
+```{r}
+D1AlveolataRawPlot <- ggplot(D1AlveolataRaw, aes(x = sca, y = scd))+
+  geom_point()
+
+D1AlveolataRawPlot
+```
+
