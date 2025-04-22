@@ -1,0 +1,714 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Drosophila_melanogaster.BDGP6.46.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+   1.3e-107  360.8   2.0   1.3e-107  360.8   2.0    2.3  2  FBpp0080003  pep primary_assembly:BDGP6.46:2L:13004480:130131
+   1.3e-107  360.8   2.0   1.3e-107  360.8   2.0    2.3  2  FBpp0307598  pep primary_assembly:BDGP6.46:2L:13004480:130131
+    1.5e-74  252.1  10.1    1.5e-74  252.1  10.1    2.1  2  FBpp0312589  pep primary_assembly:BDGP6.46:2R:5177965:5251022
+    1.5e-74  252.0  10.1    1.5e-74  252.0  10.1    2.1  2  FBpp0292385  pep primary_assembly:BDGP6.46:2R:5177965:5251022
+    6.7e-57  194.0  15.1    6.7e-57  194.0  15.1    2.3  2  FBpp0074047  pep primary_assembly:BDGP6.46:X:16391698:1639985
+      5e-10   39.9   0.1      0.085   12.8   0.3    6.3  4  FBpp0085420  pep primary_assembly:BDGP6.46:2R:5307288:5329495
+      5e-10   39.9   0.1      0.085   12.8   0.3    6.3  4  FBpp0085421  pep primary_assembly:BDGP6.46:2R:5307288:5329495
+      5e-10   39.9   0.1      0.085   12.8   0.3    6.3  4  FBpp0085422  pep primary_assembly:BDGP6.46:2R:5307288:5329555
+    1.1e-07   32.1   5.4      6e-05   23.2   3.3    3.7  2  FBpp0074835  pep primary_assembly:BDGP6.46:3L:18905372:189089
+    1.1e-07   32.1   5.4      6e-05   23.2   3.3    3.7  2  FBpp0312391  pep primary_assembly:BDGP6.46:3L:18905372:189089
+    2.9e-05   24.3  15.7     0.0056   16.7   0.7    4.2  4  FBpp0077790  pep primary_assembly:BDGP6.46:2L:295122:297449:1
+    0.00064   19.8   1.4      0.071   13.1   2.4    2.6  3  FBpp0080741  pep primary_assembly:BDGP6.46:2L:19394160:193961
+    0.00064   19.8   1.4      0.071   13.1   2.4    2.6  3  FBpp0306280  pep primary_assembly:BDGP6.46:2L:19394160:193959
+  ------ inclusion threshold ------
+      0.046   13.7   6.3      0.053   13.5   0.4    2.6  3  FBpp0080894  pep primary_assembly:BDGP6.46:2L:20459342:204617
+      0.046   13.7   6.3      0.053   13.5   0.4    2.6  3  FBpp0305185  pep primary_assembly:BDGP6.46:2L:20459342:204616
+      0.056   13.4   3.2       0.57   10.1   0.1    2.9  3  FBpp0086164  pep primary_assembly:BDGP6.46:2R:17059871:170626
+      0.056   13.4   3.2       0.57   10.1   0.1    2.9  3  FBpp0297722  pep primary_assembly:BDGP6.46:2R:17059331:170626
+
+
+Domain annotation for each sequence (and alignments):
+>> FBpp0080003  pep primary_assembly:BDGP6.46:2L:13004480:13013197:1 gene:FBgn0021796 transcript:FBtr0080422 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.4   0.2      0.99   1.8e+03     226     280 ..    1390    1438 ..    1366    1446 .. 0.61
+   2 !  360.8   2.0    7e-111  1.3e-107       2     343 .]    1481    1829 ..    1480    1829 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: -1.4 bits;  conditional E-value: 0.99
+                   ---............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTC CS
+          FAT  226 levq.eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldp 280 
+                   l+++  ++ l +  ++ a  +  +G w ++l++        +e+l++y ++ ++d+
+  FBpp0080003 1390 LQQReAAEGLLTRYRNAANELNVQGRWYEKLHN-------WDEALEHYERNLKTDS 1438
+                   444433333333333335556667777777777.......6677777776666665 PP
+
+  == domain 2  score: 360.8 bits;  conditional E-value: 7e-111
+                   CCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS CS
+          FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkl 97  
+                   plaa aaW+l++W+ m+ey+ ++ +d++d++ ++a+la+h+++f+ a++li+++r+ll+tel++++gesy+ray+++v++Q+laElee+iqyk   
+  FBpp0080003 1481 PLAAVAAWGLQDWEAMREYVRCIPEDTQDGSYYRAVLAVHHDDFETAQRLIDETRDLLDTELTSMAGESYERAYGAMVCVQMLAELEEVIQYKL-- 1574
+                   89********************************************************************************************.. PP
+
+                   ----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.............. CS
+          FAT   98 ssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk....eewlp..... 184 
+                     +e+++ l+ +W+kRl+g q+ ve+w +i++v+slv++p+ed       +++wlk+a+l+Rksg+l l++k+L +ll+ d+    ++  p     
+  FBpp0080003 1575 -IPERREPLKTMWWKRLQGGQRLVEDWRRIIQVHSLVVKPHED-------IHTWLKYASLCRKSGSLHLSHKTLVMLLGTDPklnpNQ--Plpcnq 1660
+                   .79999999999*******************************.......********************************975444..355999 PP
+
+                   TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCT CS
+          FAT  185 pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateld 279 
+                   p+v+yay ky+ a+++ +ea+++L +fvs ++++         +  p+ l+++ ++l arcyl+ + w+++lq+ + + + ++++l+++ +at +d
+  FBpp0080003 1661 PQVTYAYTKYMAANNQLQEAYEQLTHFVSTYSQEL-------SCLPPEALKQQDQRLmARCYLRMATWQNKLQD-SIRPDAIQGALECFEKATSYD 1748
+                   *****************************887754.......4445666666666666****************.89999**************** PP
+
+                   CCCHSTTCCCCHHHHHCCHHHHHHSSSS.................S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+          FAT  280 pswykawhtwalfnfevlskeeekkeeee................pedls.eyvvpavegflkslslssekslqdllRlLt 343 
+                   p+wykawh wa++nf+v++++++  ++++                  +++ +y+vpav+gf++s+sl +++slqd+lRlLt
+  FBpp0080003 1749 PNWYKAWHLWAYMNFKVVQAQKSALDKQQppgasmgmtmgsgldsDLMIIqRYAVPAVQGFFRSISLIKGNSLQDTLRLLT 1829
+                   *********************888666668999999999999998555666*****************************8 PP
+
+>> FBpp0307598  pep primary_assembly:BDGP6.46:2L:13004480:13013197:1 gene:FBgn0021796 transcript:FBtr0336615 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.4   0.2      0.99   1.8e+03     226     280 ..    1391    1439 ..    1367    1447 .. 0.61
+   2 !  360.8   2.0    7e-111  1.3e-107       2     343 .]    1482    1830 ..    1481    1830 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: -1.4 bits;  conditional E-value: 0.99
+                   ---............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTC CS
+          FAT  226 levq.eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldp 280 
+                   l+++  ++ l +  ++ a  +  +G w ++l++        +e+l++y ++ ++d+
+  FBpp0307598 1391 LQQReAAEGLLTRYRNAANELNVQGRWYEKLHN-------WDEALEHYERNLKTDS 1439
+                   444433333333333335556667777777777.......6677777776666665 PP
+
+  == domain 2  score: 360.8 bits;  conditional E-value: 7e-111
+                   CCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS CS
+          FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkl 97  
+                   plaa aaW+l++W+ m+ey+ ++ +d++d++ ++a+la+h+++f+ a++li+++r+ll+tel++++gesy+ray+++v++Q+laElee+iqyk   
+  FBpp0307598 1482 PLAAVAAWGLQDWEAMREYVRCIPEDTQDGSYYRAVLAVHHDDFETAQRLIDETRDLLDTELTSMAGESYERAYGAMVCVQMLAELEEVIQYKL-- 1575
+                   89********************************************************************************************.. PP
+
+                   ----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.............. CS
+          FAT   98 ssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk....eewlp..... 184 
+                     +e+++ l+ +W+kRl+g q+ ve+w +i++v+slv++p+ed       +++wlk+a+l+Rksg+l l++k+L +ll+ d+    ++  p     
+  FBpp0307598 1576 -IPERREPLKTMWWKRLQGGQRLVEDWRRIIQVHSLVVKPHED-------IHTWLKYASLCRKSGSLHLSHKTLVMLLGTDPklnpNQ--Plpcnq 1661
+                   .79999999999*******************************.......********************************975444..355999 PP
+
+                   TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCT CS
+          FAT  185 pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateld 279 
+                   p+v+yay ky+ a+++ +ea+++L +fvs ++++         +  p+ l+++ ++l arcyl+ + w+++lq+ + + + ++++l+++ +at +d
+  FBpp0307598 1662 PQVTYAYTKYMAANNQLQEAYEQLTHFVSTYSQEL-------SCLPPEALKQQDQRLmARCYLRMATWQNKLQD-SIRPDAIQGALECFEKATSYD 1749
+                   *****************************887754.......4445666666666666****************.89999**************** PP
+
+                   CCCHSTTCCCCHHHHHCCHHHHHHSSSS.................S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+          FAT  280 pswykawhtwalfnfevlskeeekkeeee................pedls.eyvvpavegflkslslssekslqdllRlLt 343 
+                   p+wykawh wa++nf+v++++++  ++++                  +++ +y+vpav+gf++s+sl +++slqd+lRlLt
+  FBpp0307598 1750 PNWYKAWHLWAYMNFKVVQAQKSALDKQQppgasmgmtmgsgldsDLMIIqRYAVPAVQGFFRSISLIKGNSLQDTLRLLT 1830
+                   *********************888666668999999999999998555666*****************************8 PP
+
+>> FBpp0312589  pep primary_assembly:BDGP6.46:2R:5177965:5251022:-1 gene:FBgn0053554 transcript:FBtr0347556 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.0   0.2         3   5.4e+03      99     327 ..      49     112 ..      22     131 .. 0.54
+   2 !  252.1  10.1   8.2e-78   1.5e-74       3     343 .]    2718    3053 ..    2716    3053 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: -3.0 bits;  conditional E-value: 3
+                  ---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.....HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCH CS
+          FAT  99 sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.....lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyay 191
+                   ++ l+  lk  ++ l++  +++   + +  +R+l+l++i +     +                                                  
+  FBpp0312589  49 YPSFLDNSLKIFMRILQDGEPQFIQENTMQHIRKLILEMIHRlpiteS-------------------------------------------------- 96 
+                  555555555556666666666666666666666666666666555431.................................................. PP
+
+                  HHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCC CS
+          FAT 192 lkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtw 289
+                                                                                                                    
+  FBpp0312589   - --------------------------------------------------------------------------------------------------   -
+                  .................................................................................................. PP
+
+                  CHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHH CS
+          FAT 290 alfnfevlskeeekkeeeepedlseyvvpavegflksl 327
+                                        l+++v   ++ +lk l
+  FBpp0312589  97 ----------------------LRQHVKTIITMMLKIL 112
+                  ......................3333333333333333 PP
+
+  == domain 2  score: 252.1 bits;  conditional E-value: 8.2e-78
+                   CTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCC.CHH..--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHH CS
+          FAT    3 laaeaaWrlgqWdsmeeylslmk.....kdspdkaffeaila.lhr..nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleei 90  
+                   l +e++Wr+++W++m+ +l +++     + +++ ++++ +l+ lh+  +q  ++e+++e a++l+++e+++l++ + + ++++l+  Qq++El+e+
+  FBpp0312589 2718 LILESSWRVPDWNLMKIALAKTEqcylkHYGFKINLYKGYLSiLHQeeRQTGNIERYVEIASSLCIREWRRLPNIVSHIHLPYLQASQQIMELHEA 2813
+                   789***************************************88889999********************************************** PP
+
+                   CCHHCSS-.....---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC...........HHCCS-STTCCCCCCCCHCHHHHCCSTTHH CS
+          FAT   91 iqykqkls.....sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied...........lllkgakaemwlkfanlaRksgrlslAeka 170 
+                   +q++q l+     s++++k+++ktWr+Rlp + dd+++w+di+++R+++++ i +           +l+ +a+a+++++f ++aRk++ +++++++
+  FBpp0312589 2814 SQIHQGLAqsrnnSLHDMKAIVKTWRNRLPIISDDLSHWSDIFTWRQHHYQIITQhleqqsdqgstMLGVHASAQAIISFGKIARKHNLTGVCQET 2909
+                   ******999*************************************************************************************** PP
+
+                   CCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.....SS-SS---...........HH.HHCCCTCCCCCCCCCCCT. CS
+          FAT  171 LkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.....elssglevqeptnleeftkll.arcylkkGewlaalqklnw 260 
+                   L+++                   y++++  + +++qk+r++v+c+l++++     e+++ lev+e+tnl++ft ++ a++y++kG  la++++   
+  FBpp0312589 2910 LSRI-------------------YTIPSVPIVDCFQKIRQQVKCYLQMPStsgknEINEALEVIESTNLKYFTGEMnAEFYALKGLLLAQIGR--- 2983
+                   ****...................*************************9999999**************************************... PP
+
+                   S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+          FAT  261 seekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                       see+ +++s a++l+++++kaw++w+++ ++++ ke         +++  ++v+a+ ++l++ +++ e k++++++++L+
+  FBpp0312589 2984 ----SEEAGKSFSVAAQLHDGLTKAWAMWGDYMEQIFLKE---------RKIT-LAVDALICYLQASRNQIEsKTRKYIAKVLW 3053
+                   ....9***********************************.........5666.9***************999**********9 PP
+
+>> FBpp0292385  pep primary_assembly:BDGP6.46:2R:5177965:5251022:-1 gene:FBgn0053554 transcript:FBtr0303293 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.0   0.2         3   5.5e+03      99     327 ..      49     112 ..      22     131 .. 0.54
+   2 !  252.0  10.1   8.4e-78   1.5e-74       3     343 .]    2767    3102 ..    2765    3102 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: -3.0 bits;  conditional E-value: 3
+                  ---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.....HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCH CS
+          FAT  99 sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.....lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyay 191
+                   ++ l+  lk  ++ l++  +++   + +  +R+l+l++i +     +                                                  
+  FBpp0292385  49 YPSFLDNSLKIFMRILQDGEPQFIQENTMQHIRKLILEMIHRlpiteS-------------------------------------------------- 96 
+                  555555555556666666666666666666666666666666555431.................................................. PP
+
+                  HHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCC CS
+          FAT 192 lkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtw 289
+                                                                                                                    
+  FBpp0292385   - --------------------------------------------------------------------------------------------------   -
+                  .................................................................................................. PP
+
+                  CHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHH CS
+          FAT 290 alfnfevlskeeekkeeeepedlseyvvpavegflksl 327
+                                        l+++v   ++ +lk l
+  FBpp0292385  97 ----------------------LRQHVKTIITMMLKIL 112
+                  ......................3333333333333333 PP
+
+  == domain 2  score: 252.0 bits;  conditional E-value: 8.4e-78
+                   CTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCC.CHH..--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHH CS
+          FAT    3 laaeaaWrlgqWdsmeeylslmk.....kdspdkaffeaila.lhr..nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleei 90  
+                   l +e++Wr+++W++m+ +l +++     + +++ ++++ +l+ lh+  +q  ++e+++e a++l+++e+++l++ + + ++++l+  Qq++El+e+
+  FBpp0292385 2767 LILESSWRVPDWNLMKIALAKTEqcylkHYGFKINLYKGYLSiLHQeeRQTGNIERYVEIASSLCIREWRRLPNIVSHIHLPYLQASQQIMELHEA 2862
+                   789***************************************88889999********************************************** PP
+
+                   CCHHCSS-.....---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC...........HHCCS-STTCCCCCCCCHCHHHHCCSTTHH CS
+          FAT   91 iqykqkls.....sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied...........lllkgakaemwlkfanlaRksgrlslAeka 170 
+                   +q++q l+     s++++k+++ktWr+Rlp + dd+++w+di+++R+++++ i +           +l+ +a+a+++++f ++aRk++ +++++++
+  FBpp0292385 2863 SQIHQGLAqsrnnSLHDMKAIVKTWRNRLPIISDDLSHWSDIFTWRQHHYQIITQhleqqsdqgstMLGVHASAQAIISFGKIARKHNLTGVCQET 2958
+                   ******999*************************************************************************************** PP
+
+                   CCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.....SS-SS---...........HH.HHCCCTCCCCCCCCCCCT. CS
+          FAT  171 LkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.....elssglevqeptnleeftkll.arcylkkGewlaalqklnw 260 
+                   L+++                   y++++  + +++qk+r++v+c+l++++     e+++ lev+e+tnl++ft ++ a++y++kG  la++++   
+  FBpp0292385 2959 LSRI-------------------YTIPSVPIVDCFQKIRQQVKCYLQMPStsgknEINEALEVIESTNLKYFTGEMnAEFYALKGLLLAQIGR--- 3032
+                   ****...................*************************9999999**************************************... PP
+
+                   S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+          FAT  261 seekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                       see+ +++s a++l+++++kaw++w+++ ++++ ke         +++  ++v+a+ ++l++ +++ e k++++++++L+
+  FBpp0292385 3033 ----SEEAGKSFSVAAQLHDGLTKAWAMWGDYMEQIFLKE---------RKIT-LAVDALICYLQASRNQIEsKTRKYIAKVLW 3102
+                   ....9***********************************.........5666.9***************999**********9 PP
+
+>> FBpp0074047  pep primary_assembly:BDGP6.46:X:16391698:16399850:1 gene:FBgn0004367 transcript:FBtr0074271 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  194.0  15.1   3.7e-60   6.7e-57       8     342 ..    1652    1984 ..    1645    1985 .. 0.95
+   2 ?   -4.2   0.0       7.2   1.3e+04     189     223 ..    2072    2107 ..    2059    2127 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 194.0 bits;  conditional E-value: 3.7e-60
+                   CCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH..--CCHCHHCCCHCCCCCCCCCTS---S...CCCCCHHHHHCCCCCHHHCHHCCHHCSS- CS
+          FAT    8 aWrlgqWdsmeeylslmkkdspdkaffeailalhr..nqfdeaeeliekarqllvtelsalsge...synraydllvrlQqlaEleeiiqykqkls 98  
+                    Wrlg++d+mee      + ++  ++ + +l+l+r   +  e+ +l++ +r+++++el+++s     sy++ayd++++l+ ++El++++++ +kl+
+  FBpp0074047 1652 LWRLGSYDEMEEL-----QSNWPAQCSQGCLKLRRplTTRIEFDSLLDGMRESVLEELRSCSAVqqhSYANAYDAVLKLHLVHELHCSQELVEKLE 1742
+                   6***********9.....8*****************************************9999999****************************9 PP
+
+                   .......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.........HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCT CS
+          FAT   99 .......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.........lllkgakaemwlkfanlaRksgrlslAekaLkklleed 178 
+                          +++ +k +++ W+ Rl+ vq++v+++++i+s+R+ +l   ++         ++lk+  a++wl++a++ R++g+l+ A+ +++k++e++
+  FBpp0074047 1743 qdrdednQEKLMKNYFDDWQYRLQIVQPQVRIQESIYSFRRNILAELQRrltdrnhllPHLKTELARIWLNSAQINRNAGQLQRAQLYILKAAEYQ 1838
+                   9**555444445555********************************99*********************************************** PP
+
+                   T.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHC CS
+          FAT  179 keewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysa 274 
+                   +     + ++++++k+lw+kg+q +a+++L+e++s        ++sg    ++ n++++++++ r+++++G++l+a++++++++ +++++l+++++
+  FBpp0074047 1839 P-----SGLFIERAKLLWQKGDQVMAMNYLEEQLS-------IMRSG----CQGNVKQLAAEQ-RHLFFRGKYLQAVYSAESMHLCADAVLKYFQE 1917
+                   *.....9****************************.......77888....889********9.******************************** PP
+
+                   CHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+          FAT  275 ateldpswykawhtwalfnfevlskeeekkeeeepedls.eyvvpavegflkslslssekslqdllRlL 342 
+                   a+ +++++++++ ++a+f +++l++ + +k+e  p+  + +++++++ ++ ksl+++se+++q+++Rl+
+  FBpp0074047 1918 AIAVHRQSESCHVQMAQFLEKILEARQGGKSE--PTGEQdDMLINVMVNYAKSLRYGSEHVYQSMPRLI 1984
+                   **************************999887..8888889***************************8 PP
+
+  == domain 2  score: -4.2 bits;  conditional E-value: 7.2
+                   CCHHHHHHHCCH.HHHHSSCCHHHHCCTSSCCCSS- CS
+          FAT  189 yaylkylwakge.qkealqkLrefvscllekkeels 223 
+                   + ++k+ + +++ q++++qkL +  ++l+e+  +l+
+  FBpp0074047 2072 IKRCKLVLTDSRlQNSTFQKLLQDFNSLTERLMDLT 2107
+                   678898888888899999999888888888764333 PP
+
+>> FBpp0085420  pep primary_assembly:BDGP6.46:2R:5307288:5329495:1 gene:FBgn0261403 transcript:FBtr0086084 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.3   0.0    0.0011         2     242     333 ..     118     287 ..      89     290 .. 0.57
+   2 !   12.8   0.3   4.7e-05     0.085     210     293 ..     394     468 ..     294     473 .. 0.61
+   3 ?    3.6   0.0     0.029        53     261     292 ..     470     501 ..     466     507 .. 0.86
+   4 ?   -3.9   0.0       5.8     1e+04     194     239 ..     729     783 ..     724     788 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 8.3 bits;  conditional E-value: 0.0011
+                  HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS................................ CS
+          FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee............................... 308
+                  a++y  +G   ++ ++        +e+l  y++a++l p+ ++ + ++a +   +  +e   +  ++                               
+  FBpp0085420 118 AEAYSNLGNVFKERGQ-------LQEALDNYRRAVRLKPDFIDGYINLAAALVAARDMESAVQAYITalqynpdlycvrsdlgnllkalgrleeakac 208
+                  7777777777777777.......677777777777777777777777777777766666555544445555555555555555555444444444444 PP
+
+                  .......................................................S-TCCHHHHCCT..CCHHHHTTTSS CS
+          FAT 309 .......................................................pedlseyvvpavegflkslslssek 333
+                                                                          +++ +   +av  +l++l+ls ++
+  FBpp0085420 209 ylkaietcpgfavawsnlgcvfnaqgeiwlaihhfekavtldpnfldayinlgnvLKEA-RIFDRAVAAYLRALNLSPNN 287
+                  44444444444444444444444444444444444444445555555556665542222.34566666666666666665 PP
+
+  == domain 2  score: 12.8 bits;  conditional E-value: 4.7e-05
+                  HHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+          FAT 210 efvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                    + ++l+++++l++ l+  ++++   ++   a +y   G  l++lq+        +++lq+y++a++++p  ++a+ ++a+ +
+  FBpp0085420 394 SNLASVLQQQGKLKEALM--HYKEAIRIQPTFADAYSNMGNTLKELQD-------VSGALQCYTRAIQINPAFADAHSNLASIH 468
+                  333333333333333333..4566666666667778888888888888.......89999999999999999999999999876 PP
+
+  == domain 3  score: 3.6 bits;  conditional E-value: 0.029
+                  S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+          FAT 261 seekseeilqaysaateldpswykawhtwalf 292
+                   + ++ e+ q+y++a +l p+  +a+ ++a+ 
+  FBpp0085420 470 DSGNIPEAIQSYRTALKLKPDFPDAYCNLAHC 501
+                  456799***********************986 PP
+
+  == domain 4  score: -3.9 bits;  conditional E-value: 5.8
+                  HHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---.................... CS
+          FAT 194 ylwakgeqkealqkLrefvscllekkeelssglevq.........eptnleeftk 239
+                  +++  g++k+ + +L+e +  + +++++  ++ +v+         e+t ++e+++
+  FBpp0085420 729 HTYFIGDHKQMFPHLKERIIVCDKQQSSVVDNVTVInatdlsplvENTDVKEIKE 783
+                  5566678889999999999877777778888888885555555556666666655 PP
+
+>> FBpp0085421  pep primary_assembly:BDGP6.46:2R:5307288:5329495:1 gene:FBgn0261403 transcript:FBtr0086085 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.3   0.0    0.0011         2     242     333 ..     118     287 ..      89     290 .. 0.57
+   2 !   12.8   0.3   4.7e-05     0.085     210     293 ..     394     468 ..     294     473 .. 0.61
+   3 ?    3.6   0.0     0.029        53     261     292 ..     470     501 ..     466     507 .. 0.86
+   4 ?   -3.9   0.0       5.8     1e+04     194     239 ..     729     783 ..     724     788 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 8.3 bits;  conditional E-value: 0.0011
+                  HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS................................ CS
+          FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee............................... 308
+                  a++y  +G   ++ ++        +e+l  y++a++l p+ ++ + ++a +   +  +e   +  ++                               
+  FBpp0085421 118 AEAYSNLGNVFKERGQ-------LQEALDNYRRAVRLKPDFIDGYINLAAALVAARDMESAVQAYITalqynpdlycvrsdlgnllkalgrleeakac 208
+                  7777777777777777.......677777777777777777777777777777766666555544445555555555555555555444444444444 PP
+
+                  .......................................................S-TCCHHHHCCT..CCHHHHTTTSS CS
+          FAT 309 .......................................................pedlseyvvpavegflkslslssek 333
+                                                                          +++ +   +av  +l++l+ls ++
+  FBpp0085421 209 ylkaietcpgfavawsnlgcvfnaqgeiwlaihhfekavtldpnfldayinlgnvLKEA-RIFDRAVAAYLRALNLSPNN 287
+                  44444444444444444444444444444444444444445555555556665542222.34566666666666666665 PP
+
+  == domain 2  score: 12.8 bits;  conditional E-value: 4.7e-05
+                  HHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+          FAT 210 efvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                    + ++l+++++l++ l+  ++++   ++   a +y   G  l++lq+        +++lq+y++a++++p  ++a+ ++a+ +
+  FBpp0085421 394 SNLASVLQQQGKLKEALM--HYKEAIRIQPTFADAYSNMGNTLKELQD-------VSGALQCYTRAIQINPAFADAHSNLASIH 468
+                  333333333333333333..4566666666667778888888888888.......89999999999999999999999999876 PP
+
+  == domain 3  score: 3.6 bits;  conditional E-value: 0.029
+                  S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+          FAT 261 seekseeilqaysaateldpswykawhtwalf 292
+                   + ++ e+ q+y++a +l p+  +a+ ++a+ 
+  FBpp0085421 470 DSGNIPEAIQSYRTALKLKPDFPDAYCNLAHC 501
+                  456799***********************986 PP
+
+  == domain 4  score: -3.9 bits;  conditional E-value: 5.8
+                  HHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---.................... CS
+          FAT 194 ylwakgeqkealqkLrefvscllekkeelssglevq.........eptnleeftk 239
+                  +++  g++k+ + +L+e +  + +++++  ++ +v+         e+t ++e+++
+  FBpp0085421 729 HTYFIGDHKQMFPHLKERIIVCDKQQSSVVDNVTVInatdlsplvENTDVKEIKE 783
+                  5566678889999999999877777778888888885555555556666666655 PP
+
+>> FBpp0085422  pep primary_assembly:BDGP6.46:2R:5307288:5329555:1 gene:FBgn0261403 transcript:FBtr0086086 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.3   0.0    0.0011         2     242     333 ..     118     287 ..      89     290 .. 0.57
+   2 !   12.8   0.3   4.7e-05     0.085     210     293 ..     394     468 ..     294     473 .. 0.61
+   3 ?    3.6   0.0     0.029        53     261     292 ..     470     501 ..     466     507 .. 0.86
+   4 ?   -3.9   0.0       5.8     1e+04     194     239 ..     729     783 ..     724     788 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 8.3 bits;  conditional E-value: 0.0011
+                  HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS................................ CS
+          FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee............................... 308
+                  a++y  +G   ++ ++        +e+l  y++a++l p+ ++ + ++a +   +  +e   +  ++                               
+  FBpp0085422 118 AEAYSNLGNVFKERGQ-------LQEALDNYRRAVRLKPDFIDGYINLAAALVAARDMESAVQAYITalqynpdlycvrsdlgnllkalgrleeakac 208
+                  7777777777777777.......677777777777777777777777777777766666555544445555555555555555555444444444444 PP
+
+                  .......................................................S-TCCHHHHCCT..CCHHHHTTTSS CS
+          FAT 309 .......................................................pedlseyvvpavegflkslslssek 333
+                                                                          +++ +   +av  +l++l+ls ++
+  FBpp0085422 209 ylkaietcpgfavawsnlgcvfnaqgeiwlaihhfekavtldpnfldayinlgnvLKEA-RIFDRAVAAYLRALNLSPNN 287
+                  44444444444444444444444444444444444444445555555556665542222.34566666666666666665 PP
+
+  == domain 2  score: 12.8 bits;  conditional E-value: 4.7e-05
+                  HHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+          FAT 210 efvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                    + ++l+++++l++ l+  ++++   ++   a +y   G  l++lq+        +++lq+y++a++++p  ++a+ ++a+ +
+  FBpp0085422 394 SNLASVLQQQGKLKEALM--HYKEAIRIQPTFADAYSNMGNTLKELQD-------VSGALQCYTRAIQINPAFADAHSNLASIH 468
+                  333333333333333333..4566666666667778888888888888.......89999999999999999999999999876 PP
+
+  == domain 3  score: 3.6 bits;  conditional E-value: 0.029
+                  S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+          FAT 261 seekseeilqaysaateldpswykawhtwalf 292
+                   + ++ e+ q+y++a +l p+  +a+ ++a+ 
+  FBpp0085422 470 DSGNIPEAIQSYRTALKLKPDFPDAYCNLAHC 501
+                  456799***********************986 PP
+
+  == domain 4  score: -3.9 bits;  conditional E-value: 5.8
+                  HHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---.................... CS
+          FAT 194 ylwakgeqkealqkLrefvscllekkeelssglevq.........eptnleeftk 239
+                  +++  g++k+ + +L+e +  + +++++  ++ +v+         e+t ++e+++
+  FBpp0085422 729 HTYFIGDHKQMFPHLKERIIVCDKQQSSVVDNVTVInatdlsplvENTDVKEIKE 783
+                  5566678889999999999877777778888888885555555556666666655 PP
+
+>> FBpp0074835  pep primary_assembly:BDGP6.46:3L:18905372:18908901:1 gene:FBgn0036828 transcript:FBtr0075068 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.4   0.1     0.035        63     167     302 ..     284     444 ..     279     487 .. 0.70
+   2 !   23.2   3.3   3.3e-08     6e-05     140     326 ..     618     843 ..     436     911 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 3.4 bits;  conditional E-value: 0.035
+                  TTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...........SS-SS---......................... CS
+          FAT 167 AekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke...........elssglevq....................eptn 233
+                  A  +Lk+++e ++   ++p++ +a++++   +g++++a + +    + ++++             +                            ++  
+  FBpp0074835 284 ARLLLKSVRETNP---NHPPAWIASARLEEVTGKVQMARNLIMRGCEMNIQSEDlwleaarlqppD-------TakaviaqaarhiptsvriwiKAAD 371
+                  5556777766666...66788888888888888888888888777776666655444444444332.......0334444466677777778888889 PP
+
+                  ......HHHHCCCTCCC........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH.HCCHHHHH CS
+          FAT 234 leeftkllarcylkkGe........wlaalqklnwseekseeilqaysaateldpswykawhtwalfnf.evlskeee 302
+                  le  tk + r++ k  e        w aa++      e+++++    s+a+e+++++ + w ++a+++  e+ +k+ +
+  FBpp0074835 372 LESETKAKRRVFRKALEhipnsvrlWKAAVEL-----ENPDDARILLSRAVECCNTSVELWLALARLETyENARKVLN 444
+                  99999998777777777888777777777777.....5699999999**************99999875344444444 PP
+
+  == domain 2  score: 23.2 bits;  conditional E-value: 3.3e-08
+                  C......HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...SS-SS--- CS
+          FAT 140 d......lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke...elssglev 228
+                  +      + ++  ++++wl  ++l  ++ +++ A ++L k++++++    +p+v++ ++++ wa ++ +eal  L+e v+ ++ +      ++ ++e 
+  FBpp0074835 618 RgilslaFQANPNSEDIWLAAVKLESENSEYERARRLLAKARGSAP----TPRVMMKSARLEWALEKFDEALRLLEEAVE-VFPDFPklwMMKGQIEE 710
+                  055555555666789**************************99888....78***********************99999.55554448744444444 PP
+
+                  .....................................HH..HHCCCTCCC.........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCC CS
+          FAT 229 q..........................eptnleeftkll..arcylkkGe.........wlaalqklnwseekseeilqaysaateldpswykawhtw 289
+                  q                           + nlee + +l  ar  l++G          wl+a++  + +   +e +    ++a + +p+  +    w
+  FBpp0074835 711 QqrrtddaaatytlglkkcptsiplwiLSANLEERKGVLtkARSILERGRlrnpkvavlWLEAIRV-ELRAGLKEIASTMMARALQECPNAGEL---W 804
+                  4566777777888888888********99999888877779******************9999988.667766777777777776666655544...4 PP
+
+                  CHHHHHCCHHHHHHSSSS...S-TCCHHHHCCT..CCHH CS
+          FAT 290 alfnfevlskeeekkeeee..pedlseyvvpavegflks 326
+                  a + f   + ++++k+ +   + +   +v  av++ + s
+  FBpp0074835 805 AEAIFMETKPQRKTKSVDAlkKCEHDPHVLLAVSKLFWS 843
+                  445555444444444444422333335666666666554 PP
+
+>> FBpp0312391  pep primary_assembly:BDGP6.46:3L:18905372:18908974:1 gene:FBgn0036828 transcript:FBtr0346816 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.4   0.1     0.035        63     167     302 ..     284     444 ..     279     487 .. 0.70
+   2 !   23.2   3.3   3.3e-08     6e-05     140     326 ..     618     843 ..     436     911 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 3.4 bits;  conditional E-value: 0.035
+                  TTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...........SS-SS---......................... CS
+          FAT 167 AekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke...........elssglevq....................eptn 233
+                  A  +Lk+++e ++   ++p++ +a++++   +g++++a + +    + ++++             +                            ++  
+  FBpp0312391 284 ARLLLKSVRETNP---NHPPAWIASARLEEVTGKVQMARNLIMRGCEMNIQSEDlwleaarlqppD-------TakaviaqaarhiptsvriwiKAAD 371
+                  5556777766666...66788888888888888888888888777776666655444444444332.......0334444466677777778888889 PP
+
+                  ......HHHHCCCTCCC........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH.HCCHHHHH CS
+          FAT 234 leeftkllarcylkkGe........wlaalqklnwseekseeilqaysaateldpswykawhtwalfnf.evlskeee 302
+                  le  tk + r++ k  e        w aa++      e+++++    s+a+e+++++ + w ++a+++  e+ +k+ +
+  FBpp0312391 372 LESETKAKRRVFRKALEhipnsvrlWKAAVEL-----ENPDDARILLSRAVECCNTSVELWLALARLETyENARKVLN 444
+                  99999998777777777888777777777777.....5699999999**************99999875344444444 PP
+
+  == domain 2  score: 23.2 bits;  conditional E-value: 3.3e-08
+                  C......HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...SS-SS--- CS
+          FAT 140 d......lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke...elssglev 228
+                  +      + ++  ++++wl  ++l  ++ +++ A ++L k++++++    +p+v++ ++++ wa ++ +eal  L+e v+ ++ +      ++ ++e 
+  FBpp0312391 618 RgilslaFQANPNSEDIWLAAVKLESENSEYERARRLLAKARGSAP----TPRVMMKSARLEWALEKFDEALRLLEEAVE-VFPDFPklwMMKGQIEE 710
+                  055555555666789**************************99888....78***********************99999.55554448744444444 PP
+
+                  .....................................HH..HHCCCTCCC.........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCC CS
+          FAT 229 q..........................eptnleeftkll..arcylkkGe.........wlaalqklnwseekseeilqaysaateldpswykawhtw 289
+                  q                           + nlee + +l  ar  l++G          wl+a++  + +   +e +    ++a + +p+  +    w
+  FBpp0312391 711 QqrrtddaaatytlglkkcptsiplwiLSANLEERKGVLtkARSILERGRlrnpkvavlWLEAIRV-ELRAGLKEIASTMMARALQECPNAGEL---W 804
+                  4566777777888888888********99999888877779******************9999988.667766777777777776666655544...4 PP
+
+                  CHHHHHCCHHHHHHSSSS...S-TCCHHHHCCT..CCHH CS
+          FAT 290 alfnfevlskeeekkeeee..pedlseyvvpavegflks 326
+                  a + f   + ++++k+ +   + +   +v  av++ + s
+  FBpp0312391 805 AEAIFMETKPQRKTKSVDAlkKCEHDPHVLLAVSKLFWS 843
+                  445555444444444444422333335666666666554 PP
+
+>> FBpp0077790  pep primary_assembly:BDGP6.46:2L:295122:297449:1 gene:FBgn0024352 transcript:FBtr0078131 gene_biotype:pr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.7   0.1     0.027        50     220     261 ..      19      64 ..       2      92 .. 0.71
+   2 !   16.7   0.7   3.1e-06    0.0056     230     306 ..     158     232 ..     112     255 .. 0.81
+   3 !    7.8   1.0    0.0016         3     183     278 ..     267     353 ..     244     362 .. 0.68
+   4 ?    4.2   0.1      0.02        37     238     285 ..     374     414 ..     355     416 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 3.7 bits;  conditional E-value: 0.027
+                  C......SS-SS---...........HHHHCCCTCCCCCCCCCCCT.S CS
+          FAT 220 e......elssglevqeptnleeftkllarcylkkGewlaalqklnws 261
+                  +      ++++ +   +++++ + +++   +++k G++++al++++++
+  FBpp0077790  19 KfdeavaAYTEAIALDDQNHVLYSNRSA--AFAKAGKFQEALEDAEKT 64 
+                  3344344555555555888888888886..999999999999996544 PP
+
+  == domain 2  score: 16.7 bits;  conditional E-value: 3.1e-06
+                  ..........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSS CS
+          FAT 230 eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkee 306
+                     ++e+ t+++  + +++k + l ++     ++++ e +l++y+aa+e+dp+ +  +++ a ++fe++++ee  k+ 
+  FBpp0077790 158 AEPRVEDMTEEQkNKYFARKEKELGNAAY---KKKDFETALKHYHAAIEHDPTDITFYNNIAAVHFERKEYEECIKQC 232
+                  55678999999*9********96666666...6788**********************************99876654 PP
+
+  == domain 3  score: 7.8 bits;  conditional E-value: 0.0016
+                  ..TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHC CS
+          FAT 183 lppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaatel 278
+                  ++ +v+y+++   + + e+k  l++++  ++          + + +++p ++ e +k+++  ++kkG++  a+++ +++ +++ +  + ys  + +
+  FBpp0077790 267 KQAKVYYEKAMSEHRTPEIKTSLSEVEAKIK--------EEERMAYINP-EKAEEEKEQGNLFFKKGDYSTAVKHYTEAIKRNPDDPKLYSNRAAC 353
+                  2245666666666666666666666666666........3445555555.5566677779**************9888877777777777766655 PP
+
+  == domain 4  score: 4.2 bits;  conditional E-value: 0.02
+                  ..HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHST CS
+          FAT 238 tkllarcylkkGewlaalqklnwseekseeilqaysaateldpswyka 285
+                   ++  + y +kG+ l+ +q+       ++++ +ay++a eldp+ ++a
+  FBpp0077790 374 DEKFIKGYIRKGKILQGMQQ-------QSKAQAAYQKALELDPNNAEA 414
+                  445567899***********.......99**************98876 PP
+
+>> FBpp0080741  pep primary_assembly:BDGP6.46:2L:19394160:19396190:1 gene:FBgn0051798 transcript:FBtr0081200 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.7   0.0       1.2   2.2e+03     309     334 ..      59      84 ..      19      89 .. 0.74
+   2 ?    2.1   0.0     0.088   1.6e+02     184     256 ..     171     245 ..     156     259 .. 0.70
+   3 !   13.1   2.4   3.9e-05     0.071     162     301 ..     287     455 ..     273     471 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: -1.7 bits;  conditional E-value: 1.2
+                  S-TCCHHHHCCT..CCHHHHTTTSST CS
+          FAT 309 pedlseyvvpavegflkslslsseks 334
+                  +++l++  + ++ +fl++l+  ++  
+  FBpp0080741  59 EDELRRAGCTMLPEFLHCLATKENAL 84 
+                  6778899999999******9998854 PP
+
+  == domain 2  score: 2.1 bits;  conditional E-value: 0.088
+                  ...TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCC CS
+          FAT 184 p..pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalq 256
+                  +  ++++y y+ yl  +g++ +a++ L+     +     ++  g+++ + t +e  +++lar +l +G+   + +
+  FBpp0080741 171 EyiSRIYYIYSMYLVNTGQRTSAINFLQIAMDLVRGHVWTAEVGMPAGSLTLHELVAQNLARQLLIQGKSIVRQH 245
+                  246889*********************999885544444777777775555555555555888888877555554 PP
+
+  == domain 3  score: 13.1 bits;  conditional E-value: 3.9e-05
+                  HHCCSTTHHCCCCCHCTT........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...........SS-SS---................. CS
+          FAT 162 grlslAekaLkklleedkeewlp...pevvyaylkylwakgeqkealqkLrefvscllekke...........elssglevq................ 229
+                  g+++ A+++L +++ +           + v  ++ky + +g+++e ++++++ +sc+    +           +       +                
+  FBpp0080741 287 GNFNSAQQCLEQIKTQIL----ActeYRFVKLNIKYYLIQGQCSEIFEHVEKATSCYKRALRlsrlythrdleA-------Eillhlgkifakdtqmt 373
+                  899**********44444....23334888999**********************9988875655543333330.......25555555566666666 PP
+
+                  ...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC...........CCHHHHHCCHHHH CS
+          FAT 230 .eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawht...........walfnfevlskee 301
+                    ++++ e +k++   ++ + +  +a++ +   ++  ++ei+  y a  + + + y a+++           w+++ +e++++e+
+  FBpp0080741 374 sIAKKCYEHAKRIyVDFNDLHSRKMANYLQ---AKLMADEITPLYMAMLKSSTTRYCAFFNlrqwknrcrpfWKRLGDEIIKQET 455
+                  655555555555557777777777777666...4566788888888888888888888888666666666666666666666665 PP
+
+>> FBpp0306280  pep primary_assembly:BDGP6.46:2L:19394160:19395920:1 gene:FBgn0051798 transcript:FBtr0334163 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.7   0.0       1.2   2.2e+03     309     334 ..      59      84 ..      19      89 .. 0.74
+   2 ?    2.1   0.0     0.088   1.6e+02     184     256 ..     171     245 ..     156     259 .. 0.70
+   3 !   13.1   2.4   3.9e-05     0.071     162     301 ..     287     455 ..     273     471 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: -1.7 bits;  conditional E-value: 1.2
+                  S-TCCHHHHCCT..CCHHHHTTTSST CS
+          FAT 309 pedlseyvvpavegflkslslsseks 334
+                  +++l++  + ++ +fl++l+  ++  
+  FBpp0306280  59 EDELRRAGCTMLPEFLHCLATKENAL 84 
+                  6778899999999******9998854 PP
+
+  == domain 2  score: 2.1 bits;  conditional E-value: 0.088
+                  ...TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCC CS
+          FAT 184 p..pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalq 256
+                  +  ++++y y+ yl  +g++ +a++ L+     +     ++  g+++ + t +e  +++lar +l +G+   + +
+  FBpp0306280 171 EyiSRIYYIYSMYLVNTGQRTSAINFLQIAMDLVRGHVWTAEVGMPAGSLTLHELVAQNLARQLLIQGKSIVRQH 245
+                  246889*********************999885544444777777775555555555555888888877555554 PP
+
+  == domain 3  score: 13.1 bits;  conditional E-value: 3.9e-05
+                  HHCCSTTHHCCCCCHCTT........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...........SS-SS---................. CS
+          FAT 162 grlslAekaLkklleedkeewlp...pevvyaylkylwakgeqkealqkLrefvscllekke...........elssglevq................ 229
+                  g+++ A+++L +++ +           + v  ++ky + +g+++e ++++++ +sc+    +           +       +                
+  FBpp0306280 287 GNFNSAQQCLEQIKTQIL----ActeYRFVKLNIKYYLIQGQCSEIFEHVEKATSCYKRALRlsrlythrdleA-------Eillhlgkifakdtqmt 373
+                  899**********44444....23334888999**********************9988875655543333330.......25555555566666666 PP
+
+                  ...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC...........CCHHHHHCCHHHH CS
+          FAT 230 .eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawht...........walfnfevlskee 301
+                    ++++ e +k++   ++ + +  +a++ +   ++  ++ei+  y a  + + + y a+++           w+++ +e++++e+
+  FBpp0306280 374 sIAKKCYEHAKRIyVDFNDLHSRKMANYLQ---AKLMADEITPLYMAMLKSSTTRYCAFFNlrqwknrcrpfWKRLGDEIIKQET 455
+                  655555555555557777777777777666...4566788888888888888888888888666666666666666666666665 PP
+
+>> FBpp0080894  pep primary_assembly:BDGP6.46:2L:20459342:20461729:1 gene:FBgn0032863 transcript:FBtr0081362 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.1   0.0       3.3     6e+03     229     286 ..     126     193 ..      90     204 .. 0.60
+   2 ?   13.5   0.4   2.9e-05     0.053     248     329 ..     352     449 ..     252     455 .. 0.69
+   3 ?    2.8   0.4     0.052        94     212     262 ..     500     549 ..     455     568 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: -3.1 bits;  conditional E-value: 3.3
+                  ...............HHHHCCCTCCC.............CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTT CS
+          FAT 229 q....eptnleeftkllarcylkkGe.............wlaalqklnwseekseeilqaysaateldpswykaw 286
+                  q    ep+++ ++++lla   ++ G+              l+al+        +++++q   +a++l p + +a+
+  FBpp0080894 126 QanlhEPNQMRDLADLLATLRMEYGKsrldgygiylygvVLKALNL-------NQAAEQMLVQAIRLVPMLWSAY 193
+                  2344477777777777777777777766666666664444444444.......5555566556655555555555 PP
+
+  == domain 2  score: 13.5 bits;  conditional E-value: 2.9e-05
+                  CCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH...SSSS.................S-TCC.HHHHCCT..CCH CS
+          FAT 248 kGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek...keeee................pedls.eyvvpavegflk 325
+                  ++ w+   +++  + ++ +++ q+y++a+e++++ y aw+ ++++++ ++ ++ +    k                    ++  + +   +av+++ k
+  FBpp0080894 352 LAAWTLMGHEF-MELKNTNAAIQSYRKAVEVNKRDYRAWYGLGQAYEIIKMHYYSLyyfK---IahqlrpydsrmlvalgETYEKlDKCENAVKCYWK 445
+                  44455555554.3445589****************************9999997776552...13446688888899988555556789999999999 PP
+
+                  HHHT CS
+          FAT 326 slsl 329
+                  ++  
+  FBpp0080894 446 AIDV 449
+                  9875 PP
+
+  == domain 3  score: 2.8 bits;  conditional E-value: 0.052
+                  HCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S. CS
+          FAT 212 vscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwse 262
+                  + +++ekk+e+    ++  +++l+   +++ a+++lk  +w ++++  ++++
+  FBpp0080894 500 LANYYEKKGEYERAAYY-AYKCLDSEDRKMeAKALLKTIDWKRNAEG-QKKV 549
+                  34566666666666666.67777777777777777777777766666.4444 PP
+
+>> FBpp0305185  pep primary_assembly:BDGP6.46:2L:20459342:20461643:1 gene:FBgn0032863 transcript:FBtr0332969 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.1   0.0       3.3     6e+03     229     286 ..     126     193 ..      90     204 .. 0.60
+   2 ?   13.5   0.4   2.9e-05     0.053     248     329 ..     352     449 ..     252     455 .. 0.69
+   3 ?    2.8   0.4     0.052        94     212     262 ..     500     549 ..     455     568 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: -3.1 bits;  conditional E-value: 3.3
+                  ...............HHHHCCCTCCC.............CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTT CS
+          FAT 229 q....eptnleeftkllarcylkkGe.............wlaalqklnwseekseeilqaysaateldpswykaw 286
+                  q    ep+++ ++++lla   ++ G+              l+al+        +++++q   +a++l p + +a+
+  FBpp0305185 126 QanlhEPNQMRDLADLLATLRMEYGKsrldgygiylygvVLKALNL-------NQAAEQMLVQAIRLVPMLWSAY 193
+                  2344477777777777777777777766666666664444444444.......5555566556655555555555 PP
+
+  == domain 2  score: 13.5 bits;  conditional E-value: 2.9e-05
+                  CCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH...SSSS.................S-TCC.HHHHCCT..CCH CS
+          FAT 248 kGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek...keeee................pedls.eyvvpavegflk 325
+                  ++ w+   +++  + ++ +++ q+y++a+e++++ y aw+ ++++++ ++ ++ +    k                    ++  + +   +av+++ k
+  FBpp0305185 352 LAAWTLMGHEF-MELKNTNAAIQSYRKAVEVNKRDYRAWYGLGQAYEIIKMHYYSLyyfK---IahqlrpydsrmlvalgETYEKlDKCENAVKCYWK 445
+                  44455555554.3445589****************************9999997776552...13446688888899988555556789999999999 PP
+
+                  HHHT CS
+          FAT 326 slsl 329
+                  ++  
+  FBpp0305185 446 AIDV 449
+                  9875 PP
+
+  == domain 3  score: 2.8 bits;  conditional E-value: 0.052
+                  HCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S. CS
+          FAT 212 vscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwse 262
+                  + +++ekk+e+    ++  +++l+   +++ a+++lk  +w ++++  ++++
+  FBpp0305185 500 LANYYEKKGEYERAAYY-AYKCLDSEDRKMeAKALLKTIDWKRNAEG-QKKV 549
+                  34566666666666666.67777777777777777777777766666.4444 PP
+
+>> FBpp0086164  pep primary_assembly:BDGP6.46:2R:17059871:17062634:-1 gene:FBgn0034186 transcript:FBtr0087013 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.0   0.2     0.092   1.7e+02     146     176 ..     201     235 ..     179     302 .. 0.67
+   2 ?   10.1   0.1   0.00032      0.57     244     311 ..     440     500 ..     388     509 .. 0.87
+   3 ?   -1.7   0.0       1.2   2.2e+03     121     175 ..     560     629 ..     506     695 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 2.0 bits;  conditional E-value: 0.092
+                  -STTCCCCCCCCHCHHHHCCSTT....HHCCCCCH CS
+          FAT 146 akaemwlkfanlaRksgrlslAe....kaLkklle 176
+                  ++ +mw++ ++l  ++g+l  A     ka+k+l +
+  FBpp0086164 201 QDRDMWIRVSDLLVQQGNLARARliytKAIKMLPK 235
+                  44599999999999999999998555555555532 PP
+
+  == domain 2  score: 10.1 bits;  conditional E-value: 0.00032
+                  CCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-T CS
+          FAT 244 cylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeeped 311
+                  + l+++e l++l++        +e+ q+y + ++l+p +y+a +t+  +  ++ ++ee  +  e+p +
+  FBpp0086164 440 VWLRQAECLRQLNR-------TNEAIQSYEKVVQLAPFCYDARFTLSALLKQQGRHEEAVQALEQPGE 500
+                  56889999999999.......89*****************************9999988777666655 PP
+
+  == domain 3  score: -1.7 bits;  conditional E-value: 1.2
+                  CCCTTTCCCCTCCCHCCCHC...............HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCC CS
+          FAT 121 vevwqdilsvRslvlspied...............lllkgakaemwlkfanlaRksgrlslAekaLkkll 175
+                   e  + i+++Rs +++ + +                l  + ++e   + ++ a k+g++s Aek  + + 
+  FBpp0086164 560 SESLKTIIQMRSKAVDNSAEqdlqdpaknaasetsDLTVKDEFELFRELVRTAFKHGMHSAAEKICFAMV 629
+                  4444455555555553333334555555555554434444445555566666667777777776655554 PP
+
+>> FBpp0297722  pep primary_assembly:BDGP6.46:2R:17059331:17062634:-1 gene:FBgn0034186 transcript:FBtr0306810 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.0   0.2     0.092   1.7e+02     146     176 ..     201     235 ..     179     302 .. 0.67
+   2 ?   10.1   0.1   0.00032      0.57     244     311 ..     440     500 ..     388     509 .. 0.87
+   3 ?   -1.7   0.0       1.2   2.2e+03     121     175 ..     560     629 ..     506     695 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 2.0 bits;  conditional E-value: 0.092
+                  -STTCCCCCCCCHCHHHHCCSTT....HHCCCCCH CS
+          FAT 146 akaemwlkfanlaRksgrlslAe....kaLkklle 176
+                  ++ +mw++ ++l  ++g+l  A     ka+k+l +
+  FBpp0297722 201 QDRDMWIRVSDLLVQQGNLARARliytKAIKMLPK 235
+                  44599999999999999999998555555555532 PP
+
+  == domain 2  score: 10.1 bits;  conditional E-value: 0.00032
+                  CCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-T CS
+          FAT 244 cylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeeped 311
+                  + l+++e l++l++        +e+ q+y + ++l+p +y+a +t+  +  ++ ++ee  +  e+p +
+  FBpp0297722 440 VWLRQAECLRQLNR-------TNEAIQSYEKVVQLAPFCYDARFTLSALLKQQGRHEEAVQALEQPGE 500
+                  56889999999999.......89*****************************9999988777666655 PP
+
+  == domain 3  score: -1.7 bits;  conditional E-value: 1.2
+                  CCCTTTCCCCTCCCHCCCHC...............HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCC CS
+          FAT 121 vevwqdilsvRslvlspied...............lllkgakaemwlkfanlaRksgrlslAekaLkkll 175
+                   e  + i+++Rs +++ + +                l  + ++e   + ++ a k+g++s Aek  + + 
+  FBpp0297722 560 SESLKTIIQMRSKAVDNSAEqdlqdpaknaasetsDLTVKDEFELFRELVRTAFKHGMHSAAEKICFAMV 629
+                  4444455555555553333334555555555554434444445555566666667777777776655554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      30799  (20378192 residues searched)
+Passed MSV filter:                      3283  (0.106594); expected 616.0 (0.02)
+Passed bias filter:                      706  (0.0229228); expected 616.0 (0.02)
+Passed Vit filter:                        53  (0.00172084); expected 30.8 (0.001)
+Passed Fwd filter:                        17  (0.000551966); expected 0.3 (1e-05)
+Initial search space (Z):              30799  [actual number of targets]
+Domain search space  (domZ):              17  [number of targets reported over threshold]
+# CPU time: 0.39u 0.12s 00:00:00.51 Elapsed: 00:00:00.23
+# Mc/sec: 30062.43
+//
+[ok]

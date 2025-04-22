@@ -1,0 +1,153 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Excavata/Proteins/Naegleria_gruberi.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.3e-21   77.1  12.6    2.7e-21   76.0  12.6    1.5  1  XP_002678877.1  uncharacterized protein NAEGRDRAFT_65965 [Nae
+  ------ inclusion threshold ------
+      0.051   12.3  11.2      0.054   12.2  11.2    1.1  1  XP_002682381.1  uncharacterized protein NAEGRDRAFT_77995 [Nae
+      0.095   11.4  12.0          2    7.0   0.1    2.6  2  XP_002676468.1  uncharacterized protein NAEGRDRAFT_80014 [Nae
+       0.47    9.1  51.9       0.76    8.4  51.9    1.3  1  XP_002679283.1  uncharacterized protein NAEGRDRAFT_65587 [Nae
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_002678877.1  uncharacterized protein NAEGRDRAFT_65965 [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   76.0  12.6   6.8e-25   2.7e-21     225     666 ..      78     691 ..       4     701 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 76.0 bits;  conditional E-value: 6.8e-25
+  PTHR13335.orig.30.pir 225 q....................................................................................... 225
+                            +                                                                                       
+         XP_002678877.1  78 Npghfrtrsfsstttgadhdpygaqqqggynrntglstsftppdtfdlkdyellfiehkrhveqqqkqngvaspgkfnlqlplqnmpa 165
+                            0333333333333333333333333333333333333333444444444444444444444444445556666666777777777777 PP
+
+  PTHR13335.orig.30.pir 226 ........................................lsaeesdslfekkskssstktqkskkpssa.a..kqsi.......... 260
+                                                                     s+ee++++++++++ ++++   s+ ++++ +  ++si          
+         XP_002678877.1 166 mnsssnttprgnvttprgattprngtttprrnngdqgddgVSEEENNPITPEQDTRQVEQSNTSSNQQPVnPpvQDSIfqkvtlggvn 253
+                            7777777777777777777777777777777777777888999999999999999888888888888888667845556555667776 PP
+
+  PTHR13335.orig.30.pir 261 ..........ssl.............ssaLekkps...qlnnpfneyakfdgkgvgttaslkidiylplssepdkllpltvvvkasat 322
+                                      ssl              s L  ++s   q n+ +++ a f  ++  ++ + k+++ +p  s+      +   +  + t
+         XP_002678877.1 254 kmiptkttvdSSLsmdlrprrnpaigGSLLHDNSSnfkQANQSVRYIATFVPHK--RGGVHKVNVPIPTVSS------M---TSLNFT 330
+                            66777777775556677777777777777777777786799999**********..*************999......2...44488* PP
+
+  PTHR13335.orig.30.pir 323 VqevIGlaLwqyteeg.repklpdnkvnaycLrivEdDGevddDFPpLDrnep.iskfgfselaLveatdsegktnndlqtplpreqk 408
+                              ++I  aL  y  e   ep   d+  +ay+Lr +E+DG  d++ PpL ++++ i + g  +l Lv   + +  ++            
+         XP_002678877.1 331 ATDLIRKALELYKRETdLEPIAIDD--RAYQLRVAEEDGQPDTSWPPLNKEKTmIEQLGNVKLTLVLDRNFQPMSSGN---------- 406
+                            ************9999888887776..5********************9988747777**************988222.......... PP
+
+  PTHR13335.orig.30.pir 409 krleeakrsagsaneagsslstes........................................skeslfvkvnlaypgdsvrsktti 456
+                            +++e+    ++s+ ++                                                + +s++  +n   ++ ++ +   +
+         XP_002678877.1 407 SGAED---DSSSNLKNR------RelnikfggdevftkfnledirlqvflpppknscstptiipNTNSFTSPINS--RNYQLTYFKLV 483
+                            11111...222222222......135555677888899*999999999999999999999999888888999998..45666676788 PP
+
+  PTHR13335.orig.30.pir 457 vvptdvtladvlekackkrkldqkky........rllkvsepnvivdldrtvesldglef..lllrknssradgvlekteskssssan 534
+                             v+ +  l+d+ + +c++ +ld+kky          lk  ++n++   d+t+ sl+   +  +l+r   +++d+  + ++++ s s++
+         XP_002678877.1 484 PVSPELLLKDLQKVLCQRFSLDPKKYmintigkdKNLKEISKNYK---DKTLYSLGSMIErvVLVRTAAYESDTDQSTPKGEISGSPT 568
+                            8999**********************7777777766666666665...9999999987552256677788889988888889999999 PP
+
+  PTHR13335.orig.30.pir 535 atissksaaedsqiqia.tvqddlsssayksfkVsrkhkmrfktdrelgIdgdyieimPvenqkaatkfwekqKtisihisqvvackl 621
+                            a+++++s  ++ qi    ++++d+  +    f+V++ +k++ +++r+l +d + i++ ++ n+  +  ++ k+K+++++i+ +  ++ 
+         XP_002678877.1 569 APNMIGS--PSKQIYALpFMTYDNTDN---VFHVTKTNKFGVRQERILSFDSEFIYNSKPANTSRW-MNSSKTKHPTRPITTLRSIEC 650
+                            9999987..665555440344444444...468*********************************.8*******************9 PP
+
+  PTHR13335.orig.30.pir 622 ssknpanFkivvrrendeKrydfeavsaaeaaeIvskinnileay 666
+                             s np+ F +    + d   + +ea+++ ea+ Iv+++ ++l + 
+         XP_002678877.1 651 DSTNPKCFVL----SFDDENLFYEARTTIEAETIVKRLEQLLLMK 691
+                            **********....88888999*****************999665 PP
+
+>> XP_002682381.1  uncharacterized protein NAEGRDRAFT_77995 [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.2  11.2   1.4e-05     0.054      96     212 ..     176     289 ..      78     333 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 12.2 bits;  conditional E-value: 1.4e-05
+  PTHR13335.orig.30.pir  96 psldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseer............... 168
+                             ++ q  ++qg++q+++s+++ ++ +++qsv+    s++++++++ ++ +++++  ++ + + +   + s  +               
+         XP_002682381.1 176 EQQPQGGDEQGQQQQEQSQQQFQQSGGEQSVEQG--SVEQSQQQQFQQVQQQQQGGEQVTNNNGYVANNS--Nggfaprvrggrvrgv 259
+                            3333334555555566666666666666666665..5555554444333333333333333222222223..1334455544445444 PP
+
+  PTHR13335.orig.30.pir 169 .........dqsscksiqwktessvkedsvqrassesslsserssdssssssa 212
+                                     +                       +++ss+ss +s + ss ssa
+         XP_002682381.1 260 srnngggyvS----------------------NQGGSSASSGESYS-SSGSSA 289
+                            4433333331......................33333333333322.112222 PP
+
+>> XP_002676468.1  uncharacterized protein NAEGRDRAFT_80014 [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.0   0.1   0.00051         2     564     597 ..      34      67 ..      17      80 .. 0.87
+   2 ?    5.3   8.6    0.0017       6.8     168     226 ..     175     305 ..      79     657 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 7.0 bits;  conditional E-value: 0.00051
+  PTHR13335.orig.30.pir 564 sfkVsrkhkmrfktdrelgIdgdyieimPvenqk 597
+                            sf+  ++++ + +++rel++++d i +m+ +++ 
+         XP_002676468.1  34 SFELVKINRRGARQKRELVFSDDGISNMKGKSRQ 67 
+                            899**************************99875 PP
+
+  == domain 2  score: 5.3 bits;  conditional E-value: 0.0017
+  PTHR13335.orig.30.pir 168 r..........................dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq........snk 220
+                            +                          + +  k+i+++++s++ +++  ++ss+++  s+   +s ssss+ ++  q        ++ 
+         XP_002676468.1 175 QmnmastfnppsnsspsghitptataiSTITTKGIDQQYTSTSTSTTIGNSSSSTTNVSSGGNSSTSSSSTGQFgGQdheaptlhQQ- 261
+                            04444444444555555566777777799**********************999999999999999999999998888775555322. PP
+
+  PTHR13335.orig.30.pir 221 ldseq..........................................l 226
+                                q                                          l
+         XP_002676468.1 262 ----QqlaafmgkkigihsfellkvigegsfskvclvrkkdtrqiyaL 305
+                            ....12233456666665555555555555555555555554445551 PP
+
+>> XP_002679283.1  uncharacterized protein NAEGRDRAFT_65587 [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.4  51.9   0.00019      0.76      51     285 ..      72     350 ..      22     364 .. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 8.4 bits;  conditional E-value: 0.00019
+  PTHR13335.orig.30.pir  51 ssssesllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsr 138
+                            +++s+s  + ++s+s+++ sgs+ s+     + +++  t + ++++ + + +++q+++q+s+++s+ ++++++qs++ +         
+         XP_002679283.1  72 TNQSSSQ-QASQSGSQSQQSGSQSSSQ--TTQPQPQSSTSQMQQEQANGTVSASQQQQQQSNASSQAASQQSSQSSNQT--------- 147
+                            2222222.2223333333333333222..22233334444444444444444444444444444444444444444444......... PP
+
+  PTHR13335.orig.30.pir 139 rrrantavkleklrkerrsksasiasseer.........dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrq 217
+                                                         +         +qs ++ ++++t ss++ +++q+  + s++ss++ s ss + s +s+++
+         XP_002679283.1 148 -----------------------------QtvekqdnpqAQSTSQAGSQGTGSSSQATTPQSGNQNSTASSTSTSQSSQQGSSSSSQS 206
+                            .............................23334444444444444444444444444444443333333333222221111111111 PP
+
+  PTHR13335.orig.30.pir 218 ....snkldseq............................................................................ 225
+                                +++ ++++                                                                            
+         XP_002679283.1 207 taqtNPVSQDNSsisgdthmdltpnvtqsvgqgnvsstpsvtnvnttlinetlqnigisnstaskdinitdiigriisgeniteiins 294
+                            1222111111113334444444444444445555555556666777777788888888888888889999999999888887776665 PP
+
+  PTHR13335.orig.30.pir 226 ....lsaeesdslfekkskssstktqkskkpssaakqsi.sslssaLekkpsqlnnpfneyakfd 285
+                                l++  ++ l + ++     + q s++++ +   s+   l s Le+++   n  + +y kf+
+         XP_002679283.1 295 tlrnLTQWLNSTLSNDTD----DSSQTSQQSKRG---SLrRRLLSLLEENEE--NENYAQYLKFN 350
+                            555444444444444433....444444444444...122334455777774..66677777776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      15711  (7868105 residues searched)
+Passed MSV filter:                      4406  (0.28044); expected 314.2 (0.02)
+Passed bias filter:                      677  (0.0430908); expected 314.2 (0.02)
+Passed Vit filter:                       223  (0.0141939); expected 15.7 (0.001)
+Passed Fwd filter:                         9  (0.000572847); expected 0.2 (1e-05)
+Initial search space (Z):              15711  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.46u 0.09s 00:00:00.55 Elapsed: 00:00:00.26
+# Mc/sec: 19645.66
+//
+[ok]

@@ -1,0 +1,419 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Schistosoma_mansoni.Smansoni_v7.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    4.9e-36  123.8   1.5    1.7e-34  118.8   0.1    4.0  4  Smp_122910.1  pep scaffold:Smansoni_v7:SM_V7_2:23225943:23301
+    7.4e-36  123.2   1.8    1.7e-34  118.8   0.1    3.8  4  Smp_122910.4  pep scaffold:Smansoni_v7:SM_V7_2:23225943:23297
+    7.4e-36  123.2   1.7    1.7e-34  118.8   0.1    3.8  4  Smp_122910.3  pep scaffold:Smansoni_v7:SM_V7_2:23225943:23297
+    1.5e-07   31.2   2.0       0.02   14.6   0.1    7.4  7  Smp_134860.1  pep scaffold:Smansoni_v7:SM_V7_3:42077484:42138
+    0.00039   20.1   0.1     0.0018   18.0   0.1    2.2  1  Smp_128050.1  pep scaffold:Smansoni_v7:SM_V7_5:5810025:584303
+    0.00041   20.1   1.1          3    7.5   0.0    4.3  5  Smp_142770.1  pep scaffold:Smansoni_v7:SM_V7_ZW:60880005:6089
+     0.0024   17.5   0.8       0.96    9.1   0.0    4.6  5  Smp_141630.2  pep scaffold:Smansoni_v7:SM_V7_1:52899791:52914
+     0.0028   17.3   0.7       0.94    9.1   0.1    4.6  5  Smp_141630.1  pep scaffold:Smansoni_v7:SM_V7_1:52899791:52914
+  ------ inclusion threshold ------
+      0.014   15.1   0.4       0.19   11.4   0.0    3.0  2  Smp_162340.1  pep scaffold:Smansoni_v7:SM_V7_ZW:64559474:6463
+      0.018   14.7   0.3         32    4.2   0.0    3.9  3  Smp_244680.1  pep scaffold:Smansoni_v7:SM_V7_ZW:40735172:4077
+      0.078   12.6   2.7      0.093   12.4   2.7    1.1  1  Smp_181060.1  pep scaffold:Smansoni_v7:SM_V7_2:28455403:28460
+
+
+Domain annotation for each sequence (and alignments):
+>> Smp_122910.1  pep scaffold:Smansoni_v7:SM_V7_2:23225943:23301037:-1 gene:Smp_122910 transcript:Smp_122910.1 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.8   0.0       1.6   2.1e+03      32      65 ..     115     151 ..      91     195 .. 0.54
+   2 ?   -2.5   0.0       2.7   3.6e+03     124     157 ..    1257    1297 ..    1224    1298 .. 0.66
+   3 !  118.8   0.1   1.3e-37   1.7e-34       1     159 [.    1302    1472 ..    1302    1473 .. 0.87
+   4 ?    0.4   0.0      0.34   4.5e+02     111     148 ..    1505    1543 ..    1483    1580 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: -1.8 bits;  conditional E-value: 1.6
+      mTOR_dom  32 ikvlGilGALDPykhkeveekseee.....ekeeenaee 65 
+                    +++G lG + Py +  +ee+++++     ++ ++++++
+  Smp_122910.1 115 ARLIGQLGLVFPYDF--IEEQTKNAcsilsKDISDAQKH 151
+                   488999999999988..4444433333443222222222 PP
+
+  == domain 2  score: -2.5 bits;  conditional E-value: 2.7
+      mTOR_dom  124 p......flpqiipallsvirtces.slrefllqqLatLvs 157 
+                    +      +++++ip l+ ++++++    r   +  L+ Lvs
+  Smp_122910.1 1257 AprsiyhYMDEFIPILAYMMQDTSCfLKRSIAVWTLTRLVS 1297
+                    2344444999***********99986667777888888875 PP
+
+  == domain 3  score: 118.8 bits;  conditional E-value: 1.3e-37
+      mTOR_dom    1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks..........eeeekeeenaeetdvsellvglspss.eeyyp 84  
+                    Vv Py +yp+LL+iLl +lk+e+ + iR+ev++ lG+lGALDP k+k  +++           +++e  e++  +++ sel+ +ls  s + +++
+  Smp_122910.1 1302 VVIPYKRYPQLLNILLGMLKREEIKCIRQEVLRALGVLGALDPFKFKLYSGQVdtygdtgiavSHHEVVERKDVDITQSELVINLSWESrDVFFS 1396
+                    899***********************************************999666555543311133334444455566688887777699999 PP
+
+      mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvsiv 159 
+                      +++aL++ l+dp+l s++ ++v++i++++k lg ++v +l+q+ip +++ ++++ + +l+efl++qL++ ++iv
+  Smp_122910.1 1397 VCALSALIHSLRDPALHSQYGSIVHTIVYVLKLLGPRSVIYLRQLIPDYFRCLENTRDaRLQEFLIRQLGNVMTIV 1472
+                    9*****************************************************99999****************9 PP
+
+  == domain 4  score: 0.4 bits;  conditional E-value: 0.34
+      mTOR_dom  111 imsifktlglkcvpflpqiipallsvirtces.slrefl 148 
+                    +  + + lg +  ++l+++ip++l+++++ ++ s +  l
+  Smp_122910.1 1505 LSPMSSVLGAEFRTYLTRLIPTILRMFHHESNeSNLIAL 1543
+                    555666788899999999999999999986654444444 PP
+
+>> Smp_122910.4  pep scaffold:Smansoni_v7:SM_V7_2:23225943:23297757:-1 gene:Smp_122910 transcript:Smp_122910.4 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.8   0.0       1.7   2.2e+03      32      66 ..     134     171 ..     115     215 .. 0.53
+   2 ?   -2.5   0.0       2.7   3.5e+03     124     157 ..    1276    1316 ..    1243    1317 .. 0.66
+   3 !  118.8   0.1   1.3e-37   1.7e-34       1     159 [.    1321    1491 ..    1321    1492 .. 0.87
+   4 ?    0.4   0.0      0.34   4.4e+02     111     148 ..    1524    1562 ..    1502    1600 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: -1.8 bits;  conditional E-value: 1.7
+      mTOR_dom  32 ikvlGilGALDPykhkeveekseee.....ekeeenaeet 66 
+                    +++G lG + Py +  +ee+++++     ++ +++++++
+  Smp_122910.4 134 ARLIGQLGLVFPYDF--IEEQTKNAcsilsKDISDAQKHF 171
+                   488888998888888..44444333334432222222222 PP
+
+  == domain 2  score: -2.5 bits;  conditional E-value: 2.7
+      mTOR_dom  124 p......flpqiipallsvirtces.slrefllqqLatLvs 157 
+                    +      +++++ip l+ ++++++    r   +  L+ Lvs
+  Smp_122910.4 1276 AprsiyhYMDEFIPILAYMMQDTSCfLKRSIAVWTLTRLVS 1316
+                    2344444999***********99986667777888888875 PP
+
+  == domain 3  score: 118.8 bits;  conditional E-value: 1.3e-37
+      mTOR_dom    1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks..........eeeekeeenaeetdvsellvglspss.eeyyp 84  
+                    Vv Py +yp+LL+iLl +lk+e+ + iR+ev++ lG+lGALDP k+k  +++           +++e  e++  +++ sel+ +ls  s + +++
+  Smp_122910.4 1321 VVIPYKRYPQLLNILLGMLKREEIKCIRQEVLRALGVLGALDPFKFKLYSGQVdtygdtgiavSHHEVVERKDVDITQSELVINLSWESrDVFFS 1415
+                    899***********************************************999666555543311133334444455566688887777699999 PP
+
+      mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvsiv 159 
+                      +++aL++ l+dp+l s++ ++v++i++++k lg ++v +l+q+ip +++ ++++ + +l+efl++qL++ ++iv
+  Smp_122910.4 1416 VCALSALIHSLRDPALHSQYGSIVHTIVYVLKLLGPRSVIYLRQLIPDYFRCLENTRDaRLQEFLIRQLGNVMTIV 1491
+                    9*****************************************************99999****************9 PP
+
+  == domain 4  score: 0.4 bits;  conditional E-value: 0.34
+      mTOR_dom  111 imsifktlglkcvpflpqiipallsvirtces.slrefl 148 
+                    +  + + lg +  ++l+++ip++l+++++ ++ s +  l
+  Smp_122910.4 1524 LSPMSSVLGAEFRTYLTRLIPTILRMFHHESNeSNLIAL 1562
+                    555666788889999999999999999986654444444 PP
+
+>> Smp_122910.3  pep scaffold:Smansoni_v7:SM_V7_2:23225943:23297757:-1 gene:Smp_122910 transcript:Smp_122910.3 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.9   0.0       1.8   2.3e+03      32      65 ..     134     170 ..     115     214 .. 0.53
+   2 ?   -2.5   0.0       2.7   3.6e+03     124     157 ..    1276    1316 ..    1243    1317 .. 0.66
+   3 !  118.8   0.1   1.3e-37   1.7e-34       1     159 [.    1321    1491 ..    1321    1492 .. 0.87
+   4 ?    0.4   0.0      0.35   4.6e+02     111     148 ..    1524    1562 ..    1502    1599 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: -1.9 bits;  conditional E-value: 1.8
+      mTOR_dom  32 ikvlGilGALDPykhkeveekseee.....ekeeenaee 65 
+                    +++G lG + Py +  +ee+++++     ++ ++++++
+  Smp_122910.3 134 ARLIGQLGLVFPYDF--IEEQTKNAcsilsKDISDAQKH 170
+                   488888888888888..4444433333432222222222 PP
+
+  == domain 2  score: -2.5 bits;  conditional E-value: 2.7
+      mTOR_dom  124 p......flpqiipallsvirtces.slrefllqqLatLvs 157 
+                    +      +++++ip l+ ++++++    r   +  L+ Lvs
+  Smp_122910.3 1276 AprsiyhYMDEFIPILAYMMQDTSCfLKRSIAVWTLTRLVS 1316
+                    2344444999***********99986667777888888875 PP
+
+  == domain 3  score: 118.8 bits;  conditional E-value: 1.3e-37
+      mTOR_dom    1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks..........eeeekeeenaeetdvsellvglspss.eeyyp 84  
+                    Vv Py +yp+LL+iLl +lk+e+ + iR+ev++ lG+lGALDP k+k  +++           +++e  e++  +++ sel+ +ls  s + +++
+  Smp_122910.3 1321 VVIPYKRYPQLLNILLGMLKREEIKCIRQEVLRALGVLGALDPFKFKLYSGQVdtygdtgiavSHHEVVERKDVDITQSELVINLSWESrDVFFS 1415
+                    899***********************************************999666555543311133334444455566688887777699999 PP
+
+      mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvsiv 159 
+                      +++aL++ l+dp+l s++ ++v++i++++k lg ++v +l+q+ip +++ ++++ + +l+efl++qL++ ++iv
+  Smp_122910.3 1416 VCALSALIHSLRDPALHSQYGSIVHTIVYVLKLLGPRSVIYLRQLIPDYFRCLENTRDaRLQEFLIRQLGNVMTIV 1491
+                    9*****************************************************99999****************9 PP
+
+  == domain 4  score: 0.4 bits;  conditional E-value: 0.35
+      mTOR_dom  111 imsifktlglkcvpflpqiipallsvirtces.slrefl 148 
+                    +  + + lg +  ++l+++ip++l+++++ ++ s +  l
+  Smp_122910.3 1524 LSPMSSVLGAEFRTYLTRLIPTILRMFHHESNeSNLIAL 1562
+                    555666788899999999999999999986654444444 PP
+
+>> Smp_134860.1  pep scaffold:Smansoni_v7:SM_V7_3:42077484:42138482:-1 gene:Smp_134860 transcript:Smp_134860.1 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.0      0.23   3.1e+02      76     101 ..     351     376 ..     315     473 .. 0.63
+   2 ?   -2.2   0.0       2.2   2.9e+03      78     133 ..    1765    1822 ..    1749    1841 .. 0.61
+   3 !   14.6   0.1   1.5e-05      0.02      87     159 ..    1894    1966 ..    1875    1967 .. 0.92
+   4 ?    1.2   0.0       0.2   2.6e+02     123     156 ..    2170    2203 ..    2088    2248 .. 0.53
+   5 ?    0.6   0.0       0.3     4e+02      82     150 ..    2320    2383 ..    2291    2393 .. 0.70
+   6 ?   -2.7   0.0       3.1   4.1e+03     108     141 ..    2489    2522 ..    2481    2527 .. 0.78
+   7 ?    3.3   0.0     0.045        59      87     146 ..    2832    2891 ..    2806    2904 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 0.23
+      mTOR_dom  76 spsseeyyptvvinaLlkilkdpsls 101
+                   ++s+ +  +tv+in Ll  l+ ++++
+  Smp_134860.1 351 QKSTLDRVATVAINLLLDYLERETYE 376
+                   44457888888888888888555544 PP
+
+  == domain 2  score: -2.2 bits;  conditional E-value: 2.2
+      mTOR_dom   78 sseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt...lglkcvpflpqiipal 133 
+                     see  ++ +in+L++ l  ++    ++ + + i  i +    ++lk   ++++++pal
+  Smp_134860.1 1765 LSEEQTSK-TINKLMTTLLSSNNYAERHGAAHGIAGIARGlgiMSLKHHGIIDKLMPAL 1822
+                    44444444.67888876655555555556666677776662224455555666666665 PP
+
+  == domain 3  score: 14.6 bits;  conditional E-value: 1.5e-05
+      mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                    ++ aLlk ++d++    ++++v+ + s+ +  + +  + lpqi+p ll+v+ ++++++++  ++ L+++ +++
+  Smp_134860.1 1894 ILPALLKAIDDQQSWRTKAEAVDLLASMTHCASKQLSACLPQIVPRLLEVLVDSQDRVKQAGIRALTQIGKVI 1966
+                    567899999999999****************99999*************************999999998777 PP
+
+  == domain 4  score: 1.2 bits;  conditional E-value: 0.2
+      mTOR_dom  123 vpflpqiipallsvirtcesslrefllqqLatLv 156 
+                     +f+  iip++l+ +++ ++ lre+ l+  + +v
+  Smp_134860.1 2170 AEFIGPIIPTILKSLSDETEFLRETALRAAQRIV 2203
+                    3344444444444444444444444444333333 PP
+
+  == domain 5  score: 0.6 bits;  conditional E-value: 0.3
+      mTOR_dom   82 yyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150 
+                      + v ++ Ll  l  +s ++h++ + +a+  ++++lg +   +lp+iip l++ + + +++ r  +  
+  Smp_134860.1 2320 I-MPVLVRLLLDTLG-SSSREHQQIAARALGDMVRKLGER---ILPEIIPLLVTGLDSPDADQRRGVCT 2383
+                    3.3467888888884.444678899999999999998876...58899999998888887755554444 PP
+
+  == domain 6  score: -2.7 bits;  conditional E-value: 3.1
+      mTOR_dom  108 vqaimsifktlglkcvpflpqiipallsvirtce 141 
+                    v+a  +  +  g   ++ l +i+pall++++ ++
+  Smp_134860.1 2489 VKAFAYLASVAGEALTKQLGRILPALLQTVSLMS 2522
+                    667777777778888999**********998665 PP
+
+  == domain 7  score: 3.3 bits;  conditional E-value: 0.045
+      mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146 
+                    vi  L+++l +++ +  + av+q+++s +++    + pf++q+ +++l+ + +++++ r 
+  Smp_134860.1 2832 VIGPLIRLLGERQTNVVRVAVLQSLTSLVNKCPQSVRPFVTQLQSTFLKCLGDAHKQTRI 2891
+                    677899999999999999999999999999999999999999999999998888776665 PP
+
+>> Smp_128050.1  pep scaffold:Smansoni_v7:SM_V7_5:5810025:5843034:1 gene:Smp_128050 transcript:Smp_128050.1 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.0   0.1   1.4e-06    0.0018      84     153 ..     559     632 ..     530     637 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 18.0 bits;  conditional E-value: 1.4e-06
+      mTOR_dom  84 ptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls....virtces.slrefllqqLa 153
+                   p+  i  Ll+il++p +      v++a+m ++  l+ +c+p ++ ++++lls    v+++ ++ ++++fl++ ++
+  Smp_128050.1 559 PQLLIDRLLNILNNPEYG-ESVYVIRALMRVCCCLQERCLPSMTSLVSTLLSrltqVAKNPSKpDFNHFLFETIC 632
+                   7899************99.5788*****************98888887777632226667777788899988776 PP
+
+>> Smp_142770.1  pep scaffold:Smansoni_v7:SM_V7_ZW:60880005:60896720:-1 gene:Smp_142770 transcript:Smp_142770.1 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.3   0.0      0.36   4.8e+02      94     155 ..      88     153 ..      68     155 .. 0.75
+   2 ?   -2.7   0.0       3.2   4.2e+03     129     156 ..     173     200 ..     170     203 .. 0.80
+   3 ?   -2.1   0.0         2   2.6e+03     134     153 ..     219     238 ..     182     273 .. 0.54
+   4 !    6.7   0.0     0.004       5.2      78     157 ..     462     539 ..     451     542 .. 0.85
+   5 !    7.5   0.0    0.0023         3      88     142 ..     695     752 ..     659     767 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 0.3 bits;  conditional E-value: 0.36
+      mTOR_dom  94 ilkdpsls..shhtavvqaimsifktlglkc..vpflpqiipallsvirtcesslrefllqqLatL 155
+                    +kd +l+  s  + ++++i+ i+ t  + +  ++  p+++p+l++ i + + ++ e  +  ++++
+  Smp_142770.1  88 YIKDGCLRciSDSSPMIRSIVGILITTIVTSdgIQNWPELLPKLVECIDSHDVNFMEGAFGAIEKI 153
+                   555666555556667788888877774443334899999999999999999889999998887766 PP
+
+  == domain 2  score: -2.7 bits;  conditional E-value: 3.2
+      mTOR_dom 129 iipallsvirtcesslrefllqqLatLv 156
+                   +ip++l++ r+ ++++r   l  +++++
+  Smp_142770.1 173 LIPKFLQYSRHDSPKIRSHALACINHFI 200
+                   799******9999999988887776665 PP
+
+  == domain 3  score: -2.1 bits;  conditional E-value: 2
+      mTOR_dom 134 lsvirtcesslrefllqqLa 153
+                   ++++++ ++++r  + + + 
+  Smp_142770.1 219 FALAEDEDPNVRRHVCSAFV 238
+                   33333333333333333332 PP
+
+  == domain 4  score: 6.7 bits;  conditional E-value: 0.004
+      mTOR_dom  78 sseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                    +e+y++  +++ L +il+  + +  ++a+ +a  +  ++  +  vp+l+ i+ +l+ ++++ + + +  l++ ++tL  
+  Smp_142770.1 462 PHEQYFKPLMVELLKRILD--CNKRVQEAACSAFATLEEEACTDLVPYLDLILRTLVYALKQYQHKNLFILYDAIGTLAD 539
+                   4699**************4..445678999999999999999999****************9998777777777777765 PP
+
+  == domain 5  score: 7.5 bits;  conditional E-value: 0.0023
+      mTOR_dom  88 inaLlkilkdpslssh...htavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                   i + ++il ++  s+h    ++++ ai +i+ +lg  ++pf + +i+ l+++i+  ++
+  Smp_142770.1 695 IGQFMTILANNLSSEHisvSNNAIWAIGEICIQLGEGMTPFASLFIHPLIEIINRQST 752
+                   6778889966666544222578999***************************986554 PP
+
+>> Smp_141630.2  pep scaffold:Smansoni_v7:SM_V7_1:52899791:52914674:-1 gene:Smp_141630 transcript:Smp_141630.2 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.1   0.0         1   1.3e+03      73     130 ..     449     507 ..     423     513 .. 0.75
+   2 ?    2.1   0.0      0.11   1.4e+02       3      35 ..     568     600 ..     566     767 .. 0.80
+   3 !    9.1   0.0   0.00073      0.96      57     155 ..     793     890 ..     756     895 .. 0.61
+   4 ?   -2.5   0.0       2.7   3.6e+03     120     144 ..     939     963 ..     917     974 .. 0.53
+   5 ?   -0.8   0.0       0.8   1.1e+03      15      38 ..     994    1016 ..     985    1032 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -1.1 bits;  conditional E-value: 1
+      mTOR_dom  73 vglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+                    ++++   e+ +   ++++l +l  p+l+ + ++  v++i  i+ +l+  + pf+ +i+
+  Smp_141630.2 449 RQITEKAREFGAGPLFKQILPLLMSPTLEdQERHLLVKVIDRILYKLDDLVRPFVHKIL 507
+                   55566666676777778888889999998677788889999999988888888888886 PP
+
+  == domain 2  score: 2.1 bits;  conditional E-value: 0.11
+      mTOR_dom   3 ePyldypeLLeiLlnilkteqsqsiRrevikvl 35 
+                      l  p+LL  L  + k+++s++ R   ik++
+  Smp_141630.2 568 ASALGIPSLLPFLKAVCKSKKSWQARHTGIKIV 600
+                   555667888888888888888888888777664 PP
+
+  == domain 3  score: 9.1 bits;  conditional E-value: 0.00073
+      mTOR_dom  57 ekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152
+                   ++  +++  +++++++  l +++ +   +   i  +l  ++++s +   + ++    +i+++lg ++ p+lpqi+ ++l  +++ ++++r+   + +
+  Smp_141630.2 793 SEPYRKMVMETIEKVMSALGSTEvDARLEEQLIDGILYAFQEQSTE--DAVMLIGFGTIVQSLGKRVKPYLPQICGTILWRLNNKSAKVRQQAADLI 887
+                   3344444444555555555555555555555555555555555544..3344445589*********************999998888887766666 PP
+
+      mTOR_dom 153 atL 155
+                   + +
+  Smp_141630.2 888 SRI 890
+                   655 PP
+
+  == domain 4  score: -2.5 bits;  conditional E-value: 2.7
+      mTOR_dom 120 lkcvpflpqiipallsvirtcessl 144
+                   +k++p +++++p l+ ++++ ++++
+  Smp_141630.2 939 TKMTPPIKELLPRLTPILKNRHEKV 963
+                   3335555555555555555554444 PP
+
+  == domain 5  score: -0.8 bits;  conditional E-value: 0.8
+      mTOR_dom   15 LlnilkteqsqsiRrevikvlGil 38  
+                    Ll++lk   ++siRr +++++G +
+  Smp_141630.2  994 LLELLKAH-KKSIRRATVNTFGYI 1016
+                    56667754.889999999999987 PP
+
+>> Smp_141630.1  pep scaffold:Smansoni_v7:SM_V7_1:52899791:52914674:-1 gene:Smp_141630 transcript:Smp_141630.1 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.2   0.0       1.1   1.4e+03      73     130 ..     503     561 ..     477     567 .. 0.75
+   2 ?    2.0   0.0      0.11   1.5e+02       4      35 ..     623     654 ..     620     826 .. 0.79
+   3 !    9.1   0.1   0.00072      0.94      57     155 ..     847     944 ..     758     949 .. 0.70
+   4 ?   -2.6   0.0       2.8   3.8e+03     120     144 ..     993    1017 ..     971    1028 .. 0.53
+   5 ?   -0.9   0.0      0.85   1.1e+03      15      38 ..    1048    1070 ..    1039    1086 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -1.2 bits;  conditional E-value: 1.1
+      mTOR_dom  73 vglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+                    ++++   e+ +   ++++l +l  p+l+ + ++  v++i  i+ +l+  + pf+ +i+
+  Smp_141630.1 503 RQITEKAREFGAGPLFKQILPLLMSPTLEdQERHLLVKVIDRILYKLDDLVRPFVHKIL 561
+                   55566666676777778888889999998677788889999999988888888888886 PP
+
+  == domain 2  score: 2.0 bits;  conditional E-value: 0.11
+      mTOR_dom   4 PyldypeLLeiLlnilkteqsqsiRrevikvl 35 
+                     l  p+LL  L  + k+++s++ R   ik++
+  Smp_141630.1 623 SALGIPSLLPFLKAVCKSKKSWQARHTGIKIV 654
+                   55667888888888888888888887777654 PP
+
+  == domain 3  score: 9.1 bits;  conditional E-value: 0.00072
+      mTOR_dom  57 ekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152
+                   ++  +++  +++++++  l +++ +   +   i  +l  ++++s +   + ++    +i+++lg ++ p+lpqi+ ++l  +++ ++++r+   + +
+  Smp_141630.1 847 SEPYRKMVMETIEKVMSALGSTEvDARLEEQLIDGILYAFQEQSTE--DAVMLIGFGTIVQSLGKRVKPYLPQICGTILWRLNNKSAKVRQQAADLI 941
+                   3344444444555555555555555555555555555555555544..3344445589*********************999998888887766666 PP
+
+      mTOR_dom 153 atL 155
+                   + +
+  Smp_141630.1 942 SRI 944
+                   655 PP
+
+  == domain 4  score: -2.6 bits;  conditional E-value: 2.8
+      mTOR_dom  120 lkcvpflpqiipallsvirtcessl 144 
+                    +k++p +++++p l+ ++++ ++++
+  Smp_141630.1  993 TKMTPPIKELLPRLTPILKNRHEKV 1017
+                    3335555555555555555554444 PP
+
+  == domain 5  score: -0.9 bits;  conditional E-value: 0.85
+      mTOR_dom   15 LlnilkteqsqsiRrevikvlGil 38  
+                    Ll++lk   ++siRr +++++G +
+  Smp_141630.1 1048 LLELLKAH-KKSIRRATVNTFGYI 1070
+                    56667754.889999999999987 PP
+
+>> Smp_162340.1  pep scaffold:Smansoni_v7:SM_V7_ZW:64559474:64630900:-1 gene:Smp_162340 transcript:Smp_162340.1 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.4   0.0   0.00014      0.19      13      61 ..    1354    1402 ..    1349    1456 .. 0.75
+   2 ?   -0.8   0.4      0.83   1.1e+03      55     126 ..    2342    2412 ..    2325    2445 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 11.4 bits;  conditional E-value: 0.00014
+      mTOR_dom   13 eiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeee 61  
+                      Ll+ l +++++++R+   + lG lGA+DP k    +++ ++ ++e+e
+  Smp_162340.1 1354 ASLLEGLTRDTDEKMRLLYAQWLGNLGAVDPCKLYLSNGEVKTGQNEKE 1402
+                    5688889999***********************9766665544333333 PP
+
+  == domain 2  score: -0.8 bits;  conditional E-value: 0.83
+      mTOR_dom   55 eeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpfl 126 
+                    e++ ++e++  ++v+el+   ++    y   +++++Ll+ +  + + +  t+ +  i+ if+t  l+ + fl
+  Smp_162340.1 2342 ENNLHSEQKVFNEVQELMRINCQRIPVYQFYTALSQLLSRV-CHEIPTVVTTLIALIVRIFETYPLQTMWFL 2412
+                    22222223333445555433333333333334555555444.355567889999999999999999888777 PP
+
+>> Smp_244680.1  pep scaffold:Smansoni_v7:SM_V7_ZW:40735172:40773191:-1 gene:Smp_244680 transcript:Smp_244680.1 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.2   0.0     0.024        32     104     150 ..     108     154 ..      91     163 .. 0.82
+   2 ?    1.2   0.0      0.19   2.6e+02     107     155 ..     193     241 ..     173     245 .. 0.75
+   3 ?    4.0   0.1     0.027        36      40     155 ..     416     540 ..     415     544 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 4.2 bits;  conditional E-value: 0.024
+      mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150
+                   ++ + +a+ +++k  + + +++l+ ++ a+ + +++++ss+r   lq
+  Smp_244680.1 108 RHYACEALFNVMKITRKETLNYLSDVLDAISRGVSDSDSSVRPSALQ 154
+                   44567999999999999*******************99999988877 PP
+
+  == domain 2  score: 1.2 bits;  conditional E-value: 0.19
+      mTOR_dom 107 vvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                   +v+ i + +   glk   +lpq++  l++++ + +++lr      L++L
+  Smp_244680.1 193 IVSWISTLYAIPGLKISVYLPQLLDGLFRILGDPNPDLRRQCEMLLTDL 241
+                   5666677777778888888888888888888888887776665555555 PP
+
+  == domain 3  score: 4.0 bits;  conditional E-value: 0.027
+      mTOR_dom  40 ALDPykhkeveekseee....ekeeenaeetdvsel......lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpfl 126
+                   A+D  ++  ++++++e+    ++ e+++++++ s+l      l g ++ss       +++a  ++l+++sl   + a+++ i+   +  +  + + +
+  Smp_244680.1 416 AMDSRRVSLNSGNQSESsikfSQAENSTKQFADSSLntttdsLSGEQNSSRILCTDAILEATFQLLNNSSLF-TRLAALRWITVLAEVCSADVFSHV 511
+                   566666655555553334555444444444444444232333444466667777889999999***999998.678899999999999999****** PP
+
+      mTOR_dom 127 pqiipallsvirtcesslrefllqqLatL 155
+                   ++++p++l+++++  +++ +  ++ +++L
+  Smp_244680.1 512 DRLLPEMLKLVSDPADEMVHSTISLIGKL 540
+                   ************99888877777766665 PP
+
+>> Smp_181060.1  pep scaffold:Smansoni_v7:SM_V7_2:28455403:28460931:-1 gene:Smp_181060 transcript:Smp_181060.1 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.4   2.7   7.1e-05     0.093      64     141 ..      29     106 ..      12     115 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 12.4 bits;  conditional E-value: 7.1e-05
+      mTOR_dom  64 eetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                    ++d+s+   +++++ +  + ++++n+  k++ + s  ++ ++++  + s++++  l+c  + +qi+ ++l v++ ++
+  Smp_181060.1  29 CNEDISSSNYTIQSTIKCSFCKIIVNTARKVMMKLSTIEMIHSIIYEMCSVIEEYTLECYDVASQIVDSYLIVFNRTQ 106
+                   3344444444555555888999999**9****999999*********************************9998754 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      14499  (8563460 residues searched)
+Passed MSV filter:                      1102  (0.0760052); expected 290.0 (0.02)
+Passed bias filter:                      648  (0.0446927); expected 290.0 (0.02)
+Passed Vit filter:                        58  (0.00400028); expected 14.5 (0.001)
+Passed Fwd filter:                        11  (0.000758673); expected 0.1 (1e-05)
+Initial search space (Z):              14499  [actual number of targets]
+Domain search space  (domZ):              11  [number of targets reported over threshold]
+# CPU time: 0.13u 0.10s 00:00:00.23 Elapsed: 00:00:00.13
+# Mc/sec: 10065.91
+//
+[ok]

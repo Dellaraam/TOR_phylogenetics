@@ -1,0 +1,253 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Mitosporidium_daphniae.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    7.6e-38  128.2   0.0    3.4e-34  116.2   0.0    2.8  2  KGG50381.1  hypothetical protein DI09_73p90 [Mitosporidium da
+    7.6e-38  128.2   0.0    3.4e-34  116.2   0.0    2.8  2  KGG52401.1  hypothetical protein DI09_17p310 [Mitosporidium d
+    7.9e-38  128.1   0.0    3.5e-34  116.2   0.0    2.8  2  KGG51310.1  hypothetical protein DI09_39p40 [Mitosporidium da
+    2.3e-31  106.9   0.3    2.6e-19   67.2   0.0    2.5  2  KGG50405.1  phosphatidylinositol 3-kinase Tor2, partial [Mito
+    2.3e-08   31.2   4.0    2.3e-08   31.2   4.0    2.0  2  KGG52004.1  hypothetical protein DI09_22p290, partial [Mitosp
+
+
+Domain annotation for each sequence (and alignments):
+>> KGG50381.1  hypothetical protein DI09_73p90 [Mitosporidium daphniae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.5   0.0    0.0003       0.2       3      42 ..    3137    3183 ..    3135    3190 .. 0.83
+   2 !  116.2   0.0   5.1e-37   3.4e-34      44     334 ..    3227    3689 ..    3214    3693 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 8.5 bits;  conditional E-value: 0.0003
+                  CTTCCCCTSSSGHHCCCCT...........TSSSS--CCCHCCCCHH CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmk.......kdspdkaffeailalhr 42  
+                  l + a+Wrl +W   +++  +          ++p++ f++a+l+lh+
+  KGG50381.1 3137 LSLDASWRLLDWSTSKDQAAVRAalelvadAPTPKRLFYDALLHLHQ 3183
+                  7899**********6666433336678889***************96 PP
+
+  == domain 2  score: 116.2 bits;  conditional E-value: 5.1e-37
+                  -CCHCHHCCCHCCCCCCCCCTS---S....CCCCCHHHHHCCCCCHHHCHHCCHHCSS-....................---TTTTTTT----TTS- CS
+         FAT   44 qfdeaeeliekarqllvtelsalsge....synraydllvrlQqlaEleeiiqykqkls....................sseelksllktWrkRlpg 116 
+                  ++ e+ +lie++ q  + +++a++      s n  ++  + +Q  +E +e++ ++   +                      +el+ +l tWr+Rlp 
+  KGG50381.1 3227 RVAELGRLIEEGFQVTLAQWAAMPWPligsSQNDSLS--ILFQLFVEVQEAAGLFLGAGgggagnlhlsnasplqpqltMVQELRGILGTWRERLPS 3321
+                  5677888899999999999999887733223344333..458999999999999999999999999999999999999999999999********** PP
+
+                  TT.TGCCCTTTCCCCTCCCHCCCHC...........................................HHCCS-STTCCC..CCCCCHCHHHHCCST CS
+         FAT  117 vq.ddvevwqdilsvRslvlspied...........................................lllkgakaemwl..kfanlaRksgrlslA 167 
+                  ++ d++ +w+ ++++R+ ++s i+                                            l+++g+++++wl  +fa +aR++  ++++
+  KGG50381.1 3322 IHyDSIGAWSELAAWRQSLFSAINGlfaatvteldnmvimggaagpgnmnapstapssassaassggtLIYRGYHESAWLinRFATVARRHRLPDIC 3418
+                  ************************************************************************************************* PP
+
+                  THHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.................................SS-SS---... CS
+         FAT  168 ekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.................................elssglevq.. 229 
+                   ++L+k+                   y+++++e+++a+ kL e+++c+l+                                    +          
+  KGG50381.1 3419 VQLLNKI-------------------YTLPNIEIQDAFWKLSEQAQCYLDAFYdplsapwltaavplhaaatfggasggatsantdT-------Nss 3489
+                  *******...................***********************98657777788888788888888888888877555331.......133 PP
+
+                  ................................................HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTC CS
+         FAT  230 ......................................eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawh 287 
+                                                        ++tnl +f +++ + ++ +kG +l+al+ +      +ee+++ +s+a++ld +   aw+
+  KGG50381.1 3490 taqategcaddqgaakssstaccaspgtlllvagleiiNSTNLAYFGASQkSDFFSLKGRFLEALNLTG-----IEEANKVHSQAVQLDINHGRAWA 3581
+                  45577888888888888999999999999999999999*****************************65.....*********************** PP
+
+                  CCCHHHHHCCHHHHHHSSSS..............................................................S-TCCHHHHCCT..C CS
+         FAT  288 twalfnfevlskeeekkeeee.............................................................pedlseyvvpavegf 323 
+                  +w+++n +++++   kkeee+                                                             + +++++++ a++++
+  KGG50381.1 3582 AWGHYNRRRFRAFIAKKEEENhdlgveaagtcsadessltagrspglakpppcslnitsatslgttspstltsftaltpypeEPNAQTFAMHAIHCY 3678
+                  *************999999999**********************************************************98668889********* PP
+
+                  CHHHHTTTSST CS
+         FAT  324 lkslslsseks 334 
+                  l++  l+ ++s
+  KGG50381.1 3679 LQAMILGTSSS 3689
+                  ****9998865 PP
+
+>> KGG52401.1  hypothetical protein DI09_17p310 [Mitosporidium daphniae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.5   0.0    0.0003       0.2       3      42 ..    3137    3183 ..    3135    3190 .. 0.83
+   2 !  116.2   0.0   5.1e-37   3.4e-34      44     334 ..    3227    3689 ..    3214    3693 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 8.5 bits;  conditional E-value: 0.0003
+                  CTTCCCCTSSSGHHCCCCT...........TSSSS--CCCHCCCCHH CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmk.......kdspdkaffeailalhr 42  
+                  l + a+Wrl +W   +++  +          ++p++ f++a+l+lh+
+  KGG52401.1 3137 LSLDASWRLLDWSTSKDQAAVRAalelvadAPTPKRLFYDALLHLHQ 3183
+                  7899**********6666433336678889***************96 PP
+
+  == domain 2  score: 116.2 bits;  conditional E-value: 5.1e-37
+                  -CCHCHHCCCHCCCCCCCCCTS---S....CCCCCHHHHHCCCCCHHHCHHCCHHCSS-....................---TTTTTTT----TTS- CS
+         FAT   44 qfdeaeeliekarqllvtelsalsge....synraydllvrlQqlaEleeiiqykqkls....................sseelksllktWrkRlpg 116 
+                  ++ e+ +lie++ q  + +++a++      s n  ++  + +Q  +E +e++ ++   +                      +el+ +l tWr+Rlp 
+  KGG52401.1 3227 RVAELGRLIEEGFQVTLAQWAAMPWPligsSQNDSLS--ILFQLFVEVQEAAGLFLGAGgggagnlhlsnasplqpqltMVQELRGILGTWRERLPS 3321
+                  5677888899999999999999887733223344333..458999999999999999999999999999999999999999999999********** PP
+
+                  TT.TGCCCTTTCCCCTCCCHCCCHC...........................................HHCCS-STTCCC..CCCCCHCHHHHCCST CS
+         FAT  117 vq.ddvevwqdilsvRslvlspied...........................................lllkgakaemwl..kfanlaRksgrlslA 167 
+                  ++ d++ +w+ ++++R+ ++s i+                                            l+++g+++++wl  +fa +aR++  ++++
+  KGG52401.1 3322 IHyDSIGAWSELAAWRQSLFSAINGlfaatvteldnmvimggaagpgnmnapstapssassaassggtLIYRGYHESAWLinRFATVARRHRLPDIC 3418
+                  ************************************************************************************************* PP
+
+                  THHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.................................SS-SS---... CS
+         FAT  168 ekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.................................elssglevq.. 229 
+                   ++L+k+                   y+++++e+++a+ kL e+++c+l+                                    +          
+  KGG52401.1 3419 VQLLNKI-------------------YTLPNIEIQDAFWKLSEQAQCYLDAFYdplsapwltaavplhaaatfggasggatsantdT-------Nss 3489
+                  *******...................***********************98657777788888788888888888888877555331.......133 PP
+
+                  ................................................HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTC CS
+         FAT  230 ......................................eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawh 287 
+                                                        ++tnl +f +++ + ++ +kG +l+al+ +      +ee+++ +s+a++ld +   aw+
+  KGG52401.1 3490 taqategcaddqgaakssstaccaspgtlllvagleiiNSTNLAYFGASQkSDFFSLKGRFLEALNLTG-----IEEANKVHSQAVQLDINHGRAWA 3581
+                  45577888888888888999999999999999999999*****************************65.....*********************** PP
+
+                  CCCHHHHHCCHHHHHHSSSS..............................................................S-TCCHHHHCCT..C CS
+         FAT  288 twalfnfevlskeeekkeeee.............................................................pedlseyvvpavegf 323 
+                  +w+++n +++++   kkeee+                                                             + +++++++ a++++
+  KGG52401.1 3582 AWGHYNRRRFRAFIAKKEEENhdlgveaagtcsadessltagrspglakpppcslnitsatslgttspstltsftaltpypeEPNAQTFAMHAIHCY 3678
+                  *************999999999**********************************************************98668889********* PP
+
+                  CHHHHTTTSST CS
+         FAT  324 lkslslsseks 334 
+                  l++  l+ ++s
+  KGG52401.1 3679 LQAMILGTSSS 3689
+                  ****9998865 PP
+
+>> KGG51310.1  hypothetical protein DI09_39p40 [Mitosporidium daphniae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.4   0.0    0.0003       0.2       3      42 ..    3214    3260 ..    3212    3267 .. 0.83
+   2 !  116.2   0.0   5.2e-37   3.5e-34      44     334 ..    3304    3766 ..    3291    3770 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 8.4 bits;  conditional E-value: 0.0003
+                  CTTCCCCTSSSGHHCCCCT...........TSSSS--CCCHCCCCHH CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmk.......kdspdkaffeailalhr 42  
+                  l + a+Wrl +W   +++  +          ++p++ f++a+l+lh+
+  KGG51310.1 3214 LSLDASWRLLDWSTSKDQAAVRAalelvadAPTPKRLFYDALLHLHQ 3260
+                  7899**********6666433336678889***************96 PP
+
+  == domain 2  score: 116.2 bits;  conditional E-value: 5.2e-37
+                  -CCHCHHCCCHCCCCCCCCCTS---S....CCCCCHHHHHCCCCCHHHCHHCCHHCSS-....................---TTTTTTT----TTS- CS
+         FAT   44 qfdeaeeliekarqllvtelsalsge....synraydllvrlQqlaEleeiiqykqkls....................sseelksllktWrkRlpg 116 
+                  ++ e+ +lie++ q  + +++a++      s n  ++  + +Q  +E +e++ ++   +                      +el+ +l tWr+Rlp 
+  KGG51310.1 3304 RVAELGRLIEEGFQVTLAQWAAMPWPligsSQNDSLS--ILFQLFVEVQEAAGLFLGAGgggagnlhlsnasplqpqltMVQELRGILGTWRERLPS 3398
+                  5677888899999999999999887733223344333..458999999999999999999999999999999999999999999999********** PP
+
+                  TT.TGCCCTTTCCCCTCCCHCCCHC...........................................HHCCS-STTCCC..CCCCCHCHHHHCCST CS
+         FAT  117 vq.ddvevwqdilsvRslvlspied...........................................lllkgakaemwl..kfanlaRksgrlslA 167 
+                  ++ d++ +w+ ++++R+ ++s i+                                            l+++g+++++wl  +fa +aR++  ++++
+  KGG51310.1 3399 IHyDSIGAWSELAAWRQSLFSAINGlfaatvteldnmvimggaagpgnmnapstapssassaassggtLIYRGYHESAWLinRFATVARRHRLPDIC 3495
+                  ************************************************************************************************* PP
+
+                  THHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.................................SS-SS---... CS
+         FAT  168 ekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.................................elssglevq.. 229 
+                   ++L+k+                   y+++++e+++a+ kL e+++c+l+                                    +          
+  KGG51310.1 3496 VQLLNKI-------------------YTLPNIEIQDAFWKLSEQAQCYLDAFYdplsapwltaavplhaaatfggasggatsantdT-------Nss 3566
+                  *******...................***********************98657777788888788888888888888877555331.......133 PP
+
+                  ................................................HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTC CS
+         FAT  230 ......................................eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawh 287 
+                                                        ++tnl +f +++ + ++ +kG +l+al+ +      +ee+++ +s+a++ld +   aw+
+  KGG51310.1 3567 taqategcaddqgaakssstaccaspgtlllvagleiiNSTNLAYFGASQkSDFFSLKGRFLEALNLTG-----IEEANKVHSQAVQLDINHGRAWA 3658
+                  45577888888888888999999999999999999999*****************************65.....*********************** PP
+
+                  CCCHHHHHCCHHHHHHSSSS..............................................................S-TCCHHHHCCT..C CS
+         FAT  288 twalfnfevlskeeekkeeee.............................................................pedlseyvvpavegf 323 
+                  +w+++n +++++   kkeee+                                                             + +++++++ a++++
+  KGG51310.1 3659 AWGHYNRRRFRAFIAKKEEENhdlgveaagtcsadessltagrspglakpppcslnitsatslgttspstltsftaltpypeEPNAQTFAMHAIHCY 3755
+                  *************999999999**********************************************************98668889********* PP
+
+                  CHHHHTTTSST CS
+         FAT  324 lkslslsseks 334 
+                  l++  l+ ++s
+  KGG51310.1 3756 LQAMILGTSSS 3766
+                  ****9998865 PP
+
+>> KGG50405.1  phosphatidylinositol 3-kinase Tor2, partial [Mitosporidium daphniae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   67.2   0.0   3.9e-22   2.6e-19       2     172 ..    1252    1419 ..    1251    1429 .. 0.95
+   2 !   36.9   0.5   6.8e-13   4.6e-10     265     343 .]    1613    1716 ..    1536    1716 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 67.2 bits;  conditional E-value: 3.9e-22
+                  CCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS- CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls 98  
+                  p+ a ++W+l  +d ++e+l  ++k+++  +f++a+ a++ ++ ++    ie a+  l++e s  + e y+  +++ v+ Q ++Ele++++++ ++s
+  KGG50405.1 1252 PFIAISSWGLDRYDILAETLPYISKENFFSSFLNAVTATYFKNWTAYDVAIESAKTFLDNETSPFIFEKYTKSLSVTVKSQLITELEDVAEFFGNRS 1348
+                  667789*****************************************************************************************99 PP
+
+                  ...---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCC CS
+         FAT   99 ...sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLk 172 
+                      + ++++l + W  Rl    +++e+  ++l++ s++ + +        +++ w++fan +Rk g++ l++++L 
+  KGG50405.1 1349 gypHLGNRSRLEQVWSARLYAGSSSLEHMYQLLKIQSIIPELSPV------SIKYWVRFANMCRKKGSILLSIRVLE 1419
+                  *************************************99887765......89********************9997 PP
+
+  == domain 2  score: 36.9 bits;  conditional E-value: 6.8e-13
+                  -SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.........................S-TCCHHHHCCT..CCHHHHTTTS.STTT CS
+         FAT  265 seeilqaysaateldpswykawhtwalfnfevlskeeekkeeee........................pedlseyvvpavegflkslslsse.kslq 336 
+                  s++i    + +++ld+++yk w++wal n e +s+  ++k  ++                        ++ l++ +++a++g +ks+sl++  +s q
+  KGG50405.1 1613 SSDIITLQKFSIQLDSNSYKSWYSWALSNIELISQHDSTKAASKlarsnfpasphslfkdskssdgetSSSLINIIISAISGLIKSISLNKHeSSIQ 1709
+                  666666677789************************9998888899**********************999999****************999**** PP
+
+                  CHHHHHC CS
+         FAT  337 dllRlLt 343 
+                  dllR+Lt
+  KGG50405.1 1710 DLLRILT 1716
+                  ******8 PP
+
+>> KGG52004.1  hypothetical protein DI09_22p290, partial [Mitosporidium daphniae]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.3   0.2      0.56   3.7e+02       4      15 ..     165     176 ..     163     189 .. 0.88
+   2 !   31.2   4.0   3.5e-11   2.3e-08     184     343 .]     325     471 ..     274     471 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -2.3 bits;  conditional E-value: 0.56
+                 TTCCCCTSSSGH CS
+         FAT   4 aaeaaWrlgqWd 15 
+                  a+aaW+l+ W+
+  KGG52004.1 165 YAAAAWKLQTWN 176
+                 689********7 PP
+
+  == domain 2  score: 31.2 bits;  conditional E-value: 3.5e-11
+                 ......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCH CS
+         FAT 184 p.....pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaat 276
+                 p      ++ y ++kylw+++  + a+ +L++ +                ++ ++ +ef++++ ++   ++++w  + q+ n      ++ l  + +a+
+  KGG52004.1 325 PiypkaTQMLYHQCKYLWDRELTEAAVHSLQKLTLP-------------FEKISQTDEFERNQqSKLRRRLSQWKLSSQSYN-----LNDLLPIFNEAI 405
+                 133333699*********************999992.............22334456788888899999******9999977.....************ PP
+
+                 HCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT 277 eldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343
+                 +l+p+ +k+++++a f  + +s+ + +++  ++e+++  + +a+++f + +  +++ + +++++lL+
+  KGG52004.1 406 QLSPKNEKNYYALANFQLRLFSNFKYNQSDCSREEIE-WILNAMKNFARVVIIGKSLTNESFPKLLS 471
+                 ************************9999988788886.***************************95 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       3330  (1273895 residues searched)
+Passed MSV filter:                       165  (0.0495495); expected 66.6 (0.02)
+Passed bias filter:                       86  (0.0258258); expected 66.6 (0.02)
+Passed Vit filter:                        13  (0.0039039); expected 3.3 (0.001)
+Passed Fwd filter:                         5  (0.0015015); expected 0.0 (1e-05)
+Initial search space (Z):               3330  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.07u 0.02s 00:00:00.09 Elapsed: 00:00:00.05
+# Mc/sec: 7693.85
+//
+[ok]

@@ -1,0 +1,205 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Rhodophyta/Proteins/Cyanidioschyzon_merolae.ASM9120v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-34  116.8   1.4    9.1e-26   88.9   0.0    4.0  3  CMR018CT  pep chromosome:ASM9120v1:18:48580:56793:1 gene:CMR0
+    1.7e-05   23.0   0.0       0.45    8.6   0.0    4.3  3  CMI255CT  pep chromosome:ASM9120v1:9:678024:681711:-1 gene:CM
+     0.0025   16.0   0.1      0.096   10.8   0.0    3.6  5  CMS276CT  pep chromosome:ASM9120v1:19:697738:701079:1 gene:CM
+  ------ inclusion threshold ------
+      0.012   13.8   0.1        2.6    6.2   0.0    3.5  3  CMH194CT  pep chromosome:ASM9120v1:8:502051:511488:1 gene:CMH
+      0.031   12.4   2.4      0.044   11.9   0.0    2.5  3  CMN075CT  pep chromosome:ASM9120v1:14:178693:187519:-1 gene:C
+
+
+Domain annotation for each sequence (and alignments):
+>> CMR018CT  pep chromosome:ASM9120v1:18:48580:56793:1 gene:CMR018C transcript:CMR018CT gene_biotype:protein_coding tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.5   0.4   5.2e-08   5.1e-05       1     156 [.     621     793 ..     621     796 .. 0.75
+   2 !   88.9   0.0   9.2e-29   9.1e-26       3     153 ..     801    1034 ..     800    1039 .. 0.71
+   3 ?   -2.8   0.0       1.6   1.5e+03      10      35 ..    1160    1186 ..    1157    1236 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 21.5 bits;  conditional E-value: 5.2e-08
+  mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks........eeeekeeenaeetdvsel...lvglspsseeyyptvvina 90 
+               V e yl  peLL++L+ +l+ e + ++R  ++ ++G l  ++P       ++         e e++  + ++e ++ +l   +++  +  e y pt + + 
+  CMR018CT 621 VFERYLAQPELLRALCLALHDE-DATVRERALSLVGRLSTVNPAHTLPSLRRLfmnlriilECESEPLQGSQEDALRLLlrlVQDAPQLIEPYTPT-TAKL 719
+               56779***************77.899*****************99855555546666666633345555555555555556344444444666666.7799 PP
+
+  mTOR_dom  91 Llkilkdpsls..shhtavvqaimsifkt....lglkcvpflpqiipallsvirtces..slrefllqqLatLv 156
+               L++ l+++s s     t+v+++++si       +  +  ++l   +p+ll+++++++   +lre + + L++L 
+  CMR018CT 720 LVQRLQQNSTSavAVDTSVIHTLHSIACLaergVAAELQTLLHDAMPHLLRILQHTSVeaDLREAVCRALSSLA 793
+               9****999999667899*********9873333444556699999********97664459********99996 PP
+
+  == domain 2  score: 88.9 bits;  conditional E-value: 9.2e-29
+  mTOR_dom    3 ePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykh.....keveeks........................................... 53  
+                e y++yp+LL++Ll++l+te++  +R+e+ ++lG+lGA+DP +                                                        
+  CMR018CT  801 ELYTQYPSLLSTLLRMLRTETNLFVRLEIERTLGTLGAVDPDRTaplllD-----Rtrypytrlesltevyhqqtapmhyaprptatgtgatnafttdt 894 
+                569*****************************************555550.....34455555555555555555666677777777777777777666 PP
+
+  mTOR_dom   54 ......................eeeekeeenaeetdvsellvgl.................................spsseeyyptvvinaLlkilkd 97  
+                                      +                    +                                  +++eey+p+ ++ aL++il +
+  CMR018CT  895 rcglvaeepalpgtaaaaaaatT--------------------TtttttltgqalraqlrfeapneletlvgrlphpFTANEEYFPSAALDALHRILAN 973 
+                67666655544433322222110....................01122222334455556666667777777777779999****************** PP
+
+  mTOR_dom   98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvir....tces.slrefllqqLa 153 
+                ++l++ h ++v ai++i+++lg+kc pfl+ ++p ll ++r    ++++  +re++++ La
+  CMR018CT  974 AKLTTLHYDTVGAIVNIMSSLGMKCAPFLSVVVPRLLWMLRprteDTHDlAFREYVIRGLA 1034
+                ***************************************9954443333455666655555 PP
+
+  == domain 3  score: -2.8 bits;  conditional E-value: 1.6
+  mTOR_dom   10 eLLeiLlnilkteq.sqsiRrevikvl 35  
+                +L+  L+++l+t++ +++ R+    +l
+  CMR018CT 1160 QLMHPLCRMLRTSEfQWHARQLLESLL 1186
+                899999999999987888887655555 PP
+
+>> CMI255CT  pep chromosome:ASM9120v1:9:678024:681711:-1 gene:CMI255C transcript:CMI255CT gene_biotype:protein_coding tr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   0.0      0.16   1.6e+02      91     142 ..     203     257 ..     197     276 .. 0.70
+   2 !    7.5   0.0     0.001         1      24     141 ..     452     577 ..     432     587 .. 0.63
+   3 !    8.6   0.0   0.00045      0.45     106     140 ..     635     669 ..     588     675 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 0.16
+  mTOR_dom  91 Llkilkdpsls...shhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+               L++il+   ++   + ++ +++a+  i++t + k  +  +  ip l + i+t+ s
+  CMI255CT 203 LHEILRPGLMDpdaEVREHAIEALRAILETAESKDCMQFRDMIPLLGASIETAMS 257
+               566664333332224778999*********9999988888888988877777655 PP
+
+  == domain 2  score: 7.5 bits;  conditional E-value: 0.001
+  mTOR_dom  24 sqsiRrevikvlGil.....GALDPykhkeveekseee....ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsif 115
+               ++ +R  +i+++G +     G L    h++v  +  ++     ++ ++ ++ ++ ++  + s ++   y  +v+ +L+++l+ +s     +++++a+  + 
+  CMI255CT 452 HPRVRWAAINCIGQMstdfgGTLQRKFHRHVVPTLIDAmddaCNRVRSHAAAALINFCDEASAANLIPYLDTVVGKLISLLNSNSRL-AIEQAMTAVAAVA 551
+               666777777777776666667777777777765552222111112222222233333555566665566667888888888776644.5677778888888 PP
+
+  mTOR_dom 116 ktlglkcvpflpqiipallsvirtce 141
+                 +g+   ++++ ++p l +++r+++
+  CMI255CT 552 GCVGTAFNKYYDDFMPPLKHLLRQTS 577
+               88888888888888888888888765 PP
+
+  == domain 3  score: 8.6 bits;  conditional E-value: 0.00045
+  mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtc 140
+                ++qa   i+++lg +  p+lp ++p++ +++r  
+  CMI255CT 635 YMMQAYARICQSLGKQFEPYLPYVLPTICEMARLK 669
+               578999************************99864 PP
+
+>> CMS276CT  pep chromosome:ASM9120v1:19:697738:701079:1 gene:CMS276C transcript:CMS276CT gene_biotype:protein_coding tr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.8   0.0       1.5   1.5e+03      10      35 ..     257     280 ..     252     283 .. 0.80
+   2 ?   -3.1   0.0       1.8   1.8e+03      94     149 ..     349     400 ..     345     404 .. 0.65
+   3 !   10.8   0.0   9.7e-05     0.096      72     149 ..     531     611 ..     491     620 .. 0.83
+   4 ?   -2.2   0.0      0.99   9.9e+02      36      56 ..     646     666 ..     627     684 .. 0.63
+   5 ?   -0.7   0.0      0.33   3.3e+02      76     101 ..     949     974 ..     889     998 .. 0.48
+
+  Alignments for each domain:
+  == domain 1  score: -2.8 bits;  conditional E-value: 1.5
+  mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvl 35 
+               +LLe+Ll++     s ++R +v+++l
+  CMS276CT 257 DLLETLLELFD--YSAELRNSVMRCL 280
+               68888888886..5799999**9998 PP
+
+  == domain 2  score: -3.1 bits;  conditional E-value: 1.8
+  mTOR_dom  94 ilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+               +l+++s   h++a v+  m+++k  +++ v++ +      l++ r++++sl+  l+
+  CMS276CT 349 LLEQSSDPAHRQALVTGNMYVVKIARVNDVEVFK----VCLEWWRSLTESLYRALF 400
+               4555565688899999999999988888876544....445555555555555555 PP
+
+  == domain 3  score: 10.8 bits;  conditional E-value: 9.7e-05
+  mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefll 149
+                 ++s+ se  +   vi+ Ll++ +++  ++ ++ v   im+++ +    l+    fl+ ++++l++ ++++++ ++++  
+  CMS276CT 531 SGTMSEESEKRFLIHVIKDLLRLCEEKRGKDNKAVVAANIMYVVGQypRFLRAhWRFLKTVVNKLFEFMHELHPGVQDMAC 611
+               5567888999***********************999********994433555589***************9999988765 PP
+
+  == domain 4  score: -2.2 bits;  conditional E-value: 0.99
+  mTOR_dom  36 GilGALDPykhkeveekseee 56 
+               +i+G L P+++ ++ +++++ 
+  CMS276CT 646 SIIGDLEPHQVHSFYQSAATM 666
+               688888898887776655333 PP
+
+  == domain 5  score: -0.7 bits;  conditional E-value: 0.33
+  mTOR_dom  76 spsseeyyptvvinaLlkilkdpsls 101
+               ++   e y   ++n +l++l d   +
+  CMS276CT 949 TEYFYERYYLFILNDILAVLTDTLHK 974
+               12222333345555555555555555 PP
+
+>> CMH194CT  pep chromosome:ASM9120v1:8:502051:511488:1 gene:CMH194C transcript:CMH194CT gene_biotype:protein_coding tra
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.7   0.0       1.4   1.4e+03      12      37 ..     356     381 ..     355     403 .. 0.87
+   2 ?    3.1   0.0     0.023        22      87     155 ..    1673    1742 ..    1639    1749 .. 0.70
+   3 ?    6.2   0.0    0.0026       2.6       8      44 ..    3027    3063 ..    3023    3101 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -2.7 bits;  conditional E-value: 1.4
+  mTOR_dom  12 LeiLlnilkteqsqsiRrevikvlGi 37 
+               +++Ll  l  e+++++R  ++++l  
+  CMH194CT 356 MNALLGWLAAETDPPTRVVAVRCLAS 381
+               578999*****************975 PP
+
+  == domain 2  score: 3.1 bits;  conditional E-value: 0.023
+  mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155 
+                v+ +L+  l++   +    ++   ++  + ++g ++  + lp+i+p l++++++++++++e+    L+ +
+  CMH194CT 1673 VLDSLIGQLDQTGAAWRTRMAALDMLGSMADMGPEQlSQALPEIVPRLVTALTDVHPRVQETASLALSRM 1742
+                5666666665555553333333333444445666665899*******************99976666655 PP
+
+  == domain 3  score: 6.2 bits;  conditional E-value: 0.0026
+  mTOR_dom    8 ypeLLeiLlnilkteqsqsiRrevikvlGilGALDPy 44  
+                + +  +++++ l++++ +++R  +++ lG++G LD +
+  CMH194CT 3027 HQQWTRLVVERLHEDTFSEVREAALQALGTVGTLDTV 3063
+                556667889999***********************75 PP
+
+>> CMN075CT  pep chromosome:ASM9120v1:14:178693:187519:-1 gene:CMN075C transcript:CMN075CT gene_biotype:protein_coding t
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.3   0.1       2.2   2.2e+03      89     139 ..     778     831 ..     774     848 .. 0.65
+   2 ?   11.9   0.0   4.4e-05     0.044      20      94 ..    1060    1130 ..    1045    1148 .. 0.73
+   3 ?   -2.8   0.2       1.5   1.5e+03      10      37 ..    2578    2605 ..    2575    2606 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -3.3 bits;  conditional E-value: 2.2
+  mTOR_dom  89 naLlkil...kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+               + Ll+il   + +  + + +++++ +   fk +  +   f+p+++ +l ++++ 
+  CMN075CT 778 HDLLRILdalNRRIFRRQDHQAIRILDLLFKVIAPELHLFVPKVLATLKNALEI 831
+               556666633345555677777777777777777777777777777777776665 PP
+
+  == domain 2  score: 11.9 bits;  conditional E-value: 4.4e-05
+  mTOR_dom   20 kteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspss.eeyyptvvinaLlki 94  
+                 t+ + + R e++  l +lGA+DP +    +++         + ++ +  +++ + s s+ e    +vvi +Ll+ 
+  CMN075CT 1060 VTDGDANCRDEALLALALLGAVDPARLSLEHRQP-----PPLSLPSLQQHAVVSQSSGSEgESLLDQVVIPTLLEQ 1130
+                4667899********************4333322.....3344555666666777777888999999999999865 PP
+
+  == domain 3  score: -2.8 bits;  conditional E-value: 1.5
+  mTOR_dom   10 eLLeiLlnilkteqsqsiRrevikvlGi 37  
+                +LL+++ ++l ++ + + Rr v+++  +
+  CMN075CT 2578 DLLNVVNRLLAKTADAQQRRLVLRTYAV 2605
+                79*********************98766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       4973  (2501354 residues searched)
+Passed MSV filter:                       169  (0.0339835); expected 99.5 (0.02)
+Passed bias filter:                      153  (0.0307661); expected 99.5 (0.02)
+Passed Vit filter:                        18  (0.00361955); expected 5.0 (0.001)
+Passed Fwd filter:                         5  (0.00100543); expected 0.0 (1e-05)
+Initial search space (Z):               4973  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.03u 0.05s 00:00:00.08 Elapsed: 00:00:00.09
+# Mc/sec: 4182.36
+//
+[ok]

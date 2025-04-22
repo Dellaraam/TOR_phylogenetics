@@ -1,0 +1,186 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Kluyveromyces_lactis_gca_000002515.ASM251v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   5.5e-106  354.3  37.3   5.5e-106  354.3  37.3    2.4  2  CAG99842  pep chromosome:ASM251v1:E:1582644:1585943:-1 gene:K
+    4.1e-08   30.8  12.4    4.1e-08   30.8  12.4    1.1  1  CAH01296  pep chromosome:ASM251v1:C:494240:495862:1 gene:KLLA
+  ------ inclusion threshold ------
+      0.016   12.4  16.3      0.017   12.3  16.3    1.2  1  CAG98451  pep chromosome:ASM251v1:F:1364995:1365837:-1 gene:K
+      0.086    9.9  22.9       0.13    9.4  22.9    1.2  1  CAG98281  pep chromosome:ASM251v1:F:997512:999782:1 gene:KLLA
+        8.9    3.3  25.6         13    2.7  25.6    1.3  1  CAH00302  pep chromosome:ASM251v1:D:265761:267278:1 gene:KLLA
+
+
+Domain annotation for each sequence (and alignments):
+>> CAG99842  pep chromosome:ASM251v1:E:1582644:1585943:-1 gene:KLLA0_E17843g transcript:CAG99842 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.4  20.1       1.8   1.9e+03     113     257 ..      44     236 ..       2     311 .. 0.38
+   2 !  354.3  37.3  5.4e-109  5.5e-106      79     670 ..     313    1097 ..     276    1099 .] 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -4.4 bits;  conditional E-value: 1.8
+  PTHR13335.orig.30.pir 113 sesspsyeeelqsvdissssldegsrrrra..ntavkleklrkerrsksasiassee.r.............dqsscksiqwktessv 184
+                             e+   + ++l+s++i +ss++ g++ ++    t+ +l + +++     +++ s+ e               +         + +   
+               CAG99842  44 DENGENMLQRLDSPPIAESSVKYGRHSKNHsiGTESNLFSASQN-----NTMVSLVEeEeegtdrvrngiadY---------GRNVLA 117
+                            33344444444444444444444443333222222222222222.....112222221122232222222220.........222222 PP
+
+  PTHR13335.orig.30.pir 185 kedsvqrassesslsserssdssssssapsrrq.....................................snkldseqlsaeesdslf 235
+                            k++s+ ++ +++s +s+++  s s+s   sr+q                                     s+kl+++++s   ++ lf
+               CAG99842 118 KKSSSNNTLGDKSHDSSSKGQSRSRSRSRSRSQsiigggagdtnslkhkvvstlhrrgselslqsstskaSEKLKTAKKSGLRLSRLF 205
+                            2222222222222222222221111111111112333333333344444444444444444444444444555555556666666666 PP
+
+  PTHR13335.orig.30.pir 236 ekkskssstktqkskkpssa.a........k 257
+                             + s+sss+k+  s+k ++  +        k
+               CAG99842 206 RASSTSSSSKEPTSSKANKFiPgrsragslK 236
+                            6666666666665555555544433333331 PP
+
+  == domain 2  score: 354.3 bits;  conditional E-value: 5.4e-109
+  PTHR13335.orig.30.pir   79 neaetatggdtkarrkkpsldqrretqgekqss...esesspsyeeelqsvdissssldegsrrrrantavkleklrke....rrs 157 
+                             n ++  +  dt  +++  ++ ++++++g kq++    ++ s+  e++l ++d++  +l++g++ + a    ++++  +      r+
+               CAG99842  313 NPHNILQTSDTVSSNDSERRHNSQAKRGGKQKEydnGKDASSYIESYLNQPDLKPFDLQNGITIETALNNTDSDAINSKsdgiPRN 398 
+                             33333333333344444444444444444433300023334456889999999999999999888885555555555555566677 PP
+
+  PTHR13335.orig.30.pir  158 ksasiassee.r....dqsscksiqwktessvkedsvqrassesslss.erssdssssssapsrrq............snkldseq 225 
+                             +s+ i++se+ +    d +s++++++ +++ + +++  +  ++s+lss + +s +++++s+p++r              ++     
+               CAG99842  399 SSSFISESEDeDlisnDDASSYGKSLLDSDFSGDEFESSHLQSSDLSSmTFDSHEIPNNSIPRSRAltmyhsgddstlDKE----L 480 
+                             888888888877****77777777777666666554444444444444133555666677766654678888886666333....2 PP
+
+  PTHR13335.orig.30.pir  226 ......................................................lsaeesdsl...........fekkskssstkt 246 
+                                                                                           +            e          
+               CAG99842  481 dkatkllhmankapreslsqseprestgavgkrglnlsqpelrssamkhrsstsS-------MsesirsrhllpIE---------- 549 
+                             3334666667777777788888888888888888887755555555543333320.......13333444444422.......... PP
+
+  PTHR13335.orig.30.pir  247 qkskkpssaa.....................................kqsisslssaLekkpsqlnnpfneyakfdgkg.vgttas 294 
+                                                                            +qs s ls  ++k + +++np+++++++++++ + ++++
+               CAG99842  550 ---------RhrrtssvatqssvdkdtiepstepefviekvdvgnnhPQSESTLSILFNKSKTTQINPLEYFCAVSAEKeL-RSNA 625 
+                             .........122222222333333223333567777777777777777888****************************66.**** PP
+
+  PTHR13335.orig.30.pir  295 lkidiylplssepdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnk.......vnaycLrivEdDGe.vddDFPpLDrn 372 
+                             lk+d+y++ s++ +k++p+t++vk++atV+ev G+ L++y++e ++p+   +        +n+++L+iv++DGe  +d+F++L+r+
+               CAG99842  626 LKLDVYIQDSKT-YKRKPFTISVKKTATVFEVLGYSLYCYSTEFKPPDTAGELptdeinnPNHFTLKIVDEDGEpYEDNFGVLERT 710 
+                             ************.*******************************999877776665566656************99********** PP
+
+  PTHR13335.orig.30.pir  373 episkfgfselaLveatdsegktnndlqtplpreqkkrleeakr...........sagsaneagsslstes.............sk 434 
+                             + i  + ++e++++++ + e+ ++n+ +tplp++ + +  ++ +                          +             ++
+               CAG99842  711 QQINTIFDNEVVICKVLNDEQFERNEEETPLPSVMTDDFDQEDSndglshlnqlsYY-------------KsiipskntqmsdsGS 783 
+                             ********************************8888765554444465555544333.............2444444555555699 PP
+
+  PTHR13335.orig.30.pir  435 eslfvkvnlaypgdsvrsk.ttivvptdvtladvlekackkrkldqkkyrllkvsepnvivdldrtvesldgleflllrknssrad 519 
+                             + + +kv+l yp+ +++++ t i +p+++ +++vl  +ck ++ld+++y +lk+  +n i+dl++ v sldg+  ++l k++++++
+               CAG99842  784 NYVNIKVFL-YPNLNPQYNfTNIRIPVTSKINEVLVNYCKLKNLDPTEY-VLKMEKRNLILDLNDYVTSLDGNYNVELLKKKDART 867 
+                             99*******.***************************************.************************************ PP
+
+  PTHR13335.orig.30.pir  520 gvlekteskssssanatissksaa.............................................................. 543 
+                             + +e+++   ++++++ti+s +++                                                              
+               CAG99842  868 KKFERMKAVTNQPVLPTIQSTELTpltltmandnrllnktlqeeetsansgrptsnrtssknlfsinkqhntssstsgffklknss 953 
+                             ************************************************************************************** PP
+
+  PTHR13335.orig.30.pir  544 ..................edsqiqiatvqddlsssayksfkVsrkhkmrfktdrel..gIdgdyieimPvenqkaatkfwekqKti 609 
+                                               +++  ++++ ++dl++++y+++kV+r+++m+f++++e+  +Idgdy++i  +++  ++   +e+ Kt+
+               CAG99842  954 ksslnngqkspklgslskPSNNVSGNNSYKDLFAGSYYKYKVWRRQQMSFINKHERmlVIDGDYVYISGPDGDFNW--THENVKTK 1037
+                             ******************99999*****************************************************..7******* PP
+
+  PTHR13335.orig.30.pir  610 sihisqvvacklssknpanFkivvrrendeKrydfeavsaaeaaeIvskinnileayassg 670 
+                             s+hisq+  +k+s+++p++Fki+v+r++ e+ry+feavsa+e++eI+++++n++ +y+ ++
+               CAG99842 1038 SFHISQITLVKRSKRVPEYFKIFVHRPDRERRYYFEAVSAEECVEIITRLQNLIRVYR-MN 1097
+                             *********************************************************9.44 PP
+
+>> CAH01296  pep chromosome:ASM251v1:C:494240:495862:1 gene:KLLA0_C05522g transcript:CAH01296 gene_biotype:protein_codin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.8  12.4   4.1e-11   4.1e-08      87     244 ..     255     430 ..      51     532 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 30.8 bits;  conditional E-value: 4.1e-11
+  PTHR13335.orig.30.pir  87 gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke..rrsksasiassee.r... 168
+                             + ++  ++++++q++++q+++q++++++++++++ +q+ +++  +l+ ++++++++++++ +  ++   +    + ++++ + +   
+               CAH01296 255 LHSNIILQQQQQQQQQQQQQQQQQQQQQQQQQQQQHEQQLQLQHLQLQHQQQQQQQQQQQQHHHHHQLqfQ----NHHIQPHQqQkap 338
+                            34444444444444444444444444444444444445555554445555555554444444444444332....2233333323455 PP
+
+  PTHR13335.orig.30.pir 169 ......................................................dqsscksiqwktessvkedsvqrassesslsser 202
+                                                                                  +  s  + +++ +++ ++ +  + +++ s+ s +
+               CAH01296 339 plinhqvapmmnqtapmlldtanvlvslqmpppqanpsvndviltgnsngttgsSTTSNSNSNYSINNKQNNNFDVNNPNGLSVYSPT 426
+                            677777889**********999877777666666555554444444444444444444444444444444444444444444444444 PP
+
+  PTHR13335.orig.30.pir 203 ssdssssssapsrrqsnkldseqlsaeesdslfekkskssst 244
+                            ss+                                      t
+               CAH01296 427 SSS--------------------------------------T 430
+                            443......................................2 PP
+
+>> CAG98451  pep chromosome:ASM251v1:F:1364995:1365837:-1 gene:KLLA0_F14751g transcript:CAG98451 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.3  16.3   1.6e-05     0.017      86     177 ..      65     166 ..       7     255 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 12.3 bits;  conditional E-value: 1.6e-05
+  PTHR13335.orig.30.pir  86 g...........gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasi 162
+                                        +++ +++ k+s+ q +++++e+q +++e+++  ++ l+++ +++++l++ + ++++++++++++++++++++ +++
+               CAG98451  65 SlldtldvslqtTADYVGAVKDSALQLKKQREEEQIKKQEQEKLERQLLEQQKLEQQQLEQKQLKQKQQQQQQQQQQQQQQQPQEQQH 152
+                            0555555555555556666666666777777777777777777777777777777777777777777666666666666666555544 PP
+
+  PTHR13335.orig.30.pir 163 assee.rdqsscksiq 177
+                            ++ +  +  ++ + i+
+               CAG98451 153 EQQQRyS--AKNTPID 166
+                            4333222..2222222 PP
+
+>> CAG98281  pep chromosome:ASM251v1:F:997512:999782:1 gene:KLLA0_F10835g transcript:CAG98281 gene_biotype:protein_codin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.4  22.9   0.00013      0.13      37     149 ..      91     235 ..      52     287 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 9.4 bits;  conditional E-value: 0.00013
+  PTHR13335.orig.30.pir  37 dlekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatg.....................................g 87 
+                            +++++  ++ +++s+sss+sl+ + + +++p+ +  +++  + ++ ++ +                                      
+               CAG98281  91 PIGSQPRKKSSTSSTSSSQSLTHTLQIQPHPQPHPQVRPQVHQQVHQQAHqqahqqahqqahsqahplaqpqgqpqgqpqiptqlplL 178
+                            3445555555556666666666777777888777777777777666666666668888888888888888888888888888887775 PP
+
+  PTHR13335.orig.30.pir  88 dtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkle 149
+                             ++ +++++++ q++++q+++   +++++p ++++++ +++s+  ++++++++     ++ +
+               CAG98281 179 LPQLSQQQQPQHQQQQQQQQQ---QQQQQPPQRQQEHLQLLSNIPQQQQQQQQL--STQQAD 235
+                            555555555555544444444...344445555555555555444444443333..233333 PP
+
+>> CAH00302  pep chromosome:ASM251v1:D:265761:267278:1 gene:KLLA0_D03168g transcript:CAH00302 gene_biotype:protein_codin
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.7  25.6     0.013        13      51     166 ..     352     470 ..     291     502 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 2.7 bits;  conditional E-value: 0.013
+  PTHR13335.orig.30.pir  51 ssssesll.....srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssl 133
+                             ++++++l     s++++ ++++ +   ++ +++ ++++ + ++++++++ + +++ +tqg+  + +s+++ +++ ++  ++++++  
+               CAH00302 352 DIKQQTILntqviSTIPDEVMNAIDRNMEQLKHE-VNQQVASQPQQGQPQGQTQGQGQTQGQG-QPQSGQQLDTQLPQPTTLLQQQRA 437
+                            4444444444445555555666655555555543.3444444444444444444444444333.333333333333555555555555 PP
+
+  PTHR13335.orig.30.pir 134 degsrrrrantavkleklrkerrsksasiasse 166
+                            + + +++++ ++++++++++++++++++  + +
+               CAH00302 438 QVQGQQEQMLQQQQQQQQQQQQQQQQQQLLQQQ 470
+                            555555555444444444444332222221111 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       5076  (2459916 residues searched)
+Passed MSV filter:                      1195  (0.235422); expected 101.5 (0.02)
+Passed bias filter:                      220  (0.0433412); expected 101.5 (0.02)
+Passed Vit filter:                        86  (0.0169425); expected 5.1 (0.001)
+Passed Fwd filter:                        23  (0.00453113); expected 0.1 (1e-05)
+Initial search space (Z):               5076  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.35u 0.06s 00:00:00.41 Elapsed: 00:00:00.22
+# Mc/sec: 7328.79
+//
+[ok]

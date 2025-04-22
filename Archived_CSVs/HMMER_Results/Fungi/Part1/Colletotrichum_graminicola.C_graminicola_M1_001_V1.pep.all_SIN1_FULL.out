@@ -1,0 +1,318 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Colletotrichum_graminicola.C_graminicola_M1_001_V1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   6.6e-125  418.0   0.7     8e-125  417.8   0.7    1.0  1  EFQ28469  pep supercontig:C_graminicola_M1_001_V1:GG697341:19
+    6.1e-06   24.9   0.0    8.3e-06   24.4   0.0    1.2  1  EFQ34703  pep supercontig:C_graminicola_M1_001_V1:GG697383:61
+    0.00012   20.6   9.4    0.00013   20.5   9.4    1.1  1  EFQ36080  pep supercontig:C_graminicola_M1_001_V1:GG697408:46
+    0.00016   20.2  35.9    0.00021   19.8  35.9    1.2  1  EFQ33885  pep supercontig:C_graminicola_M1_001_V1:GG697374:28
+    0.00031   19.2  16.1    0.00031   19.2  16.1    1.5  2  EFQ33968  pep supercontig:C_graminicola_M1_001_V1:GG697375:19
+     0.0014   17.0  22.0      0.002   16.6  22.0    1.2  1  EFQ27697  pep supercontig:C_graminicola_M1_001_V1:GG697338:55
+     0.0021   16.5  12.0     0.0023   16.4  12.0    1.1  1  EFQ31110  pep supercontig:C_graminicola_M1_001_V1:GG697353:29
+  ------ inclusion threshold ------
+      0.022   13.2  13.2       0.02   13.3  13.2    1.0  1  EFQ29298  pep supercontig:C_graminicola_M1_001_V1:GG697344:34
+        2.7    6.2  32.6        5.3    5.3  32.3    1.5  1  EFQ29200  pep supercontig:C_graminicola_M1_001_V1:GG697343:99
+        3.6    5.8  45.2       0.63    8.3  12.1    2.1  2  EFQ28410  pep supercontig:C_graminicola_M1_001_V1:GG697340:10
+
+
+Domain annotation for each sequence (and alignments):
+>> EFQ28469  pep supercontig:C_graminicola_M1_001_V1:GG697341:191989:194521:1 gene:GLRG_03613 transcript:EFQ28469 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  417.8   0.7  6.6e-128    8e-125       1     664 [.       1     798 [.       1     801 [. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 417.8 bits;  conditional E-value: 6.6e-128
+  PTHR13335.orig.30.pir   1 MafldnedillahlRtsyltsdddgmcerilndd.................dvdlekihsapyppvsssssesllsrpksastpgdsg 71 
+                            M++++ne++++++lR++ylt++ dg++er+++ +                  + +++ +s+p+p+  +++se++++  + ++t +d+ 
+               EFQ28469   1 MSVIQNEELVAYQLRCGYLTEIADGVGERLITLNegfmnssafkavawqanPDLVKRCYSPPIPT--AIASEYFQAPRQAGVTLEDEP 86 
+                            **************************************************94459*********6..9******98777777777666 PP
+
+  PTHR13335.orig.30.pir  72 sedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsks 159
+                            +e      +      g    +  +p+l  rr++++e+            e ++s+d++++s+d+    +ra++++k++k++ + r++s
+               EFQ28469  87 DEAGMLTGG------G---TDTIGPGLAIRRRRRRET-----------LEDDDSSDLTDESDDDDA-GQRAAQQIKFAKMPVRARAGS 153
+                            666555444......3...344458888888888888...........6699******77766666.6666***************** PP
+
+  PTHR13335.orig.30.pir 160 asiassee.r.......dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq..........snkldseq... 225
+                            ++i+ss+  +       ++ s ++++++  + vke    ra +++ +sse ss++++++s   + r+                 q   
+               EFQ28469 154 SPIQSSQIkQspamsprAAHSARRGSQSALEMVKE----RARRDTVTSSEVSSENEFDASGFHKqREaaraaaksvkL------Qaki 231
+                            ******88779*****99999999****9999999....7777799***************99966688777643331......0336 PP
+
+  PTHR13335.orig.30.pir 226 ...........................................lsaeesdslfekkskssstktqkskkpssa.a............k 257
+                                                                       ++ +++ ++ +k+   ++ +++ ++ ++   +            +
+               EFQ28469 232 meepglgikragtdllpeeeeddsdgsdmsgayiesidsasilDAVGNPEPIPHKQVVGTP-PREFTRTSTIRkSqapprilqalppP 318
+                            777888888888899888889999999******9999666666555555555555443333.33333333222223544554455551 PP
+
+  PTHR13335.orig.30.pir 258 qsi..............sslssaLekkpsqlnnpfneyakfdgkgvgttaslkidiylplssepdkllpltvvvka..........sa 321
+                                             s ls+aL +++ +++ pf+ +a+++g+g  + +++ ++iy  +s +  +++p++v ++           ++
+               EFQ28469 319 --RpmstirpmsmiqpkSLLSAALRARKTKPKVPFESFAALSGQG--ENNPIAVRIYPAFSDN--PAKPFEVPIRRmvhhgeggdrPV 400
+                            ..044666777778888999*************************..****************..55666664444448********* PP
+
+  PTHR13335.orig.30.pir 322 tVqevIGlaLwqyteegrepklpdnk..vnaycLrivEdDGevddDFPpLDrnepiskfg................fselaLveatds 391
+                            tV+++IGlaLw+y ee+r+p++p +k   n+++Lr+vE+DGevddDFPp +rn+ +++f                 f+ + Lv+at s
+               EFQ28469 401 TVADLIGLALWRYNEEKRQPPIPADKanINWFTLRMVEEDGEVDDDFPPFERNKALTSFTtannraagrmransktFDNFGLVQATQS 488
+                            **************************6666*****************************66678899999999*************** PP
+
+  PTHR13335.orig.30.pir 392 egktnndlqtplpreqkkrleeakrsagsaneagsslstes..........................................skesl 437
+                            e+++n++++++ + e++ ++ e  +        + ++++++                                           ++ +
+               EFQ28469 489 EFNENQSITPQEEEEAAEDADEDLT--------PRNTPQPNlnsflpvateprpnpvtnttysqqhsmfadapqapaaapntsRGQQK 568
+                            ****988777777777766666444........3333333344444555777777888888889999********************* PP
+
+  PTHR13335.orig.30.pir 438 fvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkkyrllkvsepnvivdldrtvesldgleflllrknssradgvlekt 525
+                             ++v+l++ +  +++ +t+ ++t++++a+vl+++c+kr+ld+ ++ +lk+++ + +  ld  v++ + l +l+l+++++++dg+l +t
+               EFQ28469 569 LLRVHLHSTDVAPGQLVTLDTTTETYMAEVLDMVCRKRQLDKANH-VLKMPGGGPVILLDTKVAAIGSLADLELHRRRFATDGPLAMT 655
+                            *********************************************.****************************************** PP
+
+  PTHR13335.orig.30.pir 526 eskssssanatissksaa...........edsqiqiatvqddlsssayksfkVsrkhkmrfktdrel..gIdgdyieimPvenqkaat 600
+                            +s+ss+s+    + + ++               +q+a  q++  s+++ks+ V+r + +r +t++e+   Idg+y++i P ++     
+               EFQ28469 656 GSPSSASPKLLPFVDGPPgrkakkphimgSHPLAQEAIKQAEFTSAYHKSWVVWRLRTVRMITQSEKrfEIDGEYVHIKPTTRDS--- 740
+                            *****99998888877779*********9888888888999999************************************98754... PP
+
+  PTHR13335.orig.30.pir 601 kfwekqKtisihisqvvacklssknpanFkivvrrendeKrydfeavsaaeaaeIvskinnile 664
+                                  Kt++ hisqv++ck+ssk+p+ Fk++++++ + Krydfea+s +ea eIv++++++++
+               EFQ28469 741 ------KTTTAHISQVIGCKVSSKHPNQFKLFIYKDTESKRYDFEAKSVEEAHEIVNELKKGVA 798
+                            ......78****************************************************9875 PP
+
+>> EFQ34703  pep supercontig:C_graminicola_M1_001_V1:GG697383:61251:62687:-1 gene:GLRG_09847 transcript:EFQ34703 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   24.4   0.0   6.9e-09   8.3e-06     167     255 ..     186     412 ..     143     452 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 24.4 bits;  conditional E-value: 6.9e-09
+  PTHR13335.orig.30.pir 167 e.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrq....snkldseq........................ 225
+                            e + +ss+ s++++ +s+++++++++ass+ss+ss++ss++  s sa+s++q         ++q                        
+               EFQ34703 186 EeT-SSSSLSTSSSSSSTSSSTTSTTASSSSSTSSSSSSST-TSTSASSTTQsasaT----EAQsspsgaagpppgaaeaanrrhsat 267
+                            222.4455555555444444455555555555555444442.233333333312321....222244466666666666666667777 PP
+
+  PTHR13335.orig.30.pir 226 ........................................................................................ 225
+                                                                                                                    
+               EFQ34703 268 iggaiggaavlvaiisvalwmckrnrrrnrrlgpgagkgpsfvpepnskefsavpggemmfdqagyghpammpgahgtttsisggkaa 355
+                            8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 PP
+
+  PTHR13335.orig.30.pir 226 ............................lsaeesdslfekkskssstktqkskkpssa 255
+                                                        +s+e++d     ++      +++++++ss+
+               EFQ34703 356 gtpphagpggynpahgashstgegvpltQSTENEDFT-RGYNDAPLPVREEYRPTSSG 412
+                            8888888888888888887777777775444444443.33333444444456666666 PP
+
+>> EFQ36080  pep supercontig:C_graminicola_M1_001_V1:GG697408:46695:48092:1 gene:GLRG_11224 transcript:EFQ36080 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.5   9.4   1.1e-07   0.00013      62     190 ..      18     179 ..       2     356 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 20.5 bits;  conditional E-value: 1.1e-07
+  PTHR13335.orig.30.pir  62 ksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkle 149
+                            k+++++  + s++s +++++       + + ++ +  +++  +++++++++ e++ ++++++q+++  +++++++++++r+n++ + +
+               EFQ36080  18 KNDRSNRGNDSRNSRDDPDG-------RDITATSMAESKALLRRRVQKQQQREQQ-QQQQQQQQQQQREQEQQQQRQEHRSNQQGQWK 97 
+                            22222222222222222222.......2223333444444444444422222222.22233333333335555556666666666666 PP
+
+  PTHR13335.orig.30.pir 150 klrkerrsksasiassee.r........................................dqsscksiqwktessvkedsvq 190
+                            k rk+  ++ ++++     r                                         ++ c  +++  +ss++++++ 
+               EFQ36080  98 KPRKHEDASRQPPETKAPqRhgqrpvvvvlqsisrllrgvwlllrwlfahpklvviafavIAVLCSVGNQASSSSSSSPRSS 179
+                            6666644444444444443366778888888888899999999999999999999999885566666666633333222222 PP
+
+>> EFQ33885  pep supercontig:C_graminicola_M1_001_V1:GG697374:282273:283718:1 gene:GLRG_09029 transcript:EFQ33885 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.8  35.9   1.7e-07   0.00021      47     239 ..     205     420 ..     123     443 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 19.8 bits;  conditional E-value: 1.7e-07
+  PTHR13335.orig.30.pir  47 ppvsssssesll.srpksastpgdsgsedsgssneaetatg.gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissss 132
+                             ++++   e ++ ++ +   +++    e++ ++++ +++++  ++++++++p++ q++++q+++ ++++++++++  ++q+ +++ ++
+               EFQ33885 205 AAIYAVENEDMQrQERQARQEKKHQEIEENRRKSQSAQQQQpQQQPQPQQQPQQPQAQQQQQQQ-QQQQKQQQQQAMPQQQHQLQHQQ 291
+                            4455555555554333333333333333333333322222211222222222222222222222.22233333333345555555444 PP
+
+  PTHR13335.orig.30.pir 133 ldegsrrrrantavkleklrkerrsksasiassee.r.......................dqsscksiqwktessvkedsvqrasses 196
+                            +++++++++  ++++ ++++++++++ ++++   + +                       ++s+ +++q+++ +  +e++ qr+    
+               EFQ33885 292 VQQQQHQQQ--QQQQHQQRQQHQQPQVQNHNHNHNhNhvqqqlnqmsrdgmtgmpkhpfeQNSHDEHVQYRDRQAEMEERNQRT---- 373
+                            444444444..4555555555566666666666555577777755555555555555555555555555554444444333333.... PP
+
+  PTHR13335.orig.30.pir 197 slsserssdssssssapsr.rq.......snkldseq.................lsaeesdslfekks 239
+                                         ++   r +q       +                        +sa ++ ++f ++ 
+               EFQ33885 374 -------------MQM--RgQQmsnafqqN------AvqqtpipvpqfgiqsgmQSAPPNAAVFRHYA 420
+                            .............222..212232222211......12223345555555555589988888888765 PP
+
+>> EFQ33968  pep supercontig:C_graminicola_M1_001_V1:GG697375:194016:197171:1 gene:GLRG_09112 transcript:EFQ33968 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   19.2  16.1   2.6e-07   0.00031      74     253 ..      23     355 ..       2     383 .. 0.69
+   2 ?   -3.4   0.5       1.9   2.3e+03      43      87 ..     549     618 ..     528     660 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: 19.2 bits;  conditional E-value: 2.6e-07
+  PTHR13335.orig.30.pir  74 dsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksas 161
+                            +       ++ ++  +k+r k+ps+ +rr++ +  ++s+++s+p+++e +++   ++ s d +s  + + +++ ++k ++ r++++ +
+               EFQ33968  23 N-----T-NNGKKRSHKQRVKNPSKRERRKHNRHPRHSDGSSAPDTNEDNDQFANDDGSSDSESLLSDSEDEMSQRKTKSKRHPGATT 104
+                            2.....2.33444678889999999999999999999999999999999999888888888888777776655555555555655444 PP
+
+  PTHR13335.orig.30.pir 162 iasseerdqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq......snkldseq................. 225
+                              +s   + +   s++ + +s+ ++ s+  +ss+s+++s +ssd     ++ ++  +      +      q                 
+               EFQ33968 105 AKKS---RPIAFHSTRKSKASKRSNLSPSPSSSSSETDSNSSSD----DDDDDDgLTkvsmtaQ------Qmqlfqhwqrsngtlplg 179
+                            4444...3556666666655555555555555555555555555....4444444443432320......235666777888889999 PP
+
+  PTHR13335.orig.30.pir 226 ........................................................................................ 225
+                                                                                                                    
+               EFQ33968 180 gdngpafwpppprrggslglgdaglgenpmfgngtrararatppsskkkskldfkrvdqvwdsaihqyklqdtaastsetqysgyvlq 267
+                            9999999999999999999998888888888888888888888888888888888888888888888888888888888888888888 PP
+
+  PTHR13335.orig.30.pir 226 ............................................................lsaeesdslfekkskssstktqkskkps 253
+                                                                                        ++++ ++s+ + ++k + +k++k+ k++
+               EFQ33968 268 vrrtfdwegkykatvvdvkskllrevlqevmgnikgvslvdetpkidpnmlflyledfrkFDKQLKKSVVVSADKKERKKRKKHIKTK 355
+                            8888888888888888888888888888888888888888888888888888888888887777788887777755555555554444 PP
+
+  == domain 2  score: -3.4 bits;  conditional E-value: 1.9
+  PTHR13335.orig.30.pir  43 sapyppvsssssesllsrpksastpgdsgsedsgssneaetatg.........................g 87 
+                            s  +p+++  +s s  s+  ++  +g++ + ++gs+++a ++ +                         +
+               EFQ33968 549 SVVRPKDHDVLSDSADSDEEDPCGQGSDDDNGNGSDDDACGKMVtkvvrdakggvrmvrvpksdlensaP 618
+                            4455666666666666666666666666666666655543333344555655555444443333222221 PP
+
+>> EFQ27697  pep supercontig:C_graminicola_M1_001_V1:GG697338:559700:561950:1 gene:GLRG_02841 transcript:EFQ27697 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.6  22.0   1.7e-06     0.002      49     174 ..     235     342 ..     188     440 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 16.6 bits;  conditional E-value: 1.7e-06
+  PTHR13335.orig.30.pir  49 vsssssesllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldeg 136
+                            +s++++ +++         + s  ++     +++++++  ++++++++++ qr+++q+++ ++++ ++++ +++ q+++ +       
+               EFQ27697 235 ASAAAQAPVQ---------AQSPVQQHQQLQQQQQQQQMLQQQQQQQQQMLQRQQQQQQQ-QYQQPPPQQPQQQPQQQPQQ------- 305
+                            2333333333.........22221111111122222223333444444444444444333.22222222222222222222....... PP
+
+  PTHR13335.orig.30.pir 137 srrrrantavkleklrkerrsksasiassee.r.dqssck 174
+                               + +++++++ +++ ++++++++ +++++ + + s+  
+               EFQ27697 306 ---QPQQQPQQQPQQQPQQQPQQQPQQQLQQrQpQPSQTP 342
+                            ...2223333333333333444444444444233222222 PP
+
+>> EFQ31110  pep supercontig:C_graminicola_M1_001_V1:GG697353:290580:292157:-1 gene:GLRG_06254 transcript:EFQ31110 gene_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.4  12.0   1.9e-06    0.0023      49     214 ..     108     250 ..      95     448 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 16.4 bits;  conditional E-value: 1.9e-06
+  PTHR13335.orig.30.pir  49 vsssssesllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekq...ssesesspsyeeelqsvdissssl 133
+                            +++s+s+s ++ + sas+++  + +++g++            +r+ ++++ q++++ ++ +   s +s+s++s  +++qs+  +  s+
+               EFQ31110 108 AIASASRSAQQAIASASQSAQQAVQQAGDQ------------VRQAQDQVRQAQDQARQASdaaSRTSSSASSAVSQAQSSARQAISD 183
+                            455566666666666666666666666662............2333333333333333332000233344444445555555555555 PP
+
+  PTHR13335.orig.30.pir 134 degsrrrrantavkleklrkerrsksasiasseerdqsscksiqwktessvkedsvqrassesslsserssdssssssaps 214
+                             ++s r++a+++  +++l + +            +++++++si+++ + s ++ +   ++s+ ++ ++  +d++  s + +
+               EFQ31110 184 AQNSARQSASQQ-ISQNLASVTS-----------SASMQIASIRSSASASAASAIAAATQSALAMVQSARTDAD--SRVQQ 250
+                            555555553322.2233333322...........2467777888887778888788888888888888888833..22222 PP
+
+>> EFQ29298  pep supercontig:C_graminicola_M1_001_V1:GG697344:341581:342285:1 gene:GLRG_04442 transcript:EFQ29298 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.3  13.2   1.7e-05      0.02      94     128 ..      55      89 ..      21     102 .. 0.47
+
+  Alignments for each domain:
+  == domain 1  score: 13.3 bits;  conditional E-value: 1.7e-05
+  PTHR13335.orig.30.pir  94 kkpsldqrretqgekqssesesspsyeeelqsvdi 128
+                            ++++++q++++q+++q++++++++++++++q+++ 
+               EFQ29298  55 QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQH 89 
+                            11111111111111111111111111111111111 PP
+
+>> EFQ29200  pep supercontig:C_graminicola_M1_001_V1:GG697343:993915:996137:-1 gene:GLRG_04344 transcript:EFQ29200 gene_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.3  32.3    0.0044       5.3      58     236 ..     254     690 ..     192     723 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 5.3 bits;  conditional E-value: 0.0044
+  PTHR13335.orig.30.pir  58 l..srpksastpgdsgsedsgssneaetatg......................................................... 86 
+                            l  + ++s++++ ++++ +++ + + + +++                                                         
+               EFQ29200 254 LhvAGSSSSGSSSTTTTNTYTNNGGRKPSNFfkvvasklqqkaasvrhkqpnmssvtldsrgplspnvsprkafklrpeqlglggpps 341
+                            2355555555555555555555555444444777777777777777777777777777777777777777777777777777777777 PP
+
+  PTHR13335.orig.30.pir  87 ........................................................................................ 86 
+                                                                                                                    
+               EFQ29200 342 arlplsppnsatipqdlpstsstgpngmpfcggyvedpffdagvagghvpmfrrsdpttpmdtpvlddksgmfyhhqqmssgnvanss 429
+                            7777777777777777777777777777777777777777777778888888888888888888888888888888888888888888 PP
+
+  PTHR13335.orig.30.pir  87 .....................................................................................gdt 89 
+                                                                                                                  ++
+               EFQ29200 430 katwpmvtttpqtdshvawsnayasdgldnqwwdgghmdlssntqfqaqnarnatfnlamqtqhndlayeynnmaaghemsglmiHMP 517
+                            8888888888888888888888888888888888888888888888888889999999999999999999999999999999999777 PP
+
+  PTHR13335.orig.30.pir  90 karrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke.rrsksasiasseerdqsscksi 176
+                            + r++ ++  + + +q+++q++++ +++++++++q+++ ++++++++++ ++ + +++ +++r +  r+ sa+        +  c ++
+               EFQ29200 518 QPRATSSPIIHYQPQQQQQQQQHHHQQQQQQQQQQQQQQQQQQQQQQQQLHHPQHPQQMTERRPRmPRAPSAGA-------RHLCLTT 598
+                            77777888888888888777777777777777777777776777777777777888888888888644333333.......3556666 PP
+
+  PTHR13335.orig.30.pir 177 qwktessvkedsvqrassesslsserssdssssssapsr.rq........snkldseq...........................lsa 228
+                              +   ++ ++s++r++s+ s+ s + ++ s +ss  ++ ++         n+++ ++                           +++
+               EFQ29200 599 PMR---KTRNTSRTRQPSRDSSTSPTPTNRSRHSSG-GSlSSigggaalsANVKKRRSwsrresmrtpsiggglggapegvgfvnFTP 682
+                            666...444444444444444444444442222222.222224555555322222222555555566666777777777777777555 PP
+
+  PTHR13335.orig.30.pir 229 eesdslfe 236
+                            ++++ l+ 
+               EFQ29200 683 SDKNILMT 690
+                            55554443 PP
+
+>> EFQ28410  pep supercontig:C_graminicola_M1_001_V1:GG697340:1003211:1005919:1 gene:GLRG_03554 transcript:EFQ28410 gene
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.3  12.1   0.00053      0.63      48     288 ..     133     377 ..      51     386 .. 0.70
+   2 ?    3.7  25.2     0.013        16      86     256 ..     517     729 ..     421     793 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: 8.3 bits;  conditional E-value: 0.00053
+  PTHR13335.orig.30.pir  48 pvsssssesll...srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissss 132
+                            + ss ++e++    +  + ++t+g +g+++++   ++++++  ++++++++  ++ r ++   +q+++s+  + ++ +  ++++++ +
+               EFQ28410 133 SESSFLYEWFClfwDIFHAQRTKGGNGPVNQYV--SHTQQQSRMRQNQQQELLRQMRPDGLAAQQQYHSQMMRNMQNGGMAMNMQKNQ 218
+                            335556666667777778889999999999998..66688889********************************************* PP
+
+  PTHR13335.orig.30.pir 133 ldegsrrrrantavkleklrkerrsksasiasseer...dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.r 216
+                            l ++   +++n ++  + l+ +++ + +   s   +   +++s+ +   + +s++k+++++ a++            ++ +  ++r +
+               EFQ28410 219 LVRTAMANNQNNPQAMQMLQHAKQTQMQRDPSDM-DgnrQRPSSPGSGENAPSPSKRPRLDGAPNFP-N--------QPGMMPNGRpQ 296
+                            **********************553333222222.23356777777777778888887777774332.2........22333333433 PP
+
+  PTHR13335.orig.30.pir 217 q....snkldseq....lsaeesdslfekkskssstktqkskkpssaakqsisslssaLekkps.q.lnnpfneyakfdgkg 288
+                            q    +++ ++ +    ++    + ++++  + ++++t ++++p     +si   ++ L++++  q +n+p+  ++   g+g
+               EFQ28410 297 QgmpgQQVGTTPNvaqaQQMLITNGINPASLTQQQFTTFSNQPPAVQ-AKSIATYAANLQQHQAsQmPNKPMPNASGPQGQG 377
+                            35556444444443333333333333444444444555555555555.7999888889999988647999998887666666 PP
+
+  == domain 2  score: 3.7 bits;  conditional E-value: 0.013
+  PTHR13335.orig.30.pir  86 g.........................................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissss 132
+                            g                                           ++ + ++++ +++ ++q+ +   +++++++ ++++q+++ +++ 
+               EFQ28410 517 GspnpmnfmnsqmdpnmaphffkgmgnqmdgnmvpnpqmnggMRPPSSHPGQQFNGQMNPQQMMAARQQQQQQQAQQQQQQQQQQQQP 604
+                            1444445555555555555566666666666664444444442233333344444444444444333333333333333333333333 PP
+
+  PTHR13335.orig.30.pir 133 ldegsrrrrantavkleklrke.rrsksasiasseer...dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr. 215
+                            +++ ++  + n++v+ ++   + +            +   +++++       ++s   +s    +++ ++s+++ + + +++++ps+ 
+               EFQ28410 605 QQQPQQAGQGNQPVQWQQGGPNgN------------QmvpQGPQGPVQGTPQQRSMPPPSAPAGANANRTSTSSPQQATAAPPTPSQs 680
+                            333444444455555555555432............1223233333333333356666666666666666666666655555555554 PP
+
+  PTHR13335.orig.30.pir 216 rq........snkldseqlsaeesdslfekkskssstktqkskkpssa.a 256
+                             +        +n ++++ ++++++   ++   +  +   q+ ++p++a +
+               EFQ28410 681 NKaapkkkdnKNAKTKAATQKKSNT-NLNSGTTPATDGAQDAEPPTPAtP 729
+                            4454444433222222222222222.223333344444444444444433 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      12020  (5585764 residues searched)
+Passed MSV filter:                      1819  (0.151331); expected 240.4 (0.02)
+Passed bias filter:                      452  (0.037604); expected 240.4 (0.02)
+Passed Vit filter:                       102  (0.00848586); expected 12.0 (0.001)
+Passed Fwd filter:                        27  (0.00224626); expected 0.1 (1e-05)
+Initial search space (Z):              12020  [actual number of targets]
+Domain search space  (domZ):              10  [number of targets reported over threshold]
+# CPU time: 0.44u 0.01s 00:00:00.45 Elapsed: 00:00:00.24
+# Mc/sec: 15466.94
+//
+[ok]

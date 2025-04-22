@@ -1,0 +1,412 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Pythium_irregulare.pir_scaffolds_v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------         -----------
+    4.1e-79  265.9   1.0    5.3e-79  265.5   0.0    1.7  2  EPrPI00000019357  pep supercontig:pir_scaffolds_v1:pir_scaffo
+    5.8e-48  163.5   0.3    8.1e-47  159.7   0.3    2.4  1  EPrPI00000017339  pep supercontig:pir_scaffolds_v1:pir_scaffo
+    1.8e-44  152.0   8.0    1.8e-44  152.0   8.0    2.3  3  EPrPI00000018802  pep supercontig:pir_scaffolds_v1:pir_scaffo
+    1.9e-38  132.2   2.8    1.9e-38  132.2   2.8    2.7  2  EPrPI00000014381  pep supercontig:pir_scaffolds_v1:pir_scaffo
+    5.4e-17   61.6  13.7    1.2e-16   60.5  13.7    1.6  1  EPrPI00000020759  pep supercontig:pir_scaffolds_v1:pir_scaffo
+    8.6e-09   34.7   0.2       0.54    9.0   0.1    5.8  4  EPrPI00000019526  pep supercontig:pir_scaffolds_v1:pir_scaffo
+     0.0032   16.4   9.5      0.082   11.7   4.8    2.4  2  EPrPI00000015608  pep supercontig:pir_scaffolds_v1:pir_scaffo
+     0.0086   15.0   2.0      0.037   12.9   0.8    2.5  2  EPrPI00000018014  pep supercontig:pir_scaffolds_v1:pir_scaffo
+  ------ inclusion threshold ------
+      0.026   13.4   0.0      0.026   13.4   0.0    4.2  6  EPrPI00000017109  pep supercontig:pir_scaffolds_v1:pir_scaffo
+
+
+Domain annotation for each sequence (and alignments):
+>> EPrPI00000019357  pep supercontig:pir_scaffolds_v1:pir_scaffold_420:3522:13790:1 gene:snap-pir_contig_420-abinit-gene
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.8   0.2       2.8   4.3e+03     271     289 ..    1780    1798 ..    1734    1852 .. 0.57
+   2 !  265.5   0.0   3.5e-82   5.3e-79       3     343 .]    1932    2354 ..    1930    2354 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -3.8 bits;  conditional E-value: 2.8
+                        HHHCCHHCTCCCHSTTCCC CS
+               FAT  271 aysaateldpswykawhtw 289 
+                          + a+++++s+++   tw
+  EPrPI00000019357 1780 ILKYAQQHHKSVIQVKETW 1798
+                        3333333333332221111 PP
+
+  == domain 2  score: 265.5 bits;  conditional E-value: 3.5e-82
+                        CTTCCCCTSSSGHHCCCCT................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCC CS
+               FAT    3 laaeaaWrlgqWdsmeeylslmk............kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrl 81  
+                        l a a+W l+qWd+m +y+s               + + + ++++ +la+h+++fd+a++li+++r+ l+t+l al+gesy+ray ++v l
+  EPrPI00000019357 1932 LGARASWCLSQWDNMNQYISDCTpattlsvasgseEADTQTSLYRSVLAVHHGKFDQAATLIDETRKTLDTKLGALVGESYSRAYRSMVTL 2022
+                        7899***************9999**********888888888************************************************* PP
+
+                        CCCHHHCHHCCHHCSS-.......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCC CS
+               FAT   82 QqlaEleeiiqykqkls.......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrls 165 
+                        Qql+Eleeii+yk+ +         ++  ++++++W  Rl+g+++ vevwq+il+vRsl++sp++d       +++wl+fa l+R+sg+ls
+  EPrPI00000019357 2023 QQLSELEEIITYKKLRMnvakseeAARYKRHMVRMWHARLSGCKRVVEVWQQILAVRSLIISPRDD-------IDTWLQFACLCRQSGNLS 2106
+                        **************877999555444445566**********************************.......****************** PP
+
+                        STTHHCCCCCHCTT.................T...................SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..... CS
+               FAT  166 lAekaLkklleedk..........eewlp..p...................evvyaylkylwakgeqkealqkLrefvscllekke..... 220 
+                        l+ k+ ++ l+ +           +++l   +                   +v +aylk+lwa +++++al +L++ vs+ + + +     
+  EPrPI00000019357 2107 LSLKVFTNSLGVNIsgtlngggalSDMLSvsSsgslssssipfgygekehhRVAFAYLKHLWAVDDKRKALTELHHLVSKISTRHHrgmpg 2197
+                        ***********9996666665555222224414556666777888888888****************************998887665555 PP
+
+                        ..SS-SS---..............................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCC CS
+               FAT  221 ..elssglevq...................eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwa 290 
+                          +                           +    +  ++ll +c+lk +ew+ ++++ + ++ ++ ++l++ ++ tel p++ykawh+wa
+  EPrPI00000019357 2198 qfH-------GhsgngngypgmgsaassfgNLVGSNGEEELLVKCHLKMAEWQLEFHEQQLERVSIPNVLASLKLCTELEPRSYKAWHAWA 2281
+                        553.......134444557799998997653334445566669************************************************ PP
+
+                        HHHHHCCHHHHHHSSSS.................S-TCCHHHHCCT..CCHHHHTTTS....STTTCHHHHHC CS
+               FAT  291 lfnfevlskeeekkeeee................pedlseyvvpavegflkslslsse....kslqdllRlLt 343 
+                        l+nf+v++++ + ++++                    +  y+ pa++gf++s++l+ +    ++ qd+lR+Lt
+  EPrPI00000019357 2282 LMNFHVVEHYSQHTSSSAlsmpahggttsqlhpgAGGIGPYIAPAIHGFFRSIALGRSrwaaNVQQDILRVLT 2354
+                        **********8888777799************9989999*********************************8 PP
+
+>> EPrPI00000017339  pep supercontig:pir_scaffolds_v1:pir_scaffold_222:22985:31025:1 gene:maker-pir_contig_222-fgenesh-g
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  159.7   0.3   5.2e-50   8.1e-47      10     343 .]    1443    1821 ..    1437    1821 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 159.7 bits;  conditional E-value: 5.2e-50
+                        TSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCC..CCCHHHCHHCCHHCSS- CS
+               FAT   10 rlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrl..QqlaEleeiiqykqkls 98  
+                        +l++Wd + +y+   + d+ + ++f+a++a++r +++ea + i ++r+ ++  l++l  +  +  + +l  +      El  ++   +  s
+  EPrPI00000017339 1443 SLQNWDAIPKYI-NSDMDETESHLFQAVVAIRRMELEEALSSIYQCRKVMDPTLRSLMLTELEEIVAYLKTFayKNNGELTLLSVPSSTTS 1532
+                        6899*******9.6678888999***************************99999999986666555555441134445555554444444 PP
+
+                        .......................---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCS CS
+               FAT   99 .......................sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlsl 166 
+                                               +   l++l   W++R +gv ++++vwq+++ vRslv++p+ed       +++wlk+a+l+Rksg++++
+  EPrPI00000017339 1533 rrkqsisslnfvssssstsygheKRAALTKLQTVWTRRVLGVDRNIQVWQSLMLVRSLVFDPRED-------VDIWLKYARLCRKSGHINM 1616
+                        6667778888888888888866666666666899*******************************.......******************* PP
+
+                        TTHHCCCCCHCTT...........T.................................SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSC CS
+               FAT  167 AekaLkklleedk..eewlp....p.................................evvyaylkylwakgeqkealqkLrefvscllek 218 
+                        A +aL ++ + ++   ++++    p                                 +v ++yl++lwa+++ + al+++ +f+  l + 
+  EPrPI00000017339 1617 AASALWRV-GAQPfiRSVQKdpytPlpinfgdsstvsnnnygfangvasladgssadpRVAFSYLRHLWAENKEDIALKQITHFIDALEQH 1706
+                        ********.8888883333343442446666677777777777777778888888888****************************55443 PP
+
+                        CCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S....-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS. CS
+               FAT  219 keelssglevqeptnleeftkllarcylkkGewlaalqklnwseek.seeilqaysaateldpswykawhtwalfnfevlskeeekkeeee 308 
+                                     ++ e+  kl  ++y  +Gew+ +l + ++++++  +++l +  +at+ldp+   awh+wal+nf++l++    k++++
+  EPrPI00000017339 1707 -----------GDEKNEDMVKLRVQVYIQLGEWQMSLLEPKKQSDEvFDQVLGCLETATKLDPTNHRAWHEWALMNFRALEAT--VKDQND 1784
+                        ...........233334445666889********99877655555549**********************************9..445566 PP
+
+                        S-TCCHHHHCCT..CCHHHHTTTS..STTTCHHHHHC CS
+               FAT  309 pedlseyvvpavegflkslslsse..kslqdllRlLt 343 
+                        p+++++y+ p+++gf++s+s +++   + +d+lRlLt
+  EPrPI00000017339 1785 PNQVKRYAAPSIQGFFRSISFGHTryDVTKDVLRLLT 1821
+                        ************************9999********8 PP
+
+>> EPrPI00000018802  pep supercontig:pir_scaffolds_v1:pir_scaffold_357:12104:26586:-1 gene:maker-pir_contig_357-snap-gen
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -8.1   5.2         9   1.4e+04     155     155 ..    2024    2024 ..    1930    2118 .. 0.52
+   2 ?   -3.0   0.2       1.6   2.5e+03     107     127 ..    3583    3603 ..    3554    3605 .. 0.72
+   3 !  152.0   8.0   1.2e-47   1.8e-44       2     343 .]    3614    3942 ..    3613    3942 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: -8.1 bits;  conditional E-value: 9
+                        C CS
+               FAT  155 a 155 
+                        a
+  EPrPI00000018802 2024 A 2024
+                        1 PP
+
+  == domain 2  score: -3.0 bits;  conditional E-value: 1.6
+                        TT----TTS-TTTGCCCTTTC CS
+               FAT  107 lktWrkRlpgvqddvevwqdi 127 
+                        l+ W++R  g+++++  wq +
+  EPrPI00000018802 3583 LRLWEERWVGCAKQLCQWQLM 3603
+                        589***************976 PP
+
+  == domain 3  score: 152.0 bits;  conditional E-value: 1.2e-47
+                        CCTTCCCCTSSSGHHCCCCT..........TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCH CS
+               FAT    2 plaaeaaWrlgqWdsmeeylslmk......kdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqla 85  
+                        +l + +aW+ g+W+s ++ ls  +        +p+  + + ++a+   ++  ++  l  ++++l + +++ l+  + + +++l++ ++  +
+  EPrPI00000018802 3614 DLLLDCAWKRGDWNSAKQLLSSPSmqsaadLGCPQTRLQRLYIAILDgEKRAAIDNLTAQTSELALHQWQGLPRVLSRTHIPLMHLFHKFV 3704
+                        7899***********999998877778887777788899999998887899999************************************* PP
+
+                        HHCHHCCHHCSS-......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.........HHCCS-STTCCCCCCCCHCHH CS
+               FAT   86 Eleeiiqykqkls......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.........lllkgakaemwlkfanlaRks 161 
+                        E +e+iq++++ +      ++ +lk   +tWr+Rlp+ + ++  w+dil++Rs++++  ++         l+  + +    +k a+ aRk+
+  EPrPI00000018802 3705 EVKESIQMMTDIKqasqthTLPNLKPSINTWRERLPNKWEPILLWDDILTWRSHMFQVVKStfswsdaqmLACMHDSPWSVIKLAHTARKQ 3795
+                        *********988755545555555555******************************9999999999955444555555667********* PP
+
+                        HHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCC CS
+               FAT  162 grlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGew 251 
+                        + ++++  aL+kl                   y+ +  ++++a++kLre+vs ++e+  e++ gl   ++tnl++ft ++ a+++ +kG +
+  EPrPI00000018802 3796 HLPDVCLGALSKL-------------------YSVPAMDVQDAFSKLREQVSICYESSTEYQGGLSILNNTNLDYFTLRQkAEMFRLKGLF 3867
+                        *************...................*********************************************************** PP
+
+                        CCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+               FAT  252 laalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlL 342 
+                        l+a+++        +e++q +s   ++++s  k w +w++++ + + +          +dls ++ + + ++l+++++  ++++  ++R+L
+  EPrPI00000018802 3868 LEAMGN-------MKEANQTFSHCLQICDSYGKGWLSWGHYCYRLFLDR---------KDLS-FASQTIACYLQAIHHRCNSARLMIARVL 3941
+                        ******.......99**********************************.........7888.**************************** PP
+
+                        C CS
+               FAT  343 t 343 
+                        +
+  EPrPI00000018802 3942 W 3942
+                        9 PP
+
+>> EPrPI00000014381  pep supercontig:pir_scaffolds_v1:pir_scaffold_42:22097:31219:-1 gene:maker-pir_contig_42-snap-gene-
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.3   0.4         1   1.6e+03     194     244 ..    1824    1875 ..    1804    1880 .. 0.80
+   2 !  132.2   2.8   1.2e-41   1.9e-38       2     343 .]    2086    2443 ..    2085    2443 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -2.3 bits;  conditional E-value: 1
+                        HHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHC CS
+               FAT  194 ylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arc 244 
+                        + w++++++ al++     s  + k  e +s+le qe++nleef k + +++
+  EPrPI00000014381 1824 WVWSSEKKRLALSSSASRQSAGSAKSVEFPSELEDQEKENLEEFLKDIpSQA 1875
+                        789999999999988777777777888*****************99886665 PP
+
+  == domain 2  score: 132.2 bits;  conditional E-value: 1.2e-41
+                        CCTTCCCCTSSSGHHCCCCT...............................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS CS
+               FAT    2 plaaeaaWrlgqWdsmeeylslmk...........................kdspdkaffeailalhrnqfdeaeeliekarqllvtelsa 65  
+                        p+a+e++Wrl+ W+++++ ls  k                            d  + ++++++++lh++++d++++ ++ ar  ++  l+a
+  EPrPI00000014381 2086 PYALECSWRLSRWELLADLLSSEKknalllsstsgaaangglsgvgsrlrgIDVSQLKLIRVLHSLHNGELDSFQRNLKDARLEVMGPLAA 2176
+                        789*****************99999********************9996654444555********************************* PP
+
+                        ---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-....---TTTTT..TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTC CS
+               FAT   66 lsgesynraydllvrlQqlaEleeiiqykqkls....sseelksl..lktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaem 150 
+                         s esy+ray+ll++l+ l+E e+   y+q  +    ++e+ +++     W++R++ + ++++++++il++R+++l+ ++    ++   + 
+  EPrPI00000014381 2177 ASAESYQRAYPLLHKLHFLHEAEQGFIYLQTTReltdEDEKTQRWknQAPWDTRYESMPTSLKFRDPILALRRVLLQEANL---RNEVSHY 2264
+                        ******************************99999754444444454667****************************988...9****** PP
+
+                        CCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH CS
+               FAT  151 wlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll 241 
+                        wl  a+laRk g + +A +a   ++  d+       + ++++k++ ++++  ealq L e v   ++   + + + +v+            
+  EPrPI00000014381 2265 WLLQAKLARKEGYVRTASSAVMHAEALDN-----QYALLEKAKLMVSQDRMYEALQLL-EPVD--ID---ATKLDFNVE--------DPHF 2336
+                        ************************99999.....56889****************999.4555..11...334444443........3344 PP
+
+                        .HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH...SSSS..........S-TCCHHHHCC CS
+               FAT  242 .arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeek...keeee.........pedlseyvvpa 319 
+                         a+++l+   w+++ ++      + +++ q y a +++dp+w+k ++ +a++++  ls        +              e +  ++++ 
+  EPrPI00000014381 2337 cAKNLLLATNWMQESGQR-----QGKKVIQRYEAVIKFDPEWEKGYFFLAKYYEYLLSVSHPDataS---MgeeggsillDEVFHAHLINL 2419
+                        49***************4.....59*****************************9999885553233...2566999*98888889***** PP
+
+                        T..CCHHHHTTTSSTTTCHHHHHC CS
+               FAT  320 vegflkslslssekslqdllRlLt 343 
+                        ++++  +l ++ + ++q+l+RlLt
+  EPrPI00000014381 2420 MKNYVLALEHGTKFVFQSLPRLLT 2443
+                        ***********************8 PP
+
+>> EPrPI00000020759  pep supercontig:pir_scaffolds_v1:pir_scaffold_615:14737:18413:1 gene:maker-pir_contig_615-fgenesh-g
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.5  13.7     8e-20   1.2e-16       3     278 ..     136     444 ..     134     510 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 60.5 bits;  conditional E-value: 8e-20
+                       CTTCCCCTSSSGHHCCCCT..............TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCC..CCTS---SCCCCCHHHHHCCCC CS
+               FAT   3 laaeaaWrlgqWdsmeeylslmk..........kdspdkaffeailalhrnqfdeaeeliekarqllvt..elsalsgesynraydllvrlQq 83 
+                       + +e aW++ qW s    ls  +            + +k +f+ + al +++ ++++ li+k ++ +++  +ls +  e+++  + +l+ l  
+  EPrPI00000020759 136 YKYELAWKNLQWGSAGTRLSSSDavesrarrdaPYCHQKVLFQSLKALAHRDNEHLQVLINKSKKEILKsvQLSLCGLEITRDSHRALLWLES 228
+                       56889*********99999999999999998877778888***********************9999872358899999************** PP
+
+                       CHHHCHHCCHHCSS-...........................---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STT CS
+               FAT  84 laEleeiiqykqkls...........................sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakae 149
+                       + ++ee++++   +                            +s  l+sl+++W++R+p +qdd++  ++++++  ++++ ++ +  +++  +
+  EPrPI00000020759 229 IRDIEEAATVVMGSTalgegasiesfrsselelksqlkkpcaESTTLASLFEQWQRRYPRIQDDFDTIDNLVALQEVLIKIADAPNTRQILSR 321
+                       ***********99999************************99999***************************************99******* PP
+
+                       CCCCCCCCHCHHHHCCSTTHHCCCCCHCTT............TSSCCCHHHHHHHCCHHHHHSSCC...HHHHCCTSSCCCSS-SS---.... CS
+               FAT 150 mwlkfanlaRksgrlslAekaLkklleedk...eewlp....pevvyaylkylwakgeqkealqkL...refvscllekkeelssglevqept 232
+                         l+ a+ +Rk++r+ +A++aL+kl++ ++       +     ++ ++++k+lw ++e ++a+ +    r ++ ++le++         + + 
+  EPrPI00000020759 322 LHLSLASFSRKANRVAVAYSALTKLEQLNDqghL---DmyqkTQWKMEKAKLLWTQKETRSAIWTAkllRSELDRTLEDP---------EFSG 402
+                       ******************************5541...345567*******************988733366666666665.........2356 PP
+
+                       .......HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHC CS
+               FAT 233 nleeftkllarcylkkGewlaalqklnwseekseeilqaysaatel 278
+                       n e ++ l+  +++  G+w a+ ++     +++  i+ ++++at l
+  EPrPI00000020759 403 NRESLQMLQVAVLTVTGKWIASQRSE----NSQVIIEDYFQKATDL 444
+                       77888899988999999999999993....3455666666666654 PP
+
+>> EPrPI00000019526  pep supercontig:pir_scaffolds_v1:pir_scaffold_441:1119:4301:1 gene:maker-pir_contig_441-snap-gene-0
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.7   0.0    0.0018       2.8     241     301 ..     153     206 ..     132     287 .. 0.83
+   2 !    7.0   0.0    0.0015       2.3     265     329 ..     340     421 ..     259     427 .. 0.79
+   3 ?    3.7   0.0     0.015        23     260     296 ..     403     439 ..     391     455 .. 0.82
+   4 !    9.0   0.1   0.00035      0.54     239     293 ..     457     504 ..     424     507 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 6.7 bits;  conditional E-value: 0.0018
+                       HHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHH CS
+               FAT 241 larcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskee 301
+                        a++y  +G  l+++++         ++ q y++a++l+p+  +a++++a  + ++ ++ e
+  EPrPI00000019526 153 FAEAYGNLGNALKEIGD-------LLGAIQFYLKAIKLHPRFSDAYNNLANSYMQIGQTHE 206
+                       57788888888888888.......789999********************99999877764 PP
+
+  == domain 2  score: 7.0 bits;  conditional E-value: 0.0015
+                       -SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS...................S-TCC..HHHHCCT..CCHHHHT CS
+               FAT 265 seeilqaysaateldpswykawhtwalfnfevlskeeekkeeee..................pedls..eyvvpavegflkslsl 329
+                        e ++q ++ a++l p+  +a+++++ +  e+ + e++ +   +                      +   +v +a++++  +++l
+  EPrPI00000019526 340 LELAVQTFRHAIQLEPNFPDAYNNLGNALREMGQLEQSINCYRTalrlkpdhphaynnlgnaL---KdkGMVKEAIHCYTTAARL 421
+                       566789999999999999999999999999998888655444447778888888888886532...2235888888888888777 PP
+
+  == domain 3  score: 3.7 bits;  conditional E-value: 0.015
+                       .S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+               FAT 260 wseekseeilqaysaateldpswykawhtwalfnfev 296
+                       + +   +e+ ++y++a++l p+ + a+ +++++  e+
+  EPrPI00000019526 403 KDKGMVKEAIHCYTTAARLLPNFAAAHSNLGSVLKEQ 439
+                       4556689************************999887 PP
+
+  == domain 4  score: 9.0 bits;  conditional E-value: 0.00035
+                       .HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+               FAT 239 kllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                       ++ a +y   G   + l +        ee+ q+ys+a++l p+  +a+ ++a+++
+  EPrPI00000019526 457 RNFADAYSNMGNVFKDLAR-------LEEAIQCYSTAIRLKPNFPDAYSNLASAY 504
+                       4455566666666666666.......78999999999999999999999999887 PP
+
+>> EPrPI00000015608  pep supercontig:pir_scaffolds_v1:pir_scaffold_106:16533:18404:1 gene:snap_masked-pir_contig_106-abi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.7   4.8   5.3e-05     0.082     123     295 ..      63     233 ..      29     240 .. 0.67
+   2 !    6.6   0.1    0.0019         3     234     293 ..     344     402 ..     292     413 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 11.7 bits;  conditional E-value: 5.3e-05
+                       CTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH.......HHHHSSCC CS
+               FAT 123 vwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakge.......qkealqkL 208
+                       +++di   R l+ +  ++    ++++ mw k     +k+g+++lA     k+ + +          +a+l  +wa+ e         + l+k+
+  EPrPI00000015608  63 IREDIPLARNLFRNVLQQ--HYKKDMGMWNKWGVMEWKAGNYDLARMIFAKASKMSF---------HAELWQSWASMEmdaknhvEAKRLYKV 144
+                       678888889999999998..4458899*******************99999944443.........555556666665443321145555666 PP
+
+                       HHHHCCTSSCCCSS-SS---...................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+               FAT 209 refvscllekkeelssglevq........eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                          +  +     ++s gl +         +++  e f+kl ++ +      l+a+  ++ ++++   + + ++aat +++  ++ wh+wa+++
+  EPrPI00000015608 145 ILATDPK-----NASAGLGMAlleaeignKQKARERFEKL-SQDHPDDVLVLQAFAVFEAKSQHMALARNMFQAATGHANATAQVWHAWAKAE 231
+                       5555533.....3333333333233243222222222222.45555555588888888888899****************************9 PP
+
+                       HH CS
+               FAT 294 fe 295
+                       f 
+  EPrPI00000015608 232 FD 233
+                       96 PP
+
+  == domain 2  score: 6.6 bits;  conditional E-value: 0.0019
+                       ......HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+               FAT 234 leeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                        + f++ l ++++ +Ge l+  + ++++  + e++ + + +at+ +p+  + w ++a+++
+  EPrPI00000015608 344 RKVFENAL-QNMHHSGELLQTWGAFEEQYGELENARELFDEATKQQPTHVESWKSLARVE 402
+                       34455555.89999******************************************9876 PP
+
+>> EPrPI00000018014  pep supercontig:pir_scaffolds_v1:pir_scaffold_280:25028:27040:1 gene:fgenesh_masked-pir_contig_280-
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.9   0.0      0.36   5.6e+02     308     332 ..     124     154 ..      79     162 .. 0.56
+   2 !   12.9   0.8   2.4e-05     0.037     163     286 ..     171     311 ..     169     393 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: -0.9 bits;  conditional E-value: 0.36
+                       ......S-TCC.HHHHCCT..CCHHHHTTTS CS
+               FAT 308 e.....pedls.eyvvpavegflkslslsse 332
+                       +     +e+l+ +   +av++f  +l+ + +
+  EPrPI00000018014 124 DkvqrgKEHLQaKRFLQAVSCFDSALQTCTG 154
+                       0222225555555666666666666666555 PP
+
+  == domain 2  score: 12.9 bits;  conditional E-value: 2.4e-05
+                       HCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC........SS-SS---...........HHHHCCCT CS
+               FAT 163 rlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke........elssglevqeptnleeftkllarcylk 247
+                       r++ A  aL++l++ ++   + p++ + +++ l+ +ge  +a+++L++ + +  ++ +        +              e++k+ a + +k
+  EPrPI00000018014 171 RYDEAFAALTQLMRTNS---SSPDLLFLRARCLYFQGEFPSAIKHLQQALRSDPDNSKfmkeikriR------------ALENSKEEANNAFK 248
+                       56778899****99999...55899*********************999995555544333332220............22222222444455 PP
+
+                       CCC...............................CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTT CS
+               FAT 248 kGe...............................wlaalqklnwseekseeilqaysaateldpswykaw 286
+                        G+                                l++l++       ++e+ +   +a+++d + +ka+
+  EPrPI00000018014 249 AGKmsdaiekysecllidpdnkafnskihcnranALSRLGR-------HDEAIKDCEKAIYFDHGYAKAY 311
+                       55522222222223333333333333331111113333333.......5555555566666665555555 PP
+
+>> EPrPI00000017109  pep supercontig:pir_scaffolds_v1:pir_scaffold_204:8827:14389:1 gene:maker-pir_contig_204-fgenesh-ge
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.7   0.0       1.3     2e+03     260     297 ..     572     609 ..     564     628 .. 0.81
+   2 ?   -3.9   0.2       3.1   4.8e+03      33      65 ..     684     717 ..     658     735 .. 0.49
+   3 ?   13.4   0.0   1.7e-05     0.026     147     277 ..     826     966 ..     813     978 .. 0.79
+   4 ?   -0.0   0.1       0.2   3.1e+02     202     220 ..    1023    1041 ..     963    1175 .. 0.47
+   5 ?   -0.4   0.1      0.27   4.1e+02     154     208 ..    1110    1163 ..    1052    1270 .. 0.67
+   6 ?   -2.2   0.0      0.94   1.4e+03     167     207 ..    1486    1536 ..    1461    1554 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: -2.7 bits;  conditional E-value: 1.3
+                       .S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCC CS
+               FAT 260 wseekseeilqaysaateldpswykawhtwalfnfevl 297
+                       ++++ s++i + + a  ++ ps  + +h+ a+ n +  
+  EPrPI00000017109 572 KTKDASQQIRELFDALKKVEPSNPELYHEIAKCNARLS 609
+                       56777899999999999999999999999999887655 PP
+
+  == domain 2  score: -3.9 bits;  conditional E-value: 3.1
+                       CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS CS
+               FAT  33 ffeailalhr.nqfdeaeeliekarqllvtelsa 65 
+                       +++a+l+ ++ ++  +  +l++ka q+ + +l +
+  EPrPI00000017109 684 LLQALLSWQKeKDRAKQVRLLQKAVQIHMDKLKE 717
+                       3344444333333333333444444444444333 PP
+
+  == domain 3  score: 13.4 bits;  conditional E-value: 1.7e-05
+                       STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...........SS-SS-- CS
+               FAT 147 kaemwlkfanlaRksgrlslAekaLkklleedkeewlp.pevvyaylkylwakgeqkealqkLrefvscllekke...........elssgle 227
+                       + ++ l  a+++ +  ++  A ++L  +l  d +  ++  ++++ ++k+l   g++++alq+L+   + +l+  +           + ++ l 
+  EPrPI00000017109 826 HSQAHLMQARICLEREHFRAASSCLDLALSHDFS-IRQsLSYFIIKAKILENAGDVRDALQTLQAAMK-MLNASNapggdkygggsSSNNSLA 916
+                       556777889******************9888882.2223589***********************999.666655588888888542222222 PP
+
+                       -.............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHH CS
+               FAT 228 vq..eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaate 277
+                       ++   pt+++ f k  a +y   ++ l++l++  ++++  +e+lq ++  t+
+  EPrPI00000017109 917 AHttLPTEVSLFDK--ASVYIQMAQVLSQLNDIAEATKIVREALQVFRGTTQ 966
+                       22335555555554..68*****************************98887 PP
+
+  == domain 4  score: -0.0 bits;  conditional E-value: 0.2
+                        HHHSSCCHHHHCCTSSCCC CS
+               FAT  202 kealqkLrefvscllekke 220 
+                          ++q+L  +  c++   +
+  EPrPI00000017109 1023 ARCYQELVSMNPCHATHVS 1041
+                        3333333333333333332 PP
+
+  == domain 5  score: -0.4 bits;  conditional E-value: 0.27
+                        CCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCC CS
+               FAT  154 fanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkL 208 
+                         a+l  k g++++A ++++++  +d+ee ++  +++ +l++ ++++++    ++L
+  EPrPI00000017109 1110 LAELYSKLGHYDQALRVIQQAPVNDSEEISD-LLQIVELQLILPEIHKGLGNEEL 1163
+                        4666667777777777777776666655555.77777777777777764444444 PP
+
+  == domain 6  score: -2.2 bits;  conditional E-value: 0.94
+                        TTHHCCCCCHCTT...............TSSCCCHHHHHHHCCHHHHHSSC CS
+               FAT  167 AekaLkklleedkeewlp..........pevvyaylkylwakgeqkealqk 207 
+                        A ++Lk++++   +++l            ++++ ++ky +a++ +k+al +
+  EPrPI00000017109 1486 ARNQLKRIAKMPYDQSLAddfersylllADIYVGRSKYDLAQELCKKALMH 1536
+                        567777775544433332345445556668888888888888888888765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      13805  (6867312 residues searched)
+Passed MSV filter:                       997  (0.0722202); expected 276.1 (0.02)
+Passed bias filter:                      341  (0.0247012); expected 276.1 (0.02)
+Passed Vit filter:                        35  (0.00253531); expected 13.8 (0.001)
+Passed Fwd filter:                         9  (0.000651938); expected 0.1 (1e-05)
+Initial search space (Z):              13805  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.18u 0.03s 00:00:00.21 Elapsed: 00:00:00.10
+# Mc/sec: 23239.92
+//
+[ok]

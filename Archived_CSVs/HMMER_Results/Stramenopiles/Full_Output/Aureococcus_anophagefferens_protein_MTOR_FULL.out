@@ -1,0 +1,115 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Aureococcus_anophagefferens_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    2.4e-39  134.3   0.0    8.3e-39  132.5   0.0    2.0  2  XP_009033961.1  hypothetical protein AURANDRAFT_52494 [Aureoc
+  ------ inclusion threshold ------
+      0.096   12.0   6.2        2.1    7.7   0.3    4.6  5  XP_009041959.1  hypothetical protein AURANDRAFT_55562 [Aureoc
+       0.11   11.8   0.0       0.13   11.6   0.0    1.1  1  XP_009042239.1  nuclear export factor CRM1, partial [Aureococ
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_009033961.1  hypothetical protein AURANDRAFT_52494 [Aureococcus anophagefferens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.1   0.0       1.1   4.4e+03       8      37 ..     723     752 ..     719     753 .. 0.85
+   2 !  132.5   0.0   2.2e-42   8.3e-39       1     160 []     760     910 ..     760     910 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: -3.1 bits;  conditional E-value: 1.1
+        mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlGi 37 
+                      p++L  L+++l   +s+  R  +++vlG 
+  XP_009033961.1 723 KPRVLAPLFDALLDRSSSRKRELALRVLGR 752
+                     5889999999999999999999999**996 PP
+
+  == domain 2  score: 132.5 bits;  conditional E-value: 2.2e-42
+        mTOR_dom   1 VvePyldypeLLeiLlnilkte.qsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspss.eeyyptvvinaLlk 93 
+                     Vv Pyl++  LL  +l +  +    +s+ re+++ lG+lGALDPyk+ e+ +k++              ++++   +p+  e+yy+ v+i aL++
+  XP_009033961.1 760 VVAPYLEHAPLLPRMLAAGDRGgAPWSLCREALRALGLLGALDPYKF-ELDGKKRA----------KGKDRAARAATPAAgEDYYARVAIDALVR 843
+                     89**********999999998856***********************.45443322..........222233344567777************** PP
+
+        mTOR_dom  94 ilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                     +l+d sl+ hh+av qa+m+if++lgl+cvpfl +i+p+ll v+rtce+ lre +l qLa L +iv+
+  XP_009033961.1 844 VLRDGSLAAHHAAVTQALMFIFQSLGLRCVPFLGNIVPHLLDVARTCEPGLRESVLLQLAALAAIVR 910
+                     *****************************************************************97 PP
+
+>> XP_009041959.1  hypothetical protein AURANDRAFT_55562 [Aureococcus anophagefferens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.1   0.1      0.13   5.1e+02     103     139 ..     151     189 ..      84     209 .. 0.58
+   2 ?    1.5   0.1     0.043   1.6e+02      62      95 ..     217     250 ..     175     285 .. 0.75
+   3 ?   -2.6   0.0      0.81   3.1e+03      90     142 ..     421     473 ..     416     487 .. 0.61
+   4 ?    7.7   0.3   0.00053       2.1      85     157 ..     554     634 ..     500     637 .. 0.76
+   5 ?    1.3   0.0     0.049   1.9e+02     103     140 ..     663     700 ..     645     760 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: -0.1 bits;  conditional E-value: 0.13
+        mTOR_dom 103 hhtavvqaimsifktlglkcvpfl..pqiipallsvirt 139
+                      +t +++++ +++++l+ ++v+ l  +qi+ a++  +r+
+  XP_009041959.1 151 LKTVTLETLGYMCEELEEESVEQLetNQILTAIVDGMRE 189
+                     234455667777777777776655224677766666664 PP
+
+  == domain 2  score: 1.5 bits;  conditional E-value: 0.043
+        mTOR_dom  62 naeetdvsellvglspsseeyyptvvinaLlkil 95 
+                     ++e t + +++++ ++s +e    v++++L ++ 
+  XP_009041959.1 217 ETERTMIMQVVCSATKSPDERLRVVAFESLARVA 250
+                     3334455556777788888888888888888774 PP
+
+  == domain 3  score: -2.6 bits;  conditional E-value: 0.81
+        mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtces 142
+                      L++ l+d+ +   + ++  ++  i++    +    +l+ ++ +l ++++++++
+  XP_009041959.1 421 VLIRSLRDEHIL-VKDTTAWTLARICELHAQRIpQGYLQPLVEQLSNALQDSSR 473
+                     566666666655.34444556667777666666566777777777777777665 PP
+
+  == domain 4  score: 7.7 bits;  conditional E-value: 0.00053
+        mTOR_dom  85 tvvinaLlkil.......kdpslsshhtavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                     +vv++ L+  +       +d+  +++ ++ + ++m+++   ++ + +pf ++i+  ll+v+++ ++  +e  +  ++   s
+  XP_009041959.1 554 QVVLQRLHGTFsmpiisqDDKEERDQLQSLLCSVMQVITRgIDREIIPFCDHIVTLLLQVLNNQNAVASEEAFMAMGAVAS 634
+                     4555555555577777766666667888888888887766599999*****************999999999998887665 PP
+
+  == domain 5  score: 1.3 bits;  conditional E-value: 0.049
+        mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvirtc 140
+                      ++a+v +   i++ l+++ +p+ + ii  ll+ +++ 
+  XP_009041959.1 663 VCSAAVGTTGDICRALEIQILPYCDDIICCLLEDLQNP 700
+                     55666667777777777777777777777776655543 PP
+
+>> XP_009042239.1  nuclear export factor CRM1, partial [Aureococcus anophagefferens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.6   0.0   3.5e-05      0.13      74     149 ..      19      97 ..       6     105 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 11.6 bits;  conditional E-value: 3.5e-05
+        mTOR_dom  74 glspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefll 149
+                      +s+ +e  +  +vi+ Ll + + +  +  ++++ + im+++ +    l+   +fl+ ++++l++ ++++++ ++++  
+  XP_009042239.1  19 AMSEDEEKRFLVTVIKDLLGLCEVKRGKGNKACIASNIMYVVGQypRFLRAhWKFLKTVVNKLFEFMHELHPGVQDMAC 97 
+                     57888899999*******************************994433555599***************9999988765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      11520  (6025584 residues searched)
+Passed MSV filter:                       231  (0.0200521); expected 230.4 (0.02)
+Passed bias filter:                      211  (0.018316); expected 230.4 (0.02)
+Passed Vit filter:                        13  (0.00112847); expected 11.5 (0.001)
+Passed Fwd filter:                         3  (0.000260417); expected 0.1 (1e-05)
+Initial search space (Z):              11520  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.05u 0.03s 00:00:00.08 Elapsed: 00:00:00.08
+# Mc/sec: 11422.90
+//
+[ok]

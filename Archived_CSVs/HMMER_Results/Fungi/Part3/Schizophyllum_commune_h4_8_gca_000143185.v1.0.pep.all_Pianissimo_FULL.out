@@ -1,0 +1,302 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Schizophyllum_commune_h4_8_gca_000143185.v1.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+          0 1023.7   0.2          0 1023.3   0.2    1.0  1  EFI99004  pep supercontig:v1.0:GL377304:2139303:2144422:1 gen
+     0.0036   14.2   0.1      0.075    9.8   0.0    2.7  3  EFJ03647  pep supercontig:v1.0:GL377302:4407260:4409718:-1 ge
+     0.0086   12.9   4.8      0.038   10.8   0.3    2.2  2  EFI97742  pep supercontig:v1.0:GL377305:1309647:1312726:1 gen
+  ------ inclusion threshold ------
+      0.026   11.4   2.7      0.036   10.9   2.7    1.1  1  EFI92226  pep supercontig:v1.0:GL377313:536220:538214:1 gene:
+      0.043   10.6   0.4        0.9    6.3   0.0    2.2  2  EFI99849  pep supercontig:v1.0:GL377303:156959:158004:1 gene:
+       0.15    8.9   2.8      0.059   10.2   0.1    1.5  2  EFI95943  pep supercontig:v1.0:GL377307:435877:439518:1 gene:
+       0.27    8.0   1.4       0.42    7.3   0.1    1.8  2  EFJ03488  pep supercontig:v1.0:GL377302:3511168:3514373:-1 ge
+       0.36    7.6   9.4       0.71    6.6   3.4    2.0  2  EFI98810  pep supercontig:v1.0:GL377304:979829:984989:1 gene:
+
+
+Domain annotation for each sequence (and alignments):
+>> EFI99004  pep supercontig:v1.0:GL377304:2139303:2144422:1 gene:SCHCODRAFT_81735 transcript:EFI99004 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1023.3   0.2         0         0       9    1139 ..      56    1199 ..      36    1231 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 1023.3 bits;  conditional E-value: 0
+  PTHR13298.orig.30.pir    9 eltvkldlatklkdgaenllsn.llresrdsiekkleslnnlikl......................................... 52  
+                              l+ +l l++ +k+gaenll++ l++++r ++e++le +  +i+                                          
+               EFI99004   56 ILNERLVLENRIKEGAENLLNMnLADSLRLKVETELEMARSKIDAivkrieqqpavdqsknalqnaraclkklaaldaqangtass 141 
+                             56788999************889*************************************************************** PP
+
+  PTHR13298.orig.30.pir   53 ............kaaakklnellgllkeeiiikedlvelelvs.clrslllseskevraaalRllrylisdskvlrrllrlgldil 125 
+                                         +++++ +nel+++l ++  ++++l+ +e+++ ++ sl +++sk+ raaa+R++r+++ d  ++++l ++ ld++
+               EFI99004  142 stgspvsapdldRQKIQVMNELVDILRKTLRVRYELNVTEIIEsVIPSLADRSSKQCRAAAYRVIRHALVDVDSVKCLSEQYLDWY 227 
+                             ************9************************************************************************* PP
+
+  PTHR13298.orig.30.pir  126 iarsLdrdsknetEreqalkliramlev........apkliptaivralvaiaeseedrlrraclatlcelallnpelvaeagglr 203 
+                             i++sL+rd+k  +E+eq++klir+++ev         +  ++++i+ra +a+ae+ ed +r++c+ tl+e++l + +lva++gg+r
+               EFI99004  228 IVKSLTRDNKCAVEKEQVIKLIRTIVEVgsersesaPRVPLSESIMRAFIAVAEHIEDPFRLICVQTLVEILLIDIDLVARTGGIR 313 
+                             ****************************98888843344459******************************************** PP
+
+  PTHR13298.orig.30.pir  204 vlldallecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqeskskeerelsrleaskkailtlLr 289 
+                              ll+ l +  +p++i++ +  ++l+++++p+tr+ylr g d+e+ l+ +td+  +            ++++ r++ ++k++  lLr
+               EFI99004  314 FLLHVLGD--GPAEISSLIASAFLHIVDSPKTRRYLRLGYDIEIALTAITDAYGK-----------GTEHADRMRGCAKIVQLLLR 386 
+                             ********..9***************************************65443...........3445569************* PP
+
+  PTHR13298.orig.30.pir  290 SWaGllylckndkrgLkslvdvlrlpnlevrkaildlLydlLrlkepkwtesftsgsalkavdsaalqdswrlsdgfvaeesktil 375 
+                             SW+Gl+ylc+ +  +++sl+d+l+lp+le+r++ild+++dlL++++p w ++f  g++l+++++++         +  +++s t  
+               EFI99004  387 SWSGLMYLCMGNMGAIRSLIDMLTLPSLETRDIILDMFFDLLNIRAPDWYQTFIDGRRLTMYRKSRD--------STEKAQSETTE 464 
+                             ***********999***************************************66**********94........33333333444 PP
+
+  PTHR13298.orig.30.pir  376 pssarsrpdlldnylallLlalieagLleaLvevits..sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfss 459 
+                                   +++l+d+y++ll++++ +agL+eaL++++t+    s++s+kAt+L++e l+lan++LP + +a+++++++ + +aa    
+               EFI99004  465 RPVVAPYQKLTDQYIGLLIMVFTHAGLFEALTSMVTEttTGSNLSRKATLLIAETLHLANRVLPLNAAAKVQAISRIFCMAADR-- 548 
+                             56677788***************************99888999****************************************5.. PP
+
+  PTHR13298.orig.30.pir  460 ekskrnraaaalalksldelkrsksksaslyldeilqkkllersssnssedskrkrlrq........iledddeafkrmlkdsqvl 537 
+                             ++ + +   ++ +l+ +d+++r++ k +   + ++++       + ns+ed  r+++rq        ++++dd++f+    + qvl
+               EFI99004  549 SNVDFRIIGTT-TLAAIDSFNRNRTKLEPNASVKQVR------PRANSVEDAVRRGQRQveqvklkmGMNMDDKQFQSTFVEAQVL 627 
+                             44444444444.899*********9999988777666......8899999*******99*************************** PP
+
+  PTHR13298.orig.30.pir  538 stkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPskkrfssidktkqlekyvqvgcqllslLlsspeGialle 623 
+                              +kd++kWn+d+ +el+egp+ l pkr eea++v+ f++r++sFy+P++ rfs + ++k ++k+v++gc+ll++L+s+ eG+++l+
+               EFI99004  628 AQKDHTKWNFDTVVELVEGPF-LVPKRVEEAIRVR-FIRRVMSFYHPFSHRFSDMPRNKTNQKWVRLGCSLLNTLMSTAEGVRYLS 711 
+                             *********************.**********888.************************************************** PP
+
+  PTHR13298.orig.30.pir  624 esr.lLkelleelsqelldsssekspderlfskerlsttlsqgyflfiGvLsstkeGlkiLeklnifqlllqlislktrdelvkli 708 
+                             ++  +L++++++++q  ld+  +  +++ +fsk+r+ +tl++gy++++G++s++keG++++ek+++f+ +++l +l++r++l+k i
+               EFI99004  712 NEDqFLTQIVKAFAQ--LDPFNGMTDSDPIFSKKRVAETLTYGYLEMLGTISRHKEGVELMEKFKVFTAFYHLSELRSREDLIKGI 795 
+                             9988***********..9***99777788********************************************************* PP
+
+  PTHR13298.orig.30.pir  709 vssLdysldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkaniley 794 
+                             +++Ldys+dg++R++lskaLtss+++iRlyat+hL +l+r  s++ + W+++lLvtqlydp+ ev++ A++ Le+ace k+  l+ 
+               EFI99004  796 IENLDYSIDGHPRIVLSKALTSSYKHIRLYATRHLGDLIR-ASPTANAWTLRLLVTQLYDPALEVCSLAVRFLEDACESKDI-LQL 879 
+                             ****************************************.************************************88888.*** PP
+
+  PTHR13298.orig.30.pir  795 lvslkpsllhlgdkgelLllrflstpkGfrylkeenyvekelekWaeernaeYvllvEealsealtlltreedgsdsrrrsngpds 880 
+                             +v+++p+l+hlgd g++Lll+f+st  Gfryl + +y+++e++ W++ern+ Yv +vE  ls+ +++      g+d + + +++  
+               EFI99004  880 VVEMRPTLDHLGDMGHPLLLKFMSTAIGFRYLYDAGYIDREMDIWFNERNIYYVVQVEVFLSKVFSD------GEDTPDKLTFD-- 957 
+                             ******************************************************************8......87777777776.. PP
+
+  PTHR13298.orig.30.pir  881 slrnrksvilPpHLygeLakteeGcelLekkghleelaetirshgle..dseeilklkaalWAlghigsselGlelleeenedlie 964 
+                                    + +PpH+yge+akt  Gc++L++kgh++e++++ir+hgle  d e i klk+ lWA+g++g++e Gl++lee  ed+i+
+               EFI99004  958 -------GAVPPHFYGEMAKTDLGCQILQEKGHFSEFSQFIRRHGLEgeDVELITKLKSILWAVGNVGATEGGLPFLEE--EDIIP 1034
+                             .......9****************************************999****************************..77*** PP
+
+  PTHR13298.orig.30.pir  965 diiklaeesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrnaliGlciPsdvnelfsipehqqsssaesapitdekpee 1050
+                              +  +ae+s++ svrGtcf+vlgli++t+qgaeiL+++ Wes++++ + ++Glc P++v+++   p++++ +s++s+         
+               EFI99004 1035 AVLDIAEQSPISSVRGTCFFVLGLISSTSQGAEILDDYEWESTLSPLGLPTGLCMPQHVERFATLPPWEEYQSSDSTIRLL----- 1115
+                             *******************************************************************98777777764433..... PP
+
+  PTHR13298.orig.30.pir 1051 iktslkyptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpel..fddpclfsevlkllseyrfrlqaRrfiqelfddavll 1134
+                                    p +++ + e+l+ ++nL+n v a+ a+++L k+k++   +  f++p +f ++l+++s  ++rl++Rr+i +lf+  +  
+               EFI99004 1116 -------PPKEPKELEVLTAIQNLANTVIANTASRSLAKMKSRPEYHdiFSSPAMFYRALQTISGQHYRLPVRRYIIDLFNLELNA 1194
+                             .......33477889**************************98666666*******************************966554 PP
+
+  PTHR13298.orig.30.pir 1135 sslrs 1139
+                             +++++
+               EFI99004 1195 ETVQK 1199
+                             44443 PP
+
+>> EFJ03647  pep supercontig:v1.0:GL377302:4407260:4409718:-1 gene:SCHCODRAFT_72999 transcript:EFJ03647 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.8   0.0   4.5e-05     0.075     912     991 ..     117     188 ..      90     197 .. 0.78
+   2 ?   -1.3   0.0       0.1   1.7e+02     396     426 ..     281     311 ..     279     319 .. 0.85
+   3 ?    0.5   0.0      0.03        50     889     947 ..     329     399 ..     297     418 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 9.8 bits;  conditional E-value: 4.5e-05
+  PTHR13298.orig.30.pir 912 ghleelaetirshgledseeilklkaalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliar 991
+                            g++++++e++++      + +l+   a WAl +i+s  +  + +   n + ++++ikl  + +vl vr  ++++lg ia 
+               EFJ03647 117 GVVARFVEFLKT-----GQPMLQF-EAAWALTNIASGTAEHTQVVI-NAQAVPEFIKLLSS-PVLDVREQAVWALGNIAG 188
+                            566666655555.....2333444.478********9999988888.689*********97.**************9985 PP
+
+  == domain 2  score: -1.3 bits;  conditional E-value: 0.1
+  PTHR13298.orig.30.pir 396 alieagLleaLvevitssdssvsvkAtiLLg 426
+                            a ie+g    Lv++++ s++sv ++A+   g
+               EFJ03647 281 AVIESGVCRRLVDLLMHSSTSVQTPALRSVG 311
+                            78999999*************9999987555 PP
+
+  == domain 3  score: 0.5 bits;  conditional E-value: 0.03
+  PTHR13298.orig.30.pir 889 ilPpHLygeLakteeGce...................lLekkghleelaetirshgledseeilklkaalWAlghigs 947
+                             lP  L++ L++t+ G++                     ++ ++++ l++++ +      ++++  k a WA++++ s
+               EFJ03647 329 ALP-ALLALLSSTKDGIRkeacwtisnitagsppqiqAVIDANIIPPLINILSN------ADFKTRKEACWAISNATS 399
+                            455.78888899999988888888888888888888888888999999966666......899999999999999755 PP
+
+>> EFI97742  pep supercontig:v1.0:GL377305:1309647:1312726:1 gene:SCHCODRAFT_67270 transcript:EFI97742 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    3.8   0.5    0.0029       4.8     724     802 ..     141     218 ..      89     231 .. 0.81
+   2 !   10.8   0.3   2.3e-05     0.038     715     790 ..     303     376 ..     268     400 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 3.8 bits;  conditional E-value: 0.0029
+  PTHR13298.orig.30.pir 724 lskaLtsssesiRlya.tkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileylvslkpsl 802
+                            ++k L ss+  iR+ a ++ Lrv  +  ++d++d ++    + l d++  v   A+ ++ e+c+ +a  le+  +  p l
+               EFI97742 141 IEKLLGSSNTYIRKKAsLCALRVIKK--VPDLADHFVGKAKNLLTDRNHGVLLTAITLVTEMCQLDAAVLEEFRNAVPLL 218
+                            6899******9998763677777666..***************************************9998887776665 PP
+
+  == domain 2  score: 10.8 bits;  conditional E-value: 2.3e-05
+  PTHR13298.orig.30.pir 715 sldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkan 790
+                            +l   + ++l k+Lt+  ++iR+ a++ L + +     +  +   ++++++l+d + +++++Al++ +  + +++n
+               EFI97742 303 GLRVMAINLLGKFLTNRDNNIRYVALNTLNKVVS-MDTNAVQRHRNTILECLRDGDISIRRRALELSYALI-NEQN 376
+                            555667889*************************.66666677899*******************988877.4444 PP
+
+>> EFI92226  pep supercontig:v1.0:GL377313:536220:538214:1 gene:SCHCODRAFT_113686 transcript:EFI92226 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.9   2.7   2.2e-05     0.036     121     261 ..     259     427 ..     256     449 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 10.9 bits;  conditional E-value: 2.2e-05
+  PTHR13298.orig.30.pir 121 gldiliarsLdrdsknetEreqalkliramlev.........apkliptaivralvaiae.......seedrlrraclatlcelalln 192
+                            +l++  ar++   +k+ tE + a +l++ +  v            l+++++v alv ++        + + r  + + ++l+ l++l+
+               EFI92226 259 HLHHVAARHIRMILKHHTEPTMAVQLMSHIFFVqtmavspdlRIRLLSRCVVGALVKVLRvyhskdsTNDRRVYETAYRVLVDLCMLD 346
+                            89999****************************88888777779999*******************7777778899************ PP
+
+  PTHR13298.orig.30.pir 193 pelv..a.eagglrvlldallecqlperiaesllavllyll...........nrpstrkylragvdlekllapftdfhyrakk 261
+                             +    a ++g++ vl++ l+    +++i+ +ll+++   l           +++s+ +      +le++++  ++ + + k+
+               EFI92226 347 ARYTvhAlQEGLFHVLVSILQK-NARSDIS-QLLDCIKAALifrkatrtfdkDMQSEDNTRPLPRELEQIISFALRRQWERKS 427
+                            9977333588999999999999.4468887.8888888877899999999998888888877788899999988844433333 PP
+
+>> EFI99849  pep supercontig:v1.0:GL377303:156959:158004:1 gene:SCHCODRAFT_65202 transcript:EFI99849 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.3   0.0   0.00054       0.9     396     433 ..      36      73 ..      31      75 .. 0.95
+   2 ?    5.6   0.2   0.00086       1.4     731     789 ..      53     116 ..      46     125 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 6.3 bits;  conditional E-value: 0.00054
+  PTHR13298.orig.30.pir 396 alieagLleaLvevitssdssvsvkAtiLLgellslan 433
+                            +++e+gLl+ L e ++s d+ +   A+  L++ll++a+
+               EFI99849  36 VFLENGLLDRLMEFVKSADPPLQLGALWALKNLLHKAK 73 
+                            89*********************************986 PP
+
+  == domain 2  score: 5.6 bits;  conditional E-value: 0.00086
+  PTHR13298.orig.30.pir 731 ssesiRlyatkhLrvllr.aessdfsd....WgielLvtqlydpskevakaAlkiLeeacedka 789
+                            +   ++l a+  L+ ll  a+++d+ +    +g + L + l d++  v + A++iL++++e  a
+               EFI99849  53 ADPPLQLGALWALKNLLHkAKLEDIRTtirtFGWDRLTELLTDEDAAVQEQAVHILKNITESTA 116
+                            5555666677777777774567777778888***************************998776 PP
+
+>> EFI95943  pep supercontig:v1.0:GL377307:435877:439518:1 gene:SCHCODRAFT_109579 transcript:EFI95943 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.2   0.1   3.6e-05     0.059     735     780 ..     351     395 ..     338     413 .. 0.87
+   2 ?   -2.8   0.4      0.29   4.8e+02      80     147 ..     621     685 ..     583     702 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 10.2 bits;  conditional E-value: 3.6e-05
+  PTHR13298.orig.30.pir 735 iRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlki 780
+                            +Rl a++ +  llr e+++ ++  ++lLv+ l dp+++v+++A   
+               EFI95943 351 VRLQALNLITTLLR-EKPEQEQNLLRLLVNKLGDPERTVCSRASYH 395
+                            8*************.**************************99654 PP
+
+  == domain 2  score: -2.8 bits;  conditional E-value: 0.29
+  PTHR13298.orig.30.pir  80 elvs.clrslllseskevraaalRllrylisdskvlrrllrlgldiliarsLdrdsknetEreqalkli 147
+                              +s  ++++    +k +    +R l++ ++d ++++   +     l+ +sL  ds  ++Er++a  ++
+               EFI95943 621 IAASlGMHQASSAAAKAIIDRYYRTLYASLHDARLASSAKQAMYLNLLFKSLKADS--SAERVKA--MV 685
+                            33344555666666666666778888888888888888888888888888888888..8888888..34 PP
+
+>> EFJ03488  pep supercontig:v1.0:GL377302:3511168:3514373:-1 gene:SCHCODRAFT_47178 transcript:EFJ03488 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.3   0.1   0.00026      0.42     726     805 ..     140     215 ..     129     231 .. 0.86
+   2 ?   -1.3   0.1       0.1   1.7e+02     164     779 ..     290     346 ..     254     376 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 7.3 bits;  conditional E-value: 0.00026
+  PTHR13298.orig.30.pir 726 kaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileylvslkpsllhl 805
+                            ++Lt s  +iR+ a+  + + l+ + +  ++ +++ L   l dp+  v++a +++L+e   +++       sl p+l hl
+               EFJ03488 140 AMLTHSRPQIRKRAVLVMYKVLQ-QYPAAAQTALPRLKDRLEDPDGAVVAATVNVLCELARKSPT---DYLSLAPQLFHL 215
+                            799********************.**********************************8866665...444555555554 PP
+
+  == domain 2  score: -1.3 bits;  conditional E-value: 0.1
+  PTHR13298.orig.30.pir 164 ralvaiaeseedrlrraclatlcelallnpelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlekllap 251
+                              l+a  ++++++l+ ++l   ++++ + p lvae                                                     
+               EFJ03488 290 TKLAAFIQDPDQNLKYIALLAMVKIVPTHPHLVAEY---------------------------------------------------- 325
+                            555555555555555555555555555555555432.................................................... PP
+
+  PTHR13298.orig.30.pir 252 ftdfhyrakkdkqeskskeerelsrleaskkailtlLrSWaGllylckndkrgLkslvdvlrlpnlevrkaildlLydlLrlkepkwt 339
+                                                                                                                    
+               EFJ03488   - ----------------------------------------------------------------------------------------   -
+                            ........................................................................................ PP
+
+  PTHR13298.orig.30.pir 340 esftsgsalkavdsaalqdswrlsdgfvaeesktilpssarsrpdlldnylallLlalieagLleaLvevitssdssvsvkAtiLLge 427
+                                                                                                                    
+               EFJ03488   - ----------------------------------------------------------------------------------------   -
+                            ........................................................................................ PP
+
+  PTHR13298.orig.30.pir 428 llslantlLPpelsaslhslptlvslaasfssekskrnraaaalalksldelkrsksksaslyldeilqkkllersssnssedskrkr 515
+                                                                                                                    
+               EFJ03488   - ----------------------------------------------------------------------------------------   -
+                            ........................................................................................ PP
+
+  PTHR13298.orig.30.pir 516 lrqiledddeafkrmlkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPskkrfssidktkqlekyvq 603
+                                                                                                                    
+               EFJ03488   - ----------------------------------------------------------------------------------------   -
+                            ........................................................................................ PP
+
+  PTHR13298.orig.30.pir 604 vgcqllslLlsspeGialleesrlLkelleelsqelldsssekspderlfskerlsttlsqgyflfiGvLsstkeGlkiLeklnifql 691
+                                                                                                                    
+               EFJ03488   - ----------------------------------------------------------------------------------------   -
+                            ........................................................................................ PP
+
+  PTHR13298.orig.30.pir 692 llqlislktrdelvklivssLdysldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlk 779
+                                                                                                ++++  ++d++ +++ +Al+
+               EFJ03488 326 -------------------------------------------------------------------QDTILSSVNDQDISIRMRALD 346
+                            ...................................................................233333344444444444444 PP
+
+>> EFI98810  pep supercontig:v1.0:GL377304:979829:984989:1 gene:SCHCODRAFT_66461 transcript:EFI98810 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.9   0.3    0.0028       4.7     182     219 ..     728     763 ..     662     786 .. 0.83
+   2 ?    6.6   3.4   0.00043      0.71      46     236 ..     815    1009 ..     801    1018 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 3.9 bits;  conditional E-value: 0.0028
+  PTHR13298.orig.30.pir 182 latlcelallnpelvaeagglrvlldallecqlperia 219
+                            +++lc   +l  +++++++gl+vl+d l e    ++ a
+               EFI98810 728 VRLLCHTSVLTLQMFISCRGLKVLVDLLDEDY--TEQA 763
+                            899***********************999844..3444 PP
+
+  == domain 2  score: 6.6 bits;  conditional E-value: 0.00043
+  PTHR13298.orig.30.pir   46 lnnliklkaaakklnellgllkeeiiikedlvelelvsclrslllseskevraaalRllrylisdskvlrrllrlgldiliarsLd 131 
+                             ++++ik  + ++ l+ + ++++++i +++ l   +++ +l +++    +e  a  l+++ +l  + ++l+ l   ++  +++r Ld
+               EFI98810  815 SSMEIKM-KIIQILQVFAQVSQSDIHVRNALGTRKVIRRLLRACELLEPECLAQMLKAIKHLSMNPTLLEVLQNANAIEILVRILD 899 
+                             5666666.6788899999********************7777999999**************88********************** PP
+
+  PTHR13298.orig.30.pir  132 rds..knetEre.qalkliramlevapkliptaivralvaiae...seedrlrraclatlcelal...lnpelvaeagglrvllda 208 
+                              +s   + tE     ++ +  +++++ ++  +a    ++ +++   + +  l++ +l +lc la    ++ +l+ + +g+++ l+ 
+               EFI98810  900 EQStgPHGTEISnHIFQTCYNLCRLNKSRQEEAAQAGIIPCLKrviETRSPLKQFALPILCDLASagkSCRSLLWQHDGMSMYLRL 985 
+                             **98889***651679*********88888888888888888888878888889998888888872225567888*********99 PP
+
+  PTHR13298.orig.30.pir  209 llecqlperiaesllavllyllnrpstr 236 
+                             l +    + ++ s+l+ +l++l ++  r
+               EFI98810  986 LDD----PYFQVSALESILSWLQDETAR 1009
+                             999....567889999999999887665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      13194  (5897161 residues searched)
+Passed MSV filter:                       507  (0.0384266); expected 263.9 (0.02)
+Passed bias filter:                      307  (0.0232682); expected 263.9 (0.02)
+Passed Vit filter:                        28  (0.00212218); expected 13.2 (0.001)
+Passed Fwd filter:                         8  (0.000606336); expected 0.1 (1e-05)
+Initial search space (Z):              13194  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.33u 0.03s 00:00:00.36 Elapsed: 00:00:00.17
+# Mc/sec: 39548.89
+//
+[ok]

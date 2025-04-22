@@ -1,0 +1,191 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Toxoplasma_gondii.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.7e-06   25.6   1.9       0.83    8.5   0.0    5.7  6  EPT29114.1  HEAT repeat-containing protein [Toxoplasma gondii
+  ------ inclusion threshold ------
+      0.027   13.4   5.2        7.9    5.3   0.0    5.2  6  EPT30013.1  U2 small nuclear ribonucleoprotein family protein
+      0.066   12.1   0.0         35    3.2   0.0    3.3  3  EPT28019.1  HEAT repeat-containing protein [Toxoplasma gondii
+      0.098   11.5   3.8        1.1    8.2   0.1    3.5  3  EPT31788.1  importin-beta N-terminal domain-containing protei
+
+
+Domain annotation for each sequence (and alignments):
+>> EPT29114.1  HEAT repeat-containing protein [Toxoplasma gondii ME49]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.5   0.0      0.95     2e+03      42      81 ..      17      54 ..      17      62 .. 0.61
+   2 ?   -1.8   0.0      0.59   1.2e+03      11      33 ..      89     111 ..      85     116 .. 0.82
+   3 !    8.5   0.0    0.0004      0.83      87     145 ..     572     631 ..     564     645 .. 0.84
+   4 !    7.6   0.0   0.00076       1.6     104     144 ..     700     740 ..     649     745 .. 0.82
+   5 ?   -1.1   0.0      0.37   7.8e+02      23      85 ..     972     998 ..     945    1065 .. 0.53
+   6 ?    1.8   0.0     0.045        94       7      37 ..    1177    1208 ..    1174    1211 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -2.5 bits;  conditional E-value: 0.95
+    mTOR_dom 42 DPykhkeveekseeeekeeenaeetdvsellvglspss.ee 81
+                DP  +ke e++++e    +e++++  vs++l+++++ s +e
+  EPT29114.1 17 DPALRKEAERQIKE---GKEKQPAALVSLVLQTVQTHSdDE 54
+                67777777776654...445555666777777776666344 PP
+
+  == domain 2  score: -1.8 bits;  conditional E-value: 0.59
+    mTOR_dom  11 LLeiLlnilkteqsqsiRrevik 33 
+                 + +iLl +l te+++ +R ++  
+  EPT29114.1  89 VKQILLHCLDTEKNKLVRNNICD 111
+                 5589*************998765 PP
+
+  == domain 3  score: 8.5 bits;  conditional E-value: 0.0004
+    mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slr 145
+                 v+++Ll+ ++  + ++ ++ +v+ i  +   l+   vp+++ ++p+ll vi+++++ +lr
+  EPT29114.1 572 VMEKLLTKIRPGTPKTVREHAVTCIAVVAGVLEESFVPYYSAVVPSLLDVITNSTAlELR 631
+                 6677777777788888899999999999999999******************98876665 PP
+
+  == domain 4  score: 7.6 bits;  conditional E-value: 0.00076
+    mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtcessl 144
+                 ++   +a+  +++ +g   + +lp+i+p ll+v++  +++l
+  EPT29114.1 700 REYLTEALGRMCRAMGADFLVYLPRILPRLLEVLTVKPKEL 740
+                 5667789999***********************99766655 PP
+
+  == domain 5  score: -1.1 bits;  conditional E-value: 0.37
+    mTOR_dom  23 qsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyypt 85 
+                 q+q++R + + ++G+l A  P ++                                      +
+  EPT29114.1 972 QEQTLRSSLLEIVGTLMATHPKEF------------------------------------LRS 998
+                 355555555555555555555544....................................222 PP
+
+  == domain 6  score: 1.8 bits;  conditional E-value: 0.045
+    mTOR_dom    7 dypeLLeiLlnilkte.qsqsiRrevikvlGi 37  
+                  + p+LL+iL+ + +t+ +++++  e+ k++  
+  EPT29114.1 1177 NLPRLLQILCAVYRTDfSDSDLNEEIKKLFAQ 1208
+                  579*************7799999998888765 PP
+
+>> EPT30013.1  U2 small nuclear ribonucleoprotein family protein, putative [Toxoplasma gondii ME49]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.0     0.075   1.6e+02      71     130 ..     596     656 ..     556     663 .. 0.74
+   2 ?    0.5   0.1      0.12   2.4e+02      97     140 ..     735     778 ..     702     795 .. 0.74
+   3 ?   -2.3   0.0      0.83   1.7e+03      80     135 ..     843     897 ..     829     921 .. 0.69
+   4 ?    5.3   0.0    0.0038       7.9      88     148 ..     974    1033 ..     869    1044 .. 0.75
+   5 ?   -2.0   0.0      0.67   1.4e+03     123     150 ..    1092    1119 ..    1068    1125 .. 0.57
+   6 ?    2.9   0.1     0.022        45      16     135 ..    1145    1257 ..    1139    1272 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 0.075
+    mTOR_dom  71 llvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+                 +l +l++ s+e+ ++  +n++l ++ +++l+ + ++  v++i  ++  l+  + p++ +i+
+  EPT30013.1 596 ALRTLTEKSKEFGAAALFNQILPLMMQSTLEdQERHLLVKVIDRVLYRLDDAVRPYVHKIL 656
+                 2456688889999999999999999999999777888999999999999999999999887 PP
+
+  == domain 2  score: 0.5 bits;  conditional E-value: 0.12
+    mTOR_dom  97 dpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtc 140
+                  ++  + +++ ++ i ++   +g+ ++p l+q++  +++ + + 
+  EPT30013.1 735 SKKSWQARHTGIKIIQQMSILMGCGVLPHLKQLVEIIQHGLDDQ 778
+                 44444677788888888888899999999999999988877764 PP
+
+  == domain 3  score: -2.3 bits;  conditional E-value: 0.83
+    mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135
+                   yy   v+  L++ ++ +  +++++ v++++ + + t g+++  + + i+p +++
+  EPT30013.1 843 ASYYTREVMVMLVREFETND-EEMKKIVLRVVRQCVATEGVESEYIRTDIVPPFFA 897
+                 55666666666666664443.45667777777888888888887777888888775 PP
+
+  == domain 4  score: 5.3 bits;  conditional E-value: 0.0038
+    mTOR_dom   88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefl 148 
+                  +  Ll  ++ ++ s+  ta ++   +i++ lg++  p+lpqi+  +   ++t +++lr+  
+  EPT30013.1  974 VDGLLYAFQ-EQTSEDATALLNGFSTIVNALGTRIKPYLPQICGVIRWRLNTPSAKLRQQA 1033
+                  444444444.44577899999999******************9988888888777777665 PP
+
+  == domain 5  score: -2.0 bits;  conditional E-value: 0.67
+    mTOR_dom  123 vpflpqiipallsvirtcesslrefllq 150 
+                  +p ++ ++p l+ ++++ +++++e +++
+  EPT30013.1 1092 TPPIKDLLPRLTPILKNRHEKVQENVID 1119
+                  5666666666666666655555555544 PP
+
+  == domain 6  score: 2.9 bits;  conditional E-value: 0.022
+    mTOR_dom   16 lnilkteqsqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsel.lvglspsseeyyptvvinaLlkilkdpslsshhtavvqa 110 
+                  l++lk + +++iRr +++++G +   + P+ +  +     +    + +++e ++ +  +  +    e   p  v+ aL++  + + l+  ++ v+++
+  EPT30013.1 1145 LDMLKAS-KKAIRRATVNTFGYIArTIGPQDVLATLL---N----NLKVQERQLRLCtTIAIAIVAETCLPYSVLPALMNEYRVQELN-VQNGVLKT 1232
+                  5566644.66777777777776643555555522221...1....1122223333332334455668888999999999999999998.78899999 PP
+
+    mTOR_dom  111 imsifktlglkcvpflpqiipalls 135 
+                  + ++f+++g     ++  ++p l  
+  EPT30013.1 1233 LSFMFEYIGEMAKDYIYTVVPLLED 1257
+                  9999999999999999999997755 PP
+
+>> EPT28019.1  HEAT repeat-containing protein [Toxoplasma gondii ME49]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.9   0.0     0.044        91      13      42 ..      86     116 ..      84     120 .. 0.81
+   2 ?    3.2   0.0     0.017        35      15      39 ..     121     146 ..     118     147 .. 0.89
+   3 ?    2.6   0.0     0.027        57      13      40 ..     357     385 ..     352     416 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 1.9 bits;  conditional E-value: 0.044
+    mTOR_dom  13 eiLlnilkteq.sqsiRrevikvlGilGALD 42 
+                 +++l+ l+ ++ s  +R e+  vlG lG  D
+  EPT28019.1  86 NLILESLNHDEgSILFRHEATYVLGQLGCQD 116
+                 566777777755999*************755 PP
+
+  == domain 2  score: 3.2 bits;  conditional E-value: 0.017
+    mTOR_dom  15 Llnilkte.qsqsiRrevikvlGilG 39 
+                 Ll+ilk + +++ +R e+   l+ lG
+  EPT28019.1 121 LLKILKDTsENEMVRHEAAEALSALG 146
+                 899***99569***********9999 PP
+
+  == domain 3  score: 2.6 bits;  conditional E-value: 0.027
+    mTOR_dom  13 eiLlnilkte.qsqsiRrevikvlGilGA 40 
+                  +L ++l++  +++  R e+   lG lGA
+  EPT28019.1 357 AALAQCLENArEHPMARHEAALALGSLGA 385
+                 5799999999459999************9 PP
+
+>> EPT31788.1  importin-beta N-terminal domain-containing protein [Toxoplasma gondii ME49]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.8   0.1     0.047        98      89     155 ..     528     594 ..     514     597 .. 0.80
+   2 ?    8.2   0.1   0.00051       1.1     122     159 ..     662     700 ..     643     701 .. 0.86
+   3 ?   -1.6   0.1       0.5     1e+03     104     140 ..     711     747 ..     698     763 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 1.8 bits;  conditional E-value: 0.047
+    mTOR_dom  89 naLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+                 ++Ll+ lk+p +++h    v ai  i    + k  v++l  ++p l++ + +++  +  +  + L+ L
+  EPT31788.1 528 ASLLEELKKPDVNKHVIVRVAAIKVIAAF-RNKFdVQLLHGVLPLLVAHLGSSQVIVHTYAANALERL 594
+                 57899999999999988888888888775.55555***********9999988777777777777766 PP
+
+  == domain 2  score: 8.2 bits;  conditional E-value: 0.00051
+    mTOR_dom 122 cvpflpqiipallsvirtces.slrefllqqLatLvsiv 159
+                  +p l+ ++  +++v+ ++++ s++++l++ LatLv+iv
+  EPT31788.1 662 AMPALSVVLACIQAVAAKLSNpSFSHYLFECLATLVKIV 700
+                 48999************99999****************9 PP
+
+  == domain 3  score: -1.6 bits;  conditional E-value: 0.5
+    mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtc 140
+                  ++vv ++   +++     +p+  q++  ll+++++ 
+  EPT31788.1 711 EAQVVPVLSVLIQQTLHDFIPYCFQVLGLLLETAEDR 747
+                 3333333333333333333666666666666665555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       8322  (6669204 residues searched)
+Passed MSV filter:                       315  (0.0378515); expected 166.4 (0.02)
+Passed bias filter:                      283  (0.0340062); expected 166.4 (0.02)
+Passed Vit filter:                        34  (0.00408556); expected 8.3 (0.001)
+Passed Fwd filter:                         4  (0.000480654); expected 0.1 (1e-05)
+Initial search space (Z):               8322  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.08u 0.10s 00:00:00.18 Elapsed: 00:00:00.19
+# Mc/sec: 5612.42
+//
+[ok]

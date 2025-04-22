@@ -1,0 +1,156 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/I_multifiliis_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    0.00098   16.2  15.6     0.0016   15.5  15.6    1.3  1  IMG5_010150  Nol1 NOP2 sun domain protein
+  ------ inclusion threshold ------
+      0.028   11.4  43.6      0.011   12.7  14.5    2.2  2  IMG5_183810  ma3 domain protein
+        0.1    9.5  25.3       0.16    8.8  25.3    1.3  1  IMG5_173120  protein phosphatase 4 regulatory subunit 1, puta
+       0.32    7.9  31.7       0.44    7.4  31.7    1.1  1  IMG5_163570  hypothetical protein
+          2    5.2  20.9        2.6    4.9  20.9    1.2  1  IMG5_165000  hypothetical protein
+
+
+Domain annotation for each sequence (and alignments):
+>> IMG5_010150  Nol1 NOP2 sun domain protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.5  15.6   1.8e-06    0.0016      86     179 ..      34     216 ..       3     244 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 15.5 bits;  conditional E-value: 1.8e-06
+  PTHR13335.orig.30.pir  86 g.............................................................................gdtkarrkkp 96 
+                            +                                                                             +  + +r+k+
+            IMG5_010150  34 KiksyrqgqytewnyenevfekyyrfmfeeeyfkenksefdvfwssmketlpvvfrinklipnyqkfqnvikdkeciyKFIELKRNKQ 121
+                            3455555555666666666666666777777777777777778888888888888888888888888888888888887777788888 PP
+
+  PTHR13335.orig.30.pir  97 sldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseer................ 168
+                            +++++++t+ ek+s+e++++  ++e++q+++ + +++++++++++ +++v+ +++++ +  k                          
+            IMG5_010150 122 QQNKNQSTEDEKKSEEEKQEENTQEQQQQQQQQ-QQQQQQQQQQQ-QQQVQDKNQPQIKYEK-F-------Efskeqlqnltlktvdf 199
+                            888888888888555555555555444444444.33333333333.3344444433332111.1.......11111122344555555 PP
+
+  PTHR13335.orig.30.pir 169 ......dqsscksiqwk 179
+                                   q+ c ++q++
+            IMG5_010150 200 ypdevvWQINCSRVQLR 216
+                            56666655556555555 PP
+
+>> IMG5_183810  ma3 domain protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.0  21.2    0.0027       2.4     185     299 ..      41     147 ..       2     176 .. 0.54
+   2 ?   12.7  14.5   1.2e-05     0.011      74     238 ..     212     356 ..     183     570 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 5.0 bits;  conditional E-value: 0.0027
+  PTHR13335.orig.30.pir 185 kedsvqrassesslsserssdssssssapsrrq..................snkldseqlsaeesdslfekkskssstktqkskkpss 254
+                             + ++qr                         +                  +nk++++q+ a+es+++ ek+++ + +k  +++k+++
+            IMG5_183810  41 FNRKSQR-------------------------KikkeqkkqqkqdffsrkkQNKNINKQQKAKESNQIQEKTEQQQHQKS-VQRKTEQ 102
+                            1111111.........................111111111122333333477777777888888888777772222222.2222222 PP
+
+  PTHR13335.orig.30.pir 255 aa.kqsi..sslssaLekkpsqlnnpfneyakfdgkgvgttaslkidi 299
+                             + k++   s l ++L+++ +q +    +y k+ gkg  ++++l  ++
+            IMG5_183810 103 IQnKKKEqnSDL-QRLQNQIQQDDEEIKYYEKLLGKG--RSKTLDKRV 147
+                            213333355888.999999999***************..888887655 PP
+
+  == domain 2  score: 12.7 bits;  conditional E-value: 1.2e-05
+  PTHR13335.orig.30.pir  74 dsgssneaetatggdtkarrkkpsldqrretqgekqs...sesesspsyeeelqsvdissssldegsrrrra....ntavkleklrke 154
+                            ++  ++e e          +++++ld+++e++ ++ +   +e++++ + e+e+++++i++++ +e+ +++       ++++ e+++  
+            IMG5_183810 212 EDELDDEEEEEE-----EEENQQQLDEKQEQEVDQEKeeeEEEIEDEEEEIEDEEEEIEDEEEEEEEIEHEEeidyEEEIDDEEEEID 294
+                            333333322222.....22333333333333333333000444566677777888888877777777777754444444444444444 PP
+
+  PTHR13335.orig.30.pir 155 rrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkldseqlsaeesdslfekk 238
+                             + + ++i   ++ +  +++ksi  k  ++ +++ +q+++++++l+  r+++++                    + e+ ++ +kk
+            IMG5_183810 295 -QEEENEIKNNNDkK-EKQIKSILKK-DTNFQNKQTQNTKEKQELDNQRQEKQE--------------------QYEKQDIEKKK 356
+                            .33455555555544.7777777766.444444567777777777777766622....................11111111111 PP
+
+>> IMG5_173120  protein phosphatase 4 regulatory subunit 1, putative
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.8  25.3   0.00018      0.16      72     173 ..     643     740 ..     533     762 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 8.8 bits;  conditional E-value: 0.00018
+  PTHR13335.orig.30.pir  72 sedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsks 159
+                            +e      +++++++   ++++k++ l+q++++ +++q++++++++++++e+++  +++++++++++++++++++++++      +  
+            IMG5_173120 643 KE-----QQQKQQKELEEEIQQKQKELQQEQQKDKQEQQKNKKEQQEDKIEQKNDKLEKQQQQQQQQQQQQQQQQQQQNIL--LYNVD 723
+                            22.....22233344445555555555555555555544444444444444444444433333333333322222222222..23333 PP
+
+  PTHR13335.orig.30.pir 160 asiassee.r..dqssc 173
+                            +si+  ++ +  +q ++
+            IMG5_173120 724 NSIQIQQNeDllKQNQI 740
+                            44444333333322222 PP
+
+>> IMG5_163570  hypothetical protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.4  31.7   0.00049      0.44      67     278 ..       7     303 ..       2     340 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 7.4 bits;  conditional E-value: 0.00049
+  PTHR13335.orig.30.pir  67 pgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke 154
+                             + s+ e+++++++    +++  +++  +++  q+re+q++++++e     ++ee++++++i++++ +++s++++ ++++++++l ++
+            IMG5_163570   7 IQQSNQEINYEAEQ---DNKKEEEQGHEQDQFFQEREEQQDHNDEE-----EQEEQEEDQSIEQEQIENNSQNKQ-AQDQQQDSLDSQ 85 
+                            56788888877555...34445555555555555555555554444.....444445555555445555554444.334444444443 PP
+
+  PTHR13335.orig.30.pir 155 rrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq....................... 217
+                             ++++++ + +++ r+   ++s +++ ++   + + +++++e ++ + + + ++++ +  ++ +q                       
+            IMG5_163570  86 -QKQQEELNILKQnRQEEELQSQNLQQNTDLLNFFFRNFQQEIQSYFAEFQQKQFNTDQQQQeQQqasilasdiplvlrvalyydnit 172
+                            .234555666666555666666666666777788888888887777777777777777777766666666666666666677776666 PP
+
+  PTHR13335.orig.30.pir 218 .snkldseq.............................................................lsaeesdslfekksksss 243
+                             +      q                                                             l+++++d+  +k s    
+            IMG5_163570 173 iHA-----QkndeneifskpnsykyildalekycisnksmkefdpnttrifyndfvdfcyfliyydqniyLQQSSKDDFEVKES---- 251
+                            644.....1444448899999999999999999999999999999999999999999999999999999955555555544444.... PP
+
+  PTHR13335.orig.30.pir 244 tktqkskkpssa.a.............kqsi......sslssaLekkpsqlnnpf 278
+                            + +++ k+ +++ +             k           l ++Le+  +  n++ 
+            IMG5_163570 252 QLEKQIKENIDHyEkylsnnqfvspqeK--QvavnmiNNLKQQLEALTK-GNKHT 303
+                            2222222222222233333333333321..0122333444444444433.23333 PP
+
+>> IMG5_165000  hypothetical protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.9  20.9    0.0029       2.6      93     234 ..       3     180 ..       1     212 [. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 4.9 bits;  conditional E-value: 0.0029
+  PTHR13335.orig.30.pir  93 rkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrra....ntavkleklrkerrsksasiassee.r....... 168
+                            ++++++++++++ +++  +e++++++++ e++++d +++++d+ ++++ +    n+++++e++ +    + ++ ++ e+ +       
+            IMG5_165000   3 QQYQQKQHKKQQNYFDEEEEQQQDDDLDNEEYEEDDDDDNDDNDDDDEYDddydNYQQQEEEEDEDEDEDEDEEEENEQeDveveqeg 90 
+                            78999999999999***********************999999998888877778888888888885545444444444448899999 PP
+
+  PTHR13335.orig.30.pir 169 ..........................dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq...snkldseq. 225
+                                                       ++ + s q+  e + ++++v          +++ ++++++++  ++ +    +        
+            IMG5_165000  91 egeeiqqingnkdyieqifqlkegnqENIELLSQQQYIELQNQRSIVEQM------CQDMITEEEFRNNMEQEiKDkfrN------Fa 166
+                            88888888888888887777777755444444444443333333333322......334444444444443333223432......02 PP
+
+  PTHR13335.orig.30.pir 226 .....lsaeesdsl 234
+                                 ++++ ++sl
+            IMG5_165000 167 ffekdKNNKYNKSL 180
+                            22222444444444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       4462  (1867145 residues searched)
+Passed MSV filter:                      1082  (0.242492); expected 89.2 (0.02)
+Passed bias filter:                      247  (0.0553563); expected 89.2 (0.02)
+Passed Vit filter:                       103  (0.0230838); expected 4.5 (0.001)
+Passed Fwd filter:                        27  (0.0060511); expected 0.0 (1e-05)
+Initial search space (Z):               4462  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.43u 0.01s 00:00:00.44 Elapsed: 00:00:00.24
+# Mc/sec: 5026.58
+//
+[ok]

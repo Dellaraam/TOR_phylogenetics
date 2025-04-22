@@ -1,0 +1,506 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Partet1_GeneModels_ExternalModels_aa.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                           -----------
+    2.1e-49  169.7  12.4    2.1e-49  169.7  12.4    2.7  2  jgi|Partet1|4789078|XM_001462465.1  
+    1.4e-37  130.9  10.0    1.4e-37  130.9  10.0    1.9  2  jgi|Partet1|4778435|XM_001451806.1  
+    1.3e-07   32.3  20.1        3.9    7.7   0.2    8.1  8  jgi|Partet1|4780772|XM_001454147.1  
+      2e-06   28.4  35.5        2.2    8.5   0.6    9.6 11  jgi|Partet1|4781012|XM_001454386.1  
+    0.00017   22.1   3.1       0.22   11.8   0.1    2.9  3  jgi|Partet1|4770173|XM_001443438.1  
+    0.00024   21.6   1.6    0.00033   21.1   1.6    1.2  1  jgi|Partet1|4752933|XM_001426266.1  
+     0.0016   18.8  16.9      0.068   13.5   0.7    2.6  2  jgi|Partet1|4788546|XM_001461933.1  
+     0.0034   17.8   2.9        2.6    8.3   0.2    2.8  3  jgi|Partet1|4786747|XM_001460133.1  
+  ------ inclusion threshold ------
+       0.02   15.2   9.4      0.041   14.2   2.6    3.5  3  jgi|Partet1|4754866|XM_001428202.1  
+      0.024   15.0   0.6      0.024   15.0   0.6    2.3  2  jgi|Partet1|4763695|XM_001436956.1  
+
+
+Domain annotation for each sequence (and alignments):
+>> jgi|Partet1|4789078|XM_001462465.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.6   3.1       5.5   2.2e+04     186     271 ..    1341    1426 ..    1308    1467 .. 0.47
+   2 !  169.7  12.4   5.4e-53   2.1e-49       2     343 .]    1471    1812 ..    1470    1812 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: -4.6 bits;  conditional E-value: 5.5
+                                          SSCCCHHHHHHHCCH.....HHHHSSCCHHHHCCTSSCCC..SS-SS---...........HHHHCCCTCCCC CS
+                                 FAT  186 evvyaylkylwakge.....qkealqkLrefvscllekke..elssglevqeptnleeftkllarcylkkGew 251 
+                                          e  +ay+k l+ +++      ++a+q+L     +l+ + +  e  +gl +  +++l+ + +     y ++ +w
+  jgi|Partet1|4789078|XM_001462465.1 1341 EKCMAYAKALYYREHefetaNSKAIQSL----ISLYTNLGlqESANGLLTYAKQSLKIQVQ--NTDYERLKKW 1407
+                                          5556666666666664222223333333....33333332222222222222222222111..2234444445 PP
+
+                                          CCCCCCCT.S...-SSCCHH CS
+                                 FAT  252 laalqklnwseekseeilqa 271 
+                                           +alq+  ++++ + e  q 
+  jgi|Partet1|4789078|XM_001462465.1 1408 DEALQE-YRQQQLKYENDQR 1426
+                                          555554.2333333333333 PP
+
+  == domain 2  score: 169.7 bits;  conditional E-value: 5.4e-53
+                                          CCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCC CS
+                                 FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynra 74  
+                                           laa+aa +lgqWd+++ y ++++ ++ dk f++a +++ ++q+dea+  + k r+ l+   + l  esy ra
+  jgi|Partet1|4789078|XM_001462465.1 1471 HLAANAAMHLGQWDKLATYNEQVNAEESDKPFWKAAVCISKGQLDEAKIQVRKSRERLDGLVTGLLQESYDRA 1543
+                                          699********************************************************************** PP
+
+                                          HHHHHCCCCCHHHCHHCCHHCSS-.....................---TTTTTTT----TTS-TTTGCCCTTT CS
+                                 FAT   75 ydllvrlQqlaEleeiiqykqkls.....................sseelksllktWrkRlpgvqddvevwqd 126 
+                                           d +++lQql+E+eeii++kq ++                      + + k+l++ W +Rl+g  +d++vw +
+  jgi|Partet1|4789078|XM_001462465.1 1544 QDGVLKLQQLVEMEEIIEIKQFENkvqkaaqenvgeysyiklldeLEIRKKKLKDIWHDRLSGAPKDIDVWYR 1616
+                                          *********************9999999*******999999998766677778999***************** PP
+
+                                          CCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHC CS
+                                 FAT  127 ilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp.pevvyaylkylwak 198 
+                                          +ls+R+l+l +  d        ++w+kfa+l+ k   + l+++++  l+e+ +++ l   +v++  + ++ + 
+  jgi|Partet1|4789078|XM_001462465.1 1617 LLSTRQLYLPKVHD-------LDIWIKFAKLCLKRQKMVLCKSTIEILKEQFQNQGLApLPVTLHIFNMQFEY 1682
+                                          **************.......************************9996666633333458888888888888 PP
+
+                                          CHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHH CS
+                                 FAT  199 geqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqa 271 
+                                           + k  +q L ++v +++ ++e++ss              kl+a++++ +G+w  +  +   s+ + e+i+++
+  jgi|Partet1|4789078|XM_001462465.1 1683 VHAKHEIQIL-DQVREYFTNQEQISSIDS-----------KLKAKTFFTLGKWAYERAE---STSDLEQITKQ 1740
+                                          8888899998.778878887655555532...........455*********8766666...6778******* PP
+
+                                          HHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS......STTTCH CS
+                                 FAT  272 ysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse......kslqdl 338 
+                                          + ++ +++++ +kawh+ +l nfev++++e++      + ++ +v  av+gflks+sl+s        +lqd+
+  jgi|Partet1|4789078|XM_001462465.1 1741 FDESLQYNSTYAKAWHYYGLCNFEVIEQQENR------QSMNAHVFAAVKGFLKSISLGSRdikkgrYILQDT 1807
+                                          *****************************555......67889*****************988888889**** PP
+
+                                          HHHHC CS
+                                 FAT  339 lRlLt 343 
+                                          lRlL+
+  jgi|Partet1|4789078|XM_001462465.1 1808 LRLLS 1812
+                                          ***95 PP
+
+>> jgi|Partet1|4778435|XM_001451806.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  130.9  10.0   3.5e-41   1.4e-37      68     343 .]      15     290 ..       7     290 .. 0.87
+   2 ?   -3.2   0.1       2.1   8.3e+03       5      26 ..     405     437 ..     396     475 .. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: 130.9 bits;  conditional E-value: 3.5e-41
+                                         -SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.....................---TTTTTTT----TTS-TTTGC CS
+                                 FAT  68 gesynraydllvrlQqlaEleeiiqykqkls.....................sseelksllktWrkRlpgvqddv 121
+                                         +esy ra d +++lQql+E+eeii++kq ++                      + + k+l++ W +Rl+g  +d+
+  jgi|Partet1|4778435|XM_001451806.1  15 MESYDRAQDGVLKLQQLVEMEEIIEIKQFENkvqkaaqenvgeysyiklldeLEIRKKKLKDIWHDRLSGAPKDI 89 
+                                         79**************************9999999*******999999998766677778999************ PP
+
+                                         CCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHH CS
+                                 FAT 122 evwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp.pevvyaylkyl 195
+                                         +vw ++ls+R+l+l +  d        ++w+kfa+l+ k   + l+++++  l+e+ +++ +   +v++  + ++
+  jgi|Partet1|4778435|XM_001451806.1  90 DVWYRLLSTRQLYLPKVHD-------LDIWIKFAKLCLKRQKMVLCKSTIEILKEQFQNQGQApLPVTLHIFNMQ 157
+                                         *******************.......************************9996665533333447888888888 PP
+
+                                         HHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCC CS
+                                 FAT 196 wakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeil 269
+                                          +  + k  +q L ++v +++ ++e++ss               +l a++++ +G+w  +  +   s+ + e+i+
+  jgi|Partet1|4778435|XM_001451806.1 158 FEYVHAKHEIQIL-DQVREYFTNQEQISSI------------DSKLkAKTFFTLGKWAYERAE---STSDLEQIT 216
+                                         8888888888888.7777788776555554............44444*********8766666...6778***** PP
+
+                                         HHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS......STTTCH CS
+                                 FAT 270 qaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse......kslqdl 338
+                                         +++ ++ +++++ +kawh+ +l nfev++++e++      + ++ +v  av+gflks+sl+s        +lqd+
+  jgi|Partet1|4778435|XM_001451806.1 217 KQFDESLQYNSTYAKAWHYYGLCNFEVIEQQENR------QSMNAHVFAAVKGFLKSISLGSRdikkgrYILQDT 285
+                                         *******************************555......67889*****************988888889**** PP
+
+                                         HHHHC CS
+                                 FAT 339 lRlLt 343
+                                         lRlL+
+  jgi|Partet1|4778435|XM_001451806.1 286 LRLLS 290
+                                         ***95 PP
+
+  == domain 2  score: -3.2 bits;  conditional E-value: 2.1
+                                         TCCCCTSS...SGHHCCCCT............T CS
+                                 FAT   5 aeaaWrlg...qWdsmeeylslmk........k 26 
+                                         +++aWr g    W s  +  +++         +
+  jgi|Partet1|4778435|XM_001451806.1 405 LKEAWREGiqeAWTSFSQDKNKTHverilrglH 437
+                                         555666665533655444443333233333330 PP
+
+>> jgi|Partet1|4780772|XM_001454147.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.9   0.2    0.0018         7     248     288 ..      12      45 ..       3      59 .. 0.77
+   2 !    6.0   0.1    0.0033        13     254     288 ..      86     113 ..      74     127 .. 0.79
+   3 ?    0.5   0.0      0.16   6.1e+02     254     287 ..     120     146 ..     114     152 .. 0.83
+   4 !    5.0   0.4    0.0067        27     252     288 ..     152     181 ..     143     193 .. 0.80
+   5 !    7.7   0.2   0.00098       3.9     263     294 ..     190     225 ..     182     276 .. 0.57
+   6 !    7.2   0.6    0.0014       5.5     207     286 ..     239     315 ..     218     329 .. 0.50
+   7 ?    3.7   0.0     0.017        68     248     287 ..     318     350 ..     316     355 .. 0.86
+   8 ?    3.9   0.0     0.014        55     255     288 ..     359     385 ..     350     389 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 6.9 bits;  conditional E-value: 0.0018
+                                         CCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 248 kGewlaalqklnwseekseeilqaysaateldpswykawht 288
+                                         kG  l+ l++        ee+ ++y +a+ ++p+  +awh+
+  jgi|Partet1|4780772|XM_001454147.1  12 KGYTLNDLNQ-------YEEAIECYNEAISISPKFVDAWHK 45 
+                                         6666666777.......89********************98 PP
+
+  == domain 2  score: 6.0 bits;  conditional E-value: 0.0033
+                                         CCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 254 alqklnwseekseeilqaysaateldpswykawht 288
+                                         +l++        +e+ ++y +a+ ++p+  +awh+
+  jgi|Partet1|4780772|XM_001454147.1  86 NLNQ-------YNEAIECYNEAISINPKNVDAWHN 113
+                                         4445.......79*********************8 PP
+
+  == domain 3  score: 0.5 bits;  conditional E-value: 0.16
+                                         CCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTC CS
+                                 FAT 254 alqklnwseekseeilqaysaateldpswykawh 287
+                                         +l++       +ee+ ++y + + ++p+ ++aw+
+  jgi|Partet1|4780772|XM_001454147.1 120 NLNQ-------NEEAIECYNEVISINPRDEQAWY 146
+                                         3444.......99********************7 PP
+
+  == domain 4  score: 5.0 bits;  conditional E-value: 0.0067
+                                         CCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 252 laalqklnwseekseeilqaysaateldpswykawht 288
+                                         l +l++       +ee+ +++ +a++++p+  +aw++
+  jgi|Partet1|4780772|XM_001454147.1 152 LGNLNQ-------NEEAIECFNEAIYINPKYVDAWYN 181
+                                         445555.......9*********************97 PP
+
+  == domain 5  score: 7.7 bits;  conditional E-value: 0.00098
+                                         ..-SSCCHHHHCCHHCTCCCHSTTCC....CCHHHH CS
+                                 FAT 263 ekseeilqaysaateldpswykawht....walfnf 294
+                                         +k +e+ ++y +a+ ++p+  +awh+    ++++n+
+  jgi|Partet1|4780772|XM_001454147.1 190 KKYNEAIECYNEAISINPKNVDAWHNkgcaLGKLNQ 225
+                                         45799********************96666444432 PP
+
+  == domain 6  score: 7.2 bits;  conditional E-value: 0.0014
+                                         CCHHHHCCTSSCCCSS-SS---...............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHH CS
+                                 FAT 207 kLrefvscllekkeelssglevq....eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaate 277
+                                           r+f+  +++k  +l s + ++    ++++   ++ +   + lkkG  l +l++        ee+ +++ +a++
+  jgi|Partet1|4780772|XM_001454147.1 239 INRKFARGCYNKGLSLASLNKYEdaieCYNEAISISPKFVDAWLKKGYALGNLNQ-------YEEAIECFNEAIY 306
+                                         3344444444433333333333322232223333333333444555555555555.......5566666666666 PP
+
+                                         CTCCCHSTT CS
+                                 FAT 278 ldpswykaw 286
+                                         ++p+  +aw
+  jgi|Partet1|4780772|XM_001454147.1 307 INPKYFNAW 315
+                                         666666666 PP
+
+  == domain 7  score: 3.7 bits;  conditional E-value: 0.017
+                                         CCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTC CS
+                                 FAT 248 kGewlaalqklnwseekseeilqaysaateldpswykawh 287
+                                         kG  l++l++        ee+ ++y +a+ ++p+  +aw+
+  jgi|Partet1|4780772|XM_001454147.1 318 KGLALRKLNQ-------YEEAIECYNEAISINPKNVSAWN 350
+                                         5777788888.......89999999999999999999996 PP
+
+  == domain 8  score: 3.9 bits;  conditional E-value: 0.014
+                                         CCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 255 lqklnwseekseeilqaysaateldpswykawht 288
+                                         l++        +e+ ++y +a+ ++p+  +aw++
+  jgi|Partet1|4780772|XM_001454147.1 359 LNQ-------YNEAIKCYNEAISISPKFVDAWYN 385
+                                         444.......79********************97 PP
+
+>> jgi|Partet1|4781012|XM_001454386.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.5   2.3   0.00057       2.3     198     328 ..      24     175 ..       3     181 .. 0.69
+   2 ?    2.0   0.1     0.055   2.2e+02     253     288 ..     158     186 ..     149     193 .. 0.83
+   3 !    4.8   0.3    0.0078        31     248     288 ..     187     220 ..     177     233 .. 0.78
+   4 !    4.5   0.8    0.0094        37     265     292 ..     231     265 ..     220     314 .. 0.48
+   5 ?    3.5   0.6     0.019        74     254     288 ..     261     288 ..     253     345 .. 0.69
+   6 ?    4.2   0.1     0.012        47     246     288 ..     321     356 ..     295     360 .. 0.86
+   7 !    8.5   0.6   0.00056       2.2     238     288 ..     347     390 ..     322     393 .. 0.78
+   8 ?    3.6   0.1     0.018        70     252     288 ..     395     424 ..     390     438 .. 0.82
+   9 ?    2.7   0.3     0.033   1.3e+02     248     287 ..     425     457 ..     419     458 .. 0.86
+  10 !    6.6   0.2    0.0022       8.6     242     288 ..     453     492 ..     448     494 .. 0.88
+  11 !    4.8   0.1    0.0076        30     251     295 ..     496     533 ..     492     535 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 8.5 bits;  conditional E-value: 0.00057
+                                         CCHHHHHSSCCHHHHCCTSSCCC........SS-SS---...........HH.HH...CCCTCCCCCCCCCCCT. CS
+                                 FAT 198 kgeqkealqkLrefvscllekke........elssglevqeptnleeftkll.ar...cylkkGewlaalqklnw 260
+                                          ++ +ea+q+L+e +s + +  e        +l+s +++q+++++ + + ++  +   +   kG  l +l++   
+  jgi|Partet1|4781012|XM_001454386.1  24 LNQYQEAIQCLNEAISINPKY-EqalvakgnALRSLTQYQDASKCYDEAISInFKsdaAWIGKGLVLVELNH--- 94 
+                                         567899*****9999944333.24667888888888888888888877777622211133445557777777... PP
+
+                                         S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS...................S-TCCHHHH CS
+                                 FAT 261 seekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee..................pedlseyvv 317
+                                              e++ ++y +a+ ++p + +aw++ +++ +  ++ ee  +  +e                   ++l+    
+  jgi|Partet1|4781012|XM_001454386.1  95 ----YEQAIKCYNEAISFNPLSVNAWNNKGYALNDLKQCEEAIECYNEaifinpkyisawngkgiaLRNLK-QYE 164
+                                         ....99**********************9998888888775554444466777777777766666644555.345 PP
+
+                                         CCT..CCHHHH CS
+                                 FAT 318 pavegflksls 328
+                                         +a++++ +++ 
+  jgi|Partet1|4781012|XM_001454386.1 165 EAIKCYNEAIY 175
+                                         66677766665 PP
+
+  == domain 2  score: 2.0 bits;  conditional E-value: 0.055
+                                         CCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 253 aalqklnwseekseeilqaysaateldpswykawht 288
+                                         ++l++        ee+ ++y +a++++p+ ++aw +
+  jgi|Partet1|4781012|XM_001454386.1 158 RNLKQ-------YEEAIKCYNEAIYINPKDASAWQN 186
+                                         44444.......89********************75 PP
+
+  == domain 3  score: 4.8 bits;  conditional E-value: 0.0078
+                                         CCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 248 kGewlaalqklnwseekseeilqaysaateldpswykawht 288
+                                         kG  l +l++       +ee+ ++y +a+ ++p+  +aw++
+  jgi|Partet1|4781012|XM_001454386.1 187 KGITLYNLNQ-------NEEAIECYNEAISINPKYVDAWNN 220
+                                         5555556666.......9*********************98 PP
+
+  == domain 4  score: 4.5 bits;  conditional E-value: 0.0094
+                                         -SSCCHHHHCCHHCTCCCHSTTCC.......CCHH CS
+                                 FAT 265 seeilqaysaateldpswykawht.......walf 292
+                                          ee+ ++y +a+ ++p+  +aw++       + ++
+  jgi|Partet1|4781012|XM_001454386.1 231 YEEAIECYNEAISISPKYVDAWYNkgitlgnLNQY 265
+                                         56666666666666666666666644332222222 PP
+
+  == domain 5  score: 3.5 bits;  conditional E-value: 0.019
+                                         CCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 254 alqklnwseekseeilqaysaateldpswykawht 288
+                                         +l++        +e+ ++y +a+ ++p+ ++aw++
+  jgi|Partet1|4781012|XM_001454386.1 261 NLNQ-------YNEAIECYNEAISINPKYAEAWNY 288
+                                         4555.......789999999999999999999988 PP
+
+  == domain 6  score: 4.2 bits;  conditional E-value: 0.012
+                                         CTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 246 lkkGewlaalqklnwseekseeilqaysaateldpswykawht 288
+                                         + kG  l +l++        +e+ ++y +a+ ++p+ ++aw++
+  jgi|Partet1|4781012|XM_001454386.1 321 FNKGNVLGNLNQ-------YNEAIECYNEAISINPKYAEAWNN 356
+                                         567777888888.......89********************86 PP
+
+  == domain 7  score: 8.5 bits;  conditional E-value: 0.00056
+                                         ..HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 238 tkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawht 288
+                                         + + a++   kG  l++l++        ee++++y +a+ ++p+ ++aw++
+  jgi|Partet1|4781012|XM_001454386.1 347 NPKYAEAWNNKGIALRNLNQ-------YEEAFKCYNEAISINPKFAEAWYN 390
+                                         44458888999999999999.......89*******************986 PP
+
+  == domain 8  score: 3.6 bits;  conditional E-value: 0.018
+                                         CCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 252 laalqklnwseekseeilqaysaateldpswykawht 288
+                                         l++l++        +e+ +++ +a+ ++p+ ++aw++
+  jgi|Partet1|4781012|XM_001454386.1 395 LNNLNQ-------FDEAIECFNEAISINPKYASAWYN 424
+                                         555666.......99********************97 PP
+
+  == domain 9  score: 2.7 bits;  conditional E-value: 0.033
+                                         CCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTC CS
+                                 FAT 248 kGewlaalqklnwseekseeilqaysaateldpswykawh 287
+                                         kG  l++l++        ee+ ++y +a+ ++p+ ++aw+
+  jgi|Partet1|4781012|XM_001454386.1 425 KGITLRNLNQ-------YEEAIECYNEAISINPKYAEAWN 457
+                                         6667777888.......89********************7 PP
+
+  == domain 10  score: 6.6 bits;  conditional E-value: 0.0022
+                                         HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawht 288
+                                         a++   kG  l++l++        ee+ ++y +a+ ++p+ ++aw++
+  jgi|Partet1|4781012|XM_001454386.1 453 AEAWNDKGIALRNLNQ-------YEEAIKCYNEAISINPKFAEAWYN 492
+                                         6777788999999999.......9*********************86 PP
+
+  == domain 11  score: 4.8 bits;  conditional E-value: 0.0076
+                                         CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+                                 FAT 251 wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfe 295
+                                          l++l++        ee+ ++y +a+ ++p++  aw++ ++f f+
+  jgi|Partet1|4781012|XM_001454386.1 496 TLNNLNQ-------YEEAIKCYNEAISINPKVDYAWYNQGQFIFK 533
+                                         5566666.......89*********************98888776 PP
+
+>> jgi|Partet1|4770173|XM_001443438.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.1   0.4   0.00075         3      41      90 ..      42      91 ..      13      99 .. 0.58
+   2 !   11.8   0.1   5.5e-05      0.22     245     293 ..     102     150 ..      92     158 .. 0.81
+   3 !    6.8   0.2    0.0018       7.2     242     288 ..     133     172 ..     133     190 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 8.1 bits;  conditional E-value: 0.00075
+                                        HH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHH CS
+                                 FAT 41 hr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleei 90
+                                           ++f ea+el+ek++    ++l+ l  +sy + y+l +   +++ +e +
+  jgi|Partet1|4770173|XM_001443438.1 42 SEgKKFLEAKELCEKVQREEPQNLHTLYRKSY-SLYNLTQYSEAIQCIELA 91
+                                        44455555555555555555555555555544.344444444444333333 PP
+
+  == domain 2  score: 11.8 bits;  conditional E-value: 5.5e-05
+                                         CCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC.......CCHHH CS
+                                 FAT 245 ylkkGewlaalqklnwseekseeilqaysaateldpswykawht.......walfn 293
+                                         y+ kG  l al+k        +e+  +y +a+++dp+ +ka+++       + ++n
+  jgi|Partet1|4770173|XM_001443438.1 102 YMTKGVALDALNK-------YNEAIVCYDKAIQIDPNFAKAYYNkgaalkrLNKYN 150
+                                         7889999999999.......89********************99555555555554 PP
+
+  == domain 3  score: 6.8 bits;  conditional E-value: 0.0018
+                                         HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawht 288
+                                         a++y  kG  l++l+k        +e+  +y +a+++dp+ + a+++
+  jgi|Partet1|4770173|XM_001443438.1 133 AKAYYNKGAALKRLNK-------YNEAIVCYDKAIQIDPNYAIAYYN 172
+                                         789999***9******.......89**************99999886 PP
+
+>> jgi|Partet1|4752933|XM_001426266.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   21.1   1.6   8.4e-08   0.00033     162     275 ..      43     174 ..      39     182 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 21.1 bits;  conditional E-value: 8.4e-08
+                                         HHCCSTT.HHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.............SS CS
+                                 FAT 162 grlslAe.kaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.............el 222
+                                         g++++++ +aL++    d+ e     + ++++k+l++ +e++ea   L  +++++ ++ e             + 
+  jgi|Partet1|4752933|XM_001426266.1  43 GQMKICYtQALQET---DN-E----CLELERIKFLLEINEVQEARIFLDNMIKKYPKNIEaylykgireiylaN- 108
+                                         66666664555555...22.2....34599***********************998888787777666554441. PP
+
+                                         -SS---...............................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCC CS
+                                 FAT 223 ssglevq....................eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaa 275
+                                               +                    +p+n++ ++++ ar++ k+ +w +al+  n++  ks + l++y++ 
+  jgi|Partet1|4752933|XM_001426266.1 109 ------IledeksfdkiidlfdeaislQPENVQLYENK-ARHLEKQQKWVEALKCINQALSKSPDSLHYYLQK 174
+                                         ......03345566777899999999999999999999.8******************************986 PP
+
+>> jgi|Partet1|4788546|XM_001461933.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.2   9.6   0.00036       1.4     156     288 ..      42     175 ..       1     180 [. 0.65
+   2 !   13.5   0.7   1.7e-05     0.068     196     305 ..     181     294 ..     178     308 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 9.2 bits;  conditional E-value: 0.00036
+                                         CCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.SS-SS--- CS
+                                 FAT 156 nlaRksgrlslAekaLkklleedkeewlp.pevvyaylkylwakgeqkealqkLrefvscllekke.elssglev 228
+                                          +a k+++++ A+++ +++l+  +    + p+    ++ +l+++++ ++al  L++ ++   +++e +++ g  +
+  jgi|Partet1|4788546|XM_001461933.1  42 IIAQKQKQTDKAISSYQMALQLLP----TfPQCLSNQATLLIETEKYSQALDLLKQALKTDQNNAEaHNNLGVLY 112
+                                         455566666666666666655544....37899999999999999999999999999994444444655555555 PP
+
+                                         ...........HHHHCCCTCCC......CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 229 qeptnleeftkllarcylkkGe......wlaalqklnwseekseeilqaysaateldpswykawht 288
+                                          ++++le  +++ +++  +k         +  +     ++++ +++lq++ +a++l ++  ka+h+
+  jgi|Partet1|4788546|XM_001461933.1 113 YKQNKLELSQNEYMEAIKLKVHnpeahsNQGVI---FCAKQDYSQALQCFDEAIKLKNDFVKAYHN 175
+                                         577777777777766666665544432222222...235667899*******************97 PP
+
+  == domain 2  score: 13.5 bits;  conditional E-value: 1.7e-05
+                                         HHCCHHHHHSSCCHHHHCCTSSCCC......SS-SS---......................HHHHCCCTCCCCCC CS
+                                 FAT 196 wakgeqkealqkLrefvscllekke......elssglevq...........eptnleeftkllarcylkkGewla 253
+                                         ++k++ kea++   + ++ +++++e             +              ++  +++ ++a  y +kG  + 
+  jgi|Partet1|4788546|XM_001461933.1 181 YEKENFKEAVEIYDKAIKGKTQDPEtyynksI------ALqgleqfddalnALEQAYKLSPEMALLYVEKGTLMY 249
+                                         56677789999999999999999996443332......3335556678887778888999999*********999 PP
+
+                                         CCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSS CS
+                                 FAT 254 alqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekke 305
+                                         + +k        +e+ + y +a++l+p++++a+++ + + +++ +  e++k+
+  jgi|Partet1|4788546|XM_001461933.1 250 RKGK-------VDEAIKNYDLAIQLQPNCAEAYYNKGCALENQGKIDESNKN 294
+                                         9999.......9*********************9966666666555555555 PP
+
+>> jgi|Partet1|4786747|XM_001460133.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.3   0.2   0.00066       2.6     248     288 ..      18      51 ..      10      63 .. 0.84
+   2 ?    4.2   0.2     0.012        47     249     288 ..      53      85 ..      50      98 .. 0.78
+   3 !    6.5   0.0    0.0023       9.2     249     287 ..      87     118 ..      84     121 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 8.3 bits;  conditional E-value: 0.00066
+                                         CCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 248 kGewlaalqklnwseekseeilqaysaateldpswykawht 288
+                                         kG  la+l++        ee++++y +a+ ++p+  +aw++
+  jgi|Partet1|4786747|XM_001460133.1  18 KGIALANLNQ-------YEEANKCYNEAISINPKYVNAWNN 51 
+                                         5666777777.......89********************97 PP
+
+  == domain 2  score: 4.2 bits;  conditional E-value: 0.012
+                                         CCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+                                 FAT 249 Gewlaalqklnwseekseeilqaysaateldpswykawht 288
+                                         G  l++l++        ee+ ++y +a+ ++p+   aw++
+  jgi|Partet1|4786747|XM_001460133.1  53 GIALRNLNQ-------YEEAIECYNEAISINPKYVYAWYN 85 
+                                         556667777.......899**************9999997 PP
+
+  == domain 3  score: 6.5 bits;  conditional E-value: 0.0023
+                                         CCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTC CS
+                                 FAT 249 Gewlaalqklnwseekseeilqaysaateldpswykawh 287
+                                         G  l++l++        ee+ ++y +a+ ++p++++aw+
+  jgi|Partet1|4786747|XM_001460133.1  87 GIALRNLNQ-------YEEAIECYNEAISINPKLAEAWF 118
+                                         555667777.......89********************7 PP
+
+>> jgi|Partet1|4754866|XM_001428202.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.2   2.6     1e-05     0.041     221     317 ..     231     327 ..      20     359 .. 0.77
+   2 ?    0.9   0.0      0.12   4.6e+02     242     293 ..     329     380 ..     318     414 .. 0.72
+   3 ?    1.6   0.6     0.073   2.9e+02     155     282 ..     363     527 ..     350     562 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 14.2 bits;  conditional E-value: 1e-05
+                                         SS-SS---................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCC CS
+                                 FAT 221 elssglevq.....eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwa 290
+                                         ++ +          + ++  e++   a +y  +G   +al++       ++++l+ y +a+ ++p+ +ka+ + +
+  jgi|Partet1|4754866|XM_001428202.1 231 QMEN----YeeaiiNFNQAIELNSGFANNYVNRGLLFKALNE-------KQKALEDYDLAISINPKFIKAYKNRG 294
+                                         2222....133446777778888888999999999*******.......9************************* PP
+
+                                         HHHHHCCHHHHHHSSSS.......S-TCCHHHH CS
+                                 FAT 291 lfnfevlskeeekkeeee......pedlseyvv 317
+                                            f+ ++++ +  +  +      p+d+ +++ 
+  jgi|Partet1|4754866|XM_001428202.1 295 TILFQEINQNDKALSDLNkilelnPKDIYTHIQ 327
+                                         *********976644444677777444444443 PP
+
+  == domain 2  score: 0.9 bits;  conditional E-value: 0.12
+                                         HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+                                 FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+                                         a  + ++G   +alq+ +++ + + ++++ y++ + l +++ ++  +++++ 
+  jgi|Partet1|4754866|XM_001428202.1 329 ANLLQLLGCTEQALQDYTKAIDINPDETENYCKRADLYKQLGQTDLAMKDYD 380
+                                         5566666777777777777777777777777777777777777777776664 PP
+
+  == domain 3  score: 1.6 bits;  conditional E-value: 0.073
+                                         CCCHCHHHHCCSTTHHCCCCCHCTT.........TSSCCCHHHHHHHCCHH.................HHHSSCC CS
+                                 FAT 155 anlaRksgrlslAekaLkklleedk....eewlppevvyaylkylwakgeq.................kealqkL 208
+                                         a+l  + g+++lA+k   k+le ++     +w++  +++++lk   + +                   ++ l+kL
+  jgi|Partet1|4754866|XM_001428202.1 363 ADLYKQLGQTDLAMKDYDKVLEINPknsnGYWNK-AIIFEELKQYEPAIAFltgfiqlnpldenaymkRSDLYKL 436
+                                         5555566666677766666666666333333333.6666666666666663222333333333344436666666 PP
+
+                                         HHHHCCTSSCCC..........SS-SS---................................HHHHCCCTCCCCC CS
+                                 FAT 209 refvscllekke..........elssglevq.....................eptnleeftkllarcylkkGewl 252
+                                           ++ + l++++                  +                     + +++ e++ +   +y+ +G   
+  jgi|Partet1|4754866|XM_001428202.1 437 VNQLDKALDDQQkiieinpknrF-------KfeyfavaflfkemneiektfqDLNRILEIKPNNINTYFIRGNLY 504
+                                         66666666665544433222220.......133444444444444444444445555555555557777777777 PP
+
+                                         CCCCCCT.S...-SSCCHHHHCCHHCTCCC CS
+                                 FAT 253 aalqklnwseekseeilqaysaateldpsw 282
+                                         + l++        +++ q +s+ +e+dp+ 
+  jgi|Partet1|4754866|XM_001428202.1 505 KDLNQ-------DDQAIQNFSKIIEIDPTH 527
+                                         77777.......678888888888888765 PP
+
+>> jgi|Partet1|4763695|XM_001436956.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   15.0   0.6   6.2e-06     0.024     242     307 ..     165     235 ..     108     268 .. 0.68
+   2 ?   -0.4   0.1      0.29   1.2e+03      71     100 ..     293     323 ..     274     331 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 15.0 bits;  conditional E-value: 6.2e-06
+                                         HHCCCTCCC......CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS CS
+                                 FAT 242 arcylkkGe......wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeee 307
+                                         ++c+  k +       +  l++l+ s++++e+i + +++  ++d+++ k++h + +f + + ++++++ +++
+  jgi|Partet1|4763695|XM_001436956.1 165 GECLNNKRKfidmngIQILLNHLD-SNRCIEKIANMFRDLLYYDDELHKIYHDLSKFSNTAGQTLKQQDKKN 235
+                                         444444444666666677788875.7899***********************************98874433 PP
+
+  == domain 2  score: -0.4 bits;  conditional E-value: 0.29
+                                         CCCCHHHHHCCCCCHHHCHHCCHHCSS-.-- CS
+                                 FAT  71 ynraydllvrlQqlaEleeiiqykqkls.ss 100
+                                         y ++  +l+++Q  +E++++iq + ++  ++
+  jgi|Partet1|4763695|XM_001436956.1 293 YLSCSVILLKVQNDQEFKQFIQTHLDHLsKE 323
+                                         5566667999999999999999988765433 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      39580  (18011020 residues searched)
+Passed MSV filter:                      9821  (0.24813); expected 791.6 (0.02)
+Passed bias filter:                      637  (0.016094); expected 791.6 (0.02)
+Passed Vit filter:                       103  (0.00260232); expected 39.6 (0.001)
+Passed Fwd filter:                        10  (0.000252653); expected 0.4 (1e-05)
+Initial search space (Z):              39580  [actual number of targets]
+Domain search space  (domZ):              10  [number of targets reported over threshold]
+# CPU time: 0.44u 0.01s 00:00:00.45 Elapsed: 00:00:00.20
+# Mc/sec: 30550.39
+//
+[ok]

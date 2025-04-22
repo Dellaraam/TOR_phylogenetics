@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Rhodophyta/Proteins/Galderia_sulphuraria_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+     0.0079   13.9   0.0      0.008   13.8   0.0    1.2  1  XP_005707069.1  hypothetical protein isoform 1 [Galdieria sul
+  ------ inclusion threshold ------
+       0.01   13.5   0.0       0.01   13.5   0.0    1.2  1  XP_005707068.1  hypothetical protein isoform 2 [Galdieria sul
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_005707069.1  hypothetical protein isoform 1 [Galdieria sulphuraria]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.8   0.0   2.2e-06     0.008     438     483 ..       2      47 ..       1     140 [. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 13.8 bits;  conditional E-value: 2.2e-06
+  PTHR13335.orig.30.pir 438 fvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkky.....r 483
+                            ++++ l++ g+      ti+v+ d t+ ++ +k+c++rk d+k++     +
+         XP_005707069.1   2 QLRIGLPD-GSV----STIQVDQDATIDQLKDKVCQERKIDPKTKrirliY 47 
+                            57888844.555....799999*********************99655552 PP
+
+>> XP_005707068.1  hypothetical protein isoform 2 [Galdieria sulphuraria]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.5   0.0   2.8e-06      0.01     438     483 ..       2      43 ..       1     147 [. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 13.5 bits;  conditional E-value: 2.8e-06
+  PTHR13335.orig.30.pir 438 fvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkky.r 483
+                            ++++ l++ g+      ti+v+ d t+ ++ +k+c++rk d+k++ +
+         XP_005707068.1   2 QLRIGLPD-GSV----STIQVDQDATIDQLKDKVCQERKIDPKTKrF 43 
+                            57888844.555....799999*********************9861 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       7174  (3008406 residues searched)
+Passed MSV filter:                      1036  (0.14441); expected 143.5 (0.02)
+Passed bias filter:                      254  (0.0354056); expected 143.5 (0.02)
+Passed Vit filter:                        38  (0.00529691); expected 7.2 (0.001)
+Passed Fwd filter:                         5  (0.000696961); expected 0.1 (1e-05)
+Initial search space (Z):               7174  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.13u 0.02s 00:00:00.15 Elapsed: 00:00:00.07
+# Mc/sec: 25926.32
+//
+[ok]

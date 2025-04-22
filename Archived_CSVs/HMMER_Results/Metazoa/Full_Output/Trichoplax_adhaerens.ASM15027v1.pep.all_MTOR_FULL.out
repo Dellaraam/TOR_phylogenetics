@@ -1,0 +1,725 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Trichoplax_adhaerens.ASM15027v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+    5.4e-59  198.1  11.2    2.4e-57  192.7   0.7    5.3  3  TriadP57462  pep scaffold:ASM15027v1:scaffold_6:3206386:32221
+    1.1e-08   34.5  10.1      0.054   12.8   0.1    8.9  9  TriadP58366  pep scaffold:ASM15027v1:scaffold_7:5065289:50792
+    5.8e-07   29.0   1.8      0.036   13.4   0.5    4.5  4  TriadP54712  pep scaffold:ASM15027v1:scaffold_3:6556624:65665
+    5.1e-05   22.7   4.2        5.6    6.3   0.0    4.7  4  TriadP54144  pep scaffold:ASM15027v1:scaffold_3:1208708:12140
+    0.00011   21.6  20.3      0.037   13.4   0.1    7.5  8  TriadP51005  pep scaffold:ASM15027v1:scaffold_21:996197:10073
+    0.00014   21.2   1.1          1    8.7   0.0    5.0  6  TriadP50449  pep scaffold:ASM15027v1:scaffold_7:485207:492970
+     0.0002   20.7  13.4        1.4    8.3   0.0    8.2  9  TriadP51271  pep scaffold:ASM15027v1:scaffold_1:191705:201145
+    0.00025   20.4   3.2        1.6    8.0   0.1    4.9  4  TriadP54034  pep scaffold:ASM15027v1:scaffold_3:358600:366051
+     0.0016   17.8   7.5       0.96    8.8   0.1    4.1  3  TriadP54294  pep scaffold:ASM15027v1:scaffold_3:2755083:27635
+     0.0021   17.4   3.6        2.2    7.6   0.0    5.4  6  TriadP54185  pep scaffold:ASM15027v1:scaffold_3:1581266:15865
+     0.0047   16.3   5.6      0.018   14.4   0.0    4.1  4  TriadP58870  pep scaffold:ASM15027v1:scaffold_9:914664:926424
+  ------ inclusion threshold ------
+      0.026   13.9   3.0         11    5.4   0.0    3.9  5  TriadP58673  pep scaffold:ASM15027v1:scaffold_8:2179347:21870
+      0.036   13.4   6.0       0.12   11.7   0.2    4.2  4  TriadP23502  pep scaffold:ASM15027v1:scaffold_4:4195260:42020
+      0.042   13.2   4.4         29    4.0   0.1    5.5  4  TriadP57860  pep scaffold:ASM15027v1:scaffold_7:911422:924344
+      0.099   12.0   0.3        3.7    6.9   0.0    3.0  3  TriadP1172   pep scaffold:ASM15027v1:scaffold_12:1089056:1093
+       0.63    9.4   5.3        2.1    7.7   1.5    3.4  3  TriadP26416  pep scaffold:ASM15027v1:scaffold_6:1701779:17046
+
+
+Domain annotation for each sequence (and alignments):
+>> TriadP57462  pep scaffold:ASM15027v1:scaffold_6:3206386:3222182:1 gene:TriadG57462 transcript:TriadT57462 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.8   0.1     0.094        68      77     156 ..     769     852 ..     688     854 .. 0.67
+   2 !  192.7   0.7   3.4e-60   2.4e-57       1     159 [.     858    1031 ..     858    1032 .. 0.90
+   3 ?    5.7   0.2     0.012       8.7     105     146 ..    1058    1098 ..    1042    1153 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 2.8 bits;  conditional E-value: 0.094
+     mTOR_dom  77 psseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces...slrefllqqLatLv 156
+                  p  +  y + +in+Ll  lk++  +     +v++a+ +  +  g + ++ ++ + p +l ++++++s   + re+ l+ +++ v
+  TriadP57462 769 PRLTRPYVKPIINTLLPKLKENDPNpAVVVNVLSAVGEQAQVSGEELIEWIEDLFPIILDILQDSSSsslNKREVALRTMGQVV 852
+                  444555666789999999988888878888999999999999999999999999999999999666432456778888777766 PP
+
+  == domain 2  score: 192.7 bits;  conditional E-value: 3.4e-60
+     mTOR_dom    1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks.............eee.ekeeenaeetdvsellvglspss.ee 81  
+                   VvePy++yp+LLe+Ll++lkteqs+siRre+++vlG+lGALDPykhk+ + k              e++   + ++  e +v+e+lv++s+ + +e
+  TriadP57462  858 VVEPYSRYPNLLETLLSFLKTEQSKSIRRETVRVLGLLGALDPYKHKVDRMKRssdiynvqdvlipETKgLADPSSIGELNVTEMLVSMSSVQmDE 953 
+                   9*********************************************98776666666666555554222444445555699*************** PP
+
+     mTOR_dom   82 yyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                   +yp+v+i+aL++ilkd+slsshh++vvqa  +i+k+l++kcv+flpqi+p++l+v+r+c+++l+e llq+L++L+s+ 
+  TriadP57462  954 FYPAVAIAALMRILKDSSLSSHHSMVVQAFSFIIKSLKIKCVAFLPQIVPTFLNVARSCDTTLKESLLQKLGVLISLA 1031
+                   ***************************************************************************986 PP
+
+  == domain 3  score: 5.7 bits;  conditional E-value: 0.012
+     mTOR_dom  105 tavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146 
+                   ++++  + ++   lg +   +lpqiip++l+++ + +s +++
+  TriadP57462 1058 NTIIALLEQMAIALGSEFKVYLPQIIPQILKTFIHDNS-HNQ 1098
+                   4556666677777999999999*****99998776443.333 PP
+
+>> TriadP58366  pep scaffold:ASM15027v1:scaffold_7:5065289:5079280:-1 gene:TriadG58366 transcript:TriadT58366 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.0   0.0       5.7   4.1e+03      26     131 ..      24      60 ..      12     119 .. 0.50
+   2 ?    2.7   0.0       0.1        72      81     145 ..     348     414 ..     269     419 .. 0.78
+   3 ?   -0.9   0.0       1.3     9e+02      27     119 ..    1192    1208 ..    1167    1264 .. 0.47
+   4 !    8.7   0.0    0.0014         1      87     160 .]    1375    1447 ..    1332    1447 .. 0.90
+   5 !   12.8   0.1   7.6e-05     0.054      91     157 ..    1497    1563 ..    1465    1565 .. 0.88
+   6 ?   -2.4   0.0       3.6   2.6e+03     123     151 ..    1649    1677 ..    1636    1684 .. 0.77
+   7 ?   -1.0   0.0       1.3   9.5e+02     105     157 ..    1774    1830 ..    1748    1848 .. 0.69
+   8 ?    2.7   0.0       0.1        73     108     142 ..    1969    2003 ..    1965    2010 .. 0.83
+   9 ?    3.8   0.0     0.046        33      62     145 ..    2006    2088 ..    2000    2102 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: -3.0 bits;  conditional E-value: 5.7
+     mTOR_dom  26 siRrevikvlGilGALDPykhkeveeks....eeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlg 119
+                   +Rr+ +kv G++  L     k   +      +                                                                 
+  TriadP58366  24 RLRRNRLKVAGVIHTLAGSHAKLAIKCLlpllQ----------------------------------------------------------------- 56 
+                  556666666666655555555444333244441................................................................. PP
+
+     mTOR_dom 120 lkcvpflpqiip 131
+                          q   
+  TriadP58366  57 --------QEAA 60 
+                  ........2222 PP
+
+  == domain 2  score: 2.7 bits;  conditional E-value: 0.1
+     mTOR_dom  81 eyyptvvinaLlkilkdpslsshhtavvqai..msifktlglkcvpflpqiipallsvirtcesslr 145
+                  e + + + + L + lk+ sl++  t +v++    +  k l+  c+++   ++ ++l+v+++c+s+++
+  TriadP58366 348 EAITSEIPKFLFEYLKNGSLDKASTPTVRVAylKFLAKCLKGDCLKYGAPVLGSILEVFSKCTSQIS 414
+                  555555556788889999**9888888776521667788***********************98765 PP
+
+  == domain 3  score: -0.9 bits;  conditional E-value: 1.3
+     mTOR_dom   27 iRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlg 119 
+                   iR+ v+ v+G                                                                            s  k+l+
+  TriadP58366 1192 IRQAVVVVMG----------------------------------------------------------------------------SLAKHLD 1208
+                   3333333333............................................................................3333333 PP
+
+  == domain 4  score: 8.7 bits;  conditional E-value: 0.0014
+     mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160 
+                   ++ +Ll  lk+ s +  +t  v+ +  + +    +  + lp+i+p+l+ ++ ++++++++  l+ L+++ s++k
+  TriadP58366 1375 IFPSLLDALKEDSWR-TKTGSVELLGAMAHCAPKQLSSCLPNIVPNLVDILGDSHAKVQHAGLHALKQIASVIK 1447
+                   567899999999988.57778899999999999999**********************************9997 PP
+
+  == domain 5  score: 12.8 bits;  conditional E-value: 7.6e-05
+     mTOR_dom   91 Llkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                   +++ l+++s s+ ++++ q i ++f   ++k   p+lp i+p l +++ +  +++r++  + L++Lv+
+  TriadP58366 1497 IHRALQQRS-SETKKMASQIIGNMFTLTDMKDlAPYLPSIVPGLKQALLDPMPNVRHVSSKALGVLVK 1563
+                   456665555.6789999**************99******************9*************996 PP
+
+  == domain 6  score: -2.4 bits;  conditional E-value: 3.6
+     mTOR_dom  123 vpflpqiipallsvirtcesslrefllqq 151 
+                    pf+  iip++l+ + + ++ +r++ l+ 
+  TriadP58366 1649 SPFIGSIIPSVLQGLADETEYVRDTSLRA 1677
+                   699**********9998877777777665 PP
+
+  == domain 7  score: -1.0 bits;  conditional E-value: 1.3
+     mTOR_dom  105 tavvqaimsifktlglkcvpflpqiipalls....virtcesslrefllqqLatLvs 157 
+                   + v qa m++ k + ++  + l++ +p+l+      + +++ ++r++    L++Lv+
+  TriadP58366 1774 HLVRQAAMHVWKVIVINTPKALREMLPNLFVkligCLASSSLDMRHMATASLTDLVT 1830
+                   455677777777777777776666666543311114444444777777777777775 PP
+
+  == domain 8  score: 2.7 bits;  conditional E-value: 0.1
+     mTOR_dom  108 vqaimsifktlglkcvpflpqiipallsvirtces 142 
+                   v+a+ ++ +  g +   + +q+ipallsvi+  ++
+  TriadP58366 1969 VRALAYVASVAGEELSLYANQVIPALLSVIKGYTR 2003
+                   678888888888899999************97665 PP
+
+  == domain 9  score: 3.8 bits;  conditional E-value: 0.046
+     mTOR_dom   62 naeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145 
+                   ++e+++ ++ ++ + + s+e    vv+++L ++ k + ++ ++ +++  ++  f++     v+ ++ i+ +l++++++++++++
+  TriadP58366 2006 EKEKESYEACMTLVVSISDETTVRVVLEELFELAKSSDVD-MRRTALGLLHPFFSESTADYVSQMDLILRTLIRMLNDSDNDVL 2088
+                   344455666688888999**************99777766.78889999999999999999*************9999887655 PP
+
+>> TriadP54712  pep scaffold:ASM15027v1:scaffold_3:6556624:6566549:1 gene:TriadG54712 transcript:TriadT54712 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.4   0.5     5e-05     0.036      80     142 ..      99     161 ..      55     175 .. 0.84
+   2 ?    1.4   0.0      0.24   1.8e+02       8      36 ..     661     688 ..     621     702 .. 0.54
+   3 ?   -1.1   0.0       1.4     1e+03     114     141 ..    1072    1100 ..    1060    1110 .. 0.82
+   4 !    8.5   0.0    0.0016       1.2      26      51 ..    1223    1248 ..    1201    1269 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 13.4 bits;  conditional E-value: 5e-05
+     mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                     + + +  +L+++l  +  ++ h++  q i+si+k ++lk + f ++ii +++ ++ ++++
+  TriadP54712  99 SKAFIKWITCKLMHLLASSDCQKLHSTSSQIIISILKLIELKDLIFFREIIEEFVMILMSLSN 161
+                  45555667778********************************************99887765 PP
+
+  == domain 2  score: 1.4 bits;  conditional E-value: 0.24
+     mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlG 36 
+                  y+e+++ L+nil t+ s si+  v  ++G
+  TriadP54712 661 YHEIISYLSNILDTD-SCSIKETVASCIG 688
+                  333333333333333.3333333333333 PP
+
+  == domain 3  score: -1.1 bits;  conditional E-value: 1.4
+     mTOR_dom  114 ifktlglkc.vpflpqiipallsvirtce 141 
+                    +k+++l +  p+l+qii  l+ v+++  
+  TriadP54712 1072 FVKSVELSSlGPMLSQIIAILYPVMKKYA 1100
+                   567888888789***********999865 PP
+
+  == domain 4  score: 8.5 bits;  conditional E-value: 0.0016
+     mTOR_dom   26 siRrevikvlGilGALDPykhkevee 51  
+                   + R     +lGi+GA+DP +  +v+e
+  TriadP54712 1223 KERNLCGECLGIIGAIDPGRLEKVSE 1248
+                   556666789*********99877664 PP
+
+>> TriadP54144  pep scaffold:ASM15027v1:scaffold_3:1208708:1214021:1 gene:TriadG54144 transcript:TriadT54144 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.9   0.0      0.02        15      93     160 .]      42     115 ..      26     115 .. 0.78
+   2 !    6.1   0.2     0.009       6.5      70     117 ..     214     260 ..     189     295 .. 0.71
+   3 ?    4.7   0.1     0.023        17      79     139 ..     373     436 ..     345     442 .. 0.78
+   4 !    6.3   0.0    0.0078       5.6      91     145 ..     431     485 ..     425     499 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 4.9 bits;  conditional E-value: 0.02
+     mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpfl....pqiipallsvir..tcesslrefllqqLatLvsivk 160
+                  ++++++s +  +++  +ai +if+ ++     +l    ++++ all+ i+  +++++++++++  L+++ ++vk
+  TriadP54144  42 NMINKSSSKILKESSAEAIGHIFRLMKNVENDYLilesDHVLAALLNGINwkDASQRVQNTIMTALSHFLTYVK 115
+                  5667777778888888899999988776665555444489*******987557778*************99997 PP
+
+  == domain 2  score: 6.1 bits;  conditional E-value: 0.009
+     mTOR_dom  70 ellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt 117
+                  ++l+++++ ++e + + v+ aL ki   +sl+    +v+++i+ ++ +
+  TriadP54144 214 QILMKMIQDDNEIIRQCVVWALGKIA-RKSLKILERNVIESIVDVLME 260
+                  44667777778888888888888887.567777888888888777655 PP
+
+  == domain 3  score: 4.7 bits;  conditional E-value: 0.023
+     mTOR_dom  79 s.eeyyptv..vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                  +  +y++++  +i  L+  lkd   ++   ++v+++  ++++l+++ vp+  +ii  ll+ i++
+  TriadP54144 373 DlSDYIKHIykMIPCLIIGLKDTYRNQVFISAVRTLKPVCRKLRTNFVPYCFEIITILLNKITD 436
+                  445666654236888999999*9999********************************998876 PP
+
+  == domain 4  score: 6.3 bits;  conditional E-value: 0.0078
+     mTOR_dom  91 Llkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+                  L ki + p  s   ++++ a+ +i +++g+   ++l+ ++ a+ +v+ ++++  +
+  TriadP54144 431 LNKITDIPFCSCFNQDIIAALGNIAESIGMYFESYLQPVLEAVDHVAVNTNPGDL 485
+                  44777788889999*****************************999988777544 PP
+
+>> TriadP51005  pep scaffold:ASM15027v1:scaffold_21:996197:1007355:1 gene:TriadG51005 transcript:TriadT51005 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.4   0.6      0.12        89     104     145 ..      46     103 ..       6     161 .. 0.51
+   2 ?    2.2   0.7      0.15     1e+02      13     138 ..      51     182 ..      44     204 .. 0.48
+   3 !   13.4   0.1   5.1e-05     0.037      94     156 ..     218     281 ..     135     283 .. 0.83
+   4 ?    5.7   0.1     0.012       8.4      87     142 ..     430     484 ..     365     501 .. 0.81
+   5 ?    3.2   0.2      0.07        50      97     157 ..     615     676 ..     559     677 .. 0.76
+   6 ?    2.6   0.1       0.1        73      66     145 ..     781     860 ..     724     869 .. 0.75
+   7 ?    1.8   0.0      0.19   1.4e+02     101     153 ..     955    1007 ..     937    1009 .. 0.84
+   8 ?   -3.4   0.0       7.4   5.3e+03      24      37 ..    1145    1158 ..    1130    1189 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 2.4 bits;  conditional E-value: 0.12
+     mTOR_dom 104 htavvqaimsifktlglkcvp................flpqiipallsvirtcesslr 145
+                   ++vv+++m  +++ + ++ +                +++qi ++l   +++++++lr
+  TriadP51005  46 EKKVVSTVMRLLEDKNGEVQNlavkclgllvtkvkenYVEQIANSLCDGMKSTSEQLR 103
+                  3344444444433321111111111111222222222444444444444444444444 PP
+
+  == domain 2  score: 2.2 bits;  conditional E-value: 0.15
+     mTOR_dom  13 eiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseee...ekeeenaeetdvsel.....lvgl.spss.eeyyptvvinaLlkilkdpsl 100
+                  ++++++l+ +++ +++  ++k+lG+l  ++ +k   ve+ ++++     ++++++  d+s++     ++++ s+++      + +++ Ll+++  ++ 
+  TriadP51005  51 STVMRLLE-DKNGEVQNLAVKCLGLL--VTKVKENYVEQ-IANSlcdGMKSTSEQLRDISSIglktvIADIaSQTQlAVLLCKLIVSRLLSVIPRAQD 144
+                  45555554.45677777777777777..55555544443.3233343222222222333333322212222334444444445555666666544444 PP
+
+     mTOR_dom 101 sshhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                   s + ++++ +  i+k+ g       +++   l++ ++
+  TriadP51005 145 PSVQLEALDILSDILKKYGGLLADHHSNVQDCLIAQMT 182
+                  44555555555555555555555555555555555555 PP
+
+  == domain 3  score: 13.4 bits;  conditional E-value: 5.1e-05
+     mTOR_dom  94 il.kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156
+                   l +++sls    + vq i +i ++ g +  ++++ ++p l+s   + ++ ++r++ lq L++Lv
+  TriadP51005 218 ELnQNRSLS-TTRTYVQCIATISRQAGHRIGNYVDTLMPLLFSFSMQQDDdEFRDYCLQALESLV 281
+                  342445555.78889****************************87777777************98 PP
+
+  == domain 4  score: 5.7 bits;  conditional E-value: 0.012
+     mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                  +++aL kilkd+s++  ++ + +++ ++++ l       ++ ++p ++  +++ +s
+  TriadP51005 430 IVKALRKILKDKSVK-TRQGCFSVLSEVCQVLYGALNDHMTSVMPGIVYSLSDKSS 484
+                  6799*********98.6788899999999999999999999999999988876544 PP
+
+  == domain 5  score: 3.2 bits;  conditional E-value: 0.07
+     mTOR_dom  97 dpslsshhtavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                      +s + ++v+a++++ ++ l+l  +++lp+ i+ l s +r+ ++ l+   l  L++L++
+  TriadP51005 615 RLRNDSTRLCTVKALTTMANSpLNLDLTMILPESIQLLSSFLRKNSRALKLSSLTALNILIQ 676
+                  33344778899********9999*********************999999999999999986 PP
+
+  == domain 6  score: 2.6 bits;  conditional E-value: 0.1
+     mTOR_dom  66 tdvsellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+                   +v++ ++g++  s +  +t+v+++L++ l+ +s s s +  ++ a+ +i + +++   + l+ +i + +s  ++  +s  
+  TriadP51005 781 YSVAKCVAGIIMESSDL-STTVVQQLIRDLESASSSvSVKMFTLLALGEIGRVVNMSAFQNLKSVITSAFSSSSEEIKSAA 860
+                  56666677776666665.556889999999999998677777899999999999999999999999887776655444555 PP
+
+  == domain 7  score: 1.8 bits;  conditional E-value: 0.19
+     mTOR_dom  101 sshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLa 153 
+                   s  + +vv+a+ + +++++ ++   l+q +  +l+ ++++++++r + l  L+
+  TriadP51005  955 SFVRCTVVNAVKFAISEQHHQVDLKLKQYMGDFLKSLEDTDPNVRRVALVTLN 1007
+                   4567899***************99*******************9999988775 PP
+
+  == domain 8  score: -3.4 bits;  conditional E-value: 7.4
+     mTOR_dom   24 sqsiRrevikvlGi 37  
+                   +++++r++++ l+ 
+  TriadP51005 1145 QNELKRSALRALTS 1158
+                   44444444444433 PP
+
+>> TriadP50449  pep scaffold:ASM15027v1:scaffold_7:485207:492970:-1 gene:TriadG50449 transcript:TriadT50449 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.1   0.0         3   2.1e+03     107     154 ..     103     152 ..      56     158 .. 0.67
+   2 ?   -0.9   0.0       1.2     9e+02     128     154 ..     171     197 ..     128     201 .. 0.73
+   3 ?    3.3   0.1     0.062        45     110     158 ..     191     240 ..     181     242 .. 0.88
+   4 ?    1.8   0.0      0.19   1.3e+02      88     135 ..     212     258 ..     205     267 .. 0.77
+   5 !    8.7   0.0    0.0014         1      76     155 ..     473     550 ..     394     555 .. 0.69
+   6 ?    1.6   0.0      0.21   1.5e+02      98     139 ..     720     761 ..     704     782 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -2.1 bits;  conditional E-value: 3
+     mTOR_dom 107 vvqaimsifktlglkc..vpflpqiipallsvirtcesslrefllqqLat 154
+                   ++ai+ i+ t   +    +  + +ipal++++ + + +  e  +  L +
+  TriadP50449 103 LIRAIVAILITAVARNdgFAEWQDLIPALFQLVDSGNYEACEGAFLALHN 152
+                  56777777766555553455667788888888877766666666666665 PP
+
+  == domain 2  score: -0.9 bits;  conditional E-value: 1.2
+     mTOR_dom 128 qiipallsvirtcesslrefllqqLat 154
+                    ip+++++i++ ++++r   +  +++
+  TriadP50449 171 FMIPKFIQYIKHYSPKIRSLAVACICH 197
+                  479*********999999887766665 PP
+
+  == domain 3  score: 3.3 bits;  conditional E-value: 0.062
+     mTOR_dom 110 aimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                  a+  i++ ++    +p ++ +i++l+sv+++ + ++r+ + + L tL  i
+  TriadP50449 191 AVACICHFMQASTiLPHIQDLIQNLFSVANDESGEVRKNVCHALVTLLGI 240
+                  567788888777779****************999***********99876 PP
+
+  == domain 4  score: 1.8 bits;  conditional E-value: 0.19
+     mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135
+                  i++L ++ +d+s +  +++v +a+++ +     + vpfl+ ii  +l 
+  TriadP50449 212 IQNLFSVANDESGE-VRKNVCHALVTLLGIRISQLVPFLNGIIEYMLV 258
+                  77888888888855.788899999999887777779999999987775 PP
+
+  == domain 5  score: 8.7 bits;  conditional E-value: 0.0014
+     mTOR_dom  76 spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                   +s++ +++   i++Llk l d++ +  ++a+ +a  +  ++     vp+l++ii++l+ ++++ +++ +  l++ ++tL
+  TriadP50449 473 NQSEKSFFQD-LIRELLKSLLDSN-KRVQEAACSAFATLEEEACSALVPYLEHIIQTLVFAFSKYQRKNLLILYDAFGTL 550
+                  4555777777.7888998886665.6689999999999999999999************999999886666666666666 PP
+
+  == domain 6  score: 1.6 bits;  conditional E-value: 0.21
+     mTOR_dom  98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                  p l s +++   ai ++  ++g  + p+lp ++ +l+++++ 
+  TriadP50449 720 PDLVSVCNNSAWAIGEMAMQMGPDVQPYLPLVLDKLIEILNR 761
+                  566677777777899999999999999999999999998875 PP
+
+>> TriadP51271  pep scaffold:ASM15027v1:scaffold_1:191705:201145:1 gene:TriadG51271 transcript:TriadT51271 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.5   0.0      0.92   6.6e+02      81     151 ..      77     148 ..      53     156 .. 0.70
+   2 ?    0.8   0.3      0.37   2.7e+02      79     140 ..     159     221 ..      84     241 .. 0.58
+   3 ?   -0.1   0.2       0.7     5e+02      71     111 ..     256     299 ..     232     311 .. 0.63
+   4 ?    1.7   0.0       0.2   1.4e+02      86     143 ..     394     452 ..     360     466 .. 0.56
+   5 ?    3.9   0.0     0.041        30      95     141 ..     495     541 ..     480     549 .. 0.82
+   6 !    8.3   0.0    0.0019       1.4     107     139 ..     599     631 ..     586     638 .. 0.85
+   7 ?   -1.1   0.0       1.5   1.1e+03     103     131 ..     747     780 ..     724     797 .. 0.52
+   8 ?    1.0   0.0      0.33   2.3e+02     104     140 ..     821     857 ..     805     876 .. 0.79
+   9 ?    3.0   0.0     0.081        58     119     148 ..     918     948 ..     894     980 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -0.5 bits;  conditional E-value: 0.92
+     mTOR_dom  81 eyyptvvinaLlkilkdpslsshhtavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllqq 151
+                  e  +++  ++Ll+ l+ +  +  + +v +a+ +  +  ++    ++ p+i++ l++ +++ + s++e+ lq 
+  TriadP51271  77 ESSQQYCKTELLTALQSEESDLVRRKVCDAVAELARLyVDDDNQNLWPEILQFLFQFANSPNLSHKEVALQI 148
+                  455555556777777777777777777777777777535555577777777777777777666777777765 PP
+
+  == domain 2  score: 0.8 bits;  conditional E-value: 0.37
+     mTOR_dom  79 seeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtc 140
+                  ++  y  v+ + L + ++d +  +    +v+a +  +   +  +     +  +p +l+v++ c
+  TriadP51271 159 QQTHYLEVIKRMLFQCMSDTTNHKIAYLAVDATTAFLMVNDNDQlRRHFQDMVPPILTVVQMC 221
+                  344455555555555555555555555555554444443333333555555555555555555 PP
+
+  == domain 3  score: -0.1 bits;  conditional E-value: 0.7
+     mTOR_dom  71 llvglspss.eeyyptvvinaLlkilkd.psls.shhtavvqai 111
+                  l++++s+s+ e  y +  ++ L+++ +  p++  +h + ++q i
+  TriadP51271 256 LIKNISNSQaESNYRQLSLEVLVTLAESaPAMMrKHGQIIIQLI 299
+                  35777777777788888888877777441344413334444443 PP
+
+  == domain 4  score: 1.7 bits;  conditional E-value: 0.2
+     mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtces.s 143
+                   v+ ++l  lkd+  +  + a+ +ai ++  +       +f ++++p+ll ++ ++ + +
+  TriadP51271 394 NVVMTILPFLKDEHPR-VRYAACNAIGQMSTDFAEYFqKKFHDKVLPQLLDLMDDIANpR 452
+                  2222333333444333.3344445555554443333335577777777777777665545 PP
+
+  == domain 5  score: 3.9 bits;  conditional E-value: 0.041
+     mTOR_dom  95 lkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                  l ++  ++  +++++ai ++ +  + + +p++++++p+l  +i++++
+  TriadP51271 495 LMQQGTKNVLEQAITAISTVAQRAEGNFLPYYDHFMPSLKFIIQSAT 541
+                  4456667788999*************************998888765 PP
+
+  == domain 6  score: 8.3 bits;  conditional E-value: 0.0019
+     mTOR_dom 107 vvqaimsifktlglkcvpflpqiipallsvirt 139
+                  +++a   i+k lg + v++lp ++p l+++++ 
+  TriadP51271 599 MMTAWARICKILGKQFVQYLPVVMPPLIKAASA 631
+                  5667789*********************98765 PP
+
+  == domain 7  score: -1.1 bits;  conditional E-value: 1.5
+     mTOR_dom 103 hhtavvqaimsifktlglkcvp.....flpqiip 131
+                  + ++v+++  + +++lg  cv+      l++ii+
+  TriadP51271 747 MLANVLDSFAKCIESLGKGCVNgkdmeKLTEIIH 780
+                  3344555555555555555554444444555554 PP
+
+  == domain 8  score: 1.0 bits;  conditional E-value: 0.33
+     mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtc 140
+                    +v + i+  fkt g + +p+ ++++p ++ +i+  
+  TriadP51271 821 LGKVTDLIHVLFKTYGQEFLPVFDKLLPDFAGLITPD 857
+                  5678899999********************9998754 PP
+
+  == domain 9  score: 3.0 bits;  conditional E-value: 0.081
+     mTOR_dom 119 glkc.vpflpqiipallsvirtcesslrefl 148
+                  g +   +f+p+++p ll+vi++++++  e l
+  TriadP51271 918 GGEEySKFIPEFVPPLLKVITDASAKEIENL 948
+                  4444378**************9988554444 PP
+
+>> TriadP54034  pep scaffold:ASM15027v1:scaffold_3:358600:366051:1 gene:TriadG54034 transcript:TriadT54034 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.6   0.1     0.054        39       5     150 ..     556     708 ..     552     758 .. 0.62
+   2 !    8.0   0.1    0.0023       1.6      54     158 ..     776     879 ..     738     881 .. 0.61
+   3 ?   -2.2   0.0       3.2   2.3e+03     110     148 ..     914     953 ..     903     960 .. 0.60
+   4 ?    3.1   0.0     0.073        53      15     131 ..     980    1089 ..     973    1107 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 3.6 bits;  conditional E-value: 0.054
+     mTOR_dom   5 yldypeLLeiLlnilkteqsqsiRrevikv...lGil.G.ALDPykhkeveeks....eeeekeeenaeetdvsellvglspsseeyyptvvinaLlk 93 
+                   l  p+LL  L  + ++++s++ R   ik+   ++il G A+ P+ +  ve  +     +e+++ ++ ++ ++++l+ + +p   e + + v++ L k
+  TriadP54034 556 ALGIPSLLPFLKAVCRSKKSWQARHTGIKIvqqISILmGcAILPHLRSLVEI-IehglVDEQQKVRTITALALAALAESATPYGIESFDS-VLKPLWK 651
+                  5667888888888888888888887666651114443434666666655543.2233222244444445555555566666666666665.5666666 PP
+
+     mTOR_dom  94 ilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllq 150
+                   ++++  +   +a ++ai +i+  ++ +    + ++++  l++ +++ ++++++ +l+
+  TriadP54034 652 GIRNHRGK-GLAAFLKAIGYIIPLMDAEFaNYYTREVMIILIREFQSPDEEMKKIVLK 708
+                  66555544.5666677777777777777733344566666666666666666666655 PP
+
+  == domain 2  score: 8.0 bits;  conditional E-value: 0.0023
+     mTOR_dom  54 eeeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150
+                  ++e+++ +++  +++++++++l  ++ +   +   i  +l  +++++  +  + +++   +++++lg+++ ++lpqi+ ++l  +++ ++++r+   +
+  TriadP54034 776 KDESEQYRKMVMEAIDKIMANLGAADiDSRLEEQLIDGILYAFQEQT--QEDAVMLNGFGTVVNSLGTRVKAYLPQICGTVLWRMNNKSAKVRQQAAD 871
+                  22233444444455555566665555555666655555555555555..4466777888899999999999999999999999999988888887777 PP
+
+     mTOR_dom 151 qLatLvsi 158
+                   ++ +  i
+  TriadP54034 872 LISRIAVI 879
+                  77666665 PP
+
+  == domain 3  score: -2.2 bits;  conditional E-value: 3.2
+     mTOR_dom 110 aimsifktlglkc.vpflpqiipallsvirtcesslrefl 148
+                  a+  i++ +g++  +p ++ ++p l+ ++++ +++++e  
+  TriadP54034 914 ALKAIVNVIGMNKmTPPIKDLLPRLTPILKNRHEKVQENC 953
+                  3444444444443367777777777777777666666655 PP
+
+  == domain 4  score: 3.1 bits;  conditional E-value: 0.073
+     mTOR_dom   15 LlnilkteqsqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvq 109 
+                   Ll++lk   +++iRr +++++G +  A+ P+ +  +  ++     + ++ ++ +v  ++v +    e   p +v+ aL++  + p l+  ++ v++
+  TriadP54034  980 LLELLKAH-KKAIRRATVNTFGYIAkAIGPQDVLATLLNN-L---KVQERQN-RVC-TTVAIAIVAETCSPFTVLPALMNEYRVPELN-VQNGVLK 1067
+                   55666644.7889999999999885588888884333222.1...1222211.122.2345556678888888888999888888887.6778888 PP
+
+     mTOR_dom  110 aimsifktlglkcvpflpqiip 131 
+                   ++ + f+++g     ++  + p
+  TriadP54034 1068 SLSFLFEYIGEMGKDYIYAVTP 1089
+                   8888888877766666666666 PP
+
+>> TriadP54294  pep scaffold:ASM15027v1:scaffold_3:2755083:2763545:1 gene:TriadG54294 transcript:TriadT54294 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.3      0.16   1.1e+02      69     117 ..     565     615 ..     527     681 .. 0.63
+   2 !    8.8   0.1    0.0013      0.96      43     157 ..     713     832 ..     711     834 .. 0.73
+   3 !    8.5   0.2    0.0016       1.2      72     113 ..     975    1017 ..     945    1056 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 0.16
+     mTOR_dom  69 sellvglspsseeyyptvvinaLlkilkdpsls..shhtavvqaimsifkt 117
+                   + + + s s+ + ++  +i+ L +i +++s++    h++ + a+  i+k+
+  TriadP54294 565 IQETLQSSGSNMQRIKLHAITYLTSISSNSSIAdlVFHSDLLIALAIILKS 615
+                  222444556666666667777777777777766445666666666666665 PP
+
+  == domain 2  score: 8.8 bits;  conditional E-value: 0.0013
+     mTOR_dom  43 Pykhkeveekseee....ekeeenaeetdvsel.lvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipall 134
+                  P  +++  +++e+     ++ +++ +++ ++++ ++  ++ss +   +++i+aL ++ +++s   +h  + v  + +i+k+l++++ ++ +q++ +l+
+  TriadP54294 713 PIVQQHAAKTIESVavidSRPSKKLATPGTAQAlWNLFTHSSSDALCATAISALSRLNRKSSSIfNHIYDRV-GLQTILKSLSTNVGKISQQLVTTLI 809
+                  5555555555533344444444444455555553566688889*************9988776635555555.5899********************* PP
+
+     mTOR_dom 135 svirtcesslrefllqqLatLvs 157
+                  +++++++  +r   +  +++L++
+  TriadP54294 810 HLLENSSYVIRGKAYLAISQLIK 832
+                  *****999888888888888876 PP
+
+  == domain 3  score: 8.5 bits;  conditional E-value: 0.0016
+     mTOR_dom   72 lvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaims 113 
+                     +  p+ ++ ++++v++ +l+i ++++l  +h++++v++im 
+  TriadP54294  975 SSTSAPTANDDFKHIVLSMVLTICQQSTLVmKHYAQMVKSIMP 1017
+                   3444566688888889999999998888887888888888873 PP
+
+>> TriadP54185  pep scaffold:ASM15027v1:scaffold_3:1581266:1586552:-1 gene:TriadG54185 transcript:TriadT54185 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.1   0.0      0.64   4.6e+02       8      30 ..      26      49 ..      23      52 .. 0.81
+   2 ?    0.8   0.0      0.37   2.7e+02      84     118 ..     120     154 ..      91     184 .. 0.66
+   3 ?    2.3   0.3      0.13        91      61      94 ..     205     238 ..     112     271 .. 0.59
+   4 ?   -3.7   0.0       9.3   6.7e+03     102     139 ..     375     413 ..     369     419 .. 0.75
+   5 !    7.6   0.0     0.003       2.2      81     138 ..     495     553 ..     469     577 .. 0.82
+   6 ?    0.8   0.0      0.37   2.7e+02      95     156 ..     652     715 ..     619     719 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 0.1 bits;  conditional E-value: 0.64
+     mTOR_dom  8 ypeLLeiLlnilkte.qsqsiRre 30
+                  pe L +L+nil ++ +sq +R  
+  TriadP54185 26 LPEFLVALVNILANTdKSQVVRMA 49
+                 69999*******999458888865 PP
+
+  == domain 2  score: 0.8 bits;  conditional E-value: 0.37
+     mTOR_dom  84 ptvvinaLlkilkdpslsshhtavvqaimsifktl 118
+                  p v+ + + ++ +++s +  +++ ++ai +i++++
+  TriadP54185 120 PEVIPTLVRNVTNQHSTEALKESSLEAIGYICSDI 154
+                  44333333456666666677777777777777664 PP
+
+  == domain 3  score: 2.3 bits;  conditional E-value: 0.13
+     mTOR_dom  61 enaeetdvsellvglspsseeyyptvvinaLlki 94 
+                  +++e   + ++l++ ++s +e +   ++++L++i
+  TriadP54185 205 KTSERHYIMQVLCEATQSPDEQIRVAALQNLVRI 238
+                  2222223333344444444555555555555554 PP
+
+  == domain 4  score: -3.7 bits;  conditional E-value: 9.3
+     mTOR_dom 102 shhtavvqaimsifktlglkc.vpflpqiipallsvirt 139
+                  +++ a+v a+ si++  +  + +p+++q +p l+ ++++
+  TriadP54185 375 QYRDAAVMALGSILEGPDPAVlLPVMNQAMPLLIGLMEN 413
+                  566777888888888877777788888888888888775 PP
+
+  == domain 5  score: 7.6 bits;  conditional E-value: 0.003
+     mTOR_dom  81 eyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                   yy ++v + L +  ++++ s + ++a+ +++m+ +k+    c p+++ + +++++ ++
+  TriadP54185 495 PYYNAIVDHLLKTTTRQEANSsNLRSAAYESLMELIKNSAKDCYPTIQLVANEIMQRLQ 553
+                  59999999999988888877768899999999999999999999999888888777655 PP
+
+  == domain 6  score: 0.8 bits;  conditional E-value: 0.37
+     mTOR_dom  95 lkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces..slrefllqqLatLv 156
+                  lk+    + + a+v  +   ++  g + vp  ++i++ l++ + +++   s++  +++ ++++ 
+  TriadP54185 652 LKNVMEHQVCLAAVGIVSDLCRAFGHNFVPHADEIMSILIKNLGDASLdrSVKPHIFSTIGDIA 715
+                  55555557778889999999999*****************999865522378888888877775 PP
+
+>> TriadP58870  pep scaffold:ASM15027v1:scaffold_9:914664:926424:-1 gene:TriadG58870 transcript:TriadT58870 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.2   0.4      0.29   2.1e+02      43     123 ..     249     319 ..     224     328 .. 0.62
+   2 ?   -2.4   0.1       3.6   2.6e+03     125     153 ..    1057    1083 ..    1050    1088 .. 0.77
+   3 !   14.4   0.0   2.5e-05     0.018      85     156 ..    1584    1657 ..    1566    1661 .. 0.86
+   4 ?   -3.3   0.0       6.7   4.8e+03     106     140 ..    2000    2034 ..    1987    2046 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 1.2 bits;  conditional E-value: 0.29
+     mTOR_dom  43 Pykhkeveekseeeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcv 123
+                  Py  k ++       ++++++ + +   +++ + +++ e+ + t+ i  + k l  psl+    +++  i+ i+++++++ +
+  TriadP58870 249 PYLIKGLK-------SKHNESIAGTYIIITQMMMKMTfENKFCTMLIDCVTKHL-SPSLQ---VEAIACITCICQSQNVQTL 319
+                  33333322.......222222222222234555666668899999999988888.67766...7899999999999887765 PP
+
+  == domain 2  score: -2.4 bits;  conditional E-value: 3.6
+     mTOR_dom  125 flpqiipallsvirtcesslrefllqqLa 153 
+                    l+q+ p ++++i++  +++++ +++ L+
+  TriadP58870 1057 SLTQVTPGFFAAIKD--EKIQQKIFSYLC 1083
+                   699**********97..567777777665 PP
+
+  == domain 3  score: 14.4 bits;  conditional E-value: 2.5e-05
+     mTOR_dom   85 tvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156 
+                   t vi+  lk+l +psls    +a++  + +i++ +g  +++flpq++p+++++++ + + s  +   ++L++Lv
+  TriadP58870 1584 THVIKGCLKVLTEPSLSmPVLAAALFCLSEICRGIGAHMIAFLPQLMPQIMKIFKLIRDeSQGDQPSKKLEVLV 1657
+                   5689999**********8888999999*************************9998777565566666666666 PP
+
+  == domain 4  score: -3.3 bits;  conditional E-value: 6.7
+     mTOR_dom  106 avvqaimsifktlglkcvpflpqiipallsvirtc 140 
+                   a v+ i + ++ lg + + +lp+ ip l++++++ 
+  TriadP58870 2000 ASVKIIGELYRRLGENFILLLPETIPFLAELMEDE 2034
+                   55666777777777777778888888877777765 PP
+
+>> TriadP58673  pep scaffold:ASM15027v1:scaffold_8:2179347:2187023:1 gene:TriadG58673 transcript:TriadT58673 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.7   0.1     0.024        17      56     110 ..     473     533 ..     447     553 .. 0.72
+   2 ?    4.9   0.0     0.021        15       9     107 ..     508     596 ..     505     599 .. 0.81
+   3 ?   -3.3   0.1         7     5e+03      11      35 ..     742     766 ..     740     769 .. 0.63
+   4 ?    5.4   0.0     0.015        11      10      37 ..     775     802 ..     771     803 .. 0.93
+   5 ?   -1.2   0.2       1.6   1.1e+03       9      57 ..     808     855 ..     805     907 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 4.7 bits;  conditional E-value: 0.024
+     mTOR_dom  56 e....ekeeenaeetdvsel.lvglspss.eeyyptvvinaLlkilkdpslsshhtavvqa 110
+                  e    ++ ++++e++d+s++  ++lsp   ++ +p+  + a+++ l dps +   +a+v  
+  TriadP58673 473 EalqlKQVDDDEEDEDISQAnQKNLSPRAlKDRIPKELLGAIMSALTDPSRRVRLEAAVGI 533
+                  1344555666667788888888999**99*********************98777776654 PP
+
+  == domain 2  score: 4.9 bits;  conditional E-value: 0.021
+     mTOR_dom   9 peLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhta 106
+                  +eLL++++++l  + s  +R+e+   + +lG L+    k++ e  ++          t+ ++ ++  + ++  y  t +i++L+  l+  s+ +h +a
+  TriadP58673 508 KELLGAIMSALT-DPSRRVRLEAAVGIMTLGLLNTNAKKVLDEVLSD---------GTSEEKWIAAKCLAKHGYCNTAIISELIGCLSADSIIKHEKA 595
+                  589999999997.779******************9999988854433.........23444444555667899**************99999999887 PP
+
+     mTOR_dom 107 v 107
+                  +
+  TriadP58673 596 T 596
+                  6 PP
+
+  == domain 3  score: -3.3 bits;  conditional E-value: 7
+     mTOR_dom  11 LLeiLlnilkteqsqsiRrevikvl 35 
+                  ++++L++ +++++s +++ ++++ l
+  TriadP58673 742 VIKQLIQSISGDSSYKVKIKAMQAL 766
+                  5566677777777777777766655 PP
+
+  == domain 4  score: 5.4 bits;  conditional E-value: 0.015
+     mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvlGi 37 
+                  eL ++Ll +++ e+++++R e+ k++G 
+  TriadP58673 775 ELCKVLLWAIRYENHPEVRAEACKTIGY 802
+                  7999**********************95 PP
+
+  == domain 5  score: -1.2 bits;  conditional E-value: 1.6
+     mTOR_dom   9 peLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeee 57 
+                   e++++L + l  + sq +R e+   l  lG  +P +  e+++++++e 
+  TriadP58673 808 NEVVSALQDRLTLDASQLVRNEATAALVALGR-TPARELEITKTIRDEV 855
+                  56778888888999999999999999999996.6777767776665542 PP
+
+>> TriadP23502  pep scaffold:ASM15027v1:scaffold_4:4195260:4202014:-1 gene:TriadG23502 transcript:TriadT23502 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.7   0.2   0.00016      0.12      70     160 .]      34     125 ..       3     125 .. 0.67
+   2 ?   -1.0   0.0       1.3   9.7e+02      72     120 ..     243     292 ..     226     324 .. 0.65
+   3 ?   -2.2   0.0       3.3   2.4e+03      77      97 ..     347     368 ..     307     377 .. 0.62
+   4 ?   -2.5   0.1         4   2.9e+03     120     120 ..     432     432 ..     401     483 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 11.7 bits;  conditional E-value: 0.00016
+     mTOR_dom  70 ellvglspsseeyyptvvinaLlkilkdpsls....shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                  +++ +l + +e   ++ vi+ + +i++d  ls    + +   v a+  i+  +g +  ++++ +ip +l+ + +++++ r f  + + ++ ++++
+  TriadP23502  34 RIVRDLHKQNE---HQQVIQLIRQIIHDYVLShinpNSCRGGVIALAAIVTGIGKEANQYMKDVIPVILRCFDDSDKETRFFACEAMYNIAKVIR 125
+                  33333322222...334566666666666655222233445666777788888888888***********************9999999998875 PP
+
+  == domain 2  score: -1.0 bits;  conditional E-value: 1.3
+     mTOR_dom  72 lvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlgl 120
+                  l+++s+ s   + +tv  + L+++l  +++ss   + ++ai+   + +++
+  TriadP23502 243 LKEISQRSfSGVAATVKYSDLVHVLMAHCISSDDVTQLTAIVWLQEFVNI 292
+                  55556666666667777777778887777777777777777654444443 PP
+
+  == domain 3  score: -2.2 bits;  conditional E-value: 3.3
+     mTOR_dom  77 psseeyypt.vvinaLlkilkd 97 
+                  p  + + ++ +v+n L+++l++
+  TriadP23502 347 PLPDGFLHAnTVLNVLIRMLSN 368
+                  5554444333667777777755 PP
+
+  == domain 4  score: -2.5 bits;  conditional E-value: 4
+     mTOR_dom 120 l 120
+                  l
+  TriadP23502 432 L 432
+                  2 PP
+
+>> TriadP57860  pep scaffold:ASM15027v1:scaffold_7:911422:924344:-1 gene:TriadG57860 transcript:TriadT57860 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.1      0.15   1.1e+02      95     156 ..      77     140 ..      30     179 .. 0.79
+   2 ?    0.8   0.0      0.39   2.8e+02      87     136 ..    1034    1083 ..     993    1100 .. 0.78
+   3 ?    2.0   0.2      0.16   1.2e+02     108     153 ..    1246    1291 ..    1172    1292 .. 0.90
+   4 ?    4.0   0.1      0.04        29     102     158 ..    1502    1566 ..    1451    1568 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 0.15
+     mTOR_dom  95 lkdpslsshhtavvqaimsifktlglkcvpflp..qiipallsvirtcesslrefllqqLatLv 156
+                  l d+  ++   + vq  ++++ ++g   +++ +  qi+p l++ i++ ++  ++ ++q +  L 
+  TriadP57860  77 LLDQFQDDATPSFVQNFTTVYLKMGFTRLSLADqlQIVPRLFECITSKTAAQQDRVFQLIVPLF 140
+                  5566666666777888888888888887777663358999999998888888888888776665 PP
+
+  == domain 2  score: 0.8 bits;  conditional E-value: 0.39
+     mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsv 136 
+                    i++ +++ + ++l + ++ +     si ++ + +  p+lp++ip l+++
+  TriadP57860 1034 LIYKFMHLANHNALWNSRKGAAIGFSSIASQARKELEPYLPKLIPRLFRY 1083
+                   6777888888888888888888889999**9999************9876 PP
+
+  == domain 3  score: 2.0 bits;  conditional E-value: 0.16
+     mTOR_dom  108 vqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLa 153 
+                   ++++++i k+      p +  +ip++++ ++++e+++ ++l+ qL 
+  TriadP57860 1246 LNTVVEIGKKAAATLKPHIAVLIPTMIESLSSLEPQVMNYLYLQLR 1291
+                   5678999999999999999999999999999999999999888885 PP
+
+  == domain 4  score: 4.0 bits;  conditional E-value: 0.04
+     mTOR_dom  102 shhtavvqaimsifkt.......lglkc.vpflpqiipallsvirtcesslrefllqqLatLvsi 158 
+                   + +++v++ai+s +k        ++  +  ++++ ii ++++ +r ++ s +   ++ L+tL ++
+  TriadP57860 1502 DGKESVLHAITSLCKAnintleeQKEDSkNATINAIIDKFVRECRRSNVSYKMIAMKSLTTLLKV 1566
+                   455666666655555422111114444444599*************999************9886 PP
+
+>> TriadP1172  pep scaffold:ASM15027v1:scaffold_12:1089056:1093858:-1 gene:TriadG1172 transcript:TriadT1172 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.9   0.0    0.0051       3.7     106     157 ..     312     361 ..     308     364 .. 0.82
+   2 ?   -1.1   0.0       1.5     1e+03      16      36 ..     415     435 ..     408     438 .. 0.86
+   3 ?    0.6   0.0      0.45   3.2e+02     125     158 ..     485     518 ..     467     520 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: 6.9 bits;  conditional E-value: 0.0051
+    mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                 av+q +++i ++  l   ++ +++ip +++++++ ++s r  llqq++ + +
+  TriadP1172 312 AVLQPLIKIGRH--LTDEEYQEKVIPCIIKLFSSPDRSTRINLLQQMEFFAK 361
+                 566777777775..56678899*************************87765 PP
+
+  == domain 2  score: -1.1 bits;  conditional E-value: 1.5
+    mTOR_dom  16 lnilkteqsqsiRrevikvlG 36 
+                 + il++++++siR ++  +lG
+  TriadP1172 415 FAILQQDEQSSIRTNTTICLG 435
+                 4799***********999998 PP
+
+  == domain 3  score: 0.6 bits;  conditional E-value: 0.45
+    mTOR_dom 125 flpqiipallsvirtcesslrefllqqLatLvsi 158
+                 + ++i+p+l s + ++++s+r+ ++  + ++ +i
+  TriadP1172 485 IAEKILPNLCSKTLDSDKSVRDQIFASIRQFLAI 518
+                 5689**********************99999887 PP
+
+>> TriadP26416  pep scaffold:ASM15027v1:scaffold_6:1701779:1704650:-1 gene:TriadG26416 transcript:TriadT26416 gene_bioty
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.7   1.5    0.0029       2.1      87     157 ..     126     198 ..     117     199 .. 0.81
+   2 ?   -2.4   0.0       3.6   2.6e+03      11      40 ..     348     378 ..     344     378 .. 0.72
+   3 ?    0.7   0.4      0.41     3e+02      36      36 ..     506     506 ..     392     598 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 7.7 bits;  conditional E-value: 0.0029
+     mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvp..flpqiipallsvirtcesslrefllqqLatLvs 157
+                  v ++L+k l++++ ++   ++++ +  ++ +   + ++  fl++ii ++l+++ + + ++r  +l  L++ +s
+  TriadP26416 126 VHRSLIKSLQQANSNQLILQILKCLAVVVTNTPYNRLQegFLSKIIDSILHYMYKKDHNIRVAFLACLTSVIS 198
+                  5567888888888888888888888777777666664355***************999*****9999998776 PP
+
+  == domain 2  score: -2.4 bits;  conditional E-value: 3.6
+     mTOR_dom  11 LLeiLlnilkteq.sqsiRrevikvlGilGA 40 
+                  LL+ +l+ l++ + +++iR     +l+++GA
+  TriadP26416 348 LLSDVLQNLSQPSvNSTIRAAGCDCLSMIGA 378
+                  5555555555554499999999999999998 PP
+
+  == domain 3  score: 0.7 bits;  conditional E-value: 0.41
+     mTOR_dom  36 G 36 
+                  G
+  TriadP26416 506 G 506
+                  1 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      11520  (5219283 residues searched)
+Passed MSV filter:                       773  (0.0671007); expected 230.4 (0.02)
+Passed bias filter:                      555  (0.0481771); expected 230.4 (0.02)
+Passed Vit filter:                        66  (0.00572917); expected 11.5 (0.001)
+Passed Fwd filter:                        16  (0.00138889); expected 0.1 (1e-05)
+Initial search space (Z):              11520  [actual number of targets]
+Domain search space  (domZ):              16  [number of targets reported over threshold]
+# CPU time: 0.10u 0.07s 00:00:00.17 Elapsed: 00:00:00.12
+# Mc/sec: 6436.66
+//
+[ok]

@@ -1,0 +1,273 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Amoebozoa/Proteins/Dictyostelium_discoideum.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+   5.7e-113  377.2   0.1   2.6e-112  375.0   0.0    2.3  2  EAL66546.1  protein kinase, Atypical group [Dictyostelium dis
+    9.2e-44  149.6   0.2    9.2e-44  149.6   0.2    3.8  3  EAL66533.2  protein kinase, Atypical group [Dictyostelium dis
+      4e-39  134.4   6.5      4e-39  134.4   6.5    4.8  6  EAL61674.1  protein kinase, Atypical group [Dictyostelium dis
+      3e-14   52.6   1.3      3e-14   52.6   1.3    3.7  3  EAL66880.2  DNA-dependent protein kinase subunit [Dictyosteli
+
+
+Domain annotation for each sequence (and alignments):
+>> EAL66546.1  protein kinase, Atypical group [Dictyostelium discoideum AX4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.6   0.1       1.1   3.6e+03     289     317 ..      10      41 ..       8      48 .. 0.79
+   2 !  375.0   0.0  7.7e-116  2.6e-112       1     343 []    1392    1716 ..    1392    1716 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: -3.6 bits;  conditional E-value: 1.1
+                 CCHHHHHCCHHHHHHSSSS....S-TCCHHHH CS
+         FAT 289 walfnfevlskeeekkeeee...pedlseyvv 317
+                 wa++  + l+++++kkee++   +++l+ yv+
+  EAL66546.1  10 WADALTKLLNDLKSKKEEDRvkaSKNLKSYVI 41 
+                 99999999999999988876777667766665 PP
+
+  == domain 2  score: 375.0 bits;  conditional E-value: 7.7e-116
+                  CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS CS
+         FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkl 97  
+                  aplaa+aaW+l +Wd+m+ey+++m+kd+ +++f++ail +h+++f+ a+ +i++ar l++tel+al gesynray+++vrlQql+Eleeii+yk++ 
+  EAL66546.1 1392 APLAAAAAWNLVNWDKMDEYVCAMNKDTVEGSFYRAILEVHHDNFTLAHGFIDHARTLVDTELTALLGESYNRAYKVVVRLQQLSELEEIIEYKKCV 1488
+                  79*********************************************************************************************** PP
+
+                  ----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT..............T CS
+         FAT   98 ssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp.........p 185 
+                  +s+e+++++++tW++Rl+g+q++v++wq+il+v+slv+sp+e+        +mwlkf+ l+Rk  rl+lA+k+L++l+++d++  ++         p
+  EAL66546.1 1489 DSPERRNMIKNTWKTRLRGCQHNVDIWQSILAVHSLVISPHEE-------LDMWLKFVGLCRKGSRLGLAQKTLTMLMGKDPSTTSQfgsvlpnthP 1578
+                  *******************************************.......********************************555445666769999 PP
+
+                  SSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCC CS
+         FAT  186 evvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpsw 282 
+                  ++++ay+k lw+ g ++ a++kLr fv+ l     +++++l+            l++r+ylk+Gew+ al++ + se+++ +i ++++aate+dp+w
+  EAL66546.1 1579 RITFAYIKQLWSAGAKQPAFEKLRTFVQAL-----RDTDDLP------------LQGRAYLKLGEWQLALGD-TLSEASIPHIISSFKAATECDPNW 1657
+                  ****************************44.....2344544............67****************.79********************** PP
+
+                  HSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  283 ykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                  ykawh+wal nfev+s++e++    +pe++  ++ pav+ f+ks+sl+   slqd+lRlLt
+  EAL66546.1 1658 YKAWHSWALINFEVVSHYEQN--GGTPEQIGAHLLPAVHSFFKSISLGPDRSLQDTLRLLT 1716
+                  ******************666..555**********************************8 PP
+
+>> EAL66533.2  protein kinase, Atypical group [Dictyostelium discoideum AX4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -5.1   5.7       3.2     1e+04     211     257 ..    1166    1210 ..    1073    1244 .. 0.52
+   2 ?   -7.1  18.6         4   1.3e+04     182     283 ..    2954    3054 ..    2929    3091 .. 0.67
+   3 !  149.6   0.2   2.8e-47   9.2e-44       2     342 ..    3320    3707 ..    3319    3708 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: -5.1 bits;  conditional E-value: 3.2
+                  HHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCC CS
+         FAT  211 fvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqk 257 
+                    +++ +++ ++++++++ +++n + ++++  +++  k e+l+++++
+  EAL66533.2 1166 NNNNNNNNN-NNNNNNNNNNNNNNNNNNNN-IKTFKTKEEYLNEIKN 1210
+                  111111111.11111111122222222222.3555555555555544 PP
+
+  == domain 2  score: -7.1 bits;  conditional E-value: 4
+                  ...TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..SS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCH CS
+         FAT  182 wlppevvyaylkylwakgeqkealqkLrefvscllekke..elssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaat 276 
+                  +++ + + ++ + + ++++q+++ q+ +++ +++ ++ +  e+ ++l v++++++++ +++  + + +  +wl++l++  +++ k +e ++  ++ +
+  EAL66533.2 2954 QQQ-QQQQQQQQQQQQQQQQQQQQQQQQQQQQQHHQQEQpmEIDENLVVEQSSSVNKGNEEFKKSLKLHTQWLESLKN--EESLKFSEFNENLRELI 3047
+                  222.22222233333333333333333333333333333579999999*9****************************..66777888777777776 PP
+
+                  HCTCCCH CS
+         FAT  277 eldpswy 283 
+                   +d+++ 
+  EAL66533.2 3048 FIDSHLV 3054
+                  6666665 PP
+
+  == domain 3  score: 149.6 bits;  conditional E-value: 2.8e-47
+                  CCTTCCCCTSSSGHHCCCCT......TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCS CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk..kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqk 96  
+                  +l +e+aW+ +qW+s++e +++m    d+  +++++ +  +  +++ e+   i   +ql++ ++ +l+ +s +++ ++lv +Qq++El+e++ ++++
+  EAL66533.2 3320 DLTIESAWKIPQWNSVKENMKKMMsqGDTSIRKILQGYFLTNEKRYHEVDPAIVTSNQLILDKWVSLPERSFRSHTNSLVEMQQVVELQESVHILKE 3416
+                  5789***********8888877776877777778887777788*****************************************************9 PP
+
+                  S-................---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC..................................... CS
+         FAT   97 ls................sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied..................................... 140 
+                   s                +s+  ks+++ Wr+Rlp+   d+ +w  ++++R+ v++ i                                       
+  EAL66533.2 3417 ISnitlsqqpadlsrsflTSNYIKSIFNIWRERLPNKDEDLLIWFELMAWRQQVFNIIGTpsmnggiganpvtptnttttitnpdgtttttttplpp 3513
+                  889*******************************************************9999*********************************** PP
+
+                  ..............HHCCS-STTCCC..CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCS CS
+         FAT  141 ..............lllkgakaemwl..kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkee 221 
+                                +++    + +w+  k++++ Rk++ ++++ ++L+k+                   + + ++e ++ +++L+e+++c+l+ + +
+  EAL66533.2 3514 pqqpinqiefasprYMVL---EMAWTmnKYSHIVRKHNIIEVCLNSLSKM-------------------FDL-QIELHDIFLNLKEQIKCYLQLPTH 3587
+                  *********987543333...5556669**********************...................333.578999****************** PP
+
+                  S-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.......S-T CS
+         FAT  222 lssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee......ped 311 
+                  + +g+  +++tnl+ ft  + ++++ +kGe+l++l++        +e++q++++++    +++k+w +wa+f+++++++  ++  +++        d
+  EAL66533.2 3588 YDTGISIINSTNLDFFTPMQkGEFLQLKGEFLNRLGR-------YDEANQSFASSVSQYENSAKNWISWAHFCDNQFTNHSSS--SITpsstptTYD 3675
+                  *************************************.......9***********************************777..233345555899 PP
+
+                  CC.HHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+         FAT  312 ls.eyvvpavegflkslslssekslqdllRlL 342 
+                  ++ + + +a++++++ +++  +    +++R+ 
+  EAL66533.2 3676 IKtQWAESAISCYIQGIKCDPKYGSRYVPRIF 3707
+                  999**************999885444777765 PP
+
+>> EAL61674.1  protein kinase, Atypical group [Dictyostelium discoideum AX4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.3   0.1      0.91     3e+03      49      78 ..     256     285 ..     234     318 .. 0.74
+   2 ?   -0.8   1.0      0.15     5e+02     209     288 ..     584     675 ..     572     689 .. 0.76
+   3 ?   -4.1   1.9       1.5   5.1e+03     217     241 ..     996    1020 ..     982    1045 .. 0.67
+   4 ?   -3.9   0.8       1.4   4.5e+03     211     241 ..    1275    1304 ..    1223    1333 .. 0.60
+   5 ?   -6.5   9.3         4   1.3e+04     209     263 ..    2065    2121 ..    2044    2141 .. 0.61
+   6 !  134.4   6.5   1.2e-42     4e-39       3     342 ..    2249    2621 ..    2247    2622 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -3.3 bits;  conditional E-value: 0.91
+                 HHCCCHCCCCCCCCCTS---SCCCCCHHHH CS
+         FAT  49 eeliekarqllvtelsalsgesynraydll 78 
+                 ++++e  ++ ++++ +  +  sy+ +y++l
+  EAL61674.1 256 KTYCELSSSVIINSNTTGNTSSYSKHYQSL 285
+                 578888888999999999999999999875 PP
+
+  == domain 2  score: -0.8 bits;  conditional E-value: 0.15
+                 HHHHCCTSSCCC..SS-SS---......................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+         FAT 209 refvscllekke..elssglevq...........eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawht 288
+                  e++s ++++ +  ++ +++e++           +++n++ ++ +  +  ++ ++ +++ q+ ++ + ++++    y++a +l  +  k++h+
+  EAL61674.1 584 YESISTVTNSVKdkNIDNNTENIekddgdggaggTSENVNNKQIENQKSITEDSKQQQQQQQ-QQPTIEQQKSIRIYLKALHLIFKICKNHHN 675
+                 44555555554444555555555668999999998888888888888999999998888888.778888999999999999999999998887 PP
+
+  == domain 3  score: -4.1 bits;  conditional E-value: 1.5
+                  SCCCSS-SS---...........HH CS
+         FAT  217 ekkeelssglevqeptnleeftkll 241 
+                  ++++++++++++ +++n++e+++l+
+  EAL61674.1  996 NNNNNNNNNNNNNNNNNIQEQNNLI 1020
+                  2222444444555889999988876 PP
+
+  == domain 4  score: -3.9 bits;  conditional E-value: 1.4
+                  HHCCTSSCCCSS-SS---...........HH CS
+         FAT  211 fvscllekkeelssglevqeptnleeftkll 241 
+                  +  +++ ++ +l++++++ +++n+++++ + 
+  EAL61674.1 1275 QKDQYILNN-SLNNNNNNNNNNNVQQLSSSS 1304
+                  333333333.333333333344444333332 PP
+
+  == domain 5  score: -6.5 bits;  conditional E-value: 4
+                  HHHHCCTSSCCC...SS-SS---...........HHHHCCCTCCCCCCCCCCCT.S.. CS
+         FAT  209 refvscllekke...elssglevqeptnleeftkllarcylkkGewlaalqklnwsee 263 
+                  r ++s+ l++++   +l+ +l++ +++nl+++++l+ +    + + +++ q+ + +++
+  EAL61674.1 2065 RNETSQILKQQQqqhQLNLQLNM-QQQNLQYQQQLQQQQPQQQQQQQQQQQQQQVQQQ 2121
+                  44455444444332233333333.6888888888885555555554555555344443 PP
+
+  == domain 6  score: 134.4 bits;  conditional E-value: 1.2e-42
+                  CTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-. CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls. 98  
+                  + ++++Wrl+ Wd+++e+ls++ +++++  + + +++l ++q +e+++ + ++r+ l + l   +  sy+r+y++l++ ++l E+e++ +++  +  
+  EAL61674.1 2249 IKIQSSWRLSHWDKIDETLSQTHEPNFEAYLGRILYSLVKKQEKEFNSNLFQCRSFLAQLLNGSALDSYQRCYPYLIQAHILEEIEQSYKLIHYNVi 2345
+                  56899****************************************************************************************999* PP
+
+                  ..........................---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTH CS
+         FAT   99 ..........................sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAek 169 
+                                            +++ lk+ll++W++Rl+ +q++++ +++ilsvR+ +l+  +    ++  +++w+k+ + aR  + ++l+ +
+  EAL61674.1 2346 pienvtitnnnnnignnnnsnnnnvqKQQMLKKLLSEWDDRLKIIQPSFKLRESILSVRREILEIGSF---SKEVIDCWMKIGKYARHDKKFELSLN 2439
+                  *************************999***********************************98866...889**********************9 PP
+
+                  HCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.......SS-SS---........................HH.HHCC CS
+         FAT  170 aLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.......elssglevq.............eptnleeftkll.arcy 245 
+                  a++k   +++    +  ++++++k++w +g++ ea++ L ++++++ +          +                     +   l +    + ++++
+  EAL61674.1 2440 AILKPTPSQQ----DKFYFIEHAKLMWNQGHSFEAINILTQELKNKWNPIInsnnnssN-------NsssnininngsklSLLGLPQEDLFIiSKTH 2525
+                  9999955554....35789*************************888764444322231.......2234555555543322222222333478999 PP
+
+                  CTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.......S-TCCHHHHCCT..CCHHHHTTTSSTTT CS
+         FAT  246 lkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee......pedlseyvvpavegflkslslssekslq 336 
+                  l+ + w ++ + +     +++e +++ys+at +  +w+k ++ ++++++  ls++++ ++++       +  + +y  + ++ + +++ l+++ ++q
+  EAL61674.1 2526 LLIARWKQQCGIT-----HHSELTEHYSSATAF--EWEKGFFFLGRYYDSLLSNLKRVNQNSPnsppldSVSYVDYTRNIISSYGQAVILGHSYIYQ 2615
+                  99999******95.....5*************9..6*******************66655444899998777889********************** PP
+
+                  CHHHHH CS
+         FAT  337 dllRlL 342 
+                   l R++
+  EAL61674.1 2616 TLTRII 2621
+                  **9986 PP
+
+>> EAL66880.2  DNA-dependent protein kinase subunit [Dictyostelium discoideum AX4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.5   1.4       2.1   6.8e+03      81     123 ..     706     751 ..     703     753 .. 0.85
+   2 ?   -4.0   0.9       1.4   4.8e+03     166     264 ..    3048    3137 ..    3043    3149 .. 0.51
+   3 !   52.6   1.3     9e-18     3e-14      36     342 ..    3241    3635 ..    3239    3636 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: -4.5 bits;  conditional E-value: 2.1
+                 CCCCHHHCHHCCHHCSS----TTTTT...TT----TTS-TTTGCCC CS
+         FAT  81 lQqlaEleeiiqykqklssseelksl...lktWrkRlpgvqddvev 123
+                 +Q+++ ++++++y+++l+++++ +s+    + ++++l++ qd +++
+  EAL66880.2 706 VQIVMQICKSQKYFNELQQDDNINSVifnNQIIDEQLQQQQDIMDI 751
+                 8999**************9999999977777888888888887776 PP
+
+  == domain 2  score: -4.0 bits;  conditional E-value: 1.4
+                  STTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---............HHHHCCCTCCCCCCCCCCCT.S CS
+         FAT  166 lAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq.eptnleeftkllarcylkkGewlaalqklnws 261 
+                  l+ek++++l+   k        +  +++ l ++++ ++   +Lre  ++l e+  ++  gl+ +     + + +k  a  + +kG+w + l+  +++
+  EAL66880.2 3048 LCEKLILSLQNTTK------ASTTNQAQKLQQQQQLNQGWDSLRELYKSLKED--DIIMGLIEKqMGGDIPYTKK--ALEFELKGDWVNVLKVYDEA 3134
+                  67777777755555......333344444444444444444444444433333..23333322213444444444..44788888888887776655 PP
+
+                  ... CS
+         FAT  262 eek 264 
+                  + k
+  EAL66880.2 3135 TSK 3137
+                  544 PP
+
+  == domain 3  score: 52.6 bits;  conditional E-value: 9e-18
+                  HCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-.---TTTTTTT----TTS-TTTGCCCTTTCCCCT CS
+         FAT   36 ailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls.sseelksllktWrkRlpgvqddvevwqdilsvR 131 
+                  a+l + r++ ++a+++++k  q +  ++s+      ++++ +l+ lQ ++E ee++++ + +  +  +l++ll +W+ R p   dd+ vw+d++  R
+  EAL66880.2 3241 AFLEVTRSDHNKASYYVSKFYQAFKHQWSSSHPLAIESRHRILQPLQKIVEVEEFLNLTSTPIiNTLKLDTLLTQWKSRFPTKLDDIMVWDDLIFYR 3337
+                  7899999*******************************************************9********************************** PP
+
+                  CCCHCCCHC..............HHCCS-STTCCC..CCCCCHCHHHHCCSTTHHCCCCCHCTT............T......SSCCCHHHHHHHCC CS
+         FAT  132 slvlspied..............lllkgakaemwl..kfanlaRksgrlslAekaLkklleedk...eewlp....p......evvyaylkylwakg 199 
+                  s++l++i +              +  + ++++++l  k+++ aRk g++ ++e + +++ ++ +   +        p      +++ ++++ + + +
+  EAL66880.2 3338 SVLLEKIYErfssftsdkssdekVKSTLIQERAILyhKMSKGARKLGNIVVSEIYFRQAVKSYPktkD---NdlafPlvtsliDIYCTKARNSPSPI 3431
+                  *******99************9955555567777788**********************999886443...13457455556688888999998889 PP
+
+                  HHHHHSSCCHHHHCCTSSCCCSS-SS---................................................................HHHH CS
+         FAT  200 eqkealqkLrefvscllekkeelssglevq.....................................................eptnleeftkllar 243 
+                  e  + + k  +f++++ ++ + ++s+ + q                                                     + ++ +e       
+  EAL66880.2 3432 ETLDRFVKALKFIESKKDEESIINSNENLQkylmmhgdifwdiyqldkklgstlvidsfkknslpinltsipinslkdelfnsTFKCYSESI----- 3523
+                  98888888888888777777766666666666777788888888888888888888888888888888887766666666555223333332..... PP
+
+                  CCCTCCC...................CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS.TTCCCCHHHHHCCHHHHHHSSSS...S-TCCHHHHC CS
+         FAT  244 cylkkGe...................wlaalqklnwseekseeilqaysaateldpswyk.awhtwalfnfevlskeeekkeeee..pedlseyvvp 318 
+                        +                      + ++ +  + +s+    + s  + + ++ +k a+ + a f++++l+++ +++   +   e++++++++
+  EAL66880.2 3524 ------KlhqkstnllnttssspslsI--SSSS-SPYSSTSSSSQPKLSNEILIEKTKTKsAHLKFANFCDNILKDKISQQTTPTqfNEEVIDLATS 3611
+                  ......222222223333355554322..2222.222233444444555566666666666888888888888888877755444666777788888 PP
+
+                  CT..CCHHHHTTTSSTTTCHHHHH CS
+         FAT  319 avegflkslslssekslqdllRlL 342 
+                  ++   l++++     s+ +++RlL
+  EAL66880.2 3612 VIVSTLEAIKEEIPGSVDKFPRLL 3635
+                  888888888888888888888887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      13267  (7024520 residues searched)
+Passed MSV filter:                      2920  (0.220095); expected 265.3 (0.02)
+Passed bias filter:                      337  (0.0254014); expected 265.3 (0.02)
+Passed Vit filter:                        84  (0.0063315); expected 13.3 (0.001)
+Passed Fwd filter:                         4  (0.0003015); expected 0.1 (1e-05)
+Initial search space (Z):              13267  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.16u 0.08s 00:00:00.24 Elapsed: 00:00:00.12
+# Mc/sec: 18734.72
+//
+[ok]

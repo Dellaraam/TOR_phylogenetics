@@ -1,0 +1,302 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Schistosoma_mansoni.Smansoni_v7.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    3.3e-71  239.7  42.7      9e-46  155.4  19.2    4.1  4  Smp_007710.1  pep scaffold:Smansoni_v7:SM_V7_ZW:19111908:1917
+    1.7e-70  237.3  30.0    5.4e-46  156.2  19.2    4.2  4  Smp_007710.2  pep scaffold:Smansoni_v7:SM_V7_ZW:19111908:1916
+    0.00012   19.3   0.3       0.13    9.2   0.1    2.8  3  Smp_151730.1  pep scaffold:Smansoni_v7:SM_V7_3:2623483:263446
+  ------ inclusion threshold ------
+      0.019   11.9   0.0      0.024   11.6   0.0    1.1  1  Smp_318510.1  pep scaffold:Smansoni_v7:SM_V7_7:18390281:18398
+
+
+Domain annotation for each sequence (and alignments):
+>> Smp_007710.1  pep scaffold:Smansoni_v7:SM_V7_ZW:19111908:19178988:1 gene:Smp_007710 transcript:Smp_007710.1 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.4   0.4   5.9e-08   0.00021      83     132 ..     106     155 ..      94     160 .. 0.90
+   2 !    8.7   0.0   4.9e-05      0.18     138     194 ..     264     378 ..     252     388 .. 0.88
+   3 !  155.4  19.2   2.5e-49     9e-46     214     797 ..     485    1305 ..     463    1368 .. 0.78
+   4 !   66.5   8.0   1.8e-22   6.6e-19     840    1133 ..    1424    2329 ..    1416    2352 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 18.4 bits;  conditional E-value: 5.9e-08
+  PTHR13298.orig.30.pir  83 sclrslllseskevraaalRllrylisdskvlrrllrlgldiliarsLdr 132
+                             +lr  l + ++++r aalR lry +++s +++ ll+ +ld liar++d 
+           Smp_007710.1 106 HILRLPLWHHNPSLRCAALRCLRYYVHSSVDVELLLECRLDLLIARCMDL 155
+                            38899999***************************************996 PP
+
+  == domain 2  score: 8.7 bits;  conditional E-value: 4.9e-05
+  PTHR13298.orig.30.pir 138 tEreqalkliramlevapkliptaivralvaiae...................................................... 171
+                             Er  +l+li  + ++ap+lip++i++a++a +                                                       
+           Smp_007710.1 264 GERQIVLRLIYYITRLAPQLIPSSIIHAVAAPCLevhrylvansnessnkgdahaasgvgvpavvsrhiprnrhhrigdfgeakvkis 351
+                            59*****************************888899999999999999999999999999999999999999999999999999999 PP
+
+  PTHR13298.orig.30.pir 172 ....seedrlrraclatlcelallnpe 194
+                                se d   r cl +l+el++l  e
+           Smp_007710.1 352 gfndSELDTTIRGCLLILAELVILALE 378
+                            999888899999999999999988766 PP
+
+  == domain 3  score: 155.4 bits;  conditional E-value: 2.5e-49
+  PTHR13298.orig.30.pir  214 lperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqeskskeerelsrleaskkailtlLrSWaGllylck 299 
+                              ++ri e+++  l+ +lnr +  ++  ++  ++k++  ft   y       +sk++ + + s   +++++++ lLrSW+G++++  
+           Smp_007710.1  485 HSSRIHEAVILSLIAVLNRSEYAQL-LPNSLISKFFVTFTSSPYFL----HRSKLSFNVYPSFPICARNSLILLLRSWPGIFHFIH 565 
+                             479****************777776.56666*********333322....23556788999999********************99 PP
+
+  PTHR13298.orig.30.pir  300 ndkrgLkslvdvlrlpnlevrkaildlLydl....................................................... 330 
+                             ++   L++l+  l + n e+r+ il+lLy l                                                       
+           Smp_007710.1  566 DGLPTLQTLLYTLGVGNTEIRNQILSLLYGLfptvpiphssvkeleptilgliealstgsssllpvinlssspgkrsdylrnemss 651 
+                             9999***************************************************************************8888888 PP
+
+  PTHR13298.orig.30.pir  331 Lrlkepkwte.sftsgsalkavdsaalqdswrlsdgfvaeesktilpssarsrp.dlldnylallLlalieagLleaLvevitssd 414 
+                              +l + +++  s    ++  +++s++  ++w+ +  f+ +e++++l ++++s   dl++ny+a+lL++l+eagL eaL++ + +s+
+           Smp_007710.1  652 SYLDSSSRRLfSILP-VRCISSSSSSSSSAWDIEGDFIPAEGCRLL-IKYDSIGiDLMNNYYAILLATLVEAGLYEALIRAVSDSN 735 
+                             444444444445544.55555555555789**************98.55555556******************************* PP
+
+  PTHR13298.orig.30.pir  415 ssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfssekskrnraaaa.......lalksldelkrsksksaslylde 493 
+                             ++ s++A +LLg l ++ + lLP+e    +++  +l ++a  +  e+++++ a          + l + + + +s  ++  l    
+           Smp_007710.1  736 QVTSTRAGYLLGLLAYKVQSLLPQE----HPACRRL-HHAGLLHPETPGSQLAVLWlerihraMRLHETQLIDTSNLIHVPL---- 812 
+                             ************************8....3455555.566665555555555555543332223444444444444444444.... PP
+
+  PTHR13298.orig.30.pir  494 ilq....kkllersssnssedskrkrlrq..iledddeafkrmlkdsqvlstkdyl...................kWnwdlilell 554 
+                                    + l+++s++n s +   + l q  ++e +d+ +++++  s+vls k+++                    Wnw++++ l 
+           Smp_007710.1  813 --HspflECLAKQSANNISPTYPLNPL-QpdQMELTDTILDQLIALSNVLSFKSKSqhgrfsqcqvttydtkspeLWNWNILTSLG 895 
+                             ..2444446666666665554444444.1359*******************9999999************************9999 PP
+
+  PTHR13298.orig.30.pir  555 egplnlnpkrle.eavkvtkffkrLlsFyk........................................................ 583 
+                                l +    ++ e+  + kf+k +++F+                                                         
+           Smp_007710.1  896 R-HLAVTRCTFSwESKSHMKFLKAVMEFLIpdqtcrtgvsdcktekctnpisppvvysipsksmqssdgllpvdgllnaisdnrnf 980 
+                             9.5559999999999999************88888888888888888888888888888888888888888888888888888888 PP
+
+  PTHR13298.orig.30.pir  584 .....................................................................................P 584 
+                                                                                                                  P
+           Smp_007710.1  981 mlqnfitlnthdnidrllvhsreknisesnatstimnnnsntsrsnylispnanfnlawlsynwphasaagilaaglithlahypP 1066
+                             88888888888888888888888888888888888888888888888888777777777777777777777777777777777776 PP
+
+  PTHR13298.orig.30.pir  585 skkrfssid.ktkqlekyvqvg..cqllslLlsspeGialleesrlLkelleelsqelldssse.kspder.lfskerlsttlsqg 665 
+                              +  f+ +d   + l+++++     q  + L+s++      ++s+  k + ++lsq+ ++ +   +      l  ++++ ++ + g
+           Smp_007710.1 1067 ASEPFQYLDrFLTALHLCLKFVlnKQSNKSLVSHNH-----DNSGNNKSMDQKLSQDNNSTHNDsNNTN-MiLTFHSNYLAKSCGG 1146
+                             667777666422233333222222555666666666.....6666778888888887665555542222.2344466666666666 PP
+
+  PTHR13298.orig.30.pir  666 yfl.fiGvLsstkeGlkiLekln...ifqlllqlislktrdelvk.......................livssLdysld.gesRvi 723 
+                             ++l +  +L+ ++ G   Lek++    fq++l + s+ ++ + ++                       +i+ssLdys + ++sR +
+           Smp_007710.1 1147 LILfAASRLTNSEVGELRLEKSDlylDFQSILMFSSQLKKSSNSHtethyndtddkrneqcvflnhakIILSSLDYSHStKLSRLL 1232
+                             66648889***************55523444444444444333337777778*************************86489**** PP
+
+  PTHR13298.orig.30.pir  724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileylvs 797 
+                             l+ a +s+ + +R+y ++ +r l r +++++++W i+l+v+ + d s+++++ Al +Lee c d +n +++l +
+           Smp_007710.1 1233 LTTAVNSGVKPLRMYTIRLIRLLFRLKLPFLASWCIDLVVKLCMDSSNKIRRLALCLLEELCWDPVN-IQALSQ 1305
+                             **************************************************************88888.666655 PP
+
+  == domain 4  score: 66.5 bits;  conditional E-value: 1.8e-22
+  PTHR13298.orig.30.pir  840 aeernaeYvllvEealsealtlltree.........................dgsdsrrrsngpdsslrnrks............. 887 
+                             ++++n +Y ++++ ++ + + ++ ++                            +  +++ +++ s+ ++r+s             
+           Smp_007710.1 1424 RKHYNVAYAQEMDSRFTSLFVTYGTKIlsgtsykstsftyfdspainlqipsPLNFNNNTDDEENSDRVDRPSnsefnfednyfie 1509
+                             57899999999999999999995555555555555556666666666665554444445555555556666668888999999999 PP
+
+  PTHR13298.orig.30.pir  888 ................................vilPpHLygeLakteeGcelLekkghleelaetirs.............hgled 928 
+                                                              +lP HLy+  a +++G++lL + ++le++++  rs             +  +d
+           Smp_007710.1 1510 esdsmsgtyvspslvndqsigqvadghdsfhcLPLPKHLYACIAEHRNGINLLDTRKDLETAIANMRSvlpqiindkyeetNTFND 1595
+                             9999999999999999999***********9999*************************************999998764444449 PP
+
+  PTHR13298.orig.30.pir  929 seeilklkaalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrnal 1014
+                             +  +lklka +WAl+h +s+++G   l +  ++l+  + +la +s+++ +r+ +  +l+lia+++    i ++++   ++++++++
+           Smp_007710.1 1596 TNSLLKLKADMWALAHTCSTSYGQYWLLK-HPELMTLFTSLALHSNSMNIRAVAWICLNLIATSSNQ--IFRQHNCLGMLQNDRTS 1678
+                             999999*****************999999.599*******************************999..9***********99999 PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+           Smp_007710.1 1679 khindlncneslsdwlfipqifygrdvktnegaqdemmvypeiqslsgqmvqtklkpnrllsdifsvippvtnfgtetknenlsls 1764
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+           Smp_007710.1 1765 aqksvkssvrnqvfenfnrsrrrlhrrwspnhrrlsppisesrehssfhlpshhfmsfvkpkhsinsftqiasfsydvssvnissk 1850
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+           Smp_007710.1 1851 kpystwthrdcipqrqvispsftpsgsahavdhddheltdskpnshsdtrwllqslfhcvnknqiiylptdikilgfkkytknkqk 1936
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+           Smp_007710.1 1937 ytimnpikslqlssssssssllfdsktnvstkpfyndnshclfrslnspdnnkhsisfidvavhvqlmlslysndklstlssvpde 2022
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir 1015 ...................................................................................... 1014
+                                                                                                                   
+           Smp_007710.1 2023 vstdttnytaknninqlsslqhsscdkenrlyssriqfadhsnsflsrrenrtseksslifdeihsvsaqpstpsvlssnqnyfeh 2108
+                             *********************************99999999999999999999999999999999999999999999999999999 PP
+
+  PTHR13298.orig.30.pir 1015 ....iGlciPsdvnelfsipehqqsssaesapitdekpeeiktslky....................................... 1057
+                                   ++  ++v++l  ++++ +ss  + ++ t++++ +++ s+++                                       
+           Smp_007710.1 2109 enheLSISASHSVEKLGEVDNWLVSSEVNETNLTKNDNVSHRLSVAKmsseeyiipidvnqspelsindhhqlkntndhdgsndnn 2194
+                             9999889999999999999999999999999999888888888877799************************************* PP
+
+  PTHR13298.orig.30.pir 1058 .............................................ptsqmvrkeilrlvanLsnsv.....lakkaekeLlkl... 1090
+                                                                           +++m  ++ l++++nLs+ v     ++ +++++L ++   
+           Smp_007710.1 2195 ngwnntenkanssvhsncllpntclsyscsltnndnsdsqcdqemTEQDMWCNQLLDSISNLSSNVfscssSHDNNSNTLDEIihk 2280
+                             ********************************************9889******************97777666666666666111 PP
+
+  PTHR13298.orig.30.pir 1091 .....kekkpel.fddpclfsevlkllseyrfrlqaRrfiqelfddavl 1133
+                                  k++k  +   + c +  +  ll+ y f+ + R +iq++f    l
+           Smp_007710.1 2281 alitqKNFKGSIqLFNACTYTIIADLLGSYPFSRSIRTKIQSVFLYFEL 2329
+                             111115555555555566666667899*****************87766 PP
+
+>> Smp_007710.2  pep scaffold:Smansoni_v7:SM_V7_ZW:19111908:19164867:1 gene:Smp_007710 transcript:Smp_007710.2 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.7   0.4   4.6e-08   0.00017      83     132 ..     106     155 ..      94     160 .. 0.90
+   2 !    9.1   0.0   3.7e-05      0.14     138     194 ..     264     378 ..     253     388 .. 0.88
+   3 !  156.2  19.2   1.5e-49   5.4e-46     214     797 ..     485    1305 ..     463    1368 .. 0.78
+   4 !   57.9   0.1     7e-20   2.5e-16     840     995 ..    1424    1661 ..    1416    1834 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 18.7 bits;  conditional E-value: 4.6e-08
+  PTHR13298.orig.30.pir  83 sclrslllseskevraaalRllrylisdskvlrrllrlgldiliarsLdr 132
+                             +lr  l + ++++r aalR lry +++s +++ ll+ +ld liar++d 
+           Smp_007710.2 106 HILRLPLWHHNPSLRCAALRCLRYYVHSSVDVELLLECRLDLLIARCMDL 155
+                            38899999***************************************996 PP
+
+  == domain 2  score: 9.1 bits;  conditional E-value: 3.7e-05
+  PTHR13298.orig.30.pir 138 tEreqalkliramlevapkliptaivralvaiae...................................................... 171
+                             Er  +l+li  + ++ap+lip++i++a++a +                                                       
+           Smp_007710.2 264 GERQIVLRLIYYITRLAPQLIPSSIIHAVAAPCLevhrylvansnessnkgdahaasgvgvpavvsrhiprnrhhrigdfgeakvkis 351
+                            59*****************************888899999999999999999999999999999999999999999999999999999 PP
+
+  PTHR13298.orig.30.pir 172 ....seedrlrraclatlcelallnpe 194
+                                se d   r cl +l+el++l  e
+           Smp_007710.2 352 gfndSELDTTIRGCLLILAELVILALE 378
+                            999888899999999999999988766 PP
+
+  == domain 3  score: 156.2 bits;  conditional E-value: 1.5e-49
+  PTHR13298.orig.30.pir  214 lperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqeskskeerelsrleaskkailtlLrSWaGllylck 299 
+                              ++ri e+++  l+ +lnr +  ++  ++  ++k++  ft   y       +sk++ + + s   +++++++ lLrSW+G++++  
+           Smp_007710.2  485 HSSRIHEAVILSLIAVLNRSEYAQL-LPNSLISKFFVTFTSSPYFL----HRSKLSFNVYPSFPICARNSLILLLRSWPGIFHFIH 565 
+                             479****************777776.56666*********333322....23556788999999********************99 PP
+
+  PTHR13298.orig.30.pir  300 ndkrgLkslvdvlrlpnlevrkaildlLydl....................................................... 330 
+                             ++   L++l+  l + n e+r+ il+lLy l                                                       
+           Smp_007710.2  566 DGLPTLQTLLYTLGVGNTEIRNQILSLLYGLfptvpiphssvkeleptilgliealstgsssllpvinlssspgkrsdylrnemss 651 
+                             9999***************************************************************************8888888 PP
+
+  PTHR13298.orig.30.pir  331 Lrlkepkwte.sftsgsalkavdsaalqdswrlsdgfvaeesktilpssarsrp.dlldnylallLlalieagLleaLvevitssd 414 
+                              +l + +++  s    ++  +++s++  ++w+ +  f+ +e++++l ++++s   dl++ny+a+lL++l+eagL eaL++ + +s+
+           Smp_007710.2  652 SYLDSSSRRLfSILP-VRCISSSSSSSSSAWDIEGDFIPAEGCRLL-IKYDSIGiDLMNNYYAILLATLVEAGLYEALIRAVSDSN 735 
+                             444444444445544.55555555555789**************98.55555556******************************* PP
+
+  PTHR13298.orig.30.pir  415 ssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfssekskrnraaaa.......lalksldelkrsksksaslylde 493 
+                             ++ s++A +LLg l ++ + lLP+e    +++  +l ++a  +  e+++++ a          + l + + + +s  ++  l    
+           Smp_007710.2  736 QVTSTRAGYLLGLLAYKVQSLLPQE----HPACRRL-HHAGLLHPETPGSQLAVLWlerihraMRLHETQLIDTSNLIHVPL---- 812 
+                             ************************8....3455555.566665555555555555543332223444444444444444444.... PP
+
+  PTHR13298.orig.30.pir  494 ilq....kkllersssnssedskrkrlrq..iledddeafkrmlkdsqvlstkdyl...................kWnwdlilell 554 
+                                    + l+++s++n s +   + l q  ++e +d+ +++++  s+vls k+++                    Wnw++++ l 
+           Smp_007710.2  813 --HspflECLAKQSANNISPTYPLNPL-QpdQMELTDTILDQLIALSNVLSFKSKSqhgrfsqcqvttydtkspeLWNWNILTSLG 895 
+                             ..2444446666666665554444444.1359*******************9999999************************9999 PP
+
+  PTHR13298.orig.30.pir  555 egplnlnpkrle.eavkvtkffkrLlsFyk........................................................ 583 
+                                l +    ++ e+  + kf+k +++F+                                                         
+           Smp_007710.2  896 R-HLAVTRCTFSwESKSHMKFLKAVMEFLIpdqtcrtgvsdcktekctnpisppvvysipsksmqssdgllpvdgllnaisdnrnf 980 
+                             9.5559999999999999************88888888888888888888888888888888888888888888888888888888 PP
+
+  PTHR13298.orig.30.pir  584 .....................................................................................P 584 
+                                                                                                                  P
+           Smp_007710.2  981 mlqnfitlnthdnidrllvhsreknisesnatstimnnnsntsrsnylispnanfnlawlsynwphasaagilaaglithlahypP 1066
+                             88888888888888888888888888888888888888888888888888777777777777777777777777777777777776 PP
+
+  PTHR13298.orig.30.pir  585 skkrfssid.ktkqlekyvqvg..cqllslLlsspeGialleesrlLkelleelsqelldssse.kspder.lfskerlsttlsqg 665 
+                              +  f+ +d   + l+++++     q  + L+s++      ++s+  k + ++lsq+ ++ +   +      l  ++++ ++ + g
+           Smp_007710.2 1067 ASEPFQYLDrFLTALHLCLKFVlnKQSNKSLVSHNH-----DNSGNNKSMDQKLSQDNNSTHNDsNNTN-MiLTFHSNYLAKSCGG 1146
+                             667777666422233333222222555666666666.....6666778888888887665555542222.2344466666666666 PP
+
+  PTHR13298.orig.30.pir  666 yfl.fiGvLsstkeGlkiLekln...ifqlllqlislktrdelvk.......................livssLdysld.gesRvi 723 
+                             ++l +  +L+ ++ G   Lek++    fq++l + s+ ++ + ++                       +i+ssLdys + ++sR +
+           Smp_007710.2 1147 LILfAASRLTNSEVGELRLEKSDlylDFQSILMFSSQLKKSSNSHtethyndtddkrneqcvflnhakIILSSLDYSHStKLSRLL 1232
+                             66648889***************55523444444444444333337777778*************************86489**** PP
+
+  PTHR13298.orig.30.pir  724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileylvs 797 
+                             l+ a +s+ + +R+y ++ +r l r +++++++W i+l+v+ + d s+++++ Al +Lee c d +n +++l +
+           Smp_007710.2 1233 LTTAVNSGVKPLRMYTIRLIRLLFRLKLPFLASWCIDLVVKLCMDSSNKIRRLALCLLEELCWDPVN-IQALSQ 1305
+                             **************************************************************88888.666655 PP
+
+  == domain 4  score: 57.9 bits;  conditional E-value: 7e-20
+  PTHR13298.orig.30.pir  840 aeernaeYvllvEealsealtlltree.........................dgsdsrrrsngpdsslrnrks............. 887 
+                             ++++n +Y ++++ ++ + + ++ ++                            +  +++ +++ s+ ++r+s             
+           Smp_007710.2 1424 RKHYNVAYAQEMDSRFTSLFVTYGTKIlsgtsykstsftyfdspainlqipsPLNFNNNTDDEENSDRVDRPSnsefnfednyfie 1509
+                             57899999999999999999995555555555555556666666666665554444445555555556666668888999999999 PP
+
+  PTHR13298.orig.30.pir  888 ................................vilPpHLygeLakteeGcelLekkghleelaetirs.............hgled 928 
+                                                              +lP HLy+  a +++G++lL + ++le++++  rs             +  +d
+           Smp_007710.2 1510 esdsmsgtyvspslvndqsigqvadghdsfhcLPLPKHLYACIAEHRNGINLLDTRKDLETAIANMRSvlpqiindkyeetNTFND 1595
+                             9999999999999999999***********9999*************************************999998764444449 PP
+
+  PTHR13298.orig.30.pir  929 seeilklkaalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqg 995 
+                             +  +lklka +WAl+h +s+++G   l +  ++l+  + +la +s+++ +r+ +  +l+lia+++  
+           Smp_007710.2 1596 TNSLLKLKADMWALAHTCSTSYGQYWLLK-HPELMTLFTSLALHSNSMNIRAVAWICLNLIATSSNQ 1661
+                             999999*****************999999.599*****************************99865 PP
+
+>> Smp_151730.1  pep scaffold:Smansoni_v7:SM_V7_3:2623483:2634462:-1 gene:Smp_151730 transcript:Smp_151730.1 gene_biotyp
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.5   0.0      0.03   1.1e+02     191     222 ..      36      65 ..      27      86 .. 0.70
+   2 !    9.2   0.1   3.5e-05      0.13     721     772 ..     191     245 ..     125     251 .. 0.79
+   3 !    6.7   0.0    0.0002      0.72     941    1001 ..     253     310 ..     246     313 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: -0.5 bits;  conditional E-value: 0.03
+  PTHR13298.orig.30.pir 191 lnpelvaeagglrvlldallecqlperiae.sl 222
+                            ++ el+++ +++++l d+l +   pe+i e ++
+           Smp_151730.1  36 KDTELIIRQRAVKALCDYLHD---PEHIEEaIN 65 
+                            566777778888888888888...555555333 PP
+
+  == domain 2  score: 9.2 bits;  conditional E-value: 3.5e-05
+  PTHR13298.orig.30.pir 721 RvilskaLtsssesiRlyatkhLrvllra...essdfsdWgielLvtqlydpske 772
+                              +++k L  s+ +iR  a + + +l      +++ +++ +i++Lvt l+dp+++
+           Smp_151730.1 191 ISLFTKLLSHSNTEIRTRAAQNILRLCVNlrgKQEALDNETIPALVTLLNDPNED 245
+                            5689******************99998856669999999*************986 PP
+
+  == domain 3  score: 6.7 bits;  conditional E-value: 0.0002
+  PTHR13298.orig.30.pir  941 AlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLee 1001
+                             Alg+i++++ G     +   + i+ + +l+ + ++  vr   f vl+ ++ t++g++iL +
+           Smp_151730.1  253 ALGFICTTNHGRYTTLN--AEAIPLLLNLVDD-KSSRVRVNTFKVLTCLSETPEGRRILLD 310 
+                             89*********877777..579*********9.7999*********************965 PP
+
+>> Smp_318510.1  pep scaffold:Smansoni_v7:SM_V7_7:18390281:18398016:-1 gene:Smp_318510 transcript:Smp_318510.1 gene_biot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.6   0.0   6.6e-06     0.024     893     940 ..      25      68 ..      12      69 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 11.6 bits;  conditional E-value: 6.6e-06
+  PTHR13298.orig.30.pir 893 HLygeLakteeGcelLekkghleelaetirshgledseeilklkaalW 940
+                             ++++L+ ++ Gc+ +e +g  ++++e i+s    ++e i  + aa++
+           Smp_318510.1  25 AFLSQLSTSRSGCQAIENEGACPRFTELIQS----NNEYIAAYTAAIL 68 
+                            599****************************....9999988888875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      14499  (8563460 residues searched)
+Passed MSV filter:                      1707  (0.117732); expected 290.0 (0.02)
+Passed bias filter:                      214  (0.0147596); expected 290.0 (0.02)
+Passed Vit filter:                        23  (0.00158632); expected 14.5 (0.001)
+Passed Fwd filter:                         4  (0.000275881); expected 0.1 (1e-05)
+Initial search space (Z):              14499  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.26u 0.15s 00:00:00.41 Elapsed: 00:00:00.19
+# Mc/sec: 51590.91
+//
+[ok]

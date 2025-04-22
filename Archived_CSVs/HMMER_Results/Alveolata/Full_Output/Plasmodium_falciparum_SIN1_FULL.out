@@ -1,0 +1,64 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Plasmodium_falciparum.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.1e-06   26.2   7.5    1.1e-06   26.2   7.5    1.1  1  CAD51379.1  skeleton-binding protein 1 [Plasmodium falciparum
+    9.2e-06   23.1  11.3    9.2e-06   23.1  11.3    1.2  1  CAD52271.1  EMP1-trafficking protein [Plasmodium falciparum 3
+
+
+Domain annotation for each sequence (and alignments):
+>> CAD51379.1  skeleton-binding protein 1 [Plasmodium falciparum 3D7]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.2   7.5   4.2e-10   1.1e-06      79     156 ..     251     327 ..      94     336 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 26.2 bits;  conditional E-value: 4.2e-10
+  PTHR13335.orig.30.pir  79 neaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerr 156
+                            +  ++  +++ ++++++ +++ +++ q+  q++++++++++ +++++++++++++++ +++ ++nt+++ ++++   +
+             CAD51379.1 251 KKEQMLEQNPEQNPEQNAQQNAQQNAQQNAQQNAQQNAQQNAQQNTQQNTQQKTQQNPQQNAQQNTQQNTQQQSTT-K 327
+                            2233333344444444444444444444444555555555555555555555555555555554444444443333.2 PP
+
+>> CAD52271.1  EMP1-trafficking protein [Plasmodium falciparum 3D7]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   23.1  11.3   3.4e-09   9.2e-06      38     129 ..      81     163 ..       5     312 .] 0.45
+
+  Alignments for each domain:
+  == domain 1  score: 23.1 bits;  conditional E-value: 3.4e-09
+  PTHR13335.orig.30.pir  38 lekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqs 125
+                            le i + +++ + s +++ ++ ++++++ ++++++e+   ++ +e++++ ++++++++++++q++++q+++         ++++++q 
+             CAD52271.1  81 LENILESRINRSLSEKQSHVTNSATEVAAQENNSTEEKKNNPPVEQQQQQQQQQQQQQQQQQQQQQQQQQQ---------QQQQQQQP 159
+                            44444444443222222223322333333333333333333333332222222221111111111111111.........11112222 PP
+
+  PTHR13335.orig.30.pir 126 vdis 129
+                             +++
+             CAD52271.1 160 NELN 163
+                            2222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       5387  (4103467 residues searched)
+Passed MSV filter:                      2173  (0.403379); expected 107.7 (0.02)
+Passed bias filter:                      278  (0.0516057); expected 107.7 (0.02)
+Passed Vit filter:                       211  (0.0391684); expected 5.4 (0.001)
+Passed Fwd filter:                         4  (0.000742528); expected 0.1 (1e-05)
+Initial search space (Z):               5387  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.55u 0.02s 00:00:00.57 Elapsed: 00:00:00.29
+# Mc/sec: 9311.88
+//
+[ok]

@@ -1,0 +1,131 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/E_vannus_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------          -----------
+    2.9e-18   65.2  11.8    2.9e-18   65.2  11.8    2.3  3  MSTRG.10385.1_fr3  UNIQ_LONG STOP:3 ANY(X):0 LONGEST:1108 TOT
+    2.9e-18   65.2  11.8    2.9e-18   65.2  11.8    2.3  3  MSTRG.10385.2_fr3  UNIQ_LONG STOP:2 ANY(X):0 LONGEST:1108 TOT
+
+
+Domain annotation for each sequence (and alignments):
+>> MSTRG.10385.1_fr3  UNIQ_LONG STOP:3 ANY(X):0 LONGEST:1108 TOTAL_LENGTH:2276 MULTIPLE_ORFs:4
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.4   0.2      0.46   2.1e+03     230     250 ..      74      93 ..      37     115 .. 0.50
+   2 !   65.2  11.8   6.5e-22   2.9e-18      51     342 ..     292     633 ..     253     634 .. 0.82
+   3 ?   -2.9   0.0      0.34   1.5e+03     154     200 ..     671     713 ..     663     754 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: -3.4 bits;  conditional E-value: 0.46
+                        ..........HHHHCCCTCCC CS
+                FAT 230 eptnleeftkllarcylkkGe 250
+                         p+ +++ftk++ ++yl +++
+  MSTRG.10385.1_fr3  74 LPQVWKTFTKEQ-KNYLAQSM 93 
+                        333333333333.33333333 PP
+
+  == domain 2  score: 65.2 bits;  conditional E-value: 6.5e-22
+                        CCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS----TTTTT......TT----TTS-TTTGCCCTTTCCCCTCCCHC CS
+                FAT  51 liekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklssseelksl......lktWrkRlpgvqddvevwqdilsvRslvls 136
+                        + +  ++ l +e+++l+  + + +y++l ++Q  +El e+ +++ +++s+++ k l          r+R p    + +  +dil +R + ++
+  MSTRG.10385.1_fr3 292 CFDSNKEKLCQEWCSLPRFIDQIHYTKLAKFQKSIELNESMALIHSSRSEQKEKYLkyfrtaAMIQRDRIPTFCESHRLCKDILENRYIPFN 383
+                        567788999************************************99977777777666653334579************************ PP
+
+                        CCHC...................HHCCS-STTCCC..CCCCCHCHHHHCCSTTHHCCCCCHCTT..........TSSCCCHHHHHHHCCHHH CS
+                FAT 137 pied...................lllkgakaemwl..kfanlaRksgrlslAekaLkklleedk...eewlp..pevvyaylkylwakgeqk 202
+                          ++                   +++k     +w    + + aRk++ l+++++ L  ++       e   +    + +++ kyl+ +++ k
+  MSTRG.10385.1_fr3 384 FLNSsvghgnrqgdpndqanknrFAFKRLLNYIWDklIITRQARKQNALEVSKRFLVDIELHITrsdE---EglKGISLQNEKYLLIQERMK 472
+                        **99*******************9999999999962256789****************9444434322...246799999999999999999 PP
+
+                        HHSSCCHHHHCCTSSCCC.........SS-SS---......................................HH.HHCCCTCCCCCCCCCC CS
+                FAT 203 ealqkLrefvscllekke.........elssglevq...........................eptnleeftkll.arcylkkGewlaalqk 257
+                          l + r fv  +l++ e         +       +                           ++++++ + +   +++y ++Ge   ++++
+  MSTRG.10385.1_fr3 473 LVLHYFRNFVRLKLSNDEflilrkqliT-------KtinlsekkvlddmrrqgeaflrtqagnQQNKIQLYPHIWeSEIYRLRGEIFMEAKN 557
+                        9999999999988888887765554440.......2334445555667778899999999996677777777777**********8888888 PP
+
+                        CT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+                FAT 258 lnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlL 342
+                                +++++a++++  l+ ++yk+w ++a + ++ +++ eekk+++ +e+l   v+ a+eg+lksl+++  +s+ ++ ++L
+  MSTRG.10385.1_fr3 558 -------YDKANEAFLQSLNLCHTSYKNWRSLAFASEQFVEMAEEKKKSD-SEKLD-WVCTAIEGYLKSLKYNLFNSRLYIIKIL 633
+                        .......89**********************************9988876.77886.***********************99988 PP
+
+  == domain 3  score: -2.9 bits;  conditional E-value: 0.34
+                        CCCCHCHHH.HCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH CS
+                FAT 154 fanlaRksg.rlslAekaLkklleedkeewlppevvyaylkylwakge 200
+                          + a ks+ ++++A+++L k++e  +      +  y+   y+w+k +
+  MSTRG.10385.1_fr3 671 LLEFAVKSNtEFDIAQRVLCKIAELYP-----QPTLYTCRHYFWHKAK 713
+                        555555555379999999999988888.....4566666667777655 PP
+
+>> MSTRG.10385.2_fr3  UNIQ_LONG STOP:2 ANY(X):0 LONGEST:1108 TOTAL_LENGTH:1949 MULTIPLE_ORFs:3
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.4   0.2      0.46   2.1e+03     230     250 ..      74      93 ..      37     115 .. 0.50
+   2 !   65.2  11.8   6.5e-22   2.9e-18      51     342 ..     292     633 ..     253     634 .. 0.82
+   3 ?   -2.9   0.0      0.34   1.5e+03     154     200 ..     671     713 ..     663     754 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: -3.4 bits;  conditional E-value: 0.46
+                        ..........HHHHCCCTCCC CS
+                FAT 230 eptnleeftkllarcylkkGe 250
+                         p+ +++ftk++ ++yl +++
+  MSTRG.10385.2_fr3  74 LPQVWKTFTKEQ-KNYLAQSM 93 
+                        333333333333.33333333 PP
+
+  == domain 2  score: 65.2 bits;  conditional E-value: 6.5e-22
+                        CCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS----TTTTT......TT----TTS-TTTGCCCTTTCCCCTCCCHC CS
+                FAT  51 liekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklssseelksl......lktWrkRlpgvqddvevwqdilsvRslvls 136
+                        + +  ++ l +e+++l+  + + +y++l ++Q  +El e+ +++ +++s+++ k l          r+R p    + +  +dil +R + ++
+  MSTRG.10385.2_fr3 292 CFDSNKEKLCQEWCSLPRFIDQIHYTKLAKFQKSIELNESMALIHSSRSEQKEKYLkyfrtaAMIQRDRIPTFCESHRLCKDILENRYIPFN 383
+                        567788999************************************99977777777666653334579************************ PP
+
+                        CCHC...................HHCCS-STTCCC..CCCCCHCHHHHCCSTTHHCCCCCHCTT..........TSSCCCHHHHHHHCCHHH CS
+                FAT 137 pied...................lllkgakaemwl..kfanlaRksgrlslAekaLkklleedk...eewlp..pevvyaylkylwakgeqk 202
+                          ++                   +++k     +w    + + aRk++ l+++++ L  ++       e   +    + +++ kyl+ +++ k
+  MSTRG.10385.2_fr3 384 FLNSsvghgnrqgdpndqanknrFAFKRLLNYIWDklIITRQARKQNALEVSKRFLVDIELHITrsdE---EglKGISLQNEKYLLIQERMK 472
+                        **99*******************9999999999962256789****************9444434322...246799999999999999999 PP
+
+                        HHSSCCHHHHCCTSSCCC.........SS-SS---......................................HH.HHCCCTCCCCCCCCCC CS
+                FAT 203 ealqkLrefvscllekke.........elssglevq...........................eptnleeftkll.arcylkkGewlaalqk 257
+                          l + r fv  +l++ e         +       +                           ++++++ + +   +++y ++Ge   ++++
+  MSTRG.10385.2_fr3 473 LVLHYFRNFVRLKLSNDEflilrkqliT-------KtinlsekkvlddmrrqgeaflrtqagnQQNKIQLYPHIWeSEIYRLRGEIFMEAKN 557
+                        9999999999988888887765554440.......2334445555667778899999999996677777777777**********8888888 PP
+
+                        CT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHH CS
+                FAT 258 lnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlL 342
+                                +++++a++++  l+ ++yk+w ++a + ++ +++ eekk+++ +e+l   v+ a+eg+lksl+++  +s+ ++ ++L
+  MSTRG.10385.2_fr3 558 -------YDKANEAFLQSLNLCHTSYKNWRSLAFASEQFVEMAEEKKKSD-SEKLD-WVCTAIEGYLKSLKYNLFNSRLYIIKIL 633
+                        .......89**********************************9988876.77886.***********************99988 PP
+
+  == domain 3  score: -2.9 bits;  conditional E-value: 0.34
+                        CCCCHCHHH.HCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH CS
+                FAT 154 fanlaRksg.rlslAekaLkklleedkeewlppevvyaylkylwakge 200
+                          + a ks+ ++++A+++L k++e  +      +  y+   y+w+k +
+  MSTRG.10385.2_fr3 671 LLEFAVKSNtEFDIAQRVLCKIAELYP-----QPTLYTCRHYFWHKAK 713
+                        555555555379999999999988888.....4566666667777655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       8856  (2176206 residues searched)
+Passed MSV filter:                      1048  (0.118338); expected 177.1 (0.02)
+Passed bias filter:                      165  (0.0186314); expected 177.1 (0.02)
+Passed Vit filter:                        17  (0.0019196); expected 8.9 (0.001)
+Passed Fwd filter:                         2  (0.000225836); expected 0.1 (1e-05)
+Initial search space (Z):               8856  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.05u 0.00s 00:00:00.05 Elapsed: 00:00:00.02
+# Mc/sec: 30211.14
+//
+[ok]

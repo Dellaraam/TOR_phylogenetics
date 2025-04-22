@@ -1,0 +1,216 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Phaeodactylum_tricornutum_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.2e-51  174.0   0.0    3.7e-48  162.7   0.0    3.6  3  EEC46831.1  predicted protein [Phaeodactylum tricornutum CCAP
+    0.00014   21.1   0.0       0.31   10.2   0.1    4.6  6  EEC43810.1  predicted protein [Phaeodactylum tricornutum CCAP
+     0.0017   17.5   0.9        2.4    7.3   0.0    5.7  8  EEC43895.1  predicted protein [Phaeodactylum tricornutum CCAP
+     0.0078   15.4   1.9        3.5    6.8   0.0    4.5  4  EEC45100.1  predicted protein [Phaeodactylum tricornutum CCAP
+
+
+Domain annotation for each sequence (and alignments):
+>> EEC46831.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.8   0.0    0.0014       3.5     106     155 ..     707     757 ..     683     760 .. 0.88
+   2 !  162.7   0.0   1.4e-51   3.7e-48       1     160 []     764     926 ..     764     926 .. 0.91
+   3 ?   -2.2   0.0      0.81   2.1e+03     109     143 ..    1010    1045 ..     991    1058 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 6.8 bits;  conditional E-value: 0.0014
+    mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatL 155
+                 a ++a+ +  +  g+   p ++ iip++l+++++ +s s + + l+ L+++
+  EEC46831.1 707 ASLEALGELAQATGTALQPWVNDIIPHVLNTMKDQSSaSKQRTSLRTLGQI 757
+                 55678888889999999****************999989999999999987 PP
+
+  == domain 2  score: 162.7 bits;  conditional E-value: 1.4e-51
+    mTOR_dom   1 VvePyldypeLLeiLlnilkte.q.sqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsel..lvglspsseeyyptvvinaLlkil 95 
+                 Vv+ yldyp+LL++ ++il  + +  +++Rrevi++lGi+GALDP ++ +v +k+++    + ++ ++ vs+l  +++++ps+e++yptv i+aL++i+
+  EEC46831.1 764 VVRLYLDYPNLLSQATDILPATkRaPWTLRREVIRTLGIIGALDPDRYYSVASKARKG-GVQYAMVAQPVSNLspAKRMTPSEEDFYPTVSIQALMRIF 861
+                 8999***************9884479**********************9999877554.34444445566666678*********************** PP
+
+    mTOR_dom  96 kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                 +d++l+ hh +v+qaim+ifk+lg++cvpfl +++p+++ +ir+c+s+l+e l+ qL++L+ +vk
+  EEC46831.1 862 RDSTLTVHHGMVIQAIMFIFKSLGVRCVPFLGKVLPHMILTIRHCPSNLKESLFIQLSNLTLVVK 926
+                 ************************************************************99997 PP
+
+  == domain 3  score: -2.2 bits;  conditional E-value: 0.81
+    mTOR_dom  109 qaimsifktlglkcvpflpqiipallsvirtces.s 143 
+                  + i++ +++l+    ++l  +ipall+++ ++ s s
+  EEC46831.1 1010 SHILKSISKLNSMLREYLHILIPALLKLADSLASlS 1045
+                  344444555777778899999999998887766545 PP
+
+>> EEC43810.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.3   0.0     0.034        88     104     155 ..      82     133 ..      16     138 .. 0.72
+   2 ?   -1.8   0.0      0.58   1.5e+03     112     143 ..     131     162 ..     113     173 .. 0.76
+   3 !   10.2   0.1   0.00012      0.31      41     160 .]     187     308 ..     186     308 .. 0.84
+   4 ?    0.3   0.0      0.13   3.5e+02     110     138 ..     299     327 ..     275     333 .. 0.69
+   5 ?    1.2   0.0      0.07   1.8e+02     116     152 ..     548     585 ..     517     592 .. 0.73
+   6 ?    0.6   0.0      0.11   2.9e+02      68      99 ..     585     616 ..     568     659 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 2.3 bits;  conditional E-value: 0.034
+    mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                 ++a v  +  i +      ++ lp ++p ++++++++++++re     L+++
+  EEC43810.1  82 RKAGVAGLGVIAEGCCEPLTAALPTVMPMVFAAAQDSSPQVRECACFCLGQI 133
+                 5555555555666656667789******************999877666665 PP
+
+  == domain 2  score: -1.8 bits;  conditional E-value: 0.58
+    mTOR_dom 112 msifktlglkcvpflpqiipallsvirtcess 143
+                  +i ++ + + +++ +qi+p +++++ +   +
+  EEC43810.1 131 GQISEHCQPEILQYSNQILPIVFALLDDQAVT 162
+                 56777788888999999999999988876544 PP
+
+  == domain 3  score: 10.2 bits;  conditional E-value: 0.00012
+    mTOR_dom  41 LDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvv.inaLlkil...kdpslsshhtavvqaimsifktlglkc.vpflpqiipall 134
+                 LDP  +k  +   e  ++++++++e++v++l+++   +++e+ p v  +++L++ l   +dp+l s +  +++ + ++   +g +   p+ +  +   +
+  EEC43810.1 187 LDPLVRKLAHM-LE--QTNKRSVQEMAVAALAATAVAAEQEFSPYVEgVAKLMTTLmslQDPTLFSLRGRALECMGHMAIAVGKENfRPYFTVTMECAM 282
+                 78888876653.33..4677888889999999999999999999974377777665555*************************99899*******999 PP
+
+    mTOR_dom 135 svirtcesslrefllqqLatLvsivk 160
+                 + ++  +++l+ef +  +a+L +++k
+  EEC43810.1 283 QGLTLESTDLQEFAYAVFANLAKVMK 308
+                 99999888******999999988765 PP
+
+  == domain 4  score: 0.3 bits;  conditional E-value: 0.13
+    mTOR_dom 110 aimsifktlglkcvpflpqiipallsvir 138
+                 +  +  k ++ +  p l+ ++p+l++v+ 
+  EEC43810.1 299 VFANLAKVMKEEFAPALSDLVPHLIQVVD 327
+                 33445555667899999999999999986 PP
+
+  == domain 5  score: 1.2 bits;  conditional E-value: 0.07
+    mTOR_dom 116 ktlglkcvpflpqiipallsvirtces.slrefllqqL 152
+                 + lg +  ++l q++pa+ ++ +++ + s r + +  L
+  EEC43810.1 548 RVLGSQFAQYLGQFLPAICEYGKSSRPaSDRSMAVGCL 585
+                 5589999*************999988866666655555 PP
+
+  == domain 6  score: 0.6 bits;  conditional E-value: 0.11
+    mTOR_dom  68 vsellvglspsseeyyptvvinaLlkilkdps 99 
+                 +se++++l++s  +y ptv + a+l+ l d+ 
+  EEC43810.1 585 LSEIAQELESSVLDYWPTVFLPAILSGLADED 616
+                 45556677777788888888888888776654 PP
+
+>> EEC43895.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.2   0.0       3.2   8.3e+03      98     141 ..      48      91 ..      45      95 .. 0.83
+   2 ?   -4.0   0.0       2.9   7.5e+03      71      92 ..     216     238 ..     207     245 .. 0.66
+   3 ?   -3.4   0.0       1.9   4.9e+03      88     117 ..    1501    1529 ..    1472    1545 .. 0.59
+   4 !    7.3   0.0   0.00093       2.4      85     159 ..    1657    1730 ..    1626    1731 .. 0.84
+   5 ?   -0.9   0.0      0.31   8.2e+02     120     156 ..    1811    1847 ..    1776    1850 .. 0.79
+   6 ?   -0.9   0.1      0.32   8.3e+02      88     141 ..    2126    2179 ..    2053    2200 .. 0.58
+   7 ?   -2.3   0.0      0.88   2.3e+03      66      99 ..    2204    2238 ..    2172    2251 .. 0.74
+   8 ?    2.0   0.0      0.04     1e+02      91     157 ..    2487    2553 ..    2479    2555 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -4.2 bits;  conditional E-value: 3.2
+    mTOR_dom  98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                 ++l+++ +a+ +++++  k++   +++ +++i+p ++  +rt+e
+  EEC43895.1  48 RALQQQDEATRRVLLECAKDITGSSLNAYRRIVPIYAWCLRTAE 91 
+                 57788888888899999999999999999999999999999876 PP
+
+  == domain 2  score: -4.0 bits;  conditional E-value: 2.9
+    mTOR_dom  71 llvglspss.eeyyptvvinaLl 92 
+                 l+ ++ +   +e ++t+v  aLl
+  EEC43895.1 216 LVRTMLQHIpDETFQTTVCPALL 238
+                 25555555559999999998887 PP
+
+  == domain 3  score: -3.4 bits;  conditional E-value: 1.9
+    mTOR_dom   88 inaLlkilkdpslsshhtavvqaimsifkt 117 
+                  i+ L++ lk ps  + +t++ +a+++ +k+
+  EEC43895.1 1501 IAMLISALKTPSE-EVQTSIADALTKLMKK 1529
+                  4455555555553.3455555555555553 PP
+
+  == domain 4  score: 7.3 bits;  conditional E-value: 0.00093
+    mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                  + v+ a+lk ++dp+ +  ++a ++ + s+ +    +  + lp+++p+l+++++++++++++   + L ++ +++
+  EEC43895.1 1657 KLVMPAVLKAFEDPAWR-TKQASIHMLGSMSHLAPKQLASALPKVVPKLTEAFSDTHPKVKQSAQEALDEISTVI 1730
+                  56888999999999998.57788999999999888888***********************99999999988877 PP
+
+  == domain 5  score: -0.9 bits;  conditional E-value: 0.31
+    mTOR_dom  120 lkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                     vp+lp ++p l++++ +  +++r +  + L++L+
+  EEC43895.1 1811 KDFVPYLPTLLPDLQTALLDPIPDVRSTAAKALGSLT 1847
+                  45599********999999998899999999999886 PP
+
+  == domain 6  score: -0.9 bits;  conditional E-value: 0.32
+    mTOR_dom   88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141 
+                  i  L + l d   ++ +  +v     i ++ + + ++f++ i+  ++ ++++ +
+  EEC43895.1 2126 IPVLRNALYDGDTDTKRGVCVGLTEVINRSTKDQIIKFIEIIVKVVQDALSDDD 2179
+                  344444444444444444444444445555555556666666666666666544 PP
+
+  == domain 7  score: -2.3 bits;  conditional E-value: 0.88
+    mTOR_dom   66 tdvsellvglspss.eeyyptvvinaLlkilkdps 99  
+                  + v +l+v+l+ s+ +e+  t ++n L  il+ +s
+  EEC43895.1 2204 EVVPSLMVSLEVSEnDEVTRTKALNGLTGILSIRS 2238
+                  44556677777676688888999999988886554 PP
+
+  == domain 8  score: 2.0 bits;  conditional E-value: 0.04
+    mTOR_dom   91 LlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                  Ll+i+ d++ s+ + a+++++  i+ + g    +f+pq+  ++++++++ ++++r   +  L+ L+ 
+  EEC43895.1 2487 LLRIVGDRNPSNVKIAILKTLGLILVKGGPALRAFVPQFQTTFVKALSDPSRQVRLEAIAALSLLMP 2553
+                  8999999999999999999999999999999999999999999999999999998888888888875 PP
+
+>> EEC45100.1  predicted protein [Phaeodactylum tricornutum CCAP 1055/1]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.0   0.0      0.17   4.3e+02      64      95 ..     179     210 ..     120     246 .. 0.52
+   2 ?    1.2   0.1      0.07   1.8e+02      50     141 ..     382     473 ..     362     488 .. 0.63
+   3 !    6.3   0.0     0.002       5.1      69     142 ..     589     661 ..     557     669 .. 0.73
+   4 !    6.8   0.0    0.0013       3.5      85     151 ..     646     714 ..     643     723 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: -0.0 bits;  conditional E-value: 0.17
+    mTOR_dom  64 eetdvsellvglspsseeyyptvvinaLlkil 95 
+                  +t ++++++g+++ +++    v+++aL + l
+  EEC45100.1 179 VDTMLTTIVNGVQSNQTDAMRLVALTALKNSL 210
+                 22222333344444446666666666665555 PP
+
+  == domain 2  score: 1.2 bits;  conditional E-value: 0.07
+    mTOR_dom  50 eekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtce 141
+                 ++++++ee + ++a+  + s+++ g s+ +   y +  i  Ll+ ++d++ +  + ++ + i ++++   + +   ++  ii  l++ +r+++
+  EEC45100.1 382 TQHIQSEEWRYRDAAIVAFSSIMDGPSTEELAIYVNQSIPVLLRAFSDSN-EMVRDSATHCISTVCRLHMIAVdRDIVHSIIKGLIEKLRDSP 473
+                 44444444444445555566666666666666777777777777775544.556666677777777765555556677777777777766654 PP
+
+  == domain 3  score: 6.3 bits;  conditional E-value: 0.002
+    mTOR_dom  69 sellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                 s l ++l++ +   y   v++ Ll+ l+ ++ s  h++   ai si  t++ + +++++ + pall+ +r+ ++
+  EEC45100.1 589 SVLFQRLEKHDVLAYVDKVMELLLQGLQLRNAS-CHEEFWLAIGSIAGTMEGEFIKYMQALSPALLTSLRDFHA 661
+                 333555666666677788999999999877766.9999*****************************9998765 PP
+
+  == domain 4  score: 6.8 bits;  conditional E-value: 0.0013
+    mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces..slrefllqq 151
+                 +    aLl+ l+d   ++ +   + +++ i++ +g k  p+ + i++al+  ++++    +++ ++++ 
+  EEC45100.1 646 QALSPALLTSLRDFHAKTLCIVSIGVVVDICSAIGDKIQPYCDGIMSALVDCLKDSVIqrDVKPVVFSC 714
+                 555668999999999999999******************************999753212556666655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      10408  (4834366 residues searched)
+Passed MSV filter:                       410  (0.0393928); expected 208.2 (0.02)
+Passed bias filter:                      348  (0.0334358); expected 208.2 (0.02)
+Passed Vit filter:                        20  (0.0019216); expected 10.4 (0.001)
+Passed Fwd filter:                         4  (0.00038432); expected 0.1 (1e-05)
+Initial search space (Z):              10408  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.08u 0.10s 00:00:00.18 Elapsed: 00:00:00.23
+# Mc/sec: 3289.97
+//
+[ok]

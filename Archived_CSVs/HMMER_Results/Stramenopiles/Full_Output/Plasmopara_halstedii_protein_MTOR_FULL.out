@@ -1,0 +1,573 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Plasmopara_halstedii_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.1e-45  155.2   1.7    5.2e-22   78.3   0.0    6.2  6  CEG44747.1  Phosphatidylinositol kinase (PIK-L2) [Plasmopara 
+    7.5e-45  152.6   1.4    1.2e-26   93.4   0.0    4.9  4  CEG47092.1  Phosphatidylinositol kinase (PIK-L1) [Plasmopara 
+    2.5e-06   27.3   0.5       0.19   11.5   0.0    3.2  3  CEG40981.1  deoxyhypusine hydroxylase-like isoform x1 [Plasmo
+    0.00013   21.8   0.7        0.8    9.4   0.0    5.4  5  CEG44306.1  probable importin subunit beta-4-like [Plasmopara
+    0.00077   19.2   1.7        5.5    6.7   0.0    6.2  7  CEG49847.1  Protein containing adaptin N-terminal region [Pla
+     0.0069   16.2  10.7        1.7    8.4   1.2    5.6  6  CEG43583.1  importin-like protein [Plasmopara halstedii]
+     0.0089   15.8   0.4        6.4    6.5   0.1    4.6  4  CEG45916.1  Karyopherin (importin) beta 3 [Plasmopara halsted
+  ------ inclusion threshold ------
+      0.027   14.2   0.2         20    4.9   0.1    3.1  3  CEG41289.1  Interferon-related protein PC4 like [Plasmopara h
+       0.03   14.1   0.0         18    5.1   0.0    3.3  3  CEG41692.1  importin subunit beta-1-like [Plasmopara halstedi
+      0.073   12.8   0.2        1.7    8.4   0.0    3.1  2  CEG40920.1  Phosphatidylinositol kinase (PIK-L4) [Plasmopara 
+       0.09   12.5   1.7       0.79    9.5   0.0    3.3  3  CEG50378.1  crm1 c terminal exportin 1-like protein [Plasmopa
+        0.1   12.4   1.1       0.55   10.0   0.1    2.6  2  CEG37490.1  brefeldin a-inhibited guanine nucleotide-exchange
+       0.31   10.8   5.2          2    8.2   0.4    4.0  4  CEG41920.1  Uncharacterized conserved protein [Plasmopara hal
+       0.35   10.6  12.9          9    6.0   0.2    6.5  5  CEG47211.1  TATA-binding protein-interacting protein [Plasmop
+          3    7.6   5.8        5.3    6.8   0.0    4.3  4  CEG43767.1  DRIM (Down-regulated in metastasis)-like proteins
+
+
+Domain annotation for each sequence (and alignments):
+>> CEG44747.1  Phosphatidylinositol kinase (PIK-L2) [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.4   0.0   0.00019      0.19      83     157 ..     693     776 ..     614     778 .. 0.75
+   2 !   47.7   0.0   1.3e-15   1.3e-12       1      56 [.     781     838 ..     781     861 .. 0.83
+   3 !   78.3   0.0     5e-25   5.2e-22      36     159 ..     894    1033 ..     874    1034 .. 0.79
+   4 !   10.6   0.0   0.00033      0.34      90     145 ..    1045    1100 ..    1036    1115 .. 0.83
+   5 ?   -2.0   0.0       2.6   2.7e+03      83     138 ..    1120    1173 ..    1100    1189 .. 0.60
+   6 ?   -3.5   0.2       7.7   7.9e+03     102     152 ..    3073    3121 ..    3056    3124 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 11.4 bits;  conditional E-value: 0.00019
+    mTOR_dom  83 yptvvinaLlkilkdpsls.shhtavvqaimsifkt......lglkc.vpflpqiipallsvirtces.slrefllqqLatLvs 157
+                 y   +++ L+k l++ s + s+  +++++   i+ t      +g +  +p+l q++p ++  +r++++ +++++ ++ L++Lvs
+  CEG44747.1 693 YVLPILRVLIKNLREDSKRrSQSRSTISVSKAILATlgdlaeVGAQElTPYLGQLLPDVIDEMRDSSNpQILQVAIKTLGQLVS 776
+                 55556777777776666655777777777777777622233344555588**************99999*************97 PP
+
+  == domain 2  score: 47.7 bits;  conditional E-value: 1.3e-15
+    mTOR_dom   1 VvePyldypeLLeiLlnilkte.q.sqsiRrevikvlGilGALDPykhkeveekseee 56 
+                 Vv Py++ypeLL++L+++l+++ +  +s+R e+ ++lG+lGALDPy+   ++ +++ +
+  CEG44747.1 781 VVLPYHEYPELLDLLCQALQKSgDaFESLRVEAGRTLGVLGALDPYNLHLFHLQKQGK 838
+                 899*****************996469*********************99888777554 PP
+
+  == domain 3  score: 78.3 bits;  conditional E-value: 5e-25
+    mTOR_dom   36 GilGALDPykhkeveeks.......eee..ekeeenaee..tdvsel.........lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaim 112 
+                  G lGALD       e+         +++  +++++++ +  +    +         l ++++ s +y+ptv+inaL++il +p  s h++ +  aim
+  CEG44747.1  894 GRLGALDGSCDEDAEQLErsllltpARKiaNSDKQTSGKltN----IilevppddlLPSMISDSSQYFPTVAINALIRILLEPRNSVHYQGTFMAIM 986 
+                  779999998886665433444444311132111111111221....123345555577889999********************************* PP
+
+    mTOR_dom  113 sifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                  +i+k+++ ++ + l +i+pa+l +++++++slr+fl++qL++Lv+iv
+  CEG44747.1  987 YICKSQRKRMRQHLGKIVPAFLYALEKVNRSLRKFLFEQLCDLVQIV 1033
+                  **********************************************9 PP
+
+  == domain 4  score: 10.6 bits;  conditional E-value: 0.00033
+    mTOR_dom   90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slr 145 
+                  aLl+i+ ++  ++h ++v++ + +  ++lg +   +lp +ip++l+virt  + + r
+  CEG44747.1 1045 ALLSIV-NSYWDDHLEEVLNLVKKLANSLGENFRVYLPDLIPQMLRVIRTERDdHAR 1100
+                  577777.56678999**********************************98765555 PP
+
+  == domain 5  score: -2.0 bits;  conditional E-value: 2.6
+    mTOR_dom   83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir 138 
+                  y + +i +L+++++  +  + +++ + ++ s +k+  l++  + ++ii+ l++vi+
+  CEG44747.1 1120 YLHLTIPTLVALIQSDADINARKQGLGSLGSLVKK--LNVSVYASKIIHMLARVIS 1173
+                  44445555555554444445555555555555554..3344455566666666555 PP
+
+  == domain 6  score: -3.5 bits;  conditional E-value: 7.7
+    mTOR_dom  102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152 
+                  s ++++  a  s+fk+   k+ +f  +i++++ +++++ + +++ ++++ L
+  CEG44747.1 3073 SIREQACLAFESVFKN--DKSCSFSYEIVQQISRYVKQKQHRIQPYIIRTL 3121
+                  5555566666667774..666778888888888888888778888777766 PP
+
+>> CEG47092.1  Phosphatidylinositol kinase (PIK-L1) [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.4      0.76   7.9e+02      19      50 ..     741     777 ..     721     846 .. 0.44
+   2 !   52.5   0.0   4.3e-17   4.4e-14       1      54 [.     850     916 ..     850     947 .. 0.76
+   3 !   93.4   0.0   1.2e-29   1.2e-26      71     159 ..    1042    1137 ..    1008    1138 .. 0.84
+   4 ?   -0.5   0.0      0.89   9.2e+02     102     138 ..    1158    1195 ..    1148    1199 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.76
+    mTOR_dom  19 lkteqsqsiRrevikvlGil..GA...LDPykhkeve 50 
+                 l+ ++++ +R +  +++G l   A   +DPy ++ +e
+  CEG47092.1 741 LQHTSDPRMREDSTRLMGYLirSAqqlVDPYVMRILE 777
+                 3334455666777777766522122224444444443 PP
+
+  == domain 2  score: 52.5 bits;  conditional E-value: 4.3e-17
+    mTOR_dom   1 VvePyldypeLLeiLlnilkte..qsqsiRrevikvlGilGALDPykhkeveeks...........e 54 
+                 V++Pyl  p+LLei+l++l+ +  + +s+Rre+++++GilGALDPyk+k   +++           +
+  CEG47092.1 850 VIRPYLASPKLLEIFLSLLHHNvgSPWSLRREAMRTVGILGALDPYKYKLCISRAslrlanevvfiA 916
+                 9********************98559***********************998777555544333331 PP
+
+  == domain 3  score: 93.4 bits;  conditional E-value: 1.2e-29
+    mTOR_dom   71 l.......lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                  +        ++lsp+se y+ptv+i+aLl+il +psl+ hh+ v+qaim+ifk+l+++c+pfl+ i+p +l+v+++ e++lre l+ qL+ L+siv
+  CEG47092.1 1042 MdskfeldPTELSPTSEAYFPTVAIHALLRILCEPSLNAHHHGVIQAIMFIFKSLSTQCIPFLKYILPPFLRVLSHGEPRLRESLFLQLTALISIV 1137
+                  222223446677***********************************************************************************9 PP
+
+  == domain 4  score: -0.5 bits;  conditional E-value: 0.89
+    mTOR_dom  102 shhtavvqaimsifktlglkc.vpflpqiipallsvir 138 
+                  sh  ++v+ + +i + +  +  +++ p+++p+ll+v++
+  CEG47092.1 1158 SHLPQIVRLVEKIAQAVPHEFrTQYFPKLLPKLLEVLQ 1195
+                  67778889999999999999889999999999999986 PP
+
+>> CEG40981.1  deoxyhypusine hydroxylase-like isoform x1 [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.2   0.0     0.067        69      12      36 ..      43      68 ..      40      70 .. 0.91
+   2 !    9.7   0.0   0.00066      0.68      12      45 ..      76     110 ..      69     177 .. 0.84
+   3 !   11.5   0.0   0.00018      0.19       7      46 ..     229     269 ..     224     299 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 3.2 bits;  conditional E-value: 0.067
+    mTOR_dom 12 LeiLlnilkteq.sqsiRrevikvlG 36
+                Le+Ll++lk+ q s+ +R e   v+G
+  CEG40981.1 43 LEVLLEALKNRQdSELMRHELAYVIG 68
+                89*********87999****999999 PP
+
+  == domain 2  score: 9.7 bits;  conditional E-value: 0.00066
+    mTOR_dom  12 LeiLlnilkteq.sqsiRrevikvlGilGALDPyk 45 
+                  eiL +il  e+ +  +R ev   lG +G +  + 
+  CEG40981.1  76 CEILHEILADETdDVMVRHEVAEALGAIGSVHSVS 110
+                 589********669***************997665 PP
+
+  == domain 3  score: 11.5 bits;  conditional E-value: 0.00018
+    mTOR_dom   7 dypeLLeiLlnilkte.qsqsiRrevikvlGilGALDPykh 46 
+                   p L+ +L+++l  + q+  +R e+   lG +G +   k 
+  CEG40981.1 229 ANPVLVPALTKVLLDQtQHRMVRHEAAEALGAIGTIECEKI 269
+                 5789999****9988857*****************998887 PP
+
+>> CEG44306.1  probable importin subunit beta-4-like [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.3   0.0       0.5   5.1e+02       8      31 ..     248     272 ..     204     278 .. 0.79
+   2 ?    2.1   0.0      0.14   1.4e+02     124     157 ..     397     430 ..     386     433 .. 0.87
+   3 !    9.4   0.0   0.00078       0.8     103     155 ..     458     511 ..     430     513 .. 0.83
+   4 ?    1.3   0.1      0.24   2.5e+02      85     127 ..     750     792 ..     723     817 .. 0.77
+   5 ?   -1.7   0.0       2.1   2.1e+03     105     140 ..     875     910 ..     869     928 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 0.3 bits;  conditional E-value: 0.5
+    mTOR_dom   8 ypeLLeiLlnilkteq.sqsiRrev 31 
+                 +p+ +e+Ll+i+  eq + s+R ++
+  CEG44306.1 248 FPQFIELLLQIIVAEQlEVSTRASA 272
+                 5778888888888887777777766 PP
+
+  == domain 2  score: 2.1 bits;  conditional E-value: 0.14
+    mTOR_dom 124 pflpqiipallsvirtcesslrefllqqLatLvs 157
+                 + l++++pa+++v++++++++re     L+++ +
+  CEG44306.1 397 QNLNELLPAIYRVAQDTDQHVREAACFALGQFAE 430
+                 67999******************99999888765 PP
+
+  == domain 3  score: 9.4 bits;  conditional E-value: 0.00078
+    mTOR_dom 103 hhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+                  +++++ ++ +i ++++  + +p+l+ ++++l++v+rt +++l+++ l+ ++++
+  CEG44306.1 458 IKATALYVLDEITQSMDSDQvLPYLETLVSKLVAVLRTGSPQLQKMALDAVGSI 511
+                 45566667788999**999989************************99987765 PP
+
+  == domain 4  score: 1.3 bits;  conditional E-value: 0.24
+    mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflp 127
+                 +v+ +a++k l ++ l++  + vv+   + +k+++ ++ p+++
+  CEG44306.1 750 AVIASAVMKNLVEELLEDPEEVVVEKAFNAIKSMSARVGPVIT 792
+                 5788899999999999999999***********9999977654 PP
+
+  == domain 5  score: -1.7 bits;  conditional E-value: 2.1
+    mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtc 140
+                 +a+v    +++++lg   ++f++++ p +l+ +++ 
+  CEG44306.1 875 AAAVGCFAEVLRELGPGALSFVENVYPVVLQGLTSD 910
+                 5677778899999***************99988764 PP
+
+>> CEG49847.1  Protein containing adaptin N-terminal region [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.9   0.0       9.9     1e+04      83     129 ..     239     280 ..     229     298 .. 0.55
+   2 ?   -2.1   0.2       2.8   2.9e+03      81     121 ..     337     377 ..     317     381 .. 0.82
+   3 !    6.7   0.0    0.0053       5.5      85     148 ..    1560    1622 ..    1527    1634 .. 0.80
+   4 ?    1.9   0.0      0.17   1.7e+02      93     157 ..    1686    1751 ..    1646    1753 .. 0.72
+   5 ?   -0.2   0.0      0.72   7.5e+02     105     139 ..    1965    1999 ..    1950    2021 .. 0.67
+   6 ?   -1.5   0.0       1.8   1.8e+03      91     139 ..    2113    2161 ..    2106    2179 .. 0.80
+   7 ?    1.7   0.0      0.19   1.9e+02      87     157 ..    2395    2465 ..    2364    2466 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: -3.9 bits;  conditional E-value: 9.9
+    mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqi 129
+                 ++ +++ ++ k+l     ++  ++v++a+   +   +l    +++ i
+  CEG49847.1 239 FQRIIMPSMNKML-----KKAPETVIEAVNALVIAAQLDFGRYVSDI 280
+                 4444444444444.....33445566666665555555555555555 PP
+
+  == domain 2  score: -2.1 bits;  conditional E-value: 2.8
+    mTOR_dom  81 eyyptvvinaLlkilkdpslsshhtavvqaimsifktlglk 121
+                 ++y+  vi a+l+   d    + h++ vq i si+    lk
+  CEG49847.1 337 QFYQRKVIFAVLNDAADVVTVQLHAMDVQEISSIVIPSMLK 377
+                 78999999999999999999999999999999998665555 PP
+
+  == domain 3  score: 6.7 bits;  conditional E-value: 0.0053
+    mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefl 148 
+                  + v+ +Ll+ l++++ +  +++ +q + s+      +  + lpq++p+ll+++ ++++++re  
+  CEG49847.1 1560 KLVLPSLLRALEESAWR-TKQSGIQILGSMAYCAPRQLGSCLPQVVPKLLAALIDSHPKVREAG 1622
+                  4788999****666665.78999********9999999***************99999999875 PP
+
+  == domain 4  score: 1.9 bits;  conditional E-value: 0.17
+    mTOR_dom   93 kilkdpsls..shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                  + lkd++ +  +  + +v ++ s++++ +   vp+++ ++p++ + + +  +++r +  + L++Lv+
+  CEG49847.1 1686 RGLKDRAGDakKKAALIVGSMCSMIND-SKDLVPYMETVLPSIKTQLVDPIPEVRAVAAKALGKLVK 1751
+                  445665554214444466777777775.5666****************9999************996 PP
+
+  == domain 5  score: -0.2 bits;  conditional E-value: 0.72
+    mTOR_dom  105 tavvqaimsifktlglkcvpflpqiipallsvirt 139 
+                  + v q+ +++ k++  +  ++l+qi+ al+++i +
+  CEG49847.1 1965 AVVRQSALQVWKSVVANTPKTLRQILEALMNAIVS 1999
+                  33446777888888888888888888888887654 PP
+
+  == domain 6  score: -1.5 bits;  conditional E-value: 1.8
+    mTOR_dom   91 Llkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139 
+                  + +ilk  +lss  ++  +a++     l++k+ ++lp +ip ll +  t
+  CEG49847.1 2113 IPMILKRIQLSSLPEEQERALLGLQDILRVKSREVLPYVIPRLLMTPVT 2161
+                  557888888888888888888888899999***********99976555 PP
+
+  == domain 7  score: 1.7 bits;  conditional E-value: 0.19
+    mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                     +L++i  d+   + ++a+++++  ++ + g    pflpq+  ++++++++++ ++r+   + L+ Lv+
+  CEG49847.1 2395 LTGSLIRIAGDRFPGHVKAAILRTLEIVLTKGGGALKPFLPQLQTTFVKALNDTDIEVRNRGASALGLLVT 2465
+                  566788888888877777777777777777777778*****************998999988888888886 PP
+
+>> CEG43583.1  importin-like protein [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.8   0.0      0.37   3.8e+02     121     159 ..     105     143 ..      21     144 .. 0.76
+   2 ?   -1.5   0.0       1.8   1.9e+03     127     158 ..     194     226 ..     172     228 .. 0.78
+   3 ?   -0.6   0.1      0.97     1e+03     152     158 ..     220     226 ..     191     302 .. 0.55
+   4 !    8.4   1.2    0.0017       1.7      82     157 ..     431     510 ..     399     513 .. 0.81
+   5 !    6.5   0.0    0.0064       6.6      91     139 ..     573     622 ..     555     631 .. 0.79
+   6 ?    0.6   0.0      0.42   4.3e+02      33     139 ..     801     927 ..     768     936 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: 0.8 bits;  conditional E-value: 0.37
+    mTOR_dom 121 kcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                 k  +  p++++++ +++++++++lr + ++ La+L ++v
+  CEG43583.1 105 KLDQPWPELLSTVSELTTHTDAQLRVTAFDLLAKLAEYV 143
+                 444455677777778888888899********9999887 PP
+
+  == domain 2  score: -1.5 bits;  conditional E-value: 1.8
+    mTOR_dom 127 pqiipallsvirtcesslrefllqq.LatLvsi 158
+                 + iip +l++i+ + +  +e  +++ L++Lv+i
+  CEG43583.1 194 TIIIPPMLRIIEALVNAGEEATFREvLSSLVQI 226
+                 67999****999998866666665438889887 PP
+
+  == domain 3  score: -0.6 bits;  conditional E-value: 0.97
+    mTOR_dom 152 LatLvsi 158
+                 L++Lv+i
+  CEG43583.1 220 LSSLVQI 226
+                 3333333 PP
+
+  == domain 4  score: 8.4 bits;  conditional E-value: 0.0017
+    mTOR_dom  82 yyptvvinaLlkilkdpsls.shhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157
+                  ++t v+ aL ++++++++    ++ + +++++ ++t   + k  +p+ + ++ al++++r+c+++++e  +  +a+  +
+  CEG43583.1 431 KFHTAVVPALTTLIQNEQVVmRTRALAASVVINFCNTnvCKAKYvTPYSQTLLEALFHAMRSCPRQVQEQAITAVASVAK 510
+                 688999999*99999988884555566677777777755555665789999******************99988877665 PP
+
+  == domain 5  score: 6.5 bits;  conditional E-value: 0.0064
+    mTOR_dom  91 Llkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                 L+++ + + l+    + v q+ + i   l+   vp+lp++ipal++ ++ 
+  CEG43583.1 573 LIRVRSSEELEgPEVQYVAQSCVRIGGILKEDFVPYLPHVIPALIKQAKI 622
+                 5555566666656667788999999999999**************98875 PP
+
+  == domain 6  score: 0.6 bits;  conditional E-value: 0.42
+    mTOR_dom  33 kvlGilGALDPykhkeveekseeeekeeenaeetdvsellvgl....................spss.eeyyptvvinaLl...kilkdpslsshhtav 107
+                 +v+Gil  +     +++  + +e+    +  e+ d +++l+++                    ++ + e ++p    + L+    +l+++ +   + ++
+  CEG43583.1 801 RVVGILKTVASNSAQRLMAQHREN----QLDEDYDAEAALQQTendeleegvfrsmidsigwiIKIQkEAFFPVFHSHLLMfvkPLLEQKVVPMLRGQA 895
+                 666666666666665555444222....22222222222333311111111111223334444455524444444444444222233555555666666 PP
+
+    mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirt 139
+                 +  i  ++++ g    ++lp ++ +l++ +++
+  CEG43583.1 896 ICMIDDVIEHCGAAAQELLPLFLDHLVQGLED 927
+                 66666666666666666666666666666655 PP
+
+>> CEG45916.1  Karyopherin (importin) beta 3 [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.0      0.28   2.9e+02      80     139 ..     460     520 ..     422     537 .. 0.71
+   2 !    6.5   0.1    0.0062       6.4     104     141 ..     543     580 ..     537     588 .. 0.91
+   3 ?    0.8   0.0      0.34   3.5e+02     108     139 ..     657     688 ..     652     699 .. 0.79
+   4 ?   -1.1   0.0       1.4   1.4e+03      10      35 ..     758     783 ..     743     791 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 0.28
+    mTOR_dom  80 eeyyptvvinaLlkil...kdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirt 139
+                 ++ y+  +++ L + l   ++p l+ h ++ ++  + ++ +   +  +p+l++i+++l++++++
+  CEG45916.1 460 QQAYHLQALTVLAHYLedfNKPRLQAHAATSLRQFIDMCPS---ELlTPYLDKILHQLFALLQN 520
+                 56677777777777773334566666666666666666664...55599*******99998886 PP
+
+  == domain 2  score: 6.5 bits;  conditional E-value: 0.0062
+    mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                 ++++++ai s+    g    +++  ++p l++++rtc 
+  CEG45916.1 543 QEQAITAISSVATVAGASFATYYAAVLPPLQQILRTCL 580
+                 7899********************************95 PP
+
+  == domain 3  score: 0.8 bits;  conditional E-value: 0.34
+    mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirt 139
+                 +qa    +  l+    p+lp ++p+ll+++ +
+  CEG45916.1 657 LQAWARCCTCLRHDFAPYLPLVMPTLLEAAMQ 688
+                 5666677788889999***********97665 PP
+
+  == domain 4  score: -1.1 bits;  conditional E-value: 1.4
+    mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvl 35 
+                 ++ ++L  +l ++ +++iR ++i+ +
+  CEG45916.1 758 QVTQVLAPLLTESVHSDIRASAIRAM 783
+                 44556666666666999999999987 PP
+
+>> CEG41289.1  Interferon-related protein PC4 like [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.9   0.1      0.02        20      69     143 ..      63     140 ..      31     156 .. 0.54
+   2 ?    3.7   0.0     0.045        46      15      41 ..     127     153 ..     120     169 .. 0.84
+   3 ?    4.9   0.0      0.02        21     120     155 ..     200     235 ..     162     238 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 4.9 bits;  conditional E-value: 0.02
+    mTOR_dom  69 sellvglspss.eeyyptvvinaLlkilkdpsls.shhtavvqaimsi.fktlglkcvpflpqiipallsvirtcess 143
+                 ++l+++l ++   e  +   in++l+ l++ps +     + + aim i f + + +     ++++  l++ +r+++ +
+  CEG41289.1  63 EKLTTHLLNCLaPEDVSDSFINNVLECLRKPSEEeAVLGSRILAIMAIiFGSNEERFFHRSKHVLRPLIRNARNAKVK 140
+                 444555545444555555667777777777776644445555555543144455555566666666666655554432 PP
+
+  == domain 2  score: 3.7 bits;  conditional E-value: 0.045
+    mTOR_dom  15 LlnilkteqsqsiRrevikvlGilGAL 41 
+                 L  ++++ ++ +++ ++i  lG++G L
+  CEG41289.1 127 LRPLIRNARNAKVKSSTIHALGLIGFL 153
+                 666788999****************76 PP
+
+  == domain 3  score: 4.9 bits;  conditional E-value: 0.02
+    mTOR_dom 120 lkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                 l + +fl++i+p++l+++ + + ++r    ++La L
+  CEG41289.1 200 LASESFLERIVPQILALLDHKDVDVRSSAGENLALL 235
+                 45568*************998888888887777766 PP
+
+>> CEG41692.1  importin subunit beta-1-like [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.6   0.0     0.049        51     114     159 ..       3      48 ..       1      49 [. 0.83
+   2 ?    5.1   0.0     0.017        18      81     141 ..      53     113 ..      39     133 .. 0.77
+   3 ?    1.7   0.0      0.19     2e+02      83     138 ..     137     208 ..     122     226 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 3.6 bits;  conditional E-value: 0.049
+    mTOR_dom 114 ifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                  +++l++   p+ ++i++all+v++t ++   e  +   + L ++v
+  CEG41692.1   3 AIQKLNTDIEPLADHIMQALLQVFSTRNAAAAEEAFMTAGALANVV 48 
+                 5677888899999*************99988888888777777666 PP
+
+  == domain 2  score: 5.1 bits;  conditional E-value: 0.017
+    mTOR_dom  81 eyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                 e y+++    +l+ lk++     ++ +v ++   ++ l+ k +p+ ++i+ al++++++ +
+  CEG41692.1  53 EIYMQYFGPVVLMGLKNSEEYMVCSVAVGVVGDLCRALEGKILPLCDEIVAALIEILKNPT 113
+                 5556655566666677777777888899999999999999999999999999999999654 PP
+
+  == domain 3  score: 1.7 bits;  conditional E-value: 0.19
+    mTOR_dom  83 yptvvinaLlkil...............kdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvir 138
+                 y+ +++++L +il                 + +++ +++v++a++ i + lg     ++l +  p++ + + 
+  CEG41692.1 137 YERYAVSSLQMILqaagacgsiatddeeIVEYMNQLRESVLEALTGIAQGLGAANkASMLLECAPQIGAFLA 208
+                 566666666666666666666666443333446678889999999999999888767777777666655554 PP
+
+>> CEG40920.1  Phosphatidylinositol kinase (PIK-L4) [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.0   0.1      0.63   6.5e+02     123     158 ..      50      85 ..       6      86 .. 0.78
+   2 ?    8.4   0.0    0.0016       1.7      13     101 ..    1497    1602 ..    1493    1608 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: -0.0 bits;  conditional E-value: 0.63
+    mTOR_dom 123 vpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                 ++ l++++p+l++ + t++++   ++lq L+++ s+
+  CEG40920.1  50 LTKLRKLLPKLMRPVATLSTEKAVTMLQGLCQILSL 85 
+                 56799999*****999999999********999875 PP
+
+  == domain 2  score: 8.4 bits;  conditional E-value: 0.0016
+    mTOR_dom   13 eiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseee.......ekeeenaeetdvsel...lvgl..........spsseeyyptvvin 89  
+                  + ++++ +te+ ++ ++   ++lG lGA+D  ++  +   ++++       ++++ ++ e ++++l   l  +           p +++   + +i+
+  CEG40920.1 1497 QSIMQLSRTETYEPNKLLCARCLGALGAIDGARVPLNMFYTSRHqgsgvvtKERQYQKIELSTKDLacvL--IetwlvnelraAPENTDSV-AFAIQ 1590
+                  567888899999999***************9999655543322223333221111111122222222221..0223333333233333322.34666 PP
+
+    mTOR_dom   90 aLlkilkdpsls 101 
+                  +Llk l + + +
+  CEG40920.1 1591 ELLKFLAELTAD 1602
+                  677666665555 PP
+
+>> CEG50378.1  crm1 c terminal exportin 1-like protein [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.4   0.2      0.82   8.4e+02      78     140 ..      89     152 ..      32     168 .. 0.71
+   2 ?    9.5   0.0   0.00077      0.79      72     149 ..     496     576 ..     437     584 .. 0.85
+   3 ?   -2.3   0.0       3.1   3.2e+03     125     150 ..     772     798 ..     757     834 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: -0.4 bits;  conditional E-value: 0.82
+    mTOR_dom  78 sseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt.lglkcvpflpqiipallsvirtc 140
+                  + e ++++++ +Ll++ +d+s+ + + + v+ +  ++ + l+ +  +  p +i+ ++s  +t+
+  CEG50378.1  89 DQREGIKSYIVGKLLSMSSDESILHSQRMFVNKMDLVLVQvLKHEWPQSWPSFISDIVSSSKTS 152
+                 3478888999999999999999999999999988555443255555666666666666666655 PP
+
+  == domain 2  score: 9.5 bits;  conditional E-value: 0.00077
+    mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefll 149
+                    +s+ +e  +  +vi+ Ll + + +  ++ ++ v + im+++ +    l+   +fl+ ++++l++ ++++++ ++++  
+  CEG50378.1 496 SGAMSEENEKRFLVTVIKDLLGLCEMKRGKDNKAVVASNIMYVVGQypRFLRAhWKFLRTVVNKLFEFMHELHPGVQDMAC 576
+                 45678999************************************994433555599***************9999888765 PP
+
+  == domain 3  score: -2.3 bits;  conditional E-value: 3.1
+    mTOR_dom 125 flpqiipallsvirtces.slrefllq 150
+                 flp+++ ++ls  +++++   +  +l+
+  CEG50378.1 772 FLPKLLETILSDYQNTTPtAKEAEVLS 798
+                 555555555554444444222222222 PP
+
+>> CEG37490.1  brefeldin a-inhibited guanine nucleotide-exchange [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.0   0.1   0.00053      0.55      71     155 ..     164     256 ..     139     259 .. 0.76
+   2 ?   -0.6   0.1      0.92   9.5e+02     107     156 ..     418     468 ..     397     501 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 10.0 bits;  conditional E-value: 0.00053
+    mTOR_dom  71 llvglspsseeyyptvvinaLlkilkdpslsshhtavvqai......msifktlglkcvp..flpqiipallsvirtcesslrefllqqLatL 155
+                 ++++    s+e  +  v++ Ll+ +  p+ + h +a ++a+      + + k+   + v+  +l+qii+ +++ ++t +++++e  ++ L  L
+  CEG37490.1 164 VACDCNDHSDEGVQIQVLRVLLTAVTTPTCEVHEHALLRAVracyhvHLVSKSATNRTVAkaTLQQIISIVFQRMETFDRRVEEETISTLHAL 256
+                 356667778999999**************************6666643333333333332559*********************999999877 PP
+
+  == domain 2  score: -0.6 bits;  conditional E-value: 0.92
+    mTOR_dom 107 vvqai.msifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                  v+ai  + +++l  +c++ ++qi++  l+v+  + ++++  l  +L +++
+  CEG37490.1 418 FVHAIrQYLCQSLLQNCTSNYTQIVSMSLQVFLVLLRNFKRHLKTELDIFI 468
+                 566663356778888889999999988888876666666666655555555 PP
+
+>> CEG41920.1  Uncharacterized conserved protein [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.2   0.4    0.0019         2      37     104 ..     152     220 ..     137     226 .. 0.75
+   2 ?   -3.3   0.1       6.3   6.5e+03      98     131 ..     303     339 ..     296     354 .. 0.59
+   3 ?    1.5   0.0      0.21   2.2e+02     103     146 ..     444     487 ..     432     492 .. 0.85
+   4 ?   -1.0   0.0       1.3   1.3e+03      71      95 ..    1050    1076 ..    1007    1098 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 8.2 bits;  conditional E-value: 0.0019
+    mTOR_dom  37 ilGALDPykhkeveekseeeekeeenaee.tdvsellvglspsseeyyptvvinaLlkilkdpslsshh 104
+                 +lG LDP  +k+++++ +++e+ ee  +e ++++ ++ + +  +e+  + + i++L ++  ++ l+++ 
+  CEG41920.1 152 LLGSLDPELVKKLKNRRKKTENIEEVRNEsFKTQVTIGESIVKNEDREKETLIKNLAAVKTEKELKEQE 220
+                 59**********99887666444444444144444455555666**************99999998765 PP
+
+  == domain 2  score: -3.3 bits;  conditional E-value: 6.3
+    mTOR_dom  98 pslsshhtavvqaimsifktlglkc...vpflpqiip 131
+                 +s++s+++++++ + +++++ +l+      + pq++p
+  CEG41920.1 303 SSVASQRAMALNIVAKVLHNRQLQTlerRRVSPQVLP 339
+                 5556666666666666666544433111335555555 PP
+
+  == domain 3  score: 1.5 bits;  conditional E-value: 0.21
+    mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146
+                  h +  + + +i++t++l      ++i+  l++v+r++++  +e
+  CEG41920.1 444 LHMNLSTRLRYILETIQLPDQDATEKILDILITVARHSPRAAQE 487
+                 56666777899**************************9887776 PP
+
+  == domain 4  score: -1.0 bits;  conditional E-value: 1.3
+    mTOR_dom   71 l..lvglspsseeyyptvvinaLlkil 95  
+                  +  ++++sp +  +  tv+i++L++ l
+  CEG41920.1 1050 IvcTTRVSPVRGAFVYTVAIHQLVMYL 1076
+                  122334466666777777777777666 PP
+
+>> CEG47211.1  TATA-binding protein-interacting protein [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.2   0.0       1.5   1.5e+03      22      38 ..      58      74 ..      42     116 .. 0.68
+   2 ?    6.0   0.2    0.0088         9       6     129 ..     165     297 ..     161     308 .. 0.59
+   3 ?    2.1   0.1      0.15   1.5e+02     101     152 ..     453     504 ..     344     511 .. 0.50
+   4 ?    4.5   0.3     0.026        27     106     156 ..     629     680 ..     610     682 .. 0.86
+   5 ?   -1.8   0.0       2.2   2.3e+03      89     141 ..     931     979 ..     913     991 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: -1.2 bits;  conditional E-value: 1.5
+    mTOR_dom 22 eqsqsiRrevikvlGil 38
+                ++s++++  ++k+lGil
+  CEG47211.1 58 DKSNDVQSIAVKCLGIL 74
+                23555555566666655 PP
+
+  == domain 2  score: 6.0 bits;  conditional E-value: 0.0088
+    mTOR_dom   6 ldypeLLeiLlnilkteqsqsiRrevikvlGilG..ALDPykhkeveekseeeekeeenaeetdvsel.....lvglspss.eeyyptvvinaLlkil. 95 
+                 +++ +++e+L+  l+ e s+ +R+ +  +lG lG  A D    + ve  ++     +++++ t+v +l     + + +  +        vi+ L++   
+  CEG47211.1 165 TEHATIMELLMMQLNDE-SPLVRKRATACLGSLGvmASDVLVSRLVEHLIQG---IQRSTDFTNVRTLiqtigMLSRTAGHrLGQHLDAVIRILMHYCg 259
+                 68899999999999866.999*************444466666666655544...22333333444442212333333333344444456666665545 PP
+
+    mTOR_dom  96 ..kdpslsshhtavvqai.msifktlglkc.vpflpqi 129
+                    d+s+++  ++ ++ai  + f++  ++c  +++p++
+  CEG47211.1 260 qfGDESMQNEDSDELRAIcFQAFESFVIRChNEIMPHV 297
+                 55788888888888888733467777777743444444 PP
+
+  == domain 3  score: 2.1 bits;  conditional E-value: 0.15
+    mTOR_dom 101 sshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152
+                  s + avv+ + +     + k   f+ ++ip++l+++++ +s+l+   l  L
+  CEG47211.1 453 VSSRCAVVTMLSELAMVEHGKLGDFIGRLIPNILNAVEDKHSDLKLDALLCL 504
+                 2344455555555555555566677777777777777777666665555555 PP
+
+  == domain 4  score: 4.5 bits;  conditional E-value: 0.026
+    mTOR_dom 106 avvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                   ++ai  i ++ l+l + p+l +  ++l++++r+ ++ l++  l+ L++Lv
+  CEG47211.1 629 HSIKAIGVIARSkLSLDMSPVLVECTQTLAHLLRQQSRPLKQATLSTLTDLV 680
+                 458899899887799************************************8 PP
+
+  == domain 5  score: -1.8 bits;  conditional E-value: 2.2
+    mTOR_dom  89 naLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                 n +l +l+d s +  +++ v+ ++s  + +g   v+  ++i+p +++++++++
+  CEG47211.1 931 NRVLPVLQDLSAR--QEEGVRNMVS--ECMGKLAVTNGSKIMPIVAELCQSSD 979
+                 4444445443333..3333333332..22344446666677777777777665 PP
+
+>> CEG43767.1  DRIM (Down-regulated in metastasis)-like proteins [Plasmopara halstedii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.8   0.0    0.0051       5.3     105     159 ..     111     165 ..      99     166 .. 0.87
+   2 ?   -2.8   0.0       4.4   4.5e+03       8      28 ..    1874    1893 ..    1833    1946 .. 0.67
+   3 ?   -3.8   0.0       9.3   9.6e+03      89     122 ..    2691    2725 ..    2690    2728 .. 0.83
+   4 ?   -0.9   0.1       1.2   1.2e+03      54     111 ..    2772    2836 ..    2758    2851 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 6.8 bits;  conditional E-value: 0.0051
+    mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                   v++ ++   ++lg +  p     +p +++vi t +++l+  +++ L++L s++
+  CEG43767.1 111 VPVLKLVTALARELGKEFYPHFADTLPMIVAVIDTKDPELSTQVFKTLTMLFSYL 165
+                 5678889999999**************************************9986 PP
+
+  == domain 2  score: -2.8 bits;  conditional E-value: 4.4
+    mTOR_dom    8 ypeLLeiLlnilkteqsqsiR 28  
+                   p+LL  + n+lk++ ++++R
+  CEG43767.1 1874 LPKLLLKVANLLKSK-NEAVR 1893
+                  344444444444433.22222 PP
+
+  == domain 3  score: -3.8 bits;  conditional E-value: 9.3
+    mTOR_dom   89 naLlkilkdpsls.shhtavvqaimsifktlglkc 122 
+                  ++L k+l+ +sl+ +  +++++a+++  + l++  
+  CEG43767.1 2691 SSLCKLLEASSLNeELVNEIITALLFLAEALEITN 2725
+                  57999999999998889999999999999888765 PP
+
+  == domain 4  score: -0.9 bits;  conditional E-value: 1.2
+    mTOR_dom   54 eeeekeeenaeetdvsel......lvglspss.eeyyptvvinaLlkilkdpslsshhtavvqai 111 
+                  +e++k++++++++++ ++        +   s+ ++  +++v++   ++l+++  +  +  v+q i
+  CEG43767.1 2772 RESQKKSDEQKKSSTPMVwlltrlSFSARDSNcTNEVQKIVFKLFAALLHNHDATFAQRYVLQII 2836
+                  22222222222222222233233344446666677778888888888888887777776666666 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      15469  (5878678 residues searched)
+Passed MSV filter:                       795  (0.0513931); expected 309.4 (0.02)
+Passed bias filter:                      565  (0.0365247); expected 309.4 (0.02)
+Passed Vit filter:                        51  (0.00329692); expected 15.5 (0.001)
+Passed Fwd filter:                        15  (0.000969681); expected 0.2 (1e-05)
+Initial search space (Z):              15469  [actual number of targets]
+Domain search space  (domZ):              15  [number of targets reported over threshold]
+# CPU time: 0.15u 0.08s 00:00:00.23 Elapsed: 00:00:00.23
+# Mc/sec: 4061.00
+//
+[ok]

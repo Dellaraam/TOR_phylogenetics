@@ -1,0 +1,60 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Eimeria_maxima.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+     0.0033   15.9   0.3     0.0067   14.9   0.1    1.6  2  CDJ59034.1  hypothetical protein, conserved [Eimeria maxima]
+
+
+Domain annotation for each sequence (and alignments):
+>> CDJ59034.1  hypothetical protein, conserved [Eimeria maxima]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.8   0.0      0.61   3.7e+03     110     120 ..     244     254 ..     226     270 .. 0.51
+   2 !   14.9   0.1   1.1e-06    0.0067       7     117 ..     344     459 ..     341     476 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: -3.8 bits;  conditional E-value: 0.61
+    mTOR_dom 110 aimsifktlgl 120
+                   m+ ++ l+l
+  CDJ59034.1 244 NTMEALRRLQL 254
+                 22334444444 PP
+
+  == domain 2  score: 14.9 bits;  conditional E-value: 1.1e-06
+    mTOR_dom   7 dypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks........eeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkd 97 
+                 d+ +L++ L + l +e ++   re+ +vl+ lGAL+ y  k + +          +  + +++ + +++  + ++   +++    ++ v +  l+il+ 
+  CDJ59034.1 344 DFQTLFRGLADNLVEEVETLNLRETAQVLSALGALNCYPEKLIANLLphvaallaA--Q-QATVSGDQRDPT-TAAAKTATSPAAAAAVTTDTLRILRS 438
+                 67889999999999998777788******************998766544433321..1.222222222222.22223333334444445555677754 PP
+
+    mTOR_dom  98 .pslsshhtavvqaimsifkt 117
+                   +l++  +av++ +  ++ +
+  CDJ59034.1 439 lGQLQKRDSAVLREVAAVLTS 459
+                 256667777777777666655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       6057  (4025948 residues searched)
+Passed MSV filter:                      2136  (0.35265); expected 121.1 (0.02)
+Passed bias filter:                      783  (0.129272); expected 121.1 (0.02)
+Passed Vit filter:                        86  (0.0141984); expected 6.1 (0.001)
+Passed Fwd filter:                         6  (0.000990589); expected 0.1 (1e-05)
+Initial search space (Z):               6057  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.11u 0.04s 00:00:00.15 Elapsed: 00:00:00.10
+# Mc/sec: 6369.95
+//
+[ok]

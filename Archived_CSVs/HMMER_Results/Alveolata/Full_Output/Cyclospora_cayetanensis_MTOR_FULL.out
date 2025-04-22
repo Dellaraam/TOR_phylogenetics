@@ -1,0 +1,97 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Cyclospora_cayetanensis.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    4.6e-05   21.9   0.2        2.5    6.5   0.0    4.8  5  XP_026190590.1  importin-5 [Cyclospora cayetanensis]
+  ------ inclusion threshold ------
+        1.5    7.2   7.8      0.063   11.6   0.2    2.2  2  XP_026190680.1  uncharacterized protein LOC34619962 [Cyclospo
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_026190590.1  importin-5 [Cyclospora cayetanensis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.5   0.0      0.99   2.9e+03      14      32 ..      93     111 ..      89     119 .. 0.83
+   2 ?   -2.4   0.0      0.45   1.3e+03       9      35 ..     171     197 ..     170     200 .. 0.89
+   3 !    6.5   0.0   0.00085       2.5      77     142 ..     522     587 ..     482     593 .. 0.83
+   4 !    4.5   0.0    0.0034       9.9     105     148 ..     592     637 ..     588     643 .. 0.79
+   5 !    4.4   0.0    0.0037        11     105     140 ..     707     742 ..     697     750 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -3.5 bits;  conditional E-value: 0.99
+        mTOR_dom  14 iLlnilkteqsqsiRrevi 32 
+                      L++++++e+s+++R ++ 
+  XP_026190590.1  93 SLIRCVENESSKTVRSNIC 111
+                     5899999999999998876 PP
+
+  == domain 2  score: -2.4 bits;  conditional E-value: 0.45
+        mTOR_dom   9 peLLeiLlnilkteqsqsiRrevikvl 35 
+                     p+L  ++  +l+t +  ++R e++ +l
+  XP_026190590.1 171 PQLAALVRGCLSTAKPAETRAEALSLL 197
+                     899999999*************99887 PP
+
+  == domain 3  score: 6.5 bits;  conditional E-value: 0.00085
+        mTOR_dom  77 psseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtces 142
+                     p+ +  y++v ++ L+  ++dp+ +  ++ +  a ++  ++l+ k+  ++++ ++p++l+++ t+++
+  XP_026190590.1 522 PTVQHEYSHVLLEPLIGCFSDPTPR-VRSHACAAFVNFAEELEKKQmREIVQVVMPKILQLADTSSP 587
+                     555677999**************88.56667789999999999999567778889******999876 PP
+
+  == domain 4  score: 4.5 bits;  conditional E-value: 0.0034
+        mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtces..slrefl 148
+                     + +++ +  i   l+ +  p+++ ++pall++++++++  +++e++
+  XP_026190590.1 592 QHAITCVAVIAGVLEKEFQPYYSAVLPALLRLVQETNPqgTHKETV 637
+                     5678888888889999*****************9887645555554 PP
+
+  == domain 5  score: 4.4 bits;  conditional E-value: 0.0037
+        mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtc 140
+                     +   +ai   ++ ++   +pfl +++p+l+sv++  
+  XP_026190590.1 707 EYLTEAIARLCRVMEADFIPFLGRLLPQLFSVLSVE 742
+                     566799**************************9864 PP
+
+>> XP_026190680.1  uncharacterized protein LOC34619962 [Cyclospora cayetanensis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.6   0.2   2.2e-05     0.063      27      87 ..     377     458 ..     374     466 .. 0.52
+   2 ?   -2.6   2.6      0.54   1.6e+03      45      74 ..     557     574 ..     542     592 .. 0.45
+
+  Alignments for each domain:
+  == domain 1  score: 11.6 bits;  conditional E-value: 2.2e-05
+        mTOR_dom  27 iRrevikvlGilGALDPykh.....................keveekseee..ekeeenaeetdvsellvglspsseeyyptvv 87 
+                      R ++++ l +lGAL P                        +  +++ ++e  ++e++++ee + ++   + ++ +ee  ++vv
+  XP_026190680.1 377 AREDALRFLCLLGALPPSDLagnvnyllslyddadrpyekqQ--QQEEKQEqqQEEKQEQEEKQEQQQEEKQEQQQEEKQQQVV 458
+                     6999****************5555555555555555544321..1111111112222222222222222233344455555554 PP
+
+  == domain 2  score: -2.6 bits;  conditional E-value: 0.54
+        mTOR_dom  45 khkeveekseeeekeeenaeetdvsellvg 74 
+                     k+            ++++++++d ++  ++
+  XP_026190680.1 557 KQ------------QNQQQQQQDEQQSKQQ 574
+                     22............2222222222222222 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       5793  (3698712 residues searched)
+Passed MSV filter:                       575  (0.0992577); expected 115.9 (0.02)
+Passed bias filter:                      366  (0.0631797); expected 115.9 (0.02)
+Passed Vit filter:                        34  (0.00586915); expected 5.8 (0.001)
+Passed Fwd filter:                         2  (0.000345244); expected 0.1 (1e-05)
+Initial search space (Z):               5793  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.06u 0.02s 00:00:00.08 Elapsed: 00:00:00.05
+# Mc/sec: 10318.64
+//
+[ok]

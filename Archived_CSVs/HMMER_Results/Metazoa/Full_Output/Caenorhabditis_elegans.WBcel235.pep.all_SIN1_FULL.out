@@ -1,0 +1,173 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Caenorhabditis_elegans.WBcel235.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+   4.7e-108  363.7   0.0   1.3e-104  352.4   0.0    2.9  1  Y57A10A.20.1  pep chromosome:WBcel235:II:12228305:12238242:1 
+  ------ inclusion threshold ------
+       0.17   11.6  22.5        0.3   10.8  22.5    1.3  1  ZC101.2r.1    pep chromosome:WBcel235:II:14652558:14684296:-1
+       0.38   10.5  17.7       0.52   10.0  17.7    1.3  1  ZC116.1.1     pep chromosome:WBcel235:V:12609826:12610857:1 g
+        2.1    8.0  14.6       0.46   10.2  11.4    1.6  2  M88.5e.1      pep chromosome:WBcel235:III:4553617:4560431:1 g
+        2.1    8.0  14.6       0.46   10.2  11.4    1.6  2  M88.5e.2      pep chromosome:WBcel235:III:4553630:4560431:1 g
+
+
+Domain annotation for each sequence (and alignments):
+>> Y57A10A.20.1  pep chromosome:WBcel235:II:12228305:12238242:1 gene:WBGene00013261 transcript:Y57A10A.20.1 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  352.4   0.0    2e-108  1.3e-104       1     668 [.       1     572 [.       1     616 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 352.4 bits;  conditional E-value: 2e-108
+  PTHR13335.orig.30.pir   1 MafldnedillahlRtsyltsdddg..mcerilndddvdlekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatg 86 
+                            M ++d+ed+l++ +R++++ +dddg  +c+r+l ++                                                    
+           Y57A10A.20.1   1 MGHVDREDLLNV-IRHELRLEDDDGpgLCSRLLLNP---------------------------------------------------- 35 
+                            999*****9999.************99********4.................................................... PP
+
+  PTHR13335.orig.30.pir  87 gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseerdqssck 174
+                             d+k+r+++ +ld+r ++   +++ ++++++ ye++l++++i++++l++ s   r+++++k+e +r++                    
+           Y57A10A.20.1  36 -DRKCRAGGLPLDFRLKNGDLMDDGDAGFDDIYEIPLYEEPIHTRTLINDSLALRTAEKIKEEGRRDN-------------------- 102
+                            .689****************************************************************.................... PP
+
+  PTHR13335.orig.30.pir 175 siqwktessvkedsvqrassesslsserssdssssssapsrrqsnkldseqlsaeesdslfekkskssstktqkskkpssaakqsiss 262
+                                                                               ++++++d+lf+k++ +++ kt  s+++s         
+           Y57A10A.20.1 103 ---------------------------------------------------FYTGPLDELFVKQEVNWPPKTPISTEKSAI------- 132
+                            ...................................................******************************....... PP
+
+  PTHR13335.orig.30.pir 263 lssaLekkpsqlnnpfneyakfdgkgvgttaslkidiylplsse.pdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnkvn 349
+                             +++Le+++ +lnnp+ ey+kf +++  t++s++i+i +p+s++ +   ++l+++v ++a+++evIG++L+qy+   +++ lp + v+
+           Y57A10A.20.1 133 -ERYLEENSANLNNPLGEYSKFAATT--TDPSRQIEIIIPMSCDeEIGFKTLKIEVLTTARIREVIGYCLLQYYLT-FDSYLPGE-VD 215
+                            .*************************..***************978899***************************.9999****.** PP
+
+  PTHR13335.orig.30.pir 350 aycLrivEdDGevddDFPpLDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrleeakrsagsaneagsslstesskesl 437
+                            +y+ +++E+DGe+++++PpLD+++ ++++gf++l Lv++ +++g++                                      +++ 
+           Y57A10A.20.1 216 DYQFYLAEEDGEIEHELPPLDSSKLVGQVGFTCLGLVSRIKKNGNS--------------------------------------RQKR 265
+                            *******************************************986......................................9*** PP
+
+  PTHR13335.orig.30.pir 438 fvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkky.............rllkvsepnvivdldrtvesldgleflllr 512
+                            +v v++++++++    ++ v++++ +l++++++a++ r+++ k+              ++++v++ +v++dl+++++s++ lef+++r
+           Y57A10A.20.1 266 AVAVWFVDKDQY----VIEVDNMEKPLRWLRDEAFRLREETVKEReplfqglldikeyYMEAVDNFDVKLDLEASISSARSLEFVMIR 349
+                            ************....************************************************************************ PP
+
+  PTHR13335.orig.30.pir 513 knssradgvlekteskssssanatissksaa.................................edsqiqiatvqddlsssayksfkV 567
+                            knssra+ ++++ ++ +++sa+ t+++++++                                 + ++++++ v++++  ++ +sf+V
+           Y57A10A.20.1 350 KNSSRAGFHPRGGRYGRQMSAMLTLKMPNSPiaagpmtplptvmeespavagtsngfgfpkaesCGAIASTPGVTWNDDGGQLSSFIV 437
+                            **************************************************************************************** PP
+
+  PTHR13335.orig.30.pir 568 srkhkmrfktdrelgIdgdyieimPvenqkaatkfwekqKtisihisqvvackl.....ssknpanFki................... 631
+                            +r+hk+++k++++l+++++++ei ++++ ++a+ ++++qK++++++++v +++      +++++++++i                   
+           Y57A10A.20.1 438 QRIHKFKPKWKANLIFRWTCFEIEKYREDRSAFLPQGYQKHTKVPWEYVGGVRTqlkdaKAGRVDMWQItffwlpvlsdetvkdvigd 525
+                            **************************************************************************************** PP
+
+  PTHR13335.orig.30.pir 632 ..........vvrrendeKrydfeavsaaeaaeIvskinnileayas 668
+                                      ++++e++++++++e+  +++++eI+s+ n+il+a+++
+           Y57A10A.20.1 526 aewnlnlvakIYANEEKWRSVTLETFFKQDVDEIFSQTNSILQARDA 572
+                            ******99999999*******************************97 PP
+
+>> ZC101.2r.1  pep chromosome:WBcel235:II:14652558:14684296:-1 gene:WBGene00006787 transcript:ZC101.2r.1 gene_biotype:pr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.8  22.5   4.7e-05       0.3      64     188 ..     612     737 ..     530     807 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 10.8 bits;  conditional E-value: 4.7e-05
+  PTHR13335.orig.30.pir  64 astpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavklekl 151
+                            + +  ++++e+       +++ + ++ +++++ +++q+r++q+ +q++ +++++++++++q+ + + + ++ +s+++ a++a+ ++  
+             ZC101.2r.1 612 STSTSTTTTEQ-------QHQRQHHQAQQAQQHQQQQERQQQERQQHERQQQERQQQDRQQQAQQHHQAQQHHSQQHPAQPAQPSQDH 692
+                            11111122222.......2222344555555555555555555566666666666666777777777777777777777777777777 PP
+
+  PTHR13335.orig.30.pir 152 rkerrsksasiassee.r.......dqsscksiqwktessvkeds 188
+                            ++e+r   +++++ ee         ++++    ++  +s+v++++
+             ZC101.2r.1 693 HEEHRRRLEEHRRREEeHhrrqeeeSRARALQQSLLHASQVESTE 737
+                            777554444444444433566664423333333333333333333 PP
+
+>> ZC116.1.1  pep chromosome:WBcel235:V:12609826:12610857:1 gene:WBGene00013853 transcript:ZC116.1.1 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.0  17.7   8.2e-05      0.52      83     159 ..     110     203 ..      15     217 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 10.0 bits;  conditional E-value: 8.2e-05
+  PTHR13335.orig.30.pir  83 tatg.............gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke... 154
+                            ++               g +++++++ ++++++ +q+++ +++++ +++  +++qs ++++ + d++s+++++ +++++ + +     
+              ZC116.1.1 110 QQAYaqqqpqqnqqyaqGTQQQQQQYYPQQTQQGQQQQTLQYQQGVQQQPVQYDQSGNTQQVQYDQSSQMQQQPQQQQQYTPQYDqsg 197
+                            1111332222333334444555555555566666666666666666666666777777776666666666665555554444444222 PP
+
+  PTHR13335.orig.30.pir 155 .rrsks 159
+                             +++++
+              ZC116.1.1 198 nTQNHQ 203
+                            223222 PP
+
+>> M88.5e.1  pep chromosome:WBcel235:III:4553617:4560431:1 gene:WBGene00010908 transcript:M88.5e.1 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.2  11.4   7.2e-05      0.46      86     179 ..      26     173 ..       1     335 [. 0.65
+   2 ?   -3.1   0.1      0.76   4.9e+03     468     500 ..     423     458 ..     399     495 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 10.2 bits;  conditional E-value: 7.2e-05
+  PTHR13335.orig.30.pir  86 g...........................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantav 146
+                            +                            + ++ ++++ ++  + + + +q+ +  ++ +++ + + +  ++++ + g+++++  +++
+               M88.5e.1  26 AqqmhhrlqgapinpqqfmvppptmmqpQQMQQAQQQQAQQMHQMQIHHQQHPQMMQQHAQQFQGYHPHQQNQQHQAGQHQQSHHQSQ 113
+                            03344455566666666677766544431222222222222223333333333333444444455667788899999******9**** PP
+
+  PTHR13335.orig.30.pir 147 kleklrkerrsksasiassee.r..........................dqsscksiqwk 179
+                            + ++ r++++s+s+++  +++                            ++s +k+i ++
+               M88.5e.1 114 NHNQHRNHNQSHSGPHHIPQNlMmprcmlkdwpircvvegkyhaviigpNGSTIKDIASS 173
+                            ****************99988778888888888888888888877777766666666666 PP
+
+  == domain 2  score: -3.1 bits;  conditional E-value: 0.76
+  PTHR13335.orig.30.pir 468 lekackkrkldqkky...rllkvsepnvivdldrtv 500
+                             e+a kkrkld +++    +   + p   +  ++t+
+               M88.5e.1 423 AEEAEKKRKLDETDSgceGVASGDHPQEFLEDNATI 458
+                            466667777777776555233333333333333333 PP
+
+>> M88.5e.2  pep chromosome:WBcel235:III:4553630:4560431:1 gene:WBGene00010908 transcript:M88.5e.2 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.2  11.4   7.2e-05      0.46      86     179 ..      26     173 ..       1     335 [. 0.65
+   2 ?   -3.1   0.1      0.76   4.9e+03     468     500 ..     423     458 ..     399     495 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 10.2 bits;  conditional E-value: 7.2e-05
+  PTHR13335.orig.30.pir  86 g...........................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantav 146
+                            +                            + ++ ++++ ++  + + + +q+ +  ++ +++ + + +  ++++ + g+++++  +++
+               M88.5e.2  26 AqqmhhrlqgapinpqqfmvppptmmqpQQMQQAQQQQAQQMHQMQIHHQQHPQMMQQHAQQFQGYHPHQQNQQHQAGQHQQSHHQSQ 113
+                            03344455566666666677766544431222222222222223333333333333444444455667788899999******9**** PP
+
+  PTHR13335.orig.30.pir 147 kleklrkerrsksasiassee.r..........................dqsscksiqwk 179
+                            + ++ r++++s+s+++  +++                            ++s +k+i ++
+               M88.5e.2 114 NHNQHRNHNQSHSGPHHIPQNlMmprcmlkdwpircvvegkyhaviigpNGSTIKDIASS 173
+                            ****************99988778888888888888888888877777766666666666 PP
+
+  == domain 2  score: -3.1 bits;  conditional E-value: 0.76
+  PTHR13335.orig.30.pir 468 lekackkrkldqkky...rllkvsepnvivdldrtv 500
+                             e+a kkrkld +++    +   + p   +  ++t+
+               M88.5e.2 423 AEEAEKKRKLDETDSgceGVASGDHPQEFLEDNATI 458
+                            466667777777776555233333333333333333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      31865  (14970386 residues searched)
+Passed MSV filter:                      6201  (0.194602); expected 637.3 (0.02)
+Passed bias filter:                     1326  (0.0416131); expected 637.3 (0.02)
+Passed Vit filter:                       491  (0.0154088); expected 31.9 (0.001)
+Passed Fwd filter:                        88  (0.00276165); expected 0.3 (1e-05)
+Initial search space (Z):              31865  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 1.77u 0.76s 00:00:02.53 Elapsed: 00:00:01.27
+# Mc/sec: 7886.65
+//
+[ok]

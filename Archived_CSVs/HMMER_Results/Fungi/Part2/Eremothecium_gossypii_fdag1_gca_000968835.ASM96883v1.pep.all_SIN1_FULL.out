@@ -1,0 +1,155 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Eremothecium_gossypii_fdag1_gca_000968835.ASM96883v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   5.9e-167  555.7  10.2   7.8e-167  555.2  10.2    1.1  1  AEY97013  pep chromosome:ASM96883v1:V:671843:674962:-1 gene:F
+    3.8e-05   20.9  17.5      5e-05   20.5  17.5    1.2  1  AEY97875  pep chromosome:ASM96883v1:VI:786525:788033:-1 gene:
+    0.00026   18.2  10.4    0.00035   17.7  10.4    1.2  1  AEY96775  pep chromosome:ASM96883v1:V:239134:240561:1 gene:FA
+    0.00073   16.7   8.4    0.00099   16.3   8.4    1.2  1  AEY97675  pep chromosome:ASM96883v1:VI:423018:425102:1 gene:F
+
+
+Domain annotation for each sequence (and alignments):
+>> AEY97013  pep chromosome:ASM96883v1:V:671843:674962:-1 gene:FAGOS_FAER023C transcript:AEY97013 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  555.2  10.2  6.6e-170  7.8e-167       8     669 ..       8    1034 ..       1    1038 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 555.2 bits;  conditional E-value: 6.6e-170
+  PTHR13335.orig.30.pir    8 dillahlRtsylt..................sdddgmcerilndd......................................... 34  
+                             +  l +lR+++l+                  ++d+++++ ++  +                                         
+               AEY97013    8 R--LNRLRAGFLKgcpeedqmkrvikpygdaTTDEALRQLYVDREghdllvhlesppisesylgsmmprtkkmseervgadedkae 91  
+                             4..459************************999***************************************************** PP
+
+  PTHR13335.orig.30.pir   35 ..............dvdlekihsapyppvsssssesll..srpksastpgdsgsedsgssneaetatg.................. 86  
+                                           ++++++  ++p  +v+++s+es++  s ++++s++++++s+++g+++ ++++++                  
+               AEY97013   92 svverssrvlgarrEDAAGAGLELPVLAVNGASEESFAgtSVSSTVSESKYDASQGPGKAKAVKGKSRfrsifrkksstdalrvqg 177 
+                             **************99*******************************************999999999****************** PP
+
+  PTHR13335.orig.30.pir   87 .........................................................................gdtkarrkkpsld 99  
+                                                                                                      + ++++ + + + 
+               AEY97013  178 apkgaprrtslydssfgfegiidedddeednedldaeankrffymngdlrdsiypdvsnnsdepkpkpikkgnFLDNFSLNPQANI 263 
+                             ************************************************************************************** PP
+
+  PTHR13335.orig.30.pir  100 qrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke...rrsksasiassee.r............. 168 
+                             q+++++++ +++e+essp + ++ +++++++++ +++++++++ ++++l++++ +    r++sa++as+++ r             
+               AEY97013  264 QNHDGRHVAGQKEEESSPPKLGKPRNPETEEDYIIDSFINQKDLEPLELTENPPHdadVRNTSAARASLRSdRpsyvedadddeag 349 
+                             ***********************************************************************88************* PP
+
+  PTHR13335.orig.30.pir  169 .......dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrq.............snkldseq......... 225 
+                                    d++s++++++ +++s+++d++ +a+++ss+++ +++++++++s+ps+r               nkl+s++         
+               AEY97013  350 gesglasDAASSYGASLLYSDSSASDFRPNAVMDSSADTGMNPIEYLHYSVPSTRGfaiytvaddsssvVNKLSSANrfrgsdtpn 435 
+                             ******************************************************888**999999998877777777999999999 PP
+
+  PTHR13335.orig.30.pir  226 ..lsaeesdslfekkskssstktqkskkpssa.a...................kqsi............................. 260 
+                               + ++ s +l++k  ++s  +++k++ + ++ +                   +                                
+               AEY97013  436 seFKDSGSTPLLSKDGNHSGVSDKKWSASLQPhSksvrirnslpsfimtgsikS--Ragrqyqhkrstsdvnrasmqafpeplvik 519 
+                             996666666666666666666666666555555455554444433333333330..033333333333444444445555555778 PP
+
+  PTHR13335.orig.30.pir  261 ...........sslssaLekkpsq.lnnpfneyakfdgkgvgttaslkidiylplssepdkllpltvvvkasatVqevIGlaLwqy 334 
+                                        s+lss L+k++++  +np++++a+++g++++++++l +d+y++ls++ +k++p++++vk++a+V+e+ G+aL++y
+               AEY97013  520 kvnvsdgkphkSHLSSLLQKTENKaDINPLEYFASASGANLPRGSVLDLDVYIQLSKT-YKKTPFSIRVKKTASVFETLGYALYCY 604 
+                             88999999999************66*********************************.*************************** PP
+
+  PTHR13335.orig.30.pir  335 teegrepklpdnk........vnaycLrivEdDGe.vddDFPpLDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrl 411 
+                             +++ r+ +l++++        +n+++L+iv++DGe ++d+F+ L+r+++i+ ++++e+++++++d+e+ t+nd++tplp++++kr+
+               AEY97013  605 VTKFRPGDLENDGlvihevenPNYFTLNIVDEDGEpFEDNFGLLERTQCIGTVSDNEVVICRVEDNEQFTKNDSMTPLPHDFVKRA 690 
+                             **************998764444*************************************************************** PP
+
+  PTHR13335.orig.30.pir  412 eeakr.....sagsaneagsslstesskeslfvkvnlaypgdsvrsk.ttivvptdvtladvlekackkrkldqkkyrllkvsepn 491 
+                             ++ ++     ++ ++n+++s+++t s++++l++kv++ yp++++r + tti++p ++ ++d+++++ck + ld++ky +lk +++n
+               AEY97013  691 TTIAEttcrtTSVNNNPPASAMTTISKDDNLTFKVYM-YPNTNPRASgTTINIPGYCKIYDLVLQCCKAKALDPTKY-HLKPLGKN 774 
+                             *****9***999*************************.********9******************************.******** PP
+
+  PTHR13335.orig.30.pir  492 vivdldrtvesldgleflllrknssradgvlekteskssssanatissksaa.................................. 543 
+                             v++d+++ v++ldg+++l+l+k+++ +++++ek +  +++++++ti+ ++++                                  
+               AEY97013  775 VLLDSNDLVNKLDGITSLELIKHKDSKSMAVEKLR--QRRPSLPTIQGSYMFneltldlgdqfiragdtantkredmvpgqnggsk 858 
+                             ********************************655..999********************************************** PP
+
+  PTHR13335.orig.30.pir  544 ...................................................edsqiqiatvqddlsssayksfkVsrkhkmrfktd 578 
+                                                                                + +   +++ ++d++++ay+++kV+r+++++f+++
+               AEY97013  859 ttnnankkyhsiyklgisrqhsltaghgagigggifrnknssksslttntqPPNVLAGGSSYKDMFAGAYYKYKVWRRQQVSFINK 944 
+                             ***************************************************9999999**************************** PP
+
+  PTHR13335.orig.30.pir  579 rel..gIdgdyieimPvenqkaatkfwekqKtisihisqvvacklssknpanFkivvrrendeKrydfeavsaaeaaeIvskinni 662 
+                             +e+  +Idgdyi+i P+en++++  ++e++Kt+s+hisqv+ +k+s+++p++Fki+v ++n+eKry+feavs++e++eIv++++n+
+               AEY97013  945 HERtlAIDGDYIYIIPPENGYHW--HQETGKTKSFHISQVSLVKRSKRVPEYFKIFVIKPNNEKRYYFEAVSPEECVEIVTRLQNL 1028
+                             ***99******************..************************************************************* PP
+
+  PTHR13335.orig.30.pir  663 leayass 669 
+                               ay+ +
+               AEY97013 1029 SGAYK-M 1034
+                             ****9.4 PP
+
+>> AEY97875  pep chromosome:ASM96883v1:VI:786525:788033:-1 gene:FAGOS_FAFR191C transcript:AEY97875 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.5  17.5   4.2e-08     5e-05      86     239 ..     126     271 ..      95     402 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 20.5 bits;  conditional E-value: 4.2e-08
+  PTHR13335.orig.30.pir  86 ggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseerdqssc 173
+                            + +t+ +++ + +++++ +  + + s ++++ s++ +++ ++++ss+  e+ +++  +  +k + ++ e+r +s         d+ss+
+               AEY97875 126 EENTQSSAQSSTATTSSTSSSSISVSSQDPETSTTPSSTTSPLTSSDNGETKTKSTVTSLLKTTDEQHETRTTST--------DSSSS 205
+                            233444444444444444444444455555555555555555552222222222222333333333333333322........34555 PP
+
+  PTHR13335.orig.30.pir 174 ksiqwktessvkedsvqrassesslsserssdssssssapsr.rq..snkldseqlsaeesdslfekks 239
+                            +    +t++sv ++s++++s +ss+ss++ss++sss s  s+ ++  s  ++    ++ +  ++++++ 
+               AEY97875 206 AASPASTPESVTSTSSTSSSTSSSTSSSTSSSTSSSTSSTSSsSTssSSSTT---AAPTPVVPVLVRTT 271
+                            5555555555555555555444444444444433333322221222211111...22333333333333 PP
+
+>> AEY96775  pep chromosome:ASM96883v1:V:239134:240561:1 gene:FAGOS_FAEL209W transcript:AEY96775 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.7  10.4     3e-07   0.00035      86     148 ..     342     465 ..     239     472 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 17.7 bits;  conditional E-value: 3e-07
+  PTHR13335.orig.30.pir  86 g.............................................................gdtkarrkkpsldqrretqgekqsse 112
+                            +                                                              + + + ++p l+q++++q++ q+++
+               AEY96775 342 QqtnnpfltqapafqpvasgvsaqhapllpqhtapmpllvaqptnpfataapatnpfaaynpAQMRYSYTQPELQQQQQQQQQIQQQQ 429
+                            0555555555555555555555555555555666666666666666666665555555554444455556666666666666666666 PP
+
+  PTHR13335.orig.30.pir 113 sesspsyeeelqsvdissssldegsrrrrantavkl 148
+                             ++++ ++++lq++++++++ ++++ ++++ ++++l
+               AEY96775 430 LQQQQLQQQQLQQQQLQQQQFQQQQLQQQQLQQQQL 465
+                            666666666666666666666666666666666665 PP
+
+>> AEY97675  pep chromosome:ASM96883v1:VI:423018:425102:1 gene:FAGOS_FAFL008W transcript:AEY97675 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.3   8.4   8.3e-07   0.00099     114     166 ..     196     248 ..      81     275 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 16.3 bits;  conditional E-value: 8.3e-07
+  PTHR13335.orig.30.pir 114 esspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasse 166
+                            ++sp+  ++++s++ ++++++++++++++++++++++++++++ +sa+ ++ +
+               AEY97675 196 SPSPAIASRTTSMQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQMHSAQAQQQS 248
+                            33444444444444443333333333333333333333333332222222111 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       4774  (2334254 residues searched)
+Passed MSV filter:                       708  (0.148303); expected 95.5 (0.02)
+Passed bias filter:                      178  (0.0372853); expected 95.5 (0.02)
+Passed Vit filter:                        50  (0.0104734); expected 4.8 (0.001)
+Passed Fwd filter:                        16  (0.00335149); expected 0.0 (1e-05)
+Initial search space (Z):               4774  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.27u 0.08s 00:00:00.35 Elapsed: 00:00:00.19
+# Mc/sec: 8007.03
+//
+[ok]

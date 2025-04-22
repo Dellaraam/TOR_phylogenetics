@@ -1,0 +1,141 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Saitoella_complicata_nrrl_y_17804_gca_001661265.Saico1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   4.8e-115  384.7   0.0   6.2e-115  384.3   0.0    1.1  1  ODQ53639  pep supercontig:Saico1:KV454262:207247:209386:-1 ge
+     0.0031   15.2   6.5     0.0033   15.1   6.5    1.0  1  ODQ56157  pep supercontig:Saico1:KV454254:497507:498558:-1 ge
+  ------ inclusion threshold ------
+      0.013   13.1  53.4      0.016   12.8  53.4    1.1  1  ODQ53338  pep supercontig:Saico1:KV454263:72334:73420:-1 gene
+      0.036   11.6   0.2      0.052   11.1   0.2    1.1  1  ODQ55957  pep supercontig:Saico1:KV454254:58598:60039:1 gene:
+
+
+Domain annotation for each sequence (and alignments):
+>> ODQ53639  pep supercontig:Saico1:KV454262:207247:209386:-1 gene:SAICODRAFT_6894 transcript:ODQ53639 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  384.3   0.0  3.6e-118  6.2e-115       1     664 [.       1     691 [.       1     694 [. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 384.3 bits;  conditional E-value: 3.6e-118
+  PTHR13335.orig.30.pir   1 MafldnedillahlRtsyltsdddgmcerilndd...............dvdlekihsapyppvsssssesllsrpksastpgdsgse 73 
+                            M++l+++ + +++lRt yl + ddg++er++  +               + +  + +s+p+p++  ++ +    rp+  ++  ds  +
+               ODQ53639   1 MSLLHDPQFAIHRLRTLYLQNSDDGVAERVISLNpaalntlaykqagwtNAQTRRCYSPPIPAFGDIPFNNT--RPTFRNSLDDSDLV 86 
+                            **********************************99999999999999988888899888886544444444..22333333333332 PP
+
+  PTHR13335.orig.30.pir  74 dsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksas 161
+                             +          +++ +  r+++++ +r+et  ++           + e  + + +++++de++   +   ++ + k++ ++ s +++
+               ODQ53639  87 LA----------APAGRDTRPGSRRLKRSETGTST-----------QNEGSEFSDDDDYMDEEIALPQ--SMIAFPKRPLRMASNTNT 151
+                            22..........24444445555555555555555...........5455555555566666664444..577777777775533332 PP
+
+  PTHR13335.orig.30.pir 162 iasseer...........................dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkld 222
+                            +  s+ +                           ++  ++s+   ++++ k++ +++++ +s + + ++++  +++s +         
+               ODQ53639 152 STPSQGTpiadddlktpkvlvtgpsrpnsasrvpKADMGESTAPAVTDTFKDQARKLDPVQSMVATQMNTS--PAMSLA--------- 228
+                            22222225666666555555544444443333333333333333333333333333333333333333333..222222......... PP
+
+  PTHR13335.orig.30.pir 223 seq................lsaeesdslfekkskssstktqkskkpssaa.........................kqsi......ssl 263
+                              +                +s e                          a                         +++i      s+l
+               ODQ53639 229 --NeatlnvepfeesdasvTSSEY-------------------------AgtigsdtgfqamfttptayhkplpkPRPIstiqpsSAL 289
+                            ..0222222222222222222222.........................133333333333333333333334433333555665999 PP
+
+  PTHR13335.orig.30.pir 264 ssaLekkpsqlnnpfneyakfdgkgvgttaslkidiylplssepdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnk..vn 349
+                            ++ +++++ +  np+  ya f+gkg  + ++l+++iy p   +  +  p++v ++++a V+e+IG+aL++y+e    p+l ++    n
+               ODQ53639 290 TALFKANEAADHNPLAHYAVFSGKG--DLNPLRLKIYRPSGAQ--PTVPWEVLIRSTANVAETIGYALYRYQEDALMPELAPEEfdAN 373
+                            8888888889***************..****************..99***********************************999888 PP
+
+  PTHR13335.orig.30.pir 350 aycLrivEdDGevddDFPpLDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrleeakr..........sagsaneagss 427
+                            +++LrivE+DGe d+DFP+LDr++ is+f f+e+aLveat+++ + n++ +++ ++++++++  +++          +a  +++++++
+               ODQ53639 374 RWTLRIVEEDGEPDEDFPALDRKKIISEFRFDEFALVEATEAQALVNEATTPNPNKQFTAKPAVTTDgpltsgtpptQAAVNVSSPNT 461
+                            **********************************************777666666666666555555999999998877777777777 PP
+
+  PTHR13335.orig.30.pir 428 lstes......skeslfvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkkyrllkvsepnvivdldrtvesldglefl 509
+                            ++ +s      ++e+  +k+++++   +++   t++v  ++ +++vl ++c++++ld++ky  l ++++ ++v  d+tvesl+   +l
+               ODQ53639 462 TPRKSanskplPAEPRNLKIRIHPHTEGAPV-STVSVMPETSISEVLGQICRRKNLDRIKY-CLRIPGTSTLVSNDKTVESLNRRLEL 547
+                            77777999999***********665555555.888888999********************.************************** PP
+
+  PTHR13335.orig.30.pir 510 llrknssradgvlekteskssssanatissksaaedsqiqiatvqddlsssayksfkVsrkhkmrfktdrel..gIdgdyieimPven 595
+                            +l+k++  + +        + ++ +a + ++       ++ +++ + + +++y++++V+r+++m+f+ ++e+  +Idgdyi+imP+e+
+               ODQ53639 548 ELIKRKLIDPTY------VPGAPLTANNLRQ---DMLMPGYGAANAVITNASYQKYIVWRRQPMSFMGRHERvlAIDGDYIHIMPSEQ 626
+                            ******554444......3344444444444...4445566778888999************************************** PP
+
+  PTHR13335.orig.30.pir 596 qkaatkfwekqKtisihisqvvacklssknpanFkivvrrendeKrydfeavsaaeaaeIvskinnile 664
+                            ++ +    e+ Kt+sihi  ++ ck+s+k+panFk vv +++++Krydfea++++eaaeIvsk++ +++
+               ODQ53639 627 KTLF----ESPKTSSIHIGAIITCKQSRKVPANFKFVVLKARETKRYDFEAINPKEAAEIVSKVRTLMN 691
+                            ****....*********************************************************9986 PP
+
+>> ODQ56157  pep supercontig:Saico1:KV454254:497507:498558:-1 gene:SAICODRAFT_28407 transcript:ODQ56157 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.1   6.5   1.9e-06    0.0033      80     141 ..      31      92 ..       1      97 [. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 15.1 bits;  conditional E-value: 1.9e-06
+  PTHR13335.orig.30.pir  80 eaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrr 141
+                            +   atg++ ++ ++  +++q +e+q+++q++++++ p+  e+++  d+++s+++ +  rrr
+               ODQ56157  31 GLHLATGVNGQQAAQPLPQQQPHEQQQQQQQQQQQQHPQPAEQTAPADLHNSDDEGSGLRRR 92 
+                            44466779999***************************************666666666655 PP
+
+>> ODQ53338  pep supercontig:Saico1:KV454263:72334:73420:-1 gene:SAICODRAFT_30089 transcript:ODQ53338 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.8  53.4   9.3e-06     0.016      59     239 ..      60     301 ..      36     321 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 12.8 bits;  conditional E-value: 9.3e-06
+  PTHR13335.orig.30.pir  59 srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantav 146
+                            +++++ + +++s+s+ds+s+++ e++++++    ++  +++++++  g++++ses+ s+s+ +++ ++d+ssss   +s +++ ++a 
+               ODQ53338  60 DSSTTLKKDESSSSDDSSSDSDEEMTDAKAESTAATTAKNSESDSDSGDESDSESSDSDSDSDSDSDSDSSSSSSGSSSSDSS-SDAS 146
+                            56677778889999999999999999997777777777777777777777777777777777777777777666666666655.5566 PP
+
+  PTHR13335.orig.30.pir 147 kleklrkerrsksasiasseer........dqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rqsnkldseq 225
+                            ++++ ++   s++ +  ss+ +        ++ss +s +++++ss++++s  ++ss+ss+ s++ssdsss+s+ +s+ ++ +k+++++
+               ODQ53338 147 DSDSDSDVSDSSTPAVTSSS-SepdndsdsSSSSNASSSSSPASSSSSSSASSSSSSSSSNSSSSSDSSSDSDSSSEsEKDEKTEDQK 233
+                            66666666222222222222.1233566666788888888888888888888888888888888888888888888866655555555 PP
+
+  PTHR13335.orig.30.pir 226 ......................................................lsaeesdslfekks 239
+                                                                                    a  s++l++++ 
+               ODQ53338 234 pakrvkldvpvklppgtkqpgerfsrikmdeisyaddslkdnsyevahafdeatYGARASKDLLVTRG 301
+                            56667777777777777777777777777777777666666666666666666655555555555555 PP
+
+>> ODQ55957  pep supercontig:Saico1:KV454254:58598:60039:1 gene:SAICODRAFT_98857 transcript:ODQ55957 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.1   0.2     3e-05     0.052     400     478 ..     156     261 ..     139     269 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 11.1 bits;  conditional E-value: 3e-05
+  PTHR13335.orig.30.pir 400 qtplpreqkkrleeakrsagsaneagsslstes..............................skeslfvkvnlaypgdsvrskttiv 457
+                            ++p  +++++   ++++sag++ +++ s +++                               s  ++++++++ +   s++ +t  +
+               ODQ55957 156 APPVASSPTQTQASSQTSAGTSPSPPPSPTKPIptptpalastllasatvittpapttpttttSTPTITLTIRF-S--NSLGDTTLTN 240
+                            334444444444444444444444444444444888888999999999999999999999999999********.5..455689**** PP
+
+  PTHR13335.orig.30.pir 458 vptdvtladvlekackkrkld 478
+                            +p ++t a++ e a +++ l+
+               ODQ55957 241 IPETYTAAQIAEAALQQQGLE 261
+                            ****************99986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       7034  (2970847 residues searched)
+Passed MSV filter:                       911  (0.129514); expected 140.7 (0.02)
+Passed bias filter:                      256  (0.0363947); expected 140.7 (0.02)
+Passed Vit filter:                        46  (0.00653966); expected 7.0 (0.001)
+Passed Fwd filter:                         6  (0.000853); expected 0.1 (1e-05)
+Initial search space (Z):               7034  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.13u 0.03s 00:00:00.16 Elapsed: 00:00:00.09
+# Mc/sec: 21710.06
+//
+[ok]

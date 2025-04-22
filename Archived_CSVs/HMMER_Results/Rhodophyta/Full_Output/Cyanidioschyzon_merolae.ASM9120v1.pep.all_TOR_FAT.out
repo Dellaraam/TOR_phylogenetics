@@ -1,0 +1,234 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Rhodophyta/Proteins/Cyanidioschyzon_merolae.ASM9120v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.5e-51  173.1   4.0    6.6e-51  171.7   0.2    3.0  2  CMR018CT  pep chromosome:ASM9120v1:18:48580:56793:1 gene:CMR0
+    1.7e-30  104.6   2.7    1.7e-30  104.6   2.7    2.2  2  CMO046CT  pep chromosome:ASM9120v1:15:116083:128922:1 gene:CM
+    3.8e-23   80.4   0.0    9.2e-23   79.2   0.0    1.7  1  CMN075CT  pep chromosome:ASM9120v1:14:178693:187519:-1 gene:C
+    2.7e-06   25.0   2.7       0.03   11.7   0.1    3.7  3  CML157CT  pep chromosome:ASM9120v1:12:399695:401582:-1 gene:C
+  ------ inclusion threshold ------
+      0.039   11.4  12.1        1.4    6.2   5.7    4.6  4  CMT415CT  pep chromosome:ASM9120v1:20:1026292:1028595:1 gene:
+
+
+Domain annotation for each sequence (and alignments):
+>> CMR018CT  pep chromosome:ASM9120v1:18:48580:56793:1 gene:CMR018C transcript:CMR018CT gene_biotype:protein_coding tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.2   0.4       2.1   2.1e+03     189     229 ..    1332    1372 ..    1315    1394 .. 0.56
+   2 !  171.7   0.2   6.7e-54   6.6e-51       2     343 .]    1628    1962 ..    1627    1962 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -4.2 bits;  conditional E-value: 2.1
+                CCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---. CS
+       FAT  189 yaylkylwakgeqkealqkLrefvscllekkeelssglevq 229 
+                +  l+ ++++++q++al+    + + +++ +++++sg+++ 
+  CMR018CT 1332 MLDLQQQLQQQQQQQALLGSGASNTTTTNTNNNNNSGHNSA 1372
+                44555566666666665544333333344444455554444 PP
+
+  == domain 2  score: 171.7 bits;  conditional E-value: 6.7e-54
+                CCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS--- CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklsss 100 
+                + aa+ a +l+ Wd+  e +  +++ds ++++f+a+la+h+++ ++a+ +i  +r ll+t  +a +ge y ray+ ++  Qql+Elee +++ q+   +
+  CMR018CT 1628 EEAAQVAYQLQLWDKFTERVAYTSRDSIRGNVFRAMLAIHQGDDEAARGYIRAGRRLLDTGVTARVGEGYPRAYGDILLTQQLVELEECLMVRQR--IL 1724
+                568888889999**********************************************************************************8..9* PP
+
+                -TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHC CS
+       FAT  101 eelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp.pevvyaylkylwak 198 
+                 ++  + + W++Rl g+  d+  wq+ l vR+l+l+p+ d        ++wl+f++l+R+++rl +A++aL +l++e+     p pev+ya+lk+ w++
+  CMR018CT 1725 PQRHVVEQLWNTRLYGCRFDYTTWQQTLLVRRLLLEPRHD-------KDVWLRFVSLCRRANRLPMANEALAMLQDEQH----PdPEVTYASLKLCWSQ 1812
+                ****************************************.......***************************77776....579************* PP
+
+                CHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.........S...-SSCCHHHHCCHHCTCCCHSTTCCC CS
+       FAT  199 geqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqkln........wseekseeilqaysaateldpswykawhtw 289 
+                g+++ea+++Lr  +++   ++                   +l ar +lk+  w +al+           +s+ +    +++ ++a+  dpsw + whtw
+  CMR018CT 1813 GRHHEAYECLRRCAEQPVPSA-------------------RLAARRFLKLCVWGRALRAEGtstfvsspSSSLRWHTLMEHARRAVVSDPSWSSGWHTW 1892
+                **********99999444432...................223444444444444444322000000003445567899999***************** PP
+
+                CHHHHHCCHHHHHHSSSS.................S-TCC.HHHHCCT..CCHHHHTTTS..STTTCHHHHHC CS
+       FAT  290 alfnfevlskeeekkeeee................pedls.eyvvpavegflkslslsse..kslqdllRlLt 343 
+                a +n  +  +   +    +                ++ l   yv +av+gf+++++l+++  +  qd+l+lLt
+  CMR018CT 1893 AALNADAAAAHSTGH---RfggawparptavaaaeSNVLVrAYVLNAVNGFFRAIALGESyaEQAQDVLKLLT 1962
+                *********995553...24569999999999999566666*******************999*********8 PP
+
+>> CMO046CT  pep chromosome:ASM9120v1:15:116083:128922:1 gene:CMO046C transcript:CMO046CT gene_biotype:protein_coding tr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.7   0.1      0.18   1.8e+02     109     137 ..    2988    3016 ..    2981    3018 .. 0.88
+   2 !  104.6   2.7   1.7e-33   1.7e-30       3     298 ..    3018    3323 ..    3016    3351 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: -0.7 bits;  conditional E-value: 0.18
+                ----TTS-TTTGCCCTTTCCCCTCCCHCC CS
+       FAT  109 tWrkRlpgvqddvevwqdilsvRslvlsp 137 
+                 W++R + ++ +++ w+ +  + + v++p
+  CMO046CT 2988 LWEDRWLHCAEELNQWDALTEFSRTVMHP 3016
+                7******************9998888876 PP
+
+  == domain 2  score: 104.6 bits;  conditional E-value: 1.7e-33
+                CTTCCCCTSSSGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---S.CCCCCHHHHHCCCCCHHHCHHCCHHCSS-. CS
+       FAT    3 laaeaaWrlgqWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsge.synraydllvrlQqlaEleeiiqykqkls. 98  
+                l  ea Wrl++W  ++e l +m  +dsp+ ++++ +++l+ n++d++e +i+ ++   ++e++ l+   s ++  ++lv +Qq +El e+++++q+l+ 
+  CMO046CT 3018 LLHEALWRLPDWAALKELLMKMPpEDSPRLKILQSFVQLQENRLDQVEPFISSGIRRALEEWQGLPENsSITAFEPSLVLFQQFVELSESASILQELNn 3116
+                6789***************99999******************************************99455555678********************** PP
+
+                ..........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC................HHCCS-STTCCC..CCCCCHCHHHHCCSTTH CS
+       FAT   99 ..........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied................lllkgakaemwl..kfanlaRksgrlslAek 169 
+                           +e+ + +l +Wr+R  + +d +++w++++ +R +vl+                    ll  g+++++w    +a+ aRk+   +++++
+  CMO046CT 3117 alqnptlletHAENIRLVLAMWRDRQANHWDRLSDWNRLICWRNHVLTAVVHtlqglrnrsrvdipqpLLCMGINETAWNvnCYARAARKQRLSEVCMQ 3215
+                *********9999**********************************888888889999*********9999999****9899**************** PP
+
+                HCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC....SS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S.. CS
+       FAT  170 aLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke....elssglevqeptnleeftkll.arcylkkGewlaalqklnwsee 263 
+                aL+++                   y +++ ++++ + k +e+++ +l  ++    +l+ gl + + tn e+f++++ a   ++ Ge+ ++l++      
+  CMO046CT 3216 ALQRM-------------------YPYSTMDVQDFFMKTKEQAKAHLLLPSnddvALRAGLVQLQHTNREYFNTRQkAYLSALEGEFYHRLGE------ 3289
+                *****...................9999999999999999999999887776676777887777*****************************...... PP
+
+                .-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCH CS
+       FAT  264 kseeilqaysaateldpswykawhtwalfnfevls 298 
+                   +++qa++++++   +    w +wa++++++ +
+  CMO046CT 3290 -FGAANQAFASSVREYGEHGGVWLRWARYCDQRGR 3323
+                .89****************************9755 PP
+
+>> CMN075CT  pep chromosome:ASM9120v1:14:178693:187519:-1 gene:CMN075C transcript:CMN075CT gene_biotype:protein_coding t
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   79.2   0.0   9.3e-26   9.2e-23       2     343 .]    1782    2266 ..    1781    2266 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 79.2 bits;  conditional E-value: 9.3e-26
+                CCTTCCCCTSSSGHHCCCCT.......TSSSS--...CCCHCCCCHH......--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHC CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk...kdspdka...ffeailalhr......nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEle 88  
+                +l +eaa rlg Wd +e     ++       +++   + +   alh+      +   +++e + +ar+ l    +  + esy+r y++lv+l+++a+ e
+  CMN075CT 1782 DLGIEAALRLGRWDALETLSASVEdpaA---RGTrsaLANIAKALHQaqqpghESGAQLSETLRRARSGLSDTVATAALESYARTYPALVQLHAVADVE 1877
+                78999**********8888878885543...4444446666666887533554448999**************************************** PP
+
+                HHCCHHCSS-..........---TTTTT.......TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.............................. CS
+       FAT   89 eiiqykqkls..........sseelksl.......lktWrkRlpgvqddvevwqdilsvRslvlspied.............................. 140 
+                +i+  + +l+                          + ++ Rl+ v+++ +++++il++ + +l  + +                              
+  CMN075CT 1878 CILGDHADLEavlqryahdwL------AggadvgaANWLEARLQCVASSWQAREPILAIQRAALLVQVErarhlvarnesaaaaaaaaaaaapctslrv 1970
+                ***999999987766655552......04444453444589******************999999999999**************************** PP
+
+                ................................................................................................... CS
+       FAT  141 ................................................................................................... 140 
+                                                                                                                   
+  CMN075CT 1971 pwtlaggerangsswaapkndndtssstssggggggierpapatvlaagrsqpasvqfpdqtwlvsastkpavlvpgttrppasfvtpersaqqflera 2069
+                **************************************************************************************************8 PP
+
+                HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.......TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---......... CS
+       FAT  141 lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp..pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq...eptnl 234 
+                l++++a  ++ l+ a+laRksg++  A+ +L++l + +         ++ ++ +k+  a+ge + al +L  +++ l    +++s+ + ++     ++ 
+  CMN075CT 2070 LVFQEAADAVTLRLARLARKSGHHAAAIAYLQQLPRAS-----LfqGPACIELAKIYRARGETRRALAQLPLSLTDLQLGRKTASTSNSSStgtWRSSS 2163
+                777777788888**********************3333.....1346999********************88888776666644444444445345555 PP
+
+                .....HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSS CS
+       FAT  235 eeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssek 333 
+                   ++l+++++ ++++w+++ ++++     ++ei  ++++a  ++p+ +k++  +++f++    +   +++ + +++   y  +a+e++ +sl+++   
+  CMN075CT 2164 GSAARLVSKALCLQAQWMQEDRSAQ-----PQEIIDCFQRALSIQPETEKIYVLLGRFYDSLTPERDAEPRIQARQQWL-YRQSALEHYARSLRYGCRY 2256
+                6667777************999966.....***********************************98887766566665.******************* PP
+
+                TTTCHHHHHC CS
+       FAT  334 slqdllRlLt 343 
+                ++ +l+R++t
+  CMN075CT 2257 VYHSLPRIIT 2266
+                *******987 PP
+
+>> CML157CT  pep chromosome:ASM9120v1:12:399695:401582:-1 gene:CML157C transcript:CML157CT gene_biotype:protein_coding t
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.2   0.1    0.0015       1.4     242     296 ..     198     260 ..     162     268 .. 0.85
+   2 !    5.0   0.0    0.0033       3.3     240     294 ..     297     360 ..     279     389 .. 0.81
+   3 !   11.7   0.1     3e-05      0.03     153     303 ..     436     597 ..     413     609 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 6.2 bits;  conditional E-value: 0.0015
+               HHCCCTCCC........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+       FAT 242 arcylkkGe........wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+               ar+ l++G           +al +l++  ++ e + + +++  e+ p+  +a+++wa +++e 
+  CML157CT 198 ARNTLRRGIqsnpgnpfLIQALADLEKLLRNWERARKLFAQTLEVEPKFLSAYNSWAMMEDEL 260
+               6666666666666777667788888888889999**************************996 PP
+
+  == domain 2  score: 5.0 bits;  conditional E-value: 0.0033
+               HH.HHCCCTCCC........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+       FAT 240 ll.arcylkkGe........wlaalqklnwseekseeilqaysaateldpswykawhtwalfnf 294
+               ++ ar++l k+          l+a++ l+ ++ ++ ++ +++++a+  dps  +a+ ++a++++
+  CML157CT 297 SKfARNLLDKALenehenvhLLHAVGVLEFKQGNPAKARASFLKAISADPSFMQAYLSLAQMEE 360
+               455666666666666666666777777777778899************************9976 PP
+
+  == domain 3  score: 11.7 bits;  conditional E-value: 3e-05
+               CCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCC.HHHHCCTSSCCC..SS-SS---...................HH. CS
+       FAT 153 kfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkL.refvscllekke..elssglevq........eptnleeftkll. 241
+               ++a+l  + g+l++A ++L+++ e d+      ++ y+yl +  + + + +a  ++    +++++  ++  +    +++               +  ++  
+  CML157CT 436 EYAKLELRLGNLKTARNLLSRAIEVDD---GY-PYAYQYLGLVEQADMRIDAARNIySRGIERCSAANSesR--YPIDTAslyhswalMEW---KCGDVTs 527
+               567777777777777777777777777...22.455666666655555444433333666666666655331..22222233433322111...2334455 PP
+
+               HHCCCTCCC.......CCCCCCCCT.S...-SS.CCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH CS
+       FAT 242 arcylkkGe.......wlaalqklnwseeksee.ilqaysaateldpswykawhtwalfnfevlskeeek 303
+               ar+++++G        wl+a +   ++   +++ + ++y++a+  +p+   +w++wa f+ ++ ++e+  
+  CML157CT 528 ARNLFERGLkvdrsagWLWASYARFEADLGNDDlAQHYYARAVNASPKDPAIWNSWAAFERRRCNQERAD 597
+               88999999999999999988877555555555516678899*********************99998654 PP
+
+>> CMT415CT  pep chromosome:ASM9120v1:20:1026292:1028595:1 gene:CMT415C transcript:CMT415CT gene_biotype:protein_coding 
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.7   0.0     0.034        34     148     170 ..     166     188 ..     151     196 .. 0.85
+   2 ?    6.2   5.7    0.0014       1.4     234     292 ..     407     475 ..     264     481 .. 0.71
+   3 ?    1.8   0.0     0.032        31     265     301 ..     486     525 ..     476     538 .. 0.73
+   4 ?   -0.9   0.0      0.21   2.1e+02     263     289 ..     635     661 ..     611     668 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 1.7 bits;  conditional E-value: 0.034
+               TTCCCCCCCCHCHHHHCCSTTHH CS
+       FAT 148 aemwlkfanlaRksgrlslAeka 170
+                ++wl  a+la +++++ lA ++
+  CMT415CT 166 GRAWLGLARLAERANNFALARRL 188
+               589*****************876 PP
+
+  == domain 2  score: 6.2 bits;  conditional E-value: 0.0014
+               ......HH.HHCCCTCCC.........CCC.CCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+       FAT 234 leeftkll.arcylkkGe.........wla.alqklnwseekseeilqaysaateldpswykawhtwalf 292
+                e+  +l+ ar+++ kG          w++ al +  ++ ++ e++ + ++aa + dp+   aw +wa +
+  CMT415CT 407 AEKADDLQaARALFAKGTqahprdaaiWQSwALVE-ARRAKDVEKARKLFAAALHADPQHLAAWQAWAML 475
+               45556677788888888888888888866514444.5667778888888888888888888888888865 PP
+
+  == domain 3  score: 1.8 bits;  conditional E-value: 0.032
+               -SSCCHHHHCCHHCTCCCHS...TTCCCCHHHHHCCHHHH CS
+       FAT 265 seeilqaysaateldpswyk...awhtwalfnfevlskee 301
+               +ee+ + +++a+  +p++ +    wh+wa ++f   +++e
+  CMT415CT 486 IEEARKLFQRAVWAAPDSPDigrVWHAWATAEFTYARDLE 525
+               567777777776665555543228********99888775 PP
+
+  == domain 4  score: -0.9 bits;  conditional E-value: 0.21
+               ..-SSCCHHHHCCHHCTCCCHSTTCCC CS
+       FAT 263 ekseeilqaysaateldpswykawhtw 289
+               e++ ++  ++ +a+e+dp+  ++w + 
+  CMT415CT 635 ENIAAARRCFEKAVEMDPGNSDIWEAY 661
+               35899999************9999765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       4973  (2501354 residues searched)
+Passed MSV filter:                       233  (0.046853); expected 99.5 (0.02)
+Passed bias filter:                      124  (0.0249346); expected 99.5 (0.02)
+Passed Vit filter:                        20  (0.00402172); expected 5.0 (0.001)
+Passed Fwd filter:                         5  (0.00100543); expected 0.0 (1e-05)
+Initial search space (Z):               4973  [actual number of targets]
+Domain search space  (domZ):               5  [number of targets reported over threshold]
+# CPU time: 0.08u 0.01s 00:00:00.09 Elapsed: 00:00:00.04
+# Mc/sec: 18067.69
+//
+[ok]

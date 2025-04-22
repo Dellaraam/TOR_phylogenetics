@@ -1,0 +1,1072 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Trichophyton_equinum_cbs_127_97_gca_000151175.ASM15117v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR11139.orig.30.pir  [M=2684]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+          0 1634.7  20.3          0 1634.4  20.3    1.0  1  EGE03582  pep supercontig:ASM15117v1:supercont1.11:165755:173
+          0 1073.0  42.3          0 1072.7  42.3    1.0  1  EGE05388  pep supercontig:ASM15117v1:supercont1.22:178840:190
+   5.7e-216  719.8  15.1     8e-216  719.3  15.1    1.2  1  EGE05156  pep supercontig:ASM15117v1:supercont1.20:330737:339
+   4.1e-160  534.5  20.1   4.1e-160  534.5  20.1    2.6  2  EGE07593  pep supercontig:ASM15117v1:supercont1.45:103266:112
+    5.8e-17   59.6   1.0    2.8e-16   57.3   1.0    1.9  1  EGE03276  pep supercontig:ASM15117v1:supercont1.9:338587:3415
+    2.9e-11   40.7   0.1    2.9e-11   40.7   0.1    2.5  2  EGE01380  pep supercontig:ASM15117v1:supercont1.1:1144008:115
+     0.0011   15.5   2.3     0.0039   13.7   0.0    2.1  2  EGE07718  pep supercontig:ASM15117v1:supercont1.47:95067:9721
+     0.0038   13.7   0.4     0.0049   13.4   0.4    1.1  1  EGE03577  pep supercontig:ASM15117v1:supercont1.11:154530:156
+  ------ inclusion threshold ------
+      0.027   10.9   0.5      0.032   10.7   0.5    1.1  1  EGE01811  pep supercontig:ASM15117v1:supercont1.3:67934:70997
+       0.45    6.9  14.7        2.4    4.4   1.6    2.4  2  EGE04331  pep supercontig:ASM15117v1:supercont1.15:385955:390
+
+
+Domain annotation for each sequence (and alignments):
+>> EGE03582  pep supercontig:ASM15117v1:supercont1.11:165755:173168:1 gene:TEQG_02612 transcript:EGE03582 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1634.4  20.3         0         0      30    2684 .]      12    2374 .]       5    2374 .] 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 1634.4 bits;  conditional E-value: 0
+  PTHR11139.orig.30.pir   30 sallsalssplessrsraaraaaellkavveelldllmvllendsaeaflqflsklssllqselqsepsfadsldvlasellalll 115 
+                             ++l+++l+s +e+ r    raa+el +++++  ++l        +++ fl+ + ++     +++++    + ++d+  +e+ + ll
+               EGE03582   12 QRLFQELKSKNEDTR---NRAATELHENIIAASREL--------PQDKFLDHYNSI-----NQRIAQLIVT-GNDA--NEKIGGLL 78  
+                             57899*****99876...44679*************........999999999999.....4444444333.8888..99****** PP
+
+  PTHR11139.orig.30.pir  116 slaslitllespivvvllrslselakgllsqllnqllpllllavrhilatdsrvvlalaldllldelladlihhvrkglslaqavr 201 
+                              l++li  ++            ++a++ + +++++l+     a+    ++++++vl  a+  l     ++l++   +g        
+               EGE03582   79 MLDRLIEFDG-----------VDTAQK-TTRFASYLRS----AL----RSNDNSVLLFAAGCL-----GHLAKP--GG-------- 129 
+                             ******8844...........477778.**********....55....777777665555555.....888888..77........ PP
+
+  PTHR11139.orig.30.pir  202 avlllssnlvdaslplliqtalewlll...ilerlea.......vlil.........lflvhvqlfflliwlalrdpvleirelai 268 
+                                +l+++lv+    ++iq+alewl+                  v            l     ++ f+liw+alrdp++ ire+a 
+               EGE03582  130 ---ALTAELVE----SEIQSALEWLQTerqE-----SrrfaavlV--IqelakgsptLLYGFIPQVFDLIWVALRDPKVVIRETAA 201 
+                             ...9*******....***********65553.....444443540..245556999977788899********************* PP
+
+  PTHR11139.orig.30.pir  269 tlLaallslllsiegkirilsssfypaaydaaldglg.llsllelfssllvllellvfseafsarlpallerllslaallqlllal 353 
+                             ++++ ++ +++++ +  r++   ++ ++y++ l gl  +++ + +++sll+l ell + ++f  + ++                  
+               EGE03582  202 DAVSECFEIIAARDSAVRSQ---WFSRVYEESLQGLRsNNV-DWIHGSLLTLKELLLKGAMFMNEHYH------------------ 265 
+                             ********************...***************999.**************888875544444.................. PP
+
+  PTHR11139.orig.30.pir  354 lqsvvtsaalagllefltlklllksvvrvvkllllavaapeplgflllrllfrslgskdlllellllellplleallnplfallay 439 
+                                                                           ++ +l+  ++++d+++++ + + +p l+++ ++ f+    
+               EGE03582  266 --------------------------------------------NTCEIVLR-LKDHRDPKIRAQIVLTIPVLASYAPLEFT---- 302 
+                             ............................................44555556.99*********************999997.... PP
+
+  PTHR11139.orig.30.pir  440 thalhlrdlllelcltlpvrlsllpllsfllqplvrdelasqllrtlelildnlepepasersdlflalgalllall......... 516 
+                                                                     ++l++ + ++ ++l+++  +er+++f+a+g++++a+          
+               EGE03582  303 ---------------------------------------NTYLHKFMIYLQAQLKRD--KERNTAFIAIGKIASAVGhaigqfldg 347 
+                             .......................................46699999*********9..*****************6655554333 PP
+
+  PTHR11139.orig.30.pir  517 ....kaggnrkflkqplplltdaae.lsgllelppkllplpl..svqafeflavalpsvsnls...gvfvittlalsdellavlsv 592 
+                                 +                  +e l+             l  + +a +  ++++ + s+ls   g    t  + +++ll+++++
+               EGE03582  348 iivyI------------------REgLA-------------LkaRNRAAVNEGPMFECISMLSlavG---QTLSKYMESLLDPIFA 399 
+                             32220..................22222.............22233344444899********7665...88888899******** PP
+
+  PTHR11139.orig.30.pir  593 rllslllaalaaaldllesapsllsivlerllnllssslealvlslisaaldllscllgsalsavlsalatalqeaalsglsvwlr 678 
+                             ++ls  l+ ++   d ++ +p+  ++++e+ll++ls+ l+++++  +  + + l+             +  + +++++s  +    
+               EGE03582  400 CGLSKSLTQAL--VDMAHYIPPIRATIQEKLLDMLSIVLCGTPFRPLGCPESRLP-------------SIPSFAKDFGSLPQDR-- 468 
+                             *********99..*************************98888855443333222.............3444444444333322.. PP
+
+  PTHR11139.orig.30.pir  679 talfllglaeasealav.allllllstlgallfsgsseealllclvlfvrellvllLlnpnldvrkaaaaalalLlassgnssvls 763 
+                                                +++l+l+tlg+++fsg   ++l +    fvr++++++++++  ++rka+a ++++L+   ++ +++s
+               EGE03582  469 ----------------SdSEIALALHTLGSFDFSG---HVLNE----FVRDVAIKFVDSDSPEIRKASALTCCQLFVHDPIINQTS 531 
+                             ................246999*************...*****....*******************************98776654 PP
+
+  PTHR11139.orig.30.pir  764 llsplssvlldarpeekavvvleilekllllaildldplvrlsvleslaedlaafdehasqafslsllfallndeslevreaaisl 849 
+                             + s+              +vv+e++ kll++++ d+dp++r+ vl sl +    fd+h++++++ + lf ++nde ++vreaais+
+               EGE03582  532 AHSI--------------QVVSEVIDKLLSVGVGDPDPDIRRNVLFSLDKK---FDRHLAKPENVRCLFLAVNDEMFPVREAAISI 600 
+                             4443..............89***************************9765...89****************************** PP
+
+  PTHR11139.orig.30.pir  850 lgrlslksllnpalrlallrkllsqlLtrL.elellsskllehldsrleeesakllgtlirkseaeellppyavsilpaLvallae 934 
+                             +grls+    npa++++ lrkll++lLt+L +    +        sr++eesa+l++ +++  +a  l++ y+ +i+ +L++++++
+               EGE03582  601 IGRLSS---VNPAYVFPPLRKLLVNLLTGLsF----AT------NSRQKEESAQLISLFVS--NATKLIRSYVDPIVTTLLPKTSD 671 
+                             ******...*******************9953....33......89***************..6666******************* PP
+
+  PTHR11139.orig.30.pir  935 ennelrsallktladlletllaevglleaaerrqllvallplilaallqlwdsesseerlllkrlllleseakllvalallgqlve 1020
+                             +n+ +  ++lk++++     la++g  +  +  q+l +l+p il+ l+   d++s++     kr+          +al++lgql++
+               EGE03582  672 GNPSVEATTLKAIGE-----LATIG--GEDM-KQYLPQLMPIILDSLQ---DLSSQA-----KRE----------AALKTLGQLAS 731 
+                             *************99.....99988..6666.5566************...876665.....456..........*********** PP
+
+  PTHR11139.orig.30.pir 1021 stgeviepllfdsiwlglepaypsllaellklllkflelshserrealavlgllgald...........sldalrrallqlttllv 1095
+                             + g+viep+           +yp+ll++l ++ +k++ +  s r e+++++g+lgald            + +++ +   ++++ +
+               EGE03582  732 NAGYVIEPYK----------EYPQLLSILINI-IKTE-QTGSLRKETIKLIGILGALDpykdqqisetsPDVHYVNEVQTVSDVSL 805 
+                             **********..........***********6.****.9********************988877777633333333333333333 PP
+
+  PTHR11139.orig.30.pir 1096 khapealipaqeseldysttkvaillllqlilrdlslpssyvlqvlvallkalasealqllvlpadkvllapslllrlkdgqlhss 1181
+                               ++        +e++y+t  v+i+ llq ilr++sl  +y++ v+ a+  ++++++l+++ +   +++  p+++++++    ++ 
+               EGE03582  806 IMQGLTP----SNEEYYPT--VVINTLLQNILRESSL-AQYHSAVIDAIVTMFKTLGLKCVPFLG-QII--PAFISVIR----STP 877 
+                             3333333....699*****..****************.**********************55555.889..*******8....666 PP
+
+  PTHR11139.orig.30.pir 1182 vsrirellvrhatrvlilqqLallvsivnaharklaldlapllvlwerrw........tilalleqlvlsaaareflgsylpelll 1259
+                             v +++e           ++qLa lv iv++h+r  +l+++  +  +  +w        til+l+e++ ++++ +ef++    +l++
+               EGE03582  878 V-SRLE---------TYFNQLAILVTIVKQHIRA-FLPEI--IEVIRDYWgspypvqcTILSLVEAV-AKSLEGEFKK----YLAA 945 
+                             6.9999.........9******999*********.77777..66667788**************999.8999999998....5555 PP
+
+  PTHR11139.orig.30.pir 1260 lesggvlpllgpllkellnllqqalgavlwinsdfllqklrelgsklklekllllallLpilnkllekllelailvraaalsslaa 1345
+                             l     +pl++   ++++    + + ++++ +   +l+++ ++gs   +e++  ++ ++p+++k+++k ++ +  +r  a+++la+
+               EGE03582  946 L-----VPLMLDTVEKDN----SVR-RQPTER---ILHTFLIFGS--SAEEY--MHRIVPAIVKIFDK-TQNPSNIRKCAMETLAK 1013
+                             7.....666655555554....333.333333...69********..99***..**************.78999************ PP
+
+  PTHR11139.orig.30.pir 1346 l.rassvtkiasallhslvrvlqllaaqdstnskllaadalgalgalvfnlgldyskilpllkklglflrsrrdwdleltllskvl 1430
+                             l r+  v+++as  +h+l rv+       ++ +k+l++ al+ ++ l f+lg d++ ++pl++k++ f+ +++     +    +vl
+               EGE03582 1014 LsRQVNVSDFASLMIHPLSRVI-------NNAEKPLRQTALDCICTLIFQLGQDFNNYVPLINKVLKFNQIHHH---SY----HVL 1085
+                             **88899***99999***9999.......778999**********************************98888...56....99* PP
+
+  PTHR11139.orig.30.pir 1431 arrlskatllagallqrqllaqelaslaiellseeggsslsnggilglrdsdlrsgvvhlvlsekgsgqkllrvfeayvkelippr 1516
+                             +++l+k  +l++ l ++                                                  ++++l + +a      +++
+               EGE03582 1086 VSKLQKGDPLPQDLNPN-------------------------------------------------EHHSNLVEDSA-----FADV 1117
+                             *******9776666444.................................................22334444444.....7777 PP
+
+  PTHR11139.orig.30.pir 1517 ltsklevalgvls.....sersmksdwleWlrgfsllLlkespspalracqllglaqsdpqlarrlfpaaflslwssl...qldql 1594
+                               +k+ v++++l       + s+++dw+eW+r+fs++Llkesps+alrac +  la  + +la++lf+aaf+s+w++l   ++++l
+               EGE03582 1118 GQKKIFVNQQHLKnawdaTQKSTREDWQEWIRRFSVELLKESPSHALRACAS--LAGIYQPLAKDLFNAAFVSCWTELyhqYQEEL 1201
+                             799999***9999**99777********************************..**************************559*** PP
+
+  PTHR11139.orig.30.pir 1595 leellsalwsktippeilqtllalleflehdddtvaqglllfgsvwssvdlallpidllqlgeaanacqayakalhylepefrepp 1680
+                             + ++  al+s++ippeilq ll+l+ef+ehd                  d+ +lpid+++lg+ a +c+a+akalhy+e+ef++  
+               EGE03582 1202 VHSIDLALTSQNIPPEILQILLNLAEFMEHD------------------DK-ALPIDIRTLGKYAGKCHAFAKALHYKELEFEQD- 1267
+                             ******************************9..................88.********************************5. PP
+
+  PTHR11139.orig.30.pir 1681 slikllgallsppleaLaelyssLgepdalyGilesra..ldletkaawaeklggweeAlaayeralqkasqdagsleatlgrlrc 1764
+                                +  ga     +eaL+++++ L+++da+ Gil++++   d+e+k++w+ kl++weeAlaay r    ++   +s+e+t+g++rc
+               EGE03582 1268 ---QNSGA-----VEALISINNHLQQSDAAIGILRKAQayRDVELKETWFVKLQRWEEALAAYKRRELIDP---DSFEVTMGKMRC 1342
+                             ...55555.....*****************************************************88777...6*********** PP
+
+  PTHR11139.orig.30.pir 1765 llaLgqw..............epeaeeellplaleaawslrlgkwdsmleyllalaaa...easselrllqallalhqgdfdeaqe 1833
+                             l aLg+w              + e+++  +pla++aaw   +g+w++m++y+     +   e+s++++++ a+l lh+++f+ea++
+               EGE03582 1343 LHALGEWkmlsdlaqekwnqaSNEHRKAIAPLAAAAAW--GRGQWELMDSYI-----GvmkEQSPDRSFFGAILSLHRNQFEEASA 1421
+                             *****************99765****************..************.....3344************************* PP
+
+  PTHR11139.orig.30.pir 1834 liqkarqlllgaelsa.vdesysrayalllvklqqLsElqelee...sqi.slaa..lldlksiletWrnRlpgtwqddvevwedl 1912
+                             li+kar  l+ +elsa ++esy+ray   +v++q+L E   lee   +   s+++  ++    ++ tW+ Rl g+ q++vevw+++
+               EGE03582 1422 LIEKARNGLD-TELSAlLGESYNRAY-NVVVRVQMLAE---LEEiitY-KrSVDDpeKQ--EAMRLTWNKRLLGC-QQNVEVWQRM 1498
+                             **********.***************.9999*******...7775432.2444447755..8899**********.********** PP
+
+  PTHR11139.orig.30.pir 1913 lavRrlvlppieddaelwlklaslaRkqgnlslalkll...............rvlieylkllwalaaveegksflleqeealldl 1983
+                             l+vR+lv+ p e ++++w+k++ l+Rk++++ la+++l                v+++ lk  wa+     g++     +eal+ l
+               EGE03582 1499 LKVRALVITPRE-NLDMWIKFVNLCRKSNRMGLAERSLsalesieaagggippEVTYARLKFDWAS-----GRQ-----AEALKAL 1573
+                             **********98.999**************************************************.....777.....******* PP
+
+  PTHR11139.orig.30.pir 1984 qqllielsstaleeells................tn.......................rkllakvllllgkWlsal.....sqls 2025
+                             + ++i l + ++  +  s                tn                       r+llak++l++g+W+  l     ++++
+               EGE03582 1574 EEFTISLTESYGRYN--SilsaqdehtptdgpalTNgindsnhtnagyskqhlgdankiRRLLAKSHLKQGEWQTVLqrgdwRSDG 1657
+                             ***999998887665..3556788877777777722555555666888999999999***************************** PP
+
+  PTHR11139.orig.30.pir 2026 veevlsslksaasaalqlapklekawhswalfndellehsqesgasaatlrllsaekaalqylvaavtcylkalala.ggnslqdt 2110
+                             v++vl+s+++    a+q+   ++kawh+wal+n+e+++++  ++++         ++++l+++ +a+ ++++++al  +   lqd+
+               EGE03582 1658 VRDVLNSYSA----ATQYNRDSYKAWHAWALANFEVVNSLTAQPEREP------PHHIILEHVMPAIRGFFRSIALLpS-STLQDA 1732
+                             ********99....***********************88766655444......779******************7664.6668** PP
+
+  PTHR11139.orig.30.pir 2111 lrlLtLwfdhgaatevndalekalssvplwpWlpviPQLiarlsh.nrevrkllknLLvriakqhPqalvyplrvaakslssears 2195
+                             lrlLtLwf hg ++evn a  +++s+v++++Wl+v+PQLiar+++ n++vr ++++LL+ ++k+hPqalvypl va ks  +  rs
+               EGE03582 1733 LRLLTLWFTHGGDAEVNAAVVEGFSTVSIDTWLEVTPQLIARINQpNPKVRTAVHRLLAELGKAHPQALVYPLTVATKS-NVVRRS 1817
+                             *******************************************999*********************************.9999** PP
+
+  PTHR11139.orig.30.pir 2196 eaaleildklrkkvpalaseletlvqqlirsafleee.....lllaqlvsdeliklaiees.....skniakasavlkplkamlek 2271
+                             ++a +i+d +r + ++l++++e +  +l+r+a l+ e     l       +e        s     ++++++++  l+pl++ml+ 
+               EGE03582 1818 QSAMTIMDSMRAHSSRLVEQAEVVSGELVRVAVLWHElwyeaL-------EEA-------SrlfftDHDVEGMLSTLAPLHDMLD- 1888
+                             **********666666666666666666666666655553211.......333.......244455888****************. PP
+
+  PTHR11139.orig.30.pir 2272 egp....epdfiqallelleklkt...........................ltkqlpalsslgplleeis......alr.elavPG 2319
+                             +g+    e +f qa++++l   k+                           +  q ++++sl   l++is        +  la+PG
+               EGE03582 1889 KGAetlrEVSFAQAFGRDLAEAKHfcnlyretgemgdlnqawdlyynvfrkISRQVTQIKSL--DLKYISpklkdvV-DlDLAIPG 1971
+                             9999****************555555555555555555556555555555588888888888..7777778876641.357***** PP
+
+  PTHR11139.orig.30.pir 2320 t.ykasplvtIssFspqvevlsskqrPkkltirGSDGkeypfLlKgheDLRqDeRimQLfrlvNtlLskdre.rrRkLsIrtYsVi 2403
+                             t  ++ p+++I+sF++ + v  +k +P+k++irGSDG+ y++ lKgheD RqDeR+mQLf+lvNtlL++d+e  +R+L+I++++ i
+               EGE03582 1972 TyQSGRPVIRIQSFDSVAIVVQTKKKPRKMIIRGSDGNSYMYALKGHEDIRQDERVMQLFGLVNTLLDNDSEcFKRHLTIQRFPAI 2057
+                             *6666999****************************************************************************** PP
+
+  PTHR11139.orig.30.pir 2404 PLsprsGLieWVpntdtLhsilrgcadyrearakipsdlniehrlmrqaapqaay.......kvevfkevleetepplLhkelwlk 2482
+                             PLs++sGLi+W++ntdtLh +++   +yre r +i   lniehr m+q+ap+  y       kvevf +++++t++ +L+++lwlk
+               EGE03582 2058 PLSQNSGLIGWCCNTDTLHALIK---EYRESR-RI--LLNIEHRIMLQMAPD--YdnltlmqKVEVFGYAMDNTTGKDLYRVLWLK 2135
+                             ***********************...***998.77..9**************..44455666************************ PP
+
+  PTHR11139.orig.30.pir 2483 ssspeaWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalgptGi 2568
+                             s s+e+Wl+rR+nytrSl vmSmvGyiLGLGDRHpsN+Lldr tG++vHIDFgdcf+ a++r+++PE+VPFRLTr+l+ a++++ i
+               EGE03582 2136 SKSSESWLERRTNYTRSLGVMSMVGYILGLGDRHPSNLLLDRITGKIVHIDFGDCFEIAMHREKYPERVPFRLTRMLTFAMEVSNI 2221
+                             ************************************************************************************** PP
+
+  PTHR11139.orig.30.pir 2569 EGvFrssceavlrvLRknkesLlavLeaFvhDPLvdWt................................................ 2606
+                             EG+F  +ceav+rv R+nkesL+avLeaF+hDPL++W+                                                
+               EGE03582 2222 EGSFHITCEAVMRVIRENKESLMAVLEAFIHDPLINWRlgaresparlsildrhpptesnmdnpiqpttfsrrrpsildggildaq 2307
+                             ***************************************99999999999988888888888888888888887777776444322 PP
+
+  PTHR11139.orig.30.pir 2607 .kaerlkllssqqaeaelgeal...aavvirrvkakLeGrddfgderkgsegLsvegQVqrLIqqAtdpeNLcrmYeGWcP.W 2684
+                              +            ++e++e++   a +v+ rvk kL+Grd      +++  L v++QV++L+ qAt+ eNLc+ Y+GWc  W
+               EGE03582 2308 qG-----------IPNEGREVQnarALQVLGRVKEKLTGRDF-----RTPDELNVSDQVDKLLVQATSVENLCQHYIGWCSfW 2374
+                             21...........4555555557779999**********887.....89999****************************988 PP
+
+>> EGE05388  pep supercontig:ASM15117v1:supercont1.22:178840:190434:1 gene:TEQG_04268 transcript:EGE05388 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1072.7  42.3         0         0       9    2684 .]      31    3808 ..      23    3808 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 1072.7 bits;  conditional E-value: 0
+  PTHR11139.orig.30.pir    9 lgelkesieaishraeysnllsallsalssplessrsraaraaa.........................ellkavveelldllmvl 69  
+                             + e+++s+e+  + a y+ +l++l++a+++ l  ++                                    ++++ ++ dll++l
+               EGE05388   31 AVEIRDSLEHLCSGATYPIFLAKLWPAFKKVLKGEP-------VfislsfeqklrncileilhrlplelPEVEPYAGDMVDLLIEL 109 
+                             777888888877777899999999999999987552.......1355667776666666666666666633456666666666666 PP
+
+  PTHR11139.orig.30.pir   70 lend......................saeaflqflsklssl........lq............................selqsep 97  
+                              +n+                      +++ +++fl  ++++         +                            ++  +++
+               EGE05388  110 VRNEnednavicmktimdlqrrqiraTQSRVQSFLELIQNMfegmpqvvRDtfdtpqaqtstpgmpstpntaaqnfqspRPSSPAT 195 
+                             666699********************777777777666444455455551156677888888999999999999999998888899 PP
+
+  PTHR11139.orig.30.pir   98 sfadsldvlasellalllslaslitllespivvvllrslselakgllsqllnqllp........l..................... 154 
+                             s +d  ++ +++++ l + ++s+++l+e+pi+vv+ +++    ++ +  ++ +++p        +                     
+               EGE05388  196 SVSDLGPEQQQTNQMLAKGMHSFKVLAECPIIVVSIFQIH---RHPVTTNVKVFVPlikgilllQarpqekahsearaqgkiftgv 278 
+                             9999999999******************************...99***********877766551666677778888888889999 PP
+
+  PTHR11139.orig.30.pir  155 .................................................lll...............avrhilatdsrvvlalald 176 
+                                                                              l +               a+rhi  ++ r  +   ld
+               EGE05388  279 skdiknraafgefitlqvktmsflayllrvyashlqdflpslpgvvvrlL-QdcprekssarkellvAIRHIINFNYRKIFLEKLD 363 
+                             99999999999999999999999998777777777777777777766650.2566666666666666******************* PP
+
+  PTHR11139.orig.30.pir  177 llldel....................ladlihhvrkglslaqavravlllssnlvdaslplliqtalewlll.............. 228 
+                              llde+                    ladlihhvr +l+  q+ r +  +++nl+d+   +++q+++ +lll              
+               EGE05388  364 DLLDERtligdgltvyealrplaysmLADLIHHVRESLTRDQIRRTLEVYTRNLHDDLPGTSFQAMSAKLLLnmaekiasmenkke 449 
+                             **************************************99*******************************998887777777776 PP
+
+  PTHR11139.orig.30.pir  229 ...........ilerlea............vlil..............................lflvhvqlfflliwla...... 255 
+                                        i                  v  +                              +           +++a      
+               EGE05388  450 aryflimildaI----GDkfatmnyqynnaV--KtsklvkqnadnlsegyladknhppdwdeidI-----------FTAApikatn 518 
+                             666666644442....223333555555330..24455557777777788878555555555431...........4444444577 PP
+
+  PTHR11139.orig.30.pir  256 ....lrdpvleirelaitlLaallslllsiegkirilsssf............................................. 292 
+                                 ++dpv + ++l +tl+++l++l +++ ++     ++                                              
+               EGE05388  519 prdrNADPVNDNKFLFKTLITGLKGLFYQLKSC-----NPEdlkldpsytpvnwaevsfgynaeevriikklfhegaglfryygad 599 
+                             7888***************************99.....333345555555555555555555555555555555555555555555 PP
+
+  PTHR11139.orig.30.pir  293 ...ypaaydaaldglglls..................llelfssllvllellvfseafsarlpallerllslaallqlllallqsv 357 
+                                ++  y++        +                  lle+f+ +++ ++  +f+e+f +++p+l   +l+ +all+l++ +l+s+
+               EGE05388  600 skePEIQYAS--------PleflssqymrhmsseekeLLESFGTIFHCVDTAAFHEVFKSEIPYLHSLMLEHSALLHLPQFFLASE 677 
+                             5555555555........055555566688999***************************************************** PP
+
+  PTHR11139.orig.30.pir  358 vtsaalag.......llef................ltlkl.llksvv..................rvvkllllavaapeplg.fll 400 
+                              ts+a ag          +                      +l +++                  +v+k+ +++v+a+e  + fll
+               EGE05388  678 ATSPAVAGmtlqylmE--HihevgsadvansrillR---MfKLSFMAvtlfsaqneqvlhphvtkIVAKCIEYSVTAEERMNyFLL 758 
+                             ********97776540..256667667676553221...222233335577788888889999****************8888*** PP
+
+  PTHR11139.orig.30.pir  401 lrllfrslgskdlllellllellplleallnplfallaythalhlrdlllelcltlpvrls.llpllsfllqplv.....rdelas 480 
+                             lr+lfrs+g++  ++ell++ellplle ll   + ll ++++++ rdl +el+lt+p+rls llp+ls+l++plv      ++l+s
+               EGE05388  759 LRSLFRSIGGG--RFELLYKELLPLLEMLLETFNNLLLGARKTQERDLYVELTLTVPARLShLLPYLSYLMRPLVvalraGSDLVS 842 
+                             ***********..*****************************************************************999999** PP
+
+  PTHR11139.orig.30.pir  481 qllrtlelildnlepe...p..asersdlflalgalllall...........ka....ggnrkflkqplpllt.daaelsgllelp 545 
+                             q+lrtlel++dnl+++   p  a ++++l+ al+ +l++ +           ++    g+nrkfl +p+ l+  ++++     ++p
+               EGE05388  843 QGLRTLELCVDNLTADyldPimAPIMDELMTALWDHLRPNPyshfhahttmrILgklgGRNRKFLNHPPELSFqQYSD-----DTP 923 
+                             ****************98659*99********************9887655511666****************88887.....555 PP
+
+  PTHR11139.orig.30.pir  546 .................pkllplplsv..............................qafeflavalpsvsnls............ 572 
+                                                       +                              qa+++l++ l++   ++            
+               EGE05388  924 smdikligsnkdrafplD--------IgidlalgklldtpapnasetvqkadifykkQAYRMLSSQLKLYIGFEhppddlatllrl 1001
+                             677777777666666551........0444444455677777888889999999999*******9999999999************ PP
+
+  PTHR11139.orig.30.pir  573 .....................gvfvittlalsdellavlsvrllslllaalaaaldllesapsllsivlerllnllsss....... 630 
+                                                  +  + +++++++ +l+     ll++++ a ++++ l++sa+++l++v++++ + + +        
+               EGE05388 1002 qandladgkfsgtvdileksdRQCSSSKRLAQETTLK----KLLKACIVA-STIPHLKQSATAFLADVCRHF-TIIEIGrslaqsr 1081
+                             ****************999886677888888888888....*******99.9*******************7.5566568****** PP
+
+  PTHR11139.orig.30.pir  631 ....lealvlslisaaldllscllgsalsavlsalatalqeaalsglsvwlrtalfllgl.........aease............ 691 
+                                     +l  ++  ld+ +  l +a++++l++++ a  +aa + +      a+ ++g+         +                
+               EGE05388 1082 hirrPFSVSLGEGPLYLDTRT--LADAVVECLASENPAVRDAAKEVIFNVRSAAVVIFGSaekagklpfF---Phlgrtlchachd 1162
+                             **9866667777777888666..*************************9999999999997765555551...0555566666699 PP
+
+  PTHR11139.orig.30.pir  692 ....................alav.allllllstlgallfsg.................sseealllclvl............... 724 
+                                                 +l++ +l+  ++++ +al++++                 +                          
+               EGE05388 1163 eewftkaagslgihlfvtelDLGNaWLIDRQVEFIRALMYVIkdtpsdfpgatriqaqkT----------Mdlilrkcnegvskee 1238
+                             9*****************9988899*****************888666666655444331..........0222333455666666 PP
+
+  PTHR11139.orig.30.pir  725 .........fvrellvllLlnpnldvrkaaaaalalLlassgnssvlsllsplssvlldarpe..eka...............vvv 784 
+                                       ++ +l  +L++ n+ vr+aa++ +a+L+a  +  +v++l++p++ +ll +++    +a                  
+               EGE05388 1239 lknergrvlALCGVLSYELSHMNKHVRQAAQSGIATLAATLN-AEVHELITPVKDRLLMPIFNkpLRAlpfptqigcieaiayC-- 1321
+                             667777888999999************************985.***************99886664447897777664444440.. PP
+
+  PTHR11139.orig.30.pir  785 leile...........................kllllaildl..............dplvrlsvleslaedlaafd.....ehasq 824 
+                                 +                                    +               +++r+s+l++l+ ++++ d      + s+
+               EGE05388 1322 ----LglrqnivtfndqlnrllmeslaladvdD--------DalaskpnefktaeqIVNLRVSCLRLLSMAMGFPDfasgpQSHSR 1395
+                             ....16666666666666665566444444440........155555555566666*****************999888775555* PP
+
+  PTHR11139.orig.30.pir  825 afslsllfallndeslevreaaisllgrlsl......ksllnpalr.....lallrkllsqlLtrL.e.lellss........kll 889 
+                             a ++  +f++l+++s+e+ eaa s+l+  +       k+ll+++lr     l + ++l++  L +L   l+ll++        +  
+               EGE05388 1396 ARIIACFFKSLYSRSPEIIEAANSGLRDVLTqtnklpKDLLQNGLRpilmnLQDPKRLSVAGLDGLaRlLTLLTNyfkveigsR-- 1479
+                             **************************99877***********************************976899999555554444.. PP
+
+  PTHR11139.orig.30.pir  890 ehldsrleeesakllgtlirkseaee..........................llppyavsilpaLvall.aeen............ 936 
+                                          ll ++   ++++                           llp++a s+++ Lv ++ + e+            
+               EGE05388 1480 -------------LLDHMRVIADENIlqrasfglveqnppmkivaaifnifhLLPAAATSFMENLVNKVlYLEDrlrrtssspfrk 1552
+                             .............444444444442233355555555777889************************9996566789999999999 PP
+
+  PTHR11139.orig.30.pir  937 ...................................................................................... 936 
+                                                                                                                   
+               EGE05388 1553 pllkylnrypreswifmqakfqeekhgrffgqllaspessalrstifadsetliklaflqeesprkntaaingiyfvhsicsheat 1638
+                             9999999999999999999999999**********988888888888888888888888888888888888888888888888877 PP
+
+  PTHR11139.orig.30.pir  937 .......nelrsallktlad.lletllaevglleaaerrqllvallplilaallqlwdsesseerlllkrlllles.....eakll 1009
+                                    ++l   ll+++ d  +    ++++++e++ ++q  ++ll+ ++  l+      +s  +     l++l+       a+ l
+               EGE05388 1639 kgflnaqPDLKRHLLNSGRDlNSKLRNDRLPPDERLRVEQAQDQLLEIFTIHLS------QSLDD-----LDFLFDvidkiSAGDL 1713
+                             777777766677777778887777778888888888777775555544444443......33333.....6666664455544444 PP
+
+  PTHR11139.orig.30.pir 1010 valallgqlvestgeviepllfdsiwlglepaypsllaellklllkflelshserrealavlg....................... 1072
+                               +++l ++  +  ++                  s++a+ ++++ + l l ++ +++++  l+                       
+               EGE05388 1714 KTTLTLPKFFYQ--YI---------------ITNSSIAYRRSVISRCLDLYNQRTSSQK--LKtyafhhlvnpilamdvkntwdsp 1780
+                             444444444333..44...............5579999999999999999999988888..7889999999988777778877788 PP
+
+  PTHR11139.orig.30.pir 1073 ..................llgald..........sldalrrallqlttllvkhapeal.......i.pa..qeseldysttkvail 1120
+                                               l+++             +d+ r++llql+ ll+k+            i +a  +   l ++  k+ ++
+               EGE05388 1781 tsgtgvldrsltdlihnrLWKPQLgdlseesgqpGIDHSRMELLQLSALLIKYHHGIVqesrkdiIkFAwsY-IRLEDTINKYGAY 1865
+                             8877777777666666663333337778888888*****************9887766*9988752655752.3334499****** PP
+
+  PTHR11139.orig.30.pir 1121 lllqlilrdlslpssyvlqvlvallkalasealqllvlpa.dkvllapslllrlkd....................gqlhssvsri 1185
+                             +l+++++ ++++ps++v q++vall+a++ e++  lv +a +  +lapsl++r+                          ++v++i
+               EGE05388 1866 VLISYFIAHYETPSKIVVQIYVALLRAHQNEGKS-LVTQAlE--ILAPSLPKRILSgpdprfpvwarcprrilteeTANLQQVMSI 1948
+                             ********************************99.7888898..99********99********************66699***** PP
+
+  PTHR11139.orig.30.pir 1186 rellvrhat............rvlilqqLallvsivnaharklaldlapllvlwerrw.......................tilal 1236
+                             +++lvr ++             + +l ++a++  +v+ + rkl l l+ l+++we+++                       +    
+               EGE05388 1949 LQFLVRQPDlfyesreyfiplIIPSLVKIAGP-TNVSFDSRKLVLHLINLIWIWEEKRvtgwrdptspnsakrklaemqasP---- 2029
+                             *********************9**********.9************************865555544433333333222220.... PP
+
+  PTHR11139.orig.30.pir 1237 leqlvlsaaareflgsylpellllesggvlpllgpll................................................. 1273
+                                                      s++ +pl++++                                                  
+               EGE05388 2030 -------------------------SMSTTPLPLKERpeytipldlrtplikylvtfvcslvdrfsvpaarfrdllppkphqalnn 2090
+                             .........................4455565655556666666667777777777777777777777777777888888888899 PP
+
+  PTHR11139.orig.30.pir 1274 .....kellnllqqalgavlwins....dfllqklrelgsklkleklll..............lallLpilnkllekllelailvr 1336
+                                  k+   ll + l+++ w+++    +  +          +le +l+              + + L++l+ ll+  ++++il r
+               EGE05388 2091 ygeicKKSVVLLRRFLSPDYWPDVdidlY--QK---------TLEPVLCsekaekpdekhvtaMVNSLQVLRILLAGKPNSWILDR 2165
+                             99999778889999999999997744331..22.........23333334444445557778877777777777666666666666 PP
+
+  PTHR11139.orig.30.pir 1337 aaals.slaal................rassvtkiasallhslvrvl....................................qll 1369
+                               +++   +++                +                                                       + +
+               EGE05388 2166 MSTIQhLVEKAlrsdnpeiqdclhggeE------------------EmdispklpppikkvldalpqeepveeeggmdvdkpsAEF 2233
+                             5555544444433333333333344442..................0344444444444444777888888877777777666434 PP
+
+  PTHR11139.orig.30.pir 1370 aaqdstnskllaadalgalgalvfnlgldyskilpllkklglflrsrrdwdleltllskvlarrlskatllagallqrqllaqela 1455
+                              ++ st ++++              ++++y   + +l++l+  +++  d+  +++  +k+++++l+k++       ++++ +   +
+               EGE05388 2234 VTFLSTVATES-------------ISSGNYIAGINILWTLSKCQPAEMDQ--HIPHVMKIFSQKLAKDH-----VASFNNNPPVAN 2299
+                             44433333333.............33344555555777777777999999..9999*************.....333333333333 PP
+
+  PTHR11139.orig.30.pir 1456 s.lai..ellseeggssl.sn.ggilgl...r.d..sdlrsgvvh..lvlsekgsgqkllrvfeayvkelipprltsklevalgvl 1528
+                             + ++   +l  +++ +   ++ +  ++l   r     d+r+ +++    l+e+++   +  ++  +    i+ +++ ++  ++   
+               EGE05388 2300 RtAEQqaQLPDPYEVEIGiDLiSKTIDLiavRmSnlGDQRRPFLSvlAQLVERSQ---N-IPLCTK----ILGMVENWIFQPT--- 2374
+                             3422232333333333444555555555553341333333332222322222222...1.122222....3333333333222... PP
+
+  PTHR11139.orig.30.pir 1529 ssersmksd.................wleWlrgfsllLlke...........spspalracqllglaqsdpqlarrlfpaaflslw 1586
+                                 s+++                   +++l +f++l ++            + +  l++++l+g +++d+ +++r++++++ sl 
+               EGE05388 2375 ---ESWPTLkektavlhkmllfesrtDSTMLGKFLELVIRVyedpkitrtelTVR--LEHAFLIGTRAQDVDMRTRFMSIFDKSLT 2455
+                             ...2333334444444444444444444688888888888899*******66666..***************************** PP
+
+  PTHR11139.orig.30.pir 1587 ssl.....q..ldqlleellsalwskt........................................................... 1606
+                             +s      +  ++q+++ l++ +w+ +                                                           
+               EGE05388 2456 RSAntrlsYvlTSQNWDTLAESFWLTQasqlvmgsvdmsasvklhpddftipptsfiyghsekdpakenvvvdnhlealvaeqkkf 2541
+                             ******996789************************************************************************** PP
+
+  PTHR11139.orig.30.pir 1607 ...ippeilqtllalleflehdddtvaqgl..llfgsvwss......vdlallpidll.......qlgeaanacqayakalhylep 1674
+                                   ++++++l +l +l+h d++va+ +   lf + w+s       dl++ +  ll       q++e++n++qa+++++  ++p
+               EGE05388 2542 saeLGDVKARDILEPLTELQHADPEVAYKVwvSLFTICWASltrderIDLEKGMVSLLtreyhhrQIDERPNVVQALLEGVIRASP 2627
+                             ***55679***************************************888888888888888899********************* PP
+
+  PTHR11139.orig.30.pir 1675 efreppslikllga.................llspp...........leaLaelyssLgepdalyGilesraldletkaawaeklg 1732
+                              f++pp+++k+l++                 +   p           l+aL e+y++L+e+d++yG +++r++ +et+aa++++++
+               EGE05388 2628 RFKIPPHVMKFLSRtfdawymaaialeryaiD---PvidtpvvresnLDALVEIYAGLQEDDMFYGTWRRRCKFVETNAALSYEQQ 2710
+                             **************998888877766444330...244445577899*************************************** PP
+
+  PTHR11139.orig.30.pir 1733 g.weeAlaayeralqkasqda....gslea........tlgrlrcllaLgqw....epeaeeellplaleaawslrlgkwd..... 1796
+                             g w++++++ye+a+ ka +++    +   a        +   + c+++L qw    + +++e +++l+lea w ++l++w+     
+               EGE05388 2711 GmWDKSQQLYESAQVKARTGSipfaQ---AeyflwedhW---MICAQKLQQWdiltDFAKHENFNDLLLEATW-RNLENWQgdtnr 2789
+                             ******************99996640...3446665544...78********99966****************.444588887767 PP
+
+  PTHR11139.orig.30.pir 1797 ....smleyllalaaaeas.selrllqallalhqgdfdeaqeliqkarqlll.gaelsavdesysrayalllvk............ 1864
+                                 s+l++++     +a  ++++++qa++ l +                   +++l++  + ++++ +l+++k            
+               EGE05388 2790 eqidSLLKSVS-----DAPtPRRTFFQAFMSLLKF---------------HTkQETLQEFNNVCDESIQLSIRKwhqlpkritnah 2855
+                             75555555553.....4444************943...............233677777666688888888888888888888888 PP
+
+  PTHR11139.orig.30.pir 1865 ......lqqLsElqeleesqi..slaa........ll.dlksiletWrnRlpgtwqddvevwedllavRrlvlppi.......... 1923
+                                   +qqL+El+++  s i  sl++        +  +lk++l tWr+Rlp++ +dd+++w+dl ++R+++++ i          
+               EGE05388 2856 ipilqnFQQLVELHDA--SVIctSLSQtnernmdtKSaELKLLLTTWRDRLPNV-WDDINAWQDLVTWRQHIFQLInstylsllpp 2938
+                             888888******9999..8778888889987754433899**************.88889************************** PP
+
+  PTHR11139.orig.30.pir 1924 ...............eddaelwlklaslaRkqgnlslalkllrvlieylkllwalaaveegksf..lleqeealldlqqllielss 1992
+                                            +++a+ ++++a++aRk++ ++++ ++       l+ +++l+++e++++f  l+eq++++++          
+               EGE05388 2939 qtnnvasnsyafrgyHETAWIINRFAHVARKHQMPEVCINQ-------LSRIYTLPNIEIQEAFlkLREQAKCHYQNPK------- 3010
+                             ***************99************************.......9***************977**********88....... PP
+
+  PTHR11139.orig.30.pir 1993 taleeells.......tn.....rkllakvllllgkWlsalsqlsveevlsslksaasaalqlapklekawhswalfndellehsq 2066
+                                  el+s       tn     ++ +a ++ l g  l+ l++   ++   ++++a+  al ++ +l+kaw +w+ ++d+++++ +
+               EGE05388 3011 -----ELNSglevinnTNlnyfnAQQKAEFYTLKGMFLAKLDH---NM---EANEAFGVALFYDLRLAKAWAEWGQYSDQRFKADH 3085
+                             .....55556666666335566644455555555544444463...33...589999999999*******************9985 PP
+
+  PTHR11139.orig.30.pir 2067 esgasaatlrllsaekaalqylvaavtcylkalalaggnslq..dtlrlL..tLwfdhgaatevn..dalekalssvplwpWlpvi 2146
+                             ++                 +++++a++cyl a+ l+        ++++lL   Lw+  + ++e +  +a+e    ++p+w+W++ i
+               EGE05388 3086 SD----------------IDQACNAISCYLEAAGLY-----KnhKSRKLLsrILWLLSQDNDEGKiaSAFENFKGDTPVWYWITFI 3150
+                             54................56777**********998.....345999********8888888888999****************** PP
+
+  PTHR11139.orig.30.pir 2147 PQLiarlshnrevrkllknLLvriakqhPqalvyplrvaaksls.......................................... 2190
+                             PQL+a+l   +++++l+k +L +iak +Pq+l+++lr+++++                                            
+               EGE05388 3151 PQLLASL--AHREARLCKAVLGKIAKLYPQSLFFLLRTSRED-Ylglkksqeqkqeklnrakasgspttkggspeakssmlpdaaa 3233
+                             *******..9999**************************999.457**************************************** PP
+
+  PTHR11139.orig.30.pir 2191 ...............................searseaaleildklrkkvpalaseletlvqqlirsafleee.....lll.a... 2236
+                                                            ++ ++e a+e ++ l++++p la ++et+v+ +i + f++ +     +l+ a   
+               EGE05388 3234 assspravaspkptppvangqtpnegdaaqkDKQPWEYADETMAGLKTAFPLLALTMETMVD-QIHKNFKCPPdedayRLIvAlln 3318
+                             **************************************************************.7***********98744444666 PP
+
+  PTHR11139.orig.30.pir 2237 ......qlvsdeliklaieesskniakasavlkplkamlekegp...epdf...iqallelleklktltkqlpalsslg.p...ll 2306
+                                    ++++++     ++++  ++++++++++ +++l++++    e df     ++ e++ kl++++ +++ +   + p   +l
+               EGE05388 3319 dglayvGRMPTSYA----QDCKLPHSTEANITRFAETILPAHIRksfEADFvtkKPTMYEYIHKLRRWRDKFEEKLD-RrPqyaHL 3399
+                             66666677888888....6659999999999999******88888884444668***********************.66779988 PP
+
+  PTHR11139.orig.30.pir 2307 eeis........alr.elavPGtyka.....splvtIssFspqvevlssk.qrPkkltirGSDGkeypfLlKgheDLR..qDeRim 2375
+                             e+ s        ++  e +vPG+y +     +++v I +F p+v+   ++  ++++l irG+DG+ ++f +      +  ++eR+ 
+               EGE05388 3400 ESFSshlsefkfMKFdEVEVPGQYLEhndknQNFVCIDRFLPHVDLVRGIgVCHRRLRIRGHDGSLHTFAVQHPAARHcrREERML 3485
+                             8888999999976669*******99999999999************99999*********************556666******** PP
+
+  PTHR11139.orig.30.pir 2376 QLfrlvNtlLskdre.rrRkLsIrtYsViPLsprsGLieWVpntdtLhsilr.gcadyrearakipsdlniehrlmrqaapqaa.. 2457
+                             QLfr+ N  L+k +e rrR+++++ +  +P +p+ +L+ ++p++++L+ i++ +c+  ++++++   +   +  +mr+ a ++a  
+               EGE05388 3486 QLFRIFNCVLRKRKEsRRRNIYFHLPLMVPFAPHIRLVKDDPSYISLQGIYEdHCR-QTGMAKDE--PVLFTMEKMRALAEAKAnv 3568
+                             ****************************************************7444.44444333..3344445555555444477 PP
+
+  PTHR11139.orig.30.pir 2458 .....................y....kvevfkevleetepp.lLhkelwlkssspeaWlarRknytrSlAvmSmvGyiLGLGDRHp 2517
+                                                  +    + e+f+ ++++ +p+ +L ++   + +++++++ +R++++ ++A+ +++ y+ + G+R p
+               EGE05388 3569 svlgvdnpnptsanssqrapeQagilRTEIFDAIQKKWVPNtILLQYVQQTYPNFADFWLFRRQFSYQYAAIAFMTYVMHMGNRYP 3654
+                             77666666666555555545505566*************9999999999************************************* PP
+
+  PTHR11139.orig.30.pir 2518 sNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalgptGiEGvFrssceavlrvLRknkesLlavLeaFvhDPLv 2603
+                             s+i ++r tG+++   + ++  +a  ++  PE VPFRLT+n++ ++gp+ +EG+F  + +a++r+L +++  L   L +Fv+D+Lv
+               EGE05388 3655 SKIHISRRTGDIWSSELIPAMNSARAIFYNPEQVPFRLTPNIQTLMGPLTTEGIFACAIMAIARCLTEPRLELEQQLSIFVRDELV 3740
+                             ************************************************************************************** PP
+
+  PTHR11139.orig.30.pir 2604 dWtkaerlkllssqqaeaelgealaavvirrvkakLeGrddfgderkgsegLsvegQVqrLIqqAtdpeNLcrmYeGWcPW 2684
+                              W+ +++           +  ++l+ +v +++   + + + +  +++++  L+ +  V  LI+  ++p NL++++  W+++
+               EGE05388 3741 MWA-SAQ----------QRVLQQLKDMVQSNIDYIVNRAVSL--TSSPDGNLPANQSVIDLISRSVNPHNLAQCDALWMAY 3808
+                             ***.322..........2334455556677778788776664..3344445999999**********************96 PP
+
+>> EGE05156  pep supercontig:ASM15117v1:supercont1.20:330737:339828:-1 gene:TEQG_04173 transcript:EGE05156 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  719.3  15.1  9.2e-219    8e-216     802    2683 ..     280    2275 ..      48    2277 .] 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 719.3 bits;  conditional E-value: 9.2e-219
+  PTHR11139.orig.30.pir  802 lvrlsvl.eslaedlaafdehas.................qafslsllfallndeslevreaaisllgrlslksllnpalrlallr 869 
+                             ++++s+l es+++ l+ f+                      + sl+ l++   ++s ++  ++ +l  r           ++   +
+               EGE05156  280 DSKASLLrESFNHGLH-FA---VrlwkaifewldvntvavGEQSLTSLLVEFVSFSRKLCSYSTRLSSR-----------IDQKVL 350 
+                             3344445455433333.22...11112222222222222222233333333333333333333333322...........222222 PP
+
+  PTHR11139.orig.30.pir  870 kllsqlLtrLel..ellsskllehldsrleeesakllgtlirkseaee......................llppyavsilpaLval 931 
+                               l+q++ +L +  e+l        ++ l +  a++l  +ir s+++                       +++   +s+ ++Lv  
+               EGE05156  351 LPLFQCVVDL-VdpEQLKR------SVELQQVLAEFLMEVIRLSQSSAgveglveelffyplsdigansdFFQTLHQSLQHVLVRV 429 
+                             2233333333.12245555......5555555666666666655553334444455555555555555554444444444444433 PP
+
+  PTHR11139.orig.30.pir  932 laeen.....................................................................nelrsallktla 948 
+                             +   +                                                                     + +++++++tl+
+               EGE05156  430 V---AgehraklgskvfrrvglfdkdrgstsrsyapdkkdspivasvdastderapkrprlsnvedqndhpdlsSVISNKIYSTLG 512 
+                             3...0333456666666666666666666666666666666666666666666666666666666666666666333344444444 PP
+
+  PTHR11139.orig.30.pir  949 dlletllaevglleaaerrqllvallplilaallqlwdsesseerlllkrlllleseakllvalallgqlvestgeviepllfd.. 1032
+                             ++  + l ++ +++ + +            + l+   +   + + ++l rl           a+a+ ++l+  +++ i+   ++  
+               EGE05156  513 IFPPNGLEDLDEDAMQDF------------SNLS---PVDKCIIIMNLGRL-----------ACAWTQSLCGEEYSNIAGQTYMck 572 
+                             444444444332222221............1111...22222222222222...........333333333333322222221111 PP
+
+  PTHR11139.orig.30.pir 1033 ...................siwlg........................................................lepayp 1043
+                                                s++ +                                                        ++ a+p
+               EGE05156  573 fghlrniissilpriedsgSCRISamiairnivnhdlrhanpfvsgiayteisklatllrltpaalfrpywrtlsqlvikNFQARP 658 
+                             11111111000001222221111133333333333333333333333333333333333333333333333334444444333444 PP
+
+  PTHR11139.orig.30.pir 1044 sllaellklllkflelshserrealavlg.llgaldsldalrrallqlttllvkhapealipaqeseldysttkvaillllqlilr 1128
+                             + +++l++ ll ++  +   r+++  +l+ l         l+r+  + ++++  h+++++     ++  +  ++ +il+ll  +++
+               EGE05156  659 QMADQLCD-LLGME-VNGFLRLTTTYTLPyL--------VLTRKKDIISRIAMTHSKKSI----SELIKTRSHLASILSLL--LVQ 728 
+                             44444444.23333.3333333333333221........122222222222222222222....11111222335555553..555 PP
+
+  PTHR11139.orig.30.pir 1129 dlslpssyvlqvlvallkalasealqllvlpa....dkv............................................... 1163
+                              l+ p++ ++ +l+ l   +    l  lv+++    + +                                               
+               EGE05156  729 PLPNPEAAIPCILQELSVKFNDPTLSKLVRSEcvpiT-Cellrglggsgegkgskyydaleyiasvtprqvgrgvvakpenlsvfi 813 
+                             5555566665555555555544444444444433210.122222222223333333333333333333333333333333333333 PP
+
+  PTHR11139.orig.30.pir 1164 ........................................................................llapslllrlkdgq 1177
+                                                                                                     +  ++++l+l    
+               EGE05156  814 eehvlgvvtefvhvindfqvlqpipekkrdiialgemikiakgnigialpqicaclraaldtsdlrdhafatW--NTMILALN--- 894 
+                             3333333333333333333333333333333333333333333333333333333333333333333333333..44444444... PP
+
+  PTHR11139.orig.30.pir 1178 lhssvsrirellvrhatrvlilqqLallvsivnaharklaldlapllvlwerrwtilalleqlvlsaaareflgsy.lpelllles 1262
+                               ++++ + +          +++ +   +++++++ +k                + + l+++++  +++  ++    lp l++   
+               EGE05156  895 -EVDLEPLVD---------QTFAIILKYWEFLTEETKK----------------KEIELVDYILRNNDDTLIAVYEtLPSLES--- 951 
+                             .444444444.........4444444444444444444................33445677755555553333223333333... PP
+
+  PTHR11139.orig.30.pir 1263 ggvlpllgpllkellnllqqalgavlwinsdfllqklrelgsklklekllllallLpilnkllekl..lelailvraaalsslaal 1346
+                                +p l+ + k+++  l+q ++         ++ k+  l +  + ++   +a++ ++l+ ll +l   e +i  ++++ +++   
+               EGE05156  952 ---IPELSEQNKKIE-NLKQGMD---------IRSKFMALCRRCQSDN---FAVVERALVELLPNLtnHEEFIHGSVFSEQPDK-- 1019
+                             ...466644444443.4444443.........5556666655555566...788888888888877774444444444444332.. PP
+
+  PTHR11139.orig.30.pir 1347 rassvtkiasallhslvrvl........qllaaqdstnskllaadalgalgalvfnlgldyskilpllkklglflrsrrdwdlelt 1424
+                                       +l++   r+l        +      s++   l+a +lg++g+l++n+ +++ k+   +  l++f rs  ++d++++
+               EGE05156 1020 ----------SLVGKVTRTLldccvkynP-----SSPTIVSLSAQCLGLIGCLDPNR-IESIKEKKDIVVLSNFERSDETLDFIIF 1089
+                             ..........3333333333444444321.....35556669***************.99999999999999999*********** PP
+
+  PTHR11139.orig.30.pir 1425 llskvlarrlskatllagallqrqllaqelaslai.ellseeggs.sl.snggilglrd.sdlrsgvvhlvlsekgsgqkllrvfe 1506
+                             +l  +l+ ++ +a+         +  +q ++++a+ +ll +++ s +  +          +d++       +s++ +   ++ +++
+               EGE05156 1090 CLQNILVDAFLAAS---------NSRTQGFLAYAMqALLTTGNIStAIpP--------RsQDPQ-------SSDLYR---RWLELP 1148
+                             **********9988.........****************99999988866........334422.......333333...688899 PP
+
+  PTHR11139.orig.30.pir 1507 ayvkelipprltsklevalgvls..se.rsmksd..wleWlrgfsllLlke...spspalracqllglaqsdpqlarrlfpaafls 1584
+                             + + +++ p l+sk+ v  g+ s  ++ + ++ +  ++eWlr+f l++l++      ++l + +++ ++++  ++   l+p+a l+
+               EGE05156 1149 ELSRNTLTPFLNSKYSVTIGAIStsCQyPLFTPSlnHSEWLRTFVLDMLQKgksRNIQILFSVFSRIIRTQEKSISVFLLPFAALN 1234
+                             989999**********9998888997785555556699***************9777889999999999999999*********** PP
+
+  PTHR11139.orig.30.pir 1585 lwssl...qldqlleellsalwskt.........ippeilqtllalleflehdddtvaqgl.llfgsvwss............... 1642
+                             +  s    ++++l  el + l  +          ++     +++++l++l+++ +  + ++  ++++ ++                
+               EGE05156 1235 VAVSAideEREHLKGELTNILECPLpdhkgpereNLILFSESVFTVLDYLSRWLHGKKKEYtSITSIGNNAsrsqkesltesavqi 1320
+                             ***99*96366664444444444445557*****555688999**********999999998777777777999998999999999 PP
+
+  PTHR11139.orig.30.pir 1643 ..vdlallpidllqlgeaanacqayakalhylepefreppslikllgallspp....leaLaelyssLgepdalyGilesra.ldl 1721
+                               v+ +l  i+ + ++++a  c++ya+al + e+++r+  s+ +  +     +       L+++y++++epd+++Gi++    ldl
+               EGE05156 1321 krVEHLLSCIPAEIISKRAVECKSYARALFHWEQYIRQQKSRPETDAM----EleslYQRLQDIYTQIDEPDGIEGISSHLHvLDL 1402
+                             9966678888888*************************8855554444....0334456899************************ PP
+
+  PTHR11139.orig.30.pir 1722 etkaawaeklggweeAlaayeralqkasqdagsleatlgrlrcllaLgqw............epeaeeellplaleaaw.slrlgk 1794
+                             +++++++  +g+w  A++ ye  l+k ++   +l++++++l cl++ gq+            +++   ++lpla+e++w +     
+               EGE05156 1403 DQQILEHRNSGRWTAAQSWYELQLNKSPK---DLDTQINLLTCLKESGQYgillnqfdslkkNEAIIPKMLPLAIESSWgKK---- 1481
+                             ****************************8...*************************99986599999***********844.... PP
+
+  PTHR11139.orig.30.pir 1795 wdsmleyllalaaaeasselrllqallalhqgdfdeaqeliqkarqlll.gaelsavdesysrayalllvklqqLsElqeleesqi 1879
+                              d                   l +++ +l+                  + g +l +v  s+ +a +    kl+ LsE++ l +   
+               EGE05156 1482 -DE------------------LGKIIEELR---------------MNVAsGFTLNSV--STFQASHDGTLKLHVLSEIELLTS--- 1528
+                             .32..................334444443...............111113344444..555555566667******444443... PP
+
+  PTHR11139.orig.30.pir 1880 slaa.......lldlksiletWrnRlpgtwqddvevwedllavRrlvlppi.....eddaelwlklaslaRkqgnlslalkll... 1950
+                                +        +  ++++     Rl +     ++  + +l +R+ v + +      ++a+ w + a+laRk++  ++a ++    
+               EGE05156 1529 ---DsydnfstPR--NELFTVLDRRLDML-GGCISDKQYVLGIRQAVMDLSpayhdLEVASVWQRIARLARKANWKDQAFNAVlhs 1608
+                             ...2333433534..99999999999999.9999***********99999999***6699*******************88889** PP
+
+  PTHR11139.orig.30.pir 1951 ......rvlieylkllwalaaveegksflleqeealldlqqllielsstaleeells......................tn..rkl 2006
+                                   + +iey+ llw       g +      +a++ l++               s                      +n  + l
+               EGE05156 1609 aqlndqNSTIEYARLLWKE-----GLH-----RKAIQTLEGAI-------------SanvfgpngrsetsdndasrptkGNeqNLL 1671
+                             *******************.....888.....99*****7733.............124566676776665665565551166*** PP
+
+  PTHR11139.orig.30.pir 2007 lakvllllgkWlsalsqlsveevlsslksaasaalqlapklekawhswalfndellehsqesgasaatlrllsaekaalqylvaav 2092
+                             +a+++lll+kW+ + +q++++ + s +++    a+++++k+ek ++++++++ ++le++++ ++  +     ++++   +  ++++
+               EGE05156 1672 MARAYLLLAKWMDSAGQTQSDFIVSRYRQ----AIHYHSKWEKVHYYLGKHYAKILESEKSKPLGKE-----GQKYLSGEASKLVI 1748
+                             *****************************....*************************998886555.....34444444445*** PP
+
+  PTHR11139.orig.30.pir 2093 tcylkalalagg.nslqdtlrlLtLwfdhga...........................atevndalekalssvplwpWlpviPQLi 2150
+                             ++yl++l ++ + ++ q ++++LtLw++h+a                            +e ++ l+k++s++++   ++++PQ++
+               EGE05156 1749 NSYLRSLTFG-NkYVSQTLPKVLTLWLEHAAavdqpfdpkrgdnedfqkhnmsqrkknLDEMHSQLKKYISRISPALLFTILPQVV 1833
+                             ********97.345558****************************9999999888888666679********************** PP
+
+  PTHR11139.orig.30.pir 2151 arlsh.nrevrkllknLLvriakqhPq.alvyplrvaakslssearseaaleildklrkkvpalaseletlvqqlirsafleeell 2234
+                             ar+ + n  v + l + +vr   ++Pq  l+  l+++ +s+++                     + ++++++              
+               EGE05156 1834 ARICQsNTTVYNTLTSMIVRPVVAFPQqGLWTVLALLKSSSKD---------------------QALSHSIFRS------------ 1886
+                             ***555999*********************9999999555444.....................3444555553............ PP
+
+  PTHR11139.orig.30.pir 2235 laqlvsdeliklaiees.skniakasavlkplkamlekegpepdfiqallelleklktltkqlpalsslgplleeis...alrela 2316
+                               +            ++ ++n +++  +++p++ ++++++                  lt +lp+  +                  
+               EGE05156 1887 --P-----------PGNqEQNPQRE--IFAPCRLAIPLQAT-----------------LTPTLPSSHEP-------HflkT----- 1928
+                             ..1...........22214444444..9*********9999.................99999999885.......23220..... PP
+
+  PTHR11139.orig.30.pir 2317 vPGtyka..splvtIssFspqvevlsskqrPkkltirGSDGkeypfLlKgheDLRqDeRimQLfrlvNtlLskdre.rrRkLsIrt 2399
+                                 ++a  ++ +tI+ + +++ vl+s+q+P+k+ irGSDGk y  L+K+++DLR+D+R m++++++N+lL +d e ++R+L+I t
+               EGE05156 1929 ----FRAfpADTITIEAILDEALVLNSLQKPRKINIRGSDGKIYGLLCKPKDDLRKDQRLMEFNSMINRLLMRDLEsNKRRLYIKT 2010
+                             ....33366899************************************************************************** PP
+
+  PTHR11139.orig.30.pir 2400 YsViPLsprsGLieWVpntdtLhsilr......gca.dyrearakipsdlniehrlmrqaapqaaykvevfkevleetepplLhke 2478
+                             Y+V+PL++++GLieWV+n +tL++i        g + +y e          i + l  +++++   k++vf+e++++   p+Lh++
+               EGE05156 2011 YAVTPLNEECGLIEWVNNLRTLRDIVTrllkdrGVTvNYSE----------IRRNLDEACSDD--SKLSVFREKVLKKYAPVLHEW 2084
+                             ***************************55444433334443..........445566778877..6******************** PP
+
+  PTHR11139.orig.30.pir 2479 lwlkssspeaWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalg 2564
+                             + +++++p+ W+a+R  ytrS AvmSmvGy LGLGDRH++NiL+  +tG+++H+DF +c+f++g+++ +PElVPFRLT+n+++a g
+               EGE05156 2085 FVETFPEPATWFAARLKYTRSSAVMSMVGYSLGLGDRHGENILFEEETGGILHVDF-NCLFDKGLTFDKPELVPFRLTHNMTDAYG 2169
+                             ********************************************************.***************************** PP
+
+  PTHR11139.orig.30.pir 2565 ptGiEGvFrssceavlrvLRknkesLlavLeaFvhDPLvdWtkaerlkllssqqaeaelgealaavvirrvkakLeGrddfgderk 2650
+                               G+ G+Fr++ce +l++LR+n +sL+++Le+F+h+P  d  +   +k++ +  +++      +  v++ v++kL+G ++     +
+               EGE05156 2170 AYGYNGPFRKTCELTLGLLRQNEDSLMTILETFLHEPTTDFIG---KKKRHNPRVPDT-----PEGVLELVRNKLRGLLP-----G 2242
+                             **************************************99664...344444433221.....44679**********99.....8 PP
+
+  PTHR11139.orig.30.pir 2651 gsegLsvegQVqrLIqqAtdpeNLcrmYeGWcP 2683
+                             +s +Lsv g+V+ LI qAt  +NL+ mY+GWcP
+               EGE05156 2243 ESVPLSVGGHVDELILQATQDKNLAAMYIGWCP 2275
+                             8999***************************** PP
+
+>> EGE07593  pep supercontig:ASM15117v1:supercont1.45:103266:112442:1 gene:TEQG_06507 transcript:EGE07593 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.1   6.3      0.26   2.3e+02     140     327 ..     461     812 ..     391     827 .. 0.66
+   2 !  534.5  20.1  4.7e-163  4.1e-160     800    2684 .]    1006    2869 ..     863    2869 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: -2.1 bits;  conditional E-value: 0.26
+  PTHR11139.orig.30.pir 140 akgllsqllnqllpl..................................lll................avrhilatdsrvvlalaldl 177
+                              g+ls ll ql+ +                                  l +                av+h  a   +++l  ++d 
+               EGE07593 461 EVGSLSTLLGQLVKNtlddnvvvaswsivaiasltscqyaksdqlketwL-QawelgvrnisspaisrAVCHFMALSIHSKLLSYSDI 547
+                            34455555555555233445555555555555555555555555555552.0355555555556666788888888888888888888 PP
+
+  PTHR11139.orig.30.pir 178 lldelladlihhvrkglsl.aqavravlllssnlvdas...lplliqtalewlll...........................ilerle 234
+                             + +      + +++ ++l  + + ++ +  +++ +a    +++l++ a++wl +                           +     
+               EGE07593 548 ARTLDSLVSSADLNGPANLnDSSLNLWVNVLELFSEANatqSQSLVKQACGWLKNkwvlvptdrvqtshmatfarplpllgiL----- 630
+                            8666633333333444444444444555666666666666888**********999999977666666655444444433330..... PP
+
+  PTHR11139.orig.30.pir 235 avlil................................................................................... 239
+                                l                                                                                   
+               EGE07593 631 ----Lscfgesipnpdisstgpvnriskvwmhlqqyakildyltltnkkmavhlgtvdnvptyvatqhhpsetlvldllqnkidtfhq 714
+                            ....255555555555555555555556666666666666777777777777777777777777777777777777888888888888 PP
+
+  PTHR11139.orig.30.pir 240 ......................................lflvhvqlfflliwlalrdpvleirelaitlLaallslllsiegkirils 289
+                                                                  + ++h q+ +l +w++l+d +  ++e+    L+++l +l++i     +  
+               EGE07593 715 vwaalctdkghhitveiiqvltslcivsivlmefipqsVRCQHTQDSVLKLWASLCDKFSKDEEH----LNTCLEVLAPIALSLKTP- 797
+                            888888888888888888888888888899999*****999******************999998....899999999888763322. PP
+
+  PTHR11139.orig.30.pir 290 ssfypaaydaaldglgllsllelfssllvllellvfse 327
+                                                   f s  ++l  lv+++
+               EGE07593 798 -----------------------FDSKDIILRGLVRMS 812
+                            .......................466666665555555 PP
+
+  == domain 2  score: 534.5 bits;  conditional E-value: 4.7e-163
+  PTHR11139.orig.30.pir  800 dplvrlsvl.es.laedlaafdehasqafslsllfallndeslevreaaisllgrlsl............................ 855 
+                              +l+rls l e+ l++++ +  ++  qa+  + lf +l+d +l v+   ++l+   ++                            
+               EGE07593 1006 KVLIRLSDLsEAiLRANPSHL-KETRQASPRTTLFRILRDGDLAVKFHISQLIPDIFSrfvlkehdailedvidrlpqdstwaegi 1090
+                             346677777777666666522.2333666667777777777777777666666443336666555555555555555555555555 PP
+
+  PTHR11139.orig.30.pir  856 ....ksllnpalr.lallrkllsqlLtrLel...ellss............................................... 886 
+                                 + ++++a+r  +llr+++ ++ +       +   s                                               
+               EGE07593 1091 alrlYLFAQLASRwHTLLRQSIYRIFETS-GnvpT---Siphakaclqeisvelgldgpkevfqlftpqilytwmdkesvtdvpfa 1172
+                             54444444444444444444444444322.11110...111111122222222222222222222222333333333333333333 PP
+
+  PTHR11139.orig.30.pir  887 .....kllehldsrleeesakllgtlirkseaeellppyavsilpaLvallaeen............................... 936 
+                                                                                                                   
+               EGE07593 1173 vfgypT------------------------------------------------Lrellidiqdevvgqtamrekeddkkaieacl 1210
+                             332222................................................03333333333333333333333333333333 PP
+
+  PTHR11139.orig.30.pir  937 .............nelrsallkt............ladlletllaevglleaaerrqllvallplilaallqlwdsesseerlllk 997 
+                                          ++ ++++++             +a+     ++ +  l+++ + ql  +++p+ +a+l++  d + +  r ++k
+               EGE07593 1211 ertfedllcesfyKAEAYSVARDismppsqeagakGAE-----RGMINILGKEKFFQLSEKYFPQTVATLFGSIDQTEQIQRAFEK 1291
+                             33333332333332223333333444444444333222.....3334477899999999999999******999999999999999 PP
+
+  PTHR11139.orig.30.pir  998 rlllleseakllvalallgqlvestgeviepllfdsiwlg..lepaypsllaellklllkflelshserrealavlg.......ll 1074
+                             r  +l+     lva+++++ +++st++            +   +++ ++ll+e++  l+k    + ++ ++ +  l        l 
+               EGE07593 1292 RPTFLHA----LVAWQNIHERSHSTSALPL---------SqqPCFRARYLLDEIEF-LCKRSGFDIETMWTPS--LVcfvartlL- 1360
+                             9988888....9************775332.........33488899999999977.5766666655555444..2223333321. PP
+
+  PTHR11139.orig.30.pir 1075 galdsldalrrallqlttllvkhapealipaqeseldysttkvaillllql..ilrdlslpssyvlqvlvallkalasealqllvl 1158
+                                d + +++  +l+ +++++k                      il+ ++   +l d+++ ++   + l+++l  + ++a + ++l
+               EGE07593 1361 ---D-STHAALGSLHTCSVIRK--------------------LKILICVAGqiLLYDYPF-EMLL-RGLSPFLTDF-HCAEDAIGL 1419
+                             ...2.22222223333333332....................222223333004445555.5444.5567777777.455555888 PP
+
+  PTHR11139.orig.30.pir 1159 pa...........dkvllapslllrlkdgqlhssvsrirellvrhatrvlilqqLallvsivnaharklaldlapllvlwerrwti 1233
+                              +           d     ps++  l+    +s ++++re         +++    ++ ++++++  ++ ++la            
+               EGE07593 1420 VWyliengkaylsD--N--PSFTAGLA----VSILASLRE---------FLS----AP-QASTTQRAHFKATLA------------ 1471
+                             88998888877555..6..99999999....666666666.........444....56.666666555555555............ PP
+
+  PTHR11139.orig.30.pir 1234 lalleqlvlsaaareflgsylpelllle.sggvlpllgpllkellnllqqalgavlwinsdfllqklrelgsklklekllllallL 1318
+                                 ++++  ++ ++fl++y+p ++ ++ +g+++ +l    ++++     ++           + +l++ g k + e  l+     
+               EGE07593 1472 ----KAHEFHLWFSDFLKTYSPSAEYSTlDGTSTESL----RRII---HASQ-----------NIQLVGNGIKGTYESELI----- 1530
+                             ....455556777788888877755431233333222....2221...1111...........222222222222222211..... PP
+
+  PTHR11139.orig.30.pir 1319 pilnkllekllelailvraaalsslaalrassvtkias.allhslvrvlqllaaqdstnskllaadalgalgalvfnlgldyskil 1403
+                                   le+l      +++++l           t++ s  +l++l  +    +  d+ ++  l +da+ a +a+ + ++++  ++ 
+               EGE07593 1531 ------LELL---GDKISGRNL----------LTAHTSnLVLSQLCGSF---QRPDTFRDDVLGEDAVAASHAMTLWSSVENRTLG 1594
+                             ......1111...111111111..........23333446666665555...3444555555666666665555555544433333 PP
+
+  PTHR11139.orig.30.pir 1404 pllkklglflrsrrdwdleltllskvlarrlskatllagallqrqllaqelas.........lai..ellseeggs.sl.sn.ggi 1475
+                                        s+r w          lar l +a+++ g  +++ ++ q++            ++  ++l++ + s s  s+  g+
+               EGE07593 1595 ----------KSFRLW----------LARVLGRAYAATGVVDPSFRKEQKSEFldysrdgflSGSkiAILRILCDSlSNsSGpAGL 1660
+                             ..........444444..........224444444444444444333333222222222222111122222222222222222222 PP
+
+  PTHR11139.orig.30.pir 1476 lglrdsdlrsgvvhlvlse.kgsgqkllrvfeayvkelipprltsklevalgvlssersmksd....................... 1537
+                              +             +l   ++   +++++ e+   ++ipp l + l                                       
+               EGE07593 1661 AER------------TLQMiLNNITRDPQIDEC--MQIIPPTLLKALT--------------Wepyqcpmlvfptsamahflslpq 1718
+                             222............111111111123333333..3344444444443..............033333333422223333333333 PP
+
+  PTHR11139.orig.30.pir 1538 ......wleWlrgfsllLlke.spspalracqllglaqsdpqlarrlfpaaflslwssl....q..ldqlleellsalwskt..ip 1608
+                                   +++  ++++l L+ + +   ++ a+ +  +    p++a +l+p+  ++++ s     q  + + +e + + l++++  i+
+               EGE07593 1719 qdaintASGFAQHLALFLCNQvTNDAVIGALPK--IIFEVPSFAVQLLPYILHDVLLSEidsnQktRTEVSELFKETLQNSNdpIL 1802
+                             334443334444444444444655555666666..77799***************9999*99855566668888888888888966 PP
+
+  PTHR11139.orig.30.pir 1609 peilqtllalleflehdddtvaqglllfgsvwss.vdlallpidllqlgeaanacqayakalhylepefreppslikllgallspp 1693
+                             p+ ++ ++++  +l++++          ++ +++ +   +l id+ +++ aa++cq   +  +   +                   
+               EGE07593 1803 PH-IRLIITCILYLRRQP---------LPRENTMnERNGWLDIDFMLAATAASRCQITTRIYRTSPS------------------- 1859
+                             66.99*********9984.........333444485666********************75555432................... PP
+
+  PTHR11139.orig.30.pir 1694 leaLaelyssLgepdalyGilesraldletkaawaeklggweeAlaayeralqkasqda..gsleatlgrlrcllaLgqw...... 1771
+                                  ++ +++++pd++yGi +  +ld+ +k +++e +g      +++ ++ + +++d   g+    +g+ + ++aL+        
+               EGE07593 1860 -----HI-QNIDDPDSFYGIQQDQSLDAVLKKLEHESSG----LKNLFFQSAN-FDTDLklGQSIDDGGAFEMIKALNYTnlqgls 1934
+                             .....44.45667************88888888888777....4444444444.55444554444488888888888733444444 PP
+
+  PTHR11139.orig.30.pir 1772 ...........epeaeeellplaleaawslrlg..kwdsmleyllalaaa...........easselrllqallalhqgdfdeaqe 1833
+                                                             +   +d+ml+ +     +            +s+ ++l+++l+al      + ++
+               EGE07593 1935 samfhsctptcA--------------------SneAFDYMLSTN-----IylqqwdipvptTTSPTGTLFKSLQAL-----NSLED 1990
+                             444444433320....................233444333322.....134445566675677***********9.....58899 PP
+
+  PTHR11139.orig.30.pir 1834 liqkarq.......lllgaelsavdesysrayalllvklqqLsElqelee....sqislaa.................ll.dlksi 1890
+                             +iq+ ++           + l     s+s+  +++ v l  L+E+ e++     s+                      ++ d++ i
+               EGE07593 1991 RIQIIKSlddcfleI--IDRLNQGNQSLSSLKSSMTV-LGILTEIDEIIMsdnsSH----LqeawdrltsrgewlkseSFqDISQI 2069
+                             999998888885531..45555533456666645555.778999777765444322....13455555555555544422333333 PP
+
+  PTHR11139.orig.30.pir 1891 letWrnRlpgtwqddvevwedllavRrlvlppi..........eddaelwlklaslaRkqgnlslalkll................ 1950
+                             l + +  ++++ +++  +  +                         a++++   ++   +g ++ +l++                 
+               EGE07593 2070 LISREAIFSSISRRS--HLKK-----------MinlnsrdaqiL-EAKCIRESLRISTEHGIPQASLQSAmslsklvqpcaelgvk 2141
+                             333333333332222..3333...........144444443321.23477777777777777776666669*************** PP
+
+  PTHR11139.orig.30.pir 1951 ...rvlieylkllwalaaveegksflleqeealldlqqllielsstaleeells.....tnrkllakvllllgkWlsalsqlsvee 2028
+                                  ++  ++ lw +     g+       + ++ lq+l ++           +     t    +a  l+ lg+ +++ +++++++
+               EGE07593 2142 idaATAFDLANVLWDQ-----GEM-----KTSIKILQNLSSQ-----------KglhsqTIPVSVAEILASLGHHIAEARLEQPDA 2206
+                             ***777999*******.....666.....7778888886532...........122223227889999****************** PP
+
+  PTHR11139.orig.30.pir 2029 vlsslksaasaalql..apkleka.....whswalfndellehsqesgasaa.................................. 2073
+                             +++s+ +     ++l    +   +     +h+ a f+d++l++      + +                                  
+               EGE07593 2207 IIQSYLAPS--IKELkgEYTG--GeaglvFHQFATFCDQQLQNP----DTLEdfvrlehlrtrklkevadleemmkasdgktkdql 2284
+                             ******944..4454223333..255999***********8663....3333677888999999999999999999********99 PP
+
+  PTHR11139.orig.30.pir 2074 .........tlrl.....lsaekaalqylvaavtcylkalalagg.nslqdtlrlLtLwfdhgaatevndalekalssvplwpWlp 2144
+                                      +++l     ++++k++  +l++ +++yl +l   ++    +d+lr ++Lw+d++ +++ n+a   +l++vp+ ++ +
+               EGE07593 2285 rthrtkakqWFDLddreyQRLKKSRESFLYQCLENYLLSLT--ACdTFANDVLRFCALWLDNSENEQANNAVSRYLREVPTRKFAS 2368
+                             99999866644448899************************..8875557************************************ PP
+
+  PTHR11139.orig.30.pir 2145 viPQLiarlsh.nrevrkllknLLvriakqhPqalvyplrvaaksls......searseaaleildklrkk........vpalase 2215
+                              + QL +rl    + +++ll +L+++i+ +hP++ +y+l v + s +        +r +aa +i+d l+k+        + +++ +
+               EGE07593 2369 LMNQLSSRLLDvADTFQPLLSSLVLQICIDHPYHGMYHLFVNSRS-KkdndpkAVSRYNAAGKIVDVLKKSkrsgewlaIHNTSYH 2453
+                             *********5555578*****************999999996666.467****557**************8777666664344444 PP
+
+  PTHR11139.orig.30.pir 2216 letlvqqlirsafleeelllaqlvsdeliklai........ees....skniakasavlkplk.amlekegpepdfiqallellek 2288
+                             + ++                            +        ++s    +k+i + + + ++++ + ++ ++               
+               EGE07593 2454 YLNFA---------------------------AeplegkvkSGSklvlKKTIYGTR-MQSAISnTKIP-PPT-------------- 2496
+                             44443...........................322211111222334477777776.66666655555.333.............. PP
+
+  PTHR11139.orig.30.pir 2289 lktltkqlpalsslgplleeisalrelavPGtykasplvtIssFspqvevlsskqrPkkltirGSDGkeypfLlK.gheDLRqDeR 2373
+                                +t+ l a+  +                     s++++++sF p++++ s++++Pk +t + S+G++y++L+K g++DLRqD+ 
+               EGE07593 2497 ---MTIPLRADCDY---------------------SDVPHLVSFQPTFTIASGISAPKIVTAVASNGIRYKQLFKsGNDDLRQDAV 2558
+                             ...67777777776.....................899************************************************ PP
+
+  PTHR11139.orig.30.pir 2374 imQLfrlvNtlLskdre.rrRkLsIrtYsViPLsprsGLieWVpntdtLhsilr..gcadyrearakipsdlniehrlmrqaapqa 2456
+                             ++Q f  v  lL+++r+ r+RkL IrtY V PL+++sG+ie+V+nt +L ++l   +        +++ ++++    ++r++ ++a
+               EGE07593 2559 MEQTFEQVSDLLRDHRDtRQRKLGIRTYKVLPLASNSGIIEFVQNTMPLNDYLLpaH--------QRY-FPRDFKPNQCRKFINDA 2635
+                             *********************************99*******************543........333.34444445677777776 PP
+
+  PTHR11139.orig.30.pir 2457 a.....ykvevfkevleetepplLhkelwlkssspeaWlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdc 2537
+                             +     ++ +++++v++++  p++++++++k+ +p++W+ +R +ytrS+A+ Sm G++LGLGDRH++NiLld +tGe vHID+  +
+               EGE07593 2636 QsksrdQRIKAYRHVTDHF-HPVMKYFFMEKFLNPDDWFSKRLAYTRSTAAISMLGHVLGLGDRHGHNILLDTETGEAVHIDL-GV 2719
+                             6666677************.***************************************************************.56 PP
+
+  PTHR11139.orig.30.pir 2538 ffeagqrLpvPElVPFRLTrnlvnalgptGiEGvFrssceavlrvLRknkesLlavLeaFvhDPLvdWt.......kaerlkllss 2616
+                              fe+g+ Lp+PE VPFRLTr+lv+++g+t +EGvFr+sce +l +LR+ + s++++L++  +DPL++Wt       k     ++ +
+               EGE07593 2720 AFEQGRVLPIPESVPFRLTRDLVDGMGITKTEGVFRRSCEFTLAALREESYSIMTILDVLRYDPLYSWTlsplrmkK-----MQDA 2800
+                             66666****************************************************************65443330.....2222 PP
+
+  PTHR11139.orig.30.pir 2617 qqaeaelgeal....................aavvirrvkakLeGrddfgderkgsegLsvegQVqrLIqqAtdpeNLcrmYeGWc 2682
+                             q+a       +                    a +++  v+ kL               Lsv++ V+ LIqqAtd +NL+ +Y GW+
+               EGE07593 2801 QEA-------EngavtsneggkktnlnepneADRALTVVRKKLGKS------------LSVAATVNELIQQATDEKNLAVLYCGWA 2867
+                             222.......1223356677777777788888899********993............***************************9 PP
+
+  PTHR11139.orig.30.pir 2683 PW 2684
+                             ++
+               EGE07593 2868 AY 2869
+                             86 PP
+
+>> EGE03276  pep supercontig:ASM15117v1:supercont1.9:338587:341530:-1 gene:TEQG_02310 transcript:EGE03276 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   57.3   1.0   3.2e-19   2.8e-16    2325    2535 ..     669     836 ..     503     840 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 57.3 bits;  conditional E-value: 3.2e-19
+  PTHR11139.orig.30.pir 2325 plvtIssFspq.vevlsskqrPkkltirGSDGkeypfLlKgheDLRqDeRimQLfrlvNtlLskdrerrRkLsIrtYsViPLsprs 2409
+                             p v I+++ p+ ++v+ s  +P  + +  SDG++yp  +K ++DLRqD+ + Q  +l+ +lL+k      +L+++ Y++i  +  +
+               EGE03276  669 PTVSIVGCHPEeANVFKSSLSPLFINFKLSDGRKYPVIFKVGDDLRQDQLVIQIITLMDRLLQKEN---LDLKLTPYRIIATGATA 751 
+                             44666666664256677777777788999***********88**********************66...69*************** PP
+
+  PTHR11139.orig.30.pir 2410 GLieWVpntdtLhsilrgcadyrearakipsdlniehrlmrqaapqaaykvevfkevleetepplLhkelwlkssspeaWlarRkn 2495
+                             G +++Vp+t  L            a+ak+  +l    ++ ++++p+ + ++ v ke++                           +
+               EGE03276  752 GAVQFVPSTP-L----S------AATAKYKGSLL---AYLKANNPDDSEPLGVRKEAM-------------D-------------T 797 
+                             *******665.4....2......45578865555...677777777553444444444.............3.............8 PP
+
+  PTHR11139.orig.30.pir 2496 ytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFg 2535
+                             y +S+A  +++ y+LG+GDRH++N+Ll    G+  H DFg
+               EGE03276  798 YIKSCAGYCVITYLLGVGDRHLENLLLAP-DGHFFHADFG 836 
+                             ************************99985.7788888886 PP
+
+>> EGE01380  pep supercontig:ASM15117v1:supercont1.1:1144008:1150909:-1 gene:TEQG_00433 transcript:EGE01380 gene_biotype
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -9.8  16.9        10   8.7e+03     633    1175 ..      63     629 ..       5     776 .. 0.34
+   2 !   40.7   0.1   3.4e-14   2.9e-11    2491    2564 ..    1834    1905 ..    1815    1907 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: -9.8 bits;  conditional E-value: 10
+  PTHR11139.orig.30.pir  633 alvlslisaaldllscllgsalsavlsalatalqeaalsglsvwlrtalfllglaeasealavallllllstlgallfsgsseeal 718 
+                              l+ ++++++ d+ ++ +++ +sa+++++a++++++a  + s+ +r ++ ll              +l                  
+               EGE01380   63 ILATKHPRQDDDQGNSDVERLISACNGSKAASSGSQAR-CASSGVRELDVLL--------------AL------------------ 115 
+                             44444444444444444555555444444444443332.1111111111111..............00.................. PP
+
+  PTHR11139.orig.30.pir  719 llclvlfvrellvllLlnpnl...dvrkaaaaalalLlassgnssvlsllsplssvlldarpeeka...........vvvleilek 790 
+                                               + +   + r+++aa l +Ll  +   + l+ l ++ss++l       +           ++v++ l++
+               EGE01380  116 ------------------CKAagsVQRGDHAAKLVSLLVGY--LPTLHTLRIHSSPFL-------HiykpspwetltHDVVTALLS 174 
+                             ..................01111233444444444444444..444444444444444.......122223333335555555555 PP
+
+  PTHR11139.orig.30.pir  791 llllaildldplvrlsvleslaedlaafdehas.........qafslsllfallndeslevreaaisllgrlslksllnpalrlal 867 
+                             l + + ++  ++v+ ++ e l+++++a d+  +         q            +es +v + ++sl+g l + s+++p++ ++l
+               EGE01380  175 LGSRHKSLQ-DDVHEAIDEYLENCHQATDRLPAvldadgtgiQ---------VESHESTDVTTLMVSLVGFLRA-SSEFPHFWAPL 249 
+                             555555533.245555555555555544422222211222211.........1122444444444444433222.22333333222 PP
+
+  PTHR11139.orig.30.pir  868 lrkllsqlLtrL...el............ellss..kllehl.dsrlee...esakllgtlirkseaeellppyavsilpaLvall 932 
+                              r ++++ L+ +    +            +   s  ++  ++ + r+ +   ++ + lg+         ll+++++ +l+ + +++
+               EGE01380  250 DRLAIVKQLHIIlseRFlvavetissgirN---SrsPDPLLHdWRRYTRqyaADGRPLGS--------MLLQQAFMGFLKSCTSPV 324 
+                             222222222211111001222211111111...022111111111111100011112222........255555555555544444 PP
+
+  PTHR11139.orig.30.pir  933 .aeen.................................nelrsallkt...lad.lletllaevglleaaerrqllvallplilaa 980 
+                               ++                                  +        +     + lle  ++ ++  +++++r+        +++a
+               EGE01380  325 eNDQTpplpddtllsryadsgyvakasdrgmislvkyaA--------EiagDQInLLEEGSDYLQVSSTWQQRLA------FLVKA 396 
+                             333333333333333332222222222222222222220........0222111111112222222233322222......34454 PP
+
+  PTHR11139.orig.30.pir  981 llqlwdsesseerlllkrlllleseakllvalallgqlvestgeviepllfd....siwlg........lepaypsllaellklll 1054
+                             l+    ++s +  +  +            v l ll+ + ++t+++ +  +++                  ++++  +++ l ++ll
+               EGE01380  397 LS---IMCSINCIMVDQDS----------VDLDLLFTSLDNTISDPD-QMMNkdlaT---VvlkaavilARLSRG-SANGLTRSLL 464 
+                             44...44444444333322..........334444444444333333.222242221...222234443222222.2222222234 PP
+
+  PTHR11139.orig.30.pir 1055 kflelshserrealavlg..............llgaldsldalrrallqlttllvkhapeal......................ip 1104
+                             +f   ++  +++++a+                ++g+l sl+ ++++   +                                  + 
+               EGE01380  465 RFI-VQNGQSSPVVALAAqclaqnlrllsqdtVIGTLYSLGNVLSSGSAA-----------DkaataltaesgtgyshsienraP- 537 
+                             443.3333334444333344444444444444333333222222111111...........011111122333333333233220. PP
+
+  PTHR11139.orig.30.pir 1105 a..........qeseldysttkvaillllqlilrdlslpssyvlqvlvallkal....................asealqllvlpa 1160
+                             +            +++ ++t ++++++++   +  +s  s++v    + l + +                    +se        a
+               EGE01380  538 PtnesflslaiDGEGDTSVTARNVVHAIV--TIATYSEDSKIVALAQSILVQKIgkanvivdayiiqetaalslKSEP-------A 614 
+                             12222223334444444455555555554..33333333444444444444444444444444444433222211111.......1 PP
+
+  PTHR11139.orig.30.pir 1161 ..dkvllapslllrlkd 1175
+                                  ll+ ++ + l+d
+               EGE01380  615 efR--LLLKFYSRLLRD 629 
+                             111..222333333332 PP
+
+  == domain 2  score: 40.7 bits;  conditional E-value: 3.4e-14
+  PTHR11139.orig.30.pir 2491 arRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalg 2564
+                             ++R+n+ +S A+ S+++y+L   DRH  Ni++d + G+++HIDFg cf+ a    ++ E+ PF LT  +++ +g
+               EGE01380 1834 EARSNFVKSMAAYSVISYLLQFKDRHNGNIMID-DAGHIIHIDFGFCFDIAPGGVRF-ERAPFKLTTEMIAVMG 1905
+                             78*******************************.789**************997777.***************8 PP
+
+>> EGE07718  pep supercontig:ASM15117v1:supercont1.47:95067:97212:-1 gene:TEQG_06701 transcript:EGE07718 gene_biotype:pr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.7   0.0   4.5e-06    0.0039    1732    1995 ..     153     447 ..     134     516 .. 0.55
+   2 ?    0.5   4.1     0.043        37    1732    1951 ..     319     591 ..     311     626 .. 0.35
+
+  Alignments for each domain:
+  == domain 1  score: 13.7 bits;  conditional E-value: 4.5e-06
+  PTHR11139.orig.30.pir 1732 ggweeAlaayeralqkasqdagsleatlgrlrcllaLgqw.............epeaeeellplaleaawslrlgkwd.smleyll 1803
+                             +++ +A+++y +a+   +    ++  +++r  c+ aLg+w             ++e+ + ++ + ++a     lgk   ++l+y +
+               EGE07718  153 KDYNRAIELYGKAILCKP----DPVYYSNRAACYNALGEWekvvedttaalamDDEYIKAMN-RRANAYD--KLGKYSeALLDYTA 231 
+                             458899999999987554....6666*******************99999986699999996.3444444..56655565555554 PP
+
+  PTHR11139.orig.30.pir 1804 alaaaeasselrllq.allalhqg.................dfdea...qeliqkarq.....................lllgael 1847
+                              +    + ++ +  + a+  l ++                    +a   ++++q  r                      l+   +l
+               EGE07718  232 SCI--LDGFASDTGKaAVERLLKQvaeekgrailegkgkklP--SAtfvSNYLQSFRPkpvpeelnesvelkedsglgqLRK-GLL 312 
+                             443..4444444444333333322222233444444445331..22445555555555666665555555555555554333.444 PP
+
+  PTHR11139.orig.30.pir 1848 sa...vdesysrayalllvklqqLsElqelee.sqislaa...........lldlksiletWrnRlpgtwqddvevwedllavRrl 1918
+                             ++    +++y++a+  +  k+  L El  le  +                    +   l   +    ++ ++d ++ +  ++    
+               EGE07718  313 AVsksTGDGYDEAA-RAFEKALELGELGKLEAlA-----LnmratftylagE--AAAALTDLNK---SI-ELDPSLVQSYIK---- 382 
+                             44677788999998.7777788888866665441.....2333333322220..2222222222...12.333333333333.... PP
+
+  PTHR11139.orig.30.pir 1919 vlppieddaelwlklaslaRkqgnlslalkll.........rvlieylkllwalaaveegksflleqeealldlqqllielsstal 1995
+                                     a+l+l ++  +  q+ ++la  ++         r     ++l ++l  +e+g++     ++ +++  +l  ++++ ++
+               EGE07718  383 -------RASLYLEMGNRESAQDDFDLAVTQNkddpdiyyhR-----AQLHFIL--GELGEA-----AKDYQKSIDL--DRDFIYS 447 
+                             .......34477777777777777777766667777554444.....6666666..555555.....7777777554..3334443 PP
+
+  == domain 2  score: 0.5 bits;  conditional E-value: 0.043
+  PTHR11139.orig.30.pir 1732 gg.weeAlaayeralqkasqdagsleatlgrlrcllaLgqwepeaeeellplaleaawslrlg......kwd..smleyllalaaa 1808
+                             g+ ++eA +a+e+al++           lg+l++l+       + ++++++la eaa   +l+      + d  ++ +y+ ++++ 
+               EGE07718  319 GDgYDEAARAFEKALELG---------ELGKLEALA------LNMRATFTYLAGEAAA--ALTdlnksiELDpsLVQSYIKRASLY 387 
+                             666777777777776643.........233333333......4555555555555555..22211112333343333333222222 PP
+
+  PTHR11139.orig.30.pir 1809 ......................................................easselrllqallalhqgdfdeaqeliqkarq 1840
+                                                                                                                  +
+               EGE07718  388 lemgnresaqddfdlavtqnkddpdiyyhraqlhfilgelgeaakdyqksidldR------------------------------D 443 
+                             4443333333333333333322222221111111111111111111111111110..............................1 PP
+
+  PTHR11139.orig.30.pir 1841 ...........................lll.gaelsavdesysrayalllvklqqLsElqelee.....sqislaa.......... 1883
+                                                         l   +++++v   y+ +   ll  +q +sE   ++e           +          
+               EGE07718  444 fiyshiqlgvtqyklgsvasamatfkrTLKnFENVAEV---YNYYG-ELLLDMQKFSE---AIEkfdraV-----Eleksnkpwsi 517 
+                             22222222222222222222211111122222333333...44444.44444777777...666332221.....02223333433 PP
+
+  PTHR11139.orig.30.pir 1884 .ll...dlksiletWrnRlpgtwqddvevwedllavRrlvlppi.....eddaelwlklaslaRkqgnlslalkll.......... 1950
+                              +l    + + +  W++ ++ + ++++          +l+++p               la+l+ +qg +s+alk +          
+               EGE07718  518 nVLpliNKALAIFQWKQDFQEA-ENLCQ--------KALIIDPDcdiaiA-------TLAQLLLQQGKVSQALKYFeraaelarte 587 
+                             3112211111122333322222.22211........11333332332221.......35666666666666666655555555444 PP
+
+  PTHR11139.orig.30.pir 1951 ...r 1951
+                                 
+               EGE07718  588 aevI 591 
+                             4441 PP
+
+>> EGE03577  pep supercontig:ASM15117v1:supercont1.11:154530:156961:1 gene:TEQG_02607 transcript:EGE03577 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.4   0.4   5.6e-06    0.0049     737     986 ..     114     451 ..      56     569 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 13.4 bits;  conditional E-value: 5.6e-06
+  PTHR11139.orig.30.pir 737 pnldvrkaaaaalalLlassgnssvlsllsplssvlldarpe.eka...............vvvleilekllllaildldplvrlsvl 808
+                             n  +r  a ++++ +       +v +  +pl+++++da+p  +k                v+ ++++e+l +++  d +p+v +s+l
+               EGE03577 114 GNPLIRALALRTISYIHVR---DFVEATVQPLKHLMSDADPYvRKTaafavaklydhdrrlVESSDLIERLNNMLQ-DENPTVVSSAL 197
+                            2224444444444444444...334444444444444444444222344444444444445555555555555555.34466666666 PP
+
+  PTHR11139.orig.30.pir 809 eslaedlaafdehas........................qafslsllfallndeslevreaaisllgrlsl...........ksllnp 861
+                            ++l  ++ +++   s                        q ++l +l + + +es+e ++ a ++  rls+                 
+               EGE03577 198 AALVDVWERSE---SitltidytnaskiisilpdcsewcQTYILEALMSYVPRESSEALLLAERVAPRLSHsnssvvltcirV----- 277
+                            55555554333...244455666666888888888888999999999999999999999999999999888665555555552..... PP
+
+  PTHR11139.orig.30.pir 862 alr.............lallrkllsqlLtrL......e.lellss..............................kllehl.dsrlee 898
+                              +              +l rkl+++l+t L      + l+l+++                                le+  ++ ++ 
+               EGE03577 278 --IlyfmnyiadekqvTSLSRKLSPPLVTLLskgpevQyLALRNAililqrrpevlrndirvffckyndpiyvkvTKLELIfMLASKD 363
+                            ..04444444777777999999999999988877766445666666666666666666777777777777777774444444555555 PP
+
+  PTHR11139.orig.30.pir 899 esakllgtlirksea..eellppyavsilpaLvallaeennelrsallktlad.lletllaevglleaaerrqllvallplilaallq 983
+                              +++l+ l   +++   +++++++++i + ++    e+++ ++  +l +l + ++   ++e++ + + ++r +  + +++i+++  q
+               EGE03577 364 NISVVLTELREYATEidVHFVRKAVRAIGKLAIK--IESASRQCIETLLELVNaKIPYIVQEATVVIRNIFRKY-PNQYESIITTVIQ 448
+                            5555555555544444433555555544444443..33334444444444333344444444444455555555.4444445555554 PP
+
+  PTHR11139.orig.30.pir 984 lwd 986
+                            + d
+               EGE03577 449 NID 451
+                            444 PP
+
+>> EGE01811  pep supercontig:ASM15117v1:supercont1.3:67934:70997:-1 gene:TEQG_00856 transcript:EGE01811 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.7   0.5   3.7e-05     0.032     691     880 ..     143     578 ..      22     729 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 10.7 bits;  conditional E-value: 3.7e-05
+  PTHR11139.orig.30.pir 691 e.................................................................................alaval 697
+                            +                                                                                 +     
+               EGE01811 143 AyhllpiakdivrrwqsetqeaassgkqsggllsftsstqrhtmsqtsymtqyhaigllcqmrahdrmamvkmvqqygsgvvK----- 225
+                            03333333333333333333333333333333333333333333333333333333333333333333333333333333321..... PP
+
+  PTHR11139.orig.30.pir 698 lllllstlgallfsgsseealllclvl............................................................f 725
+                                                      +                                                            +
+               EGE01811 226 --------------------------SppaivllvrlaakladedqslrtpmmqmleswlrgkhemvifeaakaisemkdvtdaeaaQ 287
+                            ..........................02222222333333333333333444444455555566666666777777777777788888 PP
+
+  PTHR11139.orig.30.pir 726 vrellvllLlnpnldvrkaaaaalalLlassgnssvlsllsplssvlldarpeekavvvleile........................ 789
+                             +++l+l+L++p++   +aa + l+++++ +++  v +++ +                 +++++                        
+               EGE01811 288 AVNVLQLYLSSPRTTSKFAAIRLLHTFASFKPH-VV-NACNQDI---------------ESLISnsnrsiatfaittllktgneasvd 358
+                            9999*******9998888888888888888763.22.2222222...............22222333323333334444555555555 PP
+
+  PTHR11139.orig.30.pir 790 ..................................................................................klllla 795
+                                                                                                                    
+               EGE01811 359 rlmsqisgfmsditdefkitiveairtlclkfpskqagmlsfisgilrdeggyefkksvvesmfdlikfvpgskeealshlcE----- 441
+                            55555555666666688887777887777888888877777777777777777777666666666666666666555554440..... PP
+
+  PTHR11139.orig.30.pir 796 ildl.........................................dplvrlsvleslaedlaafdehasqafslsllfallndeslev 842
+                                                                         +++vr++++++la+       ++++++++ ll  +l+d + ev
+               EGE01811 442 ---FiedceftklavrilhllgvegpktpnptkyiryiynrvvleNSTVRAAAVTALAKFGVGQKDPELRRSVIVLLKRCLDDTDDEV 526
+                            ...1555555555555555666777777777777777777777777799*****8888766555577789888888888********* PP
+
+  PTHR11139.orig.30.pir 843 reaaisllgrlsl........ksllnpalrlallrkllsqlLtrL........e 880
+                            r  a   l++  +          + ++ ++l+ + + l++ +t+         +
+               EGE01811 527 RDRAALNLRL--IddseiaerFITNDTMYSLSTFEHQLVMYVTATdketfataF 578
+                            **88444444..234555555333444444777777777777766554433333 PP
+
+>> EGE04331  pep supercontig:ASM15117v1:supercont1.15:385955:390155:1 gene:TEQG_03359 transcript:EGE04331 gene_biotype:p
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.5   7.7    0.0056       4.8     792    1396 ..      15     813 ..       5    1086 .. 0.53
+   2 ?    4.4   1.6    0.0028       2.4     789     875 ..    1052    1170 ..     982    1191 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 3.5 bits;  conditional E-value: 0.0056
+  PTHR11139.orig.30.pir  792 lllaildldplvrlsvl.eslaedlaafd.....ehasqafslsllfallndeslevreaaisllgrlsl................ 855 
+                             l ++++d+dp++r+  l  +l+ ++++++      h+s   + + l+++l+d++ ev+++a++++g l+                 
+               EGE04331   15 LMVKLTDPDPDIRYMSLnDLLSLIEGCSLpyflqDHSSCNRMVQGLLKSLEDQNGEVQNVALKCIGPLATrsppdvlssfidklal 100 
+                             5678999**********999******9999999988899999*************************9998888888888877776 PP
+
+  PTHR11139.orig.30.pir  856 ........ksllnpalr..lallrkllsqlLtrLelellsskllehldsrleeesakllgtlirkseaee..............ll 917 
+                                     +s  n+alr  la+l k +++l++      +         +++e+ s +l++ li  ++  +               +
+               EGE04331  101 ltssqtidTSVPNTALRmiLAALPKPNINLIN--S---REV------QLSYEAVSMVLIPRLIGTPT--RgnlptaapgmivndPA 173 
+                             66666666444555555888888888888887..3...333......44455555555555554222..23345555555555544 PP
+
+  PTHR11139.orig.30.pir  918 ppyavsilpaLvall....aeen............................................nelrsallkt.....ladl 950 
+                             +  ++ ++++L+  +     ++n                                            ++  s+l+ +     l   
+               EGE04331  174 KGFSSDAIDVLIDVVrsygPMLNdeelfellqtvlrviendhagtvvtkraltaismlsihlsdtqlSGFVSGLIESfksphL--- 256 
+                             44444444444433322211111222211111111111111111111111111111111111111112233333332221110... PP
+
+  PTHR11139.orig.30.pir  951 letllaevglleaaerrqllvallplilaallqlwdsesseerlllkrlllles..........eakllvalallgqlvestgevi 1026
+                             + + ++++ ++  a++r    a +  +l+ l+    s  se+++++  ++ +                                  
+               EGE04331  257 TINRRRHLIAAVSAMARST-PAKFGPYLKLLAPFVLSAVSEKEMNEMDDDMSDDgehdpkqdelR--------------------- 320 
+                             1111111111111111111.111111111111111222333333333333333333333333332..................... PP
+
+  PTHR11139.orig.30.pir 1027 epllfdsiwlglepaypsllaellklllkflelshserrealavlgllgaldsldalrrallqlttllvkhapeal.......... 1102
+                                                                                          l ++++l+ + ++ +          
+               EGE04331  321 ----------------------------------------------------------ETALVSLDTLLGYCGSEMqpylndciaa 348 
+                             ..........................................................2222222222222222222222222222 PP
+
+  PTHR11139.orig.30.pir 1103 .................................................................ipaqeseldysttkvaillll 1123
+                                                                                              +         +   + i +  
+               EGE04331  349 alrylkydpnvaeleddeemggtqdessddgateepdddndafddfeeeegysdiddlswkvrrcA-------AKVL--YTIVSTQ 425 
+                             222223333333333333333333333333222222222222222222222333222222211110.......1111..2222223 PP
+
+  PTHR11139.orig.30.pir 1124 qlilrdlslpssyvlqvlvallkalasealqllvlpadkvllapslllrlkd................gqlhssvsrirellvrha 1193
+                              + +r+++   s+++++  all ++ +e  ++     +kv ++ +++  +++                 q+ ss+ r+r+      
+               EGE04331  426 GRNARAVED-GSIYQKIAPALLSRFTKEREES-----VKVEVVATMTGLVRKtsdlatgpnlfysdpfSQARSSRKRRRQ------ 499 
+                             344444444.4455555555555553333332.....2333334444444445557777777777777666666666666...... PP
+
+  PTHR11139.orig.30.pir 1194 trvlilqqLal...............................lvsivnaharklaldlapllvlwerrw...............ti 1233
+                                 ++++                                  l              + +++ +  ++w               ++
+               EGE04331  500 ---DSNATVIDlesdfpppsasdtpiakpstpqpgpqtdladL--------------TPGIVQALTKLWkgapiplkqgvilllKA 568 
+                             ...4444433234444443333333333322222222222221..............22222222222244444333333333322 PP
+
+  PTHR11139.orig.30.pir 1234 lal............leqlvlsaaareflgsylpellllesggvlpllgpll.................................. 1273
+                             lal            +e+++++a++   l+  +                                                     
+               EGE04331  569 LALvryggladylqrIEDPIADALKTSGLSGGVTVS---------------Agsnsvsagnlqvealgliaaisethpsgslspfl 639 
+                             222333333333333333333333332222221111...............02222222222333333344444444444444455 PP
+
+  PTHR11139.orig.30.pir 1274 ...................kellnllqqalgavlwins..............d.fllqklrelgsklkleklll............ 1313
+                                                +e+l +++q   a++ +++              + ++ +k+++ ++ l      +            
+               EGE04331  640 ialipgvvacvnnrdfkvsSEALGAIEQIVVALTPPRVsvddrdlglqleklYdIVVEKVTDNSTDLG-----Vrqrgihvlgvml 720 
+                             55566666666666666664444444444433433333333222222222111112333333333222.....1333335555555 PP
+
+  PTHR11139.orig.30.pir 1314 ....................lallLpilnkllekllelailvraaalsslaal.rassvtkiasallhslvrvl............ 1366
+                                                 l++lL+ l++ ++    +a+++   a+++ a l r                               
+               EGE04331  721 srtsgpegrrfitleqrrkaLLVLLERLKNETTR---VAAAR---AIDDIALLaR------------------Qsddveaswlgyv 782 
+                             5555555555566666644444444444444332...22222...2222222222..................0222222222444 PP
+
+  PTHR11139.orig.30.pir 1367 .qllaaqdstnskllaadalgalgalvfnlg 1396
+                              + laaq  + ++ l+ ++lgal+++++n++
+               EGE04331  783 tLELAAQLRKVDRTLRDVCLGALKSIAMNSQ 813 
+                             5455677777778888888888888888875 PP
+
+  == domain 2  score: 4.4 bits;  conditional E-value: 0.0028
+  PTHR11139.orig.30.pir  789 ekllllaildl................................dplvrlsvleslaedlaafd...ehasqafslsllfallndes 839 
+                             +++ll+a+ d                                 + ++r +v+++++ +la+++   ++ +++ +  +l+ +lnd++
+               EGE04331 1052 WQILLSASDDEdnrtvgaecigrlslidpatyipqlqeylshpNATIRGTVISAFRYTLADSSstyNETLRPLIVPVLVTILNDSD 1137
+                             3555555555566666666666666666677777777777777999999999997666664546876667**************** PP
+
+  PTHR11139.orig.30.pir  840 levreaaisllgrlslksllnpalrlallrkllsql 875 
+                             l  +  a++ l+ + +     +al+l++l +ll+  
+               EGE04331 1138 LANHRLALTTLNSAIH---NKTALVLPHLPQLLPAV 1170
+                             ***********99999...999999**999988765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (2684 nodes)
+Target sequences:                       8676  (3957997 residues searched)
+Passed MSV filter:                       373  (0.0429922); expected 173.5 (0.02)
+Passed bias filter:                      190  (0.0218995); expected 173.5 (0.02)
+Passed Vit filter:                        26  (0.00299677); expected 8.7 (0.001)
+Passed Fwd filter:                        10  (0.0011526); expected 0.1 (1e-05)
+Initial search space (Z):               8676  [actual number of targets]
+Domain search space  (domZ):              10  [number of targets reported over threshold]
+# CPU time: 1.12u 0.15s 00:00:01.27 Elapsed: 00:00:00.63
+# Mc/sec: 16751.21
+//
+[ok]

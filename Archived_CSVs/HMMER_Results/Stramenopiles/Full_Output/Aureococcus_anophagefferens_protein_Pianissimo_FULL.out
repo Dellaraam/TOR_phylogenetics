@@ -1,0 +1,238 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Aureococcus_anophagefferens_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+      0.001   15.8   0.3      0.031   10.9   0.0    2.0  2  XP_009043166.1  hypothetical protein AURANDRAFT_9586, partial
+      0.001   15.8   1.6      0.092    9.3   0.1    2.8  3  XP_009043106.1  hypothetical protein AURANDRAFT_35474, partia
+      0.002   14.9   0.1      0.053   10.1   0.0    2.0  3  XP_009032873.1  hypothetical protein AURANDRAFT_6667, partial
+  ------ inclusion threshold ------
+      0.013   12.2   1.3       0.53    6.8   0.2    2.6  2  XP_009033524.1  hypothetical protein AURANDRAFT_1761, partial
+      0.025   11.2   1.2      0.028   11.1   0.0    1.6  2  XP_009034727.1  hypothetical protein AURANDRAFT_1526, partial
+       0.03   11.0   0.6       0.75    6.3   0.0    2.1  2  XP_009038997.1  hypothetical protein AURANDRAFT_7130, partial
+      0.044   10.4   2.3        4.5    3.8   0.2    3.1  3  XP_009034425.1  hypothetical protein AURANDRAFT_62371 [Aureoc
+      0.064    9.9   0.0      0.068    9.8   0.0    1.0  1  XP_009039284.1  hypothetical protein AURANDRAFT_7149, partial
+       0.08    9.5   0.0        3.9    4.0   0.0    2.0  2  XP_009042670.1  hypothetical protein AURANDRAFT_4155, partial
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_009043166.1  hypothetical protein AURANDRAFT_9586, partial [Aureococcus anophagefferens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    3.3   0.1    0.0049       6.3     168     219 ..       6      60 ..       1      75 [. 0.65
+   2 !   10.9   0.0   2.4e-05     0.031     722     790 ..      85     157 ..      79     164 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 3.3 bits;  conditional E-value: 0.0049
+  PTHR13298.orig.30.pir 168 aiaeseedrlrraclatlcelallnpe.lv.aeagglrvlldalle.cqlperia 219
+                              + + + +++ a+ + lc la ++   ++ aeagg++ l+d l + + +++r+a
+         XP_009043166.1   6 RALREGDAARKTAAARALCNLACHDDNkVLiAEAGGISRLVDLLRDgSANTKRLA 60 
+                            4445566677778888888888775431333688888888888888544445554 PP
+
+  == domain 2  score: 10.9 bits;  conditional E-value: 2.4e-05
+  PTHR13298.orig.30.pir 722 vilskaLtsssesiRlyatkhLrvllraessdfsd......WgielLvtqlydpskevakaAlkiLeeacedkan 790
+                             +l+k L ++s ++++ at  Lr l     +d ++       g++lLv+ l+d s +  ++A  +L++   +++n
+         XP_009043166.1  85 PLLVKLLRDGSAEAKKDATVALRNLAY--CNDANKtligeaGGVPLLVELLRDGSADAKTEAATALRNLAGNDDN 157
+                            689************************..555555589999**************************96655544 PP
+
+>> XP_009043106.1  hypothetical protein AURANDRAFT_35474, partial [Aureococcus anophagefferens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.1     0.024        31     162     250 ..      18     106 ..       9     125 .. 0.71
+   2 !    9.3   0.1   7.2e-05     0.092     160     250 ..     139     229 ..     118     230 .. 0.85
+   3 !    4.6   0.0    0.0019       2.4     724     781 ..     227     288 ..     219     290 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 0.024
+  PTHR13298.orig.30.pir 162 ivralvaiaeseedrlrraclatlcelallnpelva..eagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlek 247
+                             v+ lva++++ +++ + ++   l+ l+ +    va  eag++  l+  l     +e +  ++  vl +l  +p +r  + a+  +e 
+         XP_009043106.1  18 AVEPLVALLKTGSEKAKVLAAGALMNLVKNPDNQVAivEAGAIEPLVALLKT--DRESAKVIAAFVLGHLACDPGNRGAIAAAGAVEP 103
+                            5677888888888888888888888877664444433588888888887776..2333443666777788888888888877777777 PP
+
+  PTHR13298.orig.30.pir 248 lla 250
+                            l+a
+         XP_009043106.1 104 LVA 106
+                            776 PP
+
+  == domain 2  score: 9.3 bits;  conditional E-value: 7.2e-05
+  PTHR13298.orig.30.pir 160 taivralvaiaeseedrlrraclatlcelallnpelva..eagglrvlldallecqlperiaesllavllyllnrpstrkylragvdl 245
+                             + v+ l+a++++ +++ ++ +  +lc lal+n   va  +ag++  l+  lle  ++e++ + + ++l  l ++p +   + ++  +
+         XP_009043106.1 139 AGAVKPLIALLKTGSESAKENAAGVLCNLALNNDNRVAiaRAGAVEPLIA-LLE-TGSEKVKKHAAGALALLADSPGNQGAIVEAGAI 224
+                            567999**************************998774348899999885.566.489******************999888888777 PP
+
+  PTHR13298.orig.30.pir 246 eklla 250
+                            e l+a
+         XP_009043106.1 225 EPLVA 229
+                            77766 PP
+
+  == domain 3  score: 4.6 bits;  conditional E-value: 0.0019
+  PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd......WgielLvtqlydpskevakaAlkiL 781
+                            l++ L ++se++++ a + L+ l r   +d ++       gi+ Lv+ l + s+ev k A ++L
+         XP_009043106.1 227 LVALLETGSEEVKMNAARALALLAR--NNDANKvaiaaaGGIRPLVALLETGSEEVKKNAARAL 288
+                            78899******************99..34444444566699****************9999987 PP
+
+>> XP_009032873.1  hypothetical protein AURANDRAFT_6667, partial [Aureococcus anophagefferens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    4.7   0.0    0.0018       2.3     728     790 ..       1      66 [.       1      72 [. 0.81
+   2 !   10.1   0.0   4.1e-05     0.053     725     796 ..      39     113 ..      36     116 .. 0.81
+   3 !    8.0   0.0   0.00018      0.24     724     790 ..      79     149 ..      76     169 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 4.7 bits;  conditional E-value: 0.0018
+  PTHR13298.orig.30.pir 728 LtsssesiRlyatkhLrvllraessdfsd......WgielLvtqlydpskevakaAlkiLeeacedkan 790
+                            L ++ ++++  a + Lr l +    d ++       gi+ Lv  l+d s e  ++A ++L++   d+an
+         XP_009032873.1   1 LREGDDAAKAAAAEALRNLAW---DDANKvliaeaGGIPPLVDLLRDGSAEGKECAAEALRNLAWDNAN 66 
+                            567778889999999999999...4444445556799************************97778776 PP
+
+  == domain 2  score: 10.1 bits;  conditional E-value: 4.1e-05
+  PTHR13298.orig.30.pir 725 skaLtsssesiRlyatkhLrvllraessdfsd......WgielLvtqlydpskevakaAlkiLeeacedkanileylv 796
+                            +  L ++s + + +a + Lr l +    + ++       gi+ Lv+ l+d s+e  ++A k+L +    ++ +l  +v
+         XP_009032873.1  39 VDLLRDGSAEGKECAAEALRNLAW---DNANKvliaeaGGIPPLVELLRDGSTEAKAEAAKALSSLARGDDANLVLIV 113
+                            6679999999**************...333334445679**************************6655555577776 PP
+
+  == domain 3  score: 8.0 bits;  conditional E-value: 0.00018
+  PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd....WgielLvtqlydpskevakaAlkiLee.acedkan 790
+                            l++ L ++s +++  a k L  l r + +++       gi  Lv+ l+d s e  ++A ++L++ a+ ++an
+         XP_009032873.1  79 LVELLRDGSTEAKAEAAKALSSLARGDDANLVLiveaGGIAPLVALLRDGSAEAKEEAASALHNlAI-NDAN 149
+                            678999*******************6555555577789**************************555.6655 PP
+
+>> XP_009033524.1  hypothetical protein AURANDRAFT_1761, partial [Aureococcus anophagefferens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.8   0.2   0.00042      0.53     728     780 ..       5      66 ..       2     183 .. 0.64
+   2 ?    3.8   0.1    0.0034       4.4     756     789 ..     203     249 ..     172     271 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 6.8 bits;  conditional E-value: 0.00042
+  PTHR13298.orig.30.pir 728 LtsssesiRlyatkhLrvllra................essdfsdWgielLvtqlydpskevakaAlki 780
+                            L+s+  ++Rl at+hLr++l +                        +++ Lv+  ++++++  k+Al +
+         XP_009033524.1   5 LNSTDLHARLKATQHLRAMLSSvrvfgflnrpvrlvvdA------GVVPRLVEF-QQDDTDLQKEALWV 66 
+                            6777889**************554444444333333330......333333333.23333334444333 PP
+
+  == domain 2  score: 3.8 bits;  conditional E-value: 0.0034
+  PTHR13298.orig.30.pir 756 d.............WgielLvtqlydpskevakaAlkiLeeacedka 789
+                            +              + + Lv+ l +ps ev+++Al ++ ++c +++
+         XP_009033524.1 203 HlgsieraqtiidaGACPRLVELLGHPSLEVVSCALFAVGNICSTDD 249
+                            02223333333333344555555555566666666655555555444 PP
+
+>> XP_009034727.1  hypothetical protein AURANDRAFT_1526, partial [Aureococcus anophagefferens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.1   0.0   2.2e-05     0.028     938     991 ..     118     167 ..      97     176 .. 0.93
+   2 ?   -3.7   0.4      0.62   7.9e+02     394     430 ..     389     425 ..     388     426 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 11.1 bits;  conditional E-value: 2.2e-05
+  PTHR13298.orig.30.pir 938 alWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliar 991
+                            a WAl +++s++   +++++ +  +++ +++l+++ +   vr  c+++lg ia 
+         XP_009034727.1 118 AAWALTNVASTDKTQAVVDA-G--VVPAMVQLMQS-PNGDVREQCIWCLGNIAG 167
+                            89******************.6..*********97.9*************9985 PP
+
+  == domain 2  score: -3.7 bits;  conditional E-value: 0.62
+  PTHR13298.orig.30.pir 394 LlalieagLleaLvevitssdssvsvkAtiLLgells 430
+                            +lal+e+g ++ L+ ++++  + + + A+  L+ +l+
+         XP_009034727.1 389 VLALVEHGVIKPLCALLATAEAKIVTVALDALEAILK 425
+                            5788999999999999988888888888888877775 PP
+
+>> XP_009038997.1  hypothetical protein AURANDRAFT_7130, partial [Aureococcus anophagefferens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.3   0.0   0.00058      0.75     758     791 ..       6      40 ..       3      45 .. 0.90
+   2 ?    3.2   0.1    0.0052       6.7     758     791 ..      47      81 ..      43     101 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 6.3 bits;  conditional E-value: 0.00058
+  PTHR13298.orig.30.pir 758 gielLvtqlydpskevakaAlkiLee.acedkani 791
+                            gi+lLv+ l+d s e ++ A  +L++ ac d++  
+         XP_009038997.1   6 GIPLLVELLRDGSAEAIADAAWALRNlACNDDNRV 40 
+                            89************************99*877654 PP
+
+  == domain 2  score: 3.2 bits;  conditional E-value: 0.0052
+  PTHR13298.orig.30.pir 758 gielLvtqlydpskevakaAlkiLee.acedkani 791
+                            +i+lLv  l+d s +  ++A  +L++ +c d    
+         XP_009038997.1  47 AIPLLVDLLRDGSADAKEEAACALCNlSCNDAIRV 81 
+                            699***********************777555444 PP
+
+>> XP_009034425.1  hypothetical protein AURANDRAFT_62371 [Aureococcus anophagefferens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.8   0.2    0.0035       4.5     723     794 ..     363     438 ..     316     442 .. 0.81
+   2 ?    3.3   0.0    0.0047         6     724     790 ..     448     518 ..     447     525 .. 0.80
+   3 ?    1.3   0.0     0.019        24     757     790 ..     568     601 ..     523     623 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 3.8 bits;  conditional E-value: 0.0035
+  PTHR13298.orig.30.pir 723 ilskaLtsssesiRlyatkhLrvllraessdfsd......WgielLvtqlydpskevakaAlkiLee.acedkaniley 794
+                            +l++ L+++  +++  a   L  l     +d s+       +i+lLv+ l+d s +  ++A  +L + ac d+a + ++
+         XP_009034425.1 363 LLVELLCDGRAEAKRQAASALGSLAY--NNDASKvaiaeaGAIPLLVELLRDGSADAKEEAAFALSNlAC-DNAANQAA 438
+                            67788888888888888888888887..333333344555899************************999.55443555 PP
+
+  == domain 2  score: 3.3 bits;  conditional E-value: 0.0047
+  PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd....WgielLvtqlydpskevakaAlkiLeeacedkan 790
+                            l++ L ++s +++ +a + L  l   + ++ +      +i+lLv+ l+d s e ++ A+ +L +   + an
+         XP_009034425.1 448 LVELLRDGSADAKQWAMFALGNLACYNAANQAAiaeaGAIPLLVELLRDGSAEASRLATGVLWNLASNAAN 518
+                            678899999999999999999999954444444455789*********************99886656555 PP
+
+  == domain 3  score: 1.3 bits;  conditional E-value: 0.019
+  PTHR13298.orig.30.pir 757 WgielLvtqlydpskevakaAlkiLeeacedkan 790
+                             +i+lLv+ l+d s e +++A+ +L ++ ++++ 
+         XP_009034425.1 568 GAIPLLVELLRDGSAEASRRATGALWNIAYNNDA 601
+                            5899999999999999999999999996666554 PP
+
+>> XP_009039284.1  hypothetical protein AURANDRAFT_7149, partial [Aureococcus anophagefferens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.8   0.0   5.3e-05     0.068     724     786 ..      10      76 ..       6      96 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 9.8 bits;  conditional E-value: 5.3e-05
+  PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllra...essdfsdWgielLvtqlydpskevakaAlkiLee.ace 786
+                            l++ L ++s +++  a   L +l r    +++  +  gi+lLv+ l+d s++  + A ++L + a  
+         XP_009039284.1  10 LVELLRDGSPDAKQTAAGALGDLARLhanKVPIAEAGGIPLLVELLRDGSTDAKQTAAEALGDlALN 76 
+                            6788999999999999999****99444577777779***********************9984443 PP
+
+>> XP_009042670.1  hypothetical protein AURANDRAFT_4155, partial [Aureococcus anophagefferens]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.0   0.0     0.003       3.9     912     947 ..      84     123 ..      56     131 .. 0.87
+   2 ?    3.6   0.0    0.0038       4.9      82     122 ..     231     275 ..     179     314 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 4.0 bits;  conditional E-value: 0.003
+  PTHR13298.orig.30.pir 912 ghleelaetirshgle.dseeilk...lkaalWAlghigs 947
+                            g l+ +++ i s+  + d+ e+ +   l+ a+WAlg i+ 
+         XP_009042670.1  84 GALPIFCRLISSAAETpDDPECAEfehLRLAIWALGTIAE 123
+                            778889999999777788888888888***********96 PP
+
+  == domain 2  score: 3.6 bits;  conditional E-value: 0.0038
+  PTHR13298.orig.30.pir  82 vs.clr..slllseskevraaalRllrylis.dskvlrrllrlgl 122
+                             + c r  +ll ++s+ vra +l  l+ + s ++  +r++l+l++
+         XP_009042670.1 231 TDyCRRlvELLGHPSPNVRANVLTTLTSVTSgSEAQVRIVLDLHM 275
+                            332333449********************9988899999999985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      11520  (6025584 residues searched)
+Passed MSV filter:                       285  (0.0247396); expected 230.4 (0.02)
+Passed bias filter:                      238  (0.0206597); expected 230.4 (0.02)
+Passed Vit filter:                        36  (0.003125); expected 11.5 (0.001)
+Passed Fwd filter:                        11  (0.000954861); expected 0.1 (1e-05)
+Initial search space (Z):              11520  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.33u 0.04s 00:00:00.37 Elapsed: 00:00:00.18
+# Mc/sec: 37763.93
+//
+[ok]

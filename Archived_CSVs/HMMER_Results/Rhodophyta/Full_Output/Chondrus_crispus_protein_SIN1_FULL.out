@@ -1,0 +1,74 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Rhodophyta/Proteins/Chondrus_crispus_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    6.6e-07   27.8   9.6    6.6e-07   27.8   9.6    1.0  1  CDF35470.1  unnamed protein product [Chondrus crispus]
+     0.0038   15.4   5.2     0.0041   15.3   5.2    1.2  1  CDF39355.1  unnamed protein product [Chondrus crispus]
+
+
+Domain annotation for each sequence (and alignments):
+>> CDF35470.1  unnamed protein product [Chondrus crispus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   27.8   9.6   1.3e-10   6.6e-07      89     214 ..     190     304 ..      46     383 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 27.8 bits;  conditional E-value: 1.3e-10
+  PTHR13335.orig.30.pir  89 tkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r......d 169
+                            +k + kk+ +++++++++e+  sese++     ++ +++++++s +e+s ++++ ++  +e++++er++ks++  +s++ +      +
+             CDF35470.1 190 RKEKKKKKTKKGKSRKRKEE--SESEEE-----SESEEESETESEEESSEEESSEEESSSEEEERERKKKSKKKKKSSKaTkskketK 270
+                            33333334444444444333..233333.....3333333334444444444444444444444443434433333333332111112 PP
+
+  PTHR13335.orig.30.pir 170 qsscksiqwktessvkedsvqrassesslsserssdssssssaps 214
+                            +++ k ++ k     k+++ +      ++ se+ +d+s +s+  +
+             CDF35470.1 271 KAKAKKKKKK-----KSKRKD------DTTSEEETDNSEESGQED 304
+                            2222222222.....222222......222233333222222222 PP
+
+>> CDF39355.1  unnamed protein product [Chondrus crispus]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.3   5.2   8.3e-07    0.0041      87     252 ..     217     417 ..      55     446 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 15.3 bits;  conditional E-value: 8.3e-07
+  PTHR13335.orig.30.pir  87 gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r..... 168
+                              +++ +++++  + ++ +++++ ++ + s  +  ++ + +i+   +++g rr r+++a   e++++   ++ ++i+s ++       
+             CDF39355.1 217 RVKQVEEGYSREATVTRIEKFMGLADMNGSWMLHVQQMDKEIEAGMWKKGARRGRKAKAKAVETREDDAVNGLEDIMSVSSfEaagvd 304
+                            556677777777777788888888888888888889999****************99999999999999**********998844444 PP
+
+  PTHR13335.orig.30.pir 169 .........dqsscksiqwktessvkedsvqrassesslsserssdsssss..sapsr.rq........................... 217
+                                     +                         +s+ + e+ss+ +s++  ++ ++ r+                           
+             CDF39355.1 305 rdfkiesedS-------------------------GSENENEMSSIGDSEAeaDVVEEgREqrvrrrksarlsradrhiqgtkrkaav 367
+                            3222222221.........................33333333333222220022222222334345544444444444444444444 PP
+
+  PTHR13335.orig.30.pir 218 ......snkldseq...............lsaeesdslfekkskssstktqkskkp 252
+                                  +      +               +++ee++++++++sk + ++t+k++  
+             CDF39355.1 368 kaqrqmR------KkkkaeekaaeeeqqqQQEEEEHMVTPRRSKRGRSTTEKEEDE 417
+                            4444441......0444444566666666888888999999998888888887765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       9807  (3430526 residues searched)
+Passed MSV filter:                       840  (0.0856531); expected 196.1 (0.02)
+Passed bias filter:                      251  (0.025594); expected 196.1 (0.02)
+Passed Vit filter:                        33  (0.00336494); expected 9.8 (0.001)
+Passed Fwd filter:                        11  (0.00112165); expected 0.1 (1e-05)
+Initial search space (Z):               9807  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.24u 0.07s 00:00:00.31 Elapsed: 00:00:00.17
+# Mc/sec: 12939.56
+//
+[ok]

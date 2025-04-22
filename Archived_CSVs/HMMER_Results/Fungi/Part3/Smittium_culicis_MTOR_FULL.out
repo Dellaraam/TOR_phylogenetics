@@ -1,0 +1,480 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Smittium_culicis.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.8e-35  121.7  20.2    4.3e-33  114.0   0.1    6.7  5  OMJ20268.1  Target of rapamycin [Smittium culicis]
+    3.3e-07   29.9   7.7      0.074   12.5   0.4    7.1  7  OMJ17419.1  Importin subunit beta-3 [Smittium culicis]
+    2.6e-06   26.9   1.9      0.039   13.4   0.0    5.6  6  OMJ11711.1  putative importin subunit beta-4, partial [Smitti
+      1e-05   25.0   2.4      0.054   12.9   0.0    5.6  6  OMJ14017.1  putative importin subunit beta-4 [Smittium culici
+    0.00017   21.1   2.5        3.6    7.0   0.9    5.8  5  OMJ11098.1  Splicing factor 3B subunit 1 [Smittium culicis]
+    0.00017   21.1   2.5        3.6    7.0   0.9    5.8  5  OMJ25346.1  Splicing factor 3B subunit 1 [Smittium culicis]
+    0.00022   20.7   8.3        1.3    8.4   0.0    7.6  8  OMJ22814.1  Translational activator GCN1 [Smittium culicis]
+    0.00043   19.7   7.4       0.31   10.4   0.5    5.4  5  OMJ18981.1  Importin subunit beta-1 [Smittium culicis]
+  ------ inclusion threshold ------
+       0.13   11.7   1.7        1.4    8.4   0.1    3.2  3  OMJ21171.1  Coatomer subunit gamma-2 [Smittium culicis]
+
+
+Domain annotation for each sequence (and alignments):
+>> OMJ20268.1  Target of rapamycin [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.5   0.5     0.015        21      87     155 ..     481     549 ..     450     553 .. 0.83
+   2 !  114.0   0.1   3.2e-36   4.3e-33       1     158 [.     598     816 ..     598     818 .. 0.79
+   3 ?    1.7   0.0      0.12   1.6e+02     102     155 ..     841     894 ..     828     898 .. 0.82
+   4 ?    2.3   2.4     0.071        96      76     157 ..     897     978 ..     878     980 .. 0.74
+   5 !    5.1   0.3    0.0099        13      66     153 ..    1765    1856 ..    1725    1859 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 4.5 bits;  conditional E-value: 0.015
+    mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                  i +Ll+ l+ ++ s+ ++++++ +m  +++ +    p++ +i+ +++  i++++++l   +l+ +++L
+  OMJ20268.1 481 LIVQLLTQLEFSNSSQEKENCIKLLMAAVESAEQWIKPYVIEILDSIIPKISDAKPRLASKYLDIISSL 549
+                 5777888889999999**********************************************9999888 PP
+
+  == domain 2  score: 114.0 bits;  conditional E-value: 3.2e-36
+    mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks.............................................. 53 
+                 V +P++d+peLL+iL+++ k+e+++++R e+i v+G +GA+DPy++++  +                                                
+  OMJ20268.1 598 VSKPFIDHPELLDILITMFKGEENSKVRNEIITVIGNIGAVDPYEYQNKLNDLniiqsssaldynipkvqdhsaskldgrdktneiagkksntsynddi 696
+                 668*******************************************76665558898888888888888777777777666554444444333333333 PP
+
+    mTOR_dom  54 .....eeeekeeenaeetdvsellvgl..............................spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt 117
+                      +                    +                              s ++++y  +++i++Ll+il d++l++ ht++ qai+ if++
+  OMJ20268.1 697 sgsskN--------------------YkhgvvpakkdfsiakiqkqvsdipldslgsSFTTDDYHVKMAIYSLLRILTDSKLTELHTDACQAILMIFSS 775
+                 322220....................14444444555555555555666677777746667************************************** PP
+
+    mTOR_dom 118 lglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                 lgl c ++l+ ++p+l+ +++    s +ef+l+qL+ Lv+i
+  OMJ20268.1 776 LGLSCAKYLKDVVPSLMFAMKVGGFSQKEFYLEQLGRLVAI 816
+                 *********************9888**************98 PP
+
+  == domain 3  score: 1.7 bits;  conditional E-value: 0.12
+    mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                 ++++a++  i  + + l     + l+ ++p ll vi++ +s+ r+  l+ L  L
+  OMJ20268.1 841 NQQSAAIALIEVVAEALVGDFGSHLSTVLPFLLDVIEKDQSETRNPTLRVLHAL 894
+                 677888888888888888888999************998888888888888777 PP
+
+  == domain 4  score: 2.3 bits;  conditional E-value: 0.071
+    mTOR_dom  76 spsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157
+                 ++ + + y   +i  ++++l+ ++ +     +++q+i si+    ++c +f + i+ +l+++ r++++ ++++ +++ +++L++
+  OMJ20268.1 897 ISPNLDPYLLLTIPRIVSLLDFRKQTvIVIDSAIQTISSIVL--AVNCRTFASCIVLSLVRLYRNAPTlQIQNQIMDLFCVLMQ 978
+                 555566666666777777775444443567788888888886..699*********************9****99999999986 PP
+
+  == domain 5  score: 5.1 bits;  conditional E-value: 0.0099
+    mTOR_dom   66 tdvsellvglspsseeyyptvvinaLlkilkdps.......lsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLa 153 
+                  ++++++ ++++ps   +++++ ++++ + l+d            h  +v qai s f+++++   ++  q++p++l+ i+t ++++r  ++q L 
+  OMJ20268.1 1765 ISTQMVDTHIIPSIHGFFKAIQLSNMDTTLQDTLrlltvwfNYGHIDSVAQAISSRFNDVKI---TTWIQVMPQILARIHTPHENVRRLIVQLLV 1856
+                  34444455667777777777777766666655431111110235778888999998887544...445699999999999999999999999886 PP
+
+>> OMJ17419.1  Importin subunit beta-3 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.5   0.0       2.2     3e+03      90     116 ..     110     136 ..      79     166 .. 0.62
+   2 !    5.5   0.0    0.0074        10      66     142 ..     238     327 ..     189     338 .. 0.78
+   3 ?    1.0   0.0      0.19   2.6e+02      86     155 ..     368     436 ..     363     440 .. 0.80
+   4 !   12.5   0.4   5.5e-05     0.074      67     142 ..     475     549 ..     442     556 .. 0.77
+   5 ?    2.3   0.0     0.076     1e+02     112     138 ..     609     635 ..     597     644 .. 0.83
+   6 ?   -0.6   0.0      0.57   7.7e+02     102     136 ..     855     889 ..     800     900 .. 0.79
+   7 ?    3.5   0.0     0.032        44      66     101 ..     976    1013 ..     945    1067 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: -2.5 bits;  conditional E-value: 2.2
+    mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifk 116
+                  Ll+ l+ ++ ss ++++ +++  if+
+  OMJ17419.1 110 LLLSALDRETDSSSRNKICDTVSDIFN 136
+                 455555555555666666666665554 PP
+
+  == domain 2  score: 5.5 bits;  conditional E-value: 0.0074
+    mTOR_dom  66 tdvsellvglspss..eeyyptvvinaLlkil........kdpslsshhtavvqaimsifktlglkc...vpflpqiipallsvirtces 142
+                 +d ++l+ +ls+ s   e+yp+     L++il        + + l+  ++ +++++++  +     c    +f +++ip +l++++++e+
+  OMJ17419.1 238 NDEQSLVECLSSLSelAEVYPKSFRPILVNILefgsqigsNVNLLDATRQVAIEVLVTLAEAAPGICrkqPQFCEKLIPIILNMMTEIED 327
+                 455555555555444789****9999******9999999888889999999999999999996554422278*************99876 PP
+
+  == domain 3  score: 1.0 bits;  conditional E-value: 0.19
+    mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                 v+++ + ++l+ +  ++ ++a++ ai  i +     + + l++i++ +  +ir+ ++++r    + +++L
+  OMJ17419.1 368 VAFQHIPNMLSAQEWQK-RHAALMAISAIGEGSFKIMKNELENILNIVCPYIRDPHPRIRYAACNTIGQL 436
+                 67778888888887775.5567789999999755555899**************9999999888888877 PP
+
+  == domain 4  score: 12.5 bits;  conditional E-value: 5.5e-05
+    mTOR_dom  67 dvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                 ++ ++  +  + + e y  + ++ L+k+l  ++ +  +++++++i ++  + +    + ++ i+p+ll+v++++++
+  OMJ17419.1 475 AMVNFSEEARKKTIEPYLDTLFERLMKLLTSEK-RYVQEQAITTIATVADSAQELFRKHYSAIVPQLLNVLENASE 549
+                 333334445666778889999********6666.5689999**********99999***************99876 PP
+
+  == domain 5  score: 2.3 bits;  conditional E-value: 0.076
+    mTOR_dom 112 msifktlglkcvpflpqiipallsvir 138
+                    +k +g   +p+lp ++p ll+ ++
+  OMJ17419.1 609 ARLCKVMGHDFIPYLPVVMPPLLKSAS 635
+                 567999****************98765 PP
+
+  == domain 6  score: -0.6 bits;  conditional E-value: 0.57
+    mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsv 136
+                 +   ++ +ai  ++kt     +++ +q+ip+l+  
+  OMJ17419.1 855 EAMDSISKAIRLVMKTNTHTFINMFDQLIPTLVMF 889
+                 44556778889999998888899999999998765 PP
+
+  == domain 7  score: 3.5 bits;  conditional E-value: 0.032
+    mTOR_dom   66 tdvsel.lvglspsseeyypt.vvinaLlkilkdpsls 101 
+                  ++++++ + + s+++e+ y+t  +i+aL+ki+  +s s
+  OMJ17419.1  976 PSIAQMiASKDSKAEENIYATeNAISALVKIMTYNSSS 1013
+                  45566634445777799998889********9777655 PP
+
+>> OMJ11711.1  putative importin subunit beta-4, partial [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.3   0.1      0.96   1.3e+03      66      94 ..      20      49 ..       3      73 .. 0.63
+   2 !    5.7   0.0    0.0068       9.2      10      39 ..     165     194 ..     160     225 .. 0.92
+   3 ?   -0.3   0.0      0.46   6.3e+02     111     146 ..     329     363 ..     299     374 .. 0.72
+   4 !   13.4   0.0   2.9e-05     0.039      83     149 ..     424     490 ..     370     498 .. 0.74
+   5 ?   -0.2   0.0      0.43   5.8e+02     119     138 ..     588     607 ..     582     619 .. 0.81
+   6 ?   -1.2   0.0      0.89   1.2e+03     120     157 ..     655     692 ..     639     698 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -1.3 bits;  conditional E-value: 0.96
+    mTOR_dom 66 tdvsellvglspsseeyypt.vvinaLlki 94
+                t+++++ + +s+ se yy++ + i aL++i
+  OMJ11711.1 20 TSTEAIQQITSELSEKYYSSnTCIPALVEI 49
+                333344444455567777654666777666 PP
+
+  == domain 2  score: 5.7 bits;  conditional E-value: 0.0068
+    mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvlGilG 39 
+                 +L+++++n++k  +s ++R  +++ lG lG
+  OMJ11711.1 165 TLITLFSNLIKDPESIQVRVTTMQALGKLG 194
+                 6899999****99***************99 PP
+
+  == domain 3  score: -0.3 bits;  conditional E-value: 0.46
+    mTOR_dom 111 imsifktlglkcvpflpqiipallsvirtcesslre 146
+                 ++++++t +l   ++ p ++++++++++++++ +r+
+  OMJ11711.1 329 VLNVLST-NLPPAQVFPIVVNNIVQYMQNSDPMVRK 363
+                 4555554.7777889999999999999999987766 PP
+
+  == domain 4  score: 13.4 bits;  conditional E-value: 2.9e-05
+    mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+                 +++  +  +l+il+  +  ++ + + +a+  i++ lg +++p+lpq++++l++ + + +s ++ + l
+  OMJ11711.1 424 FHSQLLPRVLEILSTDNNVEMGKHACNALDAILEGLGSNVIPYLPQLMQQLINQLDNGSSVVKPMAL 490
+                 34446778899999999999*********************************99988776666655 PP
+
+  == domain 5  score: -0.2 bits;  conditional E-value: 0.43
+    mTOR_dom 119 glkcvpflpqiipallsvir 138
+                 g   ++flp+i+p++l+++ 
+  OMJ11711.1 588 GADFTTFLPHIVPEILATFA 607
+                 556789*********99865 PP
+
+  == domain 6  score: -1.2 bits;  conditional E-value: 0.89
+    mTOR_dom 120 lkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                    +p+++++  +l++++++ ++++r+  ++ L  +v+
+  OMJ11711.1 655 AGFLPYVTEVSTELVKLLSNYSDNVRKSAISALFAFVT 692
+                 55677888888888888888888888888888877765 PP
+
+>> OMJ14017.1  putative importin subunit beta-4 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.9   0.1       1.5     2e+03      66      94 ..      20      49 ..       4      68 .. 0.63
+   2 !    5.2   0.0    0.0091        12      10      39 ..     165     194 ..     160     224 .. 0.92
+   3 ?   -0.7   0.0       0.6   8.2e+02     111     146 ..     329     363 ..     298     374 .. 0.71
+   4 !   12.9   0.0     4e-05     0.054      83     149 ..     424     490 ..     368     497 .. 0.74
+   5 ?   -0.7   0.0       0.6   8.2e+02     120     138 ..     589     607 ..     583     618 .. 0.81
+   6 ?   -1.7   0.0       1.3   1.7e+03     120     157 ..     655     692 ..     645     697 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: -1.9 bits;  conditional E-value: 1.5
+    mTOR_dom 66 tdvsellvglspsseeyypt.vvinaLlki 94
+                t+++++ + +s+ se yy++ + i aL++i
+  OMJ14017.1 20 TSTEAIQQITSELSEKYYSSnTCIPALVEI 49
+                334444444455667777664667777766 PP
+
+  == domain 2  score: 5.2 bits;  conditional E-value: 0.0091
+    mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvlGilG 39 
+                 +L+++++n++k  +s ++R  +++ lG lG
+  OMJ14017.1 165 TLITLFSNLIKDPESIQVRVTTMQALGKLG 194
+                 6899999****99***************99 PP
+
+  == domain 3  score: -0.7 bits;  conditional E-value: 0.6
+    mTOR_dom 111 imsifktlglkcvpflpqiipallsvirtcesslre 146
+                 ++++++t +l   ++ p ++++++++++++++ +r+
+  OMJ14017.1 329 VLNVLST-NLPPAQVFPIVVNNIVQYMQNSDPMVRK 363
+                 4555554.7777888999999999999999987765 PP
+
+  == domain 4  score: 12.9 bits;  conditional E-value: 4e-05
+    mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+                 +++  +  +l+il+  +  ++ + + +a+  i++ lg +++p+lpq++++l++ + + +s ++ + l
+  OMJ14017.1 424 FHSQLLPRVLEILSTDNNVEMGKHACNALDAILEGLGSNVIPYLPQLMQQLINQLDNGSSVVKPMAL 490
+                 34446778899999999999*********************************99987776666655 PP
+
+  == domain 5  score: -0.7 bits;  conditional E-value: 0.6
+    mTOR_dom 120 lkcvpflpqiipallsvir 138
+                    ++flp+i+p++l+++ 
+  OMJ14017.1 589 ADFTTFLPHIVPEILATFA 607
+                 56789*********99765 PP
+
+  == domain 6  score: -1.7 bits;  conditional E-value: 1.3
+    mTOR_dom 120 lkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                    +p+++++  +l++++++ ++++r+  ++ L  +v+
+  OMJ14017.1 655 AGFLPYVTEVSTELVKLLSNYSDNVRKSAISALFAFVT 692
+                 55678888888888888888888888888888877765 PP
+
+>> OMJ11098.1  Splicing factor 3B subunit 1 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.0      0.18   2.4e+02      68     130 ..     458     521 ..     425     528 .. 0.75
+   2 ?    1.4   0.0      0.14   1.9e+02       2      35 ..     581     614 ..     580     674 .. 0.85
+   3 ?    1.5   0.1      0.13   1.7e+02      78     136 ..     706     763 ..     695     776 .. 0.81
+   4 !    7.0   0.9    0.0027       3.6      58     148 ..     782     897 ..     714     909 .. 0.63
+   5 ?    2.7   0.0     0.056        75      16     132 ..    1009    1118 ..     997    1135 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 0.18
+    mTOR_dom  68 vsellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+                  ++++ ++++    y +   +n++l +l  psl+ + ++  v++i  i+  lg  + pf  +i+
+  OMJ11098.1 458 RKSAMRQITENARTYGAGPLFNNILPLLMAPSLEdQERHLLVKVIDRILYRLGDLVRPFTHKIL 521
+                 333357777777788888899************9778889999999999999999999988887 PP
+
+  == domain 2  score: 1.4 bits;  conditional E-value: 0.14
+    mTOR_dom   2 vePyldypeLLeiLlnilkteqsqsiRrevikvl 35 
+                 v   l  p+LL  L  + k+++s++ R   ik++
+  OMJ11098.1 581 VASALGIPSLLPFLKAVCKSKKSWQARHTGIKIV 614
+                 5566678999999999999999999998888765 PP
+
+  == domain 3  score: 1.5 bits;  conditional E-value: 0.13
+    mTOR_dom  78 sseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsv 136
+                  + +yy   v+  L++ ++ p  +++++ v++++ +   t g++   ++++i+p+++++
+  OMJ11098.1 706 EHANYYTREVMIILIREFQSPD-EEMKKIVLKVVKQCTATDGVQAQYIIDEILPEFFKY 763
+                 4578999989999999997777.4577888888888888999999999********985 PP
+
+  == domain 4  score: 7.0 bits;  conditional E-value: 0.0027
+    mTOR_dom  58 keeenaeetdvsel...lvglspsseeyyptvvinaLlkil.......................kdpslsshhtavvqaimsifktlglkcvpflpqii 130
+                 ++ e a++  vs++   lv+  + + e + ++v+++L +i+                        +++ls   + +++   +i++ lgl+  p+l+qi 
+  OMJ11098.1 782 TTVEIANKVGVSSIlsrLVNGLKDQSEPFRKMVMETLDQIIsalgtsdidprleeqlmdgvlyaFQEQLS-DDQLILNGFGTIINALGLRAQPYLQQIT 879
+                 3333333444444444455556777888888888888888888888887777777776666664333333.45667777799***************** PP
+
+    mTOR_dom 131 pallsvirtcesslrefl 148
+                 +all  +++ +++ r+  
+  OMJ11098.1 880 SALLWRLNNQNARTRQQA 897
+                 ***999998887666554 PP
+
+  == domain 5  score: 2.7 bits;  conditional E-value: 0.056
+    mTOR_dom   16 lnilkteqsqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqai 111 
+                  l++lk   +++iRr  ++++G +  A+ P+ +  +  ++     + ++ ++ +v  ++v +    e   p +v+ aL++  + p l+  ++ v++++
+  OMJ11098.1 1009 LELLKAH-KKAIRRASVNTFGYIAkAIGPQDVLATLLNN-L---KVQERQN-RVC-TTVAIAIVAESCAPYTVLPALMNEYRVPELN-VQNGVLKSM 1097
+                  5555544.6778888888888775588888773333222.1...1222211.122.2345566778889999999999999999988.678899999 PP
+
+    mTOR_dom  112 msifktlglkcvpflpqiipa 132 
+                   + f+++g     +++ + p 
+  OMJ11098.1 1098 SFLFEYIGEMGKDYINAVTPL 1118
+                  999999888888888888775 PP
+
+>> OMJ25346.1  Splicing factor 3B subunit 1 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.0      0.18   2.4e+02      68     130 ..     458     521 ..     425     528 .. 0.75
+   2 ?    1.4   0.0      0.14   1.9e+02       2      35 ..     581     614 ..     580     674 .. 0.85
+   3 ?    1.5   0.1      0.13   1.7e+02      78     136 ..     706     763 ..     695     776 .. 0.81
+   4 !    7.0   0.9    0.0027       3.6      58     148 ..     782     897 ..     714     909 .. 0.63
+   5 ?    2.7   0.0     0.056        75      16     132 ..    1009    1118 ..     997    1135 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 0.18
+    mTOR_dom  68 vsellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+                  ++++ ++++    y +   +n++l +l  psl+ + ++  v++i  i+  lg  + pf  +i+
+  OMJ25346.1 458 RKSAMRQITENARTYGAGPLFNNILPLLMAPSLEdQERHLLVKVIDRILYRLGDLVRPFTHKIL 521
+                 333357777777788888899************9778889999999999999999999988887 PP
+
+  == domain 2  score: 1.4 bits;  conditional E-value: 0.14
+    mTOR_dom   2 vePyldypeLLeiLlnilkteqsqsiRrevikvl 35 
+                 v   l  p+LL  L  + k+++s++ R   ik++
+  OMJ25346.1 581 VASALGIPSLLPFLKAVCKSKKSWQARHTGIKIV 614
+                 5566678999999999999999999998888765 PP
+
+  == domain 3  score: 1.5 bits;  conditional E-value: 0.13
+    mTOR_dom  78 sseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsv 136
+                  + +yy   v+  L++ ++ p  +++++ v++++ +   t g++   ++++i+p+++++
+  OMJ25346.1 706 EHANYYTREVMIILIREFQSPD-EEMKKIVLKVVKQCTATDGVQAQYIIDEILPEFFKY 763
+                 4578999989999999997777.4577888888888888999999999********985 PP
+
+  == domain 4  score: 7.0 bits;  conditional E-value: 0.0027
+    mTOR_dom  58 keeenaeetdvsel...lvglspsseeyyptvvinaLlkil.......................kdpslsshhtavvqaimsifktlglkcvpflpqii 130
+                 ++ e a++  vs++   lv+  + + e + ++v+++L +i+                        +++ls   + +++   +i++ lgl+  p+l+qi 
+  OMJ25346.1 782 TTVEIANKVGVSSIlsrLVNGLKDQSEPFRKMVMETLDQIIsalgtsdidprleeqlmdgvlyaFQEQLS-DDQLILNGFGTIINALGLRAQPYLQQIT 879
+                 3333333444444444455556777888888888888888888888887777777776666664333333.45667777799***************** PP
+
+    mTOR_dom 131 pallsvirtcesslrefl 148
+                 +all  +++ +++ r+  
+  OMJ25346.1 880 SALLWRLNNQNARTRQQA 897
+                 ***999998887666554 PP
+
+  == domain 5  score: 2.7 bits;  conditional E-value: 0.056
+    mTOR_dom   16 lnilkteqsqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqai 111 
+                  l++lk   +++iRr  ++++G +  A+ P+ +  +  ++     + ++ ++ +v  ++v +    e   p +v+ aL++  + p l+  ++ v++++
+  OMJ25346.1 1009 LELLKAH-KKAIRRASVNTFGYIAkAIGPQDVLATLLNN-L---KVQERQN-RVC-TTVAIAIVAESCAPYTVLPALMNEYRVPELN-VQNGVLKSM 1097
+                  5555544.6778888888888775588888773333222.1...1222211.122.2345566778889999999999999999988.678899999 PP
+
+    mTOR_dom  112 msifktlglkcvpflpqiipa 132 
+                   + f+++g     +++ + p 
+  OMJ25346.1 1098 SFLFEYIGEMGKDYINAVTPL 1118
+                  999999888888888888775 PP
+
+>> OMJ22814.1  Translational activator GCN1 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.1   0.1      0.39   5.3e+02      99     141 ..     278     322 ..     248     341 .. 0.73
+   2 ?    0.1   0.1      0.35   4.8e+02      21     102 ..    1308    1393 ..    1301    1468 .. 0.74
+   3 ?   -0.3   0.0      0.46   6.2e+02      80     154 ..    1491    1564 ..    1455    1570 .. 0.74
+   4 ?   -0.4   0.0      0.51   6.8e+02     125     157 ..    1654    1686 ..    1625    1764 .. 0.61
+   5 !    5.6   0.0    0.0069       9.4      47     134 ..    1847    1933 ..    1815    1976 .. 0.63
+   6 ?   -3.1   0.0       3.3   4.5e+03     124     140 ..    2063    2079 ..    1998    2106 .. 0.58
+   7 !    8.4   0.0   0.00098       1.3      80     156 ..    2362    2441 ..    2336    2443 .. 0.80
+   8 ?   -1.5   0.1       1.1   1.4e+03      85     138 ..    2481    2540 ..    2458    2550 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: -0.1 bits;  conditional E-value: 0.39
+    mTOR_dom  99 slsshhtavvqaimsifktlglkcvpflpqiip..allsvirtce 141
+                  l+s  ++v++  +s f+ l  kcv   + i +  a++sv+++ +
+  OMJ22814.1 278 ILKSTSSQVLEKCVSLFNILAEKCVDSTNTIASanAIFSVLSKNK 322
+                 4778889999999999999999**999999965114666666444 PP
+
+  == domain 2  score: 0.1 bits;  conditional E-value: 0.35
+    mTOR_dom   21 teqsqsiRrevikvlGil.GALDPykhke..veekseeeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslss 102 
+                  +e++  +R +vi +lG+l G LD    +   v ++ + + ++ +++ +++vs  l++ls+   ee +++ + + L+++++d++++ 
+  OMJ22814.1 1308 SESHDRMRESVIVLLGTLaGHLDSGDPRIpgVLKNLAASLHTPSESVQSAVSICLATLSKKLeEEEIEKLINHLLIELFNDKKYAV 1393
+                  56788899999999998878898777653112222233333344444556666677776665588888888888889888887764 PP
+
+  == domain 3  score: -0.3 bits;  conditional E-value: 0.46
+    mTOR_dom   80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLat 154 
+                    y  + v+ +Ll+ l++++ +  ++  ++ + s+      +  + lp iip l+ ++++++ +++e     L++
+  OMJ22814.1 1491 SGYGVKLVLPSLLSGLQNSQWR-TKKGSIEMLGSMAFCAPKQLSAALPSIIPRLVLTLSDSHINVSEAAHTALKS 1564
+                  5555667777888888655555.56777888888888778888999********999999888888887777665 PP
+
+  == domain 4  score: -0.4 bits;  conditional E-value: 0.51
+    mTOR_dom  125 flpqiipallsvirtcesslrefllqqLatLvs 157 
+                  ++p+ +p l s++++  ++ r +  + L++Lvs
+  OMJ22814.1 1654 YIPKMLPLLKSILSDPLPETRGTSAKALGQLVS 1686
+                  555555555555555555555555555555543 PP
+
+  == domain 5  score: 5.6 bits;  conditional E-value: 0.0069
+    mTOR_dom   47 keveekseeeekeeenaee.tdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipall 134 
+                  k+ + + +e e+e++ +++  d + + ++  + +e+y   + i+++ +il  ++l + + + + a ++i ++  +++v   + i+ + l
+  OMJ22814.1 1847 KSSKAQDSE-EQEDSGSDDeDDEDGTFKNNKNKEEDYENEISIESIRQIL-GETLGEEKRDYIIAALYISRNDVVNSVRQASMIVWKTL 1933
+                  333332223.334444444144445577777777999999**********.56666677777777777777655555555555554433 PP
+
+  == domain 6  score: -3.1 bits;  conditional E-value: 3.3
+    mTOR_dom  124 pflpqiipallsvirtc 140 
+                   +l++++p ll+++++ 
+  OMJ22814.1 2063 RVLDNVLPYLLNALSSE 2079
+                  34444444444444432 PP
+
+  == domain 7  score: 8.4 bits;  conditional E-value: 0.00098
+    mTOR_dom   80 eeyyp...tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                  ++y +   t +   L++i+ d+  s+ ++ v+qa+ + +  l     pflpq+  ++++++++++s +r    + L++L+
+  OMJ22814.1 2362 QDYLKpsiTAITGPLIRIVGDRIPSDVRSVVIQALGQLLGLLPQYLKPFLPQLQRTFVKYLSDSDSYIRTQSQNALTILI 2441
+                  455431113455679*************************************************9999999999999887 PP
+
+  == domain 8  score: -1.5 bits;  conditional E-value: 1.1
+    mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifkt......lglkcvpflpqiipallsvir 138 
+                  + +i+aL++ lk  s+++  ++  ++i   + +       + +  + l + +p++l++++
+  OMJ22814.1 2481 SCMIKALISALKSDSIKTLSESSFKSIEACLISsdalsiHNRQIQSALAEALPTFLKLAS 2540
+                  368999999999999998888888887433322112111233345577777777777665 PP
+
+>> OMJ18981.1  Importin subunit beta-1 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.4   0.1     0.017        23      57     155 ..      68     162 ..      47     167 .. 0.70
+   2 ?    1.8   0.1       0.1   1.4e+02      65      96 ..     179     210 ..     163     234 .. 0.77
+   3 ?    4.0   0.1     0.021        29      80     156 ..     409     491 ..     379     494 .. 0.74
+   4 !   10.4   0.5   0.00023      0.31      55     159 ..     471     593 ..     455     594 .. 0.74
+   5 ?    0.5   0.0      0.27   3.6e+02     106     139 ..     623     656 ..     608     675 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 4.4 bits;  conditional E-value: 0.017
+    mTOR_dom  57 ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLat 154
+                 ++++++a+++  + ++v +++  ++  +  +i++L++ +  p+ ++ + a ++ai +i++ ++ +  ++  ++i+ a+++ +r+ e+  +e+ l  L+ 
+  OMJ18981.1  68 DSHASTASAQ--AIAAVAIIELPKNEWQD-AITELMSYVTSPN-DQLKIASLRAIGFICEGIDPEIlLSQSNKILTAVIQGARSEEP-NQEVRLTALQA 161
+                 2222222222..22255677777666776.8999**9998887.7799999**************9999*************98554.55666666655 PP
+
+    mTOR_dom 155 L 155
+                 L
+  OMJ18981.1 162 L 162
+                 5 PP
+
+  == domain 2  score: 1.8 bits;  conditional E-value: 0.1
+    mTOR_dom  65 etdvsellvglspsseeyyptvvinaLlkilk 96 
+                  + + +++++ ++s +ey +   ++ L++i++
+  OMJ18981.1 179 RSVIMQTVCEATQSPNEYVQVLSFECLVRIMQ 210
+                 334455578889999***************95 PP
+
+  == domain 3  score: 4.0 bits;  conditional E-value: 0.021
+    mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvp......flpqiipallsvir.tces.slrefllqqLatLv 156
+                  ++  +v+i+aL++ lkd+      +++  a+m+ +++l+    +      ++++i+ al+++++ ++++ + r   ++ +at+ 
+  OMJ18981.1 409 LDVHLNVMISALVMGLKDSPRV--VSNCCWALMNLCEQLSSSGQEsnplspYVEHIVTALMQITEaNTNEgNSRASAYEAMATIA 491
+                 5677789999999999987754..6677778888887765443222334449999999999999843334688888888888876 PP
+
+  == domain 4  score: 10.4 bits;  conditional E-value: 0.00023
+    mTOR_dom  55 eeekeeenaeetdvsellvglspsseeyyptvvinaLlkil.................kdpslsshhtavvqaimsifktlglkcvpflpqiipallsv 136
+                 e++++e n+++++ +++++  s+ss++ yp v+    ++ l                 +  +l + +++ +++i+++++tlg    ++ ++ +  ll++
+  OMJ18981.1 471 EANTNEGNSRASAYEAMATIASTSSKDTYPIVARLG-VATLdrleatinalsqsvgldDRIALFDLQSNLLSVITNVIRTLGSSFAEIADRCMTILLQL 568
+                 334555555556666666666777799999876443.3444466788888899999855556779********************************** PP
+
+    mTOR_dom 137 irtces..slrefllqqLatLvsiv 159
+                 i+++ +  ++ e  +  ++ L+s +
+  OMJ18981.1 569 ITSSGKqsNVAEDTFLAIGALISAI 593
+                 9977554699999999999999876 PP
+
+  == domain 5  score: 0.5 bits;  conditional E-value: 0.27
+    mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirt 139
+                  +v  i  i++  g  ++p+ +q++++ll+ i++
+  OMJ18981.1 623 IAVGIIGDICRAFGDGVLPYCDQFMSTLLNNIES 656
+                 567788999********************99875 PP
+
+>> OMJ21171.1  Coatomer subunit gamma-2 [Smittium culicis]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.4   0.1     0.001       1.4      64      97 ..     111     144 ..      92     168 .. 0.78
+   2 ?    0.3   0.0       0.3   4.1e+02      72      93 ..     396     417 ..     324     476 .. 0.59
+   3 ?   -2.0   0.0       1.5     2e+03      81     124 ..     584     628 ..     567     632 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 8.4 bits;  conditional E-value: 0.001
+    mTOR_dom  64 eetdvsellvglspsseeyyptvvinaLlkilkd 97 
+                   + +s+l+++++p s+++y + +i+aL ki + 
+  OMJ21171.1 111 VIMVTSSLMKDMQPKSDDMYRAKAIRALCKITDI 144
+                 345567779*********************9854 PP
+
+  == domain 2  score: 0.3 bits;  conditional E-value: 0.3
+    mTOR_dom  72 lvglspsseeyyptvvinaLlk 93 
+                 ++g  +   + + t+v na+ +
+  OMJ21171.1 396 MQGFLTEISDEFRTIVANAVQN 417
+                 3333333333333333333333 PP
+
+  == domain 3  score: -2.0 bits;  conditional E-value: 1.5
+    mTOR_dom  81 eyypt.vvinaLlkilkdpslsshhtavvqaimsifktlglkcvp 124
+                   y++    n L+  l d++ +      +++i +i +++++k+ +
+  OMJ21171.1 584 STYSMqALENRLVDYLADSTNRFKEPVSITSIPKISREQEIKQKT 628
+                 444441444678888888888888888888888888888887755 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      12166  (4855677 residues searched)
+Passed MSV filter:                       644  (0.0529344); expected 243.3 (0.02)
+Passed bias filter:                      439  (0.0360842); expected 243.3 (0.02)
+Passed Vit filter:                        31  (0.00254808); expected 12.2 (0.001)
+Passed Fwd filter:                         9  (0.000739767); expected 0.1 (1e-05)
+Initial search space (Z):              12166  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.10u 0.03s 00:00:00.13 Elapsed: 00:00:00.07
+# Mc/sec: 10331.68
+//
+[ok]

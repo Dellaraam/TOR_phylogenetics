@@ -1,0 +1,178 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Eremothecium_gossypii_fdag1_gca_000968835.ASM96883v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     7e-136  451.1   0.5     7e-136  451.1   0.5    2.9  3  AEY98103  pep chromosome:ASM96883v1:VI:1190600:1197988:1 gene
+    4.6e-80  267.5   9.7    4.6e-80  267.5   9.7    3.0  3  AEY97381  pep chromosome:ASM96883v1:V:1375801:1386894:-1 gene
+    7.5e-13   46.5   1.8    2.3e-12   44.9   1.8    1.9  1  AEY95168  pep chromosome:ASM96883v1:II:582934:589908:-1 gene:
+  ------ inclusion threshold ------
+      0.027   11.8   0.0      0.033   11.5   0.0    1.1  1  AEY94830  pep chromosome:ASM96883v1:I:660983:661444:-1 gene:F
+
+
+Domain annotation for each sequence (and alignments):
+>> AEY98103  pep chromosome:ASM96883v1:VI:1190600:1197988:1 gene:FAGOS_FAFR420W transcript:AEY98103 gene_biotype:protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.5   0.0      0.12   1.5e+02     203     273 ..     485     565 ..     473     582 .. 0.68
+   2 ?   -1.7   0.2      0.28   3.4e+02      67     120 ..    1348    1400 ..    1317    1438 .. 0.61
+   3 !  451.1   0.5  5.9e-139    7e-136       1     343 []    1454    1837 ..    1454    1837 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: -0.5 bits;  conditional E-value: 0.12
+               HHSSCCHHHHCCTSSCCCSS-SS---......................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHH CS
+       FAT 203 ealqkLrefvscllekkeelssglevq...........eptnleeftkllarcylkkGewlaalqklnwseekseeilqays 273
+               ++l++L++++  l    +e + +l++            +pt +++f++++ar+y  + +wl+++++ n s++++   +qa +
+  AEY98103 485 DTLETLNQELPALEPLVNEKLLDLICYnlsgdkfrppgSPTPIKHFSNEKARAYRDQ-SWLRKTGDINDSNQDALILTQALR 565
+               455555555554444443333333322555566668999999************988.59*****98877766655555555 PP
+
+  == domain 2  score: -1.7 bits;  conditional E-value: 0.28
+                --SCCCCCHHHHHCCCCCHHHCHHCCHHCSS----TTTTTTT----TTS-TTTG CS
+       FAT   67 sgesynraydllvrlQqlaEleeiiqykqklssseelksllktWrkRlpgvqdd 120 
+                   s++   +l+   +ql+    +i ++++  +++   +l++tW ++l+   d 
+  AEY98103 1348 QEPSTSTIESLISINNQLHQTDAAIGILKHA-QQHHDLQLKETWYEKLQRWDDA 1400
+                4444444444444445555556666666543.3444445556666666544443 PP
+
+  == domain 3  score: 451.1 bits;  conditional E-value: 5.9e-139
+                CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+       FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                aplaa+a W+lg Wds+e+y+++mk +spdk+ff+ail+lh n+f++a+e+i  ar+llvte+sal++esynray+++vr Q++aEleeiiqyk+ +++
+  AEY98103 1454 APLAAAAEWGLGHWDSIEKYINVMKPQSPDKEFFDAILCLHSNDFEKASEHIFLARDLLVTEMSALVNESYNRAYSVVVRSQMIAELEEIIQYKKLPQN 1552
+                79************************************************************************************************* PP
+
+                --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT...........TSSCCCHH CS
+       FAT  100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp......pevvyayl 192 
+                se+++ ++ktW+ Rl+g+q++v+vwq+il+vRslv++p++d       +++w+kfanl+Rksgr++lA+kaL++llee  ++++p      p+vvya+l
+  AEY98103 1553 SEKRAIMRKTWNHRLLGCQKNVDVWQRILRVRSLVVKPKQD-------MQVWIKFANLCRKSGRMGLAQKALNSLLEEGGDPEHPntarapPPVVYAQL 1644
+                *****************************************.......******************************9955555669999******** PP
+
+                HHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCH CS
+       FAT  193 kylwakgeqkealqkLrefvscllekkeelssglevq........eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswy 283 
+                ky+wa+g +k+al +L  f+s+++++ + ++s++++q         + ++ee+tkllarc+lk+Gew+  lq  +w+++++++il +y++at++d++wy
+  AEY98103 1645 KYMWATGSRKDALRHLISFTSRMAHDLGLDPSNMIAQnvphnsvvPACHIEEYTKLLARCFLKQGEWRVMLQP-KWRTDTPDAILGSYLLATHFDNTWY 1742
+                *************************************************************************.8************************ PP
+
+                STTCCCCHHHHHCCHHHHHHSSSS....................................S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  284 kawhtwalfnfevlskeeekkeeee...................................pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                kawh+wal+nfev+s ++++ + e+                                   p+ ++++vvpa++gf++s+sls+++slqd+lRlLt
+  AEY98103 1743 KAWHNWALANFEVISLMTDSVRDEHralsnetesvgqtdgtaqhnsidvdavncngsechPDLVQRHVVPAIKGFFHSISLSESNSLQDTLRLLT 1837
+                *****************9996666679999999**************************999999*****************************8 PP
+
+>> AEY97381  pep chromosome:ASM96883v1:V:1375801:1386894:-1 gene:FAGOS_FAER393C transcript:AEY97381 gene_biotype:protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.6   0.1     0.015        18      72     181 ..      15     131 ..       2     198 .. 0.82
+   2 ?   -4.1   0.1       1.5   1.8e+03      68     119 ..    2573    2634 ..    2547    2637 .. 0.70
+   3 !  267.5   9.7   3.9e-83   4.6e-80       2     343 .]    2703    3052 ..    2702    3052 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 2.6 bits;  conditional E-value: 0.015
+               CCCHHHHHCCCCCHHHCHHCCHHCSS-.---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.....HHCCS-STTCCCCCCCCHCHHH.HCC CS
+       FAT  72 nraydllvrlQqlaEleeiiqykqkls.sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.....lllkgakaemwlkfanlaRksg.rls 165
+                ra +l++r   l+El+++ + ++ ++  ++ l+  l  ++ +l+ v  ++++ +   +vRs+ l+  ++      l ++a++ + +    l R+++ +  
+  AEY97381  15 GRAESLVQRYAVLSELCDVMETITVSGdYEHFLSVCLPLLKVQLQTVPISLNATSAEQKVRSVTLEILNRcvmndKLERHATTIAEMLLTALPRENDeNGV 115
+               688899******************9997777888889*********************************5544444444444444555566777762567 PP
+
+               STTHHCCCCCHCTT.. CS
+       FAT 166 lAekaLkklleedkee 181
+               l++k L++l ++ k++
+  AEY97381 116 LCMKILTSLFKSYKQP 131
+               8999999998887733 PP
+
+  == domain 2  score: -4.1 bits;  conditional E-value: 1.5
+                -SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-..........---TTTTTTT----TTS-TTT CS
+       FAT   68 gesynraydllvrlQqlaEleeiiqykqkls..........sseelksllktWrkRlpgvqd 119 
+                 +syn+ y+++  l  + E  +i++ k  ++          s++e ++ +  Wr+R +   +
+  AEY97381 2573 ATSYNSWYQSINILESMEESGSIANTKILEAnedallelyvSLQEEDMFYGLWRRRAKYAET 2634
+                56777777666555555555555555444448889999999999999999999999876655 PP
+
+  == domain 3  score: 267.5 bits;  conditional E-value: 3.9e-83
+                CCTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.....--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHH CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhr.....nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleei 90  
+                +l +e+ Wr+ +W+s +e+l++        ++p++++fe++l+l++     +  +e+++l+++++ql + ++++++ +++ ++  ll+ +Qq++E++e+
+  AEY97381 2703 DLLLECGWRVADWNSDKEALEQSIksvmdVPTPRRQIFETFLNLQTfaetkKGDQEIRRLCDEGIQLSLHKWASMPERFTPAHTFLLHAFQQYMEFMEA 2801
+                689************77777666666666**************99997654449********************************************* PP
+
+                CCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC....................HHCCS-STTCCC..CCCCCH CS
+       FAT   91 iqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied....................lllkgakaemwl..kfanla 158 
+                +q + +l+         +++e k++l+ Wr+Rlp+++dd++ w+d++++R+++++ i++                    ++++g+++ +w+  +fa++a
+  AEY97381 2802 AQAYANLAtttvqnldtKAQEIKRVLQAWRDRLPNIWDDINMWNDLVTWRQHAFNVINNaylplvpalqqsnsnnnistHAYRGYHEIAWVinRFAHVA 2900
+                *************************************************************************************************** PP
+
+                CHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCC CS
+       FAT  159 RksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalq 256 
+                Rk++++++++ +L ++                   y+++++e++ea++kLre+++c++++++el++gl+v+++tnl +f++++ a+++++kG++l++l+
+  AEY97381 2901 RKHNMPDVCIGQLARI-------------------YTLPNIEIQEAFLKLREQAKCHYQSMNELTTGLDVISNTNLVYFSTVQkAEFFTLKGMFLSKLR 2980
+                ****************...................**************************************************************** PP
+
+                CCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT  257 klnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                        ++e++qa+++a+++d +++kaw++w+ fn+++ls+e        p++ls ++ +a++++l+++ l+++ k+++ l R+L+
+  AEY97381 2981 A-------HDEANQAFATAVQIDLNLAKAWAQWGFFNDRRLSEE--------PNNLS-FANNAISCYLQAAGLYKSsKTRKLLCRVLW 3052
+                *.......9***********************************........****9.******************9**********9 PP
+
+>> AEY95168  pep chromosome:ASM96883v1:II:582934:589908:-1 gene:FAGOS_FABR108C transcript:AEY95168 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   44.9   1.8     2e-15   2.3e-12     108     343 .]    1604    1810 ..    1585    1810 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 44.9 bits;  conditional E-value: 2e-15
+                T----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSS CS
+       FAT  108 ktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealq 206 
+                +++  R ++v +d+e    +ls+R+ +  ++++  +k+  a+++ k+a+laR+++rl++A ++L  +l+ +       e+ ++y+ +lw++ge++ al+
+  AEY95168 1604 RNLAVRFKNVGSDFEPNFYLLSMRKSHNLMRSEEFVKQDLADTYFKMAQLARENDRLDIASDCLMHALKLEH-----TEAELEYAEILWKQGEKELALK 1697
+                5667789999999999999******999999999*********************************99999.....78999***************** PP
+
+                CCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHS CS
+       FAT  207 kLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekk 304 
+                ++ e  +    k             + +++++++  a+++lk  ewl   ++++     s +i ++y++ + ld++w + +++ +l++ + l+k++   
+  AEY95168 1698 TVAEIHQ----K------------RKGIKTLKDRDrAKVLLKYTEWLDLSNNAT-----SVQISHQYKEVIGLDKDWDEPYYSFGLYYSRLLEKKRAD- 1774
+                *977666....2............2334444555559***************65.....9**********************************9555. PP
+
+                SSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  305 eeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                   +  ++  +  +a++ fl +   +  k+++ l++++t
+  AEY95168 1775 ---GFVTTGSLEYKAITYFLSAFEKNTVKVREALPKVIT 1810
+                ...33445567799***********999*******9987 PP
+
+>> AEY94830  pep chromosome:ASM96883v1:I:660983:661444:-1 gene:FAGOS_FAAR176C transcript:AEY94830 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.5   0.0   2.8e-05     0.033     198     263 ..       3      68 ..       1      76 [. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 11.5 bits;  conditional E-value: 2.8e-05
+               CCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S.. CS
+       FAT 198 kgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwsee 263
+               +++++e + k r  +++l++k+++ s+ l    ++ le+ + +l r+  + Gewl+ +  ++w ++
+  AEY94830   3 DNKIDESIDKARSGAKNLIDKASDGSKKLAKDAKKGLEKGESELQRAAERVGEWLSGAAAGTWDVA 68 
+               67899**************************9*************************999999876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       4774  (2334254 residues searched)
+Passed MSV filter:                       328  (0.0687055); expected 95.5 (0.02)
+Passed bias filter:                      126  (0.026393); expected 95.5 (0.02)
+Passed Vit filter:                        17  (0.00356096); expected 4.8 (0.001)
+Passed Fwd filter:                         4  (0.000837872); expected 0.0 (1e-05)
+Initial search space (Z):               4774  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.08u 0.03s 00:00:00.11 Elapsed: 00:00:00.06
+# Mc/sec: 12155.02
+//
+[ok]

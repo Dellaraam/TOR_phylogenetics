@@ -1,0 +1,189 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Trichophyton_equinum_cbs_127_97_gca_000151175.ASM15117v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   4.7e-135  451.1   3.8   5.3e-135  450.9   3.8    1.0  1  EGE08756  pep supercontig:ASM15117v1:supercont1.69:63798:6674
+     0.0053   14.7  15.9      0.015   13.2  11.9    2.0  2  EGE05985  pep supercontig:ASM15117v1:supercont1.26:275659:277
+     0.0058   14.6   0.1     0.0061   14.5   0.1    1.1  1  EGE07884  pep supercontig:ASM15117v1:supercont1.50:147595:148
+  ------ inclusion threshold ------
+      0.014   13.3   9.8      0.015   13.2   9.8    1.0  1  EGE02832  pep supercontig:ASM15117v1:supercont1.7:194640:1953
+       0.49    8.2  10.0       0.57    8.0  10.0    1.0  1  EGE06510  pep supercontig:ASM15117v1:supercont1.31:167473:168
+        1.3    6.8  14.6        1.6    6.5  14.6    1.1  1  EGE03194  pep supercontig:ASM15117v1:supercont1.9:75615:77308
+
+
+Domain annotation for each sequence (and alignments):
+>> EGE08756  pep supercontig:ASM15117v1:supercont1.69:63798:66744:1 gene:TEQG_07713 transcript:EGE08756 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  450.9   3.8  3.7e-138  5.3e-135       1     667 [.       1     928 [.       1     929 [] 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 450.9 bits;  conditional E-value: 3.7e-138
+  PTHR13335.orig.30.pir   1 MafldnedillahlRtsyltsdddgmcerilndd.....................dvdlekihsapyppvsssssesll.srpksast 66 
+                            Ma+l+ne++ +++lRtsyl +++dg++ r++n +                        ++++hs+p+p++ +  +++    + ++a+ 
+               EGE08756   1 MALLQNEEFTIWQLRTSYLATIKDGVGDRLINVNssilnspcfrsagwsatadpnAAHIKRTHSPPIPTATTVGEQYAGsGSQSTARR 88 
+                            *******************************************************999***********9999999998544444444 PP
+
+  PTHR13335.orig.30.pir  67 pgdsgsedsgssneaetatg............................................gdtkarrkkpsldqrretqgekqs 110
+                             g sgs + ++++      +                                            +  ++  kk+s+ ++ +++g ++ 
+               EGE08756  89 GGGSGSGT-VRNE------AitregsyagedtlqlgnrsgtavdedddeeitlntdgitglgfsNIMRQTHKKKSSHTDLRRRGRQKV 169
+                            44444444.3322......13335689999**********************************777888889999999999999999 PP
+
+  PTHR13335.orig.30.pir 111 sesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r..................dqsscksiqwk 179
+                            s  ++    e e++s+d+s++s++e+sr+r +n +++++k++ ++r++s++i+ se  +                  ++ss+  +   
+               EGE08756 170 SSRRPVTPGEAEEDSSDLSDESDEETSRQRAMN-QIQFTKMPVRHRADSSPIRGSEHqSgprvlitspslrsvdnrfRRSSLGAV--- 253
+                            99999999999****************999977.***********************77******66666554443333333333... PP
+
+  PTHR13335.orig.30.pir 180 tessvkedsvqrassesslsserssdssssssapsrrq.....................snkldseq..................... 225
+                                  e +  ra +++++ss++ssd ++++ a +rrq                     s                            
+               EGE08756 254 ------EAIKSRARRDTTTSSDMSSDIELDPEAMKRRQikfskhenetfvpreededaeS------Ekleeevemeaelangglgmrr 329
+                            ......3345577888*****************999778999999888877655444443......05666669999*********** PP
+
+  PTHR13335.orig.30.pir 226 ........................................................lsaeesdslfekkskssstktqkskkpssa.a 256
+                                                                                     +++ s     ++s+ +++++++    +s+ a
+               EGE08756 330 dehehdddsiagsvesaissdfghtagsgsllgrgglgvssplilnkipksggsgnAAPSVSATASGTASAANTSPRKDRDAGTSTpA 417
+                            *****99999999999999999999999999999999999999999888888776633333333333333333333333333333322 PP
+
+  PTHR13335.orig.30.pir 257 ......kqsi.......sslssaLekkpsqlnnpfneyakfdgkgvgttaslkidiylplssepdkllpltv..vvka.....satVq 324
+                                   q i       s ls++L++++++++np++ ya+++gkg     +l i++y p  ++p++++ + +   +k      ++tV+
+               EGE08756 418 lprlpaAQAItphpepvSLLSNMLNARKKAPENPMEKYAALSGKG-SSETPLYIKLYTPGAEDPEEPMDMPLtkDTKDgdhsrPVTVA 504
+                            55776623335555566****************************.89999************77777666654343377777***** PP
+
+  PTHR13335.orig.30.pir 325 evIGlaLwqyteegrepklpdnk..vnaycLrivEdDGevddDFPpLDrnepiskfg.................fselaLveatdseg 393
+                            e+IGlaLw+yt+ + +p +  +k  vn+++Lr+v +DGevd DFPpL r++pi++f                  ++e+aLvea+++e+
+               EGE08756 505 EAIGLALWRYTDDKIQPAIDASKlgVNYWNLRMV-EDGEVDYDFPPLARKRPITDFTsnnnraagfrgrsrskpYDEFALVEASPAEF 591
+                            **********************************.77*******************556789999*********************** PP
+
+  PTHR13335.orig.30.pir 394 ktnndlqtplpreqkkrleeakrsagsaneagsslstes................................................. 432
+                             +n+++ ++ + ++  +++ ++++a  a +a++++   s                                                 
+               EGE08756 592 AENEAACPGDSIVVPEAATPTTTTAAPAEAAANAQGGTSatpglpanhikvaiggrmnpilgqpfssalndsslrpadlpaiptmqat 679
+                            **999999998888887777777444444444444444469999******************************************** PP
+
+  PTHR13335.orig.30.pir 433 ..skeslfvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkkyrllkvsepnvivdldrtvesldgleflllrknssra 518
+                               + s ++kv+ ++   s+r  tt++++td+++a++l+++ckk++ld+ +y llk++++n++++ldrtve+l+++++l+l+++++ +
+               EGE08756 680 prLGVSTQLKVRYVDLEASTRT-TTLNTSTDSYIAEILDSVCKKWQLDKGNY-LLKIMNTNTVAPLDRTVEALGTNTDLDLIRRRF-G 764
+                            ***************9999665.*****************************.********************************9.7 PP
+
+  PTHR13335.orig.30.pir 519 dgvlekteskssssanatissksaa.................edsqiqiatvqddlsssayksfkVsrkhkmrfktdrel..gIdgdy 587
+                            +g+l+ ++s+ sss++a++  ++++                 + sq      qd +  ++yk++ V+rk+ m+f+t++++  ++d+dy
+               EGE08756 765 AGPLSLMGSPGSSSPSAPLLVDTSTngaskkskksaasrmlhPLSQ-----KQDVIVGGYYKRYNVIRKQSMSFTTSSQRvlAFDNDY 847
+                            999*********************************9665554444.....557999******************************* PP
+
+  PTHR13335.orig.30.pir 588 ieimPvenqkaatkfwekqKtisihisqvvacklssknpanFkivvrr...endeKrydfeavsaaeaaeIvskinnileaya 667
+                            ++imP e++k+   f  ++Kt+si + +v++ k+s+++p+ F+ vv r   + d+Krydfea++a ea eIv +i++ ++ y+
+               EGE08756 848 MHIMPAETGKTL--FEANSKTTSISFCDVIGSKVSRRHPKSFRFVVVRgadATDQKRYDFEAKNAVEAIEIVDEIKKNMAHYR 928
+                            ***********9..9****************************************************************9997 PP
+
+>> EGE05985  pep supercontig:ASM15117v1:supercont1.26:275659:277765:-1 gene:TEQG_04992 transcript:EGE05985 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    3.5   0.1    0.0092        13     164     223 ..      17      81 ..       2     226 .. 0.59
+   2 !   13.2  11.9     1e-05     0.015     120     189 ..     457     560 ..     390     618 .. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 3.5 bits;  conditional E-value: 0.0092
+  PTHR13335.orig.30.pir 164 sseerdqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq.........snklds 223
+                            s     q+++ks+    ++++  ++++ a+  +++ +++ +  s sss+p++  +         +++l++
+               EGE05985  17 S----TQPKSKSKAAASATTTTATTTTPATTTTTATTTTATP-SRSSSRPREqLShyrllfnnvRPQLTD 81 
+                            2....2444444444433333333333333333333333333.223334443222555555444444443 PP
+
+  == domain 2  score: 13.2 bits;  conditional E-value: 1e-05
+  PTHR13335.orig.30.pir 120 eeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r..................................dqss 172
+                             + +++v+ + + +++++++r++++++++++++++++++s+++a++++ +                                  ++ss
+               EGE05985 457 AQHAHQVLQH-QRQQQQQHQRQQQQQQQQQQQQQQQQQQSQTHARTRSgTvrghslhpsaqapsapvrtptdislgplphitspAASS 543
+                            2223333333.33333333333333333333333333344444444443344444444444444444444444588887777653333 PP
+
+  PTHR13335.orig.30.pir 173 cksiqwktessvkedsv 189
+                             + +    +s+v +d +
+               EGE05985 544 TAEAAAASPSTVTSDAP 560
+                            33333332222222222 PP
+
+>> EGE07884  pep supercontig:ASM15117v1:supercont1.50:147595:148761:-1 gene:TEQG_06862 transcript:EGE07884 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.5   0.1   4.2e-06    0.0061      94     149 ..     157     212 ..      18     263 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 14.5 bits;  conditional E-value: 4.2e-06
+  PTHR13335.orig.30.pir  94 kkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkle 149
+                            +  +++q++++q+++q +++   p+ e+e+ s+++ssss+d+++ + +  t++ ++
+               EGE07884 157 QFRQQKQQQQQQRDQQPDTQMAIPAAEGESSSSSSSSSSDDDSFLTAKPWTQLLFN 212
+                            22333344444444444446677777777777777777777777766655555555 PP
+
+>> EGE02832  pep supercontig:ASM15117v1:supercont1.7:194640:195306:1 gene:TEQG_01870 transcript:EGE02832 gene_biotype:pr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.2   9.8   1.1e-05     0.015      86     162 ..      69     166 ..      12     179 .. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: 13.2 bits;  conditional E-value: 1.1e-05
+  PTHR13335.orig.30.pir  86 g........................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrra.ntavkl 148
+                            g                         ++ +++++  +++++++q  +q+  +++++     +++ +iss+ +++ ++++++ ++a+++
+               EGE02832  69 GmqpvsgpggpgpnahtlshlgpahSHQMFQSPHLAQNFANNPQLLQQHHLQQQQQ----FMRQRQISSKGVQQAQQQQQQaQQAQQQ 152
+                            14444555555555555555666665555555555555555555555333333333....4445555555555555444441333333 PP
+
+  PTHR13335.orig.30.pir 149 eklrkerrsksasi 162
+                            ++ ++++++++++ 
+               EGE02832 153 QQAQQQQQQQTGPA 166
+                            33333333333333 PP
+
+>> EGE06510  pep supercontig:ASM15117v1:supercont1.31:167473:168205:-1 gene:TEQG_05510 transcript:EGE06510 gene_biotype:
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.0  10.0   0.00039      0.57      51     165 ..       9     123 ..       2     167 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 8.0 bits;  conditional E-value: 0.00039
+  PTHR13335.orig.30.pir  51 ssssesll..srpksastpgdsgsedsgssneaetatg.......gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdis 129
+                            +   +s+   +r+ ++  + ++++ +++s        g        d+  +r ++s+ +r  ++g+++s+ ++s+ ++++++++ d+ 
+               EGE06510   9 RDERRSRSpaRRHDEGERHRETATKKQSS--------GfrwkekrRDDDRDRERDSRRSRGLERGYRDSDRQRSPFRDRDRERDRDMG 88 
+                            34444444534444444444444444444........133333459999999************************************ PP
+
+  PTHR13335.orig.30.pir 130 sssldegsrrrrantavkleklrkerrsksasiass 165
+                             +  d+++r  ra+++ +   +++  ++k +++a +
+               EGE06510  89 -RGRDRERRAARADPSDQKPLEKEKDKKKKKPSAAP 123
+                            .66666666666544444333333333333333333 PP
+
+>> EGE03194  pep supercontig:ASM15117v1:supercont1.9:75615:77308:-1 gene:TEQG_02232 transcript:EGE03194 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.5  14.6    0.0011       1.6      88     226 ..      69     234 ..      10     330 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 6.5 bits;  conditional E-value: 0.0011
+  PTHR13335.orig.30.pir  88 dtkarrkkpsld.qrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.rdqssc 173
+                            +  a+r++ +l+ +++ + + +  +e++ +++  e+ +++ i  ++ +e  r++r  +a++le++rk+++++ a  a++ e   ++  
+               EGE03194  69 AAAAKRDQRRLQaEETLRLHLQAVEEERRRKEEAERRRQEKIR-QEKEEKERKER-EEAARLEAERKAKEAEKARQAEEAEkA-KKAA 153
+                            3333333333330445555666666777777777788888888.77777777888.899999999999887666555555533.4444 PP
+
+  PTHR13335.orig.30.pir 174 ksiqwktessvkedsvqrassesslsserssdssssssapsrrq.............snkldseq......................l 226
+                            +  + + e+  +e++ ++a+ es+ + e+  +++++++  ++ +             +      q                      +
+               EGE03194 154 EEEKARLEREKAEQEKKEAADESRRKAEEEAKQKAAEAKEQQ-TatkqavlginhrnQ------QevqeherylklhahlkefrsymR 234
+                            444444444444444444444444444444443333333333.023556655554331......022223445555555555555552 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       8676  (3957997 residues searched)
+Passed MSV filter:                      1822  (0.210005); expected 173.5 (0.02)
+Passed bias filter:                      389  (0.0448363); expected 173.5 (0.02)
+Passed Vit filter:                        86  (0.0099124); expected 8.7 (0.001)
+Passed Fwd filter:                        14  (0.00161365); expected 0.1 (1e-05)
+Initial search space (Z):               8676  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.21u 0.12s 00:00:00.32 Elapsed: 00:00:00.17
+# Mc/sec: 14853.02
+//
+[ok]

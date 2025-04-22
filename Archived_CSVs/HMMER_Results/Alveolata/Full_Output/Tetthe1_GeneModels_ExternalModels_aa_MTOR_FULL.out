@@ -1,0 +1,481 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Tetthe1_GeneModels_ExternalModels_aa.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                           Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                           -----------
+      4e-22   79.5   6.6    2.3e-12   47.7   2.5    8.2  9  jgi|Tetthe1|3298177|XM_001021494.1  
+    3.1e-20   73.3   2.9    1.8e-10   41.6   0.0    6.8  7  jgi|Tetthe1|3298178|XM_001021495.2  
+     0.0049   17.4  11.5        8.8    6.9   1.5    6.1  6  jgi|Tetthe1|3316946|XM_971577.3     
+     0.0097   16.5   8.0       0.45   11.1   0.0    4.6  4  jgi|Tetthe1|3307583|XM_001010414.2  
+  ------ inclusion threshold ------
+      0.042   14.4  15.9        2.2    8.8   0.1    7.9  9  jgi|Tetthe1|3313494|XM_001023312.1  
+        0.1   13.1   0.2        0.7   10.4   0.1    2.1  2  jgi|Tetthe1|3305059|XM_001023745.3  
+       0.12   12.9   6.1         10    6.6   0.0    4.3  4  jgi|Tetthe1|3296711|XM_001025413.3  
+        3.6    8.1   6.2       0.29   11.6   0.7    2.0  2  jgi|Tetthe1|3309960|XM_001018295.3  
+        3.8    8.0  14.7        4.3    7.9   0.1    5.5  5  jgi|Tetthe1|3319402|XM_001012267.3  
+
+
+Domain annotation for each sequence (and alignments):
+>> jgi|Tetthe1|3298177|XM_001021494.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.1   0.1       1.7     5e+03      63     115 ..      21      74 ..       4     101 .. 0.61
+   2 ?   -2.0   1.0       1.6   4.7e+03      65     156 ..     256     362 ..     228     388 .. 0.57
+   3 ?   -0.4   0.1       0.5   1.5e+03      72     153 ..     500     585 ..     463     587 .. 0.61
+   4 ?    0.0   1.4      0.36   1.1e+03      80     160 .]     589     669 ..     521     669 .. 0.64
+   5 !    8.0   0.3    0.0013       3.8      87     157 ..     682     754 ..     677     756 .. 0.76
+   6 !   44.2   0.1   9.8e-15   2.9e-11       1      77 [.     759     832 ..     759     872 .. 0.76
+   7 !   47.7   2.5   7.7e-16   2.3e-12      63     156 ..     927    1023 ..     899    1025 .. 0.78
+   8 ?    1.4   1.2      0.14   4.2e+02      96     158 ..    1126    1190 ..    1075    1192 .. 0.72
+   9 ?   -2.7   0.0       2.6   7.8e+03     128     155 ..    1882    1909 ..    1837    1911 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: -2.1 bits;  conditional E-value: 1.7
+                            mTOR_dom  63 aeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtav..vqaimsif 115
+                                         +e++++++ l++l   +++yy   + + L+k+++ + +++ +++   ++ i +++
+  jgi|Tetthe1|3298177|XM_001021494.1  21 QESERLAADLQQLYLKNNQYYDE-IYHGLIKLINSNDINEKYNSLigIEQISYVV 74 
+                                         22233333356666666777777.5677777777777776666651235555555 PP
+
+  == domain 2  score: -2.0 bits;  conditional E-value: 1.6
+                            mTOR_dom  65 etdvsel.lvglspss.eeyyptvvinaLlkilkdpslsshhtavvqai............msifktlglkcvpf 125
+                                         +++ s++ +  ls+ + +  ++++vi+aL ++ k ++ +   +  +++              si ++l +    +
+  jgi|Tetthe1|3298177|XM_001021494.1 256 DQQFSQMcMYVLSKKDeNSNIQKTVIEALPALAKFKKQAFAEKFFIKTTefllqrinppkaKSITHELIVSYYDT 330
+                                         444455544444444445666667777766666544444444444444411222223333333444444444445 PP
+
+                            mTOR_dom 126 lpqiipallsvirtces.slrefllqqLatLv 156
+                                         l++i + + s+i    + ++++ ++q +++++
+  jgi|Tetthe1|3298177|XM_001021494.1 331 LNKISQCIDSTIYAKLPeNMKDLVFQSIQNIT 362
+                                         55555555554443322366666666655555 PP
+
+  == domain 3  score: -0.4 bits;  conditional E-value: 0.5
+                            mTOR_dom  72 lvglspss.eeyyptvvinaLlkilkdpslsshhtavvqa..imsifktlglkc.vpflpqiipallsvirtces 142
+                                         l +   s+ e+  ++ v  ++l  l+ ++ ++ ++a+ +a  ++++ k+ g     +++ +i+ +++sv+ + ++
+  jgi|Tetthe1|3298177|XM_001021494.1 500 LSTFGFSNyENELANFVKDNVLDYLD-NKNKNIRKAAAKAgcLLYVKKERGQSIsKNIMYEILEKFMSVAISDSE 573
+                                         34445555566666677777777774.444444444444422677777777777678899999999998654444 PP
+
+                            mTOR_dom 143 .slrefllqqLa 153
+                                          ++r+++l+ L+
+  jgi|Tetthe1|3298177|XM_001021494.1 574 dEIRQTMLKSLN 585
+                                         499999999886 PP
+
+  == domain 4  score: 0.0 bits;  conditional E-value: 0.36
+                            mTOR_dom  80 eeyypt.vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLa 153
+                                         ++y      +++L   ++d++ ++ ++ v++ +    ++     +pfl++ + ++ls ++  + + ++ +++ L+
+  jgi|Tetthe1|3298177|XM_001021494.1 589 DQYLNEpNYLKKLFLCVNDSN-TQVQQLVLTILCRLSRYNPSDIIPFLKKTLFEFLSQLKINNLENEKQMINLLS 662
+                                         333333334444444444444.44566666666666667777889999999999999999766688888888888 PP
+
+                            mTOR_dom 154 tLvsivk 160
+                                         +L+ ++k
+  jgi|Tetthe1|3298177|XM_001021494.1 663 SLTCLIK 669
+                                         8887765 PP
+
+  == domain 5  score: 8.0 bits;  conditional E-value: 0.0013
+                            mTOR_dom  87 vinaLlkilkdpsls.shhtavvqaimsifktlglkc.vpflpqiipallsvirtces.slrefllqqLatLvs 157
+                                         + n Ll+ lkd++++ ++  + +++  +  + lg +  + ++++i p +l+++++ +s   re  ++ L ++ +
+  jgi|Tetthe1|3298177|XM_001021494.1 682 IANILLNFLKDQKITnNMIPELLKTFSQLSS-LGDNTiLLYMDEIFPIFLQAMQDKSStAKREAAVKSLVDILK 754
+                                         668899******9994444555555544444.45454499**************99998999**9999998876 PP
+
+  == domain 6  score: 44.2 bits;  conditional E-value: 9.8e-15
+                            mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvgl 75 
+                                         Vv Py++yp+ Lei+l+++k+e + ++R++ ++++G lGA+D   +k+v+ k +++    ++++++d  +l++++
+  jgi|Tetthe1|3298177|XM_001021494.1 759 VVLPYYKYPSFLEIILSLMKNEVNVEMRQQCMRLIGCLGAIDYFYYKKVSDKVRNR---LTASPSQDNRQLINDI 830
+                                         899**********************************************9888553...3444444444444444 PP
+
+                            mTOR_dom  76 sp 77 
+                                         ++
+  jgi|Tetthe1|3298177|XM_001021494.1 831 IK 832
+                                         33 PP
+
+  == domain 7  score: 47.7 bits;  conditional E-value: 7.7e-16
+                            mTOR_dom   63 aeetdvsel..lvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipa 132 
+                                          + ++++++l    ++++ + e+yy++++i+aLlkil d+sl++hh+ +vq++  i+  l+++  +fl+ +ip 
+  jgi|Tetthe1|3298177|XM_001021494.1  927 EIDEEIKMLlqSPTVISLTdEDYYSKITIKALLKILCDQSLNEHHSLAVQTLSCIIGVLQTRTKNFLDLLIPI 999 
+                                          22233444433233344445***************************************************** PP
+
+                            mTOR_dom  133 llsvirtcesslrefllqqLatLv 156 
+                                          +++++r+   + re +lq +++++
+  jgi|Tetthe1|3298177|XM_001021494.1 1000 FIKIVRQDMLRDRENILQLIQKII 1023
+                                          ******9777999****9999886 PP
+
+  == domain 8  score: 1.4 bits;  conditional E-value: 0.14
+                            mTOR_dom   96 kdpslsshhtavvqaimsifktlglkc...vpflpqiipallsvirtces.slrefllqqLatLvsi 158 
+                                          kd   s+ +t+v + i++ f+     c   v+fl+ i+ ++l  ++++++ ++ +  ++ + ++++i
+  jgi|Tetthe1|3298177|XM_001021494.1 1126 KDT--SQTKTKVKSEIINLFNCFANSCcstVQFLSLIVDSILINLEQSKDaKFINECMNTVVVFIYI 1190
+                                          333..455666666666666664444434499********999999888767776666666666655 PP
+
+  == domain 9  score: -2.7 bits;  conditional E-value: 2.6
+                            mTOR_dom  128 qiipallsvirtcesslrefllqqLatL 155 
+                                          +++p++++ ++t+++s+++ l + L+++
+  jgi|Tetthe1|3298177|XM_001021494.1 1882 EVVPQIIARLSTTKKSVQHLLHSLLTHI 1909
+                                          4566666666666666665555555544 PP
+
+>> jgi|Tetthe1|3298178|XM_001021495.2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.6   0.3       2.4   7.2e+03      65     152 ..     160     263 ..     126     270 .. 0.55
+   2 ?    0.7   0.2      0.22   6.7e+02      66     159 ..     489     585 ..     464     586 .. 0.67
+   3 ?    4.1   0.5      0.02        61      84     155 ..     596     669 ..     555     672 .. 0.73
+   4 !   41.6   0.0   5.9e-14   1.8e-10       1      66 [.     676     737 ..     676     786 .. 0.82
+   5 !   41.0   2.0   9.1e-14   2.7e-10      59     155 ..     857     954 ..     831     959 .. 0.77
+   6 ?   -1.4   0.6         1   3.1e+03     109     148 ..    1028    1067 ..     983    1079 .. 0.77
+   7 ?   -1.5   1.1       1.1   3.2e+03      70     127 ..    1076    1133 ..    1050    1145 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: -2.6 bits;  conditional E-value: 2.4
+                            mTOR_dom  65 etdvsellvglspsseeyypt...vvinaLlkil....kdpslsshhtavvqaimsifktlglkcvp........ 124
+                                         +t+ s++ + + + +e  y++   +vi +L  il    +++  ++   ++++ i + + + + k+ +        
+  jgi|Tetthe1|3298178|XM_001021495.2 160 DTQYSNMCKYVLSKKEHTYQSiqkIVIDTL-PILskfkRQHFCENFLCETIDHIRNLIGSNKFKSPSqdllisyy 233
+                                         344444433333333444433222677764.33333335555556666666666666555555554445555555 PP
+
+                            mTOR_dom 125 .flpqiipal.lsvirtcesslrefllqqL 152
+                                          +l++i+++l +s+i++++++ ++ +++++
+  jgi|Tetthe1|3298178|XM_001021495.2 234 dTLDKICSSLdISIIKKIPDDKKKLIFDEI 263
+                                         566666666555666666666666666655 PP
+
+  == domain 2  score: 0.7 bits;  conditional E-value: 0.22
+                            mTOR_dom  66 tdvsellvglspss.eeyypt.vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                                          ++ +++ +  + + ++y    + +++L   ++d++l+  ++ +++++    k+     vpfl++ + +++s ++
+  jgi|Tetthe1|3298178|XM_001021495.2 489 DEIRQTMLKSLNENfDQYLIEpIYLKKLFFCVNDSNLE-VQQLALTTLCRLSKYNPSDIVPFLKKTLYEYISQLS 562
+                                         33344444444444355543347788888888999998.566778899999999999999999999999999988 PP
+
+                            mTOR_dom 139 tces..slrefllqqLatLvsiv 159
+                                           ++  + ++ +++ L+ Lv ++
+  jgi|Tetthe1|3298178|XM_001021495.2 563 YNKKrfENEKKIINLLKGLVCLI 585
+                                         65552445566777777777666 PP
+
+  == domain 3  score: 4.1 bits;  conditional E-value: 0.02
+                            mTOR_dom  84 ptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatL 155
+                                         ++++ + Llk lkd++++ ++  + ++a  +     + + +  +++i p +ls++++ +s   re  ++ L ++
+  jgi|Tetthe1|3298178|XM_001021495.2 596 SMTIATILLKFLKDSTITnNMIPELLKAFSQLSALGDFQNLIDMDEIFPIFLSAMQDKSStFKRESAVKSLVEI 669
+                                         346677899******99967778888888888888888999999************998878888888888766 PP
+
+  == domain 4  score: 41.6 bits;  conditional E-value: 5.9e-14
+                            mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeet 66 
+                                         Vv Py++yp+ Lei+++++k+e ++++R + ++++G +GA+D   +k+v  k++++    + ++++
+  jgi|Tetthe1|3298178|XM_001021495.2 676 VVLPYYKYPNFLEIVFSLMKNEVNTEMRYQCMRLIGCVGAIDHFFYKKVIDKIKNH----SITSSF 737
+                                         899**********************************************9888663....222233 PP
+
+  == domain 5  score: 41.0 bits;  conditional E-value: 9.1e-14
+                            mTOR_dom  59 eeenaeetdvsel..lvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqii 130
+                                         + +++++ ++ e+  + ++++ + ++yy  ++i+a+lkil d+sl++hh+ +++++  i++ l+ +  +fl+ +i
+  jgi|Tetthe1|3298178|XM_001021495.2 857 HLTQESDDEIREMlqAPTVIQLNdQDYYTRTTIKAVLKILYDQSLNEHHELAIKTLNCIVNLLKSRTKNFLDLLI 931
+                                         223333445555544555688888*************************************************** PP
+
+                            mTOR_dom 131 pallsvirtcesslrefllqqLatL 155
+                                         p l +v+++  +++re +l+ + ++
+  jgi|Tetthe1|3298178|XM_001021495.2 932 PVLCKVLEQ--DNIREDILNIILVI 954
+                                         ********7..68999888766665 PP
+
+  == domain 6  score: -1.4 bits;  conditional E-value: 1
+                            mTOR_dom  109 qaimsifktlglkcvpflpqiipallsvirtcesslrefl 148 
+                                            +++i+k+l     p l  iip l ++i++  + ++  +
+  jgi|Tetthe1|3298178|XM_001021495.2 1028 LRVIQIYKNLAEYLNPHLHLIIPFLCQLITQNAQLVNMQV 1067
+                                          5688999999999999999999999999998665444444 PP
+
+  == domain 7  score: -1.5 bits;  conditional E-value: 1.1
+                            mTOR_dom   70 ellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflp 127 
+                                          ++l+ +++ss +y++ +v + L +i  ++    + ++++++i+  + + +    ++lp
+  jgi|Tetthe1|3298178|XM_001021495.2 1076 QYLCFYCSSSIQYISLIVDSILQNIQTNKFQPLMTNSIMDTIVVFIYKYRNDFQAYLP 1133
+                                          2233334555555555555555555544444455555555554444444555555555 PP
+
+>> jgi|Tetthe1|3316946|XM_971577.3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.6   0.0      0.59   1.8e+03      21      51 ..      97     127 ..      83     246 .. 0.57
+   2 ?    0.9   0.3       0.2     6e+02      93     139 ..     266     316 ..     240     324 .. 0.73
+   3 ?    4.8   0.0     0.012        36     103     147 ..     412     456 ..     392     466 .. 0.86
+   4 !    6.9   1.5    0.0029       8.8      66     138 ..     459     532 ..     450     556 .. 0.75
+   5 !    5.9   0.0    0.0058        17      80     140 ..     754     815 ..     727     821 .. 0.84
+   6 ?   -1.7   0.0       1.3   3.8e+03       8      31 ..     942     965 ..     937     977 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: -0.6 bits;  conditional E-value: 0.59
+                         mTOR_dom  21 teqsqsiRrevikvlGilGALDPykhkevee 51 
+                                      +e+ +s+R+++  ++Gi+  L+  + k  e 
+  jgi|Tetthe1|3316946|XM_971577.3  97 SESMKSVRKSIGALIGIIAKLTLPEGKWAEL 127
+                                      5556666666666666665554444433332 PP
+
+  == domain 2  score: 0.9 bits;  conditional E-value: 0.2
+                         mTOR_dom  93 kilkdpslsshhtav.vqai...msifktlglkcvpflpqiipallsvirt 139
+                                      k+l +p+ls+  ++v ++ i    +  k++  k +p+l+++i ++  +i t
+  jgi|Tetthe1|3316946|XM_971577.3 266 KVLGNPKLSKKIKEVvIDMIfsaSQYHKSVFNKNTPLLKKVIESICLIIAT 316
+                                      688899999655555055552222334456678899******999888876 PP
+
+  == domain 3  score: 4.8 bits;  conditional E-value: 0.012
+                         mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+                                       + a+++a+++  ++l + + ++ + i+pa++s++ ++++++ e 
+  jgi|Tetthe1|3316946|XM_971577.3 412 VRGAAIKALTYFAEYLPVDVCKYHSTIVPAIISTFDDLNNKVAEK 456
+                                      56789******************************9999887775 PP
+
+  == domain 4  score: 6.9 bits;  conditional E-value: 0.0029
+                         mTOR_dom  66 tdvsellvglspsseeyyptvvinaLlki.lkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                                      ++++ +  +l+p + e y++ + ++L +i +kd+s   ++   v+a+ s ++t++ k  pf++ + + + ++i 
+  jgi|Tetthe1|3316946|XM_971577.3 459 IAIDIFCDNLEPEDLELYMQSITEKLCMIaMKDNSTMLMRRVSVSALASCISTVEHKFKPFVTVVANLMHQIIG 532
+                                      4556667888999999999999999998846999999999*****************99998877655555443 PP
+
+  == domain 5  score: 5.9 bits;  conditional E-value: 0.0058
+                         mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtc 140
+                                      e++++  ++++ l  l+++   +   ++++ i++ fktlg  c  + l+ i +a+++++++ 
+  jgi|Tetthe1|3316946|XM_971577.3 754 ENVIQIDIFQKFLYYLNQEEACEVTGMAIEIIVELFKTLGPACfDKNLDDISNAIVKLLENE 815
+                                      55555566777788889999999999*****************8889*****9999999875 PP
+
+  == domain 6  score: -1.7 bits;  conditional E-value: 1.3
+                         mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrev 31 
+                                       p++L+iL ni +t+ +q+++ ++
+  jgi|Tetthe1|3316946|XM_971577.3 942 LPTILNILKNIFETSVEQATKDNA 965
+                                      688999999999998888777665 PP
+
+>> jgi|Tetthe1|3307583|XM_001010414.2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.5   0.1      0.26   7.8e+02     123     138 ..     145     160 ..      42     183 .. 0.59
+   2 ?   -0.2   0.1      0.43   1.3e+03     157     157 ..     180     180 ..     122     308 .. 0.67
+   3 !    5.8   0.3    0.0062        19     121     158 ..     353     390 ..     292     392 .. 0.69
+   4 !   11.1   0.0   0.00015      0.45      77     149 ..     429     498 ..     394     508 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 0.5 bits;  conditional E-value: 0.26
+                            mTOR_dom 123 vpflpqiipallsvir 138
+                                            l+ iip+++  ++
+  jgi|Tetthe1|3307583|XM_001010414.2 145 KGPLTMIIPSFYGQVS 160
+                                         3345566666665555 PP
+
+  == domain 2  score: -0.2 bits;  conditional E-value: 0.43
+                            mTOR_dom 157 s 157
+                                          
+  jgi|Tetthe1|3307583|XM_001010414.2 180 P 180
+                                         1 PP
+
+  == domain 3  score: 5.8 bits;  conditional E-value: 0.0062
+                            mTOR_dom 121 kcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                                            + ++ i+p ll+++++ +s++r  l++ L++++++
+  jgi|Tetthe1|3307583|XM_001010414.2 353 GKKNSVDLILPVLLQLLKDEDSEVRISLFKSLNQITNV 390
+                                         34557889***********999***********99876 PP
+
+  == domain 4  score: 11.1 bits;  conditional E-value: 0.00015
+                            mTOR_dom  77 psseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+                                         +   ++    +i+ L+  l+d+ ++  ++++vq++ +i+++lg +  +  ++i+p++l++  +++  +re+ll
+  jgi|Tetthe1|3307583|XM_001010414.2 429 EIGSDFLNDKIIKILMDWLSDRVYA-VRESAVQSVKNIIQSLGWQWSE--KNIMPKILALKDQTNYLHRETLL 498
+                                         4447899999***********9998.8999***********9988765..78999999888887776666665 PP
+
+>> jgi|Tetthe1|3313494|XM_001023312.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.3   0.0      0.47   1.4e+03     124     144 ..     204     224 ..     195     235 .. 0.82
+   2 ?   -1.6   0.0       1.2   3.5e+03     112     145 ..     272     304 ..     219     312 .. 0.71
+   3 ?   -3.8   0.1       5.5   1.7e+04      80     102 ..     988    1010 ..     979    1018 .. 0.69
+   4 ?   -3.1   0.0       3.5     1e+04       1      17 [.    1228    1244 ..    1228    1270 .. 0.65
+   5 ?    8.8   0.1   0.00075       2.2      42     157 ..    1355    1468 ..    1331    1471 .. 0.71
+   6 ?    1.5   0.0      0.13   3.9e+02     112     156 ..    1663    1707 ..    1524    1709 .. 0.69
+   7 ?   -2.6   0.0       2.4   7.3e+03     123     141 ..    1853    1871 ..    1836    1885 .. 0.66
+   8 ?   -0.6   0.1      0.56   1.7e+03      90     156 ..    1902    1971 ..    1857    1973 .. 0.76
+   9 ?    6.0   0.1    0.0052        16      91     157 ..    2232    2299 ..    2201    2301 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -0.3 bits;  conditional E-value: 0.47
+                            mTOR_dom 124 pflpqiipallsvirtcessl 144
+                                         +f +qi+p+++++++ +e++ 
+  jgi|Tetthe1|3313494|XM_001023312.1 204 NFTNQIVPKIINLVKRAEENT 224
+                                         799************988754 PP
+
+  == domain 2  score: -1.6 bits;  conditional E-value: 1.2
+                            mTOR_dom 112 msifktlglkcvpflpqiipallsvirtces.slr 145
+                                          ++ k  +++++p+l+qi+  ++ +++++++ + r
+  jgi|Tetthe1|3313494|XM_001023312.1 272 FNVAK--KIRSLPVLQQIVDGVVVILNQTNDeKKR 304
+                                         45555..488999999*999999999988774444 PP
+
+  == domain 3  score: -3.8 bits;  conditional E-value: 5.5
+                            mTOR_dom   80 eeyyptvvinaLlkilkdpslss 102 
+                                           + +++v++++Ll+i++ +  s 
+  jgi|Tetthe1|3313494|XM_001023312.1  988 SNPISQVILEKLLNIIDSNDTSI 1010
+                                          55567888899999987776664 PP
+
+  == domain 4  score: -3.1 bits;  conditional E-value: 3.5
+                            mTOR_dom    1 VvePyldypeLLeiLln 17  
+                                          V  Py++ ++LLe++++
+  jgi|Tetthe1|3313494|XM_001023312.1 1228 VCAPYIKNKSLLETISS 1244
+                                          66899999999998865 PP
+
+  == domain 5  score: 8.8 bits;  conditional E-value: 0.00075
+                            mTOR_dom   42 DPykhkeveekseeeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaims 113 
+                                           Py  ++++  ++  ++++e+    d+++ +++l  s+ + y  ++++ +Llk l++++ +  + + + a+ +
+  jgi|Tetthe1|3313494|XM_001023312.1 1355 EPYVSRVIKVLMHFFAETNETI--KDLALSATKLLMSRlTGYGVKIILPQLLKGLEESAWR-AKFNNIWALGN 1424
+                                          6777777765554433333443..4444445566667768888899999999999777766.56666788888 PP
+
+                            mTOR_dom  114 ifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                                          +      ++ + lpqi+p+l + ++++++++re+  + L+ + s
+  jgi|Tetthe1|3313494|XM_001023312.1 1425 MAFCSPKQMSQCLPQIVPQLSNCLSDTHPKIREVANSSLTLIGS 1468
+                                          888889999*************************9999987765 PP
+
+  == domain 6  score: 1.5 bits;  conditional E-value: 0.13
+                            mTOR_dom  112 msifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                                          +++   l+ +  pf++ ++ a  ++i++ e++ re  l+ L +L+
+  jgi|Tetthe1|3313494|XM_001023312.1 1663 VFVPVILKENFNPFIKDVLEATSEYISDDEEKTREIALRVLRILI 1707
+                                          334444555567778888888888888777788888777777776 PP
+
+  == domain 7  score: -2.6 bits;  conditional E-value: 2.4
+                            mTOR_dom  123 vpflpqiipallsvirtce 141 
+                                           +f pq++  +++++++  
+  jgi|Tetthe1|3313494|XM_001023312.1 1853 ESFFPQVLKVFQEMMKDYL 1871
+                                          4677888888888877644 PP
+
+  == domain 8  score: -0.6 bits;  conditional E-value: 0.56
+                            mTOR_dom   90 aLlkilkdpslsshhtavvqaimsifktlglkc..vpflpqiipallsvirtces..slrefllqqLatLv 156 
+                                           L++i+k p + +h ++  +++ + ++ ++ ++  + +l+ i +++++ ir +++   l+e++l+ + +L 
+  jgi|Tetthe1|3313494|XM_001023312.1 1902 DLVQIIK-PHVYTHENMFRSSVFYTLRIVSERVgeIGLLRSIFNEIFEKIRVATEqdALYETYLKIFDQLC 1971
+                                          6788884.4445578888888888887766666558999*******9999954433599999998777775 PP
+
+  == domain 9  score: 6.0 bits;  conditional E-value: 0.0052
+                            mTOR_dom   91 Llkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces..slrefllqqLatLvs 157 
+                                          L+++ + +  ++++++++q  ++ f++ g+   pf+pq+++++ +++ + ++  ++++ + q+L++Lv 
+  jgi|Tetthe1|3313494|XM_001023312.1 2232 LIRVANYKLEQDQKEKILQLFIQLFEK-GIDLKPFVPQLLSTFSKICLEFPRerEFQKLIAQNLCELVL 2299
+                                          666666666679999***********7.******************9988765689999******9985 PP
+
+>> jgi|Tetthe1|3305059|XM_001023745.3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.0   0.0      0.37   1.1e+03      58      96 ..      29      71 ..      14      79 .. 0.56
+   2 ?   10.4   0.1   0.00023       0.7      79     137 ..     155     213 ..     105     238 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 0.0 bits;  conditional E-value: 0.37
+                            mTOR_dom 58 keeenaeetdvsel..lvglspss..eeyyptvvinaLlkilk 96
+                                        +ee+++ee + ++l  + ++ p +  e  y+  vi++L  +l 
+  jgi|Tetthe1|3305059|XM_001023745.3 29 EEETKTEELNNNLLpwVEKYRPNKieEVSYQEEVIKSLQGVLL 71
+                                        2333333344444455444444444166799999999988875 PP
+
+  == domain 2  score: 10.4 bits;  conditional E-value: 0.00023
+                            mTOR_dom  79 seeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvi 137
+                                         + +   t + +aL +i++d s ++    + + i++i++ lg +cv+f  + ip  ++++
+  jgi|Tetthe1|3305059|XM_001023745.3 155 EADSMTTEAQSALRRIIEDTSSTTRFCIICNYITKIIEPLGSRCVKFRFKPIPLEAQIT 213
+                                         47778888999***********************************9766666554444 PP
+
+>> jgi|Tetthe1|3296711|XM_001025413.3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.5   0.1      0.13   3.9e+02      82     133 ..     200     251 ..     149     274 .. 0.68
+   2 ?    6.6   0.0    0.0034        10     116     158 ..     350     390 ..     309     392 .. 0.70
+   3 ?    4.3   0.3     0.018        55      76     155 ..     428     504 ..     396     509 .. 0.76
+   4 ?    2.6   0.3      0.06   1.8e+02      86     139 ..     477     526 ..     457     548 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 1.5 bits;  conditional E-value: 0.13
+                            mTOR_dom  82 yyptvvinaLlkilkdpslsshhtavvqai.msifktlglkcvpflpqiipal 133
+                                           ++vvi+ + +++kd++    +  +v+a+  +i+k+ + k  + l q+++al
+  jgi|Tetthe1|3296711|XM_001025413.3 200 KNEQVVIQIINTLIKDEQDL-VRLYIVDAVvAFIIKDTDKKYYSQLLQFLQAL 251
+                                         45667777777777766644.44445554416788888877777776666655 PP
+
+  == domain 2  score: 6.6 bits;  conditional E-value: 0.0034
+                            mTOR_dom 116 ktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                                         + lg    ++ + i+p +++++++++s++r  l++ L++++s+
+  jgi|Tetthe1|3296711|XM_001025413.3 350 QFLG--KKNTTELILPVFVQLLSDTDSDVRISLFKSLNQITSV 390
+                                         3333..3455667**************************9987 PP
+
+  == domain 3  score: 4.3 bits;  conditional E-value: 0.018
+                            mTOR_dom  76 spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150
+                                          +  +e+    +++ L++ l+d+     ++a+vq +   +++lg    +  ++i++++l+++++ +  +re++l 
+  jgi|Tetthe1|3296711|XM_001025413.3 428 KEIGQEFLNDKILKILMEWLSDKVFG-VREAAVQCVKVLVQYLGSSWAE--KNIMSKILNIVNSPNYLHRETVLF 499
+                                         44458899999999999999999887.7899999999999998888766..799999999999988888888776 PP
+
+                            mTOR_dom 151 qLatL 155
+                                          + ++
+  jgi|Tetthe1|3296711|XM_001025413.3 500 LIIQI 504
+                                         66655 PP
+
+  == domain 4  score: 2.6 bits;  conditional E-value: 0.06
+                            mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                                          +++++l+i++ p++  h+++v+  i++i ktl+    ++l++ i  ll+++++
+  jgi|Tetthe1|3296711|XM_001025413.3 477 NIMSKILNIVNSPNYL-HRETVLFLIIQIAKTLSP---EYLSKTIVPLLTTLSK 526
+                                         5678889999999887.899999999999999764...4555555555554444 PP
+
+>> jgi|Tetthe1|3309960|XM_001018295.3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.6   0.7   9.8e-05      0.29      35     129 ..      97     194 ..      87     198 .. 0.72
+   2 ?   -4.5   0.6         9   2.7e+04      57      66 ..     275     284 ..     255     300 .. 0.44
+
+  Alignments for each domain:
+  == domain 1  score: 11.6 bits;  conditional E-value: 9.8e-05
+                            mTOR_dom  35 lGilGALDPykhkeveekseee...ekeeenaeetdvsel..lvglspsseeyyptvvinaLlkilkdpslsshh 104
+                                         lGi  A+D yk+k + +  +++   +   + +++++ ++l    +      e   +    aLl++ +d+ +++  
+  jgi|Tetthe1|3309960|XM_001018295.3  97 LGINKAIDEYKQKILYQVDTQKgssD--IDYTNQEQQEKLktFLNSNDWPSEKLNQELAFALLHLNSDKIMNEKV 169
+                                         67777*******97765554446432..22222222333322344444446666666666889999********* PP
+
+                            mTOR_dom 105 tavvqaimsifktlglkcvpflpqi 129
+                                         ++v+q   +i+k ++ k+ +fl q+
+  jgi|Tetthe1|3309960|XM_001018295.3 170 KQVIQHNQFIVKRVNKKMKEFLLQV 194
+                                         **********************997 PP
+
+  == domain 2  score: -4.5 bits;  conditional E-value: 9
+                            mTOR_dom  57 ekeeenaeet 66 
+                                         +kee++++ +
+  jgi|Tetthe1|3309960|XM_001018295.3 275 KKEEQKQQGS 284
+                                         2222222222 PP
+
+>> jgi|Tetthe1|3319402|XM_001012267.3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.4   0.1      0.98   2.9e+03      41      97 ..      48     111 ..      44     151 .. 0.49
+   2 ?    0.4   0.0      0.29   8.6e+02      89     144 ..     253     313 ..     207     322 .. 0.74
+   3 ?    4.3   0.8     0.018        54     106     145 ..     506     546 ..     386     566 .. 0.75
+   4 ?    7.9   0.1    0.0014       4.3      85     135 ..     577     630 ..     553     640 .. 0.85
+   5 ?   -0.2   0.2      0.42   1.3e+03      66      85 ..     757     777 ..     699     833 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: -1.4 bits;  conditional E-value: 0.98
+                            mTOR_dom  41 LDPykhkeveeks....eee.ekeeenaeetdvsel...lvglspsseeyyptvvinaLlkilkd 97 
+                                         LD +  k  e ++    + +  +++en ++++ + l   ++++++s +e  +t  i+   +il +
+  jgi|Tetthe1|3319402|XM_001012267.3  48 LDLQDEKLCELAAlllkK-QyIDKDENLQKISDNILgeiVQKVEQSINENRKTLYIKRACEILVK 111
+                                         555555555544444421.2233333333333333344366666666666666666666666633 PP
+
+  == domain 2  score: 0.4 bits;  conditional E-value: 0.29
+                            mTOR_dom  89 naLlkilkdpsls.shhtavvqaimsifktlglkcvp...flpqiipallsvirtces.sl 144
+                                         n   +i++ ++ls s + + ++ i+si+++++ ++ +   f ++  pal++++ +++s sl
+  jgi|Tetthe1|3319402|XM_001012267.3 253 NLFTEIISTKQLSdSLRIKGLSGILSICSSQSAQVRKgdiFKTKTAPALIKMMAEVDSlSL 313
+                                         4445666777777677777788888888887766654555777788888888877777444 PP
+
+  == domain 3  score: 4.3 bits;  conditional E-value: 0.018
+                            mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtces.slr 145
+                                         +++  + ++  tl+++ v+++++++p l+++i+t+++ + +
+  jgi|Tetthe1|3319402|XM_001012267.3 506 ETLICLSTVAVTLETEFVKYYNNFMPGLQTLIQTLPAtNAQ 546
+                                         33445567777788888899999999998888877654443 PP
+
+  == domain 4  score: 7.9 bits;  conditional E-value: 0.0014
+                            mTOR_dom  85 tvvinaLlkilkdpsls...shhtavvqaimsifktlglkcvpflpqiipalls 135
+                                          +++naLl++ +d++++    hh+ ++ +  +i   ++    +flp ii+++l+
+  jgi|Tetthe1|3319402|XM_001012267.3 577 EIIMNALLSMQNDAKMEkddPHHSPILVVYAQIADAMKEGFSKFLPAIIQKILQ 630
+                                         599**********999855458999999999********************998 PP
+
+  == domain 5  score: -0.2 bits;  conditional E-value: 0.42
+                            mTOR_dom  66 tdvsellvglspss.eeyypt 85 
+                                         t +++l++++s+s+ +++y  
+  jgi|Tetthe1|3319402|XM_001012267.3 757 TLLQLLTNSVSQSNaDDVYIL 777
+                                         223333444555555555544 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      26994  (16948219 residues searched)
+Passed MSV filter:                      5471  (0.202675); expected 539.9 (0.02)
+Passed bias filter:                     1088  (0.0403053); expected 539.9 (0.02)
+Passed Vit filter:                        86  (0.00318589); expected 27.0 (0.001)
+Passed Fwd filter:                        15  (0.000555679); expected 0.3 (1e-05)
+Initial search space (Z):              26994  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.28u 0.14s 00:00:00.42 Elapsed: 00:00:00.22
+# Mc/sec: 11990.90
+//
+[ok]

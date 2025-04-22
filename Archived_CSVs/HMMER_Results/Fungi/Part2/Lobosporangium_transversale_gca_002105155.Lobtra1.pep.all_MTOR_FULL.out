@@ -1,0 +1,751 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Lobosporangium_transversale_gca_002105155.Lobtra1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.8e-63  212.1   5.5      1e-56  190.7   0.2    6.4  7  ORZ10331  pep supercontig:Lobtra1:BCR41scaffold_31:282699:291
+    1.2e-62  210.0   7.1    9.2e-55  184.4   1.4    6.7  6  ORY99616  pep supercontig:Lobtra1:BCR41scaffold_67:159923:169
+    6.5e-10   38.6   4.3      0.014   14.8   0.0    7.4  8  ORZ01822  pep supercontig:Lobtra1:BCR41scaffold_63:41831:4614
+    1.6e-09   37.3   3.4          1    8.7   0.0    8.3  9  ORZ23832  pep supercontig:Lobtra1:BCR41scaffold_9:617572:6216
+    4.3e-07   29.4   0.2        4.5    6.6   0.0    8.0  7  ORZ21884  pep supercontig:Lobtra1:BCR41scaffold_11:559025:568
+    2.3e-06   27.1   0.7      0.021   14.2   0.0    4.9  5  ORZ27705  pep supercontig:Lobtra1:BCR41scaffold_3:435395:4393
+    1.6e-05   24.3   8.2       0.14   11.5   0.0    7.9 10  ORZ07047  pep supercontig:Lobtra1:BCR41scaffold_43:292086:295
+    0.00046   19.6   4.2       0.36   10.2   0.3    4.8  4  ORZ27943  pep supercontig:Lobtra1:BCR41scaffold_3:1342480:134
+     0.0057   16.0   0.0         25    4.2   0.0    5.0  6  ORZ28466  pep supercontig:Lobtra1:BCR41scaffold_2:1423299:142
+  ------ inclusion threshold ------
+      0.014   14.8   0.8      0.034   13.5   0.8    1.6  1  ORZ21912  pep supercontig:Lobtra1:BCR41scaffold_11:670793:672
+      0.032   13.6   4.1      0.059   12.8   0.1    3.5  4  ORZ09678  pep supercontig:Lobtra1:BCR41scaffold_33:155165:160
+      0.052   12.9   0.9       0.19   11.1   0.0    2.4  3  ORZ11293  pep supercontig:Lobtra1:BCR41scaffold_28:120830:127
+      0.073   12.5   0.5       0.17   11.2   0.1    1.8  2  ORZ27955  pep supercontig:Lobtra1:BCR41scaffold_3:1374764:137
+        1.2    8.5  13.4        7.9    5.8   0.0    6.2  8  ORZ05672  pep supercontig:Lobtra1:BCR41scaffold_49:17348:2171
+        9.3    5.6  16.7       0.17   11.3   0.1    5.9  5  ORZ27636  pep supercontig:Lobtra1:BCR41scaffold_3:212009:2195
+
+
+Domain annotation for each sequence (and alignments):
+>> ORZ10331  pep supercontig:Lobtra1:BCR41scaffold_31:282699:291884:1 gene:BCR41DRAFT_423880 transcript:ORZ10331 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.0       1.8   1.4e+03     104     158 ..     155     209 ..     140     210 .. 0.83
+   2 ?   -3.2   0.0       6.2   4.9e+03      80     139 ..     298     365 ..     279     387 .. 0.66
+   3 !    8.9   0.1    0.0012      0.92      83     156 ..     664     737 ..     599     739 .. 0.70
+   4 !  190.7   0.2   1.3e-59     1e-56       1     160 []     743     901 ..     743     901 .. 0.96
+   5 ?    2.5   0.0       0.1        82      91     156 ..     911     977 ..     908     980 .. 0.83
+   6 ?    5.8   0.0      0.01         8      78     156 ..     981    1058 ..     964    1061 .. 0.88
+   7 ?   -1.5   0.0       1.9   1.5e+03     127     154 ..    1755    1782 ..    1745    1783 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 1.8
+  mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+               ++a v ++ + +++ ++ + pf+  i+ ++  ++r+ ++++r    + L+    i
+  ORZ10331 155 RHASVLVLAELVRHADVIVYPFVASILEHIWVAFRDPNQNIRVAAADALSAVLVI 209
+               5666778888899999999*******************9**99999988876555 PP
+
+  == domain 2  score: -3.2 bits;  conditional E-value: 6.2
+  mTOR_dom  80 eeyyptvvinaLlkil......kdpsls..shhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+               +e+   +  +a+++il      k++sl   + ++++  ai +i    g  + +fl+ i+  + + +r 
+  ORZ10331 298 QEFANVYLHRAMVHILsqlrkdKERSLMkeKDRSNAFLAIGKIALVAGADMGEFLDDILICIREGLRL 365
+               44444445555556666666655555543455677888888888888888888888888777666664 PP
+
+  == domain 3  score: 8.9 bits;  conditional E-value: 0.0012
+  mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156
+               y   +i+ Ll   kd+s     ++++ a+ +  +  g   +pf++q++p ++ ++++ +s + r   l+ L++L 
+  ORZ10331 664 YVESIIKVLLPKAKDQSAG-VVSSILAALGELARVGGEDLLPFMDQLMPLIIDTLQDQSSpTKRSAALKTLGQLA 737
+               3344455555555555544.44555555555555556666****************99988***********996 PP
+
+  == domain 4  score: 190.7 bits;  conditional E-value: 1.3e-59
+  mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls 101
+               V+ePy++yp LL++L+nilkteqs +iR+e+ik+lGilGALDPy+hk++  +s + ++++++++ +dvs+l+ gl psse+yyptvvinaLlkilkdpsls
+  ORZ10331 743 VIEPYIKYPGLLDTLMNILKTEQSGNIRKETIKLLGILGALDPYRHKQMAIESVD-DNQADKSQGSDVSLLMSGLGPSSEDYYPTVVINALLKILKDPSLS 842
+               9**********************************************99987755.5677888899*********************************** PP
+
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+               ++++ + qai++if+ l+lk+vpflpqi+p +ls++++ +   ++f++++++ Lv ivk
+  ORZ10331 843 QQYQPATQAILNIFQALQLKMVPFLPQIMPVYLSIMQSGTVLNLDFYFEKMGFLVMIVK 901
+               **************************************999999**************8 PP
+
+  == domain 5  score: 2.5 bits;  conditional E-value: 0.1
+  mTOR_dom  91 Llkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+               Ll+++kd+      ++ ++  + si   l+ +  ++lp++++++l+v+ t  +++ +  ++ L+ +v
+  ORZ10331 911 LLQLVKDNWNHtPLQERIIGLVESIAVALDGEFKAYLPNLLQSFLAVFDTDLTERHDASIKVLGAFV 977
+               677778877665788999999***************************9977777777777777766 PP
+
+  == domain 6  score: 5.8 bits;  conditional E-value: 0.01
+  mTOR_dom   78 sseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                s+ e y++ vi  L+k +++p    + + a++++i +  k+  ++   + ++ii+ +++++    ++lr   ++ L+ Lv
+  ORZ10331  981 SNIEEYMHLVIPVLVKTFEKPDAPiNLRRAAINTIRELAKK--VNFSDYASRIIHPFARILALPGPELRMPTMDALCCLV 1058
+                566778889************99999**************7..77889**************999999999999999987 PP
+
+  == domain 7  score: -1.5 bits;  conditional E-value: 1.9
+  mTOR_dom  127 pqiipallsvirtcesslrefllqqLat 154 
+                 q+ip+l++ i+  +++++  + q L++
+  ORZ10331 1755 LQVIPQLIARIHAPSPNVQRLIHQLLTD 1782
+                59***********999**9999988875 PP
+
+>> ORY99616  pep supercontig:Lobtra1:BCR41scaffold_67:159923:169841:-1 gene:BCR41DRAFT_426455 transcript:ORY99616 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.7   0.0      0.18   1.4e+02     105     155 ..     155     205 ..     123     210 .. 0.84
+   2 ?   -0.3   0.0      0.75   5.9e+02      20     155 ..     276     421 ..     272     425 .. 0.54
+   3 !   14.7   0.0   1.9e-05     0.015      66     157 ..     645     735 ..     614     737 .. 0.77
+   4 !  184.4   1.4   1.2e-57   9.2e-55       1     159 [.     740     897 ..     740     898 .. 0.97
+   5 ?    2.4   0.0      0.11        90      89     156 ..     906     974 ..     904     976 .. 0.82
+   6 ?    2.6   0.1       0.1        80      91     155 ..     951    1015 ..     946    1059 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 1.7 bits;  conditional E-value: 0.18
+  mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+               +a v  + +  ++ ++ + p++  i+ ++  +ir+ ++s+re   + L+  
+  ORY99616 155 HASVLILAELARHANVTVFPYVGTILDNIWGAIREPKQSIREAAADTLSAV 205
+               555566777888999999************************999999764 PP
+
+  == domain 2  score: -0.3 bits;  conditional E-value: 0.75
+  mTOR_dom  20 kteqsqsiRrevikvlGilGALDPykhkeveeks.......eee..ekeeenaeetdvsel........lvglspsseeyyptvvinaLlkilkdpslssh 103
+               k  +++ iRr v+++l +l   DP  + +            + +  +ke + +  +dv+++        l+ +s+ + e y + +++ ++  l+ ++ s  
+  ORY99616 276 KDHRENLIRRTVVNLLPVLAEYDPPDFINYYLDRsmnhllgQ-AqfDKERRIV--SDVDKAmafnaigkLALVSKRNMEIYLSDIVQCIMDGLRSKNRS-- 371
+               556677788888888888888888776333322223333331.1122222222..23322222233233344477778888888888888888766655.. PP
+
+  mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+               +++  + + + ++ l   + pf++  + +ll ++    + l+e l+q L+++
+  ORY99616 372 RATLDKPLFNCISMLAQAVGPFMDYHVAKLLDLMFA--TGLSEPLIQSLTDI 421
+               344445555555555566666666666666666664..45666666666666 PP
+
+  == domain 3  score: 14.7 bits;  conditional E-value: 1.9e-05
+  mTOR_dom  66 tdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157
+                 +++l++  +++ + y++t ++n Ll  ++d+s     ++v+qa+ +i +  g   + +++q++p +++++++ +s + r   l  L++L s
+  ORY99616 645 RLLTLLMAASEQMIKPYIET-ILNVLLPNIRDNSPG-LVSSVLQALGEIARVGGEDLLRYMDQLMPVFIEILHDQSSpTKRSAALTALGNLAS 735
+               22333344444444555555.788888888999976.899***********999999****************99988**********99975 PP
+
+  == domain 4  score: 184.4 bits;  conditional E-value: 1.2e-57
+  mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls 101
+               V++Pyl+yp LL+iL++ilkteqs  iR+e++k++G+lGALDPy++k++  +s + ++++e+++++dv++l+ g++pss+eyyptvvin+Llkilkdpsls
+  ORY99616 740 VIDPYLKYPVLLDILMSILKTEQSVRIRQETMKLIGVLGALDPYRYKQIIMESGD-SNKTEKSDNSDVTLLMSGVEPSSDEYYPTVVINTLLKILKDPSLS 839
+               9************************************************988866.6677888899*********************************** PP
+
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+               ++++ + qai++if++l+lk+v flpqi+p +l+++++ +   ++f++++++ Lv+iv
+  ORY99616 840 QQYQPATQAILNIFRSLQLKMVLFLPQIMPVYLAIMQSGTVLNLDFYFEKMGALVQIV 897
+               **************************************999999*************9 PP
+
+  == domain 5  score: 2.4 bits;  conditional E-value: 0.11
+  mTOR_dom  89 naLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                 L+++++d+      ++ ++  i si   l+    +++p+++ ++l+v+ +  ++     l+ L+ +v
+  ORY99616 906 PDLMRLIEDNWNHtRLQERIIILIESIAIALDGDFKSYMPKLLRSMLAVLDSDMTEKHGASLRALQAFV 974
+               57999999998876889999******************************9865566666666665555 PP
+
+  == domain 6  score: 2.6 bits;  conditional E-value: 0.1
+  mTOR_dom   91 Llkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces..slrefllqqLatL 155 
+                +l++l d+ +++ h a ++a+   ++ lg  + +++  i+pal+++++  ++  +lr   ++ ++ L
+  ORY99616  951 MLAVL-DSDMTEKHGASLRALQAFVR-LGSVVEEYMHLIVPALVKTFERQDApmNLRRSAISTIGAL 1015
+                55555.55666666666666544433.6666666666666666666665443345555555555444 PP
+
+>> ORZ01822  pep supercontig:Lobtra1:BCR41scaffold_63:41831:46148:-1 gene:BCR41DRAFT_328803 transcript:ORZ01822 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.1   0.0     0.017        14      79     151 ..      94     165 ..      70     174 .. 0.83
+   2 ?    4.3   0.1      0.03        23      92     142 ..     186     235 ..     177     253 .. 0.76
+   3 ?   -2.5   0.0       3.7   2.9e+03      16      35 ..     272     292 ..     264     328 .. 0.52
+   4 ?    5.6   0.0     0.012       9.1      83     144 ..     447     509 ..     429     513 .. 0.88
+   5 !   14.8   0.0   1.7e-05     0.014      75     142 ..     482     548 ..     465     557 .. 0.83
+   6 ?    4.2   0.0     0.032        25     109     138 ..     605     634 ..     582     641 .. 0.86
+   7 ?    2.5   0.0       0.1        82     109     156 ..     846     893 ..     835     896 .. 0.64
+   8 ?   -3.1   0.0       5.5   4.4e+03     104     120 ..     970     986 ..     948    1001 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 5.1 bits;  conditional E-value: 0.017
+  mTOR_dom  79 seeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqq 151
+               ++e   + + +  l+ l+++s +s ++++ ++i ++ +  +lk  p  p+++pal++ +++ ++++re  ++ 
+  ORZ01822  94 TQEQTRQAMKTHFLEGLSQESNKSVRNKICDTIAEMARASSLKGQP-WPELLPALFECTKSPSPEHRESAFRI 165
+               556666666677788899*********************9999877.59******************999975 PP
+
+  == domain 2  score: 4.3 bits;  conditional E-value: 0.03
+  mTOR_dom  92 lkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                + l+d++l+   +av  ai +++ t +    +++  ++p+ll+v++ + +
+  ORZ01822 186 ANSLRDENLQVRLAAVKAAISFMLDT-NNSTRTMMASLMPQLLEVLNALVT 235
+               5789*****98888888888888886.777889999999**9999987655 PP
+
+  == domain 3  score: -2.5 bits;  conditional E-value: 3.7
+  mTOR_dom  16 lnilkteq.sqsiRrevikvl 35 
+               + i+k+++ +  +R++++ +l
+  ORZ01822 272 IGIVKKKEfEDRTRQSALELL 292
+               555555444455555544443 PP
+
+  == domain 4  score: 5.6 bits;  conditional E-value: 0.012
+  mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcessl 144
+                ++vv+++L+ +++d+     ++ +  a+++ ++ ++     p+l+ i   lls+++t ++ +
+  ORZ01822 447 HHAVVLTNLIPVMDDAPFPRVRAHAAAALVNFCEAVEKGTlEPYLDAIFERLLSLLNTGTTYV 509
+               5789********************************9999899************99876655 PP
+
+  == domain 5  score: 14.8 bits;  conditional E-value: 1.7e-05
+  mTOR_dom  75 lspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+               +++ + e y   +++ Ll++l+  +    +++++++i ++  + + + v++++ i+p l++v+r++++
+  ORZ01822 482 VEKGTLEPYLDAIFERLLSLLNTGTTY-VQEQAITTIATVADSAEDRFVKYYSAIMPLLINVLRQATN 548
+               4556678899999********777755.89999*******************************9875 PP
+
+  == domain 6  score: 4.2 bits;  conditional E-value: 0.032
+  mTOR_dom 109 qaimsifktlglkcvpflpqiipallsvir 138
+                a   i+k lg   vp+l+ ++p ll+ ++
+  ORZ01822 605 AAWARICKVLGRDFVPYLDIVMPPLLASAQ 634
+               56678*******************998665 PP
+
+  == domain 7  score: 2.5 bits;  conditional E-value: 0.1
+  mTOR_dom 109 qaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+               ++i+si+kt g+  +p+ + + p +++ + +++ss r+  +  L +L+
+  ORZ01822 846 RTIHSIMKTHGTAYLPMFKSLEPVITTFLADSHSSSRQWAICVLDDLI 893
+               456667777666666666666666666666666666666666666665 PP
+
+  == domain 8  score: -3.1 bits;  conditional E-value: 5.5
+  mTOR_dom 104 htavvqaimsifktlgl 120
+                +++++a+++i+k  + 
+  ORZ01822 970 TENAISAVTKICKFNSS 986
+               34555555555554333 PP
+
+>> ORZ23832  pep supercontig:Lobtra1:BCR41scaffold_9:617572:621661:1 gene:BCR41DRAFT_349258 transcript:ORZ23832 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.8   0.0       4.6   3.6e+03     119     131 ..      38      50 ..       5      65 .. 0.55
+   2 ?    1.4   0.0      0.24   1.9e+02      14      41 ..      87     114 ..      85     131 .. 0.93
+   3 ?    5.7   0.1     0.011         9      94     146 ..     171     226 ..     160     235 .. 0.73
+   4 !    7.5   0.0     0.003       2.4      93     149 ..     432     487 ..     394     531 .. 0.84
+   5 ?    0.6   0.0      0.41   3.2e+02     116     146 ..     582     613 ..     564     623 .. 0.73
+   6 ?   -1.9   0.0       2.4   1.9e+03     103     147 ..     642     686 ..     634     696 .. 0.80
+   7 !    8.7   0.0    0.0013         1      83     145 ..     830     892 ..     798     905 .. 0.88
+   8 ?    1.6   0.0       0.2   1.6e+02      80     156 ..     911     985 ..     892     987 .. 0.73
+   9 ?    0.8   0.1      0.36   2.9e+02       8      32 ..     996    1022 ..     994    1028 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: -2.8 bits;  conditional E-value: 4.6
+  mTOR_dom 119 glkcvpflpqiip 131
+               +  cvp l++i+ 
+  ORZ23832  38 DATCVPALTHIVE 50 
+               3445555554443 PP
+
+  == domain 2  score: 1.4 bits;  conditional E-value: 0.24
+  mTOR_dom  14 iLlnilkteqsqsiRrevikvlGilGAL 41 
+               +Ll+++ +eq++  R ++ +v+ ++G +
+  ORZ23832  87 QLLRLILNEQESLPRHSAARVIATIGRI 114
+               6999999******************965 PP
+
+  == domain 3  score: 5.7 bits;  conditional E-value: 0.011
+  mTOR_dom  94 ilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslre 146
+                + dp  +  +t++vqa+ ++      + k+ + +l++++p++++v+++c ++  e
+  ORZ23832 171 TIVDPESQVVRTTTVQALGKMADFidDDQKQeIDMLTELVPHMVHVLKQCLDNSDE 226
+               456788888889999999666544113344449999***********999876554 PP
+
+  == domain 4  score: 7.5 bits;  conditional E-value: 0.003
+  mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+               +++++ps +    ++ +a+ si+++lg + +++lp+++++ll+++ +++ + r  ++
+  ORZ23832 432 NLMNEPSPD-ITRQACNALDSILEDLGDNILQYLPELMQKLLQMLDHAQGETRAIVV 487
+               555666654.566778999999*********************99998877666555 PP
+
+  == domain 5  score: 0.6 bits;  conditional E-value: 0.41
+  mTOR_dom 116 ktlglkcvpflpqiipallsvirtces.slre 146
+               +  + +  p+l  iip+l++ ++  e+ ++ e
+  ORZ23832 582 QVFEDEFSPYLAAIIPHLIQSCQLDENtTRVE 613
+               445557789***********999766645555 PP
+
+  == domain 6  score: -1.9 bits;  conditional E-value: 2.4
+  mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+                ++ + ++i + f++ +   +p+++  + +l+++++++ + +r+ 
+  ORZ23832 642 EKEVAADTIGELFQHTRSAFLPYVESTVKELTELTTHMADGVRKA 686
+               55667789999999999999******9999999999888877665 PP
+
+  == domain 7  score: 8.7 bits;  conditional E-value: 0.0013
+  mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+               y++v i  + k  k+++ ss +++++ ++ +i + +g   ++f +q+ p +++++++ e+++r
+  ORZ23832 830 YAQVFIPHIAKYYKKSKPSSERSMAIGSLGEIANGMGSGITEFTEQLFPLFVKALSDEEDEVR 892
+               8999**************************************************999887665 PP
+
+  == domain 8  score: 1.6 bits;  conditional E-value: 0.2
+  mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156
+                  ypt  ++aL+ +++ ++l +   ++  a+  ++          l+q++p +++++    + + +e ++q L +L+
+  ORZ23832 911 SSQYPT-LLTALYPLFQGQALPNVTDNACGAVARMIMR--HPEAVPLDQVLPVFVQALPLKRDfEENEPVYQLLFSLI 985
+               666777.6778888888888888888888888887763..55666699999999999887777777777888777776 PP
+
+  == domain 9  score: 0.8 bits;  conditional E-value: 0.36
+  mTOR_dom    8 ypeLLeiLlnilkte.q.sqsiRrevi 32  
+                 p+LL+i++++l++e + +++ R+e+i
+  ORZ23832  996 LPRLLQIFTEVLSKEdElKPHRRQEMI 1022
+                699***********9555666666666 PP
+
+>> ORZ21884  pep supercontig:Lobtra1:BCR41scaffold_11:559025:568299:1 gene:BCR41DRAFT_320585 transcript:ORZ21884 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.7   0.0      0.99   7.8e+02      74     156 ..     389     473 ..     333     474 .. 0.74
+   2 ?   -0.8   0.0       1.1   8.5e+02     121     154 ..    1536    1569 ..    1499    1574 .. 0.75
+   3 ?    3.3   0.0     0.059        47     101     157 ..    1634    1691 ..    1594    1693 .. 0.80
+   4 ?    1.8   0.0      0.18   1.4e+02     102     150 ..    1754    1802 ..    1700    1809 .. 0.84
+   5 ?    2.1   0.0      0.14   1.1e+02     107     156 ..    1907    1960 ..    1891    1963 .. 0.72
+   6 ?    2.3   0.0      0.12        97     107     159 ..    1990    2043 ..    1966    2077 .. 0.79
+   7 !    6.6   0.0    0.0058       4.5      65     157 ..    2291    2384 ..    2276    2386 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: -0.7 bits;  conditional E-value: 0.99
+  mTOR_dom  74 glspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+               ++ + + e  +  +++ L ++++++s ++  t  ++a +  ++      k +p l+ +i a ++++ +  +slr++  + +++L+
+  ORZ21884 389 KTASVKSELVSVKALQGLTTMISKESNETAVTFGIDAAILHLQVllTTGKETPELTAVIKAGVTALGSPRASLRKTWARGMGSLI 473
+               3455558888888999999999999999999999988766665532345569999999999999999998899999988888886 PP
+
+  == domain 2  score: -0.8 bits;  conditional E-value: 1.1
+  mTOR_dom  121 kcvpflpqiipallsvirtcesslrefllqqLat 154 
+                +    lp iip l  v++++++ ++e     L++
+  ORZ21884 1536 QLSISLPTIIPRLSDVLTDSHTAVQEAARLALTQ 1569
+                445689*************999999987666665 PP
+
+  == domain 3  score: 3.3 bits;  conditional E-value: 0.059
+  mTOR_dom  101 sshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                ++ ++++ q + ++ +  + k  +p+lp+++p + +v+ +  ++ r +  + L+tLv+
+  ORZ21884 1634 TDIKKKASQIVGNMASLTDQKDlIPYLPRLLPGVKEVLIDPVPEARATAAKALGTLVE 1691
+                34667777788888888888877*****************999*************96 PP
+
+  == domain 4  score: 1.8 bits;  conditional E-value: 0.18
+  mTOR_dom  102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150 
+                  ++  ++ +++   t g +  p+l +iip +l  + + ++ +re  l+
+  ORZ21884 1754 YVREGFISLLVYLPATFGQRFQPYLGRIIPPILMGLADESEYVREASLK 1802
+                45667788899999999****************9999888888887665 PP
+
+  == domain 5  score: 2.1 bits;  conditional E-value: 0.14
+  mTOR_dom  107 vvqaimsifktlglkcvpflpqiipallsvir....tcesslrefllqqLatLv 156 
+                v qa +++ k+l ++   +l++i+p+++s+i     +++ ++r +  + L++Lv
+  ORZ21884 1907 VRQASLTVWKSLVTNTPRTLREILPTIMSMIIrnlaSSSYDRRMVAARTLGDLV 1960
+                447778899999999999999999999997642332333377777777787777 PP
+
+  == domain 6  score: 2.3 bits;  conditional E-value: 0.12
+  mTOR_dom  107 vvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                v   + +i+ t g      +++ iipa+ +++ + ++++re   q + tL + v
+  ORZ21884 1990 VCIGLSEIMATAGKVHvQDYVDSIIPAVRKALLDESPDVREAAAQAFDTLHQCV 2043
+                555566777777665536699999999999999988899999999888887766 PP
+
+  == domain 7  score: 6.6 bits;  conditional E-value: 0.0058
+  mTOR_dom   65 etdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157 
+                +  v +l++++sp     + t +   L++i+ d+   + ++a+++++   ++++     pflpq+  ++++ +++ +s ++r      L++L+s
+  ORZ21884 2291 ALGVGDLIQRTSPDALKPFVTQITGPLIRIVGDRHPGEVKSAILSTLSLLLQKVPAHLKPFLPQLQRTFIKSLTDPTSaTVRVRAATALSILIS 2384
+                45566667888888877788889999************************************************99998999999999999997 PP
+
+>> ORZ27705  pep supercontig:Lobtra1:BCR41scaffold_3:435395:439391:1 gene:BCR41DRAFT_331389 transcript:ORZ27705 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.8   0.0      0.36   2.8e+02     114     149 ..     138     173 ..     117     183 .. 0.69
+   2 ?   -2.8   0.0       4.6   3.7e+03     102     146 ..     293     341 ..     273     344 .. 0.59
+   3 !   14.2   0.0   2.6e-05     0.021      73     142 ..     492     561 ..     417     571 .. 0.69
+   4 ?    5.4   0.0     0.014        11     107     136 ..     616     645 ..     590     653 .. 0.84
+   5 ?   -3.7   0.0       8.7   6.9e+03      97     133 ..     978    1012 ..     958    1028 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 0.8 bits;  conditional E-value: 0.36
+  mTOR_dom 114 ifktlglkcvpflpqiipallsvirtcesslrefll 149
+               i+ t+     +f p+++pal++ ++++++++re  +
+  ORZ27705 138 ICDTIAEIAHSFWPELLPALFECAKSSTPEVRESTY 173
+               555555555667777777777777776666666544 PP
+
+  == domain 2  score: -2.8 bits;  conditional E-value: 4.6
+  mTOR_dom 102 shhtavvqaimsifkt....lglkcvpflpqiipallsvirtcesslre 146
+               + ++++++ +++i +     ++     f   ++p +l+++++++++ +e
+  ORZ27705 293 QPRQSALELLLTIAECapnlIRKSAPDFTVTLVPVILEMMKELDDDDQE 341
+               4455555555555554333223333667788889999999888776555 PP
+
+  == domain 3  score: 14.2 bits;  conditional E-value: 2.6e-05
+  mTOR_dom  73 vglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+               ++  + +  e y   +++ Ll++lk  +    +++++++i ++  + + + v++++ i+p l+ v+r++++
+  ORZ27705 492 CEAAEKRiLEPYLDAIFERLLSLLKTGTTY-VQEQAITTIATVADSAEDRFVKYYNGIMPLLIDVLRQATT 561
+               333333448899999*********998866.78999*******************************8765 PP
+
+  == domain 4  score: 5.4 bits;  conditional E-value: 0.014
+  mTOR_dom 107 vvqaimsifktlglkcvpflpqiipallsv 136
+                + a   i+k lg   vp+l+ ++p ll+ 
+  ORZ27705 616 LLAAWARICKVLGQDFVPYLDTVMPPLLTS 645
+               5567789*******************9975 PP
+
+  == domain 5  score: -3.7 bits;  conditional E-value: 8.7
+  mTOR_dom   97 dpslsshhtavvqaimsifktlglkcvpflpqiipal 133 
+                dp      ++++ a+ +i+k  + +    ++ ++p+ 
+  ORZ27705  978 DPENILATEKAIAAVAKICKFNHSQF--DVNAVLPSW 1012
+                55555556778888888887533322..234444444 PP
+
+>> ORZ07047  pep supercontig:Lobtra1:BCR41scaffold_43:292086:295971:1 gene:BCR41DRAFT_360530 transcript:ORZ07047 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.7   0.1         1   8.1e+02      13      29 ..      43      59 ..      17      71 .. 0.66
+   2 ?    0.7   0.3      0.37     3e+02     108     108 ..     144     144 ..      46     196 .. 0.56
+   3 ?    1.6   0.1      0.21   1.6e+02      11     112 ..     164     189 ..      79     231 .. 0.50
+   4 ?   -2.9   0.0         5   3.9e+03     111     156 ..     324     371 ..     297     372 .. 0.61
+   5 !   11.5   0.0   0.00018      0.14      83     149 ..     463     527 ..     400     541 .. 0.83
+   6 ?   -2.8   0.0       4.4   3.5e+03     121     139 ..     587     605 ..     577     611 .. 0.74
+   7 ?   -1.4   0.0       1.7   1.3e+03     104     150 ..     641     687 ..     632     695 .. 0.81
+   8 ?   -0.6   0.1      0.97   7.6e+02      85     129 ..     724     769 ..     714     786 .. 0.67
+   9 ?    5.2   0.0     0.015        12      61     156 ..     890     983 ..     836     986 .. 0.75
+  10 ?   -0.1   0.0      0.69   5.4e+02       9      35 ..     995    1023 ..     990    1026 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: -0.7 bits;  conditional E-value: 1
+  mTOR_dom 13 eiLlnilkteqsqsiRr 29
+               +L+ i++t+q+++iR+
+  ORZ07047 43 PALVHIIQTSQQKEIRQ 59
+              23444444444444443 PP
+
+  == domain 2  score: 0.7 bits;  conditional E-value: 0.37
+  mTOR_dom 108 v 108
+               +
+  ORZ07047 144 I 144
+               3 PP
+
+  == domain 3  score: 1.6 bits;  conditional E-value: 0.21
+  mTOR_dom  11 LLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqai 111
+               LLe++++ +                                                                             dp     + ++vqa+
+  ORZ07047 164 LLELFSRTI----------------------------------------------------------------------------VDPDSPIVRITTVQAL 188
+               222222222............................................................................2233223333333333 PP
+
+  mTOR_dom 112 m 112
+                
+  ORZ07047 189 G 189
+               2 PP
+
+  == domain 4  score: -2.9 bits;  conditional E-value: 5
+  mTOR_dom 111 imsifktlglkc..vpflpqiipallsvirtcesslrefllqqLatLv 156
+                 ++++tl ++    ++ p  +  +l+++ ++e+  r+  +  +a+Lv
+  ORZ07047 324 AFKVINTLATNLppQQVFPVALEGILAYMANAEPLYRKAAMVTMAVLV 371
+               445555544444325677788888888898888888888888888887 PP
+
+  == domain 5  score: 11.5 bits;  conditional E-value: 0.00018
+  mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+               y  v +++Ll++l d++  + ++ vv ai s  +  g + +p+ p++i  l+++++  +s+  e +l
+  ORZ07047 463 YLPVLMEKLLHML-DHAQGETRAIVVAAIGSAAHASGPEFTPYFPEVIKRLQHLMTL-HSNEDELML 527
+               4457999******.8888999********************************9985.345555555 PP
+
+  == domain 6  score: -2.8 bits;  conditional E-value: 4.4
+  mTOR_dom 121 kcvpflpqiipallsvirt 139
+               +  p+l+ i+p+l++ ++ 
+  ORZ07047 587 EFSPYLSGIMPQLIASCQL 605
+               6689*********998775 PP
+
+  == domain 7  score: -1.4 bits;  conditional E-value: 1.7
+  mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150
+               ++ + ++i + f++ +   +p+++  + +l+++++++++ +r+    
+  ORZ07047 641 KEVAADTIGEFFQHTRSAFLPYVESSVKELINLTTHMSDGVRKASCG 687
+               56677889999**********************99999988876655 PP
+
+  == domain 8  score: -0.6 bits;  conditional E-value: 0.97
+  mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqi 129
+               + v+ a+l+i++d+  +    +v q +++ +k  g  +  ++++ i
+  ORZ07047 724 SLVMPAILTIWEDEDDKMVVVQVCQEMVETVKLCGPGVvANYITTI 769
+               4566677777777777777777777777777776666633444444 PP
+
+  == domain 9  score: 5.2 bits;  conditional E-value: 0.015
+  mTOR_dom  61 enaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156
+               +++++ +v +l +++       yp+  +++L+ +++ +sl++   ++  a+  ++   +      l+q++p +++++    + + +e +++ L +L+
+  ORZ07047 890 RSNAAYTVGALCQNTNLDISTQYPA-LLTTLYPLFQGQSLDNVTDNACGAVARMIM--KYPNAVPLDQVLPVFMQALPLKRDyEENEPVYKLLFSLI 983
+               3444444555544444444778888.78999********************99987..4888889*********99876666566666666666665 PP
+
+  == domain 10  score: -0.1 bits;  conditional E-value: 0.69
+  mTOR_dom    9 peLLeiLlnilkte.q.sqsiRrevikvl 35  
+                 +LL i+ ++l++e + ++++R+e+i ++
+  ORZ07047  995 TSLLPIFAEVLSKEdElKPHTRQEMIEII 1023
+                68999999999999658999999998765 PP
+
+>> ORZ27943  pep supercontig:Lobtra1:BCR41scaffold_3:1342480:1347452:1 gene:BCR41DRAFT_331686 transcript:ORZ27943 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.7   0.1     0.022        18      87     142 ..     129     185 ..     124     201 .. 0.83
+   2 ?   -1.3   0.0       1.5   1.2e+03     101     149 ..     378     428 ..     322     437 .. 0.70
+   3 !   10.2   0.3   0.00045      0.36      72     151 ..     526     623 ..     498     632 .. 0.70
+   4 ?    0.9   0.0      0.32   2.5e+02      92     139 ..     647     694 ..     636     716 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 4.7 bits;  conditional E-value: 0.022
+  mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtces 142
+               vi+ +l+ l+    ++ ++++++ai +i++t+  k  ++  + i+ a+++ +r+ e+
+  ORZ27943 129 VIRLMLQNLQTTDNTNLKQCTLRAIGYICETIPRKIlTSQSNSILTAVVQGARKDEP 185
+               788888999999999999999999999999999999788888999999888887554 PP
+
+  == domain 2  score: -1.3 bits;  conditional E-value: 1.5
+  mTOR_dom 101 s.shhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefll 149
+               + ++++a v a  si++  g    +p ++q +p l++++r+   +++++  
+  ORZ27943 378 EwQYREASVMAFGSILEGPGHDLlIPPVSQALPFLIEMMRDPVIKVKDTTA 428
+               237888889999999999999888999999999999999986556666655 PP
+
+  == domain 3  score: 10.2 bits;  conditional E-value: 0.00045
+  mTOR_dom  72 lvglspsseeyyptvvinaLlkil.................kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces..slrefllqq 151
+                  +s+s ++ +p++   + l+il                 + ++ s+ ++++ +++++i++ +g    p+ ++i+ all++++ +++  ++ e  +  
+  ORZ27943 526 SILISHSAKDNFPAISQLT-LTILdrleqsiavqnqivgvdERNAHSELQSNICSVLTNIIRRVGGAISPMADRIMTALLQLLTAASRqsTIVEDTFLA 623
+               4455666677777633333.4566666777777777777768888899*********************************999776533555555555 PP
+
+  == domain 4  score: 0.9 bits;  conditional E-value: 0.32
+  mTOR_dom  92 lkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                + l+++   + ++ +v  i  i++ lg ++ ++ + ++ +ll+ +++
+  ORZ27943 647 FTALQNHEEYQLCSIAVGLIGDICRGLGAQSASYCDSFMTTLLQNLQS 694
+               556677777778888999999*********************998886 PP
+
+>> ORZ28466  pep supercontig:Lobtra1:BCR41scaffold_2:1423299:1427103:1 gene:BCR41DRAFT_345374 transcript:ORZ28466 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.2   0.0     0.031        25     114     155 ..     112     154 ..      58     156 .. 0.82
+   2 ?   -2.5   0.0       3.8     3e+03     103     138 ..     231     266 ..     216     275 .. 0.63
+   3 ?   -1.8   0.0       2.2   1.8e+03     121     137 ..     292     308 ..     285     313 .. 0.80
+   4 ?    2.0   0.0      0.15   1.2e+02      71     145 ..     384     467 ..     338     479 .. 0.72
+   5 ?    2.2   0.0      0.13     1e+02      86     157 ..     496     566 ..     481     569 .. 0.76
+   6 ?   -2.1   0.0       2.7   2.1e+03       8      36 ..     672     699 ..     669     721 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 4.2 bits;  conditional E-value: 0.031
+  mTOR_dom 114 ifkt.lglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+               ++ t l+ k+++  p+++p+l+ ++ + +s++ e  ++ La++
+  ORZ28466 112 VITTiLSRKSLMSWPEVLPHLMGLLDSQDSNVVEGSFKALAKI 154
+               3333366789999***************************987 PP
+
+  == domain 2  score: -2.5 bits;  conditional E-value: 3.8
+  mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                ++ v qa++  ++    k +p +++++  +l  ++
+  ORZ28466 231 VRKHVCQAMVMLLEVRPDKLIPQINNVVEYMLYSTK 266
+               455666666666666666666666666666665555 PP
+
+  == domain 3  score: -1.8 bits;  conditional E-value: 2.2
+  mTOR_dom 121 kcvpflpqiipallsvi 137
+                  p+l+++ip ll+ +
+  ORZ28466 292 HLRPYLNRVIPVLLQGM 308
+               5679*********9966 PP
+
+  == domain 4  score: 2.0 bits;  conditional E-value: 0.15
+  mTOR_dom  71 l..lvglspsseeyyptvvinaLlkil.......kdpsls...shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+                  l + s s  ++ ++v  n++l il                +h+++ + a+  + +       p lp +ip l++++++ +s +r
+  ORZ28466 384 EwnLRKCSASALDVLSAVYGNSMLDILlpllqteL---FHkdwQHRECGILALGAVAEGCMSGIEPHLPTLIPYLITTLNDPKSLVR 467
+               14455667777888888888888888777775431...222357999999999999999999999***********99999776555 PP
+
+  == domain 5  score: 2.2 bits;  conditional E-value: 0.13
+  mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                 i+ Llk+++d++ +  ++a  +a  +  ++     vp+l  i+ +l+++++t +++ +  l++ ++tL  
+  ORZ28466 496 PLIEGLLKMVSDSN-KRVQEAGCSAFATLEEEACDALVPYLFGILKTLVHAFSTYQQKNLLILYDAIGTLAD 566
+               56777888887665.55777788888887777777779****************999777777788877765 PP
+
+  == domain 6  score: -2.1 bits;  conditional E-value: 2.7
+  mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlG 36 
+                p++L+iL+ +l  ++s ++R++   +lG
+  ORZ28466 672 QPSVLQILSVCLA-DSSAEVRQSSYALLG 699
+               6899999999998.558889988887777 PP
+
+>> ORZ21912  pep supercontig:Lobtra1:BCR41scaffold_11:670793:672756:-1 gene:BCR41DRAFT_23754 transcript:ORZ21912 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.5   0.8   4.3e-05     0.034      40     141 ..     226     329 ..     225     340 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 13.5 bits;  conditional E-value: 4.3e-05
+  mTOR_dom  40 ALDPykhkeveekseeeekeeenaeetdvsellvglspss.eeyypt.vvinaLlkilkd.pslsshhtavvqaimsifktlglkcvpflpqiipallsvi 137
+               ALD  k+k+ +ek ++ +k +++++e+d ++l+  ++  + +      +v  +L +il d p+l+s  +a++q ++   ++ +  c   + q i +l+  +
+  ORZ21912 226 ALDSNKQKKKKEKEKS-KKPQKAVDEMDKTDLVRAMQYEHpTRTLDIgTVNGNLNRILTDkPQLRSKIKACLQEVVRHASKTKRTCQRAIGQYIEQLQLPM 325
+               99*****988866644.556666666777777666655553333333357889*****7637999***************************999998776 PP
+
+  mTOR_dom 138 rtce 141
+               + ++
+  ORZ21912 326 SATQ 329
+               6554 PP
+
+>> ORZ09678  pep supercontig:Lobtra1:BCR41scaffold_33:155165:160828:1 gene:BCR41DRAFT_358290 transcript:ORZ09678 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.8   0.1   7.5e-05     0.059      70     151 ..     491     582 ..     434     591 .. 0.71
+   2 ?   -1.0   0.0       1.2   9.8e+02     118     153 ..     598     633 ..     593     638 .. 0.74
+   3 ?   -2.0   0.0       2.5     2e+03     102     118 ..     790     806 ..     735     832 .. 0.51
+   4 ?   -3.8   0.0       8.9     7e+03      80      98 ..     908     929 ..     894     954 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 12.8 bits;  conditional E-value: 7.5e-05
+  mTOR_dom  70 el.......lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqq 151
+               +l          +s+  e  +  +vi++Ll + + +  ++ ++ v + im+i+ +    lk   +fl+ ++++l++ ++++++ ++++  + 
+  ORZ09678 491 KLcwaigsiSGAMSEDAEKRFLVTVIKELLGLCEMKRGKDNKAVVASNIMYIVGQypRFLKAhWKFLKTVVNKLFEFMHETHDGVQDMACDT 582
+               33333333244567777999*********************************995534666699***************999998877655 PP
+
+  == domain 2  score: -1.0 bits;  conditional E-value: 1.2
+  mTOR_dom 118 lglkcvpflpqiipallsvirtcesslrefllqqLa 153
+               ++ + +pf+++i+++l ++++++++   +++++ ++
+  ORZ09678 598 QSQEIMPFIDEILNTLDKITSDLSPAQVHTFYEAIG 633
+               4567799********999999999965555555555 PP
+
+  == domain 3  score: -2.0 bits;  conditional E-value: 2.5
+  mTOR_dom 102 shhtavvqaimsifktl 118
+                  ++v++++ +i+ +l
+  ORZ09678 790 ARDAEVLSVMSTIVTKL 806
+               23334444444444444 PP
+
+  == domain 4  score: -3.8 bits;  conditional E-value: 8.9
+  mTOR_dom  80 eeyyptvvinaLlkil...kdp 98 
+               +++y+++ +n L  i+    d+
+  ORZ09678 908 NQFYQAYFLNILNDIFyvlTDN 929
+               5667766666666555222333 PP
+
+>> ORZ11293  pep supercontig:Lobtra1:BCR41scaffold_28:120830:127533:-1 gene:BCR41DRAFT_110660 transcript:ORZ11293 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.9   0.0         5   3.9e+03     109     155 ..     270     317 ..     264     331 .. 0.63
+   2 ?   11.1   0.0   0.00024      0.19      24      49 ..     427     452 ..     408     507 .. 0.74
+   3 ?   -3.7   0.2       8.5   6.7e+03      66     117 ..    1291    1344 ..    1279    1372 .. 0.50
+
+  Alignments for each domain:
+  == domain 1  score: -2.9 bits;  conditional E-value: 5
+  mTOR_dom 109 qaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+               +ai  i++ ++ k+   +lp+i ++l++  ++++++ + ++l+ +++L
+  ORZ11293 270 HAINGIVNLVDAKQlDVMLPHIFQTLTKRYSESSTKEKGVILRIFEHL 317
+               556666666666664456666666666666666666665555555555 PP
+
+  == domain 2  score: 11.1 bits;  conditional E-value: 0.00024
+  mTOR_dom  24 sqsiRrevikvlGilGALDPykhkev 49 
+               + ++ r  + +lGi+GA+DP k   +
+  ORZ11293 427 DAPVPRRCVECLGIIGAIDPAKLSAM 452
+               567788999************98544 PP
+
+  == domain 3  score: -3.7 bits;  conditional E-value: 8.5
+  mTOR_dom   66 tdvsellvglspsseeyyptvvinaLl.kilkdpsls.shhtavvqaimsifkt 117 
+                ++v++l+++ls +  ey    ++ +++ +++++++ +    + ++  ++  f +
+  ORZ11293 1291 QNVNKLMQNLSGMLPEYMFLSAFPQIIsRMFHKNTDAfAVLQHIIANVVLAFPH 1344
+                556666666666665555444444443244433333334444444444444444 PP
+
+>> ORZ27955  pep supercontig:Lobtra1:BCR41scaffold_3:1374764:1377488:1 gene:BCR41DRAFT_331708 transcript:ORZ27955 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.2   0.1   0.00022      0.17      57     135 ..     454     541 ..     436     554 .. 0.72
+   2 ?   -2.6   0.0       3.8     3e+03       7      23 ..     566     582 ..     561     621 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 11.2 bits;  conditional E-value: 0.00022
+  mTOR_dom  57 ekeeenaeetdvsellvglspsseeyyptvvinaLlkil......kdpsls..shhtavvqaimsifktlglkc.vpflpqiipalls 135
+                  +e+a++ + ++  ++ s s ++ ypt   n+L ++l      +d +l       + v++i + ++ l +   vpfl+q+i+++++
+  ORZ27955 454 LAMDESANSLTEKKSKQSASGSAKNKYPTPKANSLQQMLiqalhsNDLQLLeaCLTFNNVEVIRNTVRRLPTAYvVPFLTQVIHKFQQ 541
+               33445555566666688889999***********99999887777443333123344679999999999999988**********987 PP
+
+  == domain 2  score: -2.6 bits;  conditional E-value: 3.8
+  mTOR_dom   7 dypeLLeiLlnilkteq 23 
+               + p+L++ L+n+ +t +
+  ORZ27955 566 TVPDLMKKLSNFYQTLD 582
+               56777777777777643 PP
+
+>> ORZ05672  pep supercontig:Lobtra1:BCR41scaffold_49:17348:21714:-1 gene:BCR41DRAFT_312089 transcript:ORZ05672 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.7   0.2      0.39   3.1e+02      86     147 ..      24      81 ..       3      93 .. 0.56
+   2 ?    5.8   0.0      0.01       7.9      91     156 ..     194     260 ..     168     262 .. 0.84
+   3 ?   -3.7   0.0       8.8     7e+03     127     155 ..     352     380 ..     347     382 .. 0.66
+   4 ?   -2.3   0.1       3.1   2.4e+03     112     151 ..     506     546 ..     443     555 .. 0.69
+   5 ?    2.0   0.1      0.16   1.2e+02     100     152 ..     635     690 ..     572     696 .. 0.75
+   6 ?   -3.4   0.1       6.9   5.4e+03     110     153 ..     723     768 ..     721     773 .. 0.58
+   7 ?   -1.9   0.1       2.3   1.8e+03      61     115 ..     820     874 ..     808     884 .. 0.75
+   8 ?    3.3   0.0     0.062        49      60     152 ..     937    1043 ..     911    1045 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 0.7 bits;  conditional E-value: 0.39
+  mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+                v+ ++l ++kd++ +  ++++v+ + s +k+++    + l+qi+ +l + +++ +++lre 
+  ORZ05672  24 KVVDKVLLLMKDKNGE-VQNQAVKCLGSLVKKVQ---EAQLQQIVDNLCAFVSQDKEDLREI 81 
+               4444444455554433.34444555555555422...3456666666666666666666665 PP
+
+  == domain 2  score: 5.8 bits;  conditional E-value: 0.01
+  mTOR_dom  91 Llkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+               +l+ l+ ++ s +   + +qa  +i ++   +  +fl+ + p+++++ +  +++lre  lq L+ +v
+  ORZ05672 194 ILNGLETSKNSpDRLRTYIQATGTISRSNAPRFGKFLSGVAPSVIKYSELDDDELRENSLQALEAFV 260
+               455555555555677889*******************************9999**********9887 PP
+
+  == domain 3  score: -3.7 bits;  conditional E-value: 8.8
+  mTOR_dom 127 pqiipallsvirtcesslrefllqqLatL 155
+                +i p+l+s +++ e+++r  +lq + tL
+  ORZ05672 352 ANIAPSLISRFKEREETVRVEILQTFITL 380
+               56667777777777777777777766665 PP
+
+  == domain 4  score: -2.3 bits;  conditional E-value: 3.1
+  mTOR_dom 112 msifktlglkc.vpflpqiipallsvirtcesslrefllqq 151
+                s f+t +  +  + l q++p ++++i++   +++   l  
+  ORZ05672 506 RSLFRTHSSDVfQKHLGQLCPPVIAAIQDKFYKISSEALVC 546
+               56677777776667888888888888887555555555555 PP
+
+  == domain 5  score: 2.0 bits;  conditional E-value: 0.16
+  mTOR_dom 100 lsshhtavvqaimsifkt...lglkcvpflpqiipallsvirtcesslrefllqqL 152
+                +  + ++v+++++i+++    +    p++ + ip+++s++r++++ l+   l+ L
+  ORZ05672 635 NELTRLMAVKTLTQIVESpvcAEADIKPYILKAIPEVASLLRKSNRPLKVASLHFL 690
+               33445678888888888876567777999999999999999999887777766665 PP
+
+  == domain 6  score: -3.4 bits;  conditional E-value: 6.9
+  mTOR_dom 110 aimsifktlglkcvpflpqiipallsvirtce.s.slrefllqqLa 153
+               +++si++        + ++i++++l+++r+   + + ++ ll  +a
+  ORZ05672 723 SVVSILHANPASINVVKQEIMSSVLKLVRSPLiQgQALDSLLALFA 768
+               5667777655555666677888888888864211244444444444 PP
+
+  == domain 7  score: -1.9 bits;  conditional E-value: 2.3
+  mTOR_dom  61 enaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsif 115
+               ++++e++v+e++ +++  + ++  +   + aL +i + +sls+h+ +  ++i+ +f
+  ORZ05672 820 DKNQEMTVAEFVRKIEDPHtTDSLKYLSLVALGEIGRRASLSDHK-TLHTSILAMF 874
+               556678888888888666668888899999999999999999654.4555555555 PP
+
+  == domain 8  score: 3.3 bits;  conditional E-value: 0.062
+  mTOR_dom   60 eenaeetdvsellvglspsseeyyptvvinaLlkil.............kdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcessl 144 
+                e +a+++++ +ll + ++s+ee   +vv + L k+              + +s s + + +vv+a  + f +      ++l+ +i ++ls++++ + ++
+  ORZ05672  937 ELEAHASEIWTLLFDNCESQEEGTRNVVAECLGKLTltnpykflpelqaRLKSESaQIRGTVVSAFKYTFTDNTRSYDELLRPLIVEFLSLMKDKDLNV 1035
+                3344455566667777888888888888888888777888888888887444444378999999999999998888899**************988788 PP
+
+  mTOR_dom  145 refllqqL 152 
+                r   l+ L
+  ORZ05672 1036 RRLSLSTL 1043
+                88777665 PP
+
+>> ORZ27636  pep supercontig:Lobtra1:BCR41scaffold_3:212009:219515:1 gene:BCR41DRAFT_383400 transcript:ORZ27636 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.9   0.2       1.2   9.5e+02      66      94 ..     292     322 ..     255     350 .. 0.58
+   2 ?   -2.7   0.1       4.1   3.2e+03      69      98 ..    1255    1284 ..    1231    1294 .. 0.76
+   3 ?    1.1   0.1      0.29   2.3e+02     103     145 ..    1332    1386 ..    1303    1402 .. 0.78
+   4 ?   11.3   0.1   0.00021      0.17     103     138 ..    1739    1774 ..    1730    1783 .. 0.86
+   5 ?   -2.5   0.0       3.7   2.9e+03     106     139 ..    2178    2211 ..    2162    2225 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: -0.9 bits;  conditional E-value: 1.2
+  mTOR_dom  66 tdvsellvglspss..eeyyptvvinaLlki 94 
+                ++ + lv++++++   +++p v+++ L ki
+  ORZ27636 292 YQMVLCLVHICQTQetFDMFPEVAFKHLSKI 322
+               2222223333333312455555555555544 PP
+
+  == domain 2  score: -2.7 bits;  conditional E-value: 4.1
+  mTOR_dom   69 sellvglspsseeyyptvvinaLlkilkdp 98  
+                s+l ++++p s ey+ + ++++L + ++++
+  ORZ27636 1255 SDLNNNTTPVSIEYIDQLMLSSLTSFIRQA 1284
+                445677889999999999999998888765 PP
+
+  == domain 3  score: 1.1 bits;  conditional E-value: 0.29
+  mTOR_dom  103 hhtavvqaimsifktlglkcvp............flpqiipallsvirtcesslr 145 
+                + ++v++ im +f  +g +++             +l++iip l+++ r+ +ss  
+  ORZ27636 1332 YPEKVLHNIMPVFTFMGANVLRqddnysfhviqqTLEKIIPPLVAAHRHQSSSTT 1386
+                46788888888888888888666888888888889*********99998877654 PP
+
+  == domain 4  score: 11.3 bits;  conditional E-value: 0.00021
+  mTOR_dom  103 hhtavvqaimsifktlglkcvpflpqiipallsvir 138 
+                 +++++  +++++++lg+++vpflp+++p +ls+++
+  ORZ27636 1739 VKASCLVCLTFMCQELGIRVVPFLPKFMPVVLSILS 1774
+                5667777899**********************9986 PP
+
+  == domain 5  score: -2.5 bits;  conditional E-value: 3.7
+  mTOR_dom  106 avvqaimsifktlglkcvpflpqiipallsvirt 139 
+                ++++++ + +k lg + + +lp+ ip l++++++
+  ORZ27636 2178 SALKVLQEFYKRLGEEFLILLPETIPFLAELMED 2211
+                3445555566666777777777777777777776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      11822  (5530382 residues searched)
+Passed MSV filter:                       964  (0.0815429); expected 236.4 (0.02)
+Passed bias filter:                      667  (0.0564202); expected 236.4 (0.02)
+Passed Vit filter:                        58  (0.00490611); expected 11.8 (0.001)
+Passed Fwd filter:                        15  (0.00126882); expected 0.1 (1e-05)
+Initial search space (Z):              11822  [actual number of targets]
+Domain search space  (domZ):              15  [number of targets reported over threshold]
+# CPU time: 0.10u 0.08s 00:00:00.18 Elapsed: 00:00:00.18
+# Mc/sec: 4741.32
+//
+[ok]

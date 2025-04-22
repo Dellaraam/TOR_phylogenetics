@@ -1,0 +1,59 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Excavata/Proteins/Spironucleus_salmonicida.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+  ------ inclusion threshold ------
+        0.1    8.8   6.3       0.57    6.3   0.4    2.1  2  KAH0570678.1  hypothetical protein SS50377_26964 [Spironucleu
+
+
+Domain annotation for each sequence (and alignments):
+>> KAH0570678.1  hypothetical protein SS50377_26964 [Spironucleus salmonicida]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    6.3   0.4   6.6e-05      0.57     700     780 ..     106     190 ..      52     205 .. 0.84
+   2 ?    5.5   0.9   0.00011      0.97     620     698 ..     224     311 ..     215     328 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 6.3 bits;  conditional E-value: 6.6e-05
+  PTHR13298.orig.30.pir 700 trdelvklivssL......dysldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlki 780
+                            + +el+ +++s+L       + +++ + + +s +  +++++i+++at+ L   l     +f++   ++L+  l+++++e+  ++l++
+           KAH0570678.1 106 EMQELILVLLSNLmyyetsKIMINDNCKEFISRIFDTKNKKIKKFATFALSTSLI--YVQFDQSQYQMLISLLKNKENEMDVEILIV 190
+                            34566667788886555555559********************************..899999999999999999999887777776 PP
+
+  == domain 2  score: 5.5 bits;  conditional E-value: 0.00011
+  PTHR13298.orig.30.pir 620 alleesrlLkelleelsqel.....ldssse.......kspderlfskerlsttlsqgyflfiGvLsstkeGlkiLeklnifqlll.q 694
+                            + ++ +r ++e ++++ ++      l    +           ++lf + +  +++    f+ +  Ls+t++G +++++ ++f ++l +
+           KAH0570678.1 224 KTIKIERCIQEAFKCILNFSmnenlL----ShlgsqsfIYRMQKLFISCKSINKIDSAIFFVLTNLSCTEKGSRVMAQNSLFLTFLfS 307
+                            44777777778888777755543331....1233455644456788888888999999********************9988665413 PP
+
+  PTHR13298.orig.30.pir 695 lisl 698
+                            ++++
+           KAH0570678.1 308 VLKQ 311
+                            4444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                       8667  (3325212 residues searched)
+Passed MSV filter:                       914  (0.105457); expected 173.3 (0.02)
+Passed bias filter:                      166  (0.0191531); expected 173.3 (0.02)
+Passed Vit filter:                        16  (0.00184608); expected 8.7 (0.001)
+Passed Fwd filter:                         1  (0.00011538); expected 0.1 (1e-05)
+Initial search space (Z):               8667  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.11u 0.02s 00:00:00.13 Elapsed: 00:00:00.06
+# Mc/sec: 59662.62
+//
+[ok]

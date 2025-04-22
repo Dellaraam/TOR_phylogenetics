@@ -1,0 +1,170 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Saitoella_complicata_nrrl_y_17804_gca_001661265.Saico1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   8.5e-135  448.0   5.3   8.5e-135  448.0   5.3    1.7  2  ODQ52547  pep supercontig:Saico1:KV454267:251123:259269:1 gen
+    3.8e-81  271.6  10.2    3.8e-81  271.6  10.2    2.1  2  ODQ54200  pep supercontig:Saico1:KV454260:352793:364429:1 gen
+    3.1e-47  160.1   1.6    3.1e-47  160.1   1.6    2.0  2  ODQ52530  pep supercontig:Saico1:KV454267:215295:221422:-1 ge
+  ------ inclusion threshold ------
+      0.029   12.2   0.0      0.039   11.8   0.0    1.1  1  ODQ50986  pep supercontig:Saico1:KV454275:85582:86994:1 gene:
+
+
+Domain annotation for each sequence (and alignments):
+>> ODQ52547  pep supercontig:Saico1:KV454267:251123:259269:1 gene:SAICODRAFT_25841 transcript:ODQ52547 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.8   0.1       1.2   2.2e+03     208     251 ..    1530    1573 ..    1510    1583 .. 0.60
+   2 !  448.0   5.3  4.9e-138  8.5e-135       1     343 []    1596    1943 ..    1596    1943 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: -3.8 bits;  conditional E-value: 1.2
+                CHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCC CS
+       FAT  208 LrefvscllekkeelssglevqeptnleeftkllarcylkkGew 251 
+                L+e   ++l++ e+++s  e +e +n  + t  ++rc++ +Gew
+  ODQ52547 1530 LKETWYEKLQRWEDALSAYERREDQNSFDVTMGKMRCLHALGEW 1573
+                34444444444445555555555555555555556666666665 PP
+
+  == domain 2  score: 448.0 bits;  conditional E-value: 4.9e-138
+                CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+       FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                aplaa+aaW++gqW++m++y+s+mk++spd+aff+ai++lhrnqf++a+ +i kar+ll+tel+al+gesynray++ vr+Q+laEleeii+ykq+ + 
+  ODQ52547 1596 APLAAAAAWGMGQWELMDDYISVMKHESPDRAFFRAIISLHRNQFTDAALHITKARDLLDTELTALVGESYNRAYSVAVRVQMLAELEEIISYKQNGDM 1694
+                79************************************************************************************************* PP
+
+                --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT............TSSCCCH CS
+       FAT  100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk..eewlp.....pevvyay 191 
+                +e++++ +ktW+kRl+g+q++vevwq++l+vR+lv+sp+e+       +emw+kfanl+Rksgrl+lAek+L++ll+e++  ++++      p+vvya+
+  ODQ52547 1695 PEKQATQRKTWMKRLKGCQRNVEVWQRMLKVRALVISPKEN-------MEMWIKFANLCRKSGRLGLAEKSLNSLLDEEEsiSDMSSairapPSVVYAH 1786
+                *****************************************.......*******************************9884444467999******* PP
+
+                HHHHHHCCHHHHHSSCCHHHHCCTSSCCC.....SS-SS---............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHS CS
+       FAT  192 lkylwakgeqkealqkLrefvscllekke.....elssglevq.eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswyk 284 
+                lk++wa+g ++eal +Lref+ +++++ +     ++++ l+     +n+e +t+llarcylk+Gew+ alq+  w+e+++ +il +y++at++dp+wyk
+  ODQ52547 1787 LKFTWATGGRREALHNLREFTAKMSHDLGlnaseSYPKALTHDqAGQNIESYTRLLARCYLKQGEWQVALQD-RWNEQTIPDILRSYLLATHFDPDWYK 1884
+                ***************************9977777565555554789**************************.8************************* PP
+
+                TTCCCCHHHHHCCHHHHHHSSSS.S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  285 awhtwalfnfevlskeeekkeeeepedls.eyvvpavegflkslslssekslqdllRlLt 343 
+                awh+wal+nfev+++ e k++ +  +d++  +++pav+gf++s++ls+++slqd+lRlLt
+  ODQ52547 1885 AWHAWALANFEVINHHELKENAI-TNDIItAHIIPAVRGFFRSIALSKGNSLQDTLRLLT 1943
+                ****************8887777.677777*****************************8 PP
+
+>> ODQ54200  pep supercontig:Saico1:KV454260:352793:364429:1 gene:SAICODRAFT_70421 transcript:ODQ54200 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.7   0.0      0.29     5e+02     288     334 ..    1333    1404 ..    1323    1408 .. 0.84
+   2 !  271.6  10.2   2.2e-84   3.8e-81       2     343 .]    2713    3059 ..    2712    3059 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: -1.7 bits;  conditional E-value: 0.29
+                CCCHHHHHCCHHHHHHSSSS...........................S-TCCHHHHCCT..CCHHHHTTTSST CS
+       FAT  288 twalfnfevlskeeekkeeee..........................pedlseyvvpavegflkslslsseks 334 
+                ++a++++e+l ++ e+++ ++                          p++++    + ++ f+ksl + s+++
+  ODQ54200 1333 ALADAEDEALVTVSETSQYKNatslvnlrvvcikllskamacsdfssPQQAQ-TRGRIISVFFKSLYSKSNEV 1404
+                6899999999999888877778899999999999999999999998877777.77889999****99999875 PP
+
+  == domain 2  score: 271.6 bits;  conditional E-value: 2.2e-84
+                CCTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHC CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykq 95  
+                +l +e+aWr+++W   +e l++        ++p++ +fea++al++ q++   e i++ + l ++++++l++++++++++ll+ +Qq +El+e++q++ 
+  ODQ54200 2713 DLLLECAWRVTDWTADREPLEASIktlmdTPTPRRYTFEAFMALQKAQLK--LEPIQEFSRLTLRKWHSLPSTVTQAHIPLLQAFQQFVELQEASQIYA 2809
+                789************99999888788888**************9977766..699******************************************** PP
+
+                SS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC........................HHCCS-STTCCC..CCCCCHC CS
+       FAT   96 kls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied........................lllkgakaemwl..kfanlaR 159 
+                +l+         +s+elk +l tWr+Rlp+++dd+++w+d++++R+l++  i++                        ++++g+++++w+  +fa++aR
+  ODQ54200 2810 SLAsthaqnldsKSQELKGILTTWRERLPNMWDDINAWSDLVAWRQLIFAAINRvylplvpalqqqsatgaanssansFAYRGYHETAWIinRFAHVAR 2908
+                *99************************************************************************************************ PP
+
+                HHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCC CS
+       FAT  160 ksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqk 257 
+                k+  +++++++L+k+                   y+++++e++ea++kLre+++c++++++el++glev+++tnl++f++++ a+++++kG++la+l+ 
+  ODQ54200 2909 KHQLPEVCINQLTKI-------------------YTLPNIEIQEAFLKLREQAKCHYQNPNELNTGLEVISNTNLMYFNTQQkAEFFTLKGMFLAKLRL 2988
+                ***************...................***************************************************************** PP
+
+                CT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT  258 lnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                       ++e++qa+++a+++d +++kaw++w+ +n++ ++++        p+dl+  +++av+++l+++ l+++ k+++ l R+L+
+  ODQ54200 2989 -------NDEANQAFATAVQIDLTLAKAWAEWGFYNDRLFKEN--------PRDLN-SACNAVSCYLQAAGLYKNgKARKVLSRILW 3059
+                .......9***********************************........****8.*****************************8 PP
+
+>> ODQ52530  pep supercontig:Saico1:KV454267:215295:221422:-1 gene:SAICODRAFT_81229 transcript:ODQ52530 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.4   0.2      0.24   4.3e+02     209     259 ..     991    1040 ..     944    1046 .. 0.61
+   2 !  160.1   1.6   1.7e-50   3.1e-47       3     343 .]    1056    1392 ..    1054    1392 .. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: -1.4 bits;  conditional E-value: 0.24
+                HHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT CS
+       FAT  209 refvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqkln 259 
+                +++v+ +  +++++ +   +q+p++le +  ll rc+ ++G +  +l++ +
+  ODQ52530  991 EHEVTGKWTSAQTCYELCLQQQPEKLELQVGLL-RCLNLSGHYETSLNQVD 1040
+                333333333333444443444555555555555.*************9954 PP
+
+  == domain 2  score: 160.1 bits;  conditional E-value: 1.7e-50
+                CTTCCCCTSSSGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS--- CS
+       FAT    3 laaeaaWrlgqWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklsss 100 
+                 a+e+aW +g+W+ +e+ l +++ + s++  + +ail+l+ ++ ++++ +++++ ++l+ +l a  ++  +++yd+lv+l+ ++E+ +i++ +    +s
+  ODQ52530 1056 HAVESAWLVGDWKALERHLGAAEeEGSFEVVLGRAILSLREKDTRNLKAHLQQIYDILTHDLVASGVKDSRQCYDVLVKLHGVQEFSMISEACLL--DS 1152
+                589*******************977789999***************************************************************8..9* PP
+
+                -TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCC CS
+       FAT  101 eelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakg 199 
+                  l s+  ++++Rl  ++++ e +q +l++R+ +++ +  +  ++   ++wl +a+laRk+g+ + +++a++k+ e        p + ++++++lw++g
+  ODQ52530 1153 GGLVSVITNLERRLDLLAPSTESRQFVLALRRTAFELAAPVSSRAEVSAIWLDIAKLARKAGQSQRSYNAILKASEAGA-----PLAAVERARWLWHEG 1246
+                ************************************9999999*******************************88888.....9************** PP
+
+                HHHHHSSCCHHHHCCTSSCCC.....SS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+       FAT  200 eqkealqkLrefvscllekke.....elssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalf 292 
+                eq+ a+q+L+  ++  +++ +     ++ss +++ ++t+ +  +++l a++ l++++w+++ ++         ++l+ y +a++  ++w+k++++++++
+  ODQ52530 1247 EQHRAIQSLESALKAGTFDHSesipdKYSSAITT-DATTRSRPKNQLlAKAKLLLAKWMESSEQSG-----MHNVLHEYIEAARAYDRWEKCHYYLGRY 1339
+                **************99999886667666666666.6666666666666****************55.....99************************** PP
+
+                HHHCCHHHHHHSSSS..S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  293 nfevlskeeekkeeee.pedls.eyvvpavegflkslslssekslqdllRlLt 343 
+                + + +++ee+ + +++  + l  e+    v +f ++l+++ + ++q ++R+Lt
+  ODQ52530 1340 YLKLYENEEKLPVKKQgDNLLTgELTRLIVVNFGRALHYGVKYVFQTMPRFLT 1392
+                ***********7777656667789****************************8 PP
+
+>> ODQ50986  pep supercontig:Saico1:KV454275:85582:86994:1 gene:SAICODRAFT_31513 transcript:ODQ50986 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.8   0.0   2.2e-05     0.039     217     295 ..     253     332 ..     184     334 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 11.8 bits;  conditional E-value: 2.2e-05
+               SCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+       FAT 217 ekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfe 295
+                  ++ +s l++  ++++ + +k+  ar++l  G   ++ ++  ++++ s ++++  +  + l++++++aw +w++ n+ 
+  ODQ50986 253 GALSSTPSHLDTDLKKHILTAQKQAkARVLLYMGHEAEKRGEMGEAVAASHAAVALSAGDAPLQKECEEAWRAWKKINDG 332
+               333377788888899**************************************************************985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       7034  (2970847 residues searched)
+Passed MSV filter:                       302  (0.0429343); expected 140.7 (0.02)
+Passed bias filter:                      173  (0.0245948); expected 140.7 (0.02)
+Passed Vit filter:                        20  (0.00284333); expected 7.0 (0.001)
+Passed Fwd filter:                         4  (0.000568666); expected 0.1 (1e-05)
+Initial search space (Z):               7034  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.07u 0.01s 00:00:00.08 Elapsed: 00:00:00.04
+# Mc/sec: 25394.72
+//
+[ok]

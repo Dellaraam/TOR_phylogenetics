@@ -1,0 +1,457 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Vitbras1_GeneModels_AllModels_20200717_aa.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                         Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                         -----------
+    2.5e-30  105.9   0.8    1.8e-23   83.6   0.0    6.6  5  jgi|Vitbras1|10828|Vbra_14744.t1  
+    2.4e-08   34.5   6.1        1.9    8.8   0.0    8.3  8  jgi|Vitbras1|17305|Vbra_9860.t1   
+    8.4e-08   32.7   5.8      0.026   14.9   0.2    6.7  8  jgi|Vitbras1|20557|Vbra_4619.t1   
+    5.3e-05   23.6   0.0          4    7.8   0.0    6.0  5  jgi|Vitbras1|12900|Vbra_5903.t1   
+    0.00011   22.5   2.1        4.7    7.5   0.1    5.4  4  jgi|Vitbras1|9484|Vbra_5615.t1    
+     0.0029   17.9   0.0       0.76   10.1   0.0    3.6  3  jgi|Vitbras1|9399|Vbra_14059.t1   
+  ------ inclusion threshold ------
+      0.047   14.0   0.1        2.6    8.3   0.0    3.1  4  jgi|Vitbras1|669|Vbra_6795.t1     
+      0.077   13.3   0.0        4.1    7.7   0.0    3.2  3  jgi|Vitbras1|19623|Vbra_6335.t1   
+       0.36   11.2   4.0         12    6.2   0.0    4.8  6  jgi|Vitbras1|14786|Vbra_6085.t1   
+
+
+Domain annotation for each sequence (and alignments):
+>> jgi|Vitbras1|10828|Vbra_14744.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.5   0.0     0.064   1.7e+02     122     160 .]     425     462 ..     396     462 .. 0.84
+   2 ?    4.6   0.0     0.015        38       3      49 ..     795     840 ..     794     903 .. 0.58
+   3 !   83.6   0.0   6.9e-27   1.8e-23       1     159 [.    1036    1298 ..    1036    1299 .. 0.83
+   4 ?    4.9   0.0     0.012        31     106     155 ..    1371    1420 ..    1358    1487 .. 0.86
+   5 ?   -2.5   0.0       2.1   5.5e+03     128     152 ..    2557    2581 ..    2547    2584 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 2.5 bits;  conditional E-value: 0.064
+                          mTOR_dom 122 cvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                                        +++l++ + +ll++ir+   + re  ++ L++L+  vk
+  jgi|Vitbras1|10828|Vbra_14744.t1 425 ALNYLDKAVAHLLQTIRSG-GTDRELAFEALGDLILAVK 462
+                                       5789*************84.5899***********9887 PP
+
+  == domain 2  score: 4.6 bits;  conditional E-value: 0.015
+                          mTOR_dom   3 ePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkev 49 
+                                       +P+l  p+ L +L + l+ e s ++R+ +++++G l   +P  +   
+  jgi|Vitbras1|10828|Vbra_14744.t1 795 DPFLCEPSCLAALNQSLHDE-SLQVRKTAVRLMGRLCLHNPAYVLPA 840
+                                       799999999********977.999**********9866666555444 PP
+
+  == domain 3  score: 83.6 bits;  conditional E-value: 6.9e-27
+                          mTOR_dom    1 VvePyldypeLLeiLlnilkteq.s.......qsiRrevikvlGilGALDPykhkeveeks.............. 53  
+                                        V ePyl+yp+LL+ ++ +l++++ s       +++R+++i+ +G+lGALDPy++ ++e+                
+  jgi|Vitbras1|10828|Vbra_14744.t1 1036 VLEPYLKYPSLLSYMIGLLRSDStSdvhwpwhWPLRKQIIRAIGTLGALDPYRFHQLERLPrtqpqqtktrglea 1110
+                                        789*****************996244555555679*******************999876666665555555554 PP
+
+                          mTOR_dom   54 ...............eeeekeeenaeetdvsellvgl...................................... 75  
+                                                       e            +       +                                      
+  jgi|Vitbras1|10828|Vbra_14744.t1 1111 pplganeadhrnlqwE------------N-------Vklagerhmkrqqegdfevvtglgvaasrhgmpvlgggg 1166
+                                        4444433333222220............2.......12233333444566666666667888889999******* PP
+
+                          mTOR_dom   76 ......spss.eeyyptvvinaLlkil.........................................kdpslss 102 
+                                              +  +  + +++++i+aLl+++                                             lss
+  jgi|Vitbras1|10828|Vbra_14744.t1 1167 graaggEDDKgVDLFSSTAIRALLRMMaenkskgrgsasqpasglpgytywggvaygqtamvggaaggGGGVLSS 1241
+                                        ****99555569*******************************************************999***** PP
+
+                          mTOR_dom  103 hhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                                        h+t+v++a+m ifk+l+ k v flpq++pa+l ++++++ + +e ll +L++L++iv
+  jgi|Vitbras1|10828|Vbra_14744.t1 1242 HQTSVMTAMMCIFKNLEHKTVYFLPQVMPAFLDILHSSDGESQESLLLNLSDLIAIV 1298
+                                        *************************************999****************9 PP
+
+  == domain 4  score: 4.9 bits;  conditional E-value: 0.012
+                          mTOR_dom  106 avvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155 
+                                        a ++++ +i  +l     +++ q+ip ll+ +++ +s++re+ +  L+ L
+  jgi|Vitbras1|10828|Vbra_14744.t1 1371 ALLRVLEEIATHLPNDFETYMGQLIPILLNFLQNDQSERREVAFGVLQAL 1420
+                                        55566666777777777888888888888888888888888888777766 PP
+
+  == domain 5  score: -2.5 bits;  conditional E-value: 2.1
+                          mTOR_dom  128 qiipallsvirtcesslrefllqqL 152 
+                                        ++ip++l+ +r++++ l++++   L
+  jgi|Vitbras1|10828|Vbra_14744.t1 2557 EVIPQILARLRSSNKALQKTIHALL 2581
+                                        79**********9999999887666 PP
+
+>> jgi|Vitbras1|17305|Vbra_9860.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.6   0.0      0.06   1.6e+02      68     152 ..      30     111 ..       6     118 .. 0.66
+   2 ?    3.5   0.0     0.031        81      14      41 ..     183     210 ..     176     217 .. 0.89
+   3 !    6.6   0.0    0.0036       9.3      88     138 ..     220     270 ..     213     281 .. 0.90
+   4 ?   -0.8   0.0      0.65   1.7e+03     106     136 ..     295     325 ..     286     331 .. 0.66
+   5 !    8.8   0.0   0.00073       1.9      76     145 ..     468     536 ..     359     545 .. 0.70
+   6 ?    1.0   0.0      0.19     5e+02      83     148 ..     693     758 ..     621     769 .. 0.61
+   7 ?    3.8   0.0     0.025        66      64     154 ..    1030    1132 ..    1009    1136 .. 0.77
+   8 ?   -3.7   0.0         5   1.3e+04      78     116 ..    1233    1251 ..    1218    1267 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 2.6 bits;  conditional E-value: 0.06
+                         mTOR_dom  68 vsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcessl 144
+                                      ++e++++ ++ s ++  +t v +a l+ l+d+s++  + ++v+ + +i+   g ++   ++ ++  l+s++ ++++++
+  jgi|Vitbras1|17305|Vbra_9860.t1  30 TQEIINCSTHQSlDQSTATKVCQAFLTQLEDQSID-VQGNAVKCLAKIVGRFGEQQ---ITDVMGRLASLVLDAKAEV 103
+                                      22333444444459999999*************99.66778888888887766544...5566666666666666666 PP
+
+                         mTOR_dom 145 refllqqL 152
+                                      r+ +   L
+  jgi|Vitbras1|17305|Vbra_9860.t1 104 RDIYATCL 111
+                                      66666555 PP
+
+  == domain 2  score: 3.5 bits;  conditional E-value: 0.031
+                         mTOR_dom  14 iLlnilkteqsqsiRrevikvlGilGAL 41 
+                                      +Lln+l++  ++s+R+ +i ++G+l A+
+  jgi|Vitbras1|17305|Vbra_9860.t1 183 ALLNLLSSAYRPSVRKRAIACIGVLSAV 210
+                                      79999*9999***************997 PP
+
+  == domain 3  score: 6.6 bits;  conditional E-value: 0.0036
+                         mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                                      i+ Ll+ +++++ +s +++ +q + ++ +++g +  + l++i p +ls++ 
+  jgi|Vitbras1|17305|Vbra_9860.t1 220 IRVLLQNVRNANTKSNKQMYIQCVGTVGRNVGFRIGSHLSEIAPLFLSICG 270
+                                      778888899**************************************9875 PP
+
+  == domain 4  score: -0.8 bits;  conditional E-value: 0.65
+                         mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsv 136
+                                      ++++ai s + +   ++vp+l+q+i + l++
+  jgi|Vitbras1|17305|Vbra_9860.t1 295 NCLTAIESFVIKCTHQMVPYLDQLIKKSLAL 325
+                                      4445555555556667789****99988765 PP
+
+  == domain 5  score: 8.8 bits;  conditional E-value: 0.00073
+                         mTOR_dom  76 spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+                                          +e+  + ++  +l+ l+++sl+  ++ ++q   +i ++l ++  p lp+ +p+l++ ++ ++ss+r
+  jgi|Vitbras1|17305|Vbra_9860.t1 468 AIFIKEFERANAVPLMLRHLRNSSLK-TRQGALQLFKTIAQNLPTELEPWLPKMLPELVKGLQGSHSSIR 536
+                                      334488899999999**********9.688899***************************9998887665 PP
+
+  == domain 6  score: 1.0 bits;  conditional E-value: 0.19
+                         mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefl 148
+                                          +i+ L ++l+++s s  ++ ++++++  +++ g k+  ++l++++   + ++++++ ++ +  
+  jgi|Vitbras1|17305|Vbra_9860.t1 693 ALVPAIAHLSSLLNNQSRS-FRQICLDVLVALVRKYGPKVdASILNRLLEDCTPYVKDTDLHIADLC 758
+                                      2223556666666555533.55666666666666666666666666666666666666555555555 PP
+
+  == domain 7  score: 3.8 bits;  conditional E-value: 0.025
+                         mTOR_dom   64 eetdvsellvglspsseeyyptvvinaLlkil..............kdpslsshhtavvqaimsifktlglkc.vp 124 
+                                       + ++v  +lv++ +s+ee   tvv + L +il               d   ++ +t++v+a+ +   +   +c ++
+  jgi|Vitbras1|17305|Vbra_9860.t1 1030 HVNKVLPILVEYASSEEESDRTVVAECLGQILlldpvavsptlaplFDTDDAKSRTTAVSALRFAAAK---QCdIK 1102
+                                       34445555888889999999999999999999999999999988885555556688888888887774...77899 PP
+
+                         mTOR_dom  125 flpqiipallsvirtcesslrefllqqLat 154 
+                                       +l+ + p+l+++++++e  +r+  lq L++
+  jgi|Vitbras1|17305|Vbra_9860.t1 1103 TLEGLQPQLMRALTDSELMVRKAALQTLNV 1132
+                                       999999999999999988999999999875 PP
+
+  == domain 8  score: -3.7 bits;  conditional E-value: 5
+                         mTOR_dom   78 sseeyyptvvinaLlkilkdpslsshhtavvqaimsifk 116 
+                                       +     pt vi++L ki+                     
+  jgi|Vitbras1|17305|Vbra_9860.t1 1233 TLAHINPTAVIQKLEKIV--------------------D 1251
+                                       444555556666655555....................2 PP
+
+>> jgi|Vitbras1|20557|Vbra_4619.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.9   0.2     1e-05     0.026      87     150 ..     220     286 ..     216     294 .. 0.83
+   2 !    6.2   0.0    0.0048        12      78     153 ..     355     433 ..     316     436 .. 0.62
+   3 ?    3.1   0.0     0.042   1.1e+02      91     142 ..     500     551 ..     491     561 .. 0.78
+   4 ?    3.6   0.0     0.029        76     109     142 ..     608     641 ..     596     648 .. 0.83
+   5 ?   -2.6   0.1       2.3     6e+03     111     138 ..     683     710 ..     658     734 .. 0.43
+   6 ?   -2.1   0.0       1.7   4.3e+03     105     119 ..     756     770 ..     751     774 .. 0.86
+   7 ?   -3.7   0.0       5.1   1.3e+04      10      33 ..     859     882 ..     835     889 .. 0.61
+   8 ?   -1.0   0.0      0.76     2e+03       8      39 ..    1070    1102 ..    1068    1148 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 14.9 bits;  conditional E-value: 1e-05
+                         mTOR_dom  87 vinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces..slrefllq 150
+                                      ++++L ++l+d++   +h ++v++ ++++ ++  l   p lp i+ ++l++irt++   ++r+  ++
+  jgi|Vitbras1|20557|Vbra_4619.t1 220 IMASLGMMLQDQKKHlDHAKEVIEDMITMAESEALFFKPHLPGIVTQMLTYIRTSTYedDIRQLAVE 286
+                                      5678999****999999************************************87532355555555 PP
+
+  == domain 2  score: 6.2 bits;  conditional E-value: 0.0048
+                         mTOR_dom  78 sseeyyptvvinaLlkilkdpsls...shhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqq 151
+                                        e++ p+v  na    l++ s     +h+  ++ +i ++ ++++     ++lp+ii+ ll+ ++++++++r   l+ 
+  jgi|Vitbras1|20557|Vbra_4619.t1 355 GAEDVLPHVFRNA-SVFLEQGSKHnswKHKLVAIMSISQVAEYIDEDElDSYLPKIIHVLLTNVEDVHPRVRFAALHA 431
+                                      4477777766555.4455555544112455555566666666676666588**************9999998877776 PP
+
+                         mTOR_dom 152 La 153
+                                      ++
+  jgi|Vitbras1|20557|Vbra_4619.t1 432 IG 433
+                                      65 PP
+
+  == domain 3  score: 3.1 bits;  conditional E-value: 0.042
+                         mTOR_dom  91 Llkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                                      Ll+   +++++s +   v+ai  +   ++   ++f+++iip l +++ +c+s
+  jgi|Vitbras1|20557|Vbra_4619.t1 500 LLAASGQHQIRSIKDHSVTAIAVVAGVVEQHFIKFYTHIIPLLKTILAQCTS 551
+                                      44444566777777788888888888888999**********9999999976 PP
+
+  == domain 4  score: 3.6 bits;  conditional E-value: 0.029
+                         mTOR_dom 109 qaimsifktlglkcvpflpqiipallsvirtces 142
+                                      +a   +++ l+ + +p+l+ ++p++ls++rt  +
+  jgi|Vitbras1|20557|Vbra_4619.t1 608 EAFPRMCRVLKEEFIPYLSVLMPHYLSTLRTQAT 641
+                                      466678999999******************9765 PP
+
+  == domain 5  score: -2.6 bits;  conditional E-value: 2.3
+                         mTOR_dom 111 imsifktlglkcvpflpqiipallsvir 138
+                                      i + ++ lg+   +++p    a++++++
+  jgi|Vitbras1|20557|Vbra_4619.t1 683 IKTFLEVLGTDFREYIPTTTEAVVALLS 710
+                                      2222222333333333333333333333 PP
+
+  == domain 6  score: -2.1 bits;  conditional E-value: 1.7
+                         mTOR_dom 105 tavvqaimsifktlg 119
+                                      ++vvqai  ifk ++
+  jgi|Vitbras1|20557|Vbra_4619.t1 756 NMVVQAIDRIFKCME 770
+                                      68*********9886 PP
+
+  == domain 7  score: -3.7 bits;  conditional E-value: 5.1
+                         mTOR_dom  10 eLLeiLlnilkteqsqsiRrevik 33 
+                                      +L e+L  i+k   +  +R ++ k
+  jgi|Vitbras1|20557|Vbra_4619.t1 859 SLAEVLAVIMKHYPDAFLRTSASK 882
+                                      344444444444444445555544 PP
+
+  == domain 8  score: -1.0 bits;  conditional E-value: 0.76
+                         mTOR_dom    8 ypeLLeiLlnilkte.qsqsiRrevikvlGilG 39  
+                                        p+L++iL+++ kt+ ++ +    ++ +l  +G
+  jgi|Vitbras1|20557|Vbra_4619.t1 1070 LPRLVGILSRVYKTDcSTDECNTAILSLLQQIG 1102
+                                       589999999999999667777777777777776 PP
+
+>> jgi|Vitbras1|12900|Vbra_5903.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.0   0.0      0.19   4.9e+02      30     138 ..     424     500 ..     406     512 .. 0.50
+   2 !    7.8   0.0    0.0015         4     108     159 ..    1600    1651 ..    1560    1652 .. 0.84
+   3 ?    0.1   0.0      0.35   9.1e+02      87     139 ..    1699    1752 ..    1671    1770 .. 0.67
+   4 ?    0.2   0.0      0.33   8.5e+02     120     156 ..    1853    1889 ..    1755    1891 .. 0.77
+   5 ?    3.9   0.0     0.023        60      62     139 ..    2417    2494 ..    2395    2502 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 1.0 bits;  conditional E-value: 0.19
+                         mTOR_dom  30 evikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls.shhta 106
+                                        ik+ G+                                  l++l+  +++  + +  + L  il d++ s   ++a
+  jgi|Vitbras1|12900|Vbra_5903.t1 424 AGIKLTGV----------------------------------LMRLEGVTKDACHEY-AKVLGGILADKKASdRLKEA 466
+                                      33333333..................................344444444444442.24555666666666566666 PP
+
+                         mTOR_dom 107 vvqaimsifkt.lglkc.vpflpqiipallsvir 138
+                                      +v+a++s++    +    ++ l+++i  l++++ 
+  jgi|Vitbras1|12900|Vbra_5903.t1 467 TVEALVSMMCAkERFSYdLSALQELIDPLVAILP 500
+                                      7777666655412222245556666655555554 PP
+
+  == domain 2  score: 7.8 bits;  conditional E-value: 0.0015
+                         mTOR_dom  108 vqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                                       ++ + s+++    +    lpq++pal+ v++++++++r+   + L+t+ s++
+  jgi|Vitbras1|12900|Vbra_5903.t1 1600 IELLASMVNCAPKQLAVSLPQVVPALADVVSDSHPKVRDSADKALKTIASVI 1651
+                                       667777888777888999**********************999999998876 PP
+
+  == domain 3  score: 0.1 bits;  conditional E-value: 0.35
+                         mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkc..vpflpqiipallsvirt 139 
+                                       v   L + l+++  s+ ++++ q + s+++ ++     +p++p iip+l  ++ +
+  jgi|Vitbras1|12900|Vbra_5903.t1 1699 VCPMLTRALRERG-SETKKKAAQIVASMVELMREPKdfLPYYPAIIPHLKGTLVD 1752
+                                       5556667776554.44556666666666666654433599999999998776655 PP
+
+  == domain 4  score: 0.2 bits;  conditional E-value: 0.33
+                         mTOR_dom  120 lkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                                           +++pq++pall+ + + ++ +r++ ++  ++Lv
+  jgi|Vitbras1|12900|Vbra_5903.t1 1853 ESFQMYVPQVLPALLRGLADESEPVRDVSFRAAEVLV 1889
+                                       5567899999999999999988888888888777776 PP
+
+  == domain 5  score: 3.9 bits;  conditional E-value: 0.023
+                         mTOR_dom   62 naeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvi 137 
+                                       ++++  + e+++++ p      +t     L++il d+  ++ ++a+++a+   +   g    pflpq+ +++l+++
+  jgi|Vitbras1|12900|Vbra_5903.t1 2417 EVAAKGLGEMVKHMDPVALKPWATKLAGPLIRILGDRFPANVKAAILEALRALLDRGGATLKPFLPQLQSTFLKAL 2492
+                                       44455667777888888878888888889*******************************************9987 PP
+
+                         mTOR_dom  138 rt 139 
+                                        +
+  jgi|Vitbras1|12900|Vbra_5903.t1 2493 GD 2494
+                                       65 PP
+
+>> jgi|Vitbras1|9484|Vbra_5615.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.2   1.2     0.039     1e+02      68     117 ..     187     235 ..      42     271 .. 0.64
+   2 !    7.5   0.1    0.0018       4.7      74     140 ..     412     479 ..     348     496 .. 0.72
+   3 ?   -3.2   0.0       3.5   9.1e+03     108     150 ..     550     594 ..     544     600 .. 0.79
+   4 ?    4.7   0.0     0.014        35     114     155 ..     904     946 ..     881     949 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 3.2 bits;  conditional E-value: 0.039
+                        mTOR_dom  68 vsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifkt 117
+                                     vs+l +++ +++ +    ++ i  L++++ +++l++ h+++    ++if +
+  jgi|Vitbras1|9484|Vbra_5615.t1 187 VSSL-TQIVETEeQATAFKTLIGPLVRVV-EAALQQGHEDTAVLAIEIFDD 235
+                                     2222.222222212222233445555555.445555555555555555555 PP
+
+  == domain 2  score: 7.5 bits;  conditional E-value: 0.0018
+                        mTOR_dom  74 glspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkc.vpflpqiipallsvirtc 140
+                                      l+p     y++ v+  +l+ l+ +s s   +++v+ a+m  + +l+  +  +++p+++p++++++ t+
+  jgi|Vitbras1|9484|Vbra_5615.t1 412 YLQPEILKRYKQ-VMDVVLHTLEANSGSiVVQEKVLYALMVLIDHLEEDQlAAYVPHVLPKIMATLMTL 479
+                                     455566677888.5677788899999998999**************99998999999999999987765 PP
+
+  == domain 3  score: -3.2 bits;  conditional E-value: 3.5
+                        mTOR_dom 108 vqaimsifktlglkc.vpflpqiipallsvirtces.slrefllq 150
+                                      + +  i + +g +   pflp + p + + ++++++  lre  ++
+  jgi|Vitbras1|9484|Vbra_5615.t1 550 TDCVGAIAQAIGPEAfAPFLPVFYPLVKQGLSEISDhALRENSFR 594
+                                     5566778888888888999**999999999999998889988776 PP
+
+  == domain 4  score: 4.7 bits;  conditional E-value: 0.014
+                        mTOR_dom 114 ifktlglkcvpflpqiipallsvirtces.slrefllqqLatL 155
+                                     +++ +g     +++q++p++++ +++ e+ +lr   +  L++L
+  jgi|Vitbras1|9484|Vbra_5615.t1 904 VIQAMGGSAARYVDQVLPHVVQGVQQDEDwDLRRNAVFTLGVL 946
+                                     7788888889999999999999999888888888888887777 PP
+
+>> jgi|Vitbras1|9399|Vbra_14059.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.1   0.0   0.00029      0.76      60     155 ..     163     260 ..      66     262 .. 0.87
+   2 ?    0.5   0.0      0.26   6.8e+02      84     142 ..     281     339 ..     266     345 .. 0.69
+   3 ?    2.1   0.0     0.084   2.2e+02      82     149 ..     408     475 ..     378     480 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 10.1 bits;  conditional E-value: 0.00029
+                         mTOR_dom  60 eenaeetdvsel.lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflp.qiipalls 135
+                                       +++++t+v +l  ++ +p  +e + + vi+ L+++l d+s  + + ++  a+++i +  + +  ++++   +p l++
+  jgi|Vitbras1|9399|Vbra_14059.t1 163 IQQEAATAVHTLlCTTFEPPIQEAIDAGVIQPLVAVLGDSSRPKVQYEAAWALTNIASGTSEQTKAVVDaGAVPPLVQ 240
+                                      445555667776245556666*************************************988888555541689***** PP
+
+                         mTOR_dom 136 virtcesslrefllqqLatL 155
+                                      ++++ ++++r+  l  L+++
+  jgi|Vitbras1|9399|Vbra_14059.t1 241 LLSSPDDDVRHQALWALGNI 260
+                                      ****999****999999887 PP
+
+  == domain 2  score: 0.5 bits;  conditional E-value: 0.26
+                         mTOR_dom  84 ptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                                      ++ v++ L+k+l+ +s + s+  ++  a+ +  +    +  ++++++++ ++++irt e+
+  jgi|Vitbras1|9399|Vbra_14059.t1 281 EAGVMEPLVKVLRHESENvSMMRTATWALSNLSQ-KPPRPFELVSKVVSVVAELIRTPEQ 339
+                                      5667888999998888884455555555555444.4677788899999999999998776 PP
+
+  == domain 3  score: 2.1 bits;  conditional E-value: 0.084
+                         mTOR_dom  82 yyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpfl.pqiipallsvirtcesslrefll 149
+                                      ++++ +i aL ++l+ p   + + ++  ai +i+   g +  +++   ++p+l+++++t e+s++   l
+  jgi|Vitbras1|9399|Vbra_14059.t1 408 VIECGAIPALKALLSSPRQ-NICREACWAISNIMAGSGEQRQAVIdGDVVPQLITMATTDEPSVKREAL 475
+                                      5556677888888877774.5788888999999999998886666269********9999988776655 PP
+
+>> jgi|Vitbras1|669|Vbra_6795.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.5   0.0      0.27   6.9e+02     110     139 ..      12      42 ..       4      72 .. 0.68
+   2 ?   -1.9   0.0       1.4   3.8e+03      23      38 ..      55      70 ..      51      85 .. 0.77
+   3 ?   -0.1   0.0      0.39     1e+03       8      36 ..      82     110 ..      78     112 .. 0.81
+   4 ?    8.3   0.0     0.001       2.6      97     149 ..     171     223 ..     161     229 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 0.5 bits;  conditional E-value: 0.27
+                       mTOR_dom 110 aimsifktlglkc.vpflpqiipallsvirt 139
+                                    a+++ +++ +  +  p+l +ii++ l+++++
+  jgi|Vitbras1|669|Vbra_6795.t1  12 ALIKLLSSAHRPSmRPYLHKIIHKALALAQH 42 
+                                    5555555555544467777777777776664 PP
+
+  == domain 2  score: -1.9 bits;  conditional E-value: 1.4
+                       mTOR_dom 23 qsqsiRrevikvlGil 38
+                                   +s+ +R  +++vl++l
+  jgi|Vitbras1|669|Vbra_6795.t1 55 SSWLVRSAALQVLSVL 70
+                                   5778888888888776 PP
+
+  == domain 3  score: -0.1 bits;  conditional E-value: 0.39
+                       mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlG 36 
+                                    y+++ + Ll+ l  e +q++R +v +v+G
+  jgi|Vitbras1|669|Vbra_6795.t1  82 YKTVTGPLLTRLPLEWKQTVRVKVFRVVG 110
+                                    55666677888888999**********99 PP
+
+  == domain 4  score: 8.3 bits;  conditional E-value: 0.001
+                       mTOR_dom  97 dpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+                                    d+s   h++a+++    + +++     p lp+ +p+l++++++++sslr   l
+  jgi|Vitbras1|669|Vbra_6795.t1 171 DSSSLAHRHAALELFKRMARSMPAALEPELPKMLPELTKTLQDSPSSLRLDTL 223
+                                    556668999**********************************9998875544 PP
+
+>> jgi|Vitbras1|19623|Vbra_6335.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.1      0.17   4.4e+02      61     116 ..     243     301 ..     211     326 .. 0.54
+   2 ?   -2.6   0.0       2.3     6e+03      85     140 ..     524     578 ..     519     589 .. 0.77
+   3 ?    7.7   0.0    0.0016       4.1      96     141 ..     624     670 ..     586     675 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 0.17
+                         mTOR_dom  61 enaeetdvsel...lvglspsseeyypt...vvinaLlkilkdpslsshhtavvqaimsifk 116
+                                      ++ +++d  ++   ++++++s+  ++ +    +++aLl+il +   ++h ++v +  m+i+ 
+  jgi|Vitbras1|19623|Vbra_6335.t1 243 QQLSHPDAPMMmqlIADMCESDSMFFGAsadEAVKALLQILPN---KQHTHDVRSGAMEIMV 301
+                                      3333444444433366777888778777222455666666644...4444444444444443 PP
+
+  == domain 2  score: -2.6 bits;  conditional E-value: 2.3
+                         mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtc 140
+                                      ++v +aL+ il + +++  ++a +    +i + ++    p++p ++ a  ++++++
+  jgi|Vitbras1|19623|Vbra_6335.t1 524 AIVNQALIPILAKGTVQ-VQEAGLALAATIAQLVEDDFAPYYPSFMTAAKQILNQS 578
+                                      57788899999777755.67777788888888888888999998888887777765 PP
+
+  == domain 3  score: 7.7 bits;  conditional E-value: 0.0016
+                         mTOR_dom  96 kdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                                      +dp+ + +   +v+ a  +i ++lg    p+lp i+p+++++++  +
+  jgi|Vitbras1|19623|Vbra_6335.t1 624 NDPNRThNFGPSVLLAFGNIAESLGEAFEPYLPAIMPSIMAAAKMQP 670
+                                      455544477889999*************************9988755 PP
+
+>> jgi|Vitbras1|14786|Vbra_6085.t1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.7   0.0      0.61   1.6e+03     104     138 ..     612     647 ..     570     665 .. 0.73
+   2 ?   -0.1   0.1      0.41   1.1e+03     102     155 ..     646     699 ..     635     702 .. 0.85
+   3 ?   -1.0   0.1      0.75     2e+03      79     135 ..     748     803 ..     734     827 .. 0.63
+   4 ?    6.2   0.0    0.0045        12      88     158 ..     837     908 ..     809     951 .. 0.84
+   5 ?   -2.6   0.0       2.3   6.1e+03     112     145 ..     986    1020 ..     972    1030 .. 0.50
+   6 ?   -0.6   0.0      0.57   1.5e+03      24      46 ..    1058    1081 ..    1047    1149 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: -0.7 bits;  conditional E-value: 0.61
+                         mTOR_dom 104 htavvqaimsifktlglkc.vpflpqiipallsvir 138
+                                      ++++ +a   + + lg+ c +pfl+ ++ +  s+  
+  jgi|Vitbras1|14786|Vbra_6085.t1 612 RNTTARAFAVVASALGIPCiIPFLKAVCGSTKSWQA 647
+                                      456677888888999999999999999887766654 PP
+
+  == domain 2  score: -0.1 bits;  conditional E-value: 0.41
+                         mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                                      + +++ ++ + +i   +g+ ++p l+ ++ ++l  +++ ++++r      La L
+  jgi|Vitbras1|14786|Vbra_6085.t1 646 QARHTGIKIVQQIAILMGCAVLPHLKPLVDTILLGLTDEQQKVRTITALALAAL 699
+                                      566788999999*9*******************999998888888877777776 PP
+
+  == domain 3  score: -1.0 bits;  conditional E-value: 0.75
+                         mTOR_dom  79 seeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135
+                                      + +y+   v+  L++ ++ p  +++++ v++++ + + t g++   + ++i+p++++
+  jgi|Vitbras1|14786|Vbra_6085.t1 748 HANYFTREVMVILIREFQTPD-EEMKKIVLKVVKQCVATEGVEAQYIREEILPHFFK 803
+                                      355666666666666665555.34566666666666666667666666777777766 PP
+
+  == domain 4  score: 6.2 bits;  conditional E-value: 0.0045
+                         mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlglkc..vpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                                      ++ +++ lkdps + ++++vv++i +++ +lg+    v + +q+i  ++ ++++ +s+  +++l+ ++t+v+ 
+  jgi|Vitbras1|14786|Vbra_6085.t1 837 VTRVVEDLKDPS-EPYRKMVVETIEKVLTNLGVADidVRLEEQLIDGIVYAFQEQSSEDTKVMLDGFGTIVNC 908
+                                      566677788888.558999999999999999998767788899999999999998888888888888888865 PP
+
+  == domain 5  score: -2.6 bits;  conditional E-value: 2.3
+                         mTOR_dom  112 msifktlglkc.vpflpqiipallsvirtcesslr 145 
+                                         i++ +g++   p ++ ++p l+ ++++ +++++
+  jgi|Vitbras1|14786|Vbra_6085.t1  986 KAIVNVVGMQKmSPPIKDLLPRLTPILKNRHEKVQ 1020
+                                       33333333333244555555555555555444444 PP
+
+  == domain 6  score: -0.6 bits;  conditional E-value: 0.57
+                         mTOR_dom   24 sqsiRrevikvlGilG.ALDPykh 46  
+                                       +++iRr +++++G +  A+ P+ +
+  jgi|Vitbras1|14786|Vbra_6085.t1 1058 KKAIRRATVNTFGYIAkAVGPQDV 1081
+                                       566666666666655324444443 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      23412  (12163461 residues searched)
+Passed MSV filter:                       867  (0.0370323); expected 468.2 (0.02)
+Passed bias filter:                      775  (0.0331027); expected 468.2 (0.02)
+Passed Vit filter:                        64  (0.00273364); expected 23.4 (0.001)
+Passed Fwd filter:                         9  (0.000384418); expected 0.2 (1e-05)
+Initial search space (Z):              23412  [actual number of targets]
+Domain search space  (domZ):               9  [number of targets reported over threshold]
+# CPU time: 0.16u 0.04s 00:00:00.20 Elapsed: 00:00:00.17
+# Mc/sec: 11070.71
+//
+[ok]

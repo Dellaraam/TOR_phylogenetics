@@ -1,0 +1,72 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Eimeria_maxima.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+     0.0042   14.8   0.9        0.2    9.3   0.4    2.1  2  CDJ56683.1  hypothetical protein, conserved [Eimeria maxima]
+  ------ inclusion threshold ------
+      0.035   11.8   0.5       0.24    9.0   0.6    2.0  1  CDJ60831.1  hypothetical protein EMWEY_00035250 [Eimeria maxi
+
+
+Domain annotation for each sequence (and alignments):
+>> CDJ56683.1  hypothetical protein, conserved [Eimeria maxima]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    4.2   0.0    0.0024       7.2     239     295 ..      19      91 ..      12     100 .. 0.70
+   2 !    9.3   0.4   6.7e-05       0.2     249     305 ..     120     169 ..     105     198 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 4.2 bits;  conditional E-value: 0.0024
+                 .HHHHCCCTCCC......................CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHH CS
+         FAT 239 kllarcylkkGe......................wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfe 295
+                 +lla+ + + G+                       +a+l+         +e+++  +aat l+p+  + w ++++++ e
+  CDJ56683.1  19 RLLAQQNDREGMkrlvetcqsmaptafctfqvygQQARLNG------ALDEAVEVLHAATALNPTAGDGWTQLGSAYLE 91 
+                 55555555555555555555556666665222222444444......599************************99866 PP
+
+  == domain 2  score: 9.3 bits;  conditional E-value: 6.7e-05
+                 CCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSS CS
+         FAT 249 Gewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekke 305
+                 G+ +a l++         +++q y+aa++++p+++++w +++ ++ ++ ++ +  k+
+  CDJ56683.1 120 GQTQALLHN-------WAAAEQLYAAAVKCRPDLASTWWHLGTAEKQRNKHSAALKS 169
+                 555555555.......67899*************************99988876655 PP
+
+>> CDJ60831.1  hypothetical protein EMWEY_00035250 [Eimeria maxima]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.0   0.6   7.9e-05      0.24      82     133 ..       9      68 ..       7     189 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 9.0 bits;  conditional E-value: 7.9e-05
+                 CCCHHHCHHCCHHCSS-........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCC CS
+         FAT  82 QqlaEleeiiqykqkls........sseelksllktWrkRlpgvqddvevwqdilsvRsl 133
+                 Q+l  l+ei ++ ++           s e + ll +W++R++++q++++v q+ +++  l
+  CDJ60831.1   9 QMLLLLQEIREMVKEGCslldatrpVSAEEANLLGKWDQRYKDTQTELNVLQQEVQTMDL 68 
+                 666666666666664336667777999999999*****************9987766555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       6057  (4025948 residues searched)
+Passed MSV filter:                      2113  (0.348853); expected 121.1 (0.02)
+Passed bias filter:                      188  (0.0310385); expected 121.1 (0.02)
+Passed Vit filter:                       102  (0.01684); expected 6.1 (0.001)
+Passed Fwd filter:                         2  (0.000330196); expected 0.1 (1e-05)
+Initial search space (Z):               6057  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.17u 0.01s 00:00:00.18 Elapsed: 00:00:00.09
+# Mc/sec: 14425.01
+//
+[ok]

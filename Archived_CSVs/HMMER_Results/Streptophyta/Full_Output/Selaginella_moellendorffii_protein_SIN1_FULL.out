@@ -1,0 +1,449 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Streptophyta/Proteins/Selaginella_moellendorffii_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    6.7e-09   36.6   3.3    9.4e-09   36.1   3.3    1.3  1  XP_024524510.1  uncharacterized protein At4g22758-like [Selag
+    4.6e-07   30.5   2.7    6.3e-07   30.0   2.7    1.3  1  XP_002967649.2  uncharacterized protein At4g22758 [Selaginell
+    0.00013   22.5   4.4    0.00014   22.3   4.4    1.1  1  XP_024524879.1  putative E3 ubiquitin-protein ligase XBAT34 i
+    0.00013   22.5   4.4    0.00014   22.3   4.4    1.1  1  XP_024528251.1  putative E3 ubiquitin-protein ligase XBAT34 i
+    0.00013   22.4   4.6    0.00014   22.3   4.6    1.1  1  XP_024524880.1  putative E3 ubiquitin-protein ligase XBAT34 i
+    0.00013   22.4   4.6    0.00014   22.3   4.6    1.1  1  XP_024528253.1  putative E3 ubiquitin-protein ligase XBAT34 i
+     0.0019   18.6  19.9      0.068   13.4   3.2    2.2  2  XP_002970934.1  transcription factor TCP8 [Selaginella moelle
+     0.0026   18.1   2.5     0.0099   16.2   2.5    1.8  1  XP_024524280.1  uncharacterized protein LOC112344201 [Selagin
+     0.0029   17.9   2.3     0.0044   17.4   2.0    1.3  1  XP_024516708.1  ethylene-responsive transcription factor ERF0
+     0.0037   17.6  21.2      0.076   13.3   3.1    2.1  2  XP_002991157.2  transcription factor TCP8 [Selaginella moelle
+      0.008   16.5   8.4      0.014   15.7   8.4    1.4  1  XP_024534592.1  SWI/SNF complex subunit SWI3C isoform X2 [Sel
+  ------ inclusion threshold ------
+      0.056   13.7  10.4      0.069   13.4  10.4    1.2  1  XP_024533352.1  basic-leucine zipper transcription factor A-l
+       0.19   12.0   0.0       0.22   11.8   0.0    1.2  1  XP_002992399.1  uncharacterized protein LOC9661545 [Selaginel
+       0.49   10.6  10.2       0.64   10.2  10.2    1.1  1  XP_024517694.1  uncharacterized protein LOC9657769 [Selaginel
+       0.86    9.8   8.7        1.4    9.1   8.7    1.2  1  XP_002967314.1  AP-3 complex subunit delta [Selaginella moell
+        1.6    8.9   8.2        2.5    8.3   8.2    1.2  1  XP_024529827.1  AP-3 complex subunit delta [Selaginella moell
+        2.3    8.3  11.5        4.6    7.4  11.5    1.4  1  XP_024532190.1  uncharacterized protein LOC112346790 [Selagin
+        5.8    7.0  33.7      0.043   14.1  13.3    2.5  2  XP_002967479.2  nitrate regulatory gene2 protein [Selaginella
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_024524510.1  uncharacterized protein At4g22758-like [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   36.1   3.3   3.7e-12   9.4e-09     201     353 ..      13     185 ..       5     232 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 36.1 bits;  conditional E-value: 3.7e-12
+  PTHR13335.orig.30.pir 201 erssdssssssapsrrqsnkldseqlsaeesdslfekkskssstktqkskkpssa.a..........................kqsi. 260
+                            ++s++ss s+s+++           +  + ++s  +k  +s +    k  +p+++ +                               
+         XP_024524510.1  13 SMSPSSSRSQSTSR-----------CPSKRKKSPPHKDGSSHTPRSSKLPPPRPHhPvhppygssyswdsaqgqafmdkvatrT--Qs 87 
+                            22222222222222...........33333333333333222222222222333322444444444444444333333333331..02 PP
+
+  PTHR13335.orig.30.pir 261 .......sslssaLekkps.qlnnpfneya....kfdgkgvgttaslkidiylplssepdkllpltvvvkasatVqevIGlaLwqyte 336
+                                   s+ +++ ++++  +++ p+ + +    +f g  + +t+ + + + +  s+      pl +vv+++atV evI +aL++y  
+         XP_024524510.1  88 aasihdaSQQQQQQQQRQDgTKDTPYLALVqlfnQFQGMPI-DTKKTLVTVTVLGSTG-----PLRMVVTSDATVKEVIKMALLKYAH 169
+                            2333444555444444444668888888777878******6.7888888888888888.....9999********************* PP
+
+  PTHR13335.orig.30.pir 337 egrepklpdnkvnaycL 353
+                            egr p l ++  + ++L
+         XP_024524510.1 170 EGRVPALGRS-TREFEL 185
+                            *******998.445555 PP
+
+>> XP_002967649.2  uncharacterized protein At4g22758 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   30.0   2.7   2.5e-10   6.3e-07     201     353 ..      13     183 ..       5     230 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 30.0 bits;  conditional E-value: 2.5e-10
+  PTHR13335.orig.30.pir 201 erssdssssssapsrrqsnkldseqlsaeesdslfekkskssstktqkskkpssa.a.............................kq 258
+                            ++s++ss s+s+++           +  + ++s  +k  +s +    k  +p+++ +                               
+         XP_002967649.2  13 SMSPSSSRSQSTSR-----------CPSKRKKSPPHKDGSSHTPRSSKLPPPRPHhPvhppygssyswdsaqgqafmdkvatrtqsAA 89 
+                            22222222222222...........333333333333332222222222333333224444444444444443333333333322113 PP
+
+  PTHR13335.orig.30.pir 259 sisslssaLekkps..qlnnpfneya....kfdgkgvgttaslkidiylplssepdkllpltvvvkasatVqevIGlaLwqyteegre 340
+                            si+  s++ +++ +  +++ p+ + +    +f g  + +t+ + + + +  s+      pl +vv+++atV ev  +aL++y  egr 
+         XP_002967649.2  90 SIHDASQQQQQQRQdgTKDTPYLALVqlfnQFQGMPI-DTKKTLVTVTVLGSTG-----PLRMVVTSDATVKEVMKMALLKYAHEGRV 171
+                            344445556655555668888888777777******6.7888888888888888.....9999************************* PP
+
+  PTHR13335.orig.30.pir 341 pklpdnkvnaycL 353
+                            p l ++  + ++L
+         XP_002967649.2 172 PALGRS-TREFEL 183
+                            ***998.445555 PP
+
+>> XP_024524879.1  putative E3 ubiquitin-protein ligase XBAT34 isoform X1 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.3   4.4   5.4e-08   0.00014     108     213 ..     318     408 ..     190     465 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 22.3 bits;  conditional E-value: 5.4e-08
+  PTHR13335.orig.30.pir 108 kqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseerdqsscksiqwktessvkedsvqrasse 195
+                            +q+++++  p++++++q+++ + +++++++++++    +  ++++++++     +a s     ++   + w + +s++++s+ +  + 
+         XP_024524879.1 318 VQQQNQQHHPQQQQQQQQQQQQ-QQQQKQQQQQQ----QHHQQEQQQQQ-----PAGS-----KKNDCGGWAVDGSSSSTSSYNGWGT 390
+                            3333333333333222222222.11111111111....11111111122.....1122.....2222334444444444444444444 PP
+
+  PTHR13335.orig.30.pir 196 sslsserssdssssssap 213
+                             + ++++s+ s ++++ap
+         XP_024524879.1 391 PEPGQSSSEASVATPAAP 408
+                            444444444444444444 PP
+
+>> XP_024528251.1  putative E3 ubiquitin-protein ligase XBAT34 isoform X1 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.3   4.4   5.4e-08   0.00014     108     213 ..     318     408 ..     190     465 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 22.3 bits;  conditional E-value: 5.4e-08
+  PTHR13335.orig.30.pir 108 kqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseerdqsscksiqwktessvkedsvqrasse 195
+                            +q+++++  p++++++q+++ + +++++++++++    +  ++++++++     +a s     ++   + w + +s++++s+ +  + 
+         XP_024528251.1 318 VQQQNQQHHPQQQQQQQQQQQQ-QQQQKQQQQQQ----QHHQQEQQQQQ-----PAGS-----KKNDCGGWAVDGSSSSTSSYNGWGT 390
+                            3333333333333222222222.11111111111....11111111122.....1122.....2222334444444444444444444 PP
+
+  PTHR13335.orig.30.pir 196 sslsserssdssssssap 213
+                             + ++++s+ s ++++ap
+         XP_024528251.1 391 PEPGQSSSEASVATPAAP 408
+                            444444444444444444 PP
+
+>> XP_024524880.1  putative E3 ubiquitin-protein ligase XBAT34 isoform X2 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.3   4.6   5.4e-08   0.00014     108     213 ..     301     391 ..     172     448 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 22.3 bits;  conditional E-value: 5.4e-08
+  PTHR13335.orig.30.pir 108 kqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseerdqsscksiqwktessvkedsvqrasse 195
+                            +q+++++  p++++++q+++ + +++++++++++    +  ++++++++     +a s     ++   + w + +s++++s+ +  + 
+         XP_024524880.1 301 VQQQNQQHHPQQQQQQQQQQQQ-QQQQKQQQQQQ----QHHQQEQQQQQ-----PAGS-----KKNDCGGWAVDGSSSSTSSYNGWGT 373
+                            3333333333333222222222.11111111111....11111111122.....1122.....2222334444444444444444444 PP
+
+  PTHR13335.orig.30.pir 196 sslsserssdssssssap 213
+                             + ++++s+ s ++++ap
+         XP_024524880.1 374 PEPGQSSSEASVATPAAP 391
+                            444444444444444444 PP
+
+>> XP_024528253.1  putative E3 ubiquitin-protein ligase XBAT34 isoform X2 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.3   4.6   5.4e-08   0.00014     108     213 ..     301     391 ..     172     448 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 22.3 bits;  conditional E-value: 5.4e-08
+  PTHR13335.orig.30.pir 108 kqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseerdqsscksiqwktessvkedsvqrasse 195
+                            +q+++++  p++++++q+++ + +++++++++++    +  ++++++++     +a s     ++   + w + +s++++s+ +  + 
+         XP_024528253.1 301 VQQQNQQHHPQQQQQQQQQQQQ-QQQQKQQQQQQ----QHHQQEQQQQQ-----PAGS-----KKNDCGGWAVDGSSSSTSSYNGWGT 373
+                            3333333333333222222222.11111111111....11111111122.....1122.....2222334444444444444444444 PP
+
+  PTHR13335.orig.30.pir 196 sslsserssdssssssap 213
+                             + ++++s+ s ++++ap
+         XP_024528253.1 374 PEPGQSSSEASVATPAAP 391
+                            444444444444444444 PP
+
+>> XP_002970934.1  transcription factor TCP8 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.0   8.9   0.00014      0.35      69     151 ..     108     189 ..      99     328 .. 0.75
+   2 !   13.4   3.2   2.7e-05     0.068      46     123 ..     471     686 ..     465     692 .] 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 11.0 bits;  conditional E-value: 0.00014
+  PTHR13335.orig.30.pir  69 dsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavklekl 151
+                            d+  e+  +++++++  +  ++ +++++++d ++ ++ ++qsses+ s+++++++q+++ + +++++ ++++++++  +l+++
+         XP_002970934.1 108 DEQEEEEQEESGGGGGRASRKNLGAPRQRMDPASHGKSDSQSSESGLSSQQQQQQQQQQQQ-QQQQFYQQQQHQQQRYRLQAQ 189
+                            4444444444555555556677778888888888888888777777777777555555555.555555545554555554444 PP
+
+  == domain 2  score: 13.4 bits;  conditional E-value: 2.7e-05
+  PTHR13335.orig.30.pir  46 yppvsssssesllsrpksastpgdsgsedsgssneaetatg............................................... 86 
+                             ++++++ ++ lls+ +++++p+  +  +s s+   +t+++                                               
+         XP_002970934.1 471 SSGHYRKRPRGLLSSLRDPPDPQGITLGRSPSAAARSTQQHqhqtmqqglmvpsafwmlptggggggggvaeqaiwtfntagggaggg 558
+                            5556666666666666666666655555555555544554455666888999999999999999999999999999999999999999 PP
+
+  PTHR13335.orig.30.pir  87 ........................................................................................ 86 
+                                                                                                                    
+         XP_002970934.1 559 gasqlyrtaqqvtqgspmmpltgsvlpggvtimpprilpgldlqpggtgggggghhlgqltsmllgqqppesshlgmlaafqggpygt 646
+                            9999999999999999999999999999999999999999999999999999999999999999999999999999999999988887 PP
+
+  PTHR13335.orig.30.pir  87 ...gdtkarrkkpsldqrretqgekqssesesspsyeeel 123
+                                ++++ ++++ +++++++q+++q++++++++ + +++
+         XP_002970934.1 647 rggHHDPQEQQQQMQQHQQQQQQQSQQQQQQQQQPDSSRD 686
+                            7753333332222222222222222222222222222222 PP
+
+>> XP_024524280.1  uncharacterized protein LOC112344201 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.2   2.5   3.9e-06    0.0099      86     169 ..     118     365 ..      39     620 .. 0.45
+
+  Alignments for each domain:
+  == domain 1  score: 16.2 bits;  conditional E-value: 3.9e-06
+  PTHR13335.orig.30.pir  86 g....................................................................................... 86 
+                                                                                                                    
+         XP_024524280.1 118 Spsraqagnvgiaggagvwpvphqqvplpaaacdhfvgasgptmvlsptstsgapevppwypesiaraplfmtqaiheeaasqleqir 205
+                            0222222344444444444444444444444444444444444444444555555555555555555555555555555555444333 PP
+
+  PTHR13335.orig.30.pir  87 .......gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee 167
+                                              + qr+++  ++q+++++++++++++++ +  ++++ +   ++++++++++  +++ +  + ++s+   ++
+         XP_024524280.1 206 aweqqqmL---------LMHQRQNHVLFHQQQTHQQQQQQQQQHHHQAADRKNSQLLNHQQQQQQQLRYWSETLNLSPRGQSMKHVSK 284
+                            32222110.........12222233333333333333333333333333333333333333334445555555554444444444444 PP
+
+  PTHR13335.orig.30.pir 168 .r..............................................................................d 169
+                             r                                                                              +
+         XP_024524280.1 285 dRrlgvgpsklyrgvrqrhwgkwvaeirlprnrtrlwlgtfdtaedaayaydqaayklrgeyarlnfpqiqhiyraqqqeA 365
+                            445555555666666666666666666666666666666666666666666666666666666666665555555555552 PP
+
+>> XP_024516708.1  ethylene-responsive transcription factor ERF024 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.4   2.0   1.7e-06    0.0044     138     256 ..      58     273 ..      50     325 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 17.4 bits;  conditional E-value: 1.7e-06
+  PTHR13335.orig.30.pir 138 rrrrantavkleklrkerrsksasiassee.r.................dqsscksiqwktessvkedsvqrassesslsserssdss 207
+                            r +r +++++++++r++  + +++ +ssee +                 d +s+ ++ ++t+s+++ + + ++s +  + +  +sd++
+         XP_024516708.1  58 RGNREQQPQQRRNRRRHSTAAGSPGNSSEEsDdreggdggrsrrrrkssDDASLGGGGSSTTSPSAAQVSGEESPGFLAPQQQQSDQE 145
+                            5566666777766666655555666666665669999999999999999999999999999999999999999999999999999999 PP
+
+  PTHR13335.orig.30.pir 208 ssssapsr.rq...........snkldseq.......................................................... 225
+                             +++ ++  r+           ++k    +                                                          
+         XP_024516708.1 146 TQHPLYRGiRRrswgkwvseirEPK----Kktriwlgsfptpemaaraydvaaislkgpkavlnfpefayslpqpamvspksiqqaaa 229
+                            9999999988889888885554333....35556999999999999999999999888888899999998888888888888888888 PP
+
+  PTHR13335.orig.30.pir 226 ............lsaeesdslfekkskssstktqkskkpssa.a 256
+                                        +s +++ +   + s  sst+ q++  ++s+  
+         XP_024516708.1 230 aaalafsscslgTSSSSPTKASYRSSLASSTSSQQYHYSKSPeN 273
+                            88888888887755555555566666666666666666666622 PP
+
+>> XP_002991157.2  transcription factor TCP8 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.4  10.3   0.00022      0.55      69     154 ..     103     187 ..      94     409 .. 0.67
+   2 !   13.3   3.1     3e-05     0.076      46     123 ..     459     675 ..     453     679 .] 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 10.4 bits;  conditional E-value: 0.00022
+  PTHR13335.orig.30.pir  69 dsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke 154
+                            d+  e+  +++++++  +  ++ +++++++d ++ ++ ++qsses+ s+++++++q+++ + +++++ ++++++++  +l+++  +
+         XP_002991157.2 103 DEQEEEEQEESGGGGGRASRKNLGAPRQRMDPASHGKSDSQSSESGLSSQQQQQQQQQQQQ-QQQQFYQQQQHQQQRYRLQAQAAA 187
+                            4444444444555555556677778888888888888888777777777776555555555.555555545544555555444333 PP
+
+  == domain 2  score: 13.3 bits;  conditional E-value: 3e-05
+  PTHR13335.orig.30.pir  46 yppvsssssesllsrpksastpgdsgsedsgssneaetatg............................................... 86 
+                             ++++++ ++ lls+ +++++p+  +  +s s+ + +t+++                                               
+         XP_002991157.2 459 SSGHYRKRPRGLLSSLRDPPDPQGITLGRSPSAAGRSTQQQqhqtmqqglmvpsafwmlptggggggggvaeqaiwtfntagggaggg 546
+                            5566666666666667777777766666666666655555566777778999999999999999999999999999999999999999 PP
+
+  PTHR13335.orig.30.pir  87 ........................................................................................ 86 
+                                                                                                                    
+         XP_002991157.2 547 gasqlyrtaqqvtqgspmmpltgsvlpggvtimpprilpgldlqpggtgggggghhlgqltsmllgqqppesshlgmlaafqggpygt 634
+                            9999999999999999999999999999999999999999999999999999999999999999999999999999999999999998 PP
+
+  PTHR13335.orig.30.pir  87 ....gdtkarrkkpsldqrretqgekqssesesspsyeeel 123
+                                 d++ +++++++ q++++q+++q++++++++s+++ +
+         XP_002991157.2 635 rgghHDPQEQQQQMQQHQQQQQQQSQQQQQQQQPDSSRDDS 675
+                            88643333333344444444444444444444444444333 PP
+
+>> XP_024534592.1  SWI/SNF complex subunit SWI3C isoform X2 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.7   8.4   5.6e-06     0.014      86     152 ..     572     728 ..     431     797 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 15.7 bits;  conditional E-value: 5.6e-06
+  PTHR13335.orig.30.pir  86 g....................................................................................... 86 
+                            +                                                                                       
+         XP_024534592.1 572 Kkadesghqnapsaerirnaaatalaaaavkaklladqeeremqrlvasvienqlkkletklkhfgelevmlkkeyehidrarqkhfa 659
+                            1333344455566788888888888888888888888888888888888888889999999999999999999999988888888777 PP
+
+  PTHR13335.orig.30.pir  87 ...........gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklr 152
+                                       ++t a++  ++++q++++q+ +      +++++++++q+++i+ + +++++++++ ++++ l++l+
+         XP_024534592.1 660 erarllqsriaPNTAAGEMPSGQQQQQQQQQLQ------QQQQQQQQQQQQQIQ-QHQMQQIQQQH-QQQQPLSSLS 728
+                            777777777663333333333333333333333......222233344444444.33333333333.3333333333 PP
+
+>> XP_024533352.1  basic-leucine zipper transcription factor A-like [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   13.4  10.4   2.7e-05     0.069      57     140 ..     277     467 ..     198     470 .] 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 13.4 bits;  conditional E-value: 2.7e-05
+  PTHR13335.orig.30.pir  57 ll.srpksastpgdsgsedsgssneaetatg......................................................... 86 
+                            +  sr k++++++ +g++ s+s+  a +  g                                                         
+         XP_024533352.1 277 FVqSRRKDGGDKQQHGFQSSTSAAAALN--Gvvwggsshhllqgpagvveskqlvggagagtgaaaagqisaldfkvameanpqllge 362
+                            4446677777777777777666444333..2447777777777777777777777777777777777777777777777777777777 PP
+
+  PTHR13335.orig.30.pir  87 ...................................................gdtkarrkkpsldqrretqgekqssesesspsyeeel 123
+                                                                                +++ ++ + +++q++++q+ ++  ++   +++ + +
+         XP_024533352.1 363 nqplhlerimlrvfdeqekrnfrrhheqqlqpsaqlqplpalqqpqlqpsqHQHQHQQHQHQQQQQQRQQHHHHLHHHHHHQQQAQHQ 450
+                            7777777777777777777777777777777777555554444443333332222222222233333333333333333333333333 PP
+
+  PTHR13335.orig.30.pir 124 qsvdissssldegsrrr 140
+                            ++++++ +++++++++r
+         XP_024533352.1 451 HQQELQHQQQQQQQQQR 467
+                            34444423333333332 PP
+
+>> XP_002992399.1  uncharacterized protein LOC9661545 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.8   0.0   8.6e-05      0.22     231     403 ..      27     178 ..       4     185 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 11.8 bits;  conditional E-value: 8.6e-05
+  PTHR13335.orig.30.pir 231 sdslfekkskssstktqkskkpssa.akqsisslssaLekkpsqlnnpfneya.kfdgkgvgttaslkidiylplssepdkllpltvv 316
+                            + ++ +  +k+ + ++++++ ps a a        + L++k    + p+ +   k  gkg  + + + + + +  s+      pl   
+         XP_002992399.1  27 KAMVVVPGRKVPVVAEKDKNAPSRAyA-------DENLSAKRPPGKTPLAALLsKSQGKG--DANLMLVTVTVLGSPG-----PLRFL 100
+                            555555555555555555555555533.......44555555445556644444666666..6666666666666666.....44445 PP
+
+  PTHR13335.orig.30.pir 317 vkasatVqevIGlaLwqyteegrepklpdnkvnaycLrivEdDGevddDFPpLDrnepiskfgfselaLveatdsegktnndlqtpl 403
+                            v +  tV  v+  aL  y  egr p l    v+ yc     d+     DF +LD+ne+i+  g  ++ L ++   e+++++++ t+ 
+         XP_002992399.1 101 VDKADTVGRVVDTALRVYAREGRLPLLSKQLVELYC-----DN----GDFKALDSNECIGVLGTRQFLLYRKKADEISERQTSVTQP 178
+                            556666666666677777777776655555444444.....65....68******************************99888775 PP
+
+>> XP_024517694.1  uncharacterized protein LOC9657769 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.2  10.2   0.00025      0.64      55     155 ..     274     465 ..     197     468 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 10.2 bits;  conditional E-value: 0.00025
+  PTHR13335.orig.30.pir  55 esll.srpksastpgdsgsedsgssneaetatg....................................................... 86 
+                              +  sr k++++++ +g++ s+s + a+  +g                                                       
+         XP_024517694.1 274 VEFVqSRRKDGGDKQQHGFQSSTS-SVAAALNGvvwggsshhllqgpagvveskqlvggagagagaaaagqisaldfkvameanpqll 360
+                            444457777777777777777777.444444446777777777777777788888888888888888888888888888888888888 PP
+
+  PTHR13335.orig.30.pir  87 .........................................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssl 133
+                                                                     +     + ++++ q +++q+++q++++    +++++++   ++ +  
+         XP_024517694.1 361 genqplhlerimlrvfdeqekrnfrrhheqqlqpsaqlqplP-----ALQQPQLQPSQHQHQHQQQHQHHHHQQQQQQHHHHLHHHHH 443
+                            888888888887777777777777777777777777444333.....33333333333333333333333333333334444443333 PP
+
+  PTHR13335.orig.30.pir 134 degsrrrrantavkleklrker 155
+                             +++ +++ +++++ +++++++
+         XP_024517694.1 444 HQQQAQHQHQQELQHQQQQQQQ 465
+                            3333333323333333333222 PP
+
+>> XP_002967314.1  AP-3 complex subunit delta [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.1   8.7   0.00054       1.4      49     159 ..     764     864 ..     722     869 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 9.1 bits;  conditional E-value: 0.00054
+  PTHR13335.orig.30.pir  49 vsssssesll.srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdisssslde 135
+                            + +++++s+l s ++++  +  sgs ++gs +e +        + ++k    + + +++ ++ ++  +  +++   q+ + s++++d+
+         XP_002967314.1 764 SKGALKNSVLsSAIRDVLLNNKSGSHRDGSLPESS--------NAAQK---HHHHHRRRHRREKHPAEGGDLTAVPQEGLDSEKQQDQ 840
+                            45667778888999999999999999999988832........23333...3444444444455777777777788999999999*** PP
+
+  PTHR13335.orig.30.pir 136 gsrrrrantavkleklrkerrsks 159
+                            g +++++++++++++++ ++r+ks
+         XP_002967314.1 841 GEQQQQDQEKQRSKRQHHRKRAKS 864
+                            **************9999988775 PP
+
+>> XP_024529827.1  AP-3 complex subunit delta [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    8.3   8.2   0.00098       2.5      50     159 ..     765     864 ..     702     869 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 8.3 bits;  conditional E-value: 0.00098
+  PTHR13335.orig.30.pir  50 sssssesll.srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldeg 136
+                             +++++s+l   ++++  +  sgs ++gs +e +        + ++k    + + +++ ++ ++  +  +++   q+ + s++++d+g
+         XP_024529827.1 765 KGALKNSVLsTAIRDVLLNNKSGSHRDGSLPESS--------NAAQK---HHHHHRRRHRREKHPAEGGDLTAVPQEGLDSEKQQDQG 841
+                            4556666666777888888888888888877732........23333...3444444444455667777777788999999999**** PP
+
+  PTHR13335.orig.30.pir 137 srrrrantavkleklrkerrsks 159
+                             +++++++++++++++ ++r+ks
+         XP_024529827.1 842 EQQQQDQEKQRSKRQHHRKRAKS 864
+                            ************99999988775 PP
+
+>> XP_024532190.1  uncharacterized protein LOC112346790 [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.4  11.5    0.0018       4.6      44     217 ..      81     412 ..      36     503 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 7.4 bits;  conditional E-value: 0.0018
+  PTHR13335.orig.30.pir  44 apyppvsssssesll..srpksastpgdsgsedsgssneaetatg........................................... 86 
+                            +p pp+++ + + l   +                                                                      
+         XP_024532190.1  81 QPSPPLYHHHHHQLNvgA--------------------------Sssssgdvfdtstagsttpspsraqagnvgiaggagvwpvphqq 142
+                            333444444444443322..........................02222222222222223333334444566777777777777777 PP
+
+  PTHR13335.orig.30.pir  87 .................................................................gdtkarrkkpsldqrretqgekq 109
+                                                                                             g ++++++   + qr+++  ++q
+         XP_024532190.1 143 vplpaaacdhfvgasgptmvlsptstsgapevppwypesiaraplfmtqaiheegasqleqirawG-QQQQQQMLLMHQRQNHVLFHQ 229
+                            777777777777777777777777777777777777777777777777777777777777776532.333344444555566666666 PP
+
+  PTHR13335.orig.30.pir 110 ssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiassee.r............................ 168
+                            +++++++++++++++ +  ++++ +   + ++++++++  +++ +  + ++s+   ++ r                            
+         XP_024532190.1 230 QQTHQQQQQQQQQHHHQAADRKNSQL-LNHQQQQQQLRYWSETLNLSPRGQSMKHVSKdRrlgvgpsklyrgvrqrhwgkwvaeirlp 316
+                            66666666666555555555333333.3333336667777777776666777776666557888888888888888888888888888 PP
+
+  PTHR13335.orig.30.pir 169 ...................................................dqsscksiqwktessvkedsvqrassesslsserssd 205
+                                                                               +        w+ +++    s+++++s  +++    s 
+         XP_024532190.1 317 rnrtrlwlgtfdtaedaayaydqaayklrgeyarlnfpqiqhiyraqqqeaS-----KSGWSGQDQGGGGSSTTFQSTLEAKLQAISQ 399
+                            8888888888888888888888887777777777777777777777444322.....3333333333333333333333333333333 PP
+
+  PTHR13335.orig.30.pir 206 ssssssapsr.rq 217
+                            + +s+ ++s+ ++
+         XP_024532190.1 400 QTASKLDASKpTT 412
+                            3333333333222 PP
+
+>> XP_002967479.2  nitrate regulatory gene2 protein [Selaginella moellendorffii]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.0  12.2      0.63   1.6e+03     136     255 ..     111     218 ..      89     243 .. 0.68
+   2 ?   14.1  13.3   1.7e-05     0.043      42     245 ..     248     517 ..     219     658 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: -1.0 bits;  conditional E-value: 0.63
+  PTHR13335.orig.30.pir 136 gsrrrrantavkleklrke.rrsksasiassee.r..dqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsn 219
+                            + +r  + +++++e+ +     +k a+++s+   +  ++ss+ +i+ k+ s++ ++s+  + +e+++ss++ ++              
+         XP_002967479.2 111 SMKRTVSLPPMNFERKKTSaAVPKNADNSSTPPvKaaRSSSSSTIKKKEVSPSPSPSPEPELREQQASSVMEEE-------------- 184
+                            444444566666666555554444444444444448889999999**************************776.............. PP
+
+  PTHR13335.orig.30.pir 220 kldseqlsaeesdslfekkskssstktqkskkpssa 255
+                             l++ q++ +es+s+ +  + +ss+++ ++ +p ++
+         XP_002967479.2 185 -LTEPQKDVKESSSVENNVK-VSSEDEDDWVPPPPP 218
+                            .6666688888888865555.555555577777666 PP
+
+  == domain 2  score: 14.1 bits;  conditional E-value: 1.7e-05
+  PTHR13335.orig.30.pir  42 hsapyppvsssssesll.srpksastpgdsgsedsgssneaetatg......gdtkarrkkpsldqrretqgekqssesesspsyeee 122
+                            hsa + p s   +e +   + +++ + + + +++   ++e + a++      + + ++++++ l+q++++q  ++ s++++ +++e+e
+         XP_002967479.2 248 HSAVPLPRSDDNEEEFDdEDRRKQQQLE-EEKRRKLQEEEEKEAQRkeeeerKLKLQQQQEMELKQKQQEQMHRRPSTVDEGDEDEDE 334
+                            3333333333333444321111111111.11111122122222222233333334444444444444444444444444444444433 PP
+
+  PTHR13335.orig.30.pir 123 lqsvdissssldegsrrrrantavkleklrkerrsksasiasseer.......................................... 168
+                            +++++ + ++lde+  +                                                                       
+         XP_002967479.2 335 EEEEQDE-DELDEEEEE----------------------------Eedgeeeeeneeaepeeepakktvsydlpksdlsivtsskrgg 393
+                            3333333.333333322............................123344444444444444444555555**************** PP
+
+  PTHR13335.orig.30.pir 169 .................................................dqsscksiqwktessvkedsvqrassesslsserssd.s 206
+                                                                             +++ ++ i+w+    ++++s+ ra++e+s+  ++s d +
+         XP_002967479.2 394 ngelvavlkrivepfevayesgrhvasmleaqrvsfhpnfidgrsdethAKKVLRAISWS----SSNSSLARAAAEQSVFDDESGDaT 477
+                            *********************************************999888888999999....555555555555555555555504 PP
+
+  PTHR13335.orig.30.pir 207 sssssapsr.rq.snkldseqlsaeesdslfekkskssstk 245
+                              ++s+ +r    ++kl +e+++ae ++  +ekk+ ++++k
+         XP_002967479.2 478 GTHASTLDRlLAwEKKLYDEVKRAEGLRVELEKKN-TWIQK 517
+                            55555555554487777777766666666666655.44443 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                      45247  (21988998 residues searched)
+Passed MSV filter:                      6158  (0.136097); expected 904.9 (0.02)
+Passed bias filter:                     1790  (0.0395606); expected 904.9 (0.02)
+Passed Vit filter:                       336  (0.00742591); expected 45.2 (0.001)
+Passed Fwd filter:                        91  (0.00201118); expected 0.5 (1e-05)
+Initial search space (Z):              45247  [actual number of targets]
+Domain search space  (domZ):              18  [number of targets reported over threshold]
+# CPU time: 1.60u 0.09s 00:00:01.69 Elapsed: 00:00:00.81
+# Mc/sec: 18238.46
+//
+[ok]

@@ -1,0 +1,199 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Saccharomyces_cerevisiae.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+   3.3e-131  436.0   3.3   3.3e-131  436.0   3.3    2.2  2  DAA08966.1  TPA: phosphatidylinositol kinase-related protein 
+   9.4e-127  421.4   0.4   3.3e-126  419.6   0.0    2.1  2  DAA08853.1  TPA: phosphatidylinositol kinase-related protein 
+    2.7e-78  262.0   9.7    6.4e-78  260.8   9.7    1.7  1  DAA06793.1  TPA: histone acetyltransferase TRA1 [Saccharomyce
+    3.1e-11   41.5  10.8    2.3e-10   38.7   8.9    2.4  2  DAA07252.1  TPA: protein kinase MEC1 [Saccharomyces cerevisia
+
+
+Domain annotation for each sequence (and alignments):
+>> DAA08966.1  TPA: phosphatidylinositol kinase-related protein kinase TOR2 [Saccharomyces cerevisiae S288C]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.1   0.4      0.19   2.9e+02      83     116 ..    1378    1410 ..    1281    1451 .. 0.62
+   2 !  436.0   3.3  2.2e-134  3.3e-131       1     343 []    1468    1848 ..    1468    1848 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: -1.1 bits;  conditional E-value: 0.19
+                  CCHHHCHHCCHHCSS----TTTTTTT----TTS- CS
+         FAT   83 qlaEleeiiqykqklssseelksllktWrkRlpg 116 
+                  ql+   ++i ++++ +++++  +l++tW ++l+ 
+  DAA08966.1 1378 QLHQTDSAIGILKH-AQQHNELQLKETWYEKLQR 1410
+                  33333334444332.3444444444444444443 PP
+
+  == domain 2  score: 436.0 bits;  conditional E-value: 2.2e-134
+                  CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS CS
+         FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkl 97  
+                  aplaa aaW+l qWd++++y+s+mk++spdk+f++ail+lhrn+f++ae +i +ar+llvtelsal++esynray+++vr Q++aEleeii+yk+ +
+  DAA08966.1 1468 APLAAGAAWGLEQWDEIAQYTSVMKSQSPDKEFYDAILCLHRNNFKKAEVHIFNARDLLVTELSALVNESYNRAYNVVVRAQIIAELEEIIKYKKLP 1564
+                  69*********************************************************************************************** PP
+
+                  ----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.............TS CS
+         FAT   98 ssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk..eewlp......pe 186 
+                  ++s+++ ++++tW++Rl+g+q++++vwq+il+vRslv++p+ed       a++ +kfanl+Rksgr+ lA+k+L+ llee +  +  +p      p+
+  DAA08966.1 1565 QNSDKRLTMRETWNTRLLGCQKNIDVWQRILRVRSLVIKPKED-------AQVRIKFANLCRKSGRMALAKKVLNTLLEETDdpD--HPntakasPP 1652
+                  *******************************************.......*******************************9553..4445889*** PP
+
+                  SCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCC CS
+         FAT  187 vvyaylkylwakgeqkealqkLrefvscllekkeelssglevq........eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaa 275 
+                  vvya+lkylwa+g q+eal++L  f+s+++++ + +++++++q         p+++e++tkllarc+lk+Gew+  lq  +w+  +++ il +y++a
+  DAA08966.1 1653 VVYAQLKYLWATGLQDEALKQLINFTSRMAHDLGLDPNNMIAQsvpqqskrVPRHVEDYTKLLARCFLKQGEWRVCLQP-KWRLSNPDSILGSYLLA 1748
+                  ******************************************9************************************.8**************** PP
+
+                  HHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS................................S-TCC.HHHHCCT..CCHHHHTTTSSTTTCHHH CS
+         FAT  276 teldpswykawhtwalfnfevlskeeekkeeee...............................pedls.eyvvpavegflkslslssekslqdllR 340 
+                  t++d++wykawh+wal+nfev+s++++ +++++                               +++l+ ++v+pa++gf++s+sls+++slqd+lR
+  DAA08966.1 1749 THFDNTWYKAWHNWALANFEVISMLTSVSKKKQegsdassvtdinefdngmigvntfdakevhySSNLIhRHVIPAIKGFFHSISLSESSSLQDALR 1845
+                  *************************9997777789*****************************777777*************************** PP
+
+                  HHC CS
+         FAT  341 lLt 343 
+                  lLt
+  DAA08966.1 1846 LLT 1848
+                  **8 PP
+
+>> DAA08853.1  TPA: phosphatidylinositol kinase-related protein kinase TOR1 [Saccharomyces cerevisiae S288C]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.7   0.1      0.29   4.3e+02      69      94 ..    1420    1445 ..    1352    1456 .. 0.74
+   2 !  419.6   0.0  2.2e-129  3.3e-126       1     343 []    1461    1845 ..    1461    1845 .. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: -1.7 bits;  conditional E-value: 0.29
+                  SCCCCCHHHHHCCCCCHHHCHHCCHH CS
+         FAT   69 esynraydllvrlQqlaEleeiiqyk 94  
+                  +s++  ++++ +l++l E+e+++q+ 
+  DAA08853.1 1420 TSVSVTLGKMRSLHALGEWEQLSQLA 1445
+                  45666677777888888888777765 PP
+
+  == domain 2  score: 419.6 bits;  conditional E-value: 2.2e-129
+                  CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS CS
+         FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkl 97  
+                  aplaa aaW+lg+Wd +e+y+s+mk +spdk+ff+ail lh+n++d+a+++i +ar+llvte+sal++esynray+++vr Q+++E+eeii+ykq +
+  DAA08853.1 1461 APLAAGAAWGLGEWDMLEQYISVMKPKSPDKEFFDAILYLHKNDYDNASKHILNARDLLVTEISALINESYNRAYSVIVRTQIITEFEEIIKYKQLP 1557
+                  69*********************************************************************************************** PP
+
+                  ----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT...........TSSC CS
+         FAT   98 ssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp......pevv 188 
+                   +se+  ++ + W+kRl+g+q++v+ wq++l+vRslv++p++d        ++w+kfanl+Rksgr+ lA+kaL++lle  ++++lp      p+vv
+  DAA08853.1 1558 PNSEKKLHYQNLWTKRLLGCQKNVDLWQRVLRVRSLVIKPKQD-------LQIWIKFANLCRKSGRMRLANKALNMLLEGGNDPSLPntfkapPPVV 1647
+                  *******************************************.......******************************9977777889999**** PP
+
+                  CCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHH CS
+         FAT  189 yaylkylwakgeqkealqkLrefvscllekkeelssglevq........eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaate 277 
+                  ya+lky wa+g  keal++L  f+s+l+++ + +++++++q        ++  +ee+tkllarc+lk+Gew+ a+q  nw+++++++il +y++at+
+  DAA08853.1 1648 YAQLKYIWATGAYKEALNHLIGFTSRLAHDLGLDPNNMIAQsvklssasTAPYVEEYTKLLARCFLKQGEWRIATQP-NWRNTNPDAILGSYLLATH 1743
+                  ****************************************9******99999*************************.9****************** PP
+
+                  CTCCCHSTTCCCCHHHHHCCHHHHHHSSSS....................................S-TCC.HHHHCCT..CCHHHHTTTSSTTTCH CS
+         FAT  278 ldpswykawhtwalfnfevlskeeekkeeee...................................pedls.eyvvpavegflkslslssekslqdl 338 
+                  +d++wykawh+wal+nfev+s+++e+++ ++                                   p +l+ ++vvpa++gf++s+sl ++++lqd+
+  DAA08853.1 1744 FDKNWYKAWHNWALANFEVISMVQEETKLNGgkndddddtavnndnvridgsilgsgsltingnryPLELIqRHVVPAIKGFFHSISLLETSCLQDT 1840
+                  ***********************88866555889999*****************************555555************************* PP
+
+                  HHHHC CS
+         FAT  339 lRlLt 343 
+                  lRlLt
+  DAA08853.1 1841 LRLLT 1845
+                  ****8 PP
+
+>> DAA06793.1  TPA: histone acetyltransferase TRA1 [Saccharomyces cerevisiae S288C]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  260.8   9.7   4.3e-81   6.4e-78       2     343 .]    2757    3106 ..    2756    3106 .. 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 260.8 bits;  conditional E-value: 4.3e-81
+                  CCTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH.....--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHC CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhr.....nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEle 88  
+                  +l +e+ Wr+ +W+s +++l++        ++p++++f+++lal++     +  +e+++l+++++ql + ++ +l+ + + ++  ll+ +Qq++E+ 
+  DAA06793.1 2757 DLLLECGWRVADWNSDRDALEQSVksvmdVPTPRRQMFKTFLALQNfaesrKGDQEVRKLCDEGIQLSLIKWVSLPIRYTPAHKWLLHGFQQYMEFL 2853
+                  689************66666544444555**************99998665559******************************************* PP
+
+                  HHCCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC....................HHCCS-STTCCC..CC CS
+         FAT   89 eiiqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied....................lllkgakaemwl..kf 154 
+                  e+ q++ +l+         +++e k++l+ Wr+Rlp+++ddv+ w+d++++R+++++ i++                    ++++g+++ +w+  +f
+  DAA06793.1 2854 EATQIYANLHtttvqnldsKAQEIKRILQAWRDRLPNTWDDVNMWNDLVTWRQHAFQVINNaylplipalqqsnsnsnintHAYRGYHEIAWVinRF 2950
+                  ************************************************************************************************* PP
+
+                  CCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCC CS
+         FAT  155 anlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGe 250 
+                  a++aRk++++++++++L ++                   y+++++e++ea++kLre+++c++++++el++gl+v+++tnl +f +++ a+++++kG+
+  DAA06793.1 2951 AHVARKHNMPDVCISQLARI-------------------YTLPNIEIQEAFLKLREQAKCHYQNMNELTTGLDVISNTNLVYFGTVQkAEFFTLKGM 3028
+                  ********************...................********************************************************** PP
+
+                  CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+         FAT  251 wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                  +l++l+         ee++qa+++a+++d +++kaw++w+ fn+++ls+e        p+++s ++ +a++++l+++ l+++ k+++ l R+L+
+  DAA06793.1 3029 FLSKLRA-------YEEANQAFATAVQIDLNLAKAWAQWGFFNDRRLSEE--------PNNIS-FASNAISCYLQAAGLYKNsKIRELLCRILW 3106
+                  *******.......9***********************************........****9.******************9**********8 PP
+
+>> DAA07252.1  TPA: protein kinase MEC1 [Saccharomyces cerevisiae S288C]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.0   0.0     0.022        33      32      78 ..     942     992 ..     920     995 .. 0.83
+   2 !   38.7   8.9   1.5e-13   2.3e-10      29     343 .]    1571    1853 ..    1548    1853 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 2.0 bits;  conditional E-value: 0.022
+                 -CCCHCCC....CHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHH CS
+         FAT  32 affeaila....lhrnqfdeaeeliekarqllvtelsalsgesynraydll 78 
+                   +ea+ +    +++ + +e++++i+  +  +++++s+ +g++ n  y++l
+  DAA07252.1 942 VRYEAFRCwhllVRHLNDEELSTVIDSLIAFILQKWSEFNGKLRNIVYSIL 992
+                 456777776665777999*************************99999987 PP
+
+  == domain 2  score: 38.7 bits;  conditional E-value: 1.5e-13
+                  SS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---S.CCCCCHHHHHCCCCCHHHCHHCCHHCSS----TTTTTTT----TTS-TTTGCCCT CS
+         FAT   29 pdkaffeailalhrnqfdeaeeliekarqllvtelsalsge.synraydllvrlQqlaEleeiiqykqklssseelksllktWrkRlpgvqddvevw 124 
+                  ++ ++ +a++a+ +++  + +++i +   l+ t+    s+e       +ll +l+ l +l  +++ k+k + +++ +     ++ R + +  d+   
+  DAA07252.1 1571 LQYNIAKALIAISNEDPLRTQKYIHNSFRLIGTNFITSSKEtTLLKKQNLLMKLHSLYDLSFLSSAKDKFEYKSNTTI----LDYRMERIGADFVPN 1663
+                  556688999999999999999999999999999877777773556666778899999999888888887544444444....69************* PP
+
+                  TTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCS CS
+         FAT  125 qdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkee 221 
+                  + ils+R+ + + + +  + +   ++    a+laR++ rl++A ++L   le +      p++ ++ + +lw++ge + al+ ++e  + +++++  
+  DAA07252.1 1664 HYILSMRKSFDQLKMNEQADADLGKTFFTLAQLARNNARLDIASESLMHCLERRL-----PQAELEFAEILWKQGENDRALKIVQEIHE-KYQEN-- 1752
+                  **********877666669999999999**********************99999.....9********************99977777.44443.. PP
+
+                  S-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCC..HHH CS
+         FAT  222 lssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedls..eyv 316 
+                               + +++  a ++lk  ewl   ++       se+i ++y++  ++d++w k +++ +l++ + l++++ +        +   ++ 
+  DAA07252.1 1753 ------------SSVNARDRAAVLLKFTEWLDLSNNS-----ASEQIIKQYQDIFQIDSKWDKPYYSIGLYYSRLLERKKAE------GYITngRFE 1826
+                  ............222445668999***********94.....49*********************************99443......333335899 PP
+
+                  HCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  317 vpavegflkslslssekslqdllRlLt 343 
+                   +a++ fl +   +  k+++ l++++t
+  DAA07252.1 1827 YRAISYFLLAFEKNTAKVRENLPKVIT 1853
+                  ************************987 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       5998  (2924989 residues searched)
+Passed MSV filter:                       492  (0.0820273); expected 120.0 (0.02)
+Passed bias filter:                      155  (0.0258419); expected 120.0 (0.02)
+Passed Vit filter:                        11  (0.00183394); expected 6.0 (0.001)
+Passed Fwd filter:                         4  (0.000666889); expected 0.1 (1e-05)
+Initial search space (Z):               5998  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.03u 0.04s 00:00:00.07 Elapsed: 00:00:00.03
+# Mc/sec: 29545.10
+//
+[ok]

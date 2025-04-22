@@ -1,0 +1,609 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Candida_glabrata.GCA000002545v2.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence          Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------          -----------
+    7.7e-62  206.3  19.4    1.8e-61  205.0   0.6    6.2  7  CAGL0F00495g-T-p1  pep primary_assembly:GCA000002545v2:ChrF_C
+    7.4e-56  186.8  26.2    6.2e-54  180.6   1.8    5.7  6  CAGL0K00517g-T-p1  pep primary_assembly:GCA000002545v2:ChrK_C
+    1.7e-08   32.8   5.8    0.00075   17.8   0.5    6.6  7  CAGL0M13871g-T-p1  pep primary_assembly:GCA000002545v2:ChrM_C
+    5.9e-05   21.4  21.7       0.18   10.1   0.3   10.6 11  CAGL0D01826g-T-p1  pep primary_assembly:GCA000002545v2:ChrD_C
+    0.00012   20.4  12.9        0.7    8.1   0.1    6.2  5  CAGL0M13475g-T-p1  pep primary_assembly:GCA000002545v2:ChrM_C
+    0.00028   19.2   0.2         12    4.1   0.0    5.3  5  CAGL0G01144g-T-p1  pep primary_assembly:GCA000002545v2:ChrG_C
+     0.0012   17.2   9.4       0.48    8.7   0.0    6.3  7  CAGL0G03443g-T-p1  pep primary_assembly:GCA000002545v2:ChrG_C
+     0.0016   16.7   4.0      0.051   11.8   0.0    4.2  4  CAGL0B02189g-T-p1  pep primary_assembly:GCA000002545v2:ChrB_C
+  ------ inclusion threshold ------
+      0.011   14.0   6.3      0.025   12.8   0.1    3.8  3  CAGL0H07821g-T-p1  pep primary_assembly:GCA000002545v2:ChrH_C
+      0.019   13.2   2.7        3.7    5.8   0.0    3.4  3  CAGL0M07898g-T-p1  pep primary_assembly:GCA000002545v2:ChrM_C
+       0.14   10.4  20.0      0.069   11.4   0.2    6.6  8  CAGL0G04411g-T-p1  pep primary_assembly:GCA000002545v2:ChrG_C
+
+
+Domain annotation for each sequence (and alignments):
+>> CAGL0F00495g-T-p1  pep primary_assembly:GCA000002545v2:ChrF_C_glabrata_CBS138:45451:53590:-1 gene:CAGL0F00495g transc
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.1   0.0       4.1     2e+03     105     142 ..     245     282 ..     234     292 .. 0.72
+   2 ?   -1.8   0.0       1.6   7.9e+02     110     142 ..     376     410 ..     354     428 .. 0.70
+   3 ?    0.9   0.1      0.25   1.2e+02       8      35 ..     642     669 ..     573     671 .. 0.78
+   4 !    6.1   0.2    0.0062         3       8     156 ..     679     834 ..     674     836 .. 0.69
+   5 !  205.0   0.6   3.8e-64   1.8e-61       1     160 []     840     999 ..     840     999 .. 0.99
+   6 ?    3.4   0.1     0.042        20      78     156 ..    1079    1154 ..    1045    1158 .. 0.73
+   7 ?   -3.1   0.0         4   1.9e+03     128     155 ..    1880    1907 ..    1879    1909 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: -3.1 bits;  conditional E-value: 4.1
+           mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                        +a +q i+   k+  +   p+++ i+ ++ +++r+ ++
+  CAGL0F00495g-T-p1 245 HASLQIITVLSKNSPTVLYPYINSILDNIWRALRDPDN 282
+                        45566666666666666799999999999999998664 PP
+
+  == domain 2  score: -1.8 bits;  conditional E-value: 1.6
+           mTOR_dom 110 aimsifktlglkcvp..flpqiipallsvirtces 142
+                        +i+s + +l+  + +  +l+++++++l +++++++
+  CAGL0F00495g-T-p1 376 SIVSLLASLNPVMFSnlYLDKVMNHFLDLLQNITT 410
+                        44555555554443344889999999988887665 PP
+
+  == domain 3  score: 0.9 bits;  conditional E-value: 0.25
+           mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvl 35 
+                          e+Le Ll++  t+ +++iR+e++k l
+  CAGL0F00495g-T-p1 642 VSEVLEKLLTVAVTDLNPEIRLEILKHL 669
+                        3455666666666666666666666655 PP
+
+  == domain 4  score: 6.1 bits;  conditional E-value: 0.0062
+           mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks......eeeekeeenaeetdvsellvglspss...eeyyptvvina 90 
+                         pe L++L+++l+ e   +i+ e++k++G l  ++P  +    ++       e  +  + ++++ + ++ll++l++ss   +  y   ++n 
+  CAGL0F00495g-T-p1 679 KPENLQLLFTALNDE-LIAIQIEAMKIIGRLVTVNPAYVIPSLRNYllslitEL-KYPNFSTRKDEAATLLCTLIQSSknvTKPYIEPILNV 768
+                        577899999999966.899*****************888433333345444322.3334444444444445555555411345566678888 PP
+
+           mTOR_dom  91 Llkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156
+                        Ll  l+d+s s+  + +++ai       g  + +  + + p +++++++ ++   r+  l+ L++L 
+  CAGL0F00495g-T-p1 769 LLPKLDDNS-STVASIALKAIGALAVVGGEDMKQNNSTLFPLMIKTLQDQSNsFKRDAALKSLGQLA 834
+                        888887777.557777888888877777777788888889999999998888677888999998885 PP
+
+  == domain 5  score: 205.0 bits;  conditional E-value: 3.8e-64
+           mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLl 92 
+                        V++P+ldyp+LL++L+ il+ e++q+iRre+++++GilGALDP+k++ ve + +++   e+n++ +dv++l++g sps+++yyptvvi +L+
+  CAGL0F00495g-T-p1 840 VIRPFLDYPDLLSVLIGILRAESAQNIRRETVRLIGILGALDPHKQRDVEVNLKTKLAVEQNQPPIDVALLMQGNSPSNDDYYPTVVIVSLM 931
+                        9****************************************************9999999******************************** PP
+
+           mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                        kilkdpslss+ht++vqaim+if+ +glkc++fl++iip ++sv++ c+s+l++f++qqL++L+ i+k
+  CAGL0F00495g-T-p1 932 KILKDPSLSSYHTSAVQAIMQIFQIMGLKCISFLDKIIPGIISVMHMCPSNLLDFYFQQLCQLTVIMK 999
+                        ***************************************************************99986 PP
+
+  == domain 6  score: 3.4 bits;  conditional E-value: 0.042
+           mTOR_dom   78 sseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                         ++ e y+++++ ++lk+  + s  + ++a++ ++ +  k   ++  ++ ++i+++l++v+   +++lre+ l+ L+ L 
+  CAGL0F00495g-T-p1 1079 TNLELYAHTILPSILKLT-EFSTGHLRKAAIITVGKLSKC--INLSEMASRIVHSLARVLYVNDDELREVTLNTLSLLL 1154
+                         556667666666655543.444445556666666666665..44467889***********9999**********9985 PP
+
+  == domain 7  score: -3.1 bits;  conditional E-value: 4
+           mTOR_dom  128 qiipallsvirtcesslrefllqqLatL 155 
+                         +++p+l+s i++ ++ +++ ll+ L++L
+  CAGL0F00495g-T-p1 1880 EVLPQLISRIHQPNPVVSKALLSLLSDL 1907
+                         599*********999******9999998 PP
+
+>> CAGL0K00517g-T-p1  pep primary_assembly:GCA000002545v2:ChrK_C_glabrata_CBS138:55465:63484:-1 gene:CAGL0K00517g transc
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.3   0.0       2.3   1.1e+03      69     112 ..     308     352 ..     252     407 .. 0.63
+   2 !   14.7   0.6   1.4e-05    0.0065      22     153 ..     684     823 ..     669     828 .. 0.70
+   3 !  180.6   1.8   1.3e-56   6.2e-54       1     159 [.     832     990 ..     832     991 .. 0.98
+   4 ?    4.8   1.1     0.016       7.6      72     158 ..    1025    1109 ..    1006    1111 .. 0.73
+   5 ?   -0.4   0.2      0.59   2.9e+02      85     130 ..    1117    1161 ..    1106    1179 .. 0.65
+   6 ?   -2.5   0.0       2.7   1.3e+03     125     155 ..    1872    1902 ..    1856    1903 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -2.3 bits;  conditional E-value: 2.3
+           mTOR_dom  69 sellvglspss.eeyypt.vvinaLlkilkdpslsshhtavvqaim 112
+                        s++++gl + + e   +t  ++++Ll+ lkd+ +++ ++++ q+++
+  CAGL0K00517g-T-p1 308 STATQGLNSNNiESIHATlLTFKELLN-LKDSYIKDKYSQIFQVVI 352
+                        333444444443333333223333333.345555555555554444 PP
+
+  == domain 2  score: 14.7 bits;  conditional E-value: 1.4e-05
+           mTOR_dom  22 eqsqsiRrevikvlGilGALDPykhkeveeks......eeeekeeenaeetdvsellvglspss.eeyyptv..vinaLlkilkdpslsshh 104
+                        ++  +iR+e+i+v+G l   +P  +    +k+      e  + +++n +++++ +l+  +++s+ +   p +   + +L++ l+d+s     
+  CAGL0K00517g-T-p1 684 DEVYTIRLEAIRVIGALTEFNPIYVVPEMQKIflsfltEL-KYSATNRKKENMLTLIHAVINSHpDTLVPFIkdCLDSLIQRLEDNSS-AVA 773
+                        45779*************9999888433334466665422.33333333344444455555666455555432289*******99995.589 PP
+
+           mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLa 153
+                        t ++++i    + +g   ++++ q++p ++s++++  +   r + ++ L 
+  CAGL0K00517g-T-p1 774 TIAMKTIGALAEAVGPDITNYVHQLMPIIISTLHNQLNsIKRATAIKTLI 823
+                        999******************************98766244455555554 PP
+
+  == domain 3  score: 180.6 bits;  conditional E-value: 1.3e-56
+           mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLl 92 
+                        V++P+++ypeLL++L+nilkte++ +i+r++i+++G+lGA+DPyk++ ve++s+  +k ++++++t++++l++g+sps+ee+yp+vv+++L+
+  CAGL0K00517g-T-p1 832 VIDPLIEYPELLGLLMNILKTESNMEIKRDIIQLIGTLGAIDPYKYRAVETNSKGVQKIDTTQHSTAIDLLIKGMSPSNEEFYPSVVMHSLV 923
+                        9*************************************************9888889999******************************** PP
+
+           mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                        kil+d+slss+ht+++q+im if+++g++++ fl+ ++pa+ sv++tc++s++ef++qqL++Lv++v
+  CAGL0K00517g-T-p1 924 KILNDNSLSSYHTNTLQTIMRIFQDMGVQSIIFLKILVPAIKSVVKTCPPSHLEFYFQQLSVLVNTV 990
+                        ****************************************************************998 PP
+
+  == domain 4  score: 4.8 bits;  conditional E-value: 0.016
+           mTOR_dom   72 lvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158 
+                         + +l + + + + p+ ++n  l++l++      ++++  +im+ +   g +   +   iip+++++++ ++++lr+  +  +++L + 
+  CAGL0K00517g-T-p1 1025 MSHLVKNNlKRFLPK-TVNLFLNVLENDRS--NQKMASVSIMKALIAFGKNLEDYSHLIIPTIVRICEYSQNHLRKISIVTFGKLAKC 1109
+                         667777774555555.67888899965553..45566668888888899999999999999999999999989998888877777665 PP
+
+  == domain 5  score: -0.4 bits;  conditional E-value: 0.59
+           mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqii 130 
+                         +++inaL+++l +   +s  + +++++   + +lg   v ++p i 
+  CAGL0K00517g-T-p1 1117 SMIINALVRVLTNGD-KSLIKVTMNTLCLLLLQLGNDFVVYIPTIH 1161
+                         557777777775444.335556666666666666666666666665 PP
+
+  == domain 6  score: -2.5 bits;  conditional E-value: 2.7
+           mTOR_dom  125 flpqiipallsvirtcesslrefllqqLatL 155 
+                         +  +++p+l+s i++ ++ ++  ll  L++L
+  CAGL0K00517g-T-p1 1872 TWLEVLPQLISHIHQPNPLISRALLTLLSDL 1902
+                         4557999999999999999999999988887 PP
+
+>> CAGL0M13871g-T-p1  pep primary_assembly:GCA000002545v2:ChrM_C_glabrata_CBS138:1370189:1373634:-1 gene:CAGL0M13871g tr
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.0   0.0      0.93   4.5e+02       8     152 ..     137     163 ..     116     173 .. 0.65
+   2 ?    1.5   0.0      0.16        75      99     157 ..     190     251 ..     168     253 .. 0.69
+   3 ?    1.2   0.1       0.2        97      66      95 ..     290     319 ..     257     383 .. 0.76
+   4 !   17.8   0.5   1.5e-06   0.00075      59     142 ..     466     548 ..     443     557 .. 0.80
+   5 ?    5.0   0.0     0.013       6.5     110     143 ..     609     640 ..     579     645 .. 0.77
+   6 ?   -2.8   0.0       3.4   1.7e+03     110     145 ..     884     919 ..     842     927 .. 0.73
+   7 ?    1.1   0.0       0.2        98      78     124 ..    1026    1072 ..     990    1088 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: -1.0 bits;  conditional E-value: 0.93
+           mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdps 99 
+                         peLL ++++ lk                                                                               
+  CAGL0M13871g-T-p1 137 WPELLHTIVESLK------------------------------------------------------------------------------- 149
+                        4555555555555............................................................................... PP
+
+           mTOR_dom 100 lsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152
+                                                               + ++++re  ++ L
+  CAGL0M13871g-T-p1 150 ---------------------------------------SPDQNFRESSFRIL 163
+                        .......................................55555555544444 PP
+
+  == domain 2  score: 1.5 bits;  conditional E-value: 0.16
+           mTOR_dom  99 slsshhtavvqaimsifktlglkcvpflpqiipallsvir....tcesslrefllqqLatLvs 157
+                        s +s + a+v+a +  fk+l     + l  ++p+ll+ +     + +++ +  +++ L +Lv+
+  CAGL0M13871g-T-p1 190 S-DSVKIAAVTAFVGYFKQLPKSNWSKLGVLLPSLLNSLPkfldDGKDDALASVFESLIELVE 251
+                        3.45677899999999**999999998888888888765411115556677777777777775 PP
+
+  == domain 3  score: 1.2 bits;  conditional E-value: 0.2
+           mTOR_dom  66 tdvsellvglspsseeyyptvvinaLlkil 95 
+                        t+ se + ++++ +++y +++++ +L+++ 
+  CAGL0M13871g-T-p1 290 TAFSENAPHMCKNNQNYAQSIIMDSLIMMT 319
+                        33344478899999************9987 PP
+
+  == domain 4  score: 17.8 bits;  conditional E-value: 1.5e-06
+           mTOR_dom  59 eeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                        + ++ ++ ++ ++  + ++s  e y    +n+Ll++l+ ++l   +++++++i +i +  + k +++++ ++p ll+v++  ++
+  CAGL0M13871g-T-p1 466 RVQTHAAAALVNFSEHATQSIMEPYLDDLLNNLLNLLQSNKLY-VQEQALTTIAFIAEAAEKKFIKYYDTLMPLLLNVLKVESD 548
+                        3344444455555777788999999999************999.688899****************************996554 PP
+
+  == domain 5  score: 5.0 bits;  conditional E-value: 0.013
+           mTOR_dom 110 aimsifktlglkcvpflpqiipallsvirtces.s 143
+                         +   ++ l+ + vp+lp +ip ll++++ +++ s
+  CAGL0M13871g-T-p1 609 RV---CRILKEEFVPLLPMVIPPLLETAKATQDvS 640
+                        44...44555699**************99877655 PP
+
+  == domain 6  score: -2.8 bits;  conditional E-value: 3.4
+           mTOR_dom 110 aimsifktlglkcvpflpqiipallsvirtcesslr 145
+                        ++  ++++ g k+ +f + i p++++++ + ++s+r
+  CAGL0M13871g-T-p1 884 VVGDMVQYGGEKSANFKDSIAPKIVEYLVSPDASVR 919
+                        455667777778888888888888888877776655 PP
+
+  == domain 7  score: 1.1 bits;  conditional E-value: 0.2
+           mTOR_dom   78 sseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvp 124 
+                         +s + +ptvv + + +++  +sl+ +  +++v+++ + ++t++    +
+  CAGL0M13871g-T-p1 1026 CSADAIPTVVDHVVQALF-HNSLKdKAAAEAVNSVKKLLSTMNHSEAM 1072
+                         678999998877766666.55555488899999999999998876643 PP
+
+>> CAGL0D01826g-T-p1  pep primary_assembly:GCA000002545v2:ChrD_C_glabrata_CBS138:189897:198034:1 gene:CAGL0D01826g trans
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.1   0.3   0.00037      0.18      71     155 ..     336     423 ..     297     426 .. 0.79
+   2 ?    1.7   0.1      0.14        67      71     120 ..     570     619 ..     548     647 .. 0.77
+   3 !    5.5   0.1    0.0094       4.6      85     135 ..    1283    1331 ..    1222    1340 .. 0.75
+   4 ?    0.2   0.0       0.4   1.9e+02      87     144 ..    1363    1420 ..    1360    1433 .. 0.84
+   5 ?    1.6   0.1      0.15        70      85     156 ..    1559    1630 ..    1452    1634 .. 0.51
+   6 ?    0.7   0.0      0.27   1.3e+02      91     157 ..    1565    1631 ..    1551    1700 .. 0.63
+   7 ?    0.4   0.0      0.34   1.6e+02     119     150 ..    1711    1742 ..    1704    1749 .. 0.87
+   8 ?    1.7   0.2      0.14        65      66     154 ..    1925    2007 ..    1857    2011 .. 0.69
+   9 ?   -1.5   0.1       1.3   6.4e+02      86     148 ..    2054    2115 ..    2051    2165 .. 0.50
+  10 ?    1.4   0.0      0.17        84      82     156 ..    2242    2317 ..    2215    2320 .. 0.68
+  11 ?    0.2   0.1      0.39   1.9e+02       9      40 ..    2287    2318 ..    2286    2408 .. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 10.1 bits;  conditional E-value: 0.00037
+           mTOR_dom  71 l..lvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                        +  + +  +ss e  +t +i+  +++l+  +++ +  +a ++ + +if +l++++ + ++ i+++ll++i t +++++  + ++L+ L
+  CAGL0D01826g-T-p1 336 MsqAFSSFKSSREGTKTAAISFTVSVLRSLCVEtTEESALLKIVENIFTNLKTNMNADYKAIVSTLLQAIPTFHENVSLDIAEKLSPL 423
+                        22233446788999******************9666677788889**************************99998877777777655 PP
+
+  == domain 2  score: 1.7 bits;  conditional E-value: 0.14
+           mTOR_dom  71 llvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlgl 120
+                        ll +  + + e ++  vin++ +++k+ s +   ++ +   + if+ l +
+  CAGL0D01826g-T-p1 570 LLEKAVSLQGETISENVINSIANLMKQDSFELDEKCSIVYFIPIFNALVT 619
+                        35667788899999*****************9999999999999988654 PP
+
+  == domain 3  score: 5.5 bits;  conditional E-value: 0.0094
+           mTOR_dom   85 tvvinaLlkilkdpsls..shhtavvqaimsifktlglkcvpflpqiipalls 135 
+                         + +i +Ll+ l+ psl+  +  ++++ a+++ fk+   +c ++++q++ +ll 
+  CAGL0D01826g-T-p1 1283 S-IIDQLLQTLDTPSLDvqQAVSSCIAALVFQFKE---NCGSYITQLLAKLLD 1331
+                         3.7999**********9434456677777777775...999999999998876 PP
+
+  == domain 4  score: 0.2 bits;  conditional E-value: 0.4
+           mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcessl 144 
+                         +i++L++  +d++ +  +++v  a  +  ++lg    p++ +++p++l+ + ++ +++
+  CAGL0D01826g-T-p1 1363 IIRSLMEASEDKKDAIKRESVAYAFEYLSQSLGKLFEPYVIEVLPNILKNLGDSVPEV 1420
+                         5889999999999999999999999999999999999999999999998877665555 PP
+
+  == domain 5  score: 1.6 bits;  conditional E-value: 0.15
+           mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLv 156 
+                         + +i+ +++ ++d+s +  + ++ + + ++   +++k  +p+l+q+i ++  ++ +  ++ r +  + L+ Lv
+  CAGL0D01826g-T-p1 1559 ALIIHIIHRGMHDRSAN-TKRKACKIVGNMAILVETKDlIPYLQQLIDEVEIAMVDPVPNTRATAARALGALV 1630
+                         23444444445666654.3344445555555555555557777777777766666666666666666666666 PP
+
+  == domain 6  score: 0.7 bits;  conditional E-value: 0.27
+           mTOR_dom   91 Llkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                         +++ ++d+s +  + ++ + + ++   +++k  +p+l+q+i ++  ++ +  ++ r +  + L+ Lv+
+  CAGL0D01826g-T-p1 1565 IHRGMHDRSAN-TKRKACKIVGNMAILVETKDlIPYLQQLIDEVEIAMVDPVPNTRATAARALGALVE 1631
+                         44445555544.33334444444444444555466666666666666666666666666666666654 PP
+
+  == domain 7  score: 0.4 bits;  conditional E-value: 0.34
+           mTOR_dom  119 glkcvpflpqiipallsvirtcesslrefllq 150 
+                         g +  p+++qii+ +l+ + ++++++r++ l+
+  CAGL0D01826g-T-p1 1711 GAQFAPYINQIIQPILAGLADIDENIRDTSLK 1742
+                         567799*******************9999886 PP
+
+  == domain 8  score: 1.7 bits;  conditional E-value: 0.14
+           mTOR_dom   66 tdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLat 154 
+                         ++++el+++ s  +   y+ +v n L + l d+      ++v qa    f + +  +    ++++ip ll+++++ e   +e+ l  L++
+  CAGL0D01826g-T-p1 1925 IALNELVMSASMDTLTQYQDTVANILRRTLIDS-----NESVRQAAALSFDSYQEAVgKVAVDEVIPYLLNALKSNE--NSEYALLGLQD 2007
+                         445555555555665666666666655555444.....566788888888887777768889999999999999854..45555555555 PP
+
+  == domain 9  score: -1.5 bits;  conditional E-value: 1.3
+           mTOR_dom   86 vvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefl 148 
+                         v+in+L+  l    ++ + ++ v qa+  +f +  +k  + l  +++++l+++++ + + r + 
+  CAGL0D01826g-T-p1 2054 VIINSLVDTLISDDIDdTTKEGVKQALDRVFLS--VKDDEGLHPLLQQILALVKNDDMKKRIVT 2115
+                         556666655544444423444444555555544..33333344444444444443333333333 PP
+
+  == domain 10  score: 1.4 bits;  conditional E-value: 0.17
+           mTOR_dom   82 yyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156 
+                          + + +   L++++ ++  s+ ++a++ a+   fk++     pf+pq+  ++++ +++ ++ +lr    + ++tL+
+  CAGL0D01826g-T-p1 2242 PFVSAITGPLIRVVGERFKSDVKAAILLALNILFKKIPQFLRPFIPQLQRTFVKSLSDPTNeTLRLRAAKAIGTLI 2317
+                         4555566677888888888888888888888888887777788888888888888877777677777777777766 PP
+
+  == domain 11  score: 0.2 bits;  conditional E-value: 0.39
+           mTOR_dom    9 peLLeiLlnilkteqsqsiRrevikvlGilGA 40  
+                         p+L +++++ l+  +++++R+ + k +G+l  
+  CAGL0D01826g-T-p1 2287 PQLQRTFVKSLSDPTNETLRLRAAKAIGTLIE 2318
+                         56666666666666666777777777666632 PP
+
+>> CAGL0M13475g-T-p1  pep primary_assembly:GCA000002545v2:ChrM_C_glabrata_CBS138:1326386:1329367:1 gene:CAGL0M13475g tra
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.1   0.1    0.0015       0.7      70     133 ..     133     197 ..     104     224 .. 0.68
+   2 ?   -0.7   0.0      0.75   3.6e+02      72     101 ..     369     398 ..     337     435 .. 0.56
+   3 !    8.0   0.3    0.0015      0.75      87     156 ..     511     578 ..     443     582 .. 0.77
+   4 ?    3.7   0.3     0.033        16      86     149 ..     588     655 ..     574     662 .. 0.72
+   5 ?    3.5   0.1     0.039        19      15     119 ..     681     778 ..     672     800 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 8.1 bits;  conditional E-value: 0.0015
+           mTOR_dom  70 ellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipal 133
+                        +++ +l    +++ +++v+++Ll il d+sl+ + ++ +++ +   + tl+  + + ++q+++a+
+  CAGL0M13475g-T-p1 133 QAMRTLKDKYKDFGASIVFENLLPILLDSSLNdQERHLMIKLMDRAILTLSDDVSKHVSQLLNAI 197
+                        34566666669*********************444555555444444455555555555555544 PP
+
+  == domain 2  score: -0.7 bits;  conditional E-value: 0.75
+           mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpsls 101
+                        +++++p     y+    ++L++ilk +  s
+  CAGL0M13475g-T-p1 369 MASIIPLMSLEYAGFYSKELMRILKREFNS 398
+                        444444444444455556677777555443 PP
+
+  == domain 3  score: 8.0 bits;  conditional E-value: 0.0015
+           mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                         + +Ll  +++++  s    + q + +    l++++ p+l  ii+++l+++r+ ++++r+   +  a L+
+  CAGL0M13475g-T-p1 511 LVDSLLIAFQEQN--SNDPIICQCLATLAVALDIRMKPYLAPIISTILNLLRHKSPQIRQNAADLCAALI 578
+                        5555555554443..33556678888888899*********************99999988777766666 PP
+
+  == domain 4  score: 3.7 bits;  conditional E-value: 0.033
+           mTOR_dom  86 vvinaLlkilkdpslsshhtavvqai....msifktlglkc.vpflpqiipallsvirtcesslrefll 149
+                        v++n+L  il  +sl + + +v+ ai      i++ l++    p ++qi+p+l+ ++++++++++   +
+  CAGL0M13475g-T-p1 588 VILNKLSIIL-YESLGEVYPEVLGAIlaalERIVHILNIDTiQPPINQILPSLTPIFSNANRKVQMNTI 655
+                        4555555555.66777777777777633335788889999978999*****999999998888776655 PP
+
+  == domain 5  score: 3.5 bits;  conditional E-value: 0.039
+           mTOR_dom  15 LlnilkteqsqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshht 105
+                        Ll++lk+ +s+siRre+  ++G +  A+ P    +    +      ++++++ +vs+  v +    +   p +vi aLl+  + p  +  ++
+  CAGL0M13475g-T-p1 681 LLDLLKS-TSKSIRRETTATFGYIAkAIGPKDIIVALLDN-----LKAQERQLRVSTS-VAIAIVAKVCGPYTVIPALLNEYRTPETN-VQN 764
+                        5556664.47888888888888764477776663333222.....1122222223322.33444555566666777777777666644.566 PP
+
+           mTOR_dom 106 avvqaimsifktlg 119
+                         +++a++++f+++g
+  CAGL0M13475g-T-p1 765 GILKAMTFMFEDIG 778
+                        67777777776655 PP
+
+>> CAGL0G01144g-T-p1  pep primary_assembly:GCA000002545v2:ChrG_C_glabrata_CBS138:107585:110887:-1 gene:CAGL0G01144g tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.7   0.0      0.07        34       7      46 ..     131     171 ..     127     271 .. 0.71
+   2 ?    4.1   0.0     0.025        12      62     106 ..     387     431 ..     367     484 .. 0.66
+   3 ?    1.9   0.0      0.12        59      80     158 ..     449     530 ..     438     532 .. 0.71
+   4 ?    3.0   0.0     0.054        26      61     141 ..     567     652 ..     491     670 .. 0.58
+   5 ?    0.7   0.0      0.28   1.3e+02      82     138 ..     676     733 ..     649     753 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 2.7 bits;  conditional E-value: 0.07
+           mTOR_dom   7 dypeLLeiLlnilkteqsqsiRrevikvlGilG.ALDPykh 46 
+                        + p+L++i+++  +t+q ++++r  +  lG +    DP+ +
+  CAGL0G01144g-T-p1 131 EWPDLMQIMVDNTNTNQPENVKRASLLALGYICeSADPQSQ 171
+                        78999******99999*999999999999966325566555 PP
+
+  == domain 2  score: 4.1 bits;  conditional E-value: 0.025
+           mTOR_dom  62 naeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhta 106
+                        +a+ ++  +++ g  +++  y+ + ++ a+l++++dpsl+   ta
+  CAGL0G01144g-T-p1 387 EAAVMAFGSIMDGPDKTQRTYFVHQALPAILNLINDPSLQVKETA 431
+                        333344444577777777888888888888888888888744443 PP
+
+  == domain 3  score: 1.9 bits;  conditional E-value: 0.12
+           mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifkt.lglkcvpflpqiipallsvirtces..slrefllqqLatLvsi 158
+                        +e  p v+ + L+ + + p++++  + ++  +++ +++ +     +++p ++  l++ ++  ++  + r   ++ ++tL+++
+  CAGL0G01144g-T-p1 449 QEHLPGVIQSCLVGLQDHPKVATNAAWTIINLVEQLSDmQPSPIYNYYPALVDGLIKSANRPDNefNARASAFSAMTTLIEY 530
+                        5666777777777777777777665555555555555514455589999999999998888776678899999999999875 PP
+
+  == domain 4  score: 3.0 bits;  conditional E-value: 0.054
+           mTOR_dom  61 enaeetdvsellvgl..........spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                        ++ +e +++     +          sp s    + + +   +k+l+ +s +    +v  a+    ++lg    ++l+ + p l+ ++++++
+  CAGL0G01144g-T-p1 567 QSLQELQSN-----IltvlaayirkSPNSVVNVSDMLMDLFVKLLSRKSSAFIEDDVFYAVSALASSLGKGFENYLESFSPYLIGALNQVD 652
+                        222222222.....12222233333666666666777888888888888888888888899999999998888888888888888777766 PP
+
+  == domain 5  score: 0.7 bits;  conditional E-value: 0.28
+           mTOR_dom  82 yyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                         y+   +n L +++ +p+ + + + av+++   i +++g   +p++++++   +++ +
+  CAGL0G01144g-T-p1 676 RYAGAFMNVLGQLITNPAAKkELKPAVLSVFGDIASNIGEDFIPYVNEVMGLCVAAQN 733
+                        355567888888889999986788899999999****************987666555 PP
+
+>> CAGL0G03443g-T-p1  pep primary_assembly:GCA000002545v2:ChrG_C_glabrata_CBS138:331655:335918:-1 gene:CAGL0G03443g tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.3   0.0       2.4   1.2e+03      71      98 ..      24      52 ..       5      67 .. 0.62
+   2 ?    2.3   0.3     0.088        43     105     153 ..     141     190 ..      84     244 .. 0.45
+   3 ?    4.2   0.3     0.023        11      56     150 ..     326     421 ..     258     429 .. 0.69
+   4 !    8.7   0.0     0.001      0.48      87     142 ..     484     539 ..     474     566 .. 0.73
+   5 ?    0.8   0.0      0.25   1.2e+02     109     137 ..     598     626 ..     552     634 .. 0.63
+   6 ?   -3.1   0.0       4.2     2e+03     105     118 ..     709     722 ..     670     764 .. 0.59
+   7 ?   -1.7   0.0       1.6   7.5e+02      80     114 ..     900     933 ..     854     966 .. 0.48
+
+  Alignments for each domain:
+  == domain 1  score: -2.3 bits;  conditional E-value: 2.4
+           mTOR_dom 71 llvglspsseeyypt.vvinaLlkilkdp 98
+                       l   + + ++++y +   ++aL++il+ +
+  CAGL0G03443g-T-p1 24 LKEATKTLQKQFYTQpNSVAALVHILHHS 52
+                       44444555677776657788888888443 PP
+
+  == domain 2  score: 2.3 bits;  conditional E-value: 0.088
+           mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLa 153
+                        +++v  ++s +++ +   v++++ ++  + ++i++++s + r    q L+
+  CAGL0G03443g-T-p1 141 ETAVFILLSLLEDFDSSLVSYIDDFLTLFSQTINDTTSlETRSLSAQALN 190
+                        33333333333444444444444444444444443333222222222222 PP
+
+  == domain 3  score: 4.2 bits;  conditional E-value: 0.023
+           mTOR_dom  56 e..ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+                        e  e+ee++ +  ++ +l+   ++      ++v+i+ L ++l+ +++   + a++ ai  ++       ++  +++ipa +s +++ e+ ++
+  CAGL0G03443g-T-p1 326 EagENEENTPSMVAIRLLAFASTELPPSQVAAVIIEHLPTMLNSQNVF-ERRAILLAISVVVTGSPDYILSQFDKVIPATISGLKDNEQVVK 416
+                        13233333333344444455556666889999**********888876.678888899888888888889***********99999887666 PP
+
+           mTOR_dom 146 efllq 150
+                           l+
+  CAGL0G03443g-T-p1 417 LAALK 421
+                        66555 PP
+
+  == domain 4  score: 8.7 bits;  conditional E-value: 0.001
+           mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                         +n+L ++l+ ++ s+ + avv+ai s     gl  vp+ +  ++ l + i++c++
+  CAGL0G03443g-T-p1 484 LMNKLFHMLSTSNSSKLKCAVVSAIGSAAFAAGLAFVPYFKTSVQYLEQFIQNCSQ 539
+                        6899*********************9999999999999776666666666666653 PP
+
+  == domain 5  score: 0.8 bits;  conditional E-value: 0.25
+           mTOR_dom 109 qaimsifktlglkcvpflpqiipallsvi 137
+                          i +  k  g +  pfl+ i+p++++++
+  CAGL0G03443g-T-p1 598 AFIANLAKVYGENFSPFLETILPEIFKTL 626
+                        44556666666677777777777777766 PP
+
+  == domain 6  score: -3.1 bits;  conditional E-value: 4.2
+           mTOR_dom 105 tavvqaimsifktl 118
+                        ++++++i +i+k +
+  CAGL0G03443g-T-p1 709 ESALNTIWNIIKAV 722
+                        44444444444443 PP
+
+  == domain 7  score: -1.7 bits;  conditional E-value: 1.6
+           mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsi 114
+                        + y++ +  + ++++ +d+sl+  + ++   +   
+  CAGL0G03443g-T-p1 900 NPYIHEMLEALVIRLTSDKSLE-VRGNAAYGVGLL 933
+                        3333333333333555555555.333333444444 PP
+
+>> CAGL0B02189g-T-p1  pep primary_assembly:GCA000002545v2:ChrB_C_glabrata_CBS138:202260:205647:-1 gene:CAGL0B02189g tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.0   0.0      0.92   4.5e+02      24     117 ..     245     285 ..     229     320 .. 0.52
+   2 !   11.8   0.0    0.0001     0.051      70     157 ..     514     604 ..     466     607 .. 0.83
+   3 ?   -0.5   0.1      0.65   3.2e+02     120     150 ..     616     646 ..     601     656 .. 0.71
+   4 ?    2.3   0.1     0.087        42      95     147 ..     690     742 ..     653     746 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -1.0 bits;  conditional E-value: 0.92
+           mTOR_dom  24 sqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsif 115
+                        s ++R  ++k+l+ +  LD     +                                                      +++++vq   + +
+  CAGL0B02189g-T-p1 245 SADTRSVTLKCLTEVSSLDLPDNNSS-----------------------------------------------------MQQQTVQYFQNTL 283
+                        66677777777776666664333222.....................................................2222222222222 PP
+
+           mTOR_dom 116 kt 117
+                        ++
+  CAGL0B02189g-T-p1 284 QQ 285
+                        22 PP
+
+  == domain 2  score: 11.8 bits;  conditional E-value: 0.0001
+           mTOR_dom  70 ellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157
+                        ++  ++++ +e  +  +vi+ Ll++ +++  ++ ++ v + im+++ +    lk   +fl+ +i +l++ ++++++ ++++  + + ++v+
+  CAGL0B02189g-T-p1 514 SISGTMTEDTEKRFVVTVIKDLLALTEKKRGKDNKAVVASDIMYVVGQypRFLKAhWNFLRTVILKLFEFMHETHEGVQDMACDTFIKIVQ 604
+                        445677888899**********************************995534666699*****************9**9999988888876 PP
+
+  == domain 3  score: -0.5 bits;  conditional E-value: 0.65
+           mTOR_dom 120 lkcvpflpqiipallsvirtcesslrefllq 150
+                         ++ pf++ ii ++++++++++++  +++++
+  CAGL0B02189g-T-p1 616 RESEPFIQTIIREIQKTTSDLQPQQVHTFYK 646
+                        44589**************999955555555 PP
+
+  == domain 4  score: 2.3 bits;  conditional E-value: 0.087
+           mTOR_dom  95 lkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+                        l d+   +  ++++++ + +++++g    + l +i  ++l++ r ++s ++e 
+  CAGL0B02189g-T-p1 690 LLDAETVKIIANIIKTNVAVCSSMGADFYSQLGHIYYNMLQLYRAVSSMISEQ 742
+                        55666677788999999999999********************9999887776 PP
+
+>> CAGL0H07821g-T-p1  pep primary_assembly:GCA000002545v2:ChrH_C_glabrata_CBS138:761600:764969:1 gene:CAGL0H07821g trans
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.8   0.1   5.3e-05     0.025      85     156 ..     547     627 ..     534     630 .. 0.80
+   2 ?    2.7   0.1      0.07        34      98     151 ..     610     664 ..     605     672 .. 0.70
+   3 ?    0.5   0.3      0.33   1.6e+02     114     158 ..     746     788 ..     737     789 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 12.8 bits;  conditional E-value: 5.3e-05
+           mTOR_dom  85 tvvinaLlkil....kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir....tces.slrefllqqLatLv 156
+                         v in+Ll+++    + p    h +  ++a+ ++++t +    p++p++i++++s++     + ++ +++++l++ +a++ 
+  CAGL0H07821g-T-p1 547 DVLINNLLTLIkkqgSTPEQLAHNEYLIRAVYKVIQTAEETISPMYPELINQFISIVDivakNPSNpRFSHYLFESIAVIL 627
+                        68999999999443334455579999*****************************76644445555699999999998876 PP
+
+  == domain 2  score: 2.7 bits;  conditional E-value: 0.07
+           mTOR_dom  98 pslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqq 151
+                        ps     +   ++i  i+++       +++++i+p++++++++  +++  +++q 
+  CAGL0H07821g-T-p1 610 PSNPRFSHYLFESIAVILNYNPNSTlPQIIDHIMPSFMHILSEDIQEFIPYIFQI 664
+                        5555666667778888888755555478899999999999988666666666665 PP
+
+  == domain 3  score: 0.5 bits;  conditional E-value: 0.33
+           mTOR_dom 114 ifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                        if +++l++  pf++qi   ll+ +++   s  e ++++L++++ +
+  CAGL0H07821g-T-p1 746 IFLSIDLEVlKPFMKQIAILLLQRLQS---SKTERYVKKLTVFIGL 788
+                        888999999889999999999998887...5589999999998876 PP
+
+>> CAGL0M07898g-T-p1  pep primary_assembly:GCA000002545v2:ChrM_C_glabrata_CBS138:786484:791233:1 gene:CAGL0M07898g trans
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.5   0.5     0.038        19      67     149 ..     125     208 ..      97     216 .. 0.77
+   2 ?    1.5   0.0      0.16        76      80     157 ..     354     432 ..     313     433 .. 0.69
+   3 ?    5.8   0.0    0.0076       3.7     125     158 ..     488     521 ..     478     523 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: 3.5 bits;  conditional E-value: 0.038
+           mTOR_dom  67 dvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefll 149
+                        +++ +++ +s ++  +y  + ++++L +++k+p+ +    ++++ i++ f+   l +  +l+q++  l ++ +++++++r   +
+  CAGL0M07898g-T-p1 125 AMECIIKLVSLMDsVDYTISAILTKLPSVIKQPKPTAAIINILNQILTKFQCNLLASADLLKQLLEPLPKLSSHADRNVRSETM 208
+                        3333333334444478999999999*********9999999999999999999999999******9999999999887776655 PP
+
+  == domain 2  score: 1.5 bits;  conditional E-value: 0.16
+           mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc..vpflpqiipallsvirtcesslrefllqqLatLvs 157
+                        +e y +  ++   +i+++    +  t + ++i +i++ l  +     +++ + + ll+ +++ +++l++ + + L+tLv+
+  CAGL0M07898g-T-p1 354 NENYTN-LFSMYGHIISKDINVQVVTIAAESIDKICHALPKQKltKHLIQLVFNPLLERTKEKKPTLLDAIRKTLKTLVE 432
+                        555544.4555567777777778888888999999999877765344667778999999999999999999999999985 PP
+
+  == domain 3  score: 5.8 bits;  conditional E-value: 0.0076
+           mTOR_dom 125 flpqiipallsvirtcesslrefllqqLatLvsi 158
+                         +++i+p+++++++++++s+r++ ++ +atLv++
+  CAGL0M07898g-T-p1 488 EISRIVPKVVKIVNDTNPSIRQVGFDCFATLVTL 521
+                        6889***************************987 PP
+
+>> CAGL0G04411g-T-p1  pep primary_assembly:GCA000002545v2:ChrG_C_glabrata_CBS138:415759:421401:-1 gene:CAGL0G04411g tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.8   0.0      0.84     4e+02      82     105 ..     142     165 ..     125     183 .. 0.62
+   2 ?   -1.2   0.0         1     5e+02      86     127 ..     274     316 ..     263     330 .. 0.75
+   3 ?   -1.4   0.0       1.2   5.9e+02      20      40 ..     576     596 ..     563     636 .. 0.73
+   4 ?   -2.7   0.3       3.1   1.5e+03     103     144 ..     734     776 ..     718     787 .. 0.46
+   5 ?    1.0   0.4      0.23   1.1e+02      83     133 ..     939     991 ..     899    1037 .. 0.68
+   6 ?   -3.1   0.0       4.1     2e+03      73     107 ..    1147    1183 ..    1123    1205 .. 0.65
+   7 ?   11.4   0.2   0.00014     0.069      65     148 ..    1304    1394 ..    1277    1405 .. 0.64
+   8 ?    6.3   0.0    0.0052       2.5      76     143 ..    1677    1744 ..    1643    1758 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -0.8 bits;  conditional E-value: 0.84
+           mTOR_dom  82 yyptvvinaLlkilkdpslsshht 105
+                        yy++ +++ +l+i+k p+l +  +
+  CAGL0G04411g-T-p1 142 YYQSPIFKRILNIVKLPALFQPLS 165
+                        555555555555555555544333 PP
+
+  == domain 2  score: -1.2 bits;  conditional E-value: 1
+           mTOR_dom  86 vvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflp 127
+                        +v++a+ +il + + ++  +++  a+++i +tl+ ++ ++ lp
+  CAGL0G04411g-T-p1 274 IVVAAIETILANLKDKKAEQSAFWAVIKISQTLKGQQaIEHLP 316
+                        5666666666666666677899999999999988776566666 PP
+
+  == domain 3  score: -1.4 bits;  conditional E-value: 1.2
+           mTOR_dom  20 kteqsqsiRrevikvlGilGA 40 
+                        ++ +s++++ +v k+lG +G 
+  CAGL0G04411g-T-p1 576 QSGSSKNLKISVKKILGQIGN 596
+                        455799*************96 PP
+
+  == domain 4  score: -2.7 bits;  conditional E-value: 3.1
+           mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvirtces.sl 144
+                         h+ +++ i++++++     +++l   + +++++++t+++ ++
+  CAGL0G04411g-T-p1 734 KHHFMLDFIINVLQSDYEDLIQILVDRLVEVFATFKTSNQlRI 776
+                        4444444444444443333333333333333333333333333 PP
+
+  == domain 5  score: 1.0 bits;  conditional E-value: 0.23
+           mTOR_dom  83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvp....flpqiipal 133
+                         p+v  + Ll i + ++ls   + v++++m if  +g  +v     f +q++ + 
+  CAGL0G04411g-T-p1 939 SPQVQNKLLLVIGELATLS--SEIVLHSVMPIFTFMGAHSVRqddeFTTQVVEKT 991
+                        4555555666666666666..4678888888888888888766677666666543 PP
+
+  == domain 6  score: -3.1 bits;  conditional E-value: 4.1
+           mTOR_dom   73 vglspsseeyypt..vvinaLlkilkdpslsshhtav 107 
+                         + +  ++++yy +       L++i+ dp++s+   ++
+  CAGL0G04411g-T-p1 1147 KVIVDTNDDYYDSsrNFKIRLYSIILDPTVSNATRKA 1183
+                         4456667888876444444566666666666555444 PP
+
+  == domain 7  score: 11.4 bits;  conditional E-value: 0.00014
+           mTOR_dom   65 etdvsellvglspsseeyyptvvinaLl.kil......kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147 
+                         e++v+++l +l++s  + y +   n+Ll ++l           ++ + + + +i++ ++ +g+k ++f+p+++p  +++++++ +s +e 
+  CAGL0G04411g-T-p1 1304 ENNVAQVLLNLQSSLINKYGSFFDNNLLvEVLnlasglISTGPRELQISSIAVITNCVSVMGVKFISFYPKVVPICIKLFNETRASKEEL 1393
+                         4556666666666654444444444333266633333222223456667899999*************************9976655554 PP
+
+           mTOR_dom  148 l 148 
+                          
+  CAGL0G04411g-T-p1 1394 A 1394
+                         3 PP
+
+  == domain 8  score: 6.3 bits;  conditional E-value: 0.0052
+           mTOR_dom   76 spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcess 143 
+                          +ss +   +++ + L++ +k  + s+ +  +v+++  i++++g   + +lpq +p +++++++ +++
+  CAGL0G04411g-T-p1 1677 KNSSVDEHNQMMNKLLVEHMKATCSSNEKLWAVRTVKLIYSKVGESWLVLLPQMVPIIAELLEDDNEE 1744
+                         4556556667788899999****************************************999986655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       5311  (2665511 residues searched)
+Passed MSV filter:                       421  (0.0792694); expected 106.2 (0.02)
+Passed bias filter:                      283  (0.0532856); expected 106.2 (0.02)
+Passed Vit filter:                        32  (0.00602523); expected 5.3 (0.001)
+Passed Fwd filter:                        13  (0.00244775); expected 0.1 (1e-05)
+Initial search space (Z):               5311  [actual number of targets]
+Domain search space  (domZ):              11  [number of targets reported over threshold]
+# CPU time: 0.10u 0.03s 00:00:00.13 Elapsed: 00:00:00.12
+# Mc/sec: 3403.51
+//
+[ok]

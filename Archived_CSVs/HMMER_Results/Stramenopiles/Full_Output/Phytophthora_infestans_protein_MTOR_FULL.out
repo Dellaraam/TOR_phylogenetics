@@ -1,0 +1,515 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Phytophthora_infestans_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.1e-47  162.0   1.6    9.9e-21   74.3   0.0    6.5  7  EEY59643.1  Phosphatidylinositol kinase (PIK-L2) [Phytophthor
+      8e-47  159.2   3.0    8.2e-28   97.4   0.0    4.9  5  EEY63188.1  phosphatidylinositol kinase (PIK-L1) [Phytophthor
+    0.00022   21.2   0.7       0.82    9.6   0.1    5.3  7  EEY66017.1  importin-like protein [Phytophthora infestans T30
+    0.00039   20.4   0.9        5.5    6.9   0.0    5.9  5  EEY69168.1  translational activator GCN1, putative [Phytophth
+    0.00056   19.9   0.3        1.5    8.8   0.0    3.0  3  EEY55557.1  deoxyhypusine hydroxylase, putative [Phytophthora
+     0.0057   16.6   7.4        1.9    8.4   0.1    4.7  5  EEY65606.1  importin-like protein [Phytophthora infestans T30
+      0.008   16.1   1.1         13    5.8   0.2    4.5  4  EEY63321.1  importin-like protein [Phytophthora infestans T30
+  ------ inclusion threshold ------
+      0.016   15.1   0.1       0.58   10.1   0.0    3.0  2  EEY63983.1  phosphatidylinositol kinase (PIK-L4) [Phytophthor
+      0.027   14.4   0.2      0.027   14.4   0.2    2.5  3  EEY56450.1  conserved hypothetical protein [Phytophthora infe
+        0.1   12.6   1.8       0.91    9.5   0.0    3.4  3  EEY58164.1  CRM1 C terminal Exportin 1-like protein [Phytopht
+       0.31   11.0   7.0         31    4.5   0.4    5.4  8  EEY61245.1  Cullin-associated NEDD8-dissociated protein, puta
+       0.65    9.9   3.0         21    5.1   0.1    4.7  4  EEY64264.1  U3 small nucleolar RNA-associated protein, putati
+
+
+Domain annotation for each sequence (and alignments):
+>> EEY59643.1  Phosphatidylinositol kinase (PIK-L2) [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.0   0.0   1.2e-05     0.018      77     157 ..     686     776 ..     607     778 .. 0.76
+   2 !   51.5   0.0   7.3e-17   1.1e-13       1      64 [.     781     845 ..     781     873 .. 0.81
+   3 !   74.3   0.0   6.7e-24   9.9e-21      68     159 ..     947    1038 ..     906    1039 .. 0.86
+   4 !   11.7   0.0   0.00013      0.19      90     141 ..    1050    1100 ..    1041    1111 .. 0.88
+   5 ?    1.0   0.0      0.24   3.5e+02     124     157 ..    1124    1158 ..    1108    1161 .. 0.86
+   6 ?   -2.8   0.1       3.6   5.3e+03      59     110 ..    1663    1717 ..    1644    1722 .. 0.60
+   7 ?   -2.9   0.0       3.9   5.8e+03     115     153 ..    1964    2002 ..    1957    2004 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 15.0 bits;  conditional E-value: 1.2e-05
+    mTOR_dom  77 pss.eeyyptvvinaLlkilkdpsls.shhtavvqaimsifkt......lglkc.vpflpqiipallsvirtces.slrefllqqLatLvs 157
+                  s+  + y   +++ L+k l++ s + sh  ++v++   i+ t      +g +  +p+l q++p ++  +r++++ +++++ ++ L++Lvs
+  EEY59643.1 686 ASQlAQPYVLPILRVLMKNLREDSERrSHSRSTVSVSKAILATlgdlaeVGAQElTPYLGQLLPDVIDEMRDSSNpQILQVAIKTLGQLVS 776
+                 4445556666788999*9998888776888899998888888833333344444578**************99999*************97 PP
+
+  == domain 2  score: 51.5 bits;  conditional E-value: 7.3e-17
+    mTOR_dom   1 VvePyldypeLLeiLlnilkte.q.sqsiRrevikvlGilGALDPykhkeveekseee....ekeeenae 64 
+                 Vv Py++ypeLL++L+++l+++ +  +s+R e+ ++lG+lGALDPy+ + ++ +++ +    +     ++
+  EEY59643.1 781 VVLPYHEYPELLDLLCQALQKSgDaFESLRIEAGRTLGVLGALDPYNLRLFHLQKQGKltdaK-----KK 845
+                 899*****************996469************************9988866543222.....22 PP
+
+  == domain 3  score: 74.3 bits;  conditional E-value: 6.7e-24
+    mTOR_dom   68 vsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                   ++ll +++p s +y+ptv+ naL++il +p  s h++ +  aim+i+k+++ ++ + l++iipa+l +++++++slr+fl++qL++Lv+iv
+  EEY59643.1  947 PDDLLPSMIPDSSQYFPTVATNALIRILLEPRNSVHYQGTFMAIMYICKSQRKRMGQHLDKIIPAFLYALEKVNRSLRKFLFEQLCDLVQIV 1038
+                  34458899***********************************************************************************9 PP
+
+  == domain 4  score: 11.7 bits;  conditional E-value: 0.00013
+    mTOR_dom   90 aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141 
+                  aLl+i+ ++  ++h ++v++ + +  ++lg k   +lp +ip++l+virt  
+  EEY59643.1 1050 ALLSIV-NSYWDEHLEEVLNLVKKLANSLGEKFRVYLPDLIPQMLRVIRTER 1100
+                  577777.56678999**********************************965 PP
+
+  == domain 5  score: 1.0 bits;  conditional E-value: 0.24
+    mTOR_dom  124 pflpqiipallsvirtces.slrefllqqLatLvs 157 
+                   +l  iipal+++i++  + + r+  l  L++Lv+
+  EEY59643.1 1124 GYLHLIIPALVALIQSDADiNARKQGLGSLGSLVK 1158
+                  6999***********99999**********99996 PP
+
+  == domain 6  score: -2.8 bits;  conditional E-value: 3.6
+    mTOR_dom   59 eeenaeetdvsel..lvglspsseeyyptvvinaLlkilkdpsls.shhtavvqa 110 
+                  ++++ +++++s+l  + + s++s    ++v++++L +i+  + l  +   +v q+
+  EEY59643.1 1663 TTASRRKQSISSLnfVSSSSSTSYGHEKQVALKKLQTIWTRRMLGvERNIQVWQS 1717
+                  3334444555555323333333355667899999999998888764455555555 PP
+
+  == domain 7  score: -2.9 bits;  conditional E-value: 3.9
+    mTOR_dom  115 fktlglkcvpflpqiipallsvirtcesslrefllqqLa 153 
+                  ++  +  +v +   +ip+l++ i t +++ +e l + L+
+  EEY59643.1 1964 VEGFQEASVDTWLDVIPQLIARIDTPNPKTSELLHDLLS 2002
+                  55555566777789***********99999998877766 PP
+
+>> EEY63188.1  phosphatidylinositol kinase (PIK-L1) [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.0   0.0       4.1   6.1e+03     109     156 ..      37      85 ..      13      87 .. 0.73
+   2 ?   -1.2   0.2       1.2   1.7e+03      82      97 ..     806     821 ..     717     841 .. 0.43
+   3 !   57.5   0.0     1e-18   1.5e-15       1      83 [.     845     927 ..     845     948 .. 0.73
+   4 !   97.4   0.0   5.5e-31   8.2e-28      71     159 ..    1058    1148 ..    1027    1149 .. 0.89
+   5 ?   -0.8   0.0      0.88   1.3e+03     101     138 ..    1168    1206 ..    1159    1208 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -3.0 bits;  conditional E-value: 4.1
+    mTOR_dom 109 qaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLv 156
+                  a+ s  ++l+ +   + l q+ p+l+++++ +++s +   l  ++ L+
+  EEY63188.1  37 AAVASLSRQLSAERfAKALGQLTPQLYTLLQRASESAQLGALLAIERLI 85 
+                 5666667777766668899999999999999998887777776666666 PP
+
+  == domain 2  score: -1.2 bits;  conditional E-value: 1.2
+    mTOR_dom  82 yyptvvinaLlkilkd 97 
+                  y+ + +  +++ l+d
+  EEY63188.1 806 AYERYLFPLIIHTLQD 821
+                 3333333333333333 PP
+
+  == domain 3  score: 57.5 bits;  conditional E-value: 1e-18
+    mTOR_dom   1 VvePyldypeLLeiLlnilkte..qsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyy 83 
+                 Vv+Pyl  p+LLei+l++l+ +  + +s+Rre+++++GilGALDPyk+k   ++++  ++ +e a++td+s++ ++ +  + +  
+  EEY63188.1 845 VVRPYLASPKLLEIFLSLLHHNvgSPWSLRREAMRTIGILGALDPYKYKLCISRASL-RQANEVASTTDTSTT-KEETDKNADTA 927
+                 89*******************98559***********************99977744.223333333333333.34444444444 PP
+
+  == domain 4  score: 97.4 bits;  conditional E-value: 5.5e-31
+    mTOR_dom   71 l..lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                      ++lsp+se y+ptv+i+aLl+il++psl+ hh+ v+qaim+ifk+l+++cvpfl+ i+p +l+v++  e++lre l+ qL+tL+siv
+  EEY63188.1 1058 EldPTELSPASEAYFPTVAIHALLRILREPSLNAHHHGVIQAIMFIFKSLSTQCVPFLKYILPPFLRVLSRGEPRLRESLFLQLTTLISIV 1148
+                  1346788***********************************************************************************9 PP
+
+  == domain 5  score: -0.8 bits;  conditional E-value: 0.88
+    mTOR_dom  101 sshhtavvqaimsifktlglkc.vpflpqiipallsvir 138 
+                   sh t++v+ + +i +    +  +++ p+++p+ll+v++
+  EEY63188.1 1168 GSHLTQIVRLVEKISQAAPHEFrTQYFPKLLPKLLEVLQ 1206
+                  5789999999999999999999999*********99986 PP
+
+>> EEY66017.1  importin-like protein [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.2   0.2       1.2   1.8e+03     110     137 ..     228     255 ..     206     269 .. 0.65
+   2 ?   -0.6   0.0      0.79   1.2e+03       8      33 ..     248     274 ..     242     278 .. 0.84
+   3 ?    2.2   0.0      0.11   1.6e+02     123     157 ..     395     429 ..     383     432 .. 0.86
+   4 !    9.6   0.1   0.00056      0.82      98     155 ..     453     510 ..     431     512 .. 0.83
+   5 ?   -2.8   0.0       3.5   5.2e+03     120     156 ..     680     717 ..     658     719 .. 0.68
+   6 ?    0.9   0.1      0.26   3.9e+02      85     126 ..     749     790 ..     725     819 .. 0.79
+   7 ?   -2.9   0.0         4   5.9e+03     104     138 ..     873     907 ..     852     918 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: -1.2 bits;  conditional E-value: 1.2
+    mTOR_dom 110 aimsifktlglkcvpflpqiipallsvi 137
+                   m +f+++     p+l+q  p++++++
+  EEY66017.1 228 EFMDVFSEIASHPFPILDQAFPQFIELL 255
+                 4577777777777777777777777654 PP
+
+  == domain 2  score: -0.6 bits;  conditional E-value: 0.79
+    mTOR_dom   8 ypeLLeiLlnilkteq.sqsiRrevik 33 
+                 +p+ +e+Ll+i+  eq + s+R ++  
+  EEY66017.1 248 FPQFIELLLQIILAEQlEVSTRASASY 274
+                 7999***********989999988765 PP
+
+  == domain 3  score: 2.2 bits;  conditional E-value: 0.11
+    mTOR_dom 123 vpflpqiipallsvirtcesslrefllqqLatLvs 157
+                  + l++++pa+++v++++++++re     L+++ +
+  EEY66017.1 395 CQNLNELLPAVYRVAQDADQHVREAACFALGQFAE 429
+                 46799*******************99999988765 PP
+
+  == domain 4  score: 9.6 bits;  conditional E-value: 0.00056
+    mTOR_dom  98 pslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+                 +  +  +++++ ++ +i ++++ ++  p+l+ ++ +l+ v+rt +++l+++ l+ ++++
+  EEY66017.1 453 A-SKVIKATALYVLDEITQSMESEQvFPYLETLVTKLVDVLRTGSPQLQKMALDAVGSI 510
+                 3.345667777788899****999989************************99987765 PP
+
+  == domain 5  score: -2.8 bits;  conditional E-value: 3.5
+    mTOR_dom 120 lkc.vpflpqiipallsvirtcesslrefllqqLatLv 156
+                   +  p++p+++ al+ +++ +++++r  + + La Lv
+  EEY66017.1 680 GSVfEPYIPKFLEALAPLTEYIHEDVRGAVAEALAALV 717
+                 33335688888888888888888888888888888887 PP
+
+  == domain 6  score: 0.9 bits;  conditional E-value: 0.26
+    mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpfl 126
+                 +v+ +a++k l ++ l++  + vv+   + +k ++ ++ p++
+  EEY66017.1 749 AVIASAVMKSLVEELLEDPEEVVVEKAFNAIKAMSARVGPVV 790
+                 578889999999999999999999999999999999886543 PP
+
+  == domain 7  score: -2.9 bits;  conditional E-value: 4
+    mTOR_dom 104 htavvqaimsifktlglkcvpflpqiipallsvir 138
+                 ++a+v    +++++lg   + f++ + p +l+ + 
+  EEY66017.1 873 RAAAVGCFAEVLRELGPGALGFVESVFPVVLQGLA 907
+                 56777888899999999999999999999998765 PP
+
+>> EEY69168.1  translational activator GCN1, putative [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.9   0.0    0.0037       5.5      86     159 ..    1564    1636 ..    1506    1637 .. 0.85
+   2 ?    1.9   0.0      0.13     2e+02      87     157 ..    1683    1754 ..    1650    1756 .. 0.72
+   3 ?   -0.1   0.0      0.56   8.2e+02      99     139 ..    1968    2003 ..    1953    2025 .. 0.66
+   4 ?    3.2   0.0     0.053        78      91     157 ..    2385    2451 ..    2378    2452 .. 0.85
+   5 ?   -2.6   0.0       3.2   4.7e+03      89      89 ..    2628    2628 ..    2591    2685 .. 0.49
+
+  Alignments for each domain:
+  == domain 1  score: 6.9 bits;  conditional E-value: 0.0037
+    mTOR_dom   86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                   v+ +Ll  l++++ +  +++ +q + s+      +  + lpq++p+l+++++++++++re   + L +  s+v
+  EEY69168.1 1564 LVLPSLLGALEESAWR-TKQSGIQILGSMAYCAPRQLGSCLPQVVPKLMAALTDSHPKVREAGKSALRDVGSVV 1636
+                  6788899999665555.78899999999999999999*********************9998777777666655 PP
+
+  == domain 2  score: 1.9 bits;  conditional E-value: 0.13
+    mTOR_dom   87 vinaLlkilkdpsls..shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                  v+  + + lkd++ +  +  + +v ++ s++++     vp+++ ++p+l + + +  +++r +  + L++Lv+
+  EEY69168.1 1683 VMPIITRGLKDRAGDakKKAALIVGSMCSMIND-AKDLVPYMETVLPSLKTQLVDPIPEVRAVAAKALGKLVK 1754
+                  445555556666655213444466777777775.5566****************9999************996 PP
+
+  == domain 3  score: -0.1 bits;  conditional E-value: 0.56
+    mTOR_dom   99 slsshhtavvqaimsifktlglkcvpflpqiipallsvirt 139 
+                  s     + v q+ +++ k++  +  ++l+qi+ al+++i +
+  EEY69168.1 1968 S-----AVVRQSALQVWKSVVANTPKTLRQILEALMNAIVS 2003
+                  2.....33446777788888888888888888888877654 PP
+
+  == domain 4  score: 3.2 bits;  conditional E-value: 0.053
+    mTOR_dom   91 LlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                  L++i  d+   + ++a++q++  i+ + g+   pflpq+  +++++++++  ++r    + L+ Lv+
+  EEY69168.1 2385 LIRIAGDRFPGHVKAAILQTLEIILTKGGVALKPFLPQLQTTFVKALNDTALDVRAHGASALSLLVT 2451
+                  666666777777788999******************************9887888888888888876 PP
+
+  == domain 5  score: -2.6 bits;  conditional E-value: 3.2
+    mTOR_dom   89 n 89  
+                  +
+  EEY69168.1 2628 T 2628
+                  1 PP
+
+>> EEY55557.1  deoxyhypusine hydroxylase, putative [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.6   0.0      0.75   1.1e+03      12      36 ..      54      79 ..      52      81 .. 0.71
+   2 !    7.4   0.0    0.0026       3.9      13      40 ..      88     116 ..      80     120 .. 0.90
+   3 !    8.8   0.0     0.001       1.5       6      42 ..     239     276 ..     235     303 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -0.6 bits;  conditional E-value: 0.75
+    mTOR_dom 12 LeiLlnilkte.qsqsiRrevikvlG 36
+                L++Ll++l +  +s+ +R e   v+G
+  EEY55557.1 54 LQVLLTALLNRkDSELMRHELAYVIG 79
+                4555555555527999****999998 PP
+
+  == domain 2  score: 7.4 bits;  conditional E-value: 0.0026
+    mTOR_dom  13 eiLlnilkte.qsqsiRrevikvlGilGA 40 
+                 e+L ++l  e ++  +R e+   lG +GA
+  EEY55557.1  88 ETLQQVLADEaDDGMVRHEAAEALGAIGA 116
+                 7899******55****************9 PP
+
+  == domain 3  score: 8.8 bits;  conditional E-value: 0.001
+    mTOR_dom   6 ldypeLLeiLlnilkteq.sqsiRrevikvlGilGALD 42 
+                 ++ p L+ +L ++l  e+ +  +R e+   lG +G   
+  EEY55557.1 239 MENPVLVPALKKVLLDETeHRMVRHEAAEALGAIGSTE 276
+                 68899**********99549***************865 PP
+
+>> EEY65606.1  importin-like protein [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.9   0.0       1.9   2.9e+03     126     159 ..     120     153 ..      81     154 .. 0.68
+   2 ?   -2.0   0.0       2.1   3.1e+03     105     138 ..     227     260 ..     175     281 .. 0.57
+   3 !    7.3   0.1    0.0028       4.2      82     157 ..     441     520 ..     398     545 .. 0.83
+   4 !    8.4   0.1    0.0013       1.9      89     142 ..     581     635 ..     557     642 .. 0.82
+   5 ?    1.3   0.1       0.2     3e+02      46     142 ..     831     940 ..     809     947 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: -1.9 bits;  conditional E-value: 1.9
+    mTOR_dom 126 lpqiipallsvirtcesslrefllqqLatLvsiv 159
+                  p++++a+ ++++++++ lr + ++ La+L ++v
+  EEY65606.1 120 WPELLSAVSALTTHADALLRVTAFDLLAKLAEYV 153
+                 4555666666666666677777777777777766 PP
+
+  == domain 2  score: -2.0 bits;  conditional E-value: 2.1
+    mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvir 138
+                  +v++a+++i +       + l+ +  a++ v++
+  EEY65606.1 227 REVLSALVQIAEVHPKFFRNSLDDVARAMIFVCS 260
+                 3444444444443333334444444444444444 PP
+
+  == domain 3  score: 7.3 bits;  conditional E-value: 0.0028
+    mTOR_dom  82 yyptvvinaLlkilkdpsls.shhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157
+                  +++vv+ aL +++++++     ++ + +++++ ++t   + k   p+ + ++ al++++r+c+++++e  +  +a+  +
+  EEY65606.1 441 KFHAVVMPALTALIQNEQGVlRTRALAASVVINFCNTnvCKAKYvAPYSQALLEALFNAMRSCPRQVQEQAITAVASVAK 520
+                 57889999999988877766466777777788888885555555578999999***********9999998888777665 PP
+
+  == domain 4  score: 8.4 bits;  conditional E-value: 0.0013
+    mTOR_dom  89 naLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                 + L+++ + + l+    + v q+ + i + l+   vp+lp++ip+l++ ++  ++
+  EEY65606.1 581 EILVRVQSSEELEgPEVQYVAQSCVRIGSILKEDFVPYLPHVIPSLIKQAQIQPD 635
+                 5566666777777667788999999**********************99886655 PP
+
+  == domain 5  score: 1.3 bits;  conditional E-value: 0.2
+    mTOR_dom  46 hkeveekseeeekeeenaeetdvsellvgl....................spss.eeyyptvvinaLl...kilkdpslsshhtavvqaimsifktlgl 120
+                 h+e+++             + d +++l+++                    ++++ e ++p    + L     +l+++++   + +++  i  i+++ g 
+  EEY65606.1 831 HQENQQDE-----------DYDAEAALQQTendeleegvfrsmvdsigwiIKTQkEAFFPVFQAHLLAfvtPLLEQKTVPMLRGQAICMIDDIIEHCGA 918
+                 33333222...........11111112222111111111222233455555555244444433333322114568888888888888888889998888 PP
+
+    mTOR_dom 121 kcvpflpqiipallsvirtces 142
+                    +++p ++++l++ +++ ++
+  EEY65606.1 919 AAQELVPLFLNHLVQGLEDQSP 940
+                 8888888888888888777666 PP
+
+>> EEY63321.1  importin-like protein [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.7   0.0      0.15   2.2e+02      73     141 ..     424     493 ..     393     501 .. 0.72
+   2 !    5.8   0.2    0.0085        13     103     145 ..     513     556 ..     509     561 .. 0.88
+   3 ?    2.7   0.0     0.074   1.1e+02     108     141 ..     628     661 ..     609     671 .. 0.84
+   4 ?   -0.8   0.0      0.85   1.3e+03      10      35 ..     732     757 ..     702     764 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 1.7 bits;  conditional E-value: 0.15
+    mTOR_dom  73 vglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtce 141
+                 v+  p  +e y++ +++ L + l+d +    ++ + +a+ + +     +  +p+l++ +++l++++++ +
+  EEY63321.1 424 VDQAPQFQEAYHQQALTVLAHYLEDFNKPRLQAHAATALRQFIDMCPPELlTPYLENMLHQLFALLQHGQ 493
+                 4555666899999999999999976555555555555555555555556668999999999999888754 PP
+
+  == domain 2  score: 5.8 bits;  conditional E-value: 0.0085
+    mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvirtces.slr 145
+                  ++++++ai s+    g+  ++++  ++p l++++ +c + s++
+  EEY63321.1 513 VQEQAITAISSVATVAGVSFTNYYAAVMPPLQQILLNCLQeSMQ 556
+                 57899*****************************9999775555 PP
+
+  == domain 3  score: 2.7 bits;  conditional E-value: 0.074
+    mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirtce 141
+                 +qa    +  lg    p+lp ++p+ll+++++  
+  EEY63321.1 628 LQAWARCCTCLGHDFAPYLPLVMPTLLEAATQQA 661
+                 67777888999999*************9988754 PP
+
+  == domain 4  score: -0.8 bits;  conditional E-value: 0.85
+    mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvl 35 
+                 ++ ++L  +l ++ +++iR ++i+ +
+  EEY63321.1 732 QVTQVLAPLLTESVHSDIRASAIRAM 757
+                 34445555555555777777777776 PP
+
+>> EEY63983.1  phosphatidylinositol kinase (PIK-L4) [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.0      0.23   3.4e+02     122     158 ..      48      84 ..      14      85 .. 0.87
+   2 ?   10.1   0.0   0.00039      0.58      12     104 ..    1503    1612 ..    1497    1618 .. 0.55
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 0.23
+    mTOR_dom 122 cvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                 +++ l++i+p+l++ + t++++    +lq L++L ++
+  EEY63983.1  48 MLTKLRKILPKLMRPVATLSTDKAVPVLQDLCQLLNL 84 
+                 367899***************************9875 PP
+
+  == domain 2  score: 10.1 bits;  conditional E-value: 0.00039
+    mTOR_dom   12 LeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks..............eee..ekeeenaeetdvsel....lvgl..spsseeyyptv 86  
+                  ++ +l++ ++e +++i++   ++lG lGA+D  ++      +              e +  +k e ++++ ++ ++    +++l   p +++   + 
+  EEY63983.1 1503 VQSILQLSRSECHEPIKLLCARCLGALGAIDGARVPLH---MfytsgpqggaavakE-KqyQKIEYSTKDLAIVLIekwlVKELraAPENTDS-LAF 1594
+                  5566777788889******************9998322...2233455554444321.11233333333322222244433333223333332.335 PP
+
+    mTOR_dom   87 vinaLlkilkdpslsshh 104 
+                  +i++Llk l + + + +h
+  EEY63983.1 1595 AIQELLKFLAELTADPQH 1612
+                  777777777666666544 PP
+
+>> EEY56450.1  conserved hypothetical protein [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.7   0.0       6.7     1e+04      76     148 ..     270     301 ..     241     329 .. 0.51
+   2 ?   -3.8   0.0       7.6   1.1e+04      71      99 ..     566     594 ..     561     618 .. 0.45
+   3 ?   14.4   0.2   1.8e-05     0.027      57     158 ..     703     806 ..     685     807 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -3.7 bits;  conditional E-value: 6.7
+    mTOR_dom  76 spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipall.svirtcesslrefl 148
+                 s+s+                                           + f + ++p+ll +v+ + e+ ++  l
+  EEY56450.1 270 SKSNP------------------------------------------THFAQVFLPHLLlQVLLEKEQAVQRSL 301
+                 22222..........................................334444444432133333333444444 PP
+
+  == domain 2  score: -3.8 bits;  conditional E-value: 7.6
+    mTOR_dom  71 llvglspsseeyyptvvinaLlkilkdps 99 
+                 l++++ + +e  + t+  +++   + d++
+  EEY56450.1 566 LMNSIKEEDEFAFRTISSQTIAGFVVDQA 594
+                 33333333333444444445444444444 PP
+
+  == domain 3  score: 14.4 bits;  conditional E-value: 1.8e-05
+    mTOR_dom  57 ekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls..shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLa 153
+                 +++++++ +++v+++ ++ +  + e  + vv n++   +++p  +  +  +a+v ++  i++tlg   +p++p +++  ++++++ ++ +r f    +a
+  EEY56450.1 703 DHQTRRMVAQAVATICKNAEDQHREHAMLVVYNSIFVAFSNPGTAktEALEAAVMVLDRIVHTLGADLTPYIPSLVHYAMKTMSSQSKLVRTFAAGVFA 801
+                 45566666788888899999999**************999998774567789999******************************99999999999888 PP
+
+    mTOR_dom 154 tLvsi 158
+                 +Lv +
+  EEY56450.1 802 DLVPL 806
+                 88865 PP
+
+>> EEY58164.1  CRM1 C terminal Exportin 1-like protein [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.1       2.7   4.1e+03      80     111 ..      91     122 ..      21     165 .. 0.63
+   2 ?    9.5   0.0   0.00061      0.91      72     149 ..     496     576 ..     437     584 .. 0.85
+   3 ?   -0.3   0.1      0.62   9.1e+02      80     135 ..     765     824 ..     719     840 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 2.7
+    mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqai 111
+                  e ++++++ +Ll++ +d+s  + +   v+ +
+  EEY58164.1  91 REGIKSYIVGKLLSMSSDESTLHSQRVFVNKM 122
+                 56666666666776666666655554445444 PP
+
+  == domain 2  score: 9.5 bits;  conditional E-value: 0.00061
+    mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefll 149
+                    +s+ +e  +  +vi+ Ll + + +  ++ ++ v + im+++ +    l+   +fl+ ++++l++ ++++++ ++++  
+  EEY58164.1 496 SGAMSEENEKRFLVTVIKDLLGLCEMKRGKDNKAVVASNIMYVVGQypRFLRAhWKFLRTVVNKLFEFMHELHPGVQDMAC 576
+                 45678999************************************994433555599***************9999888765 PP
+
+  == domain 3  score: -0.3 bits;  conditional E-value: 0.62
+    mTOR_dom  80 eeyyptvvinaLl.kil...kdpslsshhtavvqaimsifktlglkcvpflpqiipalls 135
+                  ++ +t  + +Ll +il   ++ + s   ++v++ + + +++l+    p++p i+ a+++
+  EEY58164.1 765 RQFVATHFLPKLLeTILsdyQNTTPSAKESEVLSLLATSINKLKNIIAPTVPMILEAVFE 824
+                 444444444444423334443444445566666666666666666666777777666665 PP
+
+>> EEY61245.1  Cullin-associated NEDD8-dissociated protein, putative [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.5   0.1      0.72   1.1e+03      22      38 ..     138     154 ..     121     271 .. 0.62
+   2 ?   -0.2   0.0      0.58   8.6e+02       6      40 ..     245     278 ..     240     283 .. 0.83
+   3 ?    4.0   0.0      0.03        44      87     145 ..     288     347 ..     267     354 .. 0.85
+   4 ?   -1.8   0.0       1.8   2.7e+03     120     154 ..     529     563 ..     512     567 .. 0.67
+   5 ?    4.5   0.4     0.021        31     106     156 ..     688     739 ..     671     741 .. 0.80
+   6 ?   -3.4   0.0       5.6   8.3e+03      90     121 ..     969    1002 ..     963    1018 .. 0.56
+   7 ?   -3.7   0.0       7.1   1.1e+04     120     134 ..    1146    1160 ..    1142    1162 .. 0.80
+   8 ?   -3.4   0.0       5.4     8e+03      37      56 ..    1198    1216 ..    1197    1265 .. 0.53
+
+  Alignments for each domain:
+  == domain 1  score: -0.5 bits;  conditional E-value: 0.72
+    mTOR_dom  22 eqsqsiRrevikvlGil 38 
+                 ++s++++  ++k+lGil
+  EEY61245.1 138 DKSNDVQSIAVKCLGIL 154
+                 34666666666666665 PP
+
+  == domain 2  score: -0.2 bits;  conditional E-value: 0.58
+    mTOR_dom   6 ldypeLLeiLlnilkteqsqsiRrevikvlGilGA 40 
+                 +++ +++e+L+  l  ++s+ +R+ +  ++G lG 
+  EEY61245.1 245 TEHATIMELLMIQLT-DESPLVRKRATACVGSLGV 278
+                 678889999887776.5599*************95 PP
+
+  == domain 3  score: 4.0 bits;  conditional E-value: 0.03
+    mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slr 145
+                  ++ L++ ++ ++ ss   + +q+i    +t g +  + l+ +i  l++ + + e+ sl+
+  EEY61245.1 288 LVEHLINGIQGSANSSNVRTLIQTIGMLSRTAGHRLGQHLDAVIRILVQFCGDPEDeSLQ 347
+                 5677778889999999*********************************99988875655 PP
+
+  == domain 4  score: -1.8 bits;  conditional E-value: 1.8
+    mTOR_dom 120 lkcvpflpqiipallsvirtcesslrefllqqLat 154
+                  k   ++ +++p++l+++ + +s+l+   l  L  
+  EEY61245.1 529 GKLGDYIGRLMPNILHAVDDKHSDLKLDALLFLRL 563
+                 45567999**********98887666555554554 PP
+
+  == domain 5  score: 4.5 bits;  conditional E-value: 0.021
+    mTOR_dom 106 avvqaimsi.fktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                 + ++ai  + +++l+l + p+l +  ++l++++r+ +++l++  l  L++Lv
+  EEY61245.1 688 QSIKAIGAVaCSKLNLDMSPILVECTQTLAQLLRQQSRTLKQATLATLNDLV 739
+                 4455665541667*************************************98 PP
+
+  == domain 6  score: -3.4 bits;  conditional E-value: 5.6
+    mTOR_dom   90 aLlkilkdpslsshh..tavvqaimsifktlglk 121 
+                  +L ++++d++ + hh  ++ v+ ++ ++++++ +
+  EEY61245.1  969 SLREVISDHAAKPHHgfAMYVDRVLPVLQKMSAR 1002
+                  5555666666665553334455555555555444 PP
+
+  == domain 7  score: -3.7 bits;  conditional E-value: 7.1
+    mTOR_dom  120 lkcvpflpqiipall 134 
+                    cv++l q++p+ l
+  EEY61245.1 1146 YSCVETLVQVLPQQL 1160
+                  689999999999866 PP
+
+  == domain 8  score: -3.4 bits;  conditional E-value: 5.4
+    mTOR_dom   37 ilGALDPykhkeveekseee 56  
+                  i+GALD      +e++ +++
+  EEY61245.1 1198 IVGALDSLME-PLEKTVNRK 1216
+                  7899988766.333333333 PP
+
+>> EEY64264.1  U3 small nucleolar RNA-associated protein, putative [Phytophthora infestans T30-4]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.1   0.1     0.014        21     102     159 ..     108     165 ..      67     202 .. 0.86
+   2 ?    0.2   0.1      0.44   6.6e+02     121     155 ..     630     664 ..     565     667 .. 0.87
+   3 ?   -1.2   0.0       1.2   1.7e+03      71      94 ..     712     736 ..     692     757 .. 0.73
+   4 ?   -2.0   0.0         2     3e+03      75     112 ..    2748    2790 ..    2707    2803 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 5.1 bits;  conditional E-value: 0.014
+    mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                 +    v++ ++   ++lg +  p     +p +++vi t +++l+  +++ L++L s++
+  EEY64264.1 108 QRLVPVLKLVTALARELGKEFYPHFAGTLPLVVAVIDTKDPELSTQVFKTLTMLFSYL 165
+                 4445677888889999999999999999999999999999999999999999999876 PP
+
+  == domain 2  score: 0.2 bits;  conditional E-value: 0.44
+    mTOR_dom 121 kcvpflpqiipallsvirtcesslrefllqqLatL 155
+                   v  lp++ +all+++r+   +lr + lq La +
+  EEY64264.1 630 LTVDALPHVANALLATLRSPAHELRLVTLQLLARF 664
+                 45899*************9999***9999999875 PP
+
+  == domain 3  score: -1.2 bits;  conditional E-value: 1.2
+    mTOR_dom  71 l.lvglspsseeyyptvvinaLlki 94 
+                 + + + sp + e y+++++n+Ll +
+  EEY64264.1 712 VkILCRSPQTPELYKKIAVNQLLGL 736
+                 2445679999************976 PP
+
+  == domain 4  score: -2.0 bits;  conditional E-value: 2
+    mTOR_dom   75 l....spss.eeyyptvvinaLlkilkdpslsshhtavvqaim 112 
+                  l      s+  +  ++vv++   ++l+++  +   + vvq i 
+  EEY64264.1 2748 LsyvaRGSNcSNEVQSVVLKLFAALLHNHDAAFAEKYVVQIIN 2790
+                  1333333334555688899999999988888888888888775 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      17797  (7477656 residues searched)
+Passed MSV filter:                       813  (0.0456819); expected 355.9 (0.02)
+Passed bias filter:                      667  (0.0374782); expected 355.9 (0.02)
+Passed Vit filter:                        55  (0.00309041); expected 17.8 (0.001)
+Passed Fwd filter:                        12  (0.000674271); expected 0.2 (1e-05)
+Initial search space (Z):              17797  [actual number of targets]
+Domain search space  (domZ):              12  [number of targets reported over threshold]
+# CPU time: 0.12u 0.09s 00:00:00.21 Elapsed: 00:00:00.19
+# Mc/sec: 5997.54
+//
+[ok]

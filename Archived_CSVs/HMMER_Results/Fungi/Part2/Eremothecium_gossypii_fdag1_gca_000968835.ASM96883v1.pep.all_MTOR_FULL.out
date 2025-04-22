@@ -1,0 +1,528 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Eremothecium_gossypii_fdag1_gca_000968835.ASM96883v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.4e-74  246.8  22.4    2.2e-71  237.1   0.6    6.6  8  AEY98103  pep chromosome:ASM96883v1:VI:1190600:1197988:1 gene
+    2.2e-11   42.1   8.2      0.052   11.7   0.0   10.5 10  AEY97853  pep chromosome:ASM96883v1:VI:745737:753752:1 gene:F
+    1.2e-06   26.7   2.8     0.0022   16.1   0.6    5.2  6  AEY98468  pep chromosome:ASM96883v1:VII:55227:58505:-1 gene:F
+     0.0001   20.4   4.3        2.9    6.0   0.2    5.7  5  AEY95331  pep chromosome:ASM96883v1:III:30324:32909:1 gene:FA
+    0.00013   20.1  11.4       0.38    8.8   0.0    6.7  8  AEY98519  pep chromosome:ASM96883v1:VII:146132:149479:-1 gene
+    0.00019   19.5   1.3       0.64    8.1   0.1    4.7  5  AEY97039  pep chromosome:ASM96883v1:V:728391:731020:1 gene:FA
+     0.0015   16.6   0.6        0.1   10.7   0.0    3.7  3  AEY96090  pep chromosome:ASM96883v1:IV:463983:467231:-1 gene:
+     0.0053   14.9   7.0       0.98    7.5   0.1    5.1  4  AEY97757  pep chromosome:ASM96883v1:VI:557477:562801:-1 gene:
+  ------ inclusion threshold ------
+      0.021   12.9   0.1       0.24    9.5   0.1    2.9  2  AEY98808  pep chromosome:ASM96883v1:VII:1036350:1039988:-1 ge
+      0.023   12.8   0.9        4.5    5.3   0.7    2.9  3  AEY94624  pep chromosome:ASM96883v1:I:291791:294925:1 gene:FA
+       0.79    7.8  10.5          4    5.5   0.0    4.7  4  AEY96984  pep chromosome:ASM96883v1:V:622113:629588:1 gene:FA
+
+
+Domain annotation for each sequence (and alignments):
+>> AEY98103  pep chromosome:ASM96883v1:VI:1190600:1197988:1 gene:FAGOS_FAFR420W transcript:AEY98103 gene_biotype:protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.9   0.0       7.5   3.3e+03       3      21 ..     240     258 ..     239     269 .. 0.73
+   2 ?   -4.1   0.0       8.2   3.6e+03      99     138 ..     395     434 ..     369     449 .. 0.64
+   3 ?   -1.8   0.0       1.7   7.3e+02     113     152 ..     611     651 ..     536     653 .. 0.75
+   4 !   13.9   0.3   2.5e-05     0.011      14     155 ..     667     815 ..     655     818 .. 0.70
+   5 !  237.1   0.6   5.1e-74   2.2e-71       1     160 []     822     981 ..     822     981 .. 0.99
+   6 ?    4.8   0.1     0.016       6.8     106     156 ..    1007    1057 ..    1001    1059 .. 0.88
+   7 ?    1.1   0.5      0.21        90      83     155 ..    1066    1135 ..    1058    1140 .. 0.72
+   8 ?    0.5   0.0      0.33   1.4e+02     128     155 ..    1866    1893 ..    1765    1896 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -3.9 bits;  conditional E-value: 7.5
+  mTOR_dom   3 ePyldypeLLeiLlnilkt 21 
+               +Pyl yp L ++L ni + 
+  AEY98103 240 SPYLLYPYLNSVLDNIWRA 258
+               5899999988888777664 PP
+
+  == domain 2  score: -4.1 bits;  conditional E-value: 8.2
+  mTOR_dom  99 slsshhtavvqaimsifktlglkcvpflpqiipallsvir 138
+               + s  ++a++ +i  i  +++ +  ++l+ i+ ++   + 
+  AEY98103 395 ANSPDRAAILVSIGDIAFQVRSNIAAYLDSILDNIRDGFL 434
+               3445677788888899999999999999999988766554 PP
+
+  == domain 3  score: -1.8 bits;  conditional E-value: 1.7
+  mTOR_dom 113 sifktlglkcvpflpqiipallsvirtces.slrefllqqL 152
+               +++++ +l  ++ + +++++ll+v+ t +  ++r+ +l++L
+  AEY98103 611 NVCQQTSLHALNAVAEVLSKLLTVAITDPVaEIRHEILKHL 651
+               56666666666677777777777666555556666666655 PP
+
+  == domain 4  score: 13.9 bits;  conditional E-value: 2.5e-05
+  mTOR_dom  14 iLlnilkteqsqsiRrevikvlGilGALDPykhkeveeks.....eee.ekeeenaeetdvsellvglspsseeyyptvvinaLlkil....kdpslsshh 104
+               +L+ +l+ e    i+ +++k++G l  ++P       +k+     + e ++++ + ++++++++ ++l++ss+++     i+++l +l    +d+  s   
+  AEY98103 667 LLFMALNDE-VFIIQMQAMKIVGRLASVNPAYIVPSLRKTliqllT-ElKHSSMTRKKEESASMFCTLISSSKDVTRP-YIESILDVLlpkcQDS-SSAVA 763
+               555555544.666888999999999999997764333333444432.2344445555566666777888888777665.5777788776663444.46688 PP
+
+  mTOR_dom 105 tavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatL 155
+               ++++qa+ +     g ++  +l++++p +++++++ ++   r   l+ L++L
+  AEY98103 764 STALQAVGELSVVGGENMKDYLDKLMPLIINTFQDQSNsFKRSAALKTLGQL 815
+               999999999999888889****************999967788899999998 PP
+
+  == domain 5  score: 237.1 bits;  conditional E-value: 5.1e-74
+  mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls 101
+               V++P+ldyp+LL++L+nilk e+sqsiRre+++++GilGALDPykh+eve++s++  + e+na+++dv++l++g+sps+eeyyptvvin+L+kilkdpsls
+  AEY98103 822 VIDPLLDYPQLLGVLVNILKAESSQSIRRETVRLIGILGALDPYKHREVERTSSTPISVEQNAPSIDVALLMQGMSPSNEEYYPTVVINTLMKILKDPSLS 922
+               9*************************************************999888999****************************************** PP
+
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+               shhtav+qa+m+if+tlgl+cv+fl+qiip +++v+r+c++s++ef++qqL+++vsivk
+  AEY98103 923 SHHTAVIQAVMHIFQTLGLRCVSFLKQIIPGMINVMRSCPPSILEFYFQQLGVMVSIVK 981
+               **********************************************************8 PP
+
+  == domain 6  score: 4.8 bits;  conditional E-value: 0.016
+  mTOR_dom  106 avvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                +++++i si k+l+ +  p+lp  +  +l v+++ +s+ +   ++ L++Lv
+  AEY98103 1007 TIISVIESISKSLEGEFKPYLPTTLTLFLDVLEKDNSNKKIISIRILKSLV 1057
+                7899*****************************988888888888887776 PP
+
+  == domain 7  score: 1.1 bits;  conditional E-value: 0.21
+  mTOR_dom   83 yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155 
+                y + vi +++++ +  s  +   a++ +i    k+++l   ++ ++i++++++v++ +++++   +++ L+ L
+  AEY98103 1066 YIHLVIPSIVRMCEYGSG-NLNRAAIVTIGRLAKSVNLS--EMSSRIVQTMIRVLNVSDQQIIRAVMNTLSLL 1135
+                555677777777766654.46677777788888875555..45578999999999998888888888888877 PP
+
+  == domain 8  score: 0.5 bits;  conditional E-value: 0.33
+  mTOR_dom  128 qiipallsvirtcesslrefllqqLatL 155 
+                ++ip+l+s i++ +++++  ll+ L++L
+  AEY98103 1866 EVIPQLISRIHQPNQTVSRSLLSLLSDL 1893
+                6999999999999999999999999988 PP
+
+>> AEY97853  pep chromosome:ASM96883v1:VI:745737:753752:1 gene:FAGOS_FAFR169W transcript:AEY97853 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.9   0.3      0.85   3.7e+02      76     144 ..     338     407 ..     312     419 .. 0.59
+   2 ?    4.3   0.0     0.022       9.3      58     122 ..    1380    1449 ..    1364    1522 .. 0.69
+   3 ?    3.2   0.0     0.048        21      85     157 ..    1566    1638 ..    1459    1641 .. 0.74
+   4 ?    3.2   0.0     0.047        21      91     157 ..    1572    1638 ..    1559    1713 .. 0.55
+   5 ?    3.5   0.0     0.038        17     119     151 ..    1718    1750 ..    1707    1756 .. 0.89
+   6 ?    1.2   0.0       0.2        87     112     159 ..    1852    1903 ..    1840    1904 .. 0.78
+   7 ?    2.9   0.1     0.059        25      88     157 ..    1951    2018 ..    1909    2020 .. 0.60
+   8 ?    4.8   0.1     0.016       6.8      87     133 ..    2063    2112 ..    2055    2134 .. 0.77
+   9 !   11.7   0.0   0.00012     0.052      60     157 ..    2228    2326 ..    2218    2328 .. 0.87
+  10 ?   -0.7   0.0      0.73   3.2e+02       7      27 ..    2395    2415 ..    2337    2421 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: -0.9 bits;  conditional E-value: 0.85
+  mTOR_dom  76 spsseeyyptvvina...Llkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcessl 144
+                +s++e     ++na   Ll+ l +++ +  + a  q + + fk+++ ++   ++  +  +l+++ t ++ +
+  AEY97853 338 YKSTKEAVREATLNAtreLLNSLTKETCD--QDALQQFVAELFKSMKSNMHVDYKSTVARILTWVPTFSELV 407
+               34455555554444400044444444444..34444567788888888886666677777777776666554 PP
+
+  == domain 2  score: 4.3 bits;  conditional E-value: 0.022
+  mTOR_dom   58 keeenaeetdvsellvglspsseeyyptvvinaLlkil.....kdpslsshhtavvqaimsifktlglkc 122 
+                ++++ ++ ++v+ +  +ls+s + +++ +vi+ L +il     + p ++s  +++ ++ims   + g+k 
+  AEY97853 1380 DKKDPKRRESVAYAFECLSKSLNKFFEPYVIEVLPNILknlgdSVPEVRSATAEATKSIMSHTTSYGVKK 1449
+                3334444456666688889999****************44333334455555555555555555544443 PP
+
+  == domain 3  score: 3.2 bits;  conditional E-value: 0.048
+  mTOR_dom   85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                + +i+ +++ ++d+s +  + ++ + + ++   +++k  vp+l+q+i ++  ++ +  ++ r +  + L+ Lv+
+  AEY97853 1566 ALIIHVIHRGMRDRSAN-TKRKACKIVGNMAILVDTKDlVPYLQQLIDEVEVAMVDPVPQTRATAARALGALVE 1638
+                46777888888998877.45566677777777777777799999999999998888888999998888888885 PP
+
+  == domain 4  score: 3.2 bits;  conditional E-value: 0.047
+  mTOR_dom   91 Llkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                +++ ++d+s +  + ++ + + ++   +++k  vp+l+q+i ++  ++ +  ++ r +  + L+ Lv+
+  AEY97853 1572 IHRGMRDRSAN-TKRKACKIVGNMAILVDTKDlVPYLQQLIDEVEVAMVDPVPQTRATAARALGALVE 1638
+                44445555544.23333444444444444444455555555555555555555555555555555543 PP
+
+  == domain 5  score: 3.5 bits;  conditional E-value: 0.038
+  mTOR_dom  119 glkcvpflpqiipallsvirtcesslrefllqq 151 
+                g +  p+++qii+ +ls + ++++++r++ ++ 
+  AEY97853 1718 GSQFAPYINQIIQPILSGLADSDENIRDVAFKA 1750
+                66789************************9985 PP
+
+  == domain 6  score: 1.2 bits;  conditional E-value: 0.2
+  mTOR_dom  112 msifktlglkcvpflpqiipallsvir....tcesslrefllqqLatLvsiv 159 
+                + i k l  +   +++ i+p+l+s++     +++s+lr+   q L++Lv+ v
+  AEY97853 1852 IDIWKALVPNTPRTIKDILPTLTSLVVvhlaSSSSTLRHIAAQSLGDLVRRV 1903
+                56777788888889999***9999554334366669************9866 PP
+
+  == domain 7  score: 2.9 bits;  conditional E-value: 0.059
+  mTOR_dom   88 inaLlkilkdpslsshhtavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                  ++++il++    +  ++v ++    f + ++      ++++ip ll++++++e   +e+ l  L++++s
+  AEY97853 1951 EDTIVNILRNTL-VDESESVRESAALSFDKyQDAVGRVAIDKVIPYLLNILESSE--NSEYALLALQEIIS 2018
+                356677775444.44455555555555555155555999*************976..46666666666665 PP
+
+  == domain 8  score: 4.8 bits;  conditional E-value: 0.016
+  mTOR_dom   87 vinaLlkilkdpsls.shhtavvqaimsifktlglkc..vpflpqiipal 133 
+                +inaL++ + dp ++ + ++++++ai +++++++ +    p+l+qi+  l
+  AEY97853 2063 IINALVNAMIDPEVDeTAKESIINAIDKVLSSVSSEDgvHPLLQQIMALL 2112
+                78899998889988877888899999999998887766467777777544 PP
+
+  == domain 9  score: 11.7 bits;  conditional E-value: 0.00012
+  mTOR_dom   60 eenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157 
+                ++++++  +++++ ++  ++   y tv+   L++++ ++s s+ ++a++ a+   f+++     pf+pq+  ++++ ++++++ +lr    + L+tL++
+  AEY97853 2228 DRESSALGIADIVSKTPAANLRPYVTVITGPLIRVVGERSSSDIKAAILYALNVLFSKVPQFLRPFIPQLQRTFVKSLSDSTNeTLRLRAAKALGTLIQ 2326
+                44555566777777777777899***********************************99999*************99999988999999999999997 PP
+
+  == domain 10  score: -0.7 bits;  conditional E-value: 0.73
+  mTOR_dom    7 dypeLLeiLlnilkteqsqsi 27  
+                 y +LL++L++i++ e++q+i
+  AEY97853 2395 AYAKLLGALSEIMSPEEAQTI 2415
+                466777777777777766655 PP
+
+>> AEY98468  pep chromosome:ASM96883v1:VII:55227:58505:-1 gene:FAGOS_FAGL349C transcript:AEY98468 gene_biotype:protein_c
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.4   0.0       1.2   5.2e+02       8      35 ..     137     163 ..     132     166 .. 0.76
+   2 ?   -1.8   0.0       1.6     7e+02     107     157 ..     197     251 ..     190     254 .. 0.63
+   3 ?    0.4   0.2      0.34   1.5e+02      66      95 ..     290     319 ..     252     376 .. 0.75
+   4 !   16.1   0.6   5.1e-06    0.0022      60     140 ..     468     547 ..     406     557 .. 0.79
+   5 ?    3.6   0.0     0.036        16     113     141 ..     610     638 ..     604     645 .. 0.85
+   6 ?   -3.6   0.0       6.1   2.6e+03     103     131 ..     966     994 ..     947    1018 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: -1.4 bits;  conditional E-value: 1.2
+  mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvl 35 
+                peLL++L+++ k++ ++++R +  +++
+  AEY98468 137 WPELLRTLFEATKNQ-NPNFRESSFRIF 163
+               599999999998854.778887777765 PP
+
+  == domain 2  score: -1.8 bits;  conditional E-value: 1.6
+  mTOR_dom 107 vvqaimsifktlglkcvpflpqiipalls....virtcesslrefllqqLatLvs 157
+               +v+a +  fk+l     + l  ++p+ll+     + + +++ +  +++ L +Lv+
+  AEY98468 197 AVTAFVGYFKQLPKMHWAKLGVLLPSLLNslpkFLDDGKDDALAAVFESLIELVE 251
+               6777777777766666665555555555511115566666777778888888776 PP
+
+  == domain 3  score: 0.4 bits;  conditional E-value: 0.34
+  mTOR_dom  66 tdvsellvglspsseeyyptvvinaLlkil 95 
+               t  se + ++++s+ +y ++ ++ +Ll++ 
+  AEY98468 290 TVFSECAPQMCKSNPNYAQSLIMDTLLMMT 319
+               333444889999********9999999886 PP
+
+  == domain 4  score: 16.1 bits;  conditional E-value: 5.1e-06
+  mTOR_dom  60 eenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtc 140
+                ++ ++ ++ ++  + ++   e y    +++Ll++l+ ++l   +++++++i +i +  + k +++++ ++p llsv++t 
+  AEY98468 468 VQTHAAAALVNFSEHATQIILEPYLDSLLTNLLSMLQSSKLY-VQEQALTTIAFIAEAAEKKFIKYYDTLMPLLLSVLKTD 547
+               3333334444446666777789999999********999988.788999*****************************984 PP
+
+  == domain 5  score: 3.6 bits;  conditional E-value: 0.036
+  mTOR_dom 113 sifktlglkcvpflpqiipallsvirtce 141
+                i++ l+   vpflp ++p+ll++++  +
+  AEY98468 610 RICRILREDFVPFLPIVLPSLLETAKAGQ 638
+               588999999*************9998655 PP
+
+  == domain 6  score: -3.6 bits;  conditional E-value: 6.1
+  mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiip 131
+                 +++  a+ +i+++ g +  +f + +++
+  AEY98468 966 ATENTAAAVAKILHSFGANIPTFETYVVN 994
+               45666777777777777777666665554 PP
+
+>> AEY95331  pep chromosome:ASM96883v1:III:30324:32909:1 gene:FAGOS_FACL187W transcript:AEY95331 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.1   0.3     0.025        11       7      40 ..     131     166 ..     127     338 .. 0.65
+   2 ?    0.1   0.0      0.43   1.9e+02     103     155 ..     385     438 ..     361     442 .. 0.74
+   3 ?    3.8   0.0     0.032        14      37      99 ..     442     511 ..     426     529 .. 0.57
+   4 !    6.0   0.2    0.0067       2.9      72     155 ..     583     666 ..     493     671 .. 0.71
+   5 ?    3.3   0.0     0.045        20      72     135 ..     663     730 ..     649     744 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 4.1 bits;  conditional E-value: 0.025
+  mTOR_dom   7 dypeLLeiLlnilkteqsqsiRrevikvlGil..GA 40 
+               + p+L++iL++   + q ++++r  + vlG +  GA
+  AEY95331 131 EWPDLMKILVENTTQHQPENVKRASLLVLGYIceGA 166
+               789999999999999999999999999999884444 PP
+
+  == domain 2  score: 0.1 bits;  conditional E-value: 0.43
+  mTOR_dom 103 hhtavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+               +++a+v +  si+    +++ v+++ q +p +l++i++   +++e++   ++ +
+  AEY95331 385 QREAAVMSFGSILDGpDKVQLVSLVHQALPPILNLINDPVLQVKETVAWCIGRI 438
+               56677777777777734556699*************997668888877666655 PP
+
+  == domain 3  score: 3.8 bits;  conditional E-value: 0.032
+  mTOR_dom  37 ilGALDPykhkeveeks.......eeeekeeenaee....tdvsellvglspsseeyyptvvinaLlkilkdps 99 
+               ++GA+DP++h +    +       ++ + + +++ +    + v++l+ +  +   +yyp   + +L+k  + p 
+  AEY95331 442 VVGAIDPQRHLSDV--InacllglND-HPKVATNCAwtiiNLVEQLADNPGSPIYNYYPV-LVDSLMKTANRPD 511
+               57899999984333..2235554322.222222222222233344455555555777774.6677777766655 PP
+
+  == domain 4  score: 6.0 bits;  conditional E-value: 0.0067
+  mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                 +  p s    + + +   lk+l+++  s    +v  +i s   ++g     +l+ + p l++++++++s+++ + +  +a++
+  AEY95331 583 SIRKNPQSVSAVSDMLMDLFLKLLSKKDSSYIEDDVFYVISSLATSMGKGFERYLETFSPYLVHALNQVQSQVSVTAVGLIADI 666
+               333356666777778888999999999999999***********************************9998887777666665 PP
+
+  == domain 5  score: 3.3 bits;  conditional E-value: 0.045
+  mTOR_dom  72 lvglspsseeyypt...vvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipalls 135
+               ++++s+s e+ +++     +n L ++++ +  + + + av+++   i +++g   +p+l+q++   ++
+  AEY95331 663 IADISNSLEDDFKKfapAFMNVLGSMISSQDARmELKPAVLSVFGDIASNIGDDFIPYLNQVMALCVA 730
+               5666666666555522244666666666666665788999999999****************976665 PP
+
+>> AEY98519  pep chromosome:ASM96883v1:VII:146132:149479:-1 gene:FAGOS_FAGL298C transcript:AEY98519 gene_biotype:protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.1   0.0      0.97   4.2e+02      69      96 ..      22      50 ..       6      65 .. 0.53
+   2 ?    0.8   0.1      0.26   1.1e+02      93     112 ..     177     196 ..      81     244 .. 0.43
+   3 !    5.9   0.2    0.0072       3.1      56     156 ..     324     427 ..     286     431 .. 0.70
+   4 !    8.8   0.0   0.00087      0.38      87     142 ..     484     539 ..     462     566 .. 0.76
+   5 ?    5.0   0.0     0.013       5.8     109     141 ..     598     630 ..     570     635 .. 0.84
+   6 ?   -3.6   0.0       5.7   2.5e+03     118     158 ..     678     721 ..     674     723 .. 0.56
+   7 ?   -1.4   0.0       1.2   5.3e+02      68     101 ..     889     921 ..     827     965 .. 0.54
+   8 ?   -2.3   0.0       2.3   9.9e+02       6      71 ..    1018    1085 ..    1015    1109 .. 0.44
+
+  Alignments for each domain:
+  == domain 1  score: -1.1 bits;  conditional E-value: 0.97
+  mTOR_dom 69 sellvglspsseeyypt.vvinaLlkilk 96
+              s+l  ++ + ++++y + +++ aL++i++
+  AEY98519 22 SSLKETTKTLQTQFYTQvTALPALVHIMQ 50
+              33333344444455544234555555554 PP
+
+  == domain 2  score: 0.8 bits;  conditional E-value: 0.26
+  mTOR_dom  93 kilkdpslsshhtavvqaim 112
+               + l+ +sls +  + v+a++
+  AEY98519 177 ASLETRSLSVQALNHVSALI 196
+               22244444444444444444 PP
+
+  == domain 3  score: 5.9 bits;  conditional E-value: 0.0072
+  mTOR_dom  56 eekeeenaeetdvsellvglspsseeyyptvvinaLlkil..kdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLa 153
+               ee+  en+e+t   +++  +  +s+e+ p+ v + +++ l    +s ++    ++   +s+  t +    ++ l++iipa +s +++ e+ ++   l+ ++
+  AEY98519 324 EEEAGENEENTPCLTAMRLIAFCSTEFPPSQVAAPIMEHLpaMLSSANQFERRAILLAISVAVTGSPDYmLSQLDRIIPATISGMKDQEPIVQLAALKAVS 424
+               233334444444444477788889999999888888877733334555666666666666666544444599****************9999999999999 PP
+
+  mTOR_dom 154 tLv 156
+               +L+
+  AEY98519 425 QLT 427
+               987 PP
+
+  == domain 4  score: 8.8 bits;  conditional E-value: 0.00087
+  mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                +n+L ++l+ ++ s+ ++a+v+ai s     g + vp+ +  ++ l + i++c++
+  AEY98519 484 LMNKLFQMLESQTSSKLRAAIVSAIGSAAFAAGSNFVPYFKTSVQFLEQFIQNCSN 539
+               6899*********************9999999999999766555555555555543 PP
+
+  == domain 5  score: 5.0 bits;  conditional E-value: 0.013
+  mTOR_dom 109 qaimsifktlglkcvpflpqiipallsvirtce 141
+                 i ++ k  g    pfl+ i+p++++++++ e
+  AEY98519 598 AFIANMAKVYGKDFAPFLETIMPEIFKTLQQEE 630
+               56899999999****************999754 PP
+
+  == domain 6  score: -3.6 bits;  conditional E-value: 5.7
+  mTOR_dom 118 lglkcvpflpqiipallsvirtces...slrefllqqLatLvsi 158
+               l + c +   +++   l+v+r+  +    lre+ ++ + ++v+ 
+  AEY98519 678 LAIACKEQFLKFVEPSLKVLREQVDesyGLRETAMHTIWNIVKA 721
+               66677544445666666777743221246677776666666655 PP
+
+  == domain 7  score: -1.4 bits;  conditional E-value: 1.2
+  mTOR_dom  68 vsellvglspsseeyyptvvinaLlkilkdpsls 101
+               vse++ gl + ++ y +    + ++++  d+sl+
+  AEY98519 889 VSEIALGL-KEHNPYVQELLQAMIIRLTADKSLE 921
+               33333333.3333444444444444555555554 PP
+
+  == domain 8  score: -2.3 bits;  conditional E-value: 2.3
+  mTOR_dom    6 ldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseee...ekeeenaeetdvsel 71  
+                ++y  ++e+++++ + + ++ i  e+ +++    A+      +++ ++e++   e++ ++ ++++++e+
+  AEY98519 1018 EEYDPIFELIIKLYQAN-NSLIIAETPRIIEFFAAVFTKDNERIQLEKESTlgrEENMDKLKQFQSQEM 1085
+                55555666666555544.344455555555555555444443333333222222222222222333333 PP
+
+>> AEY97039  pep chromosome:ASM96883v1:V:728391:731020:1 gene:FAGOS_FAER049W transcript:AEY97039 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.1   0.0     0.052        22     118     159 ..      75     117 ..      10     118 .. 0.87
+   2 ?   -1.9   0.0       1.7   7.4e+02     121     158 ..     203     240 ..     182     241 .. 0.78
+   3 ?    2.5   0.0      0.08        35     119     157 ..     242     280 ..     230     283 .. 0.88
+   4 !    8.1   0.1    0.0015      0.64     102     150 ..     402     450 ..     315     459 .. 0.76
+   5 ?   -0.7   0.0      0.73   3.2e+02      72      98 ..     537     563 ..     509     623 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 3.1 bits;  conditional E-value: 0.052
+  mTOR_dom 118 lglkc.vpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+               lg k   ++l++i+p +l+ + + ++++r +  + L ++ +i 
+  AEY97039  75 LGNKYvAEYLNKILPPVLACFGDQNDQVRFYACESLYNIAKIA 117
+               55566478***************999*9999999999998886 PP
+
+  == domain 2  score: -1.9 bits;  conditional E-value: 1.7
+  mTOR_dom 121 kcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                    lp +ip l + i+ ++++ r f+++ L++L si
+  AEY97039 203 VLAFSLPDFIPLLSERIHVLNPDTRMFMVSWLQVLESI 240
+               44567999********************9999998665 PP
+
+  == domain 3  score: 2.5 bits;  conditional E-value: 0.08
+  mTOR_dom 119 glkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+               +l+ +++lp+++p l++++ ++++++r + l  L++L  
+  AEY97039 242 DLELITYLPHFLPGLFTYLGDTHNDVRMVTLALLNSLLH 280
+               577899***************************999975 PP
+
+  == domain 4  score: 8.1 bits;  conditional E-value: 0.0015
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllq 150
+               + ++ v++ + +i++    + +pfl++i++ ll+++++++++++e+  q
+  AEY97039 402 EIQSVVLNWLQTILRISPNNILPFLSKILSVLLKILSDSDPHISEMAKQ 450
+               344555566666677667799*******************999998766 PP
+
+  == domain 5  score: -0.7 bits;  conditional E-value: 0.73
+  mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdp 98 
+               + +l++ s+e y +  +++Llk++k++
+  AEY97039 537 ISDLCNGSNEAYIKKFLKNLLKLFKEN 563
+               455566666666666777777777543 PP
+
+>> AEY96090  pep chromosome:ASM96883v1:IV:463983:467231:-1 gene:FAGOS_FADL128C transcript:AEY96090 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.7   0.0   0.00023       0.1      74     157 ..     516     602 ..     485     605 .. 0.86
+   2 ?   -2.2   0.0       2.1   9.2e+02     122     148 ..     616     643 ..     608     651 .. 0.75
+   3 ?    1.3   0.2      0.18        80      84     144 ..     675     737 ..     634     744 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 10.7 bits;  conditional E-value: 0.00023
+  mTOR_dom  74 glspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157
+               ++ + +e  +  +vi+ Ll++ +++  ++ ++ v + im+++ +    lk   +fl+ ++ +l++ ++++++ ++++  + + ++v+
+  AEY96090 516 TMDEETEKRFVVTVIKDLLALTEQKRGKDNKAVVASNIMYVVGQypRFLKAhWKFLKTVVLKLFEFMHETHEGVQDMACDTFIKIVQ 602
+               456667999999******************************995534666699*****************9*99999988888876 PP
+
+  == domain 2  score: -2.2 bits;  conditional E-value: 2.1
+  mTOR_dom 122 cvpflpqiipallsvirtces.slrefl 148
+                 pf++ ii  ++++++++++ ++  f+
+  AEY96090 616 KEPFIQAIIRDIQKTTEDLQPqQVHTFY 643
+               5689999999999999999885555444 PP
+
+  == domain 3  score: 1.3 bits;  conditional E-value: 0.18
+  mTOR_dom  84 ptvvinaLl..kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcessl 144
+                t+v ++     +l dp   +  ++++++ +s++++ +    + l +i  ++l++ r ++s +
+  AEY96090 675 DTIVAQSAAnpDLLLDPETVKIIANIIKTNVSVCSSTEADFYSQLGHIYYNMLQLYRAVSSMI 737
+               444444444225788999999999999999999999999999999999999999999887654 PP
+
+>> AEY97757  pep chromosome:ASM96883v1:VI:557477:562801:-1 gene:FAGOS_FAFR074C transcript:AEY97757 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.9   0.0      0.89   3.9e+02      78     103 ..     138     163 ..     122     207 .. 0.81
+   2 ?   -2.4   0.1       2.6   1.1e+03     107     140 ..     962    1007 ..     940    1036 .. 0.62
+   3 !    6.6   0.2    0.0042       1.8      98     142 ..    1345    1392 ..    1271    1407 .. 0.72
+   4 !    7.5   0.1    0.0023      0.98      84     158 ..    1689    1763 ..    1652    1764 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -0.9 bits;  conditional E-value: 0.89
+  mTOR_dom  78 sseeyyptvvinaLlkilkdpslssh 103
+               s+ +yy++ v++ +l+i+k p l s 
+  AEY97757 138 STLNYYQSPVFKRILNIVKLPPLFSS 163
+               55789999999999999998877654 PP
+
+  == domain 2  score: -2.4 bits;  conditional E-value: 2.6
+  mTOR_dom  107 vvqaimsifktlglkcvp............flpqiipallsvirtc 140 
+                v+++im if  +g  ++             +++ ++pall+  +++
+  AEY97757  962 VLHSIMPIFTFMGAHSLRqddefstmvvekTVKTVVPALLESGSSS 1007
+                5566666666666655444455444444445555555555544444 PP
+
+  == domain 3  score: 6.6 bits;  conditional E-value: 0.0042
+  mTOR_dom   98 pslsshhtavvqai...msifktlglkcvpflpqiipallsvirtces 142 
+                +  ss    vv+a+   ++ ++ lg+k++ f+ +i+p  l+++ ++++
+  AEY97757 1345 KLNSSSTDIVVSALavlTNTVHVLGVKSIGFYAKIVPRALAIFDSVQD 1392
+                33334444444443222888888***************9999988765 PP
+
+  == domain 4  score: 7.5 bits;  conditional E-value: 0.0023
+  mTOR_dom   84 ptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158 
+                ++   +aL++ +k ++ +s++  +v+a   i+ ++g   + +lpq++p +++++++ ++++++ +   L + v++
+  AEY97757 1689 SKLLHRALVEHMKASCATSQKLWAVKATKLIYAKVGEHWLVLLPQLVPVIAELLEDDDEEVEQEVRTGLVKVVET 1763
+                56677899999********************************************99888888777777776665 PP
+
+>> AEY98808  pep chromosome:ASM96883v1:VII:1036350:1039988:-1 gene:FAGOS_FAGL014C transcript:AEY98808 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.1   0.0       4.2   1.8e+03     102     125 ..     426     450 ..     402     454 .. 0.60
+   2 ?    9.5   0.1   0.00055      0.24     101     155 ..     794     848 ..     748     852 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: -3.1 bits;  conditional E-value: 4.2
+  mTOR_dom 102 shhtavvqaimsifktlglkc.vpf 125
+               +  ++v++++   fk+l+ +c   f
+  AEY98808 426 HCAKEVLNTLAAAFKKLRHRCnPDF 450
+               3345666777777777777774445 PP
+
+  == domain 2  score: 9.5 bits;  conditional E-value: 0.00055
+  mTOR_dom 101 sshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+               +  ++a ++ai+  +k l     +f+ qi+p+++  +++++++ re  +  L ++
+  AEY98808 794 TASKAARLTAITALVKLLPSDHHNFIVQIVPEVIVSCKDTNEKSREAAFGALIVM 848
+               456677899****************************************999765 PP
+
+>> AEY94624  pep chromosome:ASM96883v1:I:291791:294925:1 gene:FAGOS_FAAL028W transcript:AEY94624 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.2   0.0      0.53   2.3e+02      84     155 ..      47     117 ..      16     121 .. 0.59
+   2 ?    5.3   0.7      0.01       4.5      34     148 ..     114     228 ..     102     240 .. 0.66
+   3 ?    3.8   0.0      0.03        13     102     156 ..     264     318 ..     232     320 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: -0.2 bits;  conditional E-value: 0.53
+  mTOR_dom  84 ptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+               p   +++L k +kd++ +   +a++++i +i ++  l+  + p++  ++p++   + + +++++    + L  +
+  AEY94624  47 PEEFFKNLTKAVKDKKTA---AAALETIAHIANEnnLSPSVEPYIVDLVPEVCVKTGDKDKDVQSIASETLLAI 117
+               444566677777777655...66777777777663344445677777777776666665556665555555555 PP
+
+  == domain 2  score: 5.3 bits;  conditional E-value: 0.01
+  mTOR_dom  34 vlGilGALDPykhkeveekseee.ekeeenaeetdvsellvglspsseeyyptvvin..aLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiip 131
+               +l i+ A+DP+  k++  + +++    ++n+ +++vs  l+ +s   +    +v+++  +L+ +l+++  ++ ++    a  ++ k  ++   + ++++ip
+  AEY94624 114 LLAIVKAIDPVAIKVILPHLTKSlV--TTNKWQEKVSV-LAAISALVDAAKTQVALRmpELIPVLSEAMWDTKKEVKHAATATMTKATETVDNKDIERFIP 211
+               5788889999999999988866532..22222233333.34555555666666665433799999888877666666666667777777777889999999 PP
+
+  mTOR_dom 132 allsvirtcesslrefl 148
+               +l++ i + ++  + ++
+  AEY94624 212 ELIQCIADPSQVSETVH 228
+               99999998777555555 PP
+
+  == domain 3  score: 3.8 bits;  conditional E-value: 0.03
+  mTOR_dom 102 shhtavvqaimsifktlglkc..vpflpqiipallsvirtces.slrefllqqLatLv 156
+                  + +   i +++k ++  +   pfl++++p l + + t+ + + re+ l+ L+tL 
+  AEY94624 264 RKAAVI---IDNMCKLVEDPQvvAPFLEKLLPGLKNNFATIADpEAREVTLRGLKTLR 318
+               333333...4444554444332379***********99999988**********9996 PP
+
+>> AEY96984  pep chromosome:ASM96883v1:V:622113:629588:1 gene:FAGOS_FAEL006W transcript:AEY96984 gene_biotype:protein_co
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.6   0.3     0.074        32      61     144 ..    1474    1559 ..    1454    1569 .. 0.70
+   2 ?    5.5   0.0    0.0092         4     118     156 ..    1624    1662 ..    1563    1665 .. 0.69
+   3 ?   -3.2   0.0       4.3   1.9e+03      77     112 ..    1878    1913 ..    1851    1964 .. 0.67
+   4 ?    2.6   0.8     0.073        32      44     116 ..    2315    2389 ..    2294    2422 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 2.6 bits;  conditional E-value: 0.074
+  mTOR_dom   61 enaeetdvsel....lvglspsseeyyptvvinaLl..kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcessl 144 
+                ++ +e+++s++    + +++  ++e y +   +++    il++ s  ++++a+++  +s++k+      + l++i++ +++v+r+ +++l
+  AEY96984 1474 DKLNENSISHYllpmIERYIFVEDEKYRNLCNETIAtiGILSNYSSWNQYKAILRRYISMMKQ----KPNHLKEIVNVIVAVTRSFKNTL 1559
+                333334444443343555577889999988877776336788888889999999999999985....78999999999999999877654 PP
+
+  == domain 2  score: 5.5 bits;  conditional E-value: 0.0092
+  mTOR_dom  118 lglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                 + + v++lp i+ +l +v+r+ +++lr+++ ++L+++ 
+  AEY96984 1624 PNERIVSLLPGILTSLCQVLRSRSEELRDVVRKNLGNIA 1662
+                34466****************************999885 PP
+
+  == domain 3  score: -3.2 bits;  conditional E-value: 4.3
+  mTOR_dom   77 psseeyyptvvinaLlkilkdpslsshhtavvqaim 112 
+                + + +   t+ ++  + ilk++ ls+    v++++ 
+  AEY96984 1878 SRNRNLLDTTYLEGFIPILKESLLSDNDGVVISTLK 1913
+                445667777778888888888888888888887752 PP
+
+  == domain 4  score: 2.6 bits;  conditional E-value: 0.073
+  mTOR_dom   44 ykhkeveekseeeekeeenaeetdvsel......lvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifk 116 
+                y  k++e +      + ++a e+++s++        + s+s+   + +   ++ L++il+ ++l+++ +a++ a+ + ++
+  AEY96984 2315 YISKNNEDEV-----RYSTAMEFAISRIsailrnEENKSESHaSKMSAIQLLAMLIQILDAAQLAQYGEAIILAVYTYVE 2389
+                4444444333.....22333333333332222222222444423333334455667888888888888888888766554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       4774  (2334254 residues searched)
+Passed MSV filter:                       263  (0.0550901); expected 95.5 (0.02)
+Passed bias filter:                      201  (0.0421031); expected 95.5 (0.02)
+Passed Vit filter:                        26  (0.00544617); expected 4.8 (0.001)
+Passed Fwd filter:                        11  (0.00230415); expected 0.0 (1e-05)
+Initial search space (Z):               4774  [actual number of targets]
+Domain search space  (domZ):              11  [number of targets reported over threshold]
+# CPU time: 0.07u 0.05s 00:00:00.12 Elapsed: 00:00:00.14
+# Mc/sec: 2657.62
+//
+[ok]

@@ -1,0 +1,51 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Cryptosporidium_pavrum.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    1.7e-06   25.1   3.9    1.7e-06   25.1   3.9    1.2  1  EAK89171.1  uncharacterized low complexity protein [Cryptospo
+
+
+Domain annotation for each sequence (and alignments):
+>> EAK89171.1  uncharacterized low complexity protein [Cryptosporidium parvum Iowa II]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.1   3.9   4.5e-10   1.7e-06     154     226 ..     132     271 ..      18     448 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 25.1 bits;  conditional E-value: 4.5e-10
+  PTHR13335.orig.30.pir 154 e...rrsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq..........snkldseq. 225
+                            +   +r+++++++s ++ +        +++ +ss++++s+ ++ss+ss+ss++ss+ssssss+p++ ++               ++  
+             EAK89171.1 132 NffsKRNEQDTMNSFSSsS-------SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSDPTFiEStvmnmannsvA----EATd 208
+                            3455566666666665533.......222223334444445555566666666666677777788777677777644422....2223 PP
+
+  PTHR13335.orig.30.pir 226 ..............................................................l 226
+                                                                                          +
+             EAK89171.1 209 eevawenfeaaklayikliylkkrgdydaycqgiipeylanlfssnelndgkfeellrevcsC 271
+                            445777777777777777777777777777777777776666655555555555555555551 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       3805  (2271431 residues searched)
+Passed MSV filter:                       903  (0.237319); expected 76.1 (0.02)
+Passed bias filter:                      143  (0.0375821); expected 76.1 (0.02)
+Passed Vit filter:                        63  (0.0165572); expected 3.8 (0.001)
+Passed Fwd filter:                         6  (0.00157687); expected 0.0 (1e-05)
+Initial search space (Z):               3805  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.27u 0.12s 00:00:00.39 Elapsed: 00:00:00.18
+# Mc/sec: 8060.68
+//
+[ok]

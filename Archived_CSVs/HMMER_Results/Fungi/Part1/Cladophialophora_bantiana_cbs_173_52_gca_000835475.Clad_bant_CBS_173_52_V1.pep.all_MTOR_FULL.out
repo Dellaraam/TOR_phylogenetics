@@ -1,0 +1,555 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Cladophialophora_bantiana_cbs_173_52_gca_000835475.Clad_bant_CBS_173_52_V1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.3e-63  212.5   3.1    3.9e-59  198.7   0.2    6.0  6  KIW91819  pep supercontig:Clad_bant_CBS_173_52_V1:KN846990:99
+    2.5e-10   40.1   0.7       0.01   15.3   0.1    6.7  8  KIW98581  pep supercontig:Clad_bant_CBS_173_52_V1:KN846980:67
+    0.00018   21.0   2.7      0.045   13.2   0.1    5.0  6  KIW89486  pep supercontig:Clad_bant_CBS_173_52_V1:KN846995:15
+  ------ inclusion threshold ------
+      0.011   15.2   8.5      0.076   12.5   0.0    5.8  7  KIW90841  pep supercontig:Clad_bant_CBS_173_52_V1:KN846992:73
+      0.012   15.1   3.8       0.11   11.9   0.0    3.8  4  KIW93532  pep supercontig:Clad_bant_CBS_173_52_V1:KN846987:13
+       0.02   14.4   2.6         27    4.2   0.4    5.6  6  KIW96009  pep supercontig:Clad_bant_CBS_173_52_V1:KN846983:79
+      0.021   14.3   1.2          4    6.9   0.3    3.4  3  KIW93452  pep supercontig:Clad_bant_CBS_173_52_V1:KN846987:11
+      0.038   13.5   0.0      1e+02    2.3   0.0    5.6  8  KIW94268  pep supercontig:Clad_bant_CBS_173_52_V1:KN846986:16
+      0.038   13.5   0.4        9.2    5.7   0.0    3.4  4  KIW98327  pep supercontig:Clad_bant_CBS_173_52_V1:KN846981:24
+      0.054   13.0   0.0       0.11   12.0   0.0    1.4  1  KIW98868  pep supercontig:Clad_bant_CBS_173_52_V1:KN846980:14
+      0.064   12.7   0.0        5.3    6.5   0.0    2.4  2  KIW87535  pep supercontig:Clad_bant_CBS_173_52_V1:KN847003:25
+        3.8    7.0   7.0         18    4.8   0.0    4.4  6  KIW98654  pep supercontig:Clad_bant_CBS_173_52_V1:KN846980:87
+
+
+Domain annotation for each sequence (and alignments):
+>> KIW91819  pep supercontig:Clad_bant_CBS_173_52_V1:KN846990:998091:1005632:1 gene:Z519_07789 transcript:KIW91819 gene_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.9   0.0      0.94     1e+03      72     133 ..     289     355 ..     264     369 .. 0.65
+   2 ?    3.6   0.0     0.039        41      26     155 ..     595     732 ..     583     734 .. 0.64
+   3 !  198.7   0.2   3.6e-62   3.9e-59       1     160 []     739     899 ..     739     899 .. 0.99
+   4 ?    2.1   0.0      0.12   1.2e+02     102     152 ..     922     972 ..     908     978 .. 0.83
+   5 ?    1.7   0.0      0.15   1.6e+02      79     157 ..     981    1066 ..     965    1069 .. 0.71
+   6 ?   -3.9   0.0       7.7   8.2e+03     106     146 ..    1766    1803 ..    1762    1811 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: -0.9 bits;  conditional E-value: 0.94
+  mTOR_dom  72 lvglspsseeyyptvvinaLlkil...kdpsls..shhtavvqaimsifktlglkcvpflpqiipal 133
+               +v+++p   ey p   in+ l+ +    +++l+  + ++++  ai +i   +g    ++l+ ii  +
+  KIW91819 289 IVQIIPVLAEYAPLEFINNYLHKFmiyLQAQLKreKERNQAFIAIGQIADAVGSAIAQYLDGIILYI 355
+               4555666666666655555442111333333332467788888999999999999999999988655 PP
+
+  == domain 2  score: 3.6 bits;  conditional E-value: 0.039
+  mTOR_dom  26 siRrevikvlGilGALDPykhkeveeks..........eeeekeeenaee.tdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsif 115
+               ++R  +i ++G l  ++P  +    +k           +  ++ ++++e+   +s+++ +  +s    y   +++aLl    dp+     +++++a+    
+  KIW91819 595 AVREAAIEIIGRLTTVNPAYVFPPLRKLlvnlltglgyS--NTAKQKEESaRLISLFVSN-ATSLVRTYVEAMVSALLPKATDPNPG-VASTTIKALGDLT 691
+               566667777777777776655222222233334443221..2222333230334444444.44445556666777888777888866.6788999999999 PP
+
+  mTOR_dom 116 ktlglkcvpflpqiipallsvirtces.slrefllqqLatL 155
+               +  g ++   +p+++p ++ +++++ s + re  ++ L +L
+  KIW91819 692 SVGGDEMAHHIPELMPIIIDALQDLGShEKREAAMKTLRSL 732
+               98888899999999999999999998889999999988877 PP
+
+  == domain 3  score: 198.7 bits;  conditional E-value: 3.6e-62
+  mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLl.kilkdpsl 100
+               V++PyldypeLL+iL+ni+kte ++++R ++ik++G+lGALDPyk+++++e+ +e+++++e+++ +dv+++++gl+ps+ee+yptvvin+L+ +il d++l
+  KIW91819 739 VIDPYLDYPELLGILINIIKTEAHEELRTDAIKLVGVLGALDPYKYQQLNESVAEKQSKAETQPVSDVALIMQGLTPSNEEFYPTVVINTLMqTILADHTL 839
+               9*************************************************99999999**********************************779****** PP
+
+  mTOR_dom 101 sshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                ++h+av++a+++ifkt+g+kcvpfl qiip +l vir++++ ++e +++qLa+Lv+iv+
+  KIW91819 840 VQYHSAVIDAVVTIFKTIGMKCVPFLGQIIPGFLGVIRSSPPPRLESYFNQLAVLVNIVR 899
+               **********************************************************97 PP
+
+  == domain 4  score: 2.1 bits;  conditional E-value: 0.12
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152
+               + ++++++ i  i k+l+ +   +l  ++p +l vi++ ++ +re  ++ L
+  KIW91819 922 QVQSTILSLIEAISKSLEGEFRRYLAGLLPLMLGVIENDTDLRRESSIRIL 972
+               667788899999*************************98777777666655 PP
+
+  == domain 5  score: 1.7 bits;  conditional E-value: 0.15
+  mTOR_dom   79 seeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvp.....flpqiipallsvirtces.slrefllqqLatLvs 157 
+                s e y+++++ a++ i+++p+   + ++a+++++ +  +t+++   +      l +i+++  +v++++++ sl+   l+ ++ L++
+  KIW91819  981 SGEEYMHMIVPAIVGIFENPAAPpNARKAAIDTLGKLSRTVNVTDFAslmihPLAKILSSPEKVVTNSSErSLKSAALDCICALIY 1066
+                33445556778889999999888888889999998888887766533233336778888888888877777888888888887775 PP
+
+  == domain 6  score: -3.9 bits;  conditional E-value: 7.7
+  mTOR_dom  106 avvqaimsifktlglkcvpflpqiipallsvirtcesslre 146 
+                +v q++++ f ++++       ++ip+l++ i++ ++++r 
+  KIW91819 1766 EVNQVVIEGFASVSIDT---WLEVIPQLIARINQPNARVRA 1803
+                55556666666544444...335677777777766666655 PP
+
+>> KIW98581  pep supercontig:Clad_bant_CBS_173_52_V1:KN846980:675371:678913:-1 gene:Z519_00242 transcript:KIW98581 gene_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.2   0.0       2.4   2.6e+03      89     150 ..     103     165 ..      97     175 .. 0.79
+   2 ?    3.5   0.0     0.043        46      93     141 ..     188     235 ..     168     256 .. 0.78
+   3 ?   -1.5   0.0       1.4   1.5e+03      88     145 ..     374     430 ..     328     442 .. 0.69
+   4 !   15.3   0.1   9.5e-06      0.01      80     155 ..     449     524 ..     435     527 .. 0.86
+   5 ?    4.8   0.1     0.017        18       8      33 ..     536     561 ..     532     580 .. 0.86
+   6 ?    3.4   0.0     0.045        48     113     138 ..     613     638 ..     584     646 .. 0.86
+   7 ?    3.1   0.0     0.057        60     107     142 ..     853     888 ..     788     899 .. 0.82
+   8 ?   -4.1   0.0       9.2   9.7e+03     124     144 ..     911     931 ..     905     936 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: -2.2 bits;  conditional E-value: 2.4
+  mTOR_dom  89 naLlkilkdpslsshhtavvqaimsifkt.lglkcvpflpqiipallsvirtcesslrefllq 150
+               ++Ll+ l  +++++ ++++ +ai +i ++ ++    ++  ++++al+++ +++++ +re  ++
+  KIW98581 103 SKLLEGLAREQVNQVRNKIGDAIAEIARQyVDAGTNETWVELLHALFQASQSTDAGMRECSFR 165
+               567888888888899999999999998876788888888889999999999888888888776 PP
+
+  == domain 2  score: 3.5 bits;  conditional E-value: 0.043
+  mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+               k +kd+s++  + ++++a  s f++++ k  p +  +ip++l+++  ++
+  KIW98581 188 KGFKDSSVE-VRLSAIEAFASFFHSVSKKTQPKYYPLIPEILNILPPLK 235
+               556777765.78899***************9999999****99876544 PP
+
+  == domain 3  score: -1.5 bits;  conditional E-value: 1.4
+  mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+               ++ L ++++ +s ++ h a++ ai  i +  +  ++  l++++  ++  +r+ ++++r
+  KIW98581 374 FTWLPRMMHSASWRDRH-AALMAISAISEGCRDLMIGELDKVLELVVPSLRDPHPRVR 430
+               56677788778877655.4566777777777667777788887777777777766665 PP
+
+  == domain 4  score: 15.3 bits;  conditional E-value: 9.5e-06
+  mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+               +e y++vv+++++ +l+ p  +  ++ +  a+++ +++ +     p+l+q++ +ll+++++ ++ ++e  l+ +at+
+  KIW98581 449 QEKYHQVVLTNIIPVLEAPEPRV-QAHAAAALVNFCEEAEKSIlEPYLDQLLGHLLQLLQSPKRYVQEQALSTIATI 524
+               799**************999884.5556678999999999998799***************999****999999887 PP
+
+  == domain 5  score: 4.8 bits;  conditional E-value: 0.017
+  mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevik 33 
+               y +L+ +L+n+l+ eqs++ R+   k
+  KIW98581 536 YDTLMPLLFNVLRAEQSKEYRLLRAK 561
+               899***************99976555 PP
+
+  == domain 6  score: 3.4 bits;  conditional E-value: 0.045
+  mTOR_dom 113 sifktlglkcvpflpqiipallsvir 138
+                +++ lg   vp+lp ++p ll+++ 
+  KIW98581 613 RMCRVLGSDFVPYLPGVMPPLLELAA 638
+               589999***************99865 PP
+
+  == domain 7  score: 3.1 bits;  conditional E-value: 0.057
+  mTOR_dom 107 vvqaimsifktlglkcvpflpqiipallsvirtces 142
+               + +a ++ifk++g+  +p+ +q++p + + ++++++
+  KIW98581 853 MNKAFHTIFKNMGVAFLPTWQQLMPFYDAFVTSADP 888
+               4578899******************88888877776 PP
+
+  == domain 8  score: -4.1 bits;  conditional E-value: 9.2
+  mTOR_dom 124 pflpqiipallsvirtcessl 144
+               ++ ++ii+ l++ +r+ +++ 
+  KIW98581 911 QYSDHIIQPLINGMRDENANN 931
+               566777888887777766633 PP
+
+>> KIW89486  pep supercontig:Clad_bant_CBS_173_52_V1:KN846995:158480:162178:-1 gene:Z519_09642 transcript:KIW89486 gene_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.2   0.0         5   5.3e+03      88     129 ..     463     505 ..     434     509 .. 0.70
+   2 ?   -0.5   0.0      0.69   7.3e+02       3      34 ..     567     598 ..     565     645 .. 0.80
+   3 ?    1.3   0.0       0.2   2.1e+02      76     127 ..     685     738 ..     665     761 .. 0.69
+   4 !   13.2   0.1   4.2e-05     0.045      40     155 ..     755     889 ..     753     894 .. 0.60
+   5 ?   -1.2   0.0       1.2   1.3e+03     107     149 ..     924     967 ..     915     974 .. 0.71
+   6 ?    0.0   0.0      0.49   5.3e+02      75     159 ..    1047    1089 ..     992    1119 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: -3.2 bits;  conditional E-value: 5
+  mTOR_dom  88 inaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqi 129
+               +n++l +l ++sl+ + ++  v++i  ++ +l+    p++ +i
+  KIW89486 463 FNQILPLLMEKSLEdQERHLLVKVIDRVLYKLDDLIRPYVHKI 505
+               6777777888888856666777777777777776666666666 PP
+
+  == domain 2  score: -0.5 bits;  conditional E-value: 0.69
+  mTOR_dom   3 ePyldypeLLeiLlnilkteqsqsiRrevikv 34 
+                  l  p LL  L  + ++++s++ R   +k+
+  KIW89486 567 ASALGIPALLPFLRAVCRSKKSWQARHTGVKI 598
+               55566788888888888888888888777665 PP
+
+  == domain 3  score: 1.3 bits;  conditional E-value: 0.2
+  mTOR_dom  76 spsseeyyptvvinaLlkilkdpsls..shhtavvqaimsifktlglkcvpflp 127
+               +p  +e y+++  +++++il  +  s  +  ++vv  ++s + + +     +l+
+  KIW89486 685 IPLMDEEYANYYTSQIMEILLREFASpdEEMKKVVLKVVSQCASTDGVTAGYLK 738
+               556677777778888888875544443366777777777777777666666664 PP
+
+  == domain 4  score: 13.2 bits;  conditional E-value: 4.2e-05
+  mTOR_dom  40 ALDPykhkeveeks......eeeekeeenaeetdvsel...lvglspsseeyyptvvinaLlkil................kdpslsshhtavvqai.... 111
+               ALD  ++++v e++                    vse+   +v+  + + e y +++++++ k++                 d  l   +++ ++ +    
+  KIW89486 755 ALDKRNYRQVVETTvdlgqkV------------GVSEIverIVNNLKDESEAYRKMTVETIEKVIaslgaadigerleerlVDGILHAFQEQSIEDVvmln 843
+               777777777775552222220............22222222444445556666666666666666666666666666666644444444444444443333 PP
+
+  mTOR_dom 112 ..msifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                  ++++ lg++c p+lpqi++++l  +++ ++++r+   + ++ +
+  KIW89486 844 gfGTVVNALGTRCKPYLPQIVSTILWRLNNKSATVRQQAADLISRI 889
+               33889999*****************999998888777666666555 PP
+
+  == domain 5  score: -1.2 bits;  conditional E-value: 1.2
+  mTOR_dom 107 vvqaimsifktlglkc.vpflpqiipallsvirtcesslrefll 149
+               ++ a+ si+  +g+++  p ++ ++p l+ ++r+ +++++e  +
+  KIW89486 924 ILGALRSIVTVVGINQmQPPIKDLLPRLTPILRNRHEKVQENTI 967
+               55567777777777776777888888888888877777777655 PP
+
+  == domain 6  score: 0.0 bits;  conditional E-value: 0.49
+  mTOR_dom   75 lspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                +    e                                         c pf   ++pal++  r  e ++++ +l+ L+ L +++
+  KIW89486 1047 IGIVAET----------------------------------------CAPF--TVLPALMNEYRVPELNVQNGVLKSLSFLFEYI 1089
+                2223333........................................4444..35555555555554455555555555555443 PP
+
+>> KIW90841  pep supercontig:Clad_bant_CBS_173_52_V1:KN846992:733367:737436:1 gene:Z519_08624 transcript:KIW90841 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.5   0.0   7.2e-05     0.076      87     141 ..     245     300 ..     223     308 .. 0.87
+   2 ?   -3.9   0.0       8.1   8.6e+03      14      32 ..     443     461 ..     441     464 .. 0.88
+   3 ?    0.7   0.1      0.31   3.3e+02     121     155 ..     535     569 ..     530     572 .. 0.82
+   4 ?   -0.0   0.0      0.51   5.4e+02     102     157 ..     613     669 ..     607     671 .. 0.82
+   5 ?   -0.4   0.1      0.67   7.1e+02      19      38 ..     698     718 ..     685     827 .. 0.75
+   6 ?   -1.3   0.0       1.3   1.4e+03      62     108 ..    1092    1141 ..    1064    1167 .. 0.51
+   7 ?   -3.4   0.0       5.4   5.8e+03      24      57 ..    1231    1270 ..    1222    1296 .. 0.59
+
+  Alignments for each domain:
+  == domain 1  score: 12.5 bits;  conditional E-value: 7.2e-05
+  mTOR_dom  87 vinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtce 141
+                ++aL + +++p+l+ +h+   v +i +  ++  +k  +f++ +ip++l+v+++ e
+  KIW90841 245 FVAALTESFQNPQLTtEHRRFLVATIATLARSSPTKFGSFVDDVIPNVLQVLSQKE 300
+               57899999******96777778999**************************99755 PP
+
+  == domain 2  score: -3.9 bits;  conditional E-value: 8.1
+  mTOR_dom  14 iLlnilkteqsqsiRrevi 32 
+               +L++ l +e++ s+R+evi
+  KIW90841 443 VLISRLFSEREDSVRLEVI 461
+               78889999*********98 PP
+
+  == domain 3  score: 0.7 bits;  conditional E-value: 0.31
+  mTOR_dom 121 kcvpflpqiipallsvirtcesslrefllqqLatL 155
+               + v+++p+i++al+++ ++++ sl++  +  L+tL
+  KIW90841 535 ELVSLVPKIVQALTKLWKKASISLKQAAVVMLKTL 569
+               66899999999999999999889999888888877 PP
+
+  == domain 4  score: -0.0 bits;  conditional E-value: 0.51
+  mTOR_dom 102 shhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157
+               s + ++++ i  i +t g  + +pf+  +ip +++++r+ + +++   l  ++++v+
+  KIW90841 613 SLQIETLTLIGAIAETNGATVlIPFVIALIPPVTAIARDRNYKVSSEALATVEQFVK 669
+               56667788899999999999999***************9888888888877777765 PP
+
+  == domain 5  score: -0.4 bits;  conditional E-value: 0.67
+  mTOR_dom  19 lkte.qsqsiRrevikvlGil 38 
+               +  + ++ ++R  +i+v+G+l
+  KIW90841 698 VTDNnTDLEVRHRAIQVFGVL 718
+               444425788888888888887 PP
+
+  == domain 6  score: -1.3 bits;  conditional E-value: 1.3
+  mTOR_dom   62 naeetdvsel...lvglspsseeyyptvvinaLlkilkdpslsshhtavv 108 
+                +++ t +s++   l + s+s ++   +++   L ++l+d+ l++ + av 
+  KIW90841 1092 SVRGTVISAFrftLGEASSSYNNILVKTMTPMLQTMLSDSDLANRRLAVT 1141
+                33333333333322233333366666666666667777777776555554 PP
+
+  == domain 7  score: -3.4 bits;  conditional E-value: 5.4
+  mTOR_dom   24 sqsiRrevikvlGilGALDPykhkeveekseee......e 57  
+                +++iR   i +l+ l  +DP + ++  ++ +e+      +
+  KIW90841 1231 DHDIRTLCILMLTRLSVIDPDQTRRRLSSLAEKfrlvlsA 1270
+                5678888888888888899998888776664444433321 PP
+
+>> KIW93532  pep supercontig:Clad_bant_CBS_173_52_V1:KN846987:1348086:1351434:-1 gene:Z519_06137 transcript:KIW93532 gen
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.7   0.0       1.6   1.7e+03     130     160 .]      87     119 ..      66     153 .. 0.61
+   2 ?   -1.5   0.0       1.4   1.5e+03      25      86 ..     238     305 ..     225     310 .. 0.57
+   3 ?   11.9   0.0   0.00011      0.11      72     150 ..     502     583 ..     437     592 .. 0.80
+   4 ?    1.2   0.1      0.21   2.2e+02      69     142 ..     652     723 ..     609     730 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: -1.7 bits;  conditional E-value: 1.6
+  mTOR_dom 130 ipallsvirtces.slrefllqqLa.tLvsivk 160
+               ++++l++ +t es + ++ +l++L  tLv+i+k
+  KIW93532  87 VNQILQASETEESlKANKLFLNKLDlTLVTILK 119
+               555555555555555555555555323444433 PP
+
+  == domain 2  score: -1.5 bits;  conditional E-value: 1.4
+  mTOR_dom  25 qsiRrevikvlGilGALDPykhkeveeks....eee..ekeeenaeetdvsellvglspsseeyyptv 86 
+                ++R  ++k+l+ +G L   ++ +   k     +e+      + + +td  e+ ++  +s++ey+ + 
+  KIW93532 238 DQFRNITLKCLTEIGGLQLGQQYQYDDKLvqmfTETltVVARTLSLDTDFREAYAKAKSSEQEYILNL 305
+               57788899999999999766665555444222211122222222333566666666666667776655 PP
+
+  == domain 3  score: 11.9 bits;  conditional E-value: 0.00011
+  mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt..lglkc.vpflpqiipallsvirtcesslrefllq 150
+                  +s+ +e  +  +vi+ Ll + + +  ++ ++ v + im+i+ +    lk   +fl+ ++++l++ ++++++ ++++  +
+  KIW93532 502 SGAMSEETEKRFLVTVIKDLLGLTEMKRGKDNKAVVASNIMYIVGQypRFLKAhWKFLKTVVNKLFEFMHETHEGVQDMACD 583
+               4557888899**********************************995534666699***************99999888765 PP
+
+  == domain 4  score: 1.2 bits;  conditional E-value: 0.21
+  mTOR_dom  69 sellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+               s+l+    ++ ++++++   n   +il+dp + +   +++++ +  ++++g    + + +i + +l++ r +++
+  KIW93532 652 SDLMSYPNQAWDNVIQQANAN--PAILHDPEIIKVVGNIMKTNVAACSSIGSYFYSQIGRIYHDMLNMYRASSQ 723
+               444444444445555553333..367777777777777777777777778888888899999999999988776 PP
+
+>> KIW96009  pep supercontig:Clad_bant_CBS_173_52_V1:KN846983:793934:797380:1 gene:Z519_03075 transcript:KIW96009 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.2   0.0       1.1   1.2e+03     108     148 ..     141     182 ..     120     193 .. 0.55
+   2 ?   -1.4   0.1       1.3   1.4e+03      10      33 ..     161     184 ..     154     283 .. 0.65
+   3 ?   -1.4   0.0       1.3   1.4e+03     123     155 ..     380     412 ..     338     415 .. 0.73
+   4 ?    1.7   0.0      0.15   1.6e+02     105     159 ..     455     510 ..     420     511 .. 0.87
+   5 ?   -0.7   0.0      0.81   8.6e+02     107     152 ..     688     733 ..     683     735 .. 0.87
+   6 ?    4.2   0.4     0.026        27      36     157 ..     911    1077 ..     907    1080 .. 0.39
+
+  Alignments for each domain:
+  == domain 1  score: -1.2 bits;  conditional E-value: 1.1
+  mTOR_dom 108 vqaimsifktlglkcvpflpqiipallsvirtces.slrefl 148
+               v+++ si++t+g    +  +++   + ++i++ es ++r   
+  KIW96009 141 VHVLYSILETMGDDFSSKFKELFALFSNTIKDPESlEVRVNT 182
+               555555555555555555555555555555554444443333 PP
+
+  == domain 2  score: -1.4 bits;  conditional E-value: 1.3
+  mTOR_dom  10 eLLeiLlnilkteqsqsiRrevik 33 
+               eL+ +++n +k  +s ++R +++ 
+  KIW96009 161 ELFALFSNTIKDPESLEVRVNTLL 184
+               555555555555555555555543 PP
+
+  == domain 3  score: -1.4 bits;  conditional E-value: 1.3
+  mTOR_dom 123 vpflpqiipallsvirtcesslrefllqqLatL 155
+                + l+ ++p l+++++++e  +r+  lq  a L
+  KIW96009 380 STQLSSVMPILFTLLEDSEVVVRQAALQTTARL 412
+               567999999999999999999999888876655 PP
+
+  == domain 4  score: 1.7 bits;  conditional E-value: 0.15
+  mTOR_dom 105 tavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+               +++ +ai  ++  ++ +  vp+l+++ p l++++++ + +++      L++L s+v
+  KIW96009 455 KSATSAIDAVVDGMDAEDaVPYLDKLAPLLQRLFKHPDFKIKALAAGALGSLASTV 510
+               5666777777888888877****************988899999999999999887 PP
+
+  == domain 5  score: -0.7 bits;  conditional E-value: 0.81
+  mTOR_dom 107 vvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152
+               ++++i  ++++ ++  +pf ++ i +ll +++++ +++r+  ++ L
+  KIW96009 688 AIEVIGDVVSNTKTAYLPFFEKTIEKLLPLAEHSYENVRKATISTL 733
+               789999999999999***************9999999998877766 PP
+
+  == domain 6  score: 4.2 bits;  conditional E-value: 0.026
+  mTOR_dom   36 GilGALDPykhkeveeks...........eeeekeeenaeetdvsellvgl........................................spsseeyy 83  
+                G+ GA++Py+ ++++              +        +++ +v +l+ +                                          + ++ + 
+  KIW96009  911 GMAGAVTPYTSQMMTVLLkrlgdedpqtkS--------NAAYAVGRLVEKSeddgtvvkaytqilsklesilhitearcqdnaagcvsrliLKHKDKVP 1001
+                677777777777776554333322222210........1122222211111111111111111111112222222222222222222222222222222 PP
+
+  mTOR_dom   84 ptvvinaLl..kilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                 + v+ aL+   il  +   +  +   + i++ +++++    ++ p++ p ++sv+ + e++l + + +q++ Lv+
+  KIW96009 1002 IQQVLPALVdsGILPLKEDYQENEPLWKMIVQLYREQDPTIQQLTPKLAPIMMSVLGEPEEQLTDEVREQVQALVE 1077
+                2233333332223333333344445555666666666666666666666666666666666666666666666665 PP
+
+>> KIW93452  pep supercontig:Clad_bant_CBS_173_52_V1:KN846987:1112329:1115475:1 gene:Z519_06057 transcript:KIW93452 gene
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.8   0.0     0.035        37       6      31 ..      29      54 ..      26      58 .. 0.90
+   2 ?    6.9   0.3    0.0038         4      81     146 ..     496     563 ..     478     573 .. 0.78
+   3 ?   -1.6   0.0       1.5   1.6e+03       7      23 ..    1006    1022 ..    1003    1030 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 3.8 bits;  conditional E-value: 0.035
+  mTOR_dom  6 ldypeLLeiLlnilkteqsqsiRrev 31
+              +++p  +++Ll+il++eq++++R++v
+  KIW93452 29 EQHPGFIGALLDILQSEQDPAVRLSV 54
+              579999*****************987 PP
+
+  == domain 2  score: 6.9 bits;  conditional E-value: 0.0038
+  mTOR_dom  81 eyyptvvinaLlkilkdpslsshhtavvqaimsifkt.lglkcvpflpqiipallsvirtces.slre 146
+               +   +++ ++L++ + dp l    +a++     i ++ ++l + + +pqi+++ll+++++++  sl++
+  KIW93452 496 QNNLMIIYQNLMESMADPELPVRVEAALALQPLIRHDaIRLTMQSNIPQIMHQLLQLMNEVDVdSLSN 563
+               4555788899*********998777777666666655589999****************999855544 PP
+
+  == domain 3  score: -1.6 bits;  conditional E-value: 1.5
+  mTOR_dom    7 dypeLLeiLlnilkteq 23  
+                + p+L++ L+ il++ +
+  KIW93452 1006 EQPQLYQNLTAILEQGD 1022
+                78***********9864 PP
+
+>> KIW94268  pep supercontig:Clad_bant_CBS_173_52_V1:KN846986:1625516:1628510:-1 gene:Z519_05584 transcript:KIW94268 gen
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.3   0.0     0.095     1e+02     127     156 ..     186     215 ..     172     217 .. 0.91
+   2 ?   -3.3   0.1       5.1   5.4e+03     127     156 ..     227     256 ..     222     260 .. 0.78
+   3 ?   -1.1   0.0       1.1   1.2e+03     118     137 ..     303     322 ..     262     329 .. 0.78
+   4 ?   -0.3   0.0      0.63   6.7e+02      83     146 ..     427     493 ..     386     503 .. 0.68
+   5 ?    1.0   0.0      0.24   2.6e+02      80     156 ..     515     590 ..     501     594 .. 0.73
+   6 ?   -1.7   0.0       1.6   1.7e+03       8      39 ..     599     632 ..     596     635 .. 0.83
+   7 ?   -1.4   0.0       1.4   1.5e+03     124     138 ..     747     761 ..     708     782 .. 0.67
+   8 ?   -2.5   0.0         3   3.2e+03     122     144 ..     839     861 ..     802     873 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 2.3 bits;  conditional E-value: 0.095
+  mTOR_dom 127 pqiipallsvirtcesslrefllqqLatLv 156
+               + i+p+ll+ ++++++++r f l+ L++++
+  KIW94268 186 TVIVPKLLEFASHSNPKIRVFALSTLKSFI 215
+               689**********************99876 PP
+
+  == domain 2  score: -3.3 bits;  conditional E-value: 5.1
+  mTOR_dom 127 pqiipallsvirtcesslrefllqqLatLv 156
+               +  ++++++++++ + ++r  + q L +Lv
+  KIW94268 227 DVYLQTIFQLASDPDVQVRRIVCQSLVQLV 256
+               555677888888888899999999999988 PP
+
+  == domain 3  score: -1.1 bits;  conditional E-value: 1.1
+  mTOR_dom 118 lglkcvpflpqiipallsvi 137
+               l+ ++ p+l++iip ll+ +
+  KIW94268 303 LRDQMGPYLEKIIPVLLAGM 322
+               4455689*******999755 PP
+
+  == domain 4  score: -0.3 bits;  conditional E-value: 0.63
+  mTOR_dom  83 yptvvinaLlkilkdp...slsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146
+               y++ v+n +l  lk++   +l   ++a+v a+  i       + p lp+++p l+s++++ e+ +r+
+  KIW94268 427 YHSAVFNIILPYLKENlshTLWPKREAAVLALGAIADGCMDVVSPHLPELVPFLISLLSDEEPVVRQ 493
+               4555555555555543111444667788888888888766667788899999888888887765555 PP
+
+  == domain 5  score: 1.0 bits;  conditional E-value: 0.24
+  mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+               ++ y   +++ Ll+ + dp+  + ++a  ++  s  ++ g k  p+++ i+ ++++ +r  +++    l++ L+tL 
+  KIW94268 515 KQRYFEPMMEGLLQRMLDPNK-KVQEAGASSFASLEEKSGDKLKPYVEPILRQFTECFRRYKDKNMYILYDCLQTLA 590
+               444445555555554447774.47788889999999999999*****************999866666666666665 PP
+
+  == domain 6  score: -1.7 bits;  conditional E-value: 1.6
+  mTOR_dom   8 ypeLLeiLlnilkte.q.sqsiRrevikvlGilG 39 
+                peL+++L+ +l +  +  q+  re+  +lG lG
+  KIW94268 599 KPELVDLLMPVLIQRwNkIQDDSREMFPLLGCLG 632
+               6999999999998876448899999999999999 PP
+
+  == domain 7  score: -1.4 bits;  conditional E-value: 1.4
+  mTOR_dom 124 pflpqiipallsvir 138
+               p+lp++ip l+s + 
+  KIW94268 747 PYLPKLIPILISQLD 761
+               677777777777665 PP
+
+  == domain 8  score: -2.5 bits;  conditional E-value: 3
+  mTOR_dom 122 cvpflpqiipallsvirtcessl 144
+                 pfl+++   +l+ ++++++s+
+  KIW94268 839 LAPFLSEFAEPFLQSMSKISTSH 861
+               35688888888888888877743 PP
+
+>> KIW98327  pep supercontig:Clad_bant_CBS_173_52_V1:KN846981:2488888:2492049:-1 gene:Z519_01911 transcript:KIW98327 gen
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.6   0.0       3.2   3.4e+03     124     139 ..     474     489 ..     462     502 .. 0.69
+   2 ?    5.7   0.0    0.0086       9.2     101     145 ..     526     570 ..     518     585 .. 0.81
+   3 ?    5.0   0.0     0.014        15      87     158 ..     565     637 ..     559     639 .. 0.75
+   4 ?   -3.3   0.0       5.1   5.4e+03     122     142 ..     650     670 ..     647     675 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: -2.6 bits;  conditional E-value: 3.2
+  mTOR_dom 124 pflpqiipallsvirt 139
+               ++lpq+ip l++v  +
+  KIW98327 474 TVLPQVIPLLTTVPDH 489
+               6788888888777554 PP
+
+  == domain 2  score: 5.7 bits;  conditional E-value: 0.0086
+  mTOR_dom 101 sshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+               s+  ++vvqa    fk lg+ c ++l   +p+l +  +++ ++l+
+  KIW98327 526 SHSSQEVVQAAALAFKFLGTDCQKLLGDHVPQLHNFYESVIDKLK 570
+               566899**************************9987766555444 PP
+
+  == domain 3  score: 5.0 bits;  conditional E-value: 0.014
+  mTOR_dom  87 vinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+               vi +L +  +++  +      +vq + +i++t++l c p++++++   ++++ +  ++    +l  ++++ + 
+  KIW98327 565 VIDKLKSTSQEEVTEgVAAVVAVQPVGKIYETMKLFCDPVMRRVVALAAQATDENAEKTVADYLGLMTIFFEW 637
+               5555555555555553445567999*********************999999998888888888888777665 PP
+
+  == domain 4  score: -3.3 bits;  conditional E-value: 5.1
+  mTOR_dom 122 cvpflpqiipallsvirtces 142
+                v++ ++++pal +++++ ++
+  KIW98327 650 AVKYCQEVLPALSQMAKHFTR 670
+               588999999999999887665 PP
+
+>> KIW98868  pep supercontig:Clad_bant_CBS_173_52_V1:KN846980:1456355:1458145:1 gene:Z519_00531 transcript:KIW98868 gene
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.0   0.0    0.0001      0.11      84     145 ..     260     321 ..     235     328 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 12.0 bits;  conditional E-value: 0.0001
+  mTOR_dom  84 ptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+               p ++   L++ +   sl+s h  +v+a+ s+ ++++      lpq++pal+++ rt +s ++
+  KIW98868 260 PETIDDYLVEAFTRLSLQSAHVGAVDALFSVSQQQKFFTDWRLPQVLPALTQARRTFDSLMQ 321
+               667778899999999**************************************999876444 PP
+
+>> KIW87535  pep supercontig:Clad_bant_CBS_173_52_V1:KN847003:251656:252651:1 gene:Z519_11858 transcript:KIW87535 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.7   0.0     0.036        38      15      49 ..      89     124 ..      82     168 .. 0.69
+   2 ?    6.5   0.0     0.005       5.3       7      39 ..     248     281 ..     243     282 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 3.7 bits;  conditional E-value: 0.036
+  mTOR_dom  15 Llnilkte.qsqsiRrevikvlGilGALDPykhkev 49 
+               L  +l++  ++   R e+   lG lG L   +  + 
+  KIW87535  89 LRAVLENRsEDAMCRHEAAEALGALGDLSSLQIMQK 124
+               66778888458999************9988777332 PP
+
+  == domain 2  score: 6.5 bits;  conditional E-value: 0.005
+  mTOR_dom   7 dypeLLeiLlnilkteq.sqsiRrevikvlGilG 39 
+                +p  + +Ll +l++++ ++ +R e+   lG lG
+  KIW87535 248 SHPASIPALLAVLENTKeESMVRHEAAEALGSLG 281
+               678888899*****9954999************9 PP
+
+>> KIW98654  pep supercontig:Clad_bant_CBS_173_52_V1:KN846980:877088:880314:1 gene:Z519_00315 transcript:KIW98654 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.9   0.1      0.13   1.4e+02      91     158 ..     172     243 ..     149     245 .. 0.76
+   2 ?   -0.0   0.0      0.51   5.5e+02     103     137 ..     303     337 ..     267     356 .. 0.75
+   3 ?   -3.5   0.0         6   6.4e+03     124     145 ..     392     413 ..     386     426 .. 0.68
+   4 ?   -3.4   0.1       5.7   6.1e+03     105     120 ..     601     616 ..     583     657 .. 0.46
+   5 ?    4.8   0.0     0.017        18       5      32 ..     702     729 ..     699     732 .. 0.86
+   6 ?   -2.7   0.0       3.3   3.5e+03     113     141 ..     989    1017 ..     964    1030 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 1.9 bits;  conditional E-value: 0.13
+  mTOR_dom  91 Llkilkdpslsshhtavvqaimsifktlglkc..vpflpqiipallsvirtces..slrefllqqLatLvsi 158
+               Ll+ + ++s ++ + ++ +a+++  + ++ +    ++lp+ +++l++v+r +++  + r++l++ L+ L+++
+  KIW98654 172 LLEAIANASSEDVQISATHALLELQRAIRNRAllASLLPRTVSTLVKVLRPSTQarRTRKVLVSYLELLTET 243
+               55555566667777788888888888877776667899************6555457888888888888765 PP
+
+  == domain 2  score: -0.0 bits;  conditional E-value: 0.51
+  mTOR_dom 103 hhtavvqaimsifktlglkcvpflpqiipallsvi 137
+                  +v +a+++ + t+   c ++l+q ip +++++
+  KIW98654 303 ESPDVAEALLNLCLTVIDDCSQTLTQSIPLMVETL 337
+               24578888888888888888888888888887765 PP
+
+  == domain 3  score: -3.5 bits;  conditional E-value: 6
+  mTOR_dom 124 pflpqiipallsvirtcesslr 145
+               ++l+q+  ++++++ t++++ +
+  KIW98654 392 QLLKQVATSFIALTDTSNTTNE 413
+               6788888888888888765333 PP
+
+  == domain 4  score: -3.4 bits;  conditional E-value: 5.7
+  mTOR_dom 105 tavvqaimsifktlgl 120
+                + v+++   +  lg 
+  KIW98654 601 PELVETLFPLLTLLGS 616
+               3333333333333222 PP
+
+  == domain 5  score: 4.8 bits;  conditional E-value: 0.017
+  mTOR_dom   5 yldypeLLeiLlnilkteqsqsiRrevi 32 
+               ++ yp+L+e+L++ilk + ++s R+ +i
+  KIW98654 702 FHGYPNLVEQLFEILKMTVTESARKPAI 729
+               678**************99999998766 PP
+
+  == domain 6  score: -2.7 bits;  conditional E-value: 3.3
+  mTOR_dom  113 sifktlglkcvpflpqiipallsvirtce 141 
+                 if++ + + ++ l  ++ ++l+ +r +e
+  KIW98654  989 AIFRSSDGQILEALVTLLVSILQHVRISE 1017
+                45555555555555555555555555444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                      12762  (6070213 residues searched)
+Passed MSV filter:                       491  (0.0384736); expected 255.2 (0.02)
+Passed bias filter:                      460  (0.0360445); expected 255.2 (0.02)
+Passed Vit filter:                        47  (0.00368281); expected 12.8 (0.001)
+Passed Fwd filter:                        12  (0.000940291); expected 0.1 (1e-05)
+Initial search space (Z):              12762  [actual number of targets]
+Domain search space  (domZ):              12  [number of targets reported over threshold]
+# CPU time: 0.14u 0.08s 00:00:00.22 Elapsed: 00:00:00.19
+# Mc/sec: 5084.42
+//
+[ok]

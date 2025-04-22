@@ -1,0 +1,362 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Stramenopiles/Proteins/Saprolegnia_diclina_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    8.3e-78  262.0   1.5    1.9e-77  260.8   1.5    1.6  1  EQC27376.1  FKBP12-rapamycin complex-associated protein [Sapr
+    6.9e-53  180.1   2.4    1.5e-52  178.9   0.1    2.6  2  EQC28787.1  hypothetical protein SDRG_13470 [Saprolegnia dicl
+    1.6e-44  152.6   6.3    1.6e-44  152.6   6.3    2.1  1  EQC27171.1  hypothetical protein SDRG_14974 [Saprolegnia dicl
+    3.6e-35  121.8   4.5    9.5e-35  120.4   4.5    1.8  1  EQC35870.1  hypothetical protein SDRG_06620 [Saprolegnia dicl
+    5.5e-10   39.0   0.0      0.032   13.5   0.0    5.6  3  EQC25218.1  hypothetical protein, variant [Saprolegnia diclin
+    8.5e-10   38.4   0.0      0.038   13.2   0.0    5.6  3  EQC25217.1  hypothetical protein SDRG_16915 [Saprolegnia dicl
+    2.9e-06   26.8   6.6    5.5e-06   25.9   6.6    1.5  1  EQC27304.1  hypothetical protein SDRG_14925 [Saprolegnia dicl
+    0.00034   20.0   0.1      0.071   12.3   0.0    2.4  2  EQC29912.1  hypothetical protein SDRG_12456 [Saprolegnia dicl
+    0.00037   19.8   0.9    0.00096   18.5   0.5    1.9  1  EQC38457.1  hypothetical protein SDRG_04165 [Saprolegnia dicl
+     0.0071   15.6   0.2      0.037   13.3   0.1    2.1  2  EQC33244.1  hypothetical protein SDRG_09227 [Saprolegnia dicl
+  ------ inclusion threshold ------
+       0.13   11.5   3.0       0.47    9.6   1.9    1.9  2  EQC39541.1  hypothetical protein SDRG_02978 [Saprolegnia dicl
+
+
+Domain annotation for each sequence (and alignments):
+>> EQC27376.1  FKBP12-rapamycin complex-associated protein [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  260.8   1.5   1.1e-80   1.9e-77       4     343 .]    1581    1943 ..    1579    1943 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 260.8 bits;  conditional E-value: 1.1e-80
+                  TTCCCCTSSSGHHCCCCT...................TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCH CS
+         FAT    4 aaeaaWrlgqWdsmeeylslmk...............kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqla 85  
+                   a a W l++Wd me+y++ ++               + +   ++++ +la+h+nqf++a++ i+ +r++l+t l al+gesy ray ++v lQql+
+  EQC27376.1 1581 TARACWWLSEWDTMEQYVQGVQtnptllaptlpgtdpELGAVASLYKSVLAVHHNQFEDAQSWIDATRKSLDTTLGALVGESYIRAYRTVVTLQQLS 1677
+                  57899***********************9999988777777777***************************************************** PP
+
+                  HHCHHCCHHCSS-.......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCC CS
+         FAT   86 Eleeiiqykqkls.......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkkll 175 
+                  Eleeii+yk+ +         ++  ++++k+W++Rl g+++ v+vwq++l+vRslvl p+ed       +e+wl+fa+l+R+sg+l l+ k+ + +l
+  EQC27376.1 1678 ELEEIIAYKKLRLqvgkadeAAKYKRRMVKMWQTRLTGCKRVVDVWQQLLAVRSLVLAPHED-------IETWLQFASLCRQSGNLALSLKVFTHAL 1767
+                  **********776899888666667778**********************************.......*************************998 PP
+
+                  HCTT...........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...- CS
+         FAT  176 eedk......eewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseeks 265 
+                            e+ +  +v +aylk+lwa g++++al++L   v+ l+ +  + ++g+ +     + +++++   +c+lk +ew+ a+++ +  +  +
+  EQC27376.1 1768 AMGFsnlgysEKDH-HRVAFAYLKHLWAVGDKQKALSELGTLVQTLSRR--SPLTGIGA-----VATNQDEEiVKCHLKWAEWQLAIHEQQLDRVPI 1856
+                  77665576543333.6****************************77665..45555554.....5555555449*********************** PP
+
+                  SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS......S-TCCHHHHCCT..CCHHHHTTTS....STTTCHHHHHC CS
+         FAT  266 eeilqaysaateldpswykawhtwalfnfevlskeeekkeeee.....pedlseyvvpavegflkslslsse....kslqdllRlLt 343 
+                   ++l a +++tel ps+ykawh+wal+nf+v ++  + +  ++     +edl  y+ +a+egf++s++l+ +    ++ qd+lR+Lt
+  EQC27376.1 1857 AAVLGALKTSTELEPSSYKAWHAWALMNFHVAEYHSQLPPGSNqvggkKEDLGPYIASAIEGFFRSIALGRSrwaaNVQQDILRVLT 1943
+                  ***********************************99955555566889*************************************8 PP
+
+>> EQC28787.1  hypothetical protein SDRG_13470 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.1   0.4      0.51   8.4e+02       5      54 ..    1414    1468 ..    1411    1472 .. 0.84
+   2 !  178.9   0.1   9.2e-56   1.5e-52      10     343 .]    1518    1869 ..    1510    1869 .. 0.91
+
+  Alignments for each domain:
+  == domain 1  score: -1.1 bits;  conditional E-value: 0.51
+                  TCCCCTSS..SGHH..CCCCT....TSSSS--CCCHCCCCHH.--CCHCHHCCCH CS
+         FAT    5 aeaaWrlg..qWds..meeylslmkkdspdkaffeailalhr.nqfdeaeeliek 54  
+                  ++a+W+ +   Wd+  +++   lm +++  +a+f+ + +l+  +q  +++++ie 
+  EQC28787.1 1414 VKASWHEKlqRWDDalVAHEAVLMTHPDDVEAVFGKMRCLYAtGQWHALNDHIEA 1468
+                  5799*998845***886666668889999999*********99999999999986 PP
+
+  == domain 2  score: 178.9 bits;  conditional E-value: 9.2e-56
+                  TSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCH.HHHHCCCCCHHHCHHCCHHCSS-....... CS
+         FAT   10 rlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynray.dllvrlQqlaEleeiiqykqkls....... 98  
+                   l++Wd + +y+   + d+ + ++f+a+ +++ n++dea+  ie++r  ++  +++ ++esy+ray + +v+lQ laEleeii+ +q+ +       
+  EQC28787.1 1518 TLQNWDIVPKYI-NSDMDDTESHLFRAVTCIRSNELDEAKLAIEECRHTMDPTIRSFISESYARAYmPCVVNLQNLAELEEIIAHLQRGAsltkpml 1613
+                  5889*******9.6677888999******************************************9456******************988******* PP
+
+                  ....................................---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHC CS
+         FAT   99 ....................................sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaR 159 
+                                                      ++++l++l k W+ Rl+gv +d++vwq ++ vRsl+l+p++d       +++wlk+a+l+R
+  EQC28787.1 1614 anssrpvrdsflqnhltresfvevlprmtpqallhaQQDDLSRLQKIWTARLLGVDRDIKVWQHVMLVRSLILEPKDD-------VDVWLKYARLCR 1703
+                  ******************************************************************************.......************ PP
+
+                  HHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCC CS
+         FAT  160 ksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalq 256 
+                  ksg+l+lA +aL ++           +v++++  +  + +     + +L++++++ l++  ++ +     + ++++e+ +l  ++y+ +G+w+ al 
+  EQC28787.1 1704 KSGHLNLAASALASV---GA------SVFMES--IATDANVPIVNVHMLEQETHNPLHDLIHAIE-----TFDEHDELVNLRVQAYTQLGKWQVALT 1784
+                  ***************...22......455555..3444555677799*******99998644433.....46788999999999************9 PP
+
+                  CCT.S....-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS..STTTCHHHHHC CS
+         FAT  257 klnwseek.seeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse..kslqdllRlLt 343 
+                  + ++ ++   +++l +  +at+ldp+  kawh+wal+nf++ +  ++      p  l++y+ +a++gf++s+s ++    + +d+lRlLt
+  EQC28787.1 1785 EPKKHSDLmFDQVLGCLNTATRLDPTNGKAWHEWALMNFRATESARDD-----PIALEKYASSAIDGFFRSISFGHRryDVTKDVLRLLT 1869
+                  9766555569***********************************666.....9***********************9999********8 PP
+
+>> EQC27171.1  hypothetical protein SDRG_14974 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  152.6   6.3   9.7e-48   1.6e-44       2     343 .]    3328    3656 ..    3327    3656 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 152.6 bits;  conditional E-value: 9.7e-48
+                  CCTTCCCCTSSSGHHCCCCT..........TSSSS--CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHC CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk......kdspdkaffeailalhr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeii 91  
+                  +l + + W+ g+W   ++ l + +        sp   + + ++a+   ++  ++ +l +++ +  + +++ l+  + n++++ll+ +Qq +E +e+i
+  EQC27171.1 3328 ELLLDCCWKRGDWTTAKQLLHASSiqaaseAGSPSVRLKKLYIAILDgDKKPQMDSLSSQMVDMALHQWQGLPRLLSNAHIPLLHLFQQFVEAKESI 3424
+                  7899***********99999999999888867777778888888777699*********************************************** PP
+
+                  CHHCSS-......---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.........HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCC CS
+         FAT   92 qykqkls......sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.........lllkgakaemwlkfanlaRksgrlslAekaLkk 173 
+                  +++ + +      ++ +lk   +tWr+Rlp+ + ++  w+dil++Rs+++  i+          l+  + +   ++k+a+ aRk+  ++++  aL+ 
+  EQC27171.1 3425 AMMAEIKaasaahTLPNLKPSINTWRERLPNKHEPILLWDDILTWRSHMFAVIKTtfswsdaqlLACLHDSPWSIVKMAHTARKQQLPDVCLHALST 3521
+                  ****98888888888888888****************************************988777778888888********************* PP
+
+                  CCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCC CS
+         FAT  174 lleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeil 269 
+                  l                   y+++  ++++a++kLre+vs ++e  +e + gl   ++tnl++f +++ a+ + +kG +l al++       +++++
+  EQC27171.1 3522 L-------------------YTIPAMDVQDAFSKLREQVSICYETTKEFKGGLSLLNNTNLDYFDARQkAELFRLKGLFLDALGD-------KSDAN 3592
+                  *...................*****************************************************************.......9**** PP
+
+                  HHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  270 qaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                   a+s + +l++s  k w +w+++++  +++          +dl  ++ + + ++l+++++ s++++ +l+R+L+
+  EQC27171.1 3593 MAFSHSLQLCDSYGKGWLSWGQYCDALFTER---------KDLD-FAAQTIACYLQAVHHRSSSARLYLARVLW 3656
+                  *******************************.........6675.****************************9 PP
+
+>> EQC35870.1  hypothetical protein SDRG_06620 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  120.4   4.5   5.7e-38   9.5e-35       2     343 .]    1784    2110 ..    1783    2110 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 120.4 bits;  conditional E-value: 5.7e-38
+                  CCTTCCCCTSSSGHH.CCCCT.........TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCC CS
+         FAT    2 plaaeaaWrlgqWds.meeylslmk.....kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiq 92  
+                  p+a+e+aWrl+ W + +e ++++mk     ++    +f +++l+l+ ++ d++++++  ar  ++  l+a s esy+r y+ll++l+ l+Ele+   
+  EQC35870.1 1784 PFALECAWRLSRWTLlQELTTDAMKvkmesQHMVSMKFARTMLCLQ-QNRDAMAYHLRDARLAIMGPLAAASLESYQRVYPLLHQLHVLHELEQGFL 1879
+                  789************6555677777775555555555*******88.899********************************************988 PP
+
+                  HHCSS-....---TTTTT..TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.... CS
+         FAT   93 ykqkls....sseelksl..lktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewl 183 
+                  +++k +    +    +++     W+ R +++++ +++++++l++R+++l+  +     +   + wl++a+ aRk g + +Ae+a   ++   +    
+  EQC35870.1 1880 VLDKFKadptTFAAEDHWvrQCPWELRDRMMAPALKFQEPLLALRRVMLQEMQL---PSLLSKNWLRYAKNARKEGFVRTAESAVMHAQALGD---- 1969
+                  8888776677444455552244699999*********************99887...78889**************************99999.... PP
+
+                  .TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCT CS
+         FAT  184 ppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateld 279 
+                    + +++++k+l ++g++ eal  L+  +  +++        l      ++ e  +   a+++l+   ++++ ++++      + +l+ y a + +d
+  EQC35870.1 1970 -RNGIIEQAKLLVHQGHVYEALHVLEPVAIDVSN--------L-----PKVPEGDRHFaAKTLLLATNYMQQSNQKQ-----GQVVLNRYGAVIAYD 2047
+                  .889*********************777763333........2.....24566677788999999999999999955.....999************ PP
+
+                  CCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  280 pswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                  ++ +k ++ +a++++  l + ++ +  e  e++  yv++ + ++  sl++s++  +q+l+RlLt
+  EQC35870.1 2048 RKYAKGYFDLAKYYEVLLDNARSDTALEVGEQYA-YVTDILANYVLSLQCSNKYLFQSLPRLLT 2110
+                  *********************9998877677776.****************************8 PP
+
+>> EQC25218.1  hypothetical protein, variant [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.5   0.0    0.0013       2.2     230     300 ..      91     154 ..      20     199 .. 0.72
+   2 !    7.4   0.0    0.0014       2.3     242     309 ..     239     317 ..     172     375 .. 0.57
+   3 !   13.5   0.0   1.9e-05     0.032     247     329 ..     380     472 ..     343     488 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 7.5 bits;  conditional E-value: 0.0013
+                 ..........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+         FAT 230 eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlske 300
+                  ++++  ++   a+++  +G  l+++++        ++++q y++a++l+p+ ++ ++++a+ + ++  + 
+  EQC25218.1  91 YNQQCIRIEPHFAEAFGNLGNALKEIGD-------MNGAVQFYLRAIKLNPRFADVYNNLASSYMQMGATR 154
+                 566677788888999*************.......89*************************998876665 PP
+
+  == domain 2  score: 7.4 bits;  conditional E-value: 0.0014
+                 HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS...................S CS
+         FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee..................p 309
+                 a +y  +G  l++ ++       + e+ +ay++a+ l+p+ + a+ ++a+ +f + + e   +   +                   
+  EQC25218.1 239 ADAYSNLGNALKESGQ-------PTEAIEAYKTAIALRPEFAIAHGNLASSYFDANQIELAISTYRTaiqlepnypdaynnlgnaL 317
+                 3344444444444444.......555555555555555555555555555555444444332222224444444444444444432 PP
+
+  == domain 3  score: 13.5 bits;  conditional E-value: 1.9e-05
+                 TCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS....................S-TCCHHHHCCT..CCHH CS
+         FAT 247 kkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee...................pedlseyvvpavegflks 326
+                  +G+ l++ +       k e++l++y++a+ +dp+ ++a+ +++ ++ e l+ ee  +  ++                   ++     + +a+++f k+
+  EQC25218.1 380 NLGSILKEQG-------KVEQALAHYQEAITIDPTFADAFSNMGNAYKELLRLEEAITCYSTairlkpafadtysnlavayKDG--GRLEEALTCFRKA 469
+                 4444444444.......4999999999999999999999999999999999988554333336667766666666665442111..3466666666666 PP
+
+                 HHT CS
+         FAT 327 lsl 329
+                 lsl
+  EQC25218.1 470 LSL 472
+                 666 PP
+
+>> EQC25217.1  hypothetical protein SDRG_16915 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.2   0.0    0.0031       5.1     230     296 ..      91     150 ..      20     158 .. 0.78
+   2 !    7.2   0.0    0.0015       2.6     242     309 ..     239     317 ..     171     375 .. 0.57
+   3 !   13.2   0.0   2.3e-05     0.038     247     329 ..     380     472 ..     347     489 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 6.2 bits;  conditional E-value: 0.0031
+                 ..........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+         FAT 230 eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+                  ++++  ++   a+++  +G  l+++++        ++++q y++a++l+p+ ++ ++++a+ + ++
+  EQC25217.1  91 YNQQCIRIEPHFAEAFGNLGNALKEIGD-------MNGAVQFYLRAIKLNPRFADVYNNLASSYMQM 150
+                 566677788888999*************.......89************************998775 PP
+
+  == domain 2  score: 7.2 bits;  conditional E-value: 0.0015
+                 HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS...................S CS
+         FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee..................p 309
+                 a +y  +G  l++ ++       + e+ +ay++a+ l+p+ + a+ ++a+ +f + + e   +   +                   
+  EQC25217.1 239 ADAYSNLGNALKESGQ-------PTEAIEAYKTAIALRPEFAIAHGNLASSYFDANQIELAISTYRTaiqlepnypdaynnlgnaL 317
+                 3344444444444444.......555555555555555555555555555555444444332222223444444444444444432 PP
+
+  == domain 3  score: 13.2 bits;  conditional E-value: 2.3e-05
+                 TCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS....................S-TCCHHHHCCT..CCHH CS
+         FAT 247 kkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee...................pedlseyvvpavegflks 326
+                  +G+ l++ +       k e++l++y++a+ +dp+ ++a+ +++ ++ e l+ ee  +  ++                   ++     + +a+++f k+
+  EQC25217.1 380 NLGSILKEQG-------KVEQALAHYQEAITIDPTFADAFSNMGNAYKELLRLEEAITCYSTairlkpafadtysnlavayKDG--GRLEEALTCFRKA 469
+                 4444444444.......599999***********************99999999554333336667777766666665443111..3466666666666 PP
+
+                 HHT CS
+         FAT 327 lsl 329
+                 lsl
+  EQC25217.1 470 LSL 472
+                 666 PP
+
+>> EQC27304.1  hypothetical protein SDRG_14925 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.9   6.6   3.3e-09   5.5e-06       2     241 ..    1871    2117 ..    1870    2251 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 25.9 bits;  conditional E-value: 3.3e-09
+                  CCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCC..CTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCS CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvte..lsalsgesynraydllvrlQqlaEleeiiqykqk 96  
+                  p+ +e aW+ +qWd+      +++  s+++ +++++  l  ++  ++e l+ +a+ +l+++   +    es++r  ++l++l +l  le ++++ ++
+  EQC27304.1 1871 PYTYELAWKSMQWDL------KVDTSSFEGCVYGCLRGLAVHDHANVELLLGQAKTSLLQSqqVAFTGLESTKRLQTSLLQLETLGKLEAVLSIQRQ 1961
+                  6778999*******9......5677899999999998888889999999998888877765115556678**************************9 PP
+
+                  S-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT..... CS
+         FAT   97 ls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp 184 
+                  ++          +  + +ll  W++R+++  dd ++  + l + s +ls  e       + +  lk a+ aRk++r+ +A  aL  l+  +  +  +
+  EQC27304.1 1962 SAqdqllgamqLQTTQHELLGSWTQRHSVYEDDADALLRALELESTLLSLLEW-----PTPTWHLKRAKAARKADRPATAFAALAHLEAIKVTSAMQ 2053
+                  9989999888666777888********************************99.....5666668**********************6655533333 PP
+
+                  TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---..................HH CS
+         FAT  185 pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq.......eptnleeftkll 241 
+                  +++ +++++ ++a+g+   al+  ++  + l   +++ +  l +         ++   e ++++
+  EQC27304.1 2054 SSLLLEKARTFYATGDAPRALLIAKHVHKALVAAPSSEPLLLAQTqltigkwLASMRAERNEVI 2117
+                  7***********************9999988877763322222222444555333333333333 PP
+
+>> EQC29912.1  hypothetical protein SDRG_12456 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.3   0.0   4.3e-05     0.071     147     208 ..    1086    1144 ..    1070    1164 .. 0.85
+   2 !    5.0   0.1    0.0075        12     268     298 ..    1191    1221 ..    1185    1261 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 12.3 bits;  conditional E-value: 4.3e-05
+                  STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCHHHHHSSCC CS
+         FAT  147 kaemwlkfanlaRksgrlslAekaLkklleedkeewlp.pevvyaylkylwakgeqkealqkL 208 
+                  ++++ l++++laRk+g+l+ A ++L +l++       +   v y+++ +  a g   +a+ +L
+  EQC29912.1 1086 QFDVQLQMVRLARKQGNLQFASSLLAQLADVPA----KaAIVNYEQACLDFACGAPADAVARL 1144
+                  57889***********************55444....23568999999998888888887766 PP
+
+  == domain 2  score: 5.0 bits;  conditional E-value: 0.0075
+                  CCHHHHCCHHCTCCCHSTTCCCCHHHHHCCH CS
+         FAT  268 ilqaysaateldpswykawhtwalfnfevls 298 
+                  i+++ +aat+++p++y+ w +w ++ f++ +
+  EQC29912.1 1191 IEASLAAATQIAPTSYQSWLAWSDYWFHAST 1221
+                  677899*******************998766 PP
+
+>> EQC38457.1  hypothetical protein SDRG_04165 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   18.5   0.5   5.8e-07   0.00096     163     286 ..     173     313 ..     170     352 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 18.5 bits;  conditional E-value: 5.8e-07
+                 HCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..........SS-SS---....................... CS
+         FAT 163 rlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke..........elssglevq...................... 229
+                 r++ A  aL++l+++d+   + p+v y ++k l+ +ge  +a+++L++ + +  ++ +          +l                             
+  EQC38457.1 173 RYDEAFAALTQLMRSDS---ASPDVLYLRAKCLYFQGEFTSAIKHLQQALRSDPDN-GrfmkeikrirQL------Dsqkeaandafkggrfqeaaday 261
+                 6677899********99...669***********************9999944444.2355544333322......12234446666666666677766 PP
+
+                 ................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTT CS
+         FAT 230 ......eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykaw 286
+                       +p n+ +++kl    +  ++  l++l++       +ee+ +   +a+++d+s  ka+
+  EQC38457.1 262 sqclliDPANKAYNAKL----HCNRAAALSKLSQ-------NEEAIKDCDKAIYYDSSYVKAY 313
+                 66666666666666555....4555556677777.......7777777777777777777777 PP
+
+>> EQC33244.1  hypothetical protein SDRG_09227 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.3   0.1   2.2e-05     0.037     150     221 ..     206     283 ..     179     309 .. 0.83
+   2 ?   -1.7   0.0      0.82   1.4e+03     235     291 ..     394     441 ..     363     445 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 13.3 bits;  conditional E-value: 2.2e-05
+                 CCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.........S CS
+         FAT 150 mwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke.........e 221
+                 +   +a+++ ++g    A ++Lkk++   +++ +     ++ +  ++++g++ ea+  L+  +++ +++ e         +
+  EQC33244.1 206 TLYAYAEVCKEQGDNRRAAETLKKIALLTPDDLAI---WLQVAECFHSNGQKVEAIDALQLCIQRSAHNDEavqfelhavN 283
+                 55579********************9999955555...888999*****************99999999885555444444 PP
+
+  == domain 2  score: -1.7 bits;  conditional E-value: 0.82
+                 .....HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCH CS
+         FAT 235 eeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwal 291
+                 +++  ll+++y ++G    al++        e++l+a ++ t +dp++  aw ++al
+  EQC33244.1 394 DKLYMLLGQAYERQGAADVALGH-------FEKALAAQAQFTAVDPHV--AWSALAL 441
+                 45555667777777777777777.......788888888888888844..6776665 PP
+
+>> EQC39541.1  hypothetical protein SDRG_02978 [Saprolegnia diclina VS20]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.0   0.3      0.03        49     266     324 ..     124     179 ..     112     194 .. 0.81
+   2 ?    9.6   1.9   0.00028      0.47     206     313 ..     145     261 ..     142     283 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 3.0 bits;  conditional E-value: 0.03
+                 SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CC CS
+         FAT 266 eeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegfl 324
+                 e +  + ++atel p++ + +++++ +  +  +++ ++++   ++++ + +++++e ++
+  EQC39541.1 124 ERAADSWRKATELEPTSFEFYYHLGFALSQLAQDQVNNQK---KHTIGKQAIESFETYF 179
+                 56778999************************99966644...3455566777777766 PP
+
+  == domain 2  score: 9.6 bits;  conditional E-value: 0.00028
+                 SCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCC.............CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCH CS
+         FAT 206 qkLrefvscllekkeelssglevqeptnleeftkllarcylkkGe.............wlaalqklnwseekseeilqaysaateldpswykawhtwal 291
+                 ++L   +s+l++++ ++++ ++ + ++ +e f++      l  G+              laa++k+n+  ek+e +l+++ aa+ ld + + a+++ +l
+  EQC39541.1 145 YHLGFALSQLAQDQVNNQKKHT-IGKQAIESFETYF---TLAEGDsdattdqmslahaSLAAIYKTNKLAEKQELALSHFEAAAALDHTNELAFFNIGL 239
+                 5666667777777655555544.3555555555443...4444446677777777777789999999999***************************** PP
+
+                 HHHHCCHHHHHHSSSS.S-TCC CS
+         FAT 292 fnfevlskeeekkeeeepedls 313
+                 ++ e+++k  ++++ e+   ++
+  EQC39541.1 240 LYAEKYEKRGDETDLENALRAI 261
+                 *********8886665533333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      18229  (8862079 residues searched)
+Passed MSV filter:                       968  (0.0531022); expected 364.6 (0.02)
+Passed bias filter:                      444  (0.0243568); expected 364.6 (0.02)
+Passed Vit filter:                        47  (0.00257831); expected 18.2 (0.001)
+Passed Fwd filter:                        11  (0.000603434); expected 0.2 (1e-05)
+Initial search space (Z):              18229  [actual number of targets]
+Domain search space  (domZ):              11  [number of targets reported over threshold]
+# CPU time: 0.20u 0.02s 00:00:00.22 Elapsed: 00:00:00.10
+# Mc/sec: 29501.31
+//
+[ok]

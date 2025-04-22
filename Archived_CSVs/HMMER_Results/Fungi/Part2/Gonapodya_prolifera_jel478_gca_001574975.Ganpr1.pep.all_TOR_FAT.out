@@ -1,0 +1,253 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Gonapodya_prolifera_jel478_gca_001574975.Ganpr1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+     3e-117  391.3   2.7     3e-117  391.3   2.7    1.7  2  KXS11006  pep supercontig:Ganpr1:KQ965810:33435:44206:1 gene:
+    1.1e-73  248.0   9.3    3.5e-73  246.4   9.3    1.9  1  KXS11669  pep supercontig:Ganpr1:KQ965799:217610:232291:1 gen
+    3.2e-41  141.3   7.3      1e-40  139.7   7.3    1.9  1  KXS21067  pep supercontig:Ganpr1:KQ965733:19937:25032:1 gene:
+    4.7e-11   42.1   1.1    8.2e-11   41.3   1.1    1.3  1  KXS15053  pep supercontig:Ganpr1:KQ965764:5800:9074:-1 gene:M
+    1.6e-06   27.2   0.1    4.1e-06   25.9   0.1    1.7  1  KXS19826  pep supercontig:Ganpr1:KQ965737:483338:500454:-1 ge
+    0.00055   18.9   0.0        0.1   11.4   1.0    2.4  2  KXS17773  pep supercontig:Ganpr1:KQ965745:321782:323824:-1 ge
+     0.0025   16.7   7.7     0.0029   16.5   0.7    3.2  2  KXS17682  pep supercontig:Ganpr1:KQ965745:54503:57508:1 gene:
+
+
+Domain annotation for each sequence (and alignments):
+>> KXS11006  pep supercontig:Ganpr1:KQ965810:33435:44206:1 gene:M427DRAFT_127023 transcript:KXS11006 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.7   0.1         2   3.9e+03     234     302 ..    1303    1327 ..    1252    1348 .. 0.55
+   2 !  391.3   2.7  1.5e-120    3e-117       1     343 []    1374    1723 ..    1374    1723 .. 0.95
+
+  Alignments for each domain:
+  == domain 1  score: -3.7 bits;  conditional E-value: 2
+                ......HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHH CS
+       FAT  234 leeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeee 302 
+                  e++      y k+G w  al                                           +e++
+  KXS11006 1303 DVELK---ESWYEKLGRWEDALVA-----------------------------------------YEKK 1327
+                22222...2234444444444444.........................................3322 PP
+
+  == domain 2  score: 391.3 bits;  conditional E-value: 1.5e-120
+                CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+       FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                aplaa+a+W+lgqWd m+ey+  mk +spd+aff+ailalhrn + + +++i+++r+ll+tel+al+gesynray+++vr+Q+laEleeii ykq +++
+  KXS11006 1374 APLAAAASWGLGQWDMMDEYITIMKPESPDGAFFRAILALHRNLYPQSQQYINRTRELLDTELTALVGESYNRAYNVVVRIQMLAELEEIILYKQINDQ 1472
+                79************************************************************************************************* PP
+
+                --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT..............TSSCC CS
+       FAT  100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk....eewlp.....pevvy 189 
+                +e++++++ktW++Rl+g+ ++v++wq+il++Rslv+sp+ed       ++ w+kfanl+Rks r  l++k+L  ll+  +    +  ++     p+vvy
+  KXS11006 1473 PERQSAIRKTWMTRLKGCTRNVDIWQRILRIRSLVVSPKED-------MDSWIKFANLCRKSSRSTLSQKTLGILLDAPDitnlDITKHfstasPKVVY 1564
+                *****************************************.......***************************9988876663333378899***** PP
+
+                CHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC......SS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCC CS
+       FAT  190 aylkylwakgeqkealqkLrefvscllekke......elssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpsw 282 
+                aylk +wa++++++a+q ++ f + l ++ +      +++ g + +  +++++ +++larcylk+Gew+ a+q+ + + + + +il +y+aat+ld++w
+  KXS11006 1565 AYLKNMWATTNRSQAFQFMKGFSKTLVDQLGiasineANLPGEILRWDSQKQTSARVLARCYLKLGEWQTAIQE-ELMDDAIPDILRSYKAATQLDRDW 1662
+                ****************************98877776677777777799999***********************.99********************** PP
+
+                HSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  283 ykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslqdllRlLt 343 
+                ykawh wal nfe+ls +e+ +e++  +++  +vvp+v+gf++s++ls+++slqd+lRlLt
+  KXS11006 1663 YKAWHLWALSNFEALSFYEKAAENIPTRTVVSHVVPSVQGFFRSIALSKGNSLQDTLRLLT 1723
+                *********************9999666777*****************************8 PP
+
+>> KXS11669  pep supercontig:Ganpr1:KQ965799:217610:232291:1 gene:M427DRAFT_158085 transcript:KXS11669 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  246.4   9.3   1.8e-76   3.5e-73       2     343 .]    2807    3152 ..    2806    3152 .. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 246.4 bits;  conditional E-value: 1.8e-76
+                CCTTCCCCTSSSGHHCCCCT.........TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHC CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk.....kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykq 95  
+                +l +e+aWr ++W   +e l++       +   +++ffea+l l+ ++  ++++  e++ ql ++++ +l+  + n++++ll+++Qq +El e++ + +
+  KXS11669 2807 ELLLECAWRISDWTADKENLQQNVmalpdSVHSRRKFFEAFLLLQPEKAHDFQKSYEEGVQLSLRKWISLPEIVSNSHVSLLHHFQQQVELTEALHIQS 2905
+                5899***********999998877789888888999*************************************************************** PP
+
+                SS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.....................HHCCS-STTCCC..CCCCCHCHHH CS
+       FAT   96 kls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.....................lllkgakaemwl..kfanlaRksg 162 
+                +l+         +s+elk ll+tWr+Rlp+   d+++w+d++s+R++++s+i++                     + ++g+++++w+  +fa++aRk+g
+  KXS11669 2906 NLAatnetnidaKSQELKGLLQTWRERLPNQFEDINIWSDLVSWRQHIFSTINRsylpllpllsqggggtnpsssYGYRGYHETAWIinRFAHVARKQG 3004
+                *************************************************************************************************** PP
+
+                HCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCCCCCT. CS
+       FAT  163 rlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaalqklnw 260 
+                 +++++++L+++                   y+++++e++ea++kLre+++c+++++ e+ sgl+v+++tnl +f+ ++ a+++++kG++l++lq    
+  KXS11669 3005 LTEVCISSLSRI-------------------YTLPNIEIQEAFYKLREQAKCHFQSPAEYASGLDVINNTNLVYFNSNQkAEFFTLKGQFLSKLQL--- 3081
+                ************...................*****************************************************************... PP
+
+                S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHHC CS
+       FAT  261 seekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse.kslqdllRlLt 343 
+                    +ee++qa+s+at++  +  kaw++w+++n+++++++        p++l+    +a++++++++  +++  s++ ++R+L+
+  KXS11669 3082 ----HEEANQAFSSATQIEMQAPKAWAAWGQYNDRMFKEQ--------PTELK-WGANAINCYMQAAGIYKNaRSRKFIARVLW 3152
+                ....9***********************************........*99*9.*****************************9 PP
+
+>> KXS21067  pep supercontig:Ganpr1:KQ965733:19937:25032:1 gene:M427DRAFT_310695 transcript:KXS21067 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  139.7   7.3   5.1e-44     1e-40       3     343 .]     394     755 ..     392     755 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 139.7 bits;  conditional E-value: 5.1e-44
+               CTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS----TT CS
+       FAT   3 laaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklssseel 103
+               ++aeaaWrl++Wd++ee l++  k+s++k++ + +lal+++q +e+++ +  +r ++   l+  s esy+ra+  +++l++l+E ee +++ q  ++++e 
+  KXS21067 394 FRAEAAWRLSKWDLLEESLDFDVKPSFEKSLGRSLLALRHEQEEELYSELRLTRTSIAGPLTVSSLESYERAHAHVLKLHMLCEVEEWAKLWQFCEQANEN 494
+               689************************************************************************************99887766644444 PP
+
+               TTT......TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC...........HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSS CS
+       FAT 104 ksl......lktWrkRlpgvqddvevwqdilsvRslvlspied...........lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppev 187
+               + l      +k+W+ Rl++  ++++v +++ls+R+ +++               + l++++  +wl++a+ aRksg ls+++++ ++++  ++     p v
+  KXS21067 495 DVLfhvegvVKQWESRLSVASSSYHVVEPLLSLRRTLMDIGLAksallewsgvaSKLEEQRGLAWLQSARAARKSGYLSTSYSHFLNAASLKS-----PAV 590
+               444444666*****************************555445589999**999999******************************99999.....*** PP
+
+               CCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC...SS-SS---..............HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCC CS
+       FAT 188 vyaylkylwakgeqkealqkLrefvscllekke...elssglevq...eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpsw 282
+               +++++k+lw +ge + a+  Lr  + +l  +k     + s+++++       l+  ++l+ +  l ++ wl +++ ++      +eil  +++    + ++
+  KXS21067 591 ILERCKWLWRNGENHRAIVDLRGALDKLKGDKVeggIIESQTQASlgsMGAPLDRMSDLV-KSKLALARWLDETRTGH-----MQEILDIFKETLTEAHRC 685
+               **************************9999987777555555555776556666666666.77788999*****9976.....999999999988888889 PP
+
+               HSTTCCCCHHHHHCCHHHHHH...SSSS..........S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT 283 ykawhtwalfnfevlskeeek...keeee.........pedlseyvvpavegflkslslssekslqdllRlLt 343
+               +k  ++ ++++ + +++e++k       +          e++  ++  ++++f ++l ++s+ ++q l+R+Lt
+  KXS21067 686 EKVAFQVGKYYLKLYENERQKfhnR---KssttsqnqgYETVVALLGYVIRHFARALTYGSKYIYQTLPRMLT 755
+               9999999999999999999996441...33456777666777789999************************8 PP
+
+>> KXS15053  pep supercontig:Ganpr1:KQ965764:5800:9074:-1 gene:M427DRAFT_112071 transcript:KXS15053 gene_biotype:protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   41.3   1.1   4.1e-14   8.2e-11     126     340 ..      18     287 ..      11     290 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 41.3 bits;  conditional E-value: 4.1e-14
+               TCCCCTCCCHCCCHCHHCCS-STTCCC....CCCCCHCHHHHCCSTTHHCCCCCHCTT..........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSS CS
+       FAT 126 dilsvRslvlspiedlllkgakaemwl....kfanlaRksgrlslAekaLkklleedkeewlp.....pevvyaylkylwakgeqkealqkLrefvsclle 217
+               + + +Rs v + +++  +kg  +++ +       +laRksg++++A + L+ l+    ++  +       +  +++k + a g++  a++kLr ++s l +
+  KXS15053  18 RTIILRSAVSNQSNE-TAKGNLMDASIrhlfICTRLARKSGSMQIALNNLTALHNAIAPHLDTdavkfGGYAREEAKCWAALGQRLLAIKKLRYSIS-LVH 116
+               556677777777777.8899999999965445679******************8777733333555778****************************.888 PP
+
+               CCCSS-SS---...........HHHHCCCTCCCCC..CCCCCCT.S...-SSCCHHHHCCHHCTCCCHS.TTCCCCHHHHHCCHHHHHHSSSS........ CS
+       FAT 218 kkeelssglevqeptnleeftkllarcylkkGewl..aalqklnwseekseeilqaysaateldpswyk.awhtwalfnfevlskeeekkeeee....... 308
+               +  e ++g    +p++ +e + +l+r y ++G +   ++l++       s+ i+++ saa+e+++s+    + ++a f + ++ k  e+   e+       
+  KXS15053 117 SLTEGKDGF---SPSQPSEVALVLSRLYRLLGRYVgiERLEQ------ASDVIENYLSAAIEIHDSSNVgSFKELATFADAHYVKSIESRTLEDttallne 208
+               776666665...577778888888*********752255555......499999999*******999988************999877754444589**** PP
+
+               ..............................................S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHH CS
+       FAT 309 ..............................................pedlseyvvpavegflkslslsse.kslqdllR 340
+                                                              e+ s +++ ave++lk l+l+      q ++R
+  KXS15053 209 klqelaslkeqlrhvaktdqmcrslesarrrtelqlendktevnrlTEERSSFLIHAVENYLKVLQLGALeRHNQVVFR 287
+               *********************************************9899999*************99875455555555 PP
+
+>> KXS19826  pep supercontig:Ganpr1:KQ965737:483338:500454:-1 gene:M427DRAFT_41671 transcript:KXS19826 gene_biotype:prot
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   25.9   0.1   2.1e-09   4.1e-06      54     300 ..    3233    3501 ..    3228    3595 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 25.9 bits;  conditional E-value: 2.1e-09
+                HCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-...---TTTTT...TT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC...... CS
+       FAT   54 karqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls...sseelksl...lktWrkRlpgvqddvevwqdilsvRslvlspied...... 140 
+                 a++ +++e ++l    ++ +++ll  lQ   E  e++ +++  +   +s+ l+ +   ++ Wr+R p   d++e+w+ i+s R+ +l  i++      
+  KXS19826 3233 LAIDGFLKEFAQLHPSAVQPRLTLLGELQRTREAVEFLDFDDGMKqnaKSSGLSLVenkFSSWRTRFPRDSDPIEAWDVIVSARTKFLGSIDSgeramd 3331
+                578999999999******************************99966655555444888********************************99****** PP
+
+                ............HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCH......HHHHSSCCHHHHCCTSSCCCS CS
+       FAT  141 ............lllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakge......qkealqkLrefvscllekkee 221 
+                            ++++g k  +++k a  a   +++   +++Lk+++    +     +v  a l++ +  +         eal   +  ++       +
+  KXS19826 3332 vdgatngstsvtSVVNGLKCGIYIKAAGAALLGNSFRWGYDLLKSARSLGHD-----RVDNALLRVKLNLQSvvnqtqNMEALDIAQTRAT-------A 3418
+                ************9*********************************777762.....3333333333333330021102223322222222.......2 PP
+
+                S-SS---....................HH.HHCCCTCCCCCCCCCCCT.S...-SSCC...HHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+       FAT  222 lssglevq.........eptnleeftkll.arcylkkGewlaalqklnwseekseeil...qaysaateldpswykawhtwalfnfevlske 300 
+                       +          +++ + +t +l a+ +l   + l al++   ++++ e +    q+ s+ te+ +sw+  + ++++  +e  s+ 
+  KXS19826 3419 -------IvslldilgkAKNEASSKTSSLfAKLLLQEVDCLDALNDPIINTDTMEIAYrgyQSISSRTEIKKSWI--YSAMKKTSDEFASDI 3501
+                .......12222223445666666666666888888888888888854444443333311144444555555553..555666666666665 PP
+
+>> KXS17773  pep supercontig:Ganpr1:KQ965745:321782:323824:-1 gene:M427DRAFT_245570 transcript:KXS17773 gene_biotype:pro
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.9   0.0      0.01        20     184     266 ..     115     225 ..     101     262 .. 0.79
+   2 !   11.4   1.0   5.2e-05       0.1     262     341 ..     343     423 ..     331     425 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 3.9 bits;  conditional E-value: 0.01
+               ..TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---.......................................HHHHCCCTCCCCCCCC CS
+       FAT 184 p.pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq............................eptnleeftkllarcylkkGewlaal 255
+               p p +++++lk  ++  +++++   L+e ++ ++ + ++l  gl +                             +++n++ + k  a cy++kG+  +al
+  KXS17773 115 PaPTATHEHLKKAIELVHSRDYNGALNEITEATSGDLSALDAGLVSMawnllgtfkflladidgameafeksikaDKSNVNSIVKY-AGCYMEKGDIPKAL 214
+               25788999999999999999988888888888888888777776666777777777777777888888888887777777777776.89999999999999 PP
+
+               CCCT.S...-S CS
+       FAT 256 qklnwseekse 266
+               +++++++e+s 
+  KXS17773 215 EEFDRATETSP 225
+               99888777654 PP
+
+  == domain 2  score: 11.4 bits;  conditional E-value: 5.2e-05
+               ...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT...CCHHHHTTTSSTTTCHHHH CS
+       FAT 262 eekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpaveg.flkslslssekslqdllRl 341
+               +++  +++q  ++ate+dp++  a+++wa+   ++ +  e  ++ e    ls+   ++v++ +++ ++l +  +lq+++ l
+  KXS17773 343 RQDLAQAEQFCRKATEVDPKCDLAYAQWAQILMQQNKLDEALEKYEAAISLSRTEPEVVQNvMFRTAALAQRDVLQQFPQL 423
+               45578899999********************99999999999998887778877777777669************999977 PP
+
+>> KXS17682  pep supercontig:Ganpr1:KQ965745:54503:57508:1 gene:M427DRAFT_133189 transcript:KXS17682 gene_biotype:protei
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.5   1.5     0.055   1.1e+02     149     288 ..     520     663 ..     479     679 .. 0.78
+   2 !   16.5   0.7   1.5e-06    0.0029     150     293 ..     762     901 ..     667     925 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 1.5 bits;  conditional E-value: 0.055
+               TCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC..SS-SS---.............HHHHCC CS
+       FAT 149 emwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekke..elssglevq..eptnleeftkllarcy 245
+               e w++ a+ + k g++ +++  ++  ++   +e+   +v  + +    a+g ++ a     + ++ +  +k+  +    le q  + ++lee+ ++ a  y
+  KXS17682 520 EQWIREAERCEKEGNVVTCQAIIRATMDLGLDEEDSRKVWTEDADRAMAQGAVQTARAIYAHALKTYPMRKNlwHKAALLEKQhgTRESLEEILQR-AVRY 619
+               6799999*************9999999999955555789999999999999999999999999998877777663333333333355555555444.6666 PP
+
+               CTCCC..CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+       FAT 246 lkkGe..wlaalqklnwseekseeilqaysaateldpswykawht 288
+                 ++e  wl  +++ +w+  + e++ +  ++a + ++ ++++w +
+  KXS17682 620 CPQAEvlWLMGARE-KWEAGDLEGASALLADALRANSASEEIWLE 663
+               67776668888888.799999999999999999999999888876 PP
+
+  == domain 2  score: 16.5 bits;  conditional E-value: 1.5e-06
+               CCCCCCCCHC.HHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHH........HHHSSCCHHHHCCTSSCCCSS-SS---............. CS
+       FAT 150 mwlkfanlaR.ksgrlslAekaLkklleedkeewlppevvyaylkylwakgeq........kealqkLrefvscllekkeelssglevq.......eptnl 234
+                wl++a+l R k+ ++  A                  ++v+++++++ +k+++        + a +++r  +  ++ +    +sgl  +        p+++
+  KXS17682 762 LWLHSAHLERvKAQQPIRA------------------RAVLERARLMVPKSDVlwtaavenEPAASTMRATLRAKALQE-CPTSGLLWRleirdapRPQKK 843
+               3333333333222333333..................556666666666666333333333777777777777555543.444444444555677788888 PP
+
+               .....HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHH CS
+       FAT 235 eeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfn 293
+               ++ ++ l rc        aa+ +l ++e+k +++   y++a+++dp+w + w++w +f+
+  KXS17682 844 SKSADALKRCENDP-RVVAAVAELFEAERKVDKARTWYARAVKIDPDWGDGWAYWYRFE 901
+               88888887776655.4577777778999***************************9886 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      13831  (5704238 residues searched)
+Passed MSV filter:                       507  (0.0366568); expected 276.6 (0.02)
+Passed bias filter:                      295  (0.0213289); expected 276.6 (0.02)
+Passed Vit filter:                        37  (0.00267515); expected 13.8 (0.001)
+Passed Fwd filter:                         7  (0.000506109); expected 0.1 (1e-05)
+Initial search space (Z):              13831  [actual number of targets]
+Domain search space  (domZ):               7  [number of targets reported over threshold]
+# CPU time: 0.14u 0.04s 00:00:00.18 Elapsed: 00:00:00.08
+# Mc/sec: 22394.22
+//
+[ok]

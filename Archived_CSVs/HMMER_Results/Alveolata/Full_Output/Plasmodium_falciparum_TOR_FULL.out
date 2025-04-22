@@ -1,0 +1,130 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Plasmodium_falciparum.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR11139.orig.30.pir  [M=2684]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.9e-15   52.5   1.0    1.2e-14   51.2   1.0    1.5  1  CAD51517.1  phosphatidylinositol 3-kinase [Plasmodium falcipa
+    3.6e-10   36.4   0.0      5e-10   35.9   0.0    1.1  1  CAX51867.2  phosphatidylinositol 4-kinase, putative [Plasmodi
+      2e-09   33.9   0.0      6e-09   32.3   0.0    1.7  1  CAD51463.1  phosphatidylinositol 4-kinase [Plasmodium falcipa
+  ------ inclusion threshold ------
+       0.26    6.9   5.0        2.8    3.6   0.0    2.7  3  CZT99416.1  VAC14 domain-containing protein, putative [Plasmo
+
+
+Domain annotation for each sequence (and alignments):
+>> CAD51517.1  phosphatidylinositol 3-kinase [Plasmodium falciparum 3D7]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   51.2   1.0   9.2e-18   1.2e-14    2360    2540 ..    1878    2015 ..    1876    2020 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 51.2 bits;  conditional E-value: 9.2e-18
+  PTHR11139.orig.30.pir 2360 fLlKgheDLRqDeRimQLfrlvNtlLskdrerrRkLsIrtYsViPLsprsGLieWVpntdtLhsilrgcadyrearakipsdlnie 2445
+                             +  K ++DLRqD  + Q   ++ ++ ++   ++ +L+ + Y+V  Ls++ G ie+V+  +++ si +   +y++   ++     i 
+             CAD51517.1 1878 YIYKAGDDLRQDHLVIQIIYVMDNIWKR---YGLDLKMTLYRVLALSTDDGFIEFVDYAESISSIKK---NYKGEIRQY----FID 1953
+                             667999******************9977...889*********************************...555432222....133 PP
+
+  PTHR11139.orig.30.pir 2446 hrlmrqaapqaaykvevfkevleetepplLhkelwlkssspeaW.larRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevv 2530
+                             +++++++                                    +  ++ +n+ +S+A  S++ yiLG+GDRH++N+++ +  G+  
+             CAD51517.1 1954 NSTCSSSPLG---------------------------------FdTEILQNFISSCAGYSVITYILGIGDRHLDNLMVTK-DGRFF 2005
+                             3333333333.................................2117889*****************************7.89*** PP
+
+  PTHR11139.orig.30.pir 2531 HIDFgdcffe 2540
+                             HIDFg++f+e
+             CAD51517.1 2006 HIDFGYIFGE 2015
+                             ********97 PP
+
+>> CAX51867.2  phosphatidylinositol 4-kinase, putative [Plasmodium falciparum 3D7]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   35.9   0.0   3.7e-13     5e-10    2493    2564 ..    4867    4937 ..    4852    4939 .. 0.94
+
+  Alignments for each domain:
+  == domain 1  score: 35.9 bits;  conditional E-value: 3.7e-13
+  PTHR11139.orig.30.pir 2493 RknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnlvnalg 2564
+                              kn+ +SlA+ S+ ++iL + DRH  N+L+d + G ++HIDFg+++     +    El PF LTr ++ +l+
+             CAX51867.2 4867 LKNFISSLAAYSLLSFILQVKDRHNGNLLFD-DNGNIIHIDFGYILNIYPGISINFELAPFKLTREMIMLLT 4937
+                             69*****************************.89*********************************98886 PP
+
+>> CAD51463.1  phosphatidylinositol 4-kinase [Plasmodium falciparum 3D7]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   32.3   0.0   4.5e-12     6e-09    2489    2559 ..    1387    1455 ..    1305    1461 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 32.3 bits;  conditional E-value: 4.5e-12
+  PTHR11139.orig.30.pir 2489 WlarRknytrSlAvmSmvGyiLGLGDRHpsNiLldrntGevvHIDFgdcffeagqrLpvPElVPFRLTrnl 2559
+                              ++++kn+  S+A+ S+++y+L + DRH  N+Lld+  G+++HID+g ++  +       E+ PF LT+  
+             CAD51463.1 1387 IFEAKKNFIESHAAYSLISYLLQVKDRHNGNLLLDS-DGHLIHIDYGFMLTNSPGNVN-FETSPFKLTQEY 1455
+                             4799*******************************6.99*******777777766444.477899999955 PP
+
+>> CZT99416.1  VAC14 domain-containing protein, putative [Plasmodium falciparum 3D7]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.6   0.0    0.0021       2.8     800     850 ..     517     569 ..     381     570 .. 0.74
+   2 ?   -0.7   0.0     0.039        52    1305    1440 ..     605     736 ..     601     759 .. 0.75
+   3 ?    2.0   1.7    0.0061       8.2     806    1093 ..    1096    1348 ..    1086    1398 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 3.6 bits;  conditional E-value: 0.0021
+  PTHR11139.orig.30.pir 800 dplvrlsvleslaedlaafd..ehasqafslsllfallndeslevreaaisll 850
+                            + +vr+ +++ l  + ++     +++++f+++ lf +l de+++++ +a ++l
+             CZT99416.1 517 NTNVRQLIISWLFFLQNIPTinIFEYFHFFIKDLFLMLSDENKDIQKQANQCL 569
+                            55677777766655555444668999********************9998876 PP
+
+  == domain 2  score: -0.7 bits;  conditional E-value: 0.039
+  PTHR11139.orig.30.pir 1305 klklekllllallLpilnkllekl.lelailvraaalsslaal..........rassvtkiasallhslvrvl.qllaaqdstnsk 1378
+                              +k++ ll+++++  iln  +++   ++++ +++++++ l ++           ++++ k + +ll+s+v++  +           
+             CZT99416.1  605 VIKHKSLLWIYHFINILNIHFYNIfDSSPKKNNTFLIELLKKIiastsdvcfdIHYTARKCN-ELLISYVKFTyL----------- 678 
+                             6799*********************9999999999999999999999999988777666666.999999888842........... PP
+
+  PTHR11139.orig.30.pir 1379 llaadalgalgalvfnlgldyskilpllkklglflrsrrdwdleltllskvlarrlskatll 1440
+                               +a+ +  l +l  n  ++ s ++ +  k +   ++++++   +++ +k+l ++l++++++
+             CZT99416.1  679 -ESAPLITKLVCLIINTKIEKSELVVSASKDS---TNYKNYQKKYFSRRKKLYKDLMYDQRN 736 
+                             .4555566666666666565555554444444...444444448888899999999998844 PP
+
+  == domain 3  score: 2.0 bits;  conditional E-value: 0.0061
+  PTHR11139.orig.30.pir  806 svleslaedlaafd..ehasqafslsllfallndeslevreaaisllgrlsl....ksllnpalrlallrkllsqlLtrLelells 885 
+                             ++l+ l e+l++ +   + + ++++  +f++l  ++++v++ ++++l  ++     k        +  + k++++l++     ++ 
+             CZT99416.1 1096 TCLQWLIEILIYKSneIKTYYDEIIICIFKCLKNDDNKVLLLSLTVLSAMCGtvdnK--------FHFYEKISLNLIN-----IFK 1168
+                             56667777776666665566899***********************99988644332........7779999999999.....566 PP
+
+  PTHR11139.orig.30.pir  886 skllehldsrleeesakllgtlirkseaee.................llppyavsilpaLvallaeennelrsallktladlletl 954 
+                             +      d +l + + k++++ i+ +  +                  ++++ ++++  +L++                        
+             CZT99416.1 1169 N------DENLLIHKGKVIVQHISRCLNNKkfyaylcyllikennftFVNKFVQVLNWVLLT------------------------ 1224
+                             6......7777777777777766644444468888888844444444444444444444443........................ PP
+
+  PTHR11139.orig.30.pir  955 laevglleaaerrqllvallplilaallqlwdsesseerlllkrlllleseakllvalallgqlvestgeviepllfdsiwlglep 1040
+                             ++e     +  r  l  + +  i++++l +w  +  ++ ++l +l+ +e                   +++ + +l          
+             CZT99416.1 1225 SDE----TKYLRNVLFLKKYYNIFSIILIAWFHNPLSAISFLLWLQKYEL-----------------AYYISS-YL---------- 1278
+                             222....2233333445555579999999999999999999999987777.................345555.66.......... PP
+
+  PTHR11139.orig.30.pir 1041 aypsllaellklllkflelshserrealavlg.................llgaldsldalrrallqlttl 1093
+                              +    + + + l +f  l+ s  ++  ++++                 l+ +l+++   +++ lq ++l
+             CZT99416.1 1279 TLLDVNSDFFHQLDNFIFLFESPVFSKQRIHLiypknypflikslmilsLMLPLNTSNNILQKRLQISQL 1348
+                             6666666677777777766666666666666677777777777666666666666655555555554444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (2684 nodes)
+Target sequences:                       5387  (4103467 residues searched)
+Passed MSV filter:                       133  (0.0246891); expected 107.7 (0.02)
+Passed bias filter:                       94  (0.0174494); expected 107.7 (0.02)
+Passed Vit filter:                        14  (0.00259885); expected 5.4 (0.001)
+Passed Fwd filter:                         4  (0.000742528); expected 0.1 (1e-05)
+Initial search space (Z):               5387  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.54u 0.03s 00:00:00.57 Elapsed: 00:00:00.33
+# Mc/sec: 32967.63
+//
+[ok]

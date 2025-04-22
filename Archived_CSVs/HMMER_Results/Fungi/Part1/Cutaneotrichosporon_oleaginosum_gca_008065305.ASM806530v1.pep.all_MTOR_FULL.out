@@ -1,0 +1,439 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Cutaneotrichosporon_oleaginosum_gca_008065305.ASM806530v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    3.8e-59  198.1  12.7    1.3e-53  180.1   0.0    6.5  7  TXT06457  pep supercontig:ASM806530v1:ATCC20508_contig05:6500
+    2.1e-08   33.2   1.0     0.0083   15.0   0.1    4.7  5  TXT04468  pep supercontig:ASM806530v1:ATCC20508_contig07:1764
+    1.4e-06   27.3   0.2       0.22   10.3   0.1    6.2  7  TXT07743  pep supercontig:ASM806530v1:ATCC20508_contig04:5444
+    0.00025   19.9   1.6        1.2    7.9   0.0    4.9  5  TXT08016  pep supercontig:ASM806530v1:ATCC20508_contig04:1240
+     0.0005   18.9   1.0      0.014   14.2   0.0    3.4  3  TXT14557  pep supercontig:ASM806530v1:ATCC20508_contig01:1844
+    0.00053   18.8   0.0        2.1    7.1   0.0    4.9  5  TXT09467  pep supercontig:ASM806530v1:ATCC20508_contig03:5384
+     0.0072   15.1   0.2      0.053   12.3   0.1    2.5  2  TXT08332  pep supercontig:ASM806530v1:ATCC20508_contig04:2089
+  ------ inclusion threshold ------
+      0.047   12.5   0.1        1.3    7.8   0.0    3.4  3  TXT06525  pep supercontig:ASM806530v1:ATCC20508_contig05:8333
+      0.085   11.7   0.0        1.8    7.4   0.1    2.7  2  TXT11955  pep supercontig:ASM806530v1:ATCC20508_contig02:1691
+       0.45    9.3   5.8        8.4    5.2   0.2    4.0  5  TXT03959  pep supercontig:ASM806530v1:ATCC20508_contig08:1488
+
+
+Domain annotation for each sequence (and alignments):
+>> TXT06457  pep supercontig:ASM806530v1:ATCC20508_contig05:650020:657468:-1 gene:COLE_05788 transcript:TXT06457 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.6   0.2      0.27   2.1e+02      70     148 ..     211     288 ..     190     298 .. 0.77
+   2 ?   -1.0   0.0      0.82   6.5e+02      80     158 ..     304     382 ..     262     383 .. 0.56
+   3 !   12.3   0.1     7e-05     0.055      36     157 ..     601     735 ..     587     736 .. 0.73
+   4 !  180.1   0.0   1.6e-56   1.3e-53       1     160 []     740     899 ..     740     899 .. 0.98
+   5 ?    0.1   0.1      0.38     3e+02     102     138 ..     922     958 ..     905     984 .. 0.75
+   6 !    5.4   0.2    0.0092       7.3      79     156 ..     987    1063 ..     961    1065 .. 0.77
+   7 ?   -0.2   0.0      0.48   3.8e+02     125     154 ..    1762    1791 ..    1745    1795 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 0.6 bits;  conditional E-value: 0.27
+  mTOR_dom  70 ellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefl 148
+               ++++  + ss e y+ +  +a   +lk +s++s   + + a   +++++++ + ++++qi+   l++  + e+ +r+ +
+  TXT06457 211 DIMKARERSSSEIYQVIFEEAKSGLLKASSVDSILGS-LLAFSAMLQNQQISMGEYYRQICEITLKYRDSKETVIRKSV 288
+               3478888999999999999999999999998876655.5689999999************9999998777766666655 PP
+
+  == domain 2  score: -1.0 bits;  conditional E-value: 0.82
+  mTOR_dom  80 eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces...slrefllqqLatLvsi 158
+               e  y +  ++ Ll+ l++p+ +     +  a+ +   +l  k+ pf++ i+  + + +r   +    ++  ++q La+L++ 
+  TXT06457 304 EVHYLHRSMAYLLQALNKPTDR---DIAYVALGHLSIQLASKMRPFIDDIVKIIKEHLRMRGKkgaPFEAPIFQCLAMLTTA 382
+               3334444444444444444433...344445556666778899999999998888877743321135677788888888765 PP
+
+  == domain 3  score: 12.3 bits;  conditional E-value: 7e-05
+  mTOR_dom  36 GilGALDPykhkeveekseee........ekeeenaeetdvsel...lvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvp 124
+               Gi+G L  ++   v  + +++        e +++n++++++++l   l g s+s    y++++++ +l+i + ps   +  +++v+ i +  +  g + v+
+  TXT06457 601 GIIGRLAHHNPAYVMPSLRKSlinlitelEYSTANKQKEESAKLlclLIGASSSLVKSYASTILSVILRIARSPSTPaTVTASCVNCIGELARVAGEELVS 701
+               55665555555444433322233333323222222333333333344677777779999999*************98799999****************** PP
+
+  mTOR_dom 125 flpqiipallsvirtces.slrefllqqLatLvs 157
+                 + i+  ll+++++  s   r+  l+ L++ vs
+  TXT06457 702 NAKTIMDLLLELLNDPAStVKRNAALKALGQVVS 735
+               ***************9997888999999999875 PP
+
+  == domain 4  score: 180.1 bits;  conditional E-value: 1.6e-56
+  mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls 101
+               V++Py+dyp+LL+iL++il+ e+s++iR+e+i++lG+lGALDP khk++ +  +++++e++  + td+++l+++   s+++yy++vvin+L+++l+d++++
+  TXT06457 740 VITPYSDYPQLLGILFRILRLETSSQIRLEAIRTLGMLGALDPFKHKQLLGGDNDNTTESTGPRVTDITLLMNHNGGSNDDYYQMVVINSLVNVLNDANMK 840
+               9*************************************************988887888888888************************************ PP
+
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+               +hh ++++++m if+t++l+cv flpqi+pa+l vir  +++ ++++l+qLa+L+sivk
+  TXT06457 841 EHHYDAINSVMLIFRTQRLRCVGFLPQILPAFLGVIRMGSRDSQDVFLKQLAQLISIVK 899
+               **********************************************************8 PP
+
+  == domain 5  score: 0.1 bits;  conditional E-value: 0.38
+  mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                ++ ++++ +  i + ++ +  ++lpq+++++l+++ 
+  TXT06457 922 MMQITIISLVEAIARAVEGEFKAYLPQLLQQILRTFD 958
+               456678999999999999*************999875 PP
+
+  == domain 6  score: 5.4 bits;  conditional E-value: 0.0092
+  mTOR_dom   79 seeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156 
+                s e y + v+  +++ +++p+   + ++a++++  + +++  ++     +qii+ l+++++t +++lr+  ++ L++Lv
+  TXT06457  987 SIEDYLHLVLPVIIRSFENPAAPtKLRKAALTTTAQLCRK--VNFSDHASQIIHPLVRTLSTQDPELRNAAMETLCVLV 1063
+                4444555677778888888877657778888888888886..66678899**************************998 PP
+
+  == domain 7  score: -0.2 bits;  conditional E-value: 0.48
+  mTOR_dom  125 flpqiipallsvirtcesslrefllqqLat 154 
+                +  ++ip++++ i+t  +++re +++ L +
+  TXT06457 1762 VWLEVIPQIIARIQTPRPTIRELIVRLLHS 1791
+                556899*********999**9999988876 PP
+
+>> TXT04468  pep supercontig:ASM806530v1:ATCC20508_contig07:176464:179338:1 gene:COLE_07287 transcript:TXT04468 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.2   0.1   0.00062      0.49       9      38 ..     128     157 ..     122     225 .. 0.73
+   2 ?   -3.8   0.0       6.2   4.9e+03     126     142 ..     319     335 ..     316     341 .. 0.69
+   3 ?    0.2   0.0      0.35   2.8e+02      11      35 ..     409     433 ..     374     481 .. 0.70
+   4 !   15.0   0.1     1e-05    0.0083       2     139 ..     597     742 ..     596     758 .. 0.75
+   5 ?    2.5   0.0     0.071        56     103     154 ..     758     812 ..     750     815 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 9.2 bits;  conditional E-value: 0.00062
+  mTOR_dom   9 peLLeiLlnilkteqsqsiRrevikvlGil 38 
+                eL+++Ll+++++e+++ +R  +++++G +
+  TXT04468 128 SELIGQLLQFVQNEENTGLRVATLQTIGYI 157
+               689*************************87 PP
+
+  == domain 2  score: -3.8 bits;  conditional E-value: 6.2
+  mTOR_dom 126 lpqiipallsvirtces 142
+               l++i+p ll+++++ e+
+  TXT04468 319 LNEILPVLLELLTQQEE 335
+               77788888877776655 PP
+
+  == domain 3  score: 0.2 bits;  conditional E-value: 0.35
+  mTOR_dom  11 LLeiLlnilkteqsqsiRrevikvl 35 
+                L++L+n+l+++ + ++R +v  +l
+  TXT04468 409 ALGTLINMLQSDPDVHVRDSVAWTL 433
+               3555555555555555555554443 PP
+
+  == domain 4  score: 15.0 bits;  conditional E-value: 1e-05
+  mTOR_dom   2 vePyldypeLLeiLlnilkte.qsqsiRrevikvlGil.GALDPykhkeveeks.....eeeekeeenaeetdvsel.......lvglspsseeyyptvvi 88 
+               v+Py d  ++++ Ll+il+++ ++ ++  + + ++G l GAL     k +e  s     +      +++e+ +v ++       + + ++ +   y+  ++
+  TXT04468 597 VQPYAD--QIMTNLLTILSSSaKHGAVLEDLLATIGALaGALEGGFIKYMEAFSsfllaA-----LQAVEDYQVVQAavycvsdVSRAIQEQLANYAEPIM 690
+               677776..89***********669************988********9999766444431.....333333333333233333344456777777888889 PP
+
+  mTOR_dom  89 naLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                +L++il+ p +  + + ++++ai ++   +g   +p+l+  +  l ++  t
+  TXT04468 691 VQLIAILRSPVIHrQVKPTAITAIGEVALAIGPAFTPYLETTMGILSQAGAT 742
+               999*********9888999********************9988777665444 PP
+
+  == domain 5  score: 2.5 bits;  conditional E-value: 0.071
+  mTOR_dom 103 hhtavvqaimsifktlglkc.vpflpqi..ipallsvirtcesslrefllqqLat 154
+               +++a+v+a + i++ l+     p+l+ +  i a+l+++ + +++ +ef+ + L+ 
+  TXT04468 758 MREAIVDAFIGIMNGLKAGDpAPMLTYVpgIMAFLHTCMKEDDRTEEFITNTLGL 812
+               6789999999999999998877777776666678888887788999999999875 PP
+
+>> TXT07743  pep supercontig:ASM806530v1:ATCC20508_contig04:544421:552447:-1 gene:COLE_04667 transcript:TXT07743 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.6   0.0      0.64     5e+02      20      84 ..    1375    1446 ..    1351    1458 .. 0.50
+   2 ?   -2.8   0.0         3   2.4e+03     115     146 ..    1514    1545 ..    1488    1549 .. 0.77
+   3 ?   -1.7   0.0       1.3   1.1e+03     125     146 ..    1603    1624 ..    1569    1633 .. 0.85
+   4 !    7.0   0.0    0.0029       2.3      95     157 ..    1692    1754 ..    1641    1756 .. 0.79
+   5 ?   -3.1   0.0       3.8     3e+03       9      30 ..    1762    1783 ..    1760    1811 .. 0.67
+   6 !   10.3   0.1   0.00028      0.22       9     157 ..    1989    2136 ..    1985    2138 .. 0.68
+   7 ?   -1.4   0.0       1.1   8.9e+02      87     137 ..    2372    2423 ..    2338    2444 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: -0.6 bits;  conditional E-value: 0.64
+  mTOR_dom   20 kteqsqsiRrevikvlGil.GALDPykhkeveeks...eee....ekeeenaeetdvsellvglspsseeyyp 84  
+                k++ s  i+  v+ ++G l G LDP   +  +      e +    ++  ++a +  + +l++g+s+ ++ey  
+  TXT07743 1375 KSQASDYIKEAVVILFGRLaGHLDPSDERIPKVVErlvE-AlntpSELVQSAVADCLPALVQGMSSEETEYLV 1446
+                333455555555555554446666665542221111121.122222222233233333335555555555554 PP
+
+  == domain 2  score: -2.8 bits;  conditional E-value: 3
+  mTOR_dom  115 fktlglkcvpflpqiipallsvirtcesslre 146 
+                  tlg    p++ qiip +l+++ ++++ +re
+  TXT07743 1514 SATLGRIFEPYIVQIIPLMLTLFGDTNKYVRE 1545
+                5566777789**********999888776665 PP
+
+  == domain 3  score: -1.7 bits;  conditional E-value: 1.3
+  mTOR_dom  125 flpqiipallsvirtcesslre 146 
+                 lp iip+l+ vi++++++++ 
+  TXT07743 1603 SLPTIIPHLTGVINDSHAQVKS 1624
+                699***********99887765 PP
+
+  == domain 4  score: 7.0 bits;  conditional E-value: 0.0029
+  mTOR_dom   95 lkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                lk++s s+ + + vq + ++ +  +++  vp+l +++p +  v+ +  ++ r +  + L+tLv+
+  TXT07743 1692 LKQRS-SETKRKSVQIVGNMASLTEVRDlVPYLAELMPLVHDVLVDPVPEARATAAKSLGTLVE 1754
+                34444.66788899*************99*****************999*************96 PP
+
+  == domain 5  score: -3.1 bits;  conditional E-value: 3.8
+  mTOR_dom    9 peLLeiLlnilkteqsqsiRre 30  
+                p+L++ Ll +l+t++s   R+ 
+  TXT07743 1762 PDLVDRLLGMLRTDSSGVDRQG 1783
+                7777777777777766555544 PP
+
+  == domain 6  score: 10.3 bits;  conditional E-value: 0.00028
+  mTOR_dom    9 peLLeiLlnilkteq..sqsiRrevikvlG.........ilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilk 96  
+                p L+++L+++l +e+  +q     + +++G         i+G + P   k ++++    + ++++ +  + s+++v+ s+   e  + v+i+++   l 
+  TXT07743 1989 PVLMQLLVSLLGSETveQQ---ETASRTIGelcrkngerIVGEIVPILKKAITST----DPRTKEGACLAFSDVMVSASKDAIETHEEVIIASVRDALV 2080
+                5566666666666532122...223333332223333556677777777666643....334555666889999************************* PP
+
+  mTOR_dom   97 dpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                dps +     v  a    f t++  +  + ++q ip+ll+++r+   + +e+ lq L++ +s
+  TXT07743 2081 DPSPD-----VRAAAARTFDTMQHFMgAKAVDQTIPTLLEAMRNP-GESSETALQALQEVMS 2136
+                **977.....4455555566655555566779***********94.58999****9998765 PP
+
+  == domain 7  score: -1.4 bits;  conditional E-value: 1.1
+  mTOR_dom   87 vinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvi 137 
+                    L+++++ +s++ + + a++q+++  ++++   + pf pq+  ++++ +
+  TXT07743 2372 LTGPLIRVISGQSIApQIKGAILQTLTVLLEEVPQLVRPFHPQLTRTFVKSA 2423
+                3444666666666665556666666666666666666666666666666655 PP
+
+>> TXT08016  pep supercontig:ASM806530v1:ATCC20508_contig04:1240018:1243452:-1 gene:COLE_04940 transcript:TXT08016 gene_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.8   0.0       1.4   1.1e+03      75     130 ..     353     409 ..     324     414 .. 0.74
+   2 ?    4.5   0.0     0.017        14       3     152 ..     470     628 ..     468     633 .. 0.65
+   3 !    7.9   0.0    0.0015       1.2      41     159 ..     661     798 ..     660     799 .. 0.70
+   4 ?   -2.4   0.0       2.2   1.7e+03     125     152 ..     848     875 ..     827     879 .. 0.55
+   5 ?    2.0   0.0       0.1        81      17     133 ..     900    1009 ..     892    1032 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: -1.8 bits;  conditional E-value: 1.4
+  mTOR_dom  75 lspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+               ++    e+ +   + ++l +l ++sl+ + ++  v++i  i+ +l+  + p++ +i+
+  TXT08016 353 ITDKAREFGAGPLFDKILPLLMERSLEdQERHLLVKVIDRILYKLDDLVRPYVHKIL 409
+               455555666666677778888899998677788888898998888888888888876 PP
+
+  == domain 2  score: 4.5 bits;  conditional E-value: 0.017
+  mTOR_dom   3 ePyldypeLLeiLlnilkteqsqsiRrevikvl......GilG.ALDPykhkeveeks....eeeekeeenaeetdvsellvglspsseeyyptvvinaLl 92 
+                  l  p LL  L  + ++++s++ R   i+++      G++G  + P+ +  v  ++    ++e+++ +++++ ++++l+ +  p   e + + v++ L 
+  TXT08016 470 ASALGIPALLPFLKAVCRSKKSWQARHTGIRIIqqiampGMMGnGVLPHLRNLVD-AIadglQDEQQKVRTMTALALAQLAESAAPYGIESFDN-VLKPLW 568
+               5556678888889888898889998888888874444455555335555554443.33344333355555555555555566666666666666.344444 PP
+
+  mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqL 152
+                 ++++   +  +a ++ai +i+  ++ +    ++++ +p l++ ++t+++++r  +lq +
+  TXT08016 569 LGIRQHRG-KTIAAFLKAIGYIIPLMDPEYaGYYVKECMPILIREFQTSDEEMRRIVLQVI 628
+               44444443.4678888999999999999985667899999999999999999999888866 PP
+
+  == domain 3  score: 7.9 bits;  conditional E-value: 0.0015
+  mTOR_dom  41 LDPykhkeveeks....................eeeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlgl 120
+               LD  ++k++  ++                    ++e++  +++  ++++++++    ++ +e  ++  i  ++  +++++l+   t +++    ++  lg 
+  TXT08016 661 LDRRNYKQLVDTTvelatkagvseivgritndlKDESEPYRKMVMETIQKVVQANGAADiDERMEQLLIDGIIFSFQEQTLE--DTVMLDGFAAVVGALGG 759
+               5555555555444455444444444444443333334555555556677777777777789999999999999999999999..688999999999***** PP
+
+  mTOR_dom 121 kcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+               ++ p+lpqi++ +l  +++ ++++r    +  ++L  i+
+  TXT08016 760 RVKPYLPQIVSMILWRLTNKSAKVRMLAADLTTKLAPII 798
+               *************99888888787777666666666665 PP
+
+  == domain 4  score: -2.4 bits;  conditional E-value: 2.2
+  mTOR_dom 125 flpqiipallsvirtcesslrefllqqL 152
+                ++ ++p ++ ++r+ +++++e  ++ +
+  TXT08016 848 PVKDLLPRMTPILRNRHEKVQEATINLI 875
+               5555555555555555555555554443 PP
+
+  == domain 5  score: 2.0 bits;  conditional E-value: 0.1
+  mTOR_dom   17 nilkteqsqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsi 114 
+                ++lk   +++iRr +++ +G +  A+ P+ + +v  ++ +     ++ ++  +s  +v +    e   p + i a+l+  + p l+  ++ +++a+ ++
+  TXT08016  900 DLLKAH-KKAIRRAAVNSFGYIAkAIGPQDVLSVLLTNLK----VQERQSRVLS--TVAIAIVAETCGPFTCIPAILNEYRTPELN-VRNGCLKALAYV 990 
+                555543.677888888888877547778777655543322....2222222222..234455667777788888888888888887.788889999999 PP
+
+  mTOR_dom  115 fktlglkcvpflpqiipal 133 
+                f+++g  +  ++  +i  l
+  TXT08016  991 FQYVGEMSKDYIHSVIGLL 1009
+                9999999999999988765 PP
+
+>> TXT14557  pep supercontig:ASM806530v1:ATCC20508_contig01:1844974:1850631:1 gene:COLE_00750 transcript:TXT14557 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.1   0.0      0.44   3.5e+02     101     145 ..     335     379 ..     318     391 .. 0.77
+   2 !   14.2   0.0   1.8e-05     0.014      10      56 ..     520     565 ..     517     615 .. 0.74
+   3 ?   -0.6   0.1      0.65   5.2e+02     102     156 ..    1297    1352 ..    1268    1354 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: -0.1 bits;  conditional E-value: 0.44
+  mTOR_dom 101 sshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslr 145
+               ++ + ++++++ + ++ +g  + +f pqii +l+s++ + e +l+
+  TXT14557 335 ADIRRKIIRSLGELISLVGDSMASFSPQIIASLQSTLCQPELRLQ 379
+               455677888888888888888899999999999888876554555 PP
+
+  == domain 2  score: 14.2 bits;  conditional E-value: 1.8e-05
+  mTOR_dom  10 eLLeiLlnilkte.qsqsiRrevikvlGilGALDPykhkeveekseee 56 
+               +L++ Ll+  +t+ + q++R     ++GilGALDP ++  v+++ e++
+  TXT14557 520 QLVQSLLSTSSTDgDGQELRDLSYECFGILGALDPDRF--VTRSDESS 565
+               7899999999999669*********************9..44333333 PP
+
+  == domain 3  score: -0.6 bits;  conditional E-value: 0.65
+  mTOR_dom  102 shhtavvqaimsifktlglkc..vpflpqiipallsvirtcesslrefllqqLatLv 156 
+                s  +  v++i++ + + + k    +fl+   p+++s i++ +s++r+++++ L+  v
+  TXT14557 1297 STVQRNVEVITHLMIQSKDKImpFQFLTA-FPQMISRITHPSSKVRDTMVKILSRVV 1352
+                33344455555544444444412456655.588888888888899998888887766 PP
+
+>> TXT09467  pep supercontig:ASM806530v1:ATCC20508_contig03:538465:541455:-1 gene:COLE_03401 transcript:TXT09467 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.1   0.0    0.0027       2.1      97     157 ..     137     207 ..      87     209 .. 0.89
+   2 ?   -1.3   0.0         1   8.1e+02      21      40 ..     229     248 ..     212     280 .. 0.65
+   3 ?   -0.2   0.0      0.47   3.7e+02     117     137 ..     292     312 ..     286     320 .. 0.83
+   4 ?    3.8   0.0     0.028        22      72     156 ..     491     574 ..     415     578 .. 0.80
+   5 ?   -2.0   0.0       1.7   1.3e+03      10      46 ..     783     820 ..     777     839 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 7.1 bits;  conditional E-value: 0.0027
+  mTOR_dom  97 dpslsshhtavvqaimsifktlglkcvp..........flpqiipallsvirtcesslrefllqqLatLvs 157
+                + lss+ ++ v+ +++ f+++   c +          + ++++p++++ + +++++ r + l+ L+ L++
+  TXT09467 137 TKGLSSQDENLVEGVLNTFQKVAEDCPQrlditiqgtnLFEHLVPQFIQFTGHSDPRNRLYALETLQCLIA 207
+               5668999***************999988899999999999*************************999986 PP
+
+  == domain 2  score: -1.3 bits;  conditional E-value: 1
+  mTOR_dom  21 teqsqsiRrevikvlGilGA 40 
+               +++s ++Rr v   lG++ A
+  TXT09467 229 SDESADVRRTVCAALGLILA 248
+               33577777777777776644 PP
+
+  == domain 3  score: -0.2 bits;  conditional E-value: 0.47
+  mTOR_dom 117 tlglkcvpflpqiipallsvi 137
+               +l+ ++ p+l++i+p ll+ +
+  TXT09467 292 SLKSQMQPYLDKIVPLLLEGM 312
+               5778899********999876 PP
+
+  == domain 4  score: 3.8 bits;  conditional E-value: 0.028
+  mTOR_dom  72 lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+               +v +s+ +++ +   +++ Ll+++ d + +  ++a  +a  +  ++ g + vpfl+ i+ +l+ ++++ +++ +  l++ ++tL 
+  TXT09467 491 VVAVSTENKQTFFLPTMEGLLQMVLDGN-KRVQEAGCSAFATLEEEAGGELVPFLEPILRNLTYAFTKYQQKNLLILYDAIGTLA 574
+               4555666666666666777888777776.44788899999999999999*************99999999977777777777776 PP
+
+  == domain 5  score: -2.0 bits;  conditional E-value: 1.7
+  mTOR_dom  10 eLLeiLlnilkteq.sqsiRrevikvlGilGALDPykh 46 
+               +L++ L+ il +++  +s+  ++  ++G lG + P ++
+  TXT09467 783 DLIKRLIPILLNQKsPKSLSENAAVTIGRLGLVAPDRV 820
+               68889999999986488899999999999999888775 PP
+
+>> TXT08332  pep supercontig:ASM806530v1:ATCC20508_contig04:2089381:2094706:1 gene:COLE_05256 transcript:TXT08332 gene_b
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.0       1.2   9.6e+02       8      46 ..     465     502 ..     460     537 .. 0.80
+   2 !   12.3   0.1   6.7e-05     0.053      76     159 ..    1056    1139 ..    1037    1140 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 1.2
+  mTOR_dom   8 ypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykh 46 
+                p ++e+L n+l  e + ++  ++  v+ +lGAL  y  
+  TXT08332 465 LPAIIETLWNCLG-EGTDELGSSTAAVMDLLGALLQYDE 502
+               6888899999997.5588899999999999999977765 PP
+
+  == domain 2  score: 12.3 bits;  conditional E-value: 6.7e-05
+  mTOR_dom   76 spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                +   +e  +  v+  ++ ++ d+     ++ +v+ai++i+k l++k +p++  +i  +l  ++++++s+r    + +a Lv++v
+  TXT08332 1056 CDVATEAAMRRVVDDIVPLVGDAERVPSRQGAVEAIHHIIKLLEIKALPYVLFLIVPILGRMSDSNESVRLLSTSTFAALVKMV 1139
+                555666666777788888888888889999********************99999999999**9999**999999999999987 PP
+
+>> TXT06525  pep supercontig:ASM806530v1:ATCC20508_contig05:833366:839290:-1 gene:COLE_05856 transcript:TXT06525 gene_bi
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.8   0.0       3.1   2.4e+03      78     130 ..     746     796 ..     725     817 .. 0.66
+   2 ?   -0.4   0.0      0.54   4.3e+02     106     155 ..    1240    1301 ..    1204    1304 .. 0.83
+   3 ?    7.8   0.0    0.0017       1.3     104     159 ..    1557    1612 ..    1497    1613 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -2.8 bits;  conditional E-value: 3.1
+  mTOR_dom  78 sseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqii 130
+               ss e    +v +aL++  + ++l+s  ++  + ++s+f +lg  ++ fl  + 
+  TXT06525 746 SSSEGQTRTVAQALYRWANSANLASAVAK--HLLHSVFTQLGEDVLVFLASVW 796
+               55555566677777777777777743333..4467889999999999998885 PP
+
+  == domain 2  score: -0.4 bits;  conditional E-value: 0.54
+  mTOR_dom  106 avvqaimsifktlglkcvp............flpqiipallsvirtcesslrefllqqLatL 155 
+                +v++ +m if  +g   ++            ++++i+p +++ +++  +s  e + + La L
+  TXT06525 1240 SVLHNVMPIFTFMGSSELQrddaysfgvvekTVERIVPVMTASLKDKATSKHELYTHSLAFL 1301
+                56777777777777777666777777777778999999999999999999999999999877 PP
+
+  == domain 3  score: 7.8 bits;  conditional E-value: 0.0017
+  mTOR_dom  104 htavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                 + +++ +   ++ lg + +pf++ i+ + ls+i ++e+      +  La Lv++v
+  TXT06525 1557 AAGILTLLSALIRRLGSRTIPFVQAILDTCLSLIGSTEPLTAAAAFGALAALVETV 1612
+                45556667778999***************************************987 PP
+
+>> TXT11955  pep supercontig:ASM806530v1:ATCC20508_contig02:1691275:1693955:-1 gene:COLE_02365 transcript:TXT11955 gene_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.0   0.0      0.42   3.3e+02      88     119 ..     151     182 ..     149     188 .. 0.84
+   2 ?    7.4   0.1    0.0023       1.8      94     159 ..     515     577 ..     467     578 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: -0.0 bits;  conditional E-value: 0.42
+  mTOR_dom  88 inaLlkilkdpslsshhtavvqaimsifktlg 119
+               i++ l+ l+ p ls+hh+  + + ++i   ++
+  TXT11955 151 ISTALAFLNAPPLSQHHAYLIPSTVFITPAME 182
+               667788999************99999987776 PP
+
+  == domain 2  score: 7.4 bits;  conditional E-value: 0.0023
+  mTOR_dom  94 ilkdpsls.shhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                     l+ s  +a v a+m  + t+++     +  ++ip++++++ + e+ +r+  ++ +a++v+ v
+  TXT11955 515 S-----LKdSFVHARVAALMALMATVECYDrDDLAGRVIPNMAHALVDKEKIVRDQAFKAMAMFVKRV 577
+               3.....333566789999999999999888567889***************************99866 PP
+
+>> TXT03959  pep supercontig:ASM806530v1:ATCC20508_contig08:148874:151941:1 gene:COLE_07656 transcript:TXT03959 gene_bio
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.2   0.2     0.011       8.4      66     102 ..      99     135 ..      72     146 .. 0.54
+   2 ?   -1.7   0.0       1.3   1.1e+03      42      92 ..     273     324 ..     273     354 .. 0.71
+   3 ?    2.2   0.2     0.087        69      71     127 ..     354     413 ..     331     422 .. 0.74
+   4 ?    1.7   0.0      0.13     1e+02      84     119 ..     423     458 ..     418     488 .. 0.84
+   5 ?   -3.8   0.1       6.2   4.9e+03     103     118 ..     686     701 ..     681     723 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 5.2 bits;  conditional E-value: 0.011
+  mTOR_dom  66 tdvsellvglspsseeyyptvvinaLlkilkdpslss 102
+               + +s+++++++p  e +y   +i+aL +i++ ++++s
+  TXT03959  99 MVTSSIMKDMQPNLEVVYRPNAIRALARIIDAQTVQS 135
+               2334445556555566666666666666665555443 PP
+
+  == domain 2  score: -1.7 bits;  conditional E-value: 1.3
+  mTOR_dom  42 DPykhkeveekseeeekeeenaeetdvsellvglspss.eeyyptvvinaLl 92 
+               DP  +k+++e  e   ++++++ +++ +++++++ + +  e y  v++ +L 
+  TXT03959 273 DPNVQKQMHEYLEGLLRHKSDMVNIEAARAICEMRSVTsAELYRPVAVLQLF 324
+               6667777766665555566666677777778888777779999999987775 PP
+
+  == domain 3  score: 2.2 bits;  conditional E-value: 0.087
+  mTOR_dom  71 l...lvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflp 127
+                   l +l++ s+  ++t++i++Llk  +++s++   +++ + ++ i  + ++ +v  ++
+  TXT03959 354 CnldLENLISDSNRSIATYAITTLLKTGNEASVDRLMKQISSFMTDITDEFKIIVVDAIR 413
+               2234677788889999*****************999999988888888887777766655 PP
+
+  == domain 4  score: 1.7 bits;  conditional E-value: 0.13
+  mTOR_dom  84 ptvvinaLlkilkdpslsshhtavvqaimsifktlg 119
+               ++v+++ L  +l+d+   + + avv+ai  ++k+++
+  TXT03959 423 QAVMLTFLSGVLRDEGGYDFKLAVVDAIFDMIKYIQ 458
+               569999999********************9999865 PP
+
+  == domain 5  score: -3.8 bits;  conditional E-value: 6.2
+  mTOR_dom 103 hhtavvqaimsifktl 118
+                 + +v+a+ +ifk+ 
+  TXT03959 686 ETEYAVSAVKHIFKEH 701
+               5567889999999874 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       7921  (3619917 residues searched)
+Passed MSV filter:                       249  (0.0314354); expected 158.4 (0.02)
+Passed bias filter:                      230  (0.0290367); expected 158.4 (0.02)
+Passed Vit filter:                        25  (0.00315617); expected 7.9 (0.001)
+Passed Fwd filter:                        10  (0.00126247); expected 0.1 (1e-05)
+Initial search space (Z):               7921  [actual number of targets]
+Domain search space  (domZ):              10  [number of targets reported over threshold]
+# CPU time: 0.08u 0.03s 00:00:00.11 Elapsed: 00:00:00.14
+# Mc/sec: 4113.30
+//
+[ok]

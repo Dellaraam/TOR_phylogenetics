@@ -1,0 +1,316 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Metazoa/Proteins/Nematostella_vectensis.ASM20922v1.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+          0 1048.3  11.7          0 1048.0  11.7    1.0  1  EDO33699  pep supercontig:ASM20922v1:NEMVEscaffold_255:105417
+      0.009   13.8   0.0      0.018   12.8   0.0    1.4  1  EDO31525  pep supercontig:ASM20922v1:NEMVEscaffold_386:58645:
+  ------ inclusion threshold ------
+      0.038   11.7   2.4       0.21    9.3   2.4    2.0  1  EDO39621  pep supercontig:ASM20922v1:NEMVEscaffold_98:172035:
+       0.04   11.6   0.6      0.088   10.5   0.1    1.8  2  EDO33776  pep supercontig:ASM20922v1:NEMVEscaffold_252:175398
+       0.18    9.5   1.3        2.3    5.8   1.0    2.4  2  EDO34974  pep supercontig:ASM20922v1:NEMVEscaffold_206:36818:
+        0.2    9.3   6.2       0.33    8.6   0.3    2.8  3  EDO33627  pep supercontig:ASM20922v1:NEMVEscaffold_259:95073:
+       0.54    7.9   3.4        4.9    4.7   0.1    2.3  3  EDO35729  pep supercontig:ASM20922v1:NEMVEscaffold_183:136316
+        0.6    7.8   2.3        5.8    4.5   0.0    2.9  3  EDO38337  pep supercontig:ASM20922v1:NEMVEscaffold_122:224552
+       0.87    7.2   1.8        8.9    3.9   0.0    2.0  2  EDO29092  pep supercontig:ASM20922v1:NEMVEscaffold_1493:7051:
+          2    6.0   3.9         14    3.3   0.1    2.9  3  EDO42228  pep supercontig:ASM20922v1:NEMVEscaffold_61:534569:
+
+
+Domain annotation for each sequence (and alignments):
+>> EDO33699  pep supercontig:ASM20922v1:NEMVEscaffold_255:105417:121146:1 gene:NEMVEDRAFT_v1g10046 transcript:EDO33699 g
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ! 1048.0  11.7         0         0      89    1012 ..       5     915 ..       1     917 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 1048.0 bits;  conditional E-value: 0
+  PTHR13298.orig.30.pir   89 llseskevraaalRllrylisdskvlrrllrlgldiliarsLdrdsknetEreqalkliramlevapkliptaivralvaiae... 171 
+                             l  ++kevraa+ R+lr+l+sd+++++++l+ ++di+i+rs+d+   ne+Er+qal++ir++++v pk +p++++ +lv+ ++   
+               EDO33699    5 LTMPAKEVRAAGVRALRHLFSDKTTFEKMLKVRMDIFIIRSMDNTIANEVERIQALRFIRKVVAVCPKSCPMSLAVCLVSTGSdns 90  
+                             77899********************************************************************************9 PP
+
+  PTHR13298.orig.30.pir  172 seedrlrraclatlcelallnpelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhy 257 
+                             +e drl+ aclatlcela++n +l++ +gg++++++++l+cq+ +r++e+l+ +ll+lln+  +r y+r +v le +lapftd hy
+               EDO33699   91 EEPDRLKTACLATLCELAIKNSALASYSGGINAIIRNVLDCQV-PRLNEALMVTLLFLLNNSDSRPYVRSDVGLEGVLAPFTDLHY 175 
+                             9*****************************************8.****************************************** PP
+
+  PTHR13298.orig.30.pir  258 rakkdkqeskskeerelsrleaskkailtlLrSWaGllylckndkrgLkslvdvlrlpnlevrkaildlLydlLrlkepkwtesft 343 
+                             r+++d++e+  ke+re+ rl+as +ai++++rSW+G++ +ck+d +gL+sl++v++l+n evr+ i+d++ +++r+k++ wt++f 
+               EDO33699  176 RHNADTSEKLFKEDREA-RLRASEMAIIAVFRSWSGIISFCKPDGKGLQSLLGVFCLKNSEVRRGIMDIISQIFRIKQAVWTDDF- 259 
+                             ********888888888.*******************************************************************. PP
+
+  PTHR13298.orig.30.pir  344 sgsalkavdsaalqdswrlsdgfvaeesktilpssarsrpdlldnylallLlalieagLleaLvevitssdssvsvkAtiLLgell 429 
+                             +  al +vd++ +qd+wrl+++fva+e+k++lp++a+ r++l+ ny+al+L+a+++agLle Lvevitssd ++sv+AtiLLgell
+               EDO33699  260 N-IALMSVDPSVMQDTWRLQENFVAQEGKDLLPHRATGRTNLVSNYTALVLAAFMNAGLLECLVEVITSSDCFISVQATILLGELL 344 
+                             4.7*********************************************************************************** PP
+
+  PTHR13298.orig.30.pir  430 slantlLPpelsaslhslptlvslaasfssekskrnraaaa.lalksldelkrsksksaslyldeilqkkllersssnssedskrk 514 
+                             +lantlLPpe+s ++h+lp+lv++a+sf+++  +r+ra+aa ++l +l+++k++ + ++slyl +i +++++++ ++     +   
+               EDO33699  345 HLANTLLPPECSRHSHCLPSLVNTATSFEVSAAERGRASAAvNCLDRLHQMKKREPVPCSLYLEQIFNQRVSAHPAHP-LCVRAWG 429 
+                             ********************************************************************8887777776.5577888 PP
+
+  PTHR13298.orig.30.pir  515 rlrqiledddeafkrmlkdsqvlstkdylkWnwdlilellegplnlnpkrleeavkvtkffkrLlsFykPskkrfssid.ktkqle 599 
+                             ++  il+d + a   +++d+qv++ kd+ kW+w+li   l++p+ l++k+le ++++++f+++Ll+FykPs+++f++++  ++  +
+               EDO33699  430 SIVIILIDPEDAYVAAIRDTQVVTEKDFRKWDWELIGATLQSPS-LSLKKLE-ETNNQRFIRNLLYFYKPSSQQFCTVSiTDNMAK 513 
+                             8888****************************************.*******.778999*********************888888 PP
+
+  PTHR13298.orig.30.pir  600 kyvqvgcqllslLlsspeGialleesrlLkelleelsqelldsssekspderlfskerlsttlsqgyflfiGvLsstkeGl..kiL 683 
+                             +y ++g+ l+++Ll++++      ++ +Lkel +e+ ++ll++   + + ++++s+++l++tls++y+lf+G++s++k+ +  k+L
+               EDO33699  514 TYSRAGLLLIHFLLDTDD----AAGDMILKELTQEIGECLLEVL--SPNMTGVLSSSSLQNTLSRDYILFLGRISCSKNSTssKLL 593 
+                             8*****************....99****************9999..55667**************************9987669** PP
+
+  PTHR13298.orig.30.pir  684 eklnifqlllqlislktrdelvklivssLdysldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydp 769 
+                             ek++i+q+ll+++s+ +++ l+kli++sLdy+  g sR+ilsk Lt+ss+s+Rlyat h+rvllr+++ +f++Wg+e+Lvtqlyd+
+               EDO33699  594 EKTDIYQYLLEMCSTPGQENLLKLIIASLDYKDTGISRIILSKLLTASSVSTRLYATSHMRVLLRSKVLFFNNWGMEFLVTQLYDT 679 
+                             ************************************************************************************** PP
+
+  PTHR13298.orig.30.pir  770 skevakaAlkiLeeacedkanileylvslkpsllhlgdkgelLllrflstpkGfrylkeenyvekelekWaeernaeYvllvEeal 855 
+                             +++va++A ++L+eaced+an l+ylv+l+p llhlg++g  L+ rf++ ++Gf yl+  +y+   le+W++++++eYv+ vEe l
+               EDO33699  680 ETQVANEAADVLDEACEDEAN-LQYLVQLRPVLLHLGERGIRLMTRFVAVERGFTYLQSLGYLHVLLEQWRQKFCREYVRWVEELL 764 
+                             *********************.**************************************************************** PP
+
+  PTHR13298.orig.30.pir  856 sealtlltreedgsdsrrrsngpdsslrnrksvilPpHLygeLakteeGcelLekkghleelaetirshgledseeilklkaalWA 941 
+                             +e+lt++t+ +d ++++rrs+ +    ++ k+ +lPpHLyg+L++ ++G++lL+k++++e +++ti++ + ++ e++ ++kaalWA
+               EDO33699  765 AESLTTYTKATDEESYVRRSTRR----KTVKDCFLPPHLYGKLVQKKNGFKLLQKTNDIELCVRTIQTLEPDTREKVIEIKAALWA 846 
+                             ********************998....6789*************************************6666************** PP
+
+  PTHR13298.orig.30.pir  942 lghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLeelgWesvrhsrn 1012
+                             lgh gss++G++ll e  ed+i+di+++aeese + +rGtcfyvlglia+t+qga+iL++l Wes+rh+ +
+               EDO33699  847 LGHCGSSNWGITLLME--EDVIPDIVRMAEESENFAIRGTCFYVLGLIAKTRQGADILQDLEWESIRHMGE 915 
+                             ****************..77************************************************975 PP
+
+>> EDO31525  pep supercontig:ASM20922v1:NEMVEscaffold_386:58645:65532:-1 gene:NEMVEDRAFT_v1g136992 transcript:EDO31525 g
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.8   0.0   7.4e-06     0.018     724     795 ..     120     189 ..     107     200 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: 12.8 bits;  conditional E-value: 7.4e-06
+  PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkanileyl 795
+                            ++  L +s  +iR+ a+  + +ll  e ++ +++ ++lLv+ + dp++++a++A ++++  + +++n  +++
+               EDO31525 120 FERLLGDSLPEIRNKALGSIYDLLS-ERPEQEQFLLRLLVNKVGDPDRKIASKASHLIRCLVNKHPN-MKMV 189
+                            56678888889**************.******************************99998888888.4554 PP
+
+>> EDO39621  pep supercontig:ASM20922v1:NEMVEscaffold_98:172035:183345:-1 gene:NEMVEDRAFT_v1g243758 transcript:EDO39621 
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.3   2.4   8.5e-05      0.21      76     188 ..     301     415 ..     268     589 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 9.3 bits;  conditional E-value: 8.5e-05
+  PTHR13298.orig.30.pir  76 lvelelvs.clrslllseskevraaalRllrylis.dskvlrrllrlgldiliarsLdrdsknetEreqalkliramlev...apkli 158
+                            l ++  ++ +++s+ l + ke r aa+ l+  +   d++ +r++ + gl+ l+  +L+ d      +e a   ++++l++   + + +
+               EDO39621 301 LIQTRDIDkVMNSAKLGNTKERRHAAFELASLAALgDETKFRIVGEGGLESLMNLCLSDDIAT---QEYAAEAVSELLTIpaiQDQFV 385
+                            445566777999999***************999778************************943...4566677888888877789999 PP
+
+  PTHR13298.orig.30.pir 159 ptaivralvaiaeseedrlrraclatlcel 188
+                              + vr+l a++ s+++r +++++  l  +
+               EDO39621 386 ELGGVRTLCALLHSKDKRVVNEAVTALSYI 415
+                            *************99999999887666544 PP
+
+>> EDO33776  pep supercontig:ASM20922v1:NEMVEscaffold_252:175398:194652:-1 gene:NEMVEDRAFT_v1g128552 transcript:EDO33776
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.5   0.1   3.5e-05     0.088     728     797 ..      15      89 ..       7     102 .. 0.88
+   2 ?   -3.1   0.0      0.47   1.2e+03     159     195 ..     234     293 ..     221     297 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 10.5 bits;  conditional E-value: 3.5e-05
+  PTHR13298.orig.30.pir 728 LtsssesiRlyatkhLrvllraessdfsd....WgielLvtqlydpskevakaAlkiLee.acedkanileylvs 797
+                            +tss ++ R  at+ L + l+ +s +++d     ++++L++ l d++ ev + A+k+L   ++  k++  e +v+
+               EDO33776  15 MTSSDKDFRFMATNDLMAELQKDSIKLDDdserKVVQMLLKLLEDKNGEVQNLAVKCLGPlVSKVKEYHVETIVD 89 
+                            89*******************988888888889*************************98777777777777765 PP
+
+  == domain 2  score: -3.1 bits;  conditional E-value: 0.47
+  PTHR13298.orig.30.pir 159 ptaivralvaiae.......................seedrlrraclatlcelallnpel 195
+                            ++  ++++ ai+                        + +d lr++c+     ++ ++p+ 
+               EDO33776 234 TRTFIQCIGAICRqaghrvgehleriiplivqfskvNNDDELREYCIQAFESFVCRCPKE 293
+                            666778888888888888888888888888888889999999999999999999988875 PP
+
+>> EDO34974  pep supercontig:ASM20922v1:NEMVEscaffold_206:36818:67983:1 gene:NEMVEDRAFT_v1g124098 transcript:EDO34974 ge
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.7   0.5     0.017        41      52     112 ..     249     353 ..     179     367 .. 0.49
+   2 ?    5.8   1.0   0.00095       2.3     715     796 ..     381     478 ..     248     487 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 1.7 bits;  conditional E-value: 0.017
+  PTHR13298.orig.30.pir  52 l......................................kaaakklnellgllkeeiii......kedlvelelvs.clrslllsesk 94 
+                                                                   +  +k++++ ++l   ++ i      ++++v +elv  +l + l s+++
+               EDO34974 249 CiynllnssspavryeaagtlvtlssaptavksaascyiELIVKESDNNVKLIVLDRLIklkenpSHEKVLQELVMdIL-RVLASPDP 335
+                            0444444444444444444444444444444444444442233333333333222222200000022333333333222.46666666 PP
+
+  PTHR13298.orig.30.pir  95 evraaalRllrylisdsk 112
+                            evr  +l l+  l+++++
+               EDO34974 336 EVRKKTLQLVLDLVTSRN 353
+                            666666666666665444 PP
+
+  == domain 2  score: 5.8 bits;  conditional E-value: 0.00095
+  PTHR13298.orig.30.pir 715 s................ldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqly.dpskevakaAlkiLeeac 785
+                                             + + +  +l ++L +s+e++ l ++ + r++++ + ++++ +++e L+++ +  +s+++ ++Al iL e+ 
+               EDO34974 381 RqmlvrtlhtcsvkfpdVANSIVPLLMEFLGDSNEQAALDVLVFVREAIQ-RFEQLKPVIMEKLMENFHmIKSVKIHRHALWILGEYA 467
+                            044444444445555556677788999***********************.9999999**********989***************99 PP
+
+  PTHR13298.orig.30.pir 786 edkanileylv 796
+                              k+ i   + 
+               EDO34974 468 DSKEDIMTVME 478
+                            88888766555 PP
+
+>> EDO33627  pep supercontig:ASM20922v1:NEMVEscaffold_259:95073:111604:-1 gene:NEMVEDRAFT_v1g173580 transcript:EDO33627 
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.4   0.5      0.01        25     716     793 ..      57     134 ..      17     142 .. 0.84
+   2 ?   -2.2   0.0      0.25   6.2e+02     406     445 ..     190     229 ..     160     235 .. 0.89
+   3 ?    8.6   0.3   0.00013      0.33     728     794 ..     292     356 ..     287     412 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 2.4 bits;  conditional E-value: 0.01
+  PTHR13298.orig.30.pir 716 ldgesRvilskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqly.dpskevakaAlkiLeeacedkanile 793
+                             +++  +i+ + L++s++s+R  +++++ +l  a++    +  ++ Lv+    d ++ v++ Al++L    e  +  l+
+               EDO33627  57 CKSDQQNIFLQHLKDSHHSVRCQCLRMIGELACADTTMGGTQSMQSLVASFAvDSDSRVRTTALQALLALHERGQK-LD 134
+                            566778899999*********************9999999999******9977*************9887766665.55 PP
+
+  == domain 2  score: -2.2 bits;  conditional E-value: 0.25
+  PTHR13298.orig.30.pir 406 LvevitssdssvsvkAtiLLgellslantlLPpelsaslh 445
+                            +++++++ + +v++ A+ LLg l +++ + L ++l +++ 
+               EDO33627 190 ICHMVNDMSMQVRGEAVGLLGSLHHVSPKFLEQTLDKKVM 229
+                            6888888899999*************99999999888776 PP
+
+  == domain 3  score: 8.6 bits;  conditional E-value: 0.00013
+  PTHR13298.orig.30.pir 728 LtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiLeeacedkaniley 794
+                            L +++ ++R+ a++ L +l + + + f+   +++Lv   +d++++v+  A++ L+++c++ +   e 
+               EDO33627 292 LEDEYLEVRMPAVDALCELAN-QNPSFAMLCLDFLVDMFNDEIESVRLNAINSLRKVCHQMEL-RED 356
+                            67788899*************.************************************55444.333 PP
+
+>> EDO35729  pep supercontig:ASM20922v1:NEMVEscaffold_183:136316:139499:1 gene:NEMVEDRAFT_v1g121800 transcript:EDO35729 
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.0   0.3    0.0067        16     751     789 ..      85     124 ..      54     131 .. 0.69
+   2 ?    2.2   0.2     0.011        28     760     793 ..      94     126 ..      91     188 .. 0.64
+   3 ?    4.7   0.1     0.002       4.9     160     229 ..     274     349 ..     259     369 .. 0.56
+
+  Alignments for each domain:
+  == domain 1  score: 3.0 bits;  conditional E-value: 0.0067
+  PTHR13298.orig.30.pir 751 ssdfsdWgielLvtqlydpskevakaAlkiLee.acedka 789
+                            ++d  d  +++Lv+ l+  + +v+++A  iL +  c +  
+               EDO35729  85 KEDGLDNLLQMLVQLLSSNDIQVVTCAAGILSNlTCNNPR 124
+                            3333347899***********************6664443 PP
+
+  == domain 2  score: 2.2 bits;  conditional E-value: 0.011
+  PTHR13298.orig.30.pir 760 elLvtqlydpskevakaAlkiLee.acedkanile 793
+                            ++Lv+ l+  + +v+++A  iL +  c +  n  +
+               EDO35729  94 QMLVQLLSSNDIQVVTCAAGILSNlTCNNPRN--K 126
+                            56666666667777777776666644433222..3 PP
+
+  == domain 3  score: 4.7 bits;  conditional E-value: 0.002
+  PTHR13298.orig.30.pir 160 taivralvaiae......seedrlrraclatlcelal..lnpelvaeagglrvlldallecqlperiaesllavllyl 229
+                            +a++r+l  i+       s++++ +r++  +lcela    + e + ++++++ l+d l     +e ia  + avl ++
+               EDO35729 274 RAVIRSLHCISLfvqllySPNENIQRVAAGVLCELAQdkEGAEAIEAENATQPLTDLLHS--RNEGIAAYAAAVLFRM 349
+                            555555555555555555666666666666666666522334555566666666666655..4456665555555555 PP
+
+>> EDO38337  pep supercontig:ASM20922v1:NEMVEscaffold_122:224552:235448:-1 gene:NEMVEDRAFT_v1g169201 transcript:EDO38337
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.5   0.0    0.0024       5.8     898     990 ..      91     187 ..      89     235 .. 0.65
+   2 ?    0.4   0.1      0.04        99     686     798 ..     200     327 ..     195     346 .. 0.57
+   3 ?   -0.4   0.1     0.067   1.7e+02     913     947 ..     371     399 ..     333     422 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 4.5 bits;  conditional E-value: 0.0024
+  PTHR13298.orig.30.pir 898 LakteeGcelLekk...........ghleelaetirshgledseeilklkaalWAlghigsselGlelleeenedliediiklaeese 974
+                            La t+  +++L+k+           g++++++e++++    ++   l+   a WAl +i+s     +     n + ++++ikl e+ +
+               EDO38337  91 LAATQRFRKILSKEpnppiddvikcGVIPKFVEFLQR----EDNSALQFE-AAWALTNIASGTSMQTRETV-NAGAVPCFIKLLES-P 171
+                            5555555666666666666666666888888888888....566666664.45888888764322211111.34577777777765.5 PP
+
+  PTHR13298.orig.30.pir 975 vlsvrGtcfyvlglia 990
+                               v   ++++lg ia
+               EDO38337 172 KEEVQEQAVWALGNIA 187
+                            5555555555555444 PP
+
+  == domain 2  score: 0.4 bits;  conditional E-value: 0.04
+  PTHR13298.orig.30.pir 686 lnifqlllqlislktrdelvklivssL...........dysldgesRvilskaLtsssesiRlyatkhLrvllra....essdfsdWg 758
+                            +++++++l+l++++tr ++ + +v  L           d+ + + +  +ls  L s+  ++       L  ll       ++ +++ +
+               EDO38337 200 CGVLTPFLNLLTKSTRLSMTRNLVWALsnlcrgrhpppDFAKVSPCLPLLSRLLFSTDAEVLADTCWALSYLLDGpnekIQAVIDSGV 287
+                            5666666666666666666554443333336666666666666666666666666666666555555555555532221222233356 PP
+
+  PTHR13298.orig.30.pir 759 ielLvtqlydpskevakaAlkiLeeacedkanileylvsl 798
+                             + Lv+ l++ +++v++aAl+++ +++  ++  ++ + ++
+               EDO38337 288 CRRLVELLDHNQNSVVSAALRAVGNIVTGDDIQTQVILNC 327
+                            6677777777777777777777777655555545555555 PP
+
+  == domain 3  score: -0.4 bits;  conditional E-value: 0.067
+  PTHR13298.orig.30.pir 913 hleelaetirshgledseeilklkaalWAlghigs 947
+                            +++ l+ ++      +++e++  k a WA++++ s
+               EDO38337 371 IIPMLIDVL------NKAEFKTRKEAAWAIANATS 399
+                            444444333......45778888888888888744 PP
+
+>> EDO29092  pep supercontig:ASM20922v1:NEMVEscaffold_1493:7051:10034:1 gene:NEMVEDRAFT_v1g145718 transcript:EDO29092 ge
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.9   0.4    0.0071        18     734     808 ..      77     152 ..      38     174 .. 0.63
+   2 ?    3.9   0.0    0.0036       8.9      87     115 ..     192     220 ..     179     223 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 2.9 bits;  conditional E-value: 0.0071
+  PTHR13298.orig.30.pir 734 siRlyatkhLrvllraessdfsd....WgielLvtqlydpskevakaAlkiLeeacedkanileylvslkpsllhlgdk 808
+                            ++R+  +  ++ ll    +d+s      +++ ++ +l+d++ +v++ A ++L  + e  ++  e l+ l+++l+ l d 
+               EDO29092  77 EVRHGGLLGIKYLLA-VRQDLSAdllpLVLNPIISALQDDDDDVRAIAASALLPIAESIVQ--ELLMTLWNTLVELDDL 152
+                            455444444444444.223333344448888899999999999999999999999988777..9999999999966662 PP
+
+  == domain 2  score: 3.9 bits;  conditional E-value: 0.0036
+  PTHR13298.orig.30.pir  87 slllseskevraaalRllrylisdskvlr 115
+                             +l +  ++vr aalR lr l++++ +++
+               EDO29092 192 PFLRHTIRSVRLAALRTLRILLQGTANVE 220
+                            6789999***************9877665 PP
+
+>> EDO42228  pep supercontig:ASM20922v1:NEMVEscaffold_61:534569:539883:-1 gene:NEMVEDRAFT_v1g184716 transcript:EDO42228 
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.8   0.0     0.015        38     935     970 ..     142     176 ..      25     198 .. 0.70
+   2 ?   -0.2   0.2     0.061   1.5e+02     760     790 ..     254     284 ..     177     317 .. 0.52
+   3 ?    3.3   0.1    0.0055        14     158     205 ..     333     380 ..     326     411 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 1.8 bits;  conditional E-value: 0.015
+  PTHR13298.orig.30.pir 935 lkaalWAlghigsselGlelleeenedliediikla 970
+                            + aa WAlg+i+ +++ l+     + + ++ ++  +
+               EDO42228 142 KEAAAWALGYIARHNAELSQAVV-DAGAVPLLVLCI 176
+                            66999999999999887765555.445666555555 PP
+
+  == domain 2  score: -0.2 bits;  conditional E-value: 0.061
+  PTHR13298.orig.30.pir 760 elLvtqlydpskevakaAlkiLeeacedkan 790
+                            ++++++l+dp++ v+k    +++e+  + ++
+               EDO42228 254 PAVLNCLKDPDEYVCKNVATLIREIAKHTPE 284
+                            3334444444444444444444444433333 PP
+
+  == domain 3  score: 3.3 bits;  conditional E-value: 0.0055
+  PTHR13298.orig.30.pir 158 iptaivralvaiaeseedrlrraclatlcelallnpelvaeagglrvl 205
+                            +++++v+  ++iae++ed  + a+   l ++ ++ pe + +    +vl
+               EDO42228 333 VSKGVVQLSISIAEESEDHIQAAAAWALGQIGRHTPEHAKAVAVANVL 380
+                            589999999999999999999999999999999999986665555554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      24780  (8294118 residues searched)
+Passed MSV filter:                      1253  (0.050565); expected 495.6 (0.02)
+Passed bias filter:                      505  (0.0203793); expected 495.6 (0.02)
+Passed Vit filter:                        63  (0.00254237); expected 24.8 (0.001)
+Passed Fwd filter:                        11  (0.000443906); expected 0.2 (1e-05)
+Initial search space (Z):              24780  [actual number of targets]
+Domain search space  (domZ):              10  [number of targets reported over threshold]
+# CPU time: 0.39u 0.11s 00:00:00.50 Elapsed: 00:00:00.23
+# Mc/sec: 41999.65
+//
+[ok]

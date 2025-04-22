@@ -1,0 +1,277 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Tilletiaria_anomala_ubc_951_gca_000711695.Tilletiaria_anomala_UBC_951_v1.0.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   3.9e-111  371.7   0.0   9.5e-111  370.4   0.0    1.6  1  KDN39097  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+    1.4e-05   22.8   7.6    1.6e-05   22.7   7.6    1.1  1  KDN53091  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+  ------ inclusion threshold ------
+      0.018   12.6  30.6      0.026   12.1  30.6    1.2  1  KDN53203  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+      0.074   10.6   6.8       0.09   10.3   6.8    1.1  1  KDN42079  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+       0.37    8.3  11.4       0.48    7.9  11.4    1.1  1  KDN49211  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+       0.51    7.8  16.2     0.0037   14.9   5.9    2.0  2  KDN50855  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+        7.2    4.0  12.2        9.3    3.6  12.2    1.1  1  KDN40433  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+          9    3.7  39.5       0.04   11.5  27.1    2.0  2  KDN45104  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K4
+
+
+Domain annotation for each sequence (and alignments):
+>> KDN39097  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_109:57276:61398:1 gene:K437DRAFT_276122 trans
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  370.4   0.0  1.1e-113  9.5e-111       1     664 [.       1    1186 [.       1    1192 [. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 370.4 bits;  conditional E-value: 1.1e-113
+  PTHR13335.orig.30.pir    1 MafldnedillahlRtsyltsdddgmcerilndddvdlekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatg 86  
+                             M+++ ++d++l+ lR++yl+  dd+ ++ri+ ++d++ ++        v + + ++++ +   a  + +sg+ + g+s+  +t ++
+               KDN39097    1 MSLIADPDYMLYSLRLAYLRRVDDACGPRIISFPDLARKEKA------VGGFQDSTVTGEYGAAHGDDRSGPAREGRSPALSTGQV 80  
+                             9********************************965555444......33334444444444555555555555555555555555 PP
+
+  PTHR13335.orig.30.pir   87 ...................................................................................... 86  
+                                                                                                                   
+               KDN39097   81 llapdshvvigelndpeawpeidathsplistpladfasrhgehnrgasgsgvlskhkpgslgytqtiygpgrsgalgmrvsgkra 166 
+                             66666888888888888888888888888888888888888888888888888888888888888888888888888888888888 PP
+
+  PTHR13335.orig.30.pir   87 ............................................................gdtkarrkkpsldqrretqgekqsse 112 
+                                                                                             + + +  + q+r ++  +  ++
+               KDN39097  167 smkitnlirskyggrgsieviaedssfqerseskdalspreatplasglnqdehpaaaapE---QTGWRG-ALQERLRKLAT-AAT 247 
+                             8888888888888888888888888888888888888888888888888888887763331...333333.33333333333.466 PP
+
+  PTHR13335.orig.30.pir  113 sesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseer.................dqsscksiqwkte 181 
+                             +e +ps++e ++s + ++ +   g +  +a+t +  + + ++  s s+s++ s  +                  + +++ + ++++
+               KDN39097  248 AEHPPSSDETARSLEREKPTPLAGATAPSAQTLMAPAHNAQNSPSRSGSSSGSG-SsgpvgppparparrvyePSGQLRQVPSSEA 332 
+                             677777777777777777777777777776666655555555222222222222.1457788888888666664444444444444 PP
+
+  PTHR13335.orig.30.pir  182 ssvkedsvqrassesslsserssdssssssapsrrq..........................snkldseq................ 225 
+                             ++   +s++r++++ ++ss++s  s sss+a                                      +                
+               KDN39097  333 GQFGLSSTTRDTGRPRSSSSSSNVSVSSSGA----GsilvplgsassdfapitsssdgfsgiP------Nmppseqnskdlaadsa 408 
+                             4444555555544444444444443333334....2344457777777755555555555551......04444445555677888 PP
+
+  PTHR13335.orig.30.pir  226 ...................................................................................... 225 
+                                                                                                                   
+               KDN39097  409 mrtrsssegatmmppivafnnlgfssleavdrgaksrgndepqgfieeegsvlnatemkwqmgahsgakdsnvlapnrsletkier 494 
+                             899999999999999999999999999999999999999*********************************************** PP
+
+  PTHR13335.orig.30.pir  226 ...................................................................................... 225 
+                                                                                                                   
+               KDN39097  495 slltppqdfgsektpitekrfftpitemdkpyfpsplhsheghadisespalhpvdlsaftgdpsedkmptampspriqvseidpr 580 
+                             ************************************************************************************** PP
+
+  PTHR13335.orig.30.pir  226 ...................................................................................... 225 
+                                                                                                                   
+               KDN39097  581 gdgvlsservsdlgspaslgedaslpdvgqgellpasqassgnicpfrqrfegdsevtasdsalglvlppkfdthavrknrlgaln 666 
+                             *************************************************************************9999999999988 PP
+
+  PTHR13335.orig.30.pir  226 .lsaeesdslfekkskssstktqkskkpssaa........kqsi..........................sslssaLekkpsqlnn 276 
+                              ls++++ +   ++ ++   k q++ ++  a+        k                             s+l+++L+k++ +++n
+               KDN39097  667 tLSPSPAPAPKDAAGSEANVKGQDTVPTGVAPtipgrmpkK--VvdndwfmslrrdptkaafphtqvkvvSALTAKLKKQDAAPEN 750 
+                             84444444444444444445555555555552355555430..134444444444444555666666778**************** PP
+
+  PTHR13335.orig.30.pir  277 pfneya..kfdgkgvgttaslkidiylplsse.................pdkllpltvvvkasatVqevIGlaLwqyteegrepkl 343 
+                             pf  ++   +  +g  + +s+ +d+ylp+ s+                 + k++ + ++v+++at++e+IG+ L++ +e+g+ p+l
+               KDN39097  751 PFAPFYagVAARSG--GEPSIAVDVYLPFASTgtttalskpatssveaiDVKAKRMRMNVRKDATMEELIGFGLFCLVEQGWGPSL 834 
+                             **999986666666..****************9**99999999999999999999999**************************** PP
+
+  PTHR13335.orig.30.pir  344 pdnk.vn..........aycLrivEdDGevddDFPpLDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrleeakr.. 416 
+                              ++  ++           + Lr v +DGevddD P++Dr+ +++ fg +e+a+vea + ++k n++++ +++r+ ++   ++k   
+               KDN39097  835 HEESvPEtqkgfklttvGWVLRVV-EDGEVDDDYPAIDRTLTVGRFGNDEFAIVEANETQIKHNQAAYNNIKRRISRTTGTSKMam 919 
+                             ***98336789999999*******.77***********************************************999888877654 PP
+
+  PTHR13335.orig.30.pir  417 ......sagsaneagsslstes................................skeslfvkvnlaypgdsvrskttivvptdvtl 464 
+                                                  +                                 +  +f++v + +p+++vr+ktt++vp++++l
+               KDN39097  920 sglaplN--------------AdslnaltphsvpvnedtsvlassaqgrslnapMSTGVFLRVLV-TPNSEVRYKTTLQVPSEMYL 990 
+                             4433331..............0223334455677778888999999********9**********.88****************** PP
+
+  PTHR13335.orig.30.pir  465 advlekackkrkldqkkyrllkvsepnvivdldrtvesldgleflllrknssradgvlekteskssssanatissksaaedsqiqi 550 
+                             advle++c+kr+l+ +++++l+v+++++iv+ldrtvesl+g ++l+l+++s  +++ + +  + +s+++na+i+ k+  +++++q+
+               KDN39097  991 ADVLEMICRKRHLSSPDEWALIVPDKDIIVPLDRTVESLQGTHDLALVRRSTLGMKGVAGALTGRSTNPNASIFNKR--HSEPAQP 1074
+                             ****************************************************************************9..6666666 PP
+
+  PTHR13335.orig.30.pir  551 atvqddlsssayksfkVsrkhkmrfktdrel..gIdgdyieimPvenqkaatkfwekqKtisihisqvvacklssknpanFkivvr 634 
+                              + +  + +s yks++V+rk +++ + + ++  ++dgd+i+imP + + +      ++  +s+h+ +v  c++s k p++Fk++vr
+               KDN39097 1075 RYKTMQDIASVYKSWTVTRKTPIFVSRHEQRslTLDGDWIHIMPLDVRAF------QTRAASFHVGSVTVCDISTKGPHIFKLIVR 1154
+                             66666679*****************99999999***************99......59**************************** PP
+
+  PTHR13335.orig.30.pir  635 r..endeKrydfeavsaaeaaeIvskinnile 664 
+                             r  ++++Krydfea+s+++a eIv +i++++ 
+               KDN39097 1155 RevPRETKRYDFEADSPKQAGEIVGEIKALMR 1186
+                             *****************************985 PP
+
+>> KDN53091  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_4:128768:130547:-1 gene:K437DRAFT_289657 tran
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.7   7.6   1.9e-08   1.6e-05      62     154 ..     234     318 ..     127     361 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 22.7 bits;  conditional E-value: 1.9e-08
+  PTHR13335.orig.30.pir  62 ksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkle 149
+                            + +++ +  g++++ + + +++    ++  + + p +++++ tq+++q++++++++++++++q+++ ++++++++++ ++       +
+               KDN53091 234 QGPPHGQAWGPQGAQRVDPMAG---AQRGTPPPPPLQQHQHLTQHQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQHQQH-----AA 313
+                            4444444444444444333333...34444555566777777887775555555554444444444443333333333333.....33 PP
+
+  PTHR13335.orig.30.pir 150 klrke 154
+                            ++r++
+               KDN53091 314 TMRQQ 318
+                            33322 PP
+
+>> KDN53203  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_3:55696:58151:-1 gene:K437DRAFT_271723 transc
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   12.1  30.6     3e-05     0.026       9     236 ..     235     478 ..     229     528 .. 0.51
+
+  Alignments for each domain:
+  == domain 1  score: 12.1 bits;  conditional E-value: 3e-05
+  PTHR13335.orig.30.pir   9 illahlRtsylt............................sdddgmcerilndddvdlekihsapyppvsssssesll...srpksas 65 
+                            ++l+h+R s +                             s d+ ++++ + d++   +++ s + ++  +s s+s     s+ k++s
+               KDN53203 235 DILQHIRRSKVInadleiehvmqilnvlifdgkvekfpmlSHDRVVARDDVSDEE--KNRRRSSKSKGKGRSTSKSSSskrSKRKESS 320
+                            5678888888885555555555555555555555555555555555555555553..3333333333333333333333335555555 PP
+
+  PTHR13335.orig.30.pir  66 tpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrk 153
+                            ++ ++ ++ ++ss++ +++ + +++    + ++++r+++++ k  ++s++++  eeel + + +s+++d  ++ +    a+k+++  +
+               KDN53203 321 HKSRREDRSDSSSESEGGSERSNDEDEDEQGKRSSRHSSKNGK--KKSKKRQTIEEELNAALGESDDDDLPDIGETLESAAKRKRSGD 406
+                            5555555555555554444443333333333333333333333..4455555555555555555555555555555555555555555 PP
+
+  PTHR13335.orig.30.pir 154 errsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsrrqsnkldseqlsaeesdslfe 236
+                            e  s+s++ +++ + +++           s+ k ++++ +ss+ss++s+   ds+s++s+++ ++s++ d+ ++s    ds+ e
+               KDN53203 407 ESTSSSKKKQKTAKgSSS-----------SKGKGKRRRADSSASSSDSSGTNDSESEQSRSD-SESDEADTGSDSGTGDDSIAE 478
+                            533333322222222211...........122222344444444444444444444444433.334444455455555555533 PP
+
+>> KDN42079  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_73:55107:58030:1 gene:K437DRAFT_258012 transc
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.3   6.8   0.00011      0.09      86     205 ..      53     203 ..       9     350 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 10.3 bits;  conditional E-value: 0.00011
+  PTHR13335.orig.30.pir  86 g................gdtkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrs 157
+                            g                ++  a+++  s+ q +++ +    +++ ++p ++ ++ +++   ++l+ ++++ +++++++l+++  ++++
+               KDN42079  53 GvpsytfntaaqggfaqTQAYAQQTTYSQAQLQAQIQAAALAAQAQAPPQQLQHPAMQHAAQQLQHQQQQFQMQQQQQLQAQYGNTQA 140
+                            0444444444444444444445555666667777788888899999999999*********************************997 PP
+
+  PTHR13335.orig.30.pir 158 ksasiassee.r...............dqsscksiqwktessvkedsvqrassesslsserssd 205
+                             + ++  +++ +               +++  ++++ ++++ v  +s+ +a s++s s e+ sd
+               KDN42079 141 AATATTYTRSpSpglaasgggeraphsSRPAARRASPSPSGAVGAPSTASA-SAASGSAEKGSD 203
+                            666666666655777777777766666555555555555555555444444.222333333333 PP
+
+>> KDN49211  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_22:64170:65480:1 gene:K437DRAFT_267466 transc
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.9  11.4   0.00056      0.48      64     156 ..     233     378 ..     207     405 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 7.9 bits;  conditional E-value: 0.00056
+  PTHR13335.orig.30.pir  64 astpgdsgsedsgssneaetatg..............................................................gdt 89 
+                            ++++  s++ d++ ++  ++ ++                                                                 
+               KDN49211 233 GAMNRVSYFGDDSNNSNNNNNNRaskrytynaadqsdgrythpggayydedgyyvpdggqaydsdaalsaaagdphanlhsnaqlH-- 318
+                            44444455555444444333333455555555555555999999999999999999999999999999999999999854444443.. PP
+
+  PTHR13335.orig.30.pir  90 karrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrkerr 156
+                                      q++++ +++q++e+ ++++   ++q+++   ++++++++++ +++ + l++++++  
+               KDN49211 319 -----PHHYGQQQQPGHYQQQQEHYQQQQEH-YQQQQQHY-QQQQQQYQQQPQDQYAYLQQQHEHAS 378
+                            .....44444444444444333333333333.22222222.34444444444444455555544433 PP
+
+>> KDN50855  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_18:150492:155932:1 gene:K437DRAFT_61039 trans
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   14.9   5.9   4.4e-06    0.0037      62     132 ..     407     477 ..     271     494 .. 0.67
+   2 ?   -1.7   2.6      0.45   3.8e+02      26     138 ..    1003    1105 ..     928    1190 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 14.9 bits;  conditional E-value: 4.4e-06
+  PTHR13335.orig.30.pir  62 ksastpgdsgsedsgssneaetatg........................gdtkarrkkpsldqrretqgekqssesesspsyeeelqs 125
+                            k                       +                         ++  +++++ +++++++q ++q++++++++++++++q+
+               KDN50855 407 K-----------------------KskhhhkstaaaaaaaaaaaaaaadSAPLSQQQQQHQQHQQQHQLQQQQQQQQQQQQQQQQQQQ 471
+                            2.......................1222222223333333333333334333333333333333333333333333333333333333 PP
+
+  PTHR13335.orig.30.pir 126 vdissss 132
+                            ++++ ++
+               KDN50855 472 MQMQ-MQ 477
+                            3333.22 PP
+
+  == domain 2  score: -1.7 bits;  conditional E-value: 0.45
+  PTHR13335.orig.30.pir   26 mcerilndddvdlekihsapyppvsssssesll.srpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqs 110 
+                             +++r+l+++  + ++ ++ap       +s   + ++  +a+t+g+ + + ++ +nea+t    +t + ++  ++  + ++q+e+  
+               KDN50855 1003 LRRRLLKSQAESSGAAKEAPVADEALTPSAA-TgAEGGDAATNGTANADANTNANEADTE---MTDVNATVCKNAAAEAGQEET-- 1082
+                             4455555555555555555555322222222.2366666666666666666665554332...333333333333333333333.. PP
+
+  PTHR13335.orig.30.pir  111 sesesspsyeeelqsvdissssldegsr 138 
+                                  ++s++++++s + s ss+++ + 
+               KDN50855 1083 -----ESSKDKPAASDSASFSSWIQADL 1105
+                             .....22333333333333333333333 PP
+
+>> KDN40433  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_91:39955:41471:1 gene:K437DRAFT_275720 transc
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.6  12.2     0.011       9.3     156     284 ..      12     157 ..       4     168 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 3.6 bits;  conditional E-value: 0.011
+  PTHR13335.orig.30.pir 156 rsksasiassee.rdqsscksiqwktessvkedsvqrassesslsserssdssssssapsr.rq..snkldseqlsaeesdslfekks 239
+                            r++ a+ a +++ r+ + + s +w+   s+ ++   +++++s+++  r+s+ +s+ss + + ++  +++  +    + ++ +l++++ 
+               KDN40433  12 RATKAAAATPSSaRAFAASPSSRWS---SSDSSVAAESAESSAAGAARNSKDASASSNAAFsSPlnRKQRFAHRVPQPNQEALLQRPL 96 
+                            4455555555555656788888888...444445555666677888888887777777777555766666667788888888888888 PP
+
+  PTHR13335.orig.30.pir 240 kssstktqkskkpssa.a................kqsisslssaLekkpsqlnnpfneyakf 284
+                            +ss  +  +s+++ss+ +                +++i+ +     ++p ++ npf+  + f
+               KDN40433  97 SSSAPNAASSSSSSSPaQqfnlgdlasmsallyhPDPILDS-GHTLNNPATPSNPFRSSVTF 157
+                            88888888888888884466665544444444444444444.44445566799999876655 PP
+
+>> KDN45104  pep supercontig:Tilletiaria_anomala_UBC_951_v1.0:K437scaffold_45:109372:111210:-1 gene:K437DRAFT_256763 tra
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.8   4.5      0.49   4.2e+02      89     163 ..      16      94 ..       2     172 .. 0.63
+   2 ?   11.5  27.1   4.7e-05      0.04      23     226 ..     234     495 ..     227     539 .. 0.52
+
+  Alignments for each domain:
+  == domain 1  score: -1.8 bits;  conditional E-value: 0.49
+  PTHR13335.orig.30.pir  89 tkarrkkpsldqrretqgekqssesesspsyeeelqsvdissssldegsrrrrantavkleklrke.....rrsksasia 163
+                              +  ++  l++r ++++++ +s +++++   ++++    +++  + +srr r  ++  +e  r++     rrs+ +++ 
+               KDN45104  16 SAIEDRELELKERLRRERDQAQSSHDERQHHLDGEDKRRVEDRAEEPSSRRDRG-YDDVSEGFRERqrgyeRRSHENGRH 94 
+                            444455566666666666666666666666666667777776666666666664.3333333333311333444444333 PP
+
+  == domain 2  score: 11.5 bits;  conditional E-value: 4.7e-05
+  PTHR13335.orig.30.pir  23 ddgmcerilndddvdlekihsapyppvsssssesllsrpksastpgdsgsedsgssneaetatggdtkarrkkpsldqrretqgekqs 110
+                            +d+++ ++++ +       +s+++p ++s  ++ ++++ k+ +  ++s++   +s  + +++ +  + ++++k+s+++r+++  +++s
+               KDN45104 234 RDSLAKQVVIWP-------ESPREPYLYSDEERERRRKEKERRREERSSKGHRSSRHSRSHSHRSSRDKDADKKSRSHRHSKHSSRHS 314
+                            566666666665.......456667777777777774444455545555555555444445545555555555555555555555555 PP
+
+  PTHR13335.orig.30.pir 111 sesesspsyeeelqsvdissssldegsrrrrantavkleklrkerrsksasiasseerdqsscksiqwktessvkedsvqrassessl 198
+                            s+++ + s++e+  ++d s++++ +++  rr     ++e   ++r+s+s++      r   +++s+ +  +  + + +++++ s ++ 
+               KDN45104 315 STHKREYSTDESGSESDDSRDYDRKHRSSRR---HRRREDGDERRHSSSGK------R-HRRSRSVASASSFASRDAHSDNERSTTRK 392
+                            5555555555555555555444444433333...33444444444433332......2.33344444444445555555555555555 PP
+
+  PTHR13335.orig.30.pir 199 sserssdssssssapsr.rq.snkldseq........................................................... 225
+                            +se +s+      a ++ ++ +n+  + +                                                           
+               KDN45104 393 DSENNSN------ALTQkEKcKNVANE-Ddsdgevgpqlpvsedgkpvdprvfggallpgegsamaayvaegkriprrgeigltseri 473
+                            6666666......33333334222222.235566677777777777777778888888888888888777777777777777777777 PP
+
+  PTHR13335.orig.30.pir 226 .....................l 226
+                                                 +
+               KDN45104 474 eaferagfvmsgsrhkrmnavR 495
+                            7777777777777777766641 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       6808  (3543999 residues searched)
+Passed MSV filter:                      1309  (0.192274); expected 136.2 (0.02)
+Passed bias filter:                      303  (0.0445065); expected 136.2 (0.02)
+Passed Vit filter:                        57  (0.0083725); expected 6.8 (0.001)
+Passed Fwd filter:                        21  (0.00308461); expected 0.1 (1e-05)
+Initial search space (Z):               6808  [actual number of targets]
+Domain search space  (domZ):               8  [number of targets reported over threshold]
+# CPU time: 0.35u 0.03s 00:00:00.38 Elapsed: 00:00:00.19
+# Mc/sec: 12014.39
+//
+[ok]

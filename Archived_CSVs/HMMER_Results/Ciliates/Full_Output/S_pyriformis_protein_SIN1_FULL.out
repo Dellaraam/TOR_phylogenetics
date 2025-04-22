@@ -1,0 +1,91 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/SIN1_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/S_pyriformis_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13335.orig.30.pir  [M=672]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    5.7e-07   27.0   0.3    8.4e-07   26.4   0.3    1.3  1  StePyr_11275  
+    5.9e-07   26.9   4.6    5.9e-07   26.9   4.6    1.6  2  StePyr_11253  
+
+
+Domain annotation for each sequence (and alignments):
+>> StePyr_11275  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   26.4   0.3   3.5e-10   8.4e-07     292     474 ..     105     253 ..      38     258 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 26.4 bits;  conditional E-value: 3.5e-10
+  PTHR13335.orig.30.pir 292 taslkidiylplssepdkllpltvvvkasatVqevIGlaLwqyteegrepklpdnk.vnaycLrivEdDGe.vddDFPpLDrnepisk 377
+                             ++l i+iy++ s++      +++ v    tV + I  aL+ y++ + +  lp    ++ y+  + EdDG   d D   +D++ ++++
+           StePyr_11275 105 LKQLSIEIYFFRSPN-----KVKLIVPNEITVNDIIIKALLAYSKSNYSR-LPHGTnSDGYEVWLPEDDGYlPDLDY-LIDKKLYVAN 185
+                            68999**********.....89999*********************9554.55554477************9999*9.99******** PP
+
+  PTHR13335.orig.30.pir 378 fgfselaLveatdsegktnndlqtplpreqkkrleeakrsagsaneagsslstesskeslfvkvnlaypgdsvrskttivvptdvtla 465
+                             + s l+L+e++d  ++        ++ + ++r+                    ++ ++ +++  ++y++ s    t i v+ d+tl+
+           StePyr_11275 186 LSASSLCLCEKPDFRSSI-------YNINNGSRN------------------LRKNIKPDTLHTKFVYENNS----TVIAVNPDSTLS 244
+                            *************99654.......221111111..................11244455677778888999....999999999999 PP
+
+  PTHR13335.orig.30.pir 466 dvlekackk 474
+                             +l +++kk
+           StePyr_11275 245 SLLITLWKK 253
+                            999999997 PP
+
+>> StePyr_11253  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.5   0.3      0.38   9.2e+02     184     184 ..      90      90 ..      36     127 .. 0.43
+   2 !   26.9   4.6   2.5e-10   5.9e-07     348     664 ..     174     476 ..     146     479 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -3.5 bits;  conditional E-value: 0.38
+  PTHR13335.orig.30.pir 184 v 184
+                            +
+           StePyr_11253  90 T 90 
+                            1 PP
+
+  == domain 2  score: 26.9 bits;  conditional E-value: 2.5e-10
+  PTHR13335.orig.30.pir 348 vnaycLrivEdDGe.vddDFPpLDrnepiskfgfselaLveatdsegktnndlqtplpreqkkrleeakrsagsaneagsslstessk 434
+                            ++ay+L + ++D   ++ DF ++D+n+ +++ g+    L  ++d++ +++ +++ pl  ++                           
+           StePyr_11253 174 PEAYNLWLIDEDTLqAEIDF-KIDKNSQLKDLGSKYYRLTAIEDYNNIKRTSSSEPLRLVSE------------------------IT 236
+                            679*********667*****.*************************9995444444431111........................34 PP
+
+  PTHR13335.orig.30.pir 435 eslfvkvnlaypgdsvrskttivvptdvtladvlekackkrkldqkky......rllkvsepnv...ivdldrtve..sldgleflll 511
+                            + l++k+++ +   s    t+i+v+ ++tl d++  + kk ++ q+        r+ + +e n+    ++ dr +e  sl+ +e ++ 
+           StePyr_11253 237 SGLALKIYF-D-ENS----TIISVNPNTTLIDLVPLLSKKFNELQTLNpdtyefRITIANEENIgdeECNVDRHLEvkSLGVNEIKIC 318
+                            579******.7.444....9**************999999888888888888**5555555544222455555555538877777766 PP
+
+  PTHR13335.orig.30.pir 512 rknssradgvlekteskssssanatissksaaedsqiqiatvqddlsssayksfkVsrkhkmrfktdrelgIdgdyieimPvenqkaa 599
+                            rk     d++le  ++k s     t+      +  +    +  +  ++ ayk++k+++   +r   + + gId+ +i i    ++k+ 
+           StePyr_11253 319 RKFY--VDTPLEVVKDKESY----TVVET---QGVFEPNRFYMNRAQACAYKEYKIYTTDGIRR-EKKIIGIDQLRIRILTLSGSKKP 396
+                            6544..57888855555553....33333...777777777888889999**********8886.667779********999999999 PP
+
+  PTHR13335.orig.30.pir 600 ..................tkfwekqKtisihisqvvacklssknpanFkivvrrendeKrydfeavsaaeaaeIvskinnile 664
+                                              +    +  ++++ i++v+ + +  kn   F i +++e   ++ +fe++++  ++eIv+ki+ + +
+           StePyr_11253 397 snqrikpkknvlkkieelF---RNNERYEVLIENVILVYQDPKNLCCFYISYNEEAIKRKKYFETENSIVCTEIVAKITRLKN 476
+                            999999*****99997653...56779***********************99999999999*****************99876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (672 nodes)
+Target sequences:                       4783  (2027660 residues searched)
+Passed MSV filter:                       648  (0.13548); expected 95.7 (0.02)
+Passed bias filter:                       91  (0.0190257); expected 95.7 (0.02)
+Passed Vit filter:                        13  (0.00271796); expected 4.8 (0.001)
+Passed Fwd filter:                         2  (0.000418148); expected 0.0 (1e-05)
+Initial search space (Z):               4783  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.09u 0.02s 00:00:00.11 Elapsed: 00:00:00.05
+# Mc/sec: 22855.20
+//
+[ok]

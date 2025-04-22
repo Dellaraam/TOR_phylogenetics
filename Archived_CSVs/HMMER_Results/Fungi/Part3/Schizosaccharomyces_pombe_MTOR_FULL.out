@@ -1,0 +1,589 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Fungi/Proteins/Schizosaccharomyces_pombe.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    4.5e-64  213.5  17.6    4.7e-63  210.2   0.2    5.1  6  CAB40167.2  phosphatidylinositol kinase Tor2 [Schizosaccharom
+    6.4e-53  177.2  12.6    1.6e-50  169.5   0.4    5.8  6  CAB10805.1  phosphatidylinositol kinase Tor1 [Schizosaccharom
+    2.5e-09   35.5   0.5      0.087   11.0   0.1    5.8  6  CAA20126.1  karyopherin Sal3 [Schizosaccharomyces pombe]
+      1e-07   30.3  10.2      0.001   17.3   0.1    5.9  7  CAA93298.3  U2 snRNP-associated protein Sap155 [Schizosacchar
+    1.8e-07   29.5   0.3        5.6    5.1   0.0    8.5  9  CAA92385.1  translation elongation regulator Gcn1 (predicted)
+    2.4e-05   22.6   0.2        7.9    4.7   0.0    6.4  9  CAB16272.1  karyopherin Kap104 [Schizosaccharomyces pombe]
+    0.00022   19.5   0.2        5.2    5.3   0.0    6.0  6  CAA19321.1  karyopherin Kap123 [Schizosaccharomyces pombe]
+     0.0024   16.1   0.1     0.0024   16.1   0.1    3.2  4  CAA21270.2  TATA-binding protein associated factor Mot1 (pred
+  ------ inclusion threshold ------
+      0.015   13.5   5.3       0.08   11.1   0.0    4.3  4  CAB40165.1  ATR checkpoint kinase Rad3 [Schizosaccharomyces p
+      0.045   12.0   6.2        5.2    5.3   0.1    4.6  4  CAC37426.1  ribosome biogenesis protein Rrp12 (predicted) [Sc
+        8.5    4.5  13.7         13    4.0   1.0    5.2  5  CAB59878.1  TFIIH regulator Mms19 [Schizosaccharomyces pombe]
+
+
+Domain annotation for each sequence (and alignments):
+>> CAB40167.2  phosphatidylinositol kinase Tor2 [Schizosaccharomyces pombe]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.1   0.2      0.43     2e+02      70     138 ..     275     344 ..     250     367 .. 0.62
+   2 ?   -0.6   0.0      0.69   3.2e+02      94     129 ..     507     543 ..     480     562 .. 0.68
+   3 !   12.3   0.1   7.7e-05     0.036      91     156 ..     647     716 ..     566     718 .. 0.73
+   4 !  210.2   0.2     1e-65   4.7e-63       1     160 []     722     880 ..     722     880 .. 0.97
+   5 ?   -4.2   0.2       8.9   4.2e+03     123     150 ..    1005    1032 ..     990    1041 .. 0.51
+   6 ?   -4.0   0.0       7.7   3.6e+03     128     154 ..    1739    1765 ..    1733    1766 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 0.1 bits;  conditional E-value: 0.43
+    mTOR_dom  70 ellvglspss.eey...yptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir 138
+                 el+++l   + +e+   y +v +  Ll++lk+++++    a++  +   +       +p+l+ i+ ++ + ++
+  CAB40167.2 275 ELIATLAAYNpDEFvsnYLHVCMLHLLNLLKKENVKMLAFATIGKVAVAIT---NSIIPYLDPICDSIKESLK 344
+                 444444444444441116678888899999999888777776666644444...4678888888777766554 PP
+
+  == domain 2  score: -0.6 bits;  conditional E-value: 0.69
+    mTOR_dom  94 ilkdpslsshhtavvqaimsifkt.lglkcvpflpqi 129
+                   +dp ls+    ++q++ +++++ l +    ++p i
+  CAB40167.2 507 FARDPILSQTSDHAIQVVAEVLEKlLTVGICDTVPDI 543
+                 4699*****************9973344444444444 PP
+
+  == domain 3  score: 12.3 bits;  conditional E-value: 7.7e-05
+    mTOR_dom  91 Llkil....kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLv 156
+                 +l+il    kd+  s   +++v+++ +i++  g   vpf++ ++p +++++++ +s  +r   l+ L++L 
+  CAB40167.2 647 ILQILlpkaKDS-SSIVAASIVNSLGEICQISGEVIVPFIKDLMPLIIEALQDQSSpIRRAAALKALGNLS 716
+                 444444442444.477899*********************************99988999999***99986 PP
+
+  == domain 4  score: 210.2 bits;  conditional E-value: 1e-65
+    mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdps 99 
+                 V++Py+++p+LL+iL+ i kteq+ +iRre+ik++G+lGALDP +h+++e+ +e+    e+++  +d+s+l+ g+ pss+eyyptvvi+aL++ilkdps
+  CAB40167.2 722 VIDPYIEFPSLLDILIGITKTEQDITIRRETIKLIGTLGALDPNRHRVLEKGTEK-VVPEQKNIPPDISLLMSGIGPSSDEYYPTVVITALMSILKDPS 819
+                 9**********************************************99977755.6677788899********************************* PP
+
+    mTOR_dom 100 lsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                 l+ hhtav+qa+m+ifkt+gl+c pfl+qiip++++v+rtc+++++ef++qqL++Lv iv+
+  CAB40167.2 820 LTIHHTAVIQAVMYIFKTMGLRCAPFLSQIIPEFIAVMRTCPTNILEFYFQQLSILVLIVR 880
+                 ***********************************************************97 PP
+
+  == domain 5  score: -4.2 bits;  conditional E-value: 8.9
+    mTOR_dom  123 vpflpqiipallsvirtcesslrefllq 150 
+                   ++ ++ii+ ++++++  ++sl  + ++
+  CAB40167.2 1005 SEYASRIIHPVMRMLSCNNASLIRVSMD 1032
+                  3444555555555554333344444444 PP
+
+  == domain 6  score: -4.0 bits;  conditional E-value: 7.7
+    mTOR_dom  128 qiipallsvirtcesslrefllqqLat 154 
+                   +ip+l++ i+ ++ s+r+ + q L++
+  CAB40167.2 1739 DVIPQLIARIHASSLSVRKSVHQLLSD 1765
+                  589999999999888999999888875 PP
+
+>> CAB10805.1  phosphatidylinositol kinase Tor1 [Schizosaccharomyces pombe]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.1      0.11        50      78     159 ..     289     369 ..     261     370 .. 0.66
+   2 ?   -1.4   0.1       1.2   5.8e+02     102     157 ..     620     675 ..     595     676 .. 0.69
+   3 !  169.5   0.4   3.4e-53   1.6e-50       1     159 [.     723     878 ..     723     879 .. 0.89
+   4 ?   -1.1   0.0         1   4.6e+02     112     156 ..     912     956 ..     897     960 .. 0.74
+   5 ?    3.9   0.1      0.03        14      77     157 ..     959    1038 ..     938    1041 .. 0.81
+   6 ?    5.1   0.0     0.012       5.7      10      78 ..    1736    1800 ..    1693    1851 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 0.11
+    mTOR_dom  78 sseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvir..tces.slrefllqqLatLvsiv 159
+                  ++ y  + +++ L +i kd+     ++ + +ai  i   ++  ++p+l++i+  +  +++    e+ + ++ +++ +++L + v
+  CAB10805.1 289 FQQRYLDSFMVYLLSHIRKDKE----KSLAFEAIGRIAMAVNEAMIPYLQNILKVIRDTLTakVREKtQYEKPVFECIGMLAAAV 369
+                 3344445555555555555555....45789999999999999999999999988877665222223366667777777776666 PP
+
+  == domain 2  score: -1.4 bits;  conditional E-value: 1.2
+    mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                  ++++  q +   +++ ++   p+++ ii+ +l  + ++++ ++  +++ L++L s
+  CAB10805.1 620 RQKEESAQLLKLLVSKARTLIKPYIQSIIHVILPKAADTSPGVSSAIISALGELAS 675
+                 44455555555555666666788999999999988888888999888888888865 PP
+
+  == domain 3  score: 169.5 bits;  conditional E-value: 3.4e-53
+    mTOR_dom   1 VvePyldypeLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdps 99 
+                 V++Pyldyp LL++L+ il++eq ++iRrev+++lG+lGALDPy++  +ee  +++  +++++++  v ++    +  s e y++v++ +L+ ilkd+s
+  CAB10805.1 723 VIQPYLDYPPLLGALIGILQSEQPTPIRREVLRTLGVLGALDPYTYLTTEE-VSDD-LQSSHNNAHGVPQI-SAAQYPSLENYAMVAVVTLIGILKDSS 818
+                 9*********************************************55554.4333.33344444566666.3345667999***************** PP
+
+    mTOR_dom 100 lsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159
+                 ls hh++vvqa+m+i++++g k++ flpq++p++l+v++++++s  ef++qqL+tL+si+
+  CAB10805.1 819 LSMHHSSVVQAVMHICSQMGSKSTVFLPQVVPTFLQVMQSLSASSAEFYFQQLTTLTSII 878
+                 **********************************************************98 PP
+
+  == domain 4  score: -1.1 bits;  conditional E-value: 1
+    mTOR_dom 112 msifktlglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                   i   l+ +   +lpqi++ +l++++  ++s r + ++ L+++v
+  CAB10805.1 912 DAIAIALQDEFKFYLPQILSCMLKAFSLDNTSSRSVSYKVLQSFV 956
+                 45555566677789**********999877788877777777665 PP
+
+  == domain 5  score: 3.9 bits;  conditional E-value: 0.03
+    mTOR_dom   77 psseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                   s+ e y++ v+  +++ ++  ++    ++++++ i + f++  ++     ++ii+ l++++ +++ +lr ++++ L+ +vs
+  CAB10805.1  959 GSNIEEYMHLVLPVIIRSFERDTIPlGFRKSALKCIAQLFQS--VNFSDHASRIIHPLVRMLGKSNGDLRAVIMDTLCAIVS 1038
+                  566666777788888888877777768999999*******98..66778899************999************998 PP
+
+  == domain 6  score: 5.1 bits;  conditional E-value: 0.012
+    mTOR_dom   10 eLLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglsps 78  
+                  e++ +L+  ++t+ s+s+R +v ++l+ +G + P+     + + ++  k+++ +++ + ++++ ++ + 
+  CAB10805.1 1736 EVIPQLIARIHTS-SSSVRASVHQLLSDIGRVHPQALV-YSLTVSS--KSTNPQQKHSAKSIMDSMLSH 1800
+                  4555666666655.778888888888888888888873.3323322..222222233344444444444 PP
+
+>> CAA20126.1  karyopherin Sal3 [Schizosaccharomyces pombe]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    7.0   0.0    0.0033       1.5      89     155 ..     101     166 ..      82     170 .. 0.87
+   2 ?   -1.6   0.0       1.5   6.8e+02      88     132 ..     219     266 ..     194     292 .. 0.60
+   3 !   11.0   0.1   0.00019     0.087      70     152 ..     438     520 ..     423     523 .. 0.82
+   4 !    5.9   0.0    0.0071       3.3      91     142 ..     501     551 ..     500     563 .. 0.84
+   5 !    7.2   0.0    0.0028       1.3     102     139 ..     601     638 ..     579     645 .. 0.77
+   6 ?   -1.9   0.0       1.8   8.2e+02      87     137 ..     951    1005 ..     922    1026 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 7.0 bits;  conditional E-value: 0.0033
+    mTOR_dom  89 naLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                 ++Ll+ + ++s+ + +++  ++i +i ++    c    p++i+ +++++++ ++s+re +++ +++L
+  CAA20126.1 101 SQLLACFVKESVPTVRNKLCDTIAEIARS-IYDCQGEWPELINVIFNAVNSPDESFRESVFRTITSL 166
+                 56788888899999999999*******98.689*****************************99988 PP
+
+  == domain 2  score: -1.6 bits;  conditional E-value: 1.5
+    mTOR_dom  88 inaLlkil...kdpslsshhtavvqaimsifktlglkcvpflpqiipa 132
+                 + +L++il   ++   s+  ++++ ai++i +       p+ + +i  
+  CAA20126.1 219 LPSLMNILpplQQDRDSDNLADCLMAITEIAEVFPKLFKPIFESVIAF 266
+                 567788876664444455556666666666665555555555555555 PP
+
+  == domain 3  score: 11.0 bits;  conditional E-value: 0.00019
+    mTOR_dom  70 ellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqL 152
+                 ++ ++  p  +  yp+ +++aL+ +l+ p  +  ++ +  a+++  ++ + k+  p+l+ i++ ll+++++ ++ ++e  +  +
+  CAA20126.1 438 QMSTDFAPDMQVKYPSRILEALVPVLESPESR-VQAHAAAAMVNFSEEADNKVlEPYLDDILQRLLTLLQSPKRYVQEQAVTTI 520
+                 5566667777888*************999966.56666778899999999999899**************99988888776665 PP
+
+  == domain 4  score: 5.9 bits;  conditional E-value: 0.0071
+    mTOR_dom  91 Llkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                 Ll++l+ p+    ++++v++i ++      k  ++ + i+p l++v+++++ 
+  CAA20126.1 501 LLTLLQSPKR-YVQEQAVTTIATVADAAAKKFEKYFDAIMPLLFNVLQQADG 551
+                 6667766664.4788999******************************9875 PP
+
+  == domain 5  score: 7.2 bits;  conditional E-value: 0.0028
+    mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirt 139
+                  + +  ++a   i++ lg   vpfl+ ++p ll ++++
+  CAA20126.1 601 PQASYLISAWGRICRVLGSDFVPFLSSVMPPLLVAATS 638
+                 455678999999*******************9976655 PP
+
+  == domain 6  score: -1.9 bits;  conditional E-value: 1.8
+    mTOR_dom   87 vinaLlkil.....kdpslsshhtavvqaimsifktlglkcvpflpqiipallsvi 137 
+                  ++ aL k+l     +d+      +++  ai +i++    + v+ l++++   ++++
+  CAA20126.1  951 ALPALFKMLelpdaRDEEQIYATENICVAICKICR-FCSQRVQDLDKVVTYWINTL 1005
+                  44456666655555555555566777778888887.45566888888888777765 PP
+
+>> CAA93298.3  U2 snRNP-associated protein Sap155 [Schizosaccharomyces pombe]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -4.0   0.4       7.8   3.6e+03      42      63 ..      89     110 ..      89     140 .. 0.50
+   2 ?    0.6   0.0      0.31   1.4e+02      70     130 ..     376     437 ..     351     444 .. 0.80
+   3 ?    1.2   0.0       0.2        91      15     144 ..     510     563 ..     496     578 .. 0.55
+   4 ?   -0.0   0.0      0.47   2.2e+02      82     137 ..     622     680 ..     597     703 .. 0.72
+   5 !   17.3   0.1   2.2e-06     0.001      55     155 ..     721     820 ..     688     825 .. 0.78
+   6 ?   -0.6   0.0      0.68   3.2e+02     107     152 ..     855     901 ..     846     906 .. 0.76
+   7 !   10.5   0.1   0.00027      0.13      15     145 ..     924    1047 ..     912    1058 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: -4.0 bits;  conditional E-value: 7.8
+    mTOR_dom  42 DPykhkeveekseeeekeeena 63 
+                 DP + ++ +++++++e++ +++
+  CAA93298.3  89 DPMQERQSKKQIQDRESDYQKQ 110
+                 8888888888886653222222 PP
+
+  == domain 2  score: 0.6 bits;  conditional E-value: 0.31
+    mTOR_dom  70 ellvglspsseeyyptvvinaLlkilkdpsls.shhtavvqaimsifktlglkcvpflpqii 130
+                 ++l +l+    ++ ++  +n++l +l +++l+ + ++  v++i  i+ +l+  + pf  +i+
+  CAA93298.3 376 SALRQLTDQARDFGAAALFNQILPLLMERTLEdQERHLLVKVIDRILYKLDDLVRPFTHKIL 437
+                 34567777789999999999**********99777888999999999999888888888886 PP
+
+  == domain 3  score: 1.2 bits;  conditional E-value: 0.2
+    mTOR_dom  15 LlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaims 113
+                 L  + ++++s++                                                                             +++ v+ i +
+  CAA93298.3 510 LKAVCRSKKSWQ----------------------------------------------------------------------------ARHTGVRIIQQ 532
+                 444444444444............................................................................45555556666 PP
+
+    mTOR_dom 114 ifktlglkcvpflpqiipallsvirtcessl 144
+                 i   lg+  +p l++++  + + +++ ++++
+  CAA93298.3 533 IALLLGCSILPHLKNLVDCIGHGLEDEQQKV 563
+                 6666666666666666666655555555555 PP
+
+  == domain 4  score: -0.0 bits;  conditional E-value: 0.47
+    mTOR_dom  82 yyptvvinaLlkil..kdpslsshhtavvqaimsifktlglkcvpflp.qiipallsvi 137
+                  y++   + ++kil  + +s ++  +++v  ++s + + +    ++l+  ++p++++ +
+  CAA93298.3 622 EYASHFTRRIMKILlrEFNSPDEEMKKIVLKVVSQCASTDGVTPEYLRtDVLPEFFHCF 680
+                 56666778888888433345557788888888888888888888888536999998865 PP
+
+  == domain 5  score: 17.3 bits;  conditional E-value: 2.2e-06
+    mTOR_dom  55 eeekeeenaeetdvsellvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152
+                 +e++  +++++++v++++ +l  s+ +e  +   +  +l  ++++s++   + +++   ++++ lg++c p+lpqi++++l  +++ ++++re   + +
+  CAA93298.3 721 DESEPYRKMTAETVDKVIGSLGVSEiDERLEELLLDGVLFAFQEQSVE--EKVILTCFSTVVNALGTRCKPYLPQIVSTILYRLNNKSANVREQAADLV 817
+                 335556666667777777778888889999999999988889888877..56777888999999**********************9999999887766 PP
+
+    mTOR_dom 153 atL 155
+                 +++
+  CAA93298.3 818 SSI 820
+                 665 PP
+
+  == domain 6  score: -0.6 bits;  conditional E-value: 0.68
+    mTOR_dom 107 vvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqL 152
+                 ++ ai  i++ +g+ +  p ++ ++p l+ ++r+ +++++e  ++ +
+  CAA93298.3 855 ILGAIKAIVSVVGMSSmQPPIRDLLPRLTPILRNRHEKVQENTIDLV 901
+                 56677778888888776788999999999999988888888776655 PP
+
+  == domain 7  score: 10.5 bits;  conditional E-value: 0.00027
+    mTOR_dom   15 LlnilkteqsqsiRrevikvlGilG.ALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqa 110 
+                  L+++lk   ++siRr +++++G +  A+ P+ +  +  ++     + ++ ++ +v  ++v +    e   p +v+ aL++  + p ++  ++ v+++
+  CAA93298.3  924 LIDMLKAH-KKSIRRAAVNTFGYISkAIGPQDVLATLLNN-L---KVQERQN-RVC-TTVAIAIVAETCMPFTVVPALMADYRTPEMN-VQNGVLKS 1012
+                  67788865.899**********99669***9994443322.2...2222222.222.23566678899******************98.7899**** PP
+
+    mTOR_dom  111 imsifktlglkcvpflpqiipallsvirtcesslr 145 
+                  + ++f+++g +   ++  i p l+ ++ + ++ +r
+  CAA93298.3 1013 LAFMFEYIGEQARDYVYAITPLLADALMDRDAVHR 1047
+                  *********************99998887776444 PP
+
+>> CAA92385.1  translation elongation regulator Gcn1 (predicted) [Schizosaccharomyces pombe]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.1   0.0         2   9.5e+02      85     155 ..      36     105 ..      33     107 .. 0.77
+   2 ?   -1.7   0.0       1.5   7.2e+02     125     155 ..     316     346 ..     297     348 .. 0.84
+   3 ?   -1.6   0.0       1.4   6.6e+02      84     103 ..    1321    1340 ..    1285    1383 .. 0.76
+   4 ?    2.3   0.0     0.091        43      87     157 ..    1402    1472 ..    1395    1475 .. 0.88
+   5 ?    4.4   0.0      0.02       9.3     111     152 ..    1504    1546 ..    1479    1553 .. 0.78
+   6 ?    5.1   0.0     0.012       5.6      66     155 ..    1660    1745 ..    1591    1773 .. 0.72
+   7 ?    0.4   0.0      0.34   1.6e+02     106     156 ..    1884    1934 ..    1837    1938 .. 0.68
+   8 ?   -0.7   0.0      0.77   3.6e+02      69     156 ..    1969    2050 ..    1940    2052 .. 0.62
+   9 ?    2.6   0.0     0.073        34      62     157 ..    2261    2357 ..    2250    2359 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: -2.1 bits;  conditional E-value: 2
+    mTOR_dom  85 tvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatL 155
+                 +++i  L +i + + ++   ++++ a+  if+tl  +      +qi  ++ ++++ ++s ++ fl++ L+t+
+  CAA92385.1  36 KIMIDILQHICRTQDID--EESAIAALEDIFETLPRNLsRDARKQIEITINHLVSRLPSIVLPFLVRRLTTI 105
+                 57888888888888877..68999999999999988886667777777777777777777777777777765 PP
+
+  == domain 2  score: -1.7 bits;  conditional E-value: 1.5
+    mTOR_dom 125 flpqiipallsvirtcesslrefllqqLatL 155
+                 +l+ ++ ++++ ++++++++r   +q +++L
+  CAA92385.1 316 ILSSVLTSFVNGLKSSNAEVRRNCFQTFKDL 346
+                 6899************99********99988 PP
+
+  == domain 3  score: -1.6 bits;  conditional E-value: 1.4
+    mTOR_dom   84 ptvvinaLlkilkdpslssh 103 
+                   +vv+ +Ll++l+ ps s +
+  CAA92385.1 1321 LAVVMDSLLSVLSTPSESVQ 1340
+                  35777778888877776644 PP
+
+  == domain 4  score: 2.3 bits;  conditional E-value: 0.091
+    mTOR_dom   87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                  ++ +L +++++++ ++h++ ++ a+    + lg+   p+lp ++p ll+ + +  +++re  ++ +++++s
+  CAA92385.1 1402 ILDSLSELISNRQNATHRQVALFAVEAFSRILGIYFEPYLPDLLPLLLTSFGDNANEVREATMDAVKQIMS 1472
+                  5678888899999999999999999999999********************99999999999999888876 PP
+
+  == domain 5  score: 4.4 bits;  conditional E-value: 0.02
+    mTOR_dom  111 imsifktlglkc.vpflpqiipallsvirtcesslrefllqqL 152 
+                  i+  ++++  k+   flp iip+l +v+++++s++r++  + L
+  CAA92385.1 1504 ILGLMSYMAPKQlSVFLPTIIPKLSEVLTDSHSQVRNTANKSL 1546
+                  555666677777578***************9999998876666 PP
+
+  == domain 6  score: 5.1 bits;  conditional E-value: 0.012
+    mTOR_dom   66 tdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155 
+                  t+ ++l   +++  e  +pt  i +L ++l+ ++ +  ++ + q + +i+  lgl     l+ ++p++l+ +++  +++re +++ L  L
+  CAA92385.1 1660 TAAKALGSLIEKLGEKKFPT-LIPELFNVLRSECSEVDRQGAAQGLSEILAGLGLA---RLEDVLPEILKNTSSPVPHIRESFISLLIYL 1745
+                  33333344445666888998.78999*******99999************998875...6899999999999998889999998887665 PP
+
+  == domain 7  score: 0.4 bits;  conditional E-value: 0.34
+    mTOR_dom  106 avvqaimsifktlglkcvpflpqiipallsvir....tcesslrefllqqLatLv 156 
+                        ++i k + ++   ++++i+p+l+s+i     ++++++r + ++ L++L 
+  CAA92385.1 1884 P----AIQIWKAIVVNTPRTVREILPTLTSIIVsnlnSSSNDRRTMCVKSLGDLL 1934
+                  3....35566666666666666666666665543332666789999999999886 PP
+
+  == domain 8  score: -0.7 bits;  conditional E-value: 0.77
+    mTOR_dom   69 sellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllqqLatLv 156 
+                  +el+++ +p + e y+   ++a+ + l d  l+  ++++ +a    f +l+       ++ ++p+ll+++++  ++ +e  l+ L +++
+  CAA92385.1 1969 EELINSATPEQLEIYSDDFVYAVRRALMDGDLE-VRETAAEA----FDSLQSILgDRAVDDVLPQLLKLLES--ENQSEQALSALREII 2050
+                  555566666666777776777777777666666.22222233....33333322234567888888888886..455666666666665 PP
+
+  == domain 9  score: 2.6 bits;  conditional E-value: 0.073
+    mTOR_dom   62 naeetdvsellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLatLvs 157 
+                  ++++  +++++ +++ps+   + t +   L++i+ ++   + + a++ ++  i++++++   pflpq+  ++++ + + +s  +r      L+tL++
+  CAA92385.1 2261 EQSALGIADIVLKTEPSKLRPFVTQITGPLIRIIGERFPVEVKCAILYTLNIILSKISTFLRPFLPQLQRTFAKCLGDPSSeVIRSRAATALGTLIT 2357
+                  445577778888889999888888899999999999999999999999999999999999999**99999999999998887888888888988886 PP
+
+>> CAB16272.1  karyopherin Kap104 [Schizosaccharomyces pombe]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.0       2.5   1.2e+03       4      35 ..       5      38 ..       4      38 .. 0.77
+   2 ?    4.4   0.0     0.021       9.6     123     155 ..     126     158 ..     112     161 .. 0.82
+   3 ?    4.7   0.0     0.017       7.9      87     156 ..     132     206 ..     126     209 .. 0.55
+   4 ?    0.2   0.0      0.38   1.8e+02     102     143 ..     234     275 ..     216     282 .. 0.84
+   5 ?   -2.3   0.0       2.3   1.1e+03     123     137 ..     298     312 ..     292     319 .. 0.81
+   6 ?    3.4   0.0      0.04        19      90     146 ..     410     473 ..     356     484 .. 0.67
+   7 ?    1.2   0.0       0.2        94      87     158 ..     502     572 ..     481     574 .. 0.71
+   8 ?   -2.8   0.0       3.3   1.5e+03     114     142 ..     671     699 ..     663     714 .. 0.53
+   9 ?    1.6   0.0      0.14        67      10      43 ..     773     807 ..     769     815 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 2.5
+    mTOR_dom  4 PyldypeLLeiLlnilkte..qsqsiRrevikvl 35
+                P++   ++L  L++++k++  +++++R  ++++l
+  CAB16272.1  5 PWVLQEQVLVELSEVIKNSlsENSQTRNAALNLL 38
+                7777888999999999999744888888888765 PP
+
+  == domain 2  score: 4.4 bits;  conditional E-value: 0.021
+    mTOR_dom 123 vpflpqiipallsvirtcesslrefllqqLatL 155
+                 +++ p+++p+l++++++  s+ +e  ++ L+++
+  CAB16272.1 126 ISTWPEVLPQLMEMLSSPASTTQEGAFSALTKI 158
+                 577899***********999**********987 PP
+
+  == domain 3  score: 4.7 bits;  conditional E-value: 0.017
+    mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifkt......lglkcvpflpqiipallsvirtcesslrefllqqLatLv 156
+                 v+ +L+++l+ p+ s+ ++ + +a+++i+++       + + +  l+  ip +++++r+ ++++r   l  L+++v
+  CAB16272.1 132 VLPQLMEMLSSPA-STTQEGAFSALTKICEDsaqeldRDFNGTRPLDFMIPRFIELARHENPKIRTDALFCLNQFV 206
+                 4455666666555.44566666677777666332211112223356667777777777766666666666666655 PP
+
+  == domain 4  score: 0.2 bits;  conditional E-value: 0.38
+    mTOR_dom 102 shhtavvqaimsifktlglkcvpflpqiipallsvirtcess 143
+                 + +++v qa+++ +     k  p l  i+  +l  +++++++
+  CAB16272.1 234 NVRKNVCQALVYLLDVRPDKIAPSLGSIVEYMLYSTQDSDQN 275
+                 567899999999999999999999**9999999999998875 PP
+
+  == domain 5  score: -2.3 bits;  conditional E-value: 2.3
+    mTOR_dom 123 vpflpqiipallsvi 137
+                  p+l++i+p ll+ +
+  CAB16272.1 298 GPYLDKIVPMLLQGM 312
+                 589*******99976 PP
+
+  == domain 6  score: 3.4 bits;  conditional E-value: 0.04
+    mTOR_dom  90 aLlkil....kdpsls...shhtavvqaimsifktlglkcvpflpqiipallsvirtcesslre 146
+                  Ll+i+    k++  s   + ++a v a+  i +     +v++lp++ p +ls++ + ++ +r 
+  CAB16272.1 410 RLLEIIlphlKQSLTSedwKVQEAGVLAVGAIAEGCMDGMVQYLPELYPYFLSLLDSKKPLVRT 473
+                 444443333322222222346788999999****99999***************9987776555 PP
+
+  == domain 7  score: 1.2 bits;  conditional E-value: 0.2
+    mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                  ++ Ll+++ d++ +  ++a  +a     ++ g   vp+l+ i+ +l+ ++++ +++    l++ ++tL  +
+  CAB16272.1 502 LLQGLLRMVVDNNKK-VQEAGCSAFAILEEQAGPSLVPYLEPILTNLAFAFQKYQRKNVLILYDAVQTLADY 572
+                 566778888777744.66677777766666677777**********99999998886666666666666655 PP
+
+  == domain 8  score: -2.8 bits;  conditional E-value: 3.3
+    mTOR_dom 114 ifktlglkcvpflpqiipallsvirtces 142
+                 i++ lg ++ p+l q  p l ++i  c +
+  CAB16272.1 671 IIQALGSQVSPLLAQADPPLGQIIGICAK 699
+                 55556666666655555555555444433 PP
+
+  == domain 9  score: 1.6 bits;  conditional E-value: 0.14
+    mTOR_dom  10 eLLeiLlnilkteq.sqsiRrevikvlGilGALDP 43 
+                  LLe L+ ilk+++ ++++  +v  ++G lG  +P
+  CAB16272.1 773 PLLERLICILKSKKsNTTVLENVAITIGRLGVYNP 807
+                 69***********7477788888899999996665 PP
+
+>> CAA19321.1  karyopherin Kap123 [Schizosaccharomyces pombe]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.3   0.0      0.09        42     101     157 ..     137     192 ..      87     195 .. 0.85
+   2 ?    0.8   0.0      0.26   1.2e+02      99     153 ..     417     472 ..     368     478 .. 0.80
+   3 ?   -0.9   0.0      0.85     4e+02      98     150 ..     523     576 ..     497     586 .. 0.75
+   4 ?    0.7   0.0      0.28   1.3e+02     121     142 ..     588     609 ..     577     616 .. 0.80
+   5 ?   -0.7   0.0      0.75   3.5e+02     106     152 ..     658     704 ..     646     707 .. 0.84
+   6 ?    5.3   0.0     0.011       5.2     115     157 ..    1004    1046 ..     992    1048 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 2.3 bits;  conditional E-value: 0.09
+    mTOR_dom 101 sshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvs 157
+                 +s ++++v ++ si +t++l    +l  +++ + ++i+++++++r + +q L+ + +
+  CAA19321.1 137 DSIREMAVYVLYSIAETVDLDNK-LLLDFVNLFSQTITDSSRTVRVTSVQGLGAIAE 192
+                 467899999999****9999875.56678999*******999***999999998876 PP
+
+  == domain 2  score: 0.8 bits;  conditional E-value: 0.26
+    mTOR_dom  99 slsshhtavvqaimsifktlglkcvpflpqiipallsvirtces.slrefllqqLa 153
+                  +s+hh++ +  + + ++t+g+k+ +   + i all+ + ++e    + +l++ L 
+  CAA19321.1 417 EVSKHHAQLLPLVFELMSTQGVKVGKSACNCIDALLEGLDKSEIsGYLPMLMERLV 472
+                 56899999999999999999999999999999999988888775555555555555 PP
+
+  == domain 3  score: -0.9 bits;  conditional E-value: 0.85
+    mTOR_dom  98 pslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefllq 150
+                     + + +v++++  i + +g +  +p+ +q+i+  ++ i+  +s+lre  + 
+  CAA19321.1 523 DEGYELRGTVMDTLGAIANAVGKQAfLPYTEQLIQLAYEGIQIDHSRLRECSFC 576
+                 444456778899999999999999989999999999999999877888888775 PP
+
+  == domain 4  score: 0.7 bits;  conditional E-value: 0.28
+    mTOR_dom 121 kcvpflpqiipallsvirtces 142
+                 +  pfl++i+pal++ i + es
+  CAA19321.1 588 EFAPFLEHIVPALFKSIDQDES 609
+                 5689***********9988665 PP
+
+  == domain 5  score: -0.7 bits;  conditional E-value: 0.75
+    mTOR_dom 106 avvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqL 152
+                  + +a+ +i+ ++g   +p+l+  + +l++ +++  + +r+  l+ L
+  CAA19321.1 658 IAADALGEICMYVGAPFTPYLEPTVEKLVACTTHFYEGVRKSALSSL 704
+                 56688999*********************999999888888887766 PP
+
+  == domain 6  score: 5.3 bits;  conditional E-value: 0.011
+    mTOR_dom  115 fktlglkc.vpflpqiipallsvirtcesslrefllqqLatLvs 157 
+                  ++ ++  c v+ l ++ip ++sv++ ++++l++ l ++L ++v+
+  CAA19321.1 1004 YR-QQNPClVQHLGELIPVFASVLTGSPEQLNDELRSELLSMVK 1046
+                  44.455666******************99**9999999888775 PP
+
+>> CAA21270.2  TATA-binding protein associated factor Mot1 (predicted) [Schizosaccharomyces pombe]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.0       2.5   1.1e+03      10      36 ..      41      66 ..       8      68 .. 0.79
+   2 ?   -2.4   0.1       2.5   1.2e+03     111     157 ..     595     642 ..     578     643 .. 0.69
+   3 ?   -2.6   0.3       2.9   1.3e+03     102     126 ..     994    1018 ..     955    1050 .. 0.59
+   4 !   16.1   0.1   5.2e-06    0.0024      86     159 ..    1236    1309 ..    1197    1310 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 2.5
+    mTOR_dom 10 eLLeiLlnilkteqsqsiRrevikvlG 36
+                +LL+ ++  lk+ +++++R  + k +G
+  CAA21270.2 41 NLLGRVVPYLKS-KNWDTRVAAAKAIG 66
+                566666666664.48999999999988 PP
+
+  == domain 2  score: -2.4 bits;  conditional E-value: 2.5
+    mTOR_dom 111 imsifktlglkcvp.flpqiipallsvirtcesslrefllqqLatLvs 157
+                 +m+ +++      +   + ++p l++++r + + +r  ++  L++++s
+  CAA21270.2 595 VMNLMQETANSDPEfSFETLVPRLFHLMRYTLTGVRRSVVYALTKFIS 642
+                 555555544444331357788888888888777888888877777776 PP
+
+  == domain 3  score: -2.6 bits;  conditional E-value: 2.9
+    mTOR_dom  102 shhtavvqaimsifktlglkcvpfl 126 
+                  +  +++++ im+ +k+ +  c+++ 
+  CAA21270.2  994 KKLNSIIKGIMESIKKEQFSCLQMH 1018
+                  4445555555555555555553332 PP
+
+  == domain 4  score: 16.1 bits;  conditional E-value: 5.2e-06
+    mTOR_dom   86 vvinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsiv 159 
+                    ++ ++ +l d+s + h++ +++ i ++++ lg++ +p++  +i  ll  ++++++++r      +atLv++v
+  CAA21270.2 1236 LLVEDVVPLLGDASSTIHRQGAIECIYHVVQRLGVRILPYILYLIIPLLGRMSDADQDVRVLATTSFATLVKLV 1309
+                  5677788899*************************************************************998 PP
+
+>> CAB40165.1  ATR checkpoint kinase Rad3 [Schizosaccharomyces pombe]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.0   0.3      0.44   2.1e+02     101     154 ..     612     663 ..     565     669 .. 0.73
+   2 ?   -0.3   0.0      0.56   2.6e+02      90     139 ..     876     928 ..     830     943 .. 0.73
+   3 ?   11.1   0.0   0.00017      0.08      10      50 ..    1076    1118 ..    1072    1146 .. 0.76
+   4 ?   -2.9   0.1       3.6   1.7e+03      84     120 ..    1230    1266 ..    1226    1290 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 0.0 bits;  conditional E-value: 0.44
+    mTOR_dom 101 sshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLat 154
+                  + h++    i + +k l ++ +++l+ +i + +s+ r +e++    ++  L++
+  CAB40165.1 612 VEFHKESKALIFNTLKILAVENTAILETVILSWISLSRVVEEEE--LHFVLLEV 663
+                 567777777899999999999999*******9999999988743..33333433 PP
+
+  == domain 2  score: -0.3 bits;  conditional E-value: 0.56
+    mTOR_dom  90 aLlkilkdpslsshhtavvqaimsifktlgl...kcvpflpqiipallsvirt 139
+                 +  +il+d + ++  ++ +++i+ i k l+l    +   lpqi+++l+s++++
+  CAB40165.1 876 EFSNILNDLKGKTSINEKIKTIVGIEKMLSLcggAVKLGLPQILSNLQSAFQN 928
+                 44578899888888888999998888876551104444699999999998886 PP
+
+  == domain 3  score: 11.1 bits;  conditional E-value: 0.00017
+    mTOR_dom   10 eLLeiLlnilkte..qsqsiRrevikvlGilGALDPykhkeve 50  
+                  +LL+ Ll++  +   ++ +i   + k lG lGA+DP + k  +
+  CAB40165.1 1076 QLLRCLLDCCVKYasTNMQISYLAAKNLGELGAIDPSRAKAQH 1118
+                  8999999987766334777888899**************8755 PP
+
+  == domain 4  score: -2.9 bits;  conditional E-value: 3.6
+    mTOR_dom   84 ptvvinaLlkilkdpslsshhtavvqaimsifktlgl 120 
+                  ++v+i++ +++++ + ++  h++  + i  i++++  
+  CAB40165.1 1230 ENVTIHTWMQLFSLKLMEYAHSQNAEKIFGICSKVVK 1266
+                  569999999*999999999999999999999987544 PP
+
+>> CAC37426.1  ribosome biogenesis protein Rrp12 (predicted) [Schizosaccharomyces pombe]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.1   0.2      0.21        97      74     149 ..      36     114 ..       9     125 .. 0.69
+   2 ?   -2.8   0.0       3.3   1.5e+03      18      43 ..     330     355 ..     324     358 .. 0.73
+   3 ?    4.7   0.1     0.017       7.9      95     155 ..     744     804 ..     719     808 .. 0.85
+   4 ?    5.3   0.1     0.011       5.2      93     146 ..     872     926 ..     827     936 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: 1.1 bits;  conditional E-value: 0.21
+    mTOR_dom  74 glspss.eeyyptvvinaLlkilkd.psls.shhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslrefll 149
+                 g+ + + +e  pt  + aLl+++k+   l+ + +  + q +  ++k++  ++  +  pqi++ l+ v++++e+  + +ll
+  CAC37426.1  36 GTLKEQkTEATPTAYLVALLTLVKEfTDLKkNFKGHTFQLLELVIKYVPSNVlQAKFPQILSVLAPVVNNAET-NKTVLL 114
+                 3344444888999888888888876334555788889999999999999999777899999999999998765.333333 PP
+
+  == domain 2  score: -2.8 bits;  conditional E-value: 3.3
+    mTOR_dom  18 ilkteqsqsiRrevikvl.GilGALDP 43 
+                 +l++ +s +iR+++  ++ +++G LD 
+  CAC37426.1 330 LLES-ESMEIRLQTATTIcSVIGCLDT 355
+                 4554.4899999988776479999996 PP
+
+  == domain 3  score: 4.7 bits;  conditional E-value: 0.017
+    mTOR_dom  95 lkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatL 155
+                 + d+ +ss +++ + ++   ++ ++ + v  +pq++p+ +  +++++++ r++ +q L ++
+  CAC37426.1 744 VADRVVSSTRKDRLASLNALYELQSSELVIAIPQLLPEAIISLKEVNEKARHTAFQLLFNI 804
+                 3588888899999999999999999999****************************99877 PP
+
+  == domain 4  score: 5.3 bits;  conditional E-value: 0.011
+    mTOR_dom  93 kilkdpslsshhtavvqaimsifktlglkc.vpflpqiipallsvirtcesslre 146
+                 +++  +s ++  +a+++ i   +++  ++c  p+lp++ip+ll++ ++ +++lr 
+  CAC37426.1 872 NLFITSSKREIAKAAIDFIKISVSSFPVECiKPLLPELIPNLLAWSHEGKANLRV 926
+                 44456677788899999999999999****999***********99988877764 PP
+
+>> CAB59878.1  TFIIH regulator Mms19 [Schizosaccharomyces pombe]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.1   0.0      0.99   4.6e+02      75     130 ..     331     389 ..     296     395 .. 0.70
+   2 ?    4.0   1.0     0.027        13      59     120 ..     536     596 ..     482     667 .. 0.64
+   3 ?    1.5   0.2      0.16        75      10      38 ..     725     753 ..     722     753 .. 0.93
+   4 ?   -2.3   0.0       2.3   1.1e+03     124     156 ..     858     890 ..     815     894 .. 0.73
+   5 ?    2.8   0.2     0.062        29      98     142 ..     916     959 ..     895     978 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: -1.1 bits;  conditional E-value: 0.99
+    mTOR_dom  75 lspsseeyyptvvinaLlkilkdpsls..shhtavvqaimsifktlglkc.vpflpqii 130
+                  s+s +e+  ++ i+   ++l+d +++    ++av  ++ si  +    c  +flp ++
+  CAB59878.1 331 FSSSFTEFVDMILIQLSQRLLEDVNVKscGSCAAVFASLASISVETFNYCsCNFLPSVL 389
+                 34555999999999999999999888833356778888888876665556588888886 PP
+
+  == domain 2  score: 4.0 bits;  conditional E-value: 0.027
+    mTOR_dom  59 eeenaeetdvsel.lvglspss.eeyyptvvinaLlkilkdpslsshhtavvqaimsifktlgl 120
+                 ++++++e++ +++  v +s s+    +++ vi+ L+++lkd+  s  +++ v+ + si+++l++
+  CAB59878.1 536 TAKSSSEETFKQYlSVLVSISEeRSLFKALVIR-LVEMLKDQFKS--KEMSVDLVESIVQSLSV 596
+                 233333333444433444555546667776665.79999888766..45555555555555544 PP
+
+  == domain 3  score: 1.5 bits;  conditional E-value: 0.16
+    mTOR_dom  10 eLLeiLlnilkteqsqsiRrevikvlGil 38 
+                 eLL++L+n++  ++s+ ++ +++++++ l
+  CAB59878.1 725 ELLNLLINVVFVTESPGVKISALRLISSL 753
+                 8************************9865 PP
+
+  == domain 4  score: -2.3 bits;  conditional E-value: 2.3
+    mTOR_dom 124 pflpqiipallsvirtcesslrefllqqLatLv 156
+                  f+  + p++l+ i+t++   +  +l  L++ +
+  CAB59878.1 858 RFYASVSPKILEHISTATGGEKSLYLMLLSNVI 890
+                 478888888888888888888888888887776 PP
+
+  == domain 5  score: 2.8 bits;  conditional E-value: 0.062
+    mTOR_dom  98 pslsshhtavvqaimsifktlglkcvpflpqiipallsvirtces 142
+                 + + s + +++++i++ +k+l    +++l+ +ip+ll++ +++++
+  CAB59878.1 916 SDI-SVKLSTLNVIHTSVKELTSLLTEYLDTLIPSLLAIPKDMNN 959
+                 333.46778899999999999999999999999999998887765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       5132  (2381887 residues searched)
+Passed MSV filter:                       346  (0.0674201); expected 102.6 (0.02)
+Passed bias filter:                      269  (0.0524162); expected 102.6 (0.02)
+Passed Vit filter:                        33  (0.00643024); expected 5.1 (0.001)
+Passed Fwd filter:                        11  (0.00214341); expected 0.1 (1e-05)
+Initial search space (Z):               5132  [actual number of targets]
+Domain search space  (domZ):              11  [number of targets reported over threshold]
+# CPU time: 0.05u 0.02s 00:00:00.07 Elapsed: 00:00:00.04
+# Mc/sec: 7857.09
+//
+[ok]

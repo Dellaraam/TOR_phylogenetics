@@ -1,0 +1,172 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/MTOR_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Ciliates/Proteins/I_multifiliis_protein.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       mTOR_dom  [M=160]
+Accession:   PF11865.13
+Description: Serine/threonine-protein kinase mTOR domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence    Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------    -----------
+     0.0083   14.1   1.5      0.012   13.6   0.5    1.9  2  IMG5_078790  TBC1 domain protein
+  ------ inclusion threshold ------
+       0.01   13.9   8.6       0.35    8.8   0.3    4.8  5  IMG5_000620  hypothetical protein
+      0.016   13.2  18.5       0.14   10.1   0.6    4.6  4  IMG5_020550  hypothetical protein
+      0.039   12.0   5.0       0.55    8.2   0.0    4.6  5  IMG5_021340  HEAT repeat protein
+
+
+Domain annotation for each sequence (and alignments):
+>> IMG5_078790  TBC1 domain protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.2   0.0      0.77   8.5e+02     125     140 ..      72      87 ..      31     103 .. 0.47
+   2 !   13.6   0.5   1.1e-05     0.012      59     142 ..     139     226 ..     104     238 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: -2.2 bits;  conditional E-value: 0.77
+     mTOR_dom 125 flpqiipallsvirtc 140
+                  +lp+  ++ +++++++
+  IMG5_078790  72 YLPKQRQKWVQTLQNS 87 
+                  3333333333333333 PP
+
+  == domain 2  score: 13.6 bits;  conditional E-value: 1.1e-05
+     mTOR_dom  59 eeenaeetdvsellvglspsseeyypt..vvinaLlkilkdpslsshhtavvqaimsifktlglkc..vpflpqiipallsvirtces 142
+                  e++++++ +  e+ ++l+  +++ y+    +   L ki k+++l++ h +v++ i++i+ +l+  +  v+ +++i+  l+ v++   +
+  IMG5_078790 139 EKDTERTRQEIEFFTKLTMRDDNIYQIpfQTQIRLEKIKKQQTLEERHCDVLSRILFIYAKLNNAVlyVQGMNEILAPLYYVMQAERE 226
+                  333444444455566676666777765323334578999**********************999888899*************97544 PP
+
+>> IMG5_000620  hypothetical protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.5   0.1      0.23   2.6e+02     128     145 ..     149     167 ..      17     182 .. 0.69
+   2 ?   -2.0   0.0      0.71   7.9e+02      91     147 ..     265     319 ..     246     326 .. 0.63
+   3 ?    2.5   0.0     0.029        32     121     158 ..     339     376 ..     333     378 .. 0.85
+   4 ?    4.0   0.1    0.0098        11      76     121 ..     414     458 ..     389     470 .. 0.73
+   5 ?    8.8   0.3   0.00032      0.35      87     158 ..     464     532 ..     459     534 .. 0.77
+
+  Alignments for each domain:
+  == domain 1  score: -0.5 bits;  conditional E-value: 0.23
+     mTOR_dom 128 qiipallsvirtces.slr 145
+                   iip++++ i++ ++ +l+
+  IMG5_000620 149 DIIPSFYASISSQSQqELN 167
+                  3566666555555554554 PP
+
+  == domain 2  score: -2.0 bits;  conditional E-value: 0.71
+     mTOR_dom  91 Llkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslref 147
+                  +lk l++      +    + + +i k   l  v+f +q+ ++++s++++ e++lr +
+  IMG5_000620 265 MLKSLSEDRSWRIRYYFCDKLAEITKV--LGKVEFKKQFFQNYISYLEDQEPELRAV 319
+                  444444444444444555555566664..4567777888888888888777777665 PP
+
+  == domain 3  score: 2.5 bits;  conditional E-value: 0.029
+     mTOR_dom 121 kcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                  k +p+++++    l+++r+ +s++r  l++qL++++++
+  IMG5_000620 339 KLIPLVKKLSTDGLNYVRNEDSDVRISLFKQLNQITNV 376
+                  567777778888899****999************9876 PP
+
+  == domain 4  score: 4.0 bits;  conditional E-value: 0.0098
+     mTOR_dom  76 spsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglk 121
+                   +  +e+    +++ L+  l+d+ ++  ++++v ++ +i+++lg  
+  IMG5_000620 414 KEIGQEFLNDKILKILMDWLQDKVYAV-RESAVISVKNILQNLGSS 458
+                  444589999999***********9995.566666799999999876 PP
+
+  == domain 5  score: 8.8 bits;  conditional E-value: 0.00032
+     mTOR_dom  87 vinaLlkilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsi 158
+                  v++++l++ ++p++  h+++v+ +im++fk+l+   ++  + i+p l+++ ++  +++r  + + L++L s 
+  IMG5_000620 464 VMTKILNLSNQPNYL-HRETVIFTIMQVFKQLNQDYIN--KTILPILTQLSKDPVPNIRFNVAKSLKNLGSS 532
+                  566666666677766.99************97665544..67889999888888889999999999888665 PP
+
+>> IMG5_020550  hypothetical protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.1   0.6   0.00013      0.14      69     149 ..      46     127 ..      26     140 .. 0.77
+   2 ?    5.7   0.1     0.003       3.3     125     156 ..     293     324 ..     251     328 .. 0.65
+   3 ?    1.4   0.1     0.061        68      69     122 ..     357     409 ..     334     426 .. 0.70
+   4 ?    4.6   3.2    0.0065       7.3      94     160 .]     421     484 ..     410     484 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 10.1 bits;  conditional E-value: 0.00013
+     mTOR_dom  69 sellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifkt...lglkcvpflpqiipallsvirtcesslrefll 149
+                   ++l++l++s+e +    +in++ +i+++  ++++ + +v+ i ++++     +++c p+l  +i  l+s+ ++   +l+ ++l
+  IMG5_020550  46 FKILQNLCKSDELFVRDKAINSIKNIINQMDIKKYEEIIVKFIKQMCECenyFSIECCPVLIIFIYPLISLQNQQ--ELNTYYL 127
+                  34589999999********************************99998745577888888888887777776653..4444444 PP
+
+  == domain 2  score: 5.7 bits;  conditional E-value: 0.003
+     mTOR_dom 125 flpqiipallsvirtcesslrefllqqLatLv 156
+                  + + ++p +l+++++ +s++r +l++qL  + 
+  IMG5_020550 293 INEYLLPIFLQLLKDEDSEIRVTLFKQLHLIS 324
+                  445689*********999**********8775 PP
+
+  == domain 3  score: 1.4 bits;  conditional E-value: 0.061
+     mTOR_dom  69 sellvglspsseeyyptvvinaLlkilkdpslsshhtavvqaimsifktlglkc 122
+                  + +     +  +e+    +++ +l +l+d+     + ++vq+i +  ++lgl  
+  IMG5_020550 357 EIIQFLAKEIGQEFLNEKILKLILDLLQDKVFV-VRDQAVQSIKFFTQNLGLAW 409
+                  333333334448999999999999999999887.78899999999999999875 PP
+
+  == domain 4  score: 4.6 bits;  conditional E-value: 0.0065
+     mTOR_dom  94 ilkdpslsshhtavvqaimsifktlglkcvpflpqiipallsvirtcesslrefllqqLatLvsivk 160
+                     ++++ +h+++++  i++i k+++ + v+  +qiip ++++ ++  +++r  + + +++++ ++k
+  IMG5_020550 421 FY-QQNILQHRETILFIIINISKNINQEYVQ--KQIIPIIIQLSKDQVPNIRINVGKAIKQIIPYIK 484
+                  44.55556799999999******97777776..8************999**9999999999998876 PP
+
+>> IMG5_021340  HEAT repeat protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.0   0.0      0.17   1.9e+02      12      39 ..     122     150 ..     119     153 .. 0.91
+   2 ?   -2.7   0.0       1.1   1.3e+03      14      35 ..     153     174 ..     151     176 .. 0.76
+   3 ?    8.2   0.0   0.00049      0.55      11     101 ..     304     386 ..     299     423 .. 0.65
+   4 ?   -2.3   0.1      0.82   9.2e+02     114     155 ..     457     500 ..     437     503 .. 0.69
+   5 ?    0.8   0.0     0.093     1e+02      17      39 ..     553     575 ..     545     632 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: -0.0 bits;  conditional E-value: 0.17
+     mTOR_dom  12 LeiLlnilkteq.sqsiRrevikvlGilG 39 
+                  L +L+nil++ + + ++  +vi+  G +G
+  IMG5_021340 122 LPLLVNILNEGNiDRQLIVSVIRACGEIG 150
+                  67999****9988999*******999998 PP
+
+  == domain 2  score: -2.7 bits;  conditional E-value: 1.1
+     mTOR_dom  14 iLlnilkteqsqsiRrevikvl 35 
+                  +Ll+ilk++ + +i+  +  vl
+  IMG5_021340 153 TLLKILKSSPNYKIKIAITTVL 174
+                  6888898888888888777666 PP
+
+  == domain 3  score: 8.2 bits;  conditional E-value: 0.00049
+     mTOR_dom  11 LLeiLlnilkteqsqsiRrevikvlGilGALDPykhkeveekseeeekeeenaeetdvsellvglspsseeyyptvvinaLlkilkdpsls 101
+                  +++ L+n++++e ++++R  ++++lG++G   P   + +e        ++ n +e++v ++ +       e  p  v + L+++lkd+  +
+  IMG5_021340 304 IIKCLCNLINEE-NHQVREAAVNTLGLIGL--PEAKQAIEPLY-----NALNDPESQVRAMSAWCLGRLGEANPLKVAKRLINLLKDNYWK 386
+                  567899999855.899*************4..44443444211.....2233333444444222223336666666666666666666655 PP
+
+  == domain 4  score: -2.3 bits;  conditional E-value: 0.82
+     mTOR_dom 114 ifktlglkc..vpflpqiipallsvirtcesslrefllqqLatL 155
+                  i+++ ++     p ++ ii +l++ +++   ++r+  lq L++L
+  IMG5_021340 457 IIQSFEIANvqSPRIDFIIEELFRNASDQMIEVRKACLQTLEVL 500
+                  44444444411356788888888888887778888888888877 PP
+
+  == domain 5  score: 0.8 bits;  conditional E-value: 0.093
+     mTOR_dom  17 nilkteqsqsiRrevikvlGilG 39 
+                  + l +++++ iR e  k lG lG
+  IMG5_021340 553 EGLTKDKNHIIRSECAKGLGQLG 575
+                  5688899999************9 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (160 nodes)
+Target sequences:                       4462  (1867145 residues searched)
+Passed MSV filter:                       740  (0.165845); expected 89.2 (0.02)
+Passed bias filter:                      178  (0.0398924); expected 89.2 (0.02)
+Passed Vit filter:                        18  (0.00403407); expected 4.5 (0.001)
+Passed Fwd filter:                         4  (0.000896459); expected 0.0 (1e-05)
+Initial search space (Z):               4462  [actual number of targets]
+Domain search space  (domZ):               4  [number of targets reported over threshold]
+# CPU time: 0.03u 0.01s 00:00:00.04 Elapsed: 00:00:00.02
+# Mc/sec: 12173.85
+//
+[ok]

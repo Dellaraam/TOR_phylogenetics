@@ -1,0 +1,673 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/Pianissimo_FULL.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Rhizaria/Proteins/Bigna1_all_proteins.fasta
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       PTHR13298.orig.30.pir  [M=1175]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                                        Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                                        -----------
+     8e-123  413.3   8.0   2.2e-122  411.9   8.0    1.5  1  jgi|Bigna1|66212|fgenesh1_pg.1_#_247             
+    5.2e-86  291.4   3.8    2.5e-47  163.3   0.0    2.0  2  jgi|Bigna1|125579|aug1.1_g287                    
+    1.5e-36  127.6   0.0    2.2e-36  127.1   0.0    1.2  1  jgi|Bigna1|66210|fgenesh1_pg.1_#_245             
+    2.7e-31  110.2   0.0    8.3e-28   98.7   0.0    2.1  2  jgi|Bigna1|125578|aug1.1_g286                    
+  ------ inclusion threshold ------
+      0.039   13.6   0.0      0.039   13.6   0.0    2.9  3  jgi|Bigna1|144502|aug1.88_g19210                 
+      0.039   13.6   0.0      0.039   13.6   0.0    2.9  4  jgi|Bigna1|82126|fgenesh1_pg.88_#_33             
+      0.039   13.6   0.0      0.039   13.6   0.0    2.9  4  jgi|Bigna1|91089|estExt_fgenesh1_pg.C_880032     
+       0.37   10.4   0.2         31    4.0   0.1    2.7  3  jgi|Bigna1|24250|gw1.112.4.1                     
+       0.37   10.4   0.2         31    4.0   0.1    2.7  3  jgi|Bigna1|51106|estExt_Genewise1.C_1120023      
+       0.52    9.9   0.2         37    3.8   0.1    2.7  3  jgi|Bigna1|45127|e_gw1.112.4.1                   
+       0.52    9.9   0.2         37    3.8   0.1    2.7  3  jgi|Bigna1|56670|estExt_Genewise1Plus.C_1120022  
+       0.56    9.8   0.2         15    5.0   0.1    2.8  2  jgi|Bigna1|51107|estExt_Genewise1.C_1120024      
+       0.56    9.8   0.2         15    5.0   0.1    2.8  2  jgi|Bigna1|51108|estExt_Genewise1.C_1120025      
+        0.6    9.7   0.3         34    3.9   0.1    2.8  3  jgi|Bigna1|45144|e_gw1.112.13.1                  
+        0.6    9.7   0.3         34    3.9   0.1    2.8  3  jgi|Bigna1|45145|e_gw1.112.17.1                  
+        0.6    9.7   0.3         34    3.9   0.1    2.8  3  jgi|Bigna1|56671|estExt_Genewise1Plus.C_1120023  
+        0.6    9.7   0.3         34    3.9   0.1    2.8  3  jgi|Bigna1|56672|estExt_Genewise1Plus.C_1120024  
+       0.84    9.2   1.9         17    4.8   0.1    2.9  3  jgi|Bigna1|29025|gw1.22.167.1                    
+
+
+Domain annotation for each sequence (and alignments):
+>> jgi|Bigna1|66212|fgenesh1_pg.1_#_247  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  411.9   8.0  4.1e-126  2.2e-122      70     781 ..      45     842 ..      12     845 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 411.9 bits;  conditional E-value: 4.1e-126
+                 PTHR13298.orig.30.pir  70 iiikedlvelelvsclrslllseskevraaalRllrylisdskvlrrllrlgldiliarsLdrdskn...... 136
+                                            i  +  ++ +  + lr l+ +  k +r+ +lR+lryli+d+ +++++l+ +ld +++r+L+r +++      
+  jgi|Bigna1|66212|fgenesh1_pg.1_#_247  45 TIS-TLRPFRAALETLRVLCWDREKVIRTQCLRALRYLITDQISVETMLAMNLDLFVVRTLERPNQKdilhqq 116
+                                           443.233333444499*************************************************666***** PP
+
+                 PTHR13298.orig.30.pir 137 .................etEreqalkliramlevapkliptaivralvaiaeseedrlrraclatlcelalln 192
+                                                            ++Er+qalk++ +++e+ pk+ip+++v+++v i + ++d lrr+cl   +ela ln
+  jgi|Bigna1|66212|fgenesh1_pg.1_#_247 117 fylycspfkpsiflagyKVERVQALKIVIRLIEISPKDIPRSMVQSMVLIMSRPKDDLRRVCLDRVRELAFLN 189
+                                           ************************************************************************* PP
+
+                 PTHR13298.orig.30.pir 193 pelvaeagglrvlldallecqlperiaesllavllyllnrpstrkylragvdlekllapftdfhyrakkdkqe 265
+                                           p++va+++g+ ++++a+l+ ++ +++a +l+++llyl+++++tr+++r++  ++ +l+ ftd++++       
+  jgi|Bigna1|66212|fgenesh1_pg.1_#_247 190 PKIVASSNGIHAMVEAILD-KTCADMAGQLTMTLLYLFDQEHTRRHIRPAIHIQHMLSVFTDTETPE------ 255
+                                           *******************.55699************************************665554...... PP
+
+                 PTHR13298.orig.30.pir 266 skskeerelsrleaskkailtlLrSWaGllylckndkrgLkslvdvlrlp.nle....vrkaildlLydlLrl 333
+                                               ++++++r  as ka++ ++rSW+G+++l  +d++gLkslv++l lp + +     ++a+  lL ++L++
+  jgi|Bigna1|66212|fgenesh1_pg.1_#_247 256 ----TQEKEQRRVASHKALMIIMRSWTGIFIL-ASDQQGLKSLVEILSLPsTVKgsswSKDAVFMLLLNILNV 323
+                                           ....3334447889******************.7779***********9932222222456777777777776 PP
+
+                 PTHR13298.orig.30.pir 334 kepkwtesftsgsalkavdsaalqdswrlsdgfvaeesktilpssarsrpdlldnylallLlalieagLleaL 406
+                                              +            +++s+                        ++  p+ll++y++++Lla+ieagL+ +L
+  jgi|Bigna1|66212|fgenesh1_pg.1_#_247 324 VKSED---L------ATHKSKGI---------------------WKNMGPNLLHSYVVMVLLAFIEAGLVPIL 366
+                                           66333...3......23333333.....................234456*********************** PP
+
+                 PTHR13298.orig.30.pir 407 vevitssdssvsvkAtiLLgellslantlLPp.elsaslhslptlvslaasfssekskrnraaaa.....lal 473
+                                            e+ +++ + +s+ At LL e+l+l+  lLP+  ++a+l++lp+ ++ aas +s++  ++  a          
+  jgi|Bigna1|66212|fgenesh1_pg.1_#_247 367 AEIGMQHGQEMSGVATNLLREILHLSADLLPSdPWGAQLNALPSVINRAASVDSKRVVSRVLARDmlknmSMG 439
+                                           ********************************88*****************9777655444333368888667 PP
+
+                 PTHR13298.orig.30.pir 474 ksldelkrsksksaslyldeilq.................................................. 496
+                                            +++ +  s+s+++  +   + +                                                  
+  jgi|Bigna1|66212|fgenesh1_pg.1_#_247 440 GNIETMGSSSSHHHHQHRGSLSPrhslvqhdtkdggrrmfpdfnlfadlasreraestdlraayrplvhgidv 512
+                                           7777777777777777777766688888888889999999999999888888888888888888888888888 PP
+
+                 PTHR13298.orig.30.pir 497 ........................kkllersssnssedskrkrlrqiledddeafkrmlkdsqvlstkdylkW 545
+                                                                   + +++r+   ss +++ +++r i   +++ +++++ +s vl+++++++W
+  jgi|Bigna1|66212|fgenesh1_pg.1_#_247 513 eavamlsdsapvarsigrkqhstpRIVTARH--ASSGGQMITMHRRITTSSESIVDKLMLESGVLENREHTGW 583
+                                           8887777777777777776655432222222..4445555555555999999999999999************ PP
+
+                 PTHR13298.orig.30.pir 546 nwdlilellegplnlnpkrleeavkvtkffkrLlsFykPsk.krfssidktkqlekyvqvgcqllslLlsspe 617
+                                           +w+  l llegpl +np+ +     +tkf krLl F +Ps+ + f+++ +t q+ k+v+v+cql+++L ss+e
+  jgi|Bigna1|66212|fgenesh1_pg.1_#_247 584 DWEKCLYLLEGPL-ANPQIIL----NTKFAKRLLTFIRPSRqQAFATMPWTLQNMKCVKVACQLFRVLCSSKE 651
+                                           *************.9998888....89**************56689999************************ PP
+
+                 PTHR13298.orig.30.pir 618 GialleesrlLkelleelsqel.ldssse.kspder....................lfskerlsttlsqgyfl 668
+                                                 es+l++++++e+ +el  +++ + + +++r                     fs+e+++++l+++yf+
+  jgi|Bigna1|66212|fgenesh1_pg.1_#_247 652 ----ACESKLFQDCVREILDELvAEATRGvGNNSQRssqsmisgdssstsgsrrlrPFSRESVTERLAREYFT 720
+                                           ....66667777777777777643333335444444555666777777777777779**************** PP
+
+                 PTHR13298.orig.30.pir 669 fiGvLsstkeGlkiLekln....ifqlllqlislktrdelvklivssLdysl.dgesRvilskaLtsssesiR 736
+                                           ++ + + + +G ++ + +     +++ l++l + ++rd l++li+s++ y++ ++  R++l  + +s+s+++R
+  jgi|Bigna1|66212|fgenesh1_pg.1_#_247 721 LLSIVTASVNGAEVVRTCTmpksFYEGLYTLYKDESRDYLARLILSCFSYGNhNKNQRTLLDMWVKSGSVNLR 793
+                                           *******************888899999**********************7538999**************** PP
+
+                 PTHR13298.orig.30.pir 737 lyatkhLrvllra....essdfsdWgielLvtqlydpskevakaAlkiL 781
+                                           +ya+ hLrvllr      +s+f +Wg++lL  ql ++++e a +Al++ 
+  jgi|Bigna1|66212|fgenesh1_pg.1_#_247 794 KYAVAHLRVLLRDksldVLSHFWQWGVRLLASQLGHENEELALSALSVT 842
+                                           ************544567777888*********************9985 PP
+
+>> jgi|Bigna1|125579|aug1.1_g287  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  124.1   6.5   3.1e-39   1.7e-35      76     238 ..      50     213 ..      13     222 .. 0.87
+   2 !  163.3   0.0   4.6e-51   2.5e-47     327     693 ..     216     646 ..     213     652 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 124.1 bits;  conditional E-value: 3.1e-39
+          PTHR13298.orig.30.pir  76 lvelelvsclrslllseskevraaalRllrylisdskvlrrllrlgldiliarsLdrds..knetEreqalkliramlev 153
+                                     ++ +  + lr l+ +  k +r+ +lR+lryli+d+ +++++l+ +ld +++r+L+r +  ++++Er+qalk++ +++e+
+  jgi|Bigna1|125579|aug1.1_g287  50 RPFRAALETLRVLCWDREKVIRTQCLRALRYLITDQISVETMLAMNLDLFVVRTLERPNqkEYKVERVQALKIVIRLIEI 129
+                                    3333444499***********************************************9964459**************** PP
+
+          PTHR13298.orig.30.pir 154 apkliptaivralvaiaeseedrlrraclatlcelallnpelvaeagglrvlldallecqlperiaesllavllyllnrp 233
+                                     pk+ip+++v+++v i + ++d lrr+cl   +ela lnp++va+++g+ ++++a+l+ ++ +++a +l+++llyl++++
+  jgi|Bigna1|125579|aug1.1_g287 130 SPKDIPRSMVQSMVLIMSRPKDDLRRVCLDRVRELAFLNPKIVASSNGIHAMVEAILD-KTCADMAGQLTMTLLYLFDQE 208
+                                    **********************************************************.55699**************** PP
+
+          PTHR13298.orig.30.pir 234 strky 238
+                                    +tr++
+  jgi|Bigna1|125579|aug1.1_g287 209 HTRRL 213
+                                    ***87 PP
+
+  == domain 2  score: 163.3 bits;  conditional E-value: 4.6e-51
+          PTHR13298.orig.30.pir 327 LydlLrlkepkwtesftsgsalkavdsaalqdswrlsdgfvaeesktilpssarsrpdlldnylallLlalieagLleaL 406
+                                    L ++L l+++ + +s+++  a  +   + l  +  +s+   +++sk i    ++  p+ll++y++++Lla+ieagL+ +L
+  jgi|Bigna1|125579|aug1.1_g287 216 LVEILSLPSTVKGSSWSK-DAVFMLLLNIL--NVVKSEDLATHKSKGI---WKNMGPNLLHSYVVMVLLAFIEAGLVPIL 289
+                                    677777777777777755.33333333322..1112222222222332...344455*********************** PP
+
+          PTHR13298.orig.30.pir 407 vevitssdssvsvkAtiLLgellslantlLPp.elsaslhslptlvslaasfssekskrnraaaa.....lalksldelk 480
+                                     e+ +++ + +s+ At LL e+l+l+  lLP+  ++a+l++lp+ ++ aas +s++  ++  a           +++ + 
+  jgi|Bigna1|125579|aug1.1_g287 290 AEIGMQHGQEMSGVATNLLREILHLSADLLPSdPWGAQLNALPSVINRAASVDSKRVVSRVLARDmlknmSMGGNIETMG 369
+                                    ********************************88*****************97776554443333688886677777777 PP
+
+          PTHR13298.orig.30.pir 481 rsksksaslyldeilq................................................................ 496
+                                     s+s+++  +   + +                                                                
+  jgi|Bigna1|125579|aug1.1_g287 370 SSSSHHHHQHRGSLSPrhslvqhdtkdggrrmfpdfnlfadlasreraestdlraayrplvhgidveavamlsdsapvar 449
+                                    77777777777776668888888888999999999999988888888888888888888888888888877777777777 PP
+
+          PTHR13298.orig.30.pir 497 ..........kkllersssnssedskrkrlrqiledddeafkrmlkdsqvlstkdylkWnwdlilellegplnlnpkrle 566
+                                              + +++r+   ss +++ +++r i   +++ +++++ +s vl+++++++W+w+  l llegpl +np+ + 
+  jgi|Bigna1|125579|aug1.1_g287 450 sigrkqhstpRIVTARH--ASSGGQMITMHRRITTSSESIVDKLMLESGVLENREHTGWDWEKCLYLLEGPL-ANPQIIL 526
+                                    77776655432222222..4445555555555999999999999999*************************.9998888 PP
+
+          PTHR13298.orig.30.pir 567 eavkvtkffkrLlsFykPsk.krfssidktkqlekyvqvgcqllslLlsspeGialleesrlLkelleelsqelldssse 645
+                                        +tkf krLl F +Ps+ + f+++ +t q+ k+v+v+cql+++L ss+e      es+l++++++e+ +el +  + 
+  jgi|Bigna1|125579|aug1.1_g287 527 ----NTKFAKRLLTFIRPSRqQAFATMPWTLQNMKCVKVACQLFRVLCSSKE----ACESKLFQDCVREILDELVAEATR 598
+                                    ....89**************56689999************************....777789999999999988544445 PP
+
+          PTHR13298.orig.30.pir 646 kspderlfskerlsttlsqgyflfiGvLsstkeGlkiLeklnifqlll 693
+                                    +   +   s+++++++l+++yf+++ + + + +G ++ + + + ++++
+  jgi|Bigna1|125579|aug1.1_g287 599 GVGNNSQRSSQSVTERLAREYFTLLSIVTASVNGAEVVRTCTMPKSFY 646
+                                    55556789******************************9999988887 PP
+
+>> jgi|Bigna1|66210|fgenesh1_pg.1_#_245  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  127.1   0.0   4.1e-40   2.2e-36     928    1165 ..     158     425 ..     144     436 .. 0.89
+
+  Alignments for each domain:
+  == domain 1  score: 127.1 bits;  conditional E-value: 4.1e-40
+                 PTHR13298.orig.30.pir  928 dseeilklkaalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaei 998 
+                                            ++   lk++ alWA+g+igsse G++ll+e++ed+i +i  +a e+++ls+rGtcfy  gl++rt++ +++
+  jgi|Bigna1|66210|fgenesh1_pg.1_#_245  158 NKTSALKIRTALWAVGQIGSSETGFRLLQEQKEDVIGMISDMALECPTLSMRGTCFYIMGLLSRTPSARTM 228 
+                                            5667799**************************************************************** PP
+
+                 PTHR13298.orig.30.pir  999 LeelgWesvrhsrnaliGlciPsdvnelfsipehqqsssaesapitdekpeeiktslky............ 1057
+                                            L++lgW       n  +G++iP d  ++ s++e  ++ s+   p ++        ++++            
+  jgi|Bigna1|66210|fgenesh1_pg.1_#_245  229 LSRLGWRFS---PNIDVGIVIPMDTRRFLSVKECGYHGSWAQDPANNF-----GLEIDPicgllgepdvgl 291 
+                                            ******844...34556*********************9999988663.....3456668899******** PP
+
+                 PTHR13298.orig.30.pir 1058 .........................ptsqmvrkeilrlvanLsnsvlakkaekeLlklkekkpel..fddp 1101
+                                                                     p  ++ ++ il +++nL+n v+ k + ++L  l++ k++   f + 
+  jgi|Bigna1|66210|fgenesh1_pg.1_#_245  292 tfcvfvlfgeyipiknaplpqttlkPDYSNCKQVILGHISNLCNNVTIKPSLSALRALRKDKKAKsyFTSA 362 
+                                            *************************999******************************986654447**** PP
+
+                 PTHR13298.orig.30.pir 1102 clfsevlkllseyrfrlqaRrfiq.elfddavllsslrseerleveesqsemyeeaelsasepes 1165
+                                            +++ + + + + y+f+l+aRr ++ e+f+++v+++++ +  +++  es++++    e+s +++es
+  jgi|Bigna1|66210|fgenesh1_pg.1_#_245  363 EMLYYTFRIVTSYNFQLEARRCLFdEVFNEVVVTKETLRVFDTPFSESARPSVA--ETSGKQRES 425 
+                                            ************************569******999999999888888887764..444444444 PP
+
+>> jgi|Bigna1|125578|aug1.1_g286  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   98.7   0.0   1.6e-31   8.3e-28     928    1081 ..     158     315 ..     144     320 .. 0.88
+   2 !    9.4   0.0   0.00014      0.72    1091    1165 ..     348     421 ..     332     431 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 98.7 bits;  conditional E-value: 1.6e-31
+          PTHR13298.orig.30.pir  928 dseeilklkaalWAlghigsselGlelleeenedliediiklaeesevlsvrGtcfyvlgliarteqgaeiLeelgWe 1005
+                                     ++   lk++ alWA+g+igsse G++ll+e++ed+i +i  +a e+++ls+rGtcfy  gl++rt++ +++L++lgW 
+  jgi|Bigna1|125578|aug1.1_g286  158 NKTSALKIRTALWAVGQIGSSETGFRLLQEQKEDVIGMISDMALECPTLSMRGTCFYIMGLLSRTPSARTMLSRLGWR 235 
+                                     5667799**********************************************************************8 PP
+
+          PTHR13298.orig.30.pir 1006 svrhsrnaliGlciPsdvnelfsipehqqsssaesapitdekpeeiktslky.........ptsqmvrkeilrlvanL 1074
+                                           n  +G++iP d  ++ s++e  ++ s+   p ++   e i  +            p  ++ ++ il +++nL
+  jgi|Bigna1|125578|aug1.1_g286  236 FS---PNIDVGIVIPMDTRRFLSVKECGYHGSWAQDPANNFGLEYIPIK--NaplpqttlkPDYSNCKQVILGHISNL 308 
+                                     44...34556**********************99999988666544444..25599999999999************* PP
+
+          PTHR13298.orig.30.pir 1075 snsvlak 1081
+                                     +n v + 
+  jgi|Bigna1|125578|aug1.1_g286  309 CNNVRTS 315 
+                                     ***9775 PP
+
+  == domain 2  score: 9.4 bits;  conditional E-value: 0.00014
+          PTHR13298.orig.30.pir 1091 kekkpelfddpclfsevlkllseyrfrlqaRrfiq.elfddavllsslrseerleveesqsemyeeaelsasepes 1165
+                                      +k +  f + +++ + + + + y+f+l+aRr ++ e+f+++v+++++ +  +++  es++++    e+s +++es
+  jgi|Bigna1|125578|aug1.1_g286  348 DKKAKSYFTSAEMLYYTFRIVTSYNFQLEARRCLFdEVFNEVVVTKETLRVFDTPFSESARPSVA--ETSGKQRES 421 
+                                     2344455****************************569******999999999888888887764..344444444 PP
+
+>> jgi|Bigna1|144502|aug1.88_g19210  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.4   0.5    0.0044        23      52     153 ..     543     667 ..     186     671 .. 0.76
+   2 ?   13.6   0.0   7.3e-06     0.039     733     798 ..     651     722 ..     638     764 .. 0.80
+   3 ?   -2.2   0.4      0.43   2.3e+03     194     229 ..     971    1008 ..     787    1101 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 4.4 bits;  conditional E-value: 0.0044
+             PTHR13298.orig.30.pir  52 l..................................kaaakklnellgllkeeiiikedlvelelvsclrslllsesk 94 
+                                                                          + + ++++ l++l +   ++           +l++ + +++ 
+  jgi|Bigna1|144502|aug1.88_g19210 543 AlmkekcgqvlldvvrkcykdpevaaaaysalaafSSRPENADYLVKLGTLPSVM-----------ALARSFGTKDA 608
+                                       0444455555555555555555554444444444455566666777777777777...........89999999999 PP
+
+             PTHR13298.orig.30.pir  95 evraaalRllrylisdskvlrrllrlgldiliarsLdrdsknetEreqalkliramlev 153
+                                        +    ++l+ +l++++++ ++l ++g+    +     + + ++ ++qalk+ir+m++ 
+  jgi|Bigna1|144502|aug1.88_g19210 609 NLAKKSMKLMAALCKTKEIGSELIKQGCLQQAVVMAKAHPDDKEVQVQALKFIREMIKK 667
+                                       99999999999999999999999999998887777777775555589999999999976 PP
+
+  == domain 2  score: 13.6 bits;  conditional E-value: 7.3e-06
+             PTHR13298.orig.30.pir 733 esiRlyatkhLrvllra....essdfsd.WgielLvtqly..dpskevakaAlkiLeeacedkanileylvsl 798
+                                       ++++  a+k++r++++      + ++++  g+e++v++l+   ++ evak  l++Le+ac +ka  l++l  +
+  jgi|Bigna1|144502|aug1.88_g19210 651 KEVQVQALKFIREMIKKngdeALDELAKnGGLETIVKALHkhGDDPEVAKLGLQALEKACSNKAA-LAKLRAC 722
+                                       688999**********65455555555589*********76699****************88888.8888776 PP
+
+  == domain 3  score: -2.2 bits;  conditional E-value: 0.43
+             PTHR13298.orig.30.pir  194 elva..eagglrvlldallecqlperiaesllavllyl 229 
+                                        +++a  e g +  ++d +++ ++++++++s++a+l +l
+  jgi|Bigna1|144502|aug1.88_g19210  971 AIAAmaELGVVASVIDIIQDHSGNANVQKSAVALLQKL 1008
+                                        33321133333344444444333344443333333333 PP
+
+>> jgi|Bigna1|82126|fgenesh1_pg.88_#_33  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.1      0.27   1.5e+03      70     137 ..     271     341 ..      80     488 .. 0.70
+   2 ?   -1.9   0.0      0.35   1.9e+03     395     496 ..     443     539 ..     439     549 .. 0.75
+   3 ?   13.6   0.0   7.4e-06     0.039     733     798 ..     552     623 ..     539     665 .. 0.80
+   4 ?   -2.2   0.4      0.43   2.3e+03     194     229 ..     872     909 ..     688    1002 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 0.27
+                 PTHR13298.orig.30.pir  70 iiikedlvelelvs.clrslllses.kevraaalRllrylis.dskvlrrllrlgldiliarsLdrdskne 137
+                                           ++i+e   ++ +++ ++rsl l+++ + +  aa+ ++  +   d ++ ++l + g+   ++r+L+ + +ne
+  jgi|Bigna1|82126|fgenesh1_pg.88_#_33 271 PEISEMIIKSGIADeLMRSLELHPKdQALSLAAMTAIKQIAEnDPRLGEMLKKRGVVGVLVRHLELHPDNE 341
+                                           23333355566666666666666541345666666666666655555555555666666777777766663 PP
+
+  == domain 2  score: -1.9 bits;  conditional E-value: 0.35
+                 PTHR13298.orig.30.pir 395 lalieagLleaLvevits..sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasfssekskrn 465
+                                           +al++ +  ++L++v+++  +d+ v+ +A + L+ + s  ++    ++  +l +lp+ ++la sf   ++++n
+  jgi|Bigna1|82126|fgenesh1_pg.88_#_33 443 YALMKEKCGQVLLDVVRKcyKDPEVAAAAYSALAAFSSRPENA---DYLVKLGTLPSVMALARSF--GTKDAN 510
+                                           6777777778888888888888888888888888888888877...8888999999999999998..666666 PP
+
+                 PTHR13298.orig.30.pir 466 raaaalalksldelkrsksksaslyldeilq 496
+                                            a+++  +k + +l ++k +  +l  +  lq
+  jgi|Bigna1|82126|fgenesh1_pg.88_#_33 511 LAKKS--MKLMAALCKTKEIGSELIKQGCLQ 539
+                                           66666..777777777777777777666666 PP
+
+  == domain 3  score: 13.6 bits;  conditional E-value: 7.4e-06
+                 PTHR13298.orig.30.pir 733 esiRlyatkhLrvllra....essdfsd.WgielLvtqly..dpskevakaAlkiLeeacedkanileylvsl 798
+                                           ++++  a+k++r++++      + ++++  g+e++v++l+   ++ evak  l++Le+ac +ka  l++l  +
+  jgi|Bigna1|82126|fgenesh1_pg.88_#_33 552 KEVQVQALKFIREMIKKngdeALDELAKnGGLETIVKALHkhGDDPEVAKLGLQALEKACSNKAA-LAKLRAC 623
+                                           688999**********65455555555589*********76699****************88888.8888776 PP
+
+  == domain 4  score: -2.2 bits;  conditional E-value: 0.43
+                 PTHR13298.orig.30.pir 194 elva..eagglrvlldallecqlperiaesllavllyl 229
+                                           +++a  e g +  ++d +++ ++++++++s++a+l +l
+  jgi|Bigna1|82126|fgenesh1_pg.88_#_33 872 AIAAmaELGVVASVIDIIQDHSGNANVQKSAVALLQKL 909
+                                           33321133333344444444333344443333333333 PP
+
+>> jgi|Bigna1|91089|estExt_fgenesh1_pg.C_880032  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.5   0.1      0.27   1.5e+03      70     137 ..     271     341 ..      80     488 .. 0.70
+   2 ?   -1.9   0.0      0.35   1.9e+03     395     496 ..     443     539 ..     439     549 .. 0.75
+   3 ?   13.6   0.0   7.4e-06     0.039     733     798 ..     552     623 ..     539     665 .. 0.80
+   4 ?   -2.2   0.4      0.43   2.3e+03     194     229 ..     872     909 ..     688    1002 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: -1.5 bits;  conditional E-value: 0.27
+                         PTHR13298.orig.30.pir  70 iiikedlvelelvs.clrslllses.kevraaalRllrylis.dskvlrrllrlgldiliarsLd 131
+                                                   ++i+e   ++ +++ ++rsl l+++ + +  aa+ ++  +   d ++ ++l + g+   ++r+L+
+  jgi|Bigna1|91089|estExt_fgenesh1_pg.C_880032 271 PEISEMIIKSGIADeLMRSLELHPKdQALSLAAMTAIKQIAEnDPRLGEMLKKRGVVGVLVRHLE 335
+                                                   23333355566666666666666541345666666666666655555555555666666777777 PP
+
+                         PTHR13298.orig.30.pir 132 rdskne 137
+                                                    + +ne
+  jgi|Bigna1|91089|estExt_fgenesh1_pg.C_880032 336 LHPDNE 341
+                                                   766663 PP
+
+  == domain 2  score: -1.9 bits;  conditional E-value: 0.35
+                         PTHR13298.orig.30.pir 395 lalieagLleaLvevits..sdssvsvkAtiLLgellslantlLPpelsaslhslptlvslaasf 457
+                                                   +al++ +  ++L++v+++  +d+ v+ +A + L+ + s  ++    ++  +l +lp+ ++la sf
+  jgi|Bigna1|91089|estExt_fgenesh1_pg.C_880032 443 YALMKEKCGQVLLDVVRKcyKDPEVAAAAYSALAAFSSRPENA---DYLVKLGTLPSVMALARSF 504
+                                                   6777777778888888888888888888888888888888877...8888999999999999998 PP
+
+                         PTHR13298.orig.30.pir 458 ssekskrnraaaalalksldelkrsksksaslyldeilq 496
+                                                      ++++n a+++  +k + +l ++k +  +l  +  lq
+  jgi|Bigna1|91089|estExt_fgenesh1_pg.C_880032 505 --GTKDANLAKKS--MKLMAALCKTKEIGSELIKQGCLQ 539
+                                                   ..66666666666..777777777777777777666666 PP
+
+  == domain 3  score: 13.6 bits;  conditional E-value: 7.4e-06
+                         PTHR13298.orig.30.pir 733 esiRlyatkhLrvllra....essdfsd.WgielLvtqly..dpskevakaAlkiLeeacedkan 790
+                                                   ++++  a+k++r++++      + ++++  g+e++v++l+   ++ evak  l++Le+ac +ka 
+  jgi|Bigna1|91089|estExt_fgenesh1_pg.C_880032 552 KEVQVQALKFIREMIKKngdeALDELAKnGGLETIVKALHkhGDDPEVAKLGLQALEKACSNKAA 616
+                                                   688999**********65455555555589*********76699****************88888 PP
+
+                         PTHR13298.orig.30.pir 791 ileylvsl 798
+                                                    l++l  +
+  jgi|Bigna1|91089|estExt_fgenesh1_pg.C_880032 617 -LAKLRAC 623
+                                                   .8888776 PP
+
+  == domain 4  score: -2.2 bits;  conditional E-value: 0.43
+                         PTHR13298.orig.30.pir 194 elva..eagglrvlldallecqlperiaesllavllyl 229
+                                                   +++a  e g +  ++d +++ ++++++++s++a+l +l
+  jgi|Bigna1|91089|estExt_fgenesh1_pg.C_880032 872 AIAAmaELGVVASVIDIIQDHSGNANVQKSAVALLQKL 909
+                                                   33321133333344444444333344443333333333 PP
+
+>> jgi|Bigna1|24250|gw1.112.4.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.3   0.0      0.02     1e+02     724     779 ..      20      71 ..       9     107 .. 0.69
+   2 ?    2.7   0.0     0.014        76     724     781 ..     122     175 ..     117     186 .. 0.79
+   3 ?    4.0   0.1    0.0059        31     724     779 ..     156     241 ..     141     244 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 2.3 bits;  conditional E-value: 0.02
+         PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlk 779
+                                   l+kaL ++ +++R+ a+k +  l  +  ++ +      Lv++l+d+++ v+k A +
+  jgi|Bigna1|24250|gw1.112.4.1  20 LVKALRDKDKNVRYEAVKAIGYLGSSAIPEAQ----LGLVKALRDEDRIVRKTAAS 71 
+                                   78999999999999999999887775444332....23555556655555555554 PP
+
+  == domain 2  score: 2.7 bits;  conditional E-value: 0.014
+         PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiL 781
+                                   l+kaL ++ + +R +a   +++l  + +++    +   Lv++l+d++k+v++aA +++
+  jgi|Bigna1|24250|gw1.112.4.1 122 LVKALRDEDKYVRWFAASAIEDLGSSATAE----AQLGLVKALRDEDKDVRQAAASAI 175
+                                   789999999999999999999998833322....334599999999999999998765 PP
+
+  == domain 3  score: 4.0 bits;  conditional E-value: 0.0059
+         PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd..............................WgielLvtqlydpskeva 774
+                                   l+kaL ++ +++R  a   + +l  +  ++ ++                               +   L+++l+d++k v+
+  jgi|Bigna1|24250|gw1.112.4.1 156 LVKALRDEDKDVRQAAASAIGKLRSSAIPEAQSglvkalkdedgtvrwfaasaiedlgssataQAQSGLLKALRDEDKYVR 236
+                                   677777777777777777777777764444433333344444444444444444445555555666777888888888888 PP
+
+         PTHR13298.orig.30.pir 775 kaAlk 779
+                                   ++A +
+  jgi|Bigna1|24250|gw1.112.4.1 237 QEAAS 241
+                                   87765 PP
+
+>> jgi|Bigna1|51106|estExt_Genewise1.C_1120023  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.3   0.0      0.02     1e+02     724     779 ..      20      71 ..       9     107 .. 0.69
+   2 ?    2.7   0.0     0.014        76     724     781 ..     122     175 ..     117     186 .. 0.79
+   3 ?    4.0   0.1    0.0059        31     724     779 ..     156     241 ..     141     244 .. 0.63
+
+  Alignments for each domain:
+  == domain 1  score: 2.3 bits;  conditional E-value: 0.02
+                        PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlk 779
+                                                  l+kaL ++ +++R+ a+k +  l  +  ++ +      Lv++l+d+++ v+k A +
+  jgi|Bigna1|51106|estExt_Genewise1.C_1120023  20 LVKALRDKDKNVRYEAVKAIGYLGSSAIPEAQ----LGLVKALRDEDRIVRKTAAS 71 
+                                                  78999999999999999999887775444332....23555556655555555554 PP
+
+  == domain 2  score: 2.7 bits;  conditional E-value: 0.014
+                        PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiL 781
+                                                  l+kaL ++ + +R +a   +++l  + +++    +   Lv++l+d++k+v++aA +++
+  jgi|Bigna1|51106|estExt_Genewise1.C_1120023 122 LVKALRDEDKYVRWFAASAIEDLGSSATAE----AQLGLVKALRDEDKDVRQAAASAI 175
+                                                  789999999999999999999998833322....334599999999999999998765 PP
+
+  == domain 3  score: 4.0 bits;  conditional E-value: 0.0059
+                        PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd..............................Wgi 759
+                                                  l+kaL ++ +++R  a   + +l  +  ++ ++                               + 
+  jgi|Bigna1|51106|estExt_Genewise1.C_1120023 156 LVKALRDEDKDVRQAAASAIGKLRSSAIPEAQSglvkalkdedgtvrwfaasaiedlgssataQAQ 221
+                                                  677777777777777777777777764444433333344444444444444444445555555666 PP
+
+                        PTHR13298.orig.30.pir 760 elLvtqlydpskevakaAlk 779
+                                                    L+++l+d++k v+++A +
+  jgi|Bigna1|51106|estExt_Genewise1.C_1120023 222 SGLLKALRDEDKYVRQEAAS 241
+                                                  77788888888888887765 PP
+
+>> jgi|Bigna1|45127|e_gw1.112.4.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.0     0.022   1.2e+02     724     779 ..      42      93 ..      29     129 .. 0.70
+   2 ?    2.6   0.0     0.016        85     724     781 ..     144     197 ..     139     210 .. 0.78
+   3 ?    3.8   0.1     0.007        37     724     779 ..     178     263 ..     163     266 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 0.022
+           PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlk 779
+                                     l+kaL ++ +++R+ a+k +  l  +  ++ +      Lv++l+d+++ v+k A +
+  jgi|Bigna1|45127|e_gw1.112.4.1  42 LVKALRDKDKNVRYEAVKAIGYLGSSAIPEAQ----LGLVKALRDEDRIVRKTAAS 93 
+                                     78999999999999999999887775444332....23555566666555555554 PP
+
+  == domain 2  score: 2.6 bits;  conditional E-value: 0.016
+           PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiL 781
+                                     l+kaL ++ + +R +a   +++l  + +++    +   Lv++l+d++k+v++aA +++
+  jgi|Bigna1|45127|e_gw1.112.4.1 144 LVKALRDEDKYVRWFAASAIEDLGSSATAE----AQLGLVKALRDEDKDVRQAAASAI 197
+                                     789999999999999999999888833222....333589999999999999998765 PP
+
+  == domain 3  score: 3.8 bits;  conditional E-value: 0.007
+           PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd..............................WgielLvtqlydpske 772
+                                     l+kaL ++ +++R  a   + +l  +  ++ ++                               +   L+++l+d++k 
+  jgi|Bigna1|45127|e_gw1.112.4.1 178 LVKALRDEDKDVRQAAASAIGKLRSSAIPEAQSglvkalkdedgtvrwfaasaiedlgssataQAQSGLLKALRDEDKY 256
+                                     6777777777777777777777777644444333333444444444444444444455555556667778888888888 PP
+
+           PTHR13298.orig.30.pir 773 vakaAlk 779
+                                     v+++A +
+  jgi|Bigna1|45127|e_gw1.112.4.1 257 VRQEAAS 263
+                                     8887765 PP
+
+>> jgi|Bigna1|56670|estExt_Genewise1Plus.C_1120022  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.0     0.022   1.2e+02     724     779 ..      42      93 ..      29     129 .. 0.70
+   2 ?    2.6   0.0     0.016        85     724     781 ..     144     197 ..     139     210 .. 0.78
+   3 ?    3.8   0.1     0.007        37     724     779 ..     178     263 ..     163     266 .. 0.62
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 0.022
+                            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlk 779
+                                                      l+kaL ++ +++R+ a+k +  l  +  ++ +      Lv++l+d+++ v+k A +
+  jgi|Bigna1|56670|estExt_Genewise1Plus.C_1120022  42 LVKALRDKDKNVRYEAVKAIGYLGSSAIPEAQ----LGLVKALRDEDRIVRKTAAS 93 
+                                                      78999999999999999999887775444332....23555566666555555554 PP
+
+  == domain 2  score: 2.6 bits;  conditional E-value: 0.016
+                            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiL 781
+                                                      l+kaL ++ + +R +a   +++l  + +++    +   Lv++l+d++k+v++aA +++
+  jgi|Bigna1|56670|estExt_Genewise1Plus.C_1120022 144 LVKALRDEDKYVRWFAASAIEDLGSSATAE----AQLGLVKALRDEDKDVRQAAASAI 197
+                                                      789999999999999999999888833222....333589999999999999998765 PP
+
+  == domain 3  score: 3.8 bits;  conditional E-value: 0.007
+                            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd............................. 756
+                                                      l+kaL ++ +++R  a   + +l  +  ++ ++                             
+  jgi|Bigna1|56670|estExt_Genewise1Plus.C_1120022 178 LVKALRDEDKDVRQAAASAIGKLRSSAIPEAQSglvkalkdedgtvrwfaasaiedlgssat 239
+                                                      67777777777777777777777776444443333334444444444444444444555555 PP
+
+                            PTHR13298.orig.30.pir 757 .WgielLvtqlydpskevakaAlk 779
+                                                        +   L+++l+d++k v+++A +
+  jgi|Bigna1|56670|estExt_Genewise1Plus.C_1120022 240 aQAQSGLLKALRDEDKYVRQEAAS 263
+                                                      566677788888888888887765 PP
+
+>> jgi|Bigna1|51107|estExt_Genewise1.C_1120024  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.2   0.0     0.042   2.2e+02     724     779 ..       2      53 ..       2      89 .. 0.66
+   2 ?    5.0   0.1    0.0029        15     724     778 ..     138     222 ..      99     259 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 1.2 bits;  conditional E-value: 0.042
+                        PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlk 779
+                                                  l+kaL ++ +++R+ a+k +  l  +  ++ +      Lv++l+d+++ v+k A +
+  jgi|Bigna1|51107|estExt_Genewise1.C_1120024   2 LVKALRDKDKNVRYEAVKAIGYLGSSAIPEAQ----LGLVKALRDEDRIVRKTAAS 53 
+                                                  67888888888888888888777774333332....23555555555555555544 PP
+
+  == domain 2  score: 5.0 bits;  conditional E-value: 0.0029
+                        PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd..............................Wgi 759
+                                                  l+kaL ++ +++R  a   + +l  +  ++ ++                               + 
+  jgi|Bigna1|51107|estExt_Genewise1.C_1120024 138 LVKALRDEDKDVRQAAASAIGKLRSSAIPEAQSglvkalkdedgtvrwfaasaiedlgssataQAQ 203
+                                                  556666666666666666666655553333333222233333333333333444444444444455 PP
+
+                        PTHR13298.orig.30.pir 760 elLvtqlydpskevakaAl 778
+                                                    L+++l+d++k v+++A 
+  jgi|Bigna1|51107|estExt_Genewise1.C_1120024 204 SGLLKALRDEDKYVRQEAA 222
+                                                  5566666666666666655 PP
+
+>> jgi|Bigna1|51108|estExt_Genewise1.C_1120025  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.2   0.0     0.042   2.2e+02     724     779 ..       2      53 ..       2      89 .. 0.66
+   2 ?    5.0   0.1    0.0029        15     724     778 ..     138     222 ..      99     259 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: 1.2 bits;  conditional E-value: 0.042
+                        PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlk 779
+                                                  l+kaL ++ +++R+ a+k +  l  +  ++ +      Lv++l+d+++ v+k A +
+  jgi|Bigna1|51108|estExt_Genewise1.C_1120025   2 LVKALRDKDKNVRYEAVKAIGYLGSSAIPEAQ----LGLVKALRDEDRIVRKTAAS 53 
+                                                  67888888888888888888777774333332....23555555555555555544 PP
+
+  == domain 2  score: 5.0 bits;  conditional E-value: 0.0029
+                        PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd..............................Wgi 759
+                                                  l+kaL ++ +++R  a   + +l  +  ++ ++                               + 
+  jgi|Bigna1|51108|estExt_Genewise1.C_1120025 138 LVKALRDEDKDVRQAAASAIGKLRSSAIPEAQSglvkalkdedgtvrwfaasaiedlgssataQAQ 203
+                                                  556666666666666666666655553333333222233333333333333444444444444455 PP
+
+                        PTHR13298.orig.30.pir 760 elLvtqlydpskevakaAl 778
+                                                    L+++l+d++k v+++A 
+  jgi|Bigna1|51108|estExt_Genewise1.C_1120025 204 SGLLKALRDEDKYVRQEAA 222
+                                                  5566666666666666655 PP
+
+>> jgi|Bigna1|45144|e_gw1.112.13.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.8   0.0     0.027   1.4e+02     724     779 ..      42      93 ..      29     129 .. 0.70
+   2 ?    2.2   0.0     0.021   1.1e+02     724     781 ..     144     197 ..     139     205 .. 0.80
+   3 ?    3.9   0.1    0.0064        34     724     780 ..     178     264 ..     163     300 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 1.8 bits;  conditional E-value: 0.027
+            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlk 779
+                                      l+kaL ++ +++R+ a+k +  l  +  ++ +      Lv++l+d+++ v+k A +
+  jgi|Bigna1|45144|e_gw1.112.13.1  42 LVKALRDKDKNVRYEAVKAIGYLGSSAIPEAQ----LGLVKALRDEDRIVRKTAAS 93 
+                                      78999999999999999999877775444332....23555556665555555554 PP
+
+  == domain 2  score: 2.2 bits;  conditional E-value: 0.021
+            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiL 781
+                                      l+kaL ++ + +R +a   +++l  + +++    +   Lv++l+d++k+v++aA +++
+  jgi|Bigna1|45144|e_gw1.112.13.1 144 LVKALRDEDKYVRWFAASAIEDLGSSATAE----AQLGLVKALRDEDKDVRQAAASAI 197
+                                      789999999999999999999998833332....334599999999999999998765 PP
+
+  == domain 3  score: 3.9 bits;  conditional E-value: 0.0064
+            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd..............................WgielLvtqlydpsk 771
+                                      l+kaL ++ +++R  a   + +l  +  ++ ++                               +   L+++l+d++k
+  jgi|Bigna1|45144|e_gw1.112.13.1 178 LVKALRDEDKDVRQAAASAIGKLRSSAIPEAQSglvkalkdedgtvrwfaasaiedlgssataQAQSGLLKALRDEDK 255
+                                      667777777777777777777777764444333333334444444444444444445555555666777777777777 PP
+
+            PTHR13298.orig.30.pir 772 evakaAlki 780
+                                       v+++A ++
+  jgi|Bigna1|45144|e_gw1.112.13.1 256 YVRQEAASA 264
+                                      777777665 PP
+
+>> jgi|Bigna1|45145|e_gw1.112.17.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.8   0.0     0.027   1.4e+02     724     779 ..      42      93 ..      29     129 .. 0.70
+   2 ?    2.2   0.0     0.021   1.1e+02     724     781 ..     144     197 ..     139     205 .. 0.80
+   3 ?    3.9   0.1    0.0064        34     724     780 ..     178     264 ..     163     300 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 1.8 bits;  conditional E-value: 0.027
+            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlk 779
+                                      l+kaL ++ +++R+ a+k +  l  +  ++ +      Lv++l+d+++ v+k A +
+  jgi|Bigna1|45145|e_gw1.112.17.1  42 LVKALRDKDKNVRYEAVKAIGYLGSSAIPEAQ----LGLVKALRDEDRIVRKTAAS 93 
+                                      78999999999999999999877775444332....23555556665555555554 PP
+
+  == domain 2  score: 2.2 bits;  conditional E-value: 0.021
+            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiL 781
+                                      l+kaL ++ + +R +a   +++l  + +++    +   Lv++l+d++k+v++aA +++
+  jgi|Bigna1|45145|e_gw1.112.17.1 144 LVKALRDEDKYVRWFAASAIEDLGSSATAE----AQLGLVKALRDEDKDVRQAAASAI 197
+                                      789999999999999999999998833332....334599999999999999998765 PP
+
+  == domain 3  score: 3.9 bits;  conditional E-value: 0.0064
+            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd..............................WgielLvtqlydpsk 771
+                                      l+kaL ++ +++R  a   + +l  +  ++ ++                               +   L+++l+d++k
+  jgi|Bigna1|45145|e_gw1.112.17.1 178 LVKALRDEDKDVRQAAASAIGKLRSSAIPEAQSglvkalkdedgtvrwfaasaiedlgssataQAQSGLLKALRDEDK 255
+                                      667777777777777777777777764444333333334444444444444444445555555666777777777777 PP
+
+            PTHR13298.orig.30.pir 772 evakaAlki 780
+                                       v+++A ++
+  jgi|Bigna1|45145|e_gw1.112.17.1 256 YVRQEAASA 264
+                                      777777665 PP
+
+>> jgi|Bigna1|56671|estExt_Genewise1Plus.C_1120023  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.8   0.0     0.027   1.4e+02     724     779 ..      42      93 ..      29     129 .. 0.70
+   2 ?    2.2   0.0     0.021   1.1e+02     724     781 ..     144     197 ..     139     205 .. 0.80
+   3 ?    3.9   0.1    0.0064        34     724     780 ..     178     264 ..     163     300 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 1.8 bits;  conditional E-value: 0.027
+                            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlk 779
+                                                      l+kaL ++ +++R+ a+k +  l  +  ++ +      Lv++l+d+++ v+k A +
+  jgi|Bigna1|56671|estExt_Genewise1Plus.C_1120023  42 LVKALRDKDKNVRYEAVKAIGYLGSSAIPEAQ----LGLVKALRDEDRIVRKTAAS 93 
+                                                      78999999999999999999877775444332....23555556665555555554 PP
+
+  == domain 2  score: 2.2 bits;  conditional E-value: 0.021
+                            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiL 781
+                                                      l+kaL ++ + +R +a   +++l  + +++    +   Lv++l+d++k+v++aA +++
+  jgi|Bigna1|56671|estExt_Genewise1Plus.C_1120023 144 LVKALRDEDKYVRWFAASAIEDLGSSATAE----AQLGLVKALRDEDKDVRQAAASAI 197
+                                                      789999999999999999999998833332....334599999999999999998765 PP
+
+  == domain 3  score: 3.9 bits;  conditional E-value: 0.0064
+                            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd............................. 756
+                                                      l+kaL ++ +++R  a   + +l  +  ++ ++                             
+  jgi|Bigna1|56671|estExt_Genewise1Plus.C_1120023 178 LVKALRDEDKDVRQAAASAIGKLRSSAIPEAQSglvkalkdedgtvrwfaasaiedlgssat 239
+                                                      66777777777777777777777776444433333333444444444444444444555555 PP
+
+                            PTHR13298.orig.30.pir 757 .WgielLvtqlydpskevakaAlki 780
+                                                        +   L+++l+d++k v+++A ++
+  jgi|Bigna1|56671|estExt_Genewise1Plus.C_1120023 240 aQAQSGLLKALRDEDKYVRQEAASA 264
+                                                      5666777777777777777777665 PP
+
+>> jgi|Bigna1|56672|estExt_Genewise1Plus.C_1120024  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.8   0.0     0.027   1.4e+02     724     779 ..      42      93 ..      29     129 .. 0.70
+   2 ?    2.2   0.0     0.021   1.1e+02     724     781 ..     144     197 ..     139     205 .. 0.80
+   3 ?    3.9   0.1    0.0064        34     724     780 ..     178     264 ..     163     300 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 1.8 bits;  conditional E-value: 0.027
+                            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlk 779
+                                                      l+kaL ++ +++R+ a+k +  l  +  ++ +      Lv++l+d+++ v+k A +
+  jgi|Bigna1|56672|estExt_Genewise1Plus.C_1120024  42 LVKALRDKDKNVRYEAVKAIGYLGSSAIPEAQ----LGLVKALRDEDRIVRKTAAS 93 
+                                                      78999999999999999999877775444332....23555556665555555554 PP
+
+  == domain 2  score: 2.2 bits;  conditional E-value: 0.021
+                            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsdWgielLvtqlydpskevakaAlkiL 781
+                                                      l+kaL ++ + +R +a   +++l  + +++    +   Lv++l+d++k+v++aA +++
+  jgi|Bigna1|56672|estExt_Genewise1Plus.C_1120024 144 LVKALRDEDKYVRWFAASAIEDLGSSATAE----AQLGLVKALRDEDKDVRQAAASAI 197
+                                                      789999999999999999999998833332....334599999999999999998765 PP
+
+  == domain 3  score: 3.9 bits;  conditional E-value: 0.0064
+                            PTHR13298.orig.30.pir 724 lskaLtsssesiRlyatkhLrvllraessdfsd............................. 756
+                                                      l+kaL ++ +++R  a   + +l  +  ++ ++                             
+  jgi|Bigna1|56672|estExt_Genewise1Plus.C_1120024 178 LVKALRDEDKDVRQAAASAIGKLRSSAIPEAQSglvkalkdedgtvrwfaasaiedlgssat 239
+                                                      66777777777777777777777776444433333333444444444444444444555555 PP
+
+                            PTHR13298.orig.30.pir 757 .WgielLvtqlydpskevakaAlki 780
+                                                        +   L+++l+d++k v+++A ++
+  jgi|Bigna1|56672|estExt_Genewise1Plus.C_1120024 240 aQAQSGLLKALRDEDKYVRQEAASA 264
+                                                      5666777777777777777777665 PP
+
+>> jgi|Bigna1|29025|gw1.22.167.1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.0   0.0     0.094     5e+02     937     991 ..     141     193 ..     114     235 .. 0.67
+   2 ?    4.8   0.1    0.0033        17     396     484 ..     288     378 ..     285     381 .. 0.71
+   3 ?    3.4   0.1    0.0087        46     908     957 ..     373     418 ..     337     433 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 0.0 bits;  conditional E-value: 0.094
+          PTHR13298.orig.30.pir 937 aalWAlghigsselGl.elleeenedliediiklaeesevlsvrGtcfyvlgliar 991
+                                     a WAl +i+s      + +++  ++ ++ ++kl  + +   vr  ++++lg ia 
+  jgi|Bigna1|29025|gw1.22.167.1 141 EAAWALTNIASGTSEHtKHVIK--NGAVPIFVKLLAS-PNEDVREQSVWALGNIAG 193
+                                    4668888887744333033333..5677777777765.667777777777776664 PP
+
+  == domain 2  score: 4.8 bits;  conditional E-value: 0.0033
+          PTHR13298.orig.30.pir 396 alieagLleaLvevitssdssvsvkAtiLLgellslantlLPpe.lsaslhslptlvslaasfssekskrnraaaa..la 472
+                                    a ie+g    Lve+++ ++++v+++A+   g+++   +        +a+l++l +l+s++ + s+ k++  + +++   +
+  jgi|Bigna1|29025|gw1.22.167.1 288 AVIESGVCRRLVELLMHKSDNVRTPALRTVGNIVTGDDVQTQVIlSCAALPCLLSLLSSSKK-SIRKETCWTISNItaGN 366
+                                    67899999999999999999999999999999987666553332256677788888777777.46666655555555567 PP
+
+          PTHR13298.orig.30.pir 473 lksldelkrsks 484
+                                    +++++e+k++ +
+  jgi|Bigna1|29025|gw1.22.167.1 367 VRQIEEVKKANI 378
+                                    777777777665 PP
+
+  == domain 3  score: 3.4 bits;  conditional E-value: 0.0087
+          PTHR13298.orig.30.pir 908 LekkghleelaetirshgledseeilklkaalWAlghi..gsselGlellee 957
+                                     +k +++++l+e++r+      +e+  +k a WA++++  g +e  +++l +
+  jgi|Bigna1|29025|gw1.22.167.1 373 VKKANIIPSLVEILRN------AEFDIKKEAAWAVSNAtcGGNEDQIRYLVQ 418
+                                    5778999999999999......778889999999988544788888888877 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (1175 nodes)
+Target sequences:                      95908  (38804730 residues searched)
+Passed MSV filter:                      5617  (0.0585665); expected 1918.2 (0.02)
+Passed bias filter:                     2240  (0.0233557); expected 1918.2 (0.02)
+Passed Vit filter:                       231  (0.00240856); expected 95.9 (0.001)
+Passed Fwd filter:                        18  (0.00018768); expected 1.0 (1e-05)
+Initial search space (Z):              95908  [actual number of targets]
+Domain search space  (domZ):              18  [number of targets reported over threshold]
+# CPU time: 1.81u 0.09s 00:00:01.90 Elapsed: 00:00:00.92
+# Mc/sec: 49362.09
+//
+[ok]

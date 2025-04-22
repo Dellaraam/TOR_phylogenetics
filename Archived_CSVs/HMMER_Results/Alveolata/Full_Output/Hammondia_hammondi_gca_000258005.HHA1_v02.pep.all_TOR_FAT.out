@@ -1,0 +1,153 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Alveolata/Proteins/Hammondia_hammondi_gca_000258005.HHA1_v02.pep.all.fa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+    2.7e-48  163.8   7.6    1.5e-20   72.6   0.1    4.5  4  KEP65775  pep supercontig:HHA1_v02:KL544030:226042:250640:-1 
+    4.4e-21   74.3   0.0    8.5e-21   73.4   0.0    1.5  1  KEP66617  pep supercontig:HHA1_v02:KL544028:231733:268236:1 g
+    1.7e-06   26.4   0.1      0.051   11.6   0.0    4.5  3  KEP67031  pep supercontig:HHA1_v02:KL544028:3328935:3339220:-
+
+
+Domain annotation for each sequence (and alignments):
+>> KEP65775  pep supercontig:HHA1_v02:KL544030:226042:250640:-1 gene:HHA_316430 transcript:KEP65775 gene_biotype:protein
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   71.7   0.3     1e-23   2.7e-20       2     101 ..    3230    3328 ..    3229    3337 .. 0.91
+   2 !   72.6   0.1   5.7e-24   1.5e-20     103     211 ..    3444    3544 ..    3431    3583 .. 0.82
+   3 !    4.7   0.1    0.0024       6.4     276     302 ..    3879    3905 ..    3869    3932 .. 0.81
+   4 !   15.8   0.0     1e-06    0.0028     303     342 ..    4152    4196 ..    4141    4197 .. 0.80
+
+  Alignments for each domain:
+  == domain 1  score: 71.7 bits;  conditional E-value: 1e-23
+                CCTTCCCCTSSSGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS-- CS
+       FAT    2 plaaeaaWrlgqWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqklss 99  
+                +laa  a +  +W  +e+y++     ds + af+ a+l +h ++f++a e i++arqll+ el+al gesy+ray++lv lQqlaEleei++++q+++ 
+  KEP65775 3230 SLAASVAFHFRDWAALERYVQWFPaTDSCEHAFYMAVLRVHSGEFEAALEEIQRARQLLDPELTALLGESYKRAYPALVTLQQLAELEEIVELLQRQR- 3327
+                68888888999*********999989999999***************************************************************865. PP
+
+                -- CS
+       FAT  100 se 101 
+                 e
+  KEP65775 3328 -E 3328
+                .2 PP
+
+  == domain 2  score: 72.6 bits;  conditional E-value: 5.7e-24
+                TTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCH CS
+       FAT  103 lksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlp.pevvyaylkylwakge 200 
+                 ++l+  Wr+Rl  + +d e+wq++l+vRsl++sp+ed       a++wl+f++l+R++++  lA + ++ l +  + +    p+vv++++k+l+a g+
+  KEP65775 3444 SEQLRHLWRTRLATCESDAEIWQKLLRVRSLIMSPHED-------ATTWLRFSSLCRQQHHARLAVEIIQCL-RDHPHSR-NdPRVVLESFKVLHAVGR 3533
+                5789999*******************************.......***************************.4444344.36**************** PP
+
+                HHHHSSCCHHH CS
+       FAT  201 qkealqkLref 211 
+                + ea + L  f
+  KEP65775 3534 KLEAQLLLTSF 3544
+                *9998888444 PP
+
+  == domain 3  score: 4.7 bits;  conditional E-value: 0.0024
+                HHCTCCCHSTTCCCCHHHHHCCHHHHH CS
+       FAT  276 teldpswykawhtwalfnfevlskeee 302 
+                + ++++  kaw +wal nf+v +++++
+  KEP65775 3879 VLFQSRNSKAWSAWALTNFQVAEALKN 3905
+                56778889*************999855 PP
+
+  == domain 4  score: 15.8 bits;  conditional E-value: 1e-06
+                HSSSS.....S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHHHH CS
+       FAT  303 kkeeee....pedlseyvvpavegflkslslsse.kslqdllRlL 342 
+                ++ee+e     ++l +++v+av+ fl+s+ l  + +slqd+lRl+
+  KEP65775 4152 NEEEKEvlllATMLPHFIVEAVRAFLRSIELRPStSSLQDILRLI 4196
+                333333577666777******************99********97 PP
+
+>> KEP66617  pep supercontig:HHA1_v02:KL544028:231733:268236:1 gene:HHA_268370 transcript:KEP66617 gene_biotype:protein_
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   73.4   0.0   3.2e-24   8.5e-21       3     343 .]    7097    7522 ..    7095    7522 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 73.4 bits;  conditional E-value: 3.2e-24
+                CTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCC..................CHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCC CS
+       FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdkaffeaila..................lhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQq 83  
+                l + +a +l++Wd++e+ +++   ++p  ++ +a++a                  +++++++e+   + +++ ll+ ++++l+  ++ +++ llv++Q 
+  KEP66617 7097 LGLDCASKLQNWDLLEHMVDAYGVHTPYTKLCQAYQAlhevvyprgrqdgevapwMQTQKLREMDLRCCEGQRLLLSSWRRLPAVITDAHIALLVQFQL 7195
+                6778888999********************999999966677766666666666555566999999999****************************** PP
+
+                CHHHCHHCCHHCSS-.........---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC................HHCCS-STTCCCCCCCC CS
+       FAT   84 laEleeiiqykqkls.........sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied................lllkgakaemwlkfanl 157 
+                ++El e   +  +ls         +    +++l+tWr+Rlp+++d+++ w+d++ +R +++s i++                +++ + +  + lkf+++
+  KEP66617 7196 YVELLEGYHLVVHLSrrlqkggesEFPAARTTLNTWRERLPNTWDSIDSWNDLFVWRNFIFSIIQStvtsspvltpsqktswPAYVQDMPWTMLKFVSI 7294
+                ******999888888889899887666777889*************************************************9***999********** PP
+
+                HCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---............................ CS
+       FAT  158 aRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq........................ept 232 
+                aR  +rl     aL++ +++ +               +       ea+  + e ++ +l ++ ++ +gl+                             
+  KEP66617 7295 ARSPNRLREVSLALLMKMDNLP--------------AMKNPAYATEAFIAMTEKAKLCLGDPAQYVTGLQLLnafdfdlpgpssvssaaaspvalcADP 7379
+                *******977777777767777..............344444466666666666666666666555555555555555666666666666667776555 PP
+
+                .......HH.HHCCCTCCC.........CCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.............. CS
+       FAT  233 nleeftkll.arcylkkGe.........wlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee............. 308 
+                +++++ + +  + + +k+            +a+q   ++ee  +++ +  ++   ++p +  aw twa++n+  +    +++   +             
+  KEP66617 7380 HVQQQLDAQrLQLLRLKAIlmfrlytldRPNAFQG-VSREELLSGADSLLRSTLAVQPLCGAAWLTWAKMNESLFFLH-NGPATLSalsasaeaveres 7476
+                55555555545555555555555555543355555.356788999999*************************99877.343333357788889999** PP
+
+                ...........S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+       FAT  309 ...........pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                           +e+l +y+ +a+ gfl  l+l   k + +l R+L+
+  KEP66617 7477 sgacetkkkeeEETLVRYLLSAMVGFLMNLQLRPAKGRLYLSRILW 7522
+                **********888888*****************************8 PP
+
+>> KEP67031  pep supercontig:HHA1_v02:KL544028:3328935:3339220:-1 gene:HHA_273500 transcript:KEP67031 gene_biotype:prote
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.6   0.0   1.9e-05     0.051     241     299 ..     280     331 ..     127     386 .. 0.57
+   2 !    5.2   0.4    0.0018       4.7     245     294 ..     393     435 ..     334     444 .. 0.80
+   3 ?    0.8   0.0     0.037        97     242     296 ..     492     541 ..     452     598 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 11.6 bits;  conditional E-value: 1.9e-05
+               HHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHH CS
+       FAT 241 larcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlsk 299
+                a cy  +G         + +++++  +lq y++at+l+ps  +a+++++ ++ +  + 
+  KEP67031 280 YAPCYYNLGVI-------HAETDDPHTALQMYREATRLNPSYVEAYNNMGAVCKNLGKL 331
+               24444444443.......345555999*********************99998776544 PP
+
+  == domain 2  score: 5.2 bits;  conditional E-value: 0.0018
+               CCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHH CS
+       FAT 245 ylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnf 294
+               y  +G   a l+k        +++l  y++a+ ++p++++a+++++  + 
+  KEP67031 393 YYNLGVAYADLHK-------FDKALVNYQLAVAFNPRCAEAYNNMGVIHK 435
+               5555666666666.......889999999999999999999999987765 PP
+
+  == domain 3  score: 0.8 bits;  conditional E-value: 0.037
+               HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC..CCHHHHHC CS
+       FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawht..walfnfev 296
+               a++y  +G   +  ++       +e+ ++ay +   ldp++ +a+h+  +al + e+
+  KEP67031 492 AEAYNNLGVLYRDQGD-------IEDSVKAYDKCLLLDPNSPNAFHNklLALNYLEN 541
+               5555555555555555.......7777777777777777777777775555555555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       8004  (6465855 residues searched)
+Passed MSV filter:                       418  (0.0522239); expected 160.1 (0.02)
+Passed bias filter:                      173  (0.0216142); expected 160.1 (0.02)
+Passed Vit filter:                        19  (0.00237381); expected 8.0 (0.001)
+Passed Fwd filter:                         3  (0.000374813); expected 0.1 (1e-05)
+Initial search space (Z):               8004  [actual number of targets]
+Domain search space  (domZ):               3  [number of targets reported over threshold]
+# CPU time: 0.16u 0.02s 00:00:00.18 Elapsed: 00:00:00.09
+# Mc/sec: 24065.74
+//
+[ok]

@@ -1,0 +1,250 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Chlorophyta/Proteins/Ostreococcus_lucimarinus.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence   Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------   -----------
+    5.9e-81  271.1   5.9    5.9e-81  271.1   5.9    2.7  3  ABO93925.1  predicted protein [Ostreococcus lucimarinus CCE99
+    2.6e-42  144.1   0.4    7.1e-42  142.6   0.4    1.8  1  ABO97047.1  predicted protein [Ostreococcus lucimarinus CCE99
+    3.6e-27   94.3   9.7    3.6e-27   94.3   9.7    2.2  2  ABO97601.1  predicted protein [Ostreococcus lucimarinus CCE99
+    0.00018   19.6  13.2      0.084   10.8   0.3    3.6  4  ABO96206.1  TPR-repeat containing protein [Ostreococcus lucim
+  ------ inclusion threshold ------
+      0.013   13.5   0.5        5.4    4.9   0.1    3.4  3  ABO94048.1  predicted protein [Ostreococcus lucimarinus CCE99
+      0.027   12.4   0.2        0.1   10.6   0.2    1.9  1  ABO95841.1  predicted protein [Ostreococcus lucimarinus CCE99
+
+
+Domain annotation for each sequence (and alignments):
+>> ABO93925.1  predicted protein [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.0   0.2      0.14   1.7e+02     278     329 ..    1140    1190 ..    1135    1208 .. 0.64
+   2 !  271.1   5.9   4.7e-84   5.9e-81       2     343 .]    1220    1563 ..    1219    1563 .. 0.92
+   3 ?   -2.4   0.1       0.7   8.9e+02      85     111 ..    1732    1758 ..    1720    1767 .. 0.88
+
+  Alignments for each domain:
+  == domain 1  score: -0.0 bits;  conditional E-value: 0.14
+                  CTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHT CS
+         FAT  278 ldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslsl 329 
+                  +  swy++  +w ++ +  ++k+ e ++ ++p+ ++    +a+ g l++l+ 
+  ABO93925.1 1140 IKESWYEKLEQWDDALEAYKRKLDELASVDSPQAME-ERREAMVGQLRCLNA 1190
+                  566777777777777777777777777777666665.445555566666554 PP
+
+  == domain 2  score: 271.1 bits;  conditional E-value: 4.7e-84
+                  CCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS- CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls 98  
+                  ++aa+aaW+lg+W++me        ++ d+ f++ ila++r+  dea+e++  ar+ l tel+al+ esy r y++l+r Qql+El e+i+y q  +
+  ABO93925.1 1220 TIAAKAAWHLGDWEQMEIL------NTTDCDFYKSILAIRRGAQDEAREHLAAAREMLGTELAALVRESYDRSYGALIRAQQLTELDEVIEYAQLTA 1310
+                  589************9887......8********************************************************************999 PP
+
+                  .....---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT........... CS
+         FAT   99 .....sseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk...eewlp... 184 
+                        +++++ ++k+Wr+R   v++dvevwq +l+vRslvl ++e+       +++wlkfa+l Rk+gr  ++ ++L++lle+d+    e +p   
+  ABO93925.1 1311 vaspaAARRQEIIRKMWRDRIYLVKRDVEVWQELLQVRSLVLPMSEE-------TDIWLKFASLNRKQGRDRQSRRTLLRLLEYDPimcAEGKPgfg 1400
+                  ****999****************************************.......********************************87755555788 PP
+
+                  .....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCH CS
+         FAT  185 .....pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaat 276 
+                       p+v++a +k+lw++g++++a+ +L+  +++l       ++++ ++ +t+ ++++++ +r++lk+G+w++al + + + e+  ++l a+++at
+  ABO93925.1 1401 agsgrPKVMFAFVKHLWHTGQKRQAFMRLQSLAHELR----VQLENMRASGQTETDHNKTV-SRAFLKLGKWRWALTD-SMNDETLTDVLMAFRTAT 1491
+                  899999***********************98888554....45677777788888888887.7***************.789999************ PP
+
+                  HCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTS......STTTCHHHHHC CS
+         FAT  277 eldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslsse......kslqdllRlLt 343 
+                    d++w kawh+walfn  ++++  ++    + +d+ ++v pa++gf++s+sl  +       slqd+lRlLt
+  ABO93925.1 1492 SADQHWSKAWHHWALFNATAMEHFHRQGGA-STKDAMQHVAPAISGFFRSISLAGSsmkakgGSLQDILRLLT 1563
+                  ***********************9666444.4667777**************97665666678*********8 PP
+
+  == domain 3  score: -2.4 bits;  conditional E-value: 0.7
+                  HHHCHHCCHHCSS----TTTTTTT--- CS
+         FAT   85 aEleeiiqykqklssseelksllktWr 111 
+                   El+e+  ++qk ++s++ ++l + W+
+  ABO93925.1 1732 RELQEAHDLCQKYRQSKREEELNQAWD 1758
+                  599999999999999999999999996 PP
+
+>> ABO97047.1  predicted protein [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  142.6   0.4   5.6e-45   7.1e-42       3     343 .]    1872    2267 ..    1870    2267 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: 142.6 bits;  conditional E-value: 5.6e-45
+                  CTTCCCCTSSSGHHCCCCT.................................................TSSSS--CCCHCCCCHH--CCHCHHCCCH CS
+         FAT    3 laaeaaWrlgqWdsmeeylslmk.............................................kdspdkaffeailalhrnqfdeaeeliek 54  
+                    a+aaWrlgqWd++++ l +++                                             + s d a+ +++lalh+n+  +++  +  
+  ABO97047.1 1872 AGAAAAWRLGQWDDLDSLLGKIDsensshvnsgmkrshrqmhvapsaltpsgmpltvgvgtqlnadvpQLSADAAIGRVLLALHKNDGHAFQVACAS 1968
+                  679********************************************************************************************** PP
+
+                  CCCCCCCCCTS---S.CCCCCHHHHHCCCCCHHHCHHCCHHCSS-............---TTTTT.............TT----TTS-TTTGCCCTT CS
+         FAT   55 arqllvtelsalsge.synraydllvrlQqlaEleeiiqykqkls............sseelksl.............lktWrkRlpgvqddvevwq 125 
+                  ar+ l+t l+a s+e sy ra+ +lv+l+ l+E e++ +     +                                 ++ W +Rl  + ++v  ++
+  ABO97047.1 1969 ARDALITPLRAASMEgSYLRAHAALVQLHLLQEAESSYNAVVLTEearkaaaaaktrI------PtdssdiplcavkeFQFWHDRLDRTPPNVATRE 2059
+                  ************************************9999888776677766666663......03444446678899******************* PP
+
+                  TCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS CS
+         FAT  126 dilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeel 222 
+                  +il++R+ +++       k a  ++wl+ a++aR +g+++ A+ aL++++ e    ++  ++ ++++k+lwa + ++ a+++++e ++         
+  ABO97047.1 2060 PILAFRRTIYKLLGA---KLAASKTWLEQAKVARSAGHYGAAQLALLEARSEIG--MSL-PLALEQAKLLWAGDSHQRAVLEIEEALK--------- 2141
+                  *************99...88889**************************55555..555.799*************************......... PP
+
+                  -SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS............ CS
+         FAT  223 ssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee........... 308 
+                         +++ +    +  a++ l+++ w   +++++     ++eil  y++ ++ ++sw+k +++ a++ +e +++ ++++ + e           
+  ABO97047.1 2142 -------DQDAVAAHPEHAAKAVLRLARWATVTGQKQ-----KKEILTLYASVIKSHKSWEKSHFHVARYMDEWMKDATKRELNGEiganlpasvrr 2226
+                  .......566777788889****************65.....************************************9997777799********* PP
+
+                  ......S-TCCHHHHCCT..CCHHHHTTTSSTTTCHHHHHC CS
+         FAT  309 ......pedlseyvvpavegflkslslssekslqdllRlLt 343 
+                         e++++++ + v+++  s+++++ +++++l+R+Lt
+  ABO97047.1 2227 kgiggdDEEAIDLLSETVREYGASIKYGHRHIYESLPRMLT 2267
+                  *****9888889****************************8 PP
+
+>> ABO97601.1  predicted protein [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.8   0.2         2   2.5e+03     304     340 ..     612     649 ..     585     651 .. 0.63
+   2 !   94.3   9.7   2.9e-30   3.6e-27       2     336 ..    2785    3118 ..    2784    3125 .. 0.90
+
+  Alignments for each domain:
+  == domain 1  score: -3.8 bits;  conditional E-value: 2
+                 SSSS.S-TCCHHHHCCT..CCHHHHTTTS.STTTCHHH CS
+         FAT 304 keeeepedlseyvvpavegflkslslsse.kslqdllR 340
+                 k+++ ++ ls +v+ ++e  l++++ +++  ++  llR
+  ABO97601.1 612 KHSNCETVLSSHVITMMESCLQAIREHENpTAYIRLLR 649
+                 22222566778899999999999988888666666666 PP
+
+  == domain 2  score: 94.3 bits;  conditional E-value: 2.9e-30
+                  CCTTCCCCTSSSGHHCCCCT........TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHH CS
+         FAT    2 plaaeaaWrlgqWdsmeeylslmk....kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqyk 94  
+                  +l ++++Wrl++W  +++ +        +++p+ ++++a+ +l  ++++eae++  +a ++ +  + +l+ +  + ++++l+ ++++aE +e+  ++
+  ABO97601.1 2785 ELMVQSMWRLSDWAGVKDLMPSGTlneiEETPEITTVRAFASLVSGRVREAEQHWANAVKSSLDRWWRLPETGSTCHIPSLHMFNAIAEVQESTRIL 2881
+                  6899**********97776543336789********************************************************************* PP
+
+                  CSS-............---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC..................HHCCS-STTCCC..CCCCCHC CS
+         FAT   95 qkls............sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied..................lllkgakaemwl..kfanlaR 159 
+                   +ls            +    +++ +tWr R p+ +d+v  w+ il++R  + +                      l   g+++++w   kfa+ aR
+  ABO97601.1 2882 LELSntqrrgvqgitnNRTLVQDIMETWRLRTPNEWDPVPWWSEILMWRGNMHNIMTHaakqigeqnpamlqvtqqLDQLGQRERAWSlnKFARAAR 2978
+                  **99999999999776555666779************************9999777777788999**********966777788888778******* PP
+
+                  HHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HH.HHCCCTCCCCCCCC CS
+         FAT  160 ksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkll.arcylkkGewlaal 255 
+                  k+  +++A + L++                        + e++ea++kLre+ + +l   +e+ +g++  e+ +le f+  + a+ + ++++++++l
+  ABO97601.1 2979 KQRLPEVALNILSRH---------------------QGQVEVSEAFSKLREQCEAYLAFENEAITGINLLESASLEFFSPPQkAELFRLRAKFQEQL 3054
+                  **************9.....................24688*****************999************************************ PP
+
+                  CCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTTSSTTT CS
+         FAT  256 qklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslssekslq 336 
+                  ++        +++ ++ys+++ l+++ ++ w +w++f+  +  +            +s+ + +  +++l++++++  +++ 
+  ABO97601.1 3055 ED-------YDAAHASYSTSVSLCKQRAESWLSWGKFCRMRGDDG----------SISNIAQQTATCYLQAVKHNVHENRH 3118
+                  **.......99***************************8876666..........57777888888888888887766555 PP
+
+>> ABO96206.1  TPR-repeat containing protein [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.8   0.3   6.6e-05     0.084     258     304 ..     175     221 ..     155     246 .. 0.80
+   2 ?   -1.9   0.0      0.48   6.1e+02     263     302 ..     251     292 ..     232     298 .. 0.68
+   3 !    6.0   3.7     0.002       2.5     249     292 ..     341     384 ..     248     388 .. 0.86
+   4 !    7.3   0.1   0.00081         1     254     296 ..     417     459 ..     392     481 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 10.8 bits;  conditional E-value: 6.6e-05
+                 CT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHS CS
+         FAT 258 lnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekk 304
+                 l+++  ++  + ++y aat  d++ + awh w++++ +  ++++ ++
+  ABO96206.1 175 LEEKAGNIALARKYYDAATAADKTHAAAWHGWGSMEKNLGNYQRARE 221
+                 455666788899***********************998877776655 PP
+
+  == domain 2  score: -1.9 bits;  conditional E-value: 0.48
+                 ..-SSCCHHHHCCHHCTCCCHS..TTCCCCHHHHHCCHHHHH CS
+         FAT 263 ekseeilqaysaateldpswyk..awhtwalfnfevlskeee 302
+                  +++e+ +++++ +++  +  +  +w +wa ++ ++  +e+ 
+  ABO96206.1 251 GRISEAREHFRQGVRTEAGAKSgaIWRSWAMLEAKAGDEEQA 292
+                 447888888888777666554444999999988887777655 PP
+
+  == domain 3  score: 6.0 bits;  conditional E-value: 0.002
+                 CCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHH CS
+         FAT 249 Gewlaalqklnwseekseeilqaysaateldpswykawhtwalf 292
+                    l+al kl+ ++ + e++ +++ + t +dp+   +w++wa +
+  ABO96206.1 341 THLLQALAKLEAEQGNLEQARKYFEQGTMMDPQHQANWNAWAMA 384
+                 4478899999999999**************************87 PP
+
+  == domain 4  score: 7.3 bits;  conditional E-value: 0.00081
+                 CCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHC CS
+         FAT 254 alqklnwseekseeilqaysaateldpswykawhtwalfnfev 296
+                 a + l+++ee+++ + q ++ a+ +d s++ +w twa ++++ 
+  ABO96206.1 417 AWGVLESREENISLARQLFKCAVNVDASSERTWLTWAMMEERE 459
+                 556667889999**************************99875 PP
+
+>> ABO94048.1  predicted protein [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.8   0.0     0.018        23     242     288 ..     130     169 ..      29     191 .. 0.57
+   2 ?    4.9   0.1    0.0043       5.4     187     287 ..     241     345 ..     213     354 .. 0.59
+   3 ?    1.5   0.0     0.045        57     252     331 ..     458     519 ..     414     526 .. 0.66
+
+  Alignments for each domain:
+  == domain 1  score: 2.8 bits;  conditional E-value: 0.018
+                 HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+         FAT 242 arcylkkGewlaalqklnwseekseeilqaysaateldpswykawht 288
+                 a + +++G   +al++         ++++a+s+a  +dp +y+a+ +
+  ABO94048.1 130 AAMCALRGRAYEALEN-------TVKAFEAHSLALSFDPMCYEAYEA 169
+                 5566666666666666.......566666677777777777766643 PP
+
+  == domain 2  score: 4.9 bits;  conditional E-value: 0.0043
+                 SCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...................HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHH CS
+         FAT 187 vvyaylkylwakgeqkealqkLrefvscllekkeelssglevq........eptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaate 277
+                 v +a ++ ++++ge   +  +L+ +         + ++gl+          +++ l  ++++l   y kk+    a++    ++++ +++ +++s+at 
+  ABO94048.1 241 VRIACARRMYQRGEFAACCAELQRQFALEP----SRLNGLPLYfatlvelgKKNDLYLLAHSLVDEYPKKAVTWFAIGCYYMATRQYDAARKYFSKATS 335
+                 555666666666666666666655555111....223333332333344443334444444444444444443334444445556699*********** PP
+
+                 CTCCCHSTTC CS
+         FAT 278 ldpswykawh 287
+                 +d s  +aw 
+  ABO94048.1 336 IDASFVQAWI 345
+                 *********6 PP
+
+  == domain 3  score: 1.5 bits;  conditional E-value: 0.045
+                 CCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCCHHHHCCT..CCHHHHTTT CS
+         FAT 252 laalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedlseyvvpavegflkslslss 331
+                 l+++++       ++e+ ++++ a  ++p+ +++++++a  ++ + +           e +s  +  a+e++ k+lsl s
+  ABO94048.1 458 LRKMGR-------HDEAIEQFQYALSVAPRNASTHAALAFTYQVKSRCT---------EPVS--LGLAIEHYHKALSLRS 519
+                 233333.......677777777777777777777777776664333333.........3333..5566677777766665 PP
+
+>> ABO95841.1  predicted protein [Ostreococcus lucimarinus CCE9901]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.6   0.2     8e-05       0.1     140     209 ..      46     124 ..      37     173 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 10.6 bits;  conditional E-value: 8e-05
+                 C............HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT......TSSCCCHHHHHHHCCHHHHHSSCCH CS
+         FAT 140 d............lllkgakaemwlkfanlaRksgrlslAekaLkklleedk.eewlppevvyaylkylwakgeqkealqkLr 209
+                 d             + +g++ +mw ++a+la + ++ + A+ +L k++++d+ ++++     + ++ +  + g+ k+a+++L+
+  ABO95841.1  46 DlekaldsyslatAVKRGVDPSMWYRMASLAVNVNNKDYAIHCLAKAARSDPhNYEN----KMDQATLYSELGDAKKAIEQLE 124
+                 455555555555556688999*******************************53333....4777777888888888888776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                       7603  (3069386 residues searched)
+Passed MSV filter:                       319  (0.0419571); expected 152.1 (0.02)
+Passed bias filter:                      178  (0.0234118); expected 152.1 (0.02)
+Passed Vit filter:                        23  (0.00302512); expected 7.6 (0.001)
+Passed Fwd filter:                         6  (0.000789162); expected 0.1 (1e-05)
+Initial search space (Z):               7603  [actual number of targets]
+Domain search space  (domZ):               6  [number of targets reported over threshold]
+# CPU time: 0.06u 0.04s 00:00:00.10 Elapsed: 00:00:00.05
+# Mc/sec: 19269.90
+//
+[ok]

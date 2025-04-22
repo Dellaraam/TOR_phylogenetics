@@ -1,0 +1,496 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.3.2 (Nov 2020); http://hmmer.org/
+# Copyright (C) 2020 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  /home/kyle/Desktop/HMMER_WORK/HMMs/Full/TOR_FAT.hmm
+# target sequence database:        /home/kyle/Desktop/HMMER_WORK/Excavata/Proteins/Naegleria_gruberi.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       FAT  [M=343]
+Accession:   PF02259.28
+Description: FAT domain
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence       Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------       -----------
+    1.1e-87  294.3  11.2    1.1e-87  294.3  11.2    2.4  2  XP_002674657.1  uncharacterized protein NAEGRDRAFT_80599 [Nae
+    1.4e-30  106.5   9.0    1.4e-30  106.5   9.0    3.4  3  XP_002682730.1  uncharacterized protein NAEGRDRAFT_62046 [Nae
+    5.1e-24   84.9   7.6    5.1e-24   84.9   7.6    3.2  3  XP_002680550.1  DNA dependent protein kinase catalytic subuni
+      2e-13   50.1   9.7      2e-13   50.1   9.7    1.9  2  XP_002682330.1  serine/threonine-protein kinase [Naegleria gr
+    1.3e-06   27.7   7.1     0.0021   17.1   0.7    3.3  3  XP_002673624.1  tetratricopeptide repeat family protein [Naeg
+    3.1e-05   23.2  37.0      0.043   12.9   0.6    8.3  6  XP_002675251.1  uncharacterized protein NAEGRDRAFT_50399 [Nae
+     0.0009   18.4   8.6      0.067   12.2   0.2    3.4  2  XP_002681799.1  uncharacterized protein NAEGRDRAFT_46164 [Nae
+      0.001   18.2   0.2      0.002   17.3   0.2    1.5  1  XP_002679852.1  uncharacterized protein NAEGRDRAFT_47422 [Nae
+     0.0037   16.3   0.4     0.0037   16.3   0.4    2.3  3  XP_002683236.1  cell division cycle protein 27 [Naegleria gru
+     0.0041   16.2   5.6       0.54    9.2   0.3    3.3  3  XP_002679878.1  uncharacterized protein NAEGRDRAFT_65065 [Nae
+  ------ inclusion threshold ------
+      0.065   12.3   0.4      0.091   11.8   0.4    1.3  1  XP_002678554.1  uncharacterized protein NAEGRDRAFT_48218 [Nae
+
+
+Domain annotation for each sequence (and alignments):
+>> XP_002674657.1  uncharacterized protein NAEGRDRAFT_80599 [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.4   0.5       1.3   1.9e+03     262     303 ..    1157    1200 ..    1138    1227 .. 0.70
+   2 !  294.3  11.2   7.5e-91   1.1e-87       1     343 []    1243    1574 ..    1243    1574 .. 0.92
+
+  Alignments for each domain:
+  == domain 1  score: -2.4 bits;  conditional E-value: 1.3
+                      ...-SSCCHHHHCC..HHCTCCCHSTTCCCCHHHHHCCHHHHHH CS
+             FAT  262 eekseeilqaysaa..teldpswykawhtwalfnfevlskeeek 303 
+                      +e + +il++ +++  +el  swy++  +w+ +++    k++++
+  XP_002674657.1 1157 HEAAMGILKYAQKNhsIELKESWYEKLQRWKEAYDAYSIKQKQN 1200
+                      44455555554443114667788888888888888766666555 PP
+
+  == domain 2  score: 294.3 bits;  conditional E-value: 7.5e-91
+                      CCCTTCCCCTSSSGHHCCCCT....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCH CS
+             FAT    1 aplaaeaaWrlgqWdsmeeylslmkkdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqy 93  
+                      ap+aa+aaW+lg+W+sm++y++ +++d+ ++aff+aila+h+++  +ae li+k+r+ l+tel+al+gesynrayd++v +Qql+E+eeii y
+  XP_002674657.1 1243 APMAAHAAWNLGEWESMRNYVNILSEDTSEGAFFRAILAIHQKDHHNAEVLIDKTRKVLDTELAALVGESYNRAYDIIVTVQQLSEMEEIIRY 1335
+                      69******************************************************************************************* PP
+
+                      HCSS----TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT....... CS
+             FAT   94 kqklssseelksllktWrkRlpgvqddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedk..eewlp 184 
+                       ++ +++e  + + + W +Rl g++++ve+wq+ilsvR+lv+  ++d        ++wlkfa+++Rks+ + ++ek L+kl +  +  ee+++
+  XP_002674657.1 1336 QKA-EDEETKALTHQIWIDRLHGCKRNVEHWQNILSVRKLVIPERQD-------LSTWLKFASICRKSNKIRMSEKILQKLVDGISlsEEPEK 1420
+                      996.5777777789*********************************.......***************************888888744444 PP
+
+                      ........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT...S...-SS CS
+             FAT  185 ........pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqkln..wseeksee 267 
+                              p++ y+y+k++w +g+q  a++ +++fv        +++++++            l+ar++l +G+w++ +++ +   +e k  +
+  XP_002674657.1 1421 llispevhPKISYEYFKHMWVEGKQMRAYELMNQFVY-------NIQCDNQ------------LKARAFLTLGQWQKVIYRQHggLEESKLPQ 1494
+                      677888899****************************.......6666644............56************99764422678899** PP
+
+                      CCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHH..SSSS.S-TCCHHHHCCT..CCHHHHTTTS..STTTCHHHHHC CS
+             FAT  268 ilqaysaateldpswykawhtwalfnfevlskeeek..keeeepedlseyvvpavegflkslslsse..kslqdllRlLt 343 
+                      il++++aat +d++wykawh+wal+n ev+s+ e+k  +++ ++e +  y+++a++gf++s++ls    +slqd+lRlLt
+  XP_002674657.1 1495 ILSHFKAATDFDKEWYKAWHEWALLNSEVVSHFEKKsqPSSRNMEAMTIYLISALTGFFNSINLSPDrnSSLQDILRLLT 1574
+                      ********************************99884434444777777****************9988**********8 PP
+
+>> XP_002682730.1  uncharacterized protein NAEGRDRAFT_62046 [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    0.4   2.0      0.18   2.5e+02      75     128 ..    2691    2752 ..    2662    2757 .. 0.78
+   2 !  106.5   9.0   9.9e-34   1.4e-30       3     332 ..    2765    3114 ..    2763    3122 .. 0.81
+   3 ?   -2.9   0.0       1.9   2.7e+03     274     303 ..    3606    3635 ..    3592    3667 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 0.4 bits;  conditional E-value: 0.18
+                      HHHHHCCCCCHHHCHHCCHHCSS-........---TTTTT...TT----TTS-TTTGCCCTTTCC CS
+             FAT   75 ydllvrlQqlaEleeiiqykqkls........sseelksl...lktWrkRlpgvqddvevwqdil 128 
+                       +l+++l q + + e+++ +++l         +++    +   l+ W+++ + + ++++ w+ + 
+  XP_002682730.1 2691 TKLVLSLEQRNNWNEAQEALKELTnayhrgqiKKKV---ThteLQLWEEHWLSCSKKLQQWDELT 2752
+                      567889999999999999999998777665533333...14469*****************9986 PP
+
+  == domain 2  score: 106.5 bits;  conditional E-value: 9.9e-34
+                      CTTCCCCTSSSGHHCCCCT....TSSSS--...CCCHCCCCHH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHC CS
+             FAT    3 laaeaaWrlgqWdsmeeylslmkkdspdka...ffeailalhr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeii 91  
+                      l +e++W++g+W++m+e  ++    s + +   ff+    + + +++++ e++i  a+ql ++ ++al++ +  ++   l+ +Qql El e++
+  XP_002682730.1 2765 LSLECMWKNGNWQQMKELFQKHA--SMENQllkFFQISCLIMQdKEVEAGETYI-VAQQLALQRWCALPSFMCGNHTFMLHIFQQLYELNESA 2854
+                      789***************86655..44444334777776666647777777777.79************************************ PP
+
+                      CHHCSS-...---TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC.............HHCCS-STTCCC..CCCCCHCHHHHCCS CS
+             FAT   92 qykqkls...sseelksllktWrkRlpgvqddvevwqdilsvRslvlspied.............lllkgakaemwl..kfanlaRksgrlsl 166 
+                      +++++ +   s +elk  l tWr+Rlp+ + d+ +w+di+++R+++l+++ +             lll   ++++w   kf++++Rk++ ++ 
+  XP_002682730.1 2855 TLLTDTKkpiSTNELKGFLTTWRDRLPNKWEDIGIWNDIFTWRCHILKKAIErfdqkeefahhraLLL---NETIWSlhKFSKISRKQNFIEP 2944
+                      ****99999999999999*****************************998888******988653333...47777778************** PP
+
+                      TTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---.....................HHHHCCCTCC CS
+             FAT  167 AekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevq..........eptnleeftkllarcylkkG 249 
+                      A ++L++  +  +                  ++e +e + ++ e +++l+++  ++++ l+++          + t+++e+ +l +++y   G
+  XP_002682730.1 2945 ALRMLSETGKLLP----------------TLTSETSEVFVRIIEIIKSLIKDR-RYNDVLDYIesdtiattklKTTQKMEILRLRGEVYSICG 3020
+                      ********66665................446777888888888888888876.677777777555544455566666666666677777777 PP
+
+                      CCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.............S-TCC.HHHHCCT..CCHHHHT CS
+             FAT  250 ewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee............pedls.eyvvpavegflkslsl 329 
+                       + +++q   +s+      + +y++++ + psw k +++wal+ ++ + ++ +++++++            + ++  e++ + +  +l ++++
+  XP_002682730.1 3021 RYDESYQTYAQSVS-YFPQEPKYTSSITTTPSWGKSFFKWALVLDKLFVEKWNSPNRHQrtkqnstkhptlS-MTAlEFAENCIAAYLLAIKY 3111
+                      78888888654444.445566788889999*********************999888888889999999963.44448**************9 PP
+
+                      TTS CS
+             FAT  330 sse 332 
+                      s +
+  XP_002682730.1 3112 SGG 3114
+                      976 PP
+
+  == domain 3  score: -2.9 bits;  conditional E-value: 1.9
+                      CCHHCTCCCHSTTCCCCHHHHHCCHHHHHH CS
+             FAT  274 aateldpswykawhtwalfnfevlskeeek 303 
+                       a  +d    k w ++ +++ e+ +++e k
+  XP_002682730.1 3606 MAKSIDTPILKYWQEMNKACSEHQNELETK 3635
+                      477889999999999999999999988665 PP
+
+>> XP_002680550.1  DNA dependent protein kinase catalytic subunit [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -0.4   0.1      0.32   4.5e+02      57     101 ..    1151    1196 ..    1131    1205 .. 0.84
+   2 ?   -1.0   0.1      0.48   6.9e+02     281     310 ..    3149    3178 ..    3143    3203 .. 0.79
+   3 !   84.9   7.6   3.6e-27   5.1e-24      13     342 ..    3208    3674 ..    3195    3675 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: -0.4 bits;  conditional E-value: 0.32
+                      CCCCCCCTS---SCCCCCHHHHHC.CCCCHHHCHHCCHHCSS---- CS
+             FAT   57 qllvtelsalsgesynraydllvr.lQqlaEleeiiqykqklssse 101 
+                      +++++e s+l+ +s ++ ++l+ + +Q +  +e ii  k++l  +e
+  XP_002680550.1 1151 KIVDNEASSLDQKSSENSLGLVEKtIQLIDHIERIIVAKSHLLIKE 1196
+                      6899******************973688888999*99999877444 PP
+
+  == domain 2  score: -1.0 bits;  conditional E-value: 0.48
+                      CCHSTTCCCCHHHHHCCHHHHHHSSSS.S- CS
+             FAT  281 swykawhtwalfnfevlskeeekkeeeepe 310 
+                      ++ k+ ++w l+ +evls++++++++e+++
+  XP_002680550.1 3149 ECLKKMNSWDLVLQEVLSEVQKRTKSESEQ 3178
+                      6789999*************9997777533 PP
+
+  == domain 3  score: 84.9 bits;  conditional E-value: 3.6e-27
+                      SGHHCCCCT....TSSSS--CCCHCCC.......CHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS- CS
+             FAT   13 qWdsmeeylslmkkdspdkaffeaila.......lhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkls 98  
+                      +W s++ ++++  + + +++++e+ ++       l ++q+++a++++      ++ ++s ls    + ++  l+rlQ l+E+ee+iq+ q++s
+  XP_002680550.1 3208 KWSSLKTFIEESMSSNVKREILETKYSnklanlsLFTHQYEKAKSYVVDSYAEFLMSWSTLSPLAKTGRHLHLQRLQPLVEMEEFIQLWQNQS 3300
+                      69999999999999999999999999999777555559**************************99999999*******************99 PP
+
+                      ..---TTTTTTT----TTS-TT.TGCCCTTTCCCCTCCCHCCCHC................................................ CS
+             FAT   99 ..sseelksllktWrkRlpgvq.ddvevwqdilsvRslvlspied................................................ 140 
+                        +s++l ++lk Wr R+p +  dd++ w++++s+R ++++ i++                                                
+  XP_002680550.1 3301 daKSKNLIRMLKDWRSRYPSSYiDDMNTWDNVISNRNFMYDLISQnlenftekdtsssvllpssrpklrpltssligespsltlslseqedyq 3393
+                      99*****************************************99************************************************ PP
+
+                      ....................HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT..........................TSSCCCHH CS
+             FAT  141 ....................lllkgakaemwlkfanlaRksgrlslAekaLkklleedk........eewlp.............pevvyayl 192 
+                                            ++  ka m l   + aRk+++  +A+++Lk ++  +k            +             + v + ++
+  XP_002680550.1 3394 alagglsniasgtldldtlsKTVTREKAVMFLTVTKAARKQKNNTVAQSYLKVAQAASKkllevtnsA---DssdalsfdfeffkSLVKLLKI 3483
+                      *****************999888889999999**********************99999777664331...2444555665555557777777 PP
+
+                      HHHHH....CCHHHHHSSCCHHHHCCTSSCCC....SS-SS---....................................HH.HHCCCTCCCC CS
+             FAT  193 kylwa....kgeqkealqkLrefvscllekke....elssglevq.........................eptnleeftkll.arcylkkGew 251 
+                      k l +    ++e k+ + kL +f+++++ k +    +      +                          e+t+l  + +     ++ +  e 
+  XP_002680550.1 3484 KALTSgrgsSSETKDVFDKLIKFIKQNATKYGkevnD----ASQTvptsyvltyklldadanssfantlrENTKLGGNPEDYlQTALNRYKES 3572
+                      7666421114447************999998753432....3322345577766677444444444444455555555555433333333333 PP
+
+                      CCCCCCCT.S...-SSCCHHHHCCHHCTC.CCHSTTCCCCHHHHHCCHHHHHHSSSS...............S-TCCHHHHCCT..CCHHHHT CS
+             FAT  252 laalqklnwseekseeilqaysaateldp.swykawhtwalfnfevlskeeekkeeee..............pedlseyvvpavegflkslsl 329 
+                       + ++k  +++++s+ + +    ++ ++p +++k++ + a f++e+l++   +k  ++              ++d+  ++   ve++l+s ++
+  XP_002680550.1 3573 VEIVNK--NTNDDSNVVIKIEDGNNTISPyQSAKIYLKFAIFCDEILKERLGQKYTDDedlvitregssklpSNDI--LAEHIVENMLNSMKY 3661
+                      333344..445556666666665666665244568888************99977776889*******99966666..69999********** PP
+
+                      TTSSTTTCHHHHH CS
+             FAT  330 ssekslqdllRlL 342 
+                      ++++++  ++RlL
+  XP_002680550.1 3662 YNKEARDRFPRLL 3674
+                      ************9 PP
+
+>> XP_002682330.1  serine/threonine-protein kinase [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   50.1   9.7   1.4e-16     2e-13       6     342 ..    1282    1650 ..    1278    1651 .. 0.81
+   2 ?   -3.4   0.3       2.6   3.7e+03     167     313 ..    1752    1800 ..    1729    1809 .. 0.43
+
+  Alignments for each domain:
+  == domain 1  score: 50.1 bits;  conditional E-value: 1.4e-16
+                      CCCCTSSSGHHCCCCT.....TSSSS--CCCHCCCCHH--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCCCHHHCHHCCHHCSS CS
+             FAT    6 eaaWrlgqWdsmeeylslmk.kdspdkaffeailalhrnqfdeaeeliekarqllvtelsalsgesynraydllvrlQqlaEleeiiqykqkl 97  
+                      e  W+    d++e+y s  +  +++++++f+ ++al +++   ++e +++ r+ + + +      s+ +a + l +lQ l+Ele + ++k  +
+  XP_002682330.1 1282 ENRWKTLTIDNLERYSSHSSnITGFNETVFNSLYALVKGDSALFKETLSNHRKYISNII------SVGNAQSNLAKLQVLSELEIAWSLKWTE 1368
+                      66799999999999999888679999999999999999999999999999999876554......55666689*****************998 PP
+
+                      -...---TTTTTTT----TT......S-TT.TGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT. CS
+             FAT   98 s...sseelksllktWrkRl......pgvq.ddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedke 180 
+                           ++e + +    ++ l       g++ d++   + ++ +R+ +l   ++   ++  +++  +f+++aRk g++ lA ++ ++l  + + 
+  XP_002682330.1 1369 IgnvALKENDII----DNNLglfmgtNGIKnDSFTEVETLVNFRASLLRALKK---NELAIKHESEFISIARKEGQFTLATNLANRLSVQMQ- 1453
+                      877655555555....4444444466889889****************99988...788888888**********************33333. PP
+
+                      ....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCC.................SS-SS---.....................HH.HHCC CS
+             FAT  181 ewlppevvyaylkylwakgeqkealqkLrefvscllekke.................elssglevq..........eptnleeftkll.arcy 245 
+                      + ++p+ +++++k+lw++g+ + a+  Lr  +++l ++k+                                       ++++ +++  a++ 
+  XP_002682330.1 1454 SGSTPPSILEEAKILWSSGDTSGAIHILRFLIQQLEKRKQhdsplyfkacyllgkwlG-------DsktdsyeniiRFLQFSKEKASSkAKAC 1539
+                      34449****************************8888877655655555555555551.......0445545556655555555555559*** PP
+
+                      CTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC.CCHHHHHCCHHHHHHSSSS...............S-TCCHHHHCCT..C CS
+             FAT  246 lkkGewlaalqklnwseekseeilqaysaateldpswykawht.walfnfevlskeeekkeeee..............pedlseyvvpavegf 323 
+                      +  G++  +l++ n  +++++e  ++y++  e ++++y+ +++  + +n++ ++   ++k+++               ++  +e+ + ++e++
+  XP_002682330.1 1540 FQMGKYIDSLYQ-NIVRKQNSEDSKSYRELLEKNKELYQQYAQkRKELNDKDVTSDFRSKMNHLqkitdldqkeqvliQSRQEEFRTLVLENY 1631
+                      ************.899999**********************996566777777777666665556777777777788766666899******* PP
+
+                      CHHHHTTTSSTTTCHHHHH CS
+             FAT  324 lkslslssekslqdllRlL 342 
+                      l + s +++ ++  ++R+L
+  XP_002682330.1 1632 LLASSTNDNYDFVTIPRIL 1650
+                      *****************99 PP
+
+  == domain 2  score: -3.4 bits;  conditional E-value: 2.6
+                      TTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT CS
+             FAT  167 AekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqkln 259 
+                      A+ ++ kl++e+k                                                                                
+  XP_002682330.1 1752 ANTLIDKLKKENK-------------------------------------------------------------------------------- 1764
+                      3333333333333................................................................................ PP
+
+                      .S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.S-TCC CS
+             FAT  260 wseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeeepedls 313 
+                                    + +e   ++ +a+ ++a   f +ls+e++++++ +p++ls
+  XP_002682330.1 1765 --------------QLIESYATLMDAYIQLA---FLQLSEEQKREQS-TPKKLS 1800
+                      ..............33333333333333333...2233333222222.244444 PP
+
+>> XP_002673624.1  tetratricopeptide repeat family protein [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.1   0.7   1.5e-06    0.0021     203     303 ..       4      97 ..       2     114 .. 0.85
+   2 !   10.1   0.0   0.00021       0.3     234     288 ..     198     245 ..     156     258 .. 0.86
+   3 ?    1.5   0.3     0.087   1.2e+02     204     275 ..     293     375 ..     276     383 .. 0.44
+
+  Alignments for each domain:
+  == domain 1  score: 17.1 bits;  conditional E-value: 1.5e-06
+                     HHSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCC CS
+             FAT 203 ealqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevl 297
+                     e+ ++L++++++  e+  ++ ++ + q  +n+ ++  +l++ y  ++ +  al++        +  +   ++a+ ++p+  +aw + al+nfe++
+  XP_002673624.1   4 EQTSELKKSIEKINEEILKIEKDYQEQGDSNKVKLVSELSESYVNRATFHIALED-------FKSGMDDLTQAVLFNPGNSQAWLMRALMNFEKF 91 
+                     5667777777765555447777778889***************************.......899****************************** PP
+
+                     HHHHHH CS
+             FAT 298 skeeek 303
+                      +++++
+  XP_002673624.1  92 GNLQKS 97 
+                     999776 PP
+
+  == domain 2  score: 10.1 bits;  conditional E-value: 0.00021
+                     ......HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC CS
+             FAT 234 leeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawht 288
+                     ++++ k+la +y  +G+  ++l++       +e++l  +  a+++d s  +aw +
+  XP_002673624.1 198 KDKLPKELANVYVYRGSLYEQLSQ-------PEKALDDFNNAIKIDASNGDAWSS 245
+                     678999******************.......**********************87 PP
+
+  == domain 3  score: 1.5 bits;  conditional E-value: 0.087
+                     HSSCCHHHHCCTSSCCCSS-SS---...........HHHHCCCTCCC....................CCCCCCCCT.S...-SSCCHHHHCC CS
+             FAT 204 alqkLrefvscllekkeelssglevqeptnleeftkllarcylkkGe....................wlaalqklnwseekseeilqaysaa 275
+                     al+ ++++++ l+++ e+         ++ lee  k+ + +y  +Ge                     l ++++l  +ee+ +++l++y +a
+  XP_002673624.1 293 ALKDINKSIE-LTSSDEK--------LKSALEESLKVRGAIYQNLGEfskaiedfqraielepnnydVLISIGNLYLNEENFNQALEYYEKA 375
+                     3333333333.2222222........344444444444555555555222222222222233344444555555555555555555555555 PP
+
+>> XP_002675251.1  uncharacterized protein NAEGRDRAFT_50399 [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.6   0.1      0.08   1.1e+02      16      60 ..     108     153 ..      65     157 .. 0.81
+   2 ?    2.8   0.1     0.035        50     202     286 ..     258     359 ..     217     361 .. 0.71
+   3 !   12.9   0.6     3e-05     0.043     118     214 ..     507     594 ..     497     607 .. 0.79
+   4 !   10.1   2.5   0.00021       0.3     145     282 ..     604     745 ..     595     825 .. 0.73
+   5 !    5.9   6.5    0.0038       5.5     100     227 ..     848     987 ..     832    1128 .. 0.78
+   6 ?    1.1   0.1      0.11   1.6e+02     148     180 ..    1183    1218 ..    1153    1258 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 1.6 bits;  conditional E-value: 0.08
+                     HCCCCT....TSSSS--.CCCHCCCCHH--CCHCHHCCCHCCCCCC CS
+             FAT  16 smeeylslmkkdspdka.ffeailalhrnqfdeaeeliekarqllv 60 
+                     +++ ++++ k   ++ a +  a+l lh ++fdea++l+e  ++l++
+  XP_002675251.1 108 NLKTFVEMEKGSAQNSAkLQAAMLYLHMSEFDEARSLLEDEIELVD 153
+                     4555554444444444457788899**************9999987 PP
+
+  == domain 2  score: 2.8 bits;  conditional E-value: 0.035
+                     HHHSSCCHHHHCCTSSCCC...........SS-SS---................HH.HHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCT CS
+             FAT 202 kealqkLrefvscllekke...........elssglevq.....eptnleeftkll.arcylkkGewlaalqklnwseekseeilqaysaateld 279
+                      +++++L ++++++ +k+            +l++g e       +  nl ++++ + a  + ++G  +  ++++ +se++ +++l+   +++e +
+  XP_002675251.1 258 VNQFNELFKSITKKESKNDklcftlaktfySLTEGREELlkrclDLLNLAKKANPIeADYFILQGYIQLTMRDFINSETSFRKALELNESSIEAN 352
+                     5566666666666666655666666665553333333225557788899********************************************** PP
+
+                     CCCHSTT CS
+             FAT 280 pswykaw 286
+                     +++yk++
+  XP_002675251.1 353 KGLYKCF 359
+                     ***9975 PP
+
+  == domain 3  score: 12.9 bits;  conditional E-value: 3e-05
+                     TTGCCCTTTCCCCTCCCHCCCHCHHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCCHHHH CS
+             FAT 118 qddvevwqdilsvRslvlspiedlllkgakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkLrefv 212
+                      +d+e  q+ils R l ++ ++         ++ +  a++a  + ++ lA   L ++  +d +  ++ ++ + ++k+l akge k+a+q+L+  +
+  XP_002675251.1 507 MRDFESSQRILS-RVLQFDNKS--------SQAHILLAQIAHHQENYALATTELERAISYDFSVTKQCDYNLLKAKVLAAKGETKDAIQNLERIL 592
+                     566666666665.544444444........4899999************************955555899*********************8877 PP
+
+                     CC CS
+             FAT 213 sc 214
+                     + 
+  XP_002675251.1 593 KT 594
+                     74 PP
+
+  == domain 4  score: 10.1 bits;  conditional E-value: 0.00021
+                     S-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.....TSSCCCHHHHHHHCCHHHHHSSCC.......HHHHCCTSSCCC....SS-SS--- CS
+             FAT 145 gakaemwlkfanlaRksgrlslAekaLkklleedkeewlppevvyaylkylwakgeqkealqkL.......refvscllekke....elssglev 228
+                     +  +++ l+ +++  + +++  A k++ ++le+ +  +++ ++++a++++++++++ ++a++ L         f   ++e ++    ++ +  ++
+  XP_002675251.1 604 DELVSIFLELSSIHSRRNEYVEAAKYIEQALEKFQRTEQEGRIIIANARLSISRNDFESAISILqsvpadsGYFMLAKSEIARiylnRNDKRAYA 698
+                     567788899999999999999999999999888885555579**********************8888777444444444444433344444455 PP
+
+                     ...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCC CS
+             FAT 229 qeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpsw 282
+                     +++++l e++++ a  yl +G+   ++q+       +e++ +ay++a  ld++ 
+  XP_002675251.1 699 KCYEELVEKATKSASGYLCLGDAYMKIQE-------PEKAIEAYQEALSLDQKN 745
+                     58999999999999999999996666666.......566666666665555443 PP
+
+  == domain 5  score: 5.9 bits;  conditional E-value: 0.0038
+                     --TTTTTTT----TTS-TTTGCCCTTTCCCCTCCCHCCCHC................HHCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCT CS
+             FAT 100 seelksllktWrkRlpgvqddvevwqdilsvRslvlspied................lllkgakaemwlkfanlaRksgrlslAekaLkklleed 178
+                     +e+ ks+  ++  Rl+++q+d    ++ ++  ++ ++  e                 l + +++++  l  a+l+ k + ++ ++++ ++ll+ +
+  XP_002675251.1 848 LEQAKSMQVKILSRLQNSQQDTLYSEKQITA-KICYELGEYhlrsdtkkamalfregLQYDETHEKSMLALAELSLKDNDIESCHSYCTSLLRLN 941
+                     5555555556666666666444444433333.2333333335555566777777777889999***********************999999999 PP
+
+                     T.....TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS-- CS
+             FAT 179 keewlppevvyaylkylwakgeqkealqkLrefvscllekkeelssgle 227
+                     k   ++ ++++  + ++  +++ ++a+++ + f++++ ++ ++l + ++
+  XP_002675251.1 942 K---AHEQATIMMADIMFRNNKFEDAIEHFQAFLQNKPNNYKALVKLIT 987
+                     9...445778999999*******************98888775554444 PP
+
+  == domain 6  score: 1.1 bits;  conditional E-value: 0.11
+                      TTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT.... CS
+             FAT  148 aemwlkfanlaRksgrlslAekaLkklleedk...e 180 
+                      ++ wl  a++   s  +++A++++kk+le +k   +
+  XP_002675251.1 1183 ERGWLLLAEINIASSKTDVAQELIKKVLEINKscsK 1218
+                      556899999999999999999999999988884443 PP
+
+>> XP_002681799.1  uncharacterized protein NAEGRDRAFT_46164 [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    4.4   3.8     0.011        16     201     290 ..      67     188 ..      19     302 .. 0.57
+   2 !   12.2   0.2   4.7e-05     0.067     142     229 ..     407     525 ..     371     542 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 4.4 bits;  conditional E-value: 0.011
+                     HHHHSSCCHHHHCCTSSCCCSS-SS---................................HH.HHCCCTCCC..........CCCCCCCCT.S.. CS
+             FAT 201 qkealqkLrefvscllekkeelssglevq.....................eptnleeftkll.arcylkkGe..........wlaalqklnwsee 263
+                       e++ ++++ v++++++ +++++++++                       + +l++++k + a +y++++             +a++ ++++ +
+  XP_002681799.1  67 DPETIRSIHQRVQEYSSRVQQAKDEKPNAsfltelnegeqkdlascynnlGYYCLQQLNKPKeALFYFLQSIqfnynndpiiLFNAASLFEREGK 161
+                     56777777777777777776444444444442111112222244444444555555555555555555555555555555553444444444444 PP
+
+                     .-SSCCHHHHCCHHCTCCCHSTTCCCC CS
+             FAT 264 kseeilqaysaateldpswykawhtwa 290
+                     +++ + + y +a+++dp   +a  ++a
+  XP_002681799.1 162 RPDSAAELYMRAIRIDPYFVDAKVHLA 188
+                     555555555555555555555555555 PP
+
+  == domain 2  score: 12.2 bits;  conditional E-value: 4.7e-05
+                     HCCS-STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT..................T..................SSCCCHHHHHHHCCHHHHHS CS
+             FAT 142 llkgakaemwlkfanlaRksgrlslAekaLkklleedk.eewlp............p..................evvyaylkylwakgeqkeal 205
+                     +  + ka+ +++ a l++  g+++ ++++L ++ +  k ++ +             p                  + ++ay+ +l+++++ k+al
+  XP_002681799.1 407 MDVNEKAKFYMNCAILSNGMGQVDESISLLERAFDMTKgKDTQIiacmalymqeksPqvsdllfkrvisleptefQHYIAYSSFLHHQSRTKDAL 501
+                     66667777788888888888888888888888877777633333444433333333255666666777777777789****************** PP
+
+                     SCCHHHHCCTSSCCCSS-SS---. CS
+             FAT 206 qkLrefvscllekkeelssglevq 229
+                     + L+  ++++ ++ke+l +++e +
+  XP_002681799.1 502 SLLERTIKKYPQMKEQLEKQMELI 525
+                     **************9888888877 PP
+
+>> XP_002679852.1  uncharacterized protein NAEGRDRAFT_47422 [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.3   0.2   1.4e-06     0.002     184     304 ..     423     558 ..     400     632 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 17.3 bits;  conditional E-value: 1.4e-06
+                     ...TSSCCCHHHHHHH..CCHHHHHSSCCHHHHCCTSSCCC.SS-SS---.....................HH...HHCCCTCCCCCCCCCCCT. CS
+             FAT 184 p..pevvyaylkylwa..kgeqkealqkLrefvscllekke.elssglevq..........eptnleeftkll...arcylkkGewlaalqklnw 260
+                     +  +  v+++lk +++  kg+ k+alq+L  +++++++ +  +++ g+  q            + le++ ++l   a  ylk+G    +++k   
+  XP_002679852.1 423 DpnSGHVLEQLKGFLHlyKGNTKQALQCLDNSLKSHFSIPViNAKLGILEQmgstfiliaeYTKILEKYGNSLddlAHYYLKRGIIIYQVGK--- 514
+                     135577888999555422788******************99977777777778888899963333445554433239********9999999... PP
+
+                     S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHS CS
+             FAT 261 seekseeilqaysaateldpswykawhtwalfnfevlskeeekk 304
+                     ++e++ +++  +++a el p++  ++ ++++++ e+ + e+ kk
+  XP_002679852.1 515 TKEEKLKAFPDFLKARELEPNCLVIYVYLVQYYAEIGEIEKAKK 558
+                     4577899999************************9987776554 PP
+
+>> XP_002683236.1  cell division cycle protein 27 [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.0   0.0       1.9   2.8e+03      41      83 ..      63      80 ..      41      93 .. 0.49
+   2 !   16.3   0.4   2.6e-06    0.0037     235     330 ..     536     641 ..     454     651 .. 0.62
+   3 ?   -1.5   0.0       0.7     1e+03     247     296 ..     650     704 ..     638     722 .. 0.61
+
+  Alignments for each domain:
+  == domain 1  score: -3.0 bits;  conditional E-value: 1.9
+                    HH.--CCHCHHCCCHCCCCCCCCCTS---SCCCCCHHHHHCCCC CS
+             FAT 41 hr.nqfdeaeeliekarqllvtelsalsgesynraydllvrlQq 83
+                     + + +++ae+++ k+                          + 
+  XP_002683236.1 63 IKlEHYSDAERYLRKC--------------------------HE 80
+                    2223333333333333..........................33 PP
+
+  == domain 2  score: 16.3 bits;  conditional E-value: 2.6e-06
+                     .....HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHHHHHSSSS.................S-TCC CS
+             FAT 235 eeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlskeeekkeeee................pedls 313
+                      + ++l   +y++ G  +a       ++++ +++lq+y+ a+++d++ y+aw+  + ++f++ +++    + ++                ++++ 
+  XP_002683236.1 536 TKVNNLFTYAYTLAGHERA-------ANDDLDGALQCYRHAIRIDDRHYNAWYGIGTVYFRQEKYQLAMYHFSKaisinskssvlycyagMAEAA 623
+                     2222333445555555443.......44459***********************99999987666644422222444566666667777755555 PP
+
+                     .HHHHCCT..CCHHHHTT CS
+             FAT 314 .eyvvpavegflkslsls 330
+                      ++  +a++ f  +++ +
+  XP_002683236.1 624 cNHFESAIKMFTCAIKIH 641
+                     577777777777776655 PP
+
+  == domain 3  score: -1.5 bits;  conditional E-value: 0.7
+                     TCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCC.....CCHHHHHC CS
+             FAT 247 kkGewlaalqklnwseekseeilqaysaateldpswykawht.....walfnfev 296
+                     kk+  l +lqk n++ e+ +e  +   +  ++  ++ k++++     +al++f++
+  XP_002683236.1 650 KKANALISLQKYNEALEELKELKHMVPKESQIYFTCGKIYASrkqkdLALYEFNI 704
+                     5555556666655555555555555555555555555555555555555555555 PP
+
+>> XP_002679878.1  uncharacterized protein NAEGRDRAFT_65065 [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.8   0.0      0.87   1.2e+03     317     333 ..     638     656 ..     633     665 .. 0.80
+   2 !    9.2   0.3   0.00038      0.54     260     300 ..     969    1009 ..     913    1066 .. 0.74
+   3 !    8.4   0.1   0.00066      0.95     223     299 ..    1041    1110 ..    1015    1126 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: -1.8 bits;  conditional E-value: 0.87
+                     HCCT..CCHHHHTTTS..S CS
+             FAT 317 vpavegflkslslsse..k 333
+                     v+av+ + ks++l+ +  +
+  XP_002679878.1 638 VNAVSDYTKSIKLNPQysN 656
+                     89***********998433 PP
+
+  == domain 2  score: 9.2 bits;  conditional E-value: 0.00038
+                      .S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHHH CS
+             FAT  260 wseekseeilqaysaateldpswykawhtwalfnfevlske 300 
+                      +++e    + + y +   ldp++ykaw+++a+++     ++
+  XP_002679878.1  969 KAKEYLTLAIEDYNKCLSLDPNCYKAWYNMASLYKSENPEK 1009
+                      45555566778899999**************9887655444 PP
+
+  == domain 3  score: 8.4 bits;  conditional E-value: 0.00066
+                      -SS---...........HHHHCCCTCCCCCCCCCCCT.S...-SSCCHHHHCCHHCTCCCHSTTCCCCHHHHHCCHH CS
+             FAT  223 ssglevqeptnleeftkllarcylkkGewlaalqklnwseekseeilqaysaateldpswykawhtwalfnfevlsk 299 
+                      ++++  ++ t++ ++  l   cy +++     +++        + ++  +++a+++dp++ +a++++a++n ++ +k
+  XP_002679878.1 1041 QKEKAIIDFTQCITLDPLNTTCYILRANTYLDMNN-------LQSAEMDFKQAIHVDPNCSSAYYELAKLNMNNEEK 1110
+                      55555556666777777778888888888888888.......789999*********************99876555 PP
+
+>> XP_002678554.1  uncharacterized protein NAEGRDRAFT_48218 [Naegleria gruberi]
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.8   0.4   6.4e-05     0.091     147     253 ..     132     239 ..      55     248 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 11.8 bits;  conditional E-value: 6.4e-05
+                     STTCCCCCCCCHCHHHHCCSTTHHCCCCCHCTT........TSSCCCHHHHHHHCCHHHHHSSCCHHHHCCTSSCCCSS-SS---.......... CS
+             FAT 147 kaemwlkfanlaRksgrlslAekaLkklleedkeewlp...pevvyaylkylwakgeqkealqkLrefvscllekkeelssglevqeptnleeft 238
+                     ++++ l++a+   k g +s A ++L  ++e++ke+  +    ++ + ++k  ++ +e+++  + L ++v++++ +  +l +  +++ ++ +e+f+
+  XP_002678554.1 132 QTACQLNIAQCLMKVGKYSKALDHLDTAEEYNKEYKDKpseKKILFRRAKCYLDGIEVEKG-KDLMKQVKEKYPEDPALIKLVDAELKKYKEQFK 225
+                     57789999*************************555444558*********9998888776.555566666666666999999999999999999 PP
+
+                     .HHHHCCCTCCCCCC CS
+             FAT 239 kllarcylkkGewla 253
+                       l ++  +kG++ +
+  XP_002678554.1 226 SDL-QNSSFKGMFNK 239
+                     998.77888888754 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (343 nodes)
+Target sequences:                      15711  (7868105 residues searched)
+Passed MSV filter:                      1635  (0.104067); expected 314.2 (0.02)
+Passed bias filter:                      400  (0.0254599); expected 314.2 (0.02)
+Passed Vit filter:                        35  (0.00222774); expected 15.7 (0.001)
+Passed Fwd filter:                        11  (0.000700146); expected 0.2 (1e-05)
+Initial search space (Z):              15711  [actual number of targets]
+Domain search space  (domZ):              11  [number of targets reported over threshold]
+# CPU time: 0.14u 0.10s 00:00:00.24 Elapsed: 00:00:00.10
+# Mc/sec: 24609.81
+//
+[ok]
