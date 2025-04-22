@@ -55,7 +55,8 @@ ExcSubset <- ExcSubset %>% filter(Organism.Name != "Trypanosoma brucei equiperdu
                                   Organism.Name != "Streblomastix strix",
                                   Organism.Name != "Aduncisulcus paluster",
                                   Organism.Name != "Monocercomonoides exilis",
-                                  Organism.Name != "Paratrimastix pyriformis")
+                                  Organism.Name != "Paratrimastix pyriformis",
+                                  Organism.Name != "Novymonas esmeraldas")
 
 
 ARSubset <- rbind(AlvSubset,RhizSubset)
