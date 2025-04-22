@@ -112,6 +112,14 @@ Mpal2 <- c(
 )
 
 
+EMpal2 <- c(
+  "Autotrophic" = "#3CBA26",
+  "Endosymbiotic" = "purple",
+  "Heterotroph" = "#A87142",
+  "Mixotroph" = "#63E3C5",
+  "Parasite" = "#FE4A49" 
+)
+
 #Tomato
 #FE4A49
 
@@ -428,9 +436,9 @@ ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 1.8, nudge
 
 experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 15.5, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
-                    values = Mpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiote"),
+                    values = EMpal2,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiote"),
                     na.value = "grey",
                     drop = FALSE)+
   theme(
@@ -521,9 +529,9 @@ ARSavePlot
 
 experimentalARplot <- gheatmap(ARSavePlot,mdf1, offset = 11, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
-                    values = Mpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
                     na.value = "grey",
                     drop = FALSE)+
   theme(
