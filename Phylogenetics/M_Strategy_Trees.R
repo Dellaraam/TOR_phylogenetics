@@ -310,10 +310,15 @@ mdf <- column_to_rownames(Msubset, var = "Organism.Name")
 AlveolataTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/TruncatedAlvTreeP.phy")
 AlveolataTree$tip.label <- gsub("'","", AlveolataTree$tip.label)
 
+AlveolataTree <- move.lineage(AlveolataTree, 135, 169, rescale = TRUE)
+AlveolataTree <- move.lineage(AlveolataTree, 134, 142, rescale = TRUE)
+AlveolataTree <- move.lineage(AlveolataTree, 169, 141, rescale = TRUE)
+
+
 #Create ggtree object
 AlvP <- ggtree(AlveolataTree, branch.length = "none", ladderize = FALSE)
 AlvP <- AlvP  %<+% Alveolata
-
+AlvP + geom_text(aes(label = node))+geom_tiplab()+geom_nodelab()
 
 #Alv Layer 1
 AlvLayer1 <- AlvP + xlim(NA,+20) + geom_tiplab(size = 1.8, show.legend = TRUE, nudge_x = .3, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
@@ -505,6 +510,13 @@ ARTree$tip.label <- gsub("'","", ARTree$tip.label)
 AR <- MasterTable %>% filter(Super.Group == "Alveolata" | Super.Group == "Rhizaria")
 AR <- AR %>% relocate(Organism.Name)
 
+
+
+ARTree <- move.lineage(ARTree, 138, 146)
+ARTree <- move.lineage(ARTree, 138, 173)
+ARTree <- move.lineage(ARTree, 172, 144)
+ARTree <- move.lineage(ARTree, 146, 145)
+
 subsetdataframe4 <- AR %>% select(Organism.Name, 
                                         SIN1, 
                                         RICTOR, 
@@ -523,7 +535,7 @@ mdf1 <- column_to_rownames(Msubset1, var = "Organism.Name")
 
 ARTP <- ggtree(ARTree, branch.length = "none", ladderize = FALSE)
 ARTP <- ARTP  %<+% AR
-ARTP
+ARTP+geom_tiplab2()+geom_text(aes(label=node))
 
 
 ARHeat <- ARTree %>% ggtree(branch.length = "none", ladderize = FALSE)+xlim(NA,30)
@@ -555,7 +567,7 @@ ARSavePlot <- ARHeatPlot %<+% AR+geom_tiplab(size = 1.8, nudge_x = .3, linesize 
 
 ARSavePlot
 
-experimentalARplot <- gheatmap(ARSavePlot,mdf1, offset = 11, width = .15, colnames = FALSE)+
+experimentalARplot <- gheatmap(ARSavePlot,mdf1, offset = 12, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
                     values = EMpal2,
