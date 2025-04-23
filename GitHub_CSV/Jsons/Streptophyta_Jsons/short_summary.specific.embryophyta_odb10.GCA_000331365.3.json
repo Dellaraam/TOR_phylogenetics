@@ -1,0 +1,66 @@
+{
+    "parameters": {
+        "out_path": "/share/korflab/project/torture/Analysis/BUSCO_Results/Streptophyta",
+        "cpu": "40",
+        "force": "True",
+        "restart": "False",
+        "quiet": "False",
+        "download_path": "/share/korflab/project/torture/Analysis/busco_downloads",
+        "datasets_version": "odb10",
+        "offline": "False",
+        "download_base_url": "https://busco-data.ezlab.org/v5/data/",
+        "auto-lineage": "False",
+        "auto-lineage-prok": "False",
+        "auto-lineage-euk": "False",
+        "use_augustus": "False",
+        "use_miniprot": "False",
+        "use_metaeuk": "False",
+        "skip_bbtools": "False",
+        "batch_mode": "False",
+        "tar": "False",
+        "opt-out-run-stats": "False",
+        "in": "/share/korflab/project/torture/Analysis/Proteomes/part1/GCA_000331365.3/protein.faa",
+        "out": "GCA_000331365.3",
+        "mode": "proteins",
+        "lineage_dataset": "/share/korflab/project/torture/Analysis/busco_downloads/lineages/embryophyta_odb10",
+        "main_out": "/share/korflab/project/torture/Analysis/BUSCO_Results/Streptophyta/GCA_000331365.3",
+        "lineage_results_dir": "run_embryophyta_odb10",
+        "domain": "eukaryota",
+        "orthodb_version": "10.1"
+    },
+    "lineage_dataset": {
+        "name": "embryophyta_odb10",
+        "creation_date": "2024-01-08",
+        "number_of_buscos": "1614",
+        "number_of_species": "50"
+    },
+    "versions": {
+        "hmmsearch": 3.1,
+        "python": [
+            3,
+            6,
+            13,
+            "final",
+            0
+        ],
+        "busco": "5.8.0"
+    },
+    "results": {
+        "one_line_summary": "C:21.6%[S:19.8%,D:1.8%],F:22.0%,M:56.4%,n:1614",
+        "Complete percentage": 21.6,
+        "Complete BUSCOs": 349,
+        "Single copy percentage": 19.8,
+        "Single copy BUSCOs": 320,
+        "Multi copy percentage": 1.8,
+        "Multi copy BUSCOs": 29,
+        "Fragmented percentage": 22.0,
+        "Fragmented BUSCOs": 355,
+        "Missing percentage": 56.4,
+        "Missing BUSCOs": 910,
+        "n_markers": 1614,
+        "avg_identity": null,
+        "domain": "eukaryota",
+        "internal_stop_codon_count": 0,
+        "internal_stop_codon_percent": 0
+    }
+}
