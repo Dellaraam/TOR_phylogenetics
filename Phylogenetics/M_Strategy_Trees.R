@@ -15,15 +15,6 @@ MasterTable %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICT
   #geom_text_repel(aes(label = Organism.Name), size = 2.2, show.legend = FALSE)+
   facet_wrap(~Super.Group,nrow = 1)
 
-MasterTable %>% ggplot()+
-  geom_boxplot(aes( x = Super.Group, y = C.score),notch = FALSE)+
-  theme_minimal()+
-  labs(title = "Completeness Score Distribution",
-       subtitle = "By Associated Super Group")+
-xlab(label = "Super Group")+
-ylab(label = "Completeness Score")
-
-MasterTable %>% select(Super.Group, Organism.Name, RICTORDomain, SIN1Domain, RAPTORDomain, LST8Domain, TORDomain)%>%
 
 
 
@@ -777,3 +768,37 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapSAR.png",
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BoxPlotCscore <- MasterTable %>% ggplot()+
+  stat_boxplot(aes(Super.Group, C.score), geom = "errorbar", linetype = 1, width = 0.5)+
+  geom_boxplot(aes( x = Super.Group, y = C.score),notch = FALSE, outlier.shape = NA)+
+  theme_bw()+
+  labs(title = "Completeness Score Distribution",
+       subtitle = "By Associated Super Group")+
+  xlab(label = "Super Group")+
+  ylab(label = "Completeness Score")
+
+
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CscorePlot.png",
+       plot = BoxPlotCscore,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
