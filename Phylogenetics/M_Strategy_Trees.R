@@ -20,10 +20,17 @@ MasterTable %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICT
 # 
 
 StramSubset <- MasterTable %>% filter(Super.Group == "Stramenopiles")
-StramSubset <- StramSubset %>% filter(C.score > 90)%>%
+StramSubset <- StramSubset %>%
   filter(Organism.Name != "Phytophthora citrophthora",
          Organism.Name != "Aphanomyces stellatus",
-         Organism.Name != "Minidiscus trioculatus")
+         Organism.Name != "Minidiscus trioculatus",
+         Organism.Name != "Labyrinthula sp. Ha",
+         Organism.Name != "Cafeteria roenbergensis",
+         Organism.Name != "Phytophthora fragariaefolia",
+         Organism.Name != "Phytophthora lilii",
+         Organism.Name != "Peronosclerospora sorghi",
+         Organism.Name != "Nothophytophthora sp. Chile5",
+         Organism.Name != "Ochromonadaceae sp. CCMP2298")
   
 
 AlvSubset <- MasterTable %>% filter(Super.Group == "Alveolata")
