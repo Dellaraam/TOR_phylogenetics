@@ -256,6 +256,14 @@ StramLayer3 <- gheatmap(StramLayer2,mdf, offset = 12, width = .15, colnames = FA
 
 StramLayer3
 
+
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/StramenopileHeatPlotMetaPlot.pptx",
+       figure = StramLayer3,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeHeatMapStramenopileTruncated.png",
        plot = StramLayer3,
        width = 3840,
@@ -434,7 +442,7 @@ ExcavataTP <- ExcavataTP  %<+% Excavata
 
 ExcavataHeat <- ExcavataTree %>% ggtree(branch.length = "none", ladderize = FALSE)+xlim(NA,40)
 
-ExcavataHeatPlot <- gheatmap(ExcavataHeat,df3, offset = 7, width = .8, font.size = 2, colnames = FALSE)+
+ExcavataHeatPlot <- gheatmap(ExcavataHeat,df3, offset = 8, width = 1.5, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -467,7 +475,7 @@ ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 1.8, nudge
   labs(title = "Excavates Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 15.5, width = .15, colnames = FALSE)+
+experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 22.5, width = .25, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiote"),
                     values = EMpal2,
@@ -485,7 +493,11 @@ experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 15.5, width = .1
 experimentalExcplot
 
 
-
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ExcHeatPlotMetaPlot.pptx",
+       figure = experimentalExcplot,
+       units = "inches",
+       width = 10,
+       height = 7)
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapExcavates.png",
        plot = ExcavataSavePlot,
        width = 3840,
@@ -611,6 +623,11 @@ experimentalARplot
 #        dpi = 320,
 #        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/AlvRhizHeatPlotMetaPlot.pptx",
+       figure = experimentalARplot,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataRhizaria.png",
        plot = ARSavePlot,
@@ -794,23 +811,5 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapSAR.png",
 
 
 
-BoxPlotCscore <- MasterTable %>% ggplot()+
-  stat_boxplot(aes(Super.Group, C.score), geom = "errorbar", linetype = 1, width = 0.5)+
-  geom_boxplot(aes( x = Super.Group, y = C.score),notch = FALSE, outlier.shape = NA)+
-  theme_bw()+
-  labs(title = "Completeness Score Distribution",
-       subtitle = "By Associated Super Group")+
-  xlab(label = "Super Group")+
-  ylab(label = "Completeness Score")
 
-
-
-
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CscorePlot.png",
-       plot = BoxPlotCscore,
-       width = 3840,
-       height = 2160,
-       units = "px",
-       dpi = 320,
-       limitsize = FALSE)
 
