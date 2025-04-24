@@ -7,32 +7,6 @@
 MasterTable <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")
 MasterTable <- select(MasterTable, -X)
 
-MasterTable %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICTORDomain, color = M.Strategy, size = C.score))+
-  geom_jitter()+
-  labs(title = "RICTOR Domain Score Distribution")+
-  xlab(label = "RICTOR H/M/L")+
-  ylab(label = "RICTOR Domain Scores")+
-  #geom_text_repel(aes(label = Organism.Name), size = 2.2, show.legend = FALSE)+
-  facet_wrap(~Super.Group,nrow = 1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Random Assortment of truncations for truncated trees to be generated from NCBI Common Tree
@@ -85,6 +59,8 @@ ExcSubset <- ExcSubset %>% filter(Organism.Name != "Trypanosoma brucei equiperdu
                                   Organism.Name != "Paratrimastix pyriformis",
                                   Organism.Name != "Novymonas esmeraldas")
 
+ChloroRhoSubset <- MasterTable %>% filter(Super.Group == "Chlorophyta" | Super.Group == "Rhodophyta")
+
 
 ARSubset <- rbind(AlvSubset,RhizSubset)
 
@@ -93,6 +69,7 @@ write.table(StramSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetic
 write.table(AlvSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedAlv.txt", sep = "\t", row.names = F, col.names = F)
 write.table(ARSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedAR.txt", sep = "\t", row.names = F, col.names = F)
 write.table(ExcSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedExc.txt", sep = "\t", row.names = F, col.names = F)
+write.table(ChloroRhoSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedChloroRho.txt", sep = "\t", row.names = F, col.names = F)
 
 #Palettes-----------------------------------------------------------------------
 pal <- c(
@@ -644,6 +621,67 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeARMetHeat
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+
+# Chlorophyta Rhodophyta--------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
