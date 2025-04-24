@@ -625,15 +625,93 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeARMetHeat
 
 # Chlorophyta Rhodophyta--------------------------------------------------------
 
+#Chlorophyta Rhodophyta Tree
+#Truncated is a relic name
+ChlorRhoTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/TruncatedChloroRhoTreeP.phy")
+ChlorRhoTree$tip.label <- gsub("'","", ChlorRhoTree$tip.label)
+ChlorRhoTree$tip.label[1]
+
+#Chlorophyta Rhodophyta Data to add to the tree
+ChlorRho <- MasterTable %>% filter(Super.Group == "Rhodophyta" | Super.Group == "Chlorophyta")
+ChlorRho <- ChlorRho %>% relocate(Organism.Name)
+ChlorRho$Organism.Name
+ChlorRho$Organism.Name <- gsub("'","", ChlorRho$Organism.Name)
+
+#TOR Components subsetted data for Chlorophyta/Rhodophyta
+subsetdataframe6 <- ChlorRho %>% select(Organism.Name, 
+                                  SIN1, 
+                                  RICTOR, 
+                                  RAPTOR, 
+                                  LST8,
+                                  TOR) %>% 
+  distinct(Organism.Name, .keep_all = TRUE)
+df6 <- column_to_rownames(subsetdataframe6, var = "Organism.Name")
+
+
+#Metabolic Subsetted Data for Chlorophyta/Rhodophyta
+Msubset3 <- ChlorRho %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name, .keep_all = TRUE) #%>%
+# pivot_longer(cols = !Organism.Name, names_to = "M.Strategy", values_to = "Type")
+mdf3 <- column_to_rownames(Msubset3, var = "Organism.Name")
 
 
 
+#Plain Tree
+ChlorRhoTreeP <- ggtree(ChlorRhoTree, branch.length = "none", ladderize = FALSE)
+ChlorRhoTreeP <- ChlorRhoTreeP  %<+% ChlorRho
 
 
+ChlorRhoTreeP+geom_text(aes(label = node))+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)+geom_tiplab()
 
 
+#Layer 1
+# Tip label layer and C.score heatmap layer
+ChloRhoLayer1 <- ChlorRhoTreeP + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
+  scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
+                        guide = guide_colorbar(order =1),
+                        name = "Completeness Score")+
+  geom_rootedge()+
+  labs(title = "Chlorophyta & Rhodophyta Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
+
+# Layer 2
+# TOR Components Heat map layer. Requires the first layer to attach to
+# Also requires a new_scale_fill() function call to establish layered fill scales
+ChloRhoLayer2 <- gheatmap(ChloRhoLayer1, df6, offset = 6.5, width = .65, font.size = 2, colnames = FALSE)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P",NA),
+                    values = pal3,
+                    limits = c("H","M","L","P", NA),
+                    na.value = "#FFFFFF",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
+
+# Layer 3
+# Metabolic Strategy Layer
+# Requires the second layer
+ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 12, width = .15, colnames = FALSE)+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
+                    values = Mpal2,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
 
 
+ChloRhoLayer3
 
 
 
