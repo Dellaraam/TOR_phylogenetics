@@ -72,6 +72,9 @@ ExcSubset <- ExcSubset %>% filter(Organism.Name != "Trypanosoma brucei equiperdu
                                   Organism.Name != "Novymonas esmeraldas")
 
 ChloroRhoSubset <- MasterTable %>% filter(Super.Group == "Chlorophyta" | Super.Group == "Rhodophyta")
+ChloroRhoSubset <- ChloroRhoSubset %>% filter(Organism.Name != "Cymbomonas tetramitiformis",
+                                              Organism.Name != "Picocystis sp. ML") 
+
 
 
 ARSubset <- rbind(AlvSubset,RhizSubset)
@@ -353,21 +356,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeHeatMapAl
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Excavata Combined Tree -------------------------------------------------------
 
 ExcavataTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/TruncatedExcTreeP.phy")
@@ -613,6 +601,8 @@ ChlorRhoTree$tip.label[1]
 
 #Chlorophyta Rhodophyta Data to add to the tree
 ChlorRho <- MasterTable %>% filter(Super.Group == "Rhodophyta" | Super.Group == "Chlorophyta")
+ChlorRho <- ChlorRho %>% filter(Organism.Name != "Cymbomonas tetramitiformis",
+                                Organism.Name != "Picocystis sp. ML") 
 ChlorRho <- ChlorRho %>% relocate(Organism.Name)
 ChlorRho$Organism.Name
 ChlorRho$Organism.Name <- gsub("'","", ChlorRho$Organism.Name)
@@ -694,37 +684,19 @@ ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 12, width = .15, colnames
 ChloRhoLayer3
 
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ChlorophytaRhodophytaTree.pptx",
+       figure = ChloRhoLayer3,
+       units = "inches",
+       width = 10,
+       height = 7)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/ChlorophytaRhodophyta.png",
+       plot = ChloRhoLayer3,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 
@@ -896,85 +868,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapSAR.png",
 
 
 
-#Chlorophyta-Rhodophyta
-#----------------------
 
-CRh <- MasterTable %>% filter(Super.Group == "Chlororphyta" | Super.Group == "Rhodophyta")
-CRh <- CRh %>% relocate(Organism.Name)
-
-ChloRhosubset <- CRh %>% select(Organism.Name, SIN1, RICTOR, RAPTOR, LST8,TOR) %>% distinct(Organism.Name, .keep_all = TRUE)
-df6 <- column_to_rownames(ChloRhosubset, var = "Organism.Name")
-
-
-CRhsubset <- CRh %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name, .keep_all = TRUE)
-mdfChRh <- column_to_rownames(CRhsubset, var = "Organism.Name")
-
-ChloroRhodoTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/chlrhoTree.phy")
-ChloroRhodoTree$tip.label <- gsub("'","", ChloroRhodoTree$tip.label)
-
-CRH <- ggtree(ChloroRhodoTree, branch.length = "none", ladderize = FALSE)
-CRH <- CRH %<+% CRh
-
-
-ChloroHeatMap1 <- CRH + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
-  scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
-                        guide = guide_colorbar(order =1),
-                        name = "Completeness Score")+
-  geom_rootedge()+
-  labs(title = "Chlorophya-Rhodophyta Phylogenetic Tree",
-       subtitle = "With HMMER Score Map")
-
-ChloroHeatMap1
-
-ChloroHeatMap2 <- gheatmap(ChloroHeatMap1, df6, offset = 6.5, font.size = 2, width = .65,  colnames = FALSE)+
-  scale_fill_manual(name = "HMMER Score",
-                    breaks = c("H","M","L","P",NA),
-                    values = pal3,
-                    limits = c("H","M","L","P",NA),
-                    na.value = "#FFFFFF",
-                    drop = FALSE)+
-  theme(
-    text = element_text(family = "serif"),
-    legend.background=element_rect(fill=NA),
-    legend.title=element_text(size=10), 
-    legend.text=element_text(size=5.5),
-    legend.spacing.y = unit(0.02, "cm"),
-    legend.key.spacing.x = unit(1,"cm"))+
-  new_scale_fill()
-
-ChloroHeatMap2
-
-StramLayer3 <- gheatmap(StramLayer2,mdf, offset = 12, width = .15, colnames = FALSE)+
-  scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
-                    values = Mpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
-                    drop = FALSE)+
-  theme(
-    text = element_text(family = "serif"),
-    legend.background=element_rect(fill=NA),
-    legend.title=element_text(size=10), 
-    legend.text=element_text(size=5.5),
-    legend.spacing.y = unit(0.02, "cm"),
-    legend.key.spacing.x = unit(1,"cm"))+
-  new_scale_fill()
-
-
-ChloroHeatMap3 <- gheatmap(ChloroHeatMap2,mdfChRh, offset = 12, width = .15, colnames = FALSE)+
-  scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
-                    values = Mpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
-                    drop = FALSE)+
-  theme(
-    text = element_text(family = "serif"),
-    legend.background=element_rect(fill=NA),
-    legend.title=element_text(size=10), 
-    legend.text=element_text(size=5.5),
-    legend.spacing.y = unit(0.02, "cm"),
-    legend.key.spacing.x = unit(1,"cm"))+
-  new_scale_fill()
-
-ChloroHeatMap3
 
 
