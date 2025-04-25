@@ -12,7 +12,6 @@ library(eoffice)
 MasterTable <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")
 MasterTable <- select(MasterTable, -X)
 
-<<<<<<< HEAD
 MasterTable %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICTORDomain, color = M.Strategy, size = C.score))+
   geom_jitter()+
   labs(title = "RICTOR Domain Score Distribution")+
@@ -20,10 +19,6 @@ MasterTable %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICT
   ylab(label = "RICTOR Domain Scores")+
   #geom_text_repel(aes(label = Organism.Name), size = 2.2, show.legend = FALSE)+
   facet_wrap(~Super.Group,nrow = 1)
-
-
-=======
->>>>>>> ed5d1b146b118ea6f9071cb2a6ea707a84d04d04
 
 
 # Random Assortment of truncations for truncated trees to be generated from NCBI Common Tree
