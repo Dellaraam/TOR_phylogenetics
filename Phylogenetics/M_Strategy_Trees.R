@@ -1,6 +1,11 @@
 # Photosynthesis trees and overall metabolism
 # Kyle Johnson
 # 4/3/2025
+library(tidyverse)
+library(ggtree)
+library(treeio)
+library(ggnewscale)
+library(eoffice)
 
 # Load in the master table
 
@@ -595,7 +600,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeARMetHeat
 
 #Chlorophyta Rhodophyta Tree
 #Truncated is a relic name
-ChlorRhoTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/TruncatedChloroRhoTreeP.phy")
+ChlorRhoTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/ChloroRodoTree.phy")
 ChlorRhoTree$tip.label <- gsub("'","", ChlorRhoTree$tip.label)
 ChlorRhoTree$tip.label[1]
 
