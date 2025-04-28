@@ -37,6 +37,28 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRICTOR.png
        dpi = 320,
        limitsize = FALSE)
 
+jitterRICTOR<- MasterTable %>%filter(!is.na(RICTOR) & RICTOR != "P") %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICTORAll))+
+  geom_jitter(shape = 18, size = 2)+
+  labs(title = "RICTOR Overall Score Distribution")+
+  xlab(label = "RICTOR H/M/L")+
+  ylab(label = "RICTOR Overall Scores")+
+  #geom_text_repel(aes(label = Organism.Name), size = 2.2, show.legend = FALSE)+
+  facet_wrap(~Super.Group,nrow = 1)+
+  theme_bw()
+jitterRICTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRICTORAll.png",
+       plot = jitterRICTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
+
+
 
 
 
@@ -56,6 +78,34 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRAPTOR.png
        dpi = 320,
        limitsize = FALSE)
 
+jitterRAPTOR<- MasterTable %>%filter(!is.na(RAPTOR) & RAPTOR != "P") %>% ggplot(aes(x = factor(RAPTOR,level = c("H", "M", "L")), y = RAPTORAll))+
+  geom_jitter(shape = 18, size = 2)+
+  labs(title = "RAPTOR Overall Score Distribution")+
+  xlab(label = "RAPTOR H/M/L")+
+  ylab(label = "RAPTOR Overall Scores")+
+  facet_wrap(~Super.Group)+
+  theme_bw()
+jitterRAPTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRAPTORAll.png",
+       plot = jitterRAPTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 jitterSIN1 <- MasterTable %>%filter(!is.na(SIN1) & SIN1 != "P" & Super.Group != "Rhizaria") %>% ggplot(aes(x = factor(SIN1, level = c("H", "M", "L")), y = SIN1Domain))+
@@ -74,6 +124,37 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterSIN1.png",
        dpi = 320,
        limitsize = FALSE)
 
+jitterSIN1 <- MasterTable %>%filter(!is.na(SIN1) & SIN1 != "P" & Super.Group != "Rhizaria") %>% ggplot(aes(x = factor(SIN1, level = c("H", "M", "L")), y = SIN1All))+
+  geom_jitter(shape = 18, size = 2)+
+  labs(title = "SIN1 Overall Score Distribution")+
+  xlab(label = "SIN1 H/M/L")+
+  ylab(label = "SIN1 Overall Scores")+
+  facet_wrap(~Super.Group)+
+  theme_bw()
+jitterSIN1
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterSIN1All.png",
+       plot = jitterSIN1,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 jitterLST8 <- MasterTable %>%filter(!is.na(LST8) & LST8 != "P") %>% ggplot(aes(x = factor(LST8, level = c("H", "M", "L")), y = LST8Domain))+
   geom_jitter(shape = 18, size = 2)+
   labs(title = "LST8 Domain Score Distribution")+
@@ -90,6 +171,29 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterLST8.png",
        dpi = 320,
        limitsize = FALSE)
 
+
+jitterLST8 <- MasterTable %>%filter(!is.na(LST8) & LST8 != "P") %>% ggplot(aes(x = factor(LST8, level = c("H", "M", "L")), y = LST8All))+
+  geom_jitter(shape = 18, size = 2)+
+  labs(title = "LST8 Overall Score Distribution")+
+  xlab(label = "LST8 H/M/L")+
+  ylab(label = "LST8 OVerall Scores")+
+  facet_wrap(~Super.Group)+
+  theme_bw()
+jitterLST8
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterLST8All.png",
+       plot = jitterLST8,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
+
+
+
 jitterTOR <- MasterTable %>%filter(!is.na(TOR) & TOR != "P") %>% ggplot(aes(x = factor(TOR, level = c("H", "M", "L")), y = TORDomain))+
   geom_jitter(shape = 18, size = 2)+
   labs(title = "TOR Domain Score Distribution")+
@@ -105,6 +209,27 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterTOR.png",
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+
+jitterTOR <- MasterTable %>%filter(!is.na(TOR) & TOR != "P") %>% ggplot(aes(x = factor(TOR, level = c("H", "M", "L")), y = TORAll))+
+  geom_jitter(shape = 18, size = 2)+
+  labs(title = "TOR Overall Score Distribution")+
+  xlab(label = "TOR H/M/L")+
+  ylab(label = "TOR Overall Scores")+
+  facet_wrap(~Super.Group)+
+  theme_bw()
+jitterTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterTORAll.png",
+       plot = jitterTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
 
 
 
@@ -128,6 +253,37 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRictor.png",
        dpi = 320,
        limitsize = FALSE)
 
+
+BoxRictor <- MasterTable %>% ggplot(aes(x = Super.Group, y = RICTORAll))+
+  stat_boxplot(aes(Super.Group, RICTORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
+  geom_boxplot(aes( x = Super.Group, y = RICTORDomain),notch = FALSE, outlier.shape = NA)+
+  labs(title = "RICTOR Overall Scores", subtitle = "By Associated Super Group")+
+  xlab(label = "Super Groups")+
+  ylab(label = "RICTOR Overall Score")+
+  theme_bw()
+
+BoxRictor
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRictorAll.png",
+       plot = BoxRictor,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
 BoxRaptor <- MasterTable %>% ggplot(aes(x = Super.Group, y = RAPTORDomain))+
   stat_boxplot(aes(Super.Group, RAPTORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = RAPTORDomain),notch = FALSE, outlier.shape = NA)+
@@ -146,6 +302,37 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRaptor.png",
        limitsize = FALSE)
 
 
+
+
+
+BoxRaptor <- MasterTable %>% ggplot(aes(x = Super.Group, y = RAPTORAll))+
+  stat_boxplot(aes(Super.Group, RAPTORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
+  geom_boxplot(aes( x = Super.Group, y = RAPTORDomain),notch = FALSE, outlier.shape = NA)+
+  labs(title = "RAPTOR Overall Scores", subtitle = "By Associated Super Group")+
+  xlab(label = "Super Groups")+
+  ylab(label = "RAPTOR Overall Score")+
+  theme_bw()
+BoxRaptor
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRaptorAll.png",
+       plot = BoxRaptor,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
 BoxTOR <- MasterTable %>% ggplot(aes(x = Super.Group, y = TORDomain))+
   stat_boxplot(aes(Super.Group, TORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = TORDomain),notch = FALSE, outlier.shape = NA)+
@@ -162,6 +349,38 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxTOR.png",
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+
+
+
+
+
+BoxTOR <- MasterTable %>% ggplot(aes(x = Super.Group, y = TORAll))+
+  stat_boxplot(aes(Super.Group, TORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
+  geom_boxplot(aes( x = Super.Group, y = TORDomain),notch = FALSE, outlier.shape = NA)+
+  #geom_jitter()+
+  labs(title = "TOR Overall Scores", subtitle = "By Associated Super Group")+
+  xlab(label = "Super Groups")+
+  ylab(label = "TOR Overall Score")+
+  theme_bw()
+BoxTOR
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxTORAll.png",
+       plot = BoxTOR,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
+
+
+
+
+
+
 
 BoxSIN1 <- MasterTable %>% ggplot(aes(x = Super.Group, y = SIN1Domain))+
   stat_boxplot(aes(Super.Group, SIN1Domain), geom = "errorbar", linetype = 1, width = 0.5)+
@@ -183,6 +402,38 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxSIN1.png",
        limitsize = FALSE)
 
 
+
+
+BoxSIN1 <- MasterTable %>% ggplot(aes(x = Super.Group, y = SIN1All))+
+  stat_boxplot(aes(Super.Group, SIN1Domain), geom = "errorbar", linetype = 1, width = 0.5)+
+  geom_boxplot(aes( x = Super.Group, y = SIN1Domain),notch = FALSE, outlier.shape = NA)+
+  #geom_jitter()+
+  labs(title = "SIN1 OVerall Scores", subtitle = "By Associated Super Group")+
+  xlab(label = "Super Groups")+
+  ylab(label = "SIN1 Overall Score")+
+  theme_bw()
+BoxSIN1
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxSIN1All.png",
+       plot = BoxSIN1,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
 BoxLST8 <- MasterTable %>% ggplot(aes(x = Super.Group, y = LST8Domain))+
   stat_boxplot(aes(Super.Group, LST8Domain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = LST8Domain),notch = FALSE, outlier.shape = NA)+
@@ -194,8 +445,6 @@ BoxLST8 <- MasterTable %>% ggplot(aes(x = Super.Group, y = LST8Domain))+
 BoxLST8
 
 
-
-
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxLST8.png",
        plot = BoxLST8,
        width = 3840,
@@ -203,6 +452,41 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxLST8.png",
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+
+
+
+
+
+
+
+
+
+
+BoxLST8 <- MasterTable %>% ggplot(aes(x = Super.Group, y = LST8All))+
+  stat_boxplot(aes(Super.Group, LST8Domain), geom = "errorbar", linetype = 1, width = 0.5)+
+  geom_boxplot(aes( x = Super.Group, y = LST8Domain),notch = FALSE, outlier.shape = NA)+
+  #geom_jitter()+
+  labs(title = "LST8 Overall Score", subtitle = "By Associated Super Group")+
+  xlab(label = "Super Groups")+
+  ylab(label = "LST8 Overall Score")+
+  theme_bw()
+BoxLST8
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxLST8All.png",
+       plot = BoxLST8,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
+
+
 
 
 
