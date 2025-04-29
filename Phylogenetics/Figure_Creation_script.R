@@ -515,4 +515,85 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CscorePlot.png",
        limitsize = FALSE)
 
 
+
+
+
+#Those with RICTOR metabolic count
+ YesPlot <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>%
+   filter(Super.Group != "Chlorophyta")%>%
+   filter(!is.na(M.Strategy))%>%
+   ggplot()+
+   geom_bar(aes(x = M.Strategy, fill = Super.Group), position = "dodge", width = .5)+
+   labs(title = "Organisms with RICTOR Protein",
+        subtitle = "Streptophyta Excluded")+
+   xlab(label = "Metabolic Strategy Employed")+
+   ylab(label = "Overall Count per Super Group")+
+   scale_fill_manual(name = "Super Group",
+                     breaks = c("Alveolata",
+                                "Stramenopiles",
+                                "Rhizaria",
+                                "Streptophyta",
+                                "Chlorophyta",
+                                "Rhodophyta",
+                                "Discoba",
+                                "Metamonada"),
+                     values = c("Alveolata" = "#EFB911",
+                                "Stramenopiles" = "#572100",
+                                "Rhizaria" = "#FFD0AB",
+                                "Streptophyta" = "#678516",
+                                "Chlorophyta" = "#525601",
+                                "Rhodophyta" = "#681114",
+                                "Discoba" = "cyan",
+                                "Metamonada" = "blue"
+                     ))+
+   theme_bw()
+ YesPlot
+ 
+ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/UpdatedMetabolicCountYes.png",
+        plot = YesPlot,
+        width = 3840,
+        height = 2160,
+        units = "px",
+        dpi = 320,
+        limitsize = FALSE)
+ 
+ 
+ NoPlot <- MasterTable %>% filter(is.na(RICTORDomain) | is.na(RICTORAll))%>%
+   filter(Super.Group != "Streptophyta")%>%
+   ggplot()+
+   geom_bar(aes(x = M.Strategy, fill = Super.Group), position = "dodge", width = .5)+
+   labs(title = "Organisms without RICTOR Protein",
+        subtitle = "Streptophyta Excluded")+
+   xlab(label = "Metabolic Strategy Employed")+
+   ylab(label = "Overall Count per Super Group")+
+   scale_fill_manual(name = "Super Group",
+                     breaks = c("Alveolata",
+                                "Stramenopiles",
+                                "Rhizaria",
+                                "Streptophyta",
+                                "Chlorophyta",
+                                "Rhodophyta",
+                                "Discoba",
+                                "Metamonada"),
+                     values = c("Alveolata" = "#EFB911",
+                                "Stramenopiles" = "#572100",
+                                "Rhizaria" = "#FFD0AB",
+                                "Streptophyta" = "#678516",
+                                "Chlorophyta" = "#525601",
+                                "Rhodophyta" = "#681114",
+                                "Discoba" = "cyan",
+                                "Metamonada" = "blue"
+                     ))+
+   theme_bw()
+   
+ NoPlot
+
+ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/UpdatedMetabolicCountNo.png",
+        plot = NoPlot,
+        width = 3840,
+        height = 2160,
+        units = "px",
+        dpi = 320,
+        limitsize = FALSE)
+
 # ------------------------------------------------------------------------------
