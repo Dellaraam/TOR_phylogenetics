@@ -73,10 +73,10 @@ ExcSubset <- ExcSubset %>% filter(Organism.Name != "Trypanosoma brucei equiperdu
 
 ChloroRhoSubset <- MasterTable %>% filter(Super.Group == "Chlorophyta" | Super.Group == "Rhodophyta")
 ChloroRhoSubset <- ChloroRhoSubset %>% filter(Organism.Name != "Cymbomonas tetramitiformis",
-                                              Organism.Name != "Picocystis sp. ML") 
+                                              Organism.Name != "Picocystis sp. ML")
 
 
-
+StreptophytaSubset <- MasterTable %>% filter(Super.Group == "Streptophyta")
 ARSubset <- rbind(AlvSubset,RhizSubset)
 
 
@@ -85,6 +85,7 @@ write.table(AlvSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/
 write.table(ARSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedAR.txt", sep = "\t", row.names = F, col.names = F)
 write.table(ExcSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedExc.txt", sep = "\t", row.names = F, col.names = F)
 write.table(ChloroRhoSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedChloroRho.txt", sep = "\t", row.names = F, col.names = F)
+write.table(StreptophytaSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedStreptophyta.txt", sep = "\t", row.names = F, col.names = F)
 
 #Palettes-----------------------------------------------------------------------
 pal <- c(
@@ -869,6 +870,15 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapSAR.png",
        limitsize = FALSE)
 
 
+
+
+
+
+# Could do a streptophyta version of the circular tree. Help break it down further with the added information now from the Metabolic data
+
+# StrepTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/ChloroRodoTree.phy")
+# StrepTree$tip.label
+# StrepTree$tip.label <- gsub("'","", StrepTree$tip.label)
 
 
 

@@ -553,7 +553,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CscorePlot.png",
  
  
  NoPlot <- MasterTable %>% filter(is.na(RICTORDomain) | is.na(RICTORAll))%>%
-   filter(Super.Group != "Streptophyta")%>%
    ggplot()+
    geom_bar(aes(x = M.Strategy, fill = Super.Group), position = position_dodge(preserve = 'single'), width = .5, color = "black")+
    labs(title = "Organisms without RICTOR Protein",
