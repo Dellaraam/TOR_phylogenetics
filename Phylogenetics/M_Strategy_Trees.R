@@ -876,9 +876,40 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapSAR.png",
 
 # Could do a streptophyta version of the circular tree. Help break it down further with the added information now from the Metabolic data
 
-# StrepTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/ChloroRodoTree.phy")
-# StrepTree$tip.label
-# StrepTree$tip.label <- gsub("'","", StrepTree$tip.label)
+StrepTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/TruncatedStrepTreeP.phy")
+StrepTree$tip.label
+StrepTree$tip.label <- gsub("'","", StrepTree$tip.label)
+
+
+Strep <- MasterTable %>% filter(Super.Group == "Rhodophyta" | Super.Group == "Chlorophyta")
+Strep <- Strep %>% relocate(Organism.Name)
+Strep$Organism.Name <- gsub("'","", ChlorRho$Organism.Name)
+
+
+#Protein Subsetted Data
+subsetdataframeProteins <- Strep %>% select(Organism.Name, 
+                                        SIN1, 
+                                        RICTOR, 
+                                        RAPTOR, 
+                                        LST8,
+                                        TOR) %>% 
+  distinct(Organism.Name, .keep_all = TRUE)
+dfProteins <- column_to_rownames(subsetdataframeProteins, var = "Organism.Name")
+
+
+#Metabolic Subsetted Data for Streptophyta
+MsubsetStrep <- Strep %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name, .keep_all = TRUE) #%>%
+# pivot_longer(cols = !Organism.Name, names_to = "M.Strategy", values_to = "Type")
+mdfStrep <- column_to_rownames(MsubsetStrep, var = "Organism.Name")
+
+
+
+
+#Naked Tree with associated data
+StrepTreeP <- ggtree(StrepTree, branch.length = "none", ladderize = FALSE)
+StrepTreeP <- StrepTreeP  %<+% Strep
+
+
 
 
 
