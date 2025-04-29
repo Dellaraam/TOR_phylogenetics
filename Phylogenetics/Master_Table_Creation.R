@@ -25,7 +25,24 @@ metabolicTable <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finaliz
 MassiveTable <- left_join(HTML,Ndf[c("SIN1All","SIN1Domain","RICTORAll","RICTORDomain","RAPTORAll","RAPTORDomain","LST8All","LST8Domain","TORAll","TORDomain","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 MassiveTable <- left_join(MassiveTable, metabolicTable[c("M.Strategy","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 
+
+#Corrections to the metabolic table
+#Alveolates
+
+
+
 MassiveTable <- distinct(MassiveTable, Organism_Taxonomic_ID, .keep_all = TRUE)
+MassiveTable <- MassiveTable %>%mutate(M.Strategy = if_else(Super.Group == "Streptophyta", "Autotrophic", M.Strategy))
+
+
+MassiveTable <- MassiveTable %>% mutate(M.Strategy = if_else(Organism.Name == "Amoebophrya sp. AT5.2","Parasite",M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Chromera velia CCMP2878","Autotrophic",M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Fugacium kawagutii","Endosymbiotic",M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Breviolum minutum","Endosymbiotic",M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Paramecium tetraurelia strain d4-2","Heterotroph",M.Strategy))%>%
+  mutate(M.Strategy = if_else(Genus.name == "Symbiodinium","Endosymbiotic", M.Strategy, missing = M.Strategy))
+
+
 
 
 write.csv(MassiveTable, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")

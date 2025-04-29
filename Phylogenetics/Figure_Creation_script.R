@@ -12,11 +12,6 @@ MasterTable <- MasterTable %>%
          SIN1All = if_else(Super.Group == "Chlorophyta", NA, SIN1All),
          RICTORDomain = if_else(Super.Group == "Chlorophyta", NA, RICTORDomain),
          RICTORAll = if_else(Super.Group == "Chlorophyta", NA, RICTORAll))
-  
-
-MasterTable %>% filter(Super.Group == "Alveolata")%>%summary()
-
-summaryData <- summarise(MasterTable)
 
 
 

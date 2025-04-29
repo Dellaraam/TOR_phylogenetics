@@ -596,8 +596,10 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/PrototypeARMetHeat
 #Chlorophyta Rhodophyta Tree
 #Truncated is a relic name
 ChlorRhoTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/ChloroRodoTree.phy")
+ChlorRhoTree$tip.label
 ChlorRhoTree$tip.label <- gsub("'","", ChlorRhoTree$tip.label)
-ChlorRhoTree$tip.label[1]
+ChlorRhoTree$tip.label <- gsub("'","", ChlorRhoTree$tip.label)
+ChlorRhoTree$tip.label
 
 #Chlorophyta Rhodophyta Data to add to the tree
 ChlorRho <- MasterTable %>% filter(Super.Group == "Rhodophyta" | Super.Group == "Chlorophyta")

@@ -19,6 +19,12 @@ ChloroInformationNCBI <- read_tsv(file="C:/Users/kajoh/Documents/GitHub/TOR_phyl
 ChloroInformationNCBI <- rename(ChloroInformationNCBI, Accn = "Assembly Accession", Organism.Name = "Organism Name", Organism_Taxonomic_ID = "Organism Taxonomic ID")
 AlvInformationNCBI <- read.csv(file="C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Alveolata_Information_2.csv")
 AlvInformationNCBI <- rename(AlvInformationNCBI, Accn = "Assembly.Accession")
+DiscobaInformationNCBI <- read_tsv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/Discoba_Names.tsv")
+DiscobaInformationNCBI <- rename(DiscobaInformationNCBI, Accn = "Assembly Accession", Organism.Name = "Organism Name", Organism_Taxonomic_ID = "Organism Taxonomic ID")
+MetamonadaInformationNCBI <- read_tsv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/Metamonada_Names.tsv")
+MetamonadaInformationNCBI <- rename(MetamonadaInformationNCBI, Accn = "Assembly Accession", Organism.Name = "Organism Name", Organism_Taxonomic_ID = "Organism Taxonomic ID")
+
+
 
 
 
@@ -177,6 +183,46 @@ FinalAlvRictor %>% ggplot(aes(x = Group.name, y = sca, color = scd))+
   ylab(label = "Overall HMMER Score")+
   labs(color = "Best Domain Hit")
 
+
+
+
+ExcRictorJGI <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/ExcavataJGI_RICTOR.csv")
+ExcRictorJGI$Accn <- sub("\\_.*", "", ExcRictorJGI$Accn)
+ExcRictorJGI <- merge(ExcRictorJGI,PhycoInformation[c("Organism_Taxonomic_ID", "name", "Accn")], by="Accn")
+ExcRictorJGI <- rename(ExcRictorJGI, Organism.Name = "name")
+
+DiscobaRictorNCBI <- read.csv(file = 'C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Discoba/RICTOR_Discoba.csv')
+DiscobaRictorNCBI <- merge(DiscobaRictorNCBI, DiscobaInformationNCBI[c("Organism_Taxonomic_ID","Accn", "Organism.Name")], by = "Accn")
+MetamonadaRictorNCBI <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Metamonada/RICTOR_Metamonada.csv")
+MetamonadaRictorNCBI <- merge(MetamonadaRictorNCBI, MetamonadaInformationNCBI[c("Organism_Taxonomic_ID","Accn", "Organism.Name")], by = "Accn")
+
+
+FinalExcRictor <- rbind(DiscobaRictorNCBI, MetamonadaRictorNCBI, ExcRictorJGI)
+FinalExcRictor <-  merge(FinalExcRictor, TaxonomicInformation, by = "Organism_Taxonomic_ID")
+
+ExcRictorPlot <- FinalExcRictor %>% ggplot()+
+  geom_jitter(aes(x = sca, y = scd), size = 2)+
+  geom_hline(yintercept = 100, linetype = "dashed")+
+  geom_vline(xintercept = 100, linetype = "dashed")+
+  geom_rect(aes(xmin = 150, xmax = Inf, ymin = 150, ymax = Inf),linetype = "dashed", color = "black", fill = "#ffffffff", alpha = 0)+
+  geom_rect(aes(xmin = 300, xmax = Inf, ymin = 300, ymax = Inf),linetype = "dashed", color = "black", fill = "#ffffffff", alpha = 0)+
+  annotate("rect", xmin = 0, xmax = 100, ymin = 0, ymax = 100, fill = "purple", alpha = .3)+
+  annotate("rect", xmin = 100, xmax = Inf, ymin = 0, ymax = 100, fill = "red", alpha = .3)+
+  annotate("rect",xmin = 0, xmax = 100, ymin = 100, ymax = Inf, fill = "red", alpha =.3)+
+  
+  theme_bw()+
+  labs(title = "Overall Hit Score vs Best Domain Hit Score Rictor",
+       subtitle = "Excavata")+
+  xlab(label = "Overall HMMER Score")+
+  ylab(label = "Best Domain Score")+
+  labs(color = "Group")
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminationExcRictor.png",
+       plot = ExcRictorPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 
