@@ -1,5 +1,5 @@
 #Creation of the master table
-
+library(tidyverse)
 #load in the HTML Table
 
 FinalBusco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/FinalBusco.csv")
@@ -20,6 +20,10 @@ Ndf <- distinct(Ndf, Organism_Taxonomic_ID, .keep_all = TRUE)
 
 #Load in the Metabolic table
 metabolicTable <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Final_Metabolic_Table.csv")
+par = which(metabolicTable$Organism.Name == "Galdieria partita")
+yel = which(metabolicTable$Organism.Name == "Galdieria yellowstonensis")
+metabolicTable[par, "M.Strategy"] <- "Mixotroph"
+metabolicTable[yel, "M.Strategy"] <- "Mixotroph"
 
 
 MassiveTable <- left_join(HTML,Ndf[c("SIN1All","SIN1Domain","RICTORAll","RICTORDomain","RAPTORAll","RAPTORDomain","LST8All","LST8Domain","TORAll","TORDomain","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
