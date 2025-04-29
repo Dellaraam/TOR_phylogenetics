@@ -46,6 +46,7 @@ MassiveTable <- MassiveTable %>% mutate(M.Strategy = if_else(Organism.Name == "A
   mutate(M.Strategy = if_else(Organism.Name == "Galdieria partita", "Mixotroph", M.Strategy))%>%
   mutate(M.Strategy = if_else(Organism.Name == "Galdieria yellowstonensis", "Mixotroph", M.Strategy))%>%
   mutate(M.Strategy = if_else(Organism.Name == "Rehmannia glutinosa", "Parasite", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Genus.name == "Cuscuta", "Parasite", M.Strategy))%>%
   mutate(M.Strategy = if_else(Genus.name == "Symbiodinium","Endosymbiotic", M.Strategy, missing = M.Strategy))
 
 
