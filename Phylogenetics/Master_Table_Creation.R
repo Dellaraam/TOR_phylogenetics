@@ -29,7 +29,6 @@ metabolicTable[yel, "M.Strategy"] <- "Mixotroph"
 MassiveTable <- left_join(HTML,Ndf[c("SIN1All","SIN1Domain","RICTORAll","RICTORDomain","RAPTORAll","RAPTORDomain","LST8All","LST8Domain","TORAll","TORDomain","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 MassiveTable <- left_join(MassiveTable, metabolicTable[c("M.Strategy","Organism_Taxonomic_ID")], by = "Organism_Taxonomic_ID")
 
-
 #Corrections to the metabolic table
 #Alveolates
 
@@ -44,6 +43,9 @@ MassiveTable <- MassiveTable %>% mutate(M.Strategy = if_else(Organism.Name == "A
   mutate(M.Strategy = if_else(Organism.Name == "Fugacium kawagutii","Endosymbiotic",M.Strategy))%>%
   mutate(M.Strategy = if_else(Organism.Name == "Breviolum minutum","Endosymbiotic",M.Strategy))%>%
   mutate(M.Strategy = if_else(Organism.Name == "Paramecium tetraurelia strain d4-2","Heterotroph",M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Galdieria partita", "Mixotroph", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Galdieria yellowstonensis", "Mixotroph", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Rehmannia glutinosa", "Parasite", M.Strategy))%>%
   mutate(M.Strategy = if_else(Genus.name == "Symbiodinium","Endosymbiotic", M.Strategy, missing = M.Strategy))
 
 
