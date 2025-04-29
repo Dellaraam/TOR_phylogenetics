@@ -235,7 +235,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterTORAll.png
 
 
 
-BoxRictor <- MasterTable %>% ggplot(aes(x = Super.Group, y = RICTORDomain))+
+BoxRictor <- MasterTable %>%filter(Super.Group != "Chlorophyta")%>%ggplot(aes(x = Super.Group, y = RICTORDomain))+
   stat_boxplot(aes(Super.Group, RICTORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = RICTORDomain),notch = FALSE, outlier.shape = NA)+
   labs(title = "RICTOR Domain Scores", subtitle = "By Associated Super Group")+
@@ -254,7 +254,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRictor.png",
        limitsize = FALSE)
 
 
-BoxRictor <- MasterTable %>% ggplot(aes(x = Super.Group, y = RICTORAll))+
+BoxRictor <- MasterTable %>% filter(Super.Group != "Chlorophyta") %>% ggplot(aes(x = Super.Group, y = RICTORAll))+
   stat_boxplot(aes(Super.Group, RICTORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = RICTORDomain),notch = FALSE, outlier.shape = NA)+
   labs(title = "RICTOR Overall Scores", subtitle = "By Associated Super Group")+
@@ -382,7 +382,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxTORAll.png",
 
 
 
-BoxSIN1 <- MasterTable %>% ggplot(aes(x = Super.Group, y = SIN1Domain))+
+BoxSIN1 <- MasterTable %>%filter(Super.Group != "Chlorophyta")%>%ggplot(aes(x = Super.Group, y = SIN1Domain))+
   stat_boxplot(aes(Super.Group, SIN1Domain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = SIN1Domain),notch = FALSE, outlier.shape = NA)+
   #geom_jitter()+
@@ -404,11 +404,11 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxSIN1.png",
 
 
 
-BoxSIN1 <- MasterTable %>% ggplot(aes(x = Super.Group, y = SIN1All))+
+BoxSIN1 <- MasterTable %>% filter(Super.Group != "Chlorophyta")%>%ggplot(aes(x = Super.Group, y = SIN1All))+
   stat_boxplot(aes(Super.Group, SIN1Domain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = SIN1Domain),notch = FALSE, outlier.shape = NA)+
   #geom_jitter()+
-  labs(title = "SIN1 OVerall Scores", subtitle = "By Associated Super Group")+
+  labs(title = "SIN1 Overall Scores", subtitle = "By Associated Super Group")+
   xlab(label = "Super Groups")+
   ylab(label = "SIN1 Overall Score")+
   theme_bw()
@@ -514,5 +514,85 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CscorePlot.png",
        dpi = 320,
        limitsize = FALSE)
 
+
+
+
+
+#Those with RICTOR metabolic counthttp://127.0.0.1:41963/graphics/plot_zoom_png?width=1707&height=912
+ YesPlot <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>%
+   ggplot()+
+   geom_bar(aes(x = M.Strategy, fill = Super.Group,stat = "identity"), position = position_dodge(preserve = 'single'), width = .5, color = "black")+
+   labs(title = "Organisms with RICTOR Protein",
+        subtitle = "Streptophyta Excluded")+
+   xlab(label = "Metabolic Strategy Employed")+
+   ylab(label = "Overall Count per Super Group")+
+   scale_fill_manual(name = "Super Group",
+                     breaks = c("Alveolata",
+                                "Stramenopiles",
+                                "Rhizaria",
+                                "Streptophyta",
+                                "Chlorophyta",
+                                "Rhodophyta",
+                                "Discoba",
+                                "Metamonada"),
+                     values = c("Alveolata" = "#EFB911",
+                                "Stramenopiles" = "#572100",
+                                "Rhizaria" = "#FFD0AB",
+                                "Streptophyta" = "#678516",
+                                "Chlorophyta" = "#525601",
+                                "Rhodophyta" = "#681114",
+                                "Discoba" = "cyan",
+                                "Metamonada" = "blue"
+                     ))+
+   theme_bw()+
+   scale_x_discrete(drop = FALSE)
+ YesPlot
+ 
+ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/UpdatedMetabolicCountYes.png",
+        plot = YesPlot,
+        width = 3840,
+        height = 2160,
+        units = "px",
+        dpi = 320,
+        limitsize = FALSE)
+ 
+ 
+ NoPlot <- MasterTable %>% filter(is.na(RICTORDomain) | is.na(RICTORAll))%>%
+   filter(Super.Group != "Streptophyta")%>%
+   ggplot()+
+   geom_bar(aes(x = M.Strategy, fill = Super.Group), position = position_dodge(preserve = 'single'), width = .5, color = "black")+
+   labs(title = "Organisms without RICTOR Protein",
+        subtitle = "Streptophyta Excluded")+
+   xlab(label = "Metabolic Strategy Employed")+
+   ylab(label = "Overall Count per Super Group")+
+   scale_fill_manual(name = "Super Group",
+                     breaks = c("Alveolata",
+                                "Stramenopiles",
+                                "Rhizaria",
+                                "Streptophyta",
+                                "Chlorophyta",
+                                "Rhodophyta",
+                                "Discoba",
+                                "Metamonada"),
+                     values = c("Alveolata" = "#EFB911",
+                                "Stramenopiles" = "#572100",
+                                "Rhizaria" = "#FFD0AB",
+                                "Streptophyta" = "#678516",
+                                "Chlorophyta" = "#525601",
+                                "Rhodophyta" = "#681114",
+                                "Discoba" = "cyan",
+                                "Metamonada" = "blue"
+                     ))+
+   theme_bw()
+   
+ NoPlot
+
+ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/UpdatedMetabolicCountNo.png",
+        plot = NoPlot,
+        width = 3840,
+        height = 2160,
+        units = "px",
+        dpi = 320,
+        limitsize = FALSE)
 
 # ------------------------------------------------------------------------------
