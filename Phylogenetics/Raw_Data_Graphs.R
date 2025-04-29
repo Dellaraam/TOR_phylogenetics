@@ -45,20 +45,64 @@ StramRictorNCBI <- read.csv(file="C:/Users/kajoh/Documents/GitHub/TOR_phylogenet
 StramRictorNCBI <- merge(StramRictorNCBI, StramInformationNCBI[c("Organism_Taxonomic_ID","Accn", "Organism.Name")], by = "Accn")
 FinalStramRictor <- rbind(StramRictorNCBI,StramRictorJGI)
 FinalStramRictor <- merge(FinalStramRictor, TaxonomicInformation, by = "Organism_Taxonomic_ID")
-FinalStramRictor %>% ggplot(aes(x = sca, y = scd, color = Group.name))+
-  geom_jitter()+
-  theme_minimal()+
+StramRictorRawPlot <- FinalStramRictor %>% ggplot()+
+  geom_jitter(aes(x = sca, y = scd), size = 2)+
+  geom_hline(yintercept = 100, linetype = "dashed")+
+  geom_vline(xintercept = 100, linetype = "dashed")+
+  geom_rect(aes(xmin = 150, xmax = Inf, ymin = 150, ymax = Inf),linetype = "dashed", color = "black", fill = "#ffffffff", alpha = 0)+
+  geom_rect(aes(xmin = 300, xmax = Inf, ymin = 300, ymax = Inf),linetype = "dashed", color = "black", fill = "#ffffffff", alpha = 0)+
+  annotate("rect", xmin = 0, xmax = 100, ymin = 0, ymax = 100, fill = "purple", alpha = .3)+
+  annotate("rect", xmin = 100, xmax = Inf, ymin = 0, ymax = 100, fill = "red", alpha = .3)+
+  annotate("rect",xmin = 0, xmax = 100, ymin = 100, ymax = Inf, fill = "red", alpha =.3)+
+  
+  theme_bw()+
+  labs(title = "Overall Hit Score vs Best Domain Hit Score RICTOR",
+       subtitle = "Stramenopiles")+
   xlab(label = "Overall HMMER Score")+
-  ylab(label = "Best Domain Hit Score")+
+  ylab(label = "Best Domain Score")+
   labs(color = "Group")
+StramRictorRawPlot
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminationStramenopileRictor.png",
+       plot = StramRictorRawPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
 
 
 StramRaptorNCBI <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Updated_Stramenopiles/RAPTORStramenopiles.csv")
 StramRaptorNCBI <- merge(StramRaptorNCBI, StramInformationNCBI[c("Organism_Taxonomic_ID","Accn", "Organism.Name")], by = "Accn")
 FinalStramRaptor <- rbind(StramRaptorNCBI,StramRaptorJGI)
 FinalStramRaptor <- merge(FinalStramRaptor, TaxonomicInformation, by = "Organism_Taxonomic_ID")
-FinalStramRaptor %>% ggplot(aes(x = Group.name, y = sca))+
-  geom_jitter()
+StramRAPTORRawPlot <- FinalStramRaptor %>% ggplot()+
+  geom_jitter(aes(x = sca, y = scd), size = 2)+
+  geom_hline(yintercept = 100, linetype = "dashed")+
+  geom_vline(xintercept = 100, linetype = "dashed")+
+  geom_rect(aes(xmin = 150, xmax = Inf, ymin = 150, ymax = Inf),linetype = "dashed", color = "black", fill = "#ffffffff", alpha = 0)+
+  geom_rect(aes(xmin = 300, xmax = Inf, ymin = 300, ymax = Inf),linetype = "dashed", color = "black", fill = "#ffffffff", alpha = 0)+
+  annotate("rect", xmin = 0, xmax = 100, ymin = 0, ymax = 100, fill = "purple", alpha = .3)+
+  annotate("rect", xmin = 100, xmax = Inf, ymin = 0, ymax = 100, fill = "red", alpha = .3)+
+  annotate("rect",xmin = 0, xmax = 100, ymin = 100, ymax = Inf, fill = "red", alpha =.3)+
+  
+  theme_bw()+
+  labs(title = "Overall Hit Score vs Best Domain Hit Score RAPTOR",
+       subtitle = "Stramenopiles")+
+  xlab(label = "Overall HMMER Score")+
+  ylab(label = "Best Domain Score")+
+  labs(color = "Group")
+StramRictorRawPlot
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminationStramenopileRaptor.png",
+       plot = StramRAPTORRawPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 
