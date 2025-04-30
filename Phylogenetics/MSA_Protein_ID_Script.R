@@ -6,9 +6,7 @@
 # Going to read in the csvs for the Raw Data
 # Then we are going to filter the data the exact same way that was used for the Complete Tables
 
-library(tidyverse)
-library(jsonlite)
-library(purrr)
+#source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
 
 
 #Might make some function calls here
@@ -29,6 +27,9 @@ mergeClean <- function(df, namedf){
 #Start with RICTOR
 # Remember this is only for NCBI. Have to do something special for the JGI version
 # Will Work on that tomorrow
+
+MasterTable <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")
+MasterTable <- select(MasterTable, -X)
 
 Taxon <- read.csv(file = "~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
 Taxon <- rename(Taxon, Organism.Name = "Tax.name")
@@ -446,6 +447,75 @@ sdf2 <- StramenopilesRaptor %>%
   subset(Source=="JGI")
 
 
+
+
+#Adding the MasterTable data to these specific dataframes (RICTOR, LST8, etc)
+#Stramenopiles First
+#Seem to have some missing elements in the Master Table. Don't know why honestly
+#Going to choose the NCBI only for the time being
+
+
+MasterTable %>% filter(Super.Group == "Stramenopiles")%>%filter(RICTOR == "H" | RICTOR == "M" | RICTOR == "L") %>%view()
+StramenopilesRictor <- left_join(StramenopilesRictor, MasterTable[c("Organism_Taxonomic_ID","RICTOR")], by = "Organism_Taxonomic_ID")
+StramRicH <- StramenopilesRictor %>% filter(RICTOR == "H") %>% filter(Source == "NCBI")
+StramRicM <- StramenopilesRictor %>% filter(RICTOR == "M") %>% filter(Source == "NCBI")
+StramRicL <- StramenopilesRictor %>% filter(RICTOR == "L") %>% filter(Source == "NCBI")
+
+
+
+write.table(StramRicH$tar, file = "~/GitHub/TOR_phylogenetics/IDs/MSA_IDs/StramRicH.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+write.table(StramRicM$tar, file = "~/GitHub/TOR_phylogenetics/IDs/MSA_IDs/StramRicM.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+write.table(StramRicL$tar, file = "~/GitHub/TOR_phylogenetics/IDs/MSA_IDs/StramRicL.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+
+
+StramenopilesRaptor <- left_join(StramenopilesRaptor, MasterTable[c("Organism_Taxonomic_ID","RAPTOR")], by = "Organism_Taxonomic_ID")
+
+
+StramRapH <- StramenopilesRaptor %>% filter(RAPTOR == "H")
+StramRapM <- StramenopilesRaptor %>% filter(RAPTOR == "M")
+StramRapL <- StramenopilesRaptor %>% filter(RAPTOR == "L")
+
+AlveolataRaptor <- left_join(AlveolataRaptor, MasterTable[c("Organism_Taxonomic_ID", "RAPTOR")], by = "Organism_Taxonomic_ID")
+AlvRapH <- AlveolataRaptor %>% filter(RAPTOR == "H")%>% filter(Source == "NCBI")
+AlvRapM <- AlveolataRaptor %>% filter(RAPTOR == "M")%>% filter(Source == "NCBI")
+AlvRapL <- AlveolataRaptor %>% filter(RAPTOR == "L")%>% filter(Source == "NCBI")
+
+write.table(AlvRapH$tar, file = "~/GitHub/TOR_phylogenetics/IDs/MSA_IDs/AlvRapH.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+write.table(AlvRapM$tar, file = "~/GitHub/TOR_phylogenetics/IDs/MSA_IDs/AlvRapM.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+write.table(AlvRapL$tar, file = "~/GitHub/TOR_phylogenetics/IDs/MSA_IDs/AlvRapL.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Finalized Version of the CSV files will go here
 write.csv(StramenopilesRictor, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/StramenopilesRICTORFinal.csv")
 write.csv(StramenopilesRaptor, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/StramenopilesRAPTORFinal.csv")
@@ -470,6 +540,21 @@ write.csv(ChlorophytaRaptor, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Final
 write.csv(ChlorophytaSIN1, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/ChlorophytaSIN1Final.csv")
 write.csv(ChlorophytaLST8, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/ChlorophytaLST8Final.csv")
 write.csv(ChlorophytaTOR, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/ChlorophytaTORFinal.csv")
+
+write.csv(StreptophytaRaptor, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/StreptophytaRAPTORFinal.csv")
+write.csv(StreptophytaLST8, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/StreptophytaLST8Final.csv")
+write.csv(StreptophytaTOR, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/StreptophytaTORFinal.csv")
+
+write.csv(RhodophytaRaptor, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/RhodophytaRAPTORFinal.csv")
+write.csv(RhodophytaLST8, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/RhodophytaLST8Final.csv")
+write.csv(RhodophytaTOR, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/RhodophytaTORFinal.csv")
+
+write.csv(Excav, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/RhodophytaTORFinal.csv")
+write.csv(RhodophytaTOR, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/RhodophytaTORFinal.csv")
+write.csv(RhodophytaTOR, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/RhodophytaTORFinal.csv")
+write.csv(RhodophytaTOR, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/RhodophytaTORFinal.csv")
+write.csv(RhodophytaTOR, file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/RhodophytaTORFinal.csv")
+
 
 
 
@@ -545,6 +630,13 @@ subset <- subset(StreptophytaLST8, Source == "NCBI")
 write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/StreptophytaLST8NCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 subset <- subset(StreptophytaTOR, Source == "NCBI")
 write.table(subset$tar, file = "~/GitHub/TOR_phylogenetics/IDs/StreptophytaTORNCBI.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
+
+
+
+
+
+
+
 
 
 

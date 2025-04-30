@@ -67,6 +67,28 @@ StramRictorRawPlot <- FinalStramRictor %>% ggplot()+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
   labs(color = "Group")
+
+
+FinalStramRictor %>%distinct(Organism_Taxonomic_ID, .keep_all = TRUE)%>%ggplot()+
+  geom_jitter(aes(x = sca, y = scd), size = 2)+
+  geom_hline(yintercept = 100, linetype = "dashed")+
+  geom_vline(xintercept = 100, linetype = "dashed")+
+  geom_rect(aes(xmin = 150, xmax = Inf, ymin = 150, ymax = Inf),linetype = "dashed", color = "black", fill = "#ffffffff", alpha = 0)+
+  geom_rect(aes(xmin = 300, xmax = Inf, ymin = 300, ymax = Inf),linetype = "dashed", color = "black", fill = "#ffffffff", alpha = 0)+
+  annotate("rect", xmin = 0, xmax = 100, ymin = 0, ymax = 100, fill = "purple", alpha = .3)+
+  annotate("rect", xmin = 100, xmax = Inf, ymin = 0, ymax = 100, fill = "red", alpha = .3)+
+  annotate("rect",xmin = 0, xmax = 100, ymin = 100, ymax = Inf, fill = "red", alpha =.3)+
+  
+  theme_bw()+
+  labs(title = "Overall Hit Score vs Best Domain Hit Score RICTOR",
+       subtitle = "Stramenopiles Distinct ID Scores")+
+  xlab(label = "Overall HMMER Score")+
+  ylab(label = "Best Domain Score")+
+  labs(color = "Group")
+
+
+
+
 StramRictorRawPlot
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminationStramenopileRictor.png",
        plot = StramRictorRawPlot,
@@ -97,10 +119,19 @@ StramRAPTORRawPlot <- FinalStramRaptor %>% ggplot()+
   
   theme_bw()+
   labs(title = "Overall Hit Score vs Best Domain Hit Score RAPTOR",
-       subtitle = "Stramenopiles")+
+       subtitle = "Stramenopiles Raw Hits")+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
   labs(color = "Group")
+StramRictorRawPlot
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminationStramenopileRaptor.png",
+       plot = StramRAPTORRawPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
 StramRictorRawPlot
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminationStramenopileRaptor.png",
        plot = StramRAPTORRawPlot,
@@ -176,14 +207,72 @@ AlvRictorNCBI <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenet
 AlvRictorNCBI <- merge(AlvRictorNCBI, AlvInformationNCBI[c("Organism_Taxonomic_ID","Accn", "Organism.Name")], by = "Accn")
 FinalAlvRictor <- rbind(AlvRictorNCBI, AlvRictorJGI)
 FinalAlvRictor <-  merge(FinalAlvRictor, TaxonomicInformation, by = "Organism_Taxonomic_ID")
-FinalAlvRictor %>% ggplot(aes(x = Group.name, y = sca, color = scd))+
-  geom_jitter()+
-  theme_minimal()+
-  xlab(label = "Group")+
-  ylab(label = "Overall HMMER Score")+
-  labs(color = "Best Domain Hit")
 
 
+
+
+FinalAlvPlot <- FinalAlvRictor %>% ggplot()+
+  geom_jitter(aes(x = sca, y = scd), size = 2)+
+  geom_hline(yintercept = 100, linetype = "dashed")+
+  geom_vline(xintercept = 100, linetype = "dashed")+
+  geom_rect(aes(xmin = 150, xmax = Inf, ymin = 150, ymax = Inf),linetype = "dashed", color = "black", fill = "#ffffffff", alpha = 0)+
+  geom_rect(aes(xmin = 300, xmax = Inf, ymin = 300, ymax = Inf),linetype = "dashed", color = "black", fill = "#ffffffff", alpha = 0)+
+  annotate("rect", xmin = 0, xmax = 100, ymin = 0, ymax = 100, fill = "purple", alpha = .3)+
+  annotate("rect", xmin = 100, xmax = Inf, ymin = 0, ymax = 100, fill = "red", alpha = .3)+
+  annotate("rect",xmin = 0, xmax = 100, ymin = 100, ymax = Inf, fill = "red", alpha =.3)+
+  
+  theme_bw()+
+  labs(title = "Overall Hit Score vs Best Domain Hit Score RAPTOR",
+       subtitle = "Alveolata Raw Hits")+
+  xlab(label = "Overall HMMER Score")+
+  ylab(label = "Best Domain Score")+
+  labs(color = "Group")
+
+
+FinalAlvPlotDist <- FinalAlvRictor %>% distinct(Organism_Taxonomic_ID, .keep_all = TRUE)%>%ggplot()+
+  geom_jitter(aes(x = sca, y = scd), size = 2)+
+  geom_hline(yintercept = 100, linetype = "dashed")+
+  geom_vline(xintercept = 100, linetype = "dashed")+
+  geom_rect(aes(xmin = 150, xmax = Inf, ymin = 150, ymax = Inf),linetype = "dashed", color = "black", fill = "#ffffffff", alpha = 0)+
+  geom_rect(aes(xmin = 300, xmax = Inf, ymin = 300, ymax = Inf),linetype = "dashed", color = "black", fill = "#ffffffff", alpha = 0)+
+  annotate("rect", xmin = 0, xmax = 100, ymin = 0, ymax = 100, fill = "purple", alpha = .3)+
+  annotate("rect", xmin = 100, xmax = Inf, ymin = 0, ymax = 100, fill = "red", alpha = .3)+
+  annotate("rect",xmin = 0, xmax = 100, ymin = 100, ymax = Inf, fill = "red", alpha =.3)+
+  
+  theme_bw()+
+  labs(title = "Overall Hit Score vs Best Domain Hit Score RAPTOR",
+       subtitle = "Alveolata Raw Hits Distinct ID")+
+  xlab(label = "Overall HMMER Score")+
+  ylab(label = "Best Domain Score")+
+  labs(color = "Group")
+
+
+
+
+
+
+
+
+
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminationAlvRictor.png",
+       plot = FinalAlvPlot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminationAlvRictorDistinct.png",
+       plot = FinalAlvPlotDist,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 ExcRictorJGI <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Excavata_JGI/ExcavataJGI_RICTOR.csv")
@@ -212,7 +301,7 @@ ExcRictorPlot <- FinalExcRictor %>% ggplot()+
   
   theme_bw()+
   labs(title = "Overall Hit Score vs Best Domain Hit Score Rictor",
-       subtitle = "Excavata")+
+       subtitle = "Excavata Raw Hits")+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
   labs(color = "Group")
