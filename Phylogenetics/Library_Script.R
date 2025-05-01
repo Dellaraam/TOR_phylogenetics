@@ -19,6 +19,7 @@
 #install.packages("ggsci")
 #install.packages("eoffice")
 #install.packages("RRphylo")
+#install.packages("treemapify")
 #remotes::install_github("djw533/micro.gen.extra")
 # https://rdrr.io/github/djw533/micro.gen.extra/
 
@@ -61,3 +62,5 @@ library(paletteer)
 library(tableHTML)
 library(eoffice)
 library(RRphylo)
+library(scales)
+library(treemapify)

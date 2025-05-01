@@ -1,11 +1,14 @@
 # Photosynthesis trees and overall metabolism
 # Kyle Johnson
 # 4/3/2025
-library(tidyverse)
-library(ggtree)
-library(treeio)
-library(ggnewscale)
-library(eoffice)
+# library(tidyverse)
+# library(ggtree)
+# library(treeio)
+# library(ggnewscale)
+# library(eoffice)
+
+
+
 
 # Load in the master table
 
@@ -201,7 +204,7 @@ StramLayer1 <- STP + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x = .3, lines
 #This layer is the first heatmap which is the H,M,L,P values
 #This takes in the df object which contains the relevant information
 #This layer also specifies that it has a unique scale_fill
-StramLayer2 <- gheatmap(StramLayer1, df, offset = 6.5, width = .65, font.size = 2, colnames = FALSE)+
+StramLayer2 <- gheatmap(StramLayer1, df, offset = 6.5, width = .85, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -220,11 +223,12 @@ StramLayer2 <- gheatmap(StramLayer1, df, offset = 6.5, width = .65, font.size = 
 #Create the third layer of the heatmap tree
 #This layer is the second heatmap which is the Metabolic Strategies
 #This takes in the mdf object which has the metabolic information
-StramLayer3 <- gheatmap(StramLayer2,mdf, offset = 12, width = .15, colnames = FALSE)+
+StramLayer3 <- gheatmap(StramLayer2,mdf, offset = 14, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
-                    values = Mpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    na.value = "grey",
                     drop = FALSE)+
   theme(
     text = element_text(family = "serif"),
@@ -319,9 +323,10 @@ AlvLayer2 <- gheatmap(AlvLayer1, df, offset = 4, font.size = 2,, width = .4, col
 #Alv Layer 3
 AlvLayer3 <- gheatmap(AlvLayer2,mdf, offset = 7, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
-                    values = Mpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    na.value = "grey",
                     drop = FALSE)+
   theme(
     text = element_text(family = "serif"),
@@ -421,11 +426,11 @@ ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 1.8, nudge
   labs(title = "Excavates Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 22.5, width = .25, colnames = FALSE)+
+experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 22.5, width = .35, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiote"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
                     values = EMpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiote"),
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
                     na.value = "grey",
                     drop = FALSE)+
   theme(
@@ -497,7 +502,7 @@ ARTP+geom_tiplab2()+geom_text(aes(label=node))
 
 
 ARHeat <- ARTree %>% ggtree(branch.length = "none", ladderize = FALSE)+xlim(NA,30)
-ARHeatPlot <- gheatmap(ARHeat,df4, offset = 6, width = .6, font.size = 2, colnames = FALSE)+
+ARHeatPlot <- gheatmap(ARHeat,df4, offset = 6, width = .85, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -525,7 +530,7 @@ ARSavePlot <- ARHeatPlot %<+% AR+geom_tiplab(size = 1.8, nudge_x = .3, linesize 
 
 ARSavePlot
 
-experimentalARplot <- gheatmap(ARSavePlot,mdf1, offset = 12, width = .15, colnames = FALSE)+
+experimentalARplot <- gheatmap(ARSavePlot,mdf1, offset = 15, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
                     values = EMpal2,
@@ -670,9 +675,10 @@ ChloRhoLayer2 <- gheatmap(ChloRhoLayer1, df6, offset = 6.5, width = .65, font.si
 # Requires the second layer
 ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 12, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite"),
-                    values = Mpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    na.value = "grey",
                     drop = FALSE)+
   theme(
     text = element_text(family = "serif"),
@@ -881,9 +887,9 @@ StrepTree$tip.label
 StrepTree$tip.label <- gsub("'","", StrepTree$tip.label)
 
 
-Strep <- MasterTable %>% filter(Super.Group == "Rhodophyta" | Super.Group == "Chlorophyta")
+Strep <- MasterTable %>% filter(Super.Group == "Streptophyta")
 Strep <- Strep %>% relocate(Organism.Name)
-Strep$Organism.Name <- gsub("'","", ChlorRho$Organism.Name)
+Strep$Organism.Name <- gsub("'","", Strep$Organism.Name)
 
 
 #Protein Subsetted Data
@@ -903,14 +909,72 @@ MsubsetStrep <- Strep %>% select(Organism.Name, M.Strategy)%>% distinct(Organism
 mdfStrep <- column_to_rownames(MsubsetStrep, var = "Organism.Name")
 
 
+C.scoreStrep <- Strep %>% select(Organism.Name, C.score)
+dfCscore <- column_to_rownames(C.scoreStrep, var = "Organism.Name")
+
+
 
 
 #Naked Tree with associated data
-StrepTreeP <- ggtree(StrepTree, branch.length = "none", ladderize = FALSE)
+StrepTreeP <- ggtree(StrepTree, branch.length = "none", layout = "circular", ladderize = FALSE)
 StrepTreeP <- StrepTreeP  %<+% Strep
 
 
+#Layer 1
+StrepLayer1 <- StrepTreeP+geom_tree(aes(color = C.score))+
+  scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
+                        guide = guide_colorbar(order =1),
+                        name = "Completeness Score")+
+  geom_rootedge()+
+  labs(title = "Streptophyta Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
+StrepLayer1
 
 
+StrepLayer1
+Streplayer2 <- gheatmap(StrepLayer1, dfProteins, offset = .5, width = .65, font.size = 2, colnames = FALSE)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P",NA),
+                    values = pal3,
+                    limits = c("H","M","L","P", NA),
+                    na.value = "#FFFFFF",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
+
+Streplayer2
+
+StrepLayer3 <- gheatmap(Streplayer2,mdfStrep, offset = 12, width = .15, colnames = FALSE)+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
+
+
+StrepLayer3
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapMetMapStrep.png",
+       plot = StrepLayer3,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 

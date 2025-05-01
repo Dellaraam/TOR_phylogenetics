@@ -47,7 +47,18 @@ MassiveTable <- MassiveTable %>% mutate(M.Strategy = if_else(Organism.Name == "A
   mutate(M.Strategy = if_else(Organism.Name == "Galdieria yellowstonensis", "Mixotroph", M.Strategy))%>%
   mutate(M.Strategy = if_else(Organism.Name == "Rehmannia glutinosa", "Parasite", M.Strategy))%>%
   mutate(M.Strategy = if_else(Genus.name == "Cuscuta", "Parasite", M.Strategy))%>%
-  mutate(M.Strategy = if_else(Genus.name == "Symbiodinium","Endosymbiotic", M.Strategy, missing = M.Strategy))
+  mutate(M.Strategy = if_else(Genus.name == "Symbiodinium","Endosymbiotic", M.Strategy, missing = M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Durusdinium trenchii", "Endosymbiotic", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Cladocopium goreaui", "Endosymbiotic", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Effrenium voratum", "Endosymbiotic", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Parmales sp. scaly parma", "Mixotroph", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Pelagophyceae sp. CCMP2097", "Autotrophic", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Bacillariaceae", "Autotrophic", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Ochromonadaceae sp. CCMP2298", "Autotrophic", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Cercozoa sp. M6MM", "Heterotroph", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Trebouxiophyceae", "Autotrophic", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Chlorellaceae sp.", "Autotrophic", M.Strategy))%>%
+  mutate(M.Strategy = if_else(Organism.Name == "Pedinophyceae sp. YPF-701", "Autotrophic", M.Strategy))
 
 
 
