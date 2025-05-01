@@ -204,7 +204,7 @@ StramLayer1 <- STP + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x = .3, lines
 #This layer is the first heatmap which is the H,M,L,P values
 #This takes in the df object which contains the relevant information
 #This layer also specifies that it has a unique scale_fill
-StramLayer2 <- gheatmap(StramLayer1, df, offset = 6.5, width = .65, font.size = 2, colnames = FALSE)+
+StramLayer2 <- gheatmap(StramLayer1, df, offset = 6.5, width = .85, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -223,7 +223,7 @@ StramLayer2 <- gheatmap(StramLayer1, df, offset = 6.5, width = .65, font.size = 
 #Create the third layer of the heatmap tree
 #This layer is the second heatmap which is the Metabolic Strategies
 #This takes in the mdf object which has the metabolic information
-StramLayer3 <- gheatmap(StramLayer2,mdf, offset = 12, width = .15, colnames = FALSE)+
+StramLayer3 <- gheatmap(StramLayer2,mdf, offset = 14, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
                     values = EMpal2,
@@ -426,7 +426,7 @@ ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 1.8, nudge
   labs(title = "Excavates Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 22.5, width = .25, colnames = FALSE)+
+experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 22.5, width = .35, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
                     values = EMpal2,
@@ -502,7 +502,7 @@ ARTP+geom_tiplab2()+geom_text(aes(label=node))
 
 
 ARHeat <- ARTree %>% ggtree(branch.length = "none", ladderize = FALSE)+xlim(NA,30)
-ARHeatPlot <- gheatmap(ARHeat,df4, offset = 6, width = .6, font.size = 2, colnames = FALSE)+
+ARHeatPlot <- gheatmap(ARHeat,df4, offset = 6, width = .85, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -530,7 +530,7 @@ ARSavePlot <- ARHeatPlot %<+% AR+geom_tiplab(size = 1.8, nudge_x = .3, linesize 
 
 ARSavePlot
 
-experimentalARplot <- gheatmap(ARSavePlot,mdf1, offset = 12, width = .15, colnames = FALSE)+
+experimentalARplot <- gheatmap(ARSavePlot,mdf1, offset = 15, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
                     values = EMpal2,
@@ -968,4 +968,13 @@ StrepLayer3 <- gheatmap(Streplayer2,mdfStrep, offset = 12, width = .15, colnames
 
 
 StrepLayer3
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapMetMapStrep.png",
+       plot = StrepLayer3,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
 
