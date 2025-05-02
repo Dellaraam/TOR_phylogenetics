@@ -538,7 +538,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CscorePlot.png",
 
 
 
-#Those with RICTOR metabolic counthttp://127.0.0.1:41963/graphics/plot_zoom_png?width=1707&height=912
+#Those with RICTOR metabolic count
  YesPlot <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>%filter(Super.Group == "Alveolata" | Super.Group == "Stramenopiles" | Super.Group == "Rhizaria")%>%
    ggplot()+
    geom_bar(aes(x = M.Strategy, fill = Super.Group,stat = "identity"), position = position_dodge(preserve = 'single'), width = .5, color = "black")+
@@ -577,20 +577,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CscorePlot.png",
    geom_boxplot(aes(x = M.Strategy, y = RICTORAll), position = position_dodge(preserve = 'single'), width = .5, color = "black", outlier.shape = NA)+
    labs(title = "Score Distributions Amongst Species with RICTOR Protein")+
    xlab(label = "Metabolic Strategy Employed")+
-   ylab(label = "Bit Score")+http://127.0.0.1:41963/graphics/plot_zoom_png?width=1707&height=912
+   ylab(label = "Bit Score")+
    theme_bw()
  
  
  
- 
- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>%count(Super.Group, M.Strategy)%>%
-   ggplot()+
-   geom_bar(aes(x = M.Strategy, y = n, fill = Super.Group), stat = "identity", position = "dodge", alpha = .8)+
-   coord_polar()+
-   theme_bw()
- 
- 
- 
+ #Pie Chart Section for Metabolic Strategies -----------------------------------
  
 pie1 <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>%
   count(M.Strategy)%>%
@@ -607,12 +599,19 @@ data <- data %>%
   mutate(ypos = cumsum(prop)- 0.5*prop)
 
 pie1 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
-  geom_bar(stat="identity", width=1, color="black") +
+  geom_bar(stat="identity", width=2, color="black") +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,4),"%")), color = "black", size=6)+
-  labs(title = "Metabolic Strategy Breakdown of Organisms That Have Rictor")
+  geom_text(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of Organisms That Have Rictor")+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(text = element_text(family = "serif"))
  
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithRictor.png",
@@ -623,8 +622,6 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithRictor.pn
        dpi = 320,
        limitsize = FALSE)
 
-
-
  
 data2 <- MasterTable %>% filter(is.na(RICTORDomain) | is.na(RICTORAll)) %>% count(M.Strategy)
 data2 <- data2 %>%
@@ -634,12 +631,20 @@ data2 <- data2 %>%
 
 
 pie2<- ggplot(data2, aes(x="", y=prop, fill=M.Strategy)) +
-  geom_bar(stat="identity", width=1, color="black") +
+  geom_bar(stat="identity", width=2, color="black") +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,4),"%")), color = "black", size=6)+
-  labs(title = "Metabolic Strategy Breakdown of Organisms That Don't Have Rictor")
+  geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of Organisms That Don't Have Rictor")+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+  
  
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithoutRictor.png",
        plot = pie2,
@@ -649,42 +654,8 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithoutRictor
        dpi = 320,
        limitsize = FALSE)
  
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ #------------------------------------------------------------------------------
+ #Tree Maps---------------------------------------------------------------------
 
 
 
@@ -751,7 +722,7 @@ TreeMapWithRictor <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTOR
         units = "px",
         dpi = 320,
         limitsize = FALSE)
- 
+ # ------------------------------------------------------------------------------
  # MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>% group_by(M.Strategy, Super.Group) %>% summarize(count=n())
  #   ggplot(aes(y = factor(M.Strategy, level = c("Mixotroph", "Autotrophic", "Heterotroph","Parasite","Endosymbiotic")), x = as.factor(Super.Group), fill = Super.Group, color = Super.Group))+
  #   geom_jitter()+
