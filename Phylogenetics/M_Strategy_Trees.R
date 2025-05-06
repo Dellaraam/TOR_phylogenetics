@@ -81,6 +81,8 @@ ChloroRhoSubset <- ChloroRhoSubset %>% filter(Organism.Name != "Cymbomonas tetra
 
 StreptophytaSubset <- MasterTable %>% filter(Super.Group == "Streptophyta")
 ARSubset <- rbind(AlvSubset,RhizSubset)
+SARSubset <- rbind(StramSubset, AlvSubset, RhizSubset)
+
 
 
 write.table(StramSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedStram.txt", sep = "\t", row.names = F, col.names = F)
@@ -89,7 +91,7 @@ write.table(ARSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/I
 write.table(ExcSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedExc.txt", sep = "\t", row.names = F, col.names = F)
 write.table(ChloroRhoSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedChloroRho.txt", sep = "\t", row.names = F, col.names = F)
 write.table(StreptophytaSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedStreptophyta.txt", sep = "\t", row.names = F, col.names = F)
-
+write.table(SARSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedSAR.txt", sep = "\t", row.names = F, col.names = F)
 #Palettes-----------------------------------------------------------------------
 pal <- c(
   "H" = "#7e2323",
@@ -748,13 +750,19 @@ subsetdataframe5 <- SAR %>% select(Organism.Name,
   distinct(Organism.Name, .keep_all = TRUE)
 df5 <- column_to_rownames(subsetdataframe5, var = "Organism.Name")
 
+Msubset4 <- SAR %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name, .keep_all = TRUE) #%>%
+# pivot_longer(cols = !Organism.Name, names_to = "M.Strategy", values_to = "Type")
+mdf4 <- column_to_rownames(Msubset4, var = "Organism.Name")
 
-SARHeat <- SARTree %>% ggtree(ladderize = FALSE, branch.length = "none", layout = "fan", open.angle = 180)+geom_rootedge()
+
+
+
+SARHeat <- SARTree %>% ggtree(ladderize = FALSE,branch.length = "none")+geom_rootedge()+geom_tree(linewidth = .25)
 SARHeat
 
 
 
-SARHeatPlot <- gheatmap(SARHeat,df5, offset = 5, width = .8, font.size = 2, colnames = FALSE)+
+SARHeatPlot <- gheatmap(SARHeat,df5, offset = 2.5, width = .3, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -767,16 +775,17 @@ SARHeatPlot <- gheatmap(SARHeat,df5, offset = 5, width = .8, font.size = 2, coln
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
     legend.spacing.y = unit(0.02, "cm"),
-    legend.key.spacing.x = unit(1,"cm"))
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
 SARHeatPlot
 
 
-SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
+SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 1, nudge_x = 0, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
-  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3http://127.0.0.1:41255/graphics/plot_zoom_png?width=1707&height=912)+
   # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
@@ -787,6 +796,36 @@ SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 1.8, nudge_x = .3, linesi
 
 SARSavePlot
 
+SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 5.5, width = .05, colnames = FALSE)+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10),
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
+
+SARSavePlotF
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SARHeatPlotMetPlot.png",
+       plot = SARSavePlotF,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/SARTreeMetHeat.pptx",
+       figure = SARSavePlotF,
+       units = "inches",
+       width = 10,
+       height = 14)
 
 
 

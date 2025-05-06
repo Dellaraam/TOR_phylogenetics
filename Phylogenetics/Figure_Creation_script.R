@@ -13,8 +13,19 @@ MasterTable <- MasterTable %>%
          RICTORAll = if_else(Super.Group == "Chlorophyta", NA, RICTORAll))
 
 
+MasterTable <- MasterTable %>% mutate(M.Strategy = if_else(Phylum.name == "Apicomplexa", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                       M.Strategy = if_else(Phylum.name == "Perkinsozoa", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                       M.Strategy = if_else(Super.Group == "Streptophyta" & M.Strategy == "Parasite", "Streptophyta parasite", M.Strategy, missing = M.Strategy),
+                       M.Strategy = if_else(Family.name == "Amoebophryaceae", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                       M.Strategy = if_else(M.Strategy == "Parasite" & Super.Group != "Streptophyta", "Non-Plastid Parasite", M.Strategy, missing = M.Strategy))
 
 
+MasterTable %>% filter(M.Strategy == "Parasite")%>% view()
+MasterTable %>% filter(is.na(RAPTOR) & M.Strategy != "Plastid Parasite") %>% view()
+
+# Add to this palette:
+# Non-Plastid Parasite
+# Plastid Parasite
 
 
 EMpal2 <- c(
@@ -604,12 +615,12 @@ pie1 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "Metabolic Strategy Breakdown of Organisms That Have Rictor")+
-  scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
-                    values = EMpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
-                    na.value = "grey",
-                    drop = FALSE)+
+  # scale_fill_manual(name = "Metabolic Strategy",
+  #                   breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+  #                   values = EMpal2,
+  #                   limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+  #                   na.value = "grey",
+  #                   drop = FALSE)+
   theme(text = element_text(family = "serif"))
  
 
@@ -620,6 +631,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithRictor.pn
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/PieWithRictor.pptx",
+       figure = pie1,
+       units = "inches",
+       width = 10,
+       height = 7)
 
  
 data2 <- MasterTable %>% filter(is.na(RICTORDomain) | is.na(RICTORAll)) %>% count(M.Strategy)
@@ -636,12 +653,12 @@ pie2<- ggplot(data2, aes(x="", y=prop, fill=M.Strategy)) +
   theme(legend.position="none")+
   geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "Metabolic Strategy Breakdown of Organisms That Don't Have Rictor")+
-  scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
-                    values = EMpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
-                    na.value = "grey",
-                    drop = FALSE)+
+  # scale_fill_manual(name = "Metabolic Strategy",
+  #                   breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+  #                   values = EMpal2,
+  #                   limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+  #                   na.value = "grey",
+  #                   drop = FALSE)+
   theme(text = element_text(family = "serif"))
   
  
@@ -652,6 +669,83 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithoutRictor
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/PieWithOutRictor.pptx",
+       figure = pie2,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+
+
+
+
+
+
+data3 <- MasterTable %>% filter(is.na(RAPTOR)) %>% count(M.Strategy)
+data3 <- data3 %>%
+  arrange(desc(M.Strategy))%>%
+  mutate(prop = n/sum(data3$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+
+pie3<- ggplot(data3, aes(x="", y=prop, fill=M.Strategy)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of Organisms That Don't Have RAPTOR")+
+  # scale_fill_manual(name = "Metabolic Strategy",
+  #                   breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+  #                   values = EMpal2,
+  #                   limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+  #                   na.value = "grey",
+  #                   drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+
+pie3
+
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/PieWithOutRAPTOR.pptx",
+       figure = pie3,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+data4 <- MasterTable %>% filter(!is.na(RAPTOR)) %>% count(M.Strategy)
+data4 <- data4 %>%
+  arrange(desc(M.Strategy))%>%
+  mutate(prop = n/sum(data4$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+
+pie4<- ggplot(data4, aes(x="", y=prop, fill=M.Strategy)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of Organisms That Have RAPTOR")+
+  # scale_fill_manual(name = "Metabolic Strategy",
+  #                   breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+  #                   values = EMpal2,
+  #                   limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+  #                   na.value = "grey",
+  #                   drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+
+pie4
+
+
+
+
+
+
+
+
  
  #------------------------------------------------------------------------------
  #Tree Maps---------------------------------------------------------------------
@@ -722,27 +816,11 @@ TreeMapWithRictor <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTOR
         dpi = 320,
         limitsize = FALSE)
  # ------------------------------------------------------------------------------
- # MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>% group_by(M.Strategy, Super.Group) %>% summarize(count=n())
- #   ggplot(aes(y = factor(M.Strategy, level = c("Mixotroph", "Autotrophic", "Heterotroph","Parasite","Endosymbiotic")), x = as.factor(Super.Group), fill = Super.Group, color = Super.Group))+
- #   geom_jitter()+
- #   labs(title = "Organisms with RICTOR")
- # 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ YesPlot <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>% group_by(M.Strategy, Super.Group) %>% summarize(count=n())
+   ggplot(aes(y = factor(M.Strategy, level = c("Mixotroph", "Autotrophic", "Heterotroph","Parasite","Endosymbiotic")), x = as.factor(Super.Group), fill = Super.Group, color = Super.Group))+
+   geom_jitter()+
+   labs(title = "Organisms with RICTOR")
+
  
  ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/UpdatedMetabolicCountYes.png",
         plot = YesPlot,
