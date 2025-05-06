@@ -22,6 +22,7 @@ MasterTable <- MasterTable %>% mutate(M.Strategy = if_else(Phylum.name == "Apico
 
 MasterTable %>% filter(M.Strategy == "Parasite")%>% view()
 MasterTable %>% filter(is.na(RAPTOR) & M.Strategy != "Plastid Parasite") %>% view()
+MasterTable %>% filter(is.na(RICTOR) & M.Strategy == "Heterotroph") %>% view()
 
 # Add to this palette:
 # Non-Plastid Parasite
@@ -67,6 +68,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRICTOR.png
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_Rictor_Domain.pptx",
+       figure = jitterRICTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 jitterRICTOR<- MasterTable %>%filter(!is.na(RICTOR) & RICTOR != "P") %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICTORAll))+
   geom_jitter(shape = 18, size = 2)+
   labs(title = "RICTOR Overall Score Distribution")+
@@ -83,6 +90,11 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRICTORAll.
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_Rictor_All.pptx",
+       figure = jitterRICTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -107,6 +119,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRAPTOR.png
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_Raptor_Domain.pptx",
+       figure = jitterRAPTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 jitterRAPTOR<- MasterTable %>%filter(!is.na(RAPTOR) & RAPTOR != "P") %>% ggplot(aes(x = factor(RAPTOR,level = c("H", "M", "L")), y = RAPTORAll))+
   geom_jitter(shape = 18, size = 2)+
@@ -123,6 +141,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRAPTORAll.
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_Raptor_All.pptx",
+       figure = jitterRAPTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -154,6 +178,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterSIN1.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_SIN1_Domain.pptx",
+       figure = jitterSIN1,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 jitterSIN1 <- MasterTable %>%filter(!is.na(SIN1) & SIN1 != "P" & Super.Group != "Rhizaria") %>% ggplot(aes(x = factor(SIN1, level = c("H", "M", "L")), y = SIN1All))+
   geom_jitter(shape = 18, size = 2)+
   labs(title = "SIN1 Overall Score Distribution")+
@@ -169,6 +199,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterSIN1All.pn
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_SIN1_All.pptx",
+       figure = jitterSIN1,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -201,6 +237,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterLST8.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_LST8_Domain.pptx",
+       figure = jitterLST8,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 jitterLST8 <- MasterTable %>%filter(!is.na(LST8) & LST8 != "P") %>% ggplot(aes(x = factor(LST8, level = c("H", "M", "L")), y = LST8All))+
   geom_jitter(shape = 18, size = 2)+
@@ -217,6 +259,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterLST8All.pn
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_LST8_All.pptx",
+       figure = jitterLST8,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -240,6 +288,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterTOR.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_TOR_Domain.pptx",
+       figure = jitterTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 jitterTOR <- MasterTable %>%filter(!is.na(TOR) & TOR != "P") %>% ggplot(aes(x = factor(TOR, level = c("H", "M", "L")), y = TORAll))+
   geom_jitter(shape = 18, size = 2)+
@@ -256,6 +310,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterTORAll.png
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_TOR_All.pptx",
+       figure = jitterTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -283,6 +343,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRictor.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_Rictor_Domain.pptx",
+       figure = BoxRictor,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 BoxRictor <- MasterTable %>% filter(Super.Group != "Chlorophyta") %>% ggplot(aes(x = Super.Group, y = RICTORAll))+
   stat_boxplot(aes(Super.Group, RICTORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
@@ -301,6 +367,13 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRictorAll.png
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_Rictor_All.pptx",
+       figure = BoxRictor,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 
 
@@ -331,6 +404,13 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRaptor.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_Raptor_Domain.pptx",
+       figure = BoxRaptor,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
 
 
 
@@ -351,6 +431,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRaptorAll.png
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_Raptor_All.pptx",
+       figure = BoxRaptor,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -380,6 +466,13 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxTOR.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_TOR_Domain.pptx",
+       figure = BoxTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
 
 
 
@@ -401,6 +494,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxTORAll.png",
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_TOR_All.pptx",
+       figure = BoxTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -431,6 +530,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxSIN1.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_SIN1_Domain.pptx",
+       figure = BoxSIN1,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 
 
@@ -452,6 +557,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxSIN1All.png",
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_SIN1_All.pptx",
+       figure = BoxSIN1,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -483,6 +594,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxLST8.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_LST8_Domain.pptx",
+       figure = BoxLST8,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 
 
@@ -511,6 +628,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxLST8All.png",
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_LST8_All.pptx",
+       figure = BoxLST8,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -543,6 +666,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CscorePlot.png",
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_C_Score.pptx",
+       figure = BoxPlotCscore,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -594,15 +723,9 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CscorePlot.png",
  
  #Pie Chart Section for Metabolic Strategies -----------------------------------
  
-pie1 <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>%
-  count(M.Strategy)%>%
-  ggplot(aes(x="", y = n, fill = M.Strategy))+
-  geom_bar(stat="identity", width=1, color = "white")+
-  coord_polar("y", start = 0)+
-  labs(title = "Breakdown of Metabolic Strategies that include Rictor")
 
 
-data <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll)) %>% count(M.Strategy)
+data <- MasterTable %>% filter(!is.na(RICTOR)) %>% count(M.Strategy)
 data <- data %>%
   arrange(desc(M.Strategy))%>%
   mutate(prop = n/sum(data$n) * 100)%>%
@@ -639,7 +762,7 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/PieWithRictor.pptx"
        height = 7)
 
  
-data2 <- MasterTable %>% filter(is.na(RICTORDomain) | is.na(RICTORAll)) %>% count(M.Strategy)
+data2 <- MasterTable %>% filter(is.na(RICTOR))%>% filter(M.Strategy != "Heterotroph")%>% count(M.Strategy)
 data2 <- data2 %>%
   arrange(desc(M.Strategy))%>%
   mutate(prop = n/sum(data2$n) * 100)%>%
@@ -683,7 +806,7 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/PieWithOutRictor.pp
 
 
 
-data3 <- MasterTable %>% filter(is.na(RAPTOR)) %>% count(M.Strategy)
+data3 <- MasterTable %>% filter(is.na(RAPTOR)& M.Strategy != "Heterotroph") %>% count(M.Strategy)
 data3 <- data3 %>%
   arrange(desc(M.Strategy))%>%
   mutate(prop = n/sum(data3$n) * 100)%>%

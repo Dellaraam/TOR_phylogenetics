@@ -738,6 +738,11 @@ SARTree$tip.label <- gsub("'","", SARTree$tip.label)
 SARTree$tip.label
 
 
+SARTree <- move.lineage(SARTree, 239, 247)
+SARTree <- move.lineage(SARTree, 239, 274)
+SARTree$node.label
+
+
 SAR <- MasterTable %>% filter(Super.Group == "Alveolata" | Super.Group == "Rhizaria" | Super.Group == "Stramenopiles")
 SAR <- SAR %>% relocate(Organism.Name)
 
@@ -758,7 +763,7 @@ mdf4 <- column_to_rownames(Msubset4, var = "Organism.Name")
 
 
 SARHeat <- SARTree %>% ggtree(ladderize = FALSE,branch.length = "none")+geom_rootedge()+geom_tree(linewidth = .25)
-SARHeat
+SARHeat + geom_nodelab(size = 2)+geom_text(aes(label = node),size = 4)
 
 
 
@@ -814,6 +819,15 @@ SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 5.5, width = .05, colnames =
 
 SARSavePlotF
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SARHeatPlotMetPlot.png",
+       plot = SARSavePlotF,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SARHeatPlotMetPlot.svg",
        plot = SARSavePlotF,
        width = 3840,
        height = 2160,
