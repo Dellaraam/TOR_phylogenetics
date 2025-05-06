@@ -4,7 +4,6 @@
 
 
 # ------------------------------------------------------------------------------
-#Test Ground
 MasterTable <- read_csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")
 MasterTable <- MasterTable %>% select(-...1)
 MasterTable <- MasterTable %>%
@@ -14,8 +13,20 @@ MasterTable <- MasterTable %>%
          RICTORAll = if_else(Super.Group == "Chlorophyta", NA, RICTORAll))
 
 
+MasterTable <- MasterTable %>% mutate(M.Strategy = if_else(Phylum.name == "Apicomplexa", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                       M.Strategy = if_else(Phylum.name == "Perkinsozoa", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                       M.Strategy = if_else(Super.Group == "Streptophyta" & M.Strategy == "Parasite", "Streptophyta parasite", M.Strategy, missing = M.Strategy),
+                       M.Strategy = if_else(Family.name == "Amoebophryaceae", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                       M.Strategy = if_else(M.Strategy == "Parasite" & Super.Group != "Streptophyta", "Non-Plastid Parasite", M.Strategy, missing = M.Strategy))
 
 
+MasterTable %>% filter(M.Strategy == "Parasite")%>% view()
+MasterTable %>% filter(is.na(RAPTOR) & M.Strategy != "Plastid Parasite") %>% view()
+MasterTable %>% filter(is.na(RICTOR) & M.Strategy == "Heterotroph") %>% view()
+
+# Add to this palette:
+# Non-Plastid Parasite
+# Plastid Parasite
 
 
 EMpal2 <- c(
@@ -57,6 +68,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRICTOR.png
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_Rictor_Domain.pptx",
+       figure = jitterRICTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 jitterRICTOR<- MasterTable %>%filter(!is.na(RICTOR) & RICTOR != "P") %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICTORAll))+
   geom_jitter(shape = 18, size = 2)+
   labs(title = "RICTOR Overall Score Distribution")+
@@ -73,6 +90,11 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRICTORAll.
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_Rictor_All.pptx",
+       figure = jitterRICTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -97,6 +119,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRAPTOR.png
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_Raptor_Domain.pptx",
+       figure = jitterRAPTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 jitterRAPTOR<- MasterTable %>%filter(!is.na(RAPTOR) & RAPTOR != "P") %>% ggplot(aes(x = factor(RAPTOR,level = c("H", "M", "L")), y = RAPTORAll))+
   geom_jitter(shape = 18, size = 2)+
@@ -113,6 +141,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRAPTORAll.
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_Raptor_All.pptx",
+       figure = jitterRAPTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -144,6 +178,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterSIN1.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_SIN1_Domain.pptx",
+       figure = jitterSIN1,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 jitterSIN1 <- MasterTable %>%filter(!is.na(SIN1) & SIN1 != "P" & Super.Group != "Rhizaria") %>% ggplot(aes(x = factor(SIN1, level = c("H", "M", "L")), y = SIN1All))+
   geom_jitter(shape = 18, size = 2)+
   labs(title = "SIN1 Overall Score Distribution")+
@@ -159,6 +199,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterSIN1All.pn
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_SIN1_All.pptx",
+       figure = jitterSIN1,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -191,6 +237,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterLST8.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_LST8_Domain.pptx",
+       figure = jitterLST8,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 jitterLST8 <- MasterTable %>%filter(!is.na(LST8) & LST8 != "P") %>% ggplot(aes(x = factor(LST8, level = c("H", "M", "L")), y = LST8All))+
   geom_jitter(shape = 18, size = 2)+
@@ -207,6 +259,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterLST8All.pn
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_LST8_All.pptx",
+       figure = jitterLST8,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -230,6 +288,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterTOR.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_TOR_Domain.pptx",
+       figure = jitterTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 jitterTOR <- MasterTable %>%filter(!is.na(TOR) & TOR != "P") %>% ggplot(aes(x = factor(TOR, level = c("H", "M", "L")), y = TORAll))+
   geom_jitter(shape = 18, size = 2)+
@@ -246,6 +310,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterTORAll.png
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_TOR_All.pptx",
+       figure = jitterTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -273,6 +343,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRictor.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_Rictor_Domain.pptx",
+       figure = BoxRictor,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 BoxRictor <- MasterTable %>% filter(Super.Group != "Chlorophyta") %>% ggplot(aes(x = Super.Group, y = RICTORAll))+
   stat_boxplot(aes(Super.Group, RICTORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
@@ -291,6 +367,13 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRictorAll.png
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_Rictor_All.pptx",
+       figure = BoxRictor,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 
 
@@ -321,6 +404,13 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRaptor.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_Raptor_Domain.pptx",
+       figure = BoxRaptor,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
 
 
 
@@ -341,6 +431,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRaptorAll.png
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_Raptor_All.pptx",
+       figure = BoxRaptor,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -370,6 +466,13 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxTOR.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_TOR_Domain.pptx",
+       figure = BoxTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
 
 
 
@@ -391,6 +494,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxTORAll.png",
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_TOR_All.pptx",
+       figure = BoxTOR,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -421,6 +530,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxSIN1.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_SIN1_Domain.pptx",
+       figure = BoxSIN1,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 
 
@@ -442,6 +557,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxSIN1All.png",
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_SIN1_All.pptx",
+       figure = BoxSIN1,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -473,6 +594,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxLST8.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_LST8_Domain.pptx",
+       figure = BoxLST8,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 
 
@@ -501,6 +628,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxLST8All.png",
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_LST8_All.pptx",
+       figure = BoxLST8,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -534,11 +667,17 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CscorePlot.png",
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_C_Score.pptx",
+       figure = BoxPlotCscore,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
 
-#Those with RICTOR metabolic counthttp://127.0.0.1:41963/graphics/plot_zoom_png?width=1707&height=912
+
+#Those with RICTOR metabolic count
  YesPlot <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>%filter(Super.Group == "Alveolata" | Super.Group == "Stramenopiles" | Super.Group == "Rhizaria")%>%
    ggplot()+
    geom_bar(aes(x = M.Strategy, fill = Super.Group,stat = "identity"), position = position_dodge(preserve = 'single'), width = .5, color = "black")+
@@ -577,42 +716,35 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CscorePlot.png",
    geom_boxplot(aes(x = M.Strategy, y = RICTORAll), position = position_dodge(preserve = 'single'), width = .5, color = "black", outlier.shape = NA)+
    labs(title = "Score Distributions Amongst Species with RICTOR Protein")+
    xlab(label = "Metabolic Strategy Employed")+
-   ylab(label = "Bit Score")+http://127.0.0.1:41963/graphics/plot_zoom_png?width=1707&height=912
+   ylab(label = "Bit Score")+
    theme_bw()
  
  
  
+ #Pie Chart Section for Metabolic Strategies -----------------------------------
  
- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>%count(Super.Group, M.Strategy)%>%
-   ggplot()+
-   geom_bar(aes(x = M.Strategy, y = n, fill = Super.Group), stat = "identity", position = "dodge", alpha = .8)+
-   coord_polar()+
-   theme_bw()
- 
- 
- 
- 
-pie1 <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>%
-  count(M.Strategy)%>%
-  ggplot(aes(x="", y = n, fill = M.Strategy))+
-  geom_bar(stat="identity", width=1, color = "white")+
-  coord_polar("y", start = 0)+
-  labs(title = "Breakdown of Metabolic Strategies that include Rictor")
 
 
-data <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll)) %>% count(M.Strategy)
+data <- MasterTable %>% filter(!is.na(RICTOR)) %>% count(M.Strategy)
 data <- data %>%
   arrange(desc(M.Strategy))%>%
   mutate(prop = n/sum(data$n) * 100)%>%
   mutate(ypos = cumsum(prop)- 0.5*prop)
 
 pie1 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
-  geom_bar(stat="identity", width=1, color="black") +
+  geom_bar(stat="identity", width=2, color="black") +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,4),"%")), color = "black", size=6)+
-  labs(title = "Metabolic Strategy Breakdown of Organisms That Have Rictor")
+  geom_text(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of Organisms That Have Rictor")+
+  # scale_fill_manual(name = "Metabolic Strategy",
+  #                   breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+  #                   values = EMpal2,
+  #                   limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+  #                   na.value = "grey",
+  #                   drop = FALSE)+
+  theme(text = element_text(family = "serif"))
  
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithRictor.png",
@@ -623,10 +755,14 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithRictor.pn
        dpi = 320,
        limitsize = FALSE)
 
-
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/PieWithRictor.pptx",
+       figure = pie1,
+       units = "inches",
+       width = 10,
+       height = 7)
 
  
-data2 <- MasterTable %>% filter(is.na(RICTORDomain) | is.na(RICTORAll)) %>% count(M.Strategy)
+data2 <- MasterTable %>% filter(is.na(RICTOR))%>% filter(M.Strategy != "Heterotroph")%>% count(M.Strategy)
 data2 <- data2 %>%
   arrange(desc(M.Strategy))%>%
   mutate(prop = n/sum(data2$n) * 100)%>%
@@ -634,12 +770,20 @@ data2 <- data2 %>%
 
 
 pie2<- ggplot(data2, aes(x="", y=prop, fill=M.Strategy)) +
-  geom_bar(stat="identity", width=1, color="black") +
+  geom_bar(stat="identity", width=2, color="black") +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,4),"%")), color = "black", size=6)+
-  labs(title = "Metabolic Strategy Breakdown of Organisms That Don't Have Rictor")
+  geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of Organisms That Don't Have Rictor")+
+  # scale_fill_manual(name = "Metabolic Strategy",
+  #                   breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+  #                   values = EMpal2,
+  #                   limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+  #                   na.value = "grey",
+  #                   drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+  
  
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithoutRictor.png",
        plot = pie2,
@@ -648,43 +792,86 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithoutRictor
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/PieWithOutRictor.pptx",
+       figure = pie2,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+
+
+
+
+
+
+data3 <- MasterTable %>% filter(is.na(RAPTOR)& M.Strategy != "Heterotroph") %>% count(M.Strategy)
+data3 <- data3 %>%
+  arrange(desc(M.Strategy))%>%
+  mutate(prop = n/sum(data3$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+
+pie3<- ggplot(data3, aes(x="", y=prop, fill=M.Strategy)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of Organisms That Don't Have RAPTOR")+
+  # scale_fill_manual(name = "Metabolic Strategy",
+  #                   breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+  #                   values = EMpal2,
+  #                   limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+  #                   na.value = "grey",
+  #                   drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+
+pie3
+
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/PieWithOutRAPTOR.pptx",
+       figure = pie3,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+data4 <- MasterTable %>% filter(!is.na(RAPTOR)) %>% count(M.Strategy)
+data4 <- data4 %>%
+  arrange(desc(M.Strategy))%>%
+  mutate(prop = n/sum(data4$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+
+pie4<- ggplot(data4, aes(x="", y=prop, fill=M.Strategy)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of Organisms That Have RAPTOR")+
+  # scale_fill_manual(name = "Metabolic Strategy",
+  #                   breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+  #                   values = EMpal2,
+  #                   limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+  #                   na.value = "grey",
+  #                   drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+
+pie4
+
+
+
+
+
+
+
+
  
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ #------------------------------------------------------------------------------
+ #Tree Maps---------------------------------------------------------------------
 
 
 
@@ -751,28 +938,12 @@ TreeMapWithRictor <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTOR
         units = "px",
         dpi = 320,
         limitsize = FALSE)
- 
- # MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>% group_by(M.Strategy, Super.Group) %>% summarize(count=n())
- #   ggplot(aes(y = factor(M.Strategy, level = c("Mixotroph", "Autotrophic", "Heterotroph","Parasite","Endosymbiotic")), x = as.factor(Super.Group), fill = Super.Group, color = Super.Group))+
- #   geom_jitter()+
- #   labs(title = "Organisms with RICTOR")
- # 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ # ------------------------------------------------------------------------------
+ YesPlot <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTORAll))%>% group_by(M.Strategy, Super.Group) %>% summarize(count=n())
+   ggplot(aes(y = factor(M.Strategy, level = c("Mixotroph", "Autotrophic", "Heterotroph","Parasite","Endosymbiotic")), x = as.factor(Super.Group), fill = Super.Group, color = Super.Group))+
+   geom_jitter()+
+   labs(title = "Organisms with RICTOR")
+
  
  ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/UpdatedMetabolicCountYes.png",
         plot = YesPlot,
