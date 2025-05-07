@@ -98,6 +98,12 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminat
        dpi = 320,
        limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/CutOffDeterminationStramenopileRictor.pptx",
+       figure = StramRictorRawPlot,
+       units = "inches",
+       width = 10,
+       height = 7)
+
 
 
 

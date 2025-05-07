@@ -15,6 +15,12 @@
 MasterTable <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")
 MasterTable <- select(MasterTable, -X)
 
+MasterTable <- MasterTable %>% mutate(M.Strategy = if_else(Phylum.name == "Apicomplexa", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Phylum.name == "Perkinsozoa", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Super.Group == "Streptophyta" & M.Strategy == "Parasite", "Streptophyta parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Family.name == "Amoebophryaceae", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(M.Strategy == "Parasite" & Super.Group != "Streptophyta", "Non-Plastid Parasite", M.Strategy, missing = M.Strategy))
+
 MasterTable %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICTORDomain, color = M.Strategy, size = C.score))+
   geom_jitter()+
   labs(title = "RICTOR Domain Score Distribution")+
@@ -85,6 +91,11 @@ SARSubset <- rbind(StramSubset, AlvSubset, RhizSubset)
 
 
 
+
+ArchaeplastidaSubset <- rbind(ChloroRhoSubset, StreptophytaSubset)
+
+
+
 write.table(StramSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedStram.txt", sep = "\t", row.names = F, col.names = F)
 write.table(AlvSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedAlv.txt", sep = "\t", row.names = F, col.names = F)
 write.table(ARSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedAR.txt", sep = "\t", row.names = F, col.names = F)
@@ -92,6 +103,8 @@ write.table(ExcSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/
 write.table(ChloroRhoSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedChloroRho.txt", sep = "\t", row.names = F, col.names = F)
 write.table(StreptophytaSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedStreptophyta.txt", sep = "\t", row.names = F, col.names = F)
 write.table(SARSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedSAR.txt", sep = "\t", row.names = F, col.names = F)
+write.table(ArchaeplastidaSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedArch.txt", sep = "\t", row.names = F, col.names = F)
+
 #Palettes-----------------------------------------------------------------------
 pal <- c(
   "H" = "#7e2323",
@@ -143,7 +156,9 @@ EMpal2 <- c(
   "Endosymbiotic" = "purple",
   "Heterotroph" = "#A87142",
   "Mixotroph" = "#63E3C5",
-  "Parasite" = "#FE4A49" 
+  "Non-Plastid Parasite" = "#FE4A49",
+  "Plastid Parasite" = "#D0D1AC",
+  "Streptophyta parasite" = "#B6A39E"
 )
 
 #Tomato
@@ -227,9 +242,9 @@ StramLayer2 <- gheatmap(StramLayer1, df, offset = 6.5, width = .85, font.size = 
 #This takes in the mdf object which has the metabolic information
 StramLayer3 <- gheatmap(StramLayer2,mdf, offset = 14, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     na.value = "grey",
                     drop = FALSE)+
   theme(
@@ -325,9 +340,9 @@ AlvLayer2 <- gheatmap(AlvLayer1, df, offset = 4, font.size = 2,, width = .4, col
 #Alv Layer 3
 AlvLayer3 <- gheatmap(AlvLayer2,mdf, offset = 7, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     na.value = "grey",
                     drop = FALSE)+
   theme(
@@ -430,9 +445,9 @@ ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 1.8, nudge
 
 experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 22.5, width = .35, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     na.value = "grey",
                     drop = FALSE)+
   theme(
@@ -534,9 +549,9 @@ ARSavePlot
 
 experimentalARplot <- gheatmap(ARSavePlot,mdf1, offset = 15, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     na.value = "grey",
                     drop = FALSE)+
   theme(
@@ -677,9 +692,9 @@ ChloRhoLayer2 <- gheatmap(ChloRhoLayer1, df6, offset = 6.5, width = .65, font.si
 # Requires the second layer
 ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 12, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     na.value = "grey",
                     drop = FALSE)+
   theme(
@@ -709,21 +724,97 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/ChlorophytaRhodoph
        dpi = 320,
        limitsize = FALSE)
 
+#-------------------------------------------------------------------------------
+# Archaeplastida Tree
+
+
+ArchTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/ArchTreeP.phy")
+ArchTree$tip.label
+ArchTree$tip.label <- gsub("'","", ArchTree$tip.label)
+ArchTree$tip.label <- gsub("'","", ArchTree$tip.label)
+ArchTree$tip.label
+
+#Create the data that will be added into the tree itself (for label purposes)
+Arch <- MasterTable %>% filter(Super.Group == "Streptophyta" | Super.Group == "Rhodophyta" | Super.Group == "Chlorophyta")
+Arch <- Arch %>% relocate(Organism.Name)
+
+#Create the subset data for the heatmap
+ArchSubset <- Arch %>% select(Organism.Name,
+                                   RAPTOR, 
+                                   LST8,
+                                   TOR) %>% 
+  distinct(Organism.Name, .keep_all = TRUE)
+ArchDataframe <- column_to_rownames(ArchSubset, var = "Organism.Name")
+
+#Highlight Information
+HighlightData <- Arch %>% mutate(NodeNumber = case_when(Super.Group == "Streptophyta" ~ which(ArchTree$node.label == "Streptophyta") + length(ArchTree$tip.label),
+                                                                 Super.Group == "Rhodophyta" ~ which(ArchTree$node.label == "Rhodophyta") + length(ArchTree$tip.label),
+                                                                 Super.Group == "Chlorophyta" ~ which(ArchTree$node.label == "Chlorophyta") + length(ArchTree$tip.label))) %>%
+  select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
+
+# Not including the metabolic data here this time
+
+#Plain Tree
+ArchTreeP <- ggtree(ArchTree, branch.length = "none", ladderize = FALSE, layout = "circular")
+ArchTreeP <- ArchTreeP  %<+% Arch
+
+
+ArchTreeP
+
+
+ArchTreePLayer1 <- gheatmap(ArchTreeP, ArchDataframe, offset = 4, width = .4, font.size = 2, colnames = FALSE)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P",NA),
+                    values = pal3,
+                    limits = c("H","M","L","P", NA),
+                    na.value = "#FFFFFF",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
 
 
 
+ArchTreePLayer1
+
+ArchTreePLayer2 <- ArchTreePLayer1 + geom_highlight(data = HighlightData,
+                                                      mapping = aes(node = NodeNumber, fill = Super.Group))+
+  scale_fill_manual(name = "Super Group",
+                    breaks = c("Alveolata",
+                               "Stramenopiles",
+                               "Rhizaria",
+                               "Streptophyta",
+                               "Chlorophyta",
+                               "Rhodophyta",
+                               "Discoba",
+                               "Metamonada"),
+                    values = c("Alveolata" = "#EFB911",
+                               "Stramenopiles" = "#572100",
+                               "Rhizaria" = "#FFD0AB",
+                               "Streptophyta" = "#678516",
+                               "Chlorophyta" = "#525601",
+                               "Rhodophyta" = "#681114",
+                               "Discoba" = "#9382E3",
+                               "Metamonada" = "#17057E"
+                    ))+
+  geom_rootedge()+
+  new_scale_fill()
+ArchTreePLayer2  
 
 
 
-
-
-
-
-
-
-
-
-
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/ArchaeplastidaTree.png",
+       plot = ArchTreePLayer2,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 # SAR --------------------------------------------------------------------------
@@ -803,9 +894,9 @@ SARSavePlot
 
 SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 5.5, width = .05, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     na.value = "grey",
                     drop = FALSE)+
   theme(
@@ -1005,9 +1096,9 @@ Streplayer2
 
 StrepLayer3 <- gheatmap(Streplayer2,mdfStrep, offset = 12, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Parasite", "Endosymbiotic"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
-                    limits = c("Autotrophic", "Heterotroph", "Mixotroph", "Parasite", "Endosymbiotic"),
+                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     na.value = "grey",
                     drop = FALSE)+
   theme(
