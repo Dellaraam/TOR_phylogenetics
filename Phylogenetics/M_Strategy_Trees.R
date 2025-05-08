@@ -711,13 +711,13 @@ ChloRhoLayer3
 
 
 topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ChlorophytaRhodophytaTree.pptx",
-       figure = ChloRhoLayer3,
+       figure = ChloRhoLayer2,
        units = "inches",
        width = 10,
        height = 7)
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/ChlorophytaRhodophyta.png",
-       plot = ChloRhoLayer3,
+       plot = ChloRhoLayer2,
        width = 3840,
        height = 2160,
        units = "px",
@@ -1114,7 +1114,7 @@ StrepLayer3 <- gheatmap(Streplayer2,mdfStrep, offset = 12, width = .15, colnames
 StrepLayer3
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapMetMapStrep.png",
-       plot = StrepLayer3,
+       plot = Streplayer2,
        width = 3840,
        height = 2160,
        units = "px",
