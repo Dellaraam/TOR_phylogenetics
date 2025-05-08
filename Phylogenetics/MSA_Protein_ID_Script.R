@@ -30,6 +30,12 @@ mergeClean <- function(df, namedf){
 
 MasterTable <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")
 MasterTable <- select(MasterTable, -X)
+MasterTable <- MasterTable %>% mutate(M.Strategy = if_else(Phylum.name == "Apicomplexa", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Phylum.name == "Perkinsozoa", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Super.Group == "Streptophyta" & M.Strategy == "Parasite", "Streptophyta parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Family.name == "Amoebophryaceae", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(M.Strategy == "Parasite" & Super.Group != "Streptophyta", "Non-Plastid Parasite", M.Strategy, missing = M.Strategy))
+
 
 Taxon <- read.csv(file = "~/GitHub/TOR_phylogenetics/Combined_Taxonomy.csv")
 Taxon <- rename(Taxon, Organism.Name = "Tax.name")
@@ -484,6 +490,12 @@ write.table(AlvRapH$tar, file = "~/GitHub/TOR_phylogenetics/IDs/MSA_IDs/AlvRapH.
 write.table(AlvRapM$tar, file = "~/GitHub/TOR_phylogenetics/IDs/MSA_IDs/AlvRapM.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 write.table(AlvRapL$tar, file = "~/GitHub/TOR_phylogenetics/IDs/MSA_IDs/AlvRapL.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
+
+
+#Plastid Parasite IDs
+PlastidParasites <- AlveolataTOR %>% left_join(MasterTable[c("Organism_Taxonomic_ID","TOR","M.Strategy")], by = "Organism_Taxonomic_ID")
+PlastidParasites <- PlastidParasites %>% filter(M.Strategy == "Plastid Parasite")
+write.table(PlastidParasites$tar, file = "~/GitHub/TOR_phylogenetics/IDs/MSA_IDs/PlastidParasite.txt", sep = "\t", row.names = F, col.names = F, quote=FALSE)
 
 
 
