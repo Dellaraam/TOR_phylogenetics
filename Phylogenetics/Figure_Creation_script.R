@@ -865,6 +865,145 @@ pie4<- ggplot(data4, aes(x="", y=prop, fill=M.Strategy)) +
   theme(text = element_text(family = "serif"))
 
 pie4
+
+
+
+#-------------------------------------------------------------------------------
+Overall <- MasterTable %>% count(Super.Group)
+Overall <- Overall %>% rename(Total = "n")
+RaptorData <- MasterTable %>% filter(!is.na(RAPTOR))%>%count(Super.Group)
+RaptorData <- left_join(RaptorData,Overall)
+
+RaptorData <- RaptorData %>%
+  arrange(desc(Super.Group))%>%
+  mutate(prop = n/sum(RaptorData$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+RaptorPie<- ggplot(RaptorData, aes(x="", y=prop, fill=Super.Group)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text_repel(aes(y = ypos, label = paste(Super.Group,"\n",n,"/",Total)), color = "black", size=6)+
+  labs(title = "Count of RAPTOR Containing Species")+
+  scale_fill_manual(name = "Super Group",
+                    breaks = c("Alveolata",
+                               "Stramenopiles",
+                               "Rhizaria",
+                               "Streptophyta",
+                               "Chlorophyta",
+                               "Rhodophyta",
+                               "Discoba",
+                               "Metamonada"),
+                    values = c("Alveolata" = "#EFB911",
+                               "Stramenopiles" = "#572100",
+                               "Rhizaria" = "#FFD0AB",
+                               "Streptophyta" = "#678516",
+                               "Chlorophyta" = "#525601",
+                               "Rhodophyta" = "#681114",
+                               "Discoba" = "cyan",
+                               "Metamonada" = "blue"
+                    ))+
+  theme(text = element_text(family = "serif"))
+RaptorPie
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/RaptorPie.pptx",
+       figure = RaptorPie,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+
+
+
+
+RictorData <- MasterTable %>% filter(!is.na(RICTOR)) %>% count(Super.Group)
+RictorData <- left_join(RictorData,Overall)
+RictorData <- RictorData %>%
+  arrange(desc(Super.Group))%>%
+  mutate(prop = n/sum(RictorData$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+
+RictorPie<- ggplot(RictorData, aes(x="", y=prop, fill=Super.Group)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text_repel(aes(y = ypos, label = paste(Super.Group,"\n",n,"/",Total)), color = "black", size=6)+
+  labs(title = "Count of RICTOR Containing Species")+
+  scale_fill_manual(name = "Super Group",
+                    breaks = c("Alveolata",
+                               "Stramenopiles",
+                               "Rhizaria",
+                               "Streptophyta",
+                               "Chlorophyta",
+                               "Rhodophyta",
+                               "Discoba",
+                               "Metamonada"),
+                    values = c("Alveolata" = "#EFB911",
+                               "Stramenopiles" = "#572100",
+                               "Rhizaria" = "#FFD0AB",
+                               "Streptophyta" = "#678516",
+                               "Chlorophyta" = "#525601",
+                               "Rhodophyta" = "#681114",
+                               "Discoba" = "cyan",
+                               "Metamonada" = "blue"
+                    ))+
+  theme(text = element_text(family = "serif"))
+RictorPie
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/RictorPie.pptx",
+       figure = RictorPie,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+TorData <- MasterTable %>% filter(!is.na(TOR)) %>% count(Super.Group)
+TorData <- left_join(TorData,Overall)
+TorData <- TorData %>%
+  arrange(desc(Super.Group))%>%
+  mutate(prop = n/sum(TorData$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+TorPie<- ggplot(TorData, aes(x="", y=prop, fill=Super.Group)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text_repel(aes(y = ypos, label = paste(Super.Group,"\n",n,"/",Total)), color = "black", size=6)+
+  labs(title = "Count of TOR Containing Species")+
+  scale_fill_manual(name = "Super Group",
+                    breaks = c("Alveolata",
+                               "Stramenopiles",
+                               "Rhizaria",
+                               "Streptophyta",
+                               "Chlorophyta",
+                               "Rhodophyta",
+                               "Discoba",
+                               "Metamonada"),
+                    values = c("Alveolata" = "#EFB911",
+                               "Stramenopiles" = "#572100",
+                               "Rhizaria" = "#FFD0AB",
+                               "Streptophyta" = "#678516",
+                               "Chlorophyta" = "#525601",
+                               "Rhodophyta" = "#681114",
+                               "Discoba" = "cyan",
+                               "Metamonada" = "blue"
+                    ))+
+  theme(text = element_text(family = "serif"))
+TorPie
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/TorPie.pptx",
+       figure = TorPie,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+
+
+
+
 #-------------------------------------------------------------------------------
 #SAR Metabolic Breakdown
 
@@ -951,12 +1090,25 @@ SARNoRaptorPie <- ggplot(SARNoRaptor, aes(x="", y=prop, fill=M.Strategy)) +
   geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "Metabolic Strategy Breakdown SAR:",
        subtitle = "No Raptor")+
-  scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
-                    values = EMpal2,
-                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
-                    na.value = "grey",
-                    drop = FALSE)+
+   scale_fill_manual(name = "Super Group",
+                     breaks = c("Alveolata",
+                                "Stramenopiles",
+                                "Rhizaria",
+                                "Streptophyta",
+                                "Chlorophyta",
+                                "Rhodophyta",
+                                "Discoba",
+                                "Metamonada"),
+                     values = c("Alveolata" = "#EFB911",
+                                "Stramenopiles" = "#572100",
+                                "Rhizaria" = "#FFD0AB",
+                                "Streptophyta" = "#678516",
+                                "Chlorophyta" = "#525601",
+                                "Rhodophyta" = "#681114",
+                                "Discoba" = "cyan",
+                                "Metamonada" = "blue"
+                     ))+
+   theme_bw()+
   theme(text = element_text(family = "serif"))
 SARNoRaptorPie
 
