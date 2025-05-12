@@ -1,7 +1,14 @@
 
 # Figure Creation Script: Plots
 #source(file = ")
-
+#install.packages("ggrepel")
+install.packages("ggnewscale")
+#install.packages("treemapify")
+library(tidyverse)
+library(ggplot2)
+library(ggrepel)
+library(treemapify)
+library(ggnewscale)
 
 # ------------------------------------------------------------------------------
 MasterTable <- read_csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")
@@ -709,7 +716,6 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_C_Score.pp
    theme_bw()+
    scale_x_discrete(drop = FALSE)
  YesPlot
- YesPlot
  
  
  
@@ -748,7 +754,7 @@ pie1 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
                     na.value = "grey",
                     drop = FALSE)+
   theme(text = element_text(family = "serif"))
- 
+pie1
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithRictor.png",
        plot = pie1,
@@ -786,7 +792,7 @@ pie2<- ggplot(data2, aes(x="", y=prop, fill=M.Strategy)) +
                     na.value = "grey",
                     drop = FALSE)+
   theme(text = element_text(family = "serif"))
-  
+pie2
  
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithoutRictor.png",
        plot = pie2,
@@ -1146,7 +1152,7 @@ TreeMapWithRictor <- MasterTable %>% filter(!is.na(RICTORDomain) | !is.na(RICTOR
      legend.spacing.y = unit(0.02, "cm"),
      legend.key.spacing.x = unit(1,"cm"))+
    new_scale_fill()
- 
+TreeMapWithRictor
  
  ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/TreeMapWithRictor.png",
         plot = TreeMapWithRictor,
