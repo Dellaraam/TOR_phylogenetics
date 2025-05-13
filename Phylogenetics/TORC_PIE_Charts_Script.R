@@ -32,6 +32,16 @@ EMpal2 <- c(
   "Streptophyta Parasite" = "#B6A39E"
 )
 
+
+
+TORCPal <- c(
+  "TORC1 & TORC2" ="#DACC3E",
+  "TORC1 Only" = "#9CC5A1",
+  "TORC2 Only" = "#CE8964",
+  "No TORC" ="#819595"
+  
+)
+
 #Currently working here. Finish up the conditional statements
 #Need to do the RAPTOR one, the Both one, and the None(?)
 
@@ -56,6 +66,12 @@ pie1 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Alveolata")+
+  scale_fill_manual(name = "TOR Components",
+                    breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    values = TORCPal,
+                    limits = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    na.value = "grey",
+                    drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie1
 
@@ -89,6 +105,12 @@ pie2 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Stramenopiles")+
+  scale_fill_manual(name = "TOR Components",
+                    breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    values = TORCPal,
+                    limits = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    na.value = "grey",
+                    drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie2
 
@@ -121,6 +143,12 @@ pie3 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Rhizaria")+
+  scale_fill_manual(name = "TOR Components",
+                    breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    values = TORCPal,
+                    limits = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    na.value = "grey",
+                    drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie3
 
@@ -152,6 +180,12 @@ pie4 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Metamonada")+
+  scale_fill_manual(name = "TOR Components",
+                    breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    values = TORCPal,
+                    limits = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    na.value = "grey",
+                    drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie4
 
@@ -186,6 +220,12 @@ pie5 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Discoba")+
+  scale_fill_manual(name = "TOR Components",
+                    breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    values = TORCPal,
+                    limits = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    na.value = "grey",
+                    drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie5
 
@@ -219,6 +259,12 @@ pie6 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Streptophyta")+
+  scale_fill_manual(name = "TOR Components",
+                    breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    values = TORCPal,
+                    limits = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    na.value = "grey",
+                    drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie6
 
@@ -253,6 +299,12 @@ pie7 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Chlorophyta")+
+  scale_fill_manual(name = "TOR Components",
+                    breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    values = TORCPal,
+                    limits = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    na.value = "grey",
+                    drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie7
 
@@ -284,6 +336,12 @@ pie8 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Rhodophyta")+
+  scale_fill_manual(name = "TOR Components",
+                    breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    values = TORCPal,
+                    limits = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    na.value = "grey",
+                    drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie8
 
@@ -315,6 +373,12 @@ pie9 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown All Super Groups")+
+  scale_fill_manual(name = "TOR Components",
+                    breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    values = TORCPal,
+                    limits = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    na.value = "grey",
+                    drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie9
 
@@ -328,6 +392,119 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/ComponentsAllPie
 
 topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ComponentsAllPieChart.pptx",
        figure = pie9,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+
+data <- MasterTable %>%filter(Super.Group == "Alveolata"|Super.Group == "Stramenopiles" | Super.Group == "Rhizaria") %>% count(Components)
+data <- data %>%
+  arrange(desc(Components))%>%
+  mutate(prop = n/sum(data$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+pie10 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  labs(title = "TOR Complexes Breakdown SAR")+
+  scale_fill_manual(name = "TOR Components",
+                    breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    values = TORCPal,
+                    limits = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+pie10
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/ComponentsSARPieChart.png",
+       plot = pie10,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ComponentsSARPieChart.pptx",
+       figure = pie10,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+data <- MasterTable %>%filter(Super.Group == "Streptophyta"|Super.Group == "Chlorophyta" | Super.Group == "Rhodophyta") %>% count(Components)
+data <- data %>%
+  arrange(desc(Components))%>%
+  mutate(prop = n/sum(data$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+pie11 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  labs(title = "TOR Complexes Breakdown Archaeplastida")+
+  scale_fill_manual(name = "TOR Components",
+                    breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    values = TORCPal,
+                    limits = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+pie11
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/ComponentsArchaeplastidaPieChart.png",
+       plot = pie11,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ComponentsArchaeplastidaPieChart.pptx",
+       figure = pie11,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+data <- MasterTable %>%filter(Super.Group == "Discoba"|Super.Group == "Metamonada") %>% count(Components)
+data <- data %>%
+  arrange(desc(Components))%>%
+  mutate(prop = n/sum(data$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+pie12 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  labs(title = "TOR Complexes Breakdown Excavata")+
+  scale_fill_manual(name = "TOR Components",
+                    breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    values = TORCPal,
+                    limits = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+pie12
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/ComponentsExcavataPieChart.png",
+       plot = pie12,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ComponentsExcavataPieChart.pptx",
+       figure = pie12,
        units = "inches",
        width = 10,
        height = 7)
