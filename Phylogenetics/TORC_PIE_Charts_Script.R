@@ -20,6 +20,50 @@ MasterTable <- MasterTable %>% mutate(M.Strategy = if_else(Phylum.name == "Apico
 
 
 
+MasterTable <- MasterTable %>%mutate(Components = NA) %>% mutate(Components = if_else(!is.na(RICTOR) & is.na(RAPTOR),"TORC2 Only",Components, missing = Components),
+                                                                 Components = if_else(is.na(RICTOR) & !is.na(RAPTOR), "TORC1 Only", Components, missing = Components),
+                                                                 Components = if_else(!is.na(RICTOR) & !is.na(RAPTOR), "TORC1 & TORC2", Components, missing = Components),
+                                                                 Components = if_else(is.na(RICTOR) & is.na(RAPTOR), "No TORC", Components, missing = Components))
+
+MasterTable <- MasterTable %>%filter(Organism.Name != "Marteilia pararefringens",
+                                     Organism.Name != "Paramarteilia canceri",
+                                     Organism.Name != "Cercozoa sp. M6MM",
+                                     Organism.Name != "Phytophthora citrophthora",
+                                     Organism.Name != "Aphanomyces stellatus",
+                                     Organism.Name != "Minidiscus trioculatus",
+                                     Organism.Name != "Labyrinthula sp. Ha",
+                                     Organism.Name != "Cafeteria roenbergensis",
+                                     Organism.Name != "Phytophthora fragariaefolia",
+                                     Organism.Name != "Phytophthora lilii",
+                                     Organism.Name != "Peronosclerospora sorghi",
+                                     Organism.Name != "Nothophytophthora sp. Chile5",
+                                     Organism.Name != "Ochromonadaceae sp. CCMP2298",
+                                     Organism.Name != "Moneuplotes crassus",
+                                     Organism.Name != "Symbiodinium pilosum",
+                                     Organism.Name != "Symbiodinium sp. CCMP2456",
+                                     Organism.Name != "Symbiodinium necroappetens",
+                                     Organism.Name != "Eimeria mitis",
+                                     Organism.Name != "Eimeria necatrix",
+                                     Organism.Name != "Eimeria praecox",
+                                     Organism.Name != "Trypanosoma brucei equiperdum",
+                                     Organism.Name != "Trpanosoma equiperdum",
+                                     Organism.Name != "Trypanosoma rangeli",
+                                     Organism.Name != "Trypanosoma rangeli SC58",
+                                     Organism.Name != "Strigomonas culicis",
+                                     Organism.Name != "Perkinsela sp. CCAP 1560/4",
+                                     Organism.Name != "Giardia lamblia ATCC 50803",
+                                     Organism.Name != "Spironucleus salmonicida",
+                                     Organism.Name != "Hexamita inflata",
+                                     Organism.Name != "Streblomastix strix",
+                                     Organism.Name != "Aduncisulcus paluster",
+                                     Organism.Name != "Monocercomonoides exilis",
+                                     Organism.Name != "Paratrimastix pyriformis",
+                                     Organism.Name != "Novymonas esmeraldas",
+                                     Organism.Name != "Picocystis sp. ML",
+                                     Organism.Name != "Pistacia atlantica",
+                                     Organism.Name != "Euglena gracilis")
+
+
 #Palettes
 
 EMpal2 <- c(
@@ -42,18 +86,11 @@ TORCPal <- c(
   
 )
 
-#Currently working here. Finish up the conditional statements
-#Need to do the RAPTOR one, the Both one, and the None(?)
-
-
-MasterTable <- MasterTable %>%mutate(Components = NA) %>% mutate(Components = if_else(!is.na(RICTOR) & is.na(RAPTOR),"TORC2 Only",Components, missing = Components),
-                                                                                                    Components = if_else(is.na(RICTOR) & !is.na(RAPTOR), "TORC1 Only", Components, missing = Components),
-                                                                                                    Components = if_else(!is.na(RICTOR) & !is.na(RAPTOR), "TORC1 & TORC2", Components, missing = Components),
-                                                                                                    Components = if_else(is.na(RICTOR) & is.na(RAPTOR), "No TORC", Components, missing = Components))
+#-------------------------------------------------------------------------------
 
 
 
-data <- MasterTable %>%filter(Super.Group == "Alveolata") %>% count(Components)
+data <- MasterTable %>%filter(Super.Group == "Alveolata") %>%count(Components)
 data <- data %>%
   arrange(desc(Components))%>%
   mutate(prop = n/sum(data$n) * 100)%>%
@@ -64,7 +101,7 @@ pie1 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Alveolata")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
@@ -92,7 +129,7 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ComponentsAlveolata
        height = 7)
 
 
-data <- MasterTable %>%filter(Super.Group == "Stramenopiles") %>% count(Components)
+data <- MasterTable %>%filter(Super.Group == "Stramenopiles")%>%count(Components)
 data <- data %>%
   arrange(desc(Components))%>%
   mutate(prop = n/sum(data$n) * 100)%>%
@@ -103,7 +140,7 @@ pie2 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Stramenopiles")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
@@ -130,7 +167,7 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ComponentsStramenop
 
 
 
-data <- MasterTable %>%filter(Super.Group == "Rhizaria") %>% count(Components)
+data <- MasterTable %>%filter(Super.Group == "Rhizaria") %>%count(Components)
 data <- data %>%
   arrange(desc(Components))%>%
   mutate(prop = n/sum(data$n) * 100)%>%
@@ -141,7 +178,7 @@ pie3 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Rhizaria")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
@@ -153,7 +190,7 @@ pie3 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
 pie3
 
 
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/ComponentsAllPieChart.png",
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/ComponentsRhizariaPieChart.png",
        plot = pie3,
        width = 3840,
        height = 2160,
@@ -161,7 +198,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/ComponentsAllPie
        dpi = 320,
        limitsize = FALSE)
 
-topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ComponentsAllPieChart.pptx",
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ComponentsRhizariaPieChart.pptx",
        figure = pie3,
        units = "inches",
        width = 10,
@@ -178,7 +215,7 @@ pie4 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Metamonada")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
@@ -218,7 +255,7 @@ pie5 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Discoba")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
@@ -257,7 +294,7 @@ pie6 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Streptophyta")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
@@ -286,7 +323,7 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ComponentsStreptoph
 
 
 
-data <- MasterTable %>%filter(Super.Group == "Chlorophyta") %>% count(Components)
+data <- MasterTable %>%filter(Super.Group == "Chlorophyta")%>%count(Components)
 data <- data %>%
   arrange(desc(Components))%>%
   mutate(prop = n/sum(data$n) * 100)%>%
@@ -297,7 +334,7 @@ pie7 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Chlorophyta")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
@@ -334,7 +371,7 @@ pie8 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Rhodophyta")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
@@ -371,7 +408,7 @@ pie9 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown All Super Groups")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
@@ -398,7 +435,7 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ComponentsAllPieCha
 
 
 
-data <- MasterTable %>%filter(Super.Group == "Alveolata"|Super.Group == "Stramenopiles" | Super.Group == "Rhizaria") %>% count(Components)
+data <- MasterTable %>%filter(Super.Group == "Alveolata"|Super.Group == "Stramenopiles" | Super.Group == "Rhizaria")%>%count(Components)
 data <- data %>%
   arrange(desc(Components))%>%
   mutate(prop = n/sum(data$n) * 100)%>%
@@ -409,7 +446,7 @@ pie10 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown SAR")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
@@ -436,7 +473,7 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ComponentsSARPieCha
        height = 7)
 
 
-data <- MasterTable %>%filter(Super.Group == "Streptophyta"|Super.Group == "Chlorophyta" | Super.Group == "Rhodophyta") %>% count(Components)
+data <- MasterTable %>%filter(Super.Group == "Streptophyta"|Super.Group == "Chlorophyta" | Super.Group == "Rhodophyta")%>%count(Components)
 data <- data %>%
   arrange(desc(Components))%>%
   mutate(prop = n/sum(data$n) * 100)%>%
@@ -447,7 +484,7 @@ pie11 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Archaeplastida")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
@@ -473,7 +510,7 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ComponentsArchaepla
        height = 7)
 
 
-data <- MasterTable %>%filter(Super.Group == "Discoba"|Super.Group == "Metamonada") %>% count(Components)
+data <- MasterTable %>%filter(Super.Group == "Discoba"|Super.Group == "Metamonada")%>%count(Components)
 data <- data %>%
   arrange(desc(Components))%>%
   mutate(prop = n/sum(data$n) * 100)%>%
@@ -484,7 +521,7 @@ pie12 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   coord_polar("y", start=0) +
   theme_void() + 
   theme(legend.position="none")+
-  geom_text(aes(y = ypos, label = paste(Components,"\n",n)), color = "black", size=6)+
+  geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
   labs(title = "TOR Complexes Breakdown Excavata")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
