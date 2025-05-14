@@ -34,6 +34,10 @@ MasterTable %>% filter(is.na(RAPTOR) & M.Strategy == "Non-Plastid Parasite")%>%v
 
 
 
+MasterTable %>% group_by(Super.Group)%>%
+  mutate(count = n())%>% ungroup()%>%
+  view()
+
 
 # Add to this palette:
 # Non-Plastid Parasite
@@ -64,13 +68,15 @@ EMpal2 <- c(
 
 
 
-jitterRICTOR<- MasterTable %>%filter(!is.na(RICTOR) & RICTOR != "P") %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICTORDomain))+
+jitterRICTOR<- MasterTable %>%group_by(Super.Group)%>%
+  mutate(count = n())%>% ungroup()%>%filter(!is.na(RICTOR) & RICTOR != "P") %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICTORDomain))+
   geom_jitter(shape = 18, size = 2)+
   labs(title = "RICTOR Domain Score Distribution")+
   xlab(label = "RICTOR H/M/L")+
   ylab(label = "RICTOR Domain Scores")+
   #geom_text_repel(aes(label = Organism.Name), size = 2.2, show.legend = FALSE)+
   facet_wrap(~Super.Group,nrow = 1)+
+  geom_text( aes(label = paste("N:",count), y = Inf, x  = -Inf), vjust = 1, hjust = 0)+
   theme_bw()
 jitterRICTOR
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/JitterRICTOR.png",
@@ -160,7 +166,6 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_Raptor_
        units = "inches",
        width = 10,
        height = 7)
-
 
 
 
@@ -338,7 +343,8 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Jitter_Plot_TOR_All
 
 
 
-BoxRictor <- MasterTable %>%filter(Super.Group != "Chlorophyta")%>%ggplot(aes(x = Super.Group, y = RICTORDomain))+
+BoxRictor <- MasterTable %>%group_by(Super.Group)%>%
+  mutate(count = n())%>% ungroup() %>% filter(Super.Group != "Chlorophyta")%>%ggplot(aes(x = Super.Group, y = RICTORDomain))+
   stat_boxplot(aes(Super.Group, RICTORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = RICTORDomain),notch = FALSE, outlier.shape = NA)+
   labs(title = "RICTOR Domain Scores", subtitle = "By Associated Super Group")+
