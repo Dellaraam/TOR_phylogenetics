@@ -19,6 +19,7 @@ Taxon <- rename(Taxon, Organism.Name = "Tax.name")
 HTML <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/HTML.tsv")
 HTML <- HTML%>% rename(Super.Group = "Group")
 HTML <- left_join(HTML,FinalBusco, by = "Accn")
+HTML$Organism.Name <- gsub("'","", HTML$Organism.Name)
 # Need to update the numeric table next
 Ndf <- read.csv("~/Github/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/NumericTable.csv")
 Ndf <- select(Ndf, -X, -Organism.Name)
@@ -28,7 +29,43 @@ Ndf <- left_join(Ndf,FinalBusco, by = "Accn")
 Ndf <- distinct(Ndf, Organism_Taxonomic_ID, .keep_all = TRUE)
 
 MasterTable <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")
-MasterTable <- select(MasterTable, -X)
+MasterTable <- select(MasterTable, -X)%>%filter(Organism.Name != "Marteilia pararefringens",
+                                                Organism.Name != "Paramarteilia canceri",
+                                                Organism.Name != "Cercozoa sp. M6MM",
+                                                Organism.Name != "Phytophthora citrophthora",
+                                                Organism.Name != "Aphanomyces stellatus",
+                                                Organism.Name != "Minidiscus trioculatus",
+                                                Organism.Name != "Labyrinthula sp. Ha",
+                                                Organism.Name != "Cafeteria roenbergensis",
+                                                Organism.Name != "Phytophthora fragariaefolia",
+                                                Organism.Name != "Phytophthora lilii",
+                                                Organism.Name != "Peronosclerospora sorghi",
+                                                Organism.Name != "Nothophytophthora sp. Chile5",
+                                                Organism.Name != "Ochromonadaceae sp. CCMP2298",
+                                                Organism.Name != "Moneuplotes crassus",
+                                                Organism.Name != "Symbiodinium pilosum",
+                                                Organism.Name != "Symbiodinium sp. CCMP2456",
+                                                Organism.Name != "Symbiodinium necroappetens",
+                                                Organism.Name != "Eimeria mitis",
+                                                Organism.Name != "Eimeria necatrix",
+                                                Organism.Name != "Eimeria praecox",
+                                                Organism.Name != "Trypanosoma brucei equiperdum",
+                                                Organism.Name != "Trpanosoma equiperdum",
+                                                Organism.Name != "Trypanosoma rangeli",
+                                                Organism.Name != "Trypanosoma rangeli SC58",
+                                                Organism.Name != "Strigomonas culicis",
+                                                Organism.Name != "Perkinsela sp. CCAP 1560/4",
+                                                Organism.Name != "Giardia lamblia ATCC 50803",
+                                                Organism.Name != "Spironucleus salmonicida",
+                                                Organism.Name != "Hexamita inflata",
+                                                Organism.Name != "Streblomastix strix",
+                                                Organism.Name != "Aduncisulcus paluster",
+                                                Organism.Name != "Monocercomonoides exilis",
+                                                Organism.Name != "Paratrimastix pyriformis",
+                                                Organism.Name != "Novymonas esmeraldas",
+                                                Organism.Name != "Picocystis sp. ML",
+                                                Organism.Name != "Pistacia atlantica",
+                                                Organism.Name != "Euglena gracilis")
 
 # Current Goal is to replace all of the names in the HTML file (really need to rename that)
 # Everything should be replaced by what is found within the Taxon file
@@ -79,7 +116,7 @@ SAR <- HTML %>% filter(Super.Group == "Alveolata"|Super.Group == "Rhizaria"|Supe
 
 
 
-write.table(HTML$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/All.txt", sep = "\t", row.names = F, col.names = F)
+write.table(MasterTable$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/All.txt", sep = "\t", row.names = F, col.names = F)
 write.table(Alveolata$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Alveolata.txt", sep = "\t", row.names = F, col.names = F)
 write.table(Stramenopiles$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Stramenopiles.txt", sep = "\t", row.names = F, col.names = F)
 write.table(Rhizaria$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/Rhizaria.txt", sep = "\t", row.names = F, col.names = F)
@@ -1714,9 +1751,45 @@ df <- column_to_rownames(subsetdataframe, var = "Organism.Name")
 
 AllTree <- read.tree(file = "~/GitHub/TOR_phylogenetics/Trees/AllTreeP.phy")
 AllTree$tip.label <- gsub("'", "", AllTree$tip.label)
+AllTree$tip.label
 AllTree$node.label <- gsub("'", "", AllTree$node.label)
-HTML <- HTML %>% relocate(Organism.Name)
-
+HTML <- HTML %>%filter(Organism.Name != "Marteilia pararefringens",
+                       Organism.Name != "Paramarteilia canceri",
+                       Organism.Name != "Cercozoa sp. M6MM",
+                       Organism.Name != "Phytophthora citrophthora",
+                       Organism.Name != "Aphanomyces stellatus",
+                       Organism.Name != "Minidiscus trioculatus",
+                       Organism.Name != "Labyrinthula sp. Ha",
+                       Organism.Name != "Cafeteria roenbergensis",
+                       Organism.Name != "Phytophthora fragariaefolia",
+                       Organism.Name != "Phytophthora lilii",
+                       Organism.Name != "Peronosclerospora sorghi",
+                       Organism.Name != "Nothophytophthora sp. Chile5",
+                       Organism.Name != "Ochromonadaceae sp. CCMP2298",
+                       Organism.Name != "Moneuplotes crassus",
+                       Organism.Name != "Symbiodinium pilosum",
+                       Organism.Name != "Symbiodinium sp. CCMP2456",
+                       Organism.Name != "Symbiodinium necroappetens",
+                       Organism.Name != "Eimeria mitis",
+                       Organism.Name != "Eimeria necatrix",
+                       Organism.Name != "Eimeria praecox",
+                       Organism.Name != "Trypanosoma brucei equiperdum",
+                       Organism.Name != "Trpanosoma equiperdum",
+                       Organism.Name != "Trypanosoma rangeli",
+                       Organism.Name != "Trypanosoma rangeli SC58",
+                       Organism.Name != "Strigomonas culicis",
+                       Organism.Name != "Perkinsela sp. CCAP 1560/4",
+                       Organism.Name != "Giardia lamblia ATCC 50803",
+                       Organism.Name != "Spironucleus salmonicida",
+                       Organism.Name != "Hexamita inflata",
+                       Organism.Name != "Streblomastix strix",
+                       Organism.Name != "Aduncisulcus paluster",
+                       Organism.Name != "Monocercomonoides exilis",
+                       Organism.Name != "Paratrimastix pyriformis",
+                       Organism.Name != "Novymonas esmeraldas",
+                       Organism.Name != "Picocystis sp. ML",
+                       Organism.Name != "Pistacia atlantica",
+                       Organism.Name != "Euglena gracilis")%>%relocate(Organism.Name)
 
 AllTreeP <- ggtree(AllTree, layout = "fan", open.angle = 18, branch.length = "none", laddarize = FALSE)
 AllTreeP <- AllTreeP %<+% HTML
@@ -1804,7 +1877,7 @@ AllHeatPlot <- gheatmap(HeatTree, df, offset = 5, font.size = 1.5, width = .8, c
     legend.text=element_text(size=5.5),
     legend.spacing.y = unit(0.02, "cm"),
     legend.key.spacing.x = unit(1,"cm"))+
-  labs(title = "Streptophyta Phylogenetic Tree",
+  labs(title = "All Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
 AllHeatPlot
