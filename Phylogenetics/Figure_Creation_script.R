@@ -32,6 +32,9 @@ MasterTable %>% filter(is.na(RAPTOR) & M.Strategy != "Plastid Parasite") %>% vie
 MasterTable %>% filter(is.na(RICTOR) & M.Strategy == "Heterotroph") %>% view()
 MasterTable %>% filter(is.na(RAPTOR) & M.Strategy == "Non-Plastid Parasite")%>%view()
 
+
+
+
 # Add to this palette:
 # Non-Plastid Parasite
 # Plastid Parasite
@@ -731,7 +734,43 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_C_Score.pp
  
  
  #Pie Chart Section for Metabolic Strategies -----------------------------------
- 
+ MasterTable <- MasterTable %>%filter(Organism.Name != "Marteilia pararefringens",
+                                      Organism.Name != "Paramarteilia canceri",
+                                      Organism.Name != "Cercozoa sp. M6MM",
+                                      Organism.Name != "Phytophthora citrophthora",
+                                      Organism.Name != "Aphanomyces stellatus",
+                                      Organism.Name != "Minidiscus trioculatus",
+                                      Organism.Name != "Labyrinthula sp. Ha",
+                                      Organism.Name != "Cafeteria roenbergensis",
+                                      Organism.Name != "Phytophthora fragariaefolia",
+                                      Organism.Name != "Phytophthora lilii",
+                                      Organism.Name != "Peronosclerospora sorghi",
+                                      Organism.Name != "Nothophytophthora sp. Chile5",
+                                      Organism.Name != "Ochromonadaceae sp. CCMP2298",
+                                      Organism.Name != "Moneuplotes crassus",
+                                      Organism.Name != "Symbiodinium pilosum",
+                                      Organism.Name != "Symbiodinium sp. CCMP2456",
+                                      Organism.Name != "Symbiodinium necroappetens",
+                                      Organism.Name != "Eimeria mitis",
+                                      Organism.Name != "Eimeria necatrix",
+                                      Organism.Name != "Eimeria praecox",
+                                      Organism.Name != "Trypanosoma brucei equiperdum",
+                                      Organism.Name != "Trpanosoma equiperdum",
+                                      Organism.Name != "Trypanosoma rangeli",
+                                      Organism.Name != "Trypanosoma rangeli SC58",
+                                      Organism.Name != "Strigomonas culicis",
+                                      Organism.Name != "Perkinsela sp. CCAP 1560/4",
+                                      Organism.Name != "Giardia lamblia ATCC 50803",
+                                      Organism.Name != "Spironucleus salmonicida",
+                                      Organism.Name != "Hexamita inflata",
+                                      Organism.Name != "Streblomastix strix",
+                                      Organism.Name != "Aduncisulcus paluster",
+                                      Organism.Name != "Monocercomonoides exilis",
+                                      Organism.Name != "Paratrimastix pyriformis",
+                                      Organism.Name != "Novymonas esmeraldas",
+                                      Organism.Name != "Picocystis sp. ML",
+                                      Organism.Name != "Pistacia atlantica",
+                                      Organism.Name != "Euglena gracilis")
 
 
 data <- MasterTable %>% filter(!is.na(RICTOR)) %>% count(M.Strategy)
@@ -839,7 +878,13 @@ pie3<- ggplot(data3, aes(x="", y=prop, fill=M.Strategy)) +
   theme(text = element_text(family = "serif"))
 
 pie3
-
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithoutRAPTOR.png",
+       plot = pie3,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/PieWithOutRAPTOR.pptx",
        figure = pie3,
@@ -871,6 +916,227 @@ pie4<- ggplot(data4, aes(x="", y=prop, fill=M.Strategy)) +
   theme(text = element_text(family = "serif"))
 
 pie4
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/PieWithRAPTOR.png",
+       plot = pie4,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/PieWithRAPTOR.pptx",
+       figure = pie4,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+
+data5 <- MasterTable %>% filter(!is.na(RICTOR)) %>% filter(Super.Group == "Alveolata" | Super.Group == "Stramenopiles" | Super.Group == "Rhizaria")%>%count(M.Strategy)
+data5 <- data5 %>%
+  arrange(desc(M.Strategy))%>%
+  mutate(prop = n/sum(data5$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+
+pie5<- ggplot(data5, aes(x="", y=prop, fill=M.Strategy)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of SAR Organisms That Have RICTOR")+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+
+pie5
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/SARWithRictor.png",
+       plot = pie5,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/SARWithRictor.pptx",
+       figure = pie5,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+
+data6 <- MasterTable %>% filter(is.na(RICTOR)) %>% filter(Super.Group == "Alveolata" | Super.Group == "Stramenopiles" | Super.Group == "Rhizaria")%>%count(M.Strategy)
+data6 <- data6 %>%
+  arrange(desc(M.Strategy))%>%
+  mutate(prop = n/sum(data6$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+
+pie6<- ggplot(data6, aes(x="", y=prop, fill=M.Strategy)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of SAR Organisms That Don't Have RICTOR")+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+
+pie6
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/SARNoRictor.png",
+       plot = pie6,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/SARNoRictor.pptx",
+       figure = pie6,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+data7 <- MasterTable %>% filter(is.na(RAPTOR)) %>% filter(Super.Group == "Alveolata" | Super.Group == "Stramenopiles" | Super.Group == "Rhizaria")%>%count(M.Strategy)
+data7 <- data7 %>%
+  arrange(desc(M.Strategy))%>%
+  mutate(prop = n/sum(data7$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+
+pie7<- ggplot(data7, aes(x="", y=prop, fill=M.Strategy)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of SAR Organisms That Don't Have RAPTOR")+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+
+pie7
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/SARNoRaptor.png",
+       plot = pie7,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/SARNoRaptor.pptx",
+       figure = pie7,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+
+
+data8 <- MasterTable %>% filter(!is.na(RAPTOR)) %>% filter(Super.Group == "Alveolata" | Super.Group == "Stramenopiles" | Super.Group == "Rhizaria")%>%count(M.Strategy)
+data8 <- data8 %>%
+  arrange(desc(M.Strategy))%>%
+  mutate(prop = n/sum(data8$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+
+pie8<- ggplot(data8, aes(x="", y=prop, fill=M.Strategy)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of SAR Organisms That Have RAPTOR")+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+
+pie8
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/SARwithRaptor.png",
+       plot = pie8,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/SARWithRaptor.pptx",
+       figure = pie8,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+data9 <- MasterTable %>% filter(is.na(TOR)) %>% filter(Super.Group == "Alveolata" | Super.Group == "Stramenopiles" | Super.Group == "Rhizaria")%>%count(M.Strategy)
+data9 <- data9 %>%
+  arrange(desc(M.Strategy))%>%
+  mutate(prop = n/sum(data9$n) * 100)%>%
+  mutate(ypos = cumsum(prop)- 0.5*prop)
+
+
+pie9<- ggplot(data9, aes(x="", y=prop, fill=M.Strategy)) +
+  geom_bar(stat="identity", width=2, color="black") +
+  coord_polar("y", start=0) +
+  theme_void() + 
+  theme(legend.position="none")+
+  geom_text_repel(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
+  labs(title = "Metabolic Strategy Breakdown of SAR Organisms That Don't Have TOR")+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(text = element_text(family = "serif"))
+
+pie9
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/SARNoTOR.png",
+       plot = pie9,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/SARNoTOR.pptx",
+       figure = pie9,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+
+
+
+
+
 
 
 

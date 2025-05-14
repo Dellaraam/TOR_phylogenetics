@@ -107,6 +107,23 @@ pie1 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
   theme(text = element_text(family = "serif"))
 pie1
 
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/MetabolicAlveolataPieChart.png",
+       plot = pie1,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetabolicAlveolataPieChart.pptx",
+       figure = pie1,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+
+
 
 data <- MasterTable %>%filter(Super.Group == "Stramenopiles") %>%count(M.Strategy)
 data <- data %>%
@@ -129,6 +146,20 @@ pie2 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
                     drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie2
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/MetabolicStramenopilesPieChart.png",
+       plot = pie2,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetabolicStramenopilesPieChart.pptx",
+       figure = pie2,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 data <- MasterTable %>%filter(Super.Group == "Rhizaria") %>%count(M.Strategy)
@@ -154,6 +185,21 @@ pie3 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
 pie3
 
 
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/MetabolicRhizariaPieChart.png",
+       plot = pie3,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetabolicRhizariaPieChart.pptx",
+       figure = pie3,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
 data <- MasterTable %>%filter(Super.Group == "Alveolata"|Super.Group == "Stramenopiles"|Super.Group == "Rhizaria") %>%count(M.Strategy)
 data <- data %>%
   arrange(desc(M.Strategy))%>%
@@ -176,6 +222,22 @@ pie4 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
   theme(text = element_text(family = "serif"))
 pie4
 
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/MetabolicSARPieChart.png",
+       plot = pie4,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetabolicSARPieChart.pptx",
+       figure = pie4,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+
 data <- MasterTable %>%filter(Super.Group == "Discoba") %>%count(M.Strategy)
 data <- data %>%
   arrange(desc(M.Strategy))%>%
@@ -197,6 +259,21 @@ pie5 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
                     drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie5
+
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/MetabolicDiscobaPieChart.png",
+       plot = pie5,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetabolicDiscobaPieChart.pptx",
+       figure = pie5,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 data <- MasterTable %>%filter(Super.Group == "Metamonada") %>%count(M.Strategy)
 data <- data %>%
@@ -221,6 +298,22 @@ pie6 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
 pie6
 
 
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/MetabolicMetamonadaPieChart.png",
+       plot = pie6,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetabolicMetamonadaPieChart.pptx",
+       figure = pie6,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
+
 data <- MasterTable %>%filter(Super.Group == "Discoba"|Super.Group == "Metamonada") %>%count(M.Strategy)
 data <- data %>%
   arrange(desc(M.Strategy))%>%
@@ -242,6 +335,20 @@ pie7 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
                     drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie7
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/MetabolicExcavatesPieChart.png",
+       plot = pie7,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetabolicExcavatesPieChart.pptx",
+       figure = pie7,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 data <- MasterTable %>%filter(Super.Group == "Streptophyta") %>%count(M.Strategy)
@@ -265,6 +372,20 @@ pie8 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
                     drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie8
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/MetabolicStreptophytaPieChart.png",
+       plot = pie8,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetabolicStreptophytaPieChart.pptx",
+       figure = pie8,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -291,7 +412,19 @@ pie9 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
   theme(text = element_text(family = "serif"))
 pie9
 
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/MetabolicChlorophytaPieChart.png",
+       plot = pie9,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetabolicChlorophytaPieChart.pptx",
+       figure = pie9,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -317,7 +450,19 @@ pie10 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
   theme(text = element_text(family = "serif"))
 pie10
 
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/MetabolicRhodophytaPieChart.png",
+       plot = pie10,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetabolicRhodophytaPieChart.pptx",
+       figure = pie10,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 
@@ -343,7 +488,19 @@ pie11 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
   theme(text = element_text(family = "serif"))
 pie11
 
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/MetabolicArchPieChart.png",
+       plot = pie11,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetabolicArchPieChart.pptx",
+       figure = pie11,
+       units = "inches",
+       width = 10,
+       height = 7)
 
 
 data <- MasterTable%>%count(M.Strategy)
@@ -367,3 +524,19 @@ pie12 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
                     drop = FALSE)+
   theme(text = element_text(family = "serif"))
 pie12
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/MetabolicAllPieChart.png",
+       plot = pie12,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/MetabolicAllPieChart.pptx",
+       figure = pie12,
+       units = "inches",
+       width = 10,
+       height = 7)
+
+
