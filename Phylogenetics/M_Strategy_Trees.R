@@ -17,10 +17,12 @@ MasterTable <- select(MasterTable, -X)
 
 MasterTable <- MasterTable %>% mutate(M.Strategy = if_else(Phylum.name == "Apicomplexa", "Plastid Parasite", M.Strategy, missing = M.Strategy),
                                       M.Strategy = if_else(Phylum.name == "Perkinsozoa", "Plastid Parasite", M.Strategy, missing = M.Strategy),
-                                      M.Strategy = if_else(Super.Group == "Streptophyta" & M.Strategy == "Parasite", "Streptophyta parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Super.Group == "Streptophyta" & M.Strategy == "Parasite", "Streptophyta Parasite", M.Strategy, missing = M.Strategy),
                                       M.Strategy = if_else(Family.name == "Amoebophryaceae", "Plastid Parasite", M.Strategy, missing = M.Strategy),
                                       M.Strategy = if_else(M.Strategy == "Parasite" & Super.Group != "Streptophyta", "Non-Plastid Parasite", M.Strategy, missing = M.Strategy))
 
+
+MasterTable <- MasterTable %>% mutate(RICTOR = if_else(Organism.Name == "Euglena gracilis","P",RICTOR, missing = RICTOR))
 MasterTable %>% ggplot(aes(x = factor(RICTOR,level = c("H", "M", "L")), y = RICTORDomain, color = M.Strategy, size = C.score))+
   geom_jitter()+
   labs(title = "RICTOR Domain Score Distribution")+
@@ -79,6 +81,9 @@ ExcSubset <- ExcSubset %>% filter(Organism.Name != "Trypanosoma brucei equiperdu
                                   Organism.Name != "Monocercomonoides exilis",
                                   Organism.Name != "Paratrimastix pyriformis",
                                   Organism.Name != "Novymonas esmeraldas")
+ExcSubset <- ExcSubset %>% mutate(RICTOR = if_else(Organism.Name == "Euglena gracilis","P",RICTOR, missing = RICTOR))
+
+
 
 ChloroRhoSubset <- MasterTable %>% filter(Super.Group == "Chlorophyta" | Super.Group == "Rhodophyta")
 ChloroRhoSubset <- ChloroRhoSubset %>% filter(Organism.Name != "Cymbomonas tetramitiformis",
@@ -158,7 +163,8 @@ EMpal2 <- c(
   "Mixotroph" = "#63E3C5",
   "Non-Plastid Parasite" = "#FE4A49",
   "Plastid Parasite" = "#D0D1AC",
-  "Streptophyta parasite" = "#B6A39E"
+  "Streptophyta Parasite" = "#B6A39E",
+  na_value = "blue"
 )
 
 #Tomato
@@ -876,7 +882,7 @@ SARHeatPlot <- gheatmap(SARHeat,df5, offset = 2.5, width = .3, font.size = 2, co
 SARHeatPlot
 
 
-SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 1, nudge_x = 0, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
+SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 1.5, nudge_x = 0, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
@@ -887,18 +893,19 @@ SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 1, nudge_x = 0, linesize 
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   geom_rootedge()+
-  labs(title = "SAR Phylogenetic Tree",
-       subtitle = "With HMMER Score Map")
+  labs(title = "Figure 6",
+       subtitle = paste0("Phylogenetic HMMER Score Map: \n",
+                         "SAR Super Groups"))
 
 SARSavePlot
 
 SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 5.5, width = .05, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite","Endosymbiotic"),
                     values = EMpal2,
-                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
+                    limits = force,
                     na.value = "grey",
-                    drop = FALSE)+
+                    drop = TRUE)+
   theme(
     text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
@@ -906,13 +913,21 @@ SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 5.5, width = .05, colnames =
     legend.text=element_text(size=5.5),
     legend.spacing.y = unit(0.02, "cm"),
     legend.key.spacing.x = unit(1,"cm"))+
-  new_scale_fill()
+  new_scale_fill()+
+  geom_highlight(data = tempdataframe,
+                 mapping = aes(node = NodeNumber, fill = Super.Group), alpha = .2)+
+  scale_fill_manual(name = "Super Group",
+                    breaks = c("Stramenopiles","Alveolata","Rhizaria"),
+                    values = c("Alveolata" = "#EFB911",
+                               "Stramenopiles" = "#572100",
+                               "Rhizaria" = "#FFD0AB"))
+  
 
 SARSavePlotF
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SARHeatPlotMetPlot.png",
        plot = SARSavePlotF,
        width = 3840,
-       height = 2160,
+       height = 4320,
        units = "px",
        dpi = 320,
        limitsize = FALSE)
@@ -1096,9 +1111,9 @@ Streplayer2
 
 StrepLayer3 <- gheatmap(Streplayer2,mdfStrep, offset = 12, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
-                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
                     values = EMpal2,
-                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
+                    limits = force,
                     na.value = "grey",
                     drop = FALSE)+
   theme(
