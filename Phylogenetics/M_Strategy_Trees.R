@@ -405,7 +405,11 @@ Msubset2 <- Excavata %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.
 # pivot_longer(cols = !Organism.Name, names_to = "M.Strategy", values_to = "Type")
 mdf2 <- column_to_rownames(Msubset2, var = "Organism.Name")
 
-
+tempdataframe <- Excavata
+tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(
+  Super.Group == "Discoba" ~ which(ExcavataTree$node.label == "Discoba") + length(ExcavataTree$tip.label),
+  Super.Group == "Metamonada" ~ which(ExcavataTree$node.label == "Metamonada") + length(ExcavataTree$tip.label)))%>%
+  select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
 
 
 ExcavataTP <- ggtree(ExcavataTree, branch.length = "none", ladderize = FALSE)
@@ -453,7 +457,7 @@ experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 22.5, width = .3
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
-                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
+                    limits = force,
                     na.value = "grey",
                     drop = FALSE)+
   theme(
@@ -463,7 +467,28 @@ experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 22.5, width = .3
     legend.text=element_text(size=5.5),
     legend.spacing.y = unit(0.02, "cm"),
     legend.key.spacing.x = unit(1,"cm"))+
-  new_scale_fill()
+  new_scale_fill()+
+  geom_highlight(data = tempdataframe,
+                 mapping = aes(node = NodeNumber, fill = Super.Group), alpha = .2)+
+  scale_fill_manual(name = "Super Group",
+                    breaks = c("Alveolata",
+                               "Stramenopiles",
+                               "Rhizaria",
+                               "Streptophyta",
+                               "Chlorophyta",
+                               "Rhodophyta",
+                               "Discoba",
+                               "Metamonada"),
+                    values = c("Alveolata" = "#EFB911",
+                               "Stramenopiles" = "#572100",
+                               "Rhizaria" = "#FFD0AB",
+                               "Streptophyta" = "#678516",
+                               "Chlorophyta" = "#525601",
+                               "Rhodophyta" = "#681114",
+                               "Discoba" = "cyan",
+                               "Metamonada" = "blue"
+                    ))
+  
 experimentalExcplot
 
 
@@ -629,6 +654,7 @@ ChlorRhoTree$tip.label
 ChlorRhoTree$tip.label <- gsub("'","", ChlorRhoTree$tip.label)
 ChlorRhoTree$tip.label <- gsub("'","", ChlorRhoTree$tip.label)
 ChlorRhoTree$tip.label
+ChlorRhoTree$node.label
 
 #Chlorophyta Rhodophyta Data to add to the tree
 ChlorRho <- MasterTable %>% filter(Super.Group == "Rhodophyta" | Super.Group == "Chlorophyta")
@@ -653,6 +679,13 @@ df6 <- column_to_rownames(subsetdataframe6, var = "Organism.Name")
 Msubset3 <- ChlorRho %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name, .keep_all = TRUE) #%>%
 # pivot_longer(cols = !Organism.Name, names_to = "M.Strategy", values_to = "Type")
 mdf3 <- column_to_rownames(Msubset3, var = "Organism.Name")
+
+
+tempdataframe <- ChlorRho
+tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(
+  Super.Group == "Chlorophyta" ~ which(ChlorRhoTree$node.label == "Chlorophyta") + length(ChlorRhoTree$tip.label),
+  Super.Group == "Rhodophyta" ~ which(ChlorRhoTree$node.label == "Rhodophyta") + length(ChlorRhoTree$tip.label)))%>%
+  select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
 
 
 
@@ -693,14 +726,15 @@ ChloRhoLayer2 <- gheatmap(ChloRhoLayer1, df6, offset = 6.5, width = .65, font.si
     legend.key.spacing.x = unit(1,"cm"))+
   new_scale_fill()
 
+ChloRhoLayer2
 # Layer 3
 # Metabolic Strategy Layer
 # Requires the second layer
-ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 12, width = .15, colnames = FALSE)+
+ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 9, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
-                    limits = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
+                    limits = force,
                     na.value = "grey",
                     drop = FALSE)+
   theme(
@@ -710,20 +744,40 @@ ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 12, width = .15, colnames
     legend.text=element_text(size=5.5),
     legend.spacing.y = unit(0.02, "cm"),
     legend.key.spacing.x = unit(1,"cm"))+
-  new_scale_fill()
+  new_scale_fill()+
+  geom_highlight(data = tempdataframe,
+                 mapping = aes(node = NodeNumber, fill = Super.Group), alpha = .2)+
+  scale_fill_manual(name = "Super Group",
+                    breaks = c("Alveolata",
+                               "Stramenopiles",
+                               "Rhizaria",
+                               "Streptophyta",
+                               "Chlorophyta",
+                               "Rhodophyta",
+                               "Discoba",
+                               "Metamonada"),
+                    values = c("Alveolata" = "#EFB911",
+                               "Stramenopiles" = "#572100",
+                               "Rhizaria" = "#FFD0AB",
+                               "Streptophyta" = "#678516",
+                               "Chlorophyta" = "#525601",
+                               "Rhodophyta" = "#681114",
+                               "Discoba" = "cyan",
+                               "Metamonada" = "blue"
+                    ))
 
 
 ChloRhoLayer3
 
 
 topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ChlorophytaRhodophytaTree.pptx",
-       figure = ChloRhoLayer2,
+       figure = ChloRhoLayer3,
        units = "inches",
        width = 10,
        height = 7)
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/ChlorophytaRhodophyta.png",
-       plot = ChloRhoLayer2,
+       plot = ChloRhoLayer3,
        width = 3840,
        height = 2160,
        units = "px",
@@ -856,7 +910,12 @@ Msubset4 <- SAR %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name,
 # pivot_longer(cols = !Organism.Name, names_to = "M.Strategy", values_to = "Type")
 mdf4 <- column_to_rownames(Msubset4, var = "Organism.Name")
 
-
+tempdataframe <- SAR
+tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(
+  Super.Group == "Alveolata" ~ which(SARTree$node.label == "Alveolata") + length(SARTree$tip.label),
+  Super.Group == "Stramenopiles" ~ which(SARTree$node.label == "Stramenopiles") + length(SARTree$tip.label),
+  Super.Group == "Rhizaria" ~ which(SARTree$node.label == "Rhizaria") + length(SARTree$tip.label)))%>%
+  select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
 
 
 SARHeat <- SARTree %>% ggtree(ladderize = FALSE,branch.length = "none")+geom_rootedge()+geom_tree(linewidth = .25)
@@ -882,7 +941,7 @@ SARHeatPlot <- gheatmap(SARHeat,df5, offset = 2.5, width = .3, font.size = 2, co
 SARHeatPlot
 
 
-SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 1.5, nudge_x = 0, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
+SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 1.35, nudge_x = 0, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
@@ -917,10 +976,23 @@ SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 5.5, width = .05, colnames =
   geom_highlight(data = tempdataframe,
                  mapping = aes(node = NodeNumber, fill = Super.Group), alpha = .2)+
   scale_fill_manual(name = "Super Group",
-                    breaks = c("Stramenopiles","Alveolata","Rhizaria"),
+                    breaks = c("Alveolata",
+                               "Stramenopiles",
+                               "Rhizaria",
+                               "Streptophyta",
+                               "Chlorophyta",
+                               "Rhodophyta",
+                               "Discoba",
+                               "Metamonada"),
                     values = c("Alveolata" = "#EFB911",
                                "Stramenopiles" = "#572100",
-                               "Rhizaria" = "#FFD0AB"))
+                               "Rhizaria" = "#FFD0AB",
+                               "Streptophyta" = "#678516",
+                               "Chlorophyta" = "#525601",
+                               "Rhodophyta" = "#681114",
+                               "Discoba" = "cyan",
+                               "Metamonada" = "blue"
+                    ))
   
 
 SARSavePlotF
@@ -952,12 +1024,7 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/SARTreeMetHeat.pptx
 
 
 
-tempdataframe <- SAR
-tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(
-                                                                 Super.Group == "Alveolata" ~ which(SARTree$node.label == "Alveolata") + length(SARTree$tip.label),
-                                                                 Super.Group == "Stramenopiles" ~ which(SARTree$node.label == "Stramenopiles") + length(SARTree$tip.label),
-                                                                 Super.Group == "Rhizaria" ~ which(SARTree$node.label == "Rhizaria") + length(SARTree$tip.label)))%>%
-select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
+
 
 
 
