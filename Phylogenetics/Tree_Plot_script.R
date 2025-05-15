@@ -1,7 +1,8 @@
 # Created by:
 # Kyle Johnson
 # Dellaraam Pourkeramati
-#
+# Tree Plot script for visualizing TOR component prevalence amongst species
+
 
 
 

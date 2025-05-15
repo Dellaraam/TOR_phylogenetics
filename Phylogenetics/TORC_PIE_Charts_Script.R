@@ -1,6 +1,12 @@
+# TOR Component Pie Chart visualization script
+# Created by: Kyle Johnson
+# Purpose of this script is to create piecharts to determine how prevalent the
+# differing TOR complexes are across the different super groups as detailed 
+# in the overall study.
 
 
 
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
 
 
 MasterTable <- read_csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")

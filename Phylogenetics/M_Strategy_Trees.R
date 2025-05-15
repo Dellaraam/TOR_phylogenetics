@@ -8,6 +8,8 @@
 # library(eoffice)
 
 
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
+
 
 
 # Load in the master table
@@ -730,7 +732,7 @@ ChloRhoLayer2
 # Layer 3
 # Metabolic Strategy Layer
 # Requires the second layer
-ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 9, width = .15, colnames = FALSE)+
+ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 11, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
