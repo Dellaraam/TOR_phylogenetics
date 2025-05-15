@@ -1,6 +1,6 @@
 #load in metabolic table
 
-df <- read.csv(file = "C:/Users/kajoh/Documents/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Final_Metabolic_Table.csv")
+df <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Final_Metabolic_Table.csv")
 
 Ydf <- filter(df, HasRICTOR == "YES", .keep_all = TRUE)
 Ndf <- filter(df, HasRICTOR == "NO", .keep_all = TRUE)
