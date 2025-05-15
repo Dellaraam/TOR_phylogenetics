@@ -1,14 +1,12 @@
 
 # Figure Creation Script: Plots
-#source(file = ")
-#install.packages("ggrepel")
-install.packages("ggnewscale")
-#install.packages("treemapify")
-library(tidyverse)
-library(ggplot2)
-library(ggrepel)
-library(treemapify)
-library(ggnewscale)
+# Kyle Johnson
+# Dellaraam Pourkeramati
+# Script for creating different plots and charts for metabolic strategy
+
+
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
+
 
 # ------------------------------------------------------------------------------
 MasterTable <- read_csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")
@@ -1395,6 +1393,18 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/SARPieWithOutRaptor
        units = "inches",
        width = 10,
        height = 7)
+
+
+
+
+
+
+
+
+
+
+
+
 
  
  #------------------------------------------------------------------------------
