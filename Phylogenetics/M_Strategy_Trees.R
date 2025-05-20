@@ -92,6 +92,35 @@ ChloroRhoSubset <- ChloroRhoSubset %>% filter(Organism.Name != "Cymbomonas tetra
                                               Organism.Name != "Picocystis sp. ML")
 
 
+
+SpecialSubset <- MasterTable %>% filter(Class.name == "Phaeophyceae"|
+                                        Class.name == "Bacillariophyceae"|
+                                        Order.name == "Saprolegniales"|
+                                        Class.name == "Bigyra"|
+                                        Order.name == "Haemosporida"|
+                                        Phylum.name == "Ciliophora"|
+                                        Order.name == "Perkinsida")%>%
+  filter(Organism.Name != "Phytophthora citrophthora",
+         Organism.Name != "Aphanomyces stellatus",
+         Organism.Name != "Minidiscus trioculatus",
+         Organism.Name != "Labyrinthula sp. Ha",
+         Organism.Name != "Cafeteria roenbergensis",
+         Organism.Name != "Phytophthora fragariaefolia",
+         Organism.Name != "Phytophthora lilii",
+         Organism.Name != "Peronosclerospora sorghi",
+         Organism.Name != "Nothophytophthora sp. Chile5",
+         Organism.Name != "Ochromonadaceae sp. CCMP2298")%>%
+  filter(Organism.Name != "Moneuplotes crassus",
+         Organism.Name != "Symbiodinium pilosum",
+         Organism.Name != "Symbiodinium sp. CCMP2456",
+         Organism.Name != "Symbiodinium necroappetens",
+         Organism.Name != "Eimeria mitis",
+         Organism.Name != "Eimeria necatrix",
+         Organism.Name != "Eimeria praecox"
+  )
+  
+
+
 StreptophytaSubset <- MasterTable %>% filter(Super.Group == "Streptophyta")
 ARSubset <- rbind(AlvSubset,RhizSubset)
 SARSubset <- rbind(StramSubset, AlvSubset, RhizSubset)
@@ -111,6 +140,8 @@ write.table(ChloroRhoSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogen
 write.table(StreptophytaSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedStreptophyta.txt", sep = "\t", row.names = F, col.names = F)
 write.table(SARSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedSAR.txt", sep = "\t", row.names = F, col.names = F)
 write.table(ArchaeplastidaSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/TruncatedArch.txt", sep = "\t", row.names = F, col.names = F)
+write.table(SpecialSubset$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/SpecialSARSubset.txt", sep = "\t", row.names = F, col.names = F)
+
 
 #Palettes-----------------------------------------------------------------------
 pal <- c(
@@ -925,7 +956,7 @@ SARHeat + geom_nodelab(size = 2)+geom_text(aes(label = node),size = 4)
 
 
 
-SARHeatPlot <- gheatmap(SARHeat,df5, offset = 2.5, width = .3, font.size = 2, colnames = FALSE)+
+SARHeatPlot <- gheatmap(SARHeat,df5, offset = 5, width = .3, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -943,7 +974,7 @@ SARHeatPlot <- gheatmap(SARHeat,df5, offset = 2.5, width = .3, font.size = 2, co
 SARHeatPlot
 
 
-SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 1.35, nudge_x = 0, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
+SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 3, nudge_x = 0, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
@@ -960,7 +991,7 @@ SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 1.35, nudge_x = 0, linesi
 
 SARSavePlot
 
-SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 5.5, width = .05, colnames = FALSE)+
+SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 8, width = .05, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite","Endosymbiotic"),
                     values = EMpal2,
@@ -1001,7 +1032,7 @@ SARSavePlotF
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SARHeatPlotMetPlot.png",
        plot = SARSavePlotF,
        width = 3840,
-       height = 4320,
+       height = 7320,
        units = "px",
        dpi = 320,
        limitsize = FALSE)
@@ -1204,5 +1235,129 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapMetMapStrep
        units = "px",
        dpi = 320,
        limitsize = FALSE)
+
+
+
+
+
+
+#-------------------------------------------------------------------------------
+
+
+SpecialSARTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/SpecialSARTreeP.phy")
+SpecialSARTree$tip.label
+SpecialSARTree$tip.label <- gsub("'","", SpecialSARTree$tip.label)
+SpecialSARTree$tip.label
+SARTree$node.label
+
+SpecialSAR <- SpecialSubset %>% relocate(Organism.Name)
+
+
+SpecialSubsetDataframe <- SpecialSAR %>% select(Organism.Name, 
+                                   SIN1, 
+                                   RICTOR, 
+                                   RAPTOR, 
+                                   LST8,
+                                   TOR) %>% 
+  distinct(Organism.Name, .keep_all = TRUE)
+HeatmapSpecial <- column_to_rownames(SpecialSubsetDataframe, var = "Organism.Name")
+
+MetSpecial <- SpecialSAR %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name, .keep_all = TRUE) #%>%
+# pivot_longer(cols = !Organism.Name, names_to = "M.Strategy", values_to = "Type")
+HeatmapMeta <- column_to_rownames(MetSpecial, var = "Organism.Name")
+
+tempdataframe <- SpecialSAR
+tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(
+  Super.Group == "Alveolata" ~ which(SpecialSARTree$node.label == "Alveolata") + length(SpecialSARTree$tip.label),
+  Super.Group == "Stramenopiles" ~ which(SpecialSARTree$node.label == "Stramenopiles") + length(SpecialSARTree$tip.label)))%>%
+  select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
+
+
+SpecialSAR1 <- SpecialSARTree %>% ggtree(ladderize = FALSE,branch.length = "none")+geom_rootedge()+geom_tree(linewidth = .25)
+SpecialSAR1
+
+
+
+
+SpecialSAR2 <- gheatmap(SpecialSAR1,HeatmapSpecial, offset = 6.5, width = 1.5, font.size = 2, colnames = FALSE)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P",NA),
+                    values = pal3,
+                    limits = c("H","M","L","P", NA),
+                    na.value = "#FFFFFF",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
+SpecialSAR2
+
+
+SpecialSAR3<- SpecialSAR2 %<+% SpecialSAR+geom_tiplab(size = 3, nudge_x = 0, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour', fontface = "italic")+
+  scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
+                        guide = guide_colorbar(order =1),
+                        name = "Completeness Score")+
+  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3http://127.0.0.1:41255/graphics/plot_zoom_png?width=1707&height=912)+
+  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_rootedge()+
+  labs(title = "Figure 6",
+       subtitle = paste0("Phylogenetic HMMER Score Map: \n",
+                         "SAR Super Groups"))
+SpecialSAR3
+
+
+SpecialSAR4 <- gheatmap(SpecialSAR3,HeatmapMeta, offset = 15.8, width = .3, colnames = FALSE)+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite","Endosymbiotic"),
+                    values = EMpal2,
+                    limits = force,
+                    na.value = "grey",
+                    drop = TRUE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10),
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()+
+  geom_highlight(data = tempdataframe,
+                 mapping = aes(node = NodeNumber, fill = Super.Group), alpha = .2)+
+  scale_fill_manual(name = "Super Group",
+                    breaks = c("Alveolata",
+                               "Stramenopiles",
+                               "Rhizaria",
+                               "Streptophyta",
+                               "Chlorophyta",
+                               "Rhodophyta",
+                               "Discoba",
+                               "Metamonada"),
+                    values = c("Alveolata" = "#EFB911",
+                               "Stramenopiles" = "#572100",
+                               "Rhizaria" = "#FFD0AB",
+                               "Streptophyta" = "#678516",
+                               "Chlorophyta" = "#525601",
+                               "Rhodophyta" = "#681114",
+                               "Discoba" = "cyan",
+                               "Metamonada" = "blue"
+                    ))
+SpecialSAR4
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SpecialSARHeatPlotMetPlot.png",
+       plot = SpecialSAR4,
+       width = 3840,
+       height = 7320,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
 
 
