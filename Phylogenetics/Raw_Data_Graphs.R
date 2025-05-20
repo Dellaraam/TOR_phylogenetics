@@ -125,7 +125,7 @@ StramRAPTORRawPlot <- FinalStramRaptor %>% ggplot()+
   
   theme_bw()+
   labs(title = "Overall Hit Score vs Best Domain Hit Score RAPTOR",
-       subtitle = "Stramenopiles Raw Hits")+
+       subtitle = "Stramenopiles")+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
   labs(color = "Group")
