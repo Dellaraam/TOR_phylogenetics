@@ -957,7 +957,7 @@ SARHeat + geom_nodelab(size = 2)+geom_text(aes(label = node),size = 4)
 
 
 
-SARHeatPlot <- gheatmap(SARHeat,df5, offset = 5, width = .6, font.size = 2, colnames = FALSE)+
+SARHeatPlot <- gheatmap(SARHeat,df5, offset = 2, width = .6, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -992,7 +992,7 @@ SARSavePlot <- SARHeatPlot %<+% SAR+geom_tree(aes(color = C.score))+
 
 SARSavePlot
 
-SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 11, width = .13, colnames = FALSE)+
+SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 8, width = .13, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite","Endosymbiotic"),
                     values = EMpal2,
@@ -1315,7 +1315,7 @@ SpecialSAR3<- SpecialSAR2 %<+% SpecialSAR+geom_tiplab(size = 3, nudge_x = 0, lin
 SpecialSAR3
 
 
-SpecialSAR4 <- gheatmap(SpecialSAR3,HeatmapMeta, offset = 15.8, width = .3, colnames = FALSE)+
+SpecialSAR4 <- gheatmap(SpecialSAR3,HeatmapMeta, offset = 17.5, width = .3, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite","Endosymbiotic"),
                     values = EMpal2,
@@ -1352,6 +1352,9 @@ SpecialSAR4 <- gheatmap(SpecialSAR3,HeatmapMeta, offset = 15.8, width = .3, coln
                     ))
 SpecialSAR4
 
+
+SpecialSAR4 + geom_nodelab()
+
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SpecialSARHeatPlotMetPlot.png",
        plot = SpecialSAR4,
        width = 5840,
@@ -1360,5 +1363,17 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SpecialSARHeatPlot
        dpi = 320,
        limitsize = FALSE)
 
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SpecialSARHeatPlotMetPlot.svg",
+       plot = SpecialSAR4,
+       width = 5840,
+       height = 4320,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/SpecialSARHeatPlotMetPlot.pptx",
+       figure = SpecialSAR4,
+       units = "inches",
+       width = 10,
+       height = 7)
 
