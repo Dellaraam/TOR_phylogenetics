@@ -1360,5 +1360,9 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SpecialSARHeatPlot
        dpi = 320,
        limitsize = FALSE)
 
-
+topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/SpecialSARHeatPlotMetPlot.pptx",
+       figure = SpecialSAR4,
+       units = "inches",
+       width = 10,
+       height = 7)
 
