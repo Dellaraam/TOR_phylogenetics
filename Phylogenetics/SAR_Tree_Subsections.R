@@ -105,7 +105,7 @@ tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(
   select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
 
 
-SARHeat <- SARTree %>% ggtree(ladderize = FALSE,branch.length = "none")+geom_rootedge()+geom_tree(linewidth = .25)+xlim(NA,20)
+SARHeat <- SARTree %>% ggtree(ladderize = FALSE,branch.length = "none", layout = "circular")+geom_rootedge()+geom_tree(linewidth = .25)
 SARHeat + geom_nodelab(size = 2)+geom_text(aes(label = node),size = 4)
 
 
@@ -127,10 +127,23 @@ SARHeatPlot <- gheatmap(SARHeat,df5, offset = 3, width = .3, font.size = 2, coln
   new_scale_fill()
 SARHeatPlot
 
-
-c
+SARSavePlot <- SARHeatPlot %<+% SAR+geom_tree(aes(color = C.score))+
+  scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
+                        guide = guide_colorbar(order =1),
+                        name = "Completeness Score")+
+  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3http://127.0.0.1:41255/graphics/plot_zoom_png?width=1707&height=912)+
+  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_rootedge()+
+  labs(title = "Figure 6",
+       subtitle = paste0("Phylogenetic HMMER Score Map: \n",
+                         "SAR Super Groups"))
 
 SARSavePlot
+
 
 SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 6, width = .05, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
