@@ -102,12 +102,12 @@ tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(
   select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
 
 
-SARHeat <- SARTree %>% ggtree(ladderize = FALSE,branch.length = "none", layout = "circular")+geom_rootedge()+geom_tree(linewidth = .25)
-SARHeat + geom_nodelab(size = 2)+geom_text(aes(label = node),size = 4)
+SARHeat <- SARTree %>% ggtree(ladderize = FALSE,branch.length = "none")+geom_rootedge()+geom_tree(linewidth = .25)
+SARHeat + geom_nodelab(size = 3)
 
 
 
-SARHeatPlot <- gheatmap(SARHeat,df5, offset = 3, width = .6, font.size = 2, colnames = FALSE)+
+SARHeatPlot <- gheatmap(SARHeat,df5, offset = 8, width = .2, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -124,7 +124,7 @@ SARHeatPlot <- gheatmap(SARHeat,df5, offset = 3, width = .6, font.size = 2, coln
   new_scale_fill()
 SARHeatPlot
 
-SARSavePlot <- SARHeatPlot %<+% SAR+geom_tree(aes(color = C.score))+
+SARSavePlot <- SARHeatPlot %<+% SAR+ geom_tiplab(size = 2.5, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
@@ -141,7 +141,7 @@ SARSavePlot <- SARHeatPlot %<+% SAR+geom_tree(aes(color = C.score))+
 
 SARSavePlot
 
-SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 9, width = .15, colnames = FALSE)+
+SARSavePlotF <- gheatmap(SARSavePlot,mdf4, offset = 10, width = .05, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite","Endosymbiotic"),
                     values = EMpal2,
@@ -183,13 +183,20 @@ SARSavePlotF
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SARParasiteFilteredPlot.png",
        plot = SARSavePlotF,
        width = 3840,
-       height = 7320,
+       height = 3320,
        units = "px",
        dpi = 320,
        limitsize = FALSE)
 
 
 
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/SARParasiteFilteredPlot.svg",
+       plot = SARSavePlotF,
+       width = 3840,
+       height = 3320,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 
 data <- FilteredSAR%>%count(M.Strategy)

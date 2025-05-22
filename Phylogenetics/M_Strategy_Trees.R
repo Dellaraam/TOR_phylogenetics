@@ -1280,7 +1280,7 @@ SpecialSAR1
 
 
 
-SpecialSAR2 <- gheatmap(SpecialSAR1,HeatmapSpecial, offset = 6.5, width = 1.5, font.size = 2, colnames = FALSE)+
+SpecialSAR2 <- gheatmap(SpecialSAR1,HeatmapSpecial, offset = 6.5, width = .2, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -1315,7 +1315,7 @@ SpecialSAR3<- SpecialSAR2 %<+% SpecialSAR+geom_tiplab(size = 3, nudge_x = 0, lin
 SpecialSAR3
 
 
-SpecialSAR4 <- gheatmap(SpecialSAR3,HeatmapMeta, offset = 17.5, width = .3, colnames = FALSE)+
+SpecialSAR4 <- gheatmap(SpecialSAR3,HeatmapMeta, offset = 17.5, width = .05, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite","Endosymbiotic"),
                     values = EMpal2,
