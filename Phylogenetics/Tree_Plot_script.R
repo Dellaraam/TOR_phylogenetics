@@ -1892,7 +1892,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAll.png",
        dpi = 320,
        limitsize = FALSE)
 
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAll.pdf",
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAll.svg",
        plot = AllHeatPlot,
        width = 3840,
        height = 2160,
