@@ -737,14 +737,12 @@ ChloRhoLayer1 <- ChlorRhoTreeP + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x
   scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
-  geom_rootedge()+
-  labs(title = "Chlorophyta & Rhodophyta Phylogenetic Tree",
-       subtitle = "With HMMER Score Map")
+  geom_rootedge()
 
 # Layer 2
 # TOR Components Heat map layer. Requires the first layer to attach to
 # Also requires a new_scale_fill() function call to establish layered fill scales
-ChloRhoLayer2 <- gheatmap(ChloRhoLayer1, df6, offset = 6.5, width = .65, font.size = 2, colnames = FALSE)+
+ChloRhoLayer2 <- gheatmap(ChloRhoLayer1, df6, offset = 6.5, width = .55, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -764,7 +762,7 @@ ChloRhoLayer2
 # Layer 3
 # Metabolic Strategy Layer
 # Requires the second layer
-ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 11, width = .15, colnames = FALSE)+
+ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 10, width = .125, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
@@ -811,6 +809,14 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/ChlorophytaRhodophy
        height = 7)
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/ChlorophytaRhodophyta.png",
+       plot = ChloRhoLayer3,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/ChlorophytaRhodophyta.svg",
        plot = ChloRhoLayer3,
        width = 3840,
        height = 2160,
@@ -1186,13 +1192,12 @@ StrepLayer1 <- StrepTreeP+geom_tree(aes(color = C.score))+
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
   geom_rootedge()+
-  labs(title = "Streptophyta Phylogenetic Tree",
-       subtitle = "With HMMER Score Map")
+  theme(legend.position = "none")
 StrepLayer1
 
 
 StrepLayer1
-Streplayer2 <- gheatmap(StrepLayer1, dfProteins, offset = .5, width = .65, font.size = 2, colnames = FALSE)+
+Streplayer2 <- gheatmap(StrepLayer1, dfProteins, offset = .5, width = .55, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -1200,6 +1205,7 @@ Streplayer2 <- gheatmap(StrepLayer1, dfProteins, offset = .5, width = .65, font.
                     na.value = "#FFFFFF",
                     drop = FALSE)+
   theme(
+    legend.position = "none",
     text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
@@ -1210,14 +1216,16 @@ Streplayer2 <- gheatmap(StrepLayer1, dfProteins, offset = .5, width = .65, font.
 
 Streplayer2
 
-StrepLayer3 <- gheatmap(Streplayer2,mdfStrep, offset = 12, width = .15, colnames = FALSE)+
+StrepLayer3 <- gheatmap(Streplayer2,mdfStrep, offset = 12.5, width = .125, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
                     values = EMpal2,
                     limits = force,
                     na.value = "grey",
                     drop = FALSE)+
+  theme_void() +
   theme(
+    legend.position = "none",
     text = element_text(family = "serif"),
     legend.background=element_rect(fill=NA),
     legend.title=element_text(size=10), 
@@ -1231,6 +1239,14 @@ StrepLayer3
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapMetMapStrep.png",
        plot = Streplayer2,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapMetMapStrep.svg",
+       plot = StrepLayer3,
        width = 3840,
        height = 2160,
        units = "px",
