@@ -222,7 +222,7 @@ pie4 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   theme_void() + 
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
-  labs(title = "TOR Complexes Breakdown Metamonada")+
+  labs(title = "TOR Complexes Metamonada")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
                     values = TORCPal,
@@ -262,7 +262,7 @@ pie5 <- ggplot(data, aes(x="", y=prop, fill=Components)) +
   theme_void() + 
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(Components,"\n",round(prop,3),"%")), color = "black", size=6)+
-  labs(title = "TOR Complexes Breakdown Discoba")+
+  labs(title = "TOR Complexes Discoba")+
   scale_fill_manual(name = "TOR Components",
                     breaks = c("TORC1 & TORC2","TORC1 Only","TORC2 Only","No TORC"),
                     values = TORCPal,

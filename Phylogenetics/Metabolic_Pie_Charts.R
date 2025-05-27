@@ -250,7 +250,7 @@ pie5 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
   theme_void() + 
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
-  labs(title = "Metabolic Strategies Breakdown Discoba")+
+  labs(title = "Metabolic Strategies Discoba")+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
                     values = EMpal2,
@@ -287,7 +287,7 @@ pie6 <- ggplot(data, aes(x="", y=prop, fill=M.Strategy)) +
   theme_void() + 
   theme(legend.position="none")+
   geom_text(aes(y = ypos, label = paste(M.Strategy,"\n",round(prop,3),"%")), color = "black", size=6)+
-  labs(title = "Metabolic Strategies Breakdown Metamonada")+
+  labs(title = "Metabolic Strategies Metamonada")+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta Parasite", "Endosymbiotic"),
                     values = EMpal2,
