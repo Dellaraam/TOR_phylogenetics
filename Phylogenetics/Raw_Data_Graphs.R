@@ -1,7 +1,7 @@
 #Script for generating plots for Raw Data Analysis
 #Focusing on Stramenopiles 4/17/2025
 
-
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
 #Stramenopile Raw Data
 #Need to combine both the JGI information and the NCBI Information
 
