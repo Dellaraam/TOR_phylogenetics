@@ -123,9 +123,7 @@ ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 3, nudge_x
   # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  geom_rootedge()+
-  labs(title = "Excavates Phylogenetic Tree",
-       subtitle = "With HMMER Score Map")
+  geom_rootedge()
 
 experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 18, width = .11, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
