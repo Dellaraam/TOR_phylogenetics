@@ -1877,9 +1877,7 @@ AllHeatPlot <- gheatmap(HeatTree, df, offset = 5, font.size = 1.5, width = .8, c
     legend.title=element_text(size=10), 
     legend.text=element_text(size=5.5),
     legend.spacing.y = unit(0.02, "cm"),
-    legend.key.spacing.x = unit(1,"cm"))+
-  labs(title = "All Phylogenetic Tree",
-       subtitle = "With HMMER Score Map")
+    legend.key.spacing.x = unit(1,"cm"))
 
 AllHeatPlot
 
