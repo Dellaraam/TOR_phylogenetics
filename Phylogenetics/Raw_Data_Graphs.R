@@ -66,7 +66,8 @@ StramRictorRawPlot <- FinalStramRictor %>% ggplot()+
        subtitle = "Stramenopiles")+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
-  labs(color = "Group")
+  labs(color = "Group")+
+  theme(text = element_text(family = "Times New Roman"))
 
 
 FinalStramRictor %>%distinct(Organism_Taxonomic_ID, .keep_all = TRUE)%>%ggplot()+
@@ -128,7 +129,8 @@ StramRAPTORRawPlot <- FinalStramRaptor %>% ggplot()+
        subtitle = "Stramenopiles")+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
-  labs(color = "Group")
+  labs(color = "Group")+
+  theme(text = element_text(family = "Times New Roman"))
 StramRictorRawPlot
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminationStramenopileRaptor.png",
        plot = StramRAPTORRawPlot,
@@ -232,7 +234,8 @@ FinalAlvPlot <- FinalAlvRictor %>% ggplot()+
        subtitle = "Alveolata Raw Hits")+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
-  labs(color = "Group")
+  labs(color = "Group")+
+  theme(text = element_text(family = "Times New Roman"))
 
 
 FinalAlvPlotDist <- FinalAlvRictor %>% distinct(Organism_Taxonomic_ID, .keep_all = TRUE)%>%ggplot()+
@@ -250,7 +253,8 @@ FinalAlvPlotDist <- FinalAlvRictor %>% distinct(Organism_Taxonomic_ID, .keep_all
        subtitle = "Alveolata Raw Hits Distinct ID")+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
-  labs(color = "Group")
+  labs(color = "Group")+
+  theme(text = element_text(family = "Times New Roman"))
 
 
 
@@ -310,7 +314,8 @@ ExcRictorPlot <- FinalExcRictor %>% ggplot()+
        subtitle = "Excavata Raw Hits")+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
-  labs(color = "Group")
+  labs(color = "Group")+
+  theme(text = element_text(family = "Times New Roman"))
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminationExcRictor.png",
        plot = ExcRictorPlot,
        width = 3840,

@@ -348,7 +348,8 @@ BoxRictor <- MasterTable %>%group_by(Super.Group)%>%
   labs(title = "RICTOR Domain Scores", subtitle = "By Associated Super Group")+
   xlab(label = "Super Groups")+
   ylab(label = "RICTOR Domain Score")+
-  theme_bw()
+  theme_bw()+
+  theme(text = element_text(family = "Times New Roman"))
 
 BoxRictor
 
@@ -373,7 +374,8 @@ BoxRictor <- MasterTable %>% filter(Super.Group != "Chlorophyta") %>% ggplot(aes
   labs(title = "RICTOR Overall Scores", subtitle = "By Associated Super Group")+
   xlab(label = "Super Groups")+
   ylab(label = "RICTOR Overall Score")+
-  theme_bw()
+  theme_bw()+
+  theme(text = element_text(family = "Times New Roman"))
 
 BoxRictor
 
@@ -410,7 +412,8 @@ BoxRaptor <- MasterTable %>% ggplot(aes(x = Super.Group, y = RAPTORDomain))+
   labs(title = "RAPTOR Domain Scores", subtitle = "By Associated Super Group")+
   xlab(label = "Super Groups")+
   ylab(label = "RAPTOR Domain Score")+
-  theme_bw()
+  theme_bw()+
+  theme(text = element_text(family = "Times New Roman"))
 BoxRaptor
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRaptor.png",
@@ -438,7 +441,8 @@ BoxRaptor <- MasterTable %>% ggplot(aes(x = Super.Group, y = RAPTORAll))+
   labs(title = "RAPTOR Overall Scores", subtitle = "By Associated Super Group")+
   xlab(label = "Super Groups")+
   ylab(label = "RAPTOR Overall Score")+
-  theme_bw()
+  theme_bw()+
+  theme(text = element_text(family = "Times New Roman"))
 BoxRaptor
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRaptorAll.png",
@@ -473,7 +477,8 @@ BoxTOR <- MasterTable %>% ggplot(aes(x = Super.Group, y = TORDomain))+
   labs(title = "TOR Domain Scores", subtitle = "By Associated Super Group")+
   xlab(label = "Super Groups")+
   ylab(label = "TOR Domain Score")+
-  theme_bw()
+  theme_bw()+
+  theme(text = element_text(family = "Times New Roman"))
 BoxTOR
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxTOR.png",
        plot = BoxTOR,
@@ -502,7 +507,8 @@ BoxTOR <- MasterTable %>% ggplot(aes(x = Super.Group, y = TORAll))+
   labs(title = "TOR Overall Scores", subtitle = "By Associated Super Group")+
   xlab(label = "Super Groups")+
   ylab(label = "TOR Overall Score")+
-  theme_bw()
+  theme_bw()+
+  theme(text = element_text(family = "Times New Roman"))
 BoxTOR
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxTORAll.png",
        plot = BoxTOR,
@@ -535,7 +541,8 @@ BoxSIN1 <- MasterTable %>%filter(Super.Group != "Chlorophyta")%>%ggplot(aes(x = 
   labs(title = "SIN1 Domain Scores", subtitle = "By Associated Super Group")+
   xlab(label = "Super Groups")+
   ylab(label = "SIN1 Domain Score")+
-  theme_bw()
+  theme_bw()+
+  theme(text = element_text(family = "Times New Roman"))
 BoxSIN1
 
 
@@ -563,7 +570,8 @@ BoxSIN1 <- MasterTable %>% filter(Super.Group != "Chlorophyta")%>%ggplot(aes(x =
   labs(title = "SIN1 Overall Scores", subtitle = "By Associated Super Group")+
   xlab(label = "Super Groups")+
   ylab(label = "SIN1 Overall Score")+
-  theme_bw()
+  theme_bw()+
+  theme(text = element_text(family = "Times New Roman"))
 BoxSIN1
 
 
@@ -599,7 +607,8 @@ BoxLST8 <- MasterTable %>% ggplot(aes(x = Super.Group, y = LST8Domain))+
   labs(title = "LST8 Domain Score", subtitle = "By Associated Super Group")+
   xlab(label = "Super Groups")+
   ylab(label = "LST8 Domain Score")+
-  theme_bw()
+  theme_bw()+
+  theme(text = element_text(family = "Times New Roman"))
 BoxLST8
 
 
@@ -634,7 +643,8 @@ BoxLST8 <- MasterTable %>% ggplot(aes(x = Super.Group, y = LST8All))+
   labs(title = "LST8 Overall Score", subtitle = "By Associated Super Group")+
   xlab(label = "Super Groups")+
   ylab(label = "LST8 Overall Score")+
-  theme_bw()
+  theme_bw()+
+  theme(text = element_text(family = "Times New Roman"))
 BoxLST8
 
 
@@ -671,7 +681,8 @@ BoxPlotCscore <- MasterTable %>% ggplot()+
   labs(title = "Completeness Score Distribution",
        subtitle = "By Associated Super Group")+
   xlab(label = "Super Group")+
-  ylab(label = "Completeness Score")
+  ylab(label = "Completeness Score")+
+  theme(text = element_text(family = "Times New Roman"))
 
 
 
