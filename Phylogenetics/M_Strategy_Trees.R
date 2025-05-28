@@ -742,7 +742,7 @@ ChloRhoLayer1 <- ChlorRhoTreeP + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x
 # Layer 2
 # TOR Components Heat map layer. Requires the first layer to attach to
 # Also requires a new_scale_fill() function call to establish layered fill scales
-ChloRhoLayer2 <- gheatmap(ChloRhoLayer1, df6, offset = 4, width = .55, font.size = 2, colnames = FALSE)+
+ChloRhoLayer2 <- gheatmap(ChloRhoLayer1, df6, offset = 3.5, width = .55, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -762,7 +762,7 @@ ChloRhoLayer2
 # Layer 3
 # Metabolic Strategy Layer
 # Requires the second layer
-ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 7, width = .125, colnames = FALSE)+
+ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 8, width = .125, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
