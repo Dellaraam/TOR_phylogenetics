@@ -1810,7 +1810,7 @@ tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(Super.Group == 
 HeatTree <- AllTreeP+xlim(-30,NA)+
   geom_highlight(data = tempdataframe,
                  mapping = aes(node = NodeNumber, fill = Super.Group))+
-  scale_fill_manual(name = "Super Group",
+  scale_fill_manual(name = "Clade",
                      breaks = c("Alveolata",
                                 "Stramenopiles",
                                 "Rhizaria",
@@ -1836,7 +1836,7 @@ DaylightTreeP <- AllTreeDaylight+
   #Streptophyta
   geom_highlight(data = tempdataframe,
                  mapping = aes(node = NodeNumber, fill = Super.Group))+
-  scale_fill_manual(name = "Super Group",
+  scale_fill_manual(name = "Clade",
                     breaks = c("Alveolata",
                                "Stramenopiles",
                                "Rhizaria",

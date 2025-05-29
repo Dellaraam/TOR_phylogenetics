@@ -345,8 +345,8 @@ BoxRictor <- MasterTable %>%group_by(Super.Group)%>%
   mutate(count = n())%>% ungroup() %>% filter(Super.Group != "Chlorophyta")%>%ggplot(aes(x = Super.Group, y = RICTORDomain))+
   stat_boxplot(aes(Super.Group, RICTORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = RICTORDomain),notch = FALSE, outlier.shape = NA)+
-  labs(title = "RICTOR Domain Scores", subtitle = "By Associated Super Group")+
-  xlab(label = "Super Groups")+
+  labs(title = "RICTOR Domain Scores", subtitle = "By Associated Clade")+
+  xlab(label = "Clade")+
   ylab(label = "RICTOR Domain Score")+
   theme_bw()+
   theme(text = element_text(family = "Times New Roman"))
@@ -371,8 +371,8 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_Rictor_Dom
 BoxRictor <- MasterTable %>% filter(Super.Group != "Chlorophyta") %>% ggplot(aes(x = Super.Group, y = RICTORAll))+
   stat_boxplot(aes(Super.Group, RICTORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = RICTORDomain),notch = FALSE, outlier.shape = NA)+
-  labs(title = "RICTOR Overall Scores", subtitle = "By Associated Super Group")+
-  xlab(label = "Super Groups")+
+  labs(title = "RICTOR Overall Scores", subtitle = "By Associated Clade")+
+  xlab(label = "Clade")+
   ylab(label = "RICTOR Overall Score")+
   theme_bw()+
   theme(text = element_text(family = "Times New Roman"))
@@ -409,8 +409,8 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_Rictor_All
 BoxRaptor <- MasterTable %>% ggplot(aes(x = Super.Group, y = RAPTORDomain))+
   stat_boxplot(aes(Super.Group, RAPTORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = RAPTORDomain),notch = FALSE, outlier.shape = NA)+
-  labs(title = "RAPTOR Domain Scores", subtitle = "By Associated Super Group")+
-  xlab(label = "Super Groups")+
+  labs(title = "RAPTOR Domain Scores", subtitle = "By Associated Clade")+
+  xlab(label = "Clade")+
   ylab(label = "RAPTOR Domain Score")+
   theme_bw()+
   theme(text = element_text(family = "Times New Roman"))
@@ -438,8 +438,8 @@ topptx(file = "~/GitHub/TOR_phylogenetics/Images/Figures_PPT/Box_Plot_Raptor_Dom
 BoxRaptor <- MasterTable %>% ggplot(aes(x = Super.Group, y = RAPTORAll))+
   stat_boxplot(aes(Super.Group, RAPTORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = RAPTORDomain),notch = FALSE, outlier.shape = NA)+
-  labs(title = "RAPTOR Overall Scores", subtitle = "By Associated Super Group")+
-  xlab(label = "Super Groups")+
+  labs(title = "RAPTOR Overall Scores", subtitle = "By Associated Clade")+
+  xlab(label = "Clade")+
   ylab(label = "RAPTOR Overall Score")+
   theme_bw()+
   theme(text = element_text(family = "Times New Roman"))
@@ -474,8 +474,8 @@ BoxTOR <- MasterTable %>% ggplot(aes(x = Super.Group, y = TORDomain))+
   stat_boxplot(aes(Super.Group, TORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = TORDomain),notch = FALSE, outlier.shape = NA)+
   #geom_jitter()+
-  labs(title = "TOR Domain Scores", subtitle = "By Associated Super Group")+
-  xlab(label = "Super Groups")+
+  labs(title = "TOR Domain Scores", subtitle = "By Associated Clade")+
+  xlab(label = "Clade")+
   ylab(label = "TOR Domain Score")+
   theme_bw()+
   theme(text = element_text(family = "Times New Roman"))
@@ -504,8 +504,8 @@ BoxTOR <- MasterTable %>% ggplot(aes(x = Super.Group, y = TORAll))+
   stat_boxplot(aes(Super.Group, TORDomain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = TORDomain),notch = FALSE, outlier.shape = NA)+
   #geom_jitter()+
-  labs(title = "TOR Overall Scores", subtitle = "By Associated Super Group")+
-  xlab(label = "Super Groups")+
+  labs(title = "TOR Overall Scores", subtitle = "By Associated Clade")+
+  xlab(label = "Clade")+
   ylab(label = "TOR Overall Score")+
   theme_bw()+
   theme(text = element_text(family = "Times New Roman"))
@@ -538,8 +538,8 @@ BoxSIN1 <- MasterTable %>%filter(Super.Group != "Chlorophyta")%>%ggplot(aes(x = 
   stat_boxplot(aes(Super.Group, SIN1Domain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = SIN1Domain),notch = FALSE, outlier.shape = NA)+
   #geom_jitter()+
-  labs(title = "SIN1 Domain Scores", subtitle = "By Associated Super Group")+
-  xlab(label = "Super Groups")+
+  labs(title = "SIN1 Domain Scores", subtitle = "By Associated Clade")+
+  xlab(label = "Clade")+
   ylab(label = "SIN1 Domain Score")+
   theme_bw()+
   theme(text = element_text(family = "Times New Roman"))
@@ -567,8 +567,8 @@ BoxSIN1 <- MasterTable %>% filter(Super.Group != "Chlorophyta")%>%ggplot(aes(x =
   stat_boxplot(aes(Super.Group, SIN1Domain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = SIN1Domain),notch = FALSE, outlier.shape = NA)+
   #geom_jitter()+
-  labs(title = "SIN1 Overall Scores", subtitle = "By Associated Super Group")+
-  xlab(label = "Super Groups")+
+  labs(title = "SIN1 Overall Scores", subtitle = "By Associated Clade")+
+  xlab(label = "Clade")+
   ylab(label = "SIN1 Overall Score")+
   theme_bw()+
   theme(text = element_text(family = "Times New Roman"))
@@ -604,8 +604,8 @@ BoxLST8 <- MasterTable %>% ggplot(aes(x = Super.Group, y = LST8Domain))+
   stat_boxplot(aes(Super.Group, LST8Domain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = LST8Domain),notch = FALSE, outlier.shape = NA)+
   #geom_jitter()+
-  labs(title = "LST8 Domain Score", subtitle = "By Associated Super Group")+
-  xlab(label = "Super Groups")+
+  labs(title = "LST8 Domain Score", subtitle = "By Associated Clade")+
+  xlab(label = "Clade")+
   ylab(label = "LST8 Domain Score")+
   theme_bw()+
   theme(text = element_text(family = "Times New Roman"))
@@ -640,8 +640,8 @@ BoxLST8 <- MasterTable %>% ggplot(aes(x = Super.Group, y = LST8All))+
   stat_boxplot(aes(Super.Group, LST8Domain), geom = "errorbar", linetype = 1, width = 0.5)+
   geom_boxplot(aes( x = Super.Group, y = LST8Domain),notch = FALSE, outlier.shape = NA)+
   #geom_jitter()+
-  labs(title = "LST8 Overall Score", subtitle = "By Associated Super Group")+
-  xlab(label = "Super Groups")+
+  labs(title = "LST8 Overall Score", subtitle = "By Associated Clade")+
+  xlab(label = "Clade")+
   ylab(label = "LST8 Overall Score")+
   theme_bw()+
   theme(text = element_text(family = "Times New Roman"))
@@ -679,8 +679,8 @@ BoxPlotCscore <- MasterTable %>% ggplot()+
   geom_boxplot(aes( x = Super.Group, y = C.score),notch = FALSE, outlier.shape = NA)+
   theme_bw()+
   labs(title = "Completeness Score Distribution",
-       subtitle = "By Associated Super Group")+
-  xlab(label = "Super Group")+
+       subtitle = "By Associated Clade")+
+  xlab(label = "Clade")+
   ylab(label = "Completeness Score")+
   theme(text = element_text(family = "Times New Roman"))
 

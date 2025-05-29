@@ -762,7 +762,7 @@ ChloRhoLayer2
 # Layer 3
 # Metabolic Strategy Layer
 # Requires the second layer
-ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 8, width = .125, colnames = FALSE)+
+ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 7.1, width = .125, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
