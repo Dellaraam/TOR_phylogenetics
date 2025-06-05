@@ -349,7 +349,8 @@ BoxRictor <- MasterTable %>%group_by(Super.Group)%>%
   xlab(label = "Clade")+
   ylab(label = "RICTOR Domain Score")+
   theme_bw()+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 
 BoxRictor
 
@@ -375,7 +376,8 @@ BoxRictor <- MasterTable %>% filter(Super.Group != "Chlorophyta") %>% ggplot(aes
   xlab(label = "Clade")+
   ylab(label = "RICTOR Overall Score")+
   theme_bw()+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 
 BoxRictor
 
@@ -413,7 +415,8 @@ BoxRaptor <- MasterTable %>% ggplot(aes(x = Super.Group, y = RAPTORDomain))+
   xlab(label = "Clade")+
   ylab(label = "RAPTOR Domain Score")+
   theme_bw()+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 BoxRaptor
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRaptor.png",
@@ -442,7 +445,8 @@ BoxRaptor <- MasterTable %>% ggplot(aes(x = Super.Group, y = RAPTORAll))+
   xlab(label = "Clade")+
   ylab(label = "RAPTOR Overall Score")+
   theme_bw()+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 BoxRaptor
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxRaptorAll.png",
@@ -478,7 +482,8 @@ BoxTOR <- MasterTable %>% ggplot(aes(x = Super.Group, y = TORDomain))+
   xlab(label = "Clade")+
   ylab(label = "TOR Domain Score")+
   theme_bw()+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 BoxTOR
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxTOR.png",
        plot = BoxTOR,
@@ -508,7 +513,8 @@ BoxTOR <- MasterTable %>% ggplot(aes(x = Super.Group, y = TORAll))+
   xlab(label = "Clade")+
   ylab(label = "TOR Overall Score")+
   theme_bw()+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 BoxTOR
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/BoxTORAll.png",
        plot = BoxTOR,
@@ -542,7 +548,8 @@ BoxSIN1 <- MasterTable %>%filter(Super.Group != "Chlorophyta")%>%ggplot(aes(x = 
   xlab(label = "Clade")+
   ylab(label = "SIN1 Domain Score")+
   theme_bw()+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 BoxSIN1
 
 
@@ -571,7 +578,8 @@ BoxSIN1 <- MasterTable %>% filter(Super.Group != "Chlorophyta")%>%ggplot(aes(x =
   xlab(label = "Clade")+
   ylab(label = "SIN1 Overall Score")+
   theme_bw()+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 BoxSIN1
 
 
@@ -608,7 +616,8 @@ BoxLST8 <- MasterTable %>% ggplot(aes(x = Super.Group, y = LST8Domain))+
   xlab(label = "Clade")+
   ylab(label = "LST8 Domain Score")+
   theme_bw()+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 BoxLST8
 
 
@@ -644,7 +653,8 @@ BoxLST8 <- MasterTable %>% ggplot(aes(x = Super.Group, y = LST8All))+
   xlab(label = "Clade")+
   ylab(label = "LST8 Overall Score")+
   theme_bw()+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 BoxLST8
 
 
@@ -682,7 +692,8 @@ BoxPlotCscore <- MasterTable %>% ggplot()+
        subtitle = "By Associated Clade")+
   xlab(label = "Clade")+
   ylab(label = "Completeness Score")+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 
 
 
