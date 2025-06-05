@@ -67,7 +67,10 @@ StramRictorRawPlot <- FinalStramRictor %>% ggplot()+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
   labs(color = "Group")+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
+
+StramRictorRawPlot
 
 
 FinalStramRictor %>%distinct(Organism_Taxonomic_ID, .keep_all = TRUE)%>%ggplot()+
@@ -130,7 +133,8 @@ StramRAPTORRawPlot <- FinalStramRaptor %>% ggplot()+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
   labs(color = "Group")+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 StramRictorRawPlot
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminationStramenopileRaptor.png",
        plot = StramRAPTORRawPlot,
@@ -235,7 +239,8 @@ FinalAlvPlot <- FinalAlvRictor %>% ggplot()+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
   labs(color = "Group")+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 
 
 FinalAlvPlotDist <- FinalAlvRictor %>% distinct(Organism_Taxonomic_ID, .keep_all = TRUE)%>%ggplot()+
@@ -254,7 +259,8 @@ FinalAlvPlotDist <- FinalAlvRictor %>% distinct(Organism_Taxonomic_ID, .keep_all
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
   labs(color = "Group")+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 
 
 
@@ -315,7 +321,8 @@ ExcRictorPlot <- FinalExcRictor %>% ggplot()+
   xlab(label = "Overall HMMER Score")+
   ylab(label = "Best Domain Score")+
   labs(color = "Group")+
-  theme(text = element_text(family = "Times New Roman"))
+  theme(text = element_text(family = "serif",
+                            size = 20))
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Figure_Images/CutOffDeterminationExcRictor.png",
        plot = ExcRictorPlot,
        width = 3840,
