@@ -94,6 +94,121 @@ ExcavataTP <- ExcavataTP  %<+% Excavata
 
 ExcavataHeat <- ExcavataTree %>% ggtree(branch.length = "none", ladderize = FALSE)+xlim(NA,40)
 
+ExcavataHeatPlot <- gheatmap(ExcavataHeat,df3, offset = 6, width = .6, font.size = 2, colnames = FALSE)+
+  scale_fill_manual(name = "HMMER Score",
+                    breaks = c("H","M","L","P",NA),
+                    values = pal3,
+                    limits = c("H","M","L","P", NA),
+                    na.value = "#FFFFFF",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()
+
+
+
+
+ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tree(aes(color = C.score))+
+  scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
+                        guide = guide_colorbar(order =1),
+                        name = "Completeness Score")+
+  # geom_cladelab(node=106, label="Heterotrophic", align = FALSE, geom = 'label',offset=2.5,barsize = 3)+
+  # geom_cladelab(node=2, label="Filter-Feeder", align = FALSE, geom = 'label',offset=2.5,barsize = 3http://127.0.0.1:41255/graphics/plot_zoom_png?width=1707&height=912)+
+  # geom_cladelab(node=92, label="Parasite", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
+  geom_rootedge()
+
+experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 12, width = .11, colnames = FALSE)+
+  scale_fill_manual(name = "Metabolic Strategy",
+                    breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
+                    values = EMpal2,
+                    limits = force,
+                    na.value = "grey",
+                    drop = FALSE)+
+  theme(
+    text = element_text(family = "serif"),
+    legend.background=element_rect(fill=NA),
+    legend.title=element_text(size=10), 
+    legend.text=element_text(size=5.5),
+    legend.spacing.y = unit(0.02, "cm"),
+    legend.key.spacing.x = unit(1,"cm"))+
+  new_scale_fill()+
+  geom_highlight(data = tempdataframe,
+                 mapping = aes(node = NodeNumber, fill = Super.Group), alpha = .2)+
+  scale_fill_manual(name = "Super Group",
+                    breaks = c("Alveolata",
+                               "Stramenopiles",
+                               "Rhizaria",
+                               "Streptophyta",
+                               "Chlorophyta",
+                               "Rhodophyta",
+                               "Discoba",
+                               "Metamonada"),
+                    values = c("Alveolata" = "#EFB911",
+                               "Stramenopiles" = "#572100",
+                               "Rhizaria" = "#2F0147",
+                               "Streptophyta" = "#678516",
+                               "Chlorophyta" = "#525601",
+                               "Rhodophyta" = "#681114",
+                               "Discoba" = "cyan",
+                               "Metamonada" = "blue"
+                    ))
+
+experimentalExcplot
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/NewHeatMapExcavatesNoLabel.svg",
+       plot = experimentalExcplot,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
+
+
+
+
+#Without Tip Labels ------------------------------------------------------------
+
+ExcavataTree <- read.tree(file = "~/Github/TOR_phylogenetics/Trees/NewTruncatedExcTreeP.phy")
+ExcavataTree$tip.label <- gsub("'","", ExcavataTree$tip.label)
+
+Excavata <- MasterTable %>% filter(Super.Group == "Discoba" | Super.Group == "Metamonada")
+Excavata <- Excavata %>% relocate(Organism.Name)
+
+subsetdataframe3 <- Excavata %>% select(Organism.Name, 
+                                        SIN1, 
+                                        RICTOR, 
+                                        RAPTOR, 
+                                        LST8,
+                                        TOR) %>% 
+  distinct(Organism.Name, .keep_all = TRUE)
+df3 <- column_to_rownames(subsetdataframe3, var = "Organism.Name")
+Msubset2 <- Excavata %>% select(Organism.Name, M.Strategy)%>% distinct(Organism.Name, .keep_all = TRUE) #%>%
+# pivot_longer(cols = !Organism.Name, names_to = "M.Strategy", values_to = "Type")
+mdf2 <- column_to_rownames(Msubset2, var = "Organism.Name")
+
+tempdataframe <- Excavata
+tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(
+  Super.Group == "Discoba" ~ which(ExcavataTree$node.label == "Discoba") + length(ExcavataTree$tip.label),
+  Super.Group == "Metamonada" ~ which(ExcavataTree$node.label == "Metamonada") + length(ExcavataTree$tip.label)))%>%
+  select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
+
+
+ExcavataTP <- ggtree(ExcavataTree, branch.length = "none", ladderize = FALSE)
+ExcavataTP <- ExcavataTP  %<+% Excavata
+
+
+
+
+ExcavataHeat <- ExcavataTree %>% ggtree(branch.length = "none", ladderize = FALSE)+xlim(NA,40)
+
 ExcavataHeatPlot <- gheatmap(ExcavataHeat,df3, offset = 12, width = .6, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
@@ -113,7 +228,7 @@ ExcavataHeatPlot <- gheatmap(ExcavataHeat,df3, offset = 12, width = .6, font.siz
 
 
 
-ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 3, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
+ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
@@ -123,7 +238,9 @@ ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 3, nudge_x
   # geom_cladelab(node=116, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=111, label="Autotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
   # geom_cladelab(node=94, label="Heterotrophic", align = FALSE, geom = 'label',offset=3,barsize = 3)+
-  geom_rootedge()
+  geom_rootedge()+
+  labs(title = "Excavates Phylogenetic Tree",
+       subtitle = "With HMMER Score Map")
 
 experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 18, width = .11, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
@@ -163,19 +280,12 @@ experimentalExcplot <- gheatmap(ExcavataSavePlot,mdf2, offset = 18, width = .11,
 
 experimentalExcplot
 
-ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/NewHeatMapExcavates.svg",
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/NewHeatMapExcavatesLabel.svg",
        plot = experimentalExcplot,
        width = 3840,
        height = 2160,
        units = "px",
        dpi = 320,
        limitsize = FALSE)
-
-
-
-
-
-
-
 
 
