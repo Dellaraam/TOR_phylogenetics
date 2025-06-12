@@ -228,7 +228,7 @@ ExcavataHeatPlot <- gheatmap(ExcavataHeat,df3, offset = 12, width = .6, font.siz
 
 
 
-ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
+ExcavataSavePlot <- ExcavataHeatPlot %<+% Excavata+geom_tiplab(size = 2, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
