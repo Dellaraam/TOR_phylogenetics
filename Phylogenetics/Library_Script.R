@@ -32,6 +32,7 @@
 #   install.packages("BiocManager")
 # BiocManager::install("ggtreeExtra")
 
+library(dplyr)
 library(remotes)
 library("Biostrings")
 library(tidyverse)

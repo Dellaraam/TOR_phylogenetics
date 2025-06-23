@@ -3,7 +3,7 @@
 # Kyle Johnson
 # 4/1/2025
 
-#source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
 
 metabolicStrategies <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/trophic_strategy.csv")
 metabolicStrategies <- distinct(metabolicStrategies, Organism_Taxonomic_ID, .keep_all = TRUE)
