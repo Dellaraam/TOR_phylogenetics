@@ -12,17 +12,24 @@ a proteome then using TBLASTN the genome would be converted to protein format.
 
 Using the Eddy Labs HMMER program we searched for sequences that match the stated TOR components 
 either in part or in whole and then the proteins found are concatenated into large files 
-corresponding to the species clade. The files are convert the output into comma separated values 
-using the script "hmmer2csv.py". 
+corresponding to the species clade. The protein HMMs were obtained through the corresponding InterPro
+page's link to Panther. The result is a .txt white space delimited table. The HMMR output files are 
+converted into comma separated values using the script "hmmer2csv.py". 
 
 ```
- insert example command line input here 
-```
-All genomes are also run on BUSCO for genome quality assurance to sense the general completeness of 
-the assembly and how much fragmentation is expected. Allowing us to be more confident in the accuracy
-of our results as well as identify organisms that should be further investigated in the alignement step.
+hmmsearch <file.hmm> 
+``` 
+All proteomes were pulled from the [NCBI datasets](https://github.com/ncbi/datasets) tool for further analysis, including:
+ 
+BUSCO for quality assurance to sense the general completeness of the assembly and how much fragmentation 
+is expected. Allowing us to be more confident in the accuracy of our results as well as identify organisms
+that should be further investigated in the alignement step. 
 
-HMMER and Blast data will be converged in a larger  
+Multiple sequence alignments to establish homology for sequences barely exceeding the threshold for the 
+HMMR results. Sequences for each TOR component was aligned with a number of references including H.Sapiens,
+S.cerevisiae, and S.pombe using ClustalO with the ClustalO coloring scheme on Jalview for visualization.  
 
+HMMER and Blast data will be merged in a larger CSV file with species names and TAXIDs. To obtain the TAXIDs, species names, 
+class, phylum, order, family, genus please see the NCBI database documentation page for [taxonomy](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/reference-docs/command-line/datasets/download/taxonomy/).
 
 
