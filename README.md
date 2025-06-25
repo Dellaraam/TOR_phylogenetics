@@ -24,7 +24,7 @@ converted into comma separated values using the script `hmmer2csv.py`.
 hmmsearch <file.hmm> 
 ``` 
 
-All proteomes were pulled from the [NCBI datasets](https://github.com/ncbi/datasets) tool for further analysis, including:
+All proteomes were pulled from the [NCBI datasets](https://github.com/ncbi/datasets) tool and [JGI Phycocosm](https://phycocosm.jgi.doe.gov/phycocosm/home) for further analysis, including:
  
 BUSCO for quality assurance to sense the general completeness of the assembly and how much fragmentation 
 is expected. Allowing us to be more confident in the accuracy of our results as well as identify organisms
