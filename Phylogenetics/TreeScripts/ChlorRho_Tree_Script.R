@@ -26,7 +26,17 @@ MasterTable <- MasterTable %>% mutate(M.Strategy = if_else(Phylum.name == "Apico
                                       M.Strategy = if_else(Organism.Name == "Trebouxia sp. C0005", "Endosymbiotic", M.Strategy, missing = M.Strategy),
                                       M.Strategy = if_else(Organism.Name == "Trebouxia sp. C0009 RCD-2024", "Endosymbiotic", M.Strategy, missing = M.Strategy),
                                       M.Strategy = if_else(Organism.Name == "Trebouxia sp. C0010 RCD-2024", "Endosymbiotic", M.Strategy, missing = M.Strategy),
-                                      M.Strategy = if_else(M.Strategy == "Parasite" & Super.Group != "Streptophyta", "Non-Plastid Parasite", M.Strategy, missing = M.Strategy))
+                                      M.Strategy = if_else(M.Strategy == "Parasite" & Super.Group != "Streptophyta", "Non-Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Chlorella sorokiniana", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Chlorella", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Micractinium conductrix", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Ostreobium quekettii", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Helicosporidium sp. ATCC 50920", "Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Micromonas", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Monoraphidium minutum", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == " Chlorella sp. A99", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Asterochloris sp. Cgr/DA1pho", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Apatococcus lobatus", "Mixotroph", M.Strategy, missing = M.Strategy))
 
 
 
