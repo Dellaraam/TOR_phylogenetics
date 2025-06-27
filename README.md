@@ -12,21 +12,64 @@ Metzoa, and Fungi clades. Then added an additional 142 Alveolata, 120 Stramenopi
 9 Rhizaria, 365 Streptophyta, 87 Chlorophyta, 14 Rhodophyta, 49 Discoba, and 22 Metamonada genomes 
 to our analysis from the NCBI database in protein form.
 
+### Archived_CSVs 
+
++ `HMMER_Results`: All old HMMER outputs before conversion to csv format 
+
++ HMMER outputs in csv format
+
+### Archived_Scripts 
+
++ Old scripts used to test ideas 
+
+### BLAST_HITS
+
+### Comparative_MSA
+
++ MSA files for Low to Medium storing components found in each clade
+
+### FASTA_Files
+
++ Sub-Directories contain fasta files for the TOR components original 90 species found in Tatabe et al
+
++ HMMER results for TOR components original 90 species found in Tatabe et al
 
 ### GitHub_CSV
 
-+ `Raw_Data_Archived` contains all raw dat is for the HMMR data and taxonomic information for specific clades.
++ `Raw_Data_Archived`: all raw dat is for the HMMR data and taxonomic information for specific clades.
 	+ Sub-directories starting with `Updated`(from NCBI) or ending in `JGI`(from JGI) 
  
-+ `Jsons_JGI` and `Jsons_NCBI` contain the Json files of all the BUSCO results for specific clades.
++ `Jsons_JGI` and `Jsons_NCBI`: the Json files of all the BUSCO results for specific clades.
 
 + `BUSCO` contains all BUSCO results for specific clades 
 
-+ `Cleaned_JGI_csv` contains the filtered data for the HMMR data and taxonomic information for specific clades downloaded from JGI
++ `Cleaned_JGI_csv`: the filtered data for the HMMR data and taxonomic information for specific clades downloaded from JGI
 
-+ `Cleaned_NCBI_csv` contains the filtered data for the HMMR data and taxonomic information for specific clades downloaded from NCBI
++ `Cleaned_NCBI_csv`: the filtered data for the HMMR data and taxonomic information for specific clades downloaded from NCBI
+
+### IDs 
+
++ `MSA_IDs`: IDs for Multiple Sequence Alignments 
+
++ Text files of unique identifiers for proteomes from NCBI or JGI
+
+### Images 
+
++ `Figures_TO_Review`: 
+
++ `MSA_Images`: Contains screenshots of MSAs 
+
++ `SVGs`: Figures turned to SVGs to manipulate presentation
+
++ `Updated_Figure_Images`: Old figures 
+
++ `Updated_Tree_Images`: Old trees with heatmaps
+
++ Original trees with diamond points 
 
 
+
+# Might not be in final post
 
 ### Data Analysis
 
