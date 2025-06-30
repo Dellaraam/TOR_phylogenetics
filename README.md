@@ -18,15 +18,21 @@ to our analysis from the NCBI database in protein form.
 
 + HMMER outputs in csv format
 
++ Old assembly information for each clade
+
 ### Archived_Scripts 
 
 + Old scripts used to test ideas 
 
 ### BLAST_HITS
 
++ `RICTOR`: RICTOR searches for species with suspicious HMMER scores
+
++ `SIN1`: SIN1 searches for species with suspicious HMMER scores
+
 ### Comparative_MSA
 
-+ MSA files for Low to Medium storing components found in each clade
++ MSA files for comparing Low to High storing components found in each clade
 
 ### FASTA_Files
 
@@ -41,7 +47,7 @@ to our analysis from the NCBI database in protein form.
  
 + `Jsons_JGI` and `Jsons_NCBI`: the Json files of all the BUSCO results for specific clades.
 
-+ `BUSCO` contains all BUSCO results for specific clades 
++ `BUSCO`: all BUSCO results for specific clades 
 
 + `Cleaned_JGI_csv`: the filtered data for the HMMR data and taxonomic information for specific clades downloaded from JGI
 
@@ -65,9 +71,35 @@ to our analysis from the NCBI database in protein form.
 
 + `Updated_Tree_Images`: Old trees with heatmaps
 
-+ Original trees with diamond points 
++ Original trees with diamond points for each TOR component 
 
+### Metabolic_Information_Species
 
++ Lists of species categorized by trophic strategy and presence and absense of RICTOR. 
+
+#### SRA 
+
++ `TSVs`: sample diamond outputs
+
++ `sample_xml_taxid`: practice sample for pulling taxids 
+
++ `species_list`: List of species that fit requirements with runids found 
+
++ `species_list_cheatsheet`: what components were found with diamond after using sra-tools to pull runids and grab the sequences with prefetch 
+
++ `sraxml.py`: script looks though `xml` files in a given directory to find sequences that are RNA-seq, single stranded, and transcriptomic. 
+
++ `srx_runid_len`: text file with species taxid, species-ids, runids, and average sequence length 
+
++ `srx_runid_len.300`: text file with species taxid, species-ids, runids, and average sequence length>=300
+
++ `xml_downloader.py`: Using the taxids in `species_list` the script creates urls to find the associated `xml`files from SRA
+
++ `xml_reader.py`: Prints the output `srx_runid_len` using `sraxml.py` with an input directory
+
+### Trees 
+
++ `nwk` and `phy` trees made for importing into R for visualization 
 
 # Might not be in final post
 
