@@ -36,22 +36,31 @@ to our analysis from the NCBI database in protein form.
 
 ### FASTA_Files
 
-+ Sub-Directories contain fasta files for the TOR components original 90 species found in Tatabe et al
++ Sub-Directories contain fasta files for the TOR components original 90 species found in Shiozaki et al
 
 + HMMER results for TOR components original 90 species found in Tatabe et al
 
 ### GitHub_CSV
-
-+ `Raw_Data_Archived`: all raw dat is for the HMMR data and taxonomic information for specific clades.
-	+ Sub-directories starting with `Updated`(from NCBI) or ending in `JGI`(from JGI) 
  
-+ `Jsons_JGI` and `Jsons_NCBI`: the Json files of all the BUSCO results for specific clades.
+
++ `Alveolata_Groups_Information`: Assembly information for taxonomic groups in the Alveolata clade
 
 + `BUSCO`: all BUSCO results for specific clades 
 
 + `Cleaned_JGI_csv`: the filtered data for the HMMR data and taxonomic information for specific clades downloaded from JGI
 
 + `Cleaned_NCBI_csv`: the filtered data for the HMMR data and taxonomic information for specific clades downloaded from NCBI
+
++ `Jsons_JGI` and `Jsons_NCBI`: the Json files of all the BUSCO results for specific clades.
+
++ `Raw_Data_Archived`: all raw dat is for the HMMR data and taxonomic information for specific clades.
+	+ Sub-directories starting with `Updated`(from NCBI) or ending in `JGI`(from JGI)
+	
++ Assembly information for various clades and sub-groups
+
+### HMMER_Results
+
++ Original HMMER results for the 90 species found in Shiozaki et al
 
 ### IDs 
 
@@ -77,7 +86,35 @@ to our analysis from the NCBI database in protein form.
 
 + Lists of species categorized by trophic strategy and presence and absense of RICTOR. 
 
-#### SRA 
+### Phylogenetics 
+
++ `Copies`: Copies of Markdown files seen in `HMMER_Post_Analysis`
++ `Figures`: Use data from the Master Table and NCBI taxonomy into create phylogenetic trees that show where component loss occurs, quality of genome, and trophic strategy 
+
++ `HMMER_Post_Analysis`:  
+	+ Markdown files to merge HMMER, BUSCO, assembly and taxonomic information and check for photosynthesis, parasitism and ciliates. Organism's HMMER scores for are plotted for each component individual domain score vs total sequence score. Plots are used to interoperate what is Hight, Medium, or Low in the scoring scheme.  
+	+ `Phylogenetics_Heterokonta`: Converging 
+	+ Adding and merging species from JGI to the larger document 
+
++ `Maintenance_Scripts`
+	+ `CombinedJGI_Table_Script.R`: Combining NCBI and JGI taxonomic information into one table 
+	+ `HTML_Additions.R`: Attached taxonomic IDs 
+	+ `Final_Busco_Script.R`: Combine BUSCO completeness score and fragmentation score from all clades and species into one BUSCO table
+	+ `Json_to_csv.R`: Converts Json files to csvs. Used for converting BUSCO Jsons. 
+	+ `Library_Script.R`: libraries needed to run some R programs. 
+	+ `MSA_Experimental_Script.R`: Test import Multiple Sequence Alignments to R
+	+ `MSA_Protein_ID_Script.R`: Importing Multiple Sequence Alignments to R
+	+ `Merging_Combined_CSV_Files.R`: Combining taxonomy, BUSCO scores, and HMMER data into one table
+
+
++ `MasterTable`: Create a master table with the HTML table adding in domain scores for TOR components and corrected trophic strategies.  
+
++ `Pie_Charts`: Creating pie charts to show predominant trophic 
+
++ `TreeScripts`: Use data from the HTML table and NCBI taxonomy into create phylogenetic trees that show where component loss occurs and quality of genome 
+
+
+### SRA 
 
 + `TSVs`: sample diamond outputs
 
@@ -96,6 +133,10 @@ to our analysis from the NCBI database in protein form.
 + `xml_downloader.py`: Using the taxids in `species_list` the script creates urls to find the associated `xml`files from SRA
 
 + `xml_reader.py`: Prints the output `srx_runid_len` using `sraxml.py` with an input directory
+
+### Test_Grounds 
+
++ Testing ideas for presenting Phylogenetic results
 
 ### Trees 
 
