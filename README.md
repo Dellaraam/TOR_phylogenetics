@@ -14,21 +14,21 @@ to our analysis from the NCBI database in protein form.
 
 ### Archived_CSVs 
 
-+ `HMMER_Results`: All old HMMER outputs before conversion to csv format 
++ `HMMER_Results`: All HMMER outputs before conversion to csv format for original 90 species found in Tatabe at al.
 
 + HMMER outputs in csv format
 
-+ Old assembly information for each clade
++ Old assembly information for each clade for the original 90 species
 
 ### Archived_Scripts 
 
-+ Old scripts used to test ideas 
++ Miscellaneous scripts used to test ideas 
 
 ### BLAST_HITS
 
-+ `RICTOR`: RICTOR searches for species with suspicious HMMER scores
++ `RICTOR`: Only RICTOR searches for species with suspicious HMMER scores
 
-+ `SIN1`: SIN1 searches for species with suspicious HMMER scores
++ `SIN1`: Only SIN1 searches for species with suspicious HMMER scores
 
 ### Comparative_MSA
 
@@ -36,20 +36,28 @@ to our analysis from the NCBI database in protein form.
 
 ### FASTA_Files
 
-+ Sub-Directories contain fasta files for the TOR components original 90 species found in Shiozaki et al
++ Sub-Directories contain fasta files for the TOR components original 90 species found in Tatabe et al
 
 + HMMER results for TOR components original 90 species found in Tatabe et al
 
 ### GitHub_CSV
- 
 
 + `Alveolata_Groups_Information`: Assembly information for taxonomic groups in the Alveolata clade
 
 + `BUSCO`: all BUSCO results for specific clades 
 
-+ `Cleaned_JGI_csv`: the filtered data for the HMMR data and taxonomic information for specific clades downloaded from JGI
++ `Cleaned_JGI_csv` and `Cleaned_NCBI_csv`: the filtered data for the HMMR data and taxonomic information for specific clades downloaded from JGI and NCBI
 
-+ `Cleaned_NCBI_csv`: the filtered data for the HMMR data and taxonomic information for specific clades downloaded from NCBI
++ `Combined_CSVs`: 
+	+ Combined information from assembly, taxonomy, organism name, and presence of component with Low, Medium, or High score for each clade
+	
+	+ `ComeleteTable.csv`, `Project.csv` and `New_Combined_Table_218.csv`: all organisms and clades information and data combined in one table 
+	
+	+ `Numeric_Table`: Same composition as `ComeleteTable.csv` but with numeric scores instead of Low, Medium, and High
+	
+	+ `Parasite_Test.csv`: Combined table of only information and data for parasites
+	
+	+ `SAR_Combined.csv`: Combined table of information and data for SAR clade 
 
 + `Jsons_JGI` and `Jsons_NCBI`: the Json files of all the BUSCO results for specific clades.
 
