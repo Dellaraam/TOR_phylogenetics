@@ -58,6 +58,9 @@ to our analysis from the NCBI database in protein form.
 	+ `Parasite_Test.csv`: Combined table of only information and data for parasites
 	
 	+ `SAR_Combined.csv`: Combined table of information and data for SAR clade 
+	
++ `Finalized_CSVs`: 
+	+ Final component CSVs 
 
 + `Jsons_JGI` and `Jsons_NCBI`: the Json files of all the BUSCO results for specific clades.
 
@@ -68,7 +71,7 @@ to our analysis from the NCBI database in protein form.
 
 ### HMMER_Results
 
-+ Original HMMER results for the 90 species found in Shiozaki et al
++ Original HMMER results for the 90 species found in Tatebe et al
 
 ### IDs 
 
@@ -97,25 +100,28 @@ to our analysis from the NCBI database in protein form.
 ### Phylogenetics 
 
 + `Copies`: Copies of Markdown files seen in `HMMER_Post_Analysis`
+
 + `Figures`: Use data from the Master Table and NCBI taxonomy into create phylogenetic trees that show where component loss occurs, quality of genome, and trophic strategy 
 
 + `HMMER_Post_Analysis`:  
-	+ Markdown files to merge HMMER, BUSCO, assembly and taxonomic information and check for photosynthesis, parasitism and ciliates. Organism's HMMER scores for are plotted for each component individual domain score vs total sequence score. Plots are used to interoperate what is Hight, Medium, or Low in the scoring scheme.  
-	+ `Phylogenetics_Heterokonta`: Converging 
+	+ Markdown files for different clades to merge highest raw HMMER hits, BUSCO, assembly and taxonomic information and check for photosynthesis, parasitism and ciliates. Organism's HMMER scores for are plotted for each component individual domain score vs total sequence score. Plots are used to interoperate what is Hight, Medium, or Low in the scoring scheme.  
+	+ `Complete_Phylogenetics.R`: Converging HMMER scores, BUSCO, taxonomic information, assembly information of all clades from NCBI and JGI into one file. CSVs go to `GitHub_CSV/Finalized_CSVs`
 	+ Adding and merging species from JGI to the larger document 
 
 + `Maintenance_Scripts`
-	+ `CombinedJGI_Table_Script.R`: Combining NCBI and JGI taxonomic information into one table 
+	+ `CombinedJGI_Table_Script.R`: Combining NCBI and JGI taxonomic information into one table. See table in `GitHub_CSV/Finalized_CSVs`.  
 	+ `HTML_Additions.R`: Attached taxonomic IDs 
-	+ `Final_Busco_Script.R`: Combine BUSCO completeness score and fragmentation score from all clades and species into one BUSCO table
+	+ `Final_Busco_Script.R`: Combine BUSCO completeness score and fragmentation score from all clades and species into one BUSCO table in `GitHub_CSV/Finalized_CSVs`
 	+ `Json_to_csv.R`: Converts Json files to csvs. Used for converting BUSCO Jsons. 
 	+ `Library_Script.R`: libraries needed to run some R programs. 
 	+ `MSA_Experimental_Script.R`: Test import Multiple Sequence Alignments to R
 	+ `MSA_Protein_ID_Script.R`: Importing Multiple Sequence Alignments to R
-	+ `Merging_Combined_CSV_Files.R`: Combining taxonomy, BUSCO scores, and HMMER data into one table
+	+ `Merging_Combined_CSV_Files.R`: Combining taxonomy, BUSCO scores, and HMMER data into one table. See table in `GitHub_CSV/Finalized_CSVs` as `HTML.tsv`.
 
-
-+ `MasterTable`: Create a master table with the HTML table adding in domain scores for TOR components and corrected trophic strategies.  
++ `MasterTable`:  
+	+ `Final_Metabolic_Tree_Table_Creation.R`: Create full table with corrected trophic strategies
+	+ `Master_Table_Creation.R`: Create a master table with the table adding in domain scores for TOR components and trophic strategies. 
+	+ `Publication_Tree.R`:  Correct trophic strategies and combine with Master Table for creating figures in publication. See `GitHub_CSV/Finalized_CSVs` for tables.
 
 + `Pie_Charts`: Creating pie charts to show predominant trophic 
 
