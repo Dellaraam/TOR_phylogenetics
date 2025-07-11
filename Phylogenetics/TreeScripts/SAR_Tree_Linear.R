@@ -1,6 +1,11 @@
 # SAR Tree Linear
+# Kyle Johnson
+# Script for generating Stramenopile/Alveolata/Rhizaria phylo trees
+# Metabolic and TORC protein Heatmaps also added to the trees
+# Output is in .svg format for usage in photoshop type editors
+# 
 
-source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Maintenance_Scripts/Library_Script.R")
 
 
 
@@ -272,7 +277,7 @@ SARHeatPlot <- gheatmap(SARHeat,df5, offset = 1, width = .15, font.size = 2, col
   new_scale_fill()
 SARHeatPlot
 
-SARSavePlot <- SARHeatPlot %<+% SAR+geom_tree(aes(color = C.score))+
+SARSavePlot <- SARHeatPlot %<+% SAR+geom_tree()+
   scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+

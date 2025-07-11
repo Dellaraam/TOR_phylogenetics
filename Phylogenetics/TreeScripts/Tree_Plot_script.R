@@ -6,16 +6,16 @@
 
 
 
-source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Maintenance_Scripts/Library_Script.R")
 # source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Merging_Combined_CSV_Files.R")
 # source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Numeric_Table_Script.R")
 # source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/HTML_Additions.R")
 
 
 #Final Modifications to csv files required for script
-FinalBusco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/FinalBusco.csv")
+FinalBusco <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/FinalBusco.csv")
 FinalBusco <- FinalBusco %>% select(-X)
-Taxon <- read.csv("~/Github/TOR_phylogenetics/Combined_Taxonomy.csv")
+Taxon <- read.csv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Combined_CSVs/Combined_Taxonomy.csv")
 Taxon <- rename(Taxon, Organism.Name = "Tax.name")
 HTML <- read_tsv("~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/HTML.tsv")
 HTML <- HTML%>% rename(Super.Group = "Group")
@@ -632,7 +632,7 @@ HeatTreeAlv <- AlvP + xlim(NA,+20) + geom_tiplab(size = 1.8, show.legend = TRUE,
   labs(title = "Alveolata Phylogenetic Tree",
        subtitle = "With HMMER Score Map")
 
-AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 4, font.size = 2,, width = .4, colnames = FALSE)+
+AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 4, font.size = 2, width = .4, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -648,7 +648,15 @@ AlvHeatPlot <- gheatmap(HeatTreeAlv, df, offset = 4, font.size = 2,, width = .4,
     legend.key.spacing.x = unit(1,"cm"))+
   new_scale_fill()
 
-AlvHeatPlot
+AnnotatedALV <- AlvHeatPlot+geom_nodelab(nudge_y = 1, nudge_x = -.5, size = 2)
+
+ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/HeatMapAlveolataAnnotated.png",
+       plot = AnnotatedALV,
+       width = 3840,
+       height = 2160,
+       units = "px",
+       dpi = 320,
+       limitsize = FALSE)
 
 experimentalAlvPlot <- gheatmap(AlvHeatPlot,mdf, offset = 7, width = .15, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
