@@ -1,0 +1,79 @@
+# Collecting Parasite/Symbiote IDs for NCBI Tree
+# Kyle Johnson
+
+# Source the appropriate library file
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Maintenance_Scripts/Library_Script.R")
+
+# Load in the master table
+MasterTable <- read.csv(file = "~/GitHub/TOR_phylogenetics/GitHub_CSV/Finalized_CSVs/Master_Table.csv")
+MasterTable <- select(MasterTable, -X)
+
+MasterTable <- MasterTable %>% mutate(M.Strategy = if_else(Phylum.name == "Apicomplexa", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Phylum.name == "Perkinsozoa", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Super.Group == "Streptophyta" & M.Strategy == "Parasite", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Family.name == "Amoebophryaceae", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Nitzschia putrida", "Heterotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Carpediemonas membranifera", "Heterotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Lagenidium giganteum", "Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Apatococcus lobatus", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Chromochloris zofingiensis", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Scenedesmus", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Prototheca wickerhamii", "Heterotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Apatococcus fuscideae", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Symbiochloris irregularis", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Trebouxia sp. C0004", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Trebouxia sp. C0006", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Trebouxia sp. C0005", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Trebouxia sp. C0009 RCD-2024", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Trebouxia sp. C0010 RCD-2024", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(M.Strategy == "Parasite" & Super.Group != "Streptophyta", "Non-Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Chlorella sorokiniana", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Chlorella", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Micractinium conductrix", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Ostreobium quekettii", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Helicosporidium sp. ATCC 50920", "Plastid Parasite", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Micromonas", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Monoraphidium minutum", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == " Chlorella sp. A99", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Asterochloris sp. Cgr/DA1pho", "Endosymbiotic", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Apatococcus lobatus", "Mixotroph", M.Strategy, missing = M.Strategy))
+
+
+
+
+EndoParasites <- MasterTable %>% filter(M.Strategy == "Plastid Parasite" | M.Strategy == "Non-Plastid Parasite" | M.Strategy == "Endosymbiotic")
+
+#Remove the species we didn't have good data for here
+EndoParasites <- EndoParasites %>% filter(Organism.Name != "Moneuplotes crassus",
+                                          Organism.Name != "Symbiodinium pilosum",
+                                          Organism.Name != "Symbiodinium sp. CCMP2456",
+                                          Organism.Name != "Symbiodinium necroappetens",
+                                          Organism.Name != "Eimeria mitis",
+                                          Organism.Name != "Eimeria necatrix",
+                                          Organism.Name != "Eimeria praecox",
+                                          Organism.Name != "Marteilia pararefringens",
+                                          Organism.Name != "Paramarteilia canceri",
+                                          Organism.Name != "Cercozoa sp. M6MM",
+                                          Organism.Name != "Trypanosoma brucei equiperdum",
+                                          Organism.Name != "Trpanosoma equiperdum",
+                                          Organism.Name != "Trypanosoma rangeli",
+                                          Organism.Name != "Trypanosoma rangeli SC58",
+                                          Organism.Name != "Strigomonas culicis",
+                                          Organism.Name != "Perkinsela sp. CCAP 1560/4",
+                                          Organism.Name != "Giardia lamblia ATCC 50803",
+                                          Organism.Name != "Spironucleus salmonicida",
+                                          Organism.Name != "Hexamita inflata",
+                                          Organism.Name != "Streblomastix strix",
+                                          Organism.Name != "Aduncisulcus paluster",
+                                          Organism.Name != "Monocercomonoides exilis",
+                                          Organism.Name != "Paratrimastix pyriformis",
+                                          Organism.Name != "Novymonas esmeraldas",
+                                          Organism.Name != "Cymbomonas tetramitiformis",
+                                          Organism.Name != "Picocystis sp. ML")
+
+#Grab the IDs for all of the Parasites/Endosymbiotes for the Tree (NCBI)
+#Write to the IDs Folder
+write.table(EndoParasites$Organism_Taxonomic_ID, file = "~/GitHub/TOR_phylogenetics/IDs/ParasitesEndoIDs.txt", sep = "\t", row.names = F, col.names = F)
+
+
+
