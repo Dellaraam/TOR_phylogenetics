@@ -210,7 +210,7 @@ ParasiteTreeLayer5c<- ParasiteTreelayer4c + geom_highlight(data = cladecolorfram
                                "Metamonada" = "blue"
                     ))
 
-
+ParasiteTreeLayer5c
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/ParasitesEndosymbiotes.png",
        plot = ParasiteTreeLayer5c,
