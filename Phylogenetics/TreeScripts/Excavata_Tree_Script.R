@@ -95,7 +95,7 @@ ExcavataTP <- ExcavataTP  %<+% Excavata
 
 
 
-ExcavataHeat <- ExcavataTree %>% ggtree(branch.length = "none", ladderize = FALSE)+xlim(NA,40)
+ExcavataHeat <- ExcavataTree %>% ggtree(branch.length = "none", ladderize = FALSE)
 
 ExcavataHeatPlot <- gheatmap(ExcavataHeat,df3, offset = 6, width = .6, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
@@ -210,7 +210,7 @@ ExcavataTP <- ExcavataTP  %<+% Excavata
 
 
 
-ExcavataHeat <- ExcavataTree %>% ggtree(branch.length = "none", ladderize = FALSE)+xlim(NA,40)
+ExcavataHeat <- ExcavataTree %>% ggtree(branch.length = "none", ladderize = FALSE)
 
 ExcavataHeatPlot <- gheatmap(ExcavataHeat,df3, offset = 12, width = .6, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",

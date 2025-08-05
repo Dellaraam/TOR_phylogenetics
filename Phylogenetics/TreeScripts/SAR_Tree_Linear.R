@@ -110,7 +110,7 @@ tempdataframe <- tempdataframe %>% mutate(NodeNumber = case_when(
   select(NodeNumber, Super.Group) %>% distinct(Super.Group, .keep_all = TRUE)
 
 
-SARHeat <- SARTree %>% ggtree(ladderize = FALSE,branch.length = "none")+geom_rootedge()+geom_tree(linewidth = .25)+xlim(NA,40)
+SARHeat <- SARTree %>% ggtree(ladderize = FALSE,branch.length = "none")+geom_rootedge()+geom_tree(linewidth = .25)
 SARHeat + geom_nodelab(size = 2)+geom_text(aes(label = node),size = 4)
 
 
@@ -132,7 +132,7 @@ SARHeatPlot <- gheatmap(SARHeat,df5, offset = 4.5, width = .15, font.size = 2, c
   new_scale_fill()
 SARHeatPlot
 
-SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 2, nudge_x = 0, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour', fontface = "italic")+
+SARSavePlot <- SARHeatPlot %<+% SAR+geom_tiplab(size = 1.5, nudge_x = 0, linesize = .2, align = TRUE, aes(color=C.score), continuous = 'colour', fontface = "italic")+
   scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
@@ -203,7 +203,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/LinearSARPlotHeat.
        width = 5840,
        height = 6320,
        units = "px",
-       dpi = 320,
+       dpi = 600,
        limitsize = FALSE)
 
 

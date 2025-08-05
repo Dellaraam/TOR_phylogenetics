@@ -1,5 +1,5 @@
 
-source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Library_Script.R")
+source(file = "~/GitHub/TOR_phylogenetics/Phylogenetics/Maintenance_Scripts/Library_Script.R")
 
 
 
@@ -36,7 +36,8 @@ MasterTable <- MasterTable %>% mutate(M.Strategy = if_else(Phylum.name == "Apico
                                       M.Strategy = if_else(Organism.Name == "Monoraphidium minutum", "Mixotroph", M.Strategy, missing = M.Strategy),
                                       M.Strategy = if_else(Organism.Name == " Chlorella sp. A99", "Mixotroph", M.Strategy, missing = M.Strategy),
                                       M.Strategy = if_else(Organism.Name == "Asterochloris sp. Cgr/DA1pho", "Endosymbiotic", M.Strategy, missing = M.Strategy),
-                                      M.Strategy = if_else(Organism.Name == "Apatococcus lobatus", "Mixotroph", M.Strategy, missing = M.Strategy))
+                                      M.Strategy = if_else(Organism.Name == "Apatococcus lobatus", "Mixotroph", M.Strategy, missing = M.Strategy),
+                                      M.Strategy = if_else(Organism.Name == "Helicosporidium sp. ATCC 50920", "Plastid Parasite", M.Strategy, missing = M.Strategy))
 
 
 
@@ -114,7 +115,7 @@ ChlorRhoTreeP+geom_text(aes(label = node))+geom_nodelab(nudge_y = 1, nudge_x = -
 
 #Layer 1
 # Tip label layer and C.score heatmap layer
-ChloRhoLayer1 <- ChlorRhoTreeP + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
+ChloRhoLayer1 <- ChlorRhoTreeP + geom_tiplab(size = 1.4, nudge_x = .3, linesize = .4, align = TRUE, aes(color=C.score), continuous = 'colour')+
   scale_color_gradientn(colours=c("#B88100", "#3083DC","#D71D36"),
                         guide = guide_colorbar(order =1),
                         name = "Completeness Score")+
@@ -123,7 +124,7 @@ ChloRhoLayer1 <- ChlorRhoTreeP + xlim(NA, +25) + geom_tiplab(size = 1.8, nudge_x
 # Layer 2
 # TOR Components Heat map layer. Requires the first layer to attach to
 # Also requires a new_scale_fill() function call to establish layered fill scales
-ChloRhoLayer2 <- gheatmap(ChloRhoLayer1, df6, offset = 3.5, width = .55, font.size = 2, colnames = FALSE)+
+ChloRhoLayer2 <- gheatmap(ChloRhoLayer1, df6, offset = 4.5, width = .55, font.size = 2, colnames = FALSE)+
   scale_fill_manual(name = "HMMER Score",
                     breaks = c("H","M","L","P",NA),
                     values = pal3,
@@ -143,7 +144,7 @@ ChloRhoLayer2
 # Layer 3
 # Metabolic Strategy Layer
 # Requires the second layer
-ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 7.1, width = .125, colnames = FALSE)+
+ChloRhoLayer3 <- gheatmap(ChloRhoLayer2,mdf3, offset = 8.1, width = .125, colnames = FALSE)+
   scale_fill_manual(name = "Metabolic Strategy",
                     breaks = c("Autotrophic","Heterotroph","Mixotroph","Plastid Parasite","Non-Plastid Parasite","Streptophyta parasite", "Endosymbiotic"),
                     values = EMpal2,
@@ -194,7 +195,7 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/ChlorophytaRhodoph
        width = 3840,
        height = 2160,
        units = "px",
-       dpi = 320,
+       dpi = 600,
        limitsize = FALSE)
 
 ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/ChlorophytaRhodophyta.svg",
@@ -202,5 +203,5 @@ ggsave("~/GitHub/TOR_phylogenetics/Images/Updated_Tree_Images/ChlorophytaRhodoph
        width = 3840,
        height = 2160,
        units = "px",
-       dpi = 320,
+       dpi = 600,
        limitsize = FALSE)
