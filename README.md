@@ -49,6 +49,10 @@ to our analysis from the NCBI database in protein form.
 	+ `SAR_Combined.csv`: Combined table of information and data for SAR clade 
 + `Finalized_CSVs`: 
 	+ Final component CSVs 
+	+ Final Master Table and table for publication
+	+ Finals taxonomy CSVs for JGI and NCBI
+	+ Final BUSCO CSVs 
+	+ Finals Metabolic/Trophic strategies
 	+ `trophic_strategy.csv`: List of species and their trophic strategies
 + `Jsons_JGI` and `Jsons_NCBI`: the Json files of all the BUSCO results for specific clades.
 + `Raw_Data_Archived`: all raw dat is for the HMMR data and taxonomic information for specific clades.
@@ -131,41 +135,8 @@ to our analysis from the NCBI database in protein form.
 
 + `nwk` and `phy` trees made for importing into R for visualization 
 
-# Might not be in final post
 
-### Data Analysis
 
-Using the Eddy Labs HMMER program search for sequences that match the stated TOR components 
-either in part or in whole and then the proteins found are concatenated into large files 
-corresponding to the species clade. The protein HMMs were obtained through the corresponding InterPro
-page's link to Panther. The result is a .txt white space delimited table. The HMMR output files are 
-converted into comma separated values using the script `hmmer2csv.py`. 
-
-```
-hmmsearch --tblout <file.hmm> <proteome.fa> 
-``` 
-Move all HMMER outputs into one directory for easy transfer
-```
-hmmer2csv.py <output-directory>
-awk ‘NR==1 || FNR>1’ *.csv > (name of output file here)
-```
-
-All proteomes were pulled from the [NCBI datasets](https://github.com/ncbi/datasets) tool and [JGI Phycocosm](https://phycocosm.jgi.doe.gov/phycocosm/home) for further analysis, including:
- 
-BUSCO for quality assurance to sense the general completeness of the assembly and how much fragmentation 
-is expected.Allowing us to be more confident in the accuracy of our results as well as identify organisms
-that should be further investigated in the alignement step. To compile all the results into one file 
-run `Json_to_csv.R`.  
- 
-Multiple sequence alignments to establish homology for sequences barely exceeding the threshold for the 
-HMMR results. Sequences for each TOR component was aligned with a number of references including H.Sapiens,
-S.cerevisiae, and S.pombe using ClustalO with the ClustalO coloring scheme on Jalview for visualization. 
-To use Jalview to to "File>Input Alignment>From File" and select your sequences. To start an alignment 
-select "Web Service" and choose an alignment program. 
-
-### Data Compilation 
-
-HMMER and Blast data will be merged in a larger CSV file with species names and TAXIDs. To obtain the TAXIDs, species names, 
-class, phylum, order, family, genus please see the NCBI database documentation page for [taxonomy](https://www.ncbi.nlm.nih.gov/datasets/docs/v2/reference-docs/command-line/datasets/download/taxonomy/).
-
++ `hmmer2csv.py`: turns hmmr outputs into machine readable format(csv)
++ `automate_csv.py`: takes directory of hmmr outputs and puts the contents into `hmmer2csv.py`
 
